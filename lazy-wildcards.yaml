@@ -93,6 +93,20 @@ lazy-wildcards:
       - wakeupyawn, yawning, covering mouth
       - wakeupstretch, stretching, arm behind head
       - (bouquet, holding bouquet)
+      - (carrying one plate of food, carrying food)
+      - relaxing, doze off
+      - (taking a selfie in the mirror)
+      - fingernails, zombie pose
+      - paw pose
+      - hands inside pocket, hand in pocket, hands in pockets
+      - from behind, pelvis, butt crack, look at viewer
+      - head rest on hand, head_on_hand, head_rest
+      - breast rest on table
+      - leaning against motorcycle
+      - cigarette in mouth
+      - (straddle)
+      - (lotus position)
+      - (cross-legged sitting,sitting with legs crossed)
     pose-nsfw:
       - (one breast out, one breast slip, one_breast_out_of_clothes), unaligned_breasts, showing breast
       - (downblouse, tank top, breasts_out, leaning forward, bent over)
@@ -100,22 +114,29 @@ lazy-wildcards:
       - squatting, crouching, spread legs, arm support, stripper pole, pole dancing, arms behind back
       - lewd, sexy, erotic, alluring, ewitching, charming, mesmerizing, enchanting, voluptuous, sexy posing, Sex Position, hentai
       - hand on own chest, grabbing herself breasts, grabbing own breasts, hands on own breasts, breast press, hand on tit
+      - squatting spread legs position, squatting, spread legs, crouching
+      - clothes lift, lifted by self, underboob
+      - bath, bathing, steam
+      - female masturbation
     ethnicity:
       - __cf-*/ethnicity__
     expressions:
       - __person/regular/expressions__
       - __halloween/pumpkin-carving/expressions__
+      - (fucked silly, torogao, Dazed, Climax), drunk, Confused
     expressions2:
       - scornful
       - (disgusted face, disgust, disgust_face, frown, shaded_face, clenched teeth, scorn)
       - (disgusted face, disgust, disgust_face, frown, shaded_face, clenched teeth, scorn), angry
       - (expressionless)
+      - flustered
   costume:
     color-theme:
       - __lazy-wildcards/utils/color-base__ clothes
     nsfw:
       - __Bo/clothings/nsfw/female-attire__
       - side-tie panties, cleavage, multi-strapped panties, highleg panties, string panties, groin, strap slip, denim, denim bikini
+      - partially unbuttoned, button bursting, revealing clothing, open buttons, straining clothing, cleavage
     clothes:
       - __cf-*/prompt-costume__
       - __Bo/chars/char-regular/female/bocloths__
@@ -132,8 +153,10 @@ lazy-wildcards:
         {2$$ and $$__lazy-wildcards/utils/color-base__} background
     anything:
       - vibrant background, vivid background
+      - __lazy-wildcards/background/location__
     location:
       - __cf-*/location/*__
       - borobudur temple
-      -
-    
+      - japanese onsen, onsen
+      - dirty alley
+
