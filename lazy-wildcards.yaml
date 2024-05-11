@@ -1,0 +1,119 @@
+lazy-wildcards:
+  prompts:
+    showcase:
+      - >-
+        female fifty-something, pear-shaped, inuit, golden eyes, large ears, unusual face shape, sandy blonde voluminous curls hair, curiosity wearing  sleeveless jumpsuit, cut-out lingerie set, fishing tackle bag, playing with necklace, playing with a necklace with a seductive glance, adding an element of elegance and allure, sunset lighting, the warm, golden glow of a sunset, adding a romantic and enchanting feel to the scene, a vibrant street market, with vendors showcasing their unique crafts and products, lecture hall, cutting board, shoe rack, dryer, carpet, travertine stone, rya knots tapestry, bioluminescent organisms, pendant lights,
+        torn clothes, sexy body, wet, drunk, bottles fallen on the floor, unconscious
+      - >-
+        tennis player wearing green Zip-up jacket with tennis ball print, tennis skirt with pleated back, bucket hat with mesh panel, platform tennis shoes,  tennis ball stored in a mesh bag,
+        haunted house, Basement, Foreboding chamber with stone walls covered in moss, rusted chains hanging from the ceiling, broken crates scattered around, a rusted iron maiden in the corner, and the sound of distant whispers echoing through the darkness,
+      - smoke_from_head
+      - police car Trunk, Spacious compartment containing emergency equipment such as cones, flares, fire extinguisher, portable toolbox, rifle rack with a shotgun secured in place, spare tire tucked away in the corner
+      - >-
+        (1girl:1.2),
+        ninja wearing Stealthy black gi with a fitted top, high-waisted pants, ninja mask, fingerless gloves, black boots,
+        orphanage Playroom, Colorful space with toys strewn across the floor, child-sized tables and chairs, bright murals decorating the walls, large bean bags for lounging, and shelves stocked with art supplies
+      - >-
+        huge breasts, black hair, long sleeves, jacket, glasses, short shorts, black shorts, blue jacket, track jacket, buruma,
+        torn clothes, sexy body, wet, drunk, bottles fallen on the floor, unconscious
+    costume:
+      - __cf-/prompt-costume__
+    dataset:
+      char-base:
+        - >-
+          __lazy-wildcards/dataset/char-view__,
+          1girl,
+          {0.3::(__lazy-wildcards/char/mouth__:1.4),|}
+          {(__lazy-wildcards/char/eyecolor__),|}
+          {
+          0.1::(Completely bald, bald, bald girl:1.3),
+          |__lazy-wildcards/char/hair-length__,__lazy-wildcards/char/haircolor__, __lazy-wildcards/char/haircut__,
+          }
+          __lazy-wildcards/costume/color-theme__,
+          {__lazy-wildcards/costume/nsfw__,|__lazy-wildcards/costume/clothes__,|}
+          {0.1::__lazy-wildcards/char/expressions__|0.3::__lazy-wildcards/char/expressions__|}
+      face:
+        - >-
+          __lazy-wildcards/prompts/dataset/char-base__,
+          {__lazy-wildcards/char/pose__,|}
+          __lazy-wildcards/dataset/background__,
+      face-simple:
+        - >-
+          __lazy-wildcards/prompts/dataset/char-base__,
+          {__lazy-wildcards/char/pose__,|}
+          __lazy-wildcards/dataset/background-color__,
+  dataset:
+    char-view:
+      - upper body
+      - full body angle, full body view, full_shot, full body
+      - (Face focus, face closeup, face and shoulder only, Portrait, upper_body, face photo)
+      - profile
+      - (closeup, face only, face focus, face closeup, close up of face, face photo)
+    background:
+      - __lazy-wildcards/dataset/background-color__
+      - __lazy-wildcards/background/anything__
+    background-color:
+      - __lazy-wildcards/background/color-transparent__
+      - __lazy-wildcards/background/color-theme__
+      - __lazy-wildcards/background/color-multi__
+  utils:
+    color-base:
+      - white
+      - black
+      - green
+      - magenta
+      - cyan
+      - yellow
+      - blue
+      - red
+  char:
+    eyecolor:
+      - __person/regular/eyecolor__
+    mouth:
+      - open mouth
+      - wavy mouth
+      - closed mouth
+      - parted lips
+    hair-length:
+      - hair, {short|long|medium|very long|very short|absurdly long} hair
+    haircolor:
+      - __Bo/chars/haircolor__ hair
+    haircut:
+      - {blunt bangs|swept bangs|crossed bangs}
+      - __person/regular/haircuts-female__ hair
+    pose:
+      - __person/nsfw/poses__
+      - wariza, sitting, w-sitting, hand between legs, between legs
+    ethnicity:
+      - __cf-*/ethnicity__
+    expressions:
+      - __person/regular/expressions__
+      - __halloween/pumpkin-carving/expressions__
+    expressions2:
+      - scornful
+      - (disgusted face, disgust, disgust_face, frown, shaded_face, clenched teeth, scorn)
+      - (disgusted face, disgust, disgust_face, frown, shaded_face, clenched teeth, scorn), angry
+      - (expressionless)
+  costume:
+    color-theme:
+      - __lazy-wildcards/utils/color-base__ clothes
+    nsfw:
+      - __Bo/clothings/nsfw/female-attire__
+      - side-tie panties, cleavage, multi-strapped panties, highleg panties, string panties, groin, strap slip, denim, denim bikini
+    clothes:
+      - __cf-*/prompt-costume__
+      - __Bo/chars/char-regular/female/bocloths__
+      - __Bo/clothings/*/female-attire__
+  background:
+    color-theme:
+      - __lazy-wildcards/utils/color-base__ background
+      - dark background
+    color-transparent:
+      - pure __lazy-wildcards/utils/color-base__ background, transparent background
+    color-multi:
+      - a colorful background, multicolored background
+      - >-
+        {2$$ and $$__lazy-wildcards/utils/color-base__} background
+    anything:
+      - vibrant background, vivid background
+    
