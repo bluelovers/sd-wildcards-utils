@@ -1,3 +1,6 @@
+#
+# https://github.com/adieyal/sd-dynamic-prompts/blob/main/docs/SYNTAX.md
+#
 lazy-wildcards:
   prompts:
     showcase:
@@ -20,35 +23,37 @@ lazy-wildcards:
       - vibrant background, vivid background,, Village Square, Bustling gathering place with wooden market stalls, vendors hawking their wares, children playing games in the cobblestone streets, cherry blossom trees offering shade, distant glimpse of the ocean beyond the rooftops
       - >-
         __lazy-wildcards/prompts/cover__,
-        upper body, 1girl, (steel gray eyes), very short hair,dark brown hair, parted bangs,crossed bangs , green clothes, side-tie panties, cleavage, multi-strapped panties, highleg panties, string panties, groin, strap slip, denim, denim bikini,  dark chestnut lips, tongue sticking out, squatting spread legs position, squatting, spread legs, crouching, __~lazy-wildcards/dataset/background__
+        upper body, 1girl, (steel gray eyes), very short hair,dark brown hair, parted bangs,crossed bangs , green clothes, side-tie panties, cleavage, multi-strapped panties, highleg panties, string panties, groin, strap slip, denim, denim bikini,  dark chestnut lips, tongue sticking out, squatting spread legs position, squatting, spread legs, crouching, 
+        __lazy-wildcards/dataset/background__
     costume:
       - >-
-        {__~lazy-wildcards/costume/nsfw__|__~lazy-wildcards/costume/clothes__}
+        {__lazy-wildcards/costume/nsfw__|__lazy-wildcards/costume/clothes__}
     pose:
       - >-
-        {__~lazy-wildcards/char/pose__|__~lazy-wildcards/char/pose-nsfw__}
+        {__lazy-wildcards/char/pose__|__lazy-wildcards/char/pose-nsfw__}
     hair:
       - >-
-        __~lazy-wildcards/char/hair-length__, __~lazy-wildcards/char/haircolor__, {1-3$$__~lazy-wildcards/char/haircut__}
+        __lazy-wildcards/char/hair-length__
+        ,__lazy-wildcards/char/haircolor__
+        {,__lazy-wildcards/char/haircut-multi__|}
+        {,__lazy-wildcards/char/hair-style-multi__|}
     hair-all:
       - >-
-        {
-          2::__lazy-wildcards/prompts/hair__
-          | 0.1::__~lazy-wildcards/char/hair-bald__
+        {1::__lazy-wildcards/prompts/hair__| 0.1::__lazy-wildcards/char/hair-bald__}
       - >-
         __lazy-wildcards/prompts/hair__
     eyes:
-      - (__~lazy-wildcards/char/eyecolor__)
+      - (__lazy-wildcards/char/eyecolor__)
       - >-
-        (__~lazy-wildcards/char/eyecolor__)
-        {0.3::,__~lazy-wildcards/char/eyeliner-color__|}
-        {0.3::,__~lazy-wildcards/char/eyeshadow-color__|}
-        {0.3::,__~lazy-wildcards/char/eyelashes__|}
-        {0.3::,__~lazy-wildcards/char/eyelashes-color__|}
+        ({1-2$$__lazy-wildcards/char/eyecolor__})
+        {0.3::,__lazy-wildcards/char/eyeliner-color__|}
+        {0.3::,__lazy-wildcards/char/eyeshadow-color__|}
+        {0.3::,__lazy-wildcards/char/eyelashes__|}
+        {0.3::,__lazy-wildcards/char/eyelashes-color__|}
     mouth:
       - >-
-        {0.3::(__~lazy-wildcards/char/mouth__:1.4),|}
-        __~lazy-wildcards/char/lips-color__
+        {0.3::(__lazy-wildcards/char/mouth__:1.4),|}
+        __lazy-wildcards/char/lips-color__
     cover:
         - >-
           (__lazy-wildcards/book/style-type/*/style__:1.35),
@@ -56,42 +61,42 @@ lazy-wildcards:
     dataset:
       char-base:
         - >-
-          __~lazy-wildcards/dataset/char-view__,
+          __lazy-wildcards/dataset/char-view__,
           1girl,
-          __~lazy-wildcards/prompts/eyes__,
+          __lazy-wildcards/prompts/eyes__,
           __lazy-wildcards/prompts/hair-all__,
-          __~lazy-wildcards/costume/color-theme__,
-          {__~lazy-wildcards/prompts/costume__,|}
-          __~lazy-wildcards/prompts/mouth__,
-          {0.1::__~lazy-wildcards/char/expressions__|0.3::__~lazy-wildcards/char/expressions__2|}
+          __lazy-wildcards/costume/color-theme__,
+          {__lazy-wildcards/prompts/costume__,|}
+          __lazy-wildcards/prompts/mouth__,
+          {0.1::__lazy-wildcards/char/expressions__|0.3::__lazy-wildcards/char/expressions2__|}
       face:
         - >-
-          __~lazy-wildcards/prompts/dataset/char-base__,
-          {__~lazy-wildcards/char/pose__,|__~lazy-wildcards/char/pose-nsfw__,|}
-          __~lazy-wildcards/dataset/background__,
+          __lazy-wildcards/prompts/dataset/char-base__,
+          {__lazy-wildcards/char/pose__,|__lazy-wildcards/char/pose-nsfw__,|}
+          __lazy-wildcards/dataset/background__
       face-simple:
         - >-
-          __~lazy-wildcards/prompts/dataset/char-base__,
-          {__~lazy-wildcards/char/pose__,|__~lazy-wildcards/char/pose-nsfw__,|}
+          __lazy-wildcards/prompts/dataset/char-base__,
+          {__lazy-wildcards/char/pose__,|__lazy-wildcards/char/pose-nsfw__,|}
           __lazy-wildcards/dataset/background-color__,
       char-nude:
         - >-
-          __~lazy-wildcards/dataset/char-view__,
+          __lazy-wildcards/dataset/char-view__,
           1girl,
-          {0.3::(__~lazy-wildcards/char/mouth__:1.4),|}
-          (__~lazy-wildcards/char/eyecolor__),
+          {0.3::(__lazy-wildcards/char/mouth__:1.4),|}
+          (__lazy-wildcards/char/eyecolor__),
           __lazy-wildcards/prompts/hair-all__,
           __lazy-wildcards/costume/nsfw-nude__,
-          {0.3::__~lazy-wildcards/char/lips-color__,|}
-          {0.3::__~lazy-wildcards/char/eyeliner-color__,|}
-          {0.3::__~lazy-wildcards/char/eyeshadow-color__,|}
-          {0.1::__~lazy-wildcards/char/expressions__|0.3::__~lazy-wildcards/char/expressions__2|},
-          {__~lazy-wildcards/char/pose__,|__~lazy-wildcards/char/pose-nsfw__,|}
+          {0.3::__lazy-wildcards/char/lips-color__,|}
+          {0.3::__lazy-wildcards/char/eyeliner-color__,|}
+          {0.3::__lazy-wildcards/char/eyeshadow-color__,|}
+          {0.1::__lazy-wildcards/char/expressions__|0.3::__lazy-wildcards/char/expressions__2|},
+          {__lazy-wildcards/char/pose__,|__lazy-wildcards/char/pose-nsfw__,|}
           __lazy-wildcards/dataset/background-color__,
       cover:
         - >-
           (__lazy-wildcards/prompts/cover__),
-          __~lazy-wildcards/prompts/dataset/char-base__,
+          __lazy-wildcards/prompts/dataset/char-base__,
           {__lazy-wildcards/book/pose__|__lazy-wildcards/char/pose__|__lazy-wildcards/char/pose-nsfw__},
           (__lazy-wildcards/dataset/background__:1.25)
   dataset:
@@ -147,11 +152,11 @@ lazy-wildcards:
           - two of hearts
   char:
     eyecolor:
-      - __~person/regular/eyecolor__
+      - __person/regular/eyecolor__
     eyeliner-color:
-      - __~Bo/chars/haircolor__ eyeliner
+      - __Bo/chars/haircolor__ eyeliner
     eyeshadow-color:
-      - __~Bo/chars/haircolor__ eyeshadow
+      - __Bo/chars/haircolor__ eyeshadow
     # 睫毛
     eyelashes:
       - eyelashes_behind_hair
@@ -162,10 +167,10 @@ lazy-wildcards:
       - mismatched eyelashes
       - long eyelashes
     eyelashes-color:
-      - __~Bo/chars/haircolor__ eyelashes
+      - __Bo/chars/haircolor__ eyelashes
       - colored eyelashes
     lips-color:
-      - __~Bo/chars/haircolor__ lips
+      - __Bo/chars/haircolor__ lips
     mouth:
       - open mouth
       - wavy mouth
@@ -179,15 +184,61 @@ lazy-wildcards:
       - very long hair
       - very short hair
       - absurdly long hair
+    haircolor-style:
+      - split-color hair, dual-toned hair, two-tone hair
+      - multi_color_hair, multicolored hair, multi colored hair
+      - rainbow hair, Iridescence hair
+      - colored inner hair
+      - gradient hair
+      - streaked hair
     haircolor:
       - >-
-        {1-3$$__~Bo/chars/haircolor__ hair}
+        {1-3$$__Bo/chars/haircolor__ hair}
+        ,{0-2$$__lazy-wildcards/char/haircolor-style__}
+    hair-style-multi:
+      - >-
+        {1-4$$__lazy-wildcards/char/hair-style__}
+    hair-style:
+      - metal hair
+      - Blowing hair in the strong wind
+      - >-
+        {ultra|} floating, floating hair
+      - soaked hair, wet hair
+      - >-
+        messy hair 
+        {,morning hair, bedhead|}
+      - flipped hair
+      - vortex hair
+      - wild hair
+      - fluid hair, fussion of fluid and hair
+      - bioluminescent hair
+      - updo hair
+      - abstract representation of the girl in her flowing hair
+      - spiked hair
+      - leaf hair
+    haircut-multi:
+      - >-
+        {1-4$$__person/regular/haircuts-female__}
+      - >-
+        {1-4$$__lazy-wildcards/char/haircuts__}
     haircut:
       - blunt bangs
       - swept bangs
       - crossed bangs
-      - __~person/regular/haircuts-female__ hair
+      - >-
+        __person/regular/haircuts-female__ hair
       - parted bangs
+      - drill hair
+      - twin drill hair
+      - Wavy Side Bangs hair
+      - hair pulled back, Folded tied hair
+      - curly frizzy flowy hair
+      - >- 
+        ahoge, antenna hair,
+        {huge ahoge|heart ahoge}
+      - wolf tail hairstyle
+      - feathered haircutfeathered haircut
+      - Layered Wavy Cut with Curtain Bangs hair
     hair-bald:
       - >-
         (Completely bald, bald, bald girl:1.3)
@@ -197,7 +248,7 @@ lazy-wildcards:
       - mole on breast
       - mole on thigh
     pose:
-      - __~person/nsfw/poses__
+      - __person/nsfw/poses__
       - wariza, sitting, w-sitting, hand between legs, between legs
       - meditative pose
       - covering mouth, hand over own mouth
@@ -232,11 +283,12 @@ lazy-wildcards:
       - clothes lift, lifted by self, underboob
       - bath, bathing, steam
       - female masturbation
+      - open clothes, exhibitionism, public indecency, naked coat
     ethnicity:
-      - __~cf-*/ethnicity__
+      - __cf-*/ethnicity__
     expressions:
-      - __~person/regular/expressions__
-      - __~halloween/pumpkin-carving/expressions__
+      - __person/regular/expressions__
+      - __halloween/pumpkin-carving/expressions__
       - (fucked silly, torogao, Dazed, Climax), drunk, Confused
     expressions2:
       - scornful
@@ -244,12 +296,11 @@ lazy-wildcards:
       - (disgusted face, disgust, disgust_face, frown, shaded_face, clenched teeth, scorn), angry
       - (expressionless)
       - flustered
-  action:
   costume:
     color-theme:
-      - __~lazy-wildcards/utils/color-base__ clothes
+      - __lazy-wildcards/utils/color-base__ clothes
     nsfw:
-      - __~Bo/clothings/nsfw/female-attire__
+      - __Bo/clothings/nsfw/female-attire__
       - side-tie panties, cleavage, multi-strapped panties, highleg panties, string panties, groin, strap slip, denim, denim bikini
       - partially unbuttoned, button bursting, revealing clothing, open buttons, straining clothing, cleavage
       - ripped clothes, torn clothes, tattered clothes
@@ -259,22 +310,34 @@ lazy-wildcards:
       - nude, topless, breasts out, breasts slip, cleavage, see-through cleavage, see-through, breasts focus, unaligned_breasts
       - naked, bare, nude, completely nude, no bar, cleavage
     clothes:
-      - __~cf-*/prompt-costume__
-      - __~Bo/chars/char-regular/female/bocloths__
-      - __~Bo/clothings/*/female-attire__
+      - __cf-*/prompt-costume__
+      - __Bo/chars/char-regular/female/bocloths__
+      - __Bo/clothings/*/female-attire__
       - ((ancient egyptian theme)), golden ornaments, ancient egyptian sailor_shirt, ancient egyptian pleated_skirt, bowtie
+      - Collared shirts
   background:
+    color-style:
+      - >-
+        {1-$$multicolored background|gradient background|solid color, solid color background|neon color}
     color-theme:
-      - __~lazy-wildcards/utils/color-base__ background
+      - __lazy-wildcards/utils/color-base__ background
       - dark background
     color-transparent:
-      - pure __~lazy-wildcards/utils/color-base__ background, transparent background
+      - pure __lazy-wildcards/utils/color-base__ background, transparent background
     color-multi:
-      - a colorful background, multicolored background
       - >-
-        {2$$ and $$__~lazy-wildcards/utils/color-base__} background
+        a colorful background, 
+        __lazy-wildcards/background/color-style__
+      - >-
+        {2-3$$ background, $$__lazy-wildcards/utils/color-base__} background
+        {,__lazy-wildcards/background/color-style__|}
+      - >-
+        pure {2-3$$ background, pure $$__lazy-wildcards/utils/color-base__} background
+        {,__lazy-wildcards/background/color-style__|}
+      - >-
+        neon {2-3$$ background, neon $$__lazy-wildcards/utils/color-base__} background
+        {,__lazy-wildcards/background/color-style__|}
     anything:
-      # - vibrant background, vivid background
       - __cf-*/location/*__
       - __lazy-wildcards/background/location/temple/main/*__
       - japanese onsen, onsen
@@ -290,6 +353,27 @@ lazy-wildcards:
       - >-
         __lazy-wildcards/background/location/casino/style__, 
         {1-$$__lazy-wildcards/background/location/casino/main/*__}, {1-$$__lazy-wildcards/background/location/casino/env__}
+      - construction site background
+      - cliff, cliff scenery, mountainside, cliff face
+      - Intricately Detailed Cinematic Bamboo forest
+      - street corner
+      - east_asian_architecture, east asian architecture
+      - architecture, bridge, east asian architecture, lantern, letterboxed, pagoda, tower, torii, tower, watercraft
+      - ancient japanese buildings
+      - roman architecture background
+      - art nouveau architecture
+      - korean architecture
+      - large forest,enchanting forest,dense forest,lush forest,tall trees,canopy,overgrown scenery
+      - Subway, Metro
+      - Metro, carriage,subway,subway interior,window
+      - rural school
+      - in dungeon
+      - prison cell
+      - prison
+      - cloud city, cloudtop sky-city
+      - downtown, city
+      - floating platforms, floating buildings
+      - Majestic Baroque halls
     location:
       temple:
         main:
