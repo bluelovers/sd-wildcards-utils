@@ -1,6 +1,8 @@
 #
 # https://github.com/adieyal/sd-dynamic-prompts/blob/main/docs/SYNTAX.md
 #
+# https://civitai.com/user/C0rn_Fl4k3s/models
+#
 lazy-wildcards:
   prompts:
     showcase:
@@ -23,11 +25,46 @@ lazy-wildcards:
       - vibrant background, vivid background,, Village Square, Bustling gathering place with wooden market stalls, vendors hawking their wares, children playing games in the cobblestone streets, cherry blossom trees offering shade, distant glimpse of the ocean beyond the rooftops
       - >-
         __lazy-wildcards/prompts/cover__,
-        upper body, 1girl, (steel gray eyes), very short hair,dark brown hair, parted bangs,crossed bangs , green clothes, side-tie panties, cleavage, multi-strapped panties, highleg panties, string panties, groin, strap slip, denim, denim bikini,  dark chestnut lips, tongue sticking out, squatting spread legs position, squatting, spread legs, crouching, 
+        upper body, 1girl, (steel gray eyes), very short hair,dark brown hair, parted bangs,crossed bangs , green clothes, side-tie panties, cleavage, multi-strapped panties, highleg panties, string panties, groin, strap slip, denim, denim bikini,  dark chestnut lips, tongue sticking out, squatting spread legs position, squatting, spread legs, crouching,
         __lazy-wildcards/dataset/background__
+      - >-
+        1girl,
+        __lazy-wildcards/prompts/hair__,
+        soldier wearing Short-sleeved shirt with tactical vest, cargo shorts, combat boots, patrol cap,
+        military base Helipad, Open space with helicopters parked in neat rows, rotor blades spinning as they prepare for takeoff, ground crew bustling around with refueling equipment, a sense of urgency in the air, the deafening roar of engines,
+        {__lazy-wildcards/background/color-multi__|}
+      - ((fast pencil scribble sketch)), ((the various expressions are shown of characters in different poses)), on paper, 1girl, __lazy-wildcards/prompts/hair__
+      - >-
+        Caribbean, (dark tunnel:1.2),
+        1girl, naked, lying on a bed,
+        with her feet in front of the camera, soles of her feet, red nails, completely naked,
+        legs open, wet pussy, pussy with cum, water,
+        (wet skin, drenched, wet, moist skinwet skin, drenched, wet, moist skin:1.1),
+        facing viewer, looking at viewer,
+        breasts, waist, extremely sexy,
+        __lazy-wildcards/prompts/hair__,
+        __lazy-wildcards/prompts/eyes__,
+        __lazy-wildcards/dataset/background-color__,
+        (flower, falling petals, petals on liquid, petals, cherry blossom:0.8)
+      - >-
+        1girl, solo,
+        under boob, up skirt, downblouse, cleavage,
+        (from below, looking down, ass visible through thighs:1.2), ceiling, (peek panties, panty peek, pussy peek),
+        selfie pose, squatting, crouching,
+        __lazy-wildcards/prompts/hair__,
+        __lazy-wildcards/prompts/eyes__,
+        __lazy-wildcards/dataset/background__,
+        (flower, falling petals, petals on liquid, petals, cherry blossom:0.8)
     costume:
       - >-
         {__lazy-wildcards/costume/nsfw__|__lazy-wildcards/costume/clothes__}
+    costume-with-color:
+      - >-
+        __lazy-wildcards/costume/color-theme__
+        {,__lazy-wildcards/prompts/costume__|}
+      - >-
+        {__lazy-wildcards/costume/color-theme__,|}
+        __lazy-wildcards/prompts/costume__
     pose:
       - >-
         {__lazy-wildcards/char/pose__|__lazy-wildcards/char/pose-nsfw__}
@@ -39,7 +76,7 @@ lazy-wildcards:
         {,__lazy-wildcards/char/hair-style-multi__|}
     hair-all:
       - >-
-        {1::__lazy-wildcards/prompts/hair__| 0.1::__lazy-wildcards/char/hair-bald__}
+        {3::__lazy-wildcards/prompts/hair__| 0.1::__lazy-wildcards/char/hair-bald__}
       - >-
         __lazy-wildcards/prompts/hair__
     eyes:
@@ -50,9 +87,12 @@ lazy-wildcards:
         {0.3::,__lazy-wildcards/char/eyeshadow-color__|}
         {0.3::,__lazy-wildcards/char/eyelashes__|}
         {0.3::,__lazy-wildcards/char/eyelashes-color__|}
+        {0.3::,{0-3$$__lazy-wildcards/char/eyes-expressions__}|}
+        {0.3::,{0-3$$__lazy-wildcards/char/eyes-style__}|}
     mouth:
       - >-
-        {0.3::(__lazy-wildcards/char/mouth__:1.4),|}
+        {0.1::(__lazy-wildcards/char/mouth__:1.4),|}
+        {0.1::({1-3$$__lazy-wildcards/char/mouth-style__}),|}
         __lazy-wildcards/char/lips-color__
     cover:
         - >-
@@ -65,8 +105,7 @@ lazy-wildcards:
           1girl,
           __lazy-wildcards/prompts/eyes__,
           __lazy-wildcards/prompts/hair-all__,
-          __lazy-wildcards/costume/color-theme__,
-          {__lazy-wildcards/prompts/costume__,|}
+          __lazy-wildcards/prompts/costume-with-color__,
           __lazy-wildcards/prompts/mouth__,
           {0.1::__lazy-wildcards/char/expressions__|0.3::__lazy-wildcards/char/expressions2__|}
       face:
@@ -126,6 +165,15 @@ lazy-wildcards:
       - yellow
       - blue
       - red
+    color-anything:
+      - >-
+        __Bo/chars/haircolor__
+      - >-
+        __lazy-wildcards/utils/color-base__
+      - >-
+        __cf-*/color__
+      - >-
+        bright blue-green
     action:
       playing-card:
         poker-playing:
@@ -137,26 +185,96 @@ lazy-wildcards:
           - ace of hearts
           - ace of spades
           - ace of diamonds
-          - ace of clubs 
-          - three of hearts 
-          - king of spades 
+          - ace of clubs
+          - three of hearts
+          - king of spades
           - ten of hearts
           - ten of spades
           - two of spades
-          - royal flush 
+          - royal flush
           - five of hearts
           - four of clubs
           - jack of spades
-          - three of spades 
+          - three of spades
           - five of spades
           - two of hearts
+    char-view:
+      - __lazy-wildcards/dataset/char-view__
+      - (from below, looking down, ass visible through thighs:1.2)
+    view:
+      - front view
   char:
+    eyes-expressions:
+      - >-
+        {half-|}closed eyes
+      - >-
+        {half-|}opened eyes
+      - >-
+        {1-$$crying with eyes open|tears|crying}
+      - narrowed eyes
+      - empty eyes
+      - rolling eyes
+      - cross eyed
+      - tsurime
+      - constricted pupils
+      - water eyes
+      - solid eyes
+      - eye_contact
+      - glint
+      - >-
+        {1-$$sharp_eyes|slanted_eyes}
+      - expressive eyes
+      - twinkling smiley eyes
+      - slightly close eyes
+      - seductive eyes
+      - wakeupeye, rubbing eyes
+      - constricted eyes, constricted pupils, bright pupils
+    eyes-style:
+      - >-
+        {1-$$multicolored eyes|gradient eyes|heterochromia}
+      - >-
+        {1-$$heart-shaped eyes|heart-shaped pupils|heart_in_eye}
+      - button eyes
+      - >-
+        {1-$$glowing eyes|sparkling eyes|pupils sparkling|light_eyes|shiny_eyes}
+      - blank eyes
+      - extra eyes
+      - >-
+        {1-$$bloodshot eyes|blood from eyes}
+      - slit pupils
+      - devil eyes
+      - >-
+        {1-$$covering eyes|eyes visible through hair|hidden eyes|no eyes|shading eyes|eyebrows visible through hair}
+      - snake pupils
+      - color contact lenses
+      - flower-shaped pupils
+      - hollow_eyes
+      - ringed_eyes
+      - eye_relfection
+      - mechanical eyes
+      - clock eyes
+      - compound eyes
+      - eye_of_horus
+      - spiral_eyes
+      - flaming_eye
+      - bags_under_eyes
+      - no_eyepatch
+      - no_blindfold
+      - scar_across_eye
+      - medical_eyepatch
+      - eyepatch
+      - colored sclera
+      - jewel-like eyes
+      - Blush Eyeshadow, Thick Eyebrows, Thick Eyelashes, eyeliner
+      - gears in eyes
+      - symbol-shaped eyes
     eyecolor:
       - __person/regular/eyecolor__
+      - __lazy-wildcards/utils/color-anything__ eyes
     eyeliner-color:
-      - __Bo/chars/haircolor__ eyeliner
+      - __lazy-wildcards/utils/color-anything__ eyeliner
     eyeshadow-color:
-      - __Bo/chars/haircolor__ eyeshadow
+      - __lazy-wildcards/utils/color-anything__ eyeshadow
     # 睫毛
     eyelashes:
       - eyelashes_behind_hair
@@ -167,16 +285,45 @@ lazy-wildcards:
       - mismatched eyelashes
       - long eyelashes
     eyelashes-color:
-      - __Bo/chars/haircolor__ eyelashes
+      - __lazy-wildcards/utils/color-anything__ eyelashes
       - colored eyelashes
     lips-color:
-      - __Bo/chars/haircolor__ lips
-    mouth:
-      - open mouth
+      - __lazy-wildcards/utils/color-anything__ lips
+    mouth-style:
       - wavy mouth
+      - chestnut_mouth
+      - >-
+        {1-$$hair_in_mouth|hair_tie_in_mouth}
+      - drooling|saliva
+      - triangle_mouth
+      - spoon_in_mouth
+      - pacifier
+      - dot_mouth
+      - shark mouth
+      - heart-shaped mouth
+      - puffy lips
+      - thick lips
+    mouth:
+      - open mouth|gasping
       - closed mouth
       - parted lips
       - finger to mouth
+      - homu
+      - Pouted lips
+      - mouth_hold
+      - oral
+      - covered_mouth
+      - >-
+        {1-$$cleave_gag|bit_gag|gag}
+      - gnaw
+      - no_mouth
+      - >-
+        :>
+      - >-
+        :o
+      - >-
+        :3
+      - coysmile
     hair-length:
       - short hair
       - long hair
@@ -193,7 +340,7 @@ lazy-wildcards:
       - streaked hair
     haircolor:
       - >-
-        {1-3$$__Bo/chars/haircolor__ hair}
+        {1-3$$ hair, $$__lazy-wildcards/utils/color-anything__} hair
         ,{0-2$$__lazy-wildcards/char/haircolor-style__}
     hair-style-multi:
       - >-
@@ -202,10 +349,11 @@ lazy-wildcards:
       - metal hair
       - Blowing hair in the strong wind
       - >-
-        {ultra|} floating, floating hair
-      - soaked hair, wet hair
+        {ultra |}floating, {ultra |}floating hair
       - >-
-        messy hair 
+        {1-$$soaked hair|wet hair}
+      - >-
+        messy hair
         {,morning hair, bedhead|}
       - flipped hair
       - vortex hair
@@ -216,29 +364,37 @@ lazy-wildcards:
       - abstract representation of the girl in her flowing hair
       - spiked hair
       - leaf hair
+      - >-
+        hair over {one eye|eyes}
+      - >-
+        hair over {one breast|breasts}
+      - >-
+        hair over {one shoulder|shoulder}
+      - hair intakes
     haircut-multi:
       - >-
-        {1-4$$__person/regular/haircuts-female__}
+        {1-4$$ hair, $$__person/regular/haircuts-female__} hair
       - >-
         {1-4$$__lazy-wildcards/char/haircuts__}
     haircut:
       - blunt bangs
       - swept bangs
       - crossed bangs
-      - >-
-        __person/regular/haircuts-female__ hair
       - parted bangs
       - drill hair
       - twin drill hair
       - Wavy Side Bangs hair
       - hair pulled back, Folded tied hair
       - curly frizzy flowy hair
-      - >- 
+      - >-
         ahoge, antenna hair,
         {huge ahoge|heart ahoge}
       - wolf tail hairstyle
       - feathered haircutfeathered haircut
       - Layered Wavy Cut with Curtain Bangs hair
+      - box braids
+      - __cf-*/hairstyle__
+      - folded ponytail
     hair-bald:
       - >-
         (Completely bald, bald, bald girl:1.3)
@@ -272,6 +428,8 @@ lazy-wildcards:
       - yokozuwari
       - __lazy-wildcards/background/location/casino/action/*__
       - __lazy-wildcards/book/pose__
+      - >-
+        {1-$$squatting|crouching|squatting cowgirl position}
     pose-nsfw:
       - (one breast out, one breast slip, one_breast_out_of_clothes), unaligned_breasts, showing breast
       - (downblouse, tank top, breasts_out, leaning forward, bent over)
@@ -284,21 +442,54 @@ lazy-wildcards:
       - bath, bathing, steam
       - female masturbation
       - open clothes, exhibitionism, public indecency, naked coat
+      - >-
+        downblouse, cleavage,
+        ceiling, (peek panties, panty peek, pussy peek),
+        selfie pose, squatting, crouching
     ethnicity:
       - __cf-*/ethnicity__
     expressions:
       - __person/regular/expressions__
       - __halloween/pumpkin-carving/expressions__
       - (fucked silly, torogao, Dazed, Climax), drunk, Confused
+      - yandere, crazy eyes, crazy, crazy smile
+      - (ahegao), [tongue_out, saliva, drooling, teasing, eyes_up, eyes_rolling_back, eye_roll]
     expressions2:
       - scornful
       - (disgusted face, disgust, disgust_face, frown, shaded_face, clenched teeth, scorn)
       - (disgusted face, disgust, disgust_face, frown, shaded_face, clenched teeth, scorn), angry
       - (expressionless)
       - flustered
+    body:
+      body-type:
+       - curvy body, hourglass body, narrow waist
+       - wide hips, narrow waist
+      # 腹部 / 肚子
+      belly:
+        - >-
+          {1-$$swollen belly|plump belly}
+        - inflation
+        - pregnant
+        - groin
+        - abs
+        - midriff
+        - belly
+      waist-style:
+       - clothes around waist
+       - waist chain
+      # 腰
+      waist:
+       - narrow waist
+       - slender waist
+       - muscled waist
+      tattoos:
+        - Hindu symbols tattoos
+        - tattoos
+      horns:
+        - curled horns
   costume:
     color-theme:
-      - __lazy-wildcards/utils/color-base__ clothes
+      - __lazy-wildcards/utils/color-anything__ clothes
     nsfw:
       - __Bo/clothings/nsfw/female-attire__
       - side-tie panties, cleavage, multi-strapped panties, highleg panties, string panties, groin, strap slip, denim, denim bikini
@@ -308,28 +499,51 @@ lazy-wildcards:
       - __lazy-wildcards/costume/nsfw-nude__
     nsfw-nude:
       - nude, topless, breasts out, breasts slip, cleavage, see-through cleavage, see-through, breasts focus, unaligned_breasts
-      - naked, bare, nude, completely nude, no bar, cleavage
+      - naked, bare, nude, completely nude, no bra, nobar, cleavage
+      - Open Jacket, Open Clothes, Bare Chest, Exposed Chest, no bra, nobar
+      - no bra, nobar
+    military:
+      - (royal ribbons, royal insignia, officer cap, sword, empire waist dress, detailed fabrics)
+      - (military costume, military hat)
+      - military flightsuit
+      - sexy military flightsuit
+      - (military hat)
     clothes:
       - __cf-*/prompt-costume__
       - __Bo/chars/char-regular/female/bocloths__
       - __Bo/clothings/*/female-attire__
       - ((ancient egyptian theme)), golden ornaments, ancient egyptian sailor_shirt, ancient egyptian pleated_skirt, bowtie
       - Collared shirts
+      - school uniform, sweater, miniskirt, 
+      - belly dance dress
+      - tight corrugated long dress
+      - maxi dress
+      - breastless dress
+      - (bare shoulders, detached sleeves, strapless dress, long dress, corset)
+    sweater:
+      - ribbed sweater
+      - sleeveless sweater
+      - sweater
+    mask:
+      mouth:
+        - ninja mask
+        - surgical mask
+        - mouth mask
   background:
     color-style:
       - >-
         {1-$$multicolored background|gradient background|solid color, solid color background|neon color}
     color-theme:
-      - __lazy-wildcards/utils/color-base__ background
+      - __lazy-wildcards/utils/color-anything__ background
       - dark background
     color-transparent:
       - pure __lazy-wildcards/utils/color-base__ background, transparent background
     color-multi:
       - >-
-        a colorful background, 
+        a colorful background,
         __lazy-wildcards/background/color-style__
       - >-
-        {2-3$$ background, $$__lazy-wildcards/utils/color-base__} background
+        {2-3$$ background, $$__lazy-wildcards/utils/color-anything__} background
         {,__lazy-wildcards/background/color-style__|}
       - >-
         pure {2-3$$ background, pure $$__lazy-wildcards/utils/color-base__} background
@@ -344,14 +558,14 @@ lazy-wildcards:
       - dirty alley
       - Study, Quiet room with low seating cushions, scroll-filled shelves lining the walls, a small writing desk with ink pots and papyrus scrolls, intricate woven rugs, and decorative hieroglyphic carvings
       - Grooming Area, Elegant space with polished ebony mirrors reflecting flickering candlelight, intricately carved wooden stools arranged neatly around a central basin, jars of fragrant oils and cosmetics neatly arranged on shelves, and servants standing by with combs and brushes
-      - Garden Pavilion, Tranquil space with a bubbling fountain at its center, lush greenery winding along trellises, mosaic tiles creating intricate patterns on the ground, woven wicker furniture with plush cushions, and the sweet scent of blooming flowers, 
+      - Garden Pavilion, Tranquil space with a bubbling fountain at its center, lush greenery winding along trellises, mosaic tiles creating intricate patterns on the ground, woven wicker furniture with plush cushions, and the sweet scent of blooming flowers,
       - Solarium, Serene room with glass walls offering panoramic views of the Nile, potted palms adding a touch of greenery, mosaic tiles depicting aquatic scenes underfoot, chaise lounges draped in silk throws, and golden sconces illuminating the space
       - Bathhouse, Steam-filled chamber with a sunken bathing pool lined with tiles, shelves stacked with aromatic oils and perfumes, woven baskets for towels, flickering oil lamps, and intricate tile mosaics depicting scenes of daily life
       - >-
-        __lazy-wildcards/background/location/casino/style__, 
+        __lazy-wildcards/background/location/casino/style__,
         __lazy-wildcards/background/location/casino/main/*__, {1-$$__lazy-wildcards/background/location/casino/env__}
       - >-
-        __lazy-wildcards/background/location/casino/style__, 
+        __lazy-wildcards/background/location/casino/style__,
         {1-$$__lazy-wildcards/background/location/casino/main/*__}, {1-$$__lazy-wildcards/background/location/casino/env__}
       - construction site background
       - cliff, cliff scenery, mountainside, cliff face
@@ -374,11 +588,15 @@ lazy-wildcards:
       - downtown, city
       - floating platforms, floating buildings
       - Majestic Baroque halls
+      - OldTaipei, scenery, outdoors, building, power lines, city, alley, street, road, motor vehicle, utility pole
+      - Caribbean, dark tunnel, china street
+      - (in Venice)
+      - A mystical swamp with dark waters and thick vegetation
     location:
       temple:
         main:
           Meditation-Chamber:
-           - temple, Meditation Chamber, Serene space with a tranquil reflecting pool, lush greenery creating a peaceful atmosphere, soft sunlight filtering through stained glass windows, and cushions arranged for quiet contemplation
+            - temple, Meditation Chamber, Serene space with a tranquil reflecting pool, lush greenery creating a peaceful atmosphere, soft sunlight filtering through stained glass windows, and cushions arranged for quiet contemplation
           others:
             - borobudur temple
       casino:
@@ -393,20 +611,21 @@ lazy-wildcards:
           - betting ticket
           - cheating \(competitive\)
         main:
-         roulette:
-          - roulette, roulette table
-         poker:
-          - poker table, poker chip, poker, casino card table, card
-         table:
-           - casino table
-         slot-machine:
-           - slot machine
+          roulette:
+            - roulette, roulette table
+          poker:
+            - poker table, poker chip, poker, casino card table, card
+          table:
+            - casino table
+          slot-machine:
+            - slot machine
         action:
           dice:
             - holding dice, dice
           poker:
             - playing card, card, __lazy-wildcards/util/action/playing-card/poker-playing__, holding card
-            - playing card, card, {1-3$$__lazy-wildcards/util/action/playing-card/poker-card__}, holding card
+            - >-
+              playing card, card, {1-3$$__lazy-wildcards/util/action/playing-card/poker-card__}, holding card
   book:
     style-adj:
       text:
