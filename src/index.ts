@@ -102,12 +102,10 @@ export function normalizeDocument<T extends Document>(doc: T)
 	})
 }
 
+export type IOptionsStringify = DocumentOptions & SchemaOptions & ParseOptions & CreateNodeOptions & ToStringOptions;
+
 /**
  * Converts the given YAML data to a string, applying normalization and formatting.
- *
- * @template T - The type of the input data, which must extend `IRecordWildcards`.
- *
- * @param data - The YAML data to be converted. It can be a `T` object, a `Document` object, or any other valid YAML data.
  *
  * @returns - A string representation of the input YAML data, with normalization and formatting applied.
  *
@@ -140,17 +138,19 @@ export function normalizeDocument<T extends Document>(doc: T)
  * //     - value4
  * ```
  */
-export function stringifyWildcardsYamlData<T extends IRecordWildcards>(data: T | unknown | Document)
+export function stringifyWildcardsYamlData<T extends IRecordWildcards>(data: T | unknown | Document,
+	opts?: IOptionsStringify)
 {
-	let opts: DocumentOptions & SchemaOptions & ParseOptions & CreateNodeOptions & ToStringOptions = {
+	opts = {
 		blockQuote: true,
 		defaultKeyType: 'PLAIN',
-		defaultStringType: 'BLOCK_FOLDED',
+		defaultStringType: 'PLAIN',
 		//lineWidth: 0,
 		//minContentWidth: 100,
 		//indentSeq: false,
 		//doubleQuotedMinMultiLineLength: 10,
 		collectionStyle: 'block',
+		...opts,
 	}
 	if (isDocument(data))
 	{
@@ -165,11 +165,6 @@ export function stringifyWildcardsYamlData<T extends IRecordWildcards>(data: T |
 /**
  * Parses Stable Diffusion wildcards source to a YAML object.
  *
- * @template Contents - The type of the YAML node contents. Defaults to `ParsedNode`.
- * @template Strict - Whether to parse the YAML strictly. Defaults to `true`.
- *
- * @param source - The source string or Uint8Array to parse.
- *
  * @returns - If `Contents` extends `ParsedNode`, returns a parsed `Document.Parsed` with the specified `Contents` and `Strict`.
  *            Otherwise, returns a parsed `Document` with the specified `Contents` and `Strict`.
  *
@@ -181,7 +176,8 @@ export function stringifyWildcardsYamlData<T extends IRecordWildcards>(data: T |
  * Then, it validates the parsed data using the `validWildcardsYamlData` function.
  * Finally, it returns the parsed data.
  */
-export function parseWildcardsYaml<Contents extends Node = ParsedNode, Strict extends boolean = true>(source: string | Uint8Array): Contents extends ParsedNode
+export function parseWildcardsYaml<Contents extends Node = ParsedNode, Strict extends boolean = true>(source: string | Uint8Array,
+	opts?: IOptionsValidWildcardsYaml): Contents extends ParsedNode
 	? Document.Parsed<Contents, Strict>
 	: Document<Contents, Strict>
 {
@@ -189,9 +185,10 @@ export function parseWildcardsYaml<Contents extends Node = ParsedNode, Strict ex
 		keepSourceTokens: true,
 	});
 
-	validWildcardsYamlData(data)
+	validWildcardsYamlData(data, opts)
 
 	return data
 }
 
+// @ts-ignore
 export default parseWildcardsYaml
