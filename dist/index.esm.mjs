@@ -28,21 +28,21 @@ function normalizeDocument(a) {
   });
 }
 
-function stringifyWildcardsYamlData(l) {
-  let t = {
+function stringifyWildcardsYamlData(l, t) {
+  return t = {
     blockQuote: !0,
     defaultKeyType: "PLAIN",
-    defaultStringType: "BLOCK_FOLDED",
-    collectionStyle: "block"
-  };
-  return a(l) ? (normalizeDocument(l), l.toString(t)) : e(l, t);
+    defaultStringType: "PLAIN",
+    collectionStyle: "block",
+    ...t
+  }, a(l) ? (normalizeDocument(l), l.toString(t)) : e(l, t);
 }
 
-function parseWildcardsYaml(a) {
-  let l = t(a.toString(), {
+function parseWildcardsYaml(a, l) {
+  let e = t(a.toString(), {
     keepSourceTokens: !0
   });
-  return validWildcardsYamlData(l), l;
+  return validWildcardsYamlData(e, l), e;
 }
 
 export { _validMap, parseWildcardsYaml as default, normalizeDocument, parseWildcardsYaml, stringifyWildcardsYamlData, validWildcardsYamlData };
