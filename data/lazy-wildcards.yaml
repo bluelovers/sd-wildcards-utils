@@ -8,7 +8,7 @@
 lazy-wildcards:
   prompts:
     showcase:
-      - >-
+      - |-
         female fifty-something, pear-shaped, inuit, golden eyes, large ears, unusual face shape, sandy blonde voluminous curls hair, curiosity wearing  sleeveless jumpsuit, cut-out lingerie set, fishing tackle bag, playing with necklace, playing with a necklace with a seductive glance, adding an element of elegance and allure, sunset lighting, the warm, golden glow of a sunset, adding a romantic and enchanting feel to the scene, a vibrant street market, with vendors showcasing their unique crafts and products, lecture hall, cutting board, shoe rack, dryer, carpet, travertine stone, rya knots tapestry, bioluminescent organisms, pendant lights,
         torn clothes, sexy body, wet, drunk, bottles fallen on the floor, unconscious
       - >-
@@ -16,7 +16,7 @@ lazy-wildcards:
         haunted house, Basement, Foreboding chamber with stone walls covered in moss, rusted chains hanging from the ceiling, broken crates scattered around, a rusted iron maiden in the corner, and the sound of distant whispers echoing through the darkness,
       - smoke_from_head
       - police car Trunk, Spacious compartment containing emergency equipment such as cones, flares, fire extinguisher, portable toolbox, rifle rack with a shotgun secured in place, spare tire tucked away in the corner
-      - >-
+      - |-
         (1girl:1.2),
         ninja wearing Stealthy black gi with a fitted top, high-waisted pants, ninja mask, fingerless gloves, black boots,
         orphanage Playroom, Colorful space with toys strewn across the floor, child-sized tables and chairs, bright murals decorating the walls, large bean bags for lounging, and shelves stocked with art supplies
@@ -25,18 +25,18 @@ lazy-wildcards:
         torn clothes, sexy body, wet, drunk, bottles fallen on the floor, unconscious
       - 1girl, between breasts, money, bills, playboy bunny, casino
       - vibrant background, vivid background,, Village Square, Bustling gathering place with wooden market stalls, vendors hawking their wares, children playing games in the cobblestone streets, cherry blossom trees offering shade, distant glimpse of the ocean beyond the rooftops
-      - >-
+      - |-
         __lazy-wildcards/prompts/cover__,
         upper body, 1girl, (steel gray eyes), very short hair,dark brown hair, parted bangs,crossed bangs , green clothes, side-tie panties, cleavage, multi-strapped panties, highleg panties, string panties, groin, strap slip, denim, denim bikini,  dark chestnut lips, tongue sticking out, squatting spread legs position, squatting, spread legs, crouching,
         __lazy-wildcards/dataset/background__
-      - >-
+      - |-
         1girl,
         __lazy-wildcards/prompts/hair__,
         soldier wearing Short-sleeved shirt with tactical vest, cargo shorts, combat boots, patrol cap,
         military base Helipad, Open space with helicopters parked in neat rows, rotor blades spinning as they prepare for takeoff, ground crew bustling around with refueling equipment, a sense of urgency in the air, the deafening roar of engines,
         {__lazy-wildcards/background/color-multi__|}
       - ((fast pencil scribble sketch)), ((the various expressions are shown of characters in different poses)), on paper, 1girl, __lazy-wildcards/prompts/hair__
-      - >-
+      - |-
         Caribbean, (dark tunnel:1.2),
         1girl, naked, lying on a bed,
         with her feet in front of the camera, soles of her feet, red nails, completely naked,
@@ -48,7 +48,7 @@ lazy-wildcards:
         __lazy-wildcards/prompts/eyes__,
         __lazy-wildcards/dataset/background-color__,
         (flower, falling petals, petals on liquid, petals, cherry blossom:0.8)
-      - >-
+      - |-
         1girl, solo,
         under boob, up skirt, downblouse, cleavage,
         (from below, looking down, ass visible through thighs:1.2), ceiling, (peek panties, panty peek, pussy peek),
@@ -57,7 +57,7 @@ lazy-wildcards:
         __lazy-wildcards/prompts/eyes__,
         __lazy-wildcards/dataset/background__,
         (flower, falling petals, petals on liquid, petals, cherry blossom:0.8)
-      - >-
+      - |-
         upper_body, 1girl, breasts, collarbone,
         covered_mouth, gag, gagged, improvised_gag, mask, mouth_mask, surgical_mask,
         solo, forehead,
@@ -65,11 +65,11 @@ lazy-wildcards:
         cleavage,
         (asymmetrical breasts, cleavage_overflow:1.6),
         ({1-$$Taretiti|saggy breasts|drooping breasts|soft breasts|sagging breasts|hanging breasts}:1.2),
-        __lazy-wildcards/costume/color-theme__, 
-        __lazy-wildcards/prompts/hair__, 
-        __lazy-wildcards/prompts/eyes__, 
+        __lazy-wildcards/costume/color-theme__,
+        __lazy-wildcards/prompts/hair__,
+        __lazy-wildcards/prompts/eyes__,
         __lazy-wildcards/dataset/background-color__,
-        (flower, falling petals, petals on liquid, petals, cherry blossom:0.8), 
+        (flower, falling petals, petals on liquid, petals, cherry blossom:0.8),
         {__lazy-wildcards/prompts/pose__}
     costume:
       - >-
@@ -310,7 +310,7 @@ lazy-wildcards:
       - chestnut_mouth
       - >-
         {1-$$hair_in_mouth|hair_tie_in_mouth}
-      - drooling|saliva
+      - "{drooling|saliva}"
       - triangle_mouth
       - spoon_in_mouth
       - pacifier
@@ -320,7 +320,7 @@ lazy-wildcards:
       - puffy lips
       - thick lips
     mouth:
-      - open mouth|gasping
+      - "{open mouth|gasping}"
       - closed mouth
       - parted lips
       - finger to mouth
@@ -594,7 +594,7 @@ lazy-wildcards:
       - __Bo/clothings/*/female-attire__
       - ((ancient egyptian theme)), golden ornaments, ancient egyptian sailor_shirt, ancient egyptian pleated_skirt, bowtie
       - Collared shirts
-      - school uniform, sweater, miniskirt, 
+      - school uniform, sweater, miniskirt,
       - belly dance dress
       - tight corrugated long dress
       - maxi dress
@@ -674,8 +674,8 @@ lazy-wildcards:
       - (in Venice)
       - A mystical swamp with dark waters and thick vegetation
       - >-
-        ((pedestrian hell)), ((busy street in taiwan)), taipei road, scooter, motorcycle, wind, trees, crowd, traffic light, cityscape, shopping, storefront, signboard, building, greenery, 
-        city-life-overload, 
+        ((pedestrian hell)), ((busy street in taiwan)), taipei road, scooter, motorcycle, wind, trees, crowd, traffic light, cityscape, shopping, storefront, signboard, building, greenery,
+        city-life-overload,
       - flare, fog, wet, wet body, rain, raining, night, neon lights, twilight
     location:
       temple:
