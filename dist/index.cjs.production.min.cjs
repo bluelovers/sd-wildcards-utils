@@ -34,21 +34,21 @@ function normalizeDocument(l) {
   });
 }
 
-function parseWildcardsYaml(a) {
-  let t = e.parseDocument(a.toString(), {
+function parseWildcardsYaml(a, t) {
+  let l = e.parseDocument(a.toString(), {
     keepSourceTokens: !0
   });
-  return validWildcardsYamlData(t), t;
+  return validWildcardsYamlData(l, t), l;
 }
 
 exports._validMap = _validMap, exports.default = parseWildcardsYaml, exports.normalizeDocument = normalizeDocument, 
-exports.parseWildcardsYaml = parseWildcardsYaml, exports.stringifyWildcardsYamlData = function stringifyWildcardsYamlData(a) {
-  let t = {
+exports.parseWildcardsYaml = parseWildcardsYaml, exports.stringifyWildcardsYamlData = function stringifyWildcardsYamlData(a, t) {
+  return t = {
     blockQuote: !0,
     defaultKeyType: "PLAIN",
-    defaultStringType: "BLOCK_FOLDED",
-    collectionStyle: "block"
-  };
-  return e.isDocument(a) ? (normalizeDocument(a), a.toString(t)) : e.stringify(a, t);
+    defaultStringType: "PLAIN",
+    collectionStyle: "block",
+    ...t
+  }, e.isDocument(a) ? (normalizeDocument(a), a.toString(t)) : e.stringify(a, t);
 }, exports.validWildcardsYamlData = validWildcardsYamlData;
 //# sourceMappingURL=index.cjs.production.min.cjs.map

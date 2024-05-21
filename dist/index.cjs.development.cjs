@@ -51,10 +51,6 @@ function normalizeDocument(doc) {
 /**
  * Converts the given YAML data to a string, applying normalization and formatting.
  *
- * @template T - The type of the input data, which must extend `IRecordWildcards`.
- *
- * @param data - The YAML data to be converted. It can be a `T` object, a `Document` object, or any other valid YAML data.
- *
  * @returns - A string representation of the input YAML data, with normalization and formatting applied.
  *
  * @throws - Throws a `SyntaxError` if the input data is invalid according to the `validWildcardsYamlData` function.
@@ -86,12 +82,13 @@ function normalizeDocument(doc) {
  * //     - value4
  * ```
  */
-function stringifyWildcardsYamlData(data) {
-  let opts = {
+function stringifyWildcardsYamlData(data, opts) {
+  opts = {
     blockQuote: true,
     defaultKeyType: 'PLAIN',
-    defaultStringType: 'BLOCK_FOLDED',
-    collectionStyle: 'block'
+    defaultStringType: 'PLAIN',
+    collectionStyle: 'block',
+    ...opts
   };
   if (yaml.isDocument(data)) {
     normalizeDocument(data);
@@ -101,11 +98,6 @@ function stringifyWildcardsYamlData(data) {
 }
 /**
  * Parses Stable Diffusion wildcards source to a YAML object.
- *
- * @template Contents - The type of the YAML node contents. Defaults to `ParsedNode`.
- * @template Strict - Whether to parse the YAML strictly. Defaults to `true`.
- *
- * @param source - The source string or Uint8Array to parse.
  *
  * @returns - If `Contents` extends `ParsedNode`, returns a parsed `Document.Parsed` with the specified `Contents` and `Strict`.
  *            Otherwise, returns a parsed `Document` with the specified `Contents` and `Strict`.
@@ -118,11 +110,11 @@ function stringifyWildcardsYamlData(data) {
  * Then, it validates the parsed data using the `validWildcardsYamlData` function.
  * Finally, it returns the parsed data.
  */
-function parseWildcardsYaml(source) {
+function parseWildcardsYaml(source, opts) {
   let data = yaml.parseDocument(source.toString(), {
     keepSourceTokens: true
   });
-  validWildcardsYamlData(data);
+  validWildcardsYamlData(data, opts);
   return data;
 }
 
