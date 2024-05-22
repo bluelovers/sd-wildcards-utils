@@ -4,14 +4,14 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - master
-      - main
+      - dev
     paths-ignore:
       - 'test/**'
       - '.run/**'
       - '.github/**'
       - '/*.*'
       - '/.*'
+      - '!/.github/workflows/build.yml'
 #  schedule:
 ## https://help.github.com/en/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows#scheduled-events-schedule
 ##            ┌───────────── minute (0 - 59)
@@ -39,6 +39,7 @@ jobs:
       - uses: actions/checkout@main
         with:
           fetch-depth: 2
+          ref: dev
       - name: Set up Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@main
         with:
