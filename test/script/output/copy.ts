@@ -9,6 +9,7 @@ import { globSync } from 'fs';
 
 export default Bluebird.each(globSync([
 	'.github/workflows/build.yml',
+	'.github/workflows/valid-yaml.yml',
 	'docs/**/*',
 ], {
 	cwd: __ROOT,
