@@ -12,6 +12,7 @@ on:
       - '/*.*'
       - '/.*'
       - '!/.github/workflows/build.yml'
+      - '!/test/script/**/*'
 #  schedule:
 ## https://help.github.com/en/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows#scheduled-events-schedule
 ##            ┌───────────── minute (0 - 59)
