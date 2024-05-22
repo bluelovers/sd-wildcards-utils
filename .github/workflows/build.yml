@@ -4,14 +4,14 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - master
-      - main
+      - dev
     paths-ignore:
       - 'test/**'
       - '.run/**'
       - '.github/**'
       - '/*.*'
       - '/.*'
+      - '!/.github/workflows/build.yml'
 #  schedule:
 ## https://help.github.com/en/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows#scheduled-events-schedule
 ##            ┌───────────── minute (0 - 59)
@@ -36,45 +36,56 @@ jobs:
         node-version: [ 22 ]
     
     steps:
-      - uses: actions/checkout@main
+      -
+        uses: actions/checkout@main
         with:
           fetch-depth: 2
-      - name: Set up Node.js ${{ matrix.node-version }}
+          ref: dev
+      -
+        name: Set up Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@main
         with:
           node-version: ${{ matrix.node-version }}
-      - name: get yarn cache dir
+      -
+        name: get yarn cache dir
         id: yarn-cache
         run: echo "::set-output name=dir::$(yarn cache dir)"
-      - name: set cache id
+      -
+        name: set cache id
         id: id-cache
         run: echo "::set-output name=id::${GITHUB_SHA}"
-      - name: echo var
+      -
+        name: echo var
         run: |
           echo ${{ steps.yarn-cache.outputs.dir }}
           echo ${{ steps.id-cache.outputs.id }}
           echo ${GITHUB_SHA}
-      - name: yarn cache
+      -
+        name: yarn cache
         uses: bluelovers/github-actions-cache@2020011001
         with:
           path: ${{ steps.yarn-cache.outputs.dir }}
           key: ${{ runner.os }}-yarn-${{ steps.id-cache.outputs.id }}
           restore-keys: |
             ${{ runner.os }}-yarn-
-      - name: setup git config
+      -
+        name: setup git config
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-      - name: install deps
+      -
+        name: install deps
         run: |
           yarn install --frozen-lockfile
           yarn run ci:install
-#          yarn add -W typescript@next jest ts-jest ts-node ynpx lerna
-      - name: run script
+      #          yarn add -W typescript@next jest ts-jest ts-node ynpx lerna
+      -
+        name: run script
         if: success()
-#        env:
+        #        env:
         run: yarn run ci:build
-      - name: Push changes
+      -
+        name: Push changes
         if: success()
         uses: ad-m/github-push-action@master
         with:
