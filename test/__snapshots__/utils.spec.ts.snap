@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matchDynamicPromptsWildcards  __season_clothes(season= )__  1`] = `
+{
+  "isFullMatch": false,
+  "keyword": undefined,
+  "name": "season_clothes",
+  "source": "__season_clothes(season= )__",
+  "variables": "(season= )",
+}
+`;
+
+exports[`matchDynamicPromptsWildcards  __season_clothes(season=)__  1`] = `
+{
+  "isFullMatch": false,
+  "keyword": undefined,
+  "name": "season_clothes",
+  "source": "__season_clothes(season=)__",
+  "variables": "(season=)",
+}
+`;
+
+exports[`matchDynamicPromptsWildcards __@season_clothes(season=__season_clothes__)__ 1`] = `
+{
+  "isFullMatch": true,
+  "keyword": "@",
+  "name": "season_clothes",
+  "source": "__@season_clothes(season=__season_clothes__)__",
+  "variables": "(season=__season_clothes__)",
+}
+`;
+
+exports[`matchDynamicPromptsWildcards __~season_clothes(season=__season_clothes__)__ 1`] = `
+{
+  "isFullMatch": true,
+  "keyword": "~",
+  "name": "season_clothes",
+  "source": "__~season_clothes(season=__season_clothes__)__",
+  "variables": "(season=__season_clothes__)",
+}
+`;
+
+exports[`matchDynamicPromptsWildcards __~season_clothes(season=winter)__ 1`] = `
+{
+  "isFullMatch": true,
+  "keyword": "~",
+  "name": "season_clothes",
+  "source": "__~season_clothes(season=winter)__",
+  "variables": "(season=winter)",
+}
+`;
+
+exports[`matchDynamicPromptsWildcards __season_clothes(season=!__season_clothes__)__ 1`] = `
+{
+  "isFullMatch": true,
+  "keyword": undefined,
+  "name": "season_clothes",
+  "source": "__season_clothes(season=!__season_clothes__)__",
+  "variables": "(season=!__season_clothes__)",
+}
+`;
+
+exports[`matchDynamicPromptsWildcards __season_clothes(season=!{!summer|autumn|winter|spring})__ 1`] = `
+{
+  "isFullMatch": true,
+  "keyword": undefined,
+  "name": "season_clothes",
+  "source": "__season_clothes(season=!{!summer|autumn|winter|spring})__",
+  "variables": "(season=!{!summer|autumn|winter|spring})",
+}
+`;
+
+exports[`matchDynamicPromptsWildcards __season_clothes(season=!{@summer|autumn|winter|spring})__ 1`] = `
+{
+  "isFullMatch": true,
+  "keyword": undefined,
+  "name": "season_clothes",
+  "source": "__season_clothes(season=!{@summer|autumn|winter|spring})__",
+  "variables": "(season=!{@summer|autumn|winter|spring})",
+}
+`;
+
+exports[`matchDynamicPromptsWildcards __season_clothes(season=!{summer|autumn|winter|spring})__ 1`] = `
+{
+  "isFullMatch": true,
+  "keyword": undefined,
+  "name": "season_clothes",
+  "source": "__season_clothes(season=!{summer|autumn|winter|spring})__",
+  "variables": "(season=!{summer|autumn|winter|spring})",
+}
+`;
+
+exports[`matchDynamicPromptsWildcards __season_clothes(season=)__  1`] = `
+{
+  "isFullMatch": false,
+  "keyword": undefined,
+  "name": "season_clothes",
+  "source": "__season_clothes(season=)__",
+  "variables": "(season=)",
+}
+`;
+
+exports[`matchDynamicPromptsWildcards __season_clothes(season=)__ 1`] = `
+{
+  "isFullMatch": true,
+  "keyword": undefined,
+  "name": "season_clothes",
+  "source": "__season_clothes(season=)__",
+  "variables": "(season=)",
+}
+`;
+
+exports[`matchDynamicPromptsWildcards __season_clothes(season=__@season_clothes__)__ 1`] = `
+{
+  "isFullMatch": true,
+  "keyword": undefined,
+  "name": "season_clothes",
+  "source": "__season_clothes(season=__@season_clothes__)__",
+  "variables": "(season=__@season_clothes__)",
+}
+`;
+
+exports[`matchDynamicPromptsWildcards __season_clothes(season=__~season_clothes__)__ 1`] = `
+{
+  "isFullMatch": true,
+  "keyword": undefined,
+  "name": "season_clothes",
+  "source": "__season_clothes(season=__~season_clothes__)__",
+  "variables": "(season=__~season_clothes__)",
+}
+`;
+
+exports[`matchDynamicPromptsWildcards __season_clothes(season=__season_clothes__)__ 1`] = `
+{
+  "isFullMatch": true,
+  "keyword": undefined,
+  "name": "season_clothes",
+  "source": "__season_clothes(season=__season_clothes__)__",
+  "variables": "(season=__season_clothes__)",
+}
+`;
+
+exports[`matchDynamicPromptsWildcards __season_clothes(season={!summer|autumn|winter|spring})__ 1`] = `
+{
+  "isFullMatch": true,
+  "keyword": undefined,
+  "name": "season_clothes",
+  "source": "__season_clothes(season={!summer|autumn|winter|spring})__",
+  "variables": "(season={!summer|autumn|winter|spring})",
+}
+`;
+
+exports[`matchDynamicPromptsWildcards __season_clothes(season={@summer|autumn|winter|spring})__ 1`] = `
+{
+  "isFullMatch": true,
+  "keyword": undefined,
+  "name": "season_clothes",
+  "source": "__season_clothes(season={@summer|autumn|winter|spring})__",
+  "variables": "(season={@summer|autumn|winter|spring})",
+}
+`;
+
+exports[`matchDynamicPromptsWildcards __season_clothes(season={summer|autumn|winter|spring})__ 1`] = `
+{
+  "isFullMatch": true,
+  "keyword": undefined,
+  "name": "season_clothes",
+  "source": "__season_clothes(season={summer|autumn|winter|spring})__",
+  "variables": "(season={summer|autumn|winter|spring})",
+}
+`;
+
+exports[`matchDynamicPromptsWildcards __season_clothes(season=winter)__ 1`] = `
+{
+  "isFullMatch": true,
+  "keyword": undefined,
+  "name": "season_clothes",
+  "source": "__season_clothes(season=winter)__",
+  "variables": "(season=winter)",
+}
+`;
+
+exports[`matchDynamicPromptsWildcards __season_clothes__ 1`] = `
+{
+  "isFullMatch": true,
+  "keyword": undefined,
+  "name": "season_clothes",
+  "source": "__season_clothes__",
+  "variables": undefined,
+}
+`;

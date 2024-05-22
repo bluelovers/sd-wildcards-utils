@@ -11,7 +11,15 @@ import type {
 	ToStringOptions,
 	YAMLMap,
 } from 'yaml';
-import { Document, isDocument, parseDocument, stringify, visit } from 'yaml';
+import {
+	Document,
+	isDocument,
+	parseDocument,
+	stringify,
+	visit,
+} from 'yaml';
+
+export * from './util';
 
 export interface IOptionsValidWildcardsYaml
 {
@@ -58,7 +66,7 @@ export function validWildcardsYamlData<T extends IRecordWildcards>(data: T | unk
 }
 
 const RE_UNSAFE_QUOTE = /['"]/;
-const RE_UNSAFE_VALUE = /^\s*-|[{$~!@}\n|:?]/;
+const RE_UNSAFE_VALUE = /^\s*-|[{$~!@}\n|:?#]/;
 
 /**
  * Normalizes a YAML document by applying specific rules to its nodes.
@@ -71,33 +79,42 @@ export function normalizeDocument<T extends Document>(doc: T)
 		Scalar(key, node)
 		{
 			let value = node.value as string;
-			if (RE_UNSAFE_QUOTE.test(value))
-			{
-				throw new SyntaxError(`Invalid SYNTAX. ${key} => ${node}`)
-			}
-			else if (node.type === 'QUOTE_DOUBLE' || node.type === 'QUOTE_SINGLE' && !value.includes('\\'))
-			{
-				node.type = 'PLAIN';
-			}
 
-			value = value
-				.replace(/[\x00\u200b]+/g, '')
-				.replace(/[\s\xa0]+|\s+$/gm, ' ')
-			;
-
-			if (RE_UNSAFE_VALUE.test(value))
+			if (typeof value === 'string')
 			{
-				if (node.type === 'PLAIN')
+				if (RE_UNSAFE_QUOTE.test(value))
 				{
-					node.type = 'BLOCK_LITERAL'
+					throw new SyntaxError(`Invalid SYNTAX. ${key} => ${node}`)
+				}
+				else if (node.type === 'QUOTE_DOUBLE' || node.type === 'QUOTE_SINGLE' && !value.includes('\\'))
+				{
+					node.type = 'PLAIN';
 				}
 
 				value = value
-					.replace(/^\s+|\s+$/g, '')
-					.replace(/\n\s*\n/g, '\n')
+					.replace(/[\x00\u200b]+/g, '')
+					.replace(/[\s\xa0]+|\s+$/gm, ' ')
 				;
+
+				if (RE_UNSAFE_VALUE.test(value))
+				{
+					if (node.type === 'PLAIN')
+					{
+						node.type = 'BLOCK_LITERAL'
+					}
+					else if (node.type === 'BLOCK_FOLDED' && /#/.test(value))
+					{
+						node.type = 'BLOCK_LITERAL'
+					}
+
+					value = value
+						.replace(/^\s+|\s+$/g, '')
+						.replace(/\n\s*\n/g, '\n')
+					;
+				}
+
+				node.value = value;
 			}
-			node.value = value;
 		},
 	})
 }
