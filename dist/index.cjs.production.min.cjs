@@ -4,51 +4,77 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 
-var e = require("yaml");
+var a = require("yaml");
 
-function _validMap(e, a) {
-  if (a.items.find((e => null === e.value))) throw new SyntaxError(`Invalid SYNTAX. ${e} => ${a}`);
+const t = /__([&~!@])?([*\w\/_\-]+)(\([^\n#]+\))?__/;
+
+function matchDynamicPromptsWildcards(a) {
+  let e = a.match(t);
+  if (!e) return null;
+  let [r, i, l, s] = e;
+  return {
+    name: l,
+    variables: s,
+    keyword: i,
+    source: r,
+    isFullMatch: r === a
+  };
 }
 
-function validWildcardsYamlData(a, t) {
-  e.isDocument(a) && (e.visit(a, {
+function isWildcardsName(a) {
+  return /^[\w\-_]+$/.test(a) && !/__|_$|^_/.test(a);
+}
+
+function _validMap(a, t) {
+  if (t.items.find((a => null === a.value))) throw new SyntaxError(`Invalid SYNTAX. ${a} => ${t}`);
+}
+
+function validWildcardsYamlData(t, e) {
+  a.isDocument(t) && (a.visit(t, {
     Map: _validMap
-  }), a = a.toJSON());
-  let l = Object.keys(a);
-  if (!l.length) throw TypeError();
-  if (1 !== l.length && (null == t || !t.allowMultiRoot)) throw TypeError();
+  }), t = t.toJSON());
+  let r = Object.keys(t);
+  if (!r.length) throw TypeError();
+  if (1 !== r.length && (null == e || !e.allowMultiRoot)) throw TypeError();
 }
 
-const a = /['"]/, t = /^\s*-|[{$~!@}\n|:?]/;
+const e = /['"]/, r = /^\s*-|[{$~!@}\n|:?#]/;
 
-function normalizeDocument(l) {
-  e.visit(l, {
+function normalizeDocument(t) {
+  a.visit(t, {
     Map: _validMap,
-    Scalar(e, l) {
-      let r = l.value;
-      if (a.test(r)) throw new SyntaxError(`Invalid SYNTAX. ${e} => ${l}`);
-      ("QUOTE_DOUBLE" === l.type || "QUOTE_SINGLE" === l.type && !r.includes("\\")) && (l.type = "PLAIN"), 
-      r = r.replace(/[\x00\u200b]+/g, "").replace(/[\s\xa0]+|\s+$/gm, " "), t.test(r) && ("PLAIN" === l.type && (l.type = "BLOCK_LITERAL"), 
-      r = r.replace(/^\s+|\s+$/g, "").replace(/\n\s*\n/g, "\n")), l.value = r;
+    Scalar(a, t) {
+      let i = t.value;
+      if ("string" == typeof i) {
+        if (e.test(i)) throw new SyntaxError(`Invalid SYNTAX. ${a} => ${t}`);
+        ("QUOTE_DOUBLE" === t.type || "QUOTE_SINGLE" === t.type && !i.includes("\\")) && (t.type = "PLAIN"), 
+        i = i.replace(/[\x00\u200b]+/g, "").replace(/[\s\xa0]+|\s+$/gm, " "), r.test(i) && (("PLAIN" === t.type || "BLOCK_FOLDED" === t.type && /#/.test(i)) && (t.type = "BLOCK_LITERAL"), 
+        i = i.replace(/^\s+|\s+$/g, "").replace(/\n\s*\n/g, "\n")), t.value = i;
+      }
     }
   });
 }
 
-function parseWildcardsYaml(a, t) {
-  let l = e.parseDocument(a.toString(), {
+function parseWildcardsYaml(t, e) {
+  let r = a.parseDocument(t.toString(), {
     keepSourceTokens: !0
   });
-  return validWildcardsYamlData(l, t), l;
+  return validWildcardsYamlData(r, e), r;
 }
 
-exports._validMap = _validMap, exports.default = parseWildcardsYaml, exports.normalizeDocument = normalizeDocument, 
-exports.parseWildcardsYaml = parseWildcardsYaml, exports.stringifyWildcardsYamlData = function stringifyWildcardsYamlData(a, t) {
-  return t = {
+exports.RE_DYNAMIC_PROMPTS_WILDCARDS = t, exports._validMap = _validMap, exports.assertWildcardsName = function assertWildcardsName(a) {
+  if (isWildcardsName(a)) throw new SyntaxError(`Invalid Wildcards Name Syntax: ${a}`);
+}, exports.default = parseWildcardsYaml, exports.isDynamicPromptsWildcards = function isDynamicPromptsWildcards(a) {
+  return matchDynamicPromptsWildcards(a).isFullMatch;
+}, exports.isWildcardsName = isWildcardsName, exports.matchDynamicPromptsWildcards = matchDynamicPromptsWildcards, 
+exports.normalizeDocument = normalizeDocument, exports.parseWildcardsYaml = parseWildcardsYaml, 
+exports.stringifyWildcardsYamlData = function stringifyWildcardsYamlData(t, e) {
+  return e = {
     blockQuote: !0,
     defaultKeyType: "PLAIN",
     defaultStringType: "PLAIN",
     collectionStyle: "block",
-    ...t
-  }, e.isDocument(a) ? (normalizeDocument(a), a.toString(t)) : e.stringify(a, t);
+    ...e
+  }, a.isDocument(t) ? (normalizeDocument(t), t.toString(e)) : a.stringify(t, e);
 }, exports.validWildcardsYamlData = validWildcardsYamlData;
 //# sourceMappingURL=index.cjs.production.min.cjs.map
