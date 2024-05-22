@@ -472,6 +472,13 @@ lazy-wildcards:
           downblouse, cleavage,
           ceiling, (peek panties, panty peek, pussy peek),
           selfie pose, squatting, crouching
+        - >-
+          {from behind|from side|from above|from below|},
+          (in container, stuck, trash can, trashcan), garbage, trash,
+          after sex,
+          anus, ass wobble, pussy, cum in ass,
+          beaten up,
+          helpless
     ethnicity:
       - __cf-*/ethnicity__
     expressions:
@@ -635,7 +642,7 @@ lazy-wildcards:
         {,__lazy-wildcards/background/color-style__|}
     anything:
       - __cf-*/location/*__
-      - __lazy-wildcards/background/location/temple/main/*__
+      - __lazy-wildcards/background/location/*/prompts__
       - japanese onsen, onsen
       - dirty alley
       - Study, Quiet room with low seating cushions, scroll-filled shelves lining the walls, a small writing desk with ink pots and papyrus scrolls, intricate woven rugs, and decorative hieroglyphic carvings
@@ -643,12 +650,6 @@ lazy-wildcards:
       - Garden Pavilion, Tranquil space with a bubbling fountain at its center, lush greenery winding along trellises, mosaic tiles creating intricate patterns on the ground, woven wicker furniture with plush cushions, and the sweet scent of blooming flowers,
       - Solarium, Serene room with glass walls offering panoramic views of the Nile, potted palms adding a touch of greenery, mosaic tiles depicting aquatic scenes underfoot, chaise lounges draped in silk throws, and golden sconces illuminating the space
       - Bathhouse, Steam-filled chamber with a sunken bathing pool lined with tiles, shelves stacked with aromatic oils and perfumes, woven baskets for towels, flickering oil lamps, and intricate tile mosaics depicting scenes of daily life
-      - >-
-        __lazy-wildcards/background/location/casino/style__,
-        __lazy-wildcards/background/location/casino/main/*__, {1-$$__lazy-wildcards/background/location/casino/env__}
-      - >-
-        __lazy-wildcards/background/location/casino/style__,
-        {1-$$__lazy-wildcards/background/location/casino/main/*__}, {1-$$__lazy-wildcards/background/location/casino/env__}
       - construction site background
       - cliff, cliff scenery, mountainside, cliff face
       - Intricately Detailed Cinematic Bamboo forest
@@ -679,13 +680,35 @@ lazy-wildcards:
         city-life-overload,
       - flare, fog, wet, wet body, rain, raining, night, neon lights, twilight
     location:
+      interior-lava:
+        prompts:
+          - >-
+            __lazy-wildcards/background/location/interior-lava/main__,
+            __lazy-wildcards/background/location/interior-lava/style__
+        style:
+          - Lava style, LAVA architecture, Chris Bosses, Chris Bosse, Chris Bosse architect, bio botanical
+        main:
+          - a hip space hotel lobby interior with incredible natural light. Futuristic botanical hotel lobby interior
+          - a chocolate tasting room, interior design, sci-fi, brutal,Futuristic botanical
+          - interior perfume shop modern style, black wooden and green light, brutal
       temple:
+        prompts:
+          - __lazy-wildcards/background/location/temple/main/*__
         main:
           Meditation-Chamber:
             - temple, Meditation Chamber, Serene space with a tranquil reflecting pool, lush greenery creating a peaceful atmosphere, soft sunlight filtering through stained glass windows, and cushions arranged for quiet contemplation
           others:
             - borobudur temple
       casino:
+        prompts:
+          - >-
+            __lazy-wildcards/background/location/casino/style__,
+            {1-$$__lazy-wildcards/background/location/casino/main/*__},
+            {1-$$__lazy-wildcards/background/location/casino/env__}
+          - >-
+            __lazy-wildcards/background/location/casino/style__,
+            __lazy-wildcards/background/location/casino/main/*__,
+            {1-$$__lazy-wildcards/background/location/casino/env__}
         style:
           - casino, gambling
         env:
