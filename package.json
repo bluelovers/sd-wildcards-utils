@@ -1,7 +1,7 @@
 {
   "name": "sd-wildcards-utils",
   "version": "1.0.0",
-  "description": "Parses Stable Diffusion wildcards source to a YAML object.",
+  "description": "Parse Stable Diffusion wildcards source to a YAML object.",
   "keywords": [
     "wildcards",
     "sd-dynamic-prompts",
@@ -66,7 +66,8 @@
     "build:microbundle": "ynpx microbundle --target node",
     "build:tsdx": "ynpx @bluelovers/tsdx build --target node --name index",
     "ci:install": "yarn install --frozen-lockfile && yarn add -W yarn-tool lerna@6 ynpx ts-node ts-jest jest typescript@next @bluelovers/jest-config tsx",
-    "ci:build": "echo ci:build",
+    "ci:build": "tsx ./test/script/build-all.ts && yarn run ci:build:commit",
+    "ci:build:commit": "git add ./output && git commit ./output -m \"build: update build\" & echo ci:build:commit",
     "npm:publish": "npm publish",
     "npm:publish:bump": "yarn run version:bump && npm publish",
     "npm:publish:bump:major": "yarn run version:bump:major && npm publish",
@@ -104,19 +105,21 @@
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
-    "fs-extra": "^11.2.0",
     "picomatch": "^4.0.2",
     "yaml": "^2.4.2"
   },
   "devDependencies": {
     "@bluelovers/tsconfig": "^1.0.35",
-    "@types/node": "6.14.13",
+    "@types/bluebird": "^3.5.42",
+    "@types/jest": "^29.5.12",
+    "@types/node": "20.12.12",
     "@types/picomatch": "^2.3.3",
+    "array-hyper-unique": "^2.1.6",
+    "bluebird": "^3.7.2",
     "dot-values2": "^2.0.7",
     "fs-extra": "^11.2.0",
     "picomatch": "^4.0.2",
-    "array-hyper-unique": "^2.1.6",
-    "tslib": ">=2"
+    "tslib": ">=2.6.2"
   },
   "peerDependencies": {},
   "packageManager": "yarn@1.22.19"

@@ -44,7 +44,7 @@ function findPath(data: IRecordWildcards, paths: string[], prefix = '', list: [s
 
 function _getEntry(target: string, data: IRecordWildcards)
 {
-	let key = target.match(/^__([^_]+)__$/)[1] ?? target;
+	let key = target.match(/^__[&~!_]?([^_\s&~!]+)__$/)[1] ?? target;
 	let paths = _splitSpecific2(key);
 
 	let list = findPath(data, paths);
@@ -65,7 +65,7 @@ function _getEntry(target: string, data: IRecordWildcards)
 	}
 }
 
-(async () => {
+export default (async () => {
 
 	let map: Record<string, any[]> = {};
 
@@ -85,6 +85,7 @@ function _getEntry(target: string, data: IRecordWildcards)
 		let obj = parseWildcardsYaml(buf, {
 			allowMultiRoot: true,
 		});
+		obj.contents
 		let json = obj.toJSON();
 
 		for (let [group, target] of [
