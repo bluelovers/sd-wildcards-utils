@@ -8,7 +8,6 @@ on:
     paths-ignore:
       - 'test/**'
       - '.run/**'
-      - '.github/**'
       - '/*.*'
       - '/.*'
       - '!/.github/workflows/build.yml'
@@ -85,12 +84,6 @@ jobs:
         if: success()
         #        env:
         run: yarn run ci:build
-      -
-        name: Push changes
-        if: success()
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
       -
         name: Push output
         if: success()
