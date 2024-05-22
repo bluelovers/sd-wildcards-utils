@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.2](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.0.1...sd-wildcards-utils@1.0.2) (2024-05-22)
+
+
+
+### 🐛　Bug Fixes
+
+* couldn't find remote ref master ([4903eb3](https://github.com/bluelovers/sd-wildcards-utils/commit/4903eb371ce7d75d65096af3428c2dd1e1d63222))
+
+
+### 🛠　Build System
+
+* update build ([ae2f3e5](https://github.com/bluelovers/sd-wildcards-utils/commit/ae2f3e5fb9a70292d1d9f2040154bcff81756db5))
+* update build ([1ced540](https://github.com/bluelovers/sd-wildcards-utils/commit/1ced540794375e51213cdff71320f44057492af5))
+* update build ([95670c3](https://github.com/bluelovers/sd-wildcards-utils/commit/95670c37f6d21f8da69dd03fa9ebe333b5115097))
+* add build scripts ([d46e5dd](https://github.com/bluelovers/sd-wildcards-utils/commit/d46e5dd9284b336f0b0b75b64b967b6f5d2905a3))
+
+
+### ⚙️　Continuous Integration
+
+* update ci ([9e507e7](https://github.com/bluelovers/sd-wildcards-utils/commit/9e507e7093c16de9d34925a307e85187bce7b238))
+* update ci ([63e7d22](https://github.com/bluelovers/sd-wildcards-utils/commit/63e7d22a9763e37c3e0dc69f66bfde3da2cdf798))
+* update ci ([d7ece6d](https://github.com/bluelovers/sd-wildcards-utils/commit/d7ece6d55201f3407eb42d4451d30ac35ba436a9))
+* update ci ([4d10640](https://github.com/bluelovers/sd-wildcards-utils/commit/4d10640b4cae8bd42315c31f41b590693fbc8dde))
+* update ci ([ddcc829](https://github.com/bluelovers/sd-wildcards-utils/commit/ddcc8297c245c9a6665befb19d1c4c7184784371))
+
+
+
 ## 1.0.1 (2024-05-22)
 
 
