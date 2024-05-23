@@ -24,6 +24,8 @@ export default Bluebird.map([
 	})
 	.then(json =>
 {
-	let out = stringifyWildcardsYamlData(json);
+	let out = stringifyWildcardsYamlData(json, {
+		lineWidth: 0,
+	});
 	return outputFile(join(__ROOT_OUTPUT_WILDCARDS, 'lazy-wildcards.yaml'), out)
 })
