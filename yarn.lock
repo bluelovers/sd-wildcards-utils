@@ -216,6 +216,13 @@ color-name@~1.1.4:
   dependencies:
     type-detect "^4.0.0"
 
+deepmerge-plus@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.npmjs.org/deepmerge-plus/-/deepmerge-plus-3.0.2.tgz#4a517b04fdd6ff636906c443d0302613cebe45cd"
+  integrity sha512-4g/xydqbqbgoC8KZANfr60a/9H8sB34+Kv3eAbr1aSkD9ptLK5pBojGxkugqLS/rdJOFhmgENZNb5BMQ/05SQQ==
+  dependencies:
+    is-mergeable-object "1.1.1"
+
 diff-sequences@^29.6.3:
   version "29.6.3"
   resolved "https://registry.npmjs.org/diff-sequences/-/diff-sequences-29.6.3.tgz#4deaf894d11407c51efc8418012f9e70b84ea921"
@@ -313,6 +320,11 @@ has-values@^2.0.1:
   integrity sha512-+QdH3jOmq9P8GfdjFg0eJudqx1FqU62NQJ4P16rOEHeRdl7ckgwn6uqQjzYE0ZoHVV/e5E2esuJ5Gl5+HUW19w==
   dependencies:
     kind-of "^6.0.2"
+
+is-mergeable-object@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.npmjs.org/is-mergeable-object/-/is-mergeable-object-1.1.1.tgz#faaa3ed1cfce87d6f7d2f5885e92cc30af3e2ebf"
+  integrity sha512-CPduJfuGg8h8vW74WOxHtHmtQutyQBzR+3MjQ6iDHIYdbOnm1YC7jv43SqCoU8OPGTJD4nibmiryA4kmogbGrA==
 
 is-number@^7.0.0:
   version "7.0.0"

@@ -181,6 +181,7 @@ lazy-wildcards:
       - yellow
       - blue
       - red
+    # do not use this anymore
     color-anything:
       - >-
         __Bo/chars/haircolor__
@@ -287,11 +288,11 @@ lazy-wildcards:
       - symbol-shaped eyes
     eyecolor:
       - __person/regular/eyecolor__
-      - __lazy-wildcards/utils/color-anything__ eyes
+      - __mix-lazy-auto/color-anything__ eyes
     eyeliner-color:
-      - __lazy-wildcards/utils/color-anything__ eyeliner
+      - __mix-lazy-auto/color-anything__ eyeliner
     eyeshadow-color:
-      - __lazy-wildcards/utils/color-anything__ eyeshadow
+      - __mix-lazy-auto/color-anything__ eyeshadow
     # 睫毛
     eyelashes:
       - eyelashes_behind_hair
@@ -302,10 +303,10 @@ lazy-wildcards:
       - mismatched eyelashes
       - long eyelashes
     eyelashes-color:
-      - __lazy-wildcards/utils/color-anything__ eyelashes
+      - __mix-lazy-auto/color-anything__ eyelashes
       - colored eyelashes
     lips-color:
-      - __lazy-wildcards/utils/color-anything__ lips
+      - __mix-lazy-auto/color-anything__ lips
     mouth-style:
       - wavy mouth
       - chestnut_mouth
@@ -357,7 +358,7 @@ lazy-wildcards:
       - streaked hair
     haircolor:
       - >-
-        {1-3$$ hair, $$__lazy-wildcards/utils/color-anything__} hair
+        {1-3$$ hair, $$__mix-lazy-auto/color-anything__} hair
         ,{0-2$$__lazy-wildcards/char/haircolor-style__}
     hair-style-multi:
       - >-
@@ -381,6 +382,8 @@ lazy-wildcards:
       - abstract representation of the girl in her flowing hair
       - spiked hair
       - leaf hair
+      - >-
+        {1-$$flowing hair|hair blown by wind}
       - >-
         hair over {one eye|eyes}
       - >-
@@ -439,7 +442,6 @@ lazy-wildcards:
         - breast rest on table
         - leaning against motorcycle
         - cigarette in mouth
-        
         - __lazy-wildcards/background/location/casino/action/*__
         - __lazy-wildcards/book/pose__
       pose-bottom:
@@ -577,7 +579,7 @@ lazy-wildcards:
         - curled horns
   costume:
     color-theme:
-      - __lazy-wildcards/utils/color-anything__ clothes
+      - __mix-lazy-auto/color-anything__ clothes
     nsfw:
       - __Bo/clothings/nsfw/female-attire__
       - side-tie panties, cleavage, multi-strapped panties, highleg panties, string panties, groin, strap slip, denim, denim bikini
@@ -623,7 +625,7 @@ lazy-wildcards:
       - >-
         {1-$$multicolored background|gradient background|solid color, solid color background|neon color}
     color-theme:
-      - __lazy-wildcards/utils/color-anything__ background
+      - __mix-lazy-auto/color-anything__ background
       - dark background
     color-transparent:
       - pure __lazy-wildcards/utils/color-base__ background, transparent background
@@ -632,7 +634,7 @@ lazy-wildcards:
         a colorful background,
         __lazy-wildcards/background/color-style__
       - >-
-        {2-3$$ background, $$__lazy-wildcards/utils/color-anything__} background
+        {2-3$$ background, $$__mix-lazy-auto/color-anything__} background
         {,__lazy-wildcards/background/color-style__|}
       - >-
         pure {2-3$$ background, pure $$__lazy-wildcards/utils/color-base__} background

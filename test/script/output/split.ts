@@ -3,13 +3,16 @@ import escapeSplit from 'escape-split';
 // @ts-ignore
 import { globSync } from 'fs';
 import { join } from 'path';
-import { __ROOT_DATA, __ROOT_OUTPUT_WILDCARDS } from '../__root';
-import { IRecordWildcards, parseWildcardsYaml, stringifyWildcardsYamlData } from '../../src/index';
+import { __ROOT_DATA, __ROOT_OUTPUT_WILDCARDS } from '../../__root';
+import { IRecordWildcards, parseWildcardsYaml, stringifyWildcardsYamlData } from '../../../src/index';
 import { readFileSync } from 'fs';
 import { isMatch } from 'picomatch';
 // @ts-ignore
 import { outputFile } from 'fs-extra';
 import { array_unique_overwrite } from 'array-hyper-unique';
+import { deepmergeAll } from 'deepmerge-plus';
+import Bluebird from 'bluebird';
+import { parseDocument } from 'yaml';
 
 const _splitSpecific2 = escapeSplit({ delimiter: '/', escaper: '\\' });
 
@@ -69,14 +72,13 @@ export default (async () => {
 
 	let map: Record<string, any[]> = {};
 
-	for (let file of globSync([
+	const json = await Bluebird.map(globSync([
 		'cf/costumes/*.yaml',
-		'others/**/*.yaml',
+			'others/**/*.yaml',
 		'*.yaml',
 	], {
 		cwd: __ROOT_DATA
-	}))
-	{
+	}), (file: string) => {
 		console.log(file);
 
 		let path = join(__ROOT_DATA, file);
@@ -88,57 +90,88 @@ export default (async () => {
 		obj.contents
 		let json = obj.toJSON();
 
-		for (let [group, target] of [
-			['color-anything', '__cf-*/color__'],
-			['color-anything', '__Bo/chars/haircolor__'],
-			['color-anything', '__lazy-wildcards/utils/color-base__'],
-			['color-anything', '__person/regular/haircolor__'],
-			['color-anything', '__person/regular/haircolor-unconv__'],
-		])
+		return json as IRecordWildcards
+	})
+		.then((ls) => {
+			return deepmergeAll(ls) as IRecordWildcards
+		})
+	;
+
+	for (let [group, target] of [
+		['color-anything', '__lazy-wildcards/utils/color-base__'],
+		['color-anything', '__mix-lazy-auto/color-anything__'],
+
+		['color-anything', '__cf-*/color__'],
+
+		['color-anything', '__Bo/chars/haircolor__'],
+		['color-anything', '__person/regular/haircolor__'],
+		['color-anything', '__person/regular/haircolor-unconv__'],
+	])
+	{
+		let ret = _getEntry(target, json);
+
+		if (ret)
 		{
-			let ret = _getEntry(target, json);
-
-			if (ret)
-			{
-				map[group] ??= [];
-				map[group].push(ret.list)
-			}
-
-			ret && console.dir(ret)
+			map[group] ??= [];
+			map[group].push(ret.list)
 		}
+
+		//ret && console.dir(ret)
 	}
 
-	console.dir(map, {
-		depth: null,
-	})
+//	console.dir(map, {
+//		depth: null,
+//	})
 
-	let new_yaml: Record<string, any[]> = {};
+	let new_yaml_doc = parseDocument(`mix-lazy-auto:`);
+
+	//let new_yaml: Record<string, any[]> = {};
 
 	for (let [group, listRoot] of Object.entries(map))
 	{
+		console.log(`create`, group);
+
+		let refs: string[] = [];
+
 		let list = listRoot.reduce((a, v: [string, [string, string[]]]) => {
 
-			a.push(v.map(v => v[1]));
+			a.push(v.map(v => {
+				refs.push(`__${v[0].replace(/\./g, '/')}__`);
+				return v[1]
+			}));
 
 			return a
 		}, [] as string[]).flat(2);
 
 		array_unique_overwrite(list);
 
-		new_yaml[group] = list;
+		let obj: IRecordWildcards = {};
+		obj[group] = list;
 
-		console.dir({
-			group,
-			list,
-		})
+		let node = new_yaml_doc.createNode(obj);
+
+		node.commentBefore = ` "${group}" is merge from\n${'  - ' + refs.join('\n  - ')}`;
+
+		new_yaml_doc.setIn(['mix-lazy-auto'], node);
+
+		//new_yaml[group] = list;
+
+//		console.dir({
+//			group,
+//			list,
+//		})
 	}
 
-	let out = stringifyWildcardsYamlData({
-		'mix-lazy-auto': new_yaml,
-	}, {
+//	let out = stringifyWildcardsYamlData({
+//		'mix-lazy-auto': new_yaml,
+//	}, {
+//		lineWidth: 0,
+//	});
+
+	let out = stringifyWildcardsYamlData(new_yaml_doc, {
 		lineWidth: 0,
 	});
 
-	outputFile(join(__ROOT_OUTPUT_WILDCARDS, 'mix-lazy-auto.yaml'), out);
+	await outputFile(join(__ROOT_OUTPUT_WILDCARDS, 'mix-lazy-auto.yaml'), out);
 
 })();

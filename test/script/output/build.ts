@@ -6,14 +6,24 @@ import { parseWildcardsYaml, stringifyWildcardsYamlData } from '../../../src/ind
 // @ts-ignore
 import { outputFile } from 'fs-extra';
 
-export default Bluebird.each([
-	'lazy-wildcards.yaml',
+export default Bluebird.map([
+	join(__ROOT_DATA, 'lazy-wildcards.yaml'),
+	join(__ROOT_OUTPUT_WILDCARDS, 'mix-lazy-auto.yaml'),
 ], (file) => {
-	return readFile(join(__ROOT_DATA, file))
+	return readFile(file)
 		.then(parseWildcardsYaml)
-		.then(stringifyWildcardsYamlData)
-		.then(out => {
-			return outputFile(join(__ROOT_OUTPUT_WILDCARDS, file), out)
+})
+	.then(ls => {
+		return ls.reduce((a, b) => {
+
+			// @ts-ignore
+			a.contents.items.push(...b.contents.items);
+
+			return a
 		})
-	;
+	})
+	.then(json =>
+{
+	let out = stringifyWildcardsYamlData(json);
+	return outputFile(join(__ROOT_OUTPUT_WILDCARDS, 'lazy-wildcards.yaml'), out)
 })
