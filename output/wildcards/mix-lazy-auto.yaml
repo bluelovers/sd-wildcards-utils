@@ -1,4 +1,10 @@
 mix-lazy-auto:
+  # "color-anything" is merge from
+  #  - __lazy-wildcards/utils/color-base__
+  #  - __mix-lazy-auto/color-anything__
+  #  - __Bo/chars/haircolor__
+  #  - __person/regular/haircolor__
+  #  - __person/regular/haircolor-unconv__
   color-anything:
     - white
     - black
@@ -8,6 +14,7 @@ mix-lazy-auto:
     - yellow
     - blue
     - red
+    - bright blue-green
     - "{0.7::__person/regular/haircolor__|0.3::__person/regular/haircolor-unconv__}"
     - brown
     - blonde
