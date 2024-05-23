@@ -1,6 +1,15 @@
 export const RE_DYNAMIC_PROMPTS_WILDCARDS = /__([&~!@])?([*\w\/_\-]+)(\([^\n#]+\))?__/
 
 /**
+ * for `matchAll`
+ *
+ * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll
+ */
+export const RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL = new RegExp(RE_DYNAMIC_PROMPTS_WILDCARDS, RE_DYNAMIC_PROMPTS_WILDCARDS.flags + 'g')
+
+export const RE_WILDCARDS_NAME = /^[\w\-_\/]+$/
+
+/**
  * Checks if the input string matches the dynamic prompts wildcards pattern.
  *
  * @param input - The input string to check.
@@ -73,8 +82,41 @@ export function isDynamicPromptsWildcards(input: string): boolean
  */
 export function matchDynamicPromptsWildcards(input: string)
 {
-	let m = input.match(RE_DYNAMIC_PROMPTS_WILDCARDS);
+	const m = input.match(RE_DYNAMIC_PROMPTS_WILDCARDS);
+	return _matchDynamicPromptsWildcardsCore(m, input);
+}
 
+/**
+ * `RE_DYNAMIC_PROMPTS_WILDCARDS` regular expression to perform the match.
+ */
+export interface IMatchDynamicPromptsWildcardsEntry
+{
+	/**
+	 * The name extracted from the input string.
+	 */
+	name: string;
+	/**
+	 * The variables extracted from the input string.
+	 */
+	variables: string;
+	/**
+	 * The keyword extracted from the input string.
+	 */
+	keyword: string;
+	/**
+	 * The original matched source string.
+	 */
+	source: string;
+	/**
+	 * A boolean indicating whether the input string is a full match.
+	 */
+	isFullMatch: boolean;
+}
+
+export function _matchDynamicPromptsWildcardsCore(m: RegExpMatchArray,
+	input?: string,
+): IMatchDynamicPromptsWildcardsEntry
+{
 	if (!m) return null;
 
 	let [source, keyword, name, variables] = m;
@@ -84,8 +126,29 @@ export function matchDynamicPromptsWildcards(input: string)
 		variables,
 		keyword,
 		source,
-		isFullMatch: source === input,
+		isFullMatch: source === (input ?? m.input),
 	}
+}
+
+/**
+ * Generator function that matches all occurrences of the dynamic prompts wildcards pattern in the input string.
+ */
+export function* matchDynamicPromptsWildcardsAllGenerator(input: string)
+{
+	const ls = input.matchAll(RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL);
+
+	for (let m of ls)
+	{
+		yield _matchDynamicPromptsWildcardsCore(m, input);
+	}
+}
+
+/**
+ * Converts the generator function `matchDynamicPromptsWildcardsAllGenerator` into an array.
+ */
+export function matchDynamicPromptsWildcardsAll(input: string)
+{
+	return [...matchDynamicPromptsWildcardsAllGenerator(input)]
 }
 
 /**
@@ -120,7 +183,7 @@ export function matchDynamicPromptsWildcards(input: string)
  */
 export function isWildcardsName(name: string): boolean
 {
-	return /^[\w\-_]+$/.test(name) && !/__|_$|^_/.test(name)
+	return RE_WILDCARDS_NAME.test(name) && !/__|[_\/]$|^[_\/]|\/\//.test(name)
 }
 
 export function assertWildcardsName(name: string)

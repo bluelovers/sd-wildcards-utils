@@ -47,7 +47,40 @@ describe(`matchDynamicPromptsWildcards`, () =>
 
 		' __season_clothes(season= )__ ',
 
-	])(`%s`, (input) =>
+		// ---------------
+
+		'__scope/season_clothes(season=winter)__',
+		'__scope/season_clothes__',
+		'__scope/season_clothes(season=__scope/season_clothes__)__',
+
+		'__scope/season_clothes(season=!__scope/season_clothes__)__',
+
+		'__~scope/season_clothes(season=winter)__',
+
+		'__scope/season_clothes(season=__@scope/season_clothes__)__',
+		'__scope/season_clothes(season=__~scope/season_clothes__)__',
+
+		'__@scope/season_clothes(season=__scope/season_clothes__)__',
+		'__~scope/season_clothes(season=__scope/season_clothes__)__',
+
+		'__scope/season_clothes(season={summer|autumn|winter|spring})__',
+		'__scope/season_clothes(season=!{summer|autumn|winter|spring})__',
+
+		'__scope/season_clothes(season={@summer|autumn|winter|spring})__',
+		'__scope/season_clothes(season={!summer|autumn|winter|spring})__',
+
+		'__scope/season_clothes(season=!{@summer|autumn|winter|spring})__',
+		'__scope/season_clothes(season=!{!summer|autumn|winter|spring})__',
+
+		'__scope/season_clothes(season=)__',
+
+		'__scope/season_clothes(season=)__ ',
+
+		' __scope/season_clothes(season=)__ ',
+
+		' __scope/season_clothes(season= )__ ',
+
+	])(`%j`, (input) =>
 	{
 
 		let actual = matchDynamicPromptsWildcards(input);
