@@ -253,7 +253,7 @@ lazy-wildcards:
       - thick lips
     mouth:
       - |-
-        {open mouth|gasping}
+        {1-$$open mouth|gasping}
       - closed mouth
       - parted lips
       - finger to mouth
@@ -503,6 +503,9 @@ lazy-wildcards:
       horns:
         - curled horns
   costume:
+    color-theme-multi:
+      - >-
+        {1-3$$ clothes, $$__mix-lazy-auto/color-anything__} clothes
     color-theme:
       - __mix-lazy-auto/color-anything__ clothes
     nsfw:
@@ -674,12 +677,25 @@ lazy-wildcards:
       - (posing in front of a colorful and dynamic background. She has a confident expression and is holding a statement accessory)
       - (posing with her hands on her hips in an Asian squat position in front of a modern and dynamic background. She exudes confidence and sex appeal, with her daring fashion choices leaving little to the imagination)
 mix-lazy-auto:
-  # "color-anything" is merge from
-  #  - __lazy-wildcards/utils/color-base__
-  #  - __mix-lazy-auto/color-anything__
-  #  - __Bo/chars/haircolor__
-  #  - __person/regular/haircolor__
-  #  - __person/regular/haircolor-unconv__
+  # "color-anything" (total: 195 => 126, save 69 ) is merge from
+  #  - __lazy-wildcards/utils/color-base__ (8)
+  #  - __mix-lazy-auto/color-anything__ (1)
+  #  - __cf-clown/color__ (12)
+  #  - __cf-disco-dancer/color__ (13)
+  #  - __cf-doctor/color__ (10)
+  #  - __cf-elf/color__ (10)
+  #  - __cf-fairy/color__ (13)
+  #  - __cf-gangster-1920s/color__ (8)
+  #  - __cf-lingerie/color__ (10)
+  #  - __cf-maid/color__ (4)
+  #  - __cf-punk/color__ (17)
+  #  - __cf-school-student/color__ (11)
+  #  - __cf-secretary/color__ (8)
+  #  - __cf-school-teacher/color__ (11)
+  #  - __cf-tennis-player/color__ (7)
+  #  - __Bo/chars/haircolor__ (1)
+  #  - __person/regular/haircolor__ (30)
+  #  - __person/regular/haircolor-unconv__ (21)
   color-anything:
     - white
     - black
@@ -690,9 +706,106 @@ mix-lazy-auto:
     - blue
     - red
     - bright blue-green
+    - orange
+    - purple
+    - pink
+    - rainbow-colored
+    - polka-dotted
+    - striped
+    - sparkling silver
+    - vibrant red
+    - electric blue
+    - dazzling gold
+    - |-
+      {neon|bright} pink
+    - emerald green
+    - radiant purple
+    - |-
+      {shimmering|glittering} bronze
+    - glossy black
+    - |-
+      {pastel|neon} yellow
+    - pure white
+    - deep magenta
+    - navy blue
+    - light blue
+    - grey
+    - maroon
+    - dark green
+    - teal
+    - burgundy
+    - sage
+    - soft lavender
+    - silver
+    - gold
+    - midnight blue
+    - ruby red
+    - pearl white
+    - pastel pink
+    - soft purple
+    - sapphire blue
+    - |-
+      {pastel|vibrant} pink
+    - |-
+      {deep|sky} blue
+    - shimmering silver
+    - golden
+    - pearlescent white
+    - lavender
+    - rose gold
+    - pinstripe
+    - gray
+    - deep burgundy
+    - dark brown
+    - classic black
+    - fiery red
+    - soft pink
+    - elegant white
+    - deep purple
+    - champagne
+    - pastel lavender
+    - metallic silver
+    - red brown
+    - ginger
+    - brown
+    - |-
+      {bleached|platinum|neon} blonde
+    - jet-black
+    - |-
+      {neon|deep shade of forest|emerald} green
+    - |-
+      {fiery|deep crimson|bright cherry} red
+    - |-
+      {fiery|neon} orange
+    - pastel peach
+    - |-
+      {cotton candy|neon|bright fuchsia|vibrant|magenta} pink
+    - |-
+      {vibrant|deep} purple
+    - |-
+      {electric|deep indigo|smoky lilac|vibrant turquoise} blue
+    - deep shade of indigo
+    - fiery
+    - rainbow
+    - sky blue
+    - beige
+    - soft grey
+    - rich plum
+    - pale pink
+    - crisp white
+    - dark navy
+    - soft beige
+    - |-
+      {light|soft} pink
+    - warm maroon
+    - |-
+      {deep|bright} blue
+    - |-
+      {pearl|off-white} white
+    - |-
+      {mustard|golden} yellow
     - |-
       {0.7::__person/regular/haircolor__|0.3::__person/regular/haircolor-unconv__}
-    - brown
     - blonde
     - auburn
     - chestnut
@@ -701,14 +814,11 @@ mix-lazy-auto:
     - sandy blonde
     - dirty blonde
     - light brown
-    - dark brown
     - light black (soft black)
     - jet black
     - mahogany
-    - burgundy
     - copper
     - strawberry blonde
-    - ginger
     - light auburn
     - dark auburn
     - light chestnut
@@ -717,15 +827,8 @@ mix-lazy-auto:
     - ash blonde
     - honey blonde
     - caramel
-    - silver
-    - grey
     - salt and pepper
-    - purple
-    - pink
-    - lavender
-    - teal
     - pastel blue
-    - rose gold
     - peach
     - mint green
     - lilac
@@ -733,9 +836,7 @@ mix-lazy-auto:
     - silver blonde
     - denim blue
     - violet
-    - emerald green
     - tangerine
     - indigo
-    - ruby red
     - orchid
     - aqua
