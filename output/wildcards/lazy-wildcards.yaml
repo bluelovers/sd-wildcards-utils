@@ -31,6 +31,8 @@ lazy-wildcards:
         1girl, solo, under boob, up skirt, downblouse, cleavage, (from below, looking down, ass visible through thighs:1.2), ceiling, (peek panties, panty peek, pussy peek), selfie pose, squatting, crouching, __lazy-wildcards/prompts/hair__, __lazy-wildcards/prompts/eyes__, __lazy-wildcards/dataset/background__, (flower, falling petals, petals on liquid, petals, cherry blossom:0.8)
       - |-
         upper_body, 1girl, breasts, collarbone, covered_mouth, gag, gagged, improvised_gag, mask, mouth_mask, surgical_mask, solo, forehead, (shirt:1.2), bar, underwear, cleavage, (asymmetrical breasts, cleavage_overflow:1.6), ({1-$$Taretiti|saggy breasts|drooping breasts|soft breasts|sagging breasts|hanging breasts}:1.2), __lazy-wildcards/costume/color-theme__, __lazy-wildcards/prompts/hair__, __lazy-wildcards/prompts/eyes__, __lazy-wildcards/dataset/background-color__, (flower, falling petals, petals on liquid, petals, cherry blossom:0.8), {__lazy-wildcards/prompts/pose__}
+      - >-
+        (silhouette:1.2), jianying, 1girl, nude, (in river), splash, ({sun rays, sunset|moonlight|dawn|twilight} background, low horizon), backlighting, contour light, body contour light, light particles, __lazy-wildcards/prompts/hair__, __lazy-wildcards/dataset/background-color__, (flower, falling petals, petals on liquid, petals, cherry blossom:0.8)
     costume:
       - >-
         {__lazy-wildcards/costume/nsfw__|__lazy-wildcards/costume/clothes__}
@@ -142,6 +144,11 @@ lazy-wildcards:
         (from below, looking down, ass visible through thighs:1.2)
     view:
       - front view
+    season:
+      - spring
+      - summer
+      - autumn
+      - winter
   char:
     eyes-expressions:
       - >-
@@ -266,6 +273,10 @@ lazy-wildcards:
       - >-
         :3
       - coysmile
+      # Smug mouth with fang / 八重歯付きのニヤけた口 - v1.0
+      # https://civitai.com/models/469309?modelVersionId=522175
+      - >-
+        (smug, Yaeba), open mouth, fang
     hair-length:
       - short hair
       - long hair
@@ -524,6 +535,8 @@ lazy-wildcards:
       - maxi dress
       - breastless dress
       - (bare shoulders, detached sleeves, strapless dress, long dress, corset)
+      - >-
+        {__lazy-wildcards/utils/season__ |}school uniform
     sweater:
       - ribbed sweater
       - sleeveless sweater
@@ -590,6 +603,9 @@ lazy-wildcards:
       - >-
         ((pedestrian hell)), ((busy street in taiwan)), taipei road, scooter, motorcycle, wind, trees, crowd, traffic light, cityscape, shopping, storefront, signboard, building, greenery, city-life-overload,
       - flare, fog, wet, wet body, rain, raining, night, neon lights, twilight
+      - perspective photo of the house on clift, post-apocalypse, brutalist, brutal green covered with green grass, many people, neon light, forest, jungle atmosphere, sunset, sunshine cinematic
+      - |-
+        (in river), splash, ({sun flare, lens flare, sunset|moonlight|dawn|twilight} background, low horizon), backlighting
     location:
       interior-lava:
         prompts:
