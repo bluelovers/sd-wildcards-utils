@@ -42,6 +42,7 @@ jobs:
           fetch-depth: 2
           ref: dev
           submodules: true
+          token: ${{ secrets.All2024_TOKEN }}
       -
         name: Set up Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@main
