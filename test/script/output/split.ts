@@ -1,11 +1,10 @@
 // @ts-ignore
 import escapeSplit from 'escape-split';
 // @ts-ignore
-import { globSync } from 'fs';
+import { globSync, readFileSync } from 'fs';
 import { join } from 'path';
 import { __ROOT_DATA, __ROOT_OUTPUT_WILDCARDS } from '../../__root';
 import { IRecordWildcards, parseWildcardsYaml, stringifyWildcardsYamlData } from '../../../src/index';
-import { readFileSync } from 'fs';
 import { isMatch } from 'picomatch';
 // @ts-ignore
 import { outputFile } from 'fs-extra';
@@ -68,33 +67,36 @@ function _getEntry(target: string, data: IRecordWildcards)
 	}
 }
 
-export default (async () => {
+export default (async () =>
+{
 
 	let map: Record<string, any[]> = {};
 
 	const json = await Bluebird.map(globSync([
-		'cf/costumes/*.yaml',
-			'others/**/*.yaml',
-		'*.yaml',
-	], {
-		cwd: __ROOT_DATA
-	}), (file: string) => {
-		console.log(file);
+				'cf/costumes/*.yaml',
+				'others/**/*.yaml',
+				'*.yaml',
+			], {
+				cwd: __ROOT_DATA,
+			}), (file: string) =>
+			{
+				console.log(file);
 
-		let path = join(__ROOT_DATA, file);
-		let buf = readFileSync(path);
+				let path = join(__ROOT_DATA, file);
+				let buf = readFileSync(path);
 
-		let obj = parseWildcardsYaml(buf, {
-			allowMultiRoot: true,
-		});
-		obj.contents
-		let json = obj.toJSON();
+				let obj = parseWildcardsYaml(buf, {
+					allowMultiRoot: true,
+				});
+				obj.contents
+				let json = obj.toJSON();
 
-		return json as IRecordWildcards
-	})
-		.then((ls) => {
-			return deepmergeAll(ls) as IRecordWildcards
-		})
+				return json as IRecordWildcards
+			})
+			.then((ls) =>
+			{
+				return deepmergeAll(ls) as IRecordWildcards
+			})
 	;
 
 	for (let [group, target] of [
@@ -129,19 +131,23 @@ export default (async () => {
 
 	for (let [group, listRoot] of Object.entries(map))
 	{
-		console.log(`create`, group);
+		console.log(`create`, group, listRoot.length);
 
 		let refs: string[] = [];
 
-		let list = listRoot.reduce((a, v: [string, [string, string[]]]) => {
+		let list = listRoot.reduce((a, v: [string, [string, string[]]]) =>
+		{
 
-			a.push(v.map(v => {
-				refs.push(`__${v[0].replace(/\./g, '/')}__`);
+			a.push(v.map(v =>
+			{
+				refs.push(`__${v[0].replace(/\./g, '/')}__ (${v[1].length})`);
 				return v[1]
 			}));
 
 			return a
 		}, [] as string[]).flat(2);
+
+		let lenOld = list.length;
 
 		array_unique_overwrite(list);
 
@@ -150,7 +156,20 @@ export default (async () => {
 
 		let node = new_yaml_doc.createNode(obj);
 
-		node.commentBefore = ` "${group}" is merge from\n${'  - ' + refs.join('\n  - ')}`;
+		let commentBefore = ` "${group}"`;
+		if (lenOld !== list.length)
+		{
+			commentBefore += ` (total: ${lenOld} => ${list.length}, save ${lenOld - list.length} )`;
+		}
+		else
+		{
+			commentBefore += ` (total: ${list.length} )`;
+		}
+		commentBefore += ` is merge from`;
+
+		commentBefore += `\n  - ${refs.join('\n  - ')}`;
+
+		node.commentBefore = commentBefore;
 
 		new_yaml_doc.setIn(['mix-lazy-auto'], node);
 
