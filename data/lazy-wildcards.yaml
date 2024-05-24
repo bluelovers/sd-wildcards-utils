@@ -337,7 +337,7 @@ lazy-wildcards:
       - puffy lips
       - thick lips
     mouth:
-      - "{open mouth|gasping}"
+      - "{1-$$open mouth|gasping}"
       - closed mouth
       - parted lips
       - finger to mouth
@@ -597,6 +597,9 @@ lazy-wildcards:
       horns:
         - curled horns
   costume:
+    color-theme-multi:
+      - >-
+        {1-3$$ clothes, $$__mix-lazy-auto/color-anything__} clothes
     color-theme:
       - __mix-lazy-auto/color-anything__ clothes
     nsfw:
