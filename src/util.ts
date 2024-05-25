@@ -193,3 +193,8 @@ export function assertWildcardsName(name: string)
 		throw new SyntaxError(`Invalid Wildcards Name Syntax: ${name}`)
 	}
 }
+
+export function convertWildcardsNameToPaths(name: string)
+{
+	return name.split('/');
+}
