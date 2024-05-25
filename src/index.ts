@@ -165,7 +165,7 @@ export function normalizeDocument<T extends Document>(doc: T)
  * //     - value4
  * ```
  */
-export function stringifyWildcardsYamlData<T extends IRecordWildcards>(data: T | unknown | Document,
+export function stringifyWildcardsYamlData<T extends IRecordWildcards | IWildcardsYAMLDocument | Document>(data: T | unknown,
 	opts?: IOptionsStringify,
 )
 {
