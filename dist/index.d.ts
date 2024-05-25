@@ -1,6 +1,42 @@
-import { CreateNodeOptions, Document as Document$1, DocumentOptions, Node as Node$1, ParseOptions, ParsedNode, SchemaOptions, ToStringOptions, YAMLMap } from 'yaml';
+import { Alias, CreateNodeOptions, Document as Document$1, DocumentOptions, Node as Node$1, Pair, ParseOptions, ParsedNode, Scalar, SchemaOptions, ToStringOptions, YAMLMap, YAMLSeq, visitorFn } from 'yaml';
 
+export interface IOptionsSharedWildcardsYaml {
+	allowMultiRoot?: boolean;
+	disableUniqueItemValues?: boolean;
+}
+export type IOptionsStringify = DocumentOptions & SchemaOptions & ParseOptions & CreateNodeOptions & ToStringOptions & IOptionsSharedWildcardsYaml;
+export type IOptionsParseDocument = ParseOptions & DocumentOptions & SchemaOptions & IOptionsSharedWildcardsYaml & {
+	toStringDefaults?: IOptionsStringify;
+};
+export declare function getOptionsShared<T extends IOptionsSharedWildcardsYaml>(opts: T): Pick<T, "allowMultiRoot" | "disableUniqueItemValues">;
+export declare function defaultOptionsStringify(opts?: IOptionsStringify): IOptionsStringify;
+export declare function defaultOptionsParseDocument(opts?: IOptionsParseDocument): IOptionsParseDocument;
+export type IWildcardsYAMLSeq = YAMLSeq<Scalar>;
+export type IWildcardsYAMLDocument<Contents extends YAMLMap = YAMLMap.Parsed, Strict extends boolean = true> = Document$1<Contents, Strict> & {
+	options: Document$1["options"] & IOptionsParseDocument;
+};
+export type IWildcardsYAMLDocumentParsed<Contents extends YAMLMap = YAMLMap.Parsed, Strict extends boolean = true> = IWildcardsYAMLDocument<Contents, Strict> & Pick<Document$1.Parsed, "directives" | "range">;
+export type IOptionsVisitor = visitorFn<unknown> | {
+	Alias?: visitorFn<Alias>;
+	Collection?: visitorFn<YAMLMap | IWildcardsYAMLSeq>;
+	Map?: visitorFn<YAMLMap>;
+	Node?: visitorFn<Alias | Scalar | YAMLMap | IWildcardsYAMLSeq>;
+	Pair?: visitorFn<Pair>;
+	Scalar?: visitorFn<Scalar>;
+	Seq?: visitorFn<IWildcardsYAMLSeq>;
+	Value?: visitorFn<Scalar | YAMLMap | IWildcardsYAMLSeq>;
+};
+export declare function visitWildcardsYAML(node: Node$1 | Document$1 | null, visitorOptions: IOptionsVisitor): void;
+export declare function uniqueSeqItemsChecker(element: Node$1, value: Node$1): boolean;
+export declare function uniqueSeqItems<T extends Node$1>(items: (T | unknown)[]): T[];
 export declare const RE_DYNAMIC_PROMPTS_WILDCARDS: RegExp;
+/**
+ * for `matchAll`
+ *
+ * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll
+ */
+export declare const RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL: RegExp;
+export declare const RE_WILDCARDS_NAME: RegExp;
 /**
  * Checks if the input string matches the dynamic prompts wildcards pattern.
  *
@@ -68,13 +104,41 @@ export declare function isDynamicPromptsWildcards(input: string): boolean;
  *
  * __season_clothes(season=)__
  */
-export declare function matchDynamicPromptsWildcards(input: string): {
+export declare function matchDynamicPromptsWildcards(input: string): IMatchDynamicPromptsWildcardsEntry;
+/**
+ * `RE_DYNAMIC_PROMPTS_WILDCARDS` regular expression to perform the match.
+ */
+export interface IMatchDynamicPromptsWildcardsEntry {
+	/**
+	 * The name extracted from the input string.
+	 */
 	name: string;
+	/**
+	 * The variables extracted from the input string.
+	 */
 	variables: string;
+	/**
+	 * The keyword extracted from the input string.
+	 */
 	keyword: string;
+	/**
+	 * The original matched source string.
+	 */
 	source: string;
+	/**
+	 * A boolean indicating whether the input string is a full match.
+	 */
 	isFullMatch: boolean;
-};
+}
+export declare function _matchDynamicPromptsWildcardsCore(m: RegExpMatchArray, input?: string): IMatchDynamicPromptsWildcardsEntry;
+/**
+ * Generator function that matches all occurrences of the dynamic prompts wildcards pattern in the input string.
+ */
+export declare function matchDynamicPromptsWildcardsAllGenerator(input: string): Generator<IMatchDynamicPromptsWildcardsEntry, void, unknown>;
+/**
+ * Converts the generator function `matchDynamicPromptsWildcardsAllGenerator` into an array.
+ */
+export declare function matchDynamicPromptsWildcardsAll(input: string): IMatchDynamicPromptsWildcardsEntry[];
 /**
  * Checks if the given name is a valid Wildcards name.
  *
@@ -107,19 +171,16 @@ export declare function matchDynamicPromptsWildcards(input: string): {
  */
 export declare function isWildcardsName(name: string): boolean;
 export declare function assertWildcardsName(name: string): void;
-export interface IOptionsValidWildcardsYaml {
-	allowMultiRoot?: boolean;
-}
+export declare function convertWildcardsNameToPaths(name: string): string[];
 export interface IRecordWildcards {
 	[key: string]: string[] | Record<string, string[]> | IRecordWildcards;
 }
 export declare function _validMap(key: number | "key" | "value" | null, node: YAMLMap): void;
-export declare function validWildcardsYamlData<T extends IRecordWildcards>(data: T | unknown | Document$1, opts?: IOptionsValidWildcardsYaml): asserts data is T;
+export declare function validWildcardsYamlData<T extends IRecordWildcards | IWildcardsYAMLDocument | Document$1>(data: T | unknown, opts?: IOptionsSharedWildcardsYaml): asserts data is T;
 /**
  * Normalizes a YAML document by applying specific rules to its nodes.
  **/
 export declare function normalizeDocument<T extends Document$1>(doc: T): void;
-export type IOptionsStringify = DocumentOptions & SchemaOptions & ParseOptions & CreateNodeOptions & ToStringOptions;
 /**
  * Converts the given YAML data to a string, applying normalization and formatting.
  *
@@ -169,7 +230,7 @@ export declare function stringifyWildcardsYamlData<T extends IRecordWildcards>(d
  * Then, it validates the parsed data using the `validWildcardsYamlData` function.
  * Finally, it returns the parsed data.
  */
-export declare function parseWildcardsYaml<Contents extends Node$1 = ParsedNode, Strict extends boolean = true>(source: string | Uint8Array, opts?: IOptionsValidWildcardsYaml): Contents extends ParsedNode ? Document$1.Parsed<Contents, Strict> : Document$1<Contents, Strict>;
+export declare function parseWildcardsYaml<Contents extends YAMLMap = YAMLMap.Parsed, Strict extends boolean = true>(source: string | Uint8Array, opts?: IOptionsParseDocument): Contents extends ParsedNode ? IWildcardsYAMLDocumentParsed<Contents, Strict> : IWildcardsYAMLDocument<Contents, Strict>;
 
 export {
 	parseWildcardsYaml as default,
