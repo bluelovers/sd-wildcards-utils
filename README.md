@@ -18,6 +18,7 @@ yt add sd-wildcards-utils
 
 # OTHERS
 
+- https://eemeli.org/yaml/#yaml
 - https://civitai.com/models/449400
 - https://gist.github.com/bluelovers/5dd82472d21cbaa7203b36c34612434b
 - https://civitai.com/user/C0rn_Fl4k3s/models
