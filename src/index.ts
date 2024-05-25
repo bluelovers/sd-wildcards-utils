@@ -1,30 +1,25 @@
 /**
  * Created by user on 2024/5/21.
  */
-import type {
-	CreateNodeOptions,
-	DocumentOptions,
-	Node,
-	ParsedNode,
-	ParseOptions,
-	SchemaOptions,
-	ToStringOptions,
-	YAMLMap,
-} from 'yaml';
+import { Document, isDocument, isMap, isNode, ParsedNode, parseDocument, stringify, YAMLMap } from 'yaml';
 import {
-	Document,
-	isDocument,
-	parseDocument,
-	stringify,
-	visit,
-} from 'yaml';
+	defaultOptionsParseDocument,
+	defaultOptionsStringify,
+	IOptionsParseDocument,
+	IOptionsSharedWildcardsYaml,
+	IOptionsStringify,
+} from './options';
+import {
+	IOptionsVisitor,
+	IWildcardsYAMLDocument,
+	IWildcardsYAMLDocumentParsed,
+	uniqueSeqItems,
+	visitWildcardsYAML,
+} from './items';
 
 export * from './util';
-
-export interface IOptionsValidWildcardsYaml
-{
-	allowMultiRoot?: boolean
-}
+export * from './options';
+export * from './items';
 
 export interface IRecordWildcards
 {
@@ -36,17 +31,22 @@ export function _validMap(key: number | 'key' | 'value' | null, node: YAMLMap)
 	const elem = node.items.find(pair => pair.value === null);
 	if (elem)
 	{
-		throw new SyntaxError(`Invalid SYNTAX. ${key} => ${node}`)
+		throw new SyntaxError(`Invalid SYNTAX. key: ${key}, node: ${node}`)
 	}
 }
 
-export function validWildcardsYamlData<T extends IRecordWildcards>(data: T | unknown | Document,
-	opts?: IOptionsValidWildcardsYaml,
+export function validWildcardsYamlData<T extends IRecordWildcards | IWildcardsYAMLDocument | Document>(data: T | unknown,
+	opts?: IOptionsSharedWildcardsYaml,
 ): asserts data is T
 {
 	if (isDocument(data))
 	{
-		visit(data, {
+		if (isNode(data.contents) && !isMap(data.contents))
+		{
+			throw TypeError(`The 'contents' property of the provided YAML document must be a YAMLMap. Received: ${data.contents}`)
+		}
+
+		visitWildcardsYAML(data, {
 			Map: _validMap,
 		});
 
@@ -57,11 +57,11 @@ export function validWildcardsYamlData<T extends IRecordWildcards>(data: T | unk
 
 	if (!rootKeys.length)
 	{
-		throw TypeError()
+		throw TypeError(`The provided JSON contents must contain at least one key.`)
 	}
 	else if (rootKeys.length !== 1 && !opts?.allowMultiRoot)
 	{
-		throw TypeError()
+		throw TypeError(`The provided JSON object cannot have more than one root key. Only one root key is allowed unless explicitly allowed by the 'allowMultiRoot' option.`)
 	}
 }
 
@@ -73,9 +73,10 @@ const RE_UNSAFE_VALUE = /^\s*-|[{$~!@}\n|:?#]/;
  **/
 export function normalizeDocument<T extends Document>(doc: T)
 {
-	visit(doc, {
+	let options = (doc.options ?? {}) as IOptionsParseDocument;
+
+	let visitorOptions: IOptionsVisitor = {
 		Map: _validMap,
-		// @ts-ignore
 		Scalar(key, node)
 		{
 			let value = node.value as string;
@@ -84,7 +85,7 @@ export function normalizeDocument<T extends Document>(doc: T)
 			{
 				if (RE_UNSAFE_QUOTE.test(value))
 				{
-					throw new SyntaxError(`Invalid SYNTAX. ${key} => ${node}`)
+					throw new SyntaxError(`Invalid SYNTAX. key: ${key}, node: ${node}`)
 				}
 				else if (node.type === 'QUOTE_DOUBLE' || node.type === 'QUOTE_SINGLE' && !value.includes('\\'))
 				{
@@ -116,10 +117,19 @@ export function normalizeDocument<T extends Document>(doc: T)
 				node.value = value;
 			}
 		},
-	})
-}
+	};
 
-export type IOptionsStringify = DocumentOptions & SchemaOptions & ParseOptions & CreateNodeOptions & ToStringOptions;
+	if (!options.disableUniqueItemValues)
+	{
+		// @ts-ignore
+		visitorOptions.Seq = (key, node) =>
+		{
+			uniqueSeqItems(node.items);
+		}
+	}
+
+	visitWildcardsYAML(doc, visitorOptions)
+}
 
 /**
  * Converts the given YAML data to a string, applying normalization and formatting.
@@ -156,19 +166,11 @@ export type IOptionsStringify = DocumentOptions & SchemaOptions & ParseOptions &
  * ```
  */
 export function stringifyWildcardsYamlData<T extends IRecordWildcards>(data: T | unknown | Document,
-	opts?: IOptionsStringify)
+	opts?: IOptionsStringify,
+)
 {
-	opts = {
-		blockQuote: true,
-		defaultKeyType: 'PLAIN',
-		defaultStringType: 'PLAIN',
-		//lineWidth: 0,
-		//minContentWidth: 100,
-		//indentSeq: false,
-		//doubleQuotedMinMultiLineLength: 10,
-		collectionStyle: 'block',
-		...opts,
-	}
+	opts = defaultOptionsStringify(opts);
+
 	if (isDocument(data))
 	{
 		normalizeDocument(data);
@@ -193,19 +195,20 @@ export function stringifyWildcardsYamlData<T extends IRecordWildcards>(data: T |
  * Then, it validates the parsed data using the `validWildcardsYamlData` function.
  * Finally, it returns the parsed data.
  */
-export function parseWildcardsYaml<Contents extends Node = ParsedNode, Strict extends boolean = true>(source: string | Uint8Array,
-	opts?: IOptionsValidWildcardsYaml): Contents extends ParsedNode
-	? Document.Parsed<Contents, Strict>
-	: Document<Contents, Strict>
+export function parseWildcardsYaml<Contents extends YAMLMap = YAMLMap.Parsed, Strict extends boolean = true>(source: string | Uint8Array,
+	opts?: IOptionsParseDocument,
+): Contents extends ParsedNode
+	? IWildcardsYAMLDocumentParsed<Contents, Strict>
+	: IWildcardsYAMLDocument<Contents, Strict>
 {
-	let data = parseDocument<Contents, Strict>(source.toString(), {
-		keepSourceTokens: true,
-	});
+	opts = defaultOptionsParseDocument(opts);
+
+	let data = parseDocument<Contents, Strict>(source.toString(), opts);
 
 	validWildcardsYamlData(data, opts)
 
+	// @ts-ignore
 	return data
 }
 
-// @ts-ignore
 export default parseWildcardsYaml
