@@ -1,6 +1,6 @@
 {
   "name": "sd-wildcards-utils",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Parse Stable Diffusion wildcards source to a YAML object.",
   "keywords": [
     "wildcards",
@@ -103,7 +103,7 @@
     "publish": "echo publish",
     "postpublish": "yarn run postpublish:changelog && yarn run postpublish:git:commit && yarn run postpublish:git:tag && yarn run postpublish:git:push",
     "postpublish:changelog": "ynpx --quiet @yarn-tool/changelog && git add ./CHANGELOG.md",
-    "postpublish:git:commit": "git commit -m \"chore(release): publish\" ./dist ./CHANGELOG.md ./package.json ./README.md & echo postpublish:git:commit",
+    "postpublish:git:commit": "git commit -m \"chore(release): publish\" . & echo postpublish:git:commit",
     "postpublish:git:push": "git push --follow-tags",
     "postpublish:git:tag": "ynpx --quiet @yarn-tool/tag",
     "postpublishOnly": "echo postpublishOnly",
