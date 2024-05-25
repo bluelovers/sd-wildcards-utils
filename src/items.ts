@@ -4,11 +4,11 @@ import { isScalar, visit } from 'yaml';
 import { IOptionsParseDocument } from './options';
 
 export type IWildcardsYAMLSeq = YAMLSeq<Scalar>;
-export type IWildcardsYAMLDocument<Contents extends YAMLMap = YAMLMap.Parsed, Strict extends boolean = true> =
-	Document<Contents, Strict>
-	& {
+export interface IWildcardsYAMLDocument<Contents extends YAMLMap = YAMLMap.Parsed, Strict extends boolean = true> extends Omit<Document<Contents, Strict>, 'options' | 'contents'>
+{
 	options: Document["options"] & IOptionsParseDocument;
-};
+	contents: Strict extends true ? Contents | null : Contents;
+}
 
 export type IWildcardsYAMLDocumentParsed<Contents extends YAMLMap = YAMLMap.Parsed, Strict extends boolean = true> =
 	IWildcardsYAMLDocument<Contents, Strict>
