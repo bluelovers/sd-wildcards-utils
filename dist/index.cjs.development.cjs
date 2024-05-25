@@ -3,8 +3,61 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 var yaml = require('yaml');
+var arrayHyperUnique = require('array-hyper-unique');
+
+function getOptionsShared(opts) {
+  return {
+    allowMultiRoot: opts.allowMultiRoot,
+    disableUniqueItemValues: opts.disableUniqueItemValues
+  };
+}
+function defaultOptionsStringify(opts) {
+  return {
+    blockQuote: true,
+    defaultKeyType: 'PLAIN',
+    defaultStringType: 'PLAIN',
+    collectionStyle: 'block',
+    ...opts
+  };
+}
+function defaultOptionsParseDocument(opts) {
+  var _opts;
+  (_opts = opts) !== null && _opts !== void 0 ? _opts : opts = {};
+  opts = {
+    keepSourceTokens: true,
+    ...opts,
+    toStringDefaults: defaultOptionsStringify({
+      ...getOptionsShared(opts),
+      ...opts.toStringDefaults
+    })
+  };
+  return opts;
+}
+
+function visitWildcardsYAML(node, visitorOptions) {
+  return yaml.visit(node, visitorOptions);
+}
+function uniqueSeqItemsChecker(element, value) {
+  if (yaml.isScalar(element) && yaml.isScalar(value)) {
+    return arrayHyperUnique.defaultChecker(element.value, value.value);
+  }
+  return arrayHyperUnique.defaultChecker(element, value);
+}
+function uniqueSeqItems(items) {
+  return arrayHyperUnique.array_unique_overwrite(items, {
+    // @ts-ignore
+    checker: uniqueSeqItemsChecker
+  });
+}
 
 const RE_DYNAMIC_PROMPTS_WILDCARDS = /__([&~!@])?([*\w\/_\-]+)(\([^\n#]+\))?__/;
+/**
+ * for `matchAll`
+ *
+ * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll
+ */
+const RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL = /*#__PURE__*/new RegExp(RE_DYNAMIC_PROMPTS_WILDCARDS, RE_DYNAMIC_PROMPTS_WILDCARDS.flags + 'g');
+const RE_WILDCARDS_NAME = /^[\w\-_\/]+$/;
 /**
  * Checks if the input string matches the dynamic prompts wildcards pattern.
  *
@@ -75,7 +128,10 @@ function isDynamicPromptsWildcards(input) {
  * __season_clothes(season=)__
  */
 function matchDynamicPromptsWildcards(input) {
-  let m = input.match(RE_DYNAMIC_PROMPTS_WILDCARDS);
+  const m = input.match(RE_DYNAMIC_PROMPTS_WILDCARDS);
+  return _matchDynamicPromptsWildcardsCore(m, input);
+}
+function _matchDynamicPromptsWildcardsCore(m, input) {
   if (!m) return null;
   let [source, keyword, name, variables] = m;
   return {
@@ -83,8 +139,17 @@ function matchDynamicPromptsWildcards(input) {
     variables,
     keyword,
     source,
-    isFullMatch: source === input
+    isFullMatch: source === (input !== null && input !== void 0 ? input : m.input)
   };
+}
+function* matchDynamicPromptsWildcardsAllGenerator(input) {
+  const ls = input.matchAll(RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL);
+  for (let m of ls) {
+    yield _matchDynamicPromptsWildcardsCore(m, input);
+  }
+}
+function matchDynamicPromptsWildcardsAll(input) {
+  return [...matchDynamicPromptsWildcardsAllGenerator(input)];
 }
 /**
  * Checks if the given name is a valid Wildcards name.
@@ -117,45 +182,52 @@ function matchDynamicPromptsWildcards(input) {
  * ```
  */
 function isWildcardsName(name) {
-  return /^[\w\-_]+$/.test(name) && !/__|_$|^_/.test(name);
+  return RE_WILDCARDS_NAME.test(name) && !/__|[_\/]$|^[_\/]|\/\//.test(name);
 }
 function assertWildcardsName(name) {
   if (isWildcardsName(name)) {
     throw new SyntaxError(`Invalid Wildcards Name Syntax: ${name}`);
   }
 }
+function convertWildcardsNameToPaths(name) {
+  return name.split('/');
+}
 
 function _validMap(key, node) {
   const elem = node.items.find(pair => pair.value === null);
   if (elem) {
-    throw new SyntaxError(`Invalid SYNTAX. ${key} => ${node}`);
+    throw new SyntaxError(`Invalid SYNTAX. key: ${key}, node: ${node}`);
   }
 }
 function validWildcardsYamlData(data, opts) {
   if (yaml.isDocument(data)) {
-    yaml.visit(data, {
+    if (yaml.isNode(data.contents) && !yaml.isMap(data.contents)) {
+      throw TypeError(`The 'contents' property of the provided YAML document must be a YAMLMap. Received: ${data.contents}`);
+    }
+    visitWildcardsYAML(data, {
       Map: _validMap
     });
     data = data.toJSON();
   }
   let rootKeys = Object.keys(data);
   if (!rootKeys.length) {
-    throw TypeError();
+    throw TypeError(`The provided JSON contents must contain at least one key.`);
   } else if (rootKeys.length !== 1 && !(opts !== null && opts !== void 0 && opts.allowMultiRoot)) {
-    throw TypeError();
+    throw TypeError(`The provided JSON object cannot have more than one root key. Only one root key is allowed unless explicitly allowed by the 'allowMultiRoot' option.`);
   }
 }
 const RE_UNSAFE_QUOTE = /['"]/;
 const RE_UNSAFE_VALUE = /^\s*-|[{$~!@}\n|:?#]/;
 function normalizeDocument(doc) {
-  yaml.visit(doc, {
+  var _doc$options;
+  let options = (_doc$options = doc.options) !== null && _doc$options !== void 0 ? _doc$options : {};
+  let visitorOptions = {
     Map: _validMap,
-    // @ts-ignore
     Scalar(key, node) {
       let value = node.value;
       if (typeof value === 'string') {
         if (RE_UNSAFE_QUOTE.test(value)) {
-          throw new SyntaxError(`Invalid SYNTAX. ${key} => ${node}`);
+          throw new SyntaxError(`Invalid SYNTAX. key: ${key}, node: ${node}`);
         } else if (node.type === 'QUOTE_DOUBLE' || node.type === 'QUOTE_SINGLE' && !value.includes('\\')) {
           node.type = 'PLAIN';
         }
@@ -171,7 +243,14 @@ function normalizeDocument(doc) {
         node.value = value;
       }
     }
-  });
+  };
+  if (!options.disableUniqueItemValues) {
+    // @ts-ignore
+    visitorOptions.Seq = (key, node) => {
+      uniqueSeqItems(node.items);
+    };
+  }
+  visitWildcardsYAML(doc, visitorOptions);
 }
 /**
  * Converts the given YAML data to a string, applying normalization and formatting.
@@ -208,13 +287,7 @@ function normalizeDocument(doc) {
  * ```
  */
 function stringifyWildcardsYamlData(data, opts) {
-  opts = {
-    blockQuote: true,
-    defaultKeyType: 'PLAIN',
-    defaultStringType: 'PLAIN',
-    collectionStyle: 'block',
-    ...opts
-  };
+  opts = defaultOptionsStringify(opts);
   if (yaml.isDocument(data)) {
     normalizeDocument(data);
     return data.toString(opts);
@@ -236,22 +309,34 @@ function stringifyWildcardsYamlData(data, opts) {
  * Finally, it returns the parsed data.
  */
 function parseWildcardsYaml(source, opts) {
-  let data = yaml.parseDocument(source.toString(), {
-    keepSourceTokens: true
-  });
+  opts = defaultOptionsParseDocument(opts);
+  let data = yaml.parseDocument(source.toString(), opts);
   validWildcardsYamlData(data, opts);
+  // @ts-ignore
   return data;
 }
 
 exports.RE_DYNAMIC_PROMPTS_WILDCARDS = RE_DYNAMIC_PROMPTS_WILDCARDS;
+exports.RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL = RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL;
+exports.RE_WILDCARDS_NAME = RE_WILDCARDS_NAME;
+exports._matchDynamicPromptsWildcardsCore = _matchDynamicPromptsWildcardsCore;
 exports._validMap = _validMap;
 exports.assertWildcardsName = assertWildcardsName;
+exports.convertWildcardsNameToPaths = convertWildcardsNameToPaths;
 exports.default = parseWildcardsYaml;
+exports.defaultOptionsParseDocument = defaultOptionsParseDocument;
+exports.defaultOptionsStringify = defaultOptionsStringify;
+exports.getOptionsShared = getOptionsShared;
 exports.isDynamicPromptsWildcards = isDynamicPromptsWildcards;
 exports.isWildcardsName = isWildcardsName;
 exports.matchDynamicPromptsWildcards = matchDynamicPromptsWildcards;
+exports.matchDynamicPromptsWildcardsAll = matchDynamicPromptsWildcardsAll;
+exports.matchDynamicPromptsWildcardsAllGenerator = matchDynamicPromptsWildcardsAllGenerator;
 exports.normalizeDocument = normalizeDocument;
 exports.parseWildcardsYaml = parseWildcardsYaml;
 exports.stringifyWildcardsYamlData = stringifyWildcardsYamlData;
+exports.uniqueSeqItems = uniqueSeqItems;
+exports.uniqueSeqItemsChecker = uniqueSeqItemsChecker;
 exports.validWildcardsYamlData = validWildcardsYamlData;
+exports.visitWildcardsYAML = visitWildcardsYAML;
 //# sourceMappingURL=index.cjs.development.cjs.map

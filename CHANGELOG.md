@@ -3,6 +3,54 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.3](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.0.2...sd-wildcards-utils@1.0.3) (2024-05-25)
+
+
+
+### 🐛　Bug Fixes
+
+* support scope ([04baf64](https://github.com/bluelovers/sd-wildcards-utils/commit/04baf64ebf7725a2c7c8209922c7e15997bbcab1))
+* **wildcards:** color-theme-multi ([62959dd](https://github.com/bluelovers/sd-wildcards-utils/commit/62959dd57619e86be951ed2b9a66702e240a5b3c))
+* **wildcards:** breasts ([6e348e6](https://github.com/bluelovers/sd-wildcards-utils/commit/6e348e60c642af92a9bd986e21cbaa4dfa2b14bd))
+
+
+### ✨　Features
+
+* **wildcards:** disable lineWidth ([fa66d97](https://github.com/bluelovers/sd-wildcards-utils/commit/fa66d97aa32dbe100ea1e5eac0f9d37991651f83))
+* **wildcards:** merge mix-lazy-auto.yaml into lazy-wildcards.yaml ([17820e9](https://github.com/bluelovers/sd-wildcards-utils/commit/17820e9cac7e8f621d4aeff4cca0e90750aa449f))
+
+
+### 📦　Code Refactoring
+
+* add many change and new ([cd6e8fa](https://github.com/bluelovers/sd-wildcards-utils/commit/cd6e8faa292a6b830ca49b48d66181846cc1b566))
+* **wildcards:** __lazy-wildcards/background/location/*/prompts__ ([6027b79](https://github.com/bluelovers/sd-wildcards-utils/commit/6027b794bc752ef2b27f8b19fb5bf12fec22062c))
+
+
+### 📚　Documentation
+
+* **wildcards:** update readme ([a764bdf](https://github.com/bluelovers/sd-wildcards-utils/commit/a764bdf2d9c9229cf1bede690fc64ecf103ba9e0))
+
+
+### 🛠　Build System
+
+* update build ([ce48d97](https://github.com/bluelovers/sd-wildcards-utils/commit/ce48d97b5394f604eaa7e0e61a92c45813079cb0))
+* update build ([63b1302](https://github.com/bluelovers/sd-wildcards-utils/commit/63b13029f98e983e28493444fe5b01c85b1ec016))
+* update build ([f1151be](https://github.com/bluelovers/sd-wildcards-utils/commit/f1151bea58163f5e39c5c61823daaa9aa77e5725))
+
+
+### ⚙️　Continuous Integration
+
+* try use token ([51372a8](https://github.com/bluelovers/sd-wildcards-utils/commit/51372a80d888d4fafc82ec747c0199d482cbafc0))
+* **fix:** fetch submodules, info of merge ([36572cb](https://github.com/bluelovers/sd-wildcards-utils/commit/36572cb7b827f45c214f2d63dcd668a84024a5ba))
+
+
+### ♻️　Chores
+
+* **wildcards:** update wildcards ([2efc24e](https://github.com/bluelovers/sd-wildcards-utils/commit/2efc24e57814ee2a15f8db137b25d35288bde7d6))
+* **wildcards:** add silhouette ([7be04ae](https://github.com/bluelovers/sd-wildcards-utils/commit/7be04aed4698b73df8e0990c5f7a211711ebe531))
+
+
+
 ## [1.0.2](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.0.1...sd-wildcards-utils@1.0.2) (2024-05-22)
 
 
