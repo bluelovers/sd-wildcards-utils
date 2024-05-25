@@ -12,9 +12,10 @@ export declare function getOptionsShared<T extends IOptionsSharedWildcardsYaml>(
 export declare function defaultOptionsStringify(opts?: IOptionsStringify): IOptionsStringify;
 export declare function defaultOptionsParseDocument(opts?: IOptionsParseDocument): IOptionsParseDocument;
 export type IWildcardsYAMLSeq = YAMLSeq<Scalar>;
-export type IWildcardsYAMLDocument<Contents extends YAMLMap = YAMLMap.Parsed, Strict extends boolean = true> = Document$1<Contents, Strict> & {
+export interface IWildcardsYAMLDocument<Contents extends YAMLMap = YAMLMap.Parsed, Strict extends boolean = true> extends Omit<Document$1<Contents, Strict>, "options" | "contents"> {
 	options: Document$1["options"] & IOptionsParseDocument;
-};
+	contents: Strict extends true ? Contents | null : Contents;
+}
 export type IWildcardsYAMLDocumentParsed<Contents extends YAMLMap = YAMLMap.Parsed, Strict extends boolean = true> = IWildcardsYAMLDocument<Contents, Strict> & Pick<Document$1.Parsed, "directives" | "range">;
 export type IOptionsVisitor = visitorFn<unknown> | {
 	Alias?: visitorFn<Alias>;
@@ -215,7 +216,7 @@ export declare function normalizeDocument<T extends Document$1>(doc: T): void;
  * //     - value4
  * ```
  */
-export declare function stringifyWildcardsYamlData<T extends IRecordWildcards>(data: T | unknown | Document$1, opts?: IOptionsStringify): string;
+export declare function stringifyWildcardsYamlData<T extends IRecordWildcards | IWildcardsYAMLDocument | Document$1>(data: T | unknown, opts?: IOptionsStringify): string;
 /**
  * Parses Stable Diffusion wildcards source to a YAML object.
  *
