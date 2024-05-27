@@ -12,6 +12,7 @@ import { array_unique_overwrite } from 'array-hyper-unique';
 import { deepmergeAll } from 'deepmerge-plus';
 import Bluebird from 'bluebird';
 import { parseDocument } from 'yaml';
+import { groupSplitConfig } from './split-config';
 
 const _splitSpecific2 = escapeSplit({ delimiter: '/', escaper: '\\' });
 
@@ -99,16 +100,7 @@ export default (async () =>
 			})
 	;
 
-	for (let [group, target] of [
-		['color-anything', '__lazy-wildcards/utils/color-base__'],
-		['color-anything', '__mix-lazy-auto/color-anything__'],
-
-		['color-anything', '__cf-*/color__'],
-
-		['color-anything', '__Bo/chars/haircolor__'],
-		['color-anything', '__person/regular/haircolor__'],
-		['color-anything', '__person/regular/haircolor-unconv__'],
-	])
+	for (let [group, target] of groupSplitConfig)
 	{
 		let ret = _getEntry(target, json);
 
