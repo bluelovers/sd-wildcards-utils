@@ -15,7 +15,12 @@ import {
 	uniqueSeqItems,
 	visitWildcardsYAML,
 } from './items';
-import { _validMap, validWildcardsYamlData } from './valid';
+import {
+	_validMap,
+	_validSeq,
+	createDefaultVisitWildcardsYAMLOptions,
+	validWildcardsYamlData,
+} from './valid';
 
 export * from './util';
 export * from './options';
@@ -37,8 +42,11 @@ export function normalizeDocument<T extends Document>(doc: T)
 {
 	let options = (doc.options ?? {}) as IOptionsParseDocument;
 
+	const defaults = createDefaultVisitWildcardsYAMLOptions();
+
 	let visitorOptions: IOptionsVisitor = {
-		Map: _validMap,
+		...defaults,
+
 		Scalar(key, node)
 		{
 			let value = node.value as string;
@@ -84,8 +92,11 @@ export function normalizeDocument<T extends Document>(doc: T)
 	if (!options.disableUniqueItemValues)
 	{
 		// @ts-ignore
-		visitorOptions.Seq = (key, node) =>
+		const fn = defaults.Seq;
+		// @ts-ignore
+		visitorOptions.Seq = (key, node, ...args) =>
 		{
+			fn(key, node, ...args);
 			uniqueSeqItems(node.items);
 		}
 	}
