@@ -4,7 +4,12 @@ import escapeSplit from 'escape-split';
 import { globSync, readFileSync } from 'fs';
 import { join } from 'path';
 import { __ROOT_DATA, __ROOT_OUTPUT_WILDCARDS } from '../../__root';
-import { IRecordWildcards, parseWildcardsYaml, stringifyWildcardsYamlData } from '../../../src/index';
+import {
+	defaultCheckerIgnoreCase,
+	IRecordWildcards,
+	parseWildcardsYaml,
+	stringifyWildcardsYamlData,
+} from '../../../src/index';
 import { isMatch } from 'picomatch';
 // @ts-ignore
 import { outputFile } from 'fs-extra';
@@ -141,7 +146,9 @@ export default (async () =>
 
 		let lenOld = list.length;
 
-		array_unique_overwrite(list);
+		array_unique_overwrite(list, {
+			checker: defaultCheckerIgnoreCase,
+		});
 
 		let obj: IRecordWildcards = {};
 		obj[group] = list;

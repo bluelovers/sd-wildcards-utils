@@ -30,13 +30,24 @@ export function visitWildcardsYAML(node: Node | Document | null, visitorOptions:
 	return visit(node, visitorOptions as visitor)
 }
 
-export function uniqueSeqItemsChecker(element: Node, value: Node)
+export function defaultCheckerIgnoreCase(a: unknown, b: unknown)
 {
-	if (isScalar(element) && isScalar(value))
+	if (typeof a === 'string' && typeof b === 'string')
 	{
-		return defaultChecker(element.value, value.value)
+		a = a.toLowerCase();
+		b = b.toLowerCase();
 	}
-	return defaultChecker(element, value)
+
+	return defaultChecker(a, b)
+}
+
+export function uniqueSeqItemsChecker(a: Node, b: Node)
+{
+	if (isScalar(a) && isScalar(b))
+	{
+		return defaultCheckerIgnoreCase(a.value, b.value)
+	}
+	return defaultCheckerIgnoreCase(a, b)
 }
 
 export function uniqueSeqItems<T extends Node>(items: (T | unknown)[])
