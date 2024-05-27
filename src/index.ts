@@ -1,12 +1,11 @@
 /**
  * Created by user on 2024/5/21.
  */
-import { Document, isDocument, isMap, isNode, ParsedNode, parseDocument, stringify, YAMLMap } from 'yaml';
+import { Document, isDocument, ParsedNode, parseDocument, stringify, YAMLMap } from 'yaml';
 import {
 	defaultOptionsParseDocument,
 	defaultOptionsStringify,
 	IOptionsParseDocument,
-	IOptionsSharedWildcardsYaml,
 	IOptionsStringify,
 } from './options';
 import {
@@ -16,53 +15,16 @@ import {
 	uniqueSeqItems,
 	visitWildcardsYAML,
 } from './items';
+import { _validMap, validWildcardsYamlData } from './valid';
 
 export * from './util';
 export * from './options';
 export * from './items';
+export * from './valid';
 
 export interface IRecordWildcards
 {
 	[key: string]: string[] | Record<string, string[]> | IRecordWildcards
-}
-
-export function _validMap(key: number | 'key' | 'value' | null, node: YAMLMap)
-{
-	const elem = node.items.find(pair => pair.value === null);
-	if (elem)
-	{
-		throw new SyntaxError(`Invalid SYNTAX. key: ${key}, node: ${node}`)
-	}
-}
-
-export function validWildcardsYamlData<T extends IRecordWildcards | IWildcardsYAMLDocument | Document>(data: T | unknown,
-	opts?: IOptionsSharedWildcardsYaml,
-): asserts data is T
-{
-	if (isDocument(data))
-	{
-		if (isNode(data.contents) && !isMap(data.contents))
-		{
-			throw TypeError(`The 'contents' property of the provided YAML document must be a YAMLMap. Received: ${data.contents}`)
-		}
-
-		visitWildcardsYAML(data, {
-			Map: _validMap,
-		});
-
-		data = data.toJSON()
-	}
-
-	let rootKeys = Object.keys(data);
-
-	if (!rootKeys.length)
-	{
-		throw TypeError(`The provided JSON contents must contain at least one key.`)
-	}
-	else if (rootKeys.length !== 1 && !opts?.allowMultiRoot)
-	{
-		throw TypeError(`The provided JSON object cannot have more than one root key. Only one root key is allowed unless explicitly allowed by the 'allowMultiRoot' option.`)
-	}
 }
 
 const RE_UNSAFE_QUOTE = /['"]/;
