@@ -5,6 +5,7 @@ import { __ROOT_DATA, __ROOT_OUTPUT_WILDCARDS } from '../../__root';
 import { parseWildcardsYaml, stringifyWildcardsYamlData } from '../../../src/index';
 // @ts-ignore
 import { outputFile } from 'fs-extra';
+import { mergeWildcardsYAMLDocumentRoots } from '../../../src/merge';
 
 export default Bluebird.map([
 	join(__ROOT_DATA, 'lazy-wildcards.yaml'),
@@ -14,13 +15,7 @@ export default Bluebird.map([
 		.then(parseWildcardsYaml)
 })
 	.then(ls => {
-		return ls.reduce((a, b) => {
-
-			// @ts-ignore
-			a.contents.items.push(...b.contents.items);
-
-			return a
-		})
+		return mergeWildcardsYAMLDocumentRoots(ls)
 	})
 	.then(json =>
 {

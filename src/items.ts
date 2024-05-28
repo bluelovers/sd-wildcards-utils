@@ -1,13 +1,16 @@
 import { array_unique_overwrite, defaultChecker } from 'array-hyper-unique';
-import type { Alias, Document, Node, Pair, Scalar, visitor, visitorFn, YAMLMap, YAMLSeq } from 'yaml';
+import type { ToJSOptions, Alias, Document, Node, Pair, Scalar, visitor, visitorFn, YAMLMap, YAMLSeq } from 'yaml';
 import { isScalar, visit } from 'yaml';
 import { IOptionsParseDocument } from './options';
+import { IRecordWildcards } from './index';
 
 export type IWildcardsYAMLSeq = YAMLSeq<Scalar>;
 export interface IWildcardsYAMLDocument<Contents extends YAMLMap = YAMLMap.Parsed, Strict extends boolean = true> extends Omit<Document<Contents, Strict>, 'options' | 'contents'>
 {
 	options: Document["options"] & IOptionsParseDocument;
 	contents: Strict extends true ? Contents | null : Contents;
+
+	toJSON<T = IRecordWildcards>(jsonArg?: string | null, onAnchor?: ToJSOptions['onAnchor']): T;
 }
 
 export type IWildcardsYAMLDocumentParsed<Contents extends YAMLMap = YAMLMap.Parsed, Strict extends boolean = true> =
