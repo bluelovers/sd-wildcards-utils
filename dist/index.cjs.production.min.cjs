@@ -156,7 +156,11 @@ exports.getOptionsShared = getOptionsShared, exports.isDynamicPromptsWildcards =
 exports.matchDynamicPromptsWildcardsAll = function matchDynamicPromptsWildcardsAll(e) {
   return [ ...matchDynamicPromptsWildcardsAllGenerator(e) ];
 }, exports.matchDynamicPromptsWildcardsAllGenerator = matchDynamicPromptsWildcardsAllGenerator, 
-exports.normalizeDocument = normalizeDocument, exports.parseWildcardsYaml = parseWildcardsYaml, 
+exports.mergeWildcardsYAMLDocumentJsonBy = function mergeWildcardsYAMLDocumentJsonBy(t, r) {
+  return r.deepmerge(t.map((t => e.isDocument(t) ? t.toJSON() : t)));
+}, exports.mergeWildcardsYAMLDocumentRoots = function mergeWildcardsYAMLDocumentRoots(e) {
+  return e.reduce(((e, t) => (e.contents.items.push(...t.contents.items), e)));
+}, exports.normalizeDocument = normalizeDocument, exports.parseWildcardsYaml = parseWildcardsYaml, 
 exports.stringifyWildcardsYamlData = function stringifyWildcardsYamlData(t, r) {
   return r = defaultOptionsStringify(r), e.isDocument(t) ? (normalizeDocument(t), 
   t.toString(r)) : e.stringify(t, r);
