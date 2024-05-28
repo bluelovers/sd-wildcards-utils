@@ -1,7 +1,7 @@
 import { Document, isDocument, YAMLMap } from 'yaml';
 import { IRecordWildcards } from './index';
 
-export function mergeWildcardsYAMLDocumentRoots<T extends Pick<Document<YAMLMap>, 'contents'>>(ls: [T, ...NoInfer<T>[]])
+export function mergeWildcardsYAMLDocumentRoots<T extends Pick<Document<YAMLMap>, 'contents'>>(ls: [T, ...any[]])
 {
 	return ls.reduce((a, b) =>
 	{
