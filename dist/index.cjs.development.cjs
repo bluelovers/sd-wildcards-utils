@@ -37,17 +37,60 @@ function defaultOptionsParseDocument(opts) {
 function visitWildcardsYAML(node, visitorOptions) {
   return yaml.visit(node, visitorOptions);
 }
-function uniqueSeqItemsChecker(element, value) {
-  if (yaml.isScalar(element) && yaml.isScalar(value)) {
-    return arrayHyperUnique.defaultChecker(element.value, value.value);
+function defaultCheckerIgnoreCase(a, b) {
+  if (typeof a === 'string' && typeof b === 'string') {
+    a = a.toLowerCase();
+    b = b.toLowerCase();
   }
-  return arrayHyperUnique.defaultChecker(element, value);
+  return arrayHyperUnique.defaultChecker(a, b);
+}
+function uniqueSeqItemsChecker(a, b) {
+  if (yaml.isScalar(a) && yaml.isScalar(b)) {
+    return defaultCheckerIgnoreCase(a.value, b.value);
+  }
+  return defaultCheckerIgnoreCase(a, b);
 }
 function uniqueSeqItems(items) {
   return arrayHyperUnique.array_unique_overwrite(items, {
     // @ts-ignore
     checker: uniqueSeqItemsChecker
   });
+}
+
+// @ts-ignore
+function _validMap(key, node, ...args) {
+  const elem = node.items.find(pair => (pair === null || pair === void 0 ? void 0 : pair.value) == null);
+  if (elem) {
+    throw new SyntaxError(`Invalid SYNTAX. key: ${key}, node: ${node}, elem: ${elem}`);
+  }
+}
+// @ts-ignore
+function _validSeq(key, node, ...args) {
+  const index = node.items.findIndex(node => !yaml.isScalar(node));
+  if (index !== -1) {
+    throw new SyntaxError(`Invalid SYNTAX. key: ${key}, node: ${node}, index: ${index}, node: ${node.items[index]}`);
+  }
+}
+function createDefaultVisitWildcardsYAMLOptions() {
+  return {
+    Map: _validMap,
+    Seq: _validSeq
+  };
+}
+function validWildcardsYamlData(data, opts) {
+  if (yaml.isDocument(data)) {
+    if (yaml.isNode(data.contents) && !yaml.isMap(data.contents)) {
+      throw TypeError(`The 'contents' property of the provided YAML document must be a YAMLMap. Received: ${data.contents}`);
+    }
+    visitWildcardsYAML(data, createDefaultVisitWildcardsYAMLOptions());
+    data = data.toJSON();
+  }
+  let rootKeys = Object.keys(data);
+  if (!rootKeys.length) {
+    throw TypeError(`The provided JSON contents must contain at least one key.`);
+  } else if (rootKeys.length !== 1 && !(opts !== null && opts !== void 0 && opts.allowMultiRoot)) {
+    throw TypeError(`The provided JSON object cannot have more than one root key. Only one root key is allowed unless explicitly allowed by the 'allowMultiRoot' option.`);
+  }
 }
 
 const RE_DYNAMIC_PROMPTS_WILDCARDS = /__([&~!@])?([*\w\/_\-]+)(\([^\n#]+\))?__/;
@@ -193,36 +236,14 @@ function convertWildcardsNameToPaths(name) {
   return name.split('/');
 }
 
-function _validMap(key, node) {
-  const elem = node.items.find(pair => pair.value === null);
-  if (elem) {
-    throw new SyntaxError(`Invalid SYNTAX. key: ${key}, node: ${node}`);
-  }
-}
-function validWildcardsYamlData(data, opts) {
-  if (yaml.isDocument(data)) {
-    if (yaml.isNode(data.contents) && !yaml.isMap(data.contents)) {
-      throw TypeError(`The 'contents' property of the provided YAML document must be a YAMLMap. Received: ${data.contents}`);
-    }
-    visitWildcardsYAML(data, {
-      Map: _validMap
-    });
-    data = data.toJSON();
-  }
-  let rootKeys = Object.keys(data);
-  if (!rootKeys.length) {
-    throw TypeError(`The provided JSON contents must contain at least one key.`);
-  } else if (rootKeys.length !== 1 && !(opts !== null && opts !== void 0 && opts.allowMultiRoot)) {
-    throw TypeError(`The provided JSON object cannot have more than one root key. Only one root key is allowed unless explicitly allowed by the 'allowMultiRoot' option.`);
-  }
-}
 const RE_UNSAFE_QUOTE = /['"]/;
 const RE_UNSAFE_VALUE = /^\s*-|[{$~!@}\n|:?#]/;
 function normalizeDocument(doc) {
   var _doc$options;
   let options = (_doc$options = doc.options) !== null && _doc$options !== void 0 ? _doc$options : {};
+  const defaults = createDefaultVisitWildcardsYAMLOptions();
   let visitorOptions = {
-    Map: _validMap,
+    ...defaults,
     Scalar(key, node) {
       let value = node.value;
       if (typeof value === 'string') {
@@ -246,7 +267,10 @@ function normalizeDocument(doc) {
   };
   if (!options.disableUniqueItemValues) {
     // @ts-ignore
-    visitorOptions.Seq = (key, node) => {
+    const fn = defaults.Seq;
+    // @ts-ignore
+    visitorOptions.Seq = (key, node, ...args) => {
+      fn(key, node, ...args);
       uniqueSeqItems(node.items);
     };
   }
@@ -321,9 +345,12 @@ exports.RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL = RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBA
 exports.RE_WILDCARDS_NAME = RE_WILDCARDS_NAME;
 exports._matchDynamicPromptsWildcardsCore = _matchDynamicPromptsWildcardsCore;
 exports._validMap = _validMap;
+exports._validSeq = _validSeq;
 exports.assertWildcardsName = assertWildcardsName;
 exports.convertWildcardsNameToPaths = convertWildcardsNameToPaths;
+exports.createDefaultVisitWildcardsYAMLOptions = createDefaultVisitWildcardsYAMLOptions;
 exports.default = parseWildcardsYaml;
+exports.defaultCheckerIgnoreCase = defaultCheckerIgnoreCase;
 exports.defaultOptionsParseDocument = defaultOptionsParseDocument;
 exports.defaultOptionsStringify = defaultOptionsStringify;
 exports.getOptionsShared = getOptionsShared;

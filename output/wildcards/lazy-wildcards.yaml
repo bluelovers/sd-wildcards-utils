@@ -408,8 +408,14 @@ lazy-wildcards:
           downblouse, cleavage, ceiling, (peek panties, panty peek, pussy peek), selfie pose, squatting, crouching
         - >-
           {from behind|from side|from above|from below|}, (in container, stuck, trash can, trashcan), garbage, trash, after sex, anus, ass wobble, pussy, cum in ass, beaten up, helpless
+        - __cf-sex-positions/prompt-solo__
+        - __cf-sex-positions/prompt-man-woman__
+        - __cf-sex-positions/prompt-two-women__
+        - __cf-sex-positions/prompt-mix__
+        - __cf-sex-positions/all__
     ethnicity:
       - __cf-*/ethnicity__
+      - a beautiful elvish girl
     expressions:
       - __person/regular/expressions__
       - __halloween/pumpkin-carving/expressions__
@@ -540,10 +546,12 @@ lazy-wildcards:
       - maxi dress
       - breastless dress
       - (bare shoulders, detached sleeves, strapless dress, long dress, corset)
+      - cape, cross-laced clothes, hexagram, white transparent thighhighs, miniskirt, dress, thong, elbow laced panties, visible panties
       - >-
         {__lazy-wildcards/utils/season__ |}school uniform
       - >-
         sosexyburuma, buruma, Bloomers, Old Japanese Gym Uniform, School Swimsuit, burumashorts, navy buruma, thong buruma, wearing navy buruma and gym uniform, see through, highleg, side-tie panties, gym shirt, short sleeves, cameltoe, revealing clothes, nsfw,
+      - skirt_suit
     sweater:
       - ribbed sweater
       - sleeveless sweater
@@ -614,6 +622,11 @@ lazy-wildcards:
       - |-
         (in river), splash, ({sun flare, lens flare, sunset|moonlight|dawn|twilight} background, low horizon), backlighting
       - mangrove forest biome
+      - |-
+        (flower, falling petals, petals on liquid, petals, cherry blossom:0.8)
+      - underground facility
+      - |-
+        (in line in front of a movie theater with friends:1.4)
     location:
       interior-lava:
         prompts:
@@ -649,6 +662,7 @@ lazy-wildcards:
           - bills
           - betting ticket
           - cheating \(competitive\)
+          - house_of_cards
         main:
           roulette:
             - roulette, roulette table
@@ -665,6 +679,84 @@ lazy-wildcards:
             - playing card, card, __lazy-wildcards/util/action/playing-card/poker-playing__, holding card
             - >-
               playing card, card, {1-3$$__lazy-wildcards/util/action/playing-card/poker-card__}, holding card
+      tarot:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/background/location/tarot/main__}, {0-2$$__lazy-wildcards/background/location/tarot/action/*__}, __lazy-wildcards/background/location/tarot/elem/cards_tarot__, {0-3$$__lazy-wildcards/background/location/tarot/elem/cards_tarot_type__}, {1-$$__lazy-wildcards/background/location/tarot/env__}, {1-$$__lazy-wildcards/background/location/tarot/style__}
+        main:
+          - a table with a lot of tarot cards
+          - a tarot card in the middle of the table
+          - >-
+            {3d papercut shadow box of |}a deck of tarot cards spilled on a table
+        style:
+          - occult
+          - arcana
+          - psychedelic
+          - magic
+        action:
+          pose:
+            - elbows_on_table,
+          telling:
+            - |-
+              (fortune_telling, card_reading:1.2), fortune_teller
+        env:
+          - tarot_cards on table, on table
+          - house_of_cards
+          - candle
+          - a lot of tarot_cards
+        elem:
+          cards_tarot:
+            - |-
+              (tarot_cards, tarot_\(card\):1.2)
+          cards_tarot_type:
+            - the_fool_\(tarot\)
+            - the_magician_\(tarot\)
+            - the_high_priestess_\(tarot\)
+            - the_empress_\(tarot\)
+            - the_emperor_\(tarot\)
+            - the_hierophant_\(tarot\)
+            - the_lovers_\(tarot\)
+            - the_chariot_\(tarot\)
+            - strength_\(tarot\)
+            - the_hermit_\(tarot\)
+            - wheel_of_fortune_\(tarot\)
+            - justice_\(tarot\)
+            - the_hanged_man_\(tarot\)
+            - death_\(tarot\)
+            - temperance_\(tarot\)
+            - the_devil_\(tarot\)
+            - the_tower_\(tarot\)
+            - the_star_\(tarot\)
+            - the_moon_\(tarot\)
+            - the_sun_\(tarot\)
+            - judgement_\(tarot\)
+            - the_world_\(tarot\)
+      fence:
+        prompts:
+          - >-
+            {1-2$$__lazy-wildcards/background/location/fence/main__}, {0-3$$__lazy-wildcards/background/location/fence/env__}, {0-1$$__lazy-wildcards/background/location/fence/action/*__}
+        main:
+          - fence
+          - chain-link fence, chain_link_fence
+          - wooden fence
+          - bamboo fence
+          - wire_fence
+          - barbed_wire
+        env:
+          - rooftop
+        action:
+          pose:
+            - against fence
+      pool:
+        prompts:
+          - >-
+            {1-2$$__lazy-wildcards/background/location/pool/main__}, {0-3$$__lazy-wildcards/background/location/pool/env__}
+        main:
+          - poolside
+          - pool
+        env:
+          - empty pool
+          - pool ladder
   book:
     style-adj:
       text:
@@ -682,25 +774,35 @@ lazy-wildcards:
       - (posing in front of a colorful and dynamic background. She has a confident expression and is holding a statement accessory)
       - (posing with her hands on her hips in an Asian squat position in front of a modern and dynamic background. She exudes confidence and sex appeal, with her daring fashion choices leaving little to the imagination)
 mix-lazy-auto:
-  # "color-anything" (total: 195 => 126, save 69 ) is merge from
+  # "color-anything" (total: 232 => 130, save 102 ) is merge from
   #  - __lazy-wildcards/utils/color-base__ (8)
   #  - __mix-lazy-auto/color-anything__ (1)
   #  - __cf-clown/color__ (12)
   #  - __cf-disco-dancer/color__ (13)
   #  - __cf-doctor/color__ (10)
   #  - __cf-elf/color__ (10)
-  #  - __cf-fairy/color__ (13)
   #  - __cf-gangster-1920s/color__ (8)
   #  - __cf-lingerie/color__ (10)
   #  - __cf-maid/color__ (4)
   #  - __cf-punk/color__ (17)
   #  - __cf-school-student/color__ (11)
   #  - __cf-secretary/color__ (8)
+  #  - __cf-sex-positions/color__ (6)
   #  - __cf-school-teacher/color__ (11)
   #  - __cf-tennis-player/color__ (7)
   #  - __Bo/chars/haircolor__ (1)
   #  - __person/regular/haircolor__ (30)
   #  - __person/regular/haircolor-unconv__ (21)
+  #  - __cf-model/eye-color/blue__ (5)
+  #  - __cf-model/eye-color/green__ (5)
+  #  - __cf-model/eye-color/brown__ (3)
+  #  - __cf-model/eye-color/black__ (1)
+  #  - __cf-model/eye-color/gray__ (2)
+  #  - __cf-model/eye-color/vivid__ (7)
+  #  - __cf-model/eye-color/other__ (3)
+  #  - __cf-model/hair-color/young__ (6)
+  #  - __cf-model/hair-color/old__ (3)
+  #  - __cf-model/hair-color/other__ (9)
   color-anything:
     - white
     - black
@@ -748,16 +850,6 @@ mix-lazy-auto:
     - pearl white
     - pastel pink
     - soft purple
-    - sapphire blue
-    - |-
-      {pastel|vibrant} pink
-    - |-
-      {deep|sky} blue
-    - shimmering silver
-    - golden
-    - pearlescent white
-    - lavender
-    - rose gold
     - pinstripe
     - gray
     - deep burgundy
@@ -833,7 +925,9 @@ mix-lazy-auto:
     - honey blonde
     - caramel
     - salt and pepper
+    - lavender
     - pastel blue
+    - rose gold
     - peach
     - mint green
     - lilac
@@ -845,3 +939,13 @@ mix-lazy-auto:
     - indigo
     - orchid
     - aqua
+    - dark Blue
+    - turquoise
+    - light green
+    - olive green
+    - jade green
+    - hazel
+    - amber
+    - heterochromia
+    - light yellow
+    - dark
