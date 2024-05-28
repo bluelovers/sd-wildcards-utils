@@ -236,6 +236,27 @@ function convertWildcardsNameToPaths(name) {
   return name.split('/');
 }
 
+function mergeWildcardsYAMLDocumentRoots(ls) {
+  return ls.reduce((a, b) => {
+    // @ts-ignore
+    a.contents.items.push(...b.contents.items);
+    return a;
+  });
+}
+/**
+ * @example
+ * import { deepmergeAll } from 'deepmerge-plus';
+ *
+ * mergeWildcardsYAMLDocumentJsonBy(ls, {
+ * 	deepmerge: deepmergeAll,
+ * })
+ */
+function mergeWildcardsYAMLDocumentJsonBy(ls, opts) {
+  return opts.deepmerge(ls.map(v => {
+    return yaml.isDocument(v) ? v.toJSON() : v;
+  }));
+}
+
 const RE_UNSAFE_QUOTE = /['"]/;
 const RE_UNSAFE_VALUE = /^\s*-|[{$~!@}\n|:?#]/;
 function normalizeDocument(doc) {
@@ -359,6 +380,8 @@ exports.isWildcardsName = isWildcardsName;
 exports.matchDynamicPromptsWildcards = matchDynamicPromptsWildcards;
 exports.matchDynamicPromptsWildcardsAll = matchDynamicPromptsWildcardsAll;
 exports.matchDynamicPromptsWildcardsAllGenerator = matchDynamicPromptsWildcardsAllGenerator;
+exports.mergeWildcardsYAMLDocumentJsonBy = mergeWildcardsYAMLDocumentJsonBy;
+exports.mergeWildcardsYAMLDocumentRoots = mergeWildcardsYAMLDocumentRoots;
 exports.normalizeDocument = normalizeDocument;
 exports.parseWildcardsYaml = parseWildcardsYaml;
 exports.stringifyWildcardsYamlData = stringifyWildcardsYamlData;

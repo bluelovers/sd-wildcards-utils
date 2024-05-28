@@ -10,7 +10,7 @@ export function mergeWildcardsYAMLDocumentRoots<T extends Pick<Document<YAMLMap>
 		a.contents.items.push(...b.contents.items);
 
 		return a
-	})
+	}) as T
 }
 
 export interface IOptionsMergeWilcardsYAMLDocumentJsonBy
