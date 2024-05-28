@@ -16,8 +16,6 @@ import {
 	visitWildcardsYAML,
 } from './items';
 import {
-	_validMap,
-	_validSeq,
 	createDefaultVisitWildcardsYAMLOptions,
 	validWildcardsYamlData,
 } from './valid';
@@ -26,6 +24,7 @@ export * from './util';
 export * from './options';
 export * from './items';
 export * from './valid';
+export * from './merge';
 
 export interface IRecordWildcards
 {

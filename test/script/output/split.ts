@@ -6,7 +6,7 @@ import { join } from 'path';
 import { __ROOT_DATA, __ROOT_OUTPUT_WILDCARDS } from '../../__root';
 import {
 	defaultCheckerIgnoreCase,
-	IRecordWildcards,
+	IRecordWildcards, mergeWildcardsYAMLDocumentJsonBy,
 	parseWildcardsYaml,
 	stringifyWildcardsYamlData,
 } from '../../../src/index';
@@ -94,14 +94,16 @@ export default (async () =>
 				let obj = parseWildcardsYaml(buf, {
 					allowMultiRoot: true,
 				});
-				obj.contents
+
 				let json = obj.toJSON();
 
 				return json as IRecordWildcards
 			})
 			.then((ls) =>
 			{
-				return deepmergeAll(ls) as IRecordWildcards
+				return mergeWildcardsYAMLDocumentJsonBy(ls, {
+					deepmerge: deepmergeAll,
+				})
 			})
 	;
 
