@@ -3,14 +3,15 @@ import { IRecordWildcards } from './index';
 
 export function mergeWildcardsYAMLDocumentRoots<T extends Pick<Document<YAMLMap>, 'contents'>>(ls: [T, ...any[]])
 {
-	return ls.reduce((a, b) =>
-	{
+	return ls.reduce(_mergeWildcardsYAMLDocumentRootsCore) as T
+}
 
-		// @ts-ignore
-		a.contents.items.push(...b.contents.items);
+export function _mergeWildcardsYAMLDocumentRootsCore<T extends Pick<Document<YAMLMap>, 'contents'>>(a: T, b: any)
+{
+	// @ts-ignore
+	a.contents.items.push(...b.contents.items);
 
-		return a
-	}) as T
+	return a
 }
 
 export interface IOptionsMergeWilcardsYAMLDocumentJsonBy
@@ -28,7 +29,10 @@ export interface IOptionsMergeWilcardsYAMLDocumentJsonBy
  */
 export function mergeWildcardsYAMLDocumentJsonBy<T extends Document | unknown, R = IRecordWildcards>(ls: T[], opts: IOptionsMergeWilcardsYAMLDocumentJsonBy): R
 {
-	return opts.deepmerge(ls.map(v => {
-		return isDocument(v) ? v.toJSON() : v
-	})) as any
+	return opts.deepmerge(ls.map(_toJSON)) as any
+}
+
+export function _toJSON<T extends Document | unknown, R = IRecordWildcards>(v: T): R
+{
+	return isDocument(v) ? v.toJSON() : v
 }

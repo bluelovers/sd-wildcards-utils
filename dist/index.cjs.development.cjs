@@ -237,11 +237,12 @@ function convertWildcardsNameToPaths(name) {
 }
 
 function mergeWildcardsYAMLDocumentRoots(ls) {
-  return ls.reduce((a, b) => {
-    // @ts-ignore
-    a.contents.items.push(...b.contents.items);
-    return a;
-  });
+  return ls.reduce(_mergeWildcardsYAMLDocumentRootsCore);
+}
+function _mergeWildcardsYAMLDocumentRootsCore(a, b) {
+  // @ts-ignore
+  a.contents.items.push(...b.contents.items);
+  return a;
 }
 /**
  * @example
@@ -252,9 +253,10 @@ function mergeWildcardsYAMLDocumentRoots(ls) {
  * })
  */
 function mergeWildcardsYAMLDocumentJsonBy(ls, opts) {
-  return opts.deepmerge(ls.map(v => {
-    return yaml.isDocument(v) ? v.toJSON() : v;
-  }));
+  return opts.deepmerge(ls.map(_toJSON));
+}
+function _toJSON(v) {
+  return yaml.isDocument(v) ? v.toJSON() : v;
 }
 
 const RE_UNSAFE_QUOTE = /['"]/;
@@ -365,6 +367,8 @@ exports.RE_DYNAMIC_PROMPTS_WILDCARDS = RE_DYNAMIC_PROMPTS_WILDCARDS;
 exports.RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL = RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL;
 exports.RE_WILDCARDS_NAME = RE_WILDCARDS_NAME;
 exports._matchDynamicPromptsWildcardsCore = _matchDynamicPromptsWildcardsCore;
+exports._mergeWildcardsYAMLDocumentRootsCore = _mergeWildcardsYAMLDocumentRootsCore;
+exports._toJSON = _toJSON;
 exports._validMap = _validMap;
 exports._validSeq = _validSeq;
 exports.assertWildcardsName = assertWildcardsName;
