@@ -28,7 +28,8 @@ export type IOptionsVisitor = visitorFn<unknown> | {
 	Value?: visitorFn<Scalar | YAMLMap | IWildcardsYAMLSeq>;
 };
 export declare function visitWildcardsYAML(node: Node$1 | Document$1 | null, visitorOptions: IOptionsVisitor): void;
-export declare function uniqueSeqItemsChecker(element: Node$1, value: Node$1): boolean;
+export declare function defaultCheckerIgnoreCase(a: unknown, b: unknown): boolean;
+export declare function uniqueSeqItemsChecker(a: Node$1, b: Node$1): boolean;
 export declare function uniqueSeqItems<T extends Node$1>(items: (T | unknown)[]): T[];
 export declare const RE_DYNAMIC_PROMPTS_WILDCARDS: RegExp;
 /**
@@ -173,11 +174,13 @@ export declare function matchDynamicPromptsWildcardsAll(input: string): IMatchDy
 export declare function isWildcardsName(name: string): boolean;
 export declare function assertWildcardsName(name: string): void;
 export declare function convertWildcardsNameToPaths(name: string): string[];
+export declare function _validMap(key: number | "key" | "value" | null, node: YAMLMap, ...args: any[]): void;
+export declare function _validSeq(key: number | "key" | "value" | null, node: YAMLSeq, ...args: any[]): asserts node is YAMLSeq<Scalar | Scalar.Parsed>;
+export declare function createDefaultVisitWildcardsYAMLOptions(): Exclude<IOptionsVisitor, Function>;
+export declare function validWildcardsYamlData<T extends IRecordWildcards | IWildcardsYAMLDocument | Document$1>(data: T | unknown, opts?: IOptionsSharedWildcardsYaml): asserts data is T;
 export interface IRecordWildcards {
 	[key: string]: string[] | Record<string, string[]> | IRecordWildcards;
 }
-export declare function _validMap(key: number | "key" | "value" | null, node: YAMLMap): void;
-export declare function validWildcardsYamlData<T extends IRecordWildcards | IWildcardsYAMLDocument | Document$1>(data: T | unknown, opts?: IOptionsSharedWildcardsYaml): asserts data is T;
 /**
  * Normalizes a YAML document by applying specific rules to its nodes.
  **/

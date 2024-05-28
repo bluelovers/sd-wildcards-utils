@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.7](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.0.6...sd-wildcards-utils@1.0.7) (2024-05-28)
+
+
+
+### ✨　Features
+
+* add defaultCheckerIgnoreCase ([26cacf1](https://github.com/bluelovers/sd-wildcards-utils/commit/26cacf1d172403420782b0af71ab9ba0e549a030))
+* support new `cf-model` ([a22344d](https://github.com/bluelovers/sd-wildcards-utils/commit/a22344d62f698ac3fb5cf7923953bcc98f6b132a))
+
+
+### 📦　Code Refactoring
+
+* add `_validSeq` ([27ecef1](https://github.com/bluelovers/sd-wildcards-utils/commit/27ecef13e0d9e795ad763975449ca2da8255b5b2))
+* code splitting ([5b34f60](https://github.com/bluelovers/sd-wildcards-utils/commit/5b34f60abe9f68010b6bc9458eea888f6b5c510a))
+
+
+### ⚙️　Continuous Integration
+
+* COMMIT_NAME ([1b831cb](https://github.com/bluelovers/sd-wildcards-utils/commit/1b831cb14e91cd1ad593fd4f9e1a571dea6ca95c))
+
+
+### 🔖　Miscellaneous
+
+* . ([6f136d7](https://github.com/bluelovers/sd-wildcards-utils/commit/6f136d7e8119b49f20826c76779cba590d53510c))
+
+
+
 ## [1.0.6](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.0.5...sd-wildcards-utils@1.0.6) (2024-05-25)
 
 
