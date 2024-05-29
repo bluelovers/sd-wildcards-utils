@@ -30,9 +30,6 @@ function _getEntry(target: string, data: IRecordWildcards)
 
 	let list = findPath(data, paths);
 
-	//console.dir(findPath(data, paths))
-	//console.dir(getValue(data, paths.join('.')))
-
 	if (!list.length)
 	{
 		return null as null;
@@ -53,6 +50,7 @@ export default (async () =>
 
 	const json = await Bluebird.map(globSync([
 				'cf/costumes/*.yaml',
+				'cf/other/*.yaml',
 				'others/**/*.yaml',
 				'*.yaml',
 			], {
