@@ -6,11 +6,11 @@ import { join } from 'path';
 import { __ROOT_DATA, __ROOT_OUTPUT_WILDCARDS } from '../../__root';
 import {
 	defaultCheckerIgnoreCase,
-	IRecordWildcards, mergeWildcardsYAMLDocumentJsonBy,
+	IRecordWildcards,
+	mergeWildcardsYAMLDocumentJsonBy,
 	parseWildcardsYaml,
 	stringifyWildcardsYamlData,
 } from '../../../src/index';
-import { isMatch } from 'picomatch';
 // @ts-ignore
 import { outputFile } from 'fs-extra';
 import { array_unique_overwrite } from 'array-hyper-unique';
@@ -18,37 +18,9 @@ import { deepmergeAll } from 'deepmerge-plus';
 import Bluebird from 'bluebird';
 import { parseDocument } from 'yaml';
 import { groupSplitConfig } from './split-config';
+import { findPath } from '../../../src/find';
 
 const _splitSpecific2 = escapeSplit({ delimiter: '/', escaper: '\\' });
-
-function findPath(data: IRecordWildcards, paths: string[], prefix = '', list: [string, string[]][] = [])
-{
-	paths = paths.slice();
-	let current = paths.shift();
-	let deep = paths.length > 0;
-
-	for (let key in data)
-	{
-		let bool = isMatch(key, current);
-		//console.log(bool, key, current, deep)
-		if (bool)
-		{
-			let target = prefix + key;
-			if (deep)
-			{
-				if (typeof data[key] !== 'string')
-				{
-					findPath(data[key] as any, paths, target + '.', list)
-				}
-			}
-			else
-			{
-				list.push([target, data[key] as string[]])
-			}
-		}
-	}
-	return list
-}
 
 function _getEntry(target: string, data: IRecordWildcards)
 {
