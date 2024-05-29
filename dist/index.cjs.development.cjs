@@ -276,7 +276,7 @@ function normalizeDocument(doc) {
         } else if (node.type === 'QUOTE_DOUBLE' || node.type === 'QUOTE_SINGLE' && !value.includes('\\')) {
           node.type = 'PLAIN';
         }
-        value = value.replace(/[\x00\u200b]+/g, '').replace(/[\s\xa0]+|\s+$/gm, ' ');
+        value = value.replace(/[\x00\u200b]+/g, '').replace(/[\s\xa0]+/gm, ' ').replace(/[\s\xa0]+$/gm, '');
         if (RE_UNSAFE_VALUE.test(value)) {
           if (node.type === 'PLAIN') {
             node.type = 'BLOCK_LITERAL';

@@ -149,7 +149,8 @@ function normalizeDocument(e) {
       if ("string" == typeof n) {
         if (a && m.test(n)) throw new SyntaxError(`Invalid SYNTAX [UNSAFE_QUOTE]. key: ${e}, node: ${t}`);
         ("QUOTE_DOUBLE" === t.type || "QUOTE_SINGLE" === t.type && !n.includes("\\")) && (t.type = "PLAIN"), 
-        n = n.replace(/[\x00\u200b]+/g, "").replace(/[\s\xa0]+|\s+$/gm, " "), f.test(n) && (("PLAIN" === t.type || "BLOCK_FOLDED" === t.type && /#/.test(n)) && (t.type = "BLOCK_LITERAL"), 
+        n = n.replace(/[\x00\u200b]+/g, "").replace(/[\s\xa0]+/gm, " ").replace(/[\s\xa0]+$/gm, ""), 
+        f.test(n) && (("PLAIN" === t.type || "BLOCK_FOLDED" === t.type && /#/.test(n)) && (t.type = "BLOCK_LITERAL"), 
         n = n.replace(/^\s+|\s+$/g, "").replace(/\n\s*\n/g, "\n")), t.value = n;
       }
     }

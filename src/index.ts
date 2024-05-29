@@ -65,7 +65,8 @@ export function normalizeDocument<T extends Document>(doc: T)
 
 				value = value
 					.replace(/[\x00\u200b]+/g, '')
-					.replace(/[\s\xa0]+|\s+$/gm, ' ')
+					.replace(/[\s\xa0]+/gm, ' ')
+					.replace(/[\s\xa0]+$/gm, '')
 				;
 
 				if (RE_UNSAFE_VALUE.test(value))
