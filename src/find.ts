@@ -1,31 +1,85 @@
 import { IRecordWildcards } from './index';
 import { isMatch } from 'picomatch';
 
-export function findPath(data: IRecordWildcards, paths: string[], prefix = '', list: [string, string[]][] = [])
+/**
+ * Represents an entry in the result of the `findPath` function.
+ * It contains a list of keys and a list of values found in the data structure.
+ */
+export interface IFindPathEntry
 {
-	paths = paths.slice();
-	let current = paths.shift();
-	let deep = paths.length > 0;
+	/**
+	 * A list of keys that lead to the value in the data structure.
+	 */
+	key: string[];
 
-	for (let key in data)
+	/**
+	 * A list of values found in the data structure.
+	 * Note: This list will always contain a single value since the `findPath` function does not support wildcard matching for values.
+	 */
+	value: string[];
+}
+
+export function pathsToWildcardsPath(paths: string[])
+{
+	return paths.join('/');
+}
+
+export function wildcardsPathToPaths(path: string)
+{
+	return path.split('/');
+}
+
+export function pathsToDotPath(paths: string[])
+{
+	return paths.join('.');
+}
+
+/**
+ * Recursively searches for a path in a nested object or array structure.
+ *
+ * @param data - The nested object or array to search in.
+ * @param paths - The path to search for, represented as an array of strings.
+ * @param prefix - Internal parameter used to keep track of the current path.
+ * @param list - Internal parameter used to store the found paths and their corresponding values.
+ * @returns A list of found paths and their corresponding values.
+ * @throws {TypeError} If the value at a found path is not a string and there are remaining paths to search.
+ */
+export function findPath(data: IRecordWildcards, paths: string[], prefix: string[] = [], list: IFindPathEntry[] = [])
+{
+	paths = paths.slice(); // Create a copy of the paths array to avoid modifying the original array.
+	const current = paths.shift(); // Remove the first element from the paths array.
+	const deep = paths.length > 0; // Check if there are remaining paths to search.
+
+	for (const key in data)
 	{
-		let bool = isMatch(key, current);
-		//console.log(bool, key, current, deep)
+		const bool = isMatch(key, current); // Check if the current key matches the current path element.
+
 		if (bool)
 		{
-			let target = prefix + key;
+			const target = prefix.slice().concat(key); // Create the current path.
+			const value = data[key]; // Get the value at the current path.
+
+			const notArray = !Array.isArray(value); // Check if the value is not an array.
+
 			if (deep)
 			{
-				if (typeof data[key] !== 'string')
+				if (notArray && typeof value !== 'string')
 				{
-					findPath(data[key] as any, paths, target + '.', list)
+					findPath(value, paths, target, list); // Recursively search for the remaining paths in the nested object or array.
+					continue;
 				}
 			}
-			else
+			else if (!notArray)
 			{
-				list.push([target, data[key] as string[]])
+				list.push({
+					key: target,
+					value,
+				}); // Add the found path and its corresponding value to the list.
+				continue;
 			}
+
+			throw new TypeError(`Invalid Type. paths: ${target}, value: ${value}`); // Throw an error if the value is not a string and there are remaining paths to search.
 		}
 	}
-	return list
+	return list; // Return the list of found paths and their corresponding values.
 }
