@@ -43,6 +43,8 @@ export function normalizeDocument<T extends Document>(doc: T)
 
 	const defaults = createDefaultVisitWildcardsYAMLOptions();
 
+	let checkUnsafeQuote = !options.disableUnsafeQuote;
+
 	let visitorOptions: IOptionsVisitor = {
 		...defaults,
 
@@ -52,9 +54,9 @@ export function normalizeDocument<T extends Document>(doc: T)
 
 			if (typeof value === 'string')
 			{
-				if (RE_UNSAFE_QUOTE.test(value))
+				if (checkUnsafeQuote && RE_UNSAFE_QUOTE.test(value))
 				{
-					throw new SyntaxError(`Invalid SYNTAX. key: ${key}, node: ${node}`)
+					throw new SyntaxError(`Invalid SYNTAX [UNSAFE_QUOTE]. key: ${key}, node: ${node}`)
 				}
 				else if (node.type === 'QUOTE_DOUBLE' || node.type === 'QUOTE_SINGLE' && !value.includes('\\'))
 				{

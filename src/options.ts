@@ -4,6 +4,7 @@ export interface IOptionsSharedWildcardsYaml
 {
 	allowMultiRoot?: boolean,
 	disableUniqueItemValues?: boolean,
+	disableUnsafeQuote?: boolean,
 }
 
 export type IOptionsStringify =
