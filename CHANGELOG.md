@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.15](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.0.14...sd-wildcards-utils@1.0.15) (2024-05-29)
+
+
+### BREAKING CHANGES
+
+* update findPath to new style
+
+
+
+### 📦　Code Refactoring
+
+* update findPath to new style ([df5a566](https://github.com/bluelovers/sd-wildcards-utils/commit/df5a566bcc3d537311beb9c35e994421209ff78f))
+* findPath ([b02b349](https://github.com/bluelovers/sd-wildcards-utils/commit/b02b3499266ed410e1dc6526bbe663cb1a45d410))
+
+
+### ⚙️　Continuous Integration
+
+* fix for new cf wildcards ([1c3cb39](https://github.com/bluelovers/sd-wildcards-utils/commit/1c3cb3983135f411bc89f45a4a01d737a8591f58))
+
+
+### ♻️　Chores
+
+* add `__lazy-wildcards/subject/action/nsfw-*/prompts__` ([93d7d76](https://github.com/bluelovers/sd-wildcards-utils/commit/93d7d76204a9b9eaae8982c201e9451f00bd200d))
+
+
+
 ## [1.0.14](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.0.13...sd-wildcards-utils@1.0.14) (2024-05-29)
 
 **Note:** Version bump only for package sd-wildcards-utils
