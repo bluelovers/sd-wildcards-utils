@@ -265,13 +265,14 @@ function normalizeDocument(doc) {
   var _doc$options;
   let options = (_doc$options = doc.options) !== null && _doc$options !== void 0 ? _doc$options : {};
   const defaults = createDefaultVisitWildcardsYAMLOptions();
+  let checkUnsafeQuote = !options.disableUnsafeQuote;
   let visitorOptions = {
     ...defaults,
     Scalar(key, node) {
       let value = node.value;
       if (typeof value === 'string') {
-        if (RE_UNSAFE_QUOTE.test(value)) {
-          throw new SyntaxError(`Invalid SYNTAX. key: ${key}, node: ${node}`);
+        if (checkUnsafeQuote && RE_UNSAFE_QUOTE.test(value)) {
+          throw new SyntaxError(`Invalid SYNTAX [UNSAFE_QUOTE]. key: ${key}, node: ${node}`);
         } else if (node.type === 'QUOTE_DOUBLE' || node.type === 'QUOTE_SINGLE' && !value.includes('\\')) {
           node.type = 'PLAIN';
         }

@@ -122,12 +122,12 @@ function normalizeDocument(e) {
   var t;
   let r = null !== (t = e.options) && void 0 !== t ? t : {};
   const a = createDefaultVisitWildcardsYAMLOptions();
-  let i = {
+  let i = !r.disableUnsafeQuote, s = {
     ...a,
     Scalar(e, t) {
       let r = t.value;
       if ("string" == typeof r) {
-        if (o.test(r)) throw new SyntaxError(`Invalid SYNTAX. key: ${e}, node: ${t}`);
+        if (i && o.test(r)) throw new SyntaxError(`Invalid SYNTAX [UNSAFE_QUOTE]. key: ${e}, node: ${t}`);
         ("QUOTE_DOUBLE" === t.type || "QUOTE_SINGLE" === t.type && !r.includes("\\")) && (t.type = "PLAIN"), 
         r = r.replace(/[\x00\u200b]+/g, "").replace(/[\s\xa0]+|\s+$/gm, " "), n.test(r) && (("PLAIN" === t.type || "BLOCK_FOLDED" === t.type && /#/.test(r)) && (t.type = "BLOCK_LITERAL"), 
         r = r.replace(/^\s+|\s+$/g, "").replace(/\n\s*\n/g, "\n")), t.value = r;
@@ -136,11 +136,11 @@ function normalizeDocument(e) {
   };
   if (!r.disableUniqueItemValues) {
     const e = a.Seq;
-    i.Seq = (t, r, ...a) => {
+    s.Seq = (t, r, ...a) => {
       e(t, r, ...a), uniqueSeqItems(r.items);
     };
   }
-  visitWildcardsYAML(e, i);
+  visitWildcardsYAML(e, s);
 }
 
 function parseWildcardsYaml(t, r) {
