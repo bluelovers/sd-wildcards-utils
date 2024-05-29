@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.12](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.0.11...sd-wildcards-utils@1.0.12) (2024-05-29)
+
+
+
+### ✨　Features
+
+* allow disable check UnsafeQuote ([089583b](https://github.com/bluelovers/sd-wildcards-utils/commit/089583b7929d346d2245b44e16ad7c8be6f2cd9d))
+
+
+
 ## [1.0.11](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.0.10...sd-wildcards-utils@1.0.11) (2024-05-28)
 
 **Note:** Version bump only for package sd-wildcards-utils
