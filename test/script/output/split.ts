@@ -15,10 +15,11 @@ import {
 import { outputFile } from 'fs-extra';
 import { array_unique_overwrite } from 'array-hyper-unique';
 import { deepmergeAll } from 'deepmerge-plus';
+// @ts-ignore
 import Bluebird from 'bluebird';
 import { parseDocument } from 'yaml';
 import { groupSplitConfig } from './split-config';
-import { findPath } from '../../../src/find';
+import { findPath, IFindPathEntry, pathsToWildcardsPath } from '../../../src/find';
 
 const _splitSpecific2 = escapeSplit({ delimiter: '/', escaper: '\\' });
 
@@ -48,7 +49,7 @@ function _getEntry(target: string, data: IRecordWildcards)
 export default (async () =>
 {
 
-	let map: Record<string, any[]> = {};
+	let map: Record<string, IFindPathEntry[][]> = {};
 
 	const json = await Bluebird.map(globSync([
 				'cf/costumes/*.yaml',
@@ -88,17 +89,9 @@ export default (async () =>
 			map[group] ??= [];
 			map[group].push(ret.list)
 		}
-
-		//ret && console.dir(ret)
 	}
 
-//	console.dir(map, {
-//		depth: null,
-//	})
-
 	let new_yaml_doc = parseDocument(`mix-lazy-auto:`);
-
-	//let new_yaml: Record<string, any[]> = {};
 
 	for (let [group, listRoot] of Object.entries(map))
 	{
@@ -106,17 +99,19 @@ export default (async () =>
 
 		let refs: string[] = [];
 
-		let list = listRoot.reduce((a, v: [string, [string, string[]]]) =>
+		let list = listRoot.reduce((a, vv) =>
 		{
-
-			a.push(v.map(v =>
+			a.push(vv.map(v =>
 			{
-				refs.push(`__${v[0].replace(/\./g, '/')}__ (${v[1].length})`);
-				return v[1]
+				let s = `__${pathsToWildcardsPath(v.key)}__ (${v.value.length})`;
+
+				refs.push(s);
+
+				return v.value
 			}));
 
 			return a
-		}, [] as string[]).flat(2);
+		}, [] as string[][][]).flat(2);
 
 		let lenOld = list.length;
 
@@ -145,20 +140,7 @@ export default (async () =>
 		node.commentBefore = commentBefore;
 
 		new_yaml_doc.setIn(['mix-lazy-auto'], node);
-
-		//new_yaml[group] = list;
-
-//		console.dir({
-//			group,
-//			list,
-//		})
 	}
-
-//	let out = stringifyWildcardsYamlData({
-//		'mix-lazy-auto': new_yaml,
-//	}, {
-//		lineWidth: 0,
-//	});
 
 	let out = stringifyWildcardsYamlData(new_yaml_doc, {
 		lineWidth: 0,
