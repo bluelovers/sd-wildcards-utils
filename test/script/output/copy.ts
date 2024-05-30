@@ -1,3 +1,5 @@
+/// <reference path="../../../global.node.v22.d.ts" preserve="true"/>
+
 import { __ROOT, __ROOT_OUTPUT } from '../../__root';
 // @ts-ignore
 import Bluebird from 'bluebird';
