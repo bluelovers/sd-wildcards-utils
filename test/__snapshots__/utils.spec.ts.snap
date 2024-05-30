@@ -1,5 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`doc.options 1`] = `
+{
+  "_directives": Directives {
+    "atNextDocument": false,
+    "docEnd": false,
+    "docStart": null,
+    "tags": {
+      "!!": "tag:yaml.org,2002:",
+    },
+    "yaml": {
+      "explicit": false,
+      "version": "1.2",
+    },
+  },
+  "allowEmptyDocument": true,
+  "intAsBigInt": false,
+  "keepSourceTokens": true,
+  "logLevel": "warn",
+  "prettyErrors": true,
+  "strict": true,
+  "toStringDefaults": {
+    "allowMultiRoot": undefined,
+    "blockQuote": true,
+    "collectionStyle": "block",
+    "defaultKeyType": "PLAIN",
+    "defaultStringType": "PLAIN",
+    "disableUniqueItemValues": undefined,
+    "disableUnsafeQuote": undefined,
+    "minifyPrompts": undefined,
+  },
+  "uniqueKeys": true,
+  "version": "1.2",
+}
+`;
+
 exports[`matchDynamicPromptsWildcards " __scope/season_clothes(season= )__ " 1`] = `
 {
   "isFullMatch": false,
