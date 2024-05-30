@@ -26,8 +26,8 @@ export function formatPrompts(value: string, opts?: IOptionsSharedWildcardsYaml)
 	if (opts.minifyPrompts)
 	{
 		value = value
-			.replace(/([,(){}\[\]])\s+/gm, '$1')
-			.replace(/\s+([,(){}\[\]])/gm, '$1')
+			.replace(/(,)\s+/gm, '$1')
+			.replace(/\s+(,)/gm, '$1')
 		;
 	}
 
