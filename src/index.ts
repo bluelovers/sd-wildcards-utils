@@ -4,7 +4,7 @@
 import { Document, isDocument, ParsedNode, parseDocument, stringify, YAMLMap } from 'yaml';
 import {
 	defaultOptionsParseDocument,
-	defaultOptionsStringify,
+	defaultOptionsStringify, getOptionsFromDocument,
 	IOptionsParseDocument,
 	IOptionsStringify,
 } from './options';
@@ -19,6 +19,7 @@ import {
 	createDefaultVisitWildcardsYAMLOptions,
 	validWildcardsYamlData,
 } from './valid';
+import { formatPrompts, stripZeroStr, trimPrompts } from './format';
 
 export * from './util';
 export * from './options';
@@ -37,9 +38,9 @@ const RE_UNSAFE_VALUE = /^\s*-|[{$~!@}\n|:?#]/;
 /**
  * Normalizes a YAML document by applying specific rules to its nodes.
  **/
-export function normalizeDocument<T extends Document>(doc: T)
+export function normalizeDocument<T extends Document>(doc: T, opts?: IOptionsParseDocument)
 {
-	let options = (doc.options ?? {}) as IOptionsParseDocument;
+	let options = getOptionsFromDocument(doc, opts);
 
 	const defaults = createDefaultVisitWildcardsYAMLOptions();
 
@@ -63,10 +64,7 @@ export function normalizeDocument<T extends Document>(doc: T)
 					node.type = 'PLAIN';
 				}
 
-				value = value
-					.replace(/[\x00\u200b]+/g, '')
-					.replace(/[\s\xa0]+/gm, ' ')
-					.replace(/[\s\xa0]+$/gm, '')
+				value = trimPrompts(stripZeroStr(formatPrompts(value, options)))
 				;
 
 				if (RE_UNSAFE_VALUE.test(value))
@@ -79,11 +77,6 @@ export function normalizeDocument<T extends Document>(doc: T)
 					{
 						node.type = 'BLOCK_LITERAL'
 					}
-
-					value = value
-						.replace(/^\s+|\s+$/g, '')
-						.replace(/\n\s*\n/g, '\n')
-					;
 				}
 
 				node.value = value;
@@ -144,11 +137,18 @@ export function stringifyWildcardsYamlData<T extends IRecordWildcards | IWildcar
 	opts?: IOptionsStringify,
 )
 {
+	const isDoc = isDocument(data);
+
+	if (isDoc)
+	{
+		opts = getOptionsFromDocument(data, opts);
+	}
+
 	opts = defaultOptionsStringify(opts);
 
-	if (isDocument(data))
+	if (isDoc)
 	{
-		normalizeDocument(data);
+		normalizeDocument(data, opts);
 
 		return data.toString(opts)
 	}
@@ -177,6 +177,11 @@ export function parseWildcardsYaml<Contents extends YAMLMap = YAMLMap.Parsed, St
 	: IWildcardsYAMLDocument<Contents, Strict>
 {
 	opts = defaultOptionsParseDocument(opts);
+
+	if (opts.allowEmptyDocument)
+	{
+		source ??= '';
+	}
 
 	let data = parseDocument<Contents, Strict>(source.toString(), opts);
 
