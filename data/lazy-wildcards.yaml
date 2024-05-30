@@ -706,6 +706,9 @@ lazy-wildcards:
         glowing-neon-{__lazy-wildcards/utils/color-base__}-{__lazy-wildcards/utils/costume-type1__}
 #      - >-
 #        glowing-neon-{__lazy-wildcards/utils/color-base__}-{1-3$$, glowing-neon-{__lazy-wildcards/utils/color-base__}-$$__lazy-wildcards/utils/costume-type1__}
+      - ssswimsuit, one-piece swimsuit, sailor swimsuit, sailor collar
+      - >-
+        (Chest open gelcoat, breast zipper:1.4)
     sweater:
       - ribbed sweater
       - sleeveless sweater
@@ -774,8 +777,14 @@ lazy-wildcards:
       - (in Venice)
       - A mystical swamp with dark waters and thick vegetation
       - >-
-        ((pedestrian hell)), ((busy street in taiwan)), taipei road, scooter, motorcycle, wind, trees, crowd, traffic light, cityscape, shopping, storefront, signboard, building, greenery,
-        city-life-overload,
+        ((pedestrian hell)),
+        __lazy-wildcards/background/location/city-traffic/func/road-in__,
+        scooter, motorcycle, wind, trees, crowd,
+        traffic light, road sign,
+        cityscape, shopping, storefront, signboard, building, greenery,
+        {city-life-overload,|}
+        {night, neon lights,|}
+        {((raining)), rain, wet street, reflection, wet clothes|}
       - flare, fog, wet, wet body, rain, raining, night, neon lights, twilight
       - perspective photo of the house on clift, post-apocalypse, brutalist, brutal green covered with green grass, many people, neon light, forest, jungle atmosphere, sunset, sunshine cinematic
       - (in river), splash, ({sun flare, lens flare, sunset|moonlight|dawn|twilight} background, low horizon), backlighting
@@ -926,8 +935,79 @@ lazy-wildcards:
         env:
           - empty pool
           - pool ladder
+      city-traffic:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/background/location/city-traffic/style__},
+            __lazy-wildcards/background/location/city-traffic/func/road-in__,
+            __lazy-wildcards/background/location/city-traffic/main__,
+            {5-$$__lazy-wildcards/background/location/city-traffic/env__},
+            {{1-$$__lazy-wildcards/background/location/city-traffic/moment-weather__},|}
+            __lazy-wildcards/background/location/city-traffic/moment__
+        main:
+          - cityscape, building
+        style:
+          - city-life-overload
+          - ((pedestrian hell))
+        env:
+          - traffic light, road sign
+          - roadway
+          - crowd
+          - greenery, trees
+          - wind, windy
+          - underpass
+          - skywalk
+          - jaywalk
+          - zebra crossing, crosswalk
+          - walk signal
+          - tunnel
+          - parking lot
+          - idewalk
+          - gas station
+          - roadworks
+          - traffic jam
+          - >-
+            {1-$$crossroads|intersection}
+          - >-
+            {1-$$scooter|motorcycle}
+          - >-
+            {1-$$shopping|storefront|signboard}
+        moment-weather:
+          - >-
+            ((raining)), rain, reflection,
+            wet street
+            {, wet clothes|}
+          - >-
+            ({1-$$winter|snow|very cold|snow fall|city snowy street view}:1.2)
+        moment:
+          - >-
+            {1-$$sunlight|sunset}
+          - dawn
+          - twilight
+          - >-
+            night{, neon lights|}
+        func:
+          road-in:
+            - >-
+              ((busy street in ${country:taiwan})), ${location:taipei} road
   subject:
     action:
+      nsfw-sex-sitting:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/action/nsfw-sex-sitting/style-type__,
+            __lazy-wildcards/subject/action/nsfw-sex-sitting/main__,
+            {{1-$$__lazy-wildcards/subject/action/nsfw-sex-sitting/main__},|}
+            __lazy-wildcards/subject/action/nsfw-sex-sitting/main-shared__
+        style-type:
+          - boy on top, hugging sex, kiss, ass
+          - reverse sitting, looking at viewer, thighhighs, thighs, sex from behind
+        style:
+          - spread legs
+        main:
+          - 1boy, hetero, 1girl, penis
+        main-shared:
+          - vaginal, sex, blush, breasts, sitting, spread legs
       nsfw-aftersex:
         prompts:
           - >-
@@ -964,6 +1044,7 @@ lazy-wildcards:
           - sitting, sleep
           - spread legs
           - wiping pussy
+          - reclining
         env:
           - tissue, tissue box, ((used tissue))
           - condom, condom box, ((used condom))
