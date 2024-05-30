@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.18](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.0.17...sd-wildcards-utils@1.0.18) (2024-05-30)
+
+
+
+### 🛠　Build System
+
+* update build ([a7a947d](https://github.com/bluelovers/sd-wildcards-utils/commit/a7a947d1d93a42af6c79e2b30af5870d52a09960))
+
+
+
 ## [1.0.17](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.0.16...sd-wildcards-utils@1.0.17) (2024-05-30)
 
 
