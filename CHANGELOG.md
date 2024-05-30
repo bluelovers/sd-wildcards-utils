@@ -3,6 +3,43 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.17](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.0.16...sd-wildcards-utils@1.0.17) (2024-05-30)
+
+
+
+### 🐛　Bug Fixes
+
+* only minify `,` ([0221426](https://github.com/bluelovers/sd-wildcards-utils/commit/02214260450beb7a69655f6eeb5b485f803aab45))
+
+
+### ✨　Features
+
+* add `isStarWildcards` ([3df01bb](https://github.com/bluelovers/sd-wildcards-utils/commit/3df01bbbc7b12d9d2156658c9fb46be8947414e8))
+* **options:** `allowEmptyDocument`, `minifyPrompts` ([4c86a20](https://github.com/bluelovers/sd-wildcards-utils/commit/4c86a2058df5f952ecee40b6be54e2159924fd02))
+
+
+### 🚨　Tests
+
+* add cache used wildcards ([f71a389](https://github.com/bluelovers/sd-wildcards-utils/commit/f71a3899f8d0b567f05147ed9ddd2accffdd7ed8))
+* update test ([e1c3936](https://github.com/bluelovers/sd-wildcards-utils/commit/e1c39360d588bf3f294f715231eb86fba709e1d6))
+
+
+### 🛠　Build System
+
+* update build ([821c85a](https://github.com/bluelovers/sd-wildcards-utils/commit/821c85a859368976189093ba2147eb0a7c88b071))
+
+
+### ♻️　Chores
+
+* add city-traffic , nsfw-sex-sitting ([2c5c044](https://github.com/bluelovers/sd-wildcards-utils/commit/2c5c0440ef8b2051b47f26b8d4ce20b453f5a5b7))
+
+
+### 🔖　Miscellaneous
+
+* **node:** update types ([6f96899](https://github.com/bluelovers/sd-wildcards-utils/commit/6f96899157bbf1314de01b1c06b1b08ef3de454b))
+
+
+
 ## [1.0.16](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.0.15...sd-wildcards-utils@1.0.16) (2024-05-29)
 
 **Note:** Version bump only for package sd-wildcards-utils

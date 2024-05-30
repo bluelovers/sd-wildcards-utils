@@ -6,9 +6,19 @@ var yaml = require('yaml');
 var arrayHyperUnique = require('array-hyper-unique');
 
 function getOptionsShared(opts) {
+  var _opts;
+  (_opts = opts) !== null && _opts !== void 0 ? _opts : opts = {};
   return {
     allowMultiRoot: opts.allowMultiRoot,
-    disableUniqueItemValues: opts.disableUniqueItemValues
+    disableUniqueItemValues: opts.disableUniqueItemValues,
+    minifyPrompts: opts.minifyPrompts,
+    disableUnsafeQuote: opts.disableUnsafeQuote
+  };
+}
+function defaultOptionsStringifyMinify() {
+  return {
+    lineWidth: 0,
+    minifyPrompts: true
   };
 }
 function defaultOptionsStringify(opts) {
@@ -21,8 +31,8 @@ function defaultOptionsStringify(opts) {
   };
 }
 function defaultOptionsParseDocument(opts) {
-  var _opts;
-  (_opts = opts) !== null && _opts !== void 0 ? _opts : opts = {};
+  var _opts2;
+  (_opts2 = opts) !== null && _opts2 !== void 0 ? _opts2 : opts = {};
   opts = {
     keepSourceTokens: true,
     ...opts,
@@ -32,6 +42,12 @@ function defaultOptionsParseDocument(opts) {
     })
   };
   return opts;
+}
+function getOptionsFromDocument(doc, opts) {
+  return {
+    ...doc.options,
+    ...opts
+  };
 }
 
 function visitWildcardsYAML(node, visitorOptions) {
@@ -78,6 +94,7 @@ function createDefaultVisitWildcardsYAMLOptions() {
   };
 }
 function validWildcardsYamlData(data, opts) {
+  var _opts;
   if (yaml.isDocument(data)) {
     if (yaml.isNode(data.contents) && !yaml.isMap(data.contents)) {
       throw TypeError(`The 'contents' property of the provided YAML document must be a YAMLMap. Received: ${data.contents}`);
@@ -85,12 +102,35 @@ function validWildcardsYamlData(data, opts) {
     visitWildcardsYAML(data, createDefaultVisitWildcardsYAMLOptions());
     data = data.toJSON();
   }
+  (_opts = opts) !== null && _opts !== void 0 ? _opts : opts = {};
+  if (typeof data === 'undefined' || data === null) {
+    if (opts.allowEmptyDocument) {
+      return;
+    }
+    throw new TypeError(`The provided JSON contents should not be empty. ${data}`);
+  }
   let rootKeys = Object.keys(data);
   if (!rootKeys.length) {
     throw TypeError(`The provided JSON contents must contain at least one key.`);
-  } else if (rootKeys.length !== 1 && !(opts !== null && opts !== void 0 && opts.allowMultiRoot)) {
+  } else if (rootKeys.length !== 1 && !opts.allowMultiRoot) {
     throw TypeError(`The provided JSON object cannot have more than one root key. Only one root key is allowed unless explicitly allowed by the 'allowMultiRoot' option.`);
   }
+}
+
+function stripZeroStr(value) {
+  return value.replace(/[\x00\u200b]+/g, '').replace(/^[\s\xa0]+|[\s\xa0]+$/gm, '');
+}
+function trimPrompts(value) {
+  return value.replace(/^\s+|\s+$/g, '').replace(/\n\s*\n/g, '\n');
+}
+function formatPrompts(value, opts) {
+  var _opts;
+  (_opts = opts) !== null && _opts !== void 0 ? _opts : opts = {};
+  value = value.replace(/[\s\xa0]+/gm, ' ');
+  if (opts.minifyPrompts) {
+    value = value.replace(/(,)\s+/gm, '$1').replace(/\s+(,)/gm, '$1');
+  }
+  return value;
 }
 
 const RE_DYNAMIC_PROMPTS_WILDCARDS = /__([&~!@])?([*\w\/_\-]+)(\([^\n#]+\))?__/;
@@ -182,7 +222,8 @@ function _matchDynamicPromptsWildcardsCore(m, input) {
     variables,
     keyword,
     source,
-    isFullMatch: source === (input !== null && input !== void 0 ? input : m.input)
+    isFullMatch: source === (input !== null && input !== void 0 ? input : m.input),
+    isStarWildcards: name.includes('*')
   };
 }
 function* matchDynamicPromptsWildcardsAllGenerator(input) {
@@ -191,8 +232,9 @@ function* matchDynamicPromptsWildcardsAllGenerator(input) {
     yield _matchDynamicPromptsWildcardsCore(m, input);
   }
 }
-function matchDynamicPromptsWildcardsAll(input) {
-  return [...matchDynamicPromptsWildcardsAllGenerator(input)];
+function matchDynamicPromptsWildcardsAll(input, unique) {
+  const arr = [...matchDynamicPromptsWildcardsAllGenerator(input)];
+  return unique ? arrayHyperUnique.array_unique_overwrite(arr) : arr;
 }
 /**
  * Checks if the given name is a valid Wildcards name.
@@ -261,9 +303,8 @@ function _toJSON(v) {
 
 const RE_UNSAFE_QUOTE = /['"]/;
 const RE_UNSAFE_VALUE = /^\s*-|[{$~!@}\n|:?#]/;
-function normalizeDocument(doc) {
-  var _doc$options;
-  let options = (_doc$options = doc.options) !== null && _doc$options !== void 0 ? _doc$options : {};
+function normalizeDocument(doc, opts) {
+  let options = getOptionsFromDocument(doc, opts);
   const defaults = createDefaultVisitWildcardsYAMLOptions();
   let checkUnsafeQuote = !options.disableUnsafeQuote;
   let visitorOptions = {
@@ -276,14 +317,13 @@ function normalizeDocument(doc) {
         } else if (node.type === 'QUOTE_DOUBLE' || node.type === 'QUOTE_SINGLE' && !value.includes('\\')) {
           node.type = 'PLAIN';
         }
-        value = value.replace(/[\x00\u200b]+/g, '').replace(/[\s\xa0]+/gm, ' ').replace(/[\s\xa0]+$/gm, '');
+        value = trimPrompts(stripZeroStr(formatPrompts(value, options)));
         if (RE_UNSAFE_VALUE.test(value)) {
           if (node.type === 'PLAIN') {
             node.type = 'BLOCK_LITERAL';
           } else if (node.type === 'BLOCK_FOLDED' && /#/.test(value)) {
             node.type = 'BLOCK_LITERAL';
           }
-          value = value.replace(/^\s+|\s+$/g, '').replace(/\n\s*\n/g, '\n');
         }
         node.value = value;
       }
@@ -335,9 +375,13 @@ function normalizeDocument(doc) {
  * ```
  */
 function stringifyWildcardsYamlData(data, opts) {
+  const isDoc = yaml.isDocument(data);
+  if (isDoc) {
+    opts = getOptionsFromDocument(data, opts);
+  }
   opts = defaultOptionsStringify(opts);
-  if (yaml.isDocument(data)) {
-    normalizeDocument(data);
+  if (isDoc) {
+    normalizeDocument(data, opts);
     return data.toString(opts);
   }
   return yaml.stringify(data, opts);
@@ -358,6 +402,10 @@ function stringifyWildcardsYamlData(data, opts) {
  */
 function parseWildcardsYaml(source, opts) {
   opts = defaultOptionsParseDocument(opts);
+  if (opts.allowEmptyDocument) {
+    var _source;
+    (_source = source) !== null && _source !== void 0 ? _source : source = '';
+  }
   let data = yaml.parseDocument(source.toString(), opts);
   validWildcardsYamlData(data, opts);
   // @ts-ignore
@@ -379,6 +427,8 @@ exports.default = parseWildcardsYaml;
 exports.defaultCheckerIgnoreCase = defaultCheckerIgnoreCase;
 exports.defaultOptionsParseDocument = defaultOptionsParseDocument;
 exports.defaultOptionsStringify = defaultOptionsStringify;
+exports.defaultOptionsStringifyMinify = defaultOptionsStringifyMinify;
+exports.getOptionsFromDocument = getOptionsFromDocument;
 exports.getOptionsShared = getOptionsShared;
 exports.isDynamicPromptsWildcards = isDynamicPromptsWildcards;
 exports.isWildcardsName = isWildcardsName;
