@@ -4,30 +4,40 @@ export interface IOptionsSharedWildcardsYaml {
 	allowMultiRoot?: boolean;
 	disableUniqueItemValues?: boolean;
 	disableUnsafeQuote?: boolean;
+	minifyPrompts?: boolean;
+	allowEmptyDocument?: boolean;
 }
 export type IOptionsStringify = DocumentOptions & SchemaOptions & ParseOptions & CreateNodeOptions & ToStringOptions & IOptionsSharedWildcardsYaml;
 export type IOptionsParseDocument = ParseOptions & DocumentOptions & SchemaOptions & IOptionsSharedWildcardsYaml & {
 	toStringDefaults?: IOptionsStringify;
 };
-export declare function getOptionsShared<T extends IOptionsSharedWildcardsYaml>(opts: T): Pick<T, "allowMultiRoot" | "disableUniqueItemValues">;
+export declare function getOptionsShared<T extends IOptionsSharedWildcardsYaml>(opts?: T): Pick<T, keyof IOptionsSharedWildcardsYaml>;
+export declare function defaultOptionsStringifyMinify(): {
+	readonly lineWidth: 0;
+	readonly minifyPrompts: true;
+};
 export declare function defaultOptionsStringify(opts?: IOptionsStringify): IOptionsStringify;
 export declare function defaultOptionsParseDocument(opts?: IOptionsParseDocument): IOptionsParseDocument;
-export type IWildcardsYAMLSeq = YAMLSeq<Scalar>;
-export interface IWildcardsYAMLDocument<Contents extends YAMLMap = YAMLMap.Parsed, Strict extends boolean = true> extends Omit<Document$1<Contents, Strict>, "options" | "contents"> {
+export declare function getOptionsFromDocument<T extends Document$1>(doc: T, opts?: IOptionsParseDocument): IOptionsParseDocument;
+export type IOmitParsedNodeContents<T extends Node$1 | Document$1, P extends ParsedNode | Document$1.Parsed> = Omit<P, "contents"> & T;
+export type IWildcardsYAMLScalar = IOmitParsedNodeContents<Scalar<string>, Scalar.Parsed>;
+export type IWildcardsYAMLSeq = IOmitParsedNodeContents<YAMLSeq<IWildcardsYAMLScalar>, YAMLSeq.Parsed>;
+export type IWildcardsYAMLMapRoot = YAMLMap.Parsed<IWildcardsYAMLScalar>;
+export interface IWildcardsYAMLDocument<Contents extends YAMLMap = IWildcardsYAMLMapRoot, Strict extends boolean = true> extends Omit<Document$1<Contents, Strict>, "options" | "contents"> {
 	options: Document$1["options"] & IOptionsParseDocument;
 	contents: Strict extends true ? Contents | null : Contents;
 	toJSON<T = IRecordWildcards>(jsonArg?: string | null, onAnchor?: ToJSOptions["onAnchor"]): T;
 }
-export type IWildcardsYAMLDocumentParsed<Contents extends YAMLMap = YAMLMap.Parsed, Strict extends boolean = true> = IWildcardsYAMLDocument<Contents, Strict> & Pick<Document$1.Parsed, "directives" | "range">;
+export type IWildcardsYAMLDocumentParsed<Contents extends YAMLMap = IWildcardsYAMLMapRoot, Strict extends boolean = true> = IWildcardsYAMLDocument<Contents, Strict> & Pick<Document$1.Parsed, "directives" | "range">;
 export type IOptionsVisitor = visitorFn<unknown> | {
 	Alias?: visitorFn<Alias>;
 	Collection?: visitorFn<YAMLMap | IWildcardsYAMLSeq>;
 	Map?: visitorFn<YAMLMap>;
-	Node?: visitorFn<Alias | Scalar | YAMLMap | IWildcardsYAMLSeq>;
+	Node?: visitorFn<Alias | IWildcardsYAMLScalar | YAMLMap | IWildcardsYAMLSeq>;
 	Pair?: visitorFn<Pair>;
-	Scalar?: visitorFn<Scalar>;
+	Scalar?: visitorFn<IWildcardsYAMLScalar>;
 	Seq?: visitorFn<IWildcardsYAMLSeq>;
-	Value?: visitorFn<Scalar | YAMLMap | IWildcardsYAMLSeq>;
+	Value?: visitorFn<IWildcardsYAMLScalar | YAMLMap | IWildcardsYAMLSeq>;
 };
 export declare function visitWildcardsYAML(node: Node$1 | Document$1 | null, visitorOptions: IOptionsVisitor): void;
 export declare function defaultCheckerIgnoreCase(a: unknown, b: unknown): boolean;
@@ -110,7 +120,7 @@ export declare function isDynamicPromptsWildcards(input: string): boolean;
  */
 export declare function matchDynamicPromptsWildcards(input: string): IMatchDynamicPromptsWildcardsEntry;
 /**
- * `RE_DYNAMIC_PROMPTS_WILDCARDS` regular expression to perform the match.
+ * Interface representing a single match of the dynamic prompts wildcards pattern.
  */
 export interface IMatchDynamicPromptsWildcardsEntry {
 	/**
@@ -133,6 +143,10 @@ export interface IMatchDynamicPromptsWildcardsEntry {
 	 * A boolean indicating whether the input string is a full match.
 	 */
 	isFullMatch: boolean;
+	/**
+	 * A boolean indicating whether the wildcards pattern contains a star (*) character.
+	 */
+	isStarWildcards: boolean;
 }
 export declare function _matchDynamicPromptsWildcardsCore(m: RegExpMatchArray, input?: string): IMatchDynamicPromptsWildcardsEntry;
 /**
@@ -142,7 +156,7 @@ export declare function matchDynamicPromptsWildcardsAllGenerator(input: string):
 /**
  * Converts the generator function `matchDynamicPromptsWildcardsAllGenerator` into an array.
  */
-export declare function matchDynamicPromptsWildcardsAll(input: string): IMatchDynamicPromptsWildcardsEntry[];
+export declare function matchDynamicPromptsWildcardsAll(input: string, unique?: boolean): IMatchDynamicPromptsWildcardsEntry[];
 /**
  * Checks if the given name is a valid Wildcards name.
  *
@@ -177,7 +191,7 @@ export declare function isWildcardsName(name: string): boolean;
 export declare function assertWildcardsName(name: string): void;
 export declare function convertWildcardsNameToPaths(name: string): string[];
 export declare function _validMap(key: number | "key" | "value" | null, node: YAMLMap, ...args: any[]): void;
-export declare function _validSeq(key: number | "key" | "value" | null, node: YAMLSeq, ...args: any[]): asserts node is YAMLSeq<Scalar | Scalar.Parsed>;
+export declare function _validSeq(key: number | "key" | "value" | null, node: YAMLSeq, ...args: any[]): asserts node is YAMLSeq<Scalar | IWildcardsYAMLScalar>;
 export declare function createDefaultVisitWildcardsYAMLOptions(): Exclude<IOptionsVisitor, Function>;
 export declare function validWildcardsYamlData<T extends IRecordWildcards | IWildcardsYAMLDocument | Document$1>(data: T | unknown, opts?: IOptionsSharedWildcardsYaml): asserts data is T;
 export declare function mergeWildcardsYAMLDocumentRoots<T extends Pick<Document$1<YAMLMap>, "contents">>(ls: [
@@ -204,7 +218,7 @@ export interface IRecordWildcards {
 /**
  * Normalizes a YAML document by applying specific rules to its nodes.
  **/
-export declare function normalizeDocument<T extends Document$1>(doc: T): void;
+export declare function normalizeDocument<T extends Document$1>(doc: T, opts?: IOptionsParseDocument): void;
 /**
  * Converts the given YAML data to a string, applying normalization and formatting.
  *
@@ -254,7 +268,7 @@ export declare function stringifyWildcardsYamlData<T extends IRecordWildcards | 
  * Then, it validates the parsed data using the `validWildcardsYamlData` function.
  * Finally, it returns the parsed data.
  */
-export declare function parseWildcardsYaml<Contents extends YAMLMap = YAMLMap.Parsed, Strict extends boolean = true>(source: string | Uint8Array, opts?: IOptionsParseDocument): Contents extends ParsedNode ? IWildcardsYAMLDocumentParsed<Contents, Strict> : IWildcardsYAMLDocument<Contents, Strict>;
+export declare function parseWildcardsYaml<Contents extends YAMLMap = IWildcardsYAMLMapRoot, Strict extends boolean = true>(source: string | Uint8Array, opts?: IOptionsParseDocument): Contents extends ParsedNode ? IWildcardsYAMLDocumentParsed<Contents, Strict> : IWildcardsYAMLDocument<Contents, Strict>;
 
 export {
 	parseWildcardsYaml as default,

@@ -38,6 +38,7 @@ exports[`doc.options 1`] = `
 exports[`matchDynamicPromptsWildcards " __scope/season_clothes(season= )__ " 1`] = `
 {
   "isFullMatch": false,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "scope/season_clothes",
   "source": "__scope/season_clothes(season= )__",
@@ -48,6 +49,7 @@ exports[`matchDynamicPromptsWildcards " __scope/season_clothes(season= )__ " 1`]
 exports[`matchDynamicPromptsWildcards " __scope/season_clothes(season=)__ " 1`] = `
 {
   "isFullMatch": false,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "scope/season_clothes",
   "source": "__scope/season_clothes(season=)__",
@@ -58,6 +60,7 @@ exports[`matchDynamicPromptsWildcards " __scope/season_clothes(season=)__ " 1`] 
 exports[`matchDynamicPromptsWildcards " __season_clothes(season= )__ " 1`] = `
 {
   "isFullMatch": false,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "season_clothes",
   "source": "__season_clothes(season= )__",
@@ -68,6 +71,7 @@ exports[`matchDynamicPromptsWildcards " __season_clothes(season= )__ " 1`] = `
 exports[`matchDynamicPromptsWildcards " __season_clothes(season=)__ " 1`] = `
 {
   "isFullMatch": false,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "season_clothes",
   "source": "__season_clothes(season=)__",
@@ -78,6 +82,7 @@ exports[`matchDynamicPromptsWildcards " __season_clothes(season=)__ " 1`] = `
 exports[`matchDynamicPromptsWildcards "__@scope/season_clothes(season=__scope/season_clothes__)__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": "@",
   "name": "scope/season_clothes",
   "source": "__@scope/season_clothes(season=__scope/season_clothes__)__",
@@ -88,6 +93,7 @@ exports[`matchDynamicPromptsWildcards "__@scope/season_clothes(season=__scope/se
 exports[`matchDynamicPromptsWildcards "__@season_clothes(season=__season_clothes__)__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": "@",
   "name": "season_clothes",
   "source": "__@season_clothes(season=__season_clothes__)__",
@@ -98,6 +104,7 @@ exports[`matchDynamicPromptsWildcards "__@season_clothes(season=__season_clothes
 exports[`matchDynamicPromptsWildcards "__~scope/season_clothes(season=__scope/season_clothes__)__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": "~",
   "name": "scope/season_clothes",
   "source": "__~scope/season_clothes(season=__scope/season_clothes__)__",
@@ -108,6 +115,7 @@ exports[`matchDynamicPromptsWildcards "__~scope/season_clothes(season=__scope/se
 exports[`matchDynamicPromptsWildcards "__~scope/season_clothes(season=winter)__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": "~",
   "name": "scope/season_clothes",
   "source": "__~scope/season_clothes(season=winter)__",
@@ -118,6 +126,7 @@ exports[`matchDynamicPromptsWildcards "__~scope/season_clothes(season=winter)__"
 exports[`matchDynamicPromptsWildcards "__~season_clothes(season=__season_clothes__)__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": "~",
   "name": "season_clothes",
   "source": "__~season_clothes(season=__season_clothes__)__",
@@ -128,6 +137,7 @@ exports[`matchDynamicPromptsWildcards "__~season_clothes(season=__season_clothes
 exports[`matchDynamicPromptsWildcards "__~season_clothes(season=winter)__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": "~",
   "name": "season_clothes",
   "source": "__~season_clothes(season=winter)__",
@@ -138,6 +148,7 @@ exports[`matchDynamicPromptsWildcards "__~season_clothes(season=winter)__" 1`] =
 exports[`matchDynamicPromptsWildcards "__scope/season_clothes(season=!__scope/season_clothes__)__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "scope/season_clothes",
   "source": "__scope/season_clothes(season=!__scope/season_clothes__)__",
@@ -148,6 +159,7 @@ exports[`matchDynamicPromptsWildcards "__scope/season_clothes(season=!__scope/se
 exports[`matchDynamicPromptsWildcards "__scope/season_clothes(season=!{!summer|autumn|winter|spring})__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "scope/season_clothes",
   "source": "__scope/season_clothes(season=!{!summer|autumn|winter|spring})__",
@@ -158,6 +170,7 @@ exports[`matchDynamicPromptsWildcards "__scope/season_clothes(season=!{!summer|a
 exports[`matchDynamicPromptsWildcards "__scope/season_clothes(season=!{@summer|autumn|winter|spring})__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "scope/season_clothes",
   "source": "__scope/season_clothes(season=!{@summer|autumn|winter|spring})__",
@@ -168,6 +181,7 @@ exports[`matchDynamicPromptsWildcards "__scope/season_clothes(season=!{@summer|a
 exports[`matchDynamicPromptsWildcards "__scope/season_clothes(season=!{summer|autumn|winter|spring})__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "scope/season_clothes",
   "source": "__scope/season_clothes(season=!{summer|autumn|winter|spring})__",
@@ -178,6 +192,7 @@ exports[`matchDynamicPromptsWildcards "__scope/season_clothes(season=!{summer|au
 exports[`matchDynamicPromptsWildcards "__scope/season_clothes(season=)__ " 1`] = `
 {
   "isFullMatch": false,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "scope/season_clothes",
   "source": "__scope/season_clothes(season=)__",
@@ -188,6 +203,7 @@ exports[`matchDynamicPromptsWildcards "__scope/season_clothes(season=)__ " 1`] =
 exports[`matchDynamicPromptsWildcards "__scope/season_clothes(season=)__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "scope/season_clothes",
   "source": "__scope/season_clothes(season=)__",
@@ -198,6 +214,7 @@ exports[`matchDynamicPromptsWildcards "__scope/season_clothes(season=)__" 1`] = 
 exports[`matchDynamicPromptsWildcards "__scope/season_clothes(season=__@scope/season_clothes__)__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "scope/season_clothes",
   "source": "__scope/season_clothes(season=__@scope/season_clothes__)__",
@@ -208,6 +225,7 @@ exports[`matchDynamicPromptsWildcards "__scope/season_clothes(season=__@scope/se
 exports[`matchDynamicPromptsWildcards "__scope/season_clothes(season=__~scope/season_clothes__)__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "scope/season_clothes",
   "source": "__scope/season_clothes(season=__~scope/season_clothes__)__",
@@ -218,6 +236,7 @@ exports[`matchDynamicPromptsWildcards "__scope/season_clothes(season=__~scope/se
 exports[`matchDynamicPromptsWildcards "__scope/season_clothes(season=__scope/season_clothes__)__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "scope/season_clothes",
   "source": "__scope/season_clothes(season=__scope/season_clothes__)__",
@@ -228,6 +247,7 @@ exports[`matchDynamicPromptsWildcards "__scope/season_clothes(season=__scope/sea
 exports[`matchDynamicPromptsWildcards "__scope/season_clothes(season={!summer|autumn|winter|spring})__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "scope/season_clothes",
   "source": "__scope/season_clothes(season={!summer|autumn|winter|spring})__",
@@ -238,6 +258,7 @@ exports[`matchDynamicPromptsWildcards "__scope/season_clothes(season={!summer|au
 exports[`matchDynamicPromptsWildcards "__scope/season_clothes(season={@summer|autumn|winter|spring})__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "scope/season_clothes",
   "source": "__scope/season_clothes(season={@summer|autumn|winter|spring})__",
@@ -248,6 +269,7 @@ exports[`matchDynamicPromptsWildcards "__scope/season_clothes(season={@summer|au
 exports[`matchDynamicPromptsWildcards "__scope/season_clothes(season={summer|autumn|winter|spring})__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "scope/season_clothes",
   "source": "__scope/season_clothes(season={summer|autumn|winter|spring})__",
@@ -258,6 +280,7 @@ exports[`matchDynamicPromptsWildcards "__scope/season_clothes(season={summer|aut
 exports[`matchDynamicPromptsWildcards "__scope/season_clothes(season=winter)__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "scope/season_clothes",
   "source": "__scope/season_clothes(season=winter)__",
@@ -268,6 +291,7 @@ exports[`matchDynamicPromptsWildcards "__scope/season_clothes(season=winter)__" 
 exports[`matchDynamicPromptsWildcards "__scope/season_clothes__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "scope/season_clothes",
   "source": "__scope/season_clothes__",
@@ -278,6 +302,7 @@ exports[`matchDynamicPromptsWildcards "__scope/season_clothes__" 1`] = `
 exports[`matchDynamicPromptsWildcards "__season_clothes(season=!__season_clothes__)__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "season_clothes",
   "source": "__season_clothes(season=!__season_clothes__)__",
@@ -288,6 +313,7 @@ exports[`matchDynamicPromptsWildcards "__season_clothes(season=!__season_clothes
 exports[`matchDynamicPromptsWildcards "__season_clothes(season=!{!summer|autumn|winter|spring})__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "season_clothes",
   "source": "__season_clothes(season=!{!summer|autumn|winter|spring})__",
@@ -298,6 +324,7 @@ exports[`matchDynamicPromptsWildcards "__season_clothes(season=!{!summer|autumn|
 exports[`matchDynamicPromptsWildcards "__season_clothes(season=!{@summer|autumn|winter|spring})__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "season_clothes",
   "source": "__season_clothes(season=!{@summer|autumn|winter|spring})__",
@@ -308,6 +335,7 @@ exports[`matchDynamicPromptsWildcards "__season_clothes(season=!{@summer|autumn|
 exports[`matchDynamicPromptsWildcards "__season_clothes(season=!{summer|autumn|winter|spring})__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "season_clothes",
   "source": "__season_clothes(season=!{summer|autumn|winter|spring})__",
@@ -318,6 +346,7 @@ exports[`matchDynamicPromptsWildcards "__season_clothes(season=!{summer|autumn|w
 exports[`matchDynamicPromptsWildcards "__season_clothes(season=)__ " 1`] = `
 {
   "isFullMatch": false,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "season_clothes",
   "source": "__season_clothes(season=)__",
@@ -328,6 +357,7 @@ exports[`matchDynamicPromptsWildcards "__season_clothes(season=)__ " 1`] = `
 exports[`matchDynamicPromptsWildcards "__season_clothes(season=)__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "season_clothes",
   "source": "__season_clothes(season=)__",
@@ -338,6 +368,7 @@ exports[`matchDynamicPromptsWildcards "__season_clothes(season=)__" 1`] = `
 exports[`matchDynamicPromptsWildcards "__season_clothes(season=__@season_clothes__)__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "season_clothes",
   "source": "__season_clothes(season=__@season_clothes__)__",
@@ -348,6 +379,7 @@ exports[`matchDynamicPromptsWildcards "__season_clothes(season=__@season_clothes
 exports[`matchDynamicPromptsWildcards "__season_clothes(season=__~season_clothes__)__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "season_clothes",
   "source": "__season_clothes(season=__~season_clothes__)__",
@@ -358,6 +390,7 @@ exports[`matchDynamicPromptsWildcards "__season_clothes(season=__~season_clothes
 exports[`matchDynamicPromptsWildcards "__season_clothes(season=__season_clothes__)__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "season_clothes",
   "source": "__season_clothes(season=__season_clothes__)__",
@@ -368,6 +401,7 @@ exports[`matchDynamicPromptsWildcards "__season_clothes(season=__season_clothes_
 exports[`matchDynamicPromptsWildcards "__season_clothes(season={!summer|autumn|winter|spring})__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "season_clothes",
   "source": "__season_clothes(season={!summer|autumn|winter|spring})__",
@@ -378,6 +412,7 @@ exports[`matchDynamicPromptsWildcards "__season_clothes(season={!summer|autumn|w
 exports[`matchDynamicPromptsWildcards "__season_clothes(season={@summer|autumn|winter|spring})__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "season_clothes",
   "source": "__season_clothes(season={@summer|autumn|winter|spring})__",
@@ -388,6 +423,7 @@ exports[`matchDynamicPromptsWildcards "__season_clothes(season={@summer|autumn|w
 exports[`matchDynamicPromptsWildcards "__season_clothes(season={summer|autumn|winter|spring})__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "season_clothes",
   "source": "__season_clothes(season={summer|autumn|winter|spring})__",
@@ -398,6 +434,7 @@ exports[`matchDynamicPromptsWildcards "__season_clothes(season={summer|autumn|wi
 exports[`matchDynamicPromptsWildcards "__season_clothes(season=winter)__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "season_clothes",
   "source": "__season_clothes(season=winter)__",
@@ -408,6 +445,7 @@ exports[`matchDynamicPromptsWildcards "__season_clothes(season=winter)__" 1`] = 
 exports[`matchDynamicPromptsWildcards "__season_clothes__" 1`] = `
 {
   "isFullMatch": true,
+  "isStarWildcards": false,
   "keyword": undefined,
   "name": "season_clothes",
   "source": "__season_clothes__",
