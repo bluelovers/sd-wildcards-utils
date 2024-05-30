@@ -1,3 +1,5 @@
+import { array_unique_overwrite } from 'array-hyper-unique';
+
 export const RE_DYNAMIC_PROMPTS_WILDCARDS = /__([&~!@])?([*\w\/_\-]+)(\([^\n#]+\))?__/
 
 /**
@@ -87,7 +89,7 @@ export function matchDynamicPromptsWildcards(input: string)
 }
 
 /**
- * `RE_DYNAMIC_PROMPTS_WILDCARDS` regular expression to perform the match.
+ * Interface representing a single match of the dynamic prompts wildcards pattern.
  */
 export interface IMatchDynamicPromptsWildcardsEntry
 {
@@ -95,22 +97,31 @@ export interface IMatchDynamicPromptsWildcardsEntry
 	 * The name extracted from the input string.
 	 */
 	name: string;
+
 	/**
 	 * The variables extracted from the input string.
 	 */
 	variables: string;
+
 	/**
 	 * The keyword extracted from the input string.
 	 */
 	keyword: string;
+
 	/**
 	 * The original matched source string.
 	 */
 	source: string;
+
 	/**
 	 * A boolean indicating whether the input string is a full match.
 	 */
 	isFullMatch: boolean;
+
+	/**
+	 * A boolean indicating whether the wildcards pattern contains a star (*) character.
+	 */
+	isStarWildcards: boolean;
 }
 
 export function _matchDynamicPromptsWildcardsCore(m: RegExpMatchArray,
@@ -127,6 +138,7 @@ export function _matchDynamicPromptsWildcardsCore(m: RegExpMatchArray,
 		keyword,
 		source,
 		isFullMatch: source === (input ?? m.input),
+		isStarWildcards: name.includes('*'),
 	}
 }
 
@@ -146,9 +158,11 @@ export function* matchDynamicPromptsWildcardsAllGenerator(input: string)
 /**
  * Converts the generator function `matchDynamicPromptsWildcardsAllGenerator` into an array.
  */
-export function matchDynamicPromptsWildcardsAll(input: string)
+export function matchDynamicPromptsWildcardsAll(input: string, unique?: boolean)
 {
-	return [...matchDynamicPromptsWildcardsAllGenerator(input)]
+	const arr = [...matchDynamicPromptsWildcardsAllGenerator(input)] as IMatchDynamicPromptsWildcardsEntry[];
+
+	return unique ? array_unique_overwrite(arr) : arr
 }
 
 /**
