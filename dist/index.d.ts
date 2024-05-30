@@ -212,6 +212,38 @@ export interface IOptionsMergeWilcardsYAMLDocumentJsonBy {
  */
 export declare function mergeWildcardsYAMLDocumentJsonBy<T extends Document$1 | unknown, R = IRecordWildcards>(ls: T[], opts: IOptionsMergeWilcardsYAMLDocumentJsonBy): R;
 export declare function _toJSON<T extends Document$1 | unknown, R = IRecordWildcards>(v: T): R;
+/**
+ * Represents an entry in the result of the `findPath` function.
+ * It contains a list of keys and a list of values found in the data structure.
+ */
+export interface IFindPathEntry {
+	/**
+	 * A list of keys that lead to the value in the data structure.
+	 */
+	key: string[];
+	/**
+	 * A list of values found in the data structure.
+	 * Note: This list will always contain a single value since the `findPath` function does not support wildcard matching for values.
+	 */
+	value: string[];
+}
+export declare function pathsToWildcardsPath(paths: string[]): string;
+export declare function wildcardsPathToPaths(path: string): string[];
+export declare function pathsToDotPath(paths: string[]): string;
+/**
+ * Recursively searches for a path in a nested object or array structure.
+ *
+ * @param data - The nested object or array to search in.
+ * @param paths - The path to search for, represented as an array of strings.
+ * @param prefix - Internal parameter used to keep track of the current path.
+ * @param list - Internal parameter used to store the found paths and their corresponding values.
+ * @returns A list of found paths and their corresponding values.
+ * @throws {TypeError} If the value at a found path is not a string and there are remaining paths to search.
+ */
+export declare function findPath(data: IRecordWildcards, paths: string[], prefix?: string[], list?: IFindPathEntry[]): IFindPathEntry[];
+export declare function stripZeroStr(value: string): string;
+export declare function trimPrompts(value: string): string;
+export declare function formatPrompts(value: string, opts?: IOptionsSharedWildcardsYaml): string;
 export interface IRecordWildcards {
 	[key: string]: string[] | Record<string, string[]> | IRecordWildcards;
 }

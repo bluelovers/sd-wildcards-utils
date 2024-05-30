@@ -4,6 +4,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var yaml = require('yaml');
 var arrayHyperUnique = require('array-hyper-unique');
+var picomatch = require('picomatch');
 
 function getOptionsShared(opts) {
   var _opts;
@@ -301,6 +302,53 @@ function _toJSON(v) {
   return yaml.isDocument(v) ? v.toJSON() : v;
 }
 
+function pathsToWildcardsPath(paths) {
+  return paths.join('/');
+}
+function wildcardsPathToPaths(path) {
+  return path.split('/');
+}
+function pathsToDotPath(paths) {
+  return paths.join('.');
+}
+/**
+ * Recursively searches for a path in a nested object or array structure.
+ *
+ * @param data - The nested object or array to search in.
+ * @param paths - The path to search for, represented as an array of strings.
+ * @param prefix - Internal parameter used to keep track of the current path.
+ * @param list - Internal parameter used to store the found paths and their corresponding values.
+ * @returns A list of found paths and their corresponding values.
+ * @throws {TypeError} If the value at a found path is not a string and there are remaining paths to search.
+ */
+function findPath(data, paths, prefix = [], list = []) {
+  paths = paths.slice();
+  const current = paths.shift();
+  const deep = paths.length > 0;
+  for (const key in data) {
+    const bool = picomatch.isMatch(key, current);
+    if (bool) {
+      const target = prefix.slice().concat(key);
+      const value = data[key];
+      const notArray = !Array.isArray(value);
+      if (deep) {
+        if (notArray && typeof value !== 'string') {
+          findPath(value, paths, target, list);
+          continue;
+        }
+      } else if (!notArray) {
+        list.push({
+          key: target,
+          value
+        });
+        continue;
+      }
+      throw new TypeError(`Invalid Type. paths: ${target}, value: ${value}`);
+    }
+  }
+  return list;
+}
+
 const RE_UNSAFE_QUOTE = /['"]/;
 const RE_UNSAFE_VALUE = /^\s*-|[{$~!@}\n|:?#]/;
 function normalizeDocument(doc, opts) {
@@ -428,6 +476,8 @@ exports.defaultCheckerIgnoreCase = defaultCheckerIgnoreCase;
 exports.defaultOptionsParseDocument = defaultOptionsParseDocument;
 exports.defaultOptionsStringify = defaultOptionsStringify;
 exports.defaultOptionsStringifyMinify = defaultOptionsStringifyMinify;
+exports.findPath = findPath;
+exports.formatPrompts = formatPrompts;
 exports.getOptionsFromDocument = getOptionsFromDocument;
 exports.getOptionsShared = getOptionsShared;
 exports.isDynamicPromptsWildcards = isDynamicPromptsWildcards;
@@ -439,9 +489,14 @@ exports.mergeWildcardsYAMLDocumentJsonBy = mergeWildcardsYAMLDocumentJsonBy;
 exports.mergeWildcardsYAMLDocumentRoots = mergeWildcardsYAMLDocumentRoots;
 exports.normalizeDocument = normalizeDocument;
 exports.parseWildcardsYaml = parseWildcardsYaml;
+exports.pathsToDotPath = pathsToDotPath;
+exports.pathsToWildcardsPath = pathsToWildcardsPath;
 exports.stringifyWildcardsYamlData = stringifyWildcardsYamlData;
+exports.stripZeroStr = stripZeroStr;
+exports.trimPrompts = trimPrompts;
 exports.uniqueSeqItems = uniqueSeqItems;
 exports.uniqueSeqItemsChecker = uniqueSeqItemsChecker;
 exports.validWildcardsYamlData = validWildcardsYamlData;
 exports.visitWildcardsYAML = visitWildcardsYAML;
+exports.wildcardsPathToPaths = wildcardsPathToPaths;
 //# sourceMappingURL=index.cjs.development.cjs.map

@@ -26,6 +26,8 @@ export * from './options';
 export * from './items';
 export * from './valid';
 export * from './merge';
+export * from './find';
+export * from './format';
 
 export interface IRecordWildcards
 {
