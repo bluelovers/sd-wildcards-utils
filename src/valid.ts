@@ -1,5 +1,5 @@
 import { Document, isDocument, isMap, isNode, isScalar, YAMLMap, YAMLSeq, Scalar } from 'yaml';
-import { IOptionsVisitor, IWildcardsYAMLDocument, visitWildcardsYAML } from './items';
+import { IOptionsVisitor, IWildcardsYAMLDocument, IWildcardsYAMLScalar, visitWildcardsYAML } from './items';
 import { IOptionsSharedWildcardsYaml } from './options';
 import { IRecordWildcards } from './index';
 
@@ -14,7 +14,7 @@ export function _validMap(key: number | 'key' | 'value' | null, node: YAMLMap, .
 }
 
 // @ts-ignore
-export function _validSeq(key: number | 'key' | 'value' | null, node: YAMLSeq, ...args: any[]): asserts node is YAMLSeq<Scalar | Scalar.Parsed>
+export function _validSeq(key: number | 'key' | 'value' | null, node: YAMLSeq, ...args: any[]): asserts node is YAMLSeq<Scalar | IWildcardsYAMLScalar>
 {
 	const index = node.items.findIndex(node => !isScalar(node));
 	if (index !== -1)

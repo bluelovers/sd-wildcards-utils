@@ -12,7 +12,7 @@ beforeAll(async () =>
 });
 
 test(`doc.options`, () => {
-	let doc = parseWildcardsYaml('', {
+	let doc = parseWildcardsYaml(null, {
 		allowEmptyDocument: true,
 	});
 
