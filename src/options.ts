@@ -1,10 +1,12 @@
-import type { CreateNodeOptions, DocumentOptions, ParseOptions, SchemaOptions, ToStringOptions } from 'yaml';
+import { CreateNodeOptions, Document, DocumentOptions, ParseOptions, SchemaOptions, ToStringOptions } from 'yaml';
 
 export interface IOptionsSharedWildcardsYaml
 {
 	allowMultiRoot?: boolean,
 	disableUniqueItemValues?: boolean,
 	disableUnsafeQuote?: boolean,
+	minifyPrompts?: boolean,
+	allowEmptyDocument?: boolean,
 }
 
 export type IOptionsStringify =
@@ -18,12 +20,23 @@ export type IOptionsParseDocument = ParseOptions & DocumentOptions & SchemaOptio
 	toStringDefaults?: IOptionsStringify,
 };
 
-export function getOptionsShared<T extends IOptionsSharedWildcardsYaml>(opts: T): Pick<T, 'allowMultiRoot' | 'disableUniqueItemValues'>
+export function getOptionsShared<T extends IOptionsSharedWildcardsYaml>(opts?: T): Pick<T, keyof IOptionsSharedWildcardsYaml >
 {
+	opts ??= {} as T;
 	return {
 		allowMultiRoot: opts.allowMultiRoot,
 		disableUniqueItemValues: opts.disableUniqueItemValues,
+		minifyPrompts: opts.minifyPrompts,
+		disableUnsafeQuote: opts.disableUnsafeQuote,
 	}
+}
+
+export function defaultOptionsStringifyMinify()
+{
+	return {
+		lineWidth: 0,
+		minifyPrompts: true,
+	} as const satisfies IOptionsStringify
 }
 
 export function defaultOptionsStringify(opts?: IOptionsStringify): IOptionsStringify
@@ -55,4 +68,12 @@ export function defaultOptionsParseDocument(opts?: IOptionsParseDocument): IOpti
 	}
 
 	return opts
+}
+
+export function getOptionsFromDocument<T extends Document>(doc: T, opts?: IOptionsParseDocument)
+{
+	return {
+		...doc.options,
+		...opts,
+	} as IOptionsParseDocument
 }

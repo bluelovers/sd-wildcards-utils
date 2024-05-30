@@ -47,13 +47,24 @@ export function validWildcardsYamlData<T extends IRecordWildcards | IWildcardsYA
 		data = data.toJSON()
 	}
 
+	opts ??= {};
+
+	if (typeof data === 'undefined' || data === null)
+	{
+		if (opts.allowEmptyDocument)
+		{
+			return;
+		}
+		throw new TypeError(`The provided JSON contents should not be empty. ${data}`)
+	}
+
 	let rootKeys = Object.keys(data);
 
 	if (!rootKeys.length)
 	{
 		throw TypeError(`The provided JSON contents must contain at least one key.`)
 	}
-	else if (rootKeys.length !== 1 && !opts?.allowMultiRoot)
+	else if (rootKeys.length !== 1 && !opts.allowMultiRoot)
 	{
 		throw TypeError(`The provided JSON object cannot have more than one root key. Only one root key is allowed unless explicitly allowed by the 'allowMultiRoot' option.`)
 	}

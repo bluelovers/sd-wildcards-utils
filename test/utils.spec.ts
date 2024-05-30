@@ -4,10 +4,19 @@
 /// <reference types="expect" />
 
 import { isWildcardsName, matchDynamicPromptsWildcards } from '../src/util';
+import parseWildcardsYaml, { getOptionsFromDocument } from '../src/index';
 
 beforeAll(async () =>
 {
 
+});
+
+test(`doc.options`, () => {
+	let doc = parseWildcardsYaml('', {
+		allowEmptyDocument: true,
+	});
+
+	expect(getOptionsFromDocument(doc)).toMatchSnapshot()
 });
 
 describe(`matchDynamicPromptsWildcards`, () =>

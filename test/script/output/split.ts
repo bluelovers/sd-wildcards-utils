@@ -5,7 +5,7 @@ import { globSync, readFileSync } from 'fs';
 import { join } from 'path';
 import { __ROOT_DATA, __ROOT_OUTPUT_WILDCARDS } from '../../__root';
 import {
-	defaultCheckerIgnoreCase,
+	defaultCheckerIgnoreCase, defaultOptionsStringifyMinify,
 	IRecordWildcards,
 	mergeWildcardsYAMLDocumentJsonBy,
 	parseWildcardsYaml,
@@ -140,9 +140,7 @@ export default (async () =>
 		new_yaml_doc.setIn(['mix-lazy-auto'], node);
 	}
 
-	let out = stringifyWildcardsYamlData(new_yaml_doc, {
-		lineWidth: 0,
-	});
+	let out = stringifyWildcardsYamlData(new_yaml_doc, defaultOptionsStringifyMinify());
 
 	await outputFile(join(__ROOT_OUTPUT_WILDCARDS, 'mix-lazy-auto.yaml'), out);
 
