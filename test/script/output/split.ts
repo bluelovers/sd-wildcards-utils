@@ -1,3 +1,5 @@
+/// <reference path="../../../global.node.v22.d.ts" preserve="true"/>
+
 // @ts-ignore
 import escapeSplit from 'escape-split';
 // @ts-ignore

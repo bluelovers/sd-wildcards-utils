@@ -26,7 +26,7 @@ declare module "fs/promises"
 
 declare module "fs"
 {
-	function globsync(pattern: string | string[], options?: IOptionsNodeGlob): string[]
+	function globSync(pattern: string | string[], options?: IOptionsNodeGlob): string[]
 
 	function glob(pattern: string | string[],
 		callback: (err?: NodeJS.ErrnoException | null) => void
