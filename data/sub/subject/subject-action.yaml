@@ -1,0 +1,59 @@
+lazy-wildcards:
+  subject:
+    action:
+      nsfw-sex-sitting:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/action/nsfw-sex-sitting/style-type__,
+            __lazy-wildcards/subject/action/nsfw-sex-sitting/main__,
+            {{1-$$__lazy-wildcards/subject/action/nsfw-sex-sitting/main__},|}
+            __lazy-wildcards/subject/action/nsfw-sex-sitting/main-shared__
+        style-type:
+          - boy on top, hugging sex, kiss, ass
+          - reverse sitting, looking at viewer, thighhighs, thighs, sex from behind
+        style:
+          - spread legs
+        main:
+          - 1boy, hetero, 1girl, penis
+        main-shared:
+          - vaginal, sex, blush, breasts, sitting, spread legs
+      nsfw-aftersex:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/action/nsfw-aftersex/main__,
+            {({1-$$__lazy-wildcards/subject/action/nsfw-aftersex/pose__}:1.2),|}
+            {1-$$__lazy-wildcards/subject/action/nsfw-aftersex/style__},
+            {1-$$__lazy-wildcards/subject/action/nsfw-aftersex/env__}
+        main:
+          - >-
+            covered pussy, covering, covering crotch, censored,
+            open clothes, panty pull, panties around one leg, underwear,
+            pussy juice, cum, cumdrip,
+            breasts
+        style:
+          - shy
+          - embarrassed
+          - blush
+          - light_blush
+          - full-face blush
+          - open mouth
+          - fang
+          - seductive smile
+          - fucked silly
+          - torogao
+          - Dazed
+          - Climax
+          - drunk
+          - Confused
+          - closed eyes
+        pose:
+          - lying
+          - >-
+            lying on {bed|sofa|side|back|animal|water|chair}
+          - sitting, sleep
+          - spread legs
+          - wiping pussy
+          - reclining
+        env:
+          - tissue, tissue box, ((used tissue))
+          - condom, condom box, ((used condom))

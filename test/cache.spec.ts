@@ -25,6 +25,7 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 		'cf/other/*.yaml',
 		'others/**/*.yaml',
 		'*.yaml',
+		'sub/**/*.yaml',
 	], {
 		cwd: __ROOT_DATA,
 	}))(`%s`, (file) =>
