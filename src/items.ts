@@ -1,8 +1,8 @@
 import { array_unique_overwrite, defaultChecker } from 'array-hyper-unique';
-import { Document, isDocument, isMap, isScalar, Node, ParsedNode, visit, visitor } from 'yaml';
+import { Document, isDocument, isMap, isPair, isScalar, Node, ParsedNode, visit, visitor } from 'yaml';
 import {
 	IOptionsVisitor,
-	IResultDeepFindSingleRootAt, IWildcardsYAMLDocument,
+	IResultDeepFindSingleRootAt, IVisitPathsNodeList, IWildcardsYAMLDocument,
 	IWildcardsYAMLMapRoot, IWildcardsYAMLPair,
 } from './types';
 
@@ -89,4 +89,17 @@ export function deepFindSingleRootAt(node: ParsedNode | Document.Parsed | IWildc
 	}
 
 	return result;
+}
+
+export function _handleVisitPathsCore(nodePaths: IVisitPathsNodeList): IWildcardsYAMLPair[]
+{
+	return nodePaths.filter(p => isPair(p)) as any
+}
+
+/**
+ * [ 'root', 'root2', 'sub2', 'sub2-2' ]
+ */
+export function handleVisitPaths(nodePaths: IVisitPathsNodeList)
+{
+	return _handleVisitPathsCore(nodePaths).map(p => p.key.value)
 }
