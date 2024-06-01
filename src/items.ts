@@ -2,8 +2,11 @@ import { array_unique_overwrite, defaultChecker } from 'array-hyper-unique';
 import { Document, isDocument, isMap, isPair, isScalar, Node, ParsedNode, visit, visitor } from 'yaml';
 import {
 	IOptionsVisitor,
-	IResultDeepFindSingleRootAt, IVisitPathsNodeList, IWildcardsYAMLDocument,
-	IWildcardsYAMLMapRoot, IWildcardsYAMLPair,
+	IResultDeepFindSingleRootAt,
+	IVisitPathsNodeList,
+	IWildcardsYAMLDocument,
+	IWildcardsYAMLMapRoot,
+	IWildcardsYAMLPair,
 } from './types';
 
 export function visitWildcardsYAML(node: Node | Document | null, visitorOptions: IOptionsVisitor)
@@ -50,7 +53,9 @@ export function uniqueSeqItems<T extends Node>(items: (T | unknown)[])
  *            If no single root node is found, it returns the input `result` object.
  * @throws - Throws a TypeError if the Document Node is passed as a child node.
  */
-export function deepFindSingleRootAt(node: ParsedNode | Document.Parsed | IWildcardsYAMLMapRoot | IWildcardsYAMLDocument, result?: IResultDeepFindSingleRootAt)
+export function deepFindSingleRootAt(node: ParsedNode | Document.Parsed | IWildcardsYAMLMapRoot | IWildcardsYAMLDocument,
+	result?: IResultDeepFindSingleRootAt,
+)
 {
 	if (isMap(node) && node.items.length === 1)
 	{
@@ -96,10 +101,35 @@ export function _handleVisitPathsCore(nodePaths: IVisitPathsNodeList): IWildcard
 	return nodePaths.filter(p => isPair(p)) as any
 }
 
+export function convertPairsToStringList(nodePaths: IWildcardsYAMLPair[])
+{
+	return nodePaths.map(p => p.key.value)
+}
+
 /**
  * [ 'root', 'root2', 'sub2', 'sub2-2' ]
  */
 export function handleVisitPaths(nodePaths: IVisitPathsNodeList)
 {
-	return _handleVisitPathsCore(nodePaths).map(p => p.key.value)
+	return convertPairsToStringList(_handleVisitPathsCore(nodePaths))
+}
+
+/**
+ * full paths
+ *
+ * [ 'root', 'root2', 'sub2', 'sub2-2', 1 ]
+ */
+export function handleVisitPathsFull<T>(key: number | 'key' | 'value' | null,
+	_node: T,
+	nodePaths: IVisitPathsNodeList,
+)
+{
+	const paths = handleVisitPaths(nodePaths) as any as (string | number)[];
+
+	if (typeof key === 'number')
+	{
+		paths.push(key)
+	}
+
+	return paths
 }
