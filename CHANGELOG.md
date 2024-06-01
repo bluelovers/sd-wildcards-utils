@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.19](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.0.18...sd-wildcards-utils@1.0.19) (2024-06-01)
+
+
+
+### ✨　Features
+
+* add `mergeFindSingleRoots` for lazy merge ([c164735](https://github.com/bluelovers/sd-wildcards-utils/commit/c16473585a687a5f959524fc36551b59600067f8))
+
+
+### 📦　Code Refactoring
+
+* splitting wildcards ([38501e2](https://github.com/bluelovers/sd-wildcards-utils/commit/38501e2da6ef4b4b3b88c831383d13ed026b2f51))
+
+
+### 🔖　Miscellaneous
+
+* . ([3ac4156](https://github.com/bluelovers/sd-wildcards-utils/commit/3ac41561dd9dcfa104500df35a5768a1bd9548ce))
+
+
+
 ## [1.0.18](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.0.17...sd-wildcards-utils@1.0.18) (2024-05-30)
 
 

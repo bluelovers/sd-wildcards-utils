@@ -1,6 +1,6 @@
 {
   "name": "sd-wildcards-utils",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "Parse Stable Diffusion wildcards source to a YAML object.",
   "keywords": [
     "wildcards",
@@ -67,7 +67,7 @@
     "install:frozenLockfile": "yarn-tool install --frozen-lockfile",
     "install:resetLockfile": "yarn-tool install --reset-lockfile",
     "build": "yarn run build:tsdx && yarn run build:dts:bundle",
-    "build:dts:bundle": "ynpx @bluelovers/dts-bundle-generator -o ./dist/index.d.ts ./src/index.ts --no-banner --inline-declare-global & echo build:dts:bundle",
+    "build:dts:bundle": "echo ynpx @bluelovers/dts-bundle-generator -o ./dist/index.d.ts ./src/index.ts --no-banner --inline-declare-global & echo build:dts:bundle",
     "build:dts:copy": "copy .\\src\\index.d.ts .\\dist\\index.d.ts & echo build:dts",
     "build:dts:tsc": "yarn run build:dts:tsc:emit && yarn run build:dts:copy",
     "build:dts:tsc:emit": "tsc --emitDeclarationOnly --declaration --noEmit false",
@@ -121,6 +121,7 @@
   "devDependencies": {
     "@bluelovers/tsconfig": "^1.0.35",
     "@types/bluebird": "^3.5.42",
+    "@types/fs-extra": "^11.0.4",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.12.12",
     "@types/picomatch": "^2.3.3",
