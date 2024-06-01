@@ -27,7 +27,7 @@ export * from './valid';
 export * from './merge';
 export * from './find';
 export * from './format';
-export * from './types';
+export type * from './types';
 
 const RE_UNSAFE_QUOTE = /['"]/;
 const RE_UNSAFE_VALUE = /^\s*-|[{$~!@}\n|:?#]/;
