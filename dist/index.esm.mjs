@@ -1,16 +1,16 @@
-import { visit as e, isScalar as t, isMap as n, isDocument as r, isPair as o, isNode as i, isSeq as a, stringify as s, parseDocument as l } from "yaml";
+import { visit as t, isScalar as e, isMap as n, isDocument as r, isPair as i, isNode as o, isSeq as a, stringify as s, parseDocument as l } from "yaml";
 
 import { defaultChecker as c, array_unique_overwrite as d } from "array-hyper-unique";
 
 import { isMatch as u } from "picomatch";
 
-function getOptionsShared(e) {
-  var t;
-  return null !== (t = e) && void 0 !== t || (e = {}), {
-    allowMultiRoot: e.allowMultiRoot,
-    disableUniqueItemValues: e.disableUniqueItemValues,
-    minifyPrompts: e.minifyPrompts,
-    disableUnsafeQuote: e.disableUnsafeQuote
+function getOptionsShared(t) {
+  var e;
+  return null !== (e = t) && void 0 !== e || (t = {}), {
+    allowMultiRoot: t.allowMultiRoot,
+    disableUniqueItemValues: t.disableUniqueItemValues,
+    minifyPrompts: t.minifyPrompts,
+    disableUnsafeQuote: t.disableUnsafeQuote
   };
 }
 
@@ -21,89 +21,106 @@ function defaultOptionsStringifyMinify() {
   };
 }
 
-function defaultOptionsStringify(e) {
+function defaultOptionsStringify(t) {
   return {
     blockQuote: !0,
     defaultKeyType: "PLAIN",
     defaultStringType: "PLAIN",
     collectionStyle: "block",
     uniqueKeys: !0,
-    ...e
-  };
-}
-
-function defaultOptionsParseDocument(e) {
-  var t;
-  return null !== (t = e) && void 0 !== t || (e = {}), {
-    keepSourceTokens: !0,
-    ...e,
-    toStringDefaults: defaultOptionsStringify({
-      ...getOptionsShared(e),
-      ...e.toStringDefaults
-    })
-  };
-}
-
-function getOptionsFromDocument(e, t) {
-  return {
-    ...e.options,
     ...t
   };
 }
 
-function visitWildcardsYAML(t, n) {
-  return e(t, n);
+function defaultOptionsParseDocument(t) {
+  var e;
+  return null !== (e = t) && void 0 !== e || (t = {}), {
+    keepSourceTokens: !0,
+    ...t,
+    toStringDefaults: defaultOptionsStringify({
+      ...getOptionsShared(t),
+      ...t.toStringDefaults
+    })
+  };
 }
 
-function defaultCheckerIgnoreCase(e, t) {
-  return "string" == typeof e && "string" == typeof t && (e = e.toLowerCase(), t = t.toLowerCase()), 
-  c(e, t);
+function getOptionsFromDocument(t, e) {
+  return {
+    ...t.options,
+    ...e
+  };
 }
 
-function uniqueSeqItemsChecker(e, n) {
-  return t(e) && t(n) ? defaultCheckerIgnoreCase(e.value, n.value) : defaultCheckerIgnoreCase(e, n);
+function visitWildcardsYAML(e, n) {
+  return t(e, n);
 }
 
-function uniqueSeqItems(e) {
-  return d(e, {
+function defaultCheckerIgnoreCase(t, e) {
+  return "string" == typeof t && "string" == typeof e && (t = t.toLowerCase(), e = e.toLowerCase()), 
+  c(t, e);
+}
+
+function uniqueSeqItemsChecker(t, n) {
+  return e(t) && e(n) ? defaultCheckerIgnoreCase(t.value, n.value) : defaultCheckerIgnoreCase(t, n);
+}
+
+function uniqueSeqItems(t) {
+  return d(t, {
     checker: uniqueSeqItemsChecker
   });
 }
 
-function deepFindSingleRootAt(e, t) {
-  if (n(e) && 1 === e.items.length) {
-    var o;
-    let n = e.items[0], r = n.key.value, i = null !== (o = null == t ? void 0 : t.paths) && void 0 !== o ? o : [];
-    i.push(r);
+function deepFindSingleRootAt(t, e) {
+  if (n(t) && 1 === t.items.length) {
+    var i;
+    let n = t.items[0], r = n.key.value, o = null !== (i = null == e ? void 0 : e.paths) && void 0 !== i ? i : [];
+    o.push(r);
     let a = n.value;
     return deepFindSingleRootAt(a, {
-      paths: i,
+      paths: o,
       key: r,
       value: a,
-      parent: e
+      parent: t
     });
   }
-  if (r(e)) {
-    if (t) throw new TypeError("The Document Node should not as Child Node");
-    let n = e.contents;
+  if (r(t)) {
+    if (e) throw new TypeError("The Document Node should not as Child Node");
+    let n = t.contents;
     return deepFindSingleRootAt(n, {
       paths: [],
       key: void 0,
       value: n,
-      parent: e
+      parent: t
     });
   }
-  return t;
+  return e;
 }
 
-function _validMap(e, t, ...n) {
-  const r = t.items.findIndex((e => !o(e) || null == (null == e ? void 0 : e.value)));
-  if (-1 !== r) throw new SyntaxError(`Invalid SYNTAX. key: ${e}, node: ${t}, elem: ${t.items[r]}`);
+function _handleVisitPathsCore(t) {
+  return t.filter((t => i(t)));
 }
 
-function _validSeq(e, n, ...r) {
-  const o = n.items.findIndex((e => !t(e)));
-  if (-1 !== o) throw new SyntaxError(`Invalid SYNTAX. key: ${e}, node: ${n}, index: ${o}, node: ${n.items[o]}`);
+function convertPairsToStringList(t) {
+  return t.map((t => t.key.value));
+}
+
+function handleVisitPaths(t) {
+  return convertPairsToStringList(_handleVisitPathsCore(t));
+}
+
+function handleVisitPathsFull(t, e, n) {
+  const r = handleVisitPaths(n);
+  return "number" == typeof t && r.push(t), r;
+}
+
+function _validMap(t, e, ...n) {
+  const r = e.items.findIndex((t => !i(t) || null == (null == t ? void 0 : t.value)));
+  if (-1 !== r) throw new SyntaxError(`Invalid SYNTAX. key: ${t}, node: ${e}, elem: ${e.items[r]}`);
+}
+
+function _validSeq(t, n, ...r) {
+  const i = n.items.findIndex((t => !e(t)));
+  if (-1 !== i) throw new SyntaxError(`Invalid SYNTAX. key: ${t}, node: ${n}, index: ${i}, node: ${n.items[i]}`);
 }
 
 function createDefaultVisitWildcardsYAMLOptions() {
@@ -113,191 +130,191 @@ function createDefaultVisitWildcardsYAMLOptions() {
   };
 }
 
-function validWildcardsYamlData(e, t) {
-  var o;
-  if (r(e)) {
-    if (i(e.contents) && !n(e.contents)) throw TypeError(`The 'contents' property of the provided YAML document must be a YAMLMap. Received: ${e.contents}`);
-    visitWildcardsYAML(e, createDefaultVisitWildcardsYAMLOptions()), e = e.toJSON();
+function validWildcardsYamlData(t, e) {
+  var i;
+  if (r(t)) {
+    if (o(t.contents) && !n(t.contents)) throw TypeError(`The 'contents' property of the provided YAML document must be a YAMLMap. Received: ${t.contents}`);
+    visitWildcardsYAML(t, createDefaultVisitWildcardsYAMLOptions()), t = t.toJSON();
   }
-  if (null !== (o = t) && void 0 !== o || (t = {}), null == e) {
-    if (t.allowEmptyDocument) return;
-    throw new TypeError(`The provided JSON contents should not be empty. ${e}`);
+  if (null !== (i = e) && void 0 !== i || (e = {}), null == t) {
+    if (e.allowEmptyDocument) return;
+    throw new TypeError(`The provided JSON contents should not be empty. ${t}`);
   }
-  let a = Object.keys(e);
+  let a = Object.keys(t);
   if (!a.length) throw TypeError("The provided JSON contents must contain at least one key.");
-  if (1 !== a.length && !t.allowMultiRoot) throw TypeError("The provided JSON object cannot have more than one root key. Only one root key is allowed unless explicitly allowed by the 'allowMultiRoot' option.");
+  if (1 !== a.length && !e.allowMultiRoot) throw TypeError("The provided JSON object cannot have more than one root key. Only one root key is allowed unless explicitly allowed by the 'allowMultiRoot' option.");
 }
 
-function stripZeroStr(e) {
-  return e.replace(/[\x00\u200b]+/g, "").replace(/^[\s\xa0]+|[\s\xa0]+$/gm, "");
+function stripZeroStr(t) {
+  return t.replace(/[\x00\u200b]+/g, "").replace(/^[\s\xa0]+|[\s\xa0]+$/gm, "");
 }
 
-function trimPrompts(e) {
-  return e.replace(/^\s+|\s+$/g, "").replace(/\n\s*\n/g, "\n");
+function trimPrompts(t) {
+  return t.replace(/^\s+|\s+$/g, "").replace(/\n\s*\n/g, "\n");
 }
 
-function formatPrompts(e, t) {
+function formatPrompts(t, e) {
   var n;
-  return null !== (n = t) && void 0 !== n || (t = {}), e = e.replace(/[\s\xa0]+/gm, " "), 
-  t.minifyPrompts && (e = e.replace(/(,)\s+/gm, "$1").replace(/\s+(,)/gm, "$1")), 
-  e;
+  return null !== (n = e) && void 0 !== n || (e = {}), t = t.replace(/[\s\xa0]+/gm, " "), 
+  e.minifyPrompts && (t = t.replace(/(,)\s+/gm, "$1").replace(/\s+(,)/gm, "$1")), 
+  t;
 }
 
 const m = /__([&~!@])?([*\w\/_\-]+)(\([^\n#]+\))?__/, p = /*#__PURE__*/ new RegExp(m, m.flags + "g"), f = /^[\w\-_\/]+$/;
 
-function isDynamicPromptsWildcards(e) {
-  return matchDynamicPromptsWildcards(e).isFullMatch;
+function isDynamicPromptsWildcards(t) {
+  return matchDynamicPromptsWildcards(t).isFullMatch;
 }
 
-function matchDynamicPromptsWildcards(e) {
-  return _matchDynamicPromptsWildcardsCore(e.match(m), e);
+function matchDynamicPromptsWildcards(t) {
+  return _matchDynamicPromptsWildcardsCore(t.match(m), t);
 }
 
-function _matchDynamicPromptsWildcardsCore(e, t) {
-  if (!e) return null;
-  let [n, r, o, i] = e;
+function _matchDynamicPromptsWildcardsCore(t, e) {
+  if (!t) return null;
+  let [n, r, i, o] = t;
   return {
-    name: o,
-    variables: i,
+    name: i,
+    variables: o,
     keyword: r,
     source: n,
-    isFullMatch: n === (null != t ? t : e.input),
-    isStarWildcards: o.includes("*")
+    isFullMatch: n === (null != e ? e : t.input),
+    isStarWildcards: i.includes("*")
   };
 }
 
-function* matchDynamicPromptsWildcardsAllGenerator(e) {
-  const t = e.matchAll(p);
-  for (let n of t) yield _matchDynamicPromptsWildcardsCore(n, e);
+function* matchDynamicPromptsWildcardsAllGenerator(t) {
+  const e = t.matchAll(p);
+  for (let n of e) yield _matchDynamicPromptsWildcardsCore(n, t);
 }
 
-function matchDynamicPromptsWildcardsAll(e, t) {
-  const n = [ ...matchDynamicPromptsWildcardsAllGenerator(e) ];
-  return t ? d(n) : n;
+function matchDynamicPromptsWildcardsAll(t, e) {
+  const n = [ ...matchDynamicPromptsWildcardsAllGenerator(t) ];
+  return e ? d(n) : n;
 }
 
-function isWildcardsName(e) {
-  return f.test(e) && !/__|[_\/]$|^[_\/]|\/\//.test(e);
+function isWildcardsName(t) {
+  return f.test(t) && !/__|[_\/]$|^[_\/]|\/\//.test(t);
 }
 
-function assertWildcardsName(e) {
-  if (isWildcardsName(e)) throw new SyntaxError(`Invalid Wildcards Name Syntax: ${e}`);
+function assertWildcardsName(t) {
+  if (isWildcardsName(t)) throw new SyntaxError(`Invalid Wildcards Name Syntax: ${t}`);
 }
 
-function convertWildcardsNameToPaths(e) {
-  return e.split("/");
+function convertWildcardsNameToPaths(t) {
+  return t.split("/");
 }
 
-function mergeWildcardsYAMLDocumentRoots(e) {
-  return e.reduce(_mergeWildcardsYAMLDocumentRootsCore);
+function mergeWildcardsYAMLDocumentRoots(t) {
+  return t.reduce(_mergeWildcardsYAMLDocumentRootsCore);
 }
 
-function _mergeWildcardsYAMLDocumentRootsCore(e, t) {
-  return e.contents.items.push(...t.contents.items), e;
+function _mergeWildcardsYAMLDocumentRootsCore(t, e) {
+  return t.contents.items.push(...e.contents.items), t;
 }
 
-function mergeWildcardsYAMLDocumentJsonBy(e, t) {
-  return t.deepmerge(e.map(_toJSON));
+function mergeWildcardsYAMLDocumentJsonBy(t, e) {
+  return e.deepmerge(t.map(_toJSON));
 }
 
-function _toJSON(e) {
-  return r(e) ? e.toJSON() : e;
+function _toJSON(t) {
+  return r(t) ? t.toJSON() : t;
 }
 
-function mergeFindSingleRoots(e, t) {
-  if (!r(e) && !n(e)) throw TypeError(`The merge target should be a YAMLMap or Document. doc: ${e}`);
-  t = [ t ].flat();
-  for (let r of t) {
-    let t = deepFindSingleRootAt(r);
-    if (!t) throw TypeError(`Only YAMLMap can be merged. node: ${r}`);
+function mergeFindSingleRoots(t, e) {
+  if (!r(t) && !n(t)) throw TypeError(`The merge target should be a YAMLMap or Document. doc: ${t}`);
+  e = [ e ].flat();
+  for (let r of e) {
+    let e = deepFindSingleRootAt(r);
+    if (!e) throw TypeError(`Only YAMLMap can be merged. node: ${r}`);
     {
-      let r = e.getIn(t.paths);
+      let r = t.getIn(e.paths);
       if (r) {
         if (!n(r)) throw TypeError(`Only YAMLMap can be merged. node: ${r}`);
-        t.value.items.forEach((e => {
-          let n = e.key.value, o = r.get(n);
-          if (o) {
-            if (!a(o) || !a(e.value)) throw TypeError(`Current does not support deep merge. paths: [${t.paths.concat(n)}], a: ${o}, b: ${e.value}`);
-            o.items.push(...e.value.items);
-          } else r.items.push(e);
+        e.value.items.forEach((t => {
+          let n = t.key.value, i = r.get(n);
+          if (i) {
+            if (!a(i) || !a(t.value)) throw TypeError(`Current does not support deep merge. paths: [${e.paths.concat(n)}], a: ${i}, b: ${t.value}`);
+            i.items.push(...t.value.items);
+          } else r.items.push(t);
         }));
-      } else e.setIn(t.paths, t.value);
+      } else t.setIn(e.paths, e.value);
     }
   }
-  return e;
+  return t;
 }
 
-function pathsToWildcardsPath(e) {
-  return e.join("/");
+function pathsToWildcardsPath(t) {
+  return t.join("/");
 }
 
-function wildcardsPathToPaths(e) {
-  return e.split("/");
+function wildcardsPathToPaths(t) {
+  return t.split("/");
 }
 
-function pathsToDotPath(e) {
-  return e.join(".");
+function pathsToDotPath(t) {
+  return t.join(".");
 }
 
-function findPath(e, t, n = [], r = []) {
-  const o = (t = t.slice()).shift(), i = t.length > 0;
-  for (const a in e) if (u(a, o)) {
-    const o = n.slice().concat(a), s = e[a], l = !Array.isArray(s);
-    if (i) {
+function findPath(t, e, n = [], r = []) {
+  const i = (e = e.slice()).shift(), o = e.length > 0;
+  for (const a in t) if (u(a, i)) {
+    const i = n.slice().concat(a), s = t[a], l = !Array.isArray(s);
+    if (o) {
       if (l && "string" != typeof s) {
-        findPath(s, t, o, r);
+        findPath(s, e, i, r);
         continue;
       }
     } else if (!l) {
       r.push({
-        key: o,
+        key: i,
         value: s
       });
       continue;
     }
-    throw new TypeError(`Invalid Type. paths: ${o}, value: ${s}`);
+    throw new TypeError(`Invalid Type. paths: ${i}, value: ${s}`);
   }
   return r;
 }
 
 const h = /['"]/, y = /^\s*-|[{$~!@}\n|:?#]/;
 
-function normalizeDocument(e, t) {
-  let n = getOptionsFromDocument(e, t);
+function normalizeDocument(t, e) {
+  let n = getOptionsFromDocument(t, e);
   const r = createDefaultVisitWildcardsYAMLOptions();
-  let o = !n.disableUnsafeQuote, i = {
+  let i = !n.disableUnsafeQuote, o = {
     ...r,
-    Scalar(e, t) {
-      let r = t.value;
+    Scalar(t, e) {
+      let r = e.value;
       if ("string" == typeof r) {
-        if (o && h.test(r)) throw new SyntaxError(`Invalid SYNTAX [UNSAFE_QUOTE]. key: ${e}, node: ${t}`);
-        ("QUOTE_DOUBLE" === t.type || "QUOTE_SINGLE" === t.type && !r.includes("\\")) && (t.type = "PLAIN"), 
-        r = trimPrompts(stripZeroStr(formatPrompts(r, n))), y.test(r) && ("PLAIN" === t.type || "BLOCK_FOLDED" === t.type && /#/.test(r)) && (t.type = "BLOCK_LITERAL"), 
-        t.value = r;
+        if (i && h.test(r)) throw new SyntaxError(`Invalid SYNTAX [UNSAFE_QUOTE]. key: ${t}, node: ${e}`);
+        ("QUOTE_DOUBLE" === e.type || "QUOTE_SINGLE" === e.type && !r.includes("\\")) && (e.type = "PLAIN"), 
+        r = trimPrompts(stripZeroStr(formatPrompts(r, n))), y.test(r) && ("PLAIN" === e.type || "BLOCK_FOLDED" === e.type && /#/.test(r)) && (e.type = "BLOCK_LITERAL"), 
+        e.value = r;
       }
     }
   };
   if (!n.disableUniqueItemValues) {
-    const e = r.Seq;
-    i.Seq = (t, n, ...r) => {
-      e(t, n, ...r), uniqueSeqItems(n.items);
+    const t = r.Seq;
+    o.Seq = (e, n, ...r) => {
+      t(e, n, ...r), uniqueSeqItems(n.items);
     };
   }
-  visitWildcardsYAML(e, i);
+  visitWildcardsYAML(t, o);
 }
 
-function stringifyWildcardsYamlData(e, t) {
-  const n = r(e);
-  return n && (t = getOptionsFromDocument(e, t)), t = defaultOptionsStringify(t), 
-  n ? (normalizeDocument(e, t), e.toString(t)) : s(e, t);
+function stringifyWildcardsYamlData(t, e) {
+  const n = r(t);
+  return n && (e = getOptionsFromDocument(t, e)), e = defaultOptionsStringify(e), 
+  n ? (normalizeDocument(t, e), t.toString(e)) : s(t, e);
 }
 
-function parseWildcardsYaml(e, t) {
+function parseWildcardsYaml(t, e) {
   var n;
-  (t = defaultOptionsParseDocument(t)).allowEmptyDocument && (null !== (n = e) && void 0 !== n || (e = ""));
-  let r = l(e.toString(), t);
-  return validWildcardsYamlData(r, t), r;
+  (e = defaultOptionsParseDocument(e)).allowEmptyDocument && (null !== (n = t) && void 0 !== n || (t = ""));
+  let r = l(t.toString(), e);
+  return validWildcardsYamlData(r, e), r;
 }
 
-export { m as RE_DYNAMIC_PROMPTS_WILDCARDS, p as RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL, f as RE_WILDCARDS_NAME, _matchDynamicPromptsWildcardsCore, _mergeWildcardsYAMLDocumentRootsCore, _toJSON, _validMap, _validSeq, assertWildcardsName, convertWildcardsNameToPaths, createDefaultVisitWildcardsYAMLOptions, deepFindSingleRootAt, parseWildcardsYaml as default, defaultCheckerIgnoreCase, defaultOptionsParseDocument, defaultOptionsStringify, defaultOptionsStringifyMinify, findPath, formatPrompts, getOptionsFromDocument, getOptionsShared, isDynamicPromptsWildcards, isWildcardsName, matchDynamicPromptsWildcards, matchDynamicPromptsWildcardsAll, matchDynamicPromptsWildcardsAllGenerator, mergeFindSingleRoots, mergeWildcardsYAMLDocumentJsonBy, mergeWildcardsYAMLDocumentRoots, normalizeDocument, parseWildcardsYaml, pathsToDotPath, pathsToWildcardsPath, stringifyWildcardsYamlData, stripZeroStr, trimPrompts, uniqueSeqItems, uniqueSeqItemsChecker, validWildcardsYamlData, visitWildcardsYAML, wildcardsPathToPaths };
+export { m as RE_DYNAMIC_PROMPTS_WILDCARDS, p as RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL, f as RE_WILDCARDS_NAME, _handleVisitPathsCore, _matchDynamicPromptsWildcardsCore, _mergeWildcardsYAMLDocumentRootsCore, _toJSON, _validMap, _validSeq, assertWildcardsName, convertPairsToStringList, convertWildcardsNameToPaths, createDefaultVisitWildcardsYAMLOptions, deepFindSingleRootAt, parseWildcardsYaml as default, defaultCheckerIgnoreCase, defaultOptionsParseDocument, defaultOptionsStringify, defaultOptionsStringifyMinify, findPath, formatPrompts, getOptionsFromDocument, getOptionsShared, handleVisitPaths, handleVisitPathsFull, isDynamicPromptsWildcards, isWildcardsName, matchDynamicPromptsWildcards, matchDynamicPromptsWildcardsAll, matchDynamicPromptsWildcardsAllGenerator, mergeFindSingleRoots, mergeWildcardsYAMLDocumentJsonBy, mergeWildcardsYAMLDocumentRoots, normalizeDocument, parseWildcardsYaml, pathsToDotPath, pathsToWildcardsPath, stringifyWildcardsYamlData, stripZeroStr, trimPrompts, uniqueSeqItems, uniqueSeqItemsChecker, validWildcardsYamlData, visitWildcardsYAML, wildcardsPathToPaths };
 //# sourceMappingURL=index.esm.mjs.map

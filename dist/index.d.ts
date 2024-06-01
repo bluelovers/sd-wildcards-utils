@@ -25,6 +25,8 @@ export interface IWildcardsYAMLDocument<Contents extends YAMLMap = IWildcardsYAM
 	contents: Strict extends true ? Contents | null : Contents;
 	toJSON<T = IRecordWildcards>(jsonArg?: string | null, onAnchor?: ToJSOptions["onAnchor"]): T;
 }
+export type IVisitPathsNode = Document$1 | Node$1 | Pair | IWildcardsYAMLPair;
+export type IVisitPathsNodeList = readonly IVisitPathsNode[];
 export type IWildcardsYAMLDocumentParsed<Contents extends YAMLMap = IWildcardsYAMLMapRoot, Strict extends boolean = true> = IWildcardsYAMLDocument<Contents, Strict> & Pick<Document$1.Parsed, "directives" | "range">;
 export type IOptionsVisitor = visitorFn<unknown> | {
 	Alias?: visitorFn<Alias>;
@@ -238,6 +240,18 @@ export declare function uniqueSeqItems<T extends Node$1>(items: (T | unknown)[])
  * @throws - Throws a TypeError if the Document Node is passed as a child node.
  */
 export declare function deepFindSingleRootAt(node: ParsedNode | Document$1.Parsed | IWildcardsYAMLMapRoot | IWildcardsYAMLDocument, result?: IResultDeepFindSingleRootAt): IResultDeepFindSingleRootAt;
+export declare function _handleVisitPathsCore(nodePaths: IVisitPathsNodeList): IWildcardsYAMLPair[];
+export declare function convertPairsToStringList(nodePaths: IWildcardsYAMLPair[]): string[];
+/**
+ * [ 'root', 'root2', 'sub2', 'sub2-2' ]
+ */
+export declare function handleVisitPaths(nodePaths: IVisitPathsNodeList): string[];
+/**
+ * full paths
+ *
+ * [ 'root', 'root2', 'sub2', 'sub2-2', 1 ]
+ */
+export declare function handleVisitPathsFull<T>(key: number | "key" | "value" | null, _node: T, nodePaths: IVisitPathsNodeList): (string | number)[];
 export declare function _validMap(key: number | "key" | "value" | null, node: YAMLMap, ...args: any[]): void;
 export declare function _validSeq(key: number | "key" | "value" | null, node: YAMLSeq, ...args: any[]): asserts node is YAMLSeq<Scalar | IWildcardsYAMLScalar>;
 export declare function createDefaultVisitWildcardsYAMLOptions(): Exclude<IOptionsVisitor, Function>;
@@ -266,9 +280,9 @@ export declare function _toJSON<T extends Document$1 | unknown, R = IRecordWildc
  * @throws {TypeError} - If the current node does not support deep merge.
  */
 export declare function mergeFindSingleRoots<T extends IWildcardsYAMLMapRoot | IWildcardsYAMLDocument>(doc: T, list: NoInfer<T>[] | NoInfer<T>): T;
-export declare function pathsToWildcardsPath(paths: string[]): string;
+export declare function pathsToWildcardsPath(paths: readonly string[]): string;
 export declare function wildcardsPathToPaths(path: string): string[];
-export declare function pathsToDotPath(paths: string[]): string;
+export declare function pathsToDotPath(paths: readonly string[]): string;
 /**
  * Recursively searches for a path in a nested object or array structure.
  *
