@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`merge.spec mergeFindSingleRoots 1`] = `
+{
+  "root": {
+    "root2": {
+      "sub1": [
+        123,
+        123,
+      ],
+      "sub2": {
+        "sub2-1": [
+          456,
+        ],
+        "sub2-2": [
+          789,
+        ],
+      },
+      "sub4": {
+        "sub2-1": [
+          456,
+        ],
+        "sub2-2": [
+          789,
+        ],
+      },
+    },
+  },
+}
+`;
+
+exports[`merge.spec mergeFindSingleRoots 2`] = `
+"root:
+  root2:
+    sub1:
+      - 123
+    sub2:
+      sub2-1:
+        - 456
+      sub2-2:
+        - 789
+    sub4:
+      sub2-1:
+        - 456
+      sub2-2:
+        - 789
+"
+`;
+
+exports[`merge.spec mergeFindSingleRoots 3`] = `"Current does not support deep merge. paths: [root,root2,sub2], a: {"sub2-1":[456],"sub2-2":[789]}, b: [123]"`;

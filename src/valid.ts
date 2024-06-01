@@ -1,14 +1,20 @@
-import { Document, isDocument, isMap, isNode, isScalar, YAMLMap, YAMLSeq, Scalar } from 'yaml';
-import { IOptionsVisitor, IWildcardsYAMLDocument, IWildcardsYAMLScalar, visitWildcardsYAML } from './items';
-import { IOptionsSharedWildcardsYaml } from './options';
-import { IRecordWildcards } from './index';
+import { Document, isDocument, isMap, isNode, isScalar, YAMLMap, YAMLSeq, Scalar, isPair } from 'yaml';
+import { visitWildcardsYAML } from './items';
+import {
+	IOptionsSharedWildcardsYaml,
+	IOptionsVisitor,
+	IRecordWildcards,
+	IWildcardsYAMLDocument,
+	IWildcardsYAMLScalar,
+} from './types';
 
 // @ts-ignore
 export function _validMap(key: number | 'key' | 'value' | null, node: YAMLMap, ...args: any[])
 {
-	const elem = node.items.find(pair => pair?.value == null);
-	if (elem)
+	const idx = node.items.findIndex(pair => (!isPair(pair) || pair?.value == null));
+	if (idx !== -1)
 	{
+		const elem = node.items[idx];
 		throw new SyntaxError(`Invalid SYNTAX. key: ${key}, node: ${node}, elem: ${elem}`)
 	}
 }

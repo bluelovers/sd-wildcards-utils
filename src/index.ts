@@ -4,22 +4,21 @@
 import { Document, isDocument, ParsedNode, parseDocument, stringify, YAMLMap } from 'yaml';
 import {
 	defaultOptionsParseDocument,
-	defaultOptionsStringify, getOptionsFromDocument,
-	IOptionsParseDocument,
-	IOptionsStringify,
+	defaultOptionsStringify,
+	getOptionsFromDocument,
+
 } from './options';
-import {
-	IOptionsVisitor,
-	IWildcardsYAMLDocument,
-	IWildcardsYAMLDocumentParsed, IWildcardsYAMLMapRoot,
-	uniqueSeqItems,
-	visitWildcardsYAML,
-} from './items';
-import {
-	createDefaultVisitWildcardsYAMLOptions,
-	validWildcardsYamlData,
-} from './valid';
+import { uniqueSeqItems, visitWildcardsYAML } from './items';
+import { createDefaultVisitWildcardsYAMLOptions, validWildcardsYamlData } from './valid';
 import { formatPrompts, stripZeroStr, trimPrompts } from './format';
+import {
+	IOptionsParseDocument, IOptionsStringify,
+	IOptionsVisitor,
+	IRecordWildcards,
+	IWildcardsYAMLDocument,
+	IWildcardsYAMLDocumentParsed,
+	IWildcardsYAMLMapRoot,
+} from './types';
 
 export * from './util';
 export * from './options';
@@ -28,11 +27,7 @@ export * from './valid';
 export * from './merge';
 export * from './find';
 export * from './format';
-
-export interface IRecordWildcards
-{
-	[key: string]: string[] | Record<string, string[]> | IRecordWildcards
-}
+export * from './types';
 
 const RE_UNSAFE_QUOTE = /['"]/;
 const RE_UNSAFE_VALUE = /^\s*-|[{$~!@}\n|:?#]/;
@@ -194,3 +189,15 @@ export function parseWildcardsYaml<Contents extends YAMLMap = IWildcardsYAMLMapR
 }
 
 export default parseWildcardsYaml
+export { IOptionsVisitor } from './types';
+export { IWildcardsYAMLDocumentParsed } from './types';
+export { IWildcardsYAMLDocument } from './types';
+export { IWildcardsYAMLMapRoot } from './types';
+export { IWildcardsYAMLSeq } from './types';
+export { IWildcardsYAMLScalar } from './types';
+export { IOmitParsedNodeContents } from './types';
+export { IFindPathEntry } from './types';
+export { IOptionsMergeWilcardsYAMLDocumentJsonBy } from './types';
+export { IOptionsParseDocument } from './types';
+export { IOptionsStringify } from './types';
+export { IOptionsSharedWildcardsYaml } from './types';

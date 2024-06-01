@@ -1,51 +1,10 @@
 import { array_unique_overwrite, defaultChecker } from 'array-hyper-unique';
-import type {
-	ToJSOptions,
-	Alias,
-	Document,
-	Node,
-	Pair,
-	Scalar,
-	visitor,
-	visitorFn,
-	YAMLMap,
-	YAMLSeq,
-	ParsedNode,
-} from 'yaml';
-import { isScalar, visit } from 'yaml';
-import { IOptionsParseDocument } from './options';
-import { IRecordWildcards } from './index';
-
-export type IOmitParsedNodeContents<T extends Node | Document, P extends ParsedNode | Document.Parsed> = Omit<P, 'contents'> & T
-
-export type IWildcardsYAMLScalar = IOmitParsedNodeContents<Scalar<string>, Scalar.Parsed>;
-
-export type IWildcardsYAMLSeq = IOmitParsedNodeContents<YAMLSeq<IWildcardsYAMLScalar>, YAMLSeq.Parsed>;
-
-export type IWildcardsYAMLMapRoot = YAMLMap.Parsed<IWildcardsYAMLScalar>;
-
-export interface IWildcardsYAMLDocument<Contents extends YAMLMap = IWildcardsYAMLMapRoot, Strict extends boolean = true> extends Omit<Document<Contents, Strict>, 'options' | 'contents'>
-{
-	options: Document["options"] & IOptionsParseDocument;
-	contents: Strict extends true ? Contents | null : Contents;
-
-	toJSON<T = IRecordWildcards>(jsonArg?: string | null, onAnchor?: ToJSOptions['onAnchor']): T;
-}
-
-export type IWildcardsYAMLDocumentParsed<Contents extends YAMLMap = IWildcardsYAMLMapRoot, Strict extends boolean = true> =
-	IWildcardsYAMLDocument<Contents, Strict>
-	& Pick<Document.Parsed, 'directives' | 'range'>;
-
-export type IOptionsVisitor = visitorFn<unknown> | {
-	Alias?: visitorFn<Alias>;
-	Collection?: visitorFn<YAMLMap | IWildcardsYAMLSeq>;
-	Map?: visitorFn<YAMLMap>;
-	Node?: visitorFn<Alias | IWildcardsYAMLScalar | YAMLMap | IWildcardsYAMLSeq>;
-	Pair?: visitorFn<Pair>;
-	Scalar?: visitorFn<IWildcardsYAMLScalar>;
-	Seq?: visitorFn<IWildcardsYAMLSeq>;
-	Value?: visitorFn<IWildcardsYAMLScalar | YAMLMap | IWildcardsYAMLSeq>;
-}
+import { Document, isDocument, isMap, isScalar, Node, ParsedNode, visit, visitor } from 'yaml';
+import {
+	IOptionsVisitor,
+	IResultDeepFindSingleRootAt, IWildcardsYAMLDocument,
+	IWildcardsYAMLMapRoot, IWildcardsYAMLPair,
+} from './types';
 
 export function visitWildcardsYAML(node: Node | Document | null, visitorOptions: IOptionsVisitor)
 {
@@ -78,4 +37,56 @@ export function uniqueSeqItems<T extends Node>(items: (T | unknown)[])
 		// @ts-ignore
 		checker: uniqueSeqItemsChecker,
 	}) as T[];
+}
+
+/**
+ * This function is used to find a single root node in a YAML structure.
+ * It traverses the YAML structure and returns the first node that has only one child.
+ * If the node is a Document, it will start from its contents.
+ *
+ * @param node - The YAML node to start the search from.
+ * @param result - An optional object to store the result.
+ * @returns - An object containing the paths, key, value, and parent of the found single root node.
+ *            If no single root node is found, it returns the input `result` object.
+ * @throws - Throws a TypeError if the Document Node is passed as a child node.
+ */
+export function deepFindSingleRootAt(node: ParsedNode | Document.Parsed | IWildcardsYAMLMapRoot | IWildcardsYAMLDocument, result?: IResultDeepFindSingleRootAt)
+{
+	if (isMap(node) && node.items.length === 1)
+	{
+		let child = node.items[0] as IWildcardsYAMLPair;
+
+		let key = child.key.value;
+
+		let paths = result?.paths ?? [];
+		(paths as any as string[]).push(key);
+
+		let value = child.value;
+
+		return deepFindSingleRootAt(value, {
+			paths,
+			key,
+			value,
+			parent: node as IWildcardsYAMLMapRoot,
+		} as const satisfies IResultDeepFindSingleRootAt)
+
+	}
+	else if (isDocument(node))
+	{
+		if (result)
+		{
+			throw new TypeError(`The Document Node should not as Child Node`)
+		}
+
+		let value = node.contents as IWildcardsYAMLMapRoot;
+
+		return deepFindSingleRootAt(value, {
+			paths: [] as const,
+			key: void 0,
+			value,
+			parent: node as IWildcardsYAMLDocument,
+		} as const satisfies IResultDeepFindSingleRootAt)
+	}
+
+	return result;
 }
