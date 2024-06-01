@@ -1,24 +1,5 @@
-import { CreateNodeOptions, Document, DocumentOptions, ParseOptions, SchemaOptions, ToStringOptions } from 'yaml';
-
-export interface IOptionsSharedWildcardsYaml
-{
-	allowMultiRoot?: boolean,
-	disableUniqueItemValues?: boolean,
-	disableUnsafeQuote?: boolean,
-	minifyPrompts?: boolean,
-	allowEmptyDocument?: boolean,
-}
-
-export type IOptionsStringify =
-	DocumentOptions
-	& SchemaOptions
-	& ParseOptions
-	& CreateNodeOptions
-	& ToStringOptions
-	& IOptionsSharedWildcardsYaml;
-export type IOptionsParseDocument = ParseOptions & DocumentOptions & SchemaOptions & IOptionsSharedWildcardsYaml & {
-	toStringDefaults?: IOptionsStringify,
-};
+import { Document } from 'yaml';
+import { IOptionsParseDocument, IOptionsSharedWildcardsYaml, IOptionsStringify } from './types';
 
 export function getOptionsShared<T extends IOptionsSharedWildcardsYaml>(opts?: T): Pick<T, keyof IOptionsSharedWildcardsYaml >
 {
@@ -50,6 +31,7 @@ export function defaultOptionsStringify(opts?: IOptionsStringify): IOptionsStrin
 		//indentSeq: false,
 		//doubleQuotedMinMultiLineLength: 10,
 		collectionStyle: 'block',
+		uniqueKeys: true,
 		...opts,
 	} satisfies IOptionsStringify
 }

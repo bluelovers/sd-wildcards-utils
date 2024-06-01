@@ -1,23 +1,6 @@
-import { IRecordWildcards } from './index';
+
 import { isMatch } from 'picomatch';
-
-/**
- * Represents an entry in the result of the `findPath` function.
- * It contains a list of keys and a list of values found in the data structure.
- */
-export interface IFindPathEntry
-{
-	/**
-	 * A list of keys that lead to the value in the data structure.
-	 */
-	key: string[];
-
-	/**
-	 * A list of values found in the data structure.
-	 * Note: This list will always contain a single value since the `findPath` function does not support wildcard matching for values.
-	 */
-	value: string[];
-}
+import { IFindPathEntry, IRecordWildcards } from './types';
 
 export function pathsToWildcardsPath(paths: string[])
 {

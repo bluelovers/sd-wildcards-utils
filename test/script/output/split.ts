@@ -8,7 +8,6 @@ import { join } from 'path';
 import { __ROOT_DATA, __ROOT_OUTPUT_WILDCARDS } from '../../__root';
 import {
 	defaultCheckerIgnoreCase, defaultOptionsStringifyMinify,
-	IRecordWildcards,
 	mergeWildcardsYAMLDocumentJsonBy,
 	parseWildcardsYaml,
 	stringifyWildcardsYamlData,
@@ -21,7 +20,8 @@ import { deepmergeAll } from 'deepmerge-plus';
 import Bluebird from 'bluebird';
 import { parseDocument } from 'yaml';
 import { groupSplitConfig } from './split-config';
-import { findPath, IFindPathEntry, pathsToWildcardsPath } from '../../../src/find';
+import { findPath, pathsToWildcardsPath } from '../../../src/find';
+import { IFindPathEntry, IRecordWildcards } from '../../../src/types';
 
 const _splitSpecific2 = escapeSplit({ delimiter: '/', escaper: '\\' });
 

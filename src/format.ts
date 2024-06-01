@@ -1,4 +1,4 @@
-import { IOptionsSharedWildcardsYaml } from './options';
+import { IOptionsSharedWildcardsYaml } from './types';
 
 export function stripZeroStr(value: string)
 {
