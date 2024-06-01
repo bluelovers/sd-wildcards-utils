@@ -2,7 +2,7 @@
 import { isMatch } from 'picomatch';
 import { IFindPathEntry, IRecordWildcards } from './types';
 
-export function pathsToWildcardsPath(paths: string[])
+export function pathsToWildcardsPath(paths: readonly string[])
 {
 	return paths.join('/');
 }
@@ -12,7 +12,7 @@ export function wildcardsPathToPaths(path: string)
 	return path.split('/');
 }
 
-export function pathsToDotPath(paths: string[])
+export function pathsToDotPath(paths: readonly string[])
 {
 	return paths.join('.');
 }

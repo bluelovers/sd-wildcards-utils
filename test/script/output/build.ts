@@ -28,8 +28,8 @@ export default Bluebird.map([
 	.then(async (doc: any) => {
 		// @ts-ignore
 		let ls = await Bluebird.map<string[]>(globSync([
-			'sub/**/*.yaml',
-			'sub/**/*.yml',
+			'sub/**/*.{yaml,yml}',
+			//'sub/**/*.yml',
 		], {
 			cwd: __ROOT_DATA
 		}), (file: string) => {

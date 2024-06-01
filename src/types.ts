@@ -15,6 +15,7 @@ import {
 	YAMLMap,
 	YAMLSeq,
 } from 'yaml';
+import { _handleVisitPathsCore } from './items';
 
 export type IOmitParsedNodeContents<T extends Node | Document, P extends ParsedNode | Document.Parsed> =
 	Omit<P, 'contents'>
@@ -59,6 +60,11 @@ export interface IWildcardsYAMLDocument<Contents extends YAMLMap = IWildcardsYAM
 
 	toJSON<T = IRecordWildcards>(jsonArg?: string | null, onAnchor?: ToJSOptions['onAnchor']): T;
 }
+
+export type IVisitPathsNode = Document | Node | Pair | IWildcardsYAMLPair
+
+export type IVisitPathsNodeList = readonly
+IVisitPathsNode[];
 
 export type IWildcardsYAMLDocumentParsed<Contents extends YAMLMap = IWildcardsYAMLMapRoot, Strict extends boolean = true> =
 	IWildcardsYAMLDocument<Contents, Strict>
