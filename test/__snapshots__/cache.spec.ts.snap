@@ -1165,13 +1165,6 @@ exports[`matchDynamicPromptsWildcardsAll lazy-wildcards.yaml 1`] = `
   "__lazy-wildcards/prompts/mouth__",
   "__lazy-wildcards/prompts/pose__",
   "__lazy-wildcards/subject/action/nsfw-*/prompts__",
-  "__lazy-wildcards/subject/action/nsfw-aftersex/env__",
-  "__lazy-wildcards/subject/action/nsfw-aftersex/main__",
-  "__lazy-wildcards/subject/action/nsfw-aftersex/pose__",
-  "__lazy-wildcards/subject/action/nsfw-aftersex/style__",
-  "__lazy-wildcards/subject/action/nsfw-sex-sitting/main-shared__",
-  "__lazy-wildcards/subject/action/nsfw-sex-sitting/main__",
-  "__lazy-wildcards/subject/action/nsfw-sex-sitting/style-type__",
   "__lazy-wildcards/util/action/playing-card/poker-card__",
   "__lazy-wildcards/util/action/playing-card/poker-playing__",
   "__lazy-wildcards/utils/color-base__",
@@ -2536,5 +2529,17 @@ exports[`matchDynamicPromptsWildcardsAll others\\billions_of_all_in_one.yaml 1`]
   "__words/scifi/adjectives__",
   "__words/scifi/substantives__",
   "__words/scifi/verbs__",
+]
+`;
+
+exports[`matchDynamicPromptsWildcardsAll sub\\subject\\subject-action.yaml 1`] = `
+[
+  "__lazy-wildcards/subject/action/nsfw-aftersex/env__",
+  "__lazy-wildcards/subject/action/nsfw-aftersex/main__",
+  "__lazy-wildcards/subject/action/nsfw-aftersex/pose__",
+  "__lazy-wildcards/subject/action/nsfw-aftersex/style__",
+  "__lazy-wildcards/subject/action/nsfw-sex-sitting/main-shared__",
+  "__lazy-wildcards/subject/action/nsfw-sex-sitting/main__",
+  "__lazy-wildcards/subject/action/nsfw-sex-sitting/style-type__",
 ]
 `;

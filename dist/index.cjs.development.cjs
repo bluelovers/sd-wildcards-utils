@@ -28,6 +28,7 @@ function defaultOptionsStringify(opts) {
     defaultKeyType: 'PLAIN',
     defaultStringType: 'PLAIN',
     collectionStyle: 'block',
+    uniqueKeys: true,
     ...opts
   };
 }
@@ -73,11 +74,51 @@ function uniqueSeqItems(items) {
     checker: uniqueSeqItemsChecker
   });
 }
+/**
+ * This function is used to find a single root node in a YAML structure.
+ * It traverses the YAML structure and returns the first node that has only one child.
+ * If the node is a Document, it will start from its contents.
+ *
+ * @param node - The YAML node to start the search from.
+ * @param result - An optional object to store the result.
+ * @returns - An object containing the paths, key, value, and parent of the found single root node.
+ *            If no single root node is found, it returns the input `result` object.
+ * @throws - Throws a TypeError if the Document Node is passed as a child node.
+ */
+function deepFindSingleRootAt(node, result) {
+  if (yaml.isMap(node) && node.items.length === 1) {
+    var _result$paths;
+    let child = node.items[0];
+    let key = child.key.value;
+    let paths = (_result$paths = result === null || result === void 0 ? void 0 : result.paths) !== null && _result$paths !== void 0 ? _result$paths : [];
+    paths.push(key);
+    let value = child.value;
+    return deepFindSingleRootAt(value, {
+      paths,
+      key,
+      value,
+      parent: node
+    });
+  } else if (yaml.isDocument(node)) {
+    if (result) {
+      throw new TypeError(`The Document Node should not as Child Node`);
+    }
+    let value = node.contents;
+    return deepFindSingleRootAt(value, {
+      paths: [],
+      key: void 0,
+      value,
+      parent: node
+    });
+  }
+  return result;
+}
 
 // @ts-ignore
 function _validMap(key, node, ...args) {
-  const elem = node.items.find(pair => (pair === null || pair === void 0 ? void 0 : pair.value) == null);
-  if (elem) {
+  const idx = node.items.findIndex(pair => !yaml.isPair(pair) || (pair === null || pair === void 0 ? void 0 : pair.value) == null);
+  if (idx !== -1) {
+    const elem = node.items[idx];
     throw new SyntaxError(`Invalid SYNTAX. key: ${key}, node: ${node}, elem: ${elem}`);
   }
 }
@@ -301,6 +342,51 @@ function mergeWildcardsYAMLDocumentJsonBy(ls, opts) {
 function _toJSON(v) {
   return yaml.isDocument(v) ? v.toJSON() : v;
 }
+/**
+ * Merges a single root YAMLMap or Document with a list of YAMLMap or Document.
+ * The function only merges the root nodes of the provided YAML structures.
+ *
+ * @throws {TypeError} - If the merge target is not a YAMLMap or Document.
+ * @throws {TypeError} - If the current node is not a YAMLMap.
+ * @throws {TypeError} - If the current node does not support deep merge.
+ */
+function mergeFindSingleRoots(doc, list) {
+  if (!yaml.isDocument(doc) && !yaml.isMap(doc)) {
+    throw TypeError(`The merge target should be a YAMLMap or Document. doc: ${doc}`);
+  }
+  list = [list].flat();
+  for (let node of list) {
+    let result = deepFindSingleRootAt(node);
+    if (result) {
+      let current = doc.getIn(result.paths);
+      if (current) {
+        if (!yaml.isMap(current)) {
+          throw TypeError(`Only YAMLMap can be merged. node: ${current}`);
+        }
+        result.value.items
+        // @ts-ignore
+        .forEach(p => {
+          let key = p.key.value;
+          let sub = current.get(key);
+          if (sub) {
+            if (yaml.isSeq(sub) && yaml.isSeq(p.value)) {
+              sub.items.push(...p.value.items);
+            } else {
+              throw TypeError(`Current does not support deep merge. paths: [${result.paths.concat(key)}], a: ${sub}, b: ${p.value}`);
+            }
+          } else {
+            current.items.push(p);
+          }
+        });
+      } else {
+        doc.setIn(result.paths, result.value);
+      }
+    } else {
+      throw TypeError(`Only YAMLMap can be merged. node: ${node}`);
+    }
+  }
+  return doc;
+}
 
 function pathsToWildcardsPath(paths) {
   return paths.join('/');
@@ -471,6 +557,7 @@ exports._validSeq = _validSeq;
 exports.assertWildcardsName = assertWildcardsName;
 exports.convertWildcardsNameToPaths = convertWildcardsNameToPaths;
 exports.createDefaultVisitWildcardsYAMLOptions = createDefaultVisitWildcardsYAMLOptions;
+exports.deepFindSingleRootAt = deepFindSingleRootAt;
 exports.default = parseWildcardsYaml;
 exports.defaultCheckerIgnoreCase = defaultCheckerIgnoreCase;
 exports.defaultOptionsParseDocument = defaultOptionsParseDocument;
@@ -485,6 +572,7 @@ exports.isWildcardsName = isWildcardsName;
 exports.matchDynamicPromptsWildcards = matchDynamicPromptsWildcards;
 exports.matchDynamicPromptsWildcardsAll = matchDynamicPromptsWildcardsAll;
 exports.matchDynamicPromptsWildcardsAllGenerator = matchDynamicPromptsWildcardsAllGenerator;
+exports.mergeFindSingleRoots = mergeFindSingleRoots;
 exports.mergeWildcardsYAMLDocumentJsonBy = mergeWildcardsYAMLDocumentJsonBy;
 exports.mergeWildcardsYAMLDocumentRoots = mergeWildcardsYAMLDocumentRoots;
 exports.normalizeDocument = normalizeDocument;

@@ -1,5 +1,14 @@
 import { Alias, CreateNodeOptions, Document as Document$1, DocumentOptions, Node as Node$1, Pair, ParseOptions, ParsedNode, Scalar, SchemaOptions, ToJSOptions, ToStringOptions, YAMLMap, YAMLSeq, visitorFn } from 'yaml';
 
+export type IOmitParsedNodeContents<T extends Node$1 | Document$1, P extends ParsedNode | Document$1.Parsed> = Omit<P, "contents"> & T;
+export type IWildcardsYAMLScalar = IOmitParsedNodeContents<Scalar<string>, Scalar.Parsed>;
+export type IWildcardsYAMLSeq = IOmitParsedNodeContents<YAMLSeq<IWildcardsYAMLScalar>, YAMLSeq.Parsed>;
+export type IWildcardsYAMLMapRoot = YAMLMap.Parsed<IWildcardsYAMLScalar, IWildcardsYAMLPairValue>;
+export type IWildcardsYAMLPairValue = IWildcardsYAMLSeq | IWildcardsYAMLMapRoot;
+export type IWildcardsYAMLPair = Pair<IWildcardsYAMLScalar, IWildcardsYAMLPairValue>;
+export interface IRecordWildcards {
+	[key: string]: string[] | Record<string, string[]> | IRecordWildcards;
+}
 export interface IOptionsSharedWildcardsYaml {
 	allowMultiRoot?: boolean;
 	disableUniqueItemValues?: boolean;
@@ -11,18 +20,6 @@ export type IOptionsStringify = DocumentOptions & SchemaOptions & ParseOptions &
 export type IOptionsParseDocument = ParseOptions & DocumentOptions & SchemaOptions & IOptionsSharedWildcardsYaml & {
 	toStringDefaults?: IOptionsStringify;
 };
-export declare function getOptionsShared<T extends IOptionsSharedWildcardsYaml>(opts?: T): Pick<T, keyof IOptionsSharedWildcardsYaml>;
-export declare function defaultOptionsStringifyMinify(): {
-	readonly lineWidth: 0;
-	readonly minifyPrompts: true;
-};
-export declare function defaultOptionsStringify(opts?: IOptionsStringify): IOptionsStringify;
-export declare function defaultOptionsParseDocument(opts?: IOptionsParseDocument): IOptionsParseDocument;
-export declare function getOptionsFromDocument<T extends Document$1>(doc: T, opts?: IOptionsParseDocument): IOptionsParseDocument;
-export type IOmitParsedNodeContents<T extends Node$1 | Document$1, P extends ParsedNode | Document$1.Parsed> = Omit<P, "contents"> & T;
-export type IWildcardsYAMLScalar = IOmitParsedNodeContents<Scalar<string>, Scalar.Parsed>;
-export type IWildcardsYAMLSeq = IOmitParsedNodeContents<YAMLSeq<IWildcardsYAMLScalar>, YAMLSeq.Parsed>;
-export type IWildcardsYAMLMapRoot = YAMLMap.Parsed<IWildcardsYAMLScalar>;
 export interface IWildcardsYAMLDocument<Contents extends YAMLMap = IWildcardsYAMLMapRoot, Strict extends boolean = true> extends Omit<Document$1<Contents, Strict>, "options" | "contents"> {
 	options: Document$1["options"] & IOptionsParseDocument;
 	contents: Strict extends true ? Contents | null : Contents;
@@ -39,10 +36,37 @@ export type IOptionsVisitor = visitorFn<unknown> | {
 	Seq?: visitorFn<IWildcardsYAMLSeq>;
 	Value?: visitorFn<IWildcardsYAMLScalar | YAMLMap | IWildcardsYAMLSeq>;
 };
-export declare function visitWildcardsYAML(node: Node$1 | Document$1 | null, visitorOptions: IOptionsVisitor): void;
-export declare function defaultCheckerIgnoreCase(a: unknown, b: unknown): boolean;
-export declare function uniqueSeqItemsChecker(a: Node$1, b: Node$1): boolean;
-export declare function uniqueSeqItems<T extends Node$1>(items: (T | unknown)[]): T[];
+/**
+ * Represents an entry in the result of the `findPath` function.
+ * It contains a list of keys and a list of values found in the data structure.
+ */
+export interface IFindPathEntry {
+	/**
+	 * A list of keys that lead to the value in the data structure.
+	 */
+	key: string[];
+	/**
+	 * A list of values found in the data structure.
+	 * Note: This list will always contain a single value since the `findPath` function does not support wildcard matching for values.
+	 */
+	value: string[];
+}
+export interface IOptionsMergeWilcardsYAMLDocumentJsonBy {
+	deepmerge<T = any>(ls: (unknown | Document$1)[]): T;
+}
+export type IResultDeepFindSingleRootAt = {
+	paths: readonly string[];
+	key: string;
+	value: IWildcardsYAMLSeq | IWildcardsYAMLMapRoot;
+	parent: IWildcardsYAMLMapRoot;
+} | {
+	paths: readonly string[] & {
+		length: 0;
+	};
+	key: void;
+	value: IWildcardsYAMLMapRoot;
+	parent: IWildcardsYAMLDocument;
+};
 export declare const RE_DYNAMIC_PROMPTS_WILDCARDS: RegExp;
 /**
  * for `matchAll`
@@ -190,6 +214,30 @@ export declare function matchDynamicPromptsWildcardsAll(input: string, unique?: 
 export declare function isWildcardsName(name: string): boolean;
 export declare function assertWildcardsName(name: string): void;
 export declare function convertWildcardsNameToPaths(name: string): string[];
+export declare function getOptionsShared<T extends IOptionsSharedWildcardsYaml>(opts?: T): Pick<T, keyof IOptionsSharedWildcardsYaml>;
+export declare function defaultOptionsStringifyMinify(): {
+	readonly lineWidth: 0;
+	readonly minifyPrompts: true;
+};
+export declare function defaultOptionsStringify(opts?: IOptionsStringify): IOptionsStringify;
+export declare function defaultOptionsParseDocument(opts?: IOptionsParseDocument): IOptionsParseDocument;
+export declare function getOptionsFromDocument<T extends Document$1>(doc: T, opts?: IOptionsParseDocument): IOptionsParseDocument;
+export declare function visitWildcardsYAML(node: Node$1 | Document$1 | null, visitorOptions: IOptionsVisitor): void;
+export declare function defaultCheckerIgnoreCase(a: unknown, b: unknown): boolean;
+export declare function uniqueSeqItemsChecker(a: Node$1, b: Node$1): boolean;
+export declare function uniqueSeqItems<T extends Node$1>(items: (T | unknown)[]): T[];
+/**
+ * This function is used to find a single root node in a YAML structure.
+ * It traverses the YAML structure and returns the first node that has only one child.
+ * If the node is a Document, it will start from its contents.
+ *
+ * @param node - The YAML node to start the search from.
+ * @param result - An optional object to store the result.
+ * @returns - An object containing the paths, key, value, and parent of the found single root node.
+ *            If no single root node is found, it returns the input `result` object.
+ * @throws - Throws a TypeError if the Document Node is passed as a child node.
+ */
+export declare function deepFindSingleRootAt(node: ParsedNode | Document$1.Parsed | IWildcardsYAMLMapRoot | IWildcardsYAMLDocument, result?: IResultDeepFindSingleRootAt): IResultDeepFindSingleRootAt;
 export declare function _validMap(key: number | "key" | "value" | null, node: YAMLMap, ...args: any[]): void;
 export declare function _validSeq(key: number | "key" | "value" | null, node: YAMLSeq, ...args: any[]): asserts node is YAMLSeq<Scalar | IWildcardsYAMLScalar>;
 export declare function createDefaultVisitWildcardsYAMLOptions(): Exclude<IOptionsVisitor, Function>;
@@ -199,9 +247,6 @@ export declare function mergeWildcardsYAMLDocumentRoots<T extends Pick<Document$
 	...any[]
 ]): T;
 export declare function _mergeWildcardsYAMLDocumentRootsCore<T extends Pick<Document$1<YAMLMap>, "contents">>(a: T, b: any): T;
-export interface IOptionsMergeWilcardsYAMLDocumentJsonBy {
-	deepmerge<T = any>(ls: (unknown | Document$1)[]): T;
-}
 /**
  * @example
  * import { deepmergeAll } from 'deepmerge-plus';
@@ -213,20 +258,14 @@ export interface IOptionsMergeWilcardsYAMLDocumentJsonBy {
 export declare function mergeWildcardsYAMLDocumentJsonBy<T extends Document$1 | unknown, R = IRecordWildcards>(ls: T[], opts: IOptionsMergeWilcardsYAMLDocumentJsonBy): R;
 export declare function _toJSON<T extends Document$1 | unknown, R = IRecordWildcards>(v: T): R;
 /**
- * Represents an entry in the result of the `findPath` function.
- * It contains a list of keys and a list of values found in the data structure.
+ * Merges a single root YAMLMap or Document with a list of YAMLMap or Document.
+ * The function only merges the root nodes of the provided YAML structures.
+ *
+ * @throws {TypeError} - If the merge target is not a YAMLMap or Document.
+ * @throws {TypeError} - If the current node is not a YAMLMap.
+ * @throws {TypeError} - If the current node does not support deep merge.
  */
-export interface IFindPathEntry {
-	/**
-	 * A list of keys that lead to the value in the data structure.
-	 */
-	key: string[];
-	/**
-	 * A list of values found in the data structure.
-	 * Note: This list will always contain a single value since the `findPath` function does not support wildcard matching for values.
-	 */
-	value: string[];
-}
+export declare function mergeFindSingleRoots<T extends IWildcardsYAMLMapRoot | IWildcardsYAMLDocument>(doc: T, list: NoInfer<T>[] | NoInfer<T>): T;
 export declare function pathsToWildcardsPath(paths: string[]): string;
 export declare function wildcardsPathToPaths(path: string): string[];
 export declare function pathsToDotPath(paths: string[]): string;
@@ -244,9 +283,6 @@ export declare function findPath(data: IRecordWildcards, paths: string[], prefix
 export declare function stripZeroStr(value: string): string;
 export declare function trimPrompts(value: string): string;
 export declare function formatPrompts(value: string, opts?: IOptionsSharedWildcardsYaml): string;
-export interface IRecordWildcards {
-	[key: string]: string[] | Record<string, string[]> | IRecordWildcards;
-}
 /**
  * Normalizes a YAML document by applying specific rules to its nodes.
  **/
