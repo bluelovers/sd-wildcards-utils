@@ -113,6 +113,22 @@ function deepFindSingleRootAt(node, result) {
   }
   return result;
 }
+function _handleVisitPathsCore(nodePaths) {
+  return nodePaths.filter(p => yaml.isPair(p));
+}
+function convertPairsToStringList(nodePaths) {
+  return nodePaths.map(p => p.key.value);
+}
+function handleVisitPaths(nodePaths) {
+  return convertPairsToStringList(_handleVisitPathsCore(nodePaths));
+}
+function handleVisitPathsFull(key, _node, nodePaths) {
+  const paths = handleVisitPaths(nodePaths);
+  if (typeof key === 'number') {
+    paths.push(key);
+  }
+  return paths;
+}
 
 // @ts-ignore
 function _validMap(key, node, ...args) {
@@ -549,12 +565,14 @@ function parseWildcardsYaml(source, opts) {
 exports.RE_DYNAMIC_PROMPTS_WILDCARDS = RE_DYNAMIC_PROMPTS_WILDCARDS;
 exports.RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL = RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL;
 exports.RE_WILDCARDS_NAME = RE_WILDCARDS_NAME;
+exports._handleVisitPathsCore = _handleVisitPathsCore;
 exports._matchDynamicPromptsWildcardsCore = _matchDynamicPromptsWildcardsCore;
 exports._mergeWildcardsYAMLDocumentRootsCore = _mergeWildcardsYAMLDocumentRootsCore;
 exports._toJSON = _toJSON;
 exports._validMap = _validMap;
 exports._validSeq = _validSeq;
 exports.assertWildcardsName = assertWildcardsName;
+exports.convertPairsToStringList = convertPairsToStringList;
 exports.convertWildcardsNameToPaths = convertWildcardsNameToPaths;
 exports.createDefaultVisitWildcardsYAMLOptions = createDefaultVisitWildcardsYAMLOptions;
 exports.deepFindSingleRootAt = deepFindSingleRootAt;
@@ -567,6 +585,8 @@ exports.findPath = findPath;
 exports.formatPrompts = formatPrompts;
 exports.getOptionsFromDocument = getOptionsFromDocument;
 exports.getOptionsShared = getOptionsShared;
+exports.handleVisitPaths = handleVisitPaths;
+exports.handleVisitPathsFull = handleVisitPathsFull;
 exports.isDynamicPromptsWildcards = isDynamicPromptsWildcards;
 exports.isWildcardsName = isWildcardsName;
 exports.matchDynamicPromptsWildcards = matchDynamicPromptsWildcards;
