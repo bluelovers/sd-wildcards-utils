@@ -150,8 +150,10 @@ lazy-wildcards:
         __lazy-wildcards/char/lips-color__
     cover:
         - >-
+          {0.2::__lazy-wildcards/book/style-type/*/style-type-adj__,|}
           (__lazy-wildcards/book/style-type/*/style__:1.35),
           __lazy-wildcards/book/style-adj/text__
+          {0.3::,{1-6$$__lazy-wildcards/book/style-adj/text__}|}
     dataset:
       char-base:
         - >-
@@ -471,6 +473,9 @@ lazy-wildcards:
       - >-
         hair over {one shoulder|shoulder}
       - hair intakes
+      - >-
+        {low |}twin braids
+      - double bun
     haircut-multi:
       - >-
         {1-4$$ hair, $$__person/regular/haircuts-female__} hair
@@ -675,11 +680,22 @@ lazy-wildcards:
     style-adj:
       text:
         - (The text on the cover should be bold and attention-grabbing, with the title of the magazine and a catchy headline. The overall style should be modern and trendy, with a focus on fashion and lifestyle), wall paper,fashion,depth of field, contrapposto,female focus,model, photorealistic,fine fabric emphasis
+      style:
+        - scifi
     style-type:
       magazine-cover:
         style:
           - (advertising style, Magazine cover-style illustration of a fashionable woman), (Fashion Magazine Cover)
           - (advertising style, Magazine cover-style illustration of a confident woman)
+      # https://zh.wikipedia.org/zh-tw/%E7%B4%99%E6%BC%BF%E9%9B%9C%E8%AA%8C
+      # https://civitai.com/models/488380/pulp-magazine
+      magazine-pulp-cover:
+        style-type-adj:
+          - (the pulps, pulp magazine, pulpmagazine:1.2), retro artstyle
+        style:
+          - >-
+            __lazy-wildcards/book/style-type/magazine-pulp-cover/style-type-adj__,
+            __lazy-wildcards/book/style-type/magazine-cover/style__
       comic-cover:
         style:
           - (comic book, comic cover), action, dynamic, speech bubbles, bang
