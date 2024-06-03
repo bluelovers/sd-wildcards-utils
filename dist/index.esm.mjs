@@ -100,12 +100,12 @@ function _handleVisitPathsCore(t) {
   return t.filter((t => i(t)));
 }
 
-function convertPairsToStringList(t) {
+function convertPairsToPathsList(t) {
   return t.map((t => t.key.value));
 }
 
 function handleVisitPaths(t) {
-  return convertPairsToStringList(_handleVisitPathsCore(t));
+  return convertPairsToPathsList(_handleVisitPathsCore(t));
 }
 
 function handleVisitPathsFull(t, e, n) {
@@ -113,9 +113,22 @@ function handleVisitPathsFull(t, e, n) {
   return "number" == typeof t && r.push(t), r;
 }
 
+function findWildcardsYAMLPathsAll(t) {
+  const e = [];
+  return visitWildcardsYAML(t, {
+    Seq(...t) {
+      const n = handleVisitPathsFull(...t);
+      e.push(n);
+    }
+  }), e;
+}
+
 function _validMap(t, e, ...n) {
   const r = e.items.findIndex((t => !i(t) || null == (null == t ? void 0 : t.value)));
-  if (-1 !== r) throw new SyntaxError(`Invalid SYNTAX. key: ${t}, node: ${e}, elem: ${e.items[r]}`);
+  if (-1 !== r) {
+    const i = handleVisitPathsFull(t, e, ...n);
+    throw new SyntaxError(`Invalid SYNTAX. paths: [${i}], key: ${t}, node: ${e}, elem: ${e.items[r]}`);
+  }
 }
 
 function _validSeq(t, n, ...r) {
@@ -316,5 +329,5 @@ function parseWildcardsYaml(t, e) {
   return validWildcardsYamlData(r, e), r;
 }
 
-export { m as RE_DYNAMIC_PROMPTS_WILDCARDS, p as RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL, f as RE_WILDCARDS_NAME, _handleVisitPathsCore, _matchDynamicPromptsWildcardsCore, _mergeWildcardsYAMLDocumentRootsCore, _toJSON, _validMap, _validSeq, assertWildcardsName, convertPairsToStringList, convertWildcardsNameToPaths, createDefaultVisitWildcardsYAMLOptions, deepFindSingleRootAt, parseWildcardsYaml as default, defaultCheckerIgnoreCase, defaultOptionsParseDocument, defaultOptionsStringify, defaultOptionsStringifyMinify, findPath, formatPrompts, getOptionsFromDocument, getOptionsShared, handleVisitPaths, handleVisitPathsFull, isDynamicPromptsWildcards, isWildcardsName, matchDynamicPromptsWildcards, matchDynamicPromptsWildcardsAll, matchDynamicPromptsWildcardsAllGenerator, mergeFindSingleRoots, mergeWildcardsYAMLDocumentJsonBy, mergeWildcardsYAMLDocumentRoots, normalizeDocument, parseWildcardsYaml, pathsToDotPath, pathsToWildcardsPath, stringifyWildcardsYamlData, stripZeroStr, trimPrompts, uniqueSeqItems, uniqueSeqItemsChecker, validWildcardsYamlData, visitWildcardsYAML, wildcardsPathToPaths };
+export { m as RE_DYNAMIC_PROMPTS_WILDCARDS, p as RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL, f as RE_WILDCARDS_NAME, _handleVisitPathsCore, _matchDynamicPromptsWildcardsCore, _mergeWildcardsYAMLDocumentRootsCore, _toJSON, _validMap, _validSeq, assertWildcardsName, convertPairsToPathsList, convertWildcardsNameToPaths, createDefaultVisitWildcardsYAMLOptions, deepFindSingleRootAt, parseWildcardsYaml as default, defaultCheckerIgnoreCase, defaultOptionsParseDocument, defaultOptionsStringify, defaultOptionsStringifyMinify, findPath, findWildcardsYAMLPathsAll, formatPrompts, getOptionsFromDocument, getOptionsShared, handleVisitPaths, handleVisitPathsFull, isDynamicPromptsWildcards, isWildcardsName, matchDynamicPromptsWildcards, matchDynamicPromptsWildcardsAll, matchDynamicPromptsWildcardsAllGenerator, mergeFindSingleRoots, mergeWildcardsYAMLDocumentJsonBy, mergeWildcardsYAMLDocumentRoots, normalizeDocument, parseWildcardsYaml, pathsToDotPath, pathsToWildcardsPath, stringifyWildcardsYamlData, stripZeroStr, trimPrompts, uniqueSeqItems, uniqueSeqItemsChecker, validWildcardsYamlData, visitWildcardsYAML, wildcardsPathToPaths };
 //# sourceMappingURL=index.esm.mjs.map

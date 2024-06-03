@@ -69,6 +69,7 @@ export type IResultDeepFindSingleRootAt = {
 	value: IWildcardsYAMLMapRoot;
 	parent: IWildcardsYAMLDocument;
 };
+export type IVisitPathsList = (string | number)[];
 export declare const RE_DYNAMIC_PROMPTS_WILDCARDS: RegExp;
 /**
  * for `matchAll`
@@ -241,17 +242,26 @@ export declare function uniqueSeqItems<T extends Node$1>(items: (T | unknown)[])
  */
 export declare function deepFindSingleRootAt(node: ParsedNode | Document$1.Parsed | IWildcardsYAMLMapRoot | IWildcardsYAMLDocument, result?: IResultDeepFindSingleRootAt): IResultDeepFindSingleRootAt;
 export declare function _handleVisitPathsCore(nodePaths: IVisitPathsNodeList): IWildcardsYAMLPair[];
-export declare function convertPairsToStringList(nodePaths: IWildcardsYAMLPair[]): string[];
+export declare function convertPairsToPathsList(nodePaths: IWildcardsYAMLPair[]): IVisitPathsList;
 /**
  * [ 'root', 'root2', 'sub2', 'sub2-2' ]
  */
-export declare function handleVisitPaths(nodePaths: IVisitPathsNodeList): string[];
+export declare function handleVisitPaths(nodePaths: IVisitPathsNodeList): IVisitPathsList;
 /**
  * full paths
  *
  * [ 'root', 'root2', 'sub2', 'sub2-2', 1 ]
  */
-export declare function handleVisitPathsFull<T>(key: number | "key" | "value" | null, _node: T, nodePaths: IVisitPathsNodeList): (string | number)[];
+export declare function handleVisitPathsFull<T>(key: number | "key" | "value" | null, _node: T, nodePaths: IVisitPathsNodeList): IVisitPathsList;
+/**
+ * This function is used to find all paths of sequences in a given YAML structure.
+ * It traverses the YAML structure and collects the paths of all sequences (Seq nodes).
+ *
+ * @param node - The YAML node to start the search from. It can be a Node, Document.
+ * @returns - An array of arrays, where each inner array represents a path of sequence nodes.
+ *            Each path is represented as an array of paths, where each path is a key or index.
+ */
+export declare function findWildcardsYAMLPathsAll(node: Node$1 | Document$1): IVisitPathsList[];
 export declare function _validMap(key: number | "key" | "value" | null, node: YAMLMap, ...args: any[]): void;
 export declare function _validSeq(key: number | "key" | "value" | null, node: YAMLSeq, ...args: any[]): asserts node is YAMLSeq<Scalar | IWildcardsYAMLScalar>;
 export declare function createDefaultVisitWildcardsYAMLOptions(): Exclude<IOptionsVisitor, Function>;
