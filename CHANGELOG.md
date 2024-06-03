@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.21](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.0.20...sd-wildcards-utils@1.0.21) (2024-06-03)
+
+
+
+### ✨　Features
+
+* add `findWildcardsYAMLPathsAll` ([0498f0d](https://github.com/bluelovers/sd-wildcards-utils/commit/0498f0d72457042a5cfe3b1695b83d212fae83c8))
+* **wildcards:** add `toilet-dirty` ([f34e9ee](https://github.com/bluelovers/sd-wildcards-utils/commit/f34e9eea73daa4de6c4017049abedec702c5ca78))
+* **wildcards:** add `pulp magazine` ([3b0418a](https://github.com/bluelovers/sd-wildcards-utils/commit/3b0418a889ecd67437957dfd274d91494de62744))
+
+
+### 📦　Code Refactoring
+
+* rename to `action-nsfw-sex` ([5b3c949](https://github.com/bluelovers/sd-wildcards-utils/commit/5b3c9490d35b371837d00378b487747decaf2f17))
+* splitting wildcards ([440e950](https://github.com/bluelovers/sd-wildcards-utils/commit/440e950e3ac00f046e47bad6e0a1b160b6d5a1a7))
+
+
+### ♻️　Chores
+
+* add others ([9912f22](https://github.com/bluelovers/sd-wildcards-utils/commit/9912f2219fd81a671bda951b3cf08dd253daa683))
+
+
+
 ## [1.0.20](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.0.19...sd-wildcards-utils@1.0.20) (2024-06-01)
 
 

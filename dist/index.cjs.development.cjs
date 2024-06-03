@@ -116,11 +116,11 @@ function deepFindSingleRootAt(node, result) {
 function _handleVisitPathsCore(nodePaths) {
   return nodePaths.filter(p => yaml.isPair(p));
 }
-function convertPairsToStringList(nodePaths) {
+function convertPairsToPathsList(nodePaths) {
   return nodePaths.map(p => p.key.value);
 }
 function handleVisitPaths(nodePaths) {
-  return convertPairsToStringList(_handleVisitPathsCore(nodePaths));
+  return convertPairsToPathsList(_handleVisitPathsCore(nodePaths));
 }
 function handleVisitPathsFull(key, _node, nodePaths) {
   const paths = handleVisitPaths(nodePaths);
@@ -129,13 +129,33 @@ function handleVisitPathsFull(key, _node, nodePaths) {
   }
   return paths;
 }
+/**
+ * This function is used to find all paths of sequences in a given YAML structure.
+ * It traverses the YAML structure and collects the paths of all sequences (Seq nodes).
+ *
+ * @param node - The YAML node to start the search from. It can be a Node, Document.
+ * @returns - An array of arrays, where each inner array represents a path of sequence nodes.
+ *            Each path is represented as an array of paths, where each path is a key or index.
+ */
+function findWildcardsYAMLPathsAll(node) {
+  const ls = [];
+  visitWildcardsYAML(node, {
+    Seq(...args) {
+      const paths = handleVisitPathsFull(...args);
+      ls.push(paths);
+    }
+  });
+  return ls;
+}
 
 // @ts-ignore
 function _validMap(key, node, ...args) {
   const idx = node.items.findIndex(pair => !yaml.isPair(pair) || (pair === null || pair === void 0 ? void 0 : pair.value) == null);
   if (idx !== -1) {
+    // @ts-ignore
+    const paths = handleVisitPathsFull(key, node, ...args);
     const elem = node.items[idx];
-    throw new SyntaxError(`Invalid SYNTAX. key: ${key}, node: ${node}, elem: ${elem}`);
+    throw new SyntaxError(`Invalid SYNTAX. paths: [${paths}], key: ${key}, node: ${node}, elem: ${elem}`);
   }
 }
 // @ts-ignore
@@ -572,7 +592,7 @@ exports._toJSON = _toJSON;
 exports._validMap = _validMap;
 exports._validSeq = _validSeq;
 exports.assertWildcardsName = assertWildcardsName;
-exports.convertPairsToStringList = convertPairsToStringList;
+exports.convertPairsToPathsList = convertPairsToPathsList;
 exports.convertWildcardsNameToPaths = convertWildcardsNameToPaths;
 exports.createDefaultVisitWildcardsYAMLOptions = createDefaultVisitWildcardsYAMLOptions;
 exports.deepFindSingleRootAt = deepFindSingleRootAt;
@@ -582,6 +602,7 @@ exports.defaultOptionsParseDocument = defaultOptionsParseDocument;
 exports.defaultOptionsStringify = defaultOptionsStringify;
 exports.defaultOptionsStringifyMinify = defaultOptionsStringifyMinify;
 exports.findPath = findPath;
+exports.findWildcardsYAMLPathsAll = findWildcardsYAMLPathsAll;
 exports.formatPrompts = formatPrompts;
 exports.getOptionsFromDocument = getOptionsFromDocument;
 exports.getOptionsShared = getOptionsShared;
