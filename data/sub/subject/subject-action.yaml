@@ -1,13 +1,13 @@
 lazy-wildcards:
   subject:
-    action:
-      nsfw-sex-sitting:
+    action-nsfw-sex:
+      sitting-sex:
         prompts:
           - >-
-            __lazy-wildcards/subject/action/nsfw-sex-sitting/style-type__,
-            __lazy-wildcards/subject/action/nsfw-sex-sitting/main__,
-            {{1-$$__lazy-wildcards/subject/action/nsfw-sex-sitting/main__},|}
-            __lazy-wildcards/subject/action/nsfw-sex-sitting/main-shared__
+            __lazy-wildcards/subject/action-nsfw-sex/sitting-sex/style-type__,
+            __lazy-wildcards/subject/action-nsfw-sex/sitting-sex/main__,
+            {{1-$$__lazy-wildcards/subject/action-nsfw-sex/sitting-sex/main__},|}
+            __lazy-wildcards/subject/action-nsfw-sex/sitting-sex/main-shared__
         style-type:
           - boy on top, hugging sex, kiss, ass
           - reverse sitting, looking at viewer, thighhighs, thighs, sex from behind
@@ -17,13 +17,13 @@ lazy-wildcards:
           - 1boy, hetero, 1girl, penis
         main-shared:
           - vaginal, sex, blush, breasts, sitting, spread legs
-      nsfw-aftersex:
+      aftersex:
         prompts:
           - >-
-            __lazy-wildcards/subject/action/nsfw-aftersex/main__,
-            {({1-$$__lazy-wildcards/subject/action/nsfw-aftersex/pose__}:1.2),|}
-            {1-$$__lazy-wildcards/subject/action/nsfw-aftersex/style__},
-            {1-$$__lazy-wildcards/subject/action/nsfw-aftersex/env__}
+            __lazy-wildcards/subject/action-nsfw-sex/aftersex/main__,
+            {({1-$$__lazy-wildcards/subject/action-nsfw-sex/aftersex/pose__}:1.2),|}
+            {1-$$__lazy-wildcards/subject/action-nsfw-sex/aftersex/style__},
+            {1-$$__lazy-wildcards/subject/action-nsfw-sex/aftersex/env__}
         main:
           - >-
             covered pussy, covering, covering crotch, censored,
