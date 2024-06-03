@@ -15,7 +15,6 @@ import {
 	YAMLMap,
 	YAMLSeq,
 } from 'yaml';
-import { _handleVisitPathsCore } from './items';
 
 export type IOmitParsedNodeContents<T extends Node | Document, P extends ParsedNode | Document.Parsed> =
 	Omit<P, 'contents'>
@@ -116,3 +115,5 @@ export type IResultDeepFindSingleRootAt = {
 	value: IWildcardsYAMLMapRoot,
 	parent: IWildcardsYAMLDocument
 }
+
+export type IVisitPathsList = (string|number)[]

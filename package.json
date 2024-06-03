@@ -103,7 +103,7 @@
     "publish": "echo publish",
     "postpublish": "yarn run postpublish:changelog && yarn run postpublish:git:commit && yarn run postpublish:git:tag && yarn run postpublish:git:push",
     "postpublish:changelog": "ynpx --quiet @yarn-tool/changelog && git add ./CHANGELOG.md",
-    "postpublish:git:commit": "git commit -m \"chore(release): publish\" . & echo postpublish:git:commit",
+    "postpublish:git:commit": "git add ./test/__file_snapshots__ & git commit -m \"chore(release): publish\" . & echo postpublish:git:commit",
     "postpublish:git:push": "git push --follow-tags",
     "postpublish:git:tag": "ynpx --quiet @yarn-tool/tag",
     "postpublishOnly": "echo postpublishOnly",
@@ -129,6 +129,7 @@
     "deepmerge-plus": "^3.0.2",
     "dot-values2": "^2.0.7",
     "fs-extra": "^11.2.0",
+    "jest-file-snapshot2": "^0.5.15",
     "tslib": ">=2.6.2"
   },
   "peerDependencies": {},

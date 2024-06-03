@@ -4,11 +4,15 @@
 /// <reference types="expect" />
 /// <reference path="../global.node.v22.d.ts" preserve="true"/>
 
-import { basename, extname, join } from 'path';
+import { basename, dirname, extname, join } from 'path';
 // @ts-ignore
 import { globSync, readFileSync } from 'fs';
-import { __ROOT_DATA } from './__root';
-import parseWildcardsYaml, { matchDynamicPromptsWildcardsAll } from '../src/index';
+import { __ROOT, __ROOT_DATA } from './__root';
+import { parseWildcardsYaml, matchDynamicPromptsWildcardsAll, findWildcardsYAMLPathsAll } from '../src/index';
+import { toMatchFile } from 'jest-file-snapshot2';
+import { ensureDir, ensureDirSync, ensureFile, ensureFileSync } from 'fs-extra';
+
+expect.extend({ toMatchFile });
 
 beforeAll(async () =>
 {
@@ -39,7 +43,35 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 
 		let actual = matchDynamicPromptsWildcardsAll(obj.toString(), true);
 
-		expect(actual.map(v => v.source).sort()).toMatchSnapshot();
+		let outPath = dirname(join(
+			__ROOT,
+			'test',
+			'__file_snapshots__',
+			'matchDynamicPromptsWildcardsAll',
+			file
+		));
+
+		ensureDirSync(outPath);
+
+		expect(actual.map(v => v.source).sort().join('\n')).toMatchFile(join(
+			outPath,
+			file + '.txt'
+		))
+
+		outPath = dirname(join(
+			__ROOT,
+			'test',
+			'__file_snapshots__',
+			'findWildcardsYAMLPathsAll',
+			file
+		));
+
+		ensureDirSync(outPath);
+
+		expect(findWildcardsYAMLPathsAll(obj).join('\n')).toMatchFile(join(
+			outPath,
+			file + '.txt'
+		))
 
 	});
 
