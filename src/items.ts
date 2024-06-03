@@ -2,7 +2,7 @@ import { array_unique_overwrite, defaultChecker } from 'array-hyper-unique';
 import { Document, isDocument, isMap, isPair, isScalar, Node, ParsedNode, visit, visitor } from 'yaml';
 import {
 	IOptionsVisitor,
-	IResultDeepFindSingleRootAt,
+	IResultDeepFindSingleRootAt, IVisitPathsList,
 	IVisitPathsNodeList,
 	IWildcardsYAMLDocument,
 	IWildcardsYAMLMapRoot,
@@ -101,9 +101,9 @@ export function _handleVisitPathsCore(nodePaths: IVisitPathsNodeList): IWildcard
 	return nodePaths.filter(p => isPair(p)) as any
 }
 
-export function convertPairsToStringList(nodePaths: IWildcardsYAMLPair[])
+export function convertPairsToPathsList(nodePaths: IWildcardsYAMLPair[])
 {
-	return nodePaths.map(p => p.key.value)
+	return nodePaths.map(p => p.key.value) as IVisitPathsList
 }
 
 /**
@@ -111,7 +111,7 @@ export function convertPairsToStringList(nodePaths: IWildcardsYAMLPair[])
  */
 export function handleVisitPaths(nodePaths: IVisitPathsNodeList)
 {
-	return convertPairsToStringList(_handleVisitPathsCore(nodePaths))
+	return convertPairsToPathsList(_handleVisitPathsCore(nodePaths))
 }
 
 /**
@@ -124,7 +124,7 @@ export function handleVisitPathsFull<T>(key: number | 'key' | 'value' | null,
 	nodePaths: IVisitPathsNodeList,
 )
 {
-	const paths = handleVisitPaths(nodePaths) as any as (string | number)[];
+	const paths = handleVisitPaths(nodePaths);
 
 	if (typeof key === 'number')
 	{
@@ -133,3 +133,26 @@ export function handleVisitPathsFull<T>(key: number | 'key' | 'value' | null,
 
 	return paths
 }
+
+/**
+ * This function is used to find all paths of sequences in a given YAML structure.
+ * It traverses the YAML structure and collects the paths of all sequences (Seq nodes).
+ *
+ * @param node - The YAML node to start the search from. It can be a Node, Document.
+ * @returns - An array of arrays, where each inner array represents a path of sequence nodes.
+ *            Each path is represented as an array of paths, where each path is a key or index.
+ */
+export function findWildcardsYAMLPathsAll(node: Node | Document)
+{
+	const ls: IVisitPathsList[] = [];
+	visitWildcardsYAML(node, {
+		Seq(...args)
+		{
+			const paths = handleVisitPathsFull(...args);
+
+			ls.push(paths)
+		}
+	});
+	return ls;
+}
+

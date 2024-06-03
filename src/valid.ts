@@ -1,5 +1,5 @@
 import { Document, isDocument, isMap, isNode, isScalar, YAMLMap, YAMLSeq, Scalar, isPair } from 'yaml';
-import { visitWildcardsYAML } from './items';
+import { handleVisitPathsFull, visitWildcardsYAML } from './items';
 import {
 	IOptionsSharedWildcardsYaml,
 	IOptionsVisitor,
@@ -14,8 +14,11 @@ export function _validMap(key: number | 'key' | 'value' | null, node: YAMLMap, .
 	const idx = node.items.findIndex(pair => (!isPair(pair) || pair?.value == null));
 	if (idx !== -1)
 	{
+		// @ts-ignore
+		const paths = handleVisitPathsFull(key, node, ...args);
+
 		const elem = node.items[idx];
-		throw new SyntaxError(`Invalid SYNTAX. key: ${key}, node: ${node}, elem: ${elem}`)
+		throw new SyntaxError(`Invalid SYNTAX. paths: [${paths}], key: ${key}, node: ${node}, elem: ${elem}`)
 	}
 }
 
