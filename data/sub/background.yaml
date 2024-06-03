@@ -275,5 +275,50 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/background/location/ruins-city/main__
+            {0.2::, __lazy-wildcards/background/location/ruins-city/city__}
         main:
-          - long-shot ruins, building, window frame, cracked window, wall corner, upturned, abandoned, metal, industrial, fence, moody, cracked mud, urban, canalside
+          - >-
+            long-shot ruins, building, window frame, cracked window, wall corner, upturned, abandoned, metal, industrial, fence, moody, cracked mud, urban, __lazy-wildcards/background/location/ruins-city/area__
+        area:
+          - suburbs
+          - canalside
+        city:
+          - london
+      toilet-dirty:
+        prompts:
+          - >-
+            __lazy-wildcards/background/location/toilet-dirty/main__,
+            {1-$$__lazy-wildcards/background/location/toilet-dirty/env-bg__},
+            {0-$$__lazy-wildcards/background/location/toilet-dirty/env__},
+            {0-$$__lazy-wildcards/background/location/toilet-dirty/style__},
+        style:
+          - dirt, filth, dirty, Dirt that cannot be washed away
+          - dirty toilet
+          - yellow urine stains, urine on the floor
+          - graffiti on the wall
+          - dirty tiles
+        main:
+          - >-
+            ({{1-$$bathroom|restroom|washroom}, |}toilet:1.3)
+        env:
+          - box
+          - >-
+            {0-$$cups|bottles},
+            {0-$$coffee|beer cans}
+          - toilet paper
+          - trash can
+          - water
+          - condom packaging
+          - newspapers
+          - food
+          - >-
+            {1-$$soap|soap bottle}
+        env-bg:
+          - >-
+            {1-$$tiles|tile floor|tile wall}
+          - handrails
+          - faucet
+          - door
+          - mirror
+          - window
+
