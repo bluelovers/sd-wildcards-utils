@@ -109,7 +109,7 @@ lazy-wildcards:
             __lazy-wildcards/background/location/casino/main/*__,
             {1-$$__lazy-wildcards/background/location/casino/env__}
         style:
-          - casino, gambling
+          - casino, gambling, set in Gambling Den
         env:
           - chip
           - dice
@@ -127,7 +127,15 @@ lazy-wildcards:
           table:
             - casino table
           slot-machine:
-            - slot machine
+            - >-
+              slot machine, Slot Machine Area,
+              {1-$$__lazy-wildcards/background/location/casino/env-slot-machine__}
+        env-slot-machine:
+          - rows of colorful slot machines
+          - flashing lights
+          - electronic sounds
+          - patrons pulling levers
+          - overflowing coin trays
         action:
           dice:
             - holding dice, dice
