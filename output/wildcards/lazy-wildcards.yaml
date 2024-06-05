@@ -19,7 +19,7 @@ lazy-wildcards:
       - >-
         huge breasts,black hair,long sleeves,jacket,glasses,short shorts,black shorts,blue jacket,track jacket,buruma,torn clothes,sexy body,wet,drunk,bottles fallen on the floor,unconscious
       - 1girl,between breasts,money,bills,playboy bunny,casino
-      - vibrant background,vivid background,,Village Square,Bustling gathering place with wooden market stalls,vendors hawking their wares,children playing games in the cobblestone streets,cherry blossom trees offering shade,distant glimpse of the ocean beyond the rooftops
+      - vibrant background,vivid background,Village Square,Bustling gathering place with wooden market stalls,vendors hawking their wares,children playing games in the cobblestone streets,cherry blossom trees offering shade,distant glimpse of the ocean beyond the rooftops
       - |-
         __lazy-wildcards/prompts/cover__,upper body,1girl,(steel gray eyes),very short hair,dark brown hair,parted bangs,crossed bangs,green clothes,side-tie panties,cleavage,multi-strapped panties,highleg panties,string panties,groin,strap slip,denim,denim bikini,dark chestnut lips,tongue sticking out,squatting spread legs position,squatting,spread legs,crouching,__lazy-wildcards/dataset/background__
       - |-
@@ -41,6 +41,8 @@ lazy-wildcards:
         (otherworldly),uncensored,1girl,(whip,whip marks,whipped,whip scar:1.2),pain,chained,tortured,underwear,topless,(whipping_hair:1.2),{0.3::{1-$$low_light|dim_lighting|dramatic_lighting|shadow|noir}|} dark background,(fantasy world)
       - >-
         1girl,Tower13_Gizelle,(wearing a luxurious red gown:1.3),sitting on a table in a glamorous restaurant,{baseball hat,|} long-shot ruins,building,window frame,cracked window,wall corner,upturned,abandoned,metal,industrial,fence,moody,cracked mud,urban,canalside,upper body,
+      - >-
+        1girl,wearing __lazy-wildcards/subject/theme/NeoFalmerWorld/costume__,__lazy-wildcards/subject/theme/NeoFalmerWorld/prompts-bg__,__lazy-wildcards/prompts/hair__
     costume:
       - >-
         {__lazy-wildcards/costume/nsfw__|__lazy-wildcards/costume/clothes__}
@@ -69,7 +71,7 @@ lazy-wildcards:
         {0.1::(__lazy-wildcards/char/mouth__:1.4),|} {0.1::({1-3$$__lazy-wildcards/char/mouth-style__}),|} __lazy-wildcards/char/lips-color__
     cover:
       - >-
-        (__lazy-wildcards/book/style-type/*/style__:1.35),__lazy-wildcards/book/style-adj/text__
+        {0.2::__lazy-wildcards/book/style-type/*/style-type-adj__,|} (__lazy-wildcards/book/style-type/*/style__:1.35),__lazy-wildcards/book/style-adj/text__ {0.3::,{1-6$$__lazy-wildcards/book/style-adj/text__}|}
     dataset:
       char-base:
         - >-
@@ -106,87 +108,395 @@ lazy-wildcards:
       - __lazy-wildcards/background/color-transparent__
       - __lazy-wildcards/background/color-theme__
       - __lazy-wildcards/background/color-multi__
-  utils:
-    color-base:
-      - white
-      - black
-      - green
-      - magenta
-      - cyan
-      - yellow
-      - blue
-      - red
-      - pink
-      - orange
-      - purple
-    # do not use this anymore
-    color-anything:
+  book:
+    style-adj:
+      text:
+        - (The text on the cover should be bold and attention-grabbing,with the title of the magazine and a catchy headline. The overall style should be modern and trendy,with a focus on fashion and lifestyle),wall paper,fashion,depth of field,contrapposto,female focus,model,photorealistic,fine fabric emphasis
+      style:
+        - scifi
+    style-type:
+      magazine-cover:
+        style:
+          - (advertising style,Magazine cover-style illustration of a fashionable woman),(Fashion Magazine Cover)
+          - (advertising style,Magazine cover-style illustration of a confident woman)
+      # https://zh.wikipedia.org/zh-tw/%E7%B4%99%E6%BC%BF%E9%9B%9C%E8%AA%8C
+      # https://civitai.com/models/488380/pulp-magazine
+      magazine-pulp-cover:
+        style-type-adj:
+          - |-
+            (the pulps,pulp magazine,pulpmagazine:1.2),retro artstyle
+        style:
+          - >-
+            __lazy-wildcards/book/style-type/magazine-pulp-cover/style-type-adj__,__lazy-wildcards/book/style-type/magazine-cover/style__
+      comic-cover:
+        style:
+          - (comic book,comic cover),action,dynamic,speech bubbles,bang
+          - (Dojinshi,doujinshi magazine cover),Graphic Design
+    pose:
+      - (posing in front of a colorful and dynamic background. She has a confident expression and is holding a statement accessory)
+      - (posing with her hands on her hips in an Asian squat position in front of a modern and dynamic background. She exudes confidence and sex appeal,with her daring fashion choices leaving little to the imagination)
+  background:
+    color-style:
       - >-
-        __Bo/chars/haircolor__
+        {1-$$multicolored background|gradient background|solid color,solid color background|neon color}
+    color-theme:
+      - __mix-lazy-auto/color-anything__ background
+      - dark background
+    color-transparent:
+      - pure __lazy-wildcards/utils/color-base__ background,transparent background
+    color-multi:
       - >-
-        __lazy-wildcards/utils/color-base__
+        a colorful background,__lazy-wildcards/background/color-style__
       - >-
-        __cf-*/color__
+        {2-3$$ background,$$__mix-lazy-auto/color-anything__} background {,__lazy-wildcards/background/color-style__|}
       - >-
-        bright blue-green
-    costume-type1:
-      - skirt
-      - jacket
-      - shirt
-      - tank top
-      - shorts
-      - hijab
-      - pants
-      - thighhighs
-      - bikini
-      - lingerie
-      - dress
-      - bra
-      - platform heels
-      - stiletto heels
-      - thong
-      - pantyhose
-      - glasses
-      - hair
-      - choker
-      - earrings
-      - leotard
-    action:
-      playing-card:
-        poker-playing:
-          - ace \(playing card\)
-          - king \(playing card\)
-          - jack \(playing card\)
-          - queen \(playing card\)
-        poker-card:
-          - ace of hearts
-          - ace of spades
-          - ace of diamonds
-          - ace of clubs
-          - three of hearts
-          - king of spades
-          - ten of hearts
-          - ten of spades
-          - two of spades
-          - royal flush
-          - five of hearts
-          - four of clubs
-          - jack of spades
-          - three of spades
-          - five of spades
-          - two of hearts
-    char-view:
-      - __lazy-wildcards/dataset/char-view__
+        pure {2-3$$ background,pure $$__lazy-wildcards/utils/color-base__} background {,__lazy-wildcards/background/color-style__|}
+      - >-
+        neon {2-3$$ background,neon $$__lazy-wildcards/utils/color-base__} background {,__lazy-wildcards/background/color-style__|}
+    anything:
+      - __cf-*/location/*__
+      - __lazy-wildcards/background/location/*/prompts__
+      - __lazy-wildcards/subject/interior/*/prompts__
+      - __lazy-wildcards/subject/theme/*/prompts-bg__
+      - __lazy-wildcards/subject/architectural/*/prompts__
+      - japanese onsen,onsen
+      - dirty alley
+      - Study,Quiet room with low seating cushions,scroll-filled shelves lining the walls,a small writing desk with ink pots and papyrus scrolls,intricate woven rugs,and decorative hieroglyphic carvings
+      - Grooming Area,Elegant space with polished ebony mirrors reflecting flickering candlelight,intricately carved wooden stools arranged neatly around a central basin,jars of fragrant oils and cosmetics neatly arranged on shelves,and servants standing by with combs and brushes
+      - Garden Pavilion,Tranquil space with a bubbling fountain at its center,lush greenery winding along trellises,mosaic tiles creating intricate patterns on the ground,woven wicker furniture with plush cushions,and the sweet scent of blooming flowers,
+      - Solarium,Serene room with glass walls offering panoramic views of the Nile,potted palms adding a touch of greenery,mosaic tiles depicting aquatic scenes underfoot,chaise lounges draped in silk throws,and golden sconces illuminating the space
+      - Bathhouse,Steam-filled chamber with a sunken bathing pool lined with tiles,shelves stacked with aromatic oils and perfumes,woven baskets for towels,flickering oil lamps,and intricate tile mosaics depicting scenes of daily life
+      - construction site background
+      - cliff,cliff scenery,mountainside,cliff face
+      - Intricately Detailed Cinematic Bamboo forest
+      - street corner
+      - east_asian_architecture,east asian architecture
+      - architecture,bridge,east asian architecture,lantern,letterboxed,pagoda,tower,torii,tower,watercraft
+      - ancient japanese buildings
+      - roman architecture background
+      - art nouveau architecture
+      - korean architecture
+      - large forest,enchanting forest,dense forest,lush forest,tall trees,canopy,overgrown scenery
+      - Subway,Metro
+      - Metro,carriage,subway,subway interior,window
+      - rural school
+      - in dungeon
+      - prison cell
+      - prison
+      - cloud city,cloudtop sky-city
+      - downtown,city
+      - floating platforms,floating buildings
+      - Majestic Baroque halls
+      - OldTaipei,scenery,outdoors,building,power lines,city,alley,street,road,motor vehicle,utility pole
+      - Caribbean,dark tunnel,china street
+      - (in Venice)
+      - A mystical swamp with dark waters and thick vegetation
+      - >-
+        ((pedestrian hell)),__lazy-wildcards/background/location/city-traffic/func/road-in__,scooter,motorcycle,wind,trees,crowd,traffic light,road sign,cityscape,shopping,storefront,signboard,building,greenery,{city-life-overload,|} {night,neon lights,|} {((raining)),rain,wet street,reflection,wet clothes|}
+      - flare,fog,wet,wet body,rain,raining,night,neon lights,twilight
+      - perspective photo of the house on clift,post-apocalypse,brutalist,brutal green covered with green grass,many people,neon light,forest,jungle atmosphere,sunset,sunshine cinematic
       - |-
-        (from below,looking down,ass visible through thighs:1.2)
-    view:
-      - front view
-    season:
-      - spring
-      - summer
-      - autumn
-      - winter
+        (in river),splash,splashing,({sun flare,lens flare,sunset|moonlight|dawn|twilight} background,low horizon),backlighting
+      - mangrove forest biome
+      - |-
+        (flower,falling petals,petals on liquid,petals,cherry blossom:0.8)
+      - underground facility
+      - |-
+        (in line in front of a movie theater with friends:1.4)
+      - grass,on soccer field
+      - above clouds,Scenery
+      - in a glamorous restaurant
+    location:
+      interior-lava:
+        prompts:
+          - >-
+            __lazy-wildcards/background/location/interior-lava/main__,__lazy-wildcards/background/location/interior-lava/style__
+        style:
+          - Lava style,LAVA architecture,Chris Bosses,Chris Bosse,Chris Bosse architect,bio botanical
+        main:
+          - a hip space hotel lobby interior with incredible natural light. Futuristic botanical hotel lobby interior
+          - a chocolate tasting room,interior design,sci-fi,brutal,Futuristic botanical
+          - interior perfume shop modern style,black wooden and green light,brutal
+      temple:
+        prompts:
+          - __lazy-wildcards/background/location/temple/main/*__
+        main:
+          Meditation-Chamber:
+            - temple,Meditation Chamber,Serene space with a tranquil reflecting pool,lush greenery creating a peaceful atmosphere,soft sunlight filtering through stained glass windows,and cushions arranged for quiet contemplation
+          others:
+            - borobudur temple
+      casino:
+        prompts:
+          - >-
+            __lazy-wildcards/background/location/casino/style__,{1-$$__lazy-wildcards/background/location/casino/main/*__},{1-$$__lazy-wildcards/background/location/casino/env__}
+          - >-
+            __lazy-wildcards/background/location/casino/style__,__lazy-wildcards/background/location/casino/main/*__,{1-$$__lazy-wildcards/background/location/casino/env__}
+        style:
+          - casino,gambling,set in Gambling Den
+        env:
+          - chip
+          - dice
+          - card
+          - money
+          - bills
+          - betting ticket
+          - cheating \(competitive\)
+          - house_of_cards
+        main:
+          roulette:
+            - roulette,roulette table
+          poker:
+            - poker table,poker chip,poker,casino card table,card
+          table:
+            - casino table
+          slot-machine:
+            - >-
+              slot machine,Slot Machine Area,{1-$$__lazy-wildcards/background/location/casino/env-slot-machine__}
+        env-slot-machine:
+          - rows of colorful slot machines
+          - flashing lights
+          - electronic sounds
+          - patrons pulling levers
+          - overflowing coin trays
+        action:
+          dice:
+            - holding dice,dice
+          poker:
+            - playing card,card,__lazy-wildcards/util/action/playing-card/poker-playing__,holding card
+            - >-
+              playing card,card,{1-3$$__lazy-wildcards/util/action/playing-card/poker-card__},holding card
+      tarot:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/background/location/tarot/main__},{0-2$$__lazy-wildcards/background/location/tarot/action/*__},__lazy-wildcards/background/location/tarot/elem/cards_tarot__,{0-3$$__lazy-wildcards/background/location/tarot/elem/cards_tarot_type__},{1-$$__lazy-wildcards/background/location/tarot/env__},{1-$$__lazy-wildcards/background/location/tarot/style__}
+        main:
+          - a table with a lot of tarot cards
+          - a tarot card in the middle of the table
+          - >-
+            {3d papercut shadow box of |}a deck of tarot cards spilled on a table
+        style:
+          - occult
+          - arcana
+          - psychedelic
+          - magic
+        action:
+          pose:
+            - elbows_on_table,
+          telling:
+            - |-
+              (fortune_telling,card_reading:1.2),fortune_teller
+        env:
+          - tarot_cards on table,on table
+          - house_of_cards
+          - candle
+          - a lot of tarot_cards
+        elem:
+          cards_tarot:
+            - |-
+              (tarot_cards,tarot_\(card\):1.2)
+          cards_tarot_type:
+            - the_fool_\(tarot\)
+            - the_magician_\(tarot\)
+            - the_high_priestess_\(tarot\)
+            - the_empress_\(tarot\)
+            - the_emperor_\(tarot\)
+            - the_hierophant_\(tarot\)
+            - the_lovers_\(tarot\)
+            - the_chariot_\(tarot\)
+            - strength_\(tarot\)
+            - the_hermit_\(tarot\)
+            - wheel_of_fortune_\(tarot\)
+            - justice_\(tarot\)
+            - the_hanged_man_\(tarot\)
+            - death_\(tarot\)
+            - temperance_\(tarot\)
+            - the_devil_\(tarot\)
+            - the_tower_\(tarot\)
+            - the_star_\(tarot\)
+            - the_moon_\(tarot\)
+            - the_sun_\(tarot\)
+            - judgement_\(tarot\)
+            - the_world_\(tarot\)
+      fence:
+        prompts:
+          - >-
+            {1-2$$__lazy-wildcards/background/location/fence/main__},{0-3$$__lazy-wildcards/background/location/fence/env__},{0-1$$__lazy-wildcards/background/location/fence/action/*__}
+        main:
+          - fence
+          - chain-link fence,chain_link_fence
+          - wooden fence
+          - bamboo fence
+          - wire_fence
+          - barbed_wire
+        env:
+          - rooftop
+        action:
+          pose:
+            - against fence
+      pool:
+        prompts:
+          - >-
+            {1-2$$__lazy-wildcards/background/location/pool/main__},{0-3$$__lazy-wildcards/background/location/pool/env__}
+        main:
+          - poolside
+          - pool
+        env:
+          - empty pool
+          - pool ladder
+      city-traffic:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/background/location/city-traffic/style__},__lazy-wildcards/background/location/city-traffic/func/road-in__,__lazy-wildcards/background/location/city-traffic/main__,{5-$$__lazy-wildcards/background/location/city-traffic/env__},{{1-$$__lazy-wildcards/background/location/city-traffic/moment-weather__},|} __lazy-wildcards/background/location/city-traffic/moment__
+        main:
+          - cityscape,building
+        style:
+          - city-life-overload
+          - ((pedestrian hell))
+        env:
+          - traffic light,road sign
+          - roadway
+          - crowd
+          - greenery,trees
+          - wind,windy
+          - underpass
+          - skywalk
+          - jaywalk
+          - zebra crossing,crosswalk
+          - walk signal
+          - tunnel
+          - parking lot
+          - idewalk
+          - gas station
+          - roadworks
+          - traffic jam
+          - >-
+            {1-$$crossroads|intersection}
+          - >-
+            {1-$$scooter|motorcycle}
+          - >-
+            {1-$$shopping|storefront|signboard}
+        moment-weather:
+          - >-
+            ((raining)),rain,reflection,wet street {,wet clothes|}
+          - >-
+            ({1-$$winter|snow|very cold|snow fall|city snowy street view}:1.2)
+        moment:
+          - >-
+            {1-$$sunlight|sunset}
+          - dawn
+          - twilight
+          - >-
+            night{,neon lights|}
+        func:
+          road-in:
+            - >-
+              ((busy street in ${country:taiwan})),${location:taipei} road
+      ruins-city:
+        prompts:
+          - >-
+            __lazy-wildcards/background/location/ruins-city/main__ {0.2::,__lazy-wildcards/background/location/ruins-city/city__}
+        main:
+          - >-
+            long-shot ruins,building,window frame,cracked window,wall corner,upturned,abandoned,metal,industrial,fence,moody,cracked mud,urban,__lazy-wildcards/background/location/ruins-city/area__
+        area:
+          - suburbs
+          - canalside
+        city:
+          - london
+      toilet-dirty:
+        prompts:
+          - >-
+            __lazy-wildcards/background/location/toilet-dirty/main__,{1-$$__lazy-wildcards/background/location/toilet-dirty/env-bg__},{0-$$__lazy-wildcards/background/location/toilet-dirty/env__},{0-$$__lazy-wildcards/background/location/toilet-dirty/style__},
+        style:
+          - dirt,filth,dirty,Dirt that cannot be washed away
+          - dirty toilet
+          - yellow urine stains,urine on the floor
+          - graffiti on the wall
+          - dirty tiles
+        main:
+          - >-
+            ({{1-$$bathroom|restroom|washroom},|}toilet:1.3)
+        env:
+          - box
+          - >-
+            {0-$$cups|bottles},{0-$$coffee|beer cans}
+          - toilet paper
+          - trash can
+          - water
+          - condom packaging
+          - newspapers
+          - food
+          - >-
+            {1-$$soap|soap bottle}
+        env-bg:
+          - >-
+            {1-$$tiles|tile floor|tile wall}
+          - handrails
+          - faucet
+          - door
+          - mirror
+          - window
   char:
+    pose:
+      pose-anything:
+        - __person/nsfw/poses__
+        - meditative pose
+        - covering mouth,hand over own mouth
+        - wakeupyawn,yawning,covering mouth
+        - wakeupstretch,stretching,arm behind head
+        - (bouquet,holding bouquet)
+        - (carrying one plate of food,carrying food)
+        - relaxing,doze off
+        - (taking a selfie in the mirror)
+        - fingernails,zombie pose
+        - paw pose
+        - hands inside pocket,hand in pocket,hands in pockets
+        - from behind,pelvis,butt crack,look at viewer
+        - head rest on hand,head_on_hand,head_rest
+        - breast rest on table
+        - leaning against motorcycle
+        - cigarette in mouth
+        - __lazy-wildcards/background/location/*/action/*__
+        - __lazy-wildcards/book/pose__
+        - holding a soccer
+        - walking away
+        - sitting on a table
+      pose-bottom:
+        sitting:
+          - (yokozuwari)
+          - (cross-legged sitting,sitting with legs crossed)
+          - >-
+            {1-$$lotus position|meditative pose}
+          - wariza,sitting,w-sitting,hand between legs,between legs
+      pose-bottom-nsfw:
+        open-legs:
+          - >-
+            {1-$$spread legs|open legs}
+          - >-
+            {1-$$squatting|crouching|squatting cowgirl position}
+          - (straddle)
+      pose-nsfw:
+        - (one breast out,one breast slip,one_breast_out_of_clothes),unaligned_breasts,showing breast
+        - (downblouse,tank top,breasts_out,leaning forward,bent over)
+        - lifted by self,dress lift,from below
+        - squatting,crouching,spread legs,arm support,stripper pole,pole dancing,arms behind back
+        - lewd,sexy,erotic,alluring,ewitching,charming,mesmerizing,enchanting,voluptuous,sexy posing,Sex Position,hentai
+        - hand on own chest,grabbing herself breasts,grabbing own breasts,hands on own breasts,breast press,hand on tit
+        - squatting spread legs position,squatting,spread legs,crouching
+        - clothes lift,lifted by self,underboob
+        - bath,bathing,steam
+        - female masturbation
+        - open clothes,exhibitionism,public indecency,naked coat
+        - >-
+          downblouse,cleavage,ceiling,(peek panties,panty peek,pussy peek),selfie pose,squatting,crouching
+        - >-
+          {from behind|from side|from above|from below|},(in container,stuck,trash can,trashcan),garbage,trash,after sex,anus,ass wobble,pussy,cum in ass,beaten up,helpless
+        - __cf-sex-positions/prompt-solo__
+        - __cf-sex-positions/prompt-man-woman__
+        - __cf-sex-positions/prompt-two-women__
+        - __cf-sex-positions/prompt-mix__
+        - __cf-sex-positions/all__
+        - __lazy-wildcards/subject/action-nsfw-*/*/prompts__
     eyes-expressions:
       - >-
         {half-|}closed eyes
@@ -363,6 +673,9 @@ lazy-wildcards:
       - >-
         hair over {one shoulder|shoulder}
       - hair intakes
+      - >-
+        {low |}twin braids
+      - double bun
     haircut-multi:
       - >-
         {1-4$$ hair,$$__person/regular/haircuts-female__} hair
@@ -394,66 +707,6 @@ lazy-wildcards:
       - mole under mouth
       - mole on breast
       - mole on thigh
-    pose:
-      pose-anything:
-        - __person/nsfw/poses__
-        - meditative pose
-        - covering mouth,hand over own mouth
-        - wakeupyawn,yawning,covering mouth
-        - wakeupstretch,stretching,arm behind head
-        - (bouquet,holding bouquet)
-        - (carrying one plate of food,carrying food)
-        - relaxing,doze off
-        - (taking a selfie in the mirror)
-        - fingernails,zombie pose
-        - paw pose
-        - hands inside pocket,hand in pocket,hands in pockets
-        - from behind,pelvis,butt crack,look at viewer
-        - head rest on hand,head_on_hand,head_rest
-        - breast rest on table
-        - leaning against motorcycle
-        - cigarette in mouth
-        - __lazy-wildcards/background/location/*/action/*__
-        - __lazy-wildcards/book/pose__
-        - holding a soccer
-        - walking away
-        - sitting on a table
-      pose-bottom:
-        sitting:
-          - (yokozuwari)
-          - (cross-legged sitting,sitting with legs crossed)
-          - >-
-            {1-$$lotus position|meditative pose}
-          - wariza,sitting,w-sitting,hand between legs,between legs
-      pose-bottom-nsfw:
-        open-legs:
-          - >-
-            {1-$$spread legs|open legs}
-          - >-
-            {1-$$squatting|crouching|squatting cowgirl position}
-          - (straddle)
-      pose-nsfw:
-        - (one breast out,one breast slip,one_breast_out_of_clothes),unaligned_breasts,showing breast
-        - (downblouse,tank top,breasts_out,leaning forward,bent over)
-        - lifted by self,dress lift,from below
-        - squatting,crouching,spread legs,arm support,stripper pole,pole dancing,arms behind back
-        - lewd,sexy,erotic,alluring,ewitching,charming,mesmerizing,enchanting,voluptuous,sexy posing,Sex Position,hentai
-        - hand on own chest,grabbing herself breasts,grabbing own breasts,hands on own breasts,breast press,hand on tit
-        - squatting spread legs position,squatting,spread legs,crouching
-        - clothes lift,lifted by self,underboob
-        - bath,bathing,steam
-        - female masturbation
-        - open clothes,exhibitionism,public indecency,naked coat
-        - >-
-          downblouse,cleavage,ceiling,(peek panties,panty peek,pussy peek),selfie pose,squatting,crouching
-        - >-
-          {from behind|from side|from above|from below|},(in container,stuck,trash can,trashcan),garbage,trash,after sex,anus,ass wobble,pussy,cum in ass,beaten up,helpless
-        - __cf-sex-positions/prompt-solo__
-        - __cf-sex-positions/prompt-man-woman__
-        - __cf-sex-positions/prompt-two-women__
-        - __cf-sex-positions/prompt-mix__
-        - __cf-sex-positions/all__
-        - __lazy-wildcards/subject/action/nsfw-*/prompts__
     ethnicity:
       - __cf-*/ethnicity__
       - a beautiful elvish girl
@@ -567,6 +820,8 @@ lazy-wildcards:
       - ripped clothes,torn clothes,tattered clothes
       - burnt_clothes,dissolving_clothes
       - __lazy-wildcards/costume/nsfw-nude__
+      - __lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/style-hemp-ropes__
+      - __lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/style-leather-harness__
     nsfw-nude:
       - nude,topless,breasts out,breasts slip,cleavage,see-through cleavage,see-through,breasts focus,unaligned_breasts
       - naked,bare,nude,completely nude,no bra,nobar,cleavage
@@ -582,6 +837,7 @@ lazy-wildcards:
       - __cf-*/prompt-costume__
       - __Bo/chars/char-regular/female/bocloths__
       - __Bo/clothings/*/female-attire__
+      - __lazy-wildcards/subject/costume/*/prompts__
       - ((ancient egyptian theme)),golden ornaments,ancient egyptian sailor_shirt,ancient egyptian pleated_skirt,bowtie
       - Collared shirts
       - school uniform,sweater,miniskirt,
@@ -598,6 +854,7 @@ lazy-wildcards:
       - skirt_suit
       - soccer jersey
       - egyptian clothes
+      - baggy full body clothing,henley neck,eyelet,wave,sleeveless,knee length,drop waist,ball gown skirt,waistband
       - |-
         adorned in intricate (snake scales attire:1.4) that shimmer in the light
       - >-
@@ -609,6 +866,12 @@ lazy-wildcards:
         (Chest open gelcoat,breast zipper:1.4)
       - >-
         (wearing a luxurious __mix-lazy-auto/color-anything__ gown:1.3)
+      - >-
+        plugsuit,neon genesis evangelion,{souryuu asuka langley,|} scifi
+      - |-
+        (denim,high heels,jeans,jewelry,shirt:1.3)
+      - |-
+        (high-waist skirt,high heels,see-through,skirt,black pantyhose,black skirt,bra:1.3)
     sweater:
       - ribbed sweater
       - sleeveless sweater
@@ -619,287 +882,149 @@ lazy-wildcards:
         - ninja mask
         - surgical mask
         - mouth mask
-  background:
-    color-style:
+  utils:
+    color-base:
+      - white
+      - black
+      - green
+      - magenta
+      - cyan
+      - yellow
+      - blue
+      - red
+      - pink
+      - orange
+      - purple
+    # do not use this anymore
+    color-anything:
       - >-
-        {1-$$multicolored background|gradient background|solid color,solid color background|neon color}
-    color-theme:
-      - __mix-lazy-auto/color-anything__ background
-      - dark background
-    color-transparent:
-      - pure __lazy-wildcards/utils/color-base__ background,transparent background
-    color-multi:
+        __Bo/chars/haircolor__
       - >-
-        a colorful background,__lazy-wildcards/background/color-style__
+        __lazy-wildcards/utils/color-base__
       - >-
-        {2-3$$ background,$$__mix-lazy-auto/color-anything__} background {,__lazy-wildcards/background/color-style__|}
+        __cf-*/color__
       - >-
-        pure {2-3$$ background,pure $$__lazy-wildcards/utils/color-base__} background {,__lazy-wildcards/background/color-style__|}
-      - >-
-        neon {2-3$$ background,neon $$__lazy-wildcards/utils/color-base__} background {,__lazy-wildcards/background/color-style__|}
-    anything:
-      - __cf-*/location/*__
-      - __lazy-wildcards/background/location/*/prompts__
-      - japanese onsen,onsen
-      - dirty alley
-      - Study,Quiet room with low seating cushions,scroll-filled shelves lining the walls,a small writing desk with ink pots and papyrus scrolls,intricate woven rugs,and decorative hieroglyphic carvings
-      - Grooming Area,Elegant space with polished ebony mirrors reflecting flickering candlelight,intricately carved wooden stools arranged neatly around a central basin,jars of fragrant oils and cosmetics neatly arranged on shelves,and servants standing by with combs and brushes
-      - Garden Pavilion,Tranquil space with a bubbling fountain at its center,lush greenery winding along trellises,mosaic tiles creating intricate patterns on the ground,woven wicker furniture with plush cushions,and the sweet scent of blooming flowers,
-      - Solarium,Serene room with glass walls offering panoramic views of the Nile,potted palms adding a touch of greenery,mosaic tiles depicting aquatic scenes underfoot,chaise lounges draped in silk throws,and golden sconces illuminating the space
-      - Bathhouse,Steam-filled chamber with a sunken bathing pool lined with tiles,shelves stacked with aromatic oils and perfumes,woven baskets for towels,flickering oil lamps,and intricate tile mosaics depicting scenes of daily life
-      - construction site background
-      - cliff,cliff scenery,mountainside,cliff face
-      - Intricately Detailed Cinematic Bamboo forest
-      - street corner
-      - east_asian_architecture,east asian architecture
-      - architecture,bridge,east asian architecture,lantern,letterboxed,pagoda,tower,torii,tower,watercraft
-      - ancient japanese buildings
-      - roman architecture background
-      - art nouveau architecture
-      - korean architecture
-      - large forest,enchanting forest,dense forest,lush forest,tall trees,canopy,overgrown scenery
-      - Subway,Metro
-      - Metro,carriage,subway,subway interior,window
-      - rural school
-      - in dungeon
-      - prison cell
-      - prison
-      - cloud city,cloudtop sky-city
-      - downtown,city
-      - floating platforms,floating buildings
-      - Majestic Baroque halls
-      - OldTaipei,scenery,outdoors,building,power lines,city,alley,street,road,motor vehicle,utility pole
-      - Caribbean,dark tunnel,china street
-      - (in Venice)
-      - A mystical swamp with dark waters and thick vegetation
-      - >-
-        ((pedestrian hell)),__lazy-wildcards/background/location/city-traffic/func/road-in__,scooter,motorcycle,wind,trees,crowd,traffic light,road sign,cityscape,shopping,storefront,signboard,building,greenery,{city-life-overload,|} {night,neon lights,|} {((raining)),rain,wet street,reflection,wet clothes|}
-      - flare,fog,wet,wet body,rain,raining,night,neon lights,twilight
-      - perspective photo of the house on clift,post-apocalypse,brutalist,brutal green covered with green grass,many people,neon light,forest,jungle atmosphere,sunset,sunshine cinematic
+        bright blue-green
+    costume-type1:
+      - skirt
+      - jacket
+      - shirt
+      - tank top
+      - shorts
+      - hijab
+      - pants
+      - thighhighs
+      - bikini
+      - lingerie
+      - dress
+      - bra
+      - platform heels
+      - stiletto heels
+      - thong
+      - pantyhose
+      - glasses
+      - hair
+      - choker
+      - earrings
+      - leotard
+    action:
+      playing-card:
+        poker-playing:
+          - ace \(playing card\)
+          - king \(playing card\)
+          - jack \(playing card\)
+          - queen \(playing card\)
+        poker-card:
+          - ace of hearts
+          - ace of spades
+          - ace of diamonds
+          - ace of clubs
+          - three of hearts
+          - king of spades
+          - ten of hearts
+          - ten of spades
+          - two of spades
+          - royal flush
+          - five of hearts
+          - four of clubs
+          - jack of spades
+          - three of spades
+          - five of spades
+          - two of hearts
+    char-view:
+      - __lazy-wildcards/dataset/char-view__
       - |-
-        (in river),splash,splashing,({sun flare,lens flare,sunset|moonlight|dawn|twilight} background,low horizon),backlighting
-      - mangrove forest biome
-      - |-
-        (flower,falling petals,petals on liquid,petals,cherry blossom:0.8)
-      - underground facility
-      - |-
-        (in line in front of a movie theater with friends:1.4)
-      - grass,on soccer field
-      - above clouds,Scenery
-      - in a glamorous restaurant
-    location:
-      interior-lava:
-        prompts:
-          - >-
-            __lazy-wildcards/background/location/interior-lava/main__,__lazy-wildcards/background/location/interior-lava/style__
-        style:
-          - Lava style,LAVA architecture,Chris Bosses,Chris Bosse,Chris Bosse architect,bio botanical
-        main:
-          - a hip space hotel lobby interior with incredible natural light. Futuristic botanical hotel lobby interior
-          - a chocolate tasting room,interior design,sci-fi,brutal,Futuristic botanical
-          - interior perfume shop modern style,black wooden and green light,brutal
-      temple:
-        prompts:
-          - __lazy-wildcards/background/location/temple/main/*__
-        main:
-          Meditation-Chamber:
-            - temple,Meditation Chamber,Serene space with a tranquil reflecting pool,lush greenery creating a peaceful atmosphere,soft sunlight filtering through stained glass windows,and cushions arranged for quiet contemplation
-          others:
-            - borobudur temple
-      casino:
-        prompts:
-          - >-
-            __lazy-wildcards/background/location/casino/style__,{1-$$__lazy-wildcards/background/location/casino/main/*__},{1-$$__lazy-wildcards/background/location/casino/env__}
-          - >-
-            __lazy-wildcards/background/location/casino/style__,__lazy-wildcards/background/location/casino/main/*__,{1-$$__lazy-wildcards/background/location/casino/env__}
-        style:
-          - casino,gambling
-        env:
-          - chip
-          - dice
-          - card
-          - money
-          - bills
-          - betting ticket
-          - cheating \(competitive\)
-          - house_of_cards
-        main:
-          roulette:
-            - roulette,roulette table
-          poker:
-            - poker table,poker chip,poker,casino card table,card
-          table:
-            - casino table
-          slot-machine:
-            - slot machine
-        action:
-          dice:
-            - holding dice,dice
-          poker:
-            - playing card,card,__lazy-wildcards/util/action/playing-card/poker-playing__,holding card
-            - >-
-              playing card,card,{1-3$$__lazy-wildcards/util/action/playing-card/poker-card__},holding card
-      tarot:
-        prompts:
-          - >-
-            {1-$$__lazy-wildcards/background/location/tarot/main__},{0-2$$__lazy-wildcards/background/location/tarot/action/*__},__lazy-wildcards/background/location/tarot/elem/cards_tarot__,{0-3$$__lazy-wildcards/background/location/tarot/elem/cards_tarot_type__},{1-$$__lazy-wildcards/background/location/tarot/env__},{1-$$__lazy-wildcards/background/location/tarot/style__}
-        main:
-          - a table with a lot of tarot cards
-          - a tarot card in the middle of the table
-          - >-
-            {3d papercut shadow box of |}a deck of tarot cards spilled on a table
-        style:
-          - occult
-          - arcana
-          - psychedelic
-          - magic
-        action:
-          pose:
-            - elbows_on_table,
-          telling:
-            - |-
-              (fortune_telling,card_reading:1.2),fortune_teller
-        env:
-          - tarot_cards on table,on table
-          - house_of_cards
-          - candle
-          - a lot of tarot_cards
-        elem:
-          cards_tarot:
-            - |-
-              (tarot_cards,tarot_\(card\):1.2)
-          cards_tarot_type:
-            - the_fool_\(tarot\)
-            - the_magician_\(tarot\)
-            - the_high_priestess_\(tarot\)
-            - the_empress_\(tarot\)
-            - the_emperor_\(tarot\)
-            - the_hierophant_\(tarot\)
-            - the_lovers_\(tarot\)
-            - the_chariot_\(tarot\)
-            - strength_\(tarot\)
-            - the_hermit_\(tarot\)
-            - wheel_of_fortune_\(tarot\)
-            - justice_\(tarot\)
-            - the_hanged_man_\(tarot\)
-            - death_\(tarot\)
-            - temperance_\(tarot\)
-            - the_devil_\(tarot\)
-            - the_tower_\(tarot\)
-            - the_star_\(tarot\)
-            - the_moon_\(tarot\)
-            - the_sun_\(tarot\)
-            - judgement_\(tarot\)
-            - the_world_\(tarot\)
-      fence:
-        prompts:
-          - >-
-            {1-2$$__lazy-wildcards/background/location/fence/main__},{0-3$$__lazy-wildcards/background/location/fence/env__},{0-1$$__lazy-wildcards/background/location/fence/action/*__}
-        main:
-          - fence
-          - chain-link fence,chain_link_fence
-          - wooden fence
-          - bamboo fence
-          - wire_fence
-          - barbed_wire
-        env:
-          - rooftop
-        action:
-          pose:
-            - against fence
-      pool:
-        prompts:
-          - >-
-            {1-2$$__lazy-wildcards/background/location/pool/main__},{0-3$$__lazy-wildcards/background/location/pool/env__}
-        main:
-          - poolside
-          - pool
-        env:
-          - empty pool
-          - pool ladder
-      city-traffic:
-        prompts:
-          - >-
-            {1-$$__lazy-wildcards/background/location/city-traffic/style__},__lazy-wildcards/background/location/city-traffic/func/road-in__,__lazy-wildcards/background/location/city-traffic/main__,{5-$$__lazy-wildcards/background/location/city-traffic/env__},{{1-$$__lazy-wildcards/background/location/city-traffic/moment-weather__},|} __lazy-wildcards/background/location/city-traffic/moment__
-        main:
-          - cityscape,building
-        style:
-          - city-life-overload
-          - ((pedestrian hell))
-        env:
-          - traffic light,road sign
-          - roadway
-          - crowd
-          - greenery,trees
-          - wind,windy
-          - underpass
-          - skywalk
-          - jaywalk
-          - zebra crossing,crosswalk
-          - walk signal
-          - tunnel
-          - parking lot
-          - idewalk
-          - gas station
-          - roadworks
-          - traffic jam
-          - >-
-            {1-$$crossroads|intersection}
-          - >-
-            {1-$$scooter|motorcycle}
-          - >-
-            {1-$$shopping|storefront|signboard}
-        moment-weather:
-          - >-
-            ((raining)),rain,reflection,wet street {,wet clothes|}
-          - >-
-            ({1-$$winter|snow|very cold|snow fall|city snowy street view}:1.2)
-        moment:
-          - >-
-            {1-$$sunlight|sunset}
-          - dawn
-          - twilight
-          - >-
-            night{,neon lights|}
-        func:
-          road-in:
-            - >-
-              ((busy street in ${country:taiwan})),${location:taipei} road
-      ruins-city:
-        prompts:
-          - >-
-            __lazy-wildcards/background/location/ruins-city/main__
-        main:
-          - long-shot ruins,building,window frame,cracked window,wall corner,upturned,abandoned,metal,industrial,fence,moody,cracked mud,urban,canalside
-
-  book:
-    style-adj:
-      text:
-        - (The text on the cover should be bold and attention-grabbing,with the title of the magazine and a catchy headline. The overall style should be modern and trendy,with a focus on fashion and lifestyle),wall paper,fashion,depth of field,contrapposto,female focus,model,photorealistic,fine fabric emphasis
-    style-type:
-      magazine-cover:
-        style:
-          - (advertising style,Magazine cover-style illustration of a fashionable woman),(Fashion Magazine Cover)
-          - (advertising style,Magazine cover-style illustration of a confident woman)
-      comic-cover:
-        style:
-          - (comic book,comic cover),action,dynamic,speech bubbles,bang
-          - (Dojinshi,doujinshi magazine cover),Graphic Design
-    pose:
-      - (posing in front of a colorful and dynamic background. She has a confident expression and is holding a statement accessory)
-      - (posing with her hands on her hips in an Asian squat position in front of a modern and dynamic background. She exudes confidence and sex appeal,with her daring fashion choices leaving little to the imagination)
+        (from below,looking down,ass visible through thighs:1.2)
+    view:
+      - front view
+    season:
+      - spring
+      - summer
+      - autumn
+      - winter
   subject:
+    architectural:
+      parking:
+        prompts:
+          - >-
+            {underground,Underground |}Car Parking,road,concrete,parking
+      alley:
+        prompts:
+          - |-
+            (fence,alley,power_lines:1.5)
     costume:
       japanese-clothes:
         prompts:
-          - oiran,hair ornament,japanese clothes,kimono,off shoulder,geta
+          - >-
+            oiran,hair ornament,japanese clothes,kimono,off shoulder,geta {0.2::,__lazy-wildcards/subject/costume/japanese-clothes/style__|}
         style:
           - floral print
-    action:
-      nsfw-sex-sitting:
+      china-dress:
         prompts:
           - >-
-            __lazy-wildcards/subject/action/nsfw-sex-sitting/style-type__,__lazy-wildcards/subject/action/nsfw-sex-sitting/main__,{{1-$$__lazy-wildcards/subject/action/nsfw-sex-sitting/main__},|} __lazy-wildcards/subject/action/nsfw-sex-sitting/main-shared__
+            __lazy-wildcards/subject/costume/china-dress/main__,{1-$$__lazy-wildcards/subject/costume/china-dress/makeup__} {,{1-$$__lazy-wildcards/subject/costume/china-dress/env__}|} {,__lazy-wildcards/subject/costume/china-dress/action__|}
+        main:
+          - (old-shanghaibeauty,old shanghai beauty,china dress,chinese clothes),舊上海美人
+        makeup:
+          - mole under eye
+          - red lips
+          - earrings
+          - hair bun
+          - arm tattoo
+          - jewelry
+          - lipstick
+          - makeup
+        action:
+          - chair,sitting
+        env:
+          - instrument
+    interior:
+      bathroom:
+        prompts:
+          - >-
+            {99$$ with $$__lazy-wildcards/subject/interior/bathroom/main-object__},{1-$$__lazy-wildcards/subject/interior/bathroom/env-object__},{1-$$__lazy-wildcards/subject/interior/bathroom/env__} {,{1-$$__lazy-wildcards/subject/interior/bathroom/env-bg__}|}
+        main-object:
+          - bath
+          - a sink
+          - bathroom
+        env-object:
+          - toilet
+          - handrails
+          - faucet
+          - door
+          - mirror
+          - window
+        env:
+          - >-
+            {1-$$soap|soap bottle}
+        env-bg:
+          - >-
+            {1-$$tiles|tile floor|tile wall}
+    action-nsfw-sex:
+      sitting-sex:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/action-nsfw-sex/sitting-sex/style-type__,__lazy-wildcards/subject/action-nsfw-sex/sitting-sex/main__,{{1-$$__lazy-wildcards/subject/action-nsfw-sex/sitting-sex/main__},|} __lazy-wildcards/subject/action-nsfw-sex/sitting-sex/main-shared__
         style-type:
           - boy on top,hugging sex,kiss,ass
           - reverse sitting,looking at viewer,thighhighs,thighs,sex from behind
@@ -909,10 +1034,10 @@ lazy-wildcards:
           - 1boy,hetero,1girl,penis
         main-shared:
           - vaginal,sex,blush,breasts,sitting,spread legs
-      nsfw-aftersex:
+      aftersex:
         prompts:
           - >-
-            __lazy-wildcards/subject/action/nsfw-aftersex/main__,{({1-$$__lazy-wildcards/subject/action/nsfw-aftersex/pose__}:1.2),|} {1-$$__lazy-wildcards/subject/action/nsfw-aftersex/style__},{1-$$__lazy-wildcards/subject/action/nsfw-aftersex/env__}
+            __lazy-wildcards/subject/action-nsfw-sex/aftersex/main__,{({1-$$__lazy-wildcards/subject/action-nsfw-sex/aftersex/pose__}:1.2),|} {1-$$__lazy-wildcards/subject/action-nsfw-sex/aftersex/style__},{1-$$__lazy-wildcards/subject/action-nsfw-sex/aftersex/env__}
         main:
           - >-
             covered pussy,covering,covering crotch,censored,open clothes,panty pull,panties around one leg,underwear,pussy juice,cum,cumdrip,breasts
@@ -942,24 +1067,121 @@ lazy-wildcards:
           - reclining
         env:
           - tissue,tissue box,((used tissue))
-          - condom,condom box,((used condom))
+          - condom,condom box,((used condom,used condoms)),condom packaging
+    theme:
+      NeoFalmerWorld:
+        prompts:
+          - __lazy-wildcards/subject/theme/NeoFalmerWorld/prompts-bg__
+        prompts-bg:
+          - >-
+            __lazy-wildcards/subject/theme/NeoFalmerWorld/main-bg-*__,__lazy-wildcards/subject/theme/NeoFalmerWorld/main__
+        style:
+          - |-
+            chitin,(chitin theme:1.2),(rough jagged texture:1.3),glow,jade
+        style-adj:
+          - green glow
+          - green theme
+          - __mix-lazy-auto/color-anything__ glow
+          - __mix-lazy-auto/color-anything__ theme
+          - __lazy-wildcards/dataset/background-color__
+        main:
+          - >-
+            __lazy-wildcards/subject/theme/NeoFalmerWorld/style__ {,__lazy-wildcards/subject/theme/NeoFalmerWorld/style-adj__|}
+        main-bg-bathroom:
+          - >-
+            __lazy-wildcards/subject/interior/bathroom/prompts__,chitin {2-$$,chitin $$__lazy-wildcards/subject/interior/bathroom/main-object__} {,chitin {1-$$,chitin $$__lazy-wildcards/subject/interior/bathroom/env-object__}|}
+        costume:
+          - chitin armoured dress
+        utils:
+          chitin-theme:
+            - >-
+              chitin ${obj}
+    action-nsfw-bdsm:
+      sunvibebdsm:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/shared__,(__lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/main-*__),{1-$$__lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/env__} {,__lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/style-hemp-ropes__|}
+        shared:
+          - nude,nsfw
+        main-chained:
+          - >-
+            ({1-$$__lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/pose-base__|__lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/style-leather-harness__|__lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/style-chained__}:1.3) {,__lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/pose-leg__|} {,__lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/pose-arms__|}
+        style-chained:
+          - shibari,bondage,chained,suspended in air,hanging
+          - shibari,bondage,chained,suspended from the ceiling
+        main-shibari-bondage:
+          - >-
+            (shibari,bondage:1.3) {,__lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/pose-leg__|} {,__lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/pose-arms__|}
+        pose-leg:
+          - (standing on one leg,one leg up)
+          - spread legs
+        main-kinbaku:
+          - >-
+            (kinbaku:1.3),__lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/style-kinbaku__
+        style-kinbaku:
+          - bent over,grabbing knees
+          - spread eagle,bed,tied to headboard
+          - __lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/pose-tied-to__
+          - __lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/pose-tied__
+        pose-tied-to:
+          - tied to headboard
+          - tied to table
+          - tied to interrogation chair
+        pose-tied:
+          - >-
+            ({1-$$tied up legs|tied up hands})
+        pose-arms:
+          - arms stretched out
+          - grabbing her own breasts
+          - arms behind back
+          - arms over head
+        style-hemp-ropes:
+          - (hemp ropes on collar and breasts)
+        main-leather-harness:
+          - >-
+            (__lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/style-leather-harness__:1.3) {,__lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/pose-arms__|} {,{1-$$__lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/pose-lifted-up__}|} {,__lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/pose-leg__|} {,all fours|}
+        style-leather-harness:
+          - (leather harness,straps,body harness,leather arm straps,thigh straps,thigh belts)
+        pose-lifted-up:
+          - being lifted up open spread legs
+          - lifted up crossed arms behind her head
+        pose-base:
+          - standing
+          - sitting
+          - kneeling
+          - squatting
+          - lying
+        env:
+          - (ball gag)
+          - (nipple clamps)
 mix-lazy-auto:
-  # "color-anything" (total: 235 => 130, save 105 ) is merge from
+  # "color-anything" (total: 339 => 136, save 203 ) is merge from
   #  - __lazy-wildcards/utils/color-base__ (11)
   #  - __mix-lazy-auto/color-anything__ (1)
   #  - __cf-sex-positions/color__ (6)
+  #  - __cf-astronaut/color__ (10)
+  #  - __cf-basketball-player/color__ (10)
+  #  - __cf-belly-dancer/color__ (10)
   #  - __cf-clown/color__ (12)
   #  - __cf-disco-dancer/color__ (13)
   #  - __cf-doctor/color__ (10)
   #  - __cf-elf/color__ (10)
+  #  - __cf-fitness/color__ (10)
   #  - __cf-gangster-1920s/color__ (8)
+  #  - __cf-hockey-player/color__ (10)
+  #  - __cf-jester/color__ (10)
   #  - __cf-lingerie/color__ (10)
+  #  - __cf-luchador/color__ (10)
   #  - __cf-maid/color__ (4)
+  #  - __cf-mechanic/color__ (9)
   #  - __cf-punk/color__ (17)
   #  - __cf-school-student/color__ (11)
   #  - __cf-secretary/color__ (8)
   #  - __cf-school-teacher/color__ (11)
   #  - __cf-tennis-player/color__ (7)
+  #  - __cf-volleyball-player/color__ (10)
+  #  - __cf-witch/color__ (8)
+  #  - __cf-yakuza/color__ (7)
   #  - __Bo/chars/haircolor__ (1)
   #  - __person/regular/haircolor__ (30)
   #  - __person/regular/haircolor-unconv__ (21)
@@ -987,6 +1209,13 @@ mix-lazy-auto:
     - purple
     - bright blue-green
     - rainbow
+    - silver
+    - gray
+    - navy
+    - gold
+    - grey
+    - maroon
+    - turquoise
     - rainbow-colored
     - polka-dotted
     - striped
@@ -1007,24 +1236,20 @@ mix-lazy-auto:
     - deep magenta
     - navy blue
     - light blue
-    - grey
-    - maroon
     - dark green
     - teal
     - burgundy
     - sage
     - soft lavender
-    - silver
-    - gold
     - midnight blue
     - ruby red
     - pearl white
     - pastel pink
     - soft purple
     - pinstripe
-    - gray
     - deep burgundy
     - dark brown
+    - multicolored
     - classic black
     - fiery red
     - soft pink
@@ -1032,10 +1257,13 @@ mix-lazy-auto:
     - deep purple
     - champagne
     - pastel lavender
+    - dark grey
+    - brown
+    - olive
+    - beige
     - metallic silver
     - red brown
     - ginger
-    - brown
     - |-
       {bleached|platinum|neon} blonde
     - jet-black
@@ -1055,7 +1283,6 @@ mix-lazy-auto:
     - deep shade of indigo
     - fiery
     - sky blue
-    - beige
     - soft grey
     - rich plum
     - pale pink
@@ -1071,6 +1298,8 @@ mix-lazy-auto:
       {pearl|off-white} white
     - |-
       {mustard|golden} yellow
+    - black and orange
+    - deep red
     - |-
       {0.7::__person/regular/haircolor__|0.3::__person/regular/haircolor-unconv__}
     - blonde
@@ -1110,7 +1339,6 @@ mix-lazy-auto:
     - orchid
     - aqua
     - dark Blue
-    - turquoise
     - light green
     - olive green
     - jade green

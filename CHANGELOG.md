@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.23](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.0.22...sd-wildcards-utils@1.0.23) (2024-06-05)
+
+
+
+### ✨　Features
+
+* **format:** strip `,` ([22ac073](https://github.com/bluelovers/sd-wildcards-utils/commit/22ac0736da031780ccdaf19b5ec69264e3a2bbdb))
+* **wildcards:** . ([255eb05](https://github.com/bluelovers/sd-wildcards-utils/commit/255eb05a42806ae29561b239fac321ecfdaf19c0))
+* **wildcards:** add `NeoFalmerWorld` ([65b2acd](https://github.com/bluelovers/sd-wildcards-utils/commit/65b2acded67e03738387687bec7f2fff988a1670))
+* **wildcards:** add `sunvibebdsm` ([3a3b992](https://github.com/bluelovers/sd-wildcards-utils/commit/3a3b992a53affba7eed02f025abb6bb601894a70))
+
+
+### 📦　Code Refactoring
+
+* **wildcards:** splitting wildcards ([f97fe34](https://github.com/bluelovers/sd-wildcards-utils/commit/f97fe342ffbcc7ca33d1622bcb769c4dbeae5568))
+
+
+### 🔖　Miscellaneous
+
+* . ([e0db9c5](https://github.com/bluelovers/sd-wildcards-utils/commit/e0db9c5118f9e22b0a3b7d6199b319b89fce0597))
+
+
+
 ## [1.0.22](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.0.21...sd-wildcards-utils@1.0.22) (2024-06-03)
 
 

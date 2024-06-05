@@ -204,7 +204,7 @@ function trimPrompts(value) {
 function formatPrompts(value, opts) {
   var _opts;
   (_opts = opts) !== null && _opts !== void 0 ? _opts : opts = {};
-  value = value.replace(/[\s\xa0]+/gm, ' ');
+  value = value.replace(/[\s\xa0]+/gm, ' ').replace(/[\s,.]+(?=,)/gm, '');
   if (opts.minifyPrompts) {
     value = value.replace(/(,)\s+/gm, '$1').replace(/\s+(,)/gm, '$1');
   }
