@@ -55,6 +55,7 @@ export default (async () =>
 				'cf/other/*.yaml',
 				'others/**/*.yaml',
 				'*.yaml',
+				'sub/**/*.yaml',
 			], {
 				cwd: __ROOT_DATA,
 			}), (file: string) =>

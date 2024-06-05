@@ -1,0 +1,27 @@
+lazy-wildcards:
+  subject:
+    interior:
+      bathroom:
+        prompts:
+          - >-
+            {99$$ with $$__lazy-wildcards/subject/interior/bathroom/main-object__},
+            {1-$$__lazy-wildcards/subject/interior/bathroom/env-object__},
+            {1-$$__lazy-wildcards/subject/interior/bathroom/env__}
+            {, {1-$$__lazy-wildcards/subject/interior/bathroom/env-bg__}|}
+        main-object:
+          - bath
+          - a sink
+          - bathroom
+        env-object:
+          - toilet
+          - handrails
+          - faucet
+          - door
+          - mirror
+          - window
+        env:
+          - >-
+            {1-$$soap|soap bottle}
+        env-bg:
+          - >-
+            {1-$$tiles|tile floor|tile wall}

@@ -1,0 +1,80 @@
+lazy-wildcards:
+  utils:
+    color-base:
+      - white
+      - black
+      - green
+      - magenta
+      - cyan
+      - yellow
+      - blue
+      - red
+      - pink
+      - orange
+      - purple
+    # do not use this anymore
+    color-anything:
+      - >-
+        __Bo/chars/haircolor__
+      - >-
+        __lazy-wildcards/utils/color-base__
+      - >-
+        __cf-*/color__
+      - >-
+        bright blue-green
+    costume-type1:
+      - skirt
+      - jacket
+      - shirt
+      - tank top
+      - shorts
+      - hijab
+      - pants
+      - thighhighs
+      - bikini
+      - lingerie
+      - dress
+      - bra
+      - platform heels
+      - stiletto heels
+      - thong
+      - pantyhose
+      - glasses
+      - hair
+      - choker
+      - earrings
+      - leotard
+    action:
+      playing-card:
+        poker-playing:
+          - ace \(playing card\)
+          - king \(playing card\)
+          - jack \(playing card\)
+          - queen \(playing card\)
+        poker-card:
+          - ace of hearts
+          - ace of spades
+          - ace of diamonds
+          - ace of clubs
+          - three of hearts
+          - king of spades
+          - ten of hearts
+          - ten of spades
+          - two of spades
+          - royal flush
+          - five of hearts
+          - four of clubs
+          - jack of spades
+          - three of spades
+          - five of spades
+          - two of hearts
+    char-view:
+      - __lazy-wildcards/dataset/char-view__
+      - (from below, looking down, ass visible through thighs:1.2)
+    view:
+      - front view
+    season:
+      - spring
+      - summer
+      - autumn
+      - winter

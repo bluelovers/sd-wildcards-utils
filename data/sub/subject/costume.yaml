@@ -3,6 +3,31 @@ lazy-wildcards:
     costume:
       japanese-clothes:
         prompts:
-          - oiran, hair ornament, japanese clothes, kimono, off shoulder, geta
+          - >-
+            oiran, hair ornament, japanese clothes, kimono, off shoulder, geta
+            {0.2::,__lazy-wildcards/subject/costume/japanese-clothes/style__|}
         style:
           - floral print
+      china-dress:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/china-dress/main__
+            ,{1-$$__lazy-wildcards/subject/costume/china-dress/makeup__}
+            {,{1-$$__lazy-wildcards/subject/costume/china-dress/env__}|}
+            {,__lazy-wildcards/subject/costume/china-dress/action__|}
+        main:
+          - (old-shanghaibeauty, old shanghai beauty, china dress, chinese clothes), 舊上海美人
+        makeup:
+          - mole under eye
+          - red lips
+          - earrings
+          - hair bun
+          - arm tattoo
+          - jewelry
+          - lipstick
+          - makeup
+        action:
+          - chair, sitting
+        env:
+          - instrument
+
