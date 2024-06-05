@@ -1,0 +1,74 @@
+lazy-wildcards:
+  subject:
+    action-nsfw-bdsm:
+      # Sunvibe BDSM
+      # https://civitai.com/models/495326/sunvibe-bdsm?modelVersionId=550669
+      sunvibebdsm:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/shared__,
+            (__lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/main-*__),
+            {1-$$__lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/env__}
+            {, __lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/style-hemp-ropes__|}
+        shared:
+          - nude, nsfw
+        main-chained:
+          - >-
+            ({1-$$__lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/pose-base__|__lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/style-leather-harness__|__lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/style-chained__}:1.3)
+            {, __lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/pose-leg__|}
+            {, __lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/pose-arms__|}
+        style-chained:
+          - shibari, bondage, chained, suspended in air, hanging
+          - shibari, bondage, chained, suspended from the ceiling
+        main-shibari-bondage:
+          - >-
+            (shibari, bondage:1.3)
+            {, __lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/pose-leg__|}
+            {, __lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/pose-arms__|}
+        pose-leg:
+          - (standing on one leg, one leg up)
+          - spread legs
+        main-kinbaku:
+          - >-
+            (kinbaku:1.3),
+            __lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/style-kinbaku__
+        style-kinbaku:
+          - bent over, grabbing knees
+          - spread eagle, bed, tied to headboard
+          - __lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/pose-tied-to__
+          - __lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/pose-tied__
+        pose-tied-to:
+          - tied to headboard
+          - tied to table
+          - tied to interrogation chair
+        pose-tied:
+          - >-
+            ({1-$$tied up legs|tied up hands})
+        pose-arms:
+          - arms stretched out
+          - grabbing her own breasts
+          - arms behind back
+          - arms over head
+        style-hemp-ropes:
+          - (hemp ropes on collar and breasts)
+        main-leather-harness:
+          - >-
+            (__lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/style-leather-harness__:1.3)
+            {, __lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/pose-arms__|}
+            {, {1-$$__lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/pose-lifted-up__}|}
+            {, __lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/pose-leg__|}
+            {, all fours|}
+        style-leather-harness:
+          - (leather harness, straps, body harness, leather arm straps, thigh straps, thigh belts)
+        pose-lifted-up:
+          - being lifted up open spread legs
+          - lifted up crossed arms behind her head
+        pose-base:
+          - standing
+          - sitting
+          - kneeling
+          - squatting
+          - lying
+        env:
+          - (ball gag)
+          - (nipple clamps)
