@@ -1129,14 +1129,14 @@ lazy-wildcards:
           - tied to interrogation chair
         pose-tied:
           - >-
-            ({1-$$tied up legs|tied up hands})
+            ({1-$$tied up legs,legs held up|tied up hands})
         pose-arms:
           - arms stretched out
           - grabbing her own breasts
           - arms behind back
           - arms over head
         style-hemp-ropes:
-          - (hemp ropes on collar and breasts)
+          - (hemp ropes on collar and breasts,Chest Harness Shibari Bondage)
         main-leather-harness:
           - >-
             (__lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/style-leather-harness__:1.3) {,__lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/pose-arms__|} {,{1-$$__lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/pose-lifted-up__}|} {,__lazy-wildcards/subject/action-nsfw-bdsm/sunvibebdsm/pose-leg__|} {,all fours|}
@@ -1154,10 +1154,13 @@ lazy-wildcards:
         env:
           - (ball gag)
           - (nipple clamps)
+          - >-
+            {__mix-lazy-auto/color-anything__ |}rope
+          - head turned
 mix-lazy-auto:
-  # "color-anything" (total: 339 => 136, save 203 ) is merge from
+  # "color-anything" (total: 340 => 137, save 203 ) is merge from
   #  - __lazy-wildcards/utils/color-base__ (11)
-  #  - __mix-lazy-auto/color-anything__ (1)
+  #  - __mix-lazy-auto/color-anything__ (2)
   #  - __cf-sex-positions/color__ (6)
   #  - __cf-astronaut/color__ (10)
   #  - __cf-basketball-player/color__ (10)
@@ -1208,6 +1211,8 @@ mix-lazy-auto:
     - orange
     - purple
     - bright blue-green
+    - |-
+      {light|soft|dark|deep} {beige|__lazy-wildcards/utils/color-base__}
     - rainbow
     - silver
     - gray
