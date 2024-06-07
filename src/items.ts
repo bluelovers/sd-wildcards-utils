@@ -1,13 +1,15 @@
 import { array_unique_overwrite, defaultChecker } from 'array-hyper-unique';
 import { Document, isDocument, isMap, isPair, isScalar, Node, ParsedNode, visit, visitor } from 'yaml';
 import {
+	IOptionsParseDocument,
 	IOptionsVisitor,
 	IResultDeepFindSingleRootAt, IVisitPathsList,
 	IVisitPathsNodeList,
 	IWildcardsYAMLDocument,
 	IWildcardsYAMLMapRoot,
-	IWildcardsYAMLPair,
+	IWildcardsYAMLPair, IWildcardsYAMLScalar,
 } from './types';
+import { formatPrompts, stripZeroStr, trimPrompts } from './format';
 
 export function visitWildcardsYAML(node: Node | Document | null, visitorOptions: IOptionsVisitor)
 {
@@ -156,3 +158,41 @@ export function findWildcardsYAMLPathsAll(node: Node | Document)
 	return ls;
 }
 
+const RE_UNSAFE_QUOTE = /['"]/;
+const RE_UNSAFE_VALUE = /^\s*-|[{$~!@}\n|:?#'"]/;
+
+export function _visitNormalizeScalar(key: number | 'key' | 'value', node: IWildcardsYAMLScalar, runtime: {
+	checkUnsafeQuote: boolean,
+	options: IOptionsParseDocument,
+})
+{
+	let value = node.value as string;
+
+	if (typeof value === 'string')
+	{
+		if (runtime.checkUnsafeQuote && RE_UNSAFE_QUOTE.test(value))
+		{
+			throw new SyntaxError(`Invalid SYNTAX [UNSAFE_QUOTE]. key: ${key}, node: ${node}`)
+		}
+		else if (node.type === 'QUOTE_DOUBLE' || node.type === 'QUOTE_SINGLE' && !value.includes('\\'))
+		{
+			node.type = 'PLAIN';
+		}
+
+		value = trimPrompts(stripZeroStr(formatPrompts(value, runtime.options)));
+
+		if (RE_UNSAFE_VALUE.test(value))
+		{
+			if (node.type === 'PLAIN')
+			{
+				node.type = 'BLOCK_LITERAL'
+			}
+			else if (node.type === 'BLOCK_FOLDED' && /#/.test(value))
+			{
+				node.type = 'BLOCK_LITERAL'
+			}
+		}
+
+		node.value = value;
+	}
+}

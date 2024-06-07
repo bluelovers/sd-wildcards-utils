@@ -8,9 +8,8 @@ import {
 	getOptionsFromDocument,
 
 } from './options';
-import { uniqueSeqItems, visitWildcardsYAML } from './items';
+import { _visitNormalizeScalar, visitWildcardsYAML } from './items';
 import { createDefaultVisitWildcardsYAMLOptions, validWildcardsYamlData } from './valid';
-import { formatPrompts, stripZeroStr, trimPrompts } from './format';
 import {
 	IOptionsParseDocument, IOptionsStringify,
 	IOptionsVisitor,
@@ -29,9 +28,6 @@ export * from './find';
 export * from './format';
 export type * from './types';
 
-const RE_UNSAFE_QUOTE = /['"]/;
-const RE_UNSAFE_VALUE = /^\s*-|[{$~!@}\n|:?#]/;
-
 /**
  * Normalizes a YAML document by applying specific rules to its nodes.
  **/
@@ -39,7 +35,7 @@ export function normalizeDocument<T extends Document>(doc: T, opts?: IOptionsPar
 {
 	let options = getOptionsFromDocument(doc, opts);
 
-	const defaults = createDefaultVisitWildcardsYAMLOptions();
+	const defaults = createDefaultVisitWildcardsYAMLOptions(options);
 
 	let checkUnsafeQuote = !options.disableUnsafeQuote;
 
@@ -48,50 +44,12 @@ export function normalizeDocument<T extends Document>(doc: T, opts?: IOptionsPar
 
 		Scalar(key, node)
 		{
-			let value = node.value as string;
-
-			if (typeof value === 'string')
-			{
-				if (checkUnsafeQuote && RE_UNSAFE_QUOTE.test(value))
-				{
-					throw new SyntaxError(`Invalid SYNTAX [UNSAFE_QUOTE]. key: ${key}, node: ${node}`)
-				}
-				else if (node.type === 'QUOTE_DOUBLE' || node.type === 'QUOTE_SINGLE' && !value.includes('\\'))
-				{
-					node.type = 'PLAIN';
-				}
-
-				value = trimPrompts(stripZeroStr(formatPrompts(value, options)))
-				;
-
-				if (RE_UNSAFE_VALUE.test(value))
-				{
-					if (node.type === 'PLAIN')
-					{
-						node.type = 'BLOCK_LITERAL'
-					}
-					else if (node.type === 'BLOCK_FOLDED' && /#/.test(value))
-					{
-						node.type = 'BLOCK_LITERAL'
-					}
-				}
-
-				node.value = value;
-			}
+			return _visitNormalizeScalar(key, node, {
+				checkUnsafeQuote,
+				options,
+			})
 		},
 	};
-
-	if (!options.disableUniqueItemValues)
-	{
-		// @ts-ignore
-		const fn = defaults.Seq;
-		// @ts-ignore
-		visitorOptions.Seq = (key, node, ...args) =>
-		{
-			fn(key, node, ...args);
-			uniqueSeqItems(node.items);
-		}
-	}
 
 	visitWildcardsYAML(doc, visitorOptions)
 }
