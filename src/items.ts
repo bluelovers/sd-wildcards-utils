@@ -3,7 +3,7 @@ import { Document, isDocument, isMap, isPair, isScalar, Node, ParsedNode, visit,
 import {
 	IOptionsParseDocument,
 	IOptionsVisitor,
-	IResultDeepFindSingleRootAt, IVisitPathsList,
+	IResultDeepFindSingleRootAt, IVisitorFnKey, IVisitPathsList,
 	IVisitPathsNodeList,
 	IWildcardsYAMLDocument,
 	IWildcardsYAMLMapRoot,
@@ -121,7 +121,7 @@ export function handleVisitPaths(nodePaths: IVisitPathsNodeList)
  *
  * [ 'root', 'root2', 'sub2', 'sub2-2', 1 ]
  */
-export function handleVisitPathsFull<T>(key: number | 'key' | 'value' | null,
+export function handleVisitPathsFull<T>(key: IVisitorFnKey | null,
 	_node: T,
 	nodePaths: IVisitPathsNodeList,
 )
@@ -161,7 +161,7 @@ export function findWildcardsYAMLPathsAll(node: Node | Document)
 const RE_UNSAFE_QUOTE = /['"]/;
 const RE_UNSAFE_VALUE = /^\s*-|[{$~!@}\n|:?#'"]/;
 
-export function _visitNormalizeScalar(key: number | 'key' | 'value', node: IWildcardsYAMLScalar, runtime: {
+export function _visitNormalizeScalar(key: IVisitorFnKey, node: IWildcardsYAMLScalar, runtime: {
 	checkUnsafeQuote: boolean,
 	options: IOptionsParseDocument,
 })

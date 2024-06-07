@@ -8,7 +8,12 @@ import { basename, dirname, extname, join } from 'path';
 // @ts-ignore
 import { globSync, readFileSync } from 'fs';
 import { __ROOT, __ROOT_DATA } from './__root';
-import { parseWildcardsYaml, matchDynamicPromptsWildcardsAll, findWildcardsYAMLPathsAll } from '../src/index';
+import {
+	parseWildcardsYaml,
+	matchDynamicPromptsWildcardsAll,
+	findWildcardsYAMLPathsAll,
+	pathsToWildcardsPath,
+} from '../src/index';
 import { toMatchFile } from 'jest-file-snapshot2';
 import { ensureDir, ensureDirSync, ensureFile, ensureFileSync } from 'fs-extra';
 
@@ -39,6 +44,7 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 
 		let obj = parseWildcardsYaml(buf, {
 			allowMultiRoot: true,
+			allowUnsafeKey: true,
 		});
 
 		let actual = matchDynamicPromptsWildcardsAll(obj.toString(), true);
@@ -68,7 +74,7 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 
 		ensureDirSync(outPath);
 
-		expect(findWildcardsYAMLPathsAll(obj).join('\n')).toMatchFile(join(
+		expect(findWildcardsYAMLPathsAll(obj).map(s => pathsToWildcardsPath(s, true)).join('\n')).toMatchFile(join(
 			outPath,
 			file + '.txt'
 		))
