@@ -39,6 +39,7 @@ export interface IOptionsSharedWildcardsYaml
 	disableUnsafeQuote?: boolean,
 	minifyPrompts?: boolean,
 	allowEmptyDocument?: boolean,
+	allowUnsafeKey?: boolean,
 }
 
 export type IOptionsStringify =
@@ -68,16 +69,22 @@ IVisitPathsNode[];
 export type IWildcardsYAMLDocumentParsed<Contents extends YAMLMap = IWildcardsYAMLMapRoot, Strict extends boolean = true> =
 	IWildcardsYAMLDocument<Contents, Strict>
 	& Pick<Document.Parsed, 'directives' | 'range'>;
-export type IOptionsVisitor = visitorFn<unknown> | {
+
+export type IVisitorFnKey = number | 'key' | 'value';
+
+export interface IOptionsVisitorMap
+{
 	Alias?: visitorFn<Alias>;
 	Collection?: visitorFn<YAMLMap | IWildcardsYAMLSeq>;
 	Map?: visitorFn<YAMLMap>;
 	Node?: visitorFn<Alias | IWildcardsYAMLScalar | YAMLMap | IWildcardsYAMLSeq>;
-	Pair?: visitorFn<Pair>;
+	Pair?: visitorFn<Pair | IWildcardsYAMLPair>;
 	Scalar?: visitorFn<IWildcardsYAMLScalar>;
 	Seq?: visitorFn<IWildcardsYAMLSeq>;
 	Value?: visitorFn<IWildcardsYAMLScalar | YAMLMap | IWildcardsYAMLSeq>;
 }
+
+export type IOptionsVisitor = visitorFn<unknown> | IOptionsVisitorMap
 
 /**
  * Represents an entry in the result of the `findPath` function.

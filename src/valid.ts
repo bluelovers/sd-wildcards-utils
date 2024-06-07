@@ -1,16 +1,16 @@
-import { Document, isDocument, isMap, isNode, isScalar, YAMLMap, YAMLSeq, Scalar, isPair } from 'yaml';
+import { Document, isDocument, isMap, isNode, isScalar, YAMLMap, YAMLSeq, Scalar, isPair, Pair } from 'yaml';
 import { handleVisitPathsFull, uniqueSeqItems, visitWildcardsYAML } from './items';
 import {
 	IOptionsParseDocument,
 	IOptionsSharedWildcardsYaml,
-	IOptionsVisitor,
-	IRecordWildcards,
+	IOptionsVisitorMap,
+	IRecordWildcards, IVisitorFnKey,
 	IWildcardsYAMLDocument, IWildcardsYAMLPair,
 	IWildcardsYAMLScalar,
 } from './types';
 
 // @ts-ignore
-export function _validMap(key: number | 'key' | 'value' | null, node: YAMLMap, ...args: any[])
+export function _validMap(key: IVisitorFnKey | null, node: YAMLMap, ...args: any[])
 {
 	const idx = node.items.findIndex(pair => (!isPair(pair) || pair?.value == null));
 	if (idx !== -1)
@@ -24,36 +24,50 @@ export function _validMap(key: number | 'key' | 'value' | null, node: YAMLMap, .
 }
 
 // @ts-ignore
-export function _validSeq(key: number | 'key' | 'value' | null, node: YAMLSeq, ...args: any[]): asserts node is YAMLSeq<Scalar | IWildcardsYAMLScalar>
+export function _validSeq(key: IVisitorFnKey | null, node: YAMLSeq, ...args: any[]): asserts node is YAMLSeq<Scalar | IWildcardsYAMLScalar>
 {
 	const index = node.items.findIndex(node => !isScalar(node));
 	if (index !== -1)
 	{
-		throw new SyntaxError(`Invalid SYNTAX. key: ${key}, node: ${node}, index: ${index}, node: ${node.items[index]}`)
+		// @ts-ignore
+		const paths = handleVisitPathsFull(key, node, ...args);
+
+		throw new SyntaxError(`Invalid SYNTAX. paths: [${paths}], indexKey: ${key} key: ${key}, node: ${node}, index: ${index}, node: ${node.items[index]}`)
 	}
 }
 
-export function _validPair(pair: IWildcardsYAMLPair)
+export function _validPair(key: IVisitorFnKey, pair: IWildcardsYAMLPair | Pair, ...args: any[])
 {
-	if (!isSafeKey(pair.key.value))
+	const keyNode = (pair as IWildcardsYAMLPair).key as IWildcardsYAMLScalar | string;
+
+	const notOk = !isSafeKey(typeof keyNode === 'string' ? keyNode : keyNode.value)
+
+	if (notOk)
 	{
-		throw new SyntaxError(`Invalid Key. key: ${pair.key.value}, pair: ${pair}, node: ${pair.key}`)
+		// @ts-ignore
+		const paths = handleVisitPathsFull(key, pair, ...args);
+
+		throw new SyntaxError(`Invalid Key. paths: [${paths}], key: ${key}, keyNodeValue: "${(keyNode as any)?.value}", keyNode: ${keyNode}`)
 	}
 }
 
-export function createDefaultVisitWildcardsYAMLOptions(opts?: IOptionsParseDocument): Exclude<IOptionsVisitor, Function>
+export function createDefaultVisitWildcardsYAMLOptions(opts?: IOptionsParseDocument): IOptionsVisitorMap
 {
 	let defaults = {
 		Map: _validMap,
 		Seq: _validSeq,
-		// @ts-ignore
-		Pair: _validPair,
-	} satisfies Exclude<IOptionsVisitor, Function>
+	} as IOptionsVisitorMap
 
-	if (!opts?.disableUniqueItemValues)
+	opts ??= {};
+
+	if (!opts.allowUnsafeKey)
+	{
+		defaults.Pair = _validPair
+	}
+
+	if (!opts.disableUniqueItemValues)
 	{
 		const fn = defaults.Seq;
-		// @ts-ignore
 		defaults.Seq = (key, node, ...args) =>
 		{
 			// @ts-ignore
@@ -62,7 +76,7 @@ export function createDefaultVisitWildcardsYAMLOptions(opts?: IOptionsParseDocum
 		}
 	}
 
-	return defaults as any;
+	return defaults;
 }
 
 export function validWildcardsYamlData<T extends IRecordWildcards | IWildcardsYAMLDocument | Document>(data: T | unknown,
@@ -76,7 +90,7 @@ export function validWildcardsYamlData<T extends IRecordWildcards | IWildcardsYA
 			throw TypeError(`The 'contents' property of the provided YAML document must be a YAMLMap. Received: ${data.contents}`)
 		}
 
-		visitWildcardsYAML(data, createDefaultVisitWildcardsYAMLOptions());
+		visitWildcardsYAML(data, createDefaultVisitWildcardsYAMLOptions(opts));
 
 		data = data.toJSON()
 	}
@@ -106,7 +120,7 @@ export function validWildcardsYamlData<T extends IRecordWildcards | IWildcardsYA
 
 export function isSafeKey<T extends string>(key: T | unknown): key is T
 {
-	return typeof key === 'string' && /^[.-_\w]+$/.test(key) && !/^[\._-]|[\._-]$/.test(key)
+	return typeof key === 'string' && /^[._\w-]+$/.test(key) && !/^[\._-]|[\._-]$/.test(key)
 }
 
 export function _validKey<T extends string>(key: T | unknown): asserts key is T

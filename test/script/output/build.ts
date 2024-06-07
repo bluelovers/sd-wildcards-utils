@@ -20,7 +20,9 @@ export default Bluebird.map([
 	join(__ROOT_OUTPUT_WILDCARDS, 'mix-lazy-auto.yaml'),
 ], (file: any) => {
 	return readFile(file)
-		.then(parseWildcardsYaml) as any as IWildcardsYAMLDocument[]
+		.then(data => parseWildcardsYaml(data, {
+			disableUnsafeQuote: true,
+		})) as any as IWildcardsYAMLDocument[]
 })
 	.then((ls: any) => {
 		return mergeWildcardsYAMLDocumentRoots(ls)
@@ -34,7 +36,9 @@ export default Bluebird.map([
 			cwd: __ROOT_DATA
 		}), (file: string) => {
 			return readFile(join(__ROOT_DATA, file))
-				.then(parseWildcardsYaml)
+				.then(data => parseWildcardsYaml(data, {
+					disableUnsafeQuote: true,
+				}))
 		})
 
 		return mergeFindSingleRoots(doc, ls)
