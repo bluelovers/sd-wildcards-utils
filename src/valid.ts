@@ -1,10 +1,11 @@
 import { Document, isDocument, isMap, isNode, isScalar, YAMLMap, YAMLSeq, Scalar, isPair } from 'yaml';
-import { handleVisitPathsFull, visitWildcardsYAML } from './items';
+import { handleVisitPathsFull, uniqueSeqItems, visitWildcardsYAML } from './items';
 import {
+	IOptionsParseDocument,
 	IOptionsSharedWildcardsYaml,
 	IOptionsVisitor,
 	IRecordWildcards,
-	IWildcardsYAMLDocument,
+	IWildcardsYAMLDocument, IWildcardsYAMLPair,
 	IWildcardsYAMLScalar,
 } from './types';
 
@@ -32,12 +33,36 @@ export function _validSeq(key: number | 'key' | 'value' | null, node: YAMLSeq, .
 	}
 }
 
-export function createDefaultVisitWildcardsYAMLOptions(): Exclude<IOptionsVisitor, Function>
+export function _validPair(pair: IWildcardsYAMLPair)
 {
-	return {
+	if (!isSafeKey(pair.key.value))
+	{
+		throw new SyntaxError(`Invalid Key. key: ${pair.key.value}, pair: ${pair}, node: ${pair.key}`)
+	}
+}
+
+export function createDefaultVisitWildcardsYAMLOptions(opts?: IOptionsParseDocument): Exclude<IOptionsVisitor, Function>
+{
+	let defaults = {
 		Map: _validMap,
 		Seq: _validSeq,
+		// @ts-ignore
+		Pair: _validPair,
+	} satisfies Exclude<IOptionsVisitor, Function>
+
+	if (!opts?.disableUniqueItemValues)
+	{
+		const fn = defaults.Seq;
+		// @ts-ignore
+		defaults.Seq = (key, node, ...args) =>
+		{
+			// @ts-ignore
+			fn(key, node, ...args);
+			uniqueSeqItems(node.items);
+		}
 	}
+
+	return defaults as any;
 }
 
 export function validWildcardsYamlData<T extends IRecordWildcards | IWildcardsYAMLDocument | Document>(data: T | unknown,
@@ -76,5 +101,18 @@ export function validWildcardsYamlData<T extends IRecordWildcards | IWildcardsYA
 	else if (rootKeys.length !== 1 && !opts.allowMultiRoot)
 	{
 		throw TypeError(`The provided JSON object cannot have more than one root key. Only one root key is allowed unless explicitly allowed by the 'allowMultiRoot' option.`)
+	}
+}
+
+export function isSafeKey<T extends string>(key: T | unknown): key is T
+{
+	return typeof key === 'string' && /^[.-_\w]+$/.test(key) && !/^[\._-]|[\._-]$/.test(key)
+}
+
+export function _validKey<T extends string>(key: T | unknown): asserts key is T
+{
+	if (!isSafeKey(key))
+	{
+		throw new SyntaxError(`Invalid Key. key: ${key}`)
 	}
 }
