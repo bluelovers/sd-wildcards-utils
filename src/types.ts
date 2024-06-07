@@ -117,3 +117,4 @@ export type IResultDeepFindSingleRootAt = {
 }
 
 export type IVisitPathsList = (string|number)[]
+export type IVisitPathsListReadonly = readonly (string | number)[]
