@@ -2,9 +2,14 @@
 import { isMatch } from 'picomatch';
 import { IFindPathEntry, IRecordWildcards, IVisitPathsListReadonly } from './types';
 
-export function pathsToWildcardsPath(paths: IVisitPathsListReadonly)
+export function pathsToWildcardsPath(paths: IVisitPathsListReadonly, full?: boolean)
 {
-	return paths.join('/');
+	let s = paths.join('/');
+	if (full)
+	{
+		s = `__${s}__`
+	}
+	return s
 }
 
 export function wildcardsPathToPaths(path: string)
