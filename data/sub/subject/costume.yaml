@@ -12,9 +12,16 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/subject/costume/china-dress/main__
-            ,{1-$$__lazy-wildcards/subject/costume/china-dress/makeup__}
+            {,{1-$$__lazy-wildcards/subject/costume/china-dress/style__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/china-dress/makeup__}|}
             {,{1-$$__lazy-wildcards/subject/costume/china-dress/env__}|}
+        prompts-extra:
+          - >-
+            __lazy-wildcards/subject/costume/china-dress/prompts__
             {,__lazy-wildcards/subject/costume/china-dress/action__|}
+        style:
+          - pelvic curtain, pelvic curtain dress
+          - multiple straps around the waist
         main:
           - (old-shanghaibeauty, old shanghai beauty, china dress, chinese clothes), 舊上海美人
         makeup:

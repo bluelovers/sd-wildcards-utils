@@ -70,6 +70,7 @@ export type IResultDeepFindSingleRootAt = {
 	parent: IWildcardsYAMLDocument;
 };
 export type IVisitPathsList = (string | number)[];
+export type IVisitPathsListReadonly = readonly (string | number)[];
 export declare const RE_DYNAMIC_PROMPTS_WILDCARDS: RegExp;
 /**
  * for `matchAll`
@@ -290,9 +291,9 @@ export declare function _toJSON<T extends Document$1 | unknown, R = IRecordWildc
  * @throws {TypeError} - If the current node does not support deep merge.
  */
 export declare function mergeFindSingleRoots<T extends IWildcardsYAMLMapRoot | IWildcardsYAMLDocument>(doc: T, list: NoInfer<T>[] | NoInfer<T>): T;
-export declare function pathsToWildcardsPath(paths: readonly string[]): string;
+export declare function pathsToWildcardsPath(paths: IVisitPathsListReadonly): string;
 export declare function wildcardsPathToPaths(path: string): string[];
-export declare function pathsToDotPath(paths: readonly string[]): string;
+export declare function pathsToDotPath(paths: IVisitPathsListReadonly): string;
 /**
  * Recursively searches for a path in a nested object or array structure.
  *
