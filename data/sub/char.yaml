@@ -183,7 +183,7 @@ lazy-wildcards:
       - double bun
     haircut-multi:
       - >-
-        {1-4$$ hair, $$__person/regular/haircuts-female__} hair
+        {1-4$$ hair, $$__person/regular/haircuts-*__} hair
       - >-
         {1-4$$__lazy-wildcards/char/haircuts__}
     haircut:
@@ -205,6 +205,9 @@ lazy-wildcards:
       - box braids
       - __cf-*/hairstyle__ hair
       - folded ponytail
+      - swept bangs
+      - >-
+        {Messy |}Side Swept Hair
     hair-bald:
       - >-
         (Completely bald, bald, bald girl:1.3)

@@ -27,6 +27,7 @@ lazy-wildcards:
       - __lazy-wildcards/subject/interior/*/prompts__
       - __lazy-wildcards/subject/theme/*/prompts-bg__
       - __lazy-wildcards/subject/architectural/*/prompts__
+      - __lazy-wildcards/subject/env-bg/*/prompts__
       - japanese onsen, onsen
       - dirty alley
       - Study, Quiet room with low seating cushions, scroll-filled shelves lining the walls, a small writing desk with ink pots and papyrus scrolls, intricate woven rugs, and decorative hieroglyphic carvings
@@ -233,9 +234,8 @@ lazy-wildcards:
             {1-$$__lazy-wildcards/background/location/city-traffic/style__},
             __lazy-wildcards/background/location/city-traffic/func/road-in__,
             __lazy-wildcards/background/location/city-traffic/main__,
-            {5-$$__lazy-wildcards/background/location/city-traffic/env__},
-            {{1-$$__lazy-wildcards/background/location/city-traffic/moment-weather__},|}
-            __lazy-wildcards/background/location/city-traffic/moment__
+            {5-$$__lazy-wildcards/background/location/city-traffic/env__}
+            {, __lazy-wildcards/subject/moment/random/prompts__|}
         main:
           - cityscape, building
         style:
@@ -264,20 +264,6 @@ lazy-wildcards:
             {1-$$scooter|motorcycle}
           - >-
             {1-$$shopping|storefront|signboard}
-        moment-weather:
-          - >-
-            ((raining)), rain, reflection,
-            wet street
-            {, wet clothes|}
-          - >-
-            ({1-$$winter|snow|very cold|snow fall|city snowy street view}:1.2)
-        moment:
-          - >-
-            {1-$$sunlight|sunset}
-          - dawn
-          - twilight
-          - >-
-            night{, neon lights|}
         func:
           road-in:
             - >-

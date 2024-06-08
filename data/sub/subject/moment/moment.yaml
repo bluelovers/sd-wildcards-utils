@@ -1,0 +1,34 @@
+lazy-wildcards:
+  subject:
+    moment:
+      random:
+        prompts:
+          - >-
+            {{1-$$__lazy-wildcards/subject/moment/weather/prompts__},|}
+            {__lazy-wildcards/subject/moment/time/prompts__|}
+      weather:
+        prompts:
+          - >-
+            ((raining)), rain, reflection,
+            wet street
+            {, wet clothes|}
+          - >-
+            ({1-$$winter|snow|very cold|snow fall|city snowy street view}:1.2)
+          - >-
+            {1-$$foggy|fog|mist|steam|smoke}
+          - >-
+            {1-$$floating cloud|cloudy|Sea of clouds}
+      time:
+        prompts:
+          - >-
+            {1-$$sunlight|sunset|cool sun}
+          - dawn
+          - twilight
+          - >-
+            night{, neon lights|}
+            {, __lazy-wildcards/subject/moment/moon/prompts__|}
+      moon:
+        prompts:
+          - >-
+            {cold |}full moon
+          - moonlight
