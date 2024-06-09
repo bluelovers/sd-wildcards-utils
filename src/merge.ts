@@ -1,10 +1,10 @@
-import { Document, isDocument, isMap, isSeq, YAMLMap } from 'yaml';
+import { Document, isDocument, isMap, isSeq, YAMLMap, YAMLSeq } from 'yaml';
 
 import {
 	IOptionsMergeWilcardsYAMLDocumentJsonBy,
 	IRecordWildcards,
 	IWildcardsYAMLDocument,
-	IWildcardsYAMLMapRoot, IWildcardsYAMLPair,
+	IWildcardsYAMLMapRoot, IWildcardsYAMLPair, IWildcardsYAMLSeq,
 } from './types';
 import { deepFindSingleRootAt } from './items';
 import { AggregateErrorExtra } from 'lazy-aggregate-error';
@@ -38,6 +38,22 @@ export function mergeWildcardsYAMLDocumentJsonBy<T extends Document | unknown, R
 export function _toJSON<T extends Document | unknown, R = IRecordWildcards>(v: T): R
 {
 	return isDocument(v) ? v.toJSON() : v
+}
+
+export function _mergeSeqCore<T extends YAMLSeq | IWildcardsYAMLSeq>(a: T, b: NoInfer<T>)
+{
+	a.items.push(...(b as IWildcardsYAMLSeq).items);
+	return a
+}
+
+export function mergeSeq<T extends YAMLSeq | IWildcardsYAMLSeq>(a: T, b: NoInfer<T>)
+{
+	if (isSeq(a) && isSeq(b))
+	{
+		return _mergeSeqCore(a, b)
+	}
+
+	throw new TypeError(`Only allow merge YAMLSeq`)
 }
 
 /**
@@ -82,7 +98,7 @@ export function mergeFindSingleRoots<T extends IWildcardsYAMLMapRoot | IWildcard
 						{
 							if (isSeq(sub) && isSeq(p.value))
 							{
-								sub.items.push(...p.value.items);
+								_mergeSeqCore(sub, p.value)
 							}
 							else if (isMap(sub) && isMap(p.value))
 							{
