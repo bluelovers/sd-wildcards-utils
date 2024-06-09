@@ -83,8 +83,25 @@ export function mergeFindSingleRoots<T extends IWildcardsYAMLMapRoot | IWildcard
 							{
 								sub.items.push(...p.value.items);
 							}
+							else if (isMap(sub) && isMap(p.value))
+							{
+								p.value.items.forEach(pair =>
+								{
+									sub.add(pair, false);
+								})
+							}
 							else
 							{
+								delete sub.srcToken
+								delete p.value.srcToken
+								console.dir(result.paths.concat(key))
+								console.dir(sub, {
+									depth: 5,
+								})
+								console.dir(p.value, {
+									depth: 5,
+								})
+
 								throw TypeError(`Current does not support deep merge. paths: [${result.paths.concat(key)}], a: ${sub}, b: ${p.value}`)
 							}
 						}
