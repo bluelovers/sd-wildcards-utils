@@ -41,7 +41,8 @@ export function defaultOptionsParseDocument(opts?: IOptionsParseDocument): IOpti
 	opts ??= {};
 
 	opts = {
-		keepSourceTokens: true,
+		//keepSourceTokens: true,
+		prettyErrors: true,
 		...opts,
 		toStringDefaults: defaultOptionsStringify({
 			...getOptionsShared(opts),
