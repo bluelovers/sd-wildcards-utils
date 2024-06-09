@@ -1,30 +1,43 @@
 mix-lazy-auto:
-  # "color-anything" (total: 340 => 137, save 203 ) is merge from
+  # "color-anything" (total: 462 => 148, save 314 ) is merge from
   #  - __lazy-wildcards/utils/color-base__ (11)
   #  - __mix-lazy-auto/color-anything__ (2)
   #  - __cf-sex-positions/color__ (6)
   #  - __cf-astronaut/color__ (10)
+  #  - __cf-baker/color__ (10)
   #  - __cf-basketball-player/color__ (10)
   #  - __cf-belly-dancer/color__ (10)
+  #  - __cf-boxer/color__ (10)
+  #  - __cf-chef/color__ (9)
   #  - __cf-clown/color__ (12)
   #  - __cf-disco-dancer/color__ (13)
   #  - __cf-doctor/color__ (10)
   #  - __cf-elf/color__ (10)
+  #  - __cf-farmer/color__ (10)
   #  - __cf-fitness/color__ (10)
+  #  - __cf-football-player/color__ (10)
   #  - __cf-gangster-1920s/color__ (8)
   #  - __cf-hockey-player/color__ (10)
   #  - __cf-jester/color__ (10)
+  #  - __cf-lifeguard/color__ (3)
   #  - __cf-lingerie/color__ (10)
   #  - __cf-luchador/color__ (10)
+  #  - __cf-mad-scientist/color__ (10)
   #  - __cf-maid/color__ (4)
   #  - __cf-mechanic/color__ (9)
+  #  - __cf-painter/color__ (10)
   #  - __cf-punk/color__ (17)
+  #  - __cf-sailor/color__ (10)
   #  - __cf-school-student/color__ (11)
+  #  - __cf-scout/color__ (10)
   #  - __cf-secretary/color__ (8)
+  #  - __cf-swimmer/color__ (10)
   #  - __cf-school-teacher/color__ (11)
   #  - __cf-tennis-player/color__ (7)
+  #  - __cf-top-model/color__ (11)
   #  - __cf-volleyball-player/color__ (10)
   #  - __cf-witch/color__ (8)
+  #  - __cf-wrestler/color__ (9)
   #  - __cf-yakuza/color__ (7)
   #  - __Bo/chars/haircolor__ (1)
   #  - __person/regular/haircolor__ (30)
@@ -58,9 +71,20 @@ mix-lazy-auto:
     - gray
     - navy
     - gold
+    - light blue
+    - beige
+    - brown
     - grey
+    - navy blue
+    - dark brown
+    - cream
+    - tan
     - maroon
     - turquoise
+    - dark grey
+    - light grey
+    - burgundy
+    - dark green
     - rainbow-colored
     - polka-dotted
     - striped
@@ -76,11 +100,7 @@ mix-lazy-auto:
     - "{pastel|neon} yellow"
     - pure white
     - deep magenta
-    - navy blue
-    - light blue
-    - dark green
     - teal
-    - burgundy
     - sage
     - soft lavender
     - midnight blue
@@ -88,10 +108,14 @@ mix-lazy-auto:
     - pearl white
     - pastel pink
     - soft purple
+    - denim blue
+    - plaid
+    - olive
     - pinstripe
     - deep burgundy
-    - dark brown
     - multicolored
+    - white and red
+    - yellow and red
     - classic black
     - fiery red
     - soft pink
@@ -99,10 +123,8 @@ mix-lazy-auto:
     - deep purple
     - champagne
     - pastel lavender
-    - dark grey
-    - brown
-    - olive
-    - beige
+    - dark blue
+    - olive green
     - metallic silver
     - red brown
     - ginger
@@ -117,7 +139,10 @@ mix-lazy-auto:
     - "{electric|deep indigo|smoky lilac|vibrant turquoise} blue"
     - deep shade of indigo
     - fiery
+    - khaki
     - sky blue
+    - forest green
+    - camo
     - soft grey
     - rich plum
     - pale pink
@@ -129,6 +154,8 @@ mix-lazy-auto:
     - "{deep|bright} blue"
     - "{pearl|off-white} white"
     - "{mustard|golden} yellow"
+    - crimson red
+    - classic beige
     - black and orange
     - deep red
     - "{0.7::__person/regular/haircolor__|0.3::__person/regular/haircolor-unconv__}"
@@ -162,15 +189,12 @@ mix-lazy-auto:
     - lilac
     - coral
     - silver blonde
-    - denim blue
     - violet
     - tangerine
     - indigo
     - orchid
     - aqua
-    - dark Blue
     - light green
-    - olive green
     - jade green
     - hazel
     - amber
