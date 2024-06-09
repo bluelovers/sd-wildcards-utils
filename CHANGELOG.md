@@ -3,6 +3,46 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.28](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.0.27...sd-wildcards-utils@1.0.28) (2024-06-09)
+
+
+
+### 🐛　Bug Fixes
+
+* _validPair ([f56e5ee](https://github.com/bluelovers/sd-wildcards-utils/commit/f56e5ee5affe0333f271d7d399c9330d2716a763))
+
+
+### ✨　Features
+
+* enable `prettyErrors`, disable `keepSourceTokens` ([c4af7fa](https://github.com/bluelovers/sd-wildcards-utils/commit/c4af7fac400cc71eee9b26df3bb4c6b256d9355d))
+* support merge map ([244e277](https://github.com/bluelovers/sd-wildcards-utils/commit/244e27793bccd64044f12f3a435c6c7f61a8a41b))
+* update pathsToWildcardsPath ([b86f35a](https://github.com/bluelovers/sd-wildcards-utils/commit/b86f35a7b980c48976671094d89bef622b48b658))
+* add _validPair, _validKey ([6b2507b](https://github.com/bluelovers/sd-wildcards-utils/commit/6b2507b74f82be616ebb732ca563f578175b43d1))
+
+
+### 📦　Code Refactoring
+
+* better error message ([c73cc2f](https://github.com/bluelovers/sd-wildcards-utils/commit/c73cc2ffa0ad451d33229f0aa3bfa2d8d2ea234c))
+* _visitNormalizeScalar ([f1ba91b](https://github.com/bluelovers/sd-wildcards-utils/commit/f1ba91b94cebbf968e01d79e7fe4b0d00d6efe2e))
+
+
+### 🛠　Build System
+
+* update build ([92e407e](https://github.com/bluelovers/sd-wildcards-utils/commit/92e407e978805925c900c4dfb9a53d812f1a6e48))
+
+
+### 📌　Dependencies
+
+* update deps ([de9dd57](https://github.com/bluelovers/sd-wildcards-utils/commit/de9dd573eb7279b13e3201647242a82c424f9693))
+
+
+### 🔖　Miscellaneous
+
+* . ([106187c](https://github.com/bluelovers/sd-wildcards-utils/commit/106187cd560d5fe6013770d28c5a8cb4ceb84ce7))
+* **wildcards:** lazy-wildcards@v1.0.3 ([ab1298b](https://github.com/bluelovers/sd-wildcards-utils/commit/ab1298bd0181203f296ef536c2d8aeb8dbefa092))
+
+
+
 ## [1.0.27](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.0.26...sd-wildcards-utils@1.0.27) (2024-06-07)
 
 

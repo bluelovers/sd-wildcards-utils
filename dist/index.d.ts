@@ -15,6 +15,7 @@ export interface IOptionsSharedWildcardsYaml {
 	disableUnsafeQuote?: boolean;
 	minifyPrompts?: boolean;
 	allowEmptyDocument?: boolean;
+	allowUnsafeKey?: boolean;
 }
 export type IOptionsStringify = DocumentOptions & SchemaOptions & ParseOptions & CreateNodeOptions & ToStringOptions & IOptionsSharedWildcardsYaml;
 export type IOptionsParseDocument = ParseOptions & DocumentOptions & SchemaOptions & IOptionsSharedWildcardsYaml & {
@@ -28,16 +29,18 @@ export interface IWildcardsYAMLDocument<Contents extends YAMLMap = IWildcardsYAM
 export type IVisitPathsNode = Document$1 | Node$1 | Pair | IWildcardsYAMLPair;
 export type IVisitPathsNodeList = readonly IVisitPathsNode[];
 export type IWildcardsYAMLDocumentParsed<Contents extends YAMLMap = IWildcardsYAMLMapRoot, Strict extends boolean = true> = IWildcardsYAMLDocument<Contents, Strict> & Pick<Document$1.Parsed, "directives" | "range">;
-export type IOptionsVisitor = visitorFn<unknown> | {
+export type IVisitorFnKey = number | "key" | "value";
+export interface IOptionsVisitorMap {
 	Alias?: visitorFn<Alias>;
 	Collection?: visitorFn<YAMLMap | IWildcardsYAMLSeq>;
 	Map?: visitorFn<YAMLMap>;
 	Node?: visitorFn<Alias | IWildcardsYAMLScalar | YAMLMap | IWildcardsYAMLSeq>;
-	Pair?: visitorFn<Pair>;
+	Pair?: visitorFn<Pair | IWildcardsYAMLPair>;
 	Scalar?: visitorFn<IWildcardsYAMLScalar>;
 	Seq?: visitorFn<IWildcardsYAMLSeq>;
 	Value?: visitorFn<IWildcardsYAMLScalar | YAMLMap | IWildcardsYAMLSeq>;
-};
+}
+export type IOptionsVisitor = visitorFn<unknown> | IOptionsVisitorMap;
 /**
  * Represents an entry in the result of the `findPath` function.
  * It contains a list of keys and a list of values found in the data structure.
@@ -253,7 +256,7 @@ export declare function handleVisitPaths(nodePaths: IVisitPathsNodeList): IVisit
  *
  * [ 'root', 'root2', 'sub2', 'sub2-2', 1 ]
  */
-export declare function handleVisitPathsFull<T>(key: number | "key" | "value" | null, _node: T, nodePaths: IVisitPathsNodeList): IVisitPathsList;
+export declare function handleVisitPathsFull<T>(key: IVisitorFnKey | null, _node: T, nodePaths: IVisitPathsNodeList): IVisitPathsList;
 /**
  * This function is used to find all paths of sequences in a given YAML structure.
  * It traverses the YAML structure and collects the paths of all sequences (Seq nodes).
@@ -263,10 +266,17 @@ export declare function handleVisitPathsFull<T>(key: number | "key" | "value" | 
  *            Each path is represented as an array of paths, where each path is a key or index.
  */
 export declare function findWildcardsYAMLPathsAll(node: Node$1 | Document$1): IVisitPathsList[];
-export declare function _validMap(key: number | "key" | "value" | null, node: YAMLMap, ...args: any[]): void;
-export declare function _validSeq(key: number | "key" | "value" | null, node: YAMLSeq, ...args: any[]): asserts node is YAMLSeq<Scalar | IWildcardsYAMLScalar>;
-export declare function createDefaultVisitWildcardsYAMLOptions(): Exclude<IOptionsVisitor, Function>;
+export declare function _visitNormalizeScalar(key: IVisitorFnKey, node: IWildcardsYAMLScalar, runtime: {
+	checkUnsafeQuote: boolean;
+	options: IOptionsParseDocument;
+}): void;
+export declare function _validMap(key: IVisitorFnKey | null, node: YAMLMap, ...args: any[]): void;
+export declare function _validSeq(key: IVisitorFnKey | null, node: YAMLSeq, ...args: any[]): asserts node is YAMLSeq<Scalar | IWildcardsYAMLScalar>;
+export declare function _validPair(key: IVisitorFnKey, pair: IWildcardsYAMLPair | Pair, ...args: any[]): void;
+export declare function createDefaultVisitWildcardsYAMLOptions(opts?: IOptionsParseDocument): IOptionsVisitorMap;
 export declare function validWildcardsYamlData<T extends IRecordWildcards | IWildcardsYAMLDocument | Document$1>(data: T | unknown, opts?: IOptionsSharedWildcardsYaml): asserts data is T;
+export declare function isSafeKey<T extends string>(key: T | unknown): key is T;
+export declare function _validKey<T extends string>(key: T | unknown): asserts key is T;
 export declare function mergeWildcardsYAMLDocumentRoots<T extends Pick<Document$1<YAMLMap>, "contents">>(ls: [
 	T,
 	...any[]
@@ -282,6 +292,8 @@ export declare function _mergeWildcardsYAMLDocumentRootsCore<T extends Pick<Docu
  */
 export declare function mergeWildcardsYAMLDocumentJsonBy<T extends Document$1 | unknown, R = IRecordWildcards>(ls: T[], opts: IOptionsMergeWilcardsYAMLDocumentJsonBy): R;
 export declare function _toJSON<T extends Document$1 | unknown, R = IRecordWildcards>(v: T): R;
+export declare function _mergeSeqCore<T extends YAMLSeq | IWildcardsYAMLSeq>(a: T, b: NoInfer<T>): T;
+export declare function mergeSeq<T extends YAMLSeq | IWildcardsYAMLSeq>(a: T, b: NoInfer<T>): T;
 /**
  * Merges a single root YAMLMap or Document with a list of YAMLMap or Document.
  * The function only merges the root nodes of the provided YAML structures.
@@ -291,7 +303,7 @@ export declare function _toJSON<T extends Document$1 | unknown, R = IRecordWildc
  * @throws {TypeError} - If the current node does not support deep merge.
  */
 export declare function mergeFindSingleRoots<T extends IWildcardsYAMLMapRoot | IWildcardsYAMLDocument>(doc: T, list: NoInfer<T>[] | NoInfer<T>): T;
-export declare function pathsToWildcardsPath(paths: IVisitPathsListReadonly): string;
+export declare function pathsToWildcardsPath(paths: IVisitPathsListReadonly, full?: boolean): string;
 export declare function wildcardsPathToPaths(path: string): string[];
 export declare function pathsToDotPath(paths: IVisitPathsListReadonly): string;
 /**

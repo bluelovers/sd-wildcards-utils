@@ -1,0 +1,61 @@
+lazy-wildcards:
+  subject:
+    action-nsfw-others:
+      # https://civitai.com/models/23680?modelVersionId=28285
+      toilet-use:
+        prompts:
+          - >-
+            (toilet use:1.5), indoors, restroom, Toilet Scene,
+            __lazy-wildcards/subject/action-nsfw-others/toilet-use/main/*__,
+            {1-$$__lazy-wildcards/subject/action-nsfw-others/toilet-use/style/main__},
+            {1-$$__lazy-wildcards/subject/action-nsfw-others/toilet-use/env__}
+        main:
+          standing:
+            - standing
+          sitting:
+            - >-
+              (sitting:1.2),
+              , {1-$$__lazy-wildcards/subject/action-nsfw-others/toilet-use/style/setting__}
+        style:
+          main:
+            - blush
+            - looking back
+            - embarrassed
+            - surprised
+            - reaching out
+            - caught
+            - moderate cleavage
+            - no pants
+            - no panties
+            - bored, tired
+            - unamused
+            - not phase
+            - panties above knees
+            - panties below knees
+            - (panty pull:1.5)
+            - bottomless
+            - (peeing, pee:1.2)
+            - toilet paper
+            - full blush
+            - shy
+            - shameful face
+            - breathing
+            - trembling
+            - spread legs
+            - surprised eyes
+            - open mouth
+            - wavy mouth
+            - (stomach ache:1.5)
+            - (close eyes:1.2)
+            - private fitting room mirror selfie
+            - flashing breasts
+            - >-
+              {1-$$clothes lift|lifted by self}
+            - underboob
+          setting:
+            - sitting on toilet pooping
+            - legs closed
+            - knees knocking together
+            - hands on knees
+        env:
+          - toilet stall

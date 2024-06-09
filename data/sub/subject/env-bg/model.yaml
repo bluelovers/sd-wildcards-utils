@@ -328,6 +328,23 @@ lazy-wildcards:
             - rooftop pool, panoramic view, sunbathing, relaxation
             - urban graffiti, vibrant street art, creative expression, colorful
             - forest trail, winding path, sunlight filtering through trees, nature walk
+      other-landscapes:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/other-landscapes/style__,
+            __lazy-wildcards/subject/env-bg/other-landscapes/main/*__
+        style:
+          - epic landscape, photo background
+        main:
+          # https://civitai.com/models/501302/greatlandscapesv10?modelVersionId=557210
+          landscapes-modelVersionId-557210:
+            - cloud, day, sunset, ice, landscape, nature, no humans, outdoors, raw photo, reflection, mountain scenery, dry grass, dead trees
+            - swiss alps, Matterhorn seen from far away, some small huts, green meadows, a small river, sunset
+            - swiss alps, Matterhorn, glacier, ice, snow, glacier stream
+            - view over a silent lake in the early morning, reed, birch trees, sunrise, mist over the water
+            - monument valley, view from a steep cliff to the red desert, a single old pine tree, stone arch, normal angle view, clear, crisp
+            - a beach with black volcanic sand in iceland , chunks of clear blueish ice, some driftwood, some dark clouds
+            - cloud, day, sunset, snow, cliff, waterfalls, moss, landscape, nature, reflection, round flat mountains with little snow
       fantasy:
         prompts:
           - >-

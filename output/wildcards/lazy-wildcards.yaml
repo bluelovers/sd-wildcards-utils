@@ -207,6 +207,7 @@ lazy-wildcards:
       - grass,on soccer field
       - above clouds,Scenery
       - in a glamorous restaurant
+      - (beautiful detailed glow,beautiful detailed ice,beautiful detailed water,snowflake)
     location:
       interior-lava:
         prompts:
@@ -392,100 +393,91 @@ lazy-wildcards:
           - canalside
         city:
           - london
-      toilet-dirty:
-        prompts:
-          - >-
-            __lazy-wildcards/background/location/toilet-dirty/main__,{1-$$__lazy-wildcards/background/location/toilet-dirty/env-bg__},{0-$$__lazy-wildcards/background/location/toilet-dirty/env__},{0-$$__lazy-wildcards/background/location/toilet-dirty/style__},
-        style:
-          - dirt,filth,dirty,Dirt that cannot be washed away
-          - dirty toilet
-          - yellow urine stains,urine on the floor
-          - graffiti on the wall
-          - dirty tiles
-        main:
-          - >-
-            ({{1-$$bathroom|restroom|washroom},|}toilet:1.3)
-        env:
-          - box
-          - >-
-            {0-$$cups|bottles},{0-$$coffee|beer cans}
-          - toilet paper
-          - trash can
-          - water
-          - condom packaging
-          - newspapers
-          - food
-          - >-
-            {1-$$soap|soap bottle}
-        env-bg:
-          - >-
-            {1-$$tiles|tile floor|tile wall}
-          - handrails
-          - faucet
-          - door
-          - mirror
-          - window
   char:
-    pose:
-      pose-anything:
-        - __person/nsfw/poses__
-        - meditative pose
-        - covering mouth,hand over own mouth
-        - wakeupyawn,yawning,covering mouth
-        - wakeupstretch,stretching,arm behind head
-        - (bouquet,holding bouquet)
-        - (carrying one plate of food,carrying food)
-        - relaxing,doze off
-        - (taking a selfie in the mirror)
-        - fingernails,zombie pose
-        - paw pose
-        - hands inside pocket,hand in pocket,hands in pockets
-        - from behind,pelvis,butt crack,look at viewer
-        - head rest on hand,head_on_hand,head_rest
-        - breast rest on table
-        - leaning against motorcycle
-        - cigarette in mouth
-        - __lazy-wildcards/background/location/*/action/*__
-        - __lazy-wildcards/book/pose__
-        - holding a soccer
-        - walking away
-        - sitting on a table
-      pose-bottom:
-        sitting:
-          - (yokozuwari)
-          - (cross-legged sitting,sitting with legs crossed)
-          - >-
-            {1-$$lotus position|meditative pose}
-          - wariza,sitting,w-sitting,hand between legs,between legs
-      pose-bottom-nsfw:
-        open-legs:
-          - >-
-            {1-$$spread legs|open legs}
-          - >-
-            {1-$$squatting|crouching|squatting cowgirl position}
-          - (straddle)
-      pose-nsfw:
-        - (one breast out,one breast slip,one_breast_out_of_clothes),unaligned_breasts,showing breast
-        - (downblouse,tank top,breasts_out,leaning forward,bent over)
-        - lifted by self,dress lift,from below
-        - squatting,crouching,spread legs,arm support,stripper pole,pole dancing,arms behind back
-        - lewd,sexy,erotic,alluring,ewitching,charming,mesmerizing,enchanting,voluptuous,sexy posing,Sex Position,hentai
-        - hand on own chest,grabbing herself breasts,grabbing own breasts,hands on own breasts,breast press,hand on tit
-        - squatting spread legs position,squatting,spread legs,crouching
-        - clothes lift,lifted by self,underboob
-        - bath,bathing,steam
-        - female masturbation
-        - open clothes,exhibitionism,public indecency,naked coat
+    body:
+      breasts-style:
+        - jewelry draped between breasts
         - >-
-          downblouse,cleavage,ceiling,(peek panties,panty peek,pussy peek),selfie pose,squatting,crouching
+          {1-$$wet breasts|sweat_on_breasts|sweaty breasts}
+        - glistening breasts
+      breasts-size:
         - >-
-          {from behind|from side|from above|from below|},(in container,stuck,trash can,trashcan),garbage,trash,after sex,anus,ass wobble,pussy,cum in ass,beaten up,helpless
-        - __cf-sex-positions/prompt-solo__
-        - __cf-sex-positions/prompt-man-woman__
-        - __cf-sex-positions/prompt-two-women__
-        - __cf-sex-positions/prompt-mix__
-        - __cf-sex-positions/all__
-        - __lazy-wildcards/subject/action-nsfw-*/*/prompts__
+          {1-$$gigantic breasts|hyper breasts}
+        - >-
+          {1-$$no_breasts|flat chest|flat chested|flat breasts}
+        - >-
+          {1-$$small breasts|tiny breasts}
+        - >-
+          medium breasts
+        - huge breasts
+        - big breasts
+        - large breasts
+        - bursting breasts
+        - small sagging breasts
+      breasts-shapes:
+        - teardrop breasts
+        - athletic breasts
+        - symmetrical breasts
+        - asymmetrical breasts
+        - breasts apart
+        - >-
+          {medium|small|} pointy breasts
+        - >-
+          {medium|small|} perky breasts
+        - >-
+          {1-$$Taretiti|saggy breasts|drooping breasts|soft breasts|sagging breasts|hanging breasts}
+        - bulging breasts
+        - bell shaped breasts
+      breasts-cleavage:
+        - cleavage
+        - >-
+          {1-$$cleavage_cutout|cleavage_window}
+        - cleavage_overflow
+        - >-
+          {1-$$cleavage_pull|cleavage_reach}
+        - cleavage_vore
+      breasts-action:
+        - breasts_squeezed_together
+        - breasts_on_glass
+        - breast squish
+        - covering_breasts
+        - flashing breasts
+      breasts-out:
+        - underboob
+        - >-
+          {one |}breasts out{ of clothes|}{,breasts_outside|}
+        - exposed breasts
+        - sideboob
+        - >-
+          {extended |}downblouse
+      body-type:
+        - curvy body,hourglass body,narrow waist
+        - wide hips,narrow waist
+        - |-
+          perfect body,muscular body,Thick thigh,wide pelvis,(big ass:0.5),tall woman
+      # 腹部 / 肚子
+      belly:
+        - >-
+          {1-$$swollen belly|plump belly}
+        - inflation
+        - pregnant
+        - groin
+        - abs
+        - midriff
+        - belly
+      waist-style:
+        - clothes around waist
+        - waist chain
+      # 腰
+      waist:
+        - narrow waist
+        - slender waist
+        - muscled waist
+      tattoos:
+        - Hindu symbols tattoos
+        - tattoos
+      horns:
+        - curled horns
     eyes-expressions:
       - >-
         {half-|}closed eyes
@@ -570,6 +562,146 @@ lazy-wildcards:
     eyelashes-color:
       - __mix-lazy-auto/color-anything__ eyelashes
       - colored eyelashes
+    hair-length:
+      - short hair
+      - long hair
+      - medium hair
+      - very long hair
+      - very short hair
+      - absurdly long hair
+      - short hair with long locks
+    haircolor-style:
+      - split-color hair,dual-toned hair,two-tone hair
+      - multi_color_hair,multicolored hair,multi colored hair
+      - rainbow hair,Iridescence hair
+      - colored inner hair
+      - gradient hair
+      - streaked hair
+    haircolor:
+      - >-
+        {1-3$$ hair,$$__mix-lazy-auto/color-anything__} hair,{0-2$$__lazy-wildcards/char/haircolor-style__}
+    hair-style-multi:
+      - >-
+        {1-4$$__lazy-wildcards/char/hair-style__}
+    hair-style:
+      - metal hair
+      - Blowing hair in the strong wind
+      - >-
+        {ultra |}floating,{ultra |}floating hair
+      - >-
+        {1-$$soaked hair|wet hair|sweat hair}
+      - >-
+        messy hair {,morning hair,bedhead|}
+      - flipped hair
+      - vortex hair
+      - wild hair
+      - fluid hair,fussion of fluid and hair
+      - bioluminescent hair
+      - updo hair
+      - abstract representation of the girl in her flowing hair
+      - spiked hair
+      - leaf hair
+      - >-
+        {1-$$flowing hair|hair blown by wind}
+      - >-
+        hair over {one eye|eyes}
+      - >-
+        hair over {one breast|breasts}
+      - >-
+        hair over {one shoulder|shoulder}
+      - hair intakes
+      - >-
+        {low |}twin braids
+      - double bun
+      - tendril bangs hairstyle
+    haircut-multi:
+      - >-
+        {1-4$$ hair,$$__person/regular/haircuts-*__} hair
+      - >-
+        {1-4$$__lazy-wildcards/char/haircuts__}
+    haircut:
+      - blunt bangs
+      - swept bangs
+      - crossed bangs
+      - parted bangs
+      - drill hair
+      - twin drill hair
+      - Wavy Side Bangs hair
+      - hair pulled back,Folded tied hair
+      - curly frizzy flowy hair
+      - >-
+        ahoge,antenna hair,{huge ahoge|heart ahoge}
+      - wolf tail hairstyle
+      - feathered haircutfeathered haircut
+      - Layered Wavy Cut with Curtain Bangs hair
+      - box braids
+      - __cf-*/hairstyle__ hair
+      - folded ponytail
+      - >-
+        {Messy |}Side Swept Hair
+    hair-bald:
+      - >-
+        (Completely bald,bald,bald girl:1.3)
+    pose:
+      pose-anything:
+        - __person/nsfw/poses__
+        - meditative pose
+        - covering mouth,hand over own mouth
+        - wakeupyawn,yawning,covering mouth
+        - wakeupstretch,stretching,arm behind head
+        - (bouquet,holding bouquet)
+        - (carrying one plate of food,carrying food)
+        - relaxing,doze off
+        - (taking a selfie in the mirror)
+        - fingernails,zombie pose
+        - paw pose
+        - hands inside pocket,hand in pocket,hands in pockets
+        - from behind,pelvis,butt crack,look at viewer
+        - head rest on hand,head_on_hand,head_rest
+        - breast rest on table
+        - leaning against motorcycle
+        - cigarette in mouth
+        - __lazy-wildcards/background/location/*/action/*__
+        - __lazy-wildcards/book/pose__
+        - holding a soccer
+        - walking away
+        - sitting on a table
+      pose-bottom:
+        sitting:
+          - (yokozuwari)
+          - (cross-legged sitting,sitting with legs crossed)
+          - >-
+            {1-$$lotus position|meditative pose}
+          - wariza,sitting,w-sitting,hand between legs,between legs
+      pose-bottom-nsfw:
+        open-legs:
+          - >-
+            {1-$$spread legs|open legs}
+          - >-
+            {1-$$squatting|crouching|squatting cowgirl position}
+          - (straddle)
+      pose-nsfw:
+        - (one breast out,one breast slip,one_breast_out_of_clothes),unaligned_breasts,showing breast
+        - (downblouse,tank top,breasts_out,leaning forward,bent over)
+        - lifted by self,dress lift,from below
+        - squatting,crouching,spread legs,arm support,stripper pole,pole dancing,arms behind back
+        - lewd,sexy,erotic,alluring,ewitching,charming,mesmerizing,enchanting,voluptuous,sexy posing,Sex Position,hentai
+        - hand on own chest,grabbing herself breasts,grabbing own breasts,hands on own breasts,breast press,hand on tit
+        - squatting spread legs position,squatting,spread legs,crouching
+        - clothes lift,lifted by self,underboob
+        - bath,bathing,steam
+        - female masturbation
+        - open clothes,exhibitionism,public indecency,naked coat
+        - >-
+          downblouse,cleavage,ceiling,(peek panties,panty peek,pussy peek),selfie pose,squatting,crouching
+        - >-
+          {from behind|from side|from above|from below|},(in container,stuck,trash can,trashcan),garbage,trash,after sex,anus,ass wobble,pussy,cum in ass,beaten up,helpless
+        - __cf-sex-positions/prompt-solo__
+        - __cf-sex-positions/prompt-man-woman__
+        - __cf-sex-positions/prompt-two-women__
+        - __cf-sex-positions/prompt-mix__
+        - __cf-sex-positions/all__
+        - __lazy-wildcards/subject/action-nsfw-*/*/prompts__
     lips-color:
       - __mix-lazy-auto/color-anything__ lips
     mouth-style:
@@ -615,84 +747,6 @@ lazy-wildcards:
       # https://civitai.com/models/469309?modelVersionId=522175
       - >-
         (smug,Yaeba),open mouth,fang
-    hair-length:
-      - short hair
-      - long hair
-      - medium hair
-      - very long hair
-      - very short hair
-      - absurdly long hair
-    haircolor-style:
-      - split-color hair,dual-toned hair,two-tone hair
-      - multi_color_hair,multicolored hair,multi colored hair
-      - rainbow hair,Iridescence hair
-      - colored inner hair
-      - gradient hair
-      - streaked hair
-    haircolor:
-      - >-
-        {1-3$$ hair,$$__mix-lazy-auto/color-anything__} hair,{0-2$$__lazy-wildcards/char/haircolor-style__}
-    hair-style-multi:
-      - >-
-        {1-4$$__lazy-wildcards/char/hair-style__}
-    hair-style:
-      - metal hair
-      - Blowing hair in the strong wind
-      - >-
-        {ultra |}floating,{ultra |}floating hair
-      - >-
-        {1-$$soaked hair|wet hair|sweat hair}
-      - >-
-        messy hair {,morning hair,bedhead|}
-      - flipped hair
-      - vortex hair
-      - wild hair
-      - fluid hair,fussion of fluid and hair
-      - bioluminescent hair
-      - updo hair
-      - abstract representation of the girl in her flowing hair
-      - spiked hair
-      - leaf hair
-      - >-
-        {1-$$flowing hair|hair blown by wind}
-      - >-
-        hair over {one eye|eyes}
-      - >-
-        hair over {one breast|breasts}
-      - >-
-        hair over {one shoulder|shoulder}
-      - hair intakes
-      - >-
-        {low |}twin braids
-      - double bun
-    haircut-multi:
-      - >-
-        {1-4$$ hair,$$__person/regular/haircuts-*__} hair
-      - >-
-        {1-4$$__lazy-wildcards/char/haircuts__}
-    haircut:
-      - blunt bangs
-      - swept bangs
-      - crossed bangs
-      - parted bangs
-      - drill hair
-      - twin drill hair
-      - Wavy Side Bangs hair
-      - hair pulled back,Folded tied hair
-      - curly frizzy flowy hair
-      - >-
-        ahoge,antenna hair,{huge ahoge|heart ahoge}
-      - wolf tail hairstyle
-      - feathered haircutfeathered haircut
-      - Layered Wavy Cut with Curtain Bangs hair
-      - box braids
-      - __cf-*/hairstyle__ hair
-      - folded ponytail
-      - >-
-        {Messy |}Side Swept Hair
-    hair-bald:
-      - >-
-        (Completely bald,bald,bald girl:1.3)
     mole:
       - mole under eye
       - mole under mouth
@@ -716,88 +770,6 @@ lazy-wildcards:
       - (disgusted face,disgust,disgust_face,frown,shaded_face,clenched teeth,scorn),angry
       - (expressionless)
       - flustered
-    body:
-      breasts-style:
-        - jewelry draped between breasts
-        - >-
-          {1-$$wet breasts|sweat_on_breasts|sweaty breasts}
-        - glistening breasts
-      breasts-size:
-        - >-
-          {1-$$gigantic breasts|hyper breasts}
-        - >-
-          {1-$$no_breasts|flat chest|flat chested|flat breasts}
-        - >-
-          {1-$$small breasts|tiny breasts}
-        - >-
-          medium breasts
-        - huge breasts
-        - big breasts
-        - large breasts
-        - bursting breasts
-        - small sagging breasts
-      breasts-shapes:
-        - teardrop breasts
-        - athletic breasts
-        - symmetrical breasts
-        - asymmetrical breasts
-        - breasts apart
-        - >-
-          {medium|small|} pointy breasts
-        - >-
-          {medium|small|} perky breasts
-        - >-
-          {1-$$Taretiti|saggy breasts|drooping breasts|soft breasts|sagging breasts|hanging breasts}
-        - bulging breasts
-        - bell shaped breasts
-      breasts-cleavage:
-        - cleavage
-        - >-
-          {1-$$cleavage_cutout|cleavage_window}
-        - cleavage_overflow
-        - >-
-          {1-$$cleavage_pull|cleavage_reach}
-        - cleavage_vore
-      breasts-action:
-        - breasts_squeezed_together
-        - breasts_on_glass
-        - breast squish
-        - covering_breasts
-        - flashing breasts
-      breasts-out:
-        - underboob
-        - >-
-          {one |}breasts out{ of clothes|}{,breasts_outside|}
-        - exposed breasts
-        - sideboob
-        - >-
-          {extended |}downblouse
-      body-type:
-        - curvy body,hourglass body,narrow waist
-        - wide hips,narrow waist
-      # 腹部 / 肚子
-      belly:
-        - >-
-          {1-$$swollen belly|plump belly}
-        - inflation
-        - pregnant
-        - groin
-        - abs
-        - midriff
-        - belly
-      waist-style:
-        - clothes around waist
-        - waist chain
-      # 腰
-      waist:
-        - narrow waist
-        - slender waist
-        - muscled waist
-      tattoos:
-        - Hindu symbols tattoos
-        - tattoos
-      horns:
-        - curled horns
   costume:
     color-theme-multi:
       - >-
@@ -863,6 +835,11 @@ lazy-wildcards:
         (denim,high heels,jeans,jewelry,shirt:1.3)
       - |-
         (high-waist skirt,high heels,see-through,skirt,black pantyhose,black skirt,bra:1.3)
+      - formal,pantyhose,suit,skirt suit
+      - |-
+        (machine made joints:1.2),(blood vessels connected to tubes),((mechanical cervial attaching to neck)),wires and cables attaching to neck,wires and cables on head
+      - |-
+        (machine made joints:1.2),(blood vessels connected to tubes),((mechanical cervial attaching to neck)),wires and cables attaching to neck,wires and cables on head,mechanical
     sweater:
       - ribbed sweater
       - sleeveless sweater
@@ -963,6 +940,33 @@ lazy-wildcards:
         prompts:
           - |-
             (fence,alley,power_lines:1.5)
+      asian-east:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/architectural/asian-east/main__,{1-$$__lazy-wildcards/subject/architectural/asian-east/main__}
+        main:
+          - architecture,east asian architecture
+        env:
+          - bridge
+          - lantern
+          - letterboxed
+          - pagoda
+          - tower
+          - torii
+          - watercraft
+      station:
+        shared:
+          
+          - 
+        main:
+          # 地下鐵 / 捷運
+          metro:
+            - Subway,Metro
+        env:
+          - window
+        env-bg:
+          - subway interior
+          - carriage
     costume:
       japanese-clothes:
         prompts:
@@ -1007,6 +1011,9 @@ lazy-wildcards:
         env:
           - instrument
           - flower
+      korean-clothes:
+        prompts:
+          - hanbok,korean clothes,clothed underbust
       others:
         prompts:
           - >-
@@ -1284,6 +1291,49 @@ lazy-wildcards:
           - brick road
           - rock road
           - wooden road
+      dirty-toilet:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/dirty-toilet/main__,{1-$$__lazy-wildcards/subject/env-bg/dirty-toilet/env-bg__},{1-$$__lazy-wildcards/subject/env-bg/dirty-toilet/env__},{1-$$__lazy-wildcards/subject/env-bg/dirty-toilet/style__},{0-$$__lazy-wildcards/subject/env-bg/dirty-toilet/style-adj__}
+        style:
+          - dirt,filth,dirty,Dirt that cannot be washed away
+          - dirty toilet
+          - yellow urine stains,urine on the floor
+          - graffiti on the wall
+          - dirty tiles
+          - dirty urinal
+        style-adj:
+          - rotten
+          - dirty scenes
+          - horror \(theme\)
+          - crack
+          - dirty
+          - garbage
+          - messy
+        main:
+          - >-
+            ({{1-$$bathroom|restroom|washroom},|}toilet:1.3),ruanyi0250
+        env:
+          - box
+          - >-
+            {0-$$cups|bottles},{0-$$coffee|beer cans}
+          - toilet paper
+          - trash can
+          - water
+          - condom packaging
+          - newspapers
+          - food
+          - >-
+            {1-$$soap|soap bottle}
+        env-bg:
+          - >-
+            {1-$$tiles|tile floor|tile wall}
+          - handrails
+          - faucet
+          - door
+          - mirror
+          - window
+          - industrial pipe
       post-apocalyptic:
         prompts:
           - >-
@@ -1608,6 +1658,22 @@ lazy-wildcards:
             - rooftop pool,panoramic view,sunbathing,relaxation
             - urban graffiti,vibrant street art,creative expression,colorful
             - forest trail,winding path,sunlight filtering through trees,nature walk
+      other-landscapes:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/other-landscapes/style__,__lazy-wildcards/subject/env-bg/other-landscapes/main/*__
+        style:
+          - epic landscape,photo background
+        main:
+          # https://civitai.com/models/501302/greatlandscapesv10?modelVersionId=557210
+          landscapes-modelVersionId-557210:
+            - cloud,day,sunset,ice,landscape,nature,no humans,outdoors,raw photo,reflection,mountain scenery,dry grass,dead trees
+            - swiss alps,Matterhorn seen from far away,some small huts,green meadows,a small river,sunset
+            - swiss alps,Matterhorn,glacier,ice,snow,glacier stream
+            - view over a silent lake in the early morning,reed,birch trees,sunrise,mist over the water
+            - monument valley,view from a steep cliff to the red desert,a single old pine tree,stone arch,normal angle view,clear,crisp
+            - a beach with black volcanic sand in iceland,chunks of clear blueish ice,some driftwood,some dark clouds
+            - cloud,day,sunset,snow,cliff,waterfalls,moss,landscape,nature,reflection,round flat mountains with little snow
       fantasy:
         prompts:
           - >-
@@ -1767,6 +1833,9 @@ lazy-wildcards:
       erlf:
         prompts:
           - a beautiful elvish girl
+      clockwork-cyborg:
+        prompts:
+          - clockwork cyborg,clockwork body,clockwork arms,clockwork legs,gears in eyes,clockwork face
     interior:
       bathroom:
         prompts:
@@ -1877,11 +1946,14 @@ lazy-wildcards:
           - >-
             ((raining)),rain,reflection,wet street {,wet clothes|}
           - >-
-            ({1-$$winter|snow|very cold|snow fall|city snowy street view}:1.2)
-          - >-
             {1-$$foggy|fog|mist|steam|smoke}
           - >-
             {1-$$floating cloud|cloudy|Sea of clouds}
+          - __lazy-wildcards/subject/moment/weather/main/*__
+        main:
+          winter:
+            - >-
+              ({1-$$winter|snow|very cold|snow fall|city snowy street view|snowflake}:1.2)
       time:
         prompts:
           - >-
@@ -1959,33 +2031,104 @@ lazy-wildcards:
           - >-
             {__mix-lazy-auto/color-anything__ |}rope
           - head turned
+    action-nsfw-others:
+      toilet-use:
+        prompts:
+          - >-
+            (toilet use:1.5),indoors,restroom,Toilet Scene,__lazy-wildcards/subject/action-nsfw-others/toilet-use/main/*__,{1-$$__lazy-wildcards/subject/action-nsfw-others/toilet-use/style/main__},{1-$$__lazy-wildcards/subject/action-nsfw-others/toilet-use/env__}
+        main:
+          standing:
+            - standing
+          sitting:
+            - >-
+              (sitting:1.2),{1-$$__lazy-wildcards/subject/action-nsfw-others/toilet-use/style/setting__}
+        style:
+          main:
+            - blush
+            - looking back
+            - embarrassed
+            - surprised
+            - reaching out
+            - caught
+            - moderate cleavage
+            - no pants
+            - no panties
+            - bored,tired
+            - unamused
+            - not phase
+            - panties above knees
+            - panties below knees
+            - |-
+              (panty pull:1.5)
+            - bottomless
+            - |-
+              (peeing,pee:1.2)
+            - toilet paper
+            - full blush
+            - shy
+            - shameful face
+            - breathing
+            - trembling
+            - spread legs
+            - surprised eyes
+            - open mouth
+            - wavy mouth
+            - |-
+              (stomach ache:1.5)
+            - |-
+              (close eyes:1.2)
+            - private fitting room mirror selfie
+            - flashing breasts
+            - >-
+              {1-$$clothes lift|lifted by self}
+            - underboob
+          setting:
+            - sitting on toilet pooping
+            - legs closed
+            - knees knocking together
+            - hands on knees
+        env:
+          - toilet stall
 mix-lazy-auto:
-  # "color-anything" (total: 340 => 137, save 203 ) is merge from
+  # "color-anything" (total: 462 => 148, save 314 ) is merge from
   #  - __lazy-wildcards/utils/color-base__ (11)
   #  - __mix-lazy-auto/color-anything__ (2)
   #  - __cf-sex-positions/color__ (6)
   #  - __cf-astronaut/color__ (10)
+  #  - __cf-baker/color__ (10)
   #  - __cf-basketball-player/color__ (10)
   #  - __cf-belly-dancer/color__ (10)
+  #  - __cf-boxer/color__ (10)
+  #  - __cf-chef/color__ (9)
   #  - __cf-clown/color__ (12)
   #  - __cf-disco-dancer/color__ (13)
   #  - __cf-doctor/color__ (10)
   #  - __cf-elf/color__ (10)
+  #  - __cf-farmer/color__ (10)
   #  - __cf-fitness/color__ (10)
+  #  - __cf-football-player/color__ (10)
   #  - __cf-gangster-1920s/color__ (8)
   #  - __cf-hockey-player/color__ (10)
   #  - __cf-jester/color__ (10)
+  #  - __cf-lifeguard/color__ (3)
   #  - __cf-lingerie/color__ (10)
   #  - __cf-luchador/color__ (10)
+  #  - __cf-mad-scientist/color__ (10)
   #  - __cf-maid/color__ (4)
   #  - __cf-mechanic/color__ (9)
+  #  - __cf-painter/color__ (10)
   #  - __cf-punk/color__ (17)
+  #  - __cf-sailor/color__ (10)
   #  - __cf-school-student/color__ (11)
+  #  - __cf-scout/color__ (10)
   #  - __cf-secretary/color__ (8)
+  #  - __cf-swimmer/color__ (10)
   #  - __cf-school-teacher/color__ (11)
   #  - __cf-tennis-player/color__ (7)
+  #  - __cf-top-model/color__ (11)
   #  - __cf-volleyball-player/color__ (10)
   #  - __cf-witch/color__ (8)
+  #  - __cf-wrestler/color__ (9)
   #  - __cf-yakuza/color__ (7)
   #  - __Bo/chars/haircolor__ (1)
   #  - __person/regular/haircolor__ (30)
@@ -2020,9 +2163,20 @@ mix-lazy-auto:
     - gray
     - navy
     - gold
+    - light blue
+    - beige
+    - brown
     - grey
+    - navy blue
+    - dark brown
+    - cream
+    - tan
     - maroon
     - turquoise
+    - dark grey
+    - light grey
+    - burgundy
+    - dark green
     - rainbow-colored
     - polka-dotted
     - striped
@@ -2041,11 +2195,7 @@ mix-lazy-auto:
       {pastel|neon} yellow
     - pure white
     - deep magenta
-    - navy blue
-    - light blue
-    - dark green
     - teal
-    - burgundy
     - sage
     - soft lavender
     - midnight blue
@@ -2053,10 +2203,14 @@ mix-lazy-auto:
     - pearl white
     - pastel pink
     - soft purple
+    - denim blue
+    - plaid
+    - olive
     - pinstripe
     - deep burgundy
-    - dark brown
     - multicolored
+    - white and red
+    - yellow and red
     - classic black
     - fiery red
     - soft pink
@@ -2064,10 +2218,8 @@ mix-lazy-auto:
     - deep purple
     - champagne
     - pastel lavender
-    - dark grey
-    - brown
-    - olive
-    - beige
+    - dark blue
+    - olive green
     - metallic silver
     - red brown
     - ginger
@@ -2089,7 +2241,10 @@ mix-lazy-auto:
       {electric|deep indigo|smoky lilac|vibrant turquoise} blue
     - deep shade of indigo
     - fiery
+    - khaki
     - sky blue
+    - forest green
+    - camo
     - soft grey
     - rich plum
     - pale pink
@@ -2105,6 +2260,8 @@ mix-lazy-auto:
       {pearl|off-white} white
     - |-
       {mustard|golden} yellow
+    - crimson red
+    - classic beige
     - black and orange
     - deep red
     - |-
@@ -2139,15 +2296,12 @@ mix-lazy-auto:
     - lilac
     - coral
     - silver blonde
-    - denim blue
     - violet
     - tangerine
     - indigo
     - orchid
     - aqua
-    - dark Blue
     - light green
-    - olive green
     - jade green
     - hazel
     - amber

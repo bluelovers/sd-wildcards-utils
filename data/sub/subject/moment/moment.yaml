@@ -13,11 +13,14 @@ lazy-wildcards:
             wet street
             {, wet clothes|}
           - >-
-            ({1-$$winter|snow|very cold|snow fall|city snowy street view}:1.2)
-          - >-
             {1-$$foggy|fog|mist|steam|smoke}
           - >-
             {1-$$floating cloud|cloudy|Sea of clouds}
+          - __lazy-wildcards/subject/moment/weather/main/*__
+        main:
+          winter:
+            - >-
+              ({1-$$winter|snow|very cold|snow fall|city snowy street view|snowflake}:1.2)
       time:
         prompts:
           - >-

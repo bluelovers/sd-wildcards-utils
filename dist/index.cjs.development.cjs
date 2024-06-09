@@ -4,6 +4,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var yaml = require('yaml');
 var arrayHyperUnique = require('array-hyper-unique');
+var lazyAggregateError = require('lazy-aggregate-error');
 var picomatch = require('picomatch');
 
 function getOptionsShared(opts) {
@@ -36,7 +37,7 @@ function defaultOptionsParseDocument(opts) {
   var _opts2;
   (_opts2 = opts) !== null && _opts2 !== void 0 ? _opts2 : opts = {};
   opts = {
-    keepSourceTokens: true,
+    prettyErrors: true,
     ...opts,
     toStringDefaults: defaultOptionsStringify({
       ...getOptionsShared(opts),
@@ -50,6 +51,22 @@ function getOptionsFromDocument(doc, opts) {
     ...doc.options,
     ...opts
   };
+}
+
+function stripZeroStr(value) {
+  return value.replace(/[\x00\u200b]+/g, '').replace(/^[\s\xa0]+|[\s\xa0]+$/gm, '');
+}
+function trimPrompts(value) {
+  return value.replace(/^\s+|\s+$/g, '').replace(/\n\s*\n/g, '\n');
+}
+function formatPrompts(value, opts) {
+  var _opts;
+  (_opts = opts) !== null && _opts !== void 0 ? _opts : opts = {};
+  value = value.replace(/[\s\xa0]+/gm, ' ').replace(/[\s,.]+(?=,)/gm, '');
+  if (opts.minifyPrompts) {
+    value = value.replace(/(,)\s+/gm, '$1').replace(/\s+(,)/gm, '$1');
+  }
+  return value;
 }
 
 function visitWildcardsYAML(node, visitorOptions) {
@@ -147,6 +164,27 @@ function findWildcardsYAMLPathsAll(node) {
   });
   return ls;
 }
+const RE_UNSAFE_QUOTE = /['"]/;
+const RE_UNSAFE_VALUE = /^\s*-|[{$~!@}\n|:?#'"]/;
+function _visitNormalizeScalar(key, node, runtime) {
+  let value = node.value;
+  if (typeof value === 'string') {
+    if (runtime.checkUnsafeQuote && RE_UNSAFE_QUOTE.test(value)) {
+      throw new SyntaxError(`Invalid SYNTAX [UNSAFE_QUOTE]. key: ${key}, node: ${node}`);
+    } else if (node.type === 'QUOTE_DOUBLE' || node.type === 'QUOTE_SINGLE' && !value.includes('\\')) {
+      node.type = 'PLAIN';
+    }
+    value = trimPrompts(stripZeroStr(formatPrompts(value, runtime.options)));
+    if (RE_UNSAFE_VALUE.test(value)) {
+      if (node.type === 'PLAIN') {
+        node.type = 'BLOCK_LITERAL';
+      } else if (node.type === 'BLOCK_FOLDED' && /#/.test(value)) {
+        node.type = 'BLOCK_LITERAL';
+      }
+    }
+    node.value = value;
+  }
+}
 
 // @ts-ignore
 function _validMap(key, node, ...args) {
@@ -162,25 +200,50 @@ function _validMap(key, node, ...args) {
 function _validSeq(key, node, ...args) {
   const index = node.items.findIndex(node => !yaml.isScalar(node));
   if (index !== -1) {
-    throw new SyntaxError(`Invalid SYNTAX. key: ${key}, node: ${node}, index: ${index}, node: ${node.items[index]}`);
+    // @ts-ignore
+    const paths = handleVisitPathsFull(key, node, ...args);
+    throw new SyntaxError(`Invalid SYNTAX. paths: [${paths}], indexKey: ${key} key: ${key}, node: ${node}, index: ${index}, node: ${node.items[index]}`);
   }
 }
-function createDefaultVisitWildcardsYAMLOptions() {
-  return {
+function _validPair(key, pair, ...args) {
+  const keyNode = pair.key;
+  const notOk = !isSafeKey(typeof keyNode === 'string' ? keyNode : keyNode.value);
+  if (notOk) {
+    // @ts-ignore
+    const paths = handleVisitPathsFull(key, pair, ...args);
+    throw new SyntaxError(`Invalid Key. paths: [${paths}], key: ${key}, keyNodeValue: "${keyNode === null || keyNode === void 0 ? void 0 : keyNode.value}", keyNode: ${keyNode}`);
+  }
+}
+function createDefaultVisitWildcardsYAMLOptions(opts) {
+  var _opts;
+  let defaults = {
     Map: _validMap,
     Seq: _validSeq
   };
+  (_opts = opts) !== null && _opts !== void 0 ? _opts : opts = {};
+  if (!opts.allowUnsafeKey) {
+    defaults.Pair = _validPair;
+  }
+  if (!opts.disableUniqueItemValues) {
+    const fn = defaults.Seq;
+    defaults.Seq = (key, node, ...args) => {
+      // @ts-ignore
+      fn(key, node, ...args);
+      uniqueSeqItems(node.items);
+    };
+  }
+  return defaults;
 }
 function validWildcardsYamlData(data, opts) {
-  var _opts;
+  var _opts2;
   if (yaml.isDocument(data)) {
     if (yaml.isNode(data.contents) && !yaml.isMap(data.contents)) {
       throw TypeError(`The 'contents' property of the provided YAML document must be a YAMLMap. Received: ${data.contents}`);
     }
-    visitWildcardsYAML(data, createDefaultVisitWildcardsYAMLOptions());
+    visitWildcardsYAML(data, createDefaultVisitWildcardsYAMLOptions(opts));
     data = data.toJSON();
   }
-  (_opts = opts) !== null && _opts !== void 0 ? _opts : opts = {};
+  (_opts2 = opts) !== null && _opts2 !== void 0 ? _opts2 : opts = {};
   if (typeof data === 'undefined' || data === null) {
     if (opts.allowEmptyDocument) {
       return;
@@ -194,21 +257,13 @@ function validWildcardsYamlData(data, opts) {
     throw TypeError(`The provided JSON object cannot have more than one root key. Only one root key is allowed unless explicitly allowed by the 'allowMultiRoot' option.`);
   }
 }
-
-function stripZeroStr(value) {
-  return value.replace(/[\x00\u200b]+/g, '').replace(/^[\s\xa0]+|[\s\xa0]+$/gm, '');
+function isSafeKey(key) {
+  return typeof key === 'string' && /^[._\w-]+$/.test(key) && !/^[\._-]|[\._-]$/.test(key);
 }
-function trimPrompts(value) {
-  return value.replace(/^\s+|\s+$/g, '').replace(/\n\s*\n/g, '\n');
-}
-function formatPrompts(value, opts) {
-  var _opts;
-  (_opts = opts) !== null && _opts !== void 0 ? _opts : opts = {};
-  value = value.replace(/[\s\xa0]+/gm, ' ').replace(/[\s,.]+(?=,)/gm, '');
-  if (opts.minifyPrompts) {
-    value = value.replace(/(,)\s+/gm, '$1').replace(/\s+(,)/gm, '$1');
+function _validKey(key) {
+  if (!isSafeKey(key)) {
+    throw new SyntaxError(`Invalid Key. key: ${key}`);
   }
-  return value;
 }
 
 const RE_DYNAMIC_PROMPTS_WILDCARDS = /__([&~!@])?([*\w\/_\-]+)(\([^\n#]+\))?__/;
@@ -378,6 +433,16 @@ function mergeWildcardsYAMLDocumentJsonBy(ls, opts) {
 function _toJSON(v) {
   return yaml.isDocument(v) ? v.toJSON() : v;
 }
+function _mergeSeqCore(a, b) {
+  a.items.push(...b.items);
+  return a;
+}
+function mergeSeq(a, b) {
+  if (yaml.isSeq(a) && yaml.isSeq(b)) {
+    return _mergeSeqCore(a, b);
+  }
+  throw new TypeError(`Only allow merge YAMLSeq`);
+}
 /**
  * Merges a single root YAMLMap or Document with a list of YAMLMap or Document.
  * The function only merges the root nodes of the provided YAML structures.
@@ -397,18 +462,32 @@ function mergeFindSingleRoots(doc, list) {
       let current = doc.getIn(result.paths);
       if (current) {
         if (!yaml.isMap(current)) {
-          throw TypeError(`Only YAMLMap can be merged. node: ${current}`);
+          throw new TypeError(`Only YAMLMap can be merged. node: ${current}`);
         }
         result.value.items
         // @ts-ignore
         .forEach(p => {
-          let key = p.key.value;
-          let sub = current.get(key);
+          const key = p.key.value;
+          const sub = current.get(key);
           if (sub) {
             if (yaml.isSeq(sub) && yaml.isSeq(p.value)) {
-              sub.items.push(...p.value.items);
+              _mergeSeqCore(sub, p.value);
+            } else if (yaml.isMap(sub) && yaml.isMap(p.value)) {
+              const errKeys = [];
+              const errors = [];
+              for (const pair of p.value.items) {
+                try {
+                  sub.add(pair, false);
+                } catch (e) {
+                  errKeys.push(pair.key.value);
+                  errors.push(e);
+                }
+              }
+              if (errors.length) {
+                throw new lazyAggregateError.AggregateErrorExtra(errors, `Failure when merging sub YAMLMap. Paths: ${JSON.stringify(result.paths.concat(key))}. Conflicting keys: ${JSON.stringify(errKeys)}`);
+              }
             } else {
-              throw TypeError(`Current does not support deep merge. paths: [${result.paths.concat(key)}], a: ${sub}, b: ${p.value}`);
+              throw new TypeError(`Current does not support deep merge at paths: ${JSON.stringify(result.paths.concat(key))}, a: ${sub}, b: ${p.value}`);
             }
           } else {
             current.items.push(p);
@@ -418,14 +497,18 @@ function mergeFindSingleRoots(doc, list) {
         doc.setIn(result.paths, result.value);
       }
     } else {
-      throw TypeError(`Only YAMLMap can be merged. node: ${node}`);
+      throw new TypeError(`Only YAMLMap can be merged. node: ${node}`);
     }
   }
   return doc;
 }
 
-function pathsToWildcardsPath(paths) {
-  return paths.join('/');
+function pathsToWildcardsPath(paths, full) {
+  let s = paths.join('/');
+  if (full) {
+    s = `__${s}__`;
+  }
+  return s;
 }
 function wildcardsPathToPaths(path) {
   return path.split('/');
@@ -471,43 +554,19 @@ function findPath(data, paths, prefix = [], list = []) {
   return list;
 }
 
-const RE_UNSAFE_QUOTE = /['"]/;
-const RE_UNSAFE_VALUE = /^\s*-|[{$~!@}\n|:?#]/;
 function normalizeDocument(doc, opts) {
   let options = getOptionsFromDocument(doc, opts);
-  const defaults = createDefaultVisitWildcardsYAMLOptions();
+  const defaults = createDefaultVisitWildcardsYAMLOptions(options);
   let checkUnsafeQuote = !options.disableUnsafeQuote;
   let visitorOptions = {
     ...defaults,
     Scalar(key, node) {
-      let value = node.value;
-      if (typeof value === 'string') {
-        if (checkUnsafeQuote && RE_UNSAFE_QUOTE.test(value)) {
-          throw new SyntaxError(`Invalid SYNTAX [UNSAFE_QUOTE]. key: ${key}, node: ${node}`);
-        } else if (node.type === 'QUOTE_DOUBLE' || node.type === 'QUOTE_SINGLE' && !value.includes('\\')) {
-          node.type = 'PLAIN';
-        }
-        value = trimPrompts(stripZeroStr(formatPrompts(value, options)));
-        if (RE_UNSAFE_VALUE.test(value)) {
-          if (node.type === 'PLAIN') {
-            node.type = 'BLOCK_LITERAL';
-          } else if (node.type === 'BLOCK_FOLDED' && /#/.test(value)) {
-            node.type = 'BLOCK_LITERAL';
-          }
-        }
-        node.value = value;
-      }
+      return _visitNormalizeScalar(key, node, {
+        checkUnsafeQuote,
+        options
+      });
     }
   };
-  if (!options.disableUniqueItemValues) {
-    // @ts-ignore
-    const fn = defaults.Seq;
-    // @ts-ignore
-    visitorOptions.Seq = (key, node, ...args) => {
-      fn(key, node, ...args);
-      uniqueSeqItems(node.items);
-    };
-  }
   visitWildcardsYAML(doc, visitorOptions);
 }
 /**
@@ -587,10 +646,14 @@ exports.RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL = RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBA
 exports.RE_WILDCARDS_NAME = RE_WILDCARDS_NAME;
 exports._handleVisitPathsCore = _handleVisitPathsCore;
 exports._matchDynamicPromptsWildcardsCore = _matchDynamicPromptsWildcardsCore;
+exports._mergeSeqCore = _mergeSeqCore;
 exports._mergeWildcardsYAMLDocumentRootsCore = _mergeWildcardsYAMLDocumentRootsCore;
 exports._toJSON = _toJSON;
+exports._validKey = _validKey;
 exports._validMap = _validMap;
+exports._validPair = _validPair;
 exports._validSeq = _validSeq;
+exports._visitNormalizeScalar = _visitNormalizeScalar;
 exports.assertWildcardsName = assertWildcardsName;
 exports.convertPairsToPathsList = convertPairsToPathsList;
 exports.convertWildcardsNameToPaths = convertWildcardsNameToPaths;
@@ -609,11 +672,13 @@ exports.getOptionsShared = getOptionsShared;
 exports.handleVisitPaths = handleVisitPaths;
 exports.handleVisitPathsFull = handleVisitPathsFull;
 exports.isDynamicPromptsWildcards = isDynamicPromptsWildcards;
+exports.isSafeKey = isSafeKey;
 exports.isWildcardsName = isWildcardsName;
 exports.matchDynamicPromptsWildcards = matchDynamicPromptsWildcards;
 exports.matchDynamicPromptsWildcardsAll = matchDynamicPromptsWildcardsAll;
 exports.matchDynamicPromptsWildcardsAllGenerator = matchDynamicPromptsWildcardsAllGenerator;
 exports.mergeFindSingleRoots = mergeFindSingleRoots;
+exports.mergeSeq = mergeSeq;
 exports.mergeWildcardsYAMLDocumentJsonBy = mergeWildcardsYAMLDocumentJsonBy;
 exports.mergeWildcardsYAMLDocumentRoots = mergeWildcardsYAMLDocumentRoots;
 exports.normalizeDocument = normalizeDocument;
