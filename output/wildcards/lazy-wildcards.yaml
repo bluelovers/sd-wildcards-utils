@@ -56,7 +56,7 @@ lazy-wildcards:
         {__lazy-wildcards/char/pose/pose-anything__|__lazy-wildcards/char/pose/pose-nsfw__}
     hair:
       - >-
-        __lazy-wildcards/char/hair-length__,__lazy-wildcards/char/haircolor__ {,__lazy-wildcards/char/haircut-multi__|} {,__lazy-wildcards/char/hair-style-multi__|}
+        __lazy-wildcards/char/hair-length__,__lazy-wildcards/char/haircolor__ {,__lazy-wildcards/char/haircuts-multis__|} {,__lazy-wildcards/char/hair-style-multi__|}
     hair-all:
       - >-
         {3::__lazy-wildcards/prompts/hair__| 0.1::__lazy-wildcards/char/hair-bald__}
@@ -264,9 +264,9 @@ lazy-wildcards:
           dice:
             - holding dice,dice
           poker:
-            - playing card,card,__lazy-wildcards/util/action/playing-card/poker-playing__,holding card
+            - playing card,card,__lazy-wildcards/utils/action/playing-card/poker-playing__,holding card
             - >-
-              playing card,card,{1-3$$__lazy-wildcards/util/action/playing-card/poker-card__},holding card
+              playing card,card,{1-3$$__lazy-wildcards/utils/action/playing-card/poker-card__},holding card
       tarot:
         prompts:
           - >-
@@ -614,12 +614,12 @@ lazy-wildcards:
         {low |}twin braids
       - double bun
       - tendril bangs hairstyle
-    haircut-multi:
+    haircuts-multis:
       - >-
         {1-4$$ hair,$$__person/regular/haircuts-*__} hair
       - >-
         {1-4$$__lazy-wildcards/char/haircuts__}
-    haircut:
+    haircuts:
       - blunt bangs
       - swept bangs
       - crossed bangs
@@ -955,9 +955,9 @@ lazy-wildcards:
           - torii
           - watercraft
       station:
-        shared:
-          
-          - 
+        prompts:
+          - >-
+            __lazy-wildcards/subject/architectural/station/main/*__,{1-$$__lazy-wildcards/subject/architectural/station/env__},{1-$$__lazy-wildcards/subject/architectural/station/env-bg__}
         main:
           # 地下鐵 / 捷運
           metro:
@@ -1014,6 +1014,27 @@ lazy-wildcards:
       korean-clothes:
         prompts:
           - hanbok,korean clothes,clothed underbust
+      office-lady:
+        prompts:
+          - office lady,zhiyezhuang,formal,collared shirt,vest,pencil skirt,pantyhose
+      maid:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/maid/main__ {0.3::,{1-$$__lazy-wildcards/subject/costume/maid/style__}|}
+        style:
+          - cleavage
+          - puffed sleeves
+          - ornate apron
+        main:
+          - __lazy-wildcards/subject/costume/maid/utils/maid-color-01(c=blue,c2=white)__
+          - |-
+            __lazy-wildcards/subject/costume/maid/utils/maid-color-01(c!=__mix-lazy-auto/color-anything__,c2=white)__
+          - __lazy-wildcards/subject/costume/maid/utils/maid-color-01(c=__mix-lazy-auto/color-anything__,c2=white)__
+          - __lazy-wildcards/subject/costume/maid/utils/maid-color-01(c=__mix-lazy-auto/color-anything__,c2=__mix-lazy-auto/color-anything__)__
+        utils:
+          maid-color-01:
+            - >-
+              maid headdress,detached collar,${c:blue} ribbon,{long|short} sleeves,breasts strap,${c:blue} corset,high-waist,${c2:white} apron,frilled apron,${c:blue} skirt,frilled skirt,${c:blue} boots
       others:
         prompts:
           - >-
@@ -1239,19 +1260,44 @@ lazy-wildcards:
           - elf elixir
           - |-
             troll's treasure
-      dirty-street:
+      ruins-common:
         prompts:
           - >-
-            ruanyi0042,{0-$$__lazy-wildcards/subject/env-bg/dirty-alley/style__|},{3-$$__lazy-wildcards/subject/env-bg/dirty-alley/main__},{6-$$__lazy-wildcards/subject/env-bg/dirty-alley/env__} {,__lazy-wildcards/subject/moment/random/prompts__|}
-      dirty-alley:
-        prompts:
-          - >-
-            ruanyi0046,alley,{0-$$__lazy-wildcards/subject/env-bg/dirty-alley/style__|},{2-$$__lazy-wildcards/subject/env-bg/dirty-alley/main__},{6-$$__lazy-wildcards/subject/env-bg/dirty-alley/env__} {,__lazy-wildcards/subject/moment/random/prompts__|}
+            {1-$$__lazy-wildcards/subject/env-bg/ruins-common/style-main__},{0-$$__lazy-wildcards/subject/env-bg/ruins-common/style__},{1-$$__lazy-wildcards/subject/env-bg/ruins-common/env__},
+        style-main:
+          - ruins,abandoned
         style:
+          - dark
+          - eerie
           - no humans
+        env:
+          - debris
+          - overgrown
+          - dilapidated
+          - crumbling
+          - vegetation
+          - moss
+          - messy
+      ruins-city-common:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-bg/ruins-city-common/style__},{1-$$__lazy-wildcards/subject/env-bg/ruins-city-common/env__},__lazy-wildcards/subject/env-bg/ruins-common/prompts__
+        prompts-style:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-bg/ruins-city-common/style__},{0-$$__lazy-wildcards/subject/env-bg/ruins-common/style__}
+        style:
+          - urban exploration
           - dirty
           - garbage
-          - messy
+        env:
+          - graffiti
+          - peeling paint
+          - broken windows
+          - garbage
+      ruins-city-street:
+        prompts:
+          - >-
+            {2-$$__lazy-wildcards/subject/env-bg/ruins-city-street/main__},__lazy-wildcards/subject/env-bg/ruins-city-common/prompts__,{1-$$__lazy-wildcards/subject/env-bg/ruins-city-street/env__}
         main:
           - city,cityscape
           - building
@@ -1291,10 +1337,22 @@ lazy-wildcards:
           - brick road
           - rock road
           - wooden road
+      ruins-station-train:
+        prompts:
+          - >-
+            abandoned train station,__lazy-wildcards/subject/architectural/station/prompts__,__lazy-wildcards/subject/env-bg/ruins-city-common/prompts__
+      dirty-street:
+        prompts:
+          - >-
+            ruanyi0042,__lazy-wildcards/subject/env-bg/ruins-city-street/prompts__,{6-$$__lazy-wildcards/subject/env-bg/ruins-city-street/env__} {,__lazy-wildcards/subject/moment/random/prompts__|}
+      dirty-alley:
+        prompts:
+          - >-
+            ruanyi0046,(alley:1.2),__lazy-wildcards/subject/env-bg/dirty-street/prompts__
       dirty-toilet:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-bg/dirty-toilet/main__,{1-$$__lazy-wildcards/subject/env-bg/dirty-toilet/env-bg__},{1-$$__lazy-wildcards/subject/env-bg/dirty-toilet/env__},{1-$$__lazy-wildcards/subject/env-bg/dirty-toilet/style__},{0-$$__lazy-wildcards/subject/env-bg/dirty-toilet/style-adj__}
+            __lazy-wildcards/subject/env-bg/dirty-toilet/main__,{1-$$__lazy-wildcards/subject/env-bg/dirty-toilet/env-bg__},{1-$$__lazy-wildcards/subject/env-bg/dirty-toilet/env__},{1-$$__lazy-wildcards/subject/env-bg/dirty-toilet/style__},{0-$$__lazy-wildcards/subject/env-bg/dirty-toilet/style-adj__} {,__lazy-wildcards/subject/env-bg/ruins-city-common/prompts__|}
         style:
           - dirt,filth,dirty,Dirt that cannot be washed away
           - dirty toilet
@@ -2089,6 +2147,62 @@ lazy-wildcards:
             - hands on knees
         env:
           - toilet stall
+  cosplay-char:
+    fate:
+      raikou:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/fate/raikou/main__,__lazy-wildcards/cosplay-char/fate/raikou/ethnicity__,__lazy-wildcards/cosplay-char/fate/raikou/costume/*__,{1-$$__lazy-wildcards/cosplay-char/fate/raikou/style__}
+        main:
+          - >-
+            minamoto no raikou \(fate\),fate \(series\)
+        ethnicity:
+          - |-
+            large breasts,parted bangs,purple eyes,(purple hair:1.2),very long hair
+        style:
+          - hoop earrings
+          - collarbone
+          - earrings
+          - hair between eyes
+          - lipstick
+          - makeup
+          - cleavage
+          - mature female
+          - bursting breasts
+          - thighs
+          - braid
+          - hair ornament
+          - black panties
+          - curvy
+          - hair flower
+          - collar
+          - hair over shoulder
+          - jewelry
+          - high collar
+          - low-tied long hair
+          - ponytail
+          - straight hair
+          - rope
+          - tie
+          - armlet
+          - purple panties
+        costume:
+          anything:
+            - Apron_Raikou_ownwaifu,apron,long sleeves,turtleneck sweater,floral print,long skirt,purple shirt
+            - Bra_Raikou_ownwaifu,bare shoulders,cleavage,sports bra,yoga pants,bracelet,brown belt,casual,hair ornament,hair scrunchie,high-waist pants,navel,sportswear,tight pants,
+            - Bunny_Raikou_ownwaifu,bare shoulders,playboy bunny,rabbit ears,wrist cuffs,highleg leotard,purple leotard,covered navel,rabbit tail,bowtie,strapless leotard,fishnets,black pantyhose,fishnet pantyhose,thighband pantyhose,black bow,black bowtie,cameltoe,detached sleeves,shiny clothes
+            - BusinessSuit_Raikou_ownwaifu,white shirt,collared shirt,office lady,black skirt,pencil skirt,dress shirt,long sleeves,shirt tucked in,belt,black pantyhose
+            - Chinese_Raikou_ownwaifu,china dress,chinese clothes,purple dress,bare shoulders,sleeveless,side slit,purple gloves,feather boa,folded fan,sleeveless dress,covered navel,floral print
+            - CowPrint_Raikou_ownwaifu,eyepatch bikini,fake horns,animal print,bare shoulders,cow print,cleavage,cow horns,elbow gloves,neck bell,swimsuit,animal ears,cow tail,cowbell,navel,white bikini,white thighh
+            - EyePatchBikini_Raikou_ownwaifu,minamoto no raikou \(swimsuit lancer\) \(fate\),bare shoulders,eyepatch bikini,purple bikini,armlet,choker,beads,cleavage,navel,side-tie bikini bottom,thighs,black gloves,single glove,fingerless gloves,pouch,strapless bikini
+            - Kimino_Raikou_ownwaifu,japanese clothes,sash,obi,hair ornament,purple kimono,floral print,cleavage,hair flower,long sleeves,wide sleeves,fur trim,kimono
+            - MainOutfit_Raikou_ownwaifu,high collar,purple bodysuit,fingerless gloves,black gloves,tabard,ribbed sleeves,arm guards,covered navel,japanese armor,loincloth,armor,kote,tassel,sheath,pelvic curtain,quiver,wagashi
+            - MainOutfitRedRopes_ownwaifu,purple bodysuit,fingerless gloves,black gloves,ribbed sleeves,covered navel,japanese armor,arm guards,loincloth,armor,kote,tabard,sheath,impossible bodysuit,shiny clothes,red rope,
+            - NSFW_Raikou_ownwaifu,completely nude,navel,cleavage,nude,armlet
+            - Shibari_Raikou_ownwaifu,nude,navel,shibari,bound legs,collar,gagged,improvised gag,red rope
+            - Sweater_Raikou_ownwaifu,ribbed sweater,turtleneck sweater,long sleeves,white sweater,purple sweater,casual,sweater dress,dolphin shorts,pink shorts,bare shoulders,clothing cutout,cleavage cutout,covered navel,sleeveless turtleneck
+            - Swimsuit_Raikou_ownwaifu,bare shoulders,navel,cleavage,collarbone,swimsuit,thighs,purple bikini,purple panties,micro bikini,side-tie bikini bottom,minamoto no raikou \(swimsuit lancer\) \(fate\),highleg bikini,leg ribbon
+            - VirginDestroyerSweater_Raikou_ownwaifu,bare shoulders,detached sleeves,revealing clothes,ribbed sleeves,virgin killer sweater,white thighhighs,navel,panties,ribbed sweater,side-tie panties,sweater,turtleneck,turtleneck sweater,underboob,white panties,white sweater
 mix-lazy-auto:
   # "color-anything" (total: 462 => 148, save 314 ) is merge from
   #  - __lazy-wildcards/utils/color-base__ (11)
