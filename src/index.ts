@@ -26,6 +26,7 @@ export * from './valid';
 export * from './merge';
 export * from './find';
 export * from './format';
+export * from './check';
 export type * from './types';
 
 /**

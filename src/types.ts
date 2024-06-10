@@ -125,3 +125,49 @@ export type IResultDeepFindSingleRootAt = {
 
 export type IVisitPathsList = (string|number)[]
 export type IVisitPathsListReadonly = readonly (string | number)[]
+
+export interface IOptionsFind
+{
+	onlyFirstMatchAll?: boolean,
+}
+
+/**
+ * Interface representing a single match of the dynamic prompts wildcards pattern.
+ */
+export interface IMatchDynamicPromptsWildcardsEntry
+{
+	/**
+	 * The name extracted from the input string.
+	 */
+	name: string;
+
+	/**
+	 * The variables extracted from the input string.
+	 */
+	variables: string;
+
+	/**
+	 * The keyword extracted from the input string.
+	 */
+	keyword: string;
+
+	/**
+	 * The original matched source string.
+	 */
+	source: string;
+
+	/**
+	 * A boolean indicating whether the input string is a full match.
+	 */
+	isFullMatch: boolean;
+
+	/**
+	 * A boolean indicating whether the wildcards pattern contains a star (*) character.
+	 */
+	isStarWildcards: boolean;
+}
+
+export interface IOptionsCheckAllSelfLinkWildcardsExists
+{
+	ignore?: string[]
+}

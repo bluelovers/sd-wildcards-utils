@@ -1,6 +1,13 @@
 
 import { isMatch } from 'picomatch';
-import { IFindPathEntry, IRecordWildcards, IVisitPathsListReadonly } from './types';
+import {
+	IFindPathEntry,
+	IOptionsFind,
+	IRecordWildcards,
+	IVisitPathsListReadonly,
+	IWildcardsYAMLDocument,
+} from './types';
+import { Document, isDocument } from 'yaml';
 
 export function pathsToWildcardsPath(paths: IVisitPathsListReadonly, full?: boolean)
 {
@@ -12,11 +19,6 @@ export function pathsToWildcardsPath(paths: IVisitPathsListReadonly, full?: bool
 	return s
 }
 
-export function wildcardsPathToPaths(path: string)
-{
-	return path.split('/');
-}
-
 export function pathsToDotPath(paths: IVisitPathsListReadonly)
 {
 	return paths.join('.');
@@ -24,15 +26,27 @@ export function pathsToDotPath(paths: IVisitPathsListReadonly)
 
 /**
  * Recursively searches for a path in a nested object or array structure.
- *
- * @param data - The nested object or array to search in.
- * @param paths - The path to search for, represented as an array of strings.
- * @param prefix - Internal parameter used to keep track of the current path.
- * @param list - Internal parameter used to store the found paths and their corresponding values.
- * @returns A list of found paths and their corresponding values.
- * @throws {TypeError} If the value at a found path is not a string and there are remaining paths to search.
  */
-export function findPath(data: IRecordWildcards, paths: string[], prefix: string[] = [], list: IFindPathEntry[] = [])
+export function findPath(data: IRecordWildcards | Document | IWildcardsYAMLDocument,
+	paths: string[],
+	findOpts?: IOptionsFind,
+	prefix: string[] = [],
+	list: IFindPathEntry[] = []
+)
+{
+	findOpts ??= {};
+	prefix ??= [];
+	list ??= [];
+
+	if (isDocument(data))
+	{
+		data = data.toJSON() as IRecordWildcards;
+	}
+
+	return _findPathCore(data, paths, findOpts, prefix, list)
+}
+
+export function _findPathCore(data: IRecordWildcards, paths: string[], findOpts: IOptionsFind, prefix: string[], list: IFindPathEntry[])
 {
 	paths = paths.slice(); // Create a copy of the paths array to avoid modifying the original array.
 	const current = paths.shift(); // Remove the first element from the paths array.
@@ -40,6 +54,11 @@ export function findPath(data: IRecordWildcards, paths: string[], prefix: string
 
 	for (const key in data)
 	{
+		if (findOpts.onlyFirstMatchAll && list.length)
+		{
+			break;
+		}
+
 		const bool = isMatch(key, current); // Check if the current key matches the current path element.
 
 		if (bool)
@@ -53,7 +72,7 @@ export function findPath(data: IRecordWildcards, paths: string[], prefix: string
 			{
 				if (notArray && typeof value !== 'string')
 				{
-					findPath(value, paths, target, list); // Recursively search for the remaining paths in the nested object or array.
+					findPath(value, paths, findOpts, target, list); // Recursively search for the remaining paths in the nested object or array.
 					continue;
 				}
 			}
@@ -66,7 +85,9 @@ export function findPath(data: IRecordWildcards, paths: string[], prefix: string
 				continue;
 			}
 
-			throw new TypeError(`Invalid Type. paths: ${target}, value: ${value}`); // Throw an error if the value is not a string and there are remaining paths to search.
+			const search = prefix.slice().concat(current);
+
+			throw new TypeError(`Invalid Type. paths: [${target}], match: [${search}], value: ${value}`); // Throw an error if the value is not a string and there are remaining paths to search.
 		}
 	}
 	return list; // Return the list of found paths and their corresponding values.

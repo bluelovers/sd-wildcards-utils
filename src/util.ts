@@ -1,4 +1,5 @@
 import { array_unique_overwrite } from 'array-hyper-unique';
+import { IMatchDynamicPromptsWildcardsEntry } from './types';
 
 export const RE_DYNAMIC_PROMPTS_WILDCARDS = /__([&~!@])?([*\w\/_\-]+)(\([^\n#]+\))?__/
 
@@ -88,42 +89,6 @@ export function matchDynamicPromptsWildcards(input: string)
 	return _matchDynamicPromptsWildcardsCore(m, input);
 }
 
-/**
- * Interface representing a single match of the dynamic prompts wildcards pattern.
- */
-export interface IMatchDynamicPromptsWildcardsEntry
-{
-	/**
-	 * The name extracted from the input string.
-	 */
-	name: string;
-
-	/**
-	 * The variables extracted from the input string.
-	 */
-	variables: string;
-
-	/**
-	 * The keyword extracted from the input string.
-	 */
-	keyword: string;
-
-	/**
-	 * The original matched source string.
-	 */
-	source: string;
-
-	/**
-	 * A boolean indicating whether the input string is a full match.
-	 */
-	isFullMatch: boolean;
-
-	/**
-	 * A boolean indicating whether the wildcards pattern contains a star (*) character.
-	 */
-	isStarWildcards: boolean;
-}
-
 export function _matchDynamicPromptsWildcardsCore(m: RegExpMatchArray,
 	input?: string,
 ): IMatchDynamicPromptsWildcardsEntry
@@ -211,4 +176,19 @@ export function assertWildcardsName(name: string)
 export function convertWildcardsNameToPaths(name: string)
 {
 	return name.split('/');
+}
+
+export function isWildcardsPathSyntx(path: string): path is `__${string}__`
+{
+	return RE_DYNAMIC_PROMPTS_WILDCARDS.test(path)
+}
+
+export function wildcardsPathToPaths(path: string)
+{
+	if (isWildcardsPathSyntx(path))
+	{
+		path = matchDynamicPromptsWildcards(path).name
+	}
+
+	return convertWildcardsNameToPaths(path);
 }
