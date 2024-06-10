@@ -60,3 +60,4 @@ export function getOptionsFromDocument<T extends Document>(doc: T, opts?: IOptio
 		...opts,
 	} as IOptionsParseDocument
 }
+

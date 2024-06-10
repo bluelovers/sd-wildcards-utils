@@ -8,4 +8,5 @@ export default (async () => {
 	await lazyImport(import('./output/copy'));
 	await lazyImport(import('./output/split'));
 	await lazyImport(import('./output/build'));
+	await lazyImport(import('./check'));
 })();
