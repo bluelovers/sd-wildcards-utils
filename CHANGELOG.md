@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.29](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.0.28...sd-wildcards-utils@1.0.29) (2024-06-10)
+
+
+### BREAKING CHANGES
+
+* **wildcards:** rename and fix missing nodes
+* add `checkAllSelfLinkWildcardsExists`
+
+
+
+### 🐛　Bug Fixes
+
+* **wildcards:** rename and fix missing nodes ([f935212](https://github.com/bluelovers/sd-wildcards-utils/commit/f935212f1e60aa20bea04f727cb11e414e2f0954))
+
+
+### 📦　Code Refactoring
+
+* add `checkAllSelfLinkWildcardsExists` ([283f607](https://github.com/bluelovers/sd-wildcards-utils/commit/283f60718502740d5066ca60f4306f4532a0fa92))
+
+
+### ♻️　Chores
+
+* **wildcards:** add cosplay-char ([b4aeea8](https://github.com/bluelovers/sd-wildcards-utils/commit/b4aeea8d363da3593d55ed1f78a31aa4b4ee07d8))
+
+
+
 ## [1.0.28](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.0.27...sd-wildcards-utils@1.0.28) (2024-06-09)
 
 

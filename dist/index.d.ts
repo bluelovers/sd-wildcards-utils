@@ -74,6 +74,41 @@ export type IResultDeepFindSingleRootAt = {
 };
 export type IVisitPathsList = (string | number)[];
 export type IVisitPathsListReadonly = readonly (string | number)[];
+export interface IOptionsFind {
+	onlyFirstMatchAll?: boolean;
+}
+/**
+ * Interface representing a single match of the dynamic prompts wildcards pattern.
+ */
+export interface IMatchDynamicPromptsWildcardsEntry {
+	/**
+	 * The name extracted from the input string.
+	 */
+	name: string;
+	/**
+	 * The variables extracted from the input string.
+	 */
+	variables: string;
+	/**
+	 * The keyword extracted from the input string.
+	 */
+	keyword: string;
+	/**
+	 * The original matched source string.
+	 */
+	source: string;
+	/**
+	 * A boolean indicating whether the input string is a full match.
+	 */
+	isFullMatch: boolean;
+	/**
+	 * A boolean indicating whether the wildcards pattern contains a star (*) character.
+	 */
+	isStarWildcards: boolean;
+}
+export interface IOptionsCheckAllSelfLinkWildcardsExists {
+	ignore?: string[];
+}
 export declare const RE_DYNAMIC_PROMPTS_WILDCARDS: RegExp;
 /**
  * for `matchAll`
@@ -150,35 +185,6 @@ export declare function isDynamicPromptsWildcards(input: string): boolean;
  * __season_clothes(season=)__
  */
 export declare function matchDynamicPromptsWildcards(input: string): IMatchDynamicPromptsWildcardsEntry;
-/**
- * Interface representing a single match of the dynamic prompts wildcards pattern.
- */
-export interface IMatchDynamicPromptsWildcardsEntry {
-	/**
-	 * The name extracted from the input string.
-	 */
-	name: string;
-	/**
-	 * The variables extracted from the input string.
-	 */
-	variables: string;
-	/**
-	 * The keyword extracted from the input string.
-	 */
-	keyword: string;
-	/**
-	 * The original matched source string.
-	 */
-	source: string;
-	/**
-	 * A boolean indicating whether the input string is a full match.
-	 */
-	isFullMatch: boolean;
-	/**
-	 * A boolean indicating whether the wildcards pattern contains a star (*) character.
-	 */
-	isStarWildcards: boolean;
-}
 export declare function _matchDynamicPromptsWildcardsCore(m: RegExpMatchArray, input?: string): IMatchDynamicPromptsWildcardsEntry;
 /**
  * Generator function that matches all occurrences of the dynamic prompts wildcards pattern in the input string.
@@ -221,6 +227,8 @@ export declare function matchDynamicPromptsWildcardsAll(input: string, unique?: 
 export declare function isWildcardsName(name: string): boolean;
 export declare function assertWildcardsName(name: string): void;
 export declare function convertWildcardsNameToPaths(name: string): string[];
+export declare function isWildcardsPathSyntx(path: string): path is `__${string}__`;
+export declare function wildcardsPathToPaths(path: string): string[];
 export declare function getOptionsShared<T extends IOptionsSharedWildcardsYaml>(opts?: T): Pick<T, keyof IOptionsSharedWildcardsYaml>;
 export declare function defaultOptionsStringifyMinify(): {
 	readonly lineWidth: 0;
@@ -304,22 +312,38 @@ export declare function mergeSeq<T extends YAMLSeq | IWildcardsYAMLSeq>(a: T, b:
  */
 export declare function mergeFindSingleRoots<T extends IWildcardsYAMLMapRoot | IWildcardsYAMLDocument>(doc: T, list: NoInfer<T>[] | NoInfer<T>): T;
 export declare function pathsToWildcardsPath(paths: IVisitPathsListReadonly, full?: boolean): string;
-export declare function wildcardsPathToPaths(path: string): string[];
 export declare function pathsToDotPath(paths: IVisitPathsListReadonly): string;
 /**
  * Recursively searches for a path in a nested object or array structure.
- *
- * @param data - The nested object or array to search in.
- * @param paths - The path to search for, represented as an array of strings.
- * @param prefix - Internal parameter used to keep track of the current path.
- * @param list - Internal parameter used to store the found paths and their corresponding values.
- * @returns A list of found paths and their corresponding values.
- * @throws {TypeError} If the value at a found path is not a string and there are remaining paths to search.
  */
-export declare function findPath(data: IRecordWildcards, paths: string[], prefix?: string[], list?: IFindPathEntry[]): IFindPathEntry[];
+export declare function findPath(data: IRecordWildcards | Document$1 | IWildcardsYAMLDocument, paths: string[], findOpts?: IOptionsFind, prefix?: string[], list?: IFindPathEntry[]): IFindPathEntry[];
+export declare function _findPathCore(data: IRecordWildcards, paths: string[], findOpts: IOptionsFind, prefix: string[], list: IFindPathEntry[]): IFindPathEntry[];
 export declare function stripZeroStr(value: string): string;
 export declare function trimPrompts(value: string): string;
 export declare function formatPrompts(value: string, opts?: IOptionsSharedWildcardsYaml): string;
+/**
+ * Checks if all self-link wildcards exist in a given object.
+ *
+ * @param obj - The object to check, can be a YAML string, Uint8Array, or a YAML Document/Node.
+ * @param chkOpts - Optional options for the check.
+ * @returns An object containing the results of the check.
+ *
+ * @throws Will throw an error if the provided object is not a YAML Document/Node and cannot be parsed as a YAML string.
+ *
+ * @remarks
+ * This function will parse the provided object into a YAML Document/Node if it is not already one.
+ * It will then extract all self-link wildcards from the YAML string representation of the object.
+ * For each wildcard, it will check if it exists in the JSON representation of the object using the `findPath` function.
+ * The function will return an object containing arrays of wildcard names that exist, do not exist, or were ignored due to the ignore option.
+ * It will also include an array of any errors that occurred during the check.
+ */
+export declare function checkAllSelfLinkWildcardsExists(obj: IRecordWildcards | Node$1 | Document$1 | string | Uint8Array, chkOpts?: IOptionsCheckAllSelfLinkWildcardsExists): {
+	obj: Document$1<Node$1, true> | Node$1<unknown>;
+	hasExists: string[];
+	ignoreList: string[];
+	notExistsOrError: string[];
+	errors: Error[];
+};
 /**
  * Normalizes a YAML document by applying specific rules to its nodes.
  **/

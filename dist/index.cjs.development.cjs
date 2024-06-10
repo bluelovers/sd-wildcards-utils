@@ -410,6 +410,15 @@ function assertWildcardsName(name) {
 function convertWildcardsNameToPaths(name) {
   return name.split('/');
 }
+function isWildcardsPathSyntx(path) {
+  return RE_DYNAMIC_PROMPTS_WILDCARDS.test(path);
+}
+function wildcardsPathToPaths(path) {
+  if (isWildcardsPathSyntx(path)) {
+    path = matchDynamicPromptsWildcards(path).name;
+  }
+  return convertWildcardsNameToPaths(path);
+}
 
 function mergeWildcardsYAMLDocumentRoots(ls) {
   return ls.reduce(_mergeWildcardsYAMLDocumentRootsCore);
@@ -510,27 +519,27 @@ function pathsToWildcardsPath(paths, full) {
   }
   return s;
 }
-function wildcardsPathToPaths(path) {
-  return path.split('/');
-}
 function pathsToDotPath(paths) {
   return paths.join('.');
 }
-/**
- * Recursively searches for a path in a nested object or array structure.
- *
- * @param data - The nested object or array to search in.
- * @param paths - The path to search for, represented as an array of strings.
- * @param prefix - Internal parameter used to keep track of the current path.
- * @param list - Internal parameter used to store the found paths and their corresponding values.
- * @returns A list of found paths and their corresponding values.
- * @throws {TypeError} If the value at a found path is not a string and there are remaining paths to search.
- */
-function findPath(data, paths, prefix = [], list = []) {
+function findPath(data, paths, findOpts, prefix = [], list = []) {
+  var _findOpts, _prefix, _list;
+  (_findOpts = findOpts) !== null && _findOpts !== void 0 ? _findOpts : findOpts = {};
+  (_prefix = prefix) !== null && _prefix !== void 0 ? _prefix : prefix = [];
+  (_list = list) !== null && _list !== void 0 ? _list : list = [];
+  if (yaml.isDocument(data)) {
+    data = data.toJSON();
+  }
+  return _findPathCore(data, paths, findOpts, prefix, list);
+}
+function _findPathCore(data, paths, findOpts, prefix, list) {
   paths = paths.slice();
   const current = paths.shift();
   const deep = paths.length > 0;
   for (const key in data) {
+    if (findOpts.onlyFirstMatchAll && list.length) {
+      break;
+    }
     const bool = picomatch.isMatch(key, current);
     if (bool) {
       const target = prefix.slice().concat(key);
@@ -538,7 +547,7 @@ function findPath(data, paths, prefix = [], list = []) {
       const notArray = !Array.isArray(value);
       if (deep) {
         if (notArray && typeof value !== 'string') {
-          findPath(value, paths, target, list);
+          findPath(value, paths, findOpts, target, list);
           continue;
         }
       } else if (!notArray) {
@@ -548,10 +557,75 @@ function findPath(data, paths, prefix = [], list = []) {
         });
         continue;
       }
-      throw new TypeError(`Invalid Type. paths: ${target}, value: ${value}`);
+      const search = prefix.slice().concat(current);
+      throw new TypeError(`Invalid Type. paths: [${target}], match: [${search}], value: ${value}`);
     }
   }
   return list;
+}
+
+/**
+ * Checks if all self-link wildcards exist in a given object.
+ *
+ * @param obj - The object to check, can be a YAML string, Uint8Array, or a YAML Document/Node.
+ * @param chkOpts - Optional options for the check.
+ * @returns An object containing the results of the check.
+ *
+ * @throws Will throw an error if the provided object is not a YAML Document/Node and cannot be parsed as a YAML string.
+ *
+ * @remarks
+ * This function will parse the provided object into a YAML Document/Node if it is not already one.
+ * It will then extract all self-link wildcards from the YAML string representation of the object.
+ * For each wildcard, it will check if it exists in the JSON representation of the object using the `findPath` function.
+ * The function will return an object containing arrays of wildcard names that exist, do not exist, or were ignored due to the ignore option.
+ * It will also include an array of any errors that occurred during the check.
+ */
+function checkAllSelfLinkWildcardsExists(obj, chkOpts) {
+  var _chkOpts, _chkOpts$ignore;
+  (_chkOpts = chkOpts) !== null && _chkOpts !== void 0 ? _chkOpts : chkOpts = {};
+  if (!(yaml.isDocument(obj) || yaml.isNode(obj))) {
+    obj = parseWildcardsYaml(obj);
+  }
+  const str = obj.toString();
+  const json = obj.toJSON();
+  let entries = matchDynamicPromptsWildcardsAll(str, true);
+  let isMatchIgnore = () => false;
+  if ((_chkOpts$ignore = chkOpts.ignore) !== null && _chkOpts$ignore !== void 0 && _chkOpts$ignore.length) {
+    isMatchIgnore = picomatch(chkOpts.ignore);
+  }
+  const notExistsOrError = [];
+  const hasExists = [];
+  const ignoreList = [];
+  const errors = [];
+  for (const entry of entries) {
+    if (isMatchIgnore(entry.name)) {
+      ignoreList.push(entry.name);
+      continue;
+    }
+    const paths = convertWildcardsNameToPaths(entry.name);
+    let list = [];
+    try {
+      list = findPath(json, paths, {
+        onlyFirstMatchAll: true
+      });
+    } catch (e) {
+      errors.push(e);
+      notExistsOrError.push(entry.name);
+      continue;
+    }
+    if (list.length) {
+      hasExists.push(entry.name);
+    } else {
+      notExistsOrError.push(entry.name);
+    }
+  }
+  return {
+    obj,
+    hasExists,
+    ignoreList,
+    notExistsOrError,
+    errors
+  };
 }
 
 function normalizeDocument(doc, opts) {
@@ -644,6 +718,7 @@ function parseWildcardsYaml(source, opts) {
 exports.RE_DYNAMIC_PROMPTS_WILDCARDS = RE_DYNAMIC_PROMPTS_WILDCARDS;
 exports.RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL = RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL;
 exports.RE_WILDCARDS_NAME = RE_WILDCARDS_NAME;
+exports._findPathCore = _findPathCore;
 exports._handleVisitPathsCore = _handleVisitPathsCore;
 exports._matchDynamicPromptsWildcardsCore = _matchDynamicPromptsWildcardsCore;
 exports._mergeSeqCore = _mergeSeqCore;
@@ -655,6 +730,7 @@ exports._validPair = _validPair;
 exports._validSeq = _validSeq;
 exports._visitNormalizeScalar = _visitNormalizeScalar;
 exports.assertWildcardsName = assertWildcardsName;
+exports.checkAllSelfLinkWildcardsExists = checkAllSelfLinkWildcardsExists;
 exports.convertPairsToPathsList = convertPairsToPathsList;
 exports.convertWildcardsNameToPaths = convertWildcardsNameToPaths;
 exports.createDefaultVisitWildcardsYAMLOptions = createDefaultVisitWildcardsYAMLOptions;
@@ -674,6 +750,7 @@ exports.handleVisitPathsFull = handleVisitPathsFull;
 exports.isDynamicPromptsWildcards = isDynamicPromptsWildcards;
 exports.isSafeKey = isSafeKey;
 exports.isWildcardsName = isWildcardsName;
+exports.isWildcardsPathSyntx = isWildcardsPathSyntx;
 exports.matchDynamicPromptsWildcards = matchDynamicPromptsWildcards;
 exports.matchDynamicPromptsWildcardsAll = matchDynamicPromptsWildcardsAll;
 exports.matchDynamicPromptsWildcardsAllGenerator = matchDynamicPromptsWildcardsAllGenerator;
