@@ -142,9 +142,9 @@ lazy-wildcards:
           dice:
             - holding dice, dice
           poker:
-            - playing card, card, __lazy-wildcards/util/action/playing-card/poker-playing__, holding card
+            - playing card, card, __lazy-wildcards/utils/action/playing-card/poker-playing__, holding card
             - >-
-              playing card, card, {1-3$$__lazy-wildcards/util/action/playing-card/poker-card__}, holding card
+              playing card, card, {1-3$$__lazy-wildcards/utils/action/playing-card/poker-card__}, holding card
       tarot:
         prompts:
           - >-

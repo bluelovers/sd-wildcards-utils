@@ -53,4 +53,31 @@ lazy-wildcards:
       korean-clothes:
         prompts:
           - hanbok, korean clothes, clothed underbust
-      
+      office-lady:
+        prompts:
+          - office lady, zhiyezhuang, formal, collared shirt, vest, pencil skirt, pantyhose
+      maid:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/maid/main__
+            {0.3::, {1-$$__lazy-wildcards/subject/costume/maid/style__}|}
+        style:
+          - cleavage
+          - puffed sleeves
+          - ornate apron
+        main:
+          - __lazy-wildcards/subject/costume/maid/utils/maid-color-01(c=blue,c2=white)__
+          - __lazy-wildcards/subject/costume/maid/utils/maid-color-01(c!=__mix-lazy-auto/color-anything__,c2=white)__
+          - __lazy-wildcards/subject/costume/maid/utils/maid-color-01(c=__mix-lazy-auto/color-anything__,c2=white)__
+          - __lazy-wildcards/subject/costume/maid/utils/maid-color-01(c=__mix-lazy-auto/color-anything__,c2=__mix-lazy-auto/color-anything__)__
+        utils:
+          maid-color-01:
+            - >-
+              maid headdress,
+              detached collar,
+              ${c:blue} ribbon,
+              {long|short} sleeves,
+              breasts strap, ${c:blue} corset, high-waist,
+              ${c2:white} apron, frilled apron,
+              ${c:blue} skirt, frilled skirt,
+              ${c:blue} boots

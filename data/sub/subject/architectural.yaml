@@ -24,8 +24,11 @@ lazy-wildcards:
           - torii
           - watercraft
       station:
-        shared:
-          -
+        prompts:
+          - >-
+            __lazy-wildcards/subject/architectural/station/main/*__,
+            {1-$$__lazy-wildcards/subject/architectural/station/env__},
+            {1-$$__lazy-wildcards/subject/architectural/station/env-bg__}
         main:
           # 地下鐵 / 捷運
           metro:
