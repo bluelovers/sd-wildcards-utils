@@ -1,0 +1,17 @@
+lazy-wildcards:
+  subject:
+    env-elem:
+      flower:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/flower/main/*__,
+            {0-$$__lazy-wildcards/subject/env-elem/flower/env__}
+        env:
+          - flower
+          - falling petals
+          - petals on liquid
+          - petals
+        main:
+          common:
+            - wisteria
+            - cherry blossom

@@ -4,14 +4,19 @@ lazy-wildcards:
       japanese-clothes:
         prompts:
           - >-
-            oiran, hair ornament, japanese clothes, kimono, off shoulder, geta
-            {0.2::,__lazy-wildcards/subject/costume/japanese-clothes/style__|}
+            __lazy-wildcards/subject/costume/japanese-clothes/costume/*__
+            {,__lazy-wildcards/subject/costume/japanese-clothes/style__|}
+        costume:
+          type-oiran:
+            - (oiran, hair ornament, japanese clothes, kimono, geta)
         style:
           - floral print
+          - off shoulder
+          - geta
       china-dress:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume/china-dress/main__
+            (__lazy-wildcards/subject/costume/china-dress/main__)
             {,{1-$$__lazy-wildcards/subject/costume/china-dress/style__}|}
             {,{1-$$__lazy-wildcards/subject/costume/china-dress/makeup__}|}
             {,{1-$$__lazy-wildcards/subject/costume/china-dress/env__}|}
@@ -52,7 +57,27 @@ lazy-wildcards:
           - flower
       korean-clothes:
         prompts:
-          - hanbok, korean clothes, clothed underbust
+          - >-
+            (__lazy-wildcards/subject/costume/korean-clothes/main__)
+            {,{1-$$__lazy-wildcards/subject/costume/korean-clothes/style__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/korean-clothes/makeup__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/korean-clothes/env__}|}
+        main:
+          - hanbok, korean clothes, clothed underbust, hanfu
+        makeup:
+          - red lips
+          - lipstick
+        style:
+          - closed mouth
+          - long sleeves
+          - traditional clothes
+        env:
+          - ribbon
+          - red ribbon
+      mixin-asian-clothes:
+        prompts:
+          - >-
+            {2-$$__lazy-wildcards/subject/costume/japanese-clothes/prompts__|__lazy-wildcards/subject/costume/china-dress/prompts__|__lazy-wildcards/subject/costume/korean-clothes/prompts__}
       office-lady:
         prompts:
           - office lady, zhiyezhuang, formal, collared shirt, vest, pencil skirt, pantyhose
@@ -65,6 +90,7 @@ lazy-wildcards:
           - cleavage
           - puffed sleeves
           - ornate apron
+          - glasses
         main:
           - __lazy-wildcards/subject/costume/maid/utils/maid-color-01(c=blue,c2=white)__
           - __lazy-wildcards/subject/costume/maid/utils/maid-color-01(c!=__mix-lazy-auto/color-anything__,c2=white)__
@@ -81,3 +107,112 @@ lazy-wildcards:
               ${c2:white} apron, frilled apron,
               ${c:blue} skirt, frilled skirt,
               ${c:blue} boots
+      slave-girl:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/slave-girl/main__,
+            {1-$$__lazy-wildcards/subject/costume/slave-girl/costume/*__},
+            ({1-$$__lazy-wildcards/subject/costume/slave-girl/style__}),
+            {1-$$__lazy-wildcards/subject/costume/slave-girl/style-torn__},
+            {({1-$$__lazy-wildcards/subject/costume/slave-girl/ethnicity__}:1.2),|}
+            {1-$$__lazy-wildcards/subject/costume/slave-girl/env__}
+            {0.1::, {1-$$__lazy-wildcards/subject/costume/slave-girl/env-bg__}|}
+            {0.2::, __lazy-wildcards/subject/moment/age/prompts__|}
+        main:
+          - slave, slavegirl
+        costume:
+          type-torn:
+            - >-
+              {2-$$ragged tunic|tattered clothing|torn clothes, torn clothing}
+          type-slave-outfit:
+            - slave outfit
+        ethnicity:
+          - malnutrition
+          - emaciation
+          - visible_ribs
+          - calloused_hands
+          - scars
+          - bruises
+          - shackles
+          - brand
+          - branded
+          - marking
+          - symbol
+          - slave tattoo
+        style:
+          - ragged
+          - tattered
+          - torn
+          - holding leash
+          - humble
+          - messy hair
+          - dirty clothes
+          - worn
+          - frayed
+          - patches
+          - damaged
+          - rough_texture
+          - ({1-$$linen \(clothing\)|flax \(clothing\)|burlap})
+          - rough_skin
+          - blemishes
+          - scaly skin
+          - scar
+          - dry skin
+          - calloused skin
+          - beige
+          - grunge
+          - weathered
+          - stained
+          - off-white
+          - rustic
+          - bag_over_head
+          - hood
+          - blindfold
+          - gag
+          - captured
+          - restraint
+          - chains
+        style-torn:
+          - torn pants
+          - torn bottomwear
+          - torn shorts
+          - torn shoes
+          - torn skirt
+          - torn suit
+        env:
+          - metal collar
+          - slave collar
+          - leashed female
+          - leash
+          - collar
+          - bare feet, barefoot
+        env-bg:
+          - >-
+            {medieval |}stone wall
+      pajamas-hooded:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/pajamas-hooded/main__,
+            __lazy-wildcards/subject/costume/pajamas-hooded/costume/*__,
+            {1-$$__lazy-wildcards/subject/costume/pajamas-hooded/style__}
+        style:
+          - animal ears
+          - animal tail
+          - pajamas challenge, pajamas_challenge_\(meme\)
+          - pajamas pull
+          - pajamas lift
+          - pajamas down
+        main:
+          - (pajamas, hooded)
+        costume:
+          type-dog:
+            - __lazy-wildcards/subject/costume/pajamas-hooded/utils/animal-costume-with-tail(a=dog)__
+          type-monkey:
+            - __lazy-wildcards/subject/costume/pajamas-hooded/utils/animal-costume-with-tail(a=monkey)__
+        utils:
+          animal-costume:
+            - >-
+              ({a} costume, {a} ears:1.2)
+          animal-costume-with-tail:
+            - >-
+              ({a} costume, {a} ears:1.2), {a} tail

@@ -18,7 +18,10 @@ lazy-wildcards:
     haircolor:
       - >-
         {1-3$$ hair, $$__mix-lazy-auto/color-anything__} hair
-        ,{0-2$$__lazy-wildcards/char/haircolor-style__}
+        {,{1-2$$__lazy-wildcards/char/haircolor-style__}|}
+      - >-
+        __mix-lazy-auto/color-anything__ hair
+        {,{1-2$$__lazy-wildcards/char/haircolor-style__}|}
     hair-style-multi:
       - >-
         {1-4$$__lazy-wildcards/char/hair-style__}
