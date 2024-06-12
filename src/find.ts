@@ -38,15 +38,24 @@ export function findPath(data: IRecordWildcards | Document | IWildcardsYAMLDocum
 	prefix ??= [];
 	list ??= [];
 
+	let _cache = {
+		paths: paths.slice(),
+	}
+
 	if (isDocument(data))
 	{
+		// @ts-ignore
+		_cache.data = data;
+
 		data = data.toJSON() as IRecordWildcards;
 	}
 
-	return _findPathCore(data, paths, findOpts, prefix, list)
+	return _findPathCore(data, paths.slice(), findOpts, prefix, list, _cache)
 }
 
-export function _findPathCore(data: IRecordWildcards, paths: string[], findOpts: IOptionsFind, prefix: string[], list: IFindPathEntry[])
+export function _findPathCore(data: IRecordWildcards, paths: string[], findOpts: IOptionsFind, prefix: string[], list: IFindPathEntry[], _cache: {
+	paths: string[],
+})
 {
 	paths = paths.slice(); // Create a copy of the paths array to avoid modifying the original array.
 	const current = paths.shift(); // Remove the first element from the paths array.
@@ -72,7 +81,7 @@ export function _findPathCore(data: IRecordWildcards, paths: string[], findOpts:
 			{
 				if (notArray && typeof value !== 'string')
 				{
-					findPath(value, paths, findOpts, target, list); // Recursively search for the remaining paths in the nested object or array.
+					_findPathCore(value, paths, findOpts, target, list, _cache); // Recursively search for the remaining paths in the nested object or array.
 					continue;
 				}
 			}
@@ -87,7 +96,7 @@ export function _findPathCore(data: IRecordWildcards, paths: string[], findOpts:
 
 			const search = prefix.slice().concat(current);
 
-			throw new TypeError(`Invalid Type. paths: [${target}], match: [${search}], value: ${value}`); // Throw an error if the value is not a string and there are remaining paths to search.
+			throw new TypeError(`Invalid Type. paths: [${target}], isMatch: ${bool}, deep: ${deep}, deep paths: [${paths}], notArray: ${notArray}, match: [${search}], value: ${value}, _cache : ${JSON.stringify(_cache)}`); // Throw an error if the value is not a string and there are remaining paths to search.
 		}
 	}
 	return list; // Return the list of found paths and their corresponding values.
