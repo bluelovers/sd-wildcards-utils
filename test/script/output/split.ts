@@ -52,6 +52,7 @@ export default (async () =>
 
 	const json = await Bluebird.map(globSync([
 				'cf/costumes/*.yaml',
+				'cf/creatures/*.yaml',
 				'cf/other/*.yaml',
 				'others/**/*.yaml',
 				'*.yaml',

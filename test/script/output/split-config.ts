@@ -11,4 +11,6 @@ export const groupSplitConfig = [
 
 	['color-anything', '__cf-model/eye-color/*__'],
 	['color-anything', '__cf-model/hair-color/*__'],
+
+	['color-anything', '__crea-*/fin-color__'],
 ] as const
