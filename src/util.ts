@@ -1,7 +1,7 @@
 import { array_unique_overwrite } from 'array-hyper-unique';
 import { IMatchDynamicPromptsWildcardsEntry } from './types';
 
-export const RE_DYNAMIC_PROMPTS_WILDCARDS = /__([&~!@])?([*\w\/_\-]+)(\([^\n#]+\))?__/
+export const RE_DYNAMIC_PROMPTS_WILDCARDS = /(?<!#[^\n]+)__([&~!@])?([*\w\/_\-]+)(\([^\n#]+\))?__/
 
 /**
  * for `matchAll`
