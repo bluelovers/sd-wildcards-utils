@@ -32,6 +32,7 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 	test.each(globSync([
 		'cf/costumes/*.yaml',
 		'cf/other/*.yaml',
+		'cf/creatures/*.yaml',
 		'others/**/*.yaml',
 		'*.yaml',
 		'sub/**/*.yaml',
