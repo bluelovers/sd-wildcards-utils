@@ -129,6 +129,7 @@ export type IVisitPathsListReadonly = readonly (string | number)[]
 export interface IOptionsFind
 {
 	onlyFirstMatchAll?: boolean,
+	throwWhenNotFound?: boolean,
 }
 
 /**
@@ -170,4 +171,5 @@ export interface IMatchDynamicPromptsWildcardsEntry
 export interface IOptionsCheckAllSelfLinkWildcardsExists
 {
 	ignore?: string[]
+	maxErrors?: number,
 }

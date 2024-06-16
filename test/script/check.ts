@@ -1,30 +1,47 @@
-import { readFileSync } from 'fs';
 import { join } from 'path';
-import { __ROOT_OUTPUT_WILDCARDS } from '../__root';
+import { __ROOT_DATA, __ROOT_OUTPUT_WILDCARDS } from '../__root';
 import { checkAllSelfLinkWildcardsExists } from '../../src/check';
-import { parseWildcardsYaml } from '../../src/index';
+import { IWildcardsYAMLDocument, mergeWildcardsYAMLDocumentRoots, parseWildcardsYaml } from '../../src/index';
 import { AggregateErrorExtra } from 'lazy-aggregate-error';
+// @ts-ignore
+import Bluebird from 'bluebird';
+import { readFile } from 'node:fs/promises';
 
 export default (async () => {
-	let buf = readFileSync(join(__ROOT_OUTPUT_WILDCARDS, 'lazy-wildcards.yaml'));
 
-	const obj = parseWildcardsYaml(buf, {
-		allowMultiRoot: true,
-		allowUnsafeKey: true,
-	})
+	const obj = await Bluebird.map([
+			join(__ROOT_OUTPUT_WILDCARDS, 'lazy-wildcards.yaml'),
+			//join(__ROOT_DATA, 'lazy-wildcards.yaml'),
+			join(__ROOT_DATA, 'cf', 'bundle', 'corn-flakes-aio-bundle-sex.yaml'),
+		], (file: any) =>
+		{
+			return readFile(file)
+				.then(data => parseWildcardsYaml(data, {
+					disableUnsafeQuote: true,
+					allowMultiRoot: true,
+					allowUnsafeKey: true,
+				})) as any as IWildcardsYAMLDocument[]
+		})
+		.then((ls: any) =>
+		{
+			return mergeWildcardsYAMLDocumentRoots(ls)
+		})
+	;
 
 	let ret = checkAllSelfLinkWildcardsExists(obj, {
 		ignore: [
-			'cf-*/**',
+			//'cf-*/**',
+			//'crea-*/**',
 			'Bo/**',
 			'person/**',
 			'halloween/**',
 		]
 	})
 
-	if (ret.notExistsOrError.length)
+	if (ret.errors.length)
 	{
-		throw new AggregateErrorExtra(ret.errors, `Failure or missing some wildcards nodes.`);
+		const e = new AggregateErrorExtra(ret.errors, `Failure or missing some wildcards nodes.`);
+		throw e
 	}
 
 })()
