@@ -40,6 +40,8 @@ export function findPath(data: IRecordWildcards | Document | IWildcardsYAMLDocum
 
 	let _cache = {
 		paths: paths.slice(),
+		findOpts,
+		prefix,
 	}
 
 	if (isDocument(data))
@@ -99,5 +101,11 @@ export function _findPathCore(data: IRecordWildcards, paths: string[], findOpts:
 			throw new TypeError(`Invalid Type. paths: [${target}], isMatch: ${bool}, deep: ${deep}, deep paths: [${paths}], notArray: ${notArray}, match: [${search}], value: ${value}, _cache : ${JSON.stringify(_cache)}`); // Throw an error if the value is not a string and there are remaining paths to search.
 		}
 	}
+
+	if (prefix.length === 0 && findOpts.throwWhenNotFound && !list.length)
+	{
+		throw new RangeError(`Invalid Paths. paths: [${[current, ...paths]}], _cache : ${JSON.stringify(_cache)}`);
+	}
+
 	return list; // Return the list of found paths and their corresponding values.
 }

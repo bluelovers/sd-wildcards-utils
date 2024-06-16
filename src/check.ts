@@ -36,6 +36,8 @@ export function checkAllSelfLinkWildcardsExists(obj: IRecordWildcards | Node | D
 {
 	chkOpts ??= {};
 
+	const maxErrors = chkOpts.maxErrors > 0 ? chkOpts.maxErrors : 10;
+
 	if (!(isDocument(obj) || isNode(obj)))
 	{
 		obj = parseWildcardsYaml(obj as string)
@@ -53,7 +55,6 @@ export function checkAllSelfLinkWildcardsExists(obj: IRecordWildcards | Node | D
 		isMatchIgnore = picomatch(chkOpts.ignore);
 	}
 
-	const notExistsOrError: string[] = [];
 	const hasExists: string[] = [];
 	const ignoreList: string[] = [];
 
@@ -69,29 +70,29 @@ export function checkAllSelfLinkWildcardsExists(obj: IRecordWildcards | Node | D
 
 		const paths = convertWildcardsNameToPaths(entry.name);
 
+		// @ts-ignore
 		let list: IFindPathEntry[] = [];
 
 		try
 		{
 			list = findPath(json, paths, {
 				onlyFirstMatchAll: true,
+				throwWhenNotFound: true,
 			})
 		}
 		catch (e)
 		{
 			errors.push(e as any)
-			notExistsOrError.push(entry.name)
+
+			if (errors.length >= maxErrors)
+			{
+				let e2 = new RangeError(`Max Errors. errors.length ${errors.length} >= ${maxErrors}`);
+				errors.unshift(e2)
+
+				break;
+			}
 
 			continue;
-		}
-
-		if (list.length)
-		{
-			hasExists.push(entry.name)
-		}
-		else
-		{
-			notExistsOrError.push(entry.name)
 		}
 	}
 
@@ -99,7 +100,6 @@ export function checkAllSelfLinkWildcardsExists(obj: IRecordWildcards | Node | D
 		obj,
 		hasExists,
 		ignoreList,
-		notExistsOrError,
 		errors,
 	}
 }
