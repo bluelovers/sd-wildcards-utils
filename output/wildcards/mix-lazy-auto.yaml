@@ -1,23 +1,41 @@
 mix-lazy-auto:
-  # "color-anything" (total: 462 => 148, save 314 ) is merge from
+  # "color-anything" (total: 662 => 174, save 488 ) is merge from
   #  - __lazy-wildcards/utils/color-base__ (11)
-  #  - __mix-lazy-auto/color-anything__ (2)
+  #  - __mix-lazy-auto/color-anything__ (3)
   #  - __cf-sex-positions/color__ (6)
+  #  - __cf-amish/color__ (5)
+  #  - __cf-ancient-china/color__ (11)
+  #  - __cf-ancient-rome/color__ (10)
   #  - __cf-astronaut/color__ (10)
+  #  - __cf-aztec/color__ (9)
   #  - __cf-baker/color__ (10)
   #  - __cf-basketball-player/color__ (10)
+  #  - __cf-bavarian/color__ (10)
   #  - __cf-belly-dancer/color__ (10)
   #  - __cf-boxer/color__ (10)
   #  - __cf-chef/color__ (9)
   #  - __cf-clown/color__ (12)
+  #  - __cf-cyberpunk/color__ (10)
+  #  - __cf-dia-de-muertos/color__ (6)
   #  - __cf-disco-dancer/color__ (13)
   #  - __cf-doctor/color__ (10)
   #  - __cf-elf/color__ (10)
   #  - __cf-farmer/color__ (10)
   #  - __cf-fitness/color__ (10)
+  #  - __cf-flapper/color__ (8)
+  #  - __cf-florist/color__ (9)
   #  - __cf-football-player/color__ (10)
+  #  - __cf-fortune-teller/color__ (10)
+  #  - __cf-french-cancan/color__ (10)
+  #  - __cf-gamer/color__ (10)
   #  - __cf-gangster-1920s/color__ (8)
+  #  - __cf-ghostbuster/color__ (6)
+  #  - __cf-harlot-18th/color__ (10)
+  #  - __cf-harlot/color__ (11)
+  #  - __cf-hawaiian/color__ (10)
+  #  - __cf-hippie/color__ (12)
   #  - __cf-hockey-player/color__ (10)
+  #  - __cf-ice-skater/color__ (10)
   #  - __cf-jester/color__ (10)
   #  - __cf-lifeguard/color__ (3)
   #  - __cf-lingerie/color__ (10)
@@ -25,8 +43,15 @@ mix-lazy-auto:
   #  - __cf-mad-scientist/color__ (10)
   #  - __cf-maid/color__ (4)
   #  - __cf-mechanic/color__ (9)
+  #  - __cf-necromancer/color__ (6)
   #  - __cf-painter/color__ (10)
-  #  - __cf-punk/color__ (17)
+  #  - __cf-pinup-1940/color__ (10)
+  #  - __cf-pop-singer/color__ (10)
+  #  - __cf-puppeteer/color__ (11)
+  #  - __cf-red-riding-hood/color__ (6)
+  #  - __cf-renaissance/color__ (10)
+  #  - __cf-rio-carnival/color__ (10)
+  #  - __cf-rumba-dancer/color__ (10)
   #  - __cf-sailor/color__ (10)
   #  - __cf-school-student/color__ (11)
   #  - __cf-scout/color__ (10)
@@ -35,6 +60,7 @@ mix-lazy-auto:
   #  - __cf-school-teacher/color__ (11)
   #  - __cf-tennis-player/color__ (7)
   #  - __cf-top-model/color__ (11)
+  #  - __cf-tudor/color__ (10)
   #  - __cf-volleyball-player/color__ (10)
   #  - __cf-witch/color__ (8)
   #  - __cf-wrestler/color__ (9)
@@ -42,16 +68,7 @@ mix-lazy-auto:
   #  - __Bo/chars/haircolor__ (1)
   #  - __person/regular/haircolor__ (30)
   #  - __person/regular/haircolor-unconv__ (21)
-  #  - __cf-model/eye-color/blue__ (5)
-  #  - __cf-model/eye-color/green__ (5)
-  #  - __cf-model/eye-color/brown__ (3)
-  #  - __cf-model/eye-color/black__ (1)
-  #  - __cf-model/eye-color/gray__ (2)
-  #  - __cf-model/eye-color/vivid__ (7)
-  #  - __cf-model/eye-color/other__ (3)
-  #  - __cf-model/hair-color/young__ (6)
-  #  - __cf-model/hair-color/old__ (3)
-  #  - __cf-model/hair-color/other__ (9)
+  #  - __crea-mermaid/fin-color__ (10)
   color-anything:
     - white
     - black
@@ -66,31 +83,46 @@ mix-lazy-auto:
     - purple
     - bright blue-green
     - "{light|soft|dark|deep} {beige|__lazy-wildcards/utils/color-base__}"
+    - off-white
     - rainbow
+    - pastel blue
+    - grey
+    - dark green
+    - brown
+    - gold
     - silver
+    - jade
     - gray
     - navy
-    - gold
+    - deep blue
+    - turquoise
     - light blue
     - beige
-    - brown
-    - grey
     - navy blue
     - dark brown
     - cream
     - tan
     - maroon
-    - turquoise
     - dark grey
     - light grey
     - burgundy
-    - dark green
     - rainbow-colored
     - polka-dotted
     - striped
+    - neon green
+    - electric blue
+    - neon pink
+    - prismatic
+    - iridescent
+    - matte black
+    - vibrant orange
+    - deep purple
+    - rich red
+    - midnight black
+    - marigold yellow
+    - turquoise blue
     - sparkling silver
     - vibrant red
-    - electric blue
     - dazzling gold
     - "{neon|bright} pink"
     - emerald green
@@ -111,8 +143,24 @@ mix-lazy-auto:
     - denim blue
     - plaid
     - olive
+    - floral print
+    - pastel orange
+    - coral
+    - rich burgundy
+    - dark violet
     - pinstripe
     - deep burgundy
+    - khaki
+    - crimson
+    - hot pink
+    - royal blue
+    - leopard print
+    - tie-dye
+    - pastel colors
+    - floral patterns
+    - ice blue
+    - light pink
+    - pastel gray
     - multicolored
     - white and red
     - yellow and red
@@ -120,26 +168,20 @@ mix-lazy-auto:
     - fiery red
     - soft pink
     - elegant white
-    - deep purple
     - champagne
     - pastel lavender
     - dark blue
     - olive green
-    - metallic silver
-    - red brown
-    - ginger
-    - "{bleached|platinum|neon} blonde"
-    - jet-black
-    - "{neon|deep shade of forest|emerald} green"
-    - "{fiery|deep crimson|bright cherry} red"
-    - "{fiery|neon} orange"
-    - pastel peach
-    - "{cotton candy|neon|bright fuchsia|vibrant|magenta} pink"
-    - "{vibrant|deep} purple"
-    - "{electric|deep indigo|smoky lilac|vibrant turquoise} blue"
-    - deep shade of indigo
-    - fiery
-    - khaki
+    - dark red
+    - dark gray
+    - polka dot
+    - floral
+    - classic beige
+    - golden yellow
+    - scarlet
+    - deep red
+    - rich purple
+    - ivory
     - sky blue
     - forest green
     - camo
@@ -155,9 +197,11 @@ mix-lazy-auto:
     - "{pearl|off-white} white"
     - "{mustard|golden} yellow"
     - crimson red
-    - classic beige
+    - rich gold
+    - dark purple
+    - classic brown
+    - silver grey
     - black and orange
-    - deep red
     - "{0.7::__person/regular/haircolor__|0.3::__person/regular/haircolor-unconv__}"
     - blonde
     - auburn
@@ -172,6 +216,7 @@ mix-lazy-auto:
     - mahogany
     - copper
     - strawberry blonde
+    - ginger
     - light auburn
     - dark auburn
     - light chestnut
@@ -182,22 +227,20 @@ mix-lazy-auto:
     - caramel
     - salt and pepper
     - lavender
-    - pastel blue
     - rose gold
     - peach
     - mint green
     - lilac
-    - coral
     - silver blonde
     - violet
     - tangerine
     - indigo
     - orchid
     - aqua
-    - light green
-    - jade green
-    - hazel
-    - amber
-    - heterochromia
-    - light yellow
-    - dark
+    - iridescent blue
+    - seafoam green
+    - shimmering silver
+    - coral pink
+    - deep ocean teal
+    - tropical sunset orange
+    - sparkling gold

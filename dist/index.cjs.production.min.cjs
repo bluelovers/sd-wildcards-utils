@@ -56,7 +56,7 @@ function trimPrompts(e) {
 
 function formatPrompts(e, t) {
   var r;
-  return null !== (r = t) && void 0 !== r || (t = {}), e = e.replace(/[\s\xa0]+/gm, " ").replace(/[\s,.]+(?=,)/gm, ""), 
+  return null !== (r = t) && void 0 !== r || (t = {}), e = e.replace(/[\s\xa0]+/gm, " ").replace(/[\s,.]+(?=,|$)/gm, ""), 
   t.minifyPrompts && (e = e.replace(/(,)\s+/gm, "$1").replace(/\s+(,)/gm, "$1")), 
   e;
 }
@@ -194,7 +194,7 @@ function isSafeKey(e) {
   return "string" == typeof e && /^[._\w-]+$/.test(e) && !/^[\._-]|[\._-]$/.test(e);
 }
 
-const s = /__([&~!@])?([*\w\/_\-]+)(\([^\n#]+\))?__/, a = /*#__PURE__*/ new RegExp(s, s.flags + "g"), l = /^[\w\-_\/]+$/;
+const s = /(?<!#[^\n]*)__([&~!@])?([*\w\/_\-]+)(\([^\n#]+\))?__/, a = /*#__PURE__*/ new RegExp(s, s.flags + "g"), l = /^[\w\-_\/]+$/;
 
 function matchDynamicPromptsWildcards(e) {
   return _matchDynamicPromptsWildcardsCore(e.match(s), e);
@@ -249,33 +249,40 @@ function _mergeSeqCore(e, t) {
 
 function findPath(t, r, i, n = [], o = []) {
   var s, a, l;
-  return null !== (s = i) && void 0 !== s || (i = {}), null !== (a = n) && void 0 !== a || (n = []), 
-  null !== (l = o) && void 0 !== l || (o = []), e.isDocument(t) && (t = t.toJSON()), 
-  _findPathCore(t, r, i, n, o);
+  null !== (s = i) && void 0 !== s || (i = {}), null !== (a = n) && void 0 !== a || (n = []), 
+  null !== (l = o) && void 0 !== l || (o = []);
+  let c = {
+    paths: r.slice(),
+    findOpts: i,
+    prefix: n
+  };
+  return e.isDocument(t) && (c.data = t, t = t.toJSON()), _findPathCore(t, r.slice(), i, n, o, c);
 }
 
-function _findPathCore(e, t, r, n, o) {
-  const s = (t = t.slice()).shift(), a = t.length > 0;
-  for (const l in e) {
+function _findPathCore(e, t, r, n, o, s) {
+  const a = (t = t.slice()).shift(), l = t.length > 0;
+  for (const c in e) {
     if (r.onlyFirstMatchAll && o.length) break;
-    if (i.isMatch(l, s)) {
-      const i = n.slice().concat(l), c = e[l], d = !Array.isArray(c);
-      if (a) {
-        if (d && "string" != typeof c) {
-          findPath(c, t, r, i, o);
+    const d = i.isMatch(c, a);
+    if (d) {
+      const i = n.slice().concat(c), u = e[c], p = !Array.isArray(u);
+      if (l) {
+        if (p && "string" != typeof u) {
+          _findPathCore(u, t, r, i, o, s);
           continue;
         }
-      } else if (!d) {
+      } else if (!p) {
         o.push({
           key: i,
-          value: c
+          value: u
         });
         continue;
       }
-      const u = n.slice().concat(s);
-      throw new TypeError(`Invalid Type. paths: [${i}], match: [${u}], value: ${c}`);
+      const m = n.slice().concat(a);
+      throw new TypeError(`Invalid Type. paths: [${i}], isMatch: ${d}, deep: ${l}, deep paths: [${t}], notArray: ${p}, match: [${m}], value: ${u}, _cache : ${JSON.stringify(s)}`);
     }
   }
+  if (0 === n.length && r.throwWhenNotFound && !o.length) throw new RangeError(`Invalid Paths. paths: [${[ a, ...t ]}], _cache : ${JSON.stringify(s)}`);
   return o;
 }
 
@@ -310,34 +317,39 @@ exports._visitNormalizeScalar = _visitNormalizeScalar, exports.assertWildcardsNa
   if (isWildcardsName(e)) throw new SyntaxError(`Invalid Wildcards Name Syntax: ${e}`);
 }, exports.checkAllSelfLinkWildcardsExists = function checkAllSelfLinkWildcardsExists(t, r) {
   var n, o;
-  null !== (n = r) && void 0 !== n || (r = {}), e.isDocument(t) || e.isNode(t) || (t = parseWildcardsYaml(t));
-  const s = t.toString(), a = t.toJSON();
-  let l = matchDynamicPromptsWildcardsAll(s, !0), isMatchIgnore = () => !1;
+  null !== (n = r) && void 0 !== n || (r = {});
+  const s = r.maxErrors > 0 ? r.maxErrors : 10;
+  e.isDocument(t) || e.isNode(t) || (t = parseWildcardsYaml(t));
+  const a = t.toString(), l = t.toJSON();
+  let c = matchDynamicPromptsWildcardsAll(a, !0), isMatchIgnore = () => !1;
   null !== (o = r.ignore) && void 0 !== o && o.length && (isMatchIgnore = i(r.ignore));
-  const c = [], d = [], u = [], p = [];
-  for (const e of l) {
+  const d = [], u = [];
+  for (const e of c) {
     if (isMatchIgnore(e.name)) {
-      u.push(e.name);
+      d.push(e.name);
       continue;
     }
     const t = convertWildcardsNameToPaths(e.name);
     let r = [];
     try {
-      r = findPath(a, t, {
-        onlyFirstMatchAll: !0
+      r = findPath(l, t, {
+        onlyFirstMatchAll: !0,
+        throwWhenNotFound: !0
       });
-    } catch (t) {
-      p.push(t), c.push(e.name);
+    } catch (e) {
+      if (u.push(e), u.length >= s) {
+        let e = new RangeError(`Max Errors. errors.length ${u.length} >= ${s}`);
+        u.unshift(e);
+        break;
+      }
       continue;
     }
-    r.length ? d.push(e.name) : c.push(e.name);
   }
   return {
     obj: t,
-    hasExists: d,
-    ignoreList: u,
-    notExistsOrError: c,
-    errors: p
+    hasExists: [],
+    ignoreList: d,
+    errors: u
   };
 }, exports.convertPairsToPathsList = convertPairsToPathsList, exports.convertWildcardsNameToPaths = convertWildcardsNameToPaths, 
 exports.createDefaultVisitWildcardsYAMLOptions = createDefaultVisitWildcardsYAMLOptions, 
