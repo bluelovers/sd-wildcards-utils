@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.0.29...sd-wildcards-utils@1.1.1) (2024-06-22)
+
+
+### BREAKING CHANGES
+
+* maxErrors
+
+
+
+### 🐛　Bug Fixes
+
+* RE_DYNAMIC_PROMPTS_WILDCARDS ([22ac0b1](https://github.com/bluelovers/sd-wildcards-utils/commit/22ac0b132675977278387b3c5e70d142275088e9))
+* avoid comment ([f821025](https://github.com/bluelovers/sd-wildcards-utils/commit/f821025af3d3c5a3524e0ef5c655a0f92bd38ede))
+
+
+### ✨　Features
+
+* maxErrors ([3205704](https://github.com/bluelovers/sd-wildcards-utils/commit/3205704c3ce0f2026e46ea4aa9a3b862f800aa4d))
+
+
+### 🚨　Tests
+
+* cf/creatures/*.yaml ([8e65080](https://github.com/bluelovers/sd-wildcards-utils/commit/8e6508076c61418f19676f12700fa6c31b9ae087))
+
+
+### ♻️　Chores
+
+* update wildcards ([a5599e9](https://github.com/bluelovers/sd-wildcards-utils/commit/a5599e91b6d5b97c038fc2d3d97dd1b54fe96761))
+
+
+### 🔖　Miscellaneous
+
+* . ([c024348](https://github.com/bluelovers/sd-wildcards-utils/commit/c024348d3a7e4acf03f2b5102dce7755cbc19847))
+* . ([2591173](https://github.com/bluelovers/sd-wildcards-utils/commit/25911738d950430b13dba9e931ca2879c35a59b8))
+* . ([a095eef](https://github.com/bluelovers/sd-wildcards-utils/commit/a095eef467b296feb486f34e3473047cfd78c4dd))
+
+
+
 ## [1.0.29](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.0.28...sd-wildcards-utils@1.0.29) (2024-06-10)
 
 

@@ -76,6 +76,7 @@ export type IVisitPathsList = (string | number)[];
 export type IVisitPathsListReadonly = readonly (string | number)[];
 export interface IOptionsFind {
 	onlyFirstMatchAll?: boolean;
+	throwWhenNotFound?: boolean;
 }
 /**
  * Interface representing a single match of the dynamic prompts wildcards pattern.
@@ -108,6 +109,7 @@ export interface IMatchDynamicPromptsWildcardsEntry {
 }
 export interface IOptionsCheckAllSelfLinkWildcardsExists {
 	ignore?: string[];
+	maxErrors?: number;
 }
 export declare const RE_DYNAMIC_PROMPTS_WILDCARDS: RegExp;
 /**
@@ -317,7 +319,9 @@ export declare function pathsToDotPath(paths: IVisitPathsListReadonly): string;
  * Recursively searches for a path in a nested object or array structure.
  */
 export declare function findPath(data: IRecordWildcards | Document$1 | IWildcardsYAMLDocument, paths: string[], findOpts?: IOptionsFind, prefix?: string[], list?: IFindPathEntry[]): IFindPathEntry[];
-export declare function _findPathCore(data: IRecordWildcards, paths: string[], findOpts: IOptionsFind, prefix: string[], list: IFindPathEntry[]): IFindPathEntry[];
+export declare function _findPathCore(data: IRecordWildcards, paths: string[], findOpts: IOptionsFind, prefix: string[], list: IFindPathEntry[], _cache: {
+	paths: string[];
+}): IFindPathEntry[];
 export declare function stripZeroStr(value: string): string;
 export declare function trimPrompts(value: string): string;
 export declare function formatPrompts(value: string, opts?: IOptionsSharedWildcardsYaml): string;
@@ -341,7 +345,6 @@ export declare function checkAllSelfLinkWildcardsExists(obj: IRecordWildcards | 
 	obj: Document$1<Node$1, true> | Node$1<unknown>;
 	hasExists: string[];
 	ignoreList: string[];
-	notExistsOrError: string[];
 	errors: Error[];
 };
 /**

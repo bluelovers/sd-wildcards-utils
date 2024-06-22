@@ -63,7 +63,7 @@ function trimPrompts(t) {
 
 function formatPrompts(t, e) {
   var n;
-  return null !== (n = e) && void 0 !== n || (e = {}), t = t.replace(/[\s\xa0]+/gm, " ").replace(/[\s,.]+(?=,)/gm, ""), 
+  return null !== (n = e) && void 0 !== n || (e = {}), t = t.replace(/[\s\xa0]+/gm, " ").replace(/[\s,.]+(?=,|$)/gm, ""), 
   e.minifyPrompts && (t = t.replace(/(,)\s+/gm, "$1").replace(/\s+(,)/gm, "$1")), 
   t;
 }
@@ -215,7 +215,7 @@ function _validKey(t) {
   if (!isSafeKey(t)) throw new SyntaxError(`Invalid Key. key: ${t}`);
 }
 
-const y = /__([&~!@])?([*\w\/_\-]+)(\([^\n#]+\))?__/, g = /*#__PURE__*/ new RegExp(y, y.flags + "g"), v = /^[\w\-_\/]+$/;
+const y = /(?<!#[^\n]*)__([&~!@])?([*\w\/_\-]+)(\([^\n#]+\))?__/, g = /*#__PURE__*/ new RegExp(y, y.flags + "g"), v = /^[\w\-_\/]+$/;
 
 function isDynamicPromptsWildcards(t) {
   return matchDynamicPromptsWildcards(t).isFullMatch;
@@ -335,65 +335,78 @@ function pathsToDotPath(t) {
 
 function findPath(t, e, n, i = [], o = []) {
   var a, s, l;
-  return null !== (a = n) && void 0 !== a || (n = {}), null !== (s = i) && void 0 !== s || (i = []), 
-  null !== (l = o) && void 0 !== l || (o = []), r(t) && (t = t.toJSON()), _findPathCore(t, e, n, i, o);
+  null !== (a = n) && void 0 !== a || (n = {}), null !== (s = i) && void 0 !== s || (i = []), 
+  null !== (l = o) && void 0 !== l || (o = []);
+  let c = {
+    paths: e.slice(),
+    findOpts: n,
+    prefix: i
+  };
+  return r(t) && (c.data = t, t = t.toJSON()), _findPathCore(t, e.slice(), n, i, o, c);
 }
 
-function _findPathCore(t, e, n, r, i) {
-  const o = (e = e.slice()).shift(), a = e.length > 0;
-  for (const s in t) {
+function _findPathCore(t, e, n, r, i, o) {
+  const a = (e = e.slice()).shift(), s = e.length > 0;
+  for (const l in t) {
     if (n.onlyFirstMatchAll && i.length) break;
-    if (f(s, o)) {
-      const l = r.slice().concat(s), c = t[s], d = !Array.isArray(c);
-      if (a) {
-        if (d && "string" != typeof c) {
-          findPath(c, e, n, l, i);
+    const c = f(l, a);
+    if (c) {
+      const d = r.slice().concat(l), u = t[l], m = !Array.isArray(u);
+      if (s) {
+        if (m && "string" != typeof u) {
+          _findPathCore(u, e, n, d, i, o);
           continue;
         }
-      } else if (!d) {
+      } else if (!m) {
         i.push({
-          key: l,
-          value: c
+          key: d,
+          value: u
         });
         continue;
       }
-      const u = r.slice().concat(o);
-      throw new TypeError(`Invalid Type. paths: [${l}], match: [${u}], value: ${c}`);
+      const f = r.slice().concat(a);
+      throw new TypeError(`Invalid Type. paths: [${d}], isMatch: ${c}, deep: ${s}, deep paths: [${e}], notArray: ${m}, match: [${f}], value: ${u}, _cache : ${JSON.stringify(o)}`);
     }
   }
+  if (0 === r.length && n.throwWhenNotFound && !i.length) throw new RangeError(`Invalid Paths. paths: [${[ a, ...e ]}], _cache : ${JSON.stringify(o)}`);
   return i;
 }
 
 function checkAllSelfLinkWildcardsExists(t, e) {
   var n, i;
-  null !== (n = e) && void 0 !== n || (e = {}), r(t) || o(t) || (t = parseWildcardsYaml(t));
-  const a = t.toString(), s = t.toJSON();
-  let l = matchDynamicPromptsWildcardsAll(a, !0), isMatchIgnore = () => !1;
+  null !== (n = e) && void 0 !== n || (e = {});
+  const a = e.maxErrors > 0 ? e.maxErrors : 10;
+  r(t) || o(t) || (t = parseWildcardsYaml(t));
+  const s = t.toString(), l = t.toJSON();
+  let c = matchDynamicPromptsWildcardsAll(s, !0), isMatchIgnore = () => !1;
   null !== (i = e.ignore) && void 0 !== i && i.length && (isMatchIgnore = m(e.ignore));
-  const c = [], d = [], u = [], f = [];
-  for (const t of l) {
+  const d = [], u = [];
+  for (const t of c) {
     if (isMatchIgnore(t.name)) {
-      u.push(t.name);
+      d.push(t.name);
       continue;
     }
     const e = convertWildcardsNameToPaths(t.name);
     let n = [];
     try {
-      n = findPath(s, e, {
-        onlyFirstMatchAll: !0
+      n = findPath(l, e, {
+        onlyFirstMatchAll: !0,
+        throwWhenNotFound: !0
       });
-    } catch (e) {
-      f.push(e), c.push(t.name);
+    } catch (t) {
+      if (u.push(t), u.length >= a) {
+        let t = new RangeError(`Max Errors. errors.length ${u.length} >= ${a}`);
+        u.unshift(t);
+        break;
+      }
       continue;
     }
-    n.length ? d.push(t.name) : c.push(t.name);
   }
   return {
     obj: t,
-    hasExists: d,
-    ignoreList: u,
-    notExistsOrError: c,
-    errors: f
+    hasExists: [],
+    ignoreList: d,
+    errors: u
   };
 }
 

@@ -62,7 +62,7 @@ function trimPrompts(value) {
 function formatPrompts(value, opts) {
   var _opts;
   (_opts = opts) !== null && _opts !== void 0 ? _opts : opts = {};
-  value = value.replace(/[\s\xa0]+/gm, ' ').replace(/[\s,.]+(?=,)/gm, '');
+  value = value.replace(/[\s\xa0]+/gm, ' ').replace(/[\s,.]+(?=,|$)/gm, '');
   if (opts.minifyPrompts) {
     value = value.replace(/(,)\s+/gm, '$1').replace(/\s+(,)/gm, '$1');
   }
@@ -266,7 +266,7 @@ function _validKey(key) {
   }
 }
 
-const RE_DYNAMIC_PROMPTS_WILDCARDS = /__([&~!@])?([*\w\/_\-]+)(\([^\n#]+\))?__/;
+const RE_DYNAMIC_PROMPTS_WILDCARDS = /(?<!#[^\n]*)__([&~!@])?([*\w\/_\-]+)(\([^\n#]+\))?__/;
 /**
  * for `matchAll`
  *
@@ -527,12 +527,19 @@ function findPath(data, paths, findOpts, prefix = [], list = []) {
   (_findOpts = findOpts) !== null && _findOpts !== void 0 ? _findOpts : findOpts = {};
   (_prefix = prefix) !== null && _prefix !== void 0 ? _prefix : prefix = [];
   (_list = list) !== null && _list !== void 0 ? _list : list = [];
+  let _cache = {
+    paths: paths.slice(),
+    findOpts,
+    prefix
+  };
   if (yaml.isDocument(data)) {
+    // @ts-ignore
+    _cache.data = data;
     data = data.toJSON();
   }
-  return _findPathCore(data, paths, findOpts, prefix, list);
+  return _findPathCore(data, paths.slice(), findOpts, prefix, list, _cache);
 }
-function _findPathCore(data, paths, findOpts, prefix, list) {
+function _findPathCore(data, paths, findOpts, prefix, list, _cache) {
   paths = paths.slice();
   const current = paths.shift();
   const deep = paths.length > 0;
@@ -547,7 +554,7 @@ function _findPathCore(data, paths, findOpts, prefix, list) {
       const notArray = !Array.isArray(value);
       if (deep) {
         if (notArray && typeof value !== 'string') {
-          findPath(value, paths, findOpts, target, list);
+          _findPathCore(value, paths, findOpts, target, list, _cache);
           continue;
         }
       } else if (!notArray) {
@@ -558,8 +565,11 @@ function _findPathCore(data, paths, findOpts, prefix, list) {
         continue;
       }
       const search = prefix.slice().concat(current);
-      throw new TypeError(`Invalid Type. paths: [${target}], match: [${search}], value: ${value}`);
+      throw new TypeError(`Invalid Type. paths: [${target}], isMatch: ${bool}, deep: ${deep}, deep paths: [${paths}], notArray: ${notArray}, match: [${search}], value: ${value}, _cache : ${JSON.stringify(_cache)}`);
     }
+  }
+  if (prefix.length === 0 && findOpts.throwWhenNotFound && !list.length) {
+    throw new RangeError(`Invalid Paths. paths: [${[current, ...paths]}], _cache : ${JSON.stringify(_cache)}`);
   }
   return list;
 }
@@ -583,6 +593,7 @@ function _findPathCore(data, paths, findOpts, prefix, list) {
 function checkAllSelfLinkWildcardsExists(obj, chkOpts) {
   var _chkOpts, _chkOpts$ignore;
   (_chkOpts = chkOpts) !== null && _chkOpts !== void 0 ? _chkOpts : chkOpts = {};
+  const maxErrors = chkOpts.maxErrors > 0 ? chkOpts.maxErrors : 10;
   if (!(yaml.isDocument(obj) || yaml.isNode(obj))) {
     obj = parseWildcardsYaml(obj);
   }
@@ -593,7 +604,6 @@ function checkAllSelfLinkWildcardsExists(obj, chkOpts) {
   if ((_chkOpts$ignore = chkOpts.ignore) !== null && _chkOpts$ignore !== void 0 && _chkOpts$ignore.length) {
     isMatchIgnore = picomatch(chkOpts.ignore);
   }
-  const notExistsOrError = [];
   const hasExists = [];
   const ignoreList = [];
   const errors = [];
@@ -603,27 +613,27 @@ function checkAllSelfLinkWildcardsExists(obj, chkOpts) {
       continue;
     }
     const paths = convertWildcardsNameToPaths(entry.name);
+    // @ts-ignore
     let list = [];
     try {
       list = findPath(json, paths, {
-        onlyFirstMatchAll: true
+        onlyFirstMatchAll: true,
+        throwWhenNotFound: true
       });
     } catch (e) {
       errors.push(e);
-      notExistsOrError.push(entry.name);
+      if (errors.length >= maxErrors) {
+        let e2 = new RangeError(`Max Errors. errors.length ${errors.length} >= ${maxErrors}`);
+        errors.unshift(e2);
+        break;
+      }
       continue;
-    }
-    if (list.length) {
-      hasExists.push(entry.name);
-    } else {
-      notExistsOrError.push(entry.name);
     }
   }
   return {
     obj,
     hasExists,
     ignoreList,
-    notExistsOrError,
     errors
   };
 }
