@@ -1,6 +1,16 @@
 lazy-wildcards:
   subject:
     env-elem:
+      others:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/others/env__}
+          - >-
+            {3-$$__lazy-wildcards/subject/env-elem/others/env__}
+          - >-
+            {6-$$__lazy-wildcards/subject/env-elem/others/env__}
+        env:
+          - metal partition
       flower:
         prompts:
           - >-

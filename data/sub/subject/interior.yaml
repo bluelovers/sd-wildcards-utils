@@ -1,6 +1,37 @@
 lazy-wildcards:
   subject:
     interior:
+      asian-east:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/interior/asian-east/main__,
+            {3-$$__lazy-wildcards/subject/interior/asian-east/env__},
+            {1-$$__lazy-wildcards/subject/interior/asian-east/style__},
+            {2-$$__lazy-wildcards/subject/interior/asian-east/env-bg__}
+        main:
+          - east asian architecture, interior, indoors
+        style:
+          - psychedelic
+          - prismatic
+          - light tone
+        env:
+          - >-
+            {1-$$cylinder|cylinder in the middle}
+          - fog
+          - reflection
+          - the wooden booth
+          - window
+          - lily pad
+          - (lotus)
+          - lantern
+          - letterboxed
+        env-bg:
+          - water
+          - cloud
+          - sky
+          - wall
+          - bridge
+          - (wooden bridge:1.2)
       bathroom:
         prompts:
           - >-

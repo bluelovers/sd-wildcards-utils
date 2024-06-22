@@ -12,12 +12,13 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/subject/architectural/asian-east/main__,
-            {1-$$__lazy-wildcards/subject/architectural/asian-east/main__}
+            {1-$$__lazy-wildcards/subject/architectural/asian-east/env__},
+            {3-$$__lazy-wildcards/subject/interior/asian-east/env__}
+            {1-$$__lazy-wildcards/subject/interior/asian-east/style__},
+            {, {1-$$__lazy-wildcards/subject/interior/asian-east/env-bg__}}
         main:
           - architecture, east asian architecture
         env:
-          - bridge
-          - lantern
           - letterboxed
           - pagoda
           - tower
