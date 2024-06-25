@@ -4,7 +4,7 @@ import { defaultChecker as c, array_unique_overwrite as d } from "array-hyper-un
 
 import { AggregateErrorExtra as u } from "lazy-aggregate-error";
 
-import m, { isMatch as f } from "picomatch";
+import m, { isMatch as h } from "picomatch";
 
 function getOptionsShared(t) {
   var e;
@@ -140,12 +140,12 @@ function findWildcardsYAMLPathsAll(t) {
   }), e;
 }
 
-const h = /['"]/, p = /^\s*-|[{$~!@}\n|:?#'"]/;
+const f = /['"]/, p = /^\s*-|[{$~!@}\n|:?#'"]/;
 
 function _visitNormalizeScalar(t, e, n) {
   let r = e.value;
   if ("string" == typeof r) {
-    if (n.checkUnsafeQuote && h.test(r)) throw new SyntaxError(`Invalid SYNTAX [UNSAFE_QUOTE]. key: ${t}, node: ${e}`);
+    if (n.checkUnsafeQuote && f.test(r)) throw new SyntaxError(`Invalid SYNTAX [UNSAFE_QUOTE]. key: ${t}, node: ${e}`);
     ("QUOTE_DOUBLE" === e.type || "QUOTE_SINGLE" === e.type && !r.includes("\\")) && (e.type = "PLAIN"), 
     r = trimPrompts(stripZeroStr(formatPrompts(r, n.options))), p.test(r) && ("PLAIN" === e.type || "BLOCK_FOLDED" === e.type && /#/.test(r)) && (e.type = "BLOCK_LITERAL"), 
     e.value = r;
@@ -340,32 +340,39 @@ function findPath(t, e, n, i = [], o = []) {
   let c = {
     paths: e.slice(),
     findOpts: n,
-    prefix: i
+    prefix: i,
+    globOpts: findPathOptionsToGlobOptions(n)
   };
   return r(t) && (c.data = t, t = t.toJSON()), _findPathCore(t, e.slice(), n, i, o, c);
+}
+
+function findPathOptionsToGlobOptions(t) {
+  return {
+    ...null == t ? void 0 : t.globOpts,
+    ignore: null == t ? void 0 : t.ignore
+  };
 }
 
 function _findPathCore(t, e, n, r, i, o) {
   const a = (e = e.slice()).shift(), s = e.length > 0;
   for (const l in t) {
     if (n.onlyFirstMatchAll && i.length) break;
-    const c = f(l, a);
-    if (c) {
-      const d = r.slice().concat(l), u = t[l], m = !Array.isArray(u);
+    const c = r.slice().concat(l), d = r.slice().concat(a), u = h(pathsToWildcardsPath(c), pathsToWildcardsPath(d), o.globOpts);
+    if (u) {
+      const r = t[l], a = !Array.isArray(r);
       if (s) {
-        if (m && "string" != typeof u) {
-          _findPathCore(u, e, n, d, i, o);
+        if (a && "string" != typeof r) {
+          _findPathCore(r, e, n, c, i, o);
           continue;
         }
-      } else if (!m) {
+      } else if (!a) {
         i.push({
-          key: d,
-          value: u
+          key: c,
+          value: r
         });
         continue;
       }
-      const f = r.slice().concat(a);
-      throw new TypeError(`Invalid Type. paths: [${d}], isMatch: ${c}, deep: ${s}, deep paths: [${e}], notArray: ${m}, match: [${f}], value: ${u}, _cache : ${JSON.stringify(o)}`);
+      throw new TypeError(`Invalid Type. paths: [${c}], isMatch: ${u}, deep: ${s}, deep paths: [${e}], notArray: ${a}, match: [${d}], value: ${r}, _cache : ${JSON.stringify(o)}`);
     }
   }
   if (0 === r.length && n.throwWhenNotFound && !i.length) throw new RangeError(`Invalid Paths. paths: [${[ a, ...e ]}], _cache : ${JSON.stringify(o)}`);
@@ -436,5 +443,5 @@ function parseWildcardsYaml(t, e) {
   return validWildcardsYamlData(r, e), r;
 }
 
-export { y as RE_DYNAMIC_PROMPTS_WILDCARDS, g as RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL, v as RE_WILDCARDS_NAME, _findPathCore, _handleVisitPathsCore, _matchDynamicPromptsWildcardsCore, _mergeSeqCore, _mergeWildcardsYAMLDocumentRootsCore, _toJSON, _validKey, _validMap, _validPair, _validSeq, _visitNormalizeScalar, assertWildcardsName, checkAllSelfLinkWildcardsExists, convertPairsToPathsList, convertWildcardsNameToPaths, createDefaultVisitWildcardsYAMLOptions, deepFindSingleRootAt, parseWildcardsYaml as default, defaultCheckerIgnoreCase, defaultOptionsParseDocument, defaultOptionsStringify, defaultOptionsStringifyMinify, findPath, findWildcardsYAMLPathsAll, formatPrompts, getOptionsFromDocument, getOptionsShared, handleVisitPaths, handleVisitPathsFull, isDynamicPromptsWildcards, isSafeKey, isWildcardsName, isWildcardsPathSyntx, matchDynamicPromptsWildcards, matchDynamicPromptsWildcardsAll, matchDynamicPromptsWildcardsAllGenerator, mergeFindSingleRoots, mergeSeq, mergeWildcardsYAMLDocumentJsonBy, mergeWildcardsYAMLDocumentRoots, normalizeDocument, parseWildcardsYaml, pathsToDotPath, pathsToWildcardsPath, stringifyWildcardsYamlData, stripZeroStr, trimPrompts, uniqueSeqItems, uniqueSeqItemsChecker, validWildcardsYamlData, visitWildcardsYAML, wildcardsPathToPaths };
+export { y as RE_DYNAMIC_PROMPTS_WILDCARDS, g as RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL, v as RE_WILDCARDS_NAME, _findPathCore, _handleVisitPathsCore, _matchDynamicPromptsWildcardsCore, _mergeSeqCore, _mergeWildcardsYAMLDocumentRootsCore, _toJSON, _validKey, _validMap, _validPair, _validSeq, _visitNormalizeScalar, assertWildcardsName, checkAllSelfLinkWildcardsExists, convertPairsToPathsList, convertWildcardsNameToPaths, createDefaultVisitWildcardsYAMLOptions, deepFindSingleRootAt, parseWildcardsYaml as default, defaultCheckerIgnoreCase, defaultOptionsParseDocument, defaultOptionsStringify, defaultOptionsStringifyMinify, findPath, findPathOptionsToGlobOptions, findWildcardsYAMLPathsAll, formatPrompts, getOptionsFromDocument, getOptionsShared, handleVisitPaths, handleVisitPathsFull, isDynamicPromptsWildcards, isSafeKey, isWildcardsName, isWildcardsPathSyntx, matchDynamicPromptsWildcards, matchDynamicPromptsWildcardsAll, matchDynamicPromptsWildcardsAllGenerator, mergeFindSingleRoots, mergeSeq, mergeWildcardsYAMLDocumentJsonBy, mergeWildcardsYAMLDocumentRoots, normalizeDocument, parseWildcardsYaml, pathsToDotPath, pathsToWildcardsPath, stringifyWildcardsYamlData, stripZeroStr, trimPrompts, uniqueSeqItems, uniqueSeqItemsChecker, validWildcardsYamlData, visitWildcardsYAML, wildcardsPathToPaths };
 //# sourceMappingURL=index.esm.mjs.map

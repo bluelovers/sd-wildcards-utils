@@ -530,7 +530,8 @@ function findPath(data, paths, findOpts, prefix = [], list = []) {
   let _cache = {
     paths: paths.slice(),
     findOpts,
-    prefix
+    prefix,
+    globOpts: findPathOptionsToGlobOptions(findOpts)
   };
   if (yaml.isDocument(data)) {
     // @ts-ignore
@@ -538,6 +539,12 @@ function findPath(data, paths, findOpts, prefix = [], list = []) {
     data = data.toJSON();
   }
   return _findPathCore(data, paths.slice(), findOpts, prefix, list, _cache);
+}
+function findPathOptionsToGlobOptions(findOpts) {
+  return {
+    ...(findOpts === null || findOpts === void 0 ? void 0 : findOpts.globOpts),
+    ignore: findOpts === null || findOpts === void 0 ? void 0 : findOpts.ignore
+  };
 }
 function _findPathCore(data, paths, findOpts, prefix, list, _cache) {
   paths = paths.slice();
@@ -547,9 +554,10 @@ function _findPathCore(data, paths, findOpts, prefix, list, _cache) {
     if (findOpts.onlyFirstMatchAll && list.length) {
       break;
     }
-    const bool = picomatch.isMatch(key, current);
+    const target = prefix.slice().concat(key);
+    const search = prefix.slice().concat(current);
+    const bool = picomatch.isMatch(pathsToWildcardsPath(target), pathsToWildcardsPath(search), _cache.globOpts);
     if (bool) {
-      const target = prefix.slice().concat(key);
       const value = data[key];
       const notArray = !Array.isArray(value);
       if (deep) {
@@ -564,7 +572,6 @@ function _findPathCore(data, paths, findOpts, prefix, list, _cache) {
         });
         continue;
       }
-      const search = prefix.slice().concat(current);
       throw new TypeError(`Invalid Type. paths: [${target}], isMatch: ${bool}, deep: ${deep}, deep paths: [${paths}], notArray: ${notArray}, match: [${search}], value: ${value}, _cache : ${JSON.stringify(_cache)}`);
     }
   }
@@ -751,6 +758,7 @@ exports.defaultOptionsParseDocument = defaultOptionsParseDocument;
 exports.defaultOptionsStringify = defaultOptionsStringify;
 exports.defaultOptionsStringifyMinify = defaultOptionsStringifyMinify;
 exports.findPath = findPath;
+exports.findPathOptionsToGlobOptions = findPathOptionsToGlobOptions;
 exports.findWildcardsYAMLPathsAll = findWildcardsYAMLPathsAll;
 exports.formatPrompts = formatPrompts;
 exports.getOptionsFromDocument = getOptionsFromDocument;

@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.1.1...sd-wildcards-utils@1.2.1) (2024-06-25)
+
+
+### BREAKING CHANGES
+
+* support glob ignore
+
+
+
+### ✨　Features
+
+* interior-style-anything ([fa12cc3](https://github.com/bluelovers/sd-wildcards-utils/commit/fa12cc364c0aac061171c32c598e81034652c095))
+* support glob ignore ([e29fa61](https://github.com/bluelovers/sd-wildcards-utils/commit/e29fa61e098616cef5de3999feb9c2e3ddb2b168))
+* add Ayanami_Rei ([8dd2972](https://github.com/bluelovers/sd-wildcards-utils/commit/8dd297267aa2d85b23ca82a294d93c819f986df6))
+
+
+### ⚙️　Continuous Integration
+
+* update scripts ([bb351ca](https://github.com/bluelovers/sd-wildcards-utils/commit/bb351caa7ddef334740e52931741ff30761b598e))
+
+
+
 ## [1.1.1](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.0.29...sd-wildcards-utils@1.1.1) (2024-06-22)
 
 
