@@ -15,6 +15,7 @@ import {
 	YAMLMap,
 	YAMLSeq,
 } from 'yaml';
+import { Glob,PicomatchOptions } from 'picomatch';
 
 export type IOmitParsedNodeContents<T extends Node | Document, P extends ParsedNode | Document.Parsed> =
 	Omit<P, 'contents'>
@@ -130,6 +131,17 @@ export interface IOptionsFind
 {
 	onlyFirstMatchAll?: boolean,
 	throwWhenNotFound?: boolean,
+	ignore?: Glob;
+	globOpts?: PicomatchOptions,
+}
+
+export interface ICachesFindPath
+{
+	paths: string[],
+	findOpts?: IOptionsFind,
+	prefix: string[],
+	data?: IWildcardsYAMLDocument | IWildcardsYAMLDocumentParsed,
+	globOpts: PicomatchOptions
 }
 
 /**
