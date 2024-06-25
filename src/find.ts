@@ -1,6 +1,7 @@
 
 import { isMatch } from 'picomatch';
 import {
+	ICachesFindPath,
 	IFindPathEntry,
 	IOptionsFind,
 	IRecordWildcards,
@@ -8,6 +9,7 @@ import {
 	IWildcardsYAMLDocument,
 } from './types';
 import { Document, isDocument } from 'yaml';
+import { PicomatchOptions } from 'picomatch';
 
 export function pathsToWildcardsPath(paths: IVisitPathsListReadonly, full?: boolean)
 {
@@ -38,10 +40,11 @@ export function findPath(data: IRecordWildcards | Document | IWildcardsYAMLDocum
 	prefix ??= [];
 	list ??= [];
 
-	let _cache = {
+	let _cache: ICachesFindPath = {
 		paths: paths.slice(),
 		findOpts,
 		prefix,
+		globOpts: findPathOptionsToGlobOptions(findOpts),
 	}
 
 	if (isDocument(data))
@@ -55,9 +58,15 @@ export function findPath(data: IRecordWildcards | Document | IWildcardsYAMLDocum
 	return _findPathCore(data, paths.slice(), findOpts, prefix, list, _cache)
 }
 
-export function _findPathCore(data: IRecordWildcards, paths: string[], findOpts: IOptionsFind, prefix: string[], list: IFindPathEntry[], _cache: {
-	paths: string[],
-})
+export function findPathOptionsToGlobOptions(findOpts?: IOptionsFind): PicomatchOptions
+{
+	return {
+		...findOpts?.globOpts,
+		ignore: findOpts?.ignore,
+	} satisfies PicomatchOptions
+}
+
+export function _findPathCore(data: IRecordWildcards, paths: string[], findOpts: IOptionsFind, prefix: string[], list: IFindPathEntry[], _cache: ICachesFindPath)
 {
 	paths = paths.slice(); // Create a copy of the paths array to avoid modifying the original array.
 	const current = paths.shift(); // Remove the first element from the paths array.
@@ -70,11 +79,17 @@ export function _findPathCore(data: IRecordWildcards, paths: string[], findOpts:
 			break;
 		}
 
-		const bool = isMatch(key, current); // Check if the current key matches the current path element.
+		// Create the current path.
+		const target = prefix.slice().concat(key);
+		const search = prefix.slice().concat(current);
+
+		// Check if the current key matches the current path element.
+		//const bool = isMatch(key, current);
+		const bool = isMatch(pathsToWildcardsPath(target), pathsToWildcardsPath(search), _cache.globOpts);
 
 		if (bool)
 		{
-			const target = prefix.slice().concat(key); // Create the current path.
+
 			const value = data[key]; // Get the value at the current path.
 
 			const notArray = !Array.isArray(value); // Check if the value is not an array.
@@ -95,8 +110,6 @@ export function _findPathCore(data: IRecordWildcards, paths: string[], findOpts:
 				}); // Add the found path and its corresponding value to the list.
 				continue;
 			}
-
-			const search = prefix.slice().concat(current);
 
 			throw new TypeError(`Invalid Type. paths: [${target}], isMatch: ${bool}, deep: ${deep}, deep paths: [${paths}], notArray: ${notArray}, match: [${search}], value: ${value}, _cache : ${JSON.stringify(_cache)}`); // Throw an error if the value is not a string and there are remaining paths to search.
 		}
