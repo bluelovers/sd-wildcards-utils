@@ -25,3 +25,13 @@ lazy-wildcards:
           common:
             - wisteria
             - cherry blossom
+      leaves-cannabis-marijuana:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/leaves-cannabis-marijuana/main__},
+            {0-$$__lazy-wildcards/subject/env-elem/leaves-cannabis-marijuana/env__}
+        main:
+          - marijuana leaves,
+          - green cannabis leaves
+        env:
+          - covered in plants

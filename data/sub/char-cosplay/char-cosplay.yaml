@@ -190,14 +190,84 @@ lazy-wildcards:
           - twilight
           - night
           - moon
-
-
-
-
-
-
-
-
-
-
-
+    ErgoProxy:
+      Re-L_Mayer:
+        prompts:
+          - >-
+            (__lazy-wildcards/cosplay-char/ErgoProxy/Re-L_Mayer/prompts-char__)
+            {,__lazy-wildcards/cosplay-char/ErgoProxy/Re-L_Mayer/costume/*__|}
+        prompts-char:
+          - >-
+            (__lazy-wildcards/cosplay-char/ErgoProxy/Re-L_Mayer/main__),
+            __lazy-wildcards/cosplay-char/ErgoProxy/Re-L_Mayer/ethnicity__,
+            {{1-$$__lazy-wildcards/cosplay-char/ErgoProxy/Re-L_Mayer/env__},|}
+            __lazy-wildcards/cosplay-char/ErgoProxy/Re-L_Mayer/style__
+        main:
+          - re-l_mayer, ErgoProxy_ReLMayer, ergo proxy
+        ethnicity:
+          - __lazy-wildcards/cosplay-char/ErgoProxy/Re-L_Mayer/ethnicity-makeup__, black hair
+        ethnicity-makeup:
+          - >-
+            makeup,
+            blue eyes,
+            eyeshadow, blue eyeshadow,
+            eyeliner, eyelashes,
+            Thin eyebrows,
+            pale skin, white skin, light skin,
+            side-swept bangs,
+            cool
+        costume:
+          leather:
+            - Purple waist bag, dark purple leather boots
+          dress:
+            - dress, dressed
+        style:
+          - goth fashion
+          - punk
+          - goth
+          - goth girl
+        env:
+          - barcode
+          - shotgun
+          - black fingernails
+          - black nails
+          - cone hair bun
+          - wet
+    Neon_Genesis_Evangelion:
+      Ayanami_Rei:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/Neon_Genesis_Evangelion/Ayanami_Rei/main__,
+            __lazy-wildcards/cosplay-char/Neon_Genesis_Evangelion/Ayanami_Rei/ethnicity__,
+            __lazy-wildcards/cosplay-char/Neon_Genesis_Evangelion/Ayanami_Rei/ethnicity-hair__,
+            {0.3::__lazy-wildcards/cosplay-char/Neon_Genesis_Evangelion/Ayanami_Rei/costume/*__,|}
+            {{1-$$__lazy-wildcards/cosplay-char/Neon_Genesis_Evangelion/Ayanami_Rei/style__},|}
+            {1-$$__lazy-wildcards/cosplay-char/Neon_Genesis_Evangelion/Ayanami_Rei/env__}
+        main:
+          - ppayanamirei, Ayanami Rei, rei ayanami, ayanami rei \(cosplay\), Neon Genesis Evangelion
+        ethnicity:
+          - blue hair, red eyes
+        ethnicity-hair:
+          - short hair
+          - very long hair, long hair
+        costume:
+          plugsuit:
+            - plugsuit, white bodysuit, pilot suit
+          school-uniform:
+            - tokyo-3 middle school uniform
+          nurse:
+            - __lazy-wildcards/subject/costume/nurse/prompts__
+        style:
+          - expressionless
+          - lonely
+        env:
+          - eva 00
+          - interface headset
+          - lance of longinus \(evangelion\)
+          - bident
+          - nerv
+          - cockpit
+          - entry plug
+          - evangelion \(mecha\)
+          - grey pupils
+          - science fiction

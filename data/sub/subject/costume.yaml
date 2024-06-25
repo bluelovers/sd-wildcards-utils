@@ -216,3 +216,88 @@ lazy-wildcards:
           animal-costume-with-tail:
             - >-
               ({a} costume, {a} ears:1.2), {a} tail
+      ofuda-maebari:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/ofuda-maebari/main__),
+            ({1-$$__lazy-wildcards/subject/costume/ofuda-maebari/prompts-costume__}:1.2)
+            {, {1-$$__lazy-wildcards/subject/costume/ofuda-maebari/env__}|}
+        main:
+          - ofuda
+        prompts-costume:
+          - __lazy-wildcards/subject/costume/ofuda-maebari/costume/ofuda-type__
+          - __lazy-wildcards/subject/costume/ofuda-maebari/costume/pussy-maebari__
+          - __lazy-wildcards/subject/costume/ofuda-maebari/costume/pussy-ofuda__
+          - __lazy-wildcards/subject/costume/ofuda-maebari/costume/other-ofuda__
+          - __lazy-wildcards/subject/costume/ofuda-maebari/costume/ofuda-bikini__
+          - __lazy-wildcards/subject/costume/ofuda-maebari/costume/ofuda-clothes__
+          - __lazy-wildcards/subject/costume/ofuda-maebari/costume/ofuda-head__
+          - __lazy-wildcards/subject/costume/ofuda-maebari/costume/ofuda-bra__
+          - >-
+            {1-$$__lazy-wildcards/subject/costume/ofuda-maebari/costume-bikini__}
+        costume:
+          ofuda-type:
+            - >-
+              {1-$$chinese ofuda|japanese ofuda}
+          pussy-maebari:
+            - maebari, covered pussy
+            - ofuda pasties
+            - ofuda maebari
+          pussy-ofuda:
+            - >-
+              {1-$$ofuda panties|ofuda on pussy|covered pussy|covered pasties}
+          other-ofuda:
+            - miko, miko ofuda
+            - jiangshi ofuda, JiangshiT
+            - blank ofuda
+          ofuda-bikini:
+            - >-
+              {99$$__lazy-wildcards/subject/costume/ofuda-maebari/costume-bikini__}
+          ofuda-clothes:
+            - ofuda on clothes
+          ofuda-head:
+            - ofuda on head
+          ofuda-bra:
+            - >-
+              {1-$$ofuda bra|ofuda on nipples|covered erect nipples}, covered nipples
+        costume-bikini:
+          - ofuda bikini
+          - __lazy-wildcards/subject/costume/ofuda-maebari/costume/pussy-ofuda__
+          - __lazy-wildcards/subject/costume/ofuda-maebari/costume/ofuda-bra__
+          - slingshot swimsuit ofuda
+        ethnicity:
+          jiangshi:
+            - >-
+              jiangshi, zombie
+              {, {grey skin|blue skin}|}
+        env:
+          - hanging ofuda
+          - ofuda coming off
+          - cum plugged
+          - stacked ofuda
+          - glowing ofuda
+          - consuming ofuda
+          - revealing clothes
+          - wet maebari
+          - censored
+          - convenient censoring
+          - partially visible vulva
+          - pussy juice
+          - uncensored
+          - gigantic breasts
+          - saggy breasts
+          - shrug \(clothing\)
+          - qing guanmao
+          - zombie pose
+          - long fingernails
+          - black sclera
+      nurse:
+        prompts:
+          - >-
+            nurse uniform smooth, nurse, nurse hat
+            {, {1-$$__lazy-wildcards/subject/costume/nurse/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/nurse/env-bg__}|}
+        env:
+          - stethoscope
+        env-bg:
+          - hospital
