@@ -1,3 +1,4 @@
+import { Glob, PicomatchOptions } from 'picomatch';
 import { Alias, CreateNodeOptions, Document as Document$1, DocumentOptions, Node as Node$1, Pair, ParseOptions, ParsedNode, Scalar, SchemaOptions, ToJSOptions, ToStringOptions, YAMLMap, YAMLSeq, visitorFn } from 'yaml';
 
 export type IOmitParsedNodeContents<T extends Node$1 | Document$1, P extends ParsedNode | Document$1.Parsed> = Omit<P, "contents"> & T;
@@ -77,6 +78,15 @@ export type IVisitPathsListReadonly = readonly (string | number)[];
 export interface IOptionsFind {
 	onlyFirstMatchAll?: boolean;
 	throwWhenNotFound?: boolean;
+	ignore?: Glob;
+	globOpts?: PicomatchOptions;
+}
+export interface ICachesFindPath {
+	paths: string[];
+	findOpts?: IOptionsFind;
+	prefix: string[];
+	data?: IWildcardsYAMLDocument | IWildcardsYAMLDocumentParsed;
+	globOpts: PicomatchOptions;
 }
 /**
  * Interface representing a single match of the dynamic prompts wildcards pattern.
@@ -319,9 +329,8 @@ export declare function pathsToDotPath(paths: IVisitPathsListReadonly): string;
  * Recursively searches for a path in a nested object or array structure.
  */
 export declare function findPath(data: IRecordWildcards | Document$1 | IWildcardsYAMLDocument, paths: string[], findOpts?: IOptionsFind, prefix?: string[], list?: IFindPathEntry[]): IFindPathEntry[];
-export declare function _findPathCore(data: IRecordWildcards, paths: string[], findOpts: IOptionsFind, prefix: string[], list: IFindPathEntry[], _cache: {
-	paths: string[];
-}): IFindPathEntry[];
+export declare function findPathOptionsToGlobOptions(findOpts?: IOptionsFind): PicomatchOptions;
+export declare function _findPathCore(data: IRecordWildcards, paths: string[], findOpts: IOptionsFind, prefix: string[], list: IFindPathEntry[], _cache: ICachesFindPath): IFindPathEntry[];
 export declare function stripZeroStr(value: string): string;
 export declare function trimPrompts(value: string): string;
 export declare function formatPrompts(value: string, opts?: IOptionsSharedWildcardsYaml): string;
