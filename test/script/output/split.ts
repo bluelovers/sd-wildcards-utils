@@ -7,7 +7,7 @@ import { globSync, readFileSync } from 'fs';
 import { join } from 'path';
 import { __ROOT_DATA, __ROOT_OUTPUT_WILDCARDS } from '../../__root';
 import {
-	defaultCheckerIgnoreCase, defaultOptionsStringifyMinify,
+	defaultCheckerIgnoreCase, defaultOptionsStringifyMinify, IOptionsFind, matchDynamicPromptsWildcards,
 	mergeWildcardsYAMLDocumentJsonBy,
 	parseWildcardsYaml,
 	stringifyWildcardsYamlData,
@@ -18,19 +18,20 @@ import { array_unique_overwrite } from 'array-hyper-unique';
 import { deepmergeAll } from 'deepmerge-plus';
 // @ts-ignore
 import Bluebird from 'bluebird';
-import { parseDocument } from 'yaml';
+import { parseDocument, YAMLMap } from 'yaml';
 import { groupSplitConfig } from './split-config';
 import { findPath, pathsToWildcardsPath } from '../../../src/find';
 import { IFindPathEntry, IRecordWildcards } from '../../../src/types';
 
 const _splitSpecific2 = escapeSplit({ delimiter: '/', escaper: '\\' });
 
-function _getEntry(target: string, data: IRecordWildcards)
+function _getEntry(target: string, data: IRecordWildcards, findOpts?: IOptionsFind)
 {
-	let key = target.match(/^__[&~!_]?([^_\s&~!]+)__$/)[1] ?? target;
+	//let key = target.match(/^__[&~!_]?([^_\s&~!]+)__$/)[1] ?? target;
+	let key = matchDynamicPromptsWildcards(target)?.name ?? target;
 	let paths = _splitSpecific2(key);
 
-	let list = findPath(data, paths);
+	let list = findPath(data, paths, findOpts);
 
 	if (!list.length)
 	{
@@ -84,9 +85,9 @@ export default (async () =>
 			})
 	;
 
-	for (let [group, target] of groupSplitConfig)
+	for (let [group, target, findOpts] of groupSplitConfig)
 	{
-		let ret = _getEntry(target, json);
+		let ret = _getEntry(target, json, findOpts);
 
 		if (ret)
 		{
@@ -95,7 +96,11 @@ export default (async () =>
 		}
 	}
 
-	let new_yaml_doc = parseDocument(`mix-lazy-auto:`);
+	let new_yaml_doc = parseDocument('');
+
+	new_yaml_doc.set('mix-lazy-auto', {})
+
+	const root = new_yaml_doc.get('mix-lazy-auto') as YAMLMap;
 
 	for (let [group, listRoot] of Object.entries(map))
 	{
@@ -123,12 +128,12 @@ export default (async () =>
 			checker: defaultCheckerIgnoreCase,
 		});
 
-		let obj: IRecordWildcards = {};
-		obj[group] = list;
+//		let obj: IRecordWildcards = {};
+//		obj[group] = list;
 
-		let node = new_yaml_doc.createNode(obj);
+		let node = new_yaml_doc.createPair(group, list);
 
-		let commentBefore = ` "${group}"`;
+		let commentBefore = ` @example ${pathsToWildcardsPath(['mix-lazy-auto', group], true)}\n "${group}"`;
 		if (lenOld !== list.length)
 		{
 			commentBefore += ` (total: ${lenOld} => ${list.length}, save ${lenOld - list.length} )`;
@@ -141,9 +146,9 @@ export default (async () =>
 
 		commentBefore += `\n  - ${refs.join('\n  - ')}`;
 
-		node.commentBefore = commentBefore;
+		node.key.commentBefore = commentBefore;
 
-		new_yaml_doc.setIn(['mix-lazy-auto'], node);
+		root.add(node);
 	}
 
 	let out = stringifyWildcardsYamlData(new_yaml_doc, defaultOptionsStringifyMinify());

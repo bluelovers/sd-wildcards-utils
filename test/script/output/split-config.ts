@@ -1,3 +1,4 @@
+import { IOptionsFind } from '../../../src/index';
 
 export const groupSplitConfig = [
 	['color-anything', '__lazy-wildcards/utils/color-base__'],
@@ -13,4 +14,10 @@ export const groupSplitConfig = [
 	['color-anything', '__cf-model/hair-color/*__'],
 
 	['color-anything', '__crea-*/fin-color__'],
-] as const
+
+	['interior-style-anything', '__lazy-wildcards/utils/interior-style-*__', {
+		ignore: [
+			'lazy-wildcards/utils/interior-style-anything'
+		]
+	}],
+] as const satisfies [key: string, wildcards: string, findOpts?: IOptionsFind][]
