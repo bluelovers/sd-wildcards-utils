@@ -1,6 +1,64 @@
 lazy-wildcards:
   subject:
     interior:
+      traditional-cjk:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/interior/traditional-cjk/main/*__,
+            {1-$$__lazy-wildcards/subject/interior/traditional-cjk/style__},
+            {1-$$__lazy-wildcards/subject/interior/traditional-cjk/env__},
+            __lazy-wildcards/subject/interior/asian-east/main__
+        main:
+          # 傳統日本室內設計，以榻榻米、滑動的紙門、被褥為特徵。
+          traditional_japanese_interior:
+            - traditional_japanese_interior, Traditional Japanese interior, tatami_mats, sliding_shoji_doors, futons, traditional_japanese_rooms
+          # 傳統中國室內設計，以雕刻的木家具、絲綢畫卷、精緻的花格窗為特徵。
+          traditional_chinese_interior:
+            - traditional_chinese_interior, Traditional Chinese interior, carved_wooden_furniture, silk_scrolls, intricate_lattice_windows
+          # 傳統韓國室內設計，以地暖、紙門、低矮的桌子為特徵。
+          traditional_korean_interior:
+            - traditional_korean_interior, Traditional Korean interior, ondol_heated_floors, paper_doors, low_tables, traditional_korean_houses
+        style:
+          - natural_light_diffusion
+        env:
+          - tatami
+          # 障子，以紙屏風、滑動門、自然光擴散為特徵。
+          - shoji, paper_screens, sliding_doors, sliding_shoji_doors
+          # 襖，以不透明的屏風、滑動隔板、傳統日本室內為特徵。
+          - fusuma, opaque_screens, sliding_partitions
+          # 床の間
+          - tokonoma
+          # 壁龕
+          - alcove_display
+          - decorative_scrolls
+          - flower_arrangements
+          # 韓國紙門，以傳統韓紙、木框架、滑動機制為特徵。
+          - korean_paper_doors, traditional_hanji_paper, wooden_frames, sliding_mechanism
+          - traditional_hanji_paper
+          # 溫突，以地暖、傳統韓國房屋、加熱的石地板為特徵。
+          - ondol, underfloor_heating, heated_stone_floors
+          - carved_wooden_furniture
+          - intricate_woodwork
+          - traditional_designs
+          - cultural_motifs
+          - wooden_frames
+          - sliding_mechanism
+          - opaque_screens
+          - sliding_partitions
+          - paper_screens
+          - sliding_doors
+          - futons
+          - silk_scrolls
+          - intricate_lattice_windows
+          - low_tables
+          - andcrafted_details
+          - Handcrafted details
+          - carved_panels
+          - embroidered_textiles
+          - artisan_decor
+          - ornate_furniture
+          - traditional_artifacts
+          - natural_materials
       asian-east:
         prompts:
           - >-
@@ -56,3 +114,31 @@ lazy-wildcards:
         env-bg:
           - >-
             {1-$$tiles|tile floor|tile wall}
+      living_room:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/interior/living_room/main__,
+            {(__lazy-wildcards/utils/interior-style-anything__),|}
+            {1-$$__lazy-wildcards/subject/interior/living_room/env-object__},
+            {1-$$__lazy-wildcards/subject/interior/living_room/env-bg__}
+        main:
+          - interior design, living room
+        env-object:
+          - sofa
+          - coffee table
+          - armchair
+          - rug
+          - lamp
+          - curtain
+          - cushion
+          - vase
+          - book
+          - stool
+          - chair
+          - shelf
+          - bar
+        env-bg:
+          - ceiling
+          - floor
+          - wall
+          - window

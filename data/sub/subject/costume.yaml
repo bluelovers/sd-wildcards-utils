@@ -36,6 +36,7 @@ lazy-wildcards:
           - short sleeves
           - long sleeves
           - dragon print
+          - sleeveless dress
         main:
           - (old-shanghaibeauty, old shanghai beauty, china dress, chinese clothes), 舊上海美人
         makeup:
@@ -222,8 +223,9 @@ lazy-wildcards:
             (__lazy-wildcards/subject/costume/ofuda-maebari/main__),
             ({1-$$__lazy-wildcards/subject/costume/ofuda-maebari/prompts-costume__}:1.2)
             {, {1-$$__lazy-wildcards/subject/costume/ofuda-maebari/env__}|}
+            , {1-$$__lazy-wildcards/subject/costume/ofuda-maebari/style__}
         main:
-          - ofuda
+          - ofuda, paper_talismans
         prompts-costume:
           - __lazy-wildcards/subject/costume/ofuda-maebari/costume/ofuda-type__
           - __lazy-wildcards/subject/costume/ofuda-maebari/costume/pussy-maebari__
@@ -270,6 +272,9 @@ lazy-wildcards:
             - >-
               jiangshi, zombie
               {, {grey skin|blue skin}|}
+        style:
+          - warding_spells
+          - spiritual_protection
         env:
           - hanging ofuda
           - ofuda coming off
@@ -291,6 +296,7 @@ lazy-wildcards:
           - zombie pose
           - long fingernails
           - black sclera
+          - omikuji
       nurse:
         prompts:
           - >-
