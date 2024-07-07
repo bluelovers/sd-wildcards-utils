@@ -1,0 +1,24 @@
+lazy-wildcards:
+  subject:
+    meme:
+      CzechCasting:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/meme/CzechCasting/main__,
+            __lazy-wildcards/subject/meme/CzechCasting/main-type/*__,
+            {1-$$__lazy-wildcards/subject/meme/CzechCasting/env-bg__}
+        main:
+          - CZC, Czech Casting, solo, looking at viewer
+        main-type:
+          poster:
+            - czc_poster, holding sign, (yellow sign:1.8), holding, upper body
+          head:
+            - czc_head, portrait, face focus
+          standing:
+            - czc_standing, full body, standing
+          back:
+            - czc_back, full body, from behind, back
+          sitting:
+            - czc_sitting, solo, full body
+        env-bg:
+          - (simple background, pure white background:1.2), stool, wooden floor

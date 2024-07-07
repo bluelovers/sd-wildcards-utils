@@ -1,0 +1,118 @@
+cf-onmyoji:
+    # Prompt only an onmyoji appearance
+    prompt-costume:
+        - >-
+            onmyoji wearing a __cf-onmyoji/robe__ , __cf-onmyoji/color__ {__cf-onmyoji/top__, __cf-onmyoji/bottom__|__cf-onmyoji/dress__}, __cf-onmyoji/shoes__, __cf-onmyoji/makeup__,
+            __cf-onmyoji/prop__, {2$$__cf-onmyoji/accessory__}
+    # Prompt onmyoji appearance with location
+    prompt-full:
+        - >-
+            (__cf-onmyoji/beauty-adj__ onmyoji) __cof-basemodel/age__ __cof-basemodel/gender__, japanese,
+            wearing a __cf-onmyoji/robe__ , __cf-onmyoji/color__ {__cf-onmyoji/top__, __cf-onmyoji/bottom__|__cf-onmyoji/dress__}, __cf-onmyoji/shoes__, __cf-onmyoji/makeup__,
+            __cf-onmyoji/prop__, {2$$__cf-onmyoji/accessory__}, 
+            __cf-onmyoji/location/anything__
+    beauty-adj:
+        - mystical
+        - serene
+        - spiritual
+        - ethereal
+        - enigmatic
+        - arcane
+        - divine
+        - sacred
+        - otherworldly
+        - tranquil
+    color:
+        - deep blue
+        - ivory white
+        - crimson red
+        - forest green
+        - black
+        - gold
+        - silver
+        - midnight purple
+        - sakura pink
+    robe:
+        - >-
+          {traditional hakama|ceremonial kimono|elaborate robes|flowing yukata}
+    prop:
+        - spiritual talismans
+        - mystical staff
+    accessory:
+        - >-
+          {paper talisman|spiritual amulet|mystical rings|ceremonial beads}
+        - headpiece
+        - >-
+          {yin-yang symbol|fox spirit charm}
+        - ritual fan
+    makeup:
+        - subtle face paint
+        - >-
+          {mystical|arcane} tattoos
+        - natural look
+        - spiritual markings
+    top:
+        - >-
+          {silk|embroidered|ceremonial} haori
+        - ritualistic kimono
+        - >-
+          {long-sleeve|short-sleeve} jacket with traditional patterns
+    bottom:
+        - >-
+          {flowing|pleated} hakama
+        - traditional trousers
+        - >-
+          {layered|decorative} skirt
+        - kimono bottoms
+    dress:
+        - >-
+          {ceremonial|formal|ritualistic} kimono dress
+        - traditional yukata with mystical symbols
+    shoes:
+        - wooden geta
+        - traditional zori
+        - bare feet
+        - >-
+          {leather|silk} slippers {with intricate designs}
+        - >-
+          {formal|decorative} sandals
+    location:
+        anything:
+            - >-
+              set in the heian period, ancient japan era, in {
+              __cf-onmyoji/location/shrine__|
+              __cf-onmyoji/location/temple__|
+              __cf-onmyoji/location/forest__|
+              __cf-onmyoji/location/ritual-site__|
+              __cf-onmyoji/location/mountain__|
+              __cf-onmyoji/location/village__|
+              __cf-onmyoji/location/ancient-palace__
+              }{, at night|, during twilight|}
+        shrine:
+            - a serene shrine, with ancient stone steps, lanterns, spiritual atmosphere, sacred artifacts
+            - a mystical shrine, featuring torii gates, flickering candles, spiritual talismans, quiet ambiance
+            - a sacred shrine, with intricate carvings, serene water features, traditional decor, tranquil vibes
+        temple:
+            - a grand temple, with large statues, incense smoke, spiritual energy, arcane symbols
+            - a peaceful temple, featuring wooden architecture, paper lanterns, ritualistic artifacts, meditative aura
+            - an ancient temple, with historical murals, sacred relics, mystical charm, solemn atmosphere
+        forest:
+            - a sacred forest, with towering trees, gentle breeze, hidden shrines, spiritual presence
+            - an enchanted forest, featuring glowing spirits, mystical flora, serene pathways, magical ambiance
+            - a tranquil forest, with quiet clearings, spiritual markings on trees, soft light filtering through leaves
+        ritual-site:
+            - a mystical ritual site, with ancient stone circles, burning incense, spiritual symbols, sacred artifacts
+            - a secluded ritual site, featuring candles, ceremonial objects, mystical energy, hidden within nature
+            - a sacred ritual site, with intricate carvings, spiritual artifacts, quiet surroundings, otherworldly feel
+        mountain:
+            - a holy mountain, with winding paths, spiritual atmosphere, hidden shrines, misty peaks
+            - a mystical mountain, featuring sacred caves, ancient statues, spiritual energy, serene environment
+            - a tranquil mountain, with peaceful views, quiet paths, spiritual ambiance, natural beauty
+        village:
+            - a traditional village, with old wooden houses, spiritual atmosphere, serene surroundings, mystical elements
+            - a sacred village, featuring spiritual markings, ancient trees, tranquil pathways, quiet ambiance
+            - an enchanting village, with hidden shrines, spiritual decorations, soft light, peaceful aura
+        ancient-palace:
+            - a grand ancient palace, with elaborate architecture, spiritual symbols, sacred artifacts, mystical atmosphere
+            - a mystical ancient palace, featuring large halls, arcane decor, spiritual energy, solemn ambiance
+            - a sacred ancient palace, with historical murals, spiritual relics, quiet surroundings, ethereal feel

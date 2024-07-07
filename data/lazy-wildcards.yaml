@@ -115,6 +115,10 @@ lazy-wildcards:
         __lazy-wildcards/prompts/hair__
       - >-
         (psychedelic, vivid colors, 3d papercut shadow box) of a deck of tarot cards spilled on a table, text "megapack" is written on the box, magic lights, bokeh
+      - >-
+        1girl, (white scaly body), halo, wings, fallen angel, loose waves, red eyes, (dragon, art by hermann nitsch, zdzislaw beksinski, dariusz zawadzki, giger), naked,
+        (__lazy-wildcards/char/haircolor__),
+        (__lazy-wildcards/dataset/background-color__)
     costume:
       - >-
         {__lazy-wildcards/costume/nsfw__|__lazy-wildcards/costume/clothes__}
@@ -240,6 +244,13 @@ lazy-wildcards:
         style:
           - >-
             __lazy-wildcards/book/style-type/magazine-pulp-cover/style-type-adj__,
+            __lazy-wildcards/book/style-type/magazine-cover/style__
+      magazine-playboy-cover:
+        style-type-adj:
+          - PlayboyCoverQuiron style, playboy cover
+        style:
+          - >-
+            __lazy-wildcards/book/style-type/magazine-playboy-cover/style-type-adj__,
             __lazy-wildcards/book/style-type/magazine-cover/style__
       comic-cover:
         style:

@@ -4,8 +4,8 @@ lazy-wildcards:
       random:
         prompts:
           - >-
-            {{1-$$__lazy-wildcards/subject/moment/weather/prompts__},|}
-            {__lazy-wildcards/subject/moment/time/prompts__|}
+            {{1-$$__lazy-wildcards/subject/moment/weather/prompts__}|}
+            {,__lazy-wildcards/subject/moment/time/prompts__|}
       weather:
         prompts:
           - >-
@@ -17,6 +17,8 @@ lazy-wildcards:
           - >-
             {1-$$floating cloud|cloudy|Sea of clouds}
           - __lazy-wildcards/subject/moment/weather/main/*__
+          - >-
+            {1-$$lightning|lightning bolt|lightning glare}
         main:
           winter:
             - >-

@@ -307,3 +307,186 @@ lazy-wildcards:
           - stethoscope
         env-bg:
           - hospital
+      dress-peacock:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/dress-peacock/main__,
+            {{1-$$__lazy-wildcards/subject/costume/dress-peacock/costume-elem__},|}
+            {{1-$$__lazy-wildcards/subject/costume/dress-peacock/style__},|}
+            {{1-$$__lazy-wildcards/subject/costume/dress-peacock/env-bg__},|}
+            {1-$$__lazy-wildcards/subject/costume/dress-peacock/env__}
+        main:
+          - peacock strapless dress, feathers dress
+        costume-elem:
+          - off shoulder
+          - tiara
+          - feathers blue dress
+          - feathers green dress
+        style:
+          - abstract
+        env:
+          - makeup
+          - curly hair
+          - floating hair
+          - lips
+          - bird
+          - jewelry
+          - earrings
+          - feathers
+          - flower
+        env-bg:
+          - peacock background
+      # use with
+      # __cf-daoist-priest/prompt-costume__
+      # __cf-daoist-priest/prompt-full__
+      daoshi:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/daoshi/main__,
+            {__lazy-wildcards/subject/costume/daoshi/costume__,|}
+            {{1-$$__lazy-wildcards/subject/costume/daoshi/costume-elem__},|}
+            {{1-$$__lazy-wildcards/subject/costume/daoshi/style__},|}
+            {1-$$__lazy-wildcards/subject/costume/daoshi/style-symbol__}
+            {1-$$__lazy-wildcards/subject/costume/daoshi/env__}
+        main:
+          - daoshi, taoist, taoist_priest, Taoist_monk, Taoist_professional
+        costume:
+          - Yellow Robe Taoist
+          - black Robe Taoist
+          - Robe Taoist
+          - demon taoist priest
+        costume-elem:
+          - taoist priest hat
+          - yin_yang_hair_ornament
+        style:
+          - yin_yang_feng_shi
+          - mystical
+          - Feng Shui
+        style-symbol:
+          - Fulu
+          - Taoist magic symbols
+          - yin and yang symbol
+          - yin_yang_orb
+          - yin_yang_print
+          - yin_yang_tattoo
+          - Eight Trigrams Pattern
+          - tai chi pattern
+          - Bagua
+        env:
+          - yellow taoist talismans, yellow paper charms, yellow Talisman paper, yellow ofuda
+          - taoist talismans, paper charms, Talisman paper, ofuda
+          - peach wood sword, peachwood sword, taoist sword
+          - taoist bell, ritual bell
+          - whisk \(object\), Fly-whisk, fly-swish
+          - incense_burner
+          - taoist mirror, ritual mirror, Bagua mirror
+          - Luopan, taoist Luopan, Feng Shui Compass Luo Pan, Chinese Ancient Chinese Compass
+          - Prayer beads, taoist beads, taoist prayer beads
+          - Copper Coin Sword
+          - gourd
+          - taoist staff
+          - paper lantern
+          - Copper Coin
+          - long tobacco pipe
+      leather-jacket-studded-choker:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/leather-jacket-studded-choker/main__,
+            {1-$$__lazy-wildcards/subject/costume/leather-jacket-studded-choker/style__},
+            {2-$$__lazy-wildcards/subject/costume/leather-jacket-studded-choker/env__}
+        main:
+          - makeup, studded choker, wearing a leather jacket, leather boots, metal_studs
+        style:
+          - punk_style, punk_fashion
+          - nsfw
+          - live in wild
+          - rebellious_look
+          - rebellious_aesthetic
+          - gothic_fashion
+          - alternative_style
+          - various_styles
+          - biker_style
+          - motorcycle_culture
+          - non-mainstream_styles
+          - unique_designs
+          - counter-culture
+        env:
+          - open jacket
+          - bold_accessories
+          - elaborate_accessories
+          - decorative_items
+          - worn_around_neck
+          - dark_clothing
+          - edgy_clothing
+          - tough_material
+          - sleek_appearance
+          - decorative_spikes
+          - embellishments
+          - rugged_clothing
+          - one breast out
+          - selfie
+          - wide hips
+          - small breasts
+          - heavy breathing
+          - mature female
+          - lips
+          - hair over eyes
+          - head out of frame
+          - cleavage cutout
+          - jewelry
+          - neck_accessory
+          - elaborate_accessories
+          - choker
+      # https://civitai.com/models/267506/modern-lady-of-winterfell-or-game-of-thrones-inspired
+      game_of_thrones:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/game_of_thrones/main__,
+            {1-$$__lazy-wildcards/subject/costume/game_of_thrones/main-type/*__},
+            {1-$$__lazy-wildcards/subject/costume/game_of_thrones/costume-elem__},
+            {{1-$$__lazy-wildcards/subject/costume/game_of_thrones/ethnicity__},|}
+            {{1-$$__lazy-wildcards/subject/costume/game_of_thrones/env-bg__},|}
+            {1-$$__lazy-wildcards/subject/costume/game_of_thrones/env__}
+        ethnicity:
+          - platinum blonde braid
+          - dark chignon hair
+        main:
+          - (l4dy), game of thrones, a song of ice and fire
+        main-type:
+          cloak:
+            - >-
+              {1-$$cloak|gossamer cloak}
+          dress:
+            - >-
+              {1-$$dress|cotton dress|wedding dress},
+              cincher, gloves, harness
+          armor:
+            - >-
+              armor,
+              cincher, gloves, cloak, fur trim
+        costume-elem:
+          - fur trim
+          - cincher
+          - harness
+          - chain
+          - (necklace chain leash)
+          - gloves
+          - draped in white toga
+          - ornate jewelry,
+          - laurel wreath headband
+          - bare hands
+          - Valkyrie warrior
+        env:
+          - snowflakes
+          - frost magic
+          - >-
+            {1-$$drogon|dragon on shoulder|dragon riding}
+          - spread wings
+          - medieval
+          - chasing
+        env-bg:
+          - medieval rampart
+          - >-
+            {1-$$throne|iron throne|marble throne}
+          - olosseum backdrop
+          - house of the dragon

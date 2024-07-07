@@ -1,0 +1,124 @@
+cf-chinese-martial-artist:
+    # Prompt only a Chinese martial artist appearance
+    prompt-costume:
+        - >-
+            Chinese martial artist wearing a {__cf-chinese-martial-artist/headgear__,|} __cf-chinese-martial-artist/color__ __cf-chinese-martial-artist/top__, __cf-chinese-martial-artist/bottom__, __cf-chinese-martial-artist/shoes__, 
+            __cf-chinese-martial-artist/accessory__ {, wielding a __cf-chinese-martial-artist/weapon__|}
+    # Prompt Chinese martial artist appearance with location
+    prompt-full:
+        - >-
+            (__cf-chinese-martial-artist/beauty-adj__ Chinese martial artist) __cof-basemodel/age__ __cof-basemodel/gender__, chinese,
+            wearing a {__cf-chinese-martial-artist/headgear__ ,|} __cf-chinese-martial-artist/color__ __cf-chinese-martial-artist/top__, __cf-chinese-martial-artist/bottom__, __cf-chinese-martial-artist/shoes__, 
+            __cf-chinese-martial-artist/accessory__,
+            {wielding a __cf-chinese-martial-artist/weapon__,|} 
+            __cf-chinese-martial-artist/location/anything__
+    beauty-adj:
+        - disciplined
+        - serene
+        - balanced
+        - harmonious
+        - poised
+        - powerful
+        - graceful
+        - agile
+        - focused
+        - spiritual
+    color:
+        - deep red
+        - black
+        - white
+        - jade green
+        - gold
+        - pastel blue
+        - silver
+        - crimson
+        - gray
+        - bronze
+    headgear:
+        - >-
+          {taiji hat|feng shui hat}
+    weapon:
+        - taiji sword
+        - bamboo staff
+        - twin daggers
+        - taiji fan
+    accessory:
+        - >-
+          {yin yang amulet|feng shui bracelet|taiji necklace|bagua pendant}
+        - wrist wraps
+        - >-
+          {wooden|metal} prayer beads
+    top:
+        - >-
+          {embroidered|silk} taiji tunic
+        - martial arts jacket
+        - >-
+          {long-sleeve|short-sleeve|sleeveless} taiji top
+        - >-
+          {flowing|fitted|loose} taiji blouse {with martial arts patterns}
+        - >-
+          {traditional|modern} martial arts vest {with decorative elements}
+    bottom:
+        - >-
+          {taiji|martial arts|kung fu} pants
+        - >-
+          {wide-leg|loose-fit|fitted} trousers
+        - >-
+          {embroidered|silk} martial arts pants {with intricate patterns}
+        - >-
+          {ankle-length|cropped} pants {with martial arts designs}
+    shoes:
+        - martial arts slippers
+        - barefoot
+        - >-
+          {leather|canvas|cotton|flat} shoes
+        - martial arts shoes
+        - >-
+          {soft|hard|flexible} shoes with decorative details
+    location:
+        anything:
+            - >-
+              set in the ancient china era, in {
+              __cf-chinese-martial-artist/location/dojang__|
+              __cf-chinese-martial-artist/location/temple__|
+              __cf-chinese-martial-artist/location/garden__|
+              __cf-chinese-martial-artist/location/mountain__|
+              __cf-chinese-martial-artist/location/training-hall__|
+              __cf-chinese-martial-artist/location/courtyard__|
+              __cf-chinese-martial-artist/location/ancient-village__
+              }{, at dawn|, during sunset|}
+        dojang:
+            - a serene dojang, with bamboo floors, hanging scrolls, traditional decor, soft lighting
+            - a traditional dojang, featuring wooden interiors, martial arts symbols, training equipment, peaceful ambiance
+            - a minimalist dojang, with tatami mats, calligraphy scrolls, training dummies, focused atmosphere
+            - a sacred dojang, adorned with Taoist symbols, feng shui elements, natural light, calm vibes
+        temple:
+            - an ancient temple, with stone statues, incense burners, serene atmosphere, spiritual ambiance
+            - a Taoist temple, featuring intricate carvings, feng shui elements, flowing robes, tranquil setting
+            - a sacred temple, with prayer flags, meditation areas, spiritual symbols, peaceful environment
+            - a mountain temple, surrounded by nature, with stone pathways, serene gardens, spiritual energy
+        garden:
+            - a tranquil garden, with blooming flowers, flowing water, stone pathways, peaceful atmosphere
+            - a feng shui garden, featuring carefully placed rocks, flowing streams, balanced elements, harmonious vibes
+            - an ancient garden, with moss-covered stones, traditional pavilions, quiet ambiance, natural beauty
+            - a secluded garden, surrounded by bamboo groves, with koi ponds, serene walkways, spiritual energy
+        mountain:
+            - a misty mountain, with steep paths, ancient trees, hidden shrines, ethereal ambiance
+            - a sacred mountain, featuring rugged terrain, spiritual symbols, breathtaking views, tranquil energy
+            - an ancient mountain, with stone steps, meditation spots, spiritual atmosphere, natural beauty
+            - a remote mountain, surrounded by clouds, with serene views, spiritual significance, peaceful vibes
+        training-hall:
+            - a traditional training hall, with wooden floors, martial arts equipment, disciplined ambiance
+            - a modern training hall, featuring advanced equipment, open spaces, focused atmosphere
+            - a rustic training hall, with stone walls, wooden beams, training mats, historical significance
+            - a spacious training hall, filled with natural light, martial arts symbols, peaceful energy
+        courtyard:
+            - a serene courtyard, with stone pavements, bonsai trees, tranquil atmosphere, traditional elements
+            - an ancient courtyard, featuring stone lanterns, bamboo fences, peaceful setting, historical significance
+            - a peaceful courtyard, with koi ponds, rock gardens, quiet ambiance, spiritual energy
+            - a traditional courtyard, surrounded by wooden buildings, with open spaces, martial arts training area
+        ancient-village:
+            - a historical village, with cobblestone streets, traditional houses, cultural significance, peaceful vibes
+            - an ancient village, featuring stone bridges, flowing streams, traditional decor, tranquil ambiance
+            - a rustic village, with wooden structures, bamboo groves, serene atmosphere, historical charm
+            - a secluded village, surrounded by mountains, with hidden pathways, cultural heritage, spiritual energy

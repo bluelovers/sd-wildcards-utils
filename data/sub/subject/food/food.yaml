@@ -1,0 +1,48 @@
+lazy-wildcards:
+  subject:
+    food:
+      shaved-ice-animal-shaped:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/food/shaved-ice-animal-shaped/main__,
+            {1-$$__lazy-wildcards/subject/food/shaved-ice-animal-shaped/main-type/*__},
+            {1-$$__lazy-wildcards/subject/food/shaved-ice-animal-shaped/main-elem__},
+            {1-$$__lazy-wildcards/subject/food/shaved-ice-animal-shaped/style__},
+            {1-$$__lazy-wildcards/subject/food/shaved-ice-animal-shaped/env__}
+        main:
+          - >-
+            animal-shaped shaved ice, shaved ice, animal-shaped,
+            fruit, ice cream,
+            animal focus, food focus,
+            dessert, in food,
+            food art, ANKG,
+            {1-$$cup|bowl|dessert_bow}
+        main-type:
+          bear:
+            - bear, polar bear
+          pokemon:
+            - pokemon \(creature\)
+          fruit:
+            - >-
+              {1-$$fruit_toppings|decorative_fruit|fresh_fruit|sliced_fruit}
+        style:
+          - still life
+          - summer_dessert
+          - cold_treat
+        main-elem:
+          - cherry
+          - solid circle eyes
+          - pudding
+          - solid circle eyes
+          - Matcha
+          - sweet_syrup
+          - condensed_milk
+          - colorful_toppings
+          - ice_syrup
+          - creamy_texture
+        env:
+          - omurice
+          - ketchup
+          - napkin
+          - table
+          - reflection

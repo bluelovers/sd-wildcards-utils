@@ -1,0 +1,145 @@
+cf-daoist-priest:
+    # Prompt only a daoist priest appearance
+    prompt-costume:
+        - >-
+            daoist priest wearing a __cf-daoist-priest/hat__, __cf-daoist-priest/color__ {__cf-daoist-priest/top__, __cf-daoist-priest/bottom__|__cf-daoist-priest/robe__}, __cf-daoist-priest/shoes__, __cf-daoist-priest/accessory__, __cf-daoist-priest/talisman__,
+            __cf-daoist-priest/prop__
+    # Prompt daoist priest appearance with location
+    prompt-full:
+        - >-
+            (__cf-daoist-priest/beauty-adj__ daoist priest) __cof-basemodel/age__ __cof-basemodel/gender__, chinese,
+            wearing a __cf-daoist-priest/hat__, __cf-daoist-priest/color__ {__cf-daoist-priest/top__, __cf-daoist-priest/bottom__|__cf-daoist-priest/robe__}, __cf-daoist-priest/shoes__, __cf-daoist-priest/accessory__, __cf-daoist-priest/talisman__,
+            __cf-daoist-priest/prop__, 
+            __cf-daoist-priest/location/anything__
+    beauty-adj:
+        - serene
+        - wise
+        - mystical
+        - enlightened
+        - ethereal
+        - spiritual
+        - tranquil
+        - ascetic
+        - ancient
+        - dignified
+        - otherworldly
+    color:
+        - white
+        - black
+        - dark blue
+        - deep green
+        - maroon
+        - gold
+        - silver
+        - brown
+        - grey
+        - beige
+    hat:
+        - >-
+          {traditional daoist hat|embroidered cap|simple headscarf}
+    talisman:
+        - paper talisman
+        - wooden charm
+        - jade amulet
+    accessory:
+        - >-
+          {beaded necklace|jade pendant|ceremonial belt|bracelet of prayer beads}
+        - hairpin
+        - >-
+          {mystical|ancient} rings
+        - armband
+    prop:
+        - divination sticks
+        - yin-yang symbol
+    top:
+        - >-
+          {traditional|embroidered|silk} robe top
+        - ceremonial vest
+        - >-
+          {flowing|loose|patterned} tunic
+        - >-
+          {satin|linen|cotton|flowing} blouse {with mystical symbols}
+        - >-
+          {fitted|loose|decorative} vest {with ancient patterns}
+    bottom:
+        - >-
+          {traditional|flowy|loose} pants
+        - >-
+          {layered|patterned|ceremonial} skirt
+        - >-
+          {wide-leg|harem} trousers
+        - >-
+          {satin|silk|cotton} pants {with mystical embroidery}
+        - >-
+          {ankle-length|maxi} skirt {with ancient symbols}
+    robe:
+        - >-
+          {traditional|ceremonial|flowy|long} robe
+        - >-
+          {embroidered|silk|satin} robe {with mystical designs}
+        - >-
+          {asymmetric|high-low|maxi|wrap} robe with ancient elements
+        - >-
+          {vintage|modern|ceremonial|casual} robe {with mystical patterns}
+    shoes:
+        - traditional sandals
+        - cloth shoes
+        - ceremonial boots
+        - barefoot
+        - >-
+          {leather|silk|cloth} slippers {with traditional designs}
+        - >-
+          {platform|wooden} sandals with ancient accents
+        - >-
+          {simple|decorative} cloth shoes
+        - >-
+          {flats|loafers} with traditional details
+    location:
+        anything:
+            - >-
+              set in the ancient china era, in {
+              __cf-daoist-priest/location/temple__|
+              __cf-daoist-priest/location/mountain__|
+              __cf-daoist-priest/location/cave__|
+              __cf-daoist-priest/location/village__|
+              __cf-daoist-priest/location/retreat__|
+              __cf-daoist-priest/location/altar__|
+              __cf-daoist-priest/location/sanctuary__
+              }{, at dawn|, during twilight|}
+        temple:
+            - a serene temple, with incense smoke, golden statues, quiet ambiance, mystical symbols
+            - a sacred temple, featuring ancient architecture, flickering candles, spiritual artifacts, ceremonial decorations
+            - a mystical temple, with ornate carvings, glowing lanterns, soft chanting, a tranquil atmosphere
+            - an ancient temple, adorned with traditional decor, sacred relics, a peaceful aura, mystical symbols
+        mountain:
+            - a secluded mountain retreat, with misty peaks, stone pathways, a tranquil daoist sanctuary
+            - a mystical mountain, featuring ancient trees, hidden caves, spiritual ambiance, serene views
+            - a tranquil mountain, with flowing streams, lush greenery, a serene daoist retreat, mystical elements
+            - a sacred mountain, bathed in the glow of the rising sun, with a peaceful aura and ancient daoist rituals
+        cave:
+            - a hidden cave, with ancient symbols, flickering torches, a mystical ambiance, sacred artifacts
+            - a sacred cave, featuring glowing crystals, spiritual symbols, a quiet sanctuary, mystical energy
+            - an ancient cave, with stone carvings, sacred relics, a tranquil atmosphere, mystical lighting
+            - a mystical cave, filled with soft light, ancient texts, spiritual artifacts, a serene environment
+        village:
+            - a tranquil village, with traditional houses, quiet pathways, spiritual ambiance, a daoist priest’s dwelling
+            - a mystical village, featuring ancient architecture, sacred sites, peaceful surroundings, spiritual energy
+            - an ancient village, with cobblestone streets, traditional decor, a quiet atmosphere, mystical elements
+            - a serene village, bathed in the glow of lanterns, with an air of tranquility, traditional customs, a daoist retreat
+        retreat:
+            - a secluded retreat, with hidden alcoves, spiritual symbols, flickering candles, ancient artifacts
+            - a mystical retreat, featuring arcane symbols, plush seating, shimmering lights, spiritual decor
+            - a hidden retreat, filled with mystical books, soft lighting, ancient relics, cozy nooks
+            - an arcane retreat, with mystical patterns, glowing crystals, sacred mirrors, spiritual vibes
+            - a secluded sanctuary, featuring spiritual artifacts, mystical lighting, plush carpets, comfortable seating
+        altar:
+            - a sacred altar, with ancient relics, flickering candles, mystical symbols, serene ambiance
+            - a mystical altar, featuring spiritual artifacts, glowing lanterns, sacred decor, tranquil surroundings
+            - an ancient altar, with traditional decor, sacred texts, soft lighting, spiritual energy
+            - a tranquil altar, adorned with spiritual symbols, flickering lanterns, mystical ambiance, peaceful aura
+        sanctuary:
+            - a secret sanctuary, with hidden alcoves, spiritual symbols, flickering candles, ancient artifacts
+            - a mystical sanctuary, featuring arcane symbols, plush seating, shimmering lights, spiritual decor
+            - a hidden sanctuary, filled with mystical books, soft lighting, ancient relics, cozy nooks
+            - an arcane sanctuary, with mystical patterns, glowing crystals, sacred mirrors, spiritual vibes
+            - a secluded sanctuary, featuring spiritual artifacts, mystical lighting, plush carpets, comfortable seating

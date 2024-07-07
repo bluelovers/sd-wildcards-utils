@@ -24,7 +24,8 @@ lazy-wildcards:
         main:
           common:
             - wisteria
-            - cherry blossom
+            - cherry blossom, sakura
+            - syaoran
       leaves-cannabis-marijuana:
         prompts:
           - >-
@@ -35,3 +36,172 @@ lazy-wildcards:
           - green cannabis leaves
         env:
           - covered in plants
+      # https://civitai.com/models/44566
+      # https://prompts.co.kr/articles/366
+      manhole-cover:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/manhole-cover/main__,
+            {1-$$__lazy-wildcards/subject/env-elem/manhole-cover/style-colors__},
+            {{1-$$__lazy-wildcards/subject/env-elem/manhole-cover/style-location__},|}
+            {{1-$$__lazy-wildcards/subject/env-elem/manhole-cover/env__},|}
+            {{1-$$__lazy-wildcards/subject/env-elem/flower/prompts__},|}
+            {1-$$__lazy-wildcards/subject/env-elem/manhole-cover/style__}
+        main:
+          - japanese_manhole, manhole cover
+        style-colors:
+          - colored metal, colorful_designs
+          - colorless metal
+        style-location:
+          - japanese_manhole_cover
+          - taiwan_manhole_cover
+          - taipei_manhole_cover
+        style:
+          - intricate_designs
+          - city_emblems
+          - cultural_patterns
+          - unique_patterns
+          - city_symbols
+          - local_culture
+          - specific_city_emblems
+          - decorative_designs
+          - capital_city
+          - artistic_patterns
+          - elaborate_artwork
+          - aesthetic_patterns
+          - public_art.
+        env:
+          - gorgeous_manhole_cover
+          - decorative_manhole_cover
+      # https://danbooru.donmai.us/posts?tags=chinese_medicine_cabinet+&z=5
+      chinese-medicine:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/chinese-medicine/main__,
+            {3-$$__lazy-wildcards/subject/env-elem/chinese-medicine/main-type/*__},
+            {2-$$__lazy-wildcards/subject/env-elem/chinese-medicine/style__},
+            {{1-$$__lazy-wildcards/subject/env-elem/chinese-medicine/env-bg__},|}
+            {3-$$__lazy-wildcards/subject/env-elem/chinese-medicine/env__}
+        main:
+          - Traditional Chinese Medicine
+        main-type:
+          # 經絡圖，以人體地圖、能量通道、傳統中醫為特徵。
+          meridian_chart:
+            - meridian_chart, body_map, energy_paths
+          qi:
+            - qi, life_energy, vital_force
+          herbal_dispensary:
+            - herbal_dispensary, herb_cabinets, medicinal_drawers, chinese_medicine_cabinet
+          herbal_tea:
+            - herbal_tea, medicinal_tea, traditional_brew
+          # 推拿，以治療按摩、壓力點、傳統中國按摩為特徵。
+          tui_na:
+            - tui_na, therapeutic_massage, pressure_points, traditional_chinese_massage
+          # 艾灸，以燃燒艾草、熱療法、傳統中醫實踐為特徵。
+          moxibustion:
+            - moxibustion, burning_moxa
+          # 拔罐療法，以拔罐、皮膚痕跡、傳統療法為特徵。
+          cupping_therapy:
+            - cupping_therapy, suction_cups, skin_marks
+          # 針灸，以細針、經絡點、傳統療法為特徵。
+          acupuncture:
+            - acupuncture, thin_needles, meridian_points
+          herbal_medicine:
+            - herbal_medicine, medicinal_plants, dried_herbs
+        style:
+          - yin_yang
+          - dualism
+          - traditional_chinese_philosophy
+          - traditional_chinese_concept
+          - life_energy
+          - vital_force
+          - health_benefits
+          - pickling
+        env:
+          - medicinal_drawers
+          - balance_symbol
+          - traditional_decor
+          - heat_therapy
+          - traditional_healing
+          - herb bundle
+          - pestle
+          - red pepper
+          - medicine
+          - spice
+          - herb
+          - mantle clock
+          - yagen \(tool\)
+          - incense burner
+          - garlic
+          - mortar \(bowl\)
+          - animal around neck
+          - cabinet
+          - hanging scroll
+        env-bg:
+          - chinese_apothecary
+          - traditional_chinese_pharmacy
+          - traditional_medicine_clinic
+          - herbal_dispensary
+          - treatment_rooms
+      mud:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/mud/main__,
+            {1-$$__lazy-wildcards/subject/env-elem/mud/style__},
+            {{1-$$__lazy-wildcards/subject/env-elem/mud/env-bg__},|}
+            {1-$$__lazy-wildcards/subject/env-elem/mud/env__}
+        main:
+          - (mud, silt:1.2), dirty, dirt, soil, Loam, clay, wet
+        style:
+          - >-
+            ({1-$$plastered with mud|smeared with mud|splashes mud}:1.2)
+          - ominous_presence
+          - unsettling_noises
+          - spectral_appearance
+          - night
+          - hostile_environment
+          - foreboding_atmosphere
+          - creepy_vibes
+          - hidden_perils
+          - forgotten_civilization
+          - partially submerged
+        env:
+          - >-
+            {1-$$ancient bare tree|bare tree|tree|branch}
+          - >-
+            {1-$$moss slime vines|moss vines}
+          - >-
+            slime_\(substance\), sticky slime
+          - >-
+            {1-$$dirty face|dirty clothes|dirty feet}
+          - grass
+          - overgrown with thick vines
+          - >-
+            {1-$$lush vegetation|dense underbrush|overgrown landmarks}
+          - molten
+          - mysterious waters
+          - shadowy vegetation
+          - >-
+            {1-$$foggy environment|thick mist}
+          - desolate landscape
+          - ghostly figures
+          - moonlit water
+          - nocturnal creatures
+          - dark foliage
+          - unclear waters
+          - dense underbrush
+          - twisted trees
+          - treacherous terrain
+          - mysterious glow
+        env-bg:
+          - wetlands, marsh
+          - swamp
+          - lake
+          - dark background
+          - >-
+            {1-$$dark swamp|gloomy marsh|haunted_swamp|murky swamp|forbidding swamp|ominous swamp}
+          - >-
+            {1-$$swamp ruins|ancient structures}
+          - enchanted_swamp
+          - __lazy-wildcards/subject/env-bg/swamp-*/prompts__
+

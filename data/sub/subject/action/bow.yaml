@@ -1,0 +1,14 @@
+lazy-wildcards:
+  subject:
+    action-sfw-bow:
+      # https://civitai.com/models/550529/curtsey-or-lift-dress-bow?modelVersionId=614856
+      girl-curtsey:
+        prompts:
+          - >-
+            Curtsey, Lift Dress Bow, skirt hold, bowing, crossed legs, feet crossed, knees bent, standing
+            {,{1-$$__lazy-wildcards/subject/action-sfw-bow/girl-curtsey/env__}|}
+        env:
+          - hand on own chest
+          - leaning forward
+          - collarbone
+          - full body

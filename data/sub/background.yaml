@@ -23,13 +23,21 @@ lazy-wildcards:
         {,__lazy-wildcards/background/color-style__|}
     anything:
       - __cf-*/location/*__
+      - __cornf-*/location/*__
+      - __crea-*/location/*__
       - __lazy-wildcards/background/location/*/prompts__
       - __lazy-wildcards/subject/interior/*/prompts__
       - __lazy-wildcards/subject/theme/*/prompts-bg__
       - __lazy-wildcards/subject/architectural/*/prompts__
       - __lazy-wildcards/subject/env-bg/*/prompts__
       - __lazy-wildcards/subject/env-elem/*/prompts__
+      - >-
+        {3-6$$__lazy-wildcards/subject/*/*/env-bg__}
+      - >-
+        {3-6$$__lazy-wildcards/subject/*/*/env__}
       - __cornf-furniture/prompt-full__
+      - __cornf-*/prompt-object__
+      - __cornf-house/prompt-full__
       - japanese onsen, onsen
       - dirty alley
       - Study, Quiet room with low seating cushions, scroll-filled shelves lining the walls, a small writing desk with ink pots and papyrus scrolls, intricate woven rugs, and decorative hieroglyphic carvings
@@ -83,7 +91,9 @@ lazy-wildcards:
       - in a glamorous restaurant
       - (beautiful detailed glow, beautiful detailed ice, beautiful detailed water, snowflake)
       - japanese building, dirt road, willow tree, stone fence, river
-    
+      - Chinese calligraphy in background
+      - crowded train interior
+      - news anchor in front of big screen, facing viewer, back screen is big which is from the floor to ceiling and left to right
     location:
       interior-lava:
         prompts:
@@ -288,4 +298,3 @@ lazy-wildcards:
           - canalside
         city:
           - london
-

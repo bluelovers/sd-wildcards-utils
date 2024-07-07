@@ -305,7 +305,7 @@ lazy-wildcards:
           type-kaine:
             - kaine lingerie, kaine bandages, kaine gloves, kaine shoes
           type-bride:
-            - Nier.2b\(Bride\)
+            - Nier.2b\(Bride\), thighhighs, frills, sheer sleeves, sheer dress, sheer bridal veil, lace dress, wedding dress, bridal lingerie
         costume-eyes:
           eyes:
             - blue-gray eyes, no blindfold
@@ -336,4 +336,57 @@ lazy-wildcards:
           - underwear
           - hemming of a skirt
           - turtleneck
+          - Inverted Bob Haircut
+          - white rose
+          - wedding ring
+    onmyoji:
+      suzuka_gozen:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/main__,
+            __lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/ethnicity__,
+            {{1-$$__lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/costume/type-*__},|}
+            {1-$$__lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/env__}
+        main:
+          - suzuka_gozen_(onmyoji), onmyoji, onmyoji:_the_card_game, onmyouji
+        costume:
+          type-original-outfit:
+            - original outfit
+          type-dress:
+            - original outfit, white shirt, open clothes, rope, colored sclera, japanese clothes, japanese armor
+          type-mecha:
+            - white mecha bodysuit, white mecha corset, mecha museum, mechanical parts and weapons, headgear, humanoid robot, android, exposed bones, anatomy, exo-skeleton body, mecha skeleton, rib cage, hip bones, backbones,
+        ethnicity:
+          - white hair, long hair, colored sclera
+        env:
+          - slightly curly hair
+          - blue eyes
+          - expressionless
+          - ponytail
+          - earphones
+          - white pantyhose
+          - string bikini
+          - highleg panties
+          - garter
+          - necktie
+          - suspender
+          - gloves
+          - spider lily print
+          - bonsai
+          - kimono
+          - in tree
+          - haori
+          - fur rug
+          - bow
+          - center opening
+          - breasts apart
+          - black sclera
+          - sideboob
+          - slit pupils
+
+
+
+
+
+
 
