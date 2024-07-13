@@ -23,9 +23,13 @@ export type IOmitParsedNodeContents<T extends Node | Document, P extends ParsedN
 
 export type IWildcardsYAMLScalar = IOmitParsedNodeContents<Scalar<string>, Scalar.Parsed>;
 export type IWildcardsYAMLSeq = IOmitParsedNodeContents<YAMLSeq<IWildcardsYAMLScalar>, YAMLSeq.Parsed>;
-export type IWildcardsYAMLMapRoot = YAMLMap.Parsed<IWildcardsYAMLScalar, IWildcardsYAMLPairValue>;
 
-export type IWildcardsYAMLPairValue = IWildcardsYAMLSeq | IWildcardsYAMLMapRoot;
+// avoid loop self in IWildcardsYAMLPairValue
+type _IWildcardsYAMLMapRoot = YAMLMap.Parsed<IWildcardsYAMLScalar, IWildcardsYAMLPairValue>;
+
+export type IWildcardsYAMLMapRoot<K extends IWildcardsYAMLScalar = IWildcardsYAMLScalar, V extends IWildcardsYAMLPairValue = IWildcardsYAMLPairValue> = YAMLMap.Parsed<K, V>;
+
+export type IWildcardsYAMLPairValue = IWildcardsYAMLSeq | _IWildcardsYAMLMapRoot;
 export type IWildcardsYAMLPair = Pair<IWildcardsYAMLScalar, IWildcardsYAMLPairValue>;
 
 export interface IRecordWildcards
