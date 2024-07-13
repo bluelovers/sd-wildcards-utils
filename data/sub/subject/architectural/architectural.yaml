@@ -39,3 +39,43 @@ lazy-wildcards:
         env-bg:
           - subway interior
           - carriage
+      ruin-decrepit-center:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/architectural/ruin-decrepit-center/main__,
+            {1-$$__lazy-wildcards/subject/architectural/ruin-decrepit-center/env-bg__},
+            {4-$$__lazy-wildcards/subject/architectural/ruin-decrepit-center/env__},
+            {1-$$__lazy-wildcards/subject/architectural/ruin-decrepit-center/style__}
+        main:
+          - tszcampout, big building
+        style:
+          - decrepit
+        env-bg:
+          - building on a hill
+          - hill
+          - decrepit center
+        env:
+          - trees
+          - bush
+          - grass
+          - leaves
+          - branch
+          - fence
+          - gate
+          - awning
+          - >-
+            {1-$$pavement|road}
+          - stairs
+          - bench
+          - lamp post
+          - parking lot
+          - sign
+          - sky
+          - antenna
+          - gravel
+          - railing
+          - balcony
+          - moss
+          - rust
+          - fog
+          - foggy

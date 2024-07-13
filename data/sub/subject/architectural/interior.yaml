@@ -144,3 +144,53 @@ lazy-wildcards:
           - floor
           - wall
           - window
+      japanese-tatami:
+        prompts:
+          - >-
+            indoors, interior, traditional_japanese_interior, tatami, japanese writing, calligraphy,
+            {1-$$__lazy-wildcards/subject/interior/aquarium/env__}
+        env:
+          - >-
+            {1-$$sword|katana}
+          - scroll
+      aquarium:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/interior/aquarium/main__,
+            {1-$$__lazy-wildcards/subject/interior/aquarium/main-type/*__},
+            {1-$$__lazy-wildcards/subject/interior/aquarium/env__},
+            {{1-$$__lazy-wildcards/subject/interior/aquarium/env-bg__},|}
+            {1-$$__lazy-wildcards/subject/interior/aquarium/style__},
+            {1-$$__lazy-wildcards/subject/interior/aquarium/env-fish__}
+        main:
+          - aquarium, indoors, interior
+        main-type:
+          aquarium-tunnel:
+            - (aquarium tunnel:1.2), underwater_tunnel
+          jellyfish_tank:
+            - jellyfish_tank, floating_jellyfish, transparent_tank, glowing_effect
+          shark_tank:
+            - shark_tank, large_aquarium
+        style:
+          - colorful_ecosystem
+          - immersive_experience
+          - panoramic_view
+          - thrilling_exhibit
+          - underwater_exhibit
+          - submerged_displays
+          - diverse_species
+        env-fish:
+          - tropical_fish
+          - predatory_fish
+          - shark
+          - >-
+            {1-$$marine_life|sea_creatures|ocean_dwellers}
+          - jellyfish
+        env:
+          - fish_tanks
+          - aquatic_exhibits
+          - decorative_aquascape
+          - aquatic_habitat
+        env-bg:
+          - >-
+            {1-$$coral_reef|vibrant_corals}

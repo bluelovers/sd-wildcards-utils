@@ -383,10 +383,92 @@ lazy-wildcards:
           - black sclera
           - sideboob
           - slit pupils
-
-
-
-
-
-
+    vocaloid:
+      hatsune_miku:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/vocaloid/hatsune_miku/main__,
+            {1-$$__lazy-wildcards/cosplay-char/vocaloid/hatsune_miku/ethnicity__},
+            {1-$$__lazy-wildcards/cosplay-char/vocaloid/hatsune_miku/costume/type-*__},
+            {1-$$__lazy-wildcards/cosplay-char/vocaloid/hatsune_miku/costume-elem__}
+        main:
+          - 1girl, hatsune miku, vocaloid, hatsune miku \(cosplay\)
+        costume:
+          # https://civitai.com/models/567354/hatsune-miku-bagua-clothes?modelVersionId=632268
+          type-bagua:
+            - (bagua:1.2), Hatsune Miku Bagua Clothes
+        ethnicity:
+          - aqua hair
+          - twintails
+          - aqua eyes
+          - very long hair
+          - number_tattoo
+          - hair between eyes
+        costume-elem:
+          - headphones
+          - >-
+            {1-$$holding fan|hand fan|folding fan}
+          - holding
+          - toeless footwear
+          - dress
+          - >-
+            {1-$$double bun|hair bun}
+          - toenail polish
+          - nail polish
+          - hair bow
+          - jewelry
+          - bangs
+          - bow
+          - socks
+          - wrist cuffs
+          - sandals
+          - thigh strap
+          - skirt hold
+          - earrings
+          - short dress
+          - red dress
+          - tassel
+          - hair ornament
+    ragnarok_online:
+      blacksmith:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/ragnarok_online/blacksmith/main__,
+            {{1-$$__lazy-wildcards/cosplay-char/ragnarok_online/blacksmith/costume__},|}
+            {{1-$$__lazy-wildcards/cosplay-char/ragnarok_online/blacksmith/ethnicity__},|}
+            {__lazy-wildcards/cosplay-char/ragnarok_online/blacksmith/pose__,|}
+            {1-$$__lazy-wildcards/cosplay-char/ragnarok_online/blacksmith/env__}
+        main:
+          - blacksmith \(ragnarok online\), ragnarok online, bsRO
+        costume:
+          - red scarf, blue denim shorts, tied shirt, armored gloves, fingerless gloves, crop top, front-tie top, tattoo, underboob, sleeveless shirt, belt, ankle_boots
+        ethnicity:
+          - blue hair, blue eye, low twintails
+        pose:
+          - standing, hand on hip
+          - arms behind head
+        env:
+          - pullcart
+          - breasts apart
+          - goggles on head
+      alchemist:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/ragnarok_online/alchemist/main__,
+            {{1-$$__lazy-wildcards/cosplay-char/ragnarok_online/alchemist/costume__},|}
+            {1-$$__lazy-wildcards/cosplay-char/ragnarok_online/alchemist/env__}
+        main:
+          - alchemist \(ragnarok online\), ragnarok online, alchemyRO
+        costume:
+          - belt, cape, cleavage, fingerless gloves, fur trim, gloves, black skirt, bare shoulder, elbow gloves, black strapless, knee boots
+        env:
+          - >-
+            {flask|holding flask}, round-bottom flask
+          - >-
+            {potion|holding potion}
+          - holding
+          - magatama
+      rogue:
+        prompts:
+          - rogue \(ragnarok online\), ragnarok online, rogueRO, fishnet legwear, red fur coat, shoes, midriff, collar, black shorts, bangle, armlet, navel
 

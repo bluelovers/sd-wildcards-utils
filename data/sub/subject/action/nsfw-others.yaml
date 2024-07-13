@@ -59,3 +59,40 @@ lazy-wildcards:
             - hands on knees
         env:
           - toilet stall
+      undressing:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/action-nsfw-others/undressing/main__,
+            {1-$$__lazy-wildcards/subject/action-nsfw-others/undressing/main-sub__},
+            {1-$$__lazy-wildcards/subject/action-nsfw-others/undressing/action-elem__},
+            {1-$$__lazy-wildcards/subject/action-nsfw-others/undressing/style__}
+        main:
+          - (undressing:1.2), half naked
+        main-sub:
+          - undressing_in_public
+          - >-
+            {1-$$undressing_self|pulled by self|lifted_by_self}
+          - undressing_with_mouth
+          - pulling down pants
+          - pulling bikini string
+          - >-
+            {1-$$undressing_another|lifted_by_another}
+          - undressing_partner
+        action-elem:
+          - breast press
+          - breasts out
+          - hand on waist
+          - underboob
+          - >-
+            {1-$$pussy juice|pussy juice drip}
+        style:
+          - horny
+          - laying on back
+          - laying on bed
+          - looking at partner
+          - nude
+          - selfie
+          - open clothes
+          - heart
+          - clothes pull
+          - cleavage
