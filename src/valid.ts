@@ -83,6 +83,8 @@ export function validWildcardsYamlData<T extends IRecordWildcards | IWildcardsYA
 	opts?: IOptionsSharedWildcardsYaml,
 ): asserts data is T
 {
+	opts ??= {};
+
 	if (isDocument(data))
 	{
 		if (isNode(data.contents) && !isMap(data.contents))
@@ -94,8 +96,6 @@ export function validWildcardsYamlData<T extends IRecordWildcards | IWildcardsYA
 
 		data = data.toJSON()
 	}
-
-	opts ??= {};
 
 	if (typeof data === 'undefined' || data === null)
 	{

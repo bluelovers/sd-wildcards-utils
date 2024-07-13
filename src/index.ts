@@ -27,6 +27,7 @@ export * from './merge';
 export * from './find';
 export * from './format';
 export * from './check';
+export * from './is';
 export type * from './types';
 
 /**
@@ -148,15 +149,3 @@ export function parseWildcardsYaml<Contents extends YAMLMap = IWildcardsYAMLMapR
 }
 
 export default parseWildcardsYaml
-export { IOptionsVisitor } from './types';
-export { IWildcardsYAMLDocumentParsed } from './types';
-export { IWildcardsYAMLDocument } from './types';
-export { IWildcardsYAMLMapRoot } from './types';
-export { IWildcardsYAMLSeq } from './types';
-export { IWildcardsYAMLScalar } from './types';
-export { IOmitParsedNodeContents } from './types';
-export { IFindPathEntry } from './types';
-export { IOptionsMergeWilcardsYAMLDocumentJsonBy } from './types';
-export { IOptionsParseDocument } from './types';
-export { IOptionsStringify } from './types';
-export { IOptionsSharedWildcardsYaml } from './types';

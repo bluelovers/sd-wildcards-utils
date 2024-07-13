@@ -1,5 +1,5 @@
 import { array_unique_overwrite, defaultChecker } from 'array-hyper-unique';
-import { Document, isDocument, isMap, isPair, isScalar, Node, ParsedNode, visit, visitor } from 'yaml';
+import { Document, isDocument, isMap, isPair, isScalar, Node, ParsedNode, visit, visitor, YAMLMap } from 'yaml';
 import {
 	IOptionsParseDocument,
 	IOptionsVisitor,
@@ -10,6 +10,7 @@ import {
 	IWildcardsYAMLPair, IWildcardsYAMLScalar,
 } from './types';
 import { formatPrompts, stripZeroStr, trimPrompts } from './format';
+import { isWildcardsYAMLDocument, isWildcardsYAMLMap } from './is';
 
 export function visitWildcardsYAML(node: Node | Document | null, visitorOptions: IOptionsVisitor)
 {
@@ -195,4 +196,25 @@ export function _visitNormalizeScalar(key: IVisitorFnKey, node: IWildcardsYAMLSc
 
 		node.value = value;
 	}
+}
+
+export function getTopRootContents<T extends IWildcardsYAMLDocument | Document | IWildcardsYAMLMapRoot | YAMLMap>(doc: T)
+{
+	if (isWildcardsYAMLDocument(doc))
+	{
+		// @ts-ignore
+		doc = doc.contents as IWildcardsYAMLMapRoot
+	}
+
+	if (isWildcardsYAMLMap(doc))
+	{
+		return doc
+	}
+
+	throw new TypeError(`Input document is not a YAML Document or a YAML Map. Please provide a valid YAML structure.`)
+}
+
+export function getTopRootNodes<T extends IWildcardsYAMLDocument | Document | IWildcardsYAMLMapRoot | YAMLMap>(doc: T)
+{
+	return getTopRootContents(doc).items
 }
