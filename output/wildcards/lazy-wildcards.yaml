@@ -3159,6 +3159,25 @@ lazy-wildcards:
         env-bg:
           - >-
             {1-$$coral_reef|vibrant_corals}
+      hotel_capsule:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/interior/hotel_capsule/main__,{1-$$__lazy-wildcards/subject/interior/hotel_capsule/main-type/*__},{1-$$__lazy-wildcards/subject/interior/hotel_capsule/env__}
+        main:
+          - Capsule hotel,indoors,scenery
+        main-type:
+          type-inside:
+            - television,pillow,bed
+          type-outside:
+            - hallway
+        env:
+          - glasses
+          - light
+          - wooden floor
+          - ceiling light
+      Internet_Cafes_inside:
+        prompts:
+          - Internet Cafe,cybercafe,necafe,scenery,indoors,computer,door,chair,monitor,still life,mouse (computer),desk
     architectural-style:
       elven:
         prompts:
@@ -3686,6 +3705,51 @@ lazy-wildcards:
           - black sclera
           - sideboob
           - slit pupils
+      enenra:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/onmyoji/enenra/main__,{1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/ethnicity__},{{1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/costume-type/type-*__},|} {1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/costume-elem__},{{1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/env-bg__},|} {1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/env__}
+        main:
+          - Enenra,enenra \(onmyoji\),japanese attire
+        ethnicity:
+          - hidden ears
+          - blue eyes
+          - pointy ears
+          - blunt bangs
+        costume-type:
+          type-kimono:
+            - kimono
+          type-yukata:
+            - yukata
+        costume-elem:
+          - >-
+            {1-$$earrings|hoop earrings}
+          - (light purple attire)
+          - showing panty
+          - tight clothing
+          - white panty
+          - tight panty
+          - >-
+            {1-$$holding|holding smoking pipe|smoking pipe|smoke|kiseru}
+          - hair bow
+          - jewelry
+          - >-
+            {1-$$long sleeves|wide sleeves}
+          - sidelocks
+          - sideboob
+          - bare shoulders
+          - underwear
+          - clothes lift
+        env:
+          - alluring legs
+          - seductive smile
+          - seducing the viewer
+          - water drop
+          - soaking hands
+        env-bg:
+          - beach
+          - heian
+          - on the blanket
     vocaloid:
       hatsune_miku:
         prompts:
