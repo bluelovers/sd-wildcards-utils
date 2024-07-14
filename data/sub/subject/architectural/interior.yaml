@@ -194,3 +194,24 @@ lazy-wildcards:
         env-bg:
           - >-
             {1-$$coral_reef|vibrant_corals}
+      hotel_capsule:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/interior/hotel_capsule/main__,
+            {1-$$__lazy-wildcards/subject/interior/hotel_capsule/main-type/*__},
+            {1-$$__lazy-wildcards/subject/interior/hotel_capsule/env__}
+        main:
+          - Capsule hotel, indoors, scenery
+        main-type:
+          type-inside:
+            - television, pillow, bed
+          type-outside:
+            - hallway
+        env:
+          - glasses
+          - light
+          - wooden floor
+          - ceiling light
+      Internet_Cafes_inside:
+        prompts:
+          - Internet Cafe, cybercafe, necafe, scenery, indoors, computer, door, chair, monitor, still life, mouse (computer), desk
