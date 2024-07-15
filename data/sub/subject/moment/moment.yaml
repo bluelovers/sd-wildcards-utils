@@ -34,6 +34,7 @@ lazy-wildcards:
             {, __lazy-wildcards/subject/moment/moon/prompts__|}
           - day
           - Dusk
+          - __cof-location/timeofday/all__
       moon:
         prompts:
           - >-
@@ -42,4 +43,13 @@ lazy-wildcards:
       age:
         prompts:
           - medieval
-
+      season:
+        prompts:
+          - __cof-location/season__
+          - >-
+            {1-$$__lazy-wildcards/subject/moment/season/main__}
+        main:
+          - spring
+          - summer
+          - autumn
+          - winter

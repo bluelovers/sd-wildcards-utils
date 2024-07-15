@@ -521,4 +521,109 @@ lazy-wildcards:
       rogue:
         prompts:
           - rogue \(ragnarok online\), ragnarok online, rogueRO, fishnet legwear, red fur coat, shoes, midriff, collar, black shorts, bangle, armlet, navel
-
+    rwby:
+      ruby_rose:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/rwby/ruby_rose/main__,
+            {{1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/ethnicity__},|}
+            {{1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/costume-type/type-*__},|}
+            {{1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/costume-weapon__},|}
+            {1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/style__},
+            {1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/costume-elem__},
+            {1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/env__}
+        main:
+          - rwby, ruby rose, ruby rose \(rwby\), crescent rose
+        ethnicity:
+          - short hair
+          - red eyes
+          - grey eyes
+          - >-
+            {1-$$colored sclera|black sclera}
+          - >-
+            {1-$$red hair|black hair|multicolored hair}
+        costume-type:
+          type-corset:
+            - corset, dress, hood
+          # https://www.deviantart.com/dishwasher1910/art/Grimm-773345213
+          # https://civitai.com/models/542202/ruby-rose-grimm-rwby
+          type-grimm:
+            - GrimmRu13y, black thighhighs, single horn, demon horns, fur trim, fur-trimmed cape
+          # https://www.deviantart.com/dishwasher1910/art/RWBY-3-0-741045666
+          # https://civitai.com/models/542089/ruby-rose-rwby-30
+          type-30:
+            - RubyRose30, grey skirt, medium breasts, hair between eyes, armor, leotard, greaves, waist cape, mechanical legs, impossible leotard
+        costume-elem:
+          - colored skin
+          - white skin
+          - >-
+            {cape|red cape}
+          - torn clothes
+          - bare shoulders
+          - cross
+          - pouch
+          - taut clothes
+          - gauntlets
+          - skeletal arm
+          - >-
+            {high heels|high heel boots}
+          - expressionless
+          - black gloves
+          - black dress
+          - collarbone
+          - sleeveless
+          - belt
+        costume-weapon:
+          - holding
+          - >-
+            {1-$$scythe|holding scythe}
+          - weapon
+        style:
+          - gothic lolita
+          - lolita fashion
+          - alternate universe
+          - dark persona
+        env:
+          - broken moon
+          - __lazy-wildcards/cosplay-char/rwby/grimm/prompts__
+          - rose petals
+          - petals
+          - night
+          - snow
+          - reading
+          - tree
+      grimm:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/rwby/grimm/main__
+            {,{1-$$__lazy-wildcards/cosplay-char/rwby/grimm/env__}|}
+        main:
+          - grimm \(rwby\), monster
+        env:
+          - grimm dragon
+          - corruption
+          - multiple dogs
+          - beowolf
+    # https://danbooru.donmai.us/posts?tags=kumo_desu_ga_nani_ka%3F&z=2
+    kumo_desu:
+      # https://civitai.com/models/579504/karnatia-seri-anabald-kumo-desu-ga-nani-ka?modelVersionId=646336
+      karnatia_seri_anabald:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/kumo_desu/karnatia_seri_anabald/main__,
+            {{1-$$__lazy-wildcards/cosplay-char/kumo_desu/karnatia_seri_anabald/ethnicity__},|}
+            {1-$$__lazy-wildcards/cosplay-char/kumo_desu/karnatia_seri_anabald/costume__},
+            {1-$$__lazy-wildcards/cosplay-char/kumo_desu/karnatia_seri_anabald/costume-elem__}
+        main:
+          - (karnatia:1.2), kumo_desu_ga_nani_ka
+        ethnicity:
+          - red_hair
+        costume:
+          - red_dress,pendant,cloak
+          - pendant,pink_cloak
+          - white_cape
+          - bikini
+          - formal_dress
+        costume-elem:
+          - capelet
+          - grey capelet

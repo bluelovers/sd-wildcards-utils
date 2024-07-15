@@ -22,7 +22,12 @@ lazy-wildcards:
         neon {2-3$$ background, neon $$__lazy-wildcards/utils/color-base__} background
         {,__lazy-wildcards/background/color-style__|}
     anything:
+      - photo of __cof-location/place/*__, __cof-location/weather__ weather, during __cof-location/season__, __cof-location/timeofday/all__
       - __cf-*/location__
+      - __cof-location/place/*__
+      - __cof-location/weather__
+      - __cof-location/season__
+      - __cof-location/timeofday/all__
       - __cornf-*/location__
       - __crea-*/location__
       - __lazy-wildcards/background/location/*/prompts__
@@ -38,6 +43,9 @@ lazy-wildcards:
       - __cornf-furniture/prompt-full__
       - __cornf-*/prompt-object__
       - __cornf-house/prompt-full__
+      - __lazy-wildcards/subject/moment/random/prompts__
+      - >-
+        {1-$$__lazy-wildcards/subject/moment/*/prompts__}
       - japanese onsen, onsen
       - dirty alley
       - Study, Quiet room with low seating cushions, scroll-filled shelves lining the walls, a small writing desk with ink pots and papyrus scrolls, intricate woven rugs, and decorative hieroglyphic carvings
