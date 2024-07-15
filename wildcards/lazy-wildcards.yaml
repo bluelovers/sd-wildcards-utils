@@ -164,7 +164,12 @@ lazy-wildcards:
       - >-
         neon {2-3$$ background,neon $$__lazy-wildcards/utils/color-base__} background {,__lazy-wildcards/background/color-style__|}
     anything:
+      - photo of __cof-location/place/*__,__cof-location/weather__ weather,during __cof-location/season__,__cof-location/timeofday/all__
       - __cf-*/location__
+      - __cof-location/place/*__
+      - __cof-location/weather__
+      - __cof-location/season__
+      - __cof-location/timeofday/all__
       - __cornf-*/location__
       - __crea-*/location__
       - __lazy-wildcards/background/location/*/prompts__
@@ -180,6 +185,9 @@ lazy-wildcards:
       - __cornf-furniture/prompt-full__
       - __cornf-*/prompt-object__
       - __cornf-house/prompt-full__
+      - __lazy-wildcards/subject/moment/random/prompts__
+      - >-
+        {1-$$__lazy-wildcards/subject/moment/*/prompts__}
       - japanese onsen,onsen
       - dirty alley
       - Study,Quiet room with low seating cushions,scroll-filled shelves lining the walls,a small writing desk with ink pots and papyrus scrolls,intricate woven rugs,and decorative hieroglyphic carvings
@@ -927,7 +935,7 @@ lazy-wildcards:
       - (bare shoulders,detached sleeves,strapless dress,long dress,corset)
       - cape,cross-laced clothes,hexagram,white transparent thighhighs,miniskirt,dress,thong,elbow laced panties,visible panties
       - >-
-        {__lazy-wildcards/utils/season__ |}school uniform
+        {__lazy-wildcards/subject/moment/season/main__ |}school uniform
       - >-
         sosexyburuma,buruma,Bloomers,Old Japanese Gym Uniform,School Swimsuit,burumashorts,navy buruma,thong buruma,wearing navy buruma and gym uniform,see through,highleg,side-tie panties,gym shirt,short sleeves,cameltoe,revealing clothes,nsfw
       - skirt_suit
@@ -1044,11 +1052,6 @@ lazy-wildcards:
         (from below,looking down,ass visible through thighs:1.2)
     view:
       - front view
-    season:
-      - spring
-      - summer
-      - autumn
-      - winter
     interior-style-anything:
       - __mix-lazy-auto/interior-style-anything__
       - >-
@@ -2648,6 +2651,7 @@ lazy-wildcards:
             night{,neon lights|} {,__lazy-wildcards/subject/moment/moon/prompts__|}
           - day
           - Dusk
+          - __cof-location/timeofday/all__
       moon:
         prompts:
           - >-
@@ -2656,6 +2660,16 @@ lazy-wildcards:
       age:
         prompts:
           - medieval
+      season:
+        prompts:
+          - __cof-location/season__
+          - >-
+            {1-$$__lazy-wildcards/subject/moment/season/main__}
+        main:
+          - spring
+          - summer
+          - autumn
+          - winter
     meme:
       CzechCasting:
         prompts:
@@ -3830,9 +3844,106 @@ lazy-wildcards:
       rogue:
         prompts:
           - rogue \(ragnarok online\),ragnarok online,rogueRO,fishnet legwear,red fur coat,shoes,midriff,collar,black shorts,bangle,armlet,navel
+    rwby:
+      ruby_rose:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/rwby/ruby_rose/main__,{{1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/ethnicity__},|} {{1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/costume-type/type-*__},|} {{1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/costume-weapon__},|} {1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/style__},{1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/costume-elem__},{1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/env__}
+        main:
+          - rwby,ruby rose,ruby rose \(rwby\),crescent rose
+        ethnicity:
+          - short hair
+          - red eyes
+          - grey eyes
+          - >-
+            {1-$$colored sclera|black sclera}
+          - >-
+            {1-$$red hair|black hair|multicolored hair}
+        costume-type:
+          type-corset:
+            - corset,dress,hood
+          # https://www.deviantart.com/dishwasher1910/art/Grimm-773345213
+          # https://civitai.com/models/542202/ruby-rose-grimm-rwby
+          type-grimm:
+            - GrimmRu13y,black thighhighs,single horn,demon horns,fur trim,fur-trimmed cape
+          # https://www.deviantart.com/dishwasher1910/art/RWBY-3-0-741045666
+          # https://civitai.com/models/542089/ruby-rose-rwby-30
+          type-30:
+            - RubyRose30,grey skirt,medium breasts,hair between eyes,armor,leotard,greaves,waist cape,mechanical legs,impossible leotard
+        costume-elem:
+          - colored skin
+          - white skin
+          - >-
+            {cape|red cape}
+          - torn clothes
+          - bare shoulders
+          - cross
+          - pouch
+          - taut clothes
+          - gauntlets
+          - skeletal arm
+          - >-
+            {high heels|high heel boots}
+          - expressionless
+          - black gloves
+          - black dress
+          - collarbone
+          - sleeveless
+          - belt
+        costume-weapon:
+          - holding
+          - >-
+            {1-$$scythe|holding scythe}
+          - weapon
+        style:
+          - gothic lolita
+          - lolita fashion
+          - alternate universe
+          - dark persona
+        env:
+          - broken moon
+          - __lazy-wildcards/cosplay-char/rwby/grimm/prompts__
+          - rose petals
+          - petals
+          - night
+          - snow
+          - reading
+          - tree
+      grimm:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/rwby/grimm/main__ {,{1-$$__lazy-wildcards/cosplay-char/rwby/grimm/env__}|}
+        main:
+          - grimm \(rwby\),monster
+        env:
+          - grimm dragon
+          - corruption
+          - multiple dogs
+          - beowolf
+    # https://danbooru.donmai.us/posts?tags=kumo_desu_ga_nani_ka%3F&z=2
+    kumo_desu:
+      # https://civitai.com/models/579504/karnatia-seri-anabald-kumo-desu-ga-nani-ka?modelVersionId=646336
+      karnatia_seri_anabald:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/kumo_desu/karnatia_seri_anabald/main__,{{1-$$__lazy-wildcards/cosplay-char/kumo_desu/karnatia_seri_anabald/ethnicity__},|} {1-$$__lazy-wildcards/cosplay-char/kumo_desu/karnatia_seri_anabald/costume__},{1-$$__lazy-wildcards/cosplay-char/kumo_desu/karnatia_seri_anabald/costume-elem__}
+        main:
+          - |-
+            (karnatia:1.2),kumo_desu_ga_nani_ka
+        ethnicity:
+          - red_hair
+        costume:
+          - red_dress,pendant,cloak
+          - pendant,pink_cloak
+          - white_cape
+          - bikini
+          - formal_dress
+        costume-elem:
+          - capelet
+          - grey capelet
 mix-lazy-auto:
   # @example __mix-lazy-auto/color-anything__
-  # "color-anything" (total: 761 => 193, save 568 ) is merge from
+  # "color-anything" (total: 864 => 209, save 655 ) is merge from
   #  - __lazy-wildcards/utils/color-base__ (11)
   #  - __mix-lazy-auto/color-anything__ (3)
   #  - __cf-daoist-priest/color__ (10)
@@ -3843,6 +3954,7 @@ mix-lazy-auto:
   #  - __cf-ancient-china/color__ (11)
   #  - __cf-ancient-rome/color__ (10)
   #  - __cf-angel/color__ (12)
+  #  - __cf-arab-princess/color__ (10)
   #  - __cf-astronaut/color__ (10)
   #  - __cf-aztec/color__ (9)
   #  - __cf-baker/color__ (10)
@@ -3863,6 +3975,7 @@ mix-lazy-auto:
   #  - __cf-farmer/color__ (10)
   #  - __cf-fitness/color__ (10)
   #  - __cf-flapper/color__ (8)
+  #  - __cf-flight-attendant/color__ (10)
   #  - __cf-florist/color__ (9)
   #  - __cf-football-player/color__ (10)
   #  - __cf-fortune-teller/color__ (10)
@@ -3870,13 +3983,18 @@ mix-lazy-auto:
   #  - __cf-gamer/color__ (10)
   #  - __cf-gangster-1920s/color__ (8)
   #  - __cf-ghostbuster/color__ (6)
+  #  - __cf-gothic-lolita/color__ (10)
+  #  - __cf-gothic/color__ (9)
+  #  - __cf-greaser-1950s/color__ (7)
   #  - __cf-gymnast/color__ (11)
   #  - __cf-harlot-18th/color__ (10)
   #  - __cf-harlot/color__ (11)
   #  - __cf-hawaiian/color__ (10)
   #  - __cf-hippie/color__ (12)
+  #  - __cf-hitek-soldier/color__ (10)
   #  - __cf-hockey-player/color__ (10)
   #  - __cf-ice-skater/color__ (10)
+  #  - __cf-indian-princess/color__ (10)
   #  - __cf-jester/color__ (10)
   #  - __cf-lifeguard/color__ (3)
   #  - __cf-lingerie/color__ (10)
@@ -3884,10 +4002,14 @@ mix-lazy-auto:
   #  - __cf-mad-scientist/color__ (10)
   #  - __cf-maid/color__ (10)
   #  - __cf-mechanic/color__ (9)
+  #  - __cf-military/color__ (10)
+  #  - __cf-mistress/color__ (9)
   #  - __cf-necromancer/color__ (6)
+  #  - __cf-ninja/color__ (8)
   #  - __cf-nurse/color__ (8)
   #  - __cf-painter/color__ (10)
   #  - __cf-pinup-1940/color__ (10)
+  #  - __cf-pirate/color__ (10)
   #  - __cf-pop-singer/color__ (10)
   #  - __cf-puppeteer/color__ (11)
   #  - __cf-red-riding-hood/color__ (6)
@@ -3961,8 +4083,14 @@ mix-lazy-auto:
     - ethereal ivory
     - soft purple
     - rose gold
-    - navy
+    - deep purple
+    - emerald green
+    - ruby red
+    - sapphire blue
     - turquoise
+    - ivory
+    - midnight blue
+    - navy
     - light blue
     - navy blue
     - dark brown
@@ -3970,8 +4098,6 @@ mix-lazy-auto:
     - tan
     - pastel pink
     - burgundy
-    - ivory
-    - emerald green
     - blush pink
     - lavender
     - lilac
@@ -3993,7 +4119,6 @@ mix-lazy-auto:
     - iridescent
     - matte black
     - vibrant orange
-    - deep purple
     - rich red
     - midnight black
     - marigold yellow
@@ -4014,11 +4139,10 @@ mix-lazy-auto:
     - teal
     - sage
     - soft lavender
-    - midnight blue
-    - ruby red
     - denim blue
     - plaid
     - olive
+    - royal blue
     - pastel orange
     - coral
     - rich burgundy
@@ -4026,12 +4150,17 @@ mix-lazy-auto:
     - pinstripe
     - deep burgundy
     - khaki
+    - dark purple
     - hot pink
-    - royal blue
     - leopard print
     - tie-dye
     - pastel colors
     - floral patterns
+    - metallic silver
+    - camo green
+    - steel grey
+    - digital camo
+    - chrome
     - ice blue
     - light pink
     - pastel gray
@@ -4045,8 +4174,18 @@ mix-lazy-auto:
     - champagne
     - pastel lavender
     - olive green
+    - camouflage
+    - desert tan
+    - woodland camo
+    - urban camo
+    - jungle green
     - dark red
+    - leather brown
+    - glossy red
+    - charcoal grey
     - dark gray
+    - shadow purple
+    - obsidian
     - floral
     - classic beige
     - golden yellow
@@ -4070,7 +4209,6 @@ mix-lazy-auto:
     - |-
       {mustard|golden} yellow
     - rich gold
-    - dark purple
     - classic brown
     - silver grey
     - black and orange
