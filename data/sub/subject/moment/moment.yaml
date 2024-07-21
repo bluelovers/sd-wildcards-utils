@@ -4,8 +4,29 @@ lazy-wildcards:
       random:
         prompts:
           - >-
-            {{1-$$__lazy-wildcards/subject/moment/weather/prompts__}|}
+            {1-$$__lazy-wildcards/subject/moment/weather/prompts__}
             {,__lazy-wildcards/subject/moment/time/prompts__|}
+            {,__lazy-wildcards/subject/moment/moon/prompts__|}
+            {,__lazy-wildcards/subject/moment/season/prompts__|}
+            {0.2::,__lazy-wildcards/subject/moment/age/prompts__|}
+          - >-
+            __lazy-wildcards/subject/moment/time/prompts__
+            {,{1-$$__lazy-wildcards/subject/moment/weather/prompts__}|}
+            {,__lazy-wildcards/subject/moment/moon/prompts__|}
+            {,__lazy-wildcards/subject/moment/season/prompts__|}
+            {0.2::,__lazy-wildcards/subject/moment/age/prompts__|}
+          - >-
+            __lazy-wildcards/subject/moment/moon/prompts__
+            {,{1-$$__lazy-wildcards/subject/moment/weather/prompts__}|}
+            {,__lazy-wildcards/subject/moment/time/prompts__|}
+            {,__lazy-wildcards/subject/moment/season/prompts__|}
+            {0.2::,__lazy-wildcards/subject/moment/age/prompts__|}
+          - >-
+            __lazy-wildcards/subject/moment/season/prompts__
+            {,{1-$$__lazy-wildcards/subject/moment/weather/prompts__}|}
+            {,__lazy-wildcards/subject/moment/time/prompts__|}
+            {,__lazy-wildcards/subject/moment/moon/prompts__|}
+            {0.2::,__lazy-wildcards/subject/moment/age/prompts__|}
       weather:
         prompts:
           - >-

@@ -194,12 +194,12 @@ lazy-wildcards:
         env-bg:
           - >-
             {1-$$coral_reef|vibrant_corals}
-      hotel_capsule:
+      hotel-capsule:
         prompts:
           - >-
-            __lazy-wildcards/subject/interior/hotel_capsule/main__,
-            {1-$$__lazy-wildcards/subject/interior/hotel_capsule/main-type/*__},
-            {1-$$__lazy-wildcards/subject/interior/hotel_capsule/env__}
+            __lazy-wildcards/subject/interior/hotel-capsule/main__,
+            {1-$$__lazy-wildcards/subject/interior/hotel-capsule/main-type/*__},
+            {1-$$__lazy-wildcards/subject/interior/hotel-capsule/env__}
         main:
           - Capsule hotel, indoors, scenery
         main-type:
@@ -215,3 +215,51 @@ lazy-wildcards:
       Internet_Cafes_inside:
         prompts:
           - Internet Cafe, cybercafe, necafe, scenery, indoors, computer, door, chair, monitor, still life, mouse (computer), desk
+      hotel-business-bedroom:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/interior/hotel-business-bedroom/main__,
+            {1-$$__lazy-wildcards/subject/interior/hotel-business-bedroom/main-trigger-words__},
+            {1-$$__lazy-wildcards/subject/interior/hotel-business-bedroom/env__}
+            {,__lazy-wildcards/subject/moment/random/prompts__|}
+            {,{1-$$__lazy-wildcards/subject/interior/hotel-business-bedroom/style__}|}
+            {0.3::,{1-$$__lazy-wildcards/subject/interior/hotel-business-bedroom/env-bed__}|}
+        main:
+          - business hotel, hotel_room, scenery, indoors, bedroom, (bed:1.3), curtains, window
+        main-trigger-words:
+          - toyoko-inn
+          - apahotel
+        style:
+          - neutral_colors, beige, grey, white
+          - efficient_layout, space_optimization
+          - comfortable_setting
+          - hotel_room_decor
+          - stylish_interior
+          - coordinated_furnishings
+          - aesthetic_appeal
+        env-bed:
+          - single_bed, compact_size, solo_travel
+          - double bed, double bed room
+          - twin room, twin bed room
+          - twin bed
+        env:
+          - pillow
+          - lamp
+          - table
+          - chair
+          - book
+          - desk
+          - television
+          - air conditioner
+          - blinds
+          - phone
+          - >-
+            window_view, {1-$$cityscape|natural_light|outdoor_scenery}
+          - nightstand
+          - notebook
+          - >-
+            mirror{, {1-$$vanity_mirror|full_length_mirror|mirror_reflection}|}
+          - >-
+            {1-$$dressing_table|makeup_area|dressing_area}
+          - sheet
+          - wardrobe
