@@ -279,11 +279,11 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/cosplay-char/Nier/2b/main__,
             __lazy-wildcards/cosplay-char/Nier/2b/ethnicity__,
-            {__lazy-wildcards/cosplay-char/Nier/2b/costume/type-*__,|}
+            {__lazy-wildcards/cosplay-char/Nier/2b/costume-type/type-*__,|}
             __lazy-wildcards/cosplay-char/Nier/2b/costume-eyes/*__,
             {1-$$__lazy-wildcards/cosplay-char/Nier/2b/env__}
         main:
-          - nier:automata, nier \(series\), nier, 2bnierdef
+          - nier:automata, nier \(series\), nier, 2bnierdef, 2b, 2b \(nier:automata\)
         ethnicity:
           - __lazy-wildcards/cosplay-char/Nier/2b/ethnicity-types/*__, hair over one eye
         ethnicity-types:
@@ -293,7 +293,7 @@ lazy-wildcards:
             - 2pdark, dark skin, black hair, 2p_\(nier:automata\), 2p_\(nier:automata\)_\(cosplay\)
           2p-b:
             - 2ppale, pale skin, black hair, 2p_\(nier:automata\), 2p_\(nier:automata\)_\(cosplay\)
-        costume:
+        costume-type:
           type-2p-dress:
             - white dress, cleavage cutout, black gloves, white footwear, 2p dress, 2p footwear, 2p gloves
           type-2p-leotard:
@@ -339,17 +339,76 @@ lazy-wildcards:
           - Inverted Bob Haircut
           - white rose
           - wedding ring
+          - pod \(nier:automata\)
+      # https://civitai.com/models/140784/operator-6o-and-21o-nierautomata-lora
+      operator:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/Nier/operator/main__,
+            __lazy-wildcards/cosplay-char/Nier/operator/costume__,
+            {__lazy-wildcards/cosplay-char/Nier/operator/ethnicity-type/type-*__,|}
+            {1-$$__lazy-wildcards/cosplay-char/Nier/operator/costume-elem__},
+            {1-$$__lazy-wildcards/cosplay-char/Nier/operator/style__},
+            {1-$$__lazy-wildcards/cosplay-char/Nier/operator/env__}
+        main:
+          - nier \(series\), nier:automata
+        costume:
+          - mouth veil, bodysuit, bodystocking, black gloves, thigh boots
+        ethnicity-type:
+          type-op6o:
+            - op6o, twin braids, bangs, hairband, operator 6o, operator 6o \(cosplay\)
+          type-op21o:
+            - op21o, short hair, hairband, operator 21o, operator 21o \(cosplay\)
+        costume-elem:
+          - bodystocking
+          - detached sleeves
+          - dress
+          - veil
+          - black hairband
+          - closed eyes
+          - green eyes
+          - red eyes
+          - >-
+            {1-$$high heels|high heel boots}
+          - >-
+            {1-$$fishnets|fishnet legwear}
+          - heavy breathing
+          - makeup
+          - >-
+            {1-$$navel|covered navel}
+          - puffy sleeves
+          - torn clothes
+          - hand on own hip
+          - knee boots
+          - large breasts
+          - blue eyes
+          - kneeling
+        style:
+          - mind control
+          - see-through
+        env:
+          - >-
+            {1-$$holographic|holographic touchscreen|holographic interface}
+          - recording
+          - >-
+            {1-$$chair|invisible chair}
+      # https://civitai.com/models/149752/louise-nier-replicant
+      # https://nier.fandom.com/wiki/Louise
+      louise:
+        prompts:
+          - long hair,black hair, ribbon, brown eyes, hair bow, boots, sleeveless, black gloves, sailor collar, white dress, white footwear, white bow, single glove, sailor dress
+          - black hair, yellow eyes, dark-skinned female,blunt bangs,makeup, glowing, lipstick, glowing eyes, science fiction
     onmyoji:
       suzuka_gozen:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/main__,
             __lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/ethnicity__,
-            {{1-$$__lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/costume/type-*__},|}
+            {{1-$$__lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/costume-type/type-*__},|}
             {1-$$__lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/env__}
         main:
           - suzuka_gozen_(onmyoji), onmyoji, onmyoji:_the_card_game, onmyouji
-        costume:
+        costume-type:
           type-original-outfit:
             - original outfit
           type-dress:
