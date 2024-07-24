@@ -29,8 +29,8 @@ export function formatPrompts(value: string, opts?: IOptionsSharedWildcardsYaml)
 		value = value
 			.replace(/(,)\s+/gm, '$1')
 			.replace(/\s+(,)/gm, '$1')
-			.replace(/(?<=,\|})\s+(?=\{)/gm, '')
-			.replace(/(?<=})\s+(?=\{(?:\d+(?:\.\d+)?::)?,)/gm, '')
+			.replace(/(?<=,\|})\s+/gm, '')
+			.replace(/\s+(?=\{(?:\s*\d+(?:\.\d+)?::)?,)/gm, '')
 		;
 	}
 
