@@ -1,0 +1,75 @@
+lazy-wildcards:
+  subject:
+    env-bg-real-world-location:
+      # https://civitai.com/models/62198/kowloon-walled-city-tset?modelVersionId=66738
+      kowloon-walled-city:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-real-world-location/kowloon-walled-city/main__,
+            {{1-$$__lazy-wildcards/subject/env-bg-real-world-location/kowloon-walled-city/main-type/*__},|}
+            {1-$$__lazy-wildcards/subject/env-bg-real-world-location/kowloon-walled-city/env__},
+            {1-$$__lazy-wildcards/subject/env-bg-real-world-location/kowloon-walled-city/style__}
+        main:
+          - kowloon walled city, hong_kong, real_world_location
+        main-type:
+          densely_packed_buildings:
+            - densely_packed_buildings, close_proximity, high_rise_structures, urban_sprawl.
+          hidden_alleys:
+            - narrow_alleyways, hidden_alleys, concealed_passages, secret_routes, labyrinthine_paths
+        style:
+          - high_density_buildings
+          - extremely close and packed structures
+          - multi-story residential units
+          - dimly_lit_streets
+          - nighttime_activities
+          - shadowy_urban_areas
+          - urban_decay, deteriorating_buildings
+          - illegal_settlements, unregulated_housing, informal_communities, unauthorized_construction
+          - community_life, close-knit_neighbors, communal_areas, shared_resources
+          - chaotic_architecture, disorganized_buildings, irregular_structures, cluttered_appearance
+        env:
+          - sign
+          - cityscape, scenery
+          - >-
+            {power lines|overhead line}
+          - >-
+            {1-$$stairs|stairwell|railroad tracks}
+          - traditional chinese text
+          - >-
+            {1-$$streetcar|ground vehicle|vehicle}
+      landmark:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-real-world-location/landmark/main-type/*__, real_world_location
+        main-type:
+          base:
+            - Statue_of_Liberty
+            - Taj_Mahal, Mughal_architecture
+            - Machu_Picchu
+            - Eiffel_Tower
+            # 悉尼歌剧院，以帆船形屋顶、临水位置、文化中心为特征。
+            - Sydney_Opera_House
+            # 圣托里尼，以白色建筑、蓝色圆顶、爱琴海景为特征。
+            - Santorini, whitewashed_buildings, blue_domes, Aegean_sea_view
+            - Grand_Canyon, vast_gorge, layered_rock_formations
+            - Pyramids_of_Giza, desert_landscape
+            - Abu_Simbel, colossal_statues, rock_temples, Ramses_II
+          North_American:
+            - Yellowstone_National_Park
+            - Yosemite_National_Park
+            - Banff_National_Park
+            - Niagara_Falls
+            - Olympic_National_Park
+            - Multnomah_Falls
+      
+      elem-interior:
+        prompts:
+          - Indian_mausoleum
+      elem-landmark:
+        prompts:
+          - Mughal_architecture
+          - Aswan_High_Dam
+          - Saqqara
+          - Nubian
+          - real_world_location
+

@@ -868,3 +868,52 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/claymore/base/utils/name-hair-long(name=galatea)__
+    # https://civitai.com/models/137944/blame
+    blame:
+      # https://civitai.com/models/204845/cibo-from-blame
+      cibo:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/blame/cibo/main__,
+            {{1-$$__lazy-wildcards/cosplay-char/blame/cibo/main-trigger-words__},|}
+            {{1-$$__lazy-wildcards/cosplay-char/blame/cibo/ethnicity__},|}
+            {{1-$$__lazy-wildcards/cosplay-char/blame/cibo/costume__},|}
+            {1-$$__lazy-wildcards/cosplay-char/blame/cibo/costume-elem__},
+            {1-$$__lazy-wildcards/cosplay-char/blame/cibo/env__}
+        main:
+          - cibo, tsutomu nihei, nihei_tsutomu, blame!, blame gakuen!, cyberpunk, cyborg, science fiction, noise \(manga\)
+        main-trigger-words:
+          - ova
+          - movie
+        ethnicity:
+          - long hair, white hair, blue eyes, blunt bangs
+          - long legs, tall female
+        costume:
+          - body horror, bone, core, facial mark, forehead mark, energy ball, skeleton, spine
+          - bodysuit
+          - school uniform
+        
+        
+        costume-elem:
+          - emblem
+          - glowing
+          - humanoid robot
+          - safeguard \(blame!\)
+          - joints, robot joints
+          - mechanical arms
+          - mechanical legs
+          - arm cannon
+          - torn clothes
+          - torn legwear
+          - thighhighs
+          - thigh gap
+          - long sleeves
+        env:
+          - toha heavy industries
+          - wire
+          - industrial pipes
+
+
+
+
+

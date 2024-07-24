@@ -1,0 +1,49 @@
+lazy-wildcards:
+  subject:
+    architectural:
+      # 農業區
+      agricultural_zone:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/architectural/agricultural_zone/main__,
+            {1-3$$__lazy-wildcards/subject/architectural/agricultural_zone/main-type/*__},
+            {1-$$__lazy-wildcards/subject/architectural/agricultural_zone/env__}
+        main:
+          - indoors, interior, agricultural
+        main-type:
+          agricultural_zone:
+            - agricultural_zone, food_production
+          hydroponic_farm:
+            - >-
+              {1-$$hydroponic_farm|hydroponics_lab},
+              water_based_cultivation,
+              nutrient_solution,
+              soil-free_growth
+          indoor_garden:
+            - indoor_garden, controlled_environment, artificial_lighting, indoor_planting
+          greenhouse:
+            - greenhouse, transparent_structure, controlled_climate, protected_cultivation
+          vertical_farming:
+            - vertical_farming, multi-layered_growth, space_efficient, urban_agriculture
+          agricultural_technology:
+            - agricultural_technology, automated_systems, smart_irrigation, precision_farming
+          plant_genetics_lab:
+            - plant_genetics_lab, genetic_modification, plant_breeding, DNA_analysis
+          climate_control_chamber:
+            - climate_control_chamber, temperature_regulation, humidity_control, environmental_simulation
+          soil_testing_lab:
+            - soil_testing_lab, soil_analysis
+          aquaponics_lab:
+            - aquaponics_lab, integrated_fish_and_plant_cultivation
+          animal_farm:
+            - Animal Farm, (Animal, living creature)
+        env:
+          - >-
+            crops
+            {, {1-$$__lazy-wildcards/utils/crops/essential_crops__}|}
+            {, {1-$$__lazy-wildcards/utils/crops/economic_crops__}|}
+          - water_recycling
+          - symbiotic_systems
+          - __lazy-wildcards/subject/env-elem/flower/prompts__
+          - plant
+          - laboratory

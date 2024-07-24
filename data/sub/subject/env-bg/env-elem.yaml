@@ -3,6 +3,7 @@ lazy-wildcards:
     env-elem:
       others:
         prompts:
+          - __lazy-wildcards/subject/env-elem/others/env__
           - >-
             {1-$$__lazy-wildcards/subject/env-elem/others/env__}
           - >-
@@ -11,21 +12,55 @@ lazy-wildcards:
             {6-$$__lazy-wildcards/subject/env-elem/others/env__}
         env:
           - metal partition
+
+      
+      
       flower:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-elem/flower/main/*__,
-            {0-$$__lazy-wildcards/subject/env-elem/flower/env__}
+            {1-$$__lazy-wildcards/subject/env-elem/flower/main-type/*__}
+            {,{1-$$__lazy-wildcards/subject/env-elem/flower/env__}|}
         env:
           - flower
           - falling petals
           - petals on liquid
           - petals
-        main:
+        main-type:
           common:
             - wisteria
             - cherry blossom, sakura
             - syaoran
+          others:
+            - blue and ginger scales blooming rose
+      mushroom:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/mushroom/main__}, mushroom
+          - >-
+            __lazy-wildcards/subject/env-elem/mushroom/main__
+        main:
+          - mushroom
+          - Amanita_muscaria
+          - Hericium_erinaceus
+          - Hydnellum_peckii
+      mushroom-wrong:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/mushroom-wrong/main__}, mushroom
+          - >-
+            __lazy-wildcards/subject/env-elem/mushroom-wrong/main__, mushroom
+        main:
+          - Coprinus_comatus
+          - Laccaria_amethystina
+          - Clathrus_ruber
+          - Mycena_chlorophos
+          - Lactarius_indigo
+      plant-elem:
+        prompts:
+          - delicate_lattice_veil
+          - unique_stem
+          - stinkhorn
+      
       leaves-cannabis-marijuana:
         prompts:
           - >-
