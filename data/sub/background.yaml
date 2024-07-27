@@ -46,9 +46,9 @@ lazy-wildcards:
         __lazy-wildcards/subject/env-bg/background/prompts__
         {,{1-3$$__lazy-wildcards/subject/env-elem/*/prompts__}|}
       - >-
-        {3-6$$__lazy-wildcards/subject/*/*/env-*__}
+        {3-6$$__lazy-wildcards/*/*/*/env-*__}
       - >-
-        {3-6$$__lazy-wildcards/subject/*/*/env__}
+        {3-6$$__lazy-wildcards/*/*/*/env__}
       - __cornf-furniture/prompt-full__
       - __cornf-*/prompt-object__
       - __cornf-house/prompt-full__
@@ -111,6 +111,9 @@ lazy-wildcards:
       - Chinese calligraphy in background
       - crowded train interior
       - news anchor in front of big screen, facing viewer, back screen is big which is from the floor to ceiling and left to right
+      - >-
+        (floating:1.3), {1-$$floating stalls|floating sky_buoys|floating hovering_merchant_stands|floating_islands|aerial_stalls|sky_market|floating platform}
+      - cemetery, graveyard
     location:
       interior-lava:
         prompts:

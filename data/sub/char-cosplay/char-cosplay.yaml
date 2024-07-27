@@ -892,8 +892,6 @@ lazy-wildcards:
           - body horror, bone, core, facial mark, forehead mark, energy ball, skeleton, spine
           - bodysuit
           - school uniform
-        
-        
         costume-elem:
           - emblem
           - glowing
@@ -912,8 +910,130 @@ lazy-wildcards:
           - toha heavy industries
           - wire
           - industrial pipes
-
-
-
-
-
+    # https://danbooru.donmai.us/posts?tags=kyoushoku_soukou_guyver+&z=5
+    # https://rule34.xxx/index.php?page=post&s=list&tags=guyver
+    # https://rule34.xxx/index.php?page=post&s=list&tags=valcuria
+    # https://rule34.xxx/index.php?page=post&s=list&tags=zoanoid
+    guyver:
+      # https://civitai.com/models/120063/guyvercha
+      guyver:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/guyver/guyver/main__,
+            __lazy-wildcards/cosplay-char/guyver/guyver/main-type/*__,
+            {1-$$__lazy-wildcards/cosplay-char/guyver/guyver/costume-elem__}
+            {,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/costume-weapen__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/style__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/env__}|}
+        main:
+          - guyver, kyoushoku soukou guyver, bio armor, biosuit, Bio Booster Armor Guyver, GZZVZR
+        main-type:
+          g00:
+            - g00, guyver_0, dark biosuit
+          g01:
+            - g01, guyver_i
+          g02:
+            - g02, guyver_ii
+          g02f:
+            - g02f, guyver_ii-f, valcuria, Valkyria
+          g03:
+            - g03, guyver_iii
+        costume-elem:
+          - living armor, living clothes
+          - Power armor
+          - Colored sclera
+          - light blue
+          - light yellow
+          - >-
+            {1-$$pink|violet}
+          - spiky
+          - single_horn
+          - armor
+          - Guyver Unit
+          - Guyver Bio-Organs
+          - Guyver Gigantic
+          - Gigantic Exceed
+          - Energy Amps
+          - long claws with blade
+          - massive armor
+          - gory skin melt
+          - Zoaforms
+        costume-weapen:
+          - wide sonic swords
+          - extra vibration swords
+          - High-Frequency Swords
+          - Gravity Controller
+          - Pressure Cannon
+          - arm blade
+        style:
+          - >-
+            {1-$$biomechanical|biopunk}
+          - no_humans
+          - dripping purple paint
+        env:
+          - >-
+            {1-$$tentacle|tentacle around leg}
+          - >-
+            {1-$$monster|Alien|Bio Boosted Creature|Zoalords|Zoanoid}
+          - robotic
+        env-bg:
+          - Alien ship
+      # https://guyver.fandom.com/wiki/Aptom
+      aptom:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/guyver/aptom/main__,
+            __lazy-wildcards/cosplay-char/guyver/aptom/costume__,
+            {1-$$__lazy-wildcards/cosplay-char/guyver/aptom/costume-elem__}
+            {,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/costume-weapen__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/style__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/env__}|}
+        main:
+          - aptom, aptomf, Aputomu, Zoanoid
+        costume:
+          - Aptom Chaos Mode
+          - Evil Aptom Form
+          - Aptom OmegaBlast Form
+          - Aptom Form I
+          - Aptom Form II
+          - Aptom Form III
+          - Aptom Form IV
+          - Monster, power armor
+        costume-elem:
+          - bio armor, biosuit
+    # https://x.com/CheLA_777
+    CheLA77:
+      # https://x.com/CheLA_777/status/1799009419126325744/photo/1
+      # https://civitai.com/models/601494/poorly-dressed-policewoman-chela77?modelVersionId=672283
+      PoorlyDressedPolicewoman:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/main__,
+            {1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume__}
+            {,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/police/prompts__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/ethnicity__}|}
+        main:
+          - PoorlyDressedPolicewoman
+        ethnicity:
+          - short hair, blonde hair, large breasts, orange eyes
+        costume:
+          - >-
+            pink bra, leopard print bar,
+            blue Police jacket, open jacket,
+            cleavage,
+            white shirt
+        costume-elem:
+          - earrings
+          - long sleeves
+          - jewelry
+          - short shorts
+          - choker
+          - collared shirt
+          - necklace
+          - piercing
+          - pink leopard print
+          - thigh strap, thighband pantyhose, black pantyhose
+          - >-
+            pink panties, leopard print panties{, panties under pantyhose|}

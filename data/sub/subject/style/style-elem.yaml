@@ -1,8 +1,15 @@
 lazy-wildcards:
   subject:
     style-elem:
-      style-elem:
+      cyberpunk:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/style-elem/cyberpunk/main__}:1.2)
+        main:
+          - ancient japanese cyberpunk
+          - ancient chinese cyberpunk
+          - ancient egyptian cyberpunk
+      elem:
         prompts:
           - unusual_appearance
           - toxic
-

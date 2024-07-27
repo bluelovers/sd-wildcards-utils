@@ -526,3 +526,133 @@ lazy-wildcards:
       wings-elem:
         prompts:
           - multiple_wings
+      Nun:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume/Nun/main__}
+            {,{1-$$__lazy-wildcards/subject/costume/Nun/costume__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/Nun/ethnicity__}|}
+            ,{1-$$__lazy-wildcards/subject/costume/Nun/style__}
+            ,{1-$$__lazy-wildcards/subject/costume/Nun/env__}
+            {,{1-$$__lazy-wildcards/subject/costume/Nun/env-bg__}|}
+        main:
+          - nun
+        ethnicity:
+          - pale_skin
+        costume:
+          - >-
+            {1-$$religious_attire|religious_uniform}
+          - >-
+            {1-$$veils|nun veils}
+          - hidden_face
+          - traditional_nun_attire
+          - modest_clothing
+          - rosary, prayer_beads
+        style:
+          - mystical_rituals
+          - hidden_knowledge
+          - peaceful_aura
+          - gentle_presence
+          - holy
+          - pious_lifestyle
+          - religious_dedication
+          - sanctity
+          - religious_art
+          - sacred_space
+          - private_prayer
+          - spiritual_themes
+          - religious_themes
+        env:
+          - religious_symbols
+          - occult_symbols
+          - stained_glass_windows
+          - pews
+          - crucifix
+          - church_bell
+          - religious_paintings
+        env-bg:
+          - >-
+            {1-$$church|cathedral|chapel|monastery}
+          - religious_building
+          - altar
+          - church_interior
+          - bell_tower
+      # https://civitai.com/models/579225?modelVersionId=671994
+      Nun-Dark:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume/Nun-Dark/main__}
+            {,{1-$$__lazy-wildcards/subject/costume/Nun-Dark/costume__}|}
+            ,{1-$$__lazy-wildcards/subject/costume/Nun-Dark/style__}
+            ,{1-$$__lazy-wildcards/subject/costume/Nun-Dark/env__}
+            {,{1-$$__lazy-wildcards/subject/costume/Nun-Dark/env-bg__}|}
+            ,{1-$$__lazy-wildcards/subject/costume/Nun/prompts__}
+        main:
+          - dark nun
+        costume:
+          - >-
+            {1-$$dark_clothing|dark_religious_attire}
+          - gothic_nun, gothic_attire
+          - demonic_nun, demonic_possession
+        style:
+          - gothic_aesthetic
+          - >-
+            {1-$$sinister|eerie_atmosphere|dark_aura|cursed|malevolent_expression|ominous_presence}
+          - dark_magic
+          - supernatural_affliction
+          - haunted_appearance
+          - chilling_appearance
+          - shadows_and_darkness
+        env:
+          - >-
+            {1-$$spectral_figures|ghostly_presence|ghostly_aura}
+          - inverted_cross, cross of saint peter
+        env-bg:
+          - haunted_monastery
+      police:
+        prompts:
+          - >-
+            {{1-$$__lazy-wildcards/subject/costume/police/costume__},|}
+            {{1-$$__lazy-wildcards/subject/costume/police/costume-weapen__},|}
+            {1-$$__lazy-wildcards/subject/costume/police/costume-elem__}
+        costume:
+          - police_cap
+          - police_uniform
+        costume-elem:
+          - police_badge
+          - utility_belt
+        costume-weapen:
+          - >-
+            {1-$$walkie-talkie|holding walkie-talkie}
+          - handcuffs
+          - law_enforcement_tool
+      sfw-civitai:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/sfw-civitai/main__
+            {,{1-$$__lazy-wildcards/subject/costume/sfw-civitai/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/sfw-civitai/style__}|}
+        main:
+          - >-
+            (1girl:1.6), solo,
+            $(neg-nsfw-civitai-001), (fully clothes, fully clothed:1.2),
+            upper body, portrait, face focus,
+            sfw, safe_for_work
+        costume-elem:
+          - Conservative Clothing
+          - conservative_dress
+          - long_sleeves
+          - turtleneck
+          - high_collar
+          - neck_coverage
+          - maxi_skirt
+          - midi_skirt
+        style:
+          - full_coverage, full_body_covering
+          - arm_coverage
+          - formal_appearance
+          - classic_style
+          - flowing_fabric
+          - layering_piece
+          - casual_wear
+          - minimal_exposure
