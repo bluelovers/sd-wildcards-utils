@@ -4,8 +4,9 @@ import { Alias, CreateNodeOptions, Document as Document$1, DocumentOptions, Node
 export type IOmitParsedNodeContents<T extends Node$1 | Document$1, P extends ParsedNode | Document$1.Parsed> = Omit<P, "contents"> & T;
 export type IWildcardsYAMLScalar = IOmitParsedNodeContents<Scalar<string>, Scalar.Parsed>;
 export type IWildcardsYAMLSeq = IOmitParsedNodeContents<YAMLSeq<IWildcardsYAMLScalar>, YAMLSeq.Parsed>;
-export type IWildcardsYAMLMapRoot = YAMLMap.Parsed<IWildcardsYAMLScalar, IWildcardsYAMLPairValue>;
-export type IWildcardsYAMLPairValue = IWildcardsYAMLSeq | IWildcardsYAMLMapRoot;
+export type _IWildcardsYAMLMapRoot = YAMLMap.Parsed<IWildcardsYAMLScalar, IWildcardsYAMLPairValue>;
+export type IWildcardsYAMLMapRoot<K extends IWildcardsYAMLScalar = IWildcardsYAMLScalar, V extends IWildcardsYAMLPairValue = IWildcardsYAMLPairValue> = YAMLMap.Parsed<K, V>;
+export type IWildcardsYAMLPairValue = IWildcardsYAMLSeq | _IWildcardsYAMLMapRoot;
 export type IWildcardsYAMLPair = Pair<IWildcardsYAMLScalar, IWildcardsYAMLPairValue>;
 export interface IRecordWildcards {
 	[key: string]: string[] | Record<string, string[]> | IRecordWildcards;
@@ -290,6 +291,8 @@ export declare function _visitNormalizeScalar(key: IVisitorFnKey, node: IWildcar
 	checkUnsafeQuote: boolean;
 	options: IOptionsParseDocument;
 }): void;
+export declare function getTopRootContents<T extends IWildcardsYAMLDocument | Document$1 | IWildcardsYAMLMapRoot | YAMLMap>(doc: T): T & IWildcardsYAMLMapRoot<IWildcardsYAMLScalar, IWildcardsYAMLPairValue>;
+export declare function getTopRootNodes<T extends IWildcardsYAMLDocument | Document$1 | IWildcardsYAMLMapRoot | YAMLMap>(doc: T): import("yaml").Pair<IWildcardsYAMLScalar, IWildcardsYAMLPairValue>[] | (import("yaml").Pair<unknown, unknown>[] & import("yaml").Pair<IWildcardsYAMLScalar, IWildcardsYAMLPairValue>[]);
 export declare function _validMap(key: IVisitorFnKey | null, node: YAMLMap, ...args: any[]): void;
 export declare function _validSeq(key: IVisitorFnKey | null, node: YAMLSeq, ...args: any[]): asserts node is YAMLSeq<Scalar | IWildcardsYAMLScalar>;
 export declare function _validPair(key: IVisitorFnKey, pair: IWildcardsYAMLPair | Pair, ...args: any[]): void;
@@ -356,6 +359,12 @@ export declare function checkAllSelfLinkWildcardsExists(obj: IRecordWildcards | 
 	ignoreList: string[];
 	errors: Error[];
 };
+export declare function isWildcardsYAMLDocument<T extends IWildcardsYAMLMapRoot>(node: IWildcardsYAMLDocument<T, true> | Document$1<T, true>): node is IWildcardsYAMLDocument<T, true>;
+export declare function isWildcardsYAMLDocument<T extends IWildcardsYAMLDocument | Document$1>(doc: any): doc is IWildcardsYAMLDocument;
+export declare function isWildcardsYAMLDocument<T extends YAMLMap = IWildcardsYAMLMapRoot>(node: any): node is IWildcardsYAMLDocument<T, true>;
+export declare function isWildcardsYAMLDocumentAndContentsIsMap(doc: any): doc is IWildcardsYAMLDocument;
+export declare function isWildcardsYAMLMap<K extends IWildcardsYAMLScalar, V extends IWildcardsYAMLPairValue>(doc: IWildcardsYAMLMapRoot<K, V> | YAMLMap.Parsed<K, V> | YAMLMap<K, V>): doc is IWildcardsYAMLMapRoot<K, V>;
+export declare function isWildcardsYAMLMap<K extends IWildcardsYAMLScalar = IWildcardsYAMLScalar, V extends IWildcardsYAMLPairValue = IWildcardsYAMLPairValue>(doc: any): doc is IWildcardsYAMLMapRoot<K, V>;
 /**
  * Normalizes a YAML document by applying specific rules to its nodes.
  **/

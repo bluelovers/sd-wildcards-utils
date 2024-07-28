@@ -64,9 +64,19 @@ function formatPrompts(value, opts) {
   (_opts = opts) !== null && _opts !== void 0 ? _opts : opts = {};
   value = value.replace(/[\s\xa0]+/gm, ' ').replace(/[\s,.]+(?=,|$)/gm, '');
   if (opts.minifyPrompts) {
-    value = value.replace(/(,)\s+/gm, '$1').replace(/\s+(,)/gm, '$1');
+    value = value.replace(/(,)\s+/gm, '$1').replace(/\s+(,)/gm, '$1').replace(/(?<=,\|})\s+/gm, '').replace(/\s+(?=\{(?:\s*\d+(?:\.\d+)?::)?,)/gm, '');
   }
   return value;
+}
+
+function isWildcardsYAMLDocument(doc) {
+  return yaml.isDocument(doc);
+}
+function isWildcardsYAMLDocumentAndContentsIsMap(doc) {
+  return yaml.isDocument(doc) && yaml.isMap(doc.contents);
+}
+function isWildcardsYAMLMap(doc) {
+  return yaml.isMap(doc);
 }
 
 function visitWildcardsYAML(node, visitorOptions) {
@@ -185,6 +195,19 @@ function _visitNormalizeScalar(key, node, runtime) {
     node.value = value;
   }
 }
+function getTopRootContents(doc) {
+  if (isWildcardsYAMLDocument(doc)) {
+    // @ts-ignore
+    doc = doc.contents;
+  }
+  if (isWildcardsYAMLMap(doc)) {
+    return doc;
+  }
+  throw new TypeError(`Input document is not a YAML Document or a YAML Map. Please provide a valid YAML structure.`);
+}
+function getTopRootNodes(doc) {
+  return getTopRootContents(doc).items;
+}
 
 // @ts-ignore
 function _validMap(key, node, ...args) {
@@ -236,6 +259,7 @@ function createDefaultVisitWildcardsYAMLOptions(opts) {
 }
 function validWildcardsYamlData(data, opts) {
   var _opts2;
+  (_opts2 = opts) !== null && _opts2 !== void 0 ? _opts2 : opts = {};
   if (yaml.isDocument(data)) {
     if (yaml.isNode(data.contents) && !yaml.isMap(data.contents)) {
       throw TypeError(`The 'contents' property of the provided YAML document must be a YAMLMap. Received: ${data.contents}`);
@@ -243,7 +267,6 @@ function validWildcardsYamlData(data, opts) {
     visitWildcardsYAML(data, createDefaultVisitWildcardsYAMLOptions(opts));
     data = data.toJSON();
   }
-  (_opts2 = opts) !== null && _opts2 !== void 0 ? _opts2 : opts = {};
   if (typeof data === 'undefined' || data === null) {
     if (opts.allowEmptyDocument) {
       return;
@@ -572,7 +595,9 @@ function _findPathCore(data, paths, findOpts, prefix, list, _cache) {
         });
         continue;
       }
-      throw new TypeError(`Invalid Type. paths: [${target}], isMatch: ${bool}, deep: ${deep}, deep paths: [${paths}], notArray: ${notArray}, match: [${search}], value: ${value}, _cache : ${JSON.stringify(_cache)}`);
+      if (!current.includes('*') || notArray && !deep) {
+        throw new TypeError(`Invalid Type. paths: [${target}], isMatch: ${bool}, deep: ${deep}, deep paths: [${paths}], notArray: ${notArray}, match: [${search}], value: ${value}, _cache : ${JSON.stringify(_cache)}`);
+      }
     }
   }
   if (prefix.length === 0 && findOpts.throwWhenNotFound && !list.length) {
@@ -763,12 +788,17 @@ exports.findWildcardsYAMLPathsAll = findWildcardsYAMLPathsAll;
 exports.formatPrompts = formatPrompts;
 exports.getOptionsFromDocument = getOptionsFromDocument;
 exports.getOptionsShared = getOptionsShared;
+exports.getTopRootContents = getTopRootContents;
+exports.getTopRootNodes = getTopRootNodes;
 exports.handleVisitPaths = handleVisitPaths;
 exports.handleVisitPathsFull = handleVisitPathsFull;
 exports.isDynamicPromptsWildcards = isDynamicPromptsWildcards;
 exports.isSafeKey = isSafeKey;
 exports.isWildcardsName = isWildcardsName;
 exports.isWildcardsPathSyntx = isWildcardsPathSyntx;
+exports.isWildcardsYAMLDocument = isWildcardsYAMLDocument;
+exports.isWildcardsYAMLDocumentAndContentsIsMap = isWildcardsYAMLDocumentAndContentsIsMap;
+exports.isWildcardsYAMLMap = isWildcardsYAMLMap;
 exports.matchDynamicPromptsWildcards = matchDynamicPromptsWildcards;
 exports.matchDynamicPromptsWildcardsAll = matchDynamicPromptsWildcardsAll;
 exports.matchDynamicPromptsWildcardsAllGenerator = matchDynamicPromptsWildcardsAllGenerator;
