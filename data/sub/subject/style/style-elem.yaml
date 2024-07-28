@@ -13,3 +13,27 @@ lazy-wildcards:
         prompts:
           - unusual_appearance
           - toxic
+      cyberpunk-cyberspace-grid:
+        # https://civitai.com/models/289472/neon-cyberpunk-cyberspace-sdxl-pony-and-sd15?modelVersionId=337666
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-elem/cyberpunk-cyberspace-grid/main__,
+            ({1-$$__lazy-wildcards/subject/style-elem/cyberpunk-cyberspace-grid/style__})
+            {,{1-$$__lazy-wildcards/subject/style-elem/cyberpunk-cyberspace-grid/style-elem__}|}
+        main:
+          - (mad-cyberspace, glowing outlines, glowing grid:1.3), retro, scifi
+        style:
+          - orange glowing outlines
+          - emerald glowing outlines
+          - green coloring
+          - purple coloring
+          - >-
+            {1-2$$ coloring, $$__mix-lazy-auto/color-anything__} coloring
+          - >-
+            {1-2$$ glowing outlines, $$__mix-lazy-auto/color-anything__} glowing outlines
+          - >-
+            {1-2$$ glowing grid, $$__mix-lazy-auto/color-anything__} glowing grid
+          - light trail
+        style-elem:
+          - cyberpunk, 1980s
+          - motion blur
