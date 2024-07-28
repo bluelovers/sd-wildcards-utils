@@ -3,6 +3,62 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.2.1...sd-wildcards-utils@1.3.1) (2024-07-28)
+
+
+### BREAKING CHANGES
+
+* ignore some error
+* .
+* **dict:** { utils/season => subject/moment/season/main }
+* update for DynamicWildcards unleashed v2
+
+
+
+### 🐛　Bug Fixes
+
+* strip space ([5b2156b](https://github.com/bluelovers/sd-wildcards-utils/commit/5b2156b3868d0703bbf3738558f05a8855ed7005))
+* update for DynamicWildcards unleashed v2 ([19fc5d7](https://github.com/bluelovers/sd-wildcards-utils/commit/19fc5d7ff0ba65aace716763041ba3993fedc6b7))
+
+
+### ✨　Features
+
+* add 2b (nier:automata) ([17802fa](https://github.com/bluelovers/sd-wildcards-utils/commit/17802fa7a19754ea4d90dc35213f9faaa0047d37))
+
+
+### 📦　Code Refactoring
+
+* ignore some error ([ae3e696](https://github.com/bluelovers/sd-wildcards-utils/commit/ae3e696cdfdd749787b0c94cda0fa1faced04c55))
+* . ([c2a23b3](https://github.com/bluelovers/sd-wildcards-utils/commit/c2a23b33e2c0e4a9bef9ab076f29d563a290c6e6))
+* **dict:** { utils/season => subject/moment/season/main } ([c94889a](https://github.com/bluelovers/sd-wildcards-utils/commit/c94889a6452f4615aa09713b379a51663d848ae3))
+
+
+### 🛠　Build System
+
+* update build ([2f2ec2d](https://github.com/bluelovers/sd-wildcards-utils/commit/2f2ec2de08d4840595da289e664227bd31f15caa))
+* update build ([3ba003a](https://github.com/bluelovers/sd-wildcards-utils/commit/3ba003ae9181bcf51becde7655b651907a670277))
+
+
+### ♻️　Chores
+
+* update wildcards ([2337d7f](https://github.com/bluelovers/sd-wildcards-utils/commit/2337d7f1e0fc5b78d9d2574dfde384a7005955c3))
+* add queens_blade ([8d798d3](https://github.com/bluelovers/sd-wildcards-utils/commit/8d798d34516622b4b92cddfcd138dbdd342581bf))
+* add hotel-business-bedroom ([613fe86](https://github.com/bluelovers/sd-wildcards-utils/commit/613fe861d5591b524051c69a8da4707669d41138))
+* add `getTopRootContents` ([2108304](https://github.com/bluelovers/sd-wildcards-utils/commit/21083047cd36818018a4f0eff7548d040ea37115))
+
+
+### 🔖　Miscellaneous
+
+* . ([ccc7f04](https://github.com/bluelovers/sd-wildcards-utils/commit/ccc7f043b6ee8ec5dffbfa6333278bd4a8e06299))
+* . ([585bb33](https://github.com/bluelovers/sd-wildcards-utils/commit/585bb336ea9f4529a99b8b3625744932f2f9bf1e))
+* . ([e2c5e8d](https://github.com/bluelovers/sd-wildcards-utils/commit/e2c5e8d40f0354d7dd87363556c89aad19892824))
+* . ([14f9be8](https://github.com/bluelovers/sd-wildcards-utils/commit/14f9be8ac34f65ff5c82fae9a35f674a4bd310fa))
+* . ([8c15246](https://github.com/bluelovers/sd-wildcards-utils/commit/8c15246b8565793cbb90f06a2516fee480ac9dbf))
+* . ([18b2a76](https://github.com/bluelovers/sd-wildcards-utils/commit/18b2a76b9ec9c6d541768ce30758f374836e1743))
+* . ([382a7dc](https://github.com/bluelovers/sd-wildcards-utils/commit/382a7dcb775082d396b86e9a1304b0d3b57e3c7c))
+
+
+
 ## [1.2.1](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.1.1...sd-wildcards-utils@1.2.1) (2024-06-25)
 
 

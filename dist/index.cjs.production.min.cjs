@@ -57,8 +57,16 @@ function trimPrompts(t) {
 function formatPrompts(t, e) {
   var r;
   return null !== (r = e) && void 0 !== r || (e = {}), t = t.replace(/[\s\xa0]+/gm, " ").replace(/[\s,.]+(?=,|$)/gm, ""), 
-  e.minifyPrompts && (t = t.replace(/(,)\s+/gm, "$1").replace(/\s+(,)/gm, "$1")), 
+  e.minifyPrompts && (t = t.replace(/(,)\s+/gm, "$1").replace(/\s+(,)/gm, "$1").replace(/(?<=,\|})\s+/gm, "").replace(/\s+(?=\{(?:\s*\d+(?:\.\d+)?::)?,)/gm, "")), 
   t;
+}
+
+function isWildcardsYAMLDocument(e) {
+  return t.isDocument(e);
+}
+
+function isWildcardsYAMLMap(e) {
+  return t.isMap(e);
 }
 
 function visitWildcardsYAML(e, r) {
@@ -135,6 +143,11 @@ function _visitNormalizeScalar(t, e, r) {
   }
 }
 
+function getTopRootContents(t) {
+  if (isWildcardsYAMLDocument(t) && (t = t.contents), isWildcardsYAMLMap(t)) return t;
+  throw new TypeError("Input document is not a YAML Document or a YAML Map. Please provide a valid YAML structure.");
+}
+
 function _validMap(e, r, ...i) {
   const o = r.items.findIndex((e => !t.isPair(e) || null == (null == e ? void 0 : e.value)));
   if (-1 !== o) {
@@ -177,11 +190,11 @@ function createDefaultVisitWildcardsYAMLOptions(t) {
 
 function validWildcardsYamlData(e, r) {
   var i;
-  if (t.isDocument(e)) {
+  if (null !== (i = r) && void 0 !== i || (r = {}), t.isDocument(e)) {
     if (t.isNode(e.contents) && !t.isMap(e.contents)) throw TypeError(`The 'contents' property of the provided YAML document must be a YAMLMap. Received: ${e.contents}`);
     visitWildcardsYAML(e, createDefaultVisitWildcardsYAMLOptions(r)), e = e.toJSON();
   }
-  if (null !== (i = r) && void 0 !== i || (r = {}), null == e) {
+  if (null == e) {
     if (r.allowEmptyDocument) return;
     throw new TypeError(`The provided JSON contents should not be empty. ${e}`);
   }
@@ -291,7 +304,7 @@ function _findPathCore(t, e, r, o, n, s) {
         });
         continue;
       }
-      throw new TypeError(`Invalid Type. paths: [${d}], isMatch: ${p}, deep: ${l}, deep paths: [${e}], notArray: ${o}, match: [${u}], value: ${i}, _cache : ${JSON.stringify(s)}`);
+      if (!a.includes("*") || o && !l) throw new TypeError(`Invalid Type. paths: [${d}], isMatch: ${p}, deep: ${l}, deep paths: [${e}], notArray: ${o}, match: [${u}], value: ${i}, _cache : ${JSON.stringify(s)}`);
     }
   }
   if (0 === o.length && r.throwWhenNotFound && !n.length) throw new RangeError(`Invalid Paths. paths: [${[ a, ...e ]}], _cache : ${JSON.stringify(s)}`);
@@ -382,12 +395,17 @@ exports.findWildcardsYAMLPathsAll = function findWildcardsYAMLPathsAll(t) {
     }
   }), e;
 }, exports.formatPrompts = formatPrompts, exports.getOptionsFromDocument = getOptionsFromDocument, 
-exports.getOptionsShared = getOptionsShared, exports.handleVisitPaths = handleVisitPaths, 
-exports.handleVisitPathsFull = handleVisitPathsFull, exports.isDynamicPromptsWildcards = function isDynamicPromptsWildcards(t) {
+exports.getOptionsShared = getOptionsShared, exports.getTopRootContents = getTopRootContents, 
+exports.getTopRootNodes = function getTopRootNodes(t) {
+  return getTopRootContents(t).items;
+}, exports.handleVisitPaths = handleVisitPaths, exports.handleVisitPathsFull = handleVisitPathsFull, 
+exports.isDynamicPromptsWildcards = function isDynamicPromptsWildcards(t) {
   return matchDynamicPromptsWildcards(t).isFullMatch;
 }, exports.isSafeKey = isSafeKey, exports.isWildcardsName = isWildcardsName, exports.isWildcardsPathSyntx = isWildcardsPathSyntx, 
-exports.matchDynamicPromptsWildcards = matchDynamicPromptsWildcards, exports.matchDynamicPromptsWildcardsAll = matchDynamicPromptsWildcardsAll, 
-exports.matchDynamicPromptsWildcardsAllGenerator = matchDynamicPromptsWildcardsAllGenerator, 
+exports.isWildcardsYAMLDocument = isWildcardsYAMLDocument, exports.isWildcardsYAMLDocumentAndContentsIsMap = function isWildcardsYAMLDocumentAndContentsIsMap(e) {
+  return t.isDocument(e) && t.isMap(e.contents);
+}, exports.isWildcardsYAMLMap = isWildcardsYAMLMap, exports.matchDynamicPromptsWildcards = matchDynamicPromptsWildcards, 
+exports.matchDynamicPromptsWildcardsAll = matchDynamicPromptsWildcardsAll, exports.matchDynamicPromptsWildcardsAllGenerator = matchDynamicPromptsWildcardsAllGenerator, 
 exports.mergeFindSingleRoots = function mergeFindSingleRoots(e, i) {
   if (!t.isDocument(e) && !t.isMap(e)) throw TypeError(`The merge target should be a YAMLMap or Document. doc: ${e}`);
   i = [ i ].flat();
