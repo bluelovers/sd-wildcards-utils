@@ -78,3 +78,55 @@ lazy-wildcards:
           - >-
             {__mix-lazy-auto/color-anything__ |}rope
           - head turned
+      # https://civitai.com/models/612894/pov-bondage-chair-sd15-or?modelVersionId=685145
+      pov-bondage-chair:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/main__:1.2),
+            ({{1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/action-sex__}|no sex}:1.4)
+            {, {1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/costume-exposed__}|}
+            {, {1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/costume-weapen__}|}
+            {, {1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/style__}|}
+            {, {1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/env__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/env-bg__}|}
+        main:
+          - >-
+            Pov Bondage Chair, legs up, nsfw, bondage
+        action-sex:
+          - deep sex
+          - >-
+            {deep |}anal sex
+          - pressed against anus
+          - pressed against vagina
+          - sex
+        costume-exposed:
+          - lower half exposed
+          - breasts exposed
+          - fully exposed
+          - vagina exposed
+        costume-elem:
+          - pelvis curtain
+          - revealing clothes
+          - cleavage
+          - rope
+          - sash
+          - restraints
+          - gag
+          - shackles
+          - handcuffs
+        costume-weapen:
+          - wielding_whip
+        style:
+          - uncensored
+          - eye contact
+          - >-
+            {1-$$dominance|submission}
+          - sleek
+        env:
+          - bondage_chair
+          - restraint_device
+        env-bg:
+          - white brick wall
+          - __mix-lazy-auto/color-anything__ brick wall
+

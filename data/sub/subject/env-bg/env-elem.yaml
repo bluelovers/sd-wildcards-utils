@@ -239,4 +239,51 @@ lazy-wildcards:
             {1-$$swamp ruins|ancient structures}
           - enchanted_swamp
           - __lazy-wildcards/subject/env-bg/swamp-*/prompts__
+      # https://civitai.com/models/93976/parasite
+      parasitism-parasite:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/parasitism-parasite/main__
+            ,{1-$$__lazy-wildcards/subject/env-elem/parasitism-parasite/env__}
+            {,{1-$$__lazy-wildcards/subject/env-elem/parasitism-parasite/expressions__}|}
+            {,{1-$$__lazy-wildcards/subject/env-elem/parasitism-parasite/style__}|}
+        main:
+          - (parasitism, para_sitism, parasitic_worm, invasive, parasite), (worm, covered in worms, WormsWorld, worms crawling all over the body:1.2), wormbath
+        style:
+          - transformation
+          - invasive_organism, biological_invasion
+          - host_body
+          - symbiotic_relationship
+          - invasive_species
+          - aggressive_spread
+          - decomposing_flesh
+          - advanced_decomposition
+          - necrosis
+          - sexualized
+          - parasite_infestation
+          - host_suffering
+          - neurological_control, mind_control
+        expressions:
+          - fucked silly
+          - blush
+          - ahegao
+          - open mouth
+          - tears
+        env:
+          - body_decay
+          - rotting_corpse
+          - gangrene
+          - long tongue
+          - caterpillar
+          - insect
+          - bug bite
+          - >-
+            {1-$$multiple_parasites|brain_parasite|invasive_worm|crest_worm}
+          - >-
+            {1-$$veiny tentacles|tentacle_porn|multiple_tentacles|sexualized_tentacles}
+          - suction_cups
+          - >-
+            {1-$$cum|cum on body|cum on breasts|cumdrip}
+          - distome
+          - slime \(substance\)
 

@@ -4,9 +4,9 @@ lazy-wildcards:
       japanese-clothes:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume/japanese-clothes/costume/*__
+            __lazy-wildcards/subject/costume/japanese-clothes/costume-type/*__
             {,__lazy-wildcards/subject/costume/japanese-clothes/style__|}
-        costume:
+        costume-type:
           type-oiran:
             - (oiran, hair ornament, japanese clothes, kimono, geta)
         style:
@@ -657,3 +657,189 @@ lazy-wildcards:
           - layering_piece
           - casual_wear
           - minimal_exposure
+      biomachine_body_horror:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/biomachine_body_horror/main__
+            {,({1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/style__}:1.2)|}
+            {,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-type/*__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/ethnicity__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-wings__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/env__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-breasts__}|}
+            {,{1-6$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-elem__}|}
+            {,{1-6$$__lazy-wildcards/subject/costume/biomachine_body_horror/style-elem__}|}
+        main:
+          - (body horror, biomachine:1.3)
+        style:
+          - bloody
+          - zentangle
+          - dark art
+          - erosion
+          - fractal art
+          - horror \(theme\)
+        style-elem:
+          - living being
+          - hybrid_technology
+          - enhanced_capabilities
+          - bioengineering
+          - genetic_modification
+          - synthetic_biology
+          - engineered_organisms
+          - nanotechnology
+          - advanced_materials
+          - grotesque_transformations
+          - unnatural_growths
+          - disturbing_mutations
+          - merging_of_flesh
+          - distorted_bodies
+          - organic_abominations
+          - mutations
+          - grotesque_transformations
+          - horrific_changes
+          - unsettling_appearance
+          - surgical_alterations
+          - trypophobia
+          - eldritch abomination
+          - cuts
+        costume-type:
+          mecha:
+            - mechanical arms masterpiece
+            - mecha musume
+            - headgear
+            - mechanical arms
+            - mecha_limbs
+            - robotic_arms_and_legs
+            - mechanical_appendages
+          body_horror:
+            - monstrous_changes
+            - flesh_fusion
+            - body_modifications
+            - extreme_piercings
+            - flesh_sculpting
+            - bone
+            - hip bones
+            - skeleton
+        costume-breasts:
+          - large breasts
+          - cleavage
+          - underboob
+          - breasts
+        costume-elem:
+          - artificial_limbs
+          - cyborg
+          - human_robot_hybrid
+          - cybernetic_parts
+          - organic_meets_mechanical
+          - cybernetic_implants
+          - hybrid_monster
+          - skindentation
+          - bioluminescence
+          - chest mouth
+          - monsterification
+          - bleeding
+          - blood from eyes
+          - clothes lift
+          - wrist cutting
+        ethnicity:
+          - black sclera
+          - fangs
+          - mismatched sclera
+        costume-wings:
+          - plant wings
+          - flower wings
+          - leaf wings
+          - mismatched wings
+        env:
+          - tendril
+          - microscopic_machines
+          - nanobots
+          - monster
+      graduation_robe:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/graduation_robe/main__
+            {,(__lazy-wildcards/subject/costume/graduation_robe/costume__)|}
+            ,(__lazy-wildcards/subject/costume/graduation_robe/costume-headwear__)
+            {0.3::,({1-$$__lazy-wildcards/subject/costume/graduation_robe/costume-weapen__})|}
+            {,{1-$$__lazy-wildcards/subject/costume/graduation_robe/costume-elem__}|}
+            {0.2::,{1-$$__lazy-wildcards/subject/costume/graduation_robe/action__}|}
+            {0.3::,{1-$$__lazy-wildcards/subject/costume/graduation_robe/expressions__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/graduation_robe/env-bg__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/graduation_robe/env__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/graduation_robe/style__}|}
+        main:
+          - (graduation)
+        costume:
+          - american_graduation_gown, black_academic_robe, mortarboard_cap
+          - british_graduation_gow, traditional_academic_robe, hood
+          - japanese_graduation_hakama, formal_kimono, formal_hakama
+          - chinese_graduation_robe, modern_academic_robe, school_colors
+          - french_graduation_robe, formal_black_gown, traditional_french_biretta
+          - italian_graduation_toga, classical_toga_style, white, red
+          - south_korean_graduation_gown, academic_robe_with_collar, dark_colors
+          - australian_graduation_gown, traditional_academic_robe, university_colors
+          - indian_graduation_robe, academic_robe_with_sash
+          - south_african_graduation_gown, formal_academic_robe, colorful_scarf, colorful_sash
+        action:
+          - peace sign
+        costume-headwear:
+          - mortarboard cap
+          - doctoral cap
+          - >-
+            {1-$$graduation hat|graduation cap}
+        costume-elem:
+          - >-
+            graduation {1-$$, graduation $$gown|robe|toga|cloak|bachelor gown}
+          - academic_robe
+          - sash
+          - scarf
+          - >-
+            ({1-$$open clothes|center opening|flashing|public indecency}{, open {1-$$, open $$gown|robe|toga|cloak|bachelor gown}|}:1.2)
+          - corsage
+          - >-
+            {1-$$underwear|Lingerie bar}
+          - hair ribbon, ribbon
+          - bow, bowtie
+          - backless outfit
+          - clothing cutout
+          - breasts
+          - shawl
+          - >-
+            {1-$$sideboob|side cutout|covered_sideboob|presenting_sideboob|high-waist_sideboob}
+            {,sideless {1-$$, sideless $$gown|robe|toga|cloak|bachelor gown}|}
+          - >-
+            (see-through{, see-through {1-$$, see-through $$gown|robe|toga|cloak|bachelor gown}|}:1.2)
+          - >-
+            fishnet {1-$$, fishnet $$gown|robe|toga|cloak|bachelor gown}
+          - >-
+            ({1-$$cleavage|cleavage cutout|firm breast cleavage|navel|covered navel|see-through cleavage}:1.2)
+        costume-weapen:
+          - >-
+            {1-$$diploma|holding diploma}
+          - >-
+            {1-$$bouquet|holding bouquet}
+        style:
+          - >-
+            {1-$$academic_achievement|academic_honor|higher_education}
+          - formal
+          - graduation_photos
+          - certificate_award
+          - pasties
+          - >-
+            ({1-$$sexy|erotic|seductive|nsfw}:1.2)
+        expressions:
+          - wiping tears
+          - happy tears
+          - >-
+            {1-$$tears|crying}
+          - blush
+        env:
+          - cherry blossoms
+          - petals, falling petals
+          - chalkboard
+        env-bg:
+          - school
+          - classroom
+          - >-
+            {1-$$graduation_ceremony|university_graduation}

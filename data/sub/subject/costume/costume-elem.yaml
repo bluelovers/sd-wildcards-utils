@@ -5,4 +5,38 @@ lazy-wildcards:
         prompts:
           - earrings
           - large earrings
-
+      religious:
+        prompts:
+          - cope, ceremonial_cloak
+    costume-headwear:
+      headwear-religious:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-headwear/headwear-religious/costume-hat__
+            {,{1-$$__lazy-wildcards/subject/costume-headwear/headwear-religious/costume-hat__}|}
+            {,{1-$$__lazy-wildcards/subject/costume-headwear/headwear-religious/costume-elem__}|}
+        style:
+          - religious_symbolism, religious_attire
+          - ornate_designs
+          - ceremonial_purpose
+          - distinctive_shape
+        costume-hat:
+          - miter, tall_pointed_hat
+          - zucchetto, small_skullcap
+          - biretta, square_cap, pom_pom_top
+          - priest_hat, religious_headwear
+        costume-elem:
+          - metal headwear
+    costume-tattoo:
+      # 宗教紋身 (Religious Tattoos)
+      religious:
+        prompts:
+          - cross_tattoo, Christian_symbolism
+          - buddha_tattoo, Buddhist_symbolism
+          - hindu_tattoo, Hindu_symbols
+          - angel_wings_tattoo
+          - mandala_tattoo, intricate_geometric_patterns
+          - scripture_tattoo, religious_texts
+          - yin_yang_tattoo, Taoist_symbolism, circular_design
+          - kabbalah_tattoo, Jewish_mysticism, Hebrew_letters, Tree_of_Life
+          - tribal_tattoo, indigenous_designs, bold_and_intricate_patterns

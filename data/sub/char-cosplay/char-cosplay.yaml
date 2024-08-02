@@ -701,7 +701,8 @@ lazy-wildcards:
         ethnicity:
           - short hair
           - red eyes
-          - grey eyes
+          - >-
+            {1-$$grey eyes|silver eyes}
           - >-
             {1-$$colored sclera|black sclera}
           - >-
@@ -743,8 +744,7 @@ lazy-wildcards:
             {1-$$scythe|holding scythe}
           - weapon
         style:
-          - gothic lolita
-          - lolita fashion
+          - gothic fashion
           - alternate universe
           - dark persona
         env:
@@ -768,6 +768,31 @@ lazy-wildcards:
           - corruption
           - multiple dogs
           - beowolf
+      # https://civitai.com/models/314876/summer-rose-rwby-2-outfits?modelVersionId=353202
+      summer-rose:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/rwby/summer-rose/main__
+            {{1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/ethnicity__},|}
+            {{1-$$__lazy-wildcards/cosplay-char/rwby/summer-rose/costume__},|}
+            {{1-$$__lazy-wildcards/cosplay-char/rwby/summer-rose/costume-elem__},|}
+            {{1-$$__lazy-wildcards/cosplay-char/rwby/summer-rose/costume-weqapen__},|}
+            {1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/style__},
+            {1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/env__}
+        main:
+          - SummerRose, summer rose \(rwby\), rwby
+        costume:
+          - dress, white cape, corset, pantyhose, boots
+          - OriginalOutfit, cape, white cape, long sleeves, black corset, black dress, black skirt
+          - Vol9Outfit, red dress, pantyhose, bare shoulders, detached sleeves, long black sleeves, fingerless gloves, white cape, red cape inside, belts
+        costume-elem:
+          - hood
+        costume-weqapen:
+          - >-
+            Sundered Rose,
+            axe rifle, stock,
+            gold blade, black handle, curved blade,
+            transforming weapon, dual-purpose
     # https://danbooru.donmai.us/posts?tags=kumo_desu_ga_nani_ka%3F&z=2
     kumo_desu:
       # https://civitai.com/models/579504/karnatia-seri-anabald-kumo-desu-ga-nani-ka?modelVersionId=646336
@@ -1009,23 +1034,38 @@ lazy-wildcards:
       PoorlyDressedPolicewoman:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/main__,
-            {1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume__}
+            __lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/main__
+            {,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-hand__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-headwear__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-elem__}|}
             {,{1-$$__lazy-wildcards/subject/costume/police/prompts__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/ethnicity__}|}
+            {0.2::,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/ethnicity__}|}
         main:
-          - PoorlyDressedPolicewoman
+          - PoorlyDressedPolicewoman, brautiful pol1ceg1rls in a police uniform, policewoman
         ethnicity:
           - short hair, blonde hair, large breasts, orange eyes
+          - long hair
         costume:
           - >-
             pink bra, leopard print bar,
             blue Police jacket, open jacket,
             cleavage,
             white shirt
+        costume-hand:
+          - >-
+            {1-$$fingernails|long fingernails|nail polish}
+          - fingerless gloves
+          - >-
+            {1-$$cuffs|handcuffs}
+        costume-headwear:
+          - peaked cap
+          - police hat
         costume-elem:
-          - earrings
+          - >-
+            {1-$$earrings|hoop earrings}
+          - >-
+            {1-$$crop top|midriff}
           - long sleeves
           - jewelry
           - short shorts
@@ -1035,5 +1075,353 @@ lazy-wildcards:
           - piercing
           - pink leopard print
           - thigh strap, thighband pantyhose, black pantyhose
+          - sagging breasts
+          - detached collar
+          - garter straps
+          - epaulettes
           - >-
             pink panties, leopard print panties{, panties under pantyhose|}
+    # https://mangadex.org/title/8fef2dc5-fd32-4d62-9cb3-4a39275e0ef5/no-longer-allowed-in-another-world
+    # https://civitai.com/models/563039/isekai-shikkaku-or-annette-and-tama-pdxl
+    Isekai_Shikkaku:
+      # https://myanimelist.net/character/242644/Annette
+      Annette:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/main__
+            {,{1-$$__lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/ethnicity__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/costume__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/costume-weapen__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/env__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/style__}|}
+        main:
+          - (Annette:1.3), a beautiful elvish girl
+        ethnicity:
+          - orange hair
+          - blonde hair
+        costume:
+          - bishop_robe, worn_by_bishops
+          - fantasy_robes
+          - holy_vestments
+          - sacred_clothing
+          - ritual_robes
+          - blue and white dress
+          - >-
+            {Mitre hat|metal Mitre}
+        costume-elem:
+          - long_flowing_garment
+        style:
+          - ornate_designs
+          - mystical_appearance
+          - intricate_patterns
+          - magical_aura
+          - ceremonial_use
+        env:
+          - religious_symbol
+        costume-weapen:
+          - >-
+            {holding a large crosier,|}large crosier
+          - Wand
+          - staff
+    yu-gi-oh:
+      # https://danbooru.donmai.us/posts?tags=harpie_lady
+      # https://danbooru.donmai.us/posts?tags=harpie_lady_%28normal_monster%29
+      # https://civitai.com/models/611599/harpy-lady-yugioh?modelVersionId=683689
+      harpie-lady:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/main__
+            ,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/ethnicity__}
+            ,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume-wings__}
+            {,__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume__|}
+            {,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume-weapen__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/env__}|}
+        main:
+          - HL, harpie_lady_1, harpie_lady, harpie_lady_\(normal_monster\), yu-gi-oh!, yu-gi-oh! duel monsters, harpie lady \(normal monster\) \(cosplay\), harpy
+        ethnicity:
+          - >-
+            {1-$$winged arms|feathered arms}
+          - blue skin
+          - claws
+          - pink hair
+          - pointy ears
+          - bird tail
+          - green eyes
+          - long hair, very long hair
+        costume:
+          - blue bodysuit, purple tights, harpy, winged arms, blue wings
+          - gold armor, purple tights, winged arms, purple wings
+          - purple armor, purple tights, winged arms, green wings
+        costume-elem:
+          - purple tights
+          - spiked armor
+          - cyber harpie lady \(cosplay\), cyber_harpie_lady
+          - bare shoulders
+          - collar
+          - collarbone
+          - open clothes
+          - strapless leotard
+          - bikini armor
+          - black pantyhose
+          - black thighhighs
+          - clothing cutout
+          - garter straps
+          - navel, navel cutout
+          - pantyhose
+        costume-wings:
+          - aqua feathers, aqua wings
+          - green feathers, green wings
+          - feathered wings
+        costume-weapen:
+          - holding, holding card
+        env:
+          - magical_hats_(yu-gi-oh!)
+          - harpie's pet dragon
+          - cyber shield (yu-gi-oh!)
+    sousou_no_frieren:
+      # https://civitai.com/models/421109/ubel-sousou-no-frieren
+      # https://danbooru.donmai.us/posts?tags=ubel_%28sousou_no_frieren%29&z=2
+      ubel:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/main__
+            ,{2-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/ethnicity__}
+            {,{1-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/expressions__}|}
+            ,{5-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/costume__}
+            {,__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/costume-weapen__|}
+            {,{1-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/costume-elem__}|}
+        main:
+          - ubel_\(sousou_no_frieren\), UbelFrieren, ubel, ubel_\(sousou_no_frieren\)_\(cosplay\)
+        ethnicity:
+          - long hair
+          - green hair
+          - side ponytail, hair between eyes, bangs
+          - green eyes
+          - double-parted bangs
+          - high ponytail
+        expressions:
+          - closed mouth
+          - smile
+        costume:
+          - black choker
+          - halterneck
+          - bare shoulders
+          - black dress
+          - sleeveless dress
+          - pleated dress
+          - medium breasts
+          - single glove
+          - black gloves
+          - belt
+          - black socks
+          - boots
+          - black footwear
+          - suspenders hanging
+        costume-elem:
+          - armlet
+          - armband
+          - collarbone
+          - o-ring, o-ring choker
+          - ear piercing
+          - arm strap
+          - sidelocks
+          - sweatdrop
+          - sweaty armpits
+          - sweat
+        costume-weapen:
+          - holding
+          - holding polearm
+          - holding weapon
+    Brown-Dust:
+      # https://civitai.com/models/611537/eclipse-nightmare-bunny-brown-dust-2
+      Eclipse:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/main__
+            ,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/ethnicity__}
+            {,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/costume-type/*__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/action__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/env__}|}
+        main:
+          - EclipseNightmareBunny, eclipse_(brown_dust_2), brown_dust_2, brown_dust
+        ethnicity:
+          - very long hair, ponytail, purple hair, blue eyes, hair over one eye
+          - huge breasts
+          - black hair
+          - colored inner hair
+          - purple hair
+        costume-type:
+          Nightmare-Bunny:
+            - gloves, long sleeves, navel, cleavage, bare shoulders, fishnet pantyhose, bowtie, rabbit ears, red bow, black leotard, purple coat, wrist cuffs, strapless, detached collar, highleg
+        costume-elem:
+          - demon girl
+          - fishnet pantyhose
+          - playboy bunny
+          - red gloves
+          - torn clothes
+          - torn pantyhose
+          - broken horn
+          - curly hair
+          - demon horns
+          - horn ornament
+          - horn ring
+          - shirt overhang
+          - chest tattoo
+          - horn ribbon
+        costume-weapen:
+          - drinking glass, wine glass
+          - holding cup
+          - champagne bottle
+          - holding tray
+          - book
+        action:
+          - arm up
+          - lying, on back
+        env:
+          - floating book
+          - floating object
+          - floating, flying
+          - shadow
+          - aura
+    # https://zh.wikipedia.org/zh-tw/STAR%E2%98%86jewel
+    Star-Jewel:
+      # https://civitai.com/models/613899/reiko-kanna-star-jewel?modelVersionId=686256
+      Reiko-Kanna:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/Star-Jewel/Reiko-Kanna/main__
+            ,{1-$$__lazy-wildcards/cosplay-char/Star-Jewel/Reiko-Kanna/ethnicity__}
+            {,{1-$$__lazy-wildcards/cosplay-char/Star-Jewel/Reiko-Kanna/costume-elem__}|}
+        main:
+          - ReikoKanna
+        ethnicity:
+          - short hair
+          - bob cut
+          - blue hair
+        costume-elem:
+          - navel, navel cutout
+          - jewelry, earrings
+          - cleavage, center opening
+          - white gloves, elbow gloves
+          - blue bodysuit, bare shoulders
+          - lipstick
+          - skin tight
+    ShinMegamiTensei:
+      # https://civitai.com/models/613904/danu-shin-megami-tensei?modelVersionId=686262
+      Demons-Danu:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/main__
+            ,{3-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/ethnicity__}
+            ,{99-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/ethnicity-hair__}
+            ,{99-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/costume__}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/costume-tattoo__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/action__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/costume-weapen__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/env__}|}
+        main:
+          - DanuSMT, danu_\(megami_tensei\), shin megami tensei
+        ethnicity:
+          - long hair
+          - green eyes
+          - green hair
+          - colored skin, bronze skin
+          - dark-skinned female
+        ethnicity-hair:
+          - plant hair, hair flower
+        costume:
+          - hair ornament
+          - hair flower
+          - navel
+          - jewelry
+          - bracelet
+          - nail polish, red nails
+          - navel piercing
+          - topless
+        costume-elem:
+          - monster girl
+          - cape
+          - brown footwear
+          - brown skirt
+          - fur trim
+          - mask
+          - pelvic curtain
+        costume-tattoo:
+          - mandala_tattoo
+          - scripture_tattoo
+        costume-weapen:
+          - holding staff
+        env:
+          - clover, shamrock
+        action:
+          - hand on own hip
+      # https://civitai.com/models/491563?modelVersionId=546594
+      Demons-Naamah:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Naamah/main__
+            ,{3-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Naamah/ethnicity__}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Naamah/costume-wings__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Naamah/costume__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Naamah/action__}|}
+        main:
+          - Naamah, naamah_\(megami_tensei\), shin megami tensei
+        ethnicity:
+          - long hair, colored skin, half mask, lipstick, cyborg, mechanical arm, mechanical leg, hairband, gold trim, teeth
+          - heterochromia, blue eyes, red eyes
+          - blonde hair
+          - white skin
+          - sharp fingernails
+        costume-wings:
+          - black wings
+        costume:
+          - fishnet gloves, asymmetrical gloves,
+          - fishnets, asymmetrical legwear
+          - bare shoulders
+          - black thighhighs, fishnet thighhighs
+          - glowing eye
+        action:
+          - reaching
+          - reaching towards viewer
+          - and on own chest
+    Path-to-Nowhere:
+      # https://civitai.com/models/428585/mantis-path-to-nowhere
+      # https://danbooru.donmai.us/posts?tags=mantis_%28path_to_nowhere%29&z=5
+      Mantis:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/main__
+            ,{3-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/ethnicity__}
+            {0.3::,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-wings__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-weapen__}|}
+        main:
+          - Mantis, Mantis \(path_to_nowhere\), path_to_nowhere
+        ethnicity:
+          - aqua eyes
+          - ahoge
+          - monster girl
+          - green hair
+          - green eyes
+        costume:
+          - black shirt, short shorts, strapless
+        costume-elem:
+          - mask
+          - half mask
+          - midriff
+          - arm blade
+          - torn clothes
+          - torn camisole
+          - cleavage
+          - eyes visible through hair
+        costume-wings:
+          - insect wings
+          - green wings
+          - energy wings
+        costume-weapen:
+          - scythe

@@ -2,7 +2,7 @@ lazy-wildcards:
   background:
     color-style:
       - >-
-        {1-$$multicolored background|gradient background|solid color, solid color background|neon color}
+        {1-2$$multicolored background|gradient background|solid color, solid color background|neon color background}
     color-theme:
       - __mix-lazy-auto/color-anything__ background
       - dark background
@@ -14,13 +14,13 @@ lazy-wildcards:
         __lazy-wildcards/background/color-style__
       - >-
         {2-3$$ background, $$__mix-lazy-auto/color-anything__} background
-        {,__lazy-wildcards/background/color-style__|}
+        ,__lazy-wildcards/background/color-style__
       - >-
         pure {2-3$$ background, pure $$__lazy-wildcards/utils/color-base__} background
-        {,__lazy-wildcards/background/color-style__|}
+        ,__lazy-wildcards/background/color-style__
       - >-
         neon {2-3$$ background, neon $$__lazy-wildcards/utils/color-base__} background
-        {,__lazy-wildcards/background/color-style__|}
+        ,__lazy-wildcards/background/color-style__
     anything:
       - photo of __cof-location/place/*__, __cof-location/weather__ weather, during __cof-location/season__, __cof-location/timeofday/all__
       - __cf-*/location__
@@ -114,6 +114,8 @@ lazy-wildcards:
       - >-
         (floating:1.3), {1-$$floating stalls|floating sky_buoys|floating hovering_merchant_stands|floating_islands|aerial_stalls|sky_market|floating platform}
       - cemetery, graveyard
+      - Industrial age city
+    
     location:
       interior-lava:
         prompts:
