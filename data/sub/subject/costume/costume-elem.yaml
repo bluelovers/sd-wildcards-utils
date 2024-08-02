@@ -5,9 +5,40 @@ lazy-wildcards:
         prompts:
           - earrings
           - large earrings
+          - ear chain
+          - ear piercing
       religious:
         prompts:
           - cope, ceremonial_cloak
+      unzipping:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem/unzipping/costume__
+            {0.1::, {1-$$__lazy-wildcards/subject/costume-elem/unzipping/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem/unzipping/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem/unzipping/costume-elem-zipper__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem/unzipping/costume-eyes__}|}
+        costume:
+          - >-
+            (unzipping, undressing:1.4), zipper,
+            ({unzipped|partially unzipped}:1.2)
+        costume-eyes:
+          - averting eyes
+          - heart-shaped pupils
+        action:
+          - undressing another
+        costume-elem-zipper:
+          - full-length zipper
+          - zipper pull tab
+          - front zipper
+        costume-elem:
+          - cleavage
+          - open bodysuit
+          - no bra
+          - center opening
+          - blush
+          - clothing cutout
+          - underboob
     costume-headwear:
       headwear-religious:
         prompts:

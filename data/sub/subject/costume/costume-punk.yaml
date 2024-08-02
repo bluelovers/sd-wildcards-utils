@@ -6,7 +6,7 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/subject/costume/punk-insect/main__
             ,{1-2$$__lazy-wildcards/subject/costume/punk-insect/ethnicity__}
-            {,{1-$$__lazy-wildcards/subject/costume/punk-insect/costume-weapen__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/punk-insect/costume-weapon__}|}
             {,{1-$$__lazy-wildcards/subject/costume/punk-insect/costume-elem__}|}
             {,{1-$$__lazy-wildcards/subject/costume/punk-insect/env__}|}
             {,{1-$$__lazy-wildcards/subject/costume/punk-insect/style__}|}
@@ -90,7 +90,7 @@ lazy-wildcards:
           - >-
             fur {1-$$, fur $$wings|claws|legs|arms|limbs|parts|hair|tail|forearms}
           - bright pupils
-        costume-weapen:
+        costume-weapon:
           - scythe
         env:
           - food in mouth

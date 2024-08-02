@@ -613,7 +613,7 @@ lazy-wildcards:
         prompts:
           - >-
             {{1-$$__lazy-wildcards/subject/costume/police/costume__},|}
-            {{1-$$__lazy-wildcards/subject/costume/police/costume-weapen__},|}
+            {{1-$$__lazy-wildcards/subject/costume/police/costume-weapon__},|}
             {1-$$__lazy-wildcards/subject/costume/police/costume-elem__}
         costume:
           - police_cap
@@ -621,7 +621,7 @@ lazy-wildcards:
         costume-elem:
           - police_badge
           - utility_belt
-        costume-weapen:
+        costume-weapon:
           - >-
             {1-$$walkie-talkie|holding walkie-talkie}
           - handcuffs
@@ -761,7 +761,7 @@ lazy-wildcards:
             __lazy-wildcards/subject/costume/graduation_robe/main__
             {,(__lazy-wildcards/subject/costume/graduation_robe/costume__)|}
             ,(__lazy-wildcards/subject/costume/graduation_robe/costume-headwear__)
-            {0.3::,({1-$$__lazy-wildcards/subject/costume/graduation_robe/costume-weapen__})|}
+            {0.3::,({1-$$__lazy-wildcards/subject/costume/graduation_robe/costume-weapon__})|}
             {,{1-$$__lazy-wildcards/subject/costume/graduation_robe/costume-elem__}|}
             {0.2::,{1-$$__lazy-wildcards/subject/costume/graduation_robe/action__}|}
             {0.3::,{1-$$__lazy-wildcards/subject/costume/graduation_robe/expressions__}|}
@@ -814,7 +814,7 @@ lazy-wildcards:
             fishnet {1-$$, fishnet $$gown|robe|toga|cloak|bachelor gown}
           - >-
             ({1-$$cleavage|cleavage cutout|firm breast cleavage|navel|covered navel|see-through cleavage}:1.2)
-        costume-weapen:
+        costume-weapon:
           - >-
             {1-$$diploma|holding diploma}
           - >-
