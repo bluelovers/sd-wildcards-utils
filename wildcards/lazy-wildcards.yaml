@@ -120,6 +120,10 @@ lazy-wildcards:
         {1-6$$__lazy-wildcards/subject/style-*/*/prompts__}
       - >-
         {1-6$$__lazy-wildcards/*/*/*/style__}
+      - >-
+        {1-6$$__lazy-wildcards/*/*/*/style-*__}
+      - >-
+        {1-2$$__lazy-wildcards/subject/style-*/*/prompts__},{1-2$$__lazy-wildcards/*/*/*/style__},{1-2$$__lazy-wildcards/*/*/*/style-*__}
     food-all:
       - __lazy-wildcards/subject/food-*/*/prompts__
       - __lazy-wildcards/subject/food/*/prompts__
@@ -133,6 +137,9 @@ lazy-wildcards:
       - __lazy-wildcards/*/*/*/ethnicity-makeup__
       - __lazy-wildcards/*/*/*/ethnicity-eyes__
       - __lazy-wildcards/*/*/*/ethnicity-hair__
+    costume-weapon:
+      - __cf-*/weapon__
+      - __lazy-wildcards/*/*/*/costume-weapon__
   book:
     style-adj:
       text:
@@ -169,7 +176,7 @@ lazy-wildcards:
   background:
     color-style:
       - >-
-        {1-$$multicolored background|gradient background|solid color,solid color background|neon color}
+        {1-2$$multicolored background|gradient background|solid color,solid color background|neon color background}
     color-theme:
       - __mix-lazy-auto/color-anything__ background
       - dark background
@@ -179,11 +186,11 @@ lazy-wildcards:
       - >-
         a colorful background,__lazy-wildcards/background/color-style__
       - >-
-        {2-3$$ background,$$__mix-lazy-auto/color-anything__} background{,__lazy-wildcards/background/color-style__|}
+        {2-3$$ background,$$__mix-lazy-auto/color-anything__} background,__lazy-wildcards/background/color-style__
       - >-
-        pure {2-3$$ background,pure $$__lazy-wildcards/utils/color-base__} background{,__lazy-wildcards/background/color-style__|}
+        pure {2-3$$ background,pure $$__lazy-wildcards/utils/color-base__} background,__lazy-wildcards/background/color-style__
       - >-
-        neon {2-3$$ background,neon $$__lazy-wildcards/utils/color-base__} background{,__lazy-wildcards/background/color-style__|}
+        neon {2-3$$ background,neon $$__lazy-wildcards/utils/color-base__} background,__lazy-wildcards/background/color-style__
     anything:
       - photo of __cof-location/place/*__,__cof-location/weather__ weather,during __cof-location/season__,__cof-location/timeofday/all__
       - __cf-*/location__
@@ -272,6 +279,8 @@ lazy-wildcards:
       - >-
         (floating:1.3),{1-$$floating stalls|floating sky_buoys|floating hovering_merchant_stands|floating_islands|aerial_stalls|sky_market|floating platform}
       - cemetery,graveyard
+      - Industrial age city
+
     location:
       interior-lava:
         prompts:
@@ -520,7 +529,7 @@ lazy-wildcards:
         - >-
           {extended |}downblouse
       body-type:
-        - curvy body,hourglass body,narrow waist
+        - curvy body,hourglass body,narrow waist,hourglass slim figure
         - wide hips,narrow waist
         - |-
           perfect body,muscular body,Thick thigh,wide pelvis,(big ass:0.5),tall woman
@@ -650,7 +659,7 @@ lazy-wildcards:
       - streaked hair
     haircolor:
       - >-
-        {1-3$$ hair,$$__mix-lazy-auto/color-anything__} hair{,{1-2$$__lazy-wildcards/char/haircolor-style__}|}
+        {2-3$$ hair,$$__mix-lazy-auto/color-anything__} hair,{1-2$$__lazy-wildcards/char/haircolor-style__}
       - >-
         __mix-lazy-auto/color-anything__ hair{,{1-2$$__lazy-wildcards/char/haircolor-style__}|}
     hair-style-multi:
@@ -964,12 +973,18 @@ lazy-wildcards:
       - __Bo/chars/char-regular/female/bocloths__
       - __Bo/clothings/*/female-attire__
       - __lazy-wildcards/subject/costume/*/prompts__
-      - __lazy-wildcards/subject/costume-*/*/prompts__
+      - >-
+        {1-3$$__lazy-wildcards/subject/costume-*/*/prompts__}
+      - >-
+        {1-3$$__lazy-wildcards/*/*/*/costume-elem__}
+      - >-
+        {1-3$$__lazy-wildcards/*/*/*/costume-type/*__}
+      - >-
+        {1-3$$__lazy-wildcards/*/*/*/costume__}
+      - >-
+        {3-6$$__lazy-wildcards/*/*/*/costume__|__lazy-wildcards/*/*/*/costume-type/*__|__lazy-wildcards/*/*/*/costume-elem__}
       - __lazy-wildcards/cosplay-*/*/*/prompts__
-      - __lazy-wildcards/*/*/*/costume__
-      - __lazy-wildcards/*/*/*/costume-elem__
-      - __lazy-wildcards/*/*/*/costume-type/*__
-      - __lazy-wildcards/*/*/*/costume-weapen__
+      - __lazy-wildcards/*/*/*/costume-weapon__
       - ((ancient egyptian theme)),golden ornaments,ancient egyptian sailor_shirt,ancient egyptian pleated_skirt,bowtie
       - Collared shirts
       - school uniform,sweater,miniskirt
@@ -1015,6 +1030,8 @@ lazy-wildcards:
       - ((crop top)),chest chain,deep v,collarbone,cleavage,sideboob,underboob,midriff
       - |-
         wearing a full armor and a gothic,gothic armor,(intricate poncho capelet:1.27),gold laced,gauntlets
+      - white robe,see-through robe
+
     sweater:
       - ribbed sweater
       - sleeveless sweater
@@ -1311,6 +1328,8 @@ lazy-wildcards:
         prompts:
           - unusual_appearance
           - toxic
+          - |-
+            (body horror:1.2),(biomachine:1.3),(bloody:1.2),living being,(zentangle:1.1),(dark art,erosion,fractal art:1.2)
       cyberpunk-cyberspace-grid:
         # https://civitai.com/models/289472/neon-cyberpunk-cyberspace-sdxl-pony-and-sd15?modelVersionId=337666
         prompts:
@@ -1757,6 +1776,51 @@ lazy-wildcards:
             {1-$$swamp ruins|ancient structures}
           - enchanted_swamp
           - __lazy-wildcards/subject/env-bg/swamp-*/prompts__
+      # https://civitai.com/models/93976/parasite
+      parasitism-parasite:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/parasitism-parasite/main__,{1-$$__lazy-wildcards/subject/env-elem/parasitism-parasite/env__}{,{1-$$__lazy-wildcards/subject/env-elem/parasitism-parasite/expressions__}|}{,{1-$$__lazy-wildcards/subject/env-elem/parasitism-parasite/style__}|}
+        main:
+          - |-
+            (parasitism,para_sitism,parasitic_worm,invasive,parasite),(worm,covered in worms,WormsWorld,worms crawling all over the body:1.2),wormbath
+        style:
+          - transformation
+          - invasive_organism,biological_invasion
+          - host_body
+          - symbiotic_relationship
+          - invasive_species
+          - aggressive_spread
+          - decomposing_flesh
+          - advanced_decomposition
+          - necrosis
+          - sexualized
+          - parasite_infestation
+          - host_suffering
+          - neurological_control,mind_control
+        expressions:
+          - fucked silly
+          - blush
+          - ahegao
+          - open mouth
+          - tears
+        env:
+          - body_decay
+          - rotting_corpse
+          - gangrene
+          - long tongue
+          - caterpillar
+          - insect
+          - bug bite
+          - >-
+            {1-$$multiple_parasites|brain_parasite|invasive_worm|crest_worm}
+          - >-
+            {1-$$veiny tentacles|tentacle_porn|multiple_tentacles|sexualized_tentacles}
+          - suction_cups
+          - >-
+            {1-$$cum|cum on body|cum on breasts|cumdrip}
+          - distome
+          - slime \(substance\)
     env-bg:
       background:
         prompts:
@@ -2082,6 +2146,35 @@ lazy-wildcards:
           - subterranean_shops
           - >-
             (floating:1.3),{1-$$floating stalls|floating sky_buoys|floating hovering_merchant_stands|floating_islands|aerial_stalls|sky_market|floating platform}
+      # 日本盂蘭盆節
+      # https://civitai.com/models/615027/japanese-festival?modelVersionId=687529
+      Japanese-Festival-Bon-Odori:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/Japanese-Festival-Bon-Odori/main__{,{1-$$__lazy-wildcards/subject/env-bg/Japanese-Festival-Bon-Odori/costume__}|}{0.2::,{1-$$__lazy-wildcards/subject/env-bg/Japanese-Festival-Bon-Odori/action__}|}{,{1-$$__lazy-wildcards/subject/env-bg/Japanese-Festival-Bon-Odori/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/Japanese-Festival-Bon-Odori/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/Japanese-Festival-Bon-Odori/style__}|}
+        main:
+          - bonodori,night,lantern,Japanese_Festival,Bon Odori Venue,Obon_Festival
+        style:
+          - traditional_celebration
+          - festive_decorations
+          - cultural_events
+          - nighttime_ambiance
+          - glowing_lights
+        costume:
+          - Yukata,traditional_summer_kimono
+        action:
+          - traditional_dance
+          - circular_dance_patterns
+        env:
+          - Festival_Lanterns,paper_lanterns
+          - Obon_Lanterns,floating_lanterns,river_ceremony
+          - Taiko_Drums,large_drums
+          - Spirit_Boat,ceremonial_boat
+          - building
+          - summer
+        env-bg:
+          - Yagura,festival_stage,elevated_platform,central_structure
+          - Hanabi,fireworks_display,colorful_explosions,night_sky_illumination
       post-apocalyptic:
         prompts:
           - >-
@@ -2621,6 +2714,65 @@ lazy-wildcards:
         prompts:
           - earrings
           - large earrings
+          - ear chain
+          - ear piercing
+      religious:
+        prompts:
+          - cope,ceremonial_cloak
+      unzipping:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem/unzipping/costume__{0.1::,{1-$$__lazy-wildcards/subject/costume-elem/unzipping/action__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/unzipping/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/unzipping/costume-elem-zipper__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/unzipping/costume-eyes__}|}
+        costume:
+          - >-
+            (unzipping,undressing:1.4),zipper,({unzipped|partially unzipped}:1.2)
+        costume-eyes:
+          - averting eyes
+          - heart-shaped pupils
+        action:
+          - undressing another
+        costume-elem-zipper:
+          - full-length zipper
+          - zipper pull tab
+          - front zipper
+        costume-elem:
+          - cleavage
+          - open bodysuit
+          - no bra
+          - center opening
+          - blush
+          - clothing cutout
+          - underboob
+    costume-headwear:
+      headwear-religious:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-headwear/headwear-religious/costume-hat__{,{1-$$__lazy-wildcards/subject/costume-headwear/headwear-religious/costume-hat__}|}{,{1-$$__lazy-wildcards/subject/costume-headwear/headwear-religious/costume-elem__}|}
+        style:
+          - religious_symbolism,religious_attire
+          - ornate_designs
+          - ceremonial_purpose
+          - distinctive_shape
+        costume-hat:
+          - miter,tall_pointed_hat
+          - zucchetto,small_skullcap
+          - biretta,square_cap,pom_pom_top
+          - priest_hat,religious_headwear
+        costume-elem:
+          - metal headwear
+    costume-tattoo:
+      # 宗教紋身 (Religious Tattoos)
+      religious:
+        prompts:
+          - cross_tattoo,Christian_symbolism
+          - buddha_tattoo,Buddhist_symbolism
+          - hindu_tattoo,Hindu_symbols
+          - angel_wings_tattoo
+          - mandala_tattoo,intricate_geometric_patterns
+          - scripture_tattoo,religious_texts
+          - yin_yang_tattoo,Taoist_symbolism,circular_design
+          - kabbalah_tattoo,Jewish_mysticism,Hebrew_letters,Tree_of_Life
+          - tribal_tattoo,indigenous_designs,bold_and_intricate_patterns
     costume:
       others:
         prompts:
@@ -2829,11 +2981,101 @@ lazy-wildcards:
               (Striped_bikini:1.5),(Flowy_wrap_skirt:1.4),(Straw_tote_bag:1.3)
             - |-
               (Knit_cardigan:1.4),(Printed_midi_skirt:1.3),(Slip-on_sneakers:1.2)
+      punk-insect:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/punk-insect/main__,{1-2$$__lazy-wildcards/subject/costume/punk-insect/ethnicity__}{,{1-$$__lazy-wildcards/subject/costume/punk-insect/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume/punk-insect/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume/punk-insect/env__}|}{,{1-$$__lazy-wildcards/subject/costume/punk-insect/style__}|}
+        main:
+          - IPNK,Insectpunk,Insect punk,inspired by insects,insectoid,Monster Musume
+        style:
+          - biomechanical_integration
+          - mechanical
+          - biological
+          - natural
+          - intricate patterns
+          - |-
+            transparent|colorful|iridescent
+          - chitinous_materials
+          - symbiosis
+          - symmetrical
+          - lepidoptera
+          - cyberpunk
+          - android
+          - insect technology
+          - taur
+          - Anthro Bugs
+
+        ethnicity:
+          - >-
+            insect {1-$$,insect $$girl|exoskeletons|wings|antennae|tail|claws|hair|tattoo|legs|arms|limbs|parts|ears|eyes|horns|joints|tentacles}
+          - >-
+            prosthetic {1-$$,prosthetic $$girl|exoskeletons|wings|antennae|tail|claws|hair|tattoo|legs|arms|limbs|parts|ears|eyes|horns|joints|tentacles}
+          - >-
+            moth {1-$$,moth $$girl|exoskeletons|wings|antennae}
+          - >-
+            butterfly {1-$$,butterfly $$girl|exoskeletons|wings|antennae}
+          - >-
+            bee {1-$$,bee $$girl|exoskeletons|wings|antennae|tail}
+          - >-
+            MosquitoGirl,Mosquito {1-$$,Mosquito $$girl|exoskeletons|wings|antennae|tail}
+          - >-
+            arthropod {1-$$,arthropod $$girl|exoskeletons|wings|antennae|legs|arms|limbs|parts}
+          - >-
+            beetle {1-$$,beetle $$girl|exoskeletons|wings|antennae|legs|arms|limbs|parts|horns}{,{stag beetle}|}
+          - >-
+            scorpion {1-$$,scorpion $$girl|exoskeletons|tail|claws|legs|arms|limbs|parts}
+          - >-
+            mantis {1-$$,mantis $$girl|exoskeletons|tail|claws|legs|arms|limbs|parts|eyes}{,{praying mantis}|}
+          - >-
+            spider {1-$$,spider $$girl|exoskeletons|claws|legs|arms|limbs|parts|eyes}
+          - >-
+            arachne {1-$$,arachne $$girl|exoskeletons|claws|legs|arms|limbs|parts|eyes}
+        costume-elem:
+          - >-
+            mechanical {1-$$,mechanical $$girl|exoskeletons|wings|antennae|tail|claws|hair|tattoo|legs|arms|limbs|parts|ears|eyes|horns|joints|tentacles}
+          - >-
+            extra {1-$$,extra $$claws|legs|arms|limbs|parts|eyes|tail|forearms|pupils}
+          - >-
+            multiple {1-$$,multiple $$claws|legs|arms|limbs|parts|eyes|tail|forearms|pupils}
+          - >-
+            oversized {1-$$,oversized $$claws|legs|arms|limbs|parts|eyes|tail|forearms}
+          - organic_textures
+          - exoskeleton_armor
+          - joints
+          - compound_eyes
+          - venom_sacs,venom
+          - bioluminescence
+          - monster girl
+          - wings hair
+          - carapace
+          - colored sclera
+          - colored skin
+          - tail
+          - fang
+          - navel
+          - barefoot
+          - bandages
+          - racelet
+          - claws
+          - centauroid
+          - tattoo
+          - silk
+          - body fur
+          - >-
+            fur {1-$$,fur $$wings|claws|legs|arms|limbs|parts|hair|tail|forearms}
+          - bright pupils
+        costume-weapon:
+          - scythe
+        env:
+          - food in mouth
+          - Insect
+          - spider web
+          - flower
       japanese-clothes:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume/japanese-clothes/costume/*__{,__lazy-wildcards/subject/costume/japanese-clothes/style__|}
-        costume:
+            __lazy-wildcards/subject/costume/japanese-clothes/costume-type/*__{,__lazy-wildcards/subject/costume/japanese-clothes/style__|}
+        costume-type:
           type-oiran:
             - (oiran,hair ornament,japanese clothes,kimono,geta)
         style:
@@ -3377,14 +3619,14 @@ lazy-wildcards:
       police:
         prompts:
           - >-
-            {{1-$$__lazy-wildcards/subject/costume/police/costume__},|}{{1-$$__lazy-wildcards/subject/costume/police/costume-weapen__},|}{1-$$__lazy-wildcards/subject/costume/police/costume-elem__}
+            {{1-$$__lazy-wildcards/subject/costume/police/costume__},|}{{1-$$__lazy-wildcards/subject/costume/police/costume-weapon__},|}{1-$$__lazy-wildcards/subject/costume/police/costume-elem__}
         costume:
           - police_cap
           - police_uniform
         costume-elem:
           - police_badge
           - utility_belt
-        costume-weapen:
+        costume-weapon:
           - >-
             {1-$$walkie-talkie|holding walkie-talkie}
           - handcuffs
@@ -3414,6 +3656,174 @@ lazy-wildcards:
           - layering_piece
           - casual_wear
           - minimal_exposure
+      biomachine_body_horror:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/biomachine_body_horror/main__{,({1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/style__}:1.2)|}{,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-type/*__}|}{,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/ethnicity__}|}{,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-wings__}|}{,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/env__}|}{,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-breasts__}|}{,{1-6$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-elem__}|}{,{1-6$$__lazy-wildcards/subject/costume/biomachine_body_horror/style-elem__}|}
+        main:
+          - |-
+            (body horror,biomachine:1.3)
+        style:
+          - bloody
+          - zentangle
+          - dark art
+          - erosion
+          - fractal art
+          - horror \(theme\)
+        style-elem:
+          - living being
+          - hybrid_technology
+          - enhanced_capabilities
+          - bioengineering
+          - genetic_modification
+          - synthetic_biology
+          - engineered_organisms
+          - nanotechnology
+          - advanced_materials
+          - grotesque_transformations
+          - unnatural_growths
+          - disturbing_mutations
+          - merging_of_flesh
+          - distorted_bodies
+          - organic_abominations
+          - mutations
+          - horrific_changes
+          - unsettling_appearance
+          - surgical_alterations
+          - trypophobia
+          - eldritch abomination
+          - cuts
+        costume-type:
+          mecha:
+            - mechanical arms masterpiece
+            - mecha musume
+            - headgear
+            - mechanical arms
+            - mecha_limbs
+            - robotic_arms_and_legs
+            - mechanical_appendages
+          body_horror:
+            - monstrous_changes
+            - flesh_fusion
+            - body_modifications
+            - extreme_piercings
+            - flesh_sculpting
+            - bone
+            - hip bones
+            - skeleton
+        costume-breasts:
+          - large breasts
+          - cleavage
+          - underboob
+          - breasts
+        costume-elem:
+          - artificial_limbs
+          - cyborg
+          - human_robot_hybrid
+          - cybernetic_parts
+          - organic_meets_mechanical
+          - cybernetic_implants
+          - hybrid_monster
+          - skindentation
+          - bioluminescence
+          - chest mouth
+          - monsterification
+          - bleeding
+          - blood from eyes
+          - clothes lift
+          - wrist cutting
+        ethnicity:
+          - black sclera
+          - fangs
+          - mismatched sclera
+        costume-wings:
+          - plant wings
+          - flower wings
+          - leaf wings
+          - mismatched wings
+        env:
+          - tendril
+          - microscopic_machines
+          - nanobots
+          - monster
+      graduation_robe:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/graduation_robe/main__{,(__lazy-wildcards/subject/costume/graduation_robe/costume__)|},(__lazy-wildcards/subject/costume/graduation_robe/costume-headwear__){0.3::,({1-$$__lazy-wildcards/subject/costume/graduation_robe/costume-weapon__})|}{,{1-$$__lazy-wildcards/subject/costume/graduation_robe/costume-elem__}|}{0.2::,{1-$$__lazy-wildcards/subject/costume/graduation_robe/action__}|}{0.3::,{1-$$__lazy-wildcards/subject/costume/graduation_robe/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume/graduation_robe/env-bg__}|}{,{1-$$__lazy-wildcards/subject/costume/graduation_robe/env__}|}{,{1-$$__lazy-wildcards/subject/costume/graduation_robe/style__}|}
+        main:
+          - (graduation)
+        costume:
+          - american_graduation_gown,black_academic_robe,mortarboard_cap
+          - british_graduation_gow,traditional_academic_robe,hood
+          - japanese_graduation_hakama,formal_kimono,formal_hakama
+          - chinese_graduation_robe,modern_academic_robe,school_colors
+          - french_graduation_robe,formal_black_gown,traditional_french_biretta
+          - italian_graduation_toga,classical_toga_style,white,red
+          - south_korean_graduation_gown,academic_robe_with_collar,dark_colors
+          - australian_graduation_gown,traditional_academic_robe,university_colors
+          - indian_graduation_robe,academic_robe_with_sash
+          - south_african_graduation_gown,formal_academic_robe,colorful_scarf,colorful_sash
+        action:
+          - peace sign
+        costume-headwear:
+          - mortarboard cap
+          - doctoral cap
+          - >-
+            {1-$$graduation hat|graduation cap}
+        costume-elem:
+          - >-
+            graduation {1-$$,graduation $$gown|robe|toga|cloak|bachelor gown}
+          - academic_robe
+          - sash
+          - scarf
+          - >-
+            ({1-$$open clothes|center opening|flashing|public indecency}{,open {1-$$,open $$gown|robe|toga|cloak|bachelor gown}|}:1.2)
+          - corsage
+          - >-
+            {1-$$underwear|Lingerie bar}
+          - hair ribbon,ribbon
+          - bow,bowtie
+          - backless outfit
+          - clothing cutout
+          - breasts
+          - shawl
+          - >-
+            {1-$$sideboob|side cutout|covered_sideboob|presenting_sideboob|high-waist_sideboob}{,sideless {1-$$,sideless $$gown|robe|toga|cloak|bachelor gown}|}
+          - >-
+            (see-through{,see-through {1-$$,see-through $$gown|robe|toga|cloak|bachelor gown}|}:1.2)
+          - >-
+            fishnet {1-$$,fishnet $$gown|robe|toga|cloak|bachelor gown}
+          - >-
+            ({1-$$cleavage|cleavage cutout|firm breast cleavage|navel|covered navel|see-through cleavage}:1.2)
+        costume-weapon:
+          - >-
+            {1-$$diploma|holding diploma}
+          - >-
+            {1-$$bouquet|holding bouquet}
+        style:
+          - >-
+            {1-$$academic_achievement|academic_honor|higher_education}
+          - formal
+          - graduation_photos
+          - certificate_award
+          - pasties
+          - >-
+            ({1-$$sexy|erotic|seductive|nsfw}:1.2)
+        expressions:
+          - wiping tears
+          - happy tears
+          - >-
+            {1-$$tears|crying}
+          - blush
+        env:
+          - cherry blossoms
+          - petals,falling petals
+          - chalkboard
+        env-bg:
+          - school
+          - classroom
+          - >-
+            {1-$$graduation_ceremony|university_graduation}
     architectural:
       agricultural_zone:
         prompts:
@@ -3784,6 +4194,8 @@ lazy-wildcards:
           - collarbone
           - full body
     action-nsfw-bdsm:
+      # Sunvibe BDSM
+      # https://civitai.com/models/495326/sunvibe-bdsm?modelVersionId=550669
       sunvibebdsm:
         prompts:
           - >-
@@ -3847,6 +4259,50 @@ lazy-wildcards:
           - >-
             {__mix-lazy-auto/color-anything__ |}rope
           - head turned
+      # https://civitai.com/models/612894/pov-bondage-chair-sd15-or?modelVersionId=685145
+      pov-bondage-chair:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/main__:1.2),({{1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/action-sex__}|no sex}:1.4){,{1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/costume-exposed__}|}{,{1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/style__}|}{,{1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/env__}|}{0.3::,{1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/env-bg__}|}
+        main:
+          - >-
+            Pov Bondage Chair,legs up,nsfw,bondage
+        action-sex:
+          - deep sex
+          - >-
+            {deep |}anal sex
+          - pressed against anus
+          - pressed against vagina
+          - sex
+        costume-exposed:
+          - lower half exposed
+          - breasts exposed
+          - fully exposed
+          - vagina exposed
+        costume-elem:
+          - pelvis curtain
+          - revealing clothes
+          - cleavage
+          - rope
+          - sash
+          - restraints
+          - gag
+          - shackles
+          - handcuffs
+        costume-weapon:
+          - wielding_whip
+        style:
+          - uncensored
+          - eye contact
+          - >-
+            {1-$$dominance|submission}
+          - sleek
+        env:
+          - bondage_chair
+          - restraint_device
+        env-bg:
+          - white brick wall
+          - __mix-lazy-auto/color-anything__ brick wall
     action-nsfw-others:
       # https://civitai.com/models/23680?modelVersionId=28285
       toilet-use:
@@ -4582,7 +5038,8 @@ lazy-wildcards:
         ethnicity:
           - short hair
           - red eyes
-          - grey eyes
+          - >-
+            {1-$$grey eyes|silver eyes}
           - >-
             {1-$$colored sclera|black sclera}
           - >-
@@ -4624,8 +5081,7 @@ lazy-wildcards:
             {1-$$scythe|holding scythe}
           - weapon
         style:
-          - gothic lolita
-          - lolita fashion
+          - gothic fashion
           - alternate universe
           - dark persona
         env:
@@ -4648,6 +5104,22 @@ lazy-wildcards:
           - corruption
           - multiple dogs
           - beowolf
+      # https://civitai.com/models/314876/summer-rose-rwby-2-outfits?modelVersionId=353202
+      summer-rose:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/rwby/summer-rose/main__ {{1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/ethnicity__},|}{{1-$$__lazy-wildcards/cosplay-char/rwby/summer-rose/costume__},|}{{1-$$__lazy-wildcards/cosplay-char/rwby/summer-rose/costume-elem__},|}{{1-$$__lazy-wildcards/cosplay-char/rwby/summer-rose/costume-weqapen__},|}{1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/style__},{1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/env__}
+        main:
+          - SummerRose,summer rose \(rwby\),rwby
+        costume:
+          - dress,white cape,corset,pantyhose,boots
+          - OriginalOutfit,cape,white cape,long sleeves,black corset,black dress,black skirt
+          - Vol9Outfit,red dress,pantyhose,bare shoulders,detached sleeves,long black sleeves,fingerless gloves,white cape,red cape inside,belts
+        costume-elem:
+          - hood
+        costume-weqapen:
+          - >-
+            Sundered Rose,axe rifle,stock,gold blade,black handle,curved blade,transforming weapon,dual-purpose
     # https://danbooru.donmai.us/posts?tags=kumo_desu_ga_nani_ka%3F&z=2
     kumo_desu:
       # https://civitai.com/models/579504/karnatia-seri-anabald-kumo-desu-ga-nani-ka?modelVersionId=646336
@@ -4787,7 +5259,7 @@ lazy-wildcards:
       guyver:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/guyver/guyver/main__,__lazy-wildcards/cosplay-char/guyver/guyver/main-type/*__,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/costume-elem__}{,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/costume-weapen__}|}{,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/style__}|}{,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/env__}|}
+            __lazy-wildcards/cosplay-char/guyver/guyver/main__,__lazy-wildcards/cosplay-char/guyver/guyver/main-type/*__,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/costume-elem__}{,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/style__}|}{,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/env__}|}
         main:
           - guyver,kyoushoku soukou guyver,bio armor,biosuit,Bio Booster Armor Guyver,GZZVZR
         main-type:
@@ -4821,7 +5293,7 @@ lazy-wildcards:
           - massive armor
           - gory skin melt
           - Zoaforms
-        costume-weapen:
+        costume-weapon:
           - wide sonic swords
           - extra vibration swords
           - High-Frequency Swords
@@ -4845,7 +5317,7 @@ lazy-wildcards:
       aptom:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/guyver/aptom/main__,__lazy-wildcards/cosplay-char/guyver/aptom/costume__,{1-$$__lazy-wildcards/cosplay-char/guyver/aptom/costume-elem__}{,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/costume-weapen__}|}{,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/style__}|}{,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/env__}|}
+            __lazy-wildcards/cosplay-char/guyver/aptom/main__,__lazy-wildcards/cosplay-char/guyver/aptom/costume__,{1-$$__lazy-wildcards/cosplay-char/guyver/aptom/costume-elem__}{,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/style__}|}{,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/env__}|}
         main:
           - aptom,aptomf,Aputomu,Zoanoid
         costume:
@@ -4866,16 +5338,29 @@ lazy-wildcards:
       PoorlyDressedPolicewoman:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/main__,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume__}{,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume/police/prompts__}|}{,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/ethnicity__}|}
+            __lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/main__{,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-hand__}|}{,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-headwear__}|}{,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume/police/prompts__}|}{0.2::,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/ethnicity__}|}
         main:
-          - PoorlyDressedPolicewoman
+          - PoorlyDressedPolicewoman,brautiful pol1ceg1rls in a police uniform,policewoman
         ethnicity:
           - short hair,blonde hair,large breasts,orange eyes
+          - long hair
         costume:
           - >-
             pink bra,leopard print bar,blue Police jacket,open jacket,cleavage,white shirt
+        costume-hand:
+          - >-
+            {1-$$fingernails|long fingernails|nail polish}
+          - fingerless gloves
+          - >-
+            {1-$$cuffs|handcuffs}
+        costume-headwear:
+          - peaked cap
+          - police hat
         costume-elem:
-          - earrings
+          - >-
+            {1-$$earrings|hoop earrings}
+          - >-
+            {1-$$crop top|midriff}
           - long sleeves
           - jewelry
           - short shorts
@@ -4885,11 +5370,323 @@ lazy-wildcards:
           - piercing
           - pink leopard print
           - thigh strap,thighband pantyhose,black pantyhose
+          - sagging breasts
+          - detached collar
+          - garter straps
+          - epaulettes
           - >-
             pink panties,leopard print panties{,panties under pantyhose|}
+    # https://mangadex.org/title/8fef2dc5-fd32-4d62-9cb3-4a39275e0ef5/no-longer-allowed-in-another-world
+    # https://civitai.com/models/563039/isekai-shikkaku-or-annette-and-tama-pdxl
+    Isekai_Shikkaku:
+      # https://myanimelist.net/character/242644/Annette
+      Annette:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/main__{,{1-$$__lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/ethnicity__}|}{,{1-$$__lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/env__}|}{,{1-$$__lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/style__}|}
+        main:
+          - |-
+            (Annette:1.3),a beautiful elvish girl
+        ethnicity:
+          - orange hair
+          - blonde hair
+        costume:
+          - bishop_robe,worn_by_bishops
+          - fantasy_robes
+          - holy_vestments
+          - sacred_clothing
+          - ritual_robes
+          - blue and white dress
+          - >-
+            {Mitre hat|metal Mitre}
+        costume-elem:
+          - long_flowing_garment
+        style:
+          - ornate_designs
+          - mystical_appearance
+          - intricate_patterns
+          - magical_aura
+          - ceremonial_use
+        env:
+          - religious_symbol
+        costume-weapon:
+          - >-
+            {holding a large crosier,|}large crosier
+          - Wand
+          - staff
+    yu-gi-oh:
+      # https://danbooru.donmai.us/posts?tags=harpie_lady
+      # https://danbooru.donmai.us/posts?tags=harpie_lady_%28normal_monster%29
+      # https://civitai.com/models/611599/harpy-lady-yugioh?modelVersionId=683689
+      harpie-lady:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/main__,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/ethnicity__},{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume-wings__}{,__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume__|}{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/env__}|}
+        main:
+          - |-
+            HL,harpie_lady_1,harpie_lady,harpie_lady_\(normal_monster\),yu-gi-oh!,yu-gi-oh! duel monsters,harpie lady \(normal monster\) \(cosplay\),harpy
+        ethnicity:
+          - >-
+            {1-$$winged arms|feathered arms}
+          - blue skin
+          - claws
+          - pink hair
+          - pointy ears
+          - bird tail
+          - green eyes
+          - long hair,very long hair
+        costume:
+          - blue bodysuit,purple tights,harpy,winged arms,blue wings
+          - gold armor,purple tights,winged arms,purple wings
+          - purple armor,purple tights,winged arms,green wings
+        costume-elem:
+          - purple tights
+          - spiked armor
+          - cyber harpie lady \(cosplay\),cyber_harpie_lady
+          - bare shoulders
+          - collar
+          - collarbone
+          - open clothes
+          - strapless leotard
+          - bikini armor
+          - black pantyhose
+          - black thighhighs
+          - clothing cutout
+          - garter straps
+          - navel,navel cutout
+          - pantyhose
+        costume-wings:
+          - aqua feathers,aqua wings
+          - green feathers,green wings
+          - feathered wings
+        costume-weapon:
+          - holding,holding card
+        env:
+          - |-
+            magical_hats_(yu-gi-oh!)
+          - |-
+            harpie's pet dragon
+          - |-
+            cyber shield (yu-gi-oh!)
+    sousou_no_frieren:
+      # https://civitai.com/models/421109/ubel-sousou-no-frieren
+      # https://danbooru.donmai.us/posts?tags=ubel_%28sousou_no_frieren%29&z=2
+      ubel:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/main__,{2-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/ethnicity__}{,{1-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/expressions__}|},{5-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/costume__}{,__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/costume-weapon__|}{,{1-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/costume-elem__}|}
+        main:
+          - ubel_\(sousou_no_frieren\),UbelFrieren,ubel,ubel_\(sousou_no_frieren\)_\(cosplay\)
+        ethnicity:
+          - long hair
+          - green hair
+          - side ponytail,hair between eyes,bangs
+          - green eyes
+          - double-parted bangs
+          - high ponytail
+        expressions:
+          - closed mouth
+          - smile
+        costume:
+          - black choker
+          - halterneck
+          - bare shoulders
+          - black dress
+          - sleeveless dress
+          - pleated dress
+          - medium breasts
+          - single glove
+          - black gloves
+          - belt
+          - black socks
+          - boots
+          - black footwear
+          - suspenders hanging
+        costume-elem:
+          - armlet
+          - armband
+          - collarbone
+          - o-ring,o-ring choker
+          - ear piercing
+          - arm strap
+          - sidelocks
+          - sweatdrop
+          - sweaty armpits
+          - sweat
+        costume-weapon:
+          - holding
+          - holding polearm
+          - holding weapon
+    Brown-Dust:
+      # https://civitai.com/models/611537/eclipse-nightmare-bunny-brown-dust-2
+      Eclipse:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/main__,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/ethnicity__}{,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/costume-type/*__}|}{,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/action__}|}{,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/env__}|}
+        main:
+          - EclipseNightmareBunny,eclipse_(brown_dust_2),brown_dust_2,brown_dust
+        ethnicity:
+          - very long hair,ponytail,purple hair,blue eyes,hair over one eye
+          - huge breasts
+          - black hair
+          - colored inner hair
+          - purple hair
+        costume-type:
+          Nightmare-Bunny:
+            - gloves,long sleeves,navel,cleavage,bare shoulders,fishnet pantyhose,bowtie,rabbit ears,red bow,black leotard,purple coat,wrist cuffs,strapless,detached collar,highleg
+        costume-elem:
+          - demon girl
+          - fishnet pantyhose
+          - playboy bunny
+          - red gloves
+          - torn clothes
+          - torn pantyhose
+          - broken horn
+          - curly hair
+          - demon horns
+          - horn ornament
+          - horn ring
+          - shirt overhang
+          - chest tattoo
+          - horn ribbon
+        costume-weapon:
+          - drinking glass,wine glass
+          - holding cup
+          - champagne bottle
+          - holding tray
+          - book
+        action:
+          - arm up
+          - lying,on back
+        env:
+          - floating book
+          - floating object
+          - floating,flying
+          - shadow
+          - aura
+    # https://zh.wikipedia.org/zh-tw/STAR%E2%98%86jewel
+    Star-Jewel:
+      # https://civitai.com/models/613899/reiko-kanna-star-jewel?modelVersionId=686256
+      Reiko-Kanna:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/Star-Jewel/Reiko-Kanna/main__,{1-$$__lazy-wildcards/cosplay-char/Star-Jewel/Reiko-Kanna/ethnicity__}{,{1-$$__lazy-wildcards/cosplay-char/Star-Jewel/Reiko-Kanna/costume-elem__}|}
+        main:
+          - ReikoKanna
+        ethnicity:
+          - short hair
+          - bob cut
+          - blue hair
+        costume-elem:
+          - navel,navel cutout
+          - jewelry,earrings
+          - cleavage,center opening
+          - white gloves,elbow gloves
+          - blue bodysuit,bare shoulders
+          - lipstick
+          - skin tight
+    ShinMegamiTensei:
+      # https://civitai.com/models/613904/danu-shin-megami-tensei?modelVersionId=686262
+      Demons-Danu:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/main__,{3-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/ethnicity__},{99-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/ethnicity-hair__},{99-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/costume__}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/costume-tattoo__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/action__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/env__}|}
+        main:
+          - DanuSMT,danu_\(megami_tensei\),shin megami tensei
+        ethnicity:
+          - long hair
+          - green eyes
+          - green hair
+          - colored skin,bronze skin
+          - dark-skinned female
+        ethnicity-hair:
+          - plant hair,hair flower
+        costume:
+          - hair ornament
+          - hair flower
+          - navel
+          - jewelry
+          - bracelet
+          - nail polish,red nails
+          - navel piercing
+          - topless
+        costume-elem:
+          - monster girl
+          - cape
+          - brown footwear
+          - brown skirt
+          - fur trim
+          - mask
+          - pelvic curtain
+        costume-tattoo:
+          - mandala_tattoo
+          - scripture_tattoo
+        costume-weapon:
+          - holding staff
+        env:
+          - clover,shamrock
+        action:
+          - hand on own hip
+      # https://civitai.com/models/491563?modelVersionId=546594
+      Demons-Naamah:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Naamah/main__,{3-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Naamah/ethnicity__}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Naamah/costume-wings__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Naamah/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Naamah/action__}|}
+        main:
+          - Naamah,naamah_\(megami_tensei\),shin megami tensei
+        ethnicity:
+          - long hair,colored skin,half mask,lipstick,cyborg,mechanical arm,mechanical leg,hairband,gold trim,teeth
+          - heterochromia,blue eyes,red eyes
+          - blonde hair
+          - white skin
+          - sharp fingernails
+        costume-wings:
+          - black wings
+        costume:
+          - fishnet gloves,asymmetrical gloves
+          - fishnets,asymmetrical legwear
+          - bare shoulders
+          - black thighhighs,fishnet thighhighs
+          - glowing eye
+        action:
+          - reaching
+          - reaching towards viewer
+          - and on own chest
+    Path-to-Nowhere:
+      # https://civitai.com/models/428585/mantis-path-to-nowhere
+      # https://danbooru.donmai.us/posts?tags=mantis_%28path_to_nowhere%29&z=5
+      Mantis:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/main__,{3-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/ethnicity__}{0.3::,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-wings__}|}{,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-weapon__}|}
+        main:
+          - Mantis,Mantis \(path_to_nowhere\),path_to_nowhere
+        ethnicity:
+          - aqua eyes
+          - ahoge
+          - monster girl
+          - green hair
+          - green eyes
+        costume:
+          - black shirt,short shorts,strapless
+        costume-elem:
+          - mask
+          - half mask
+          - midriff
+          - arm blade
+          - torn clothes
+          - torn camisole
+          - cleavage
+          - eyes visible through hair
+        costume-wings:
+          - insect wings
+          - green wings
+          - energy wings
+        costume-weapon:
+          - scythe
 mix-lazy-auto:
   # @example __mix-lazy-auto/color-anything__
-  # "color-anything" (total: 982 => 221, save 761 ) is merge from
+  # "color-anything" (total: 994 => 223, save 771 ) is merge from
   #  - __lazy-wildcards/utils/color-base__ (11)
   #  - __mix-lazy-auto/color-anything__ (3)
   #  - __cf-daoist-priest/color__ (10)
@@ -4943,6 +5740,7 @@ mix-lazy-auto:
   #  - __cf-harlot/color__ (11)
   #  - __cf-hawaiian/color__ (10)
   #  - __cf-hippie/color__ (12)
+  #  - __cf-hipster-man/color__ (12)
   #  - __cf-hitek-soldier/color__ (10)
   #  - __cf-hockey-player/color__ (10)
   #  - __cf-ice-skater/color__ (10)
@@ -5123,6 +5921,8 @@ mix-lazy-auto:
     - pastel colors
     - rainbow
     - floral patterns
+    - flannel red
+    - pastel green
     - metallic silver
     - camo green
     - steel grey
