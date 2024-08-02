@@ -78,7 +78,8 @@ jobs:
       -
         name: install deps
         run: |
-          yarn install --frozen-lockfile
+          # yarn install --frozen-lockfile
+          yarn install
           yarn run ci:install
       #          yarn add -W typescript@next jest ts-jest ts-node ynpx lerna
       -
