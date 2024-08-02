@@ -137,6 +137,9 @@ lazy-wildcards:
       - __lazy-wildcards/*/*/*/ethnicity-makeup__
       - __lazy-wildcards/*/*/*/ethnicity-eyes__
       - __lazy-wildcards/*/*/*/ethnicity-hair__
+    costume-weapon:
+      - __cf-*/weapon__
+      - __lazy-wildcards/*/*/*/costume-weapon__
   book:
     style-adj:
       text:
@@ -526,7 +529,7 @@ lazy-wildcards:
         - >-
           {extended |}downblouse
       body-type:
-        - curvy body,hourglass body,narrow waist
+        - curvy body,hourglass body,narrow waist,hourglass slim figure
         - wide hips,narrow waist
         - |-
           perfect body,muscular body,Thick thigh,wide pelvis,(big ass:0.5),tall woman
@@ -981,7 +984,7 @@ lazy-wildcards:
       - >-
         {3-6$$__lazy-wildcards/*/*/*/costume__|__lazy-wildcards/*/*/*/costume-type/*__|__lazy-wildcards/*/*/*/costume-elem__}
       - __lazy-wildcards/cosplay-*/*/*/prompts__
-      - __lazy-wildcards/*/*/*/costume-weapen__
+      - __lazy-wildcards/*/*/*/costume-weapon__
       - ((ancient egyptian theme)),golden ornaments,ancient egyptian sailor_shirt,ancient egyptian pleated_skirt,bowtie
       - Collared shirts
       - school uniform,sweater,miniskirt
@@ -2711,9 +2714,35 @@ lazy-wildcards:
         prompts:
           - earrings
           - large earrings
+          - ear chain
+          - ear piercing
       religious:
         prompts:
           - cope,ceremonial_cloak
+      unzipping:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem/unzipping/costume__{0.1::,{1-$$__lazy-wildcards/subject/costume-elem/unzipping/action__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/unzipping/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/unzipping/costume-elem-zipper__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/unzipping/costume-eyes__}|}
+        costume:
+          - >-
+            (unzipping,undressing:1.4),zipper,({unzipped|partially unzipped}:1.2)
+        costume-eyes:
+          - averting eyes
+          - heart-shaped pupils
+        action:
+          - undressing another
+        costume-elem-zipper:
+          - full-length zipper
+          - zipper pull tab
+          - front zipper
+        costume-elem:
+          - cleavage
+          - open bodysuit
+          - no bra
+          - center opening
+          - blush
+          - clothing cutout
+          - underboob
     costume-headwear:
       headwear-religious:
         prompts:
@@ -2955,7 +2984,7 @@ lazy-wildcards:
       punk-insect:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume/punk-insect/main__,{1-2$$__lazy-wildcards/subject/costume/punk-insect/ethnicity__}{,{1-$$__lazy-wildcards/subject/costume/punk-insect/costume-weapen__}|}{,{1-$$__lazy-wildcards/subject/costume/punk-insect/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume/punk-insect/env__}|}{,{1-$$__lazy-wildcards/subject/costume/punk-insect/style__}|}
+            __lazy-wildcards/subject/costume/punk-insect/main__,{1-2$$__lazy-wildcards/subject/costume/punk-insect/ethnicity__}{,{1-$$__lazy-wildcards/subject/costume/punk-insect/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume/punk-insect/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume/punk-insect/env__}|}{,{1-$$__lazy-wildcards/subject/costume/punk-insect/style__}|}
         main:
           - IPNK,Insectpunk,Insect punk,inspired by insects,insectoid,Monster Musume
         style:
@@ -3035,7 +3064,7 @@ lazy-wildcards:
           - >-
             fur {1-$$,fur $$wings|claws|legs|arms|limbs|parts|hair|tail|forearms}
           - bright pupils
-        costume-weapen:
+        costume-weapon:
           - scythe
         env:
           - food in mouth
@@ -3590,14 +3619,14 @@ lazy-wildcards:
       police:
         prompts:
           - >-
-            {{1-$$__lazy-wildcards/subject/costume/police/costume__},|}{{1-$$__lazy-wildcards/subject/costume/police/costume-weapen__},|}{1-$$__lazy-wildcards/subject/costume/police/costume-elem__}
+            {{1-$$__lazy-wildcards/subject/costume/police/costume__},|}{{1-$$__lazy-wildcards/subject/costume/police/costume-weapon__},|}{1-$$__lazy-wildcards/subject/costume/police/costume-elem__}
         costume:
           - police_cap
           - police_uniform
         costume-elem:
           - police_badge
           - utility_belt
-        costume-weapen:
+        costume-weapon:
           - >-
             {1-$$walkie-talkie|holding walkie-talkie}
           - handcuffs
@@ -3720,7 +3749,7 @@ lazy-wildcards:
       graduation_robe:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume/graduation_robe/main__{,(__lazy-wildcards/subject/costume/graduation_robe/costume__)|},(__lazy-wildcards/subject/costume/graduation_robe/costume-headwear__){0.3::,({1-$$__lazy-wildcards/subject/costume/graduation_robe/costume-weapen__})|}{,{1-$$__lazy-wildcards/subject/costume/graduation_robe/costume-elem__}|}{0.2::,{1-$$__lazy-wildcards/subject/costume/graduation_robe/action__}|}{0.3::,{1-$$__lazy-wildcards/subject/costume/graduation_robe/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume/graduation_robe/env-bg__}|}{,{1-$$__lazy-wildcards/subject/costume/graduation_robe/env__}|}{,{1-$$__lazy-wildcards/subject/costume/graduation_robe/style__}|}
+            __lazy-wildcards/subject/costume/graduation_robe/main__{,(__lazy-wildcards/subject/costume/graduation_robe/costume__)|},(__lazy-wildcards/subject/costume/graduation_robe/costume-headwear__){0.3::,({1-$$__lazy-wildcards/subject/costume/graduation_robe/costume-weapon__})|}{,{1-$$__lazy-wildcards/subject/costume/graduation_robe/costume-elem__}|}{0.2::,{1-$$__lazy-wildcards/subject/costume/graduation_robe/action__}|}{0.3::,{1-$$__lazy-wildcards/subject/costume/graduation_robe/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume/graduation_robe/env-bg__}|}{,{1-$$__lazy-wildcards/subject/costume/graduation_robe/env__}|}{,{1-$$__lazy-wildcards/subject/costume/graduation_robe/style__}|}
         main:
           - (graduation)
         costume:
@@ -3766,7 +3795,7 @@ lazy-wildcards:
             fishnet {1-$$,fishnet $$gown|robe|toga|cloak|bachelor gown}
           - >-
             ({1-$$cleavage|cleavage cutout|firm breast cleavage|navel|covered navel|see-through cleavage}:1.2)
-        costume-weapen:
+        costume-weapon:
           - >-
             {1-$$diploma|holding diploma}
           - >-
@@ -4234,7 +4263,7 @@ lazy-wildcards:
       pov-bondage-chair:
         prompts:
           - >-
-            (__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/main__:1.2),({{1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/action-sex__}|no sex}:1.4){,{1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/costume-exposed__}|}{,{1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/costume-weapen__}|}{,{1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/style__}|}{,{1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/env__}|}{0.3::,{1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/env-bg__}|}
+            (__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/main__:1.2),({{1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/action-sex__}|no sex}:1.4){,{1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/costume-exposed__}|}{,{1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/style__}|}{,{1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/env__}|}{0.3::,{1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/env-bg__}|}
         main:
           - >-
             Pov Bondage Chair,legs up,nsfw,bondage
@@ -4260,7 +4289,7 @@ lazy-wildcards:
           - gag
           - shackles
           - handcuffs
-        costume-weapen:
+        costume-weapon:
           - wielding_whip
         style:
           - uncensored
@@ -5230,7 +5259,7 @@ lazy-wildcards:
       guyver:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/guyver/guyver/main__,__lazy-wildcards/cosplay-char/guyver/guyver/main-type/*__,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/costume-elem__}{,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/costume-weapen__}|}{,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/style__}|}{,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/env__}|}
+            __lazy-wildcards/cosplay-char/guyver/guyver/main__,__lazy-wildcards/cosplay-char/guyver/guyver/main-type/*__,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/costume-elem__}{,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/style__}|}{,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/env__}|}
         main:
           - guyver,kyoushoku soukou guyver,bio armor,biosuit,Bio Booster Armor Guyver,GZZVZR
         main-type:
@@ -5264,7 +5293,7 @@ lazy-wildcards:
           - massive armor
           - gory skin melt
           - Zoaforms
-        costume-weapen:
+        costume-weapon:
           - wide sonic swords
           - extra vibration swords
           - High-Frequency Swords
@@ -5288,7 +5317,7 @@ lazy-wildcards:
       aptom:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/guyver/aptom/main__,__lazy-wildcards/cosplay-char/guyver/aptom/costume__,{1-$$__lazy-wildcards/cosplay-char/guyver/aptom/costume-elem__}{,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/costume-weapen__}|}{,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/style__}|}{,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/env__}|}
+            __lazy-wildcards/cosplay-char/guyver/aptom/main__,__lazy-wildcards/cosplay-char/guyver/aptom/costume__,{1-$$__lazy-wildcards/cosplay-char/guyver/aptom/costume-elem__}{,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/style__}|}{,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/env__}|}
         main:
           - aptom,aptomf,Aputomu,Zoanoid
         costume:
@@ -5354,7 +5383,7 @@ lazy-wildcards:
       Annette:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/main__{,{1-$$__lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/ethnicity__}|}{,{1-$$__lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/costume-weapen__}|}{,{1-$$__lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/env__}|}{,{1-$$__lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/style__}|}
+            __lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/main__{,{1-$$__lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/ethnicity__}|}{,{1-$$__lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/env__}|}{,{1-$$__lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/style__}|}
         main:
           - |-
             (Annette:1.3),a beautiful elvish girl
@@ -5380,7 +5409,7 @@ lazy-wildcards:
           - ceremonial_use
         env:
           - religious_symbol
-        costume-weapen:
+        costume-weapon:
           - >-
             {holding a large crosier,|}large crosier
           - Wand
@@ -5392,7 +5421,7 @@ lazy-wildcards:
       harpie-lady:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/main__,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/ethnicity__},{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume-wings__}{,__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume__|}{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume-weapen__}|}{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/env__}|}
+            __lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/main__,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/ethnicity__},{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume-wings__}{,__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume__|}{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/env__}|}
         main:
           - |-
             HL,harpie_lady_1,harpie_lady,harpie_lady_\(normal_monster\),yu-gi-oh!,yu-gi-oh! duel monsters,harpie lady \(normal monster\) \(cosplay\),harpy
@@ -5430,7 +5459,7 @@ lazy-wildcards:
           - aqua feathers,aqua wings
           - green feathers,green wings
           - feathered wings
-        costume-weapen:
+        costume-weapon:
           - holding,holding card
         env:
           - |-
@@ -5445,7 +5474,7 @@ lazy-wildcards:
       ubel:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/main__,{2-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/ethnicity__}{,{1-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/expressions__}|},{5-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/costume__}{,__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/costume-weapen__|}{,{1-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/costume-elem__}|}
+            __lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/main__,{2-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/ethnicity__}{,{1-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/expressions__}|},{5-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/costume__}{,__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/costume-weapon__|}{,{1-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/costume-elem__}|}
         main:
           - ubel_\(sousou_no_frieren\),UbelFrieren,ubel,ubel_\(sousou_no_frieren\)_\(cosplay\)
         ethnicity:
@@ -5484,7 +5513,7 @@ lazy-wildcards:
           - sweatdrop
           - sweaty armpits
           - sweat
-        costume-weapen:
+        costume-weapon:
           - holding
           - holding polearm
           - holding weapon
@@ -5520,7 +5549,7 @@ lazy-wildcards:
           - shirt overhang
           - chest tattoo
           - horn ribbon
-        costume-weapen:
+        costume-weapon:
           - drinking glass,wine glass
           - holding cup
           - champagne bottle
@@ -5561,7 +5590,7 @@ lazy-wildcards:
       Demons-Danu:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/main__,{3-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/ethnicity__},{99-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/ethnicity-hair__},{99-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/costume__}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/costume-tattoo__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/action__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/costume-weapen__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/env__}|}
+            __lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/main__,{3-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/ethnicity__},{99-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/ethnicity-hair__},{99-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/costume__}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/costume-tattoo__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/action__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/env__}|}
         main:
           - DanuSMT,danu_\(megami_tensei\),shin megami tensei
         ethnicity:
@@ -5592,7 +5621,7 @@ lazy-wildcards:
         costume-tattoo:
           - mandala_tattoo
           - scripture_tattoo
-        costume-weapen:
+        costume-weapon:
           - holding staff
         env:
           - clover,shamrock
@@ -5629,7 +5658,7 @@ lazy-wildcards:
       Mantis:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/main__,{3-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/ethnicity__}{0.3::,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-wings__}|}{,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-weapen__}|}
+            __lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/main__,{3-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/ethnicity__}{0.3::,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-wings__}|}{,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-weapon__}|}
         main:
           - Mantis,Mantis \(path_to_nowhere\),path_to_nowhere
         ethnicity:
@@ -5653,11 +5682,11 @@ lazy-wildcards:
           - insect wings
           - green wings
           - energy wings
-        costume-weapen:
+        costume-weapon:
           - scythe
 mix-lazy-auto:
   # @example __mix-lazy-auto/color-anything__
-  # "color-anything" (total: 982 => 221, save 761 ) is merge from
+  # "color-anything" (total: 994 => 223, save 771 ) is merge from
   #  - __lazy-wildcards/utils/color-base__ (11)
   #  - __mix-lazy-auto/color-anything__ (3)
   #  - __cf-daoist-priest/color__ (10)
@@ -5711,6 +5740,7 @@ mix-lazy-auto:
   #  - __cf-harlot/color__ (11)
   #  - __cf-hawaiian/color__ (10)
   #  - __cf-hippie/color__ (12)
+  #  - __cf-hipster-man/color__ (12)
   #  - __cf-hitek-soldier/color__ (10)
   #  - __cf-hockey-player/color__ (10)
   #  - __cf-ice-skater/color__ (10)
@@ -5891,6 +5921,8 @@ mix-lazy-auto:
     - pastel colors
     - rainbow
     - floral patterns
+    - flannel red
+    - pastel green
     - metallic silver
     - camo green
     - steel grey
