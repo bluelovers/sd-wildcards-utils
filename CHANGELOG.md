@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.2](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.3.1...sd-wildcards-utils@1.3.2) (2024-08-02)
+
+
+
+### 🛠　Build System
+
+* update build ([4ee63a8](https://github.com/bluelovers/sd-wildcards-utils/commit/4ee63a897cd2207447538f26668bace3da298cb1))
+
+
+### ♻️　Chores
+
+* `costume-weapen` ([cbf7ed1](https://github.com/bluelovers/sd-wildcards-utils/commit/cbf7ed1bd59c4a0427cc2774fd8c2cf5ec6919e9))
+
+
+### 🔖　Miscellaneous
+
+* . ([73ac1b4](https://github.com/bluelovers/sd-wildcards-utils/commit/73ac1b40c784da4e8bcf18af4904c85d189b15c1))
+* . ([388916f](https://github.com/bluelovers/sd-wildcards-utils/commit/388916fb3ceeb869bdf6a13146f76bcecb938017))
+
+
+
 ## [1.3.1](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.2.1...sd-wildcards-utils@1.3.1) (2024-07-28)
 
 
