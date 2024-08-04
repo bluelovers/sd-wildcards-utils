@@ -27,10 +27,10 @@ lazy-wildcards:
       station:
         prompts:
           - >-
-            __lazy-wildcards/subject/architectural/station/main/*__,
+            __lazy-wildcards/subject/architectural/station/main-types/*__,
             {1-$$__lazy-wildcards/subject/architectural/station/env__},
             {1-$$__lazy-wildcards/subject/architectural/station/env-bg__}
-        main:
+        main-types:
           # 地下鐵 / 捷運
           metro:
             - Subway, Metro

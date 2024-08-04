@@ -48,8 +48,8 @@ lazy-wildcards:
         __lazy-wildcards/char/lips-color__
     cover:
         - >-
-          {0.2::__lazy-wildcards/book/style-type/*/style-type-adj__,|}
-          (__lazy-wildcards/book/style-type/*/style__:1.35),
+          {0.2::__lazy-wildcards/book/style-types/*/style-type-adj__,|}
+          (__lazy-wildcards/book/style-types/*/style__:1.35),
           __lazy-wildcards/book/style-adj/text__
           {0.3::,{1-6$$__lazy-wildcards/book/style-adj/text__}|}
     dataset:
@@ -119,7 +119,7 @@ lazy-wildcards:
         - (The text on the cover should be bold and attention-grabbing, with the title of the magazine and a catchy headline. The overall style should be modern and trendy, with a focus on fashion and lifestyle), wall paper,fashion,depth of field, contrapposto,female focus,model, photorealistic,fine fabric emphasis
       style:
         - scifi
-    style-type:
+    style-types:
       magazine-cover:
         style:
           - (advertising style, Magazine cover-style illustration of a fashionable woman), (Fashion Magazine Cover)
@@ -131,15 +131,15 @@ lazy-wildcards:
           - (the pulps, pulp magazine, pulpmagazine:1.2), retro artstyle
         style:
           - >-
-            __lazy-wildcards/book/style-type/magazine-pulp-cover/style-type-adj__,
-            __lazy-wildcards/book/style-type/magazine-cover/style__
+            __lazy-wildcards/book/style-types/magazine-pulp-cover/style-type-adj__,
+            __lazy-wildcards/book/style-types/magazine-cover/style__
       magazine-playboy-cover:
         style-type-adj:
           - PlayboyCoverQuiron style, playboy cover
         style:
           - >-
-            __lazy-wildcards/book/style-type/magazine-playboy-cover/style-type-adj__,
-            __lazy-wildcards/book/style-type/magazine-cover/style__
+            __lazy-wildcards/book/style-types/magazine-playboy-cover/style-type-adj__,
+            __lazy-wildcards/book/style-types/magazine-cover/style__
       comic-cover:
         style:
           - (comic book, comic cover), action, dynamic, speech bubbles, bang

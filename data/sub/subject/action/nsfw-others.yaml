@@ -6,10 +6,10 @@ lazy-wildcards:
         prompts:
           - >-
             (toilet use:1.5), indoors, restroom, Toilet Scene,
-            __lazy-wildcards/subject/action-nsfw-others/toilet-use/main/*__,
+            __lazy-wildcards/subject/action-nsfw-others/toilet-use/main-types/*__,
             {1-$$__lazy-wildcards/subject/action-nsfw-others/toilet-use/style/main__},
             {1-$$__lazy-wildcards/subject/action-nsfw-others/toilet-use/env__}
-        main:
+        main-types:
           standing:
             - standing
           sitting:

@@ -36,18 +36,18 @@ lazy-wildcards:
           - >-
             {1-$$foggy|fog|mist|steam|smoke}
           - >-
-            {1-$$floating cloud|cloudy|Sea of clouds}
-          - __lazy-wildcards/subject/moment/weather/main/*__
+            {1-$$floating cloud|cloudy|Sea of clouds|dark clouds}
+          - __lazy-wildcards/subject/moment/weather/main-types/*__
           - >-
             {1-$$lightning|lightning bolt|lightning glare}
-        main:
+        main-types:
           winter:
             - >-
               (snowylandscape, {1-$$winter|snow|very cold|snow fall|city snowy street view|snowflake|pure winter}:1.2)
       time:
         prompts:
           - >-
-            {1-$$sunlight|sunset|cool sun}
+            {1-$$sunlight|sunset|cool sun|scorching sun}
           - dawn
           - twilight
           - >-

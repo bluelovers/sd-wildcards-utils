@@ -21,7 +21,7 @@ lazy-wildcards:
         costume:
           - >-
             (unzipping, undressing:1.4), zipper,
-            ({unzipped|partially unzipped}:1.2)
+            ({unzipped|partially unzipped}:1.2), half naked
         costume-eyes:
           - averting eyes
           - heart-shaped pupils
@@ -31,27 +31,42 @@ lazy-wildcards:
           - full-length zipper
           - zipper pull tab
           - front zipper
+          - breast zipper
         costume-elem:
           - cleavage
           - open bodysuit
           - no bra
-          - center opening
+          - center opening, chest open
           - blush
           - clothing cutout
           - underboob
+          - sideboob
     costume-headwear:
+      eyewear:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-headwear/eyewear/costume-headwear__
+            {,{1-$$__lazy-wildcards/subject/costume-headwear/eyewear/action__}|}
+        costume-headwear:
+          - semi-rimless eyewear
+          - red-framed eyewear
+          - under-rim eyewear
+          - over-rim eyewear
+          - rectangular eyewear
+        action:
+          - adjusting eyewear
       headwear-religious:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume-headwear/headwear-religious/costume-hat__
-            {,{1-$$__lazy-wildcards/subject/costume-headwear/headwear-religious/costume-hat__}|}
+            __lazy-wildcards/subject/costume-headwear/headwear-religious/costume-headwear__
+            {,{1-$$__lazy-wildcards/subject/costume-headwear/headwear-religious/style__}|}
             {,{1-$$__lazy-wildcards/subject/costume-headwear/headwear-religious/costume-elem__}|}
         style:
           - religious_symbolism, religious_attire
           - ornate_designs
           - ceremonial_purpose
           - distinctive_shape
-        costume-hat:
+        costume-headwear:
           - miter, tall_pointed_hat
           - zucchetto, small_skullcap
           - biretta, square_cap, pom_pom_top

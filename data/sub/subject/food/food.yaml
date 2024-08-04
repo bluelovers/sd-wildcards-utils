@@ -5,7 +5,7 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/subject/food/shaved-ice-animal-shaped/main__,
-            {1-$$__lazy-wildcards/subject/food/shaved-ice-animal-shaped/main-type/*__},
+            {1-$$__lazy-wildcards/subject/food/shaved-ice-animal-shaped/main-types/*__},
             {1-$$__lazy-wildcards/subject/food/shaved-ice-animal-shaped/main-elem__},
             {1-$$__lazy-wildcards/subject/food/shaved-ice-animal-shaped/style__},
             {1-$$__lazy-wildcards/subject/food/shaved-ice-animal-shaped/env__}
@@ -17,7 +17,7 @@ lazy-wildcards:
             dessert, in food,
             food art, ANKG,
             {1-$$cup|bowl|dessert_bow}
-        main-type:
+        main-types:
           bear:
             - bear, polar bear
           pokemon:

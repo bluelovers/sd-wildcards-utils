@@ -1,26 +1,26 @@
 lazy-wildcards:
   subject:
-    art-type:
+    art-types:
       sketch-pen-landscape:
         prompts:
           - >-
-            __lazy-wildcards/subject/art-type/sketch-pen-landscape/main__,
-            __lazy-wildcards/subject/art-type/sketch-pen-base/prompts__
+            __lazy-wildcards/subject/art-types/sketch-pen-landscape/main__,
+            __lazy-wildcards/subject/art-types/sketch-pen-base/prompts__
         main:
           - (XCYP) Landscape Sketch, (Sketch Landscape:1.4)
       sketch-pen-portrait:
         prompts:
           - >-
-            __lazy-wildcards/subject/art-type/sketch-pen-portrait/main__,
-            __lazy-wildcards/subject/art-type/sketch-pen-base/prompts__
+            __lazy-wildcards/subject/art-types/sketch-pen-portrait/main__,
+            __lazy-wildcards/subject/art-types/sketch-pen-base/prompts__
         main:
           - (Sketch portrait, portrait)
       sketch-pen-base:
         prompts:
           - >-
-            __lazy-wildcards/subject/art-type/sketch-pen-base/main__,
-            {__lazy-wildcards/subject/art-type/sketch-pen-base/style-color__,|}
-            ({3-$$__lazy-wildcards/subject/art-type/sketch-pen-base/style__})
+            __lazy-wildcards/subject/art-types/sketch-pen-base/main__,
+            {__lazy-wildcards/subject/art-types/sketch-pen-base/style-color__,|}
+            ({3-$$__lazy-wildcards/subject/art-types/sketch-pen-base/style__})
         main:
           - (XCYP) Sketch, (Sketch:1.4), (Pen Drawing:2)
         style-color:

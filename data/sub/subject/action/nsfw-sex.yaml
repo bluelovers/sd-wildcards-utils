@@ -4,11 +4,11 @@ lazy-wildcards:
       sitting-sex:
         prompts:
           - >-
-            __lazy-wildcards/subject/action-nsfw-sex/sitting-sex/style-type__,
+            __lazy-wildcards/subject/action-nsfw-sex/sitting-sex/style__,
             __lazy-wildcards/subject/action-nsfw-sex/sitting-sex/main__,
             {{1-$$__lazy-wildcards/subject/action-nsfw-sex/sitting-sex/main__},|}
             __lazy-wildcards/subject/action-nsfw-sex/sitting-sex/main-shared__
-        style-type:
+        style-types:
           - boy on top, hugging sex, kiss, ass
           - >-
             reverse sitting, looking at viewer, thighhighs, thighs, sex from behind{, HDA_reverse_suspended_congress|}
@@ -59,3 +59,51 @@ lazy-wildcards:
         env:
           - tissue, tissue box, ((used tissue))
           - condom, condom box, ((used condom, used condoms)), condom packaging
+      # https://civitai.com/models/308865/hikari-fellatio-invitationafter-fellatio-concept-lora?modelVersionId=346618
+      # https://danbooru.donmai.us/posts?page=2&tags=cum_on_hands
+      fellatio-invitation-after:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/action-nsfw-sex/fellatio-invitation-after/main__
+            {,({1-2$$__lazy-wildcards/subject/action-nsfw-sex/fellatio-invitation-after/action-hand__})|}
+            {,({1-$$__lazy-wildcards/subject/action-nsfw-sex/fellatio-invitation-after/costume-cum__}:1.3)|}
+            {,{1-2$$__lazy-wildcards/subject/action-nsfw-sex/fellatio-invitation-after/costume-eyes__}|}
+            {,{1-$$__lazy-wildcards/subject/action-nsfw-sex/fellatio-invitation-after/costume__}|}
+            {,{1-$$__lazy-wildcards/subject/action-nsfw-sex/fellatio-invitation-after/style__}|}
+        main:
+          - (open mouth, tongue out, pov), looking at viewer, looking up
+        action-hand:
+          - fellatio gesture
+          - after fellatio, palms, open hand, hands up, own hands together
+          - cupping_hand
+          - grabbing own breast
+          - ok sign
+          - peace sign
+        costume-cum:
+          - >-
+            cum on {1-$$, cum on $$hands|hair|breasts|clothes|gloves|body|tongue|legs|stomach}
+          - >-
+            cum in {1-$$, cum in $$mouth}
+          - cum string
+          - cumdrip
+          - cum
+          - saliva
+          - projectile cum
+        costume-eyes:
+          - >-
+            {one |}eye closed
+          - heart-shaped pupils
+          - symbol-shaped pupils
+          - furrowed brow
+        costume:
+          - collarbone
+          - upper teeth only
+          - facial
+          - parted lips
+          - upper body
+          - wavy mouth
+          - sweat
+          - leaning forward
+          - closed mouth
+        style:
+          - sexually suggestive

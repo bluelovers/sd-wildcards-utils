@@ -4,10 +4,10 @@ lazy-wildcards:
       post-apocalyptic:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-bg/post-apocalyptic/main/*__
+            __lazy-wildcards/subject/env-bg/post-apocalyptic/main-types/*__
           - >-
-            {1-3$$__lazy-wildcards/subject/env-bg/post-apocalyptic/main/*__}
-        main:
+            {1-3$$__lazy-wildcards/subject/env-bg/post-apocalyptic/main-types/*__}
+        main-types:
           # https://civitai.com/models/99047?modelVersionId=106283
           modelVersionId-106283:
             - ruined cityscape, crumbling buildings, overgrown vegetation, desolate streets
@@ -113,10 +113,10 @@ lazy-wildcards:
       medieval:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-bg/medieval/main/*__
+            __lazy-wildcards/subject/env-bg/medieval/main-types/*__
           - >-
-            {1-3$$__lazy-wildcards/subject/env-bg/medieval/main/*__}
-        main:
+            {1-3$$__lazy-wildcards/subject/env-bg/medieval/main-types/*__}
+        main-types:
           # https://civitai.com/models/99047?modelVersionId=105979
           modelVersionId-105979:
             - castle courtyard, stone walls, bustling activity, knights in armor, courtyard fountain
@@ -222,10 +222,10 @@ lazy-wildcards:
       others:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-bg/others/main/*__
+            __lazy-wildcards/subject/env-bg/others/main-types/*__
           - >-
-            {1-3$$__lazy-wildcards/subject/env-bg/others/main/*__}
-        main:
+            {1-3$$__lazy-wildcards/subject/env-bg/others/main-types/*__}
+        main-types:
           # https://civitai.com/models/99047?modelVersionId=105967
           modelVersionId-105967:
             - beach, sandy shore, crashing waves, sunny
@@ -332,10 +332,10 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/subject/env-bg/other-landscapes/style__,
-            __lazy-wildcards/subject/env-bg/other-landscapes/main/*__
+            __lazy-wildcards/subject/env-bg/other-landscapes/main-types/*__
         style:
           - epic landscape, photo background
-        main:
+        main-types:
           # https://civitai.com/models/501302/greatlandscapesv10?modelVersionId=557210
           landscapes-modelVersionId-557210:
             - cloud, day, sunset, ice, landscape, nature, no humans, outdoors, raw photo, reflection, mountain scenery, dry grass, dead trees
@@ -348,10 +348,10 @@ lazy-wildcards:
       fantasy:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-bg/fantasy/main/*__
+            __lazy-wildcards/subject/env-bg/fantasy/main-types/*__
           - >-
-            {1-3$$__lazy-wildcards/subject/env-bg/fantasy/main/*__}
-        main:
+            {1-3$$__lazy-wildcards/subject/env-bg/fantasy/main-types/*__}
+        main-types:
           # https://civitai.com/models/99047?modelVersionId=105975
           modelVersionId-105975:
             - starfall sanctuary, celestial realm, shimmering constellations, ethereal beauty

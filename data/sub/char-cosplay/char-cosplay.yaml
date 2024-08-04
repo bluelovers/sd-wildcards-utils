@@ -8,7 +8,7 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/cosplay-char/fate/raikou/main__,
             __lazy-wildcards/cosplay-char/fate/raikou/ethnicity__,
-            __lazy-wildcards/cosplay-char/fate/raikou/costume/*__,
+            __lazy-wildcards/cosplay-char/fate/raikou/costume-types/*__,
             {1-$$__lazy-wildcards/cosplay-char/fate/raikou/style__}
         main:
           - >-
@@ -43,7 +43,7 @@ lazy-wildcards:
           - tie
           - armlet
           - purple panties
-        costume:
+        costume-types:
           anything:
             - Apron_Raikou_ownwaifu, apron, long sleeves, turtleneck sweater, floral print, long skirt, purple shirt
             - Bra_Raikou_ownwaifu, bare shoulders, cleavage, sports bra,  yoga pants, bracelet, brown belt, casual, hair ornament, hair scrunchie, high-waist pants, navel, sportswear, tight pants,
@@ -279,7 +279,7 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/cosplay-char/Nier/2b/main__,
             __lazy-wildcards/cosplay-char/Nier/2b/ethnicity__,
-            {__lazy-wildcards/cosplay-char/Nier/2b/costume-type/type-*__,|}
+            {__lazy-wildcards/cosplay-char/Nier/2b/costume-types/type-*__,|}
             __lazy-wildcards/cosplay-char/Nier/2b/costume-eyes/*__,
             {1-$$__lazy-wildcards/cosplay-char/Nier/2b/env__}
         main:
@@ -293,7 +293,7 @@ lazy-wildcards:
             - 2pdark, dark skin, black hair, 2p_\(nier:automata\), 2p_\(nier:automata\)_\(cosplay\)
           2p-b:
             - 2ppale, pale skin, black hair, 2p_\(nier:automata\), 2p_\(nier:automata\)_\(cosplay\)
-        costume-type:
+        costume-types:
           type-2p-dress:
             - white dress, cleavage cutout, black gloves, white footwear, 2p dress, 2p footwear, 2p gloves
           type-2p-leotard:
@@ -346,7 +346,7 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/cosplay-char/Nier/operator/main__,
             __lazy-wildcards/cosplay-char/Nier/operator/costume__,
-            {__lazy-wildcards/cosplay-char/Nier/operator/ethnicity-type/type-*__,|}
+            {__lazy-wildcards/cosplay-char/Nier/operator/ethnicity-types/type-*__,|}
             {1-$$__lazy-wildcards/cosplay-char/Nier/operator/costume-elem__},
             {1-$$__lazy-wildcards/cosplay-char/Nier/operator/style__},
             {1-$$__lazy-wildcards/cosplay-char/Nier/operator/env__}
@@ -354,7 +354,7 @@ lazy-wildcards:
           - nier \(series\), nier:automata
         costume:
           - mouth veil, bodysuit, bodystocking, black gloves, thigh boots
-        ethnicity-type:
+        ethnicity-types:
           type-op6o:
             - op6o, twin braids, bangs, hairband, operator 6o, operator 6o \(cosplay\)
           type-op21o:
@@ -404,11 +404,11 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/main__,
             __lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/ethnicity__,
-            {{1-$$__lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/costume-type/type-*__},|}
+            {{1-$$__lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/costume-types/type-*__},|}
             {1-$$__lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/env__}
         main:
           - suzuka_gozen_(onmyoji), onmyoji, onmyoji:_the_card_game, onmyouji
-        costume-type:
+        costume-types:
           type-original-outfit:
             - original outfit
           type-dress:
@@ -447,7 +447,7 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/cosplay-char/onmyoji/enenra/main__,
             {1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/ethnicity__},
-            {{1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/costume-type/type-*__},|}
+            {{1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/costume-types/type-*__},|}
             {1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/costume-elem__},
             {{1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/env-bg__},|}
             {1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/env__}
@@ -458,7 +458,7 @@ lazy-wildcards:
           - blue eyes
           - pointy ears
           - blunt bangs
-        costume-type:
+        costume-types:
           type-kimono:
             - kimono
           type-yukata:
@@ -614,7 +614,7 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/queens_blade/menace/main__,
-            {{1-$$__lazy-wildcards/cosplay-char/queens_blade/menace/costume-type/*__},|}
+            {{1-$$__lazy-wildcards/cosplay-char/queens_blade/menace/costume-types/*__},|}
             {1-$$__lazy-wildcards/cosplay-char/queens_blade/menace/ethnicity__},
             {{1-$$__lazy-wildcards/cosplay-char/queens_blade/menace/env__},|}
             {1-$$__lazy-wildcards/cosplay-char/queens_blade/menace/costume-elem__}
@@ -630,7 +630,7 @@ lazy-wildcards:
           - wide hips
           - curvy
           - groin
-        costume-type:
+        costume-types:
           EgyptianClothes_Menace_ownwaifu:
             - EgyptianClothes_Menace_ownwaifu
           MicroBikini_Menace_ownwaifu:
@@ -691,7 +691,7 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/cosplay-char/rwby/ruby_rose/main__,
             {{1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/ethnicity__},|}
-            {{1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/costume-type/type-*__},|}
+            {{1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/costume-types/type-*__},|}
             {{1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/costume-weapon__},|}
             {1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/style__},
             {1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/costume-elem__},
@@ -707,7 +707,7 @@ lazy-wildcards:
             {1-$$colored sclera|black sclera}
           - >-
             {1-$$red hair|black hair|multicolored hair}
-        costume-type:
+        costume-types:
           type-corset:
             - corset, dress, hood
           # https://www.deviantart.com/dishwasher1910/art/Grimm-773345213
@@ -945,14 +945,14 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/guyver/guyver/main__,
-            __lazy-wildcards/cosplay-char/guyver/guyver/main-type/*__,
+            __lazy-wildcards/cosplay-char/guyver/guyver/main-types/*__,
             {1-$$__lazy-wildcards/cosplay-char/guyver/guyver/costume-elem__}
             {,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/costume-weapon__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/style__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/env__}|}
         main:
           - guyver, kyoushoku soukou guyver, bio armor, biosuit, Bio Booster Armor Guyver, GZZVZR
-        main-type:
+        main-types:
           g00:
             - g00, guyver_0, dark biosuit
           g01:
@@ -1241,7 +1241,7 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/main__
             ,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/ethnicity__}
-            {,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/costume-type/*__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/costume-types/*__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/costume-elem__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/action__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/env__}|}
@@ -1253,7 +1253,7 @@ lazy-wildcards:
           - black hair
           - colored inner hair
           - purple hair
-        costume-type:
+        costume-types:
           Nightmare-Bunny:
             - gloves, long sleeves, navel, cleavage, bare shoulders, fishnet pantyhose, bowtie, rabbit ears, red bow, black leotard, purple coat, wrist cuffs, strapless, detached collar, highleg
         costume-elem:
@@ -1425,3 +1425,161 @@ lazy-wildcards:
           - energy wings
         costume-weapon:
           - scythe
+    Magi:
+      # https://civitai.com/models/620498/myers-magi?modelVersionId=693655
+      # https://danbooru.donmai.us/posts/1625247
+      # https://magi.fandom.com/wiki/Myers
+      Myers:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/Magi/Myers/main__
+            ,({1-$$__lazy-wildcards/cosplay-char/Magi/Myers/ethnicity__})
+            {,{1-$$__lazy-wildcards/cosplay-char/Magi/Myers/costume-headwear__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Magi/Myers/costume-weapon__}|}
+            ,{1-$$__lazy-wildcards/cosplay-char/Magi/Myers/costume__}
+            {,{1-$$__lazy-wildcards/cosplay-char/Magi/Myers/env__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Magi/Myers/env-bg__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Magi/Myers/style__}|}
+        main:
+          - MyersMagi, myers, dominatrix, magi the labyrinth of magic
+        costume:
+          - navel
+          - cleavage, breasts
+          - metal shoulder armor, pauldrons
+          - cape
+          - silver metal bikini armor
+          - hair between breasts
+          - tall
+          - dark_makeup,
+          - bold_lip_color, dark_lipstick
+          - revealing_armor
+          - metal_thong, Metal_underwear
+          - strap-on
+          - >-
+            {1-$$metal_boots|Armored_boots|thigh_high_boots|leg_armor}
+          - >-
+            {1-$$thighhighs|thighs|Bare_thighs|exposed_thighs}
+        style:
+          - leg_fetish
+          - ornamental
+          - floral_design
+          - spider_design
+          - bdsm
+          - zero_gravity
+        costume-headwear:
+          - glasses, (angular red-framed eyewear, pointed_rims:1.3)
+        costume-weapon:
+          - Thunder_Whip, Lightning_whip
+          - red_whip
+          - magical_weapon
+          - whipping
+          - holding riding crop
+        ethnicity:
+          - yellow eyes, purple hair, long hair
+        env:
+          - djinn equip
+          - >-
+            {1-$$lightning_magic|electric_magic}
+        env-bg:
+          - Magnostadt_Academy, magic_school, magical_academy, sorcery_institute
+          - fictional_city
+          - magical_city
+      # https://magi.fandom.com/wiki/Paimon
+      # https://danbooru.donmai.us/posts?tags=paimon_%28magi%29&z=2
+      # https://civitai.com/models/147095/paimon-magi-the-labyrinth-of-magic?modelVersionId=163988
+      # https://civitai.com/models/126562/paimon-anime-character-or-paimon-magi-the-labyrinth-of-magic-or-ownwaifu
+      djinn-paimon:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/Magi/djinn-paimon/main__
+            ,({5-$$__lazy-wildcards/cosplay-char/Magi/djinn-paimon/ethnicity__})
+            {,{1-$$__lazy-wildcards/cosplay-char/Magi/djinn-paimon/costume__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Magi/djinn-paimon/costume-weapon__}|}
+            {,{5-$$__lazy-wildcards/cosplay-char/Magi/djinn-paimon/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Magi/djinn-paimon/env__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Magi/djinn-paimon/env-bg__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Magi/djinn-paimon/expressions__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Magi/djinn-paimon/style__}|}
+        main:
+          - >-
+            paimon_magi, Paimon_aiwaifu, paimon_\(magi\), paimon_\(magi\)_\(cosplay\), magi the labyrinth of magic, djinn
+        ethnicity:
+          - long hair, blue hair, very long hair, hair between eyes
+          - sharp fingernails
+          - pointy ears, ear piercing
+          - curvy, toned
+          - breasts
+          - >-
+            ({1-$$third eye|Forehead_eye|mystical_eye|additional_eye}:1.2)
+          - eyes visible through hair
+          - bangs
+          - (djinn, shiny blue skin:1.3)
+        style:
+          - size difference
+          - maniacal_love
+          - chaos
+          - Seductive, flirtatious
+          - riches_and_power
+          - magical_power
+        expressions:
+          - embarrassed
+        costume:
+          - (piercing, navel piercing, chain, nipple piercing, nipple rings, linked piercing, lip piercing, belly chain, multiple_piercings, body_jewelry:1.2)
+          - bare shoulders
+          - topless, bare_breasts
+          - midriff, bare_belly
+        costume-elem:
+          - jewelry
+          - armlet
+          - earrings
+          - facial mark
+          - necklace
+          - hair_tubes
+          - gem
+        costume-weapon:
+          - metal_vessel, djinn_container, Djinn_vessel
+          - Flabellum, ceremonial_fan
+          - magical_weapon
+        env:
+          - Wind_Djinn, elemental_spirit
+          - magical_entity
+          - Treasure, wealth, rewards
+          - pillar_of_light, luminous_pathway, glowing_pillar
+        env-bg:
+          - paradise waterfall
+          - the labyrinth of magic, magical_dungeon
+          - entry_gate, Dungeon_entrance, golden_gate, entry_point
+          - >-
+            {1-$$tornado_attack|whirlwind|destructive_storm}
+    Mahou-Shoujo-ni-Akogarete:
+      # https://civitai.com/models/234649/magia-baiser-mahou-shoujo-ni-akogarete
+      # https://civitai.com/models/350351/cosplayhiiragi-utena-magia-baiser-ver-or-mahou-shoujo-ni-akogarete
+      # https://civitai.com/models/242076/hiiragi-utena-or-mahou-shoujo-ni-akogarete-lora?modelVersionId=321532
+      Magia-Baiser:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/Mahou-Shoujo-ni-Akogarete/Magia-Baiser/main__
+            ,({1-$$__lazy-wildcards/cosplay-char/Mahou-Shoujo-ni-Akogarete/Magia-Baiser/ethnicity__})
+            {,{1-$$__lazy-wildcards/cosplay-char/Mahou-Shoujo-ni-Akogarete/Magia-Baiser/costume__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Mahou-Shoujo-ni-Akogarete/Magia-Baiser/costume-wings__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Mahou-Shoujo-ni-Akogarete/Magia-Baiser/costume-elem__}|}
+        main:
+          - >-
+            magiabaiser, magia_baiser, magiav1, utena_wz, mahou shoujo ni akogarete
+        ethnicity:
+          - short hair, black hair, ahoge, bangs, hair between eyes, yellow eyes, purple hair
+        costume:
+          - corset, navel, midriff
+          - high heels
+          - purple elbow gloves
+          - demon horns, yellow horns, forward facing horns
+          - long pants, lowleg pants, purple pants
+          - puffy sleeves, puffy shrug
+          - star pasties, purple pasties
+          - school uniform
+        costume-wings:
+          - wings, mini low wings
+        costume-elem:
+          - symbol-shaped pupils
+          - star
+          - see-through

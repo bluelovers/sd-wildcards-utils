@@ -18,14 +18,14 @@ lazy-wildcards:
       flower:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/env-elem/flower/main-type/*__}
+            {1-$$__lazy-wildcards/subject/env-elem/flower/main-types/*__}
             {,{1-$$__lazy-wildcards/subject/env-elem/flower/env__}|}
         env:
           - flower
           - falling petals
           - petals on liquid
           - petals
-        main-type:
+        main-types:
           common:
             - wisteria
             - cherry blossom, sakura
@@ -113,13 +113,13 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/subject/env-elem/chinese-medicine/main__,
-            {3-$$__lazy-wildcards/subject/env-elem/chinese-medicine/main-type/*__},
+            {3-$$__lazy-wildcards/subject/env-elem/chinese-medicine/main-types/*__},
             {2-$$__lazy-wildcards/subject/env-elem/chinese-medicine/style__},
             {{1-$$__lazy-wildcards/subject/env-elem/chinese-medicine/env-bg__},|}
             {3-$$__lazy-wildcards/subject/env-elem/chinese-medicine/env__}
         main:
           - Traditional Chinese Medicine
-        main-type:
+        main-types:
           # 經絡圖，以人體地圖、能量通道、傳統中醫為特徵。
           meridian_chart:
             - meridian_chart, body_map, energy_paths

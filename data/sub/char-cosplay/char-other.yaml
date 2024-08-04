@@ -1,0 +1,113 @@
+lazy-wildcards:
+  cosplay-others:
+    Mobile-Police-Patlabor:
+      # https://danbooru.donmai.us/posts?tags=av-98_ingram
+      # https://civitai.com/models/619840/av-98-ingram-mobile-police-patlabor?modelVersionId=692893
+      AV-98-INGRAM:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-others/Mobile-Police-Patlabor/AV-98-INGRAM/main__
+            {,{1-2$$__lazy-wildcards/cosplay-others/Mobile-Police-Patlabor/AV-98-INGRAM/action__}|}
+            {,{1-3$$__lazy-wildcards/cosplay-others/Mobile-Police-Patlabor/AV-98-INGRAM/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/cosplay-others/Mobile-Police-Patlabor/AV-98-INGRAM/env-bg__}|}
+            {,{1-$$__lazy-wildcards/cosplay-others/Mobile-Police-Patlabor/AV-98-INGRAM/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-others/Mobile-Police-Patlabor/AV-98-INGRAM/env__}|}
+            {,{1-$$__lazy-wildcards/cosplay-others/Mobile-Police-Patlabor/AV-98-INGRAM/style__}|}
+        main:
+          - >-
+            (AV-98, av-98 ingram, alphonse \(av-98 ingram\)),
+            kidou_keisatsu_patlabor, Mobile Police PATLABOR,
+            mecha focus, mecha_robot
+        costume-elem:
+          - >-
+            {1-$$assault visor|green visor|blue visor|red visor}
+          - >-
+            {1-$$police|police badge}
+          - radio antenna
+          - rust
+          - buchi holes
+          - piston
+          - exposed internal machinery
+          - >-
+            {1-$$vest|high-visibility vest|orange vest|yellow vest}
+          - sketch
+          - boots
+          - coat
+          - head-mounted display
+          - helmet
+          - jacket
+          - tactical clothes
+          - headgear
+          - brooch
+          - tail
+          - hachimaki
+          - mobile suit
+          - >-
+            {1-$$armor|shoulder armor}
+          - >-
+            {1-$$damaged|missing limb|broken glass}
+          - >-
+            {1-$$cropped torso|crossed arms}
+          - >-
+            {1-$$belt|belt pouch|pouch}
+        style:
+          - science fiction
+          - symmetry
+          - retro artstyle, 1980s \(style\)
+          - serious
+          - size difference
+          - speed lines
+          - united nations
+          - no humans
+          - crossover
+        action:
+          - outstretched arm
+          - open hand
+          - straight-on
+          - projected inset
+          - turning head
+        costume-weapon:
+          - holding gun
+          - handgun
+          - holding weapon
+          - gun
+          - aiming, finger on trigger
+          - revolver
+          - holding cable
+          - holding person
+          - >-
+            {1-$$shield|riot shield}
+          - >-
+            {1-$$shotgun|shotgun shell|shell casing}
+          - >-
+            {1-$$sniper rifle|spas-12 rifle|anti-materiel rifle|rifle}
+          - weapon
+          - clipboard
+          - >-
+            {1-$$baton \(weapon\)|expandable baton|tonfa|holding baton}
+          - dual wielding
+          - >-
+            {1-$$casing ejection|pump action}
+        env:
+          - >-
+            {1-$$cable|wire}
+          - machinery
+          - monitor
+          - ramp
+          - >-
+            {1-$$sign|redesign|warning sign}
+          - window
+          - rain
+          - triangle
+          - license plate
+          - >-
+            {1-$$car|police car}
+          - >-
+            {1-$$cloud|dark clouds}
+        env-bg:
+          - ({1-$$hangar|maintenance bay}:1.3)
+          - cityscape
+          - building
+          - catwalk \(walkway\)
+          - >-
+            ({1-$$cockpit|control stick|pilot chair|open hatch}:1.3)

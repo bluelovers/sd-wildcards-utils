@@ -4,9 +4,9 @@ lazy-wildcards:
       japanese-clothes:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume/japanese-clothes/costume-type/*__
+            __lazy-wildcards/subject/costume/japanese-clothes/costume-types/*__
             {,__lazy-wildcards/subject/costume/japanese-clothes/style__|}
-        costume-type:
+        costume-types:
           type-oiran:
             - (oiran, hair ornament, japanese clothes, kimono, geta)
         style:
@@ -227,18 +227,18 @@ lazy-wildcards:
         main:
           - ofuda, paper_talismans
         prompts-costume:
-          - __lazy-wildcards/subject/costume/ofuda-maebari/costume/ofuda-type__
-          - __lazy-wildcards/subject/costume/ofuda-maebari/costume/pussy-maebari__
-          - __lazy-wildcards/subject/costume/ofuda-maebari/costume/pussy-ofuda__
-          - __lazy-wildcards/subject/costume/ofuda-maebari/costume/other-ofuda__
-          - __lazy-wildcards/subject/costume/ofuda-maebari/costume/ofuda-bikini__
-          - __lazy-wildcards/subject/costume/ofuda-maebari/costume/ofuda-clothes__
-          - __lazy-wildcards/subject/costume/ofuda-maebari/costume/ofuda-head__
-          - __lazy-wildcards/subject/costume/ofuda-maebari/costume/ofuda-bra__
+          - __lazy-wildcards/subject/costume/ofuda-maebari/costume-types/ofuda__
+          - __lazy-wildcards/subject/costume/ofuda-maebari/costume-types/pussy-maebari__
+          - __lazy-wildcards/subject/costume/ofuda-maebari/costume-types/pussy-ofuda__
+          - __lazy-wildcards/subject/costume/ofuda-maebari/costume-types/other-ofuda__
+          - __lazy-wildcards/subject/costume/ofuda-maebari/costume-types/ofuda-bikini__
+          - __lazy-wildcards/subject/costume/ofuda-maebari/costume-types/ofuda-clothes__
+          - __lazy-wildcards/subject/costume/ofuda-maebari/costume-types/ofuda-head__
+          - __lazy-wildcards/subject/costume/ofuda-maebari/costume-types/ofuda-bra__
           - >-
             {1-$$__lazy-wildcards/subject/costume/ofuda-maebari/costume-bikini__}
-        costume:
-          ofuda-type:
+        costume-types:
+          ofuda:
             - >-
               {1-$$chinese ofuda|japanese ofuda}
           pussy-maebari:
@@ -264,8 +264,8 @@ lazy-wildcards:
               {1-$$ofuda bra|ofuda on nipples|covered erect nipples}, covered nipples
         costume-bikini:
           - ofuda bikini
-          - __lazy-wildcards/subject/costume/ofuda-maebari/costume/pussy-ofuda__
-          - __lazy-wildcards/subject/costume/ofuda-maebari/costume/ofuda-bra__
+          - __lazy-wildcards/subject/costume/ofuda-maebari/costume-types/pussy-ofuda__
+          - __lazy-wildcards/subject/costume/ofuda-maebari/costume-types/ofuda-bra__
           - slingshot swimsuit ofuda
         ethnicity:
           jiangshi:
@@ -442,7 +442,7 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/subject/costume/game_of_thrones/main__,
-            {1-$$__lazy-wildcards/subject/costume/game_of_thrones/main-type/*__},
+            {1-$$__lazy-wildcards/subject/costume/game_of_thrones/main-types/*__},
             {1-$$__lazy-wildcards/subject/costume/game_of_thrones/costume-elem__},
             {{1-$$__lazy-wildcards/subject/costume/game_of_thrones/ethnicity__},|}
             {{1-$$__lazy-wildcards/subject/costume/game_of_thrones/env-bg__},|}
@@ -452,7 +452,7 @@ lazy-wildcards:
           - dark chignon hair
         main:
           - (l4dy), game of thrones, a song of ice and fire
-        main-type:
+        main-types:
           cloak:
             - >-
               {1-$$cloak|gossamer cloak}
@@ -662,7 +662,7 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/subject/costume/biomachine_body_horror/main__
             {,({1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/style__}:1.2)|}
-            {,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-type/*__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-types/*__}|}
             {,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/ethnicity__}|}
             {,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-wings__}|}
             {,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/env__}|}
@@ -702,7 +702,7 @@ lazy-wildcards:
           - trypophobia
           - eldritch abomination
           - cuts
-        costume-type:
+        costume-types:
           mecha:
             - mechanical arms masterpiece
             - mecha musume
@@ -843,3 +843,33 @@ lazy-wildcards:
           - classroom
           - >-
             {1-$$graduation_ceremony|university_graduation}
+      ancient-egyptian:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/ancient-egyptian/main__,
+            {__lazy-wildcards/subject/costume/ancient-egyptian/costume-makeup__,|}
+            {__lazy-wildcards/subject/costume/ancient-egyptian/costume__,|}
+            {__lazy-wildcards/subject/costume/ancient-egyptian/costume-headwear__,|}
+            {1-$$__lazy-wildcards/subject/costume/ancient-egyptian/costume-elem__}
+          - __cf-ancient-egypt/prompt-costume__
+        main:
+          - ancient egyptian
+        costume:
+          - Egyptian_Robe, long flowing garments, linen fabric, traditional draping
+          - Kalasiris, close-fitting dress, pleated fabric
+          - Shendyt, pleated dress
+        costume-headwear:
+          - Nemes_Headdress, striped headcloth, royal headwear, pharaoh's symbol
+          - Khat_Headdress, nobles, plain headcloth
+          - Pschent, pharaohs, double crown, symbol of united Egypt
+          - Uraeus, rearing cobra, royal emblem, part of headdresses
+        costume-elem:
+          - Egyptian_Sandals, reed materia
+          - Beaded_Collar, wide necklace, intricate beadwork, colorful
+          - Royal_Cuff, wide wristbands, gold, jeweled, royalty
+          - >-
+            Egyptian_Belt, waistbands, functional and decorative, made of {cloth|leather}
+          - Ceremonial_Cape, rituals, ornate design, richly decorated
+          - Egyptian_Jewelry, gold, gemstones
+        costume-makeup:
+          - Kohl_Makeup, black eye paint, defining eyes

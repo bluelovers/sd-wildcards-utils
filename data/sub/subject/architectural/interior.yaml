@@ -4,11 +4,11 @@ lazy-wildcards:
       traditional-cjk:
         prompts:
           - >-
-            __lazy-wildcards/subject/interior/traditional-cjk/main/*__,
+            __lazy-wildcards/subject/interior/traditional-cjk/main-types/*__,
             {1-$$__lazy-wildcards/subject/interior/traditional-cjk/style__},
             {1-$$__lazy-wildcards/subject/interior/traditional-cjk/env__},
             __lazy-wildcards/subject/interior/asian-east/main__
-        main:
+        main-types:
           # 傳統日本室內設計，以榻榻米、滑動的紙門、被褥為特徵。
           traditional_japanese_interior:
             - traditional_japanese_interior, Traditional Japanese interior, tatami_mats, sliding_shoji_doors, futons, traditional_japanese_rooms
@@ -157,14 +157,14 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/subject/interior/aquarium/main__,
-            {1-$$__lazy-wildcards/subject/interior/aquarium/main-type/*__},
+            {1-$$__lazy-wildcards/subject/interior/aquarium/main-types/*__},
             {1-$$__lazy-wildcards/subject/interior/aquarium/env__},
             {{1-$$__lazy-wildcards/subject/interior/aquarium/env-bg__},|}
             {1-$$__lazy-wildcards/subject/interior/aquarium/style__},
             {1-$$__lazy-wildcards/subject/interior/aquarium/env-fish__}
         main:
           - aquarium, indoors, interior
-        main-type:
+        main-types:
           aquarium-tunnel:
             - (aquarium tunnel:1.2), underwater_tunnel
           jellyfish_tank:
@@ -198,11 +198,11 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/subject/interior/hotel-capsule/main__,
-            {1-$$__lazy-wildcards/subject/interior/hotel-capsule/main-type/*__},
+            {1-$$__lazy-wildcards/subject/interior/hotel-capsule/main-types/*__},
             {1-$$__lazy-wildcards/subject/interior/hotel-capsule/env__}
         main:
           - Capsule hotel, indoors, scenery
-        main-type:
+        main-types:
           type-inside:
             - television, pillow, bed
           type-outside:

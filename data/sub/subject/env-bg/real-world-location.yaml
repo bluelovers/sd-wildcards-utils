@@ -6,12 +6,12 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/subject/env-bg-real-world-location/kowloon-walled-city/main__,
-            {{1-$$__lazy-wildcards/subject/env-bg-real-world-location/kowloon-walled-city/main-type/*__},|}
+            {{1-$$__lazy-wildcards/subject/env-bg-real-world-location/kowloon-walled-city/main-types/*__},|}
             {1-$$__lazy-wildcards/subject/env-bg-real-world-location/kowloon-walled-city/env__},
             {1-$$__lazy-wildcards/subject/env-bg-real-world-location/kowloon-walled-city/style__}
         main:
           - kowloon walled city, hong_kong, real_world_location
-        main-type:
+        main-types:
           densely_packed_buildings:
             - densely_packed_buildings, close_proximity, high_rise_structures, urban_sprawl.
           hidden_alleys:
@@ -40,8 +40,8 @@ lazy-wildcards:
       landmark:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-bg-real-world-location/landmark/main-type/*__, real_world_location
-        main-type:
+            __lazy-wildcards/subject/env-bg-real-world-location/landmark/main-types/*__, real_world_location
+        main-types:
           base:
             - Statue_of_Liberty
             - Taj_Mahal, Mughal_architecture
