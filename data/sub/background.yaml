@@ -2,12 +2,11 @@ lazy-wildcards:
   background:
     color-style:
       - >-
-        {1-2$$multicolored background|gradient background|solid color, solid color background|neon color background}
+        ({1-2$$ background, $$multicolored|gradient|solid color|neon color|fluorescent|psychedelic color|fluid color|color splash|color fusion|tie-dye color|colour sequence|rainbow|colored geometric|color bokeh|color stripes|colored confetti|colored marble|colored smoke|colored digital glitch|Abstract colored fractal|colored fractal} background)
     color-theme:
       - __mix-lazy-auto/color-anything__ background
-      - dark background
     color-transparent:
-      - pure __lazy-wildcards/utils/color-base__ background, transparent background
+      - (pure __lazy-wildcards/utils/color-base__ background, transparent background:1.2)
     color-multi:
       - >-
         a colorful background,

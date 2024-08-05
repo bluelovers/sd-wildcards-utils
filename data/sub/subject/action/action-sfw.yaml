@@ -1,0 +1,48 @@
+lazy-wildcards:
+  subject:
+    action-sfw:
+      stance-archery:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/action-sfw/stance-archery/main__}
+            {,{1-$$__lazy-wildcards/subject/action-sfw/stance-archery/action__}|}
+            {,__lazy-wildcards/subject/action-sfw/stance-archery/costume-weapon-bow__|}
+            {,{1-$$__lazy-wildcards/subject/action-sfw/stance-archery/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/subject/action-sfw/stance-archery/costume__}|}
+            {,{1-$$__lazy-wildcards/subject/action-sfw/stance-archery/style__}|}
+        main:
+          - archery, kyuudou, archery stance
+        action:
+          - >-
+            {aiming|aiming at viewer|aiming_up}
+        costume-weapon-bow:
+          - bow \(weapon\)
+          - yumi \(bow\)
+          - Recurve_Bow \(weapon\)
+          - Longbow \(weapon\)
+          - Compound_Bow \(weapon\)
+          - Crossbow \(weapon\)
+          - Horsebow \(weapon\)
+          - Flatbow \(weapon\)
+          - Hybrid_Bow \(weapon\)
+          - oversized bow \(weapon\)
+        costume-weapon:
+          - the archer having pulled the bowstring back to its maximum extension
+          - quiver
+          - >-
+            {1-$$holding arrow|holding bow \(weapon\)|drawing bow}
+          - >-
+            arrow \(projectile\)
+            {,between fingers|}
+        costume:
+          - single sleeve
+          - fingerless gloves
+          - pelvic curtain
+          - side slit
+          - rope belt
+        style:
+          - >-
+            {1-$$glowing arrow|energy arrow}
+          - diffraction spikes
+          - lens flare
+
