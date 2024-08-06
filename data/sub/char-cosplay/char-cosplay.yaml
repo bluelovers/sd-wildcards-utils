@@ -1583,3 +1583,50 @@ lazy-wildcards:
           - symbol-shaped pupils
           - star
           - see-through
+    dragon_ball:
+      # https://civitai.com/models/625503/dr-gero?modelVersionId=699270
+      # https://danbooru.donmai.us/posts?tags=dr._gero_%28dragon_ball%29&z=2
+      dr-gero:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/dragon_ball/dr-gero/main__
+            ,({1-$$__lazy-wildcards/cosplay-char/dragon_ball/dr-gero/ethnicity__})
+            ,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/dr-gero/costume-elem__}
+            {,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/dr-gero/action__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/dr-gero/env__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/dr-gero/expressions__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/dr-gero/style__}|}
+        main:
+          - (dr gero, dr._gero_\(dragon_ball\), red_ribbon_army), dragon_ball, Android_20
+        ethnicity:
+          - white mustache, white facial hair, old man
+          - white hair, grey hair
+          - blue eyes
+        costume-elem:
+          - red ribbon hat, black hat
+          - brain visible
+          - wristband
+          - brown pants
+          - earrings
+          - jewelry
+          - orange colored shirt
+          - android
+          - torn clothes
+          - orange bandana
+          - long sleeves
+          - Old_Scientist
+          - Lab_Coat
+          - Mechanical_Parts
+        env:
+          - severed head
+        style:
+          - (toriyama akira \(style\))
+          - Cybernetic_Augmentations
+          - mechanical enhancements
+          - Villain
+        action:
+          - arms crossed
+        expressions:
+          - furrowed brow
+          - sweat
+

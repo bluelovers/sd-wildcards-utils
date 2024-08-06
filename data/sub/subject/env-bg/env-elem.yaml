@@ -12,9 +12,6 @@ lazy-wildcards:
             {6-$$__lazy-wildcards/subject/env-elem/others/env__}
         env:
           - metal partition
-
-      
-      
       flower:
         prompts:
           - >-
@@ -60,7 +57,6 @@ lazy-wildcards:
           - delicate_lattice_veil
           - unique_stem
           - stinkhorn
-      
       leaves-cannabis-marijuana:
         prompts:
           - >-
@@ -286,4 +282,25 @@ lazy-wildcards:
             {1-$$cum|cum on body|cum on breasts|cumdrip}
           - distome
           - slime \(substance\)
-
+      Vending-Machines:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/Vending-Machines/main__
+            {,{1-3$$__lazy-wildcards/subject/env-elem/Vending-Machines/env__}|}
+        main:
+          - Vending_Machines
+        env:
+          - Gacha_Machine, capsules
+          - Ticket_Vending_Machine
+          - Ice_Cream_Vending_Machine
+          - Hot_Food_Vending_Machine
+          - Drink_Vending_Machine
+          - Snack_Vending_Machine
+          - >-
+            selling {1-$$ and $$__lazy-wildcards/subject/env-elem/Vending-Machines/env__}
+        env-items:
+          - water
+          - soda
+          - coffee
+          - drinks
+          - snacks

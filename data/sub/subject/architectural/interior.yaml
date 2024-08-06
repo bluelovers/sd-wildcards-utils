@@ -263,3 +263,25 @@ lazy-wildcards:
             {1-$$dressing_table|makeup_area|dressing_area}
           - sheet
           - wardrobe
+      # https://civitai.com/models/623723/subway-station-corridor-in-japan?modelVersionId=697293
+      station-subway-corridor-stairs:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/interior/station-subway-corridor-stairs/main__
+            {,{1-$$__lazy-wildcards/subject/interior/station-subway-corridor-stairs/env-bg__}|}
+            {,{1-$$__lazy-wildcards/subject/interior/station-subway-corridor-stairs/env__}|}
+            {,{1-$$__lazy-wildcards/subject/interior/station-subway-corridor-stairs/style__}|}
+        main:
+          - Subway station corridor, jpsta, train_station, on stairs, interior, indoors
+        style:
+          - subway station design
+        env:
+          - Tile_Walls
+          - >-
+            {1-$$Signage|bilingual signs indicating directions|exits signs|facilities signs}
+          - >-
+            __lazy-wildcards/subject/env-elem/Vending-Machines/prompts__
+        env-bg:
+          - Subway_Corridor
+          - underground shopping areas
+          - Japan
