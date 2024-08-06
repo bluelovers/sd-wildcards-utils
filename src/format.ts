@@ -36,3 +36,10 @@ export function formatPrompts(value: string, opts?: IOptionsSharedWildcardsYaml)
 
 	return value
 }
+
+export function stripBlankLines(value: string)
+{
+	return value
+		.replace(/(\r?\n)[\s\r\n\t\xa0]+(\r?\n)/g, '$1$2')
+		.replace(/(\r?\n)(?:\r?\n)(?=[\s\t\xa0])/g, '$1')
+}

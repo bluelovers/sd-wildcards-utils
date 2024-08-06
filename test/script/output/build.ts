@@ -7,10 +7,10 @@ import {
 	defaultOptionsStringifyMinify, IWildcardsYAMLDocument,
 	mergeFindSingleRoots,
 	parseWildcardsYaml,
-	stringifyWildcardsYamlData,
+	stringifyWildcardsYamlData, stripBlankLines,
 } from '../../../src/index';
 // @ts-ignore
-import { outputFile } from 'fs-extra';
+import { outputFile, writeFile } from 'fs-extra';
 import { mergeWildcardsYAMLDocumentRoots } from '../../../src/merge';
 // @ts-ignore
 import { globSync } from 'fs';
@@ -34,11 +34,15 @@ export default Bluebird.map([
 			//'sub/**/*.yml',
 		], {
 			cwd: __ROOT_DATA
-		}), (file: string) => {
-			return readFile(join(__ROOT_DATA, file))
-				.then(data => parseWildcardsYaml(data, {
-					disableUnsafeQuote: true,
-				}))
+		}), async (file: string) => {
+			const full_file = join(__ROOT_DATA, file)
+			let data = await readFile(full_file)
+
+			await writeFile(full_file, stripBlankLines(data.toString()))
+
+			return parseWildcardsYaml(data, {
+				disableUnsafeQuote: true,
+			})
 		})
 
 		return mergeFindSingleRoots(doc, ls)
