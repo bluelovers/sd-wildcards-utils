@@ -1,6 +1,6 @@
 lazy-wildcards:
   subject:
-    architectural:
+    env-bg-architectural:
       parking:
         prompts:
           - >-
@@ -11,11 +11,11 @@ lazy-wildcards:
       asian-east:
         prompts:
           - >-
-            __lazy-wildcards/subject/architectural/asian-east/main__,
-            {1-$$__lazy-wildcards/subject/architectural/asian-east/env__},
-            {3-$$__lazy-wildcards/subject/interior/asian-east/env__}
-            {1-$$__lazy-wildcards/subject/interior/asian-east/style__},
-            {, {1-$$__lazy-wildcards/subject/interior/asian-east/env-bg__}}
+            __lazy-wildcards/subject/env-bg-architectural/asian-east/main__,
+            {1-$$__lazy-wildcards/subject/env-bg-architectural/asian-east/env__},
+            {3-$$__lazy-wildcards/subject/env-bg-interior/asian-east/env__}
+            {1-$$__lazy-wildcards/subject/env-bg-interior/asian-east/style__},
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/asian-east/env-bg__}}
         main:
           - architecture, east asian architecture
         env:
@@ -27,9 +27,9 @@ lazy-wildcards:
       station:
         prompts:
           - >-
-            __lazy-wildcards/subject/architectural/station/main-types/*__,
-            {1-$$__lazy-wildcards/subject/architectural/station/env__},
-            {1-$$__lazy-wildcards/subject/architectural/station/env-bg__}
+            __lazy-wildcards/subject/env-bg-architectural/station/main-types/*__,
+            {1-$$__lazy-wildcards/subject/env-bg-architectural/station/env__},
+            {1-$$__lazy-wildcards/subject/env-bg-architectural/station/env-bg__}
         main-types:
           # 地下鐵 / 捷運
           metro:
@@ -42,10 +42,10 @@ lazy-wildcards:
       ruin-decrepit-center:
         prompts:
           - >-
-            __lazy-wildcards/subject/architectural/ruin-decrepit-center/main__,
-            {1-$$__lazy-wildcards/subject/architectural/ruin-decrepit-center/env-bg__},
-            {4-$$__lazy-wildcards/subject/architectural/ruin-decrepit-center/env__},
-            {1-$$__lazy-wildcards/subject/architectural/ruin-decrepit-center/style__}
+            __lazy-wildcards/subject/env-bg-architectural/ruin-decrepit-center/main__,
+            {1-$$__lazy-wildcards/subject/env-bg-architectural/ruin-decrepit-center/env-bg__},
+            {4-$$__lazy-wildcards/subject/env-bg-architectural/ruin-decrepit-center/env__},
+            {1-$$__lazy-wildcards/subject/env-bg-architectural/ruin-decrepit-center/style__}
         main:
           - tszcampout, big building
         style:

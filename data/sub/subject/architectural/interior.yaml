@@ -1,13 +1,13 @@
 lazy-wildcards:
   subject:
-    interior:
+    env-bg-interior:
       traditional-cjk:
         prompts:
           - >-
-            __lazy-wildcards/subject/interior/traditional-cjk/main-types/*__,
-            {1-$$__lazy-wildcards/subject/interior/traditional-cjk/style__},
-            {1-$$__lazy-wildcards/subject/interior/traditional-cjk/env__},
-            __lazy-wildcards/subject/interior/asian-east/main__
+            __lazy-wildcards/subject/env-bg-interior/traditional-cjk/main-types/*__,
+            {1-$$__lazy-wildcards/subject/env-bg-interior/traditional-cjk/style__},
+            {1-$$__lazy-wildcards/subject/env-bg-interior/traditional-cjk/env__},
+            __lazy-wildcards/subject/env-bg-interior/asian-east/main__
         main-types:
           # 傳統日本室內設計，以榻榻米、滑動的紙門、被褥為特徵。
           traditional_japanese_interior:
@@ -64,10 +64,10 @@ lazy-wildcards:
       asian-east:
         prompts:
           - >-
-            __lazy-wildcards/subject/interior/asian-east/main__,
-            {3-$$__lazy-wildcards/subject/interior/asian-east/env__},
-            {1-$$__lazy-wildcards/subject/interior/asian-east/style__},
-            {2-$$__lazy-wildcards/subject/interior/asian-east/env-bg__}
+            __lazy-wildcards/subject/env-bg-interior/asian-east/main__,
+            {3-$$__lazy-wildcards/subject/env-bg-interior/asian-east/env__},
+            {1-$$__lazy-wildcards/subject/env-bg-interior/asian-east/style__},
+            {2-$$__lazy-wildcards/subject/env-bg-interior/asian-east/env-bg__}
         main:
           - east asian architecture, interior, indoors
         style:
@@ -95,10 +95,10 @@ lazy-wildcards:
       bathroom:
         prompts:
           - >-
-            {99$$ with $$__lazy-wildcards/subject/interior/bathroom/main-object__},
-            {1-$$__lazy-wildcards/subject/interior/bathroom/env-object__},
-            {1-$$__lazy-wildcards/subject/interior/bathroom/env__}
-            {, {1-$$__lazy-wildcards/subject/interior/bathroom/env-bg__}|}
+            {99$$ with $$__lazy-wildcards/subject/env-bg-interior/bathroom/main-object__},
+            {1-$$__lazy-wildcards/subject/env-bg-interior/bathroom/env-object__},
+            {1-$$__lazy-wildcards/subject/env-bg-interior/bathroom/env__}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/bathroom/env-bg__}|}
         main-object:
           - bath
           - a sink
@@ -119,10 +119,10 @@ lazy-wildcards:
       living_room:
         prompts:
           - >-
-            __lazy-wildcards/subject/interior/living_room/main__,
+            __lazy-wildcards/subject/env-bg-interior/living_room/main__,
             {(__lazy-wildcards/utils/interior-style-anything__),|}
-            {1-$$__lazy-wildcards/subject/interior/living_room/env-object__},
-            {1-$$__lazy-wildcards/subject/interior/living_room/env-bg__}
+            {1-$$__lazy-wildcards/subject/env-bg-interior/living_room/env-object__},
+            {1-$$__lazy-wildcards/subject/env-bg-interior/living_room/env-bg__}
         main:
           - interior design, living room
         env-object:
@@ -148,7 +148,7 @@ lazy-wildcards:
         prompts:
           - >-
             indoors, interior, traditional_japanese_interior, tatami, japanese writing, calligraphy,
-            {1-$$__lazy-wildcards/subject/interior/aquarium/env__}
+            {1-$$__lazy-wildcards/subject/env-bg-interior/aquarium/env__}
         env:
           - >-
             {1-$$sword|katana}
@@ -156,12 +156,12 @@ lazy-wildcards:
       aquarium:
         prompts:
           - >-
-            __lazy-wildcards/subject/interior/aquarium/main__,
-            {1-$$__lazy-wildcards/subject/interior/aquarium/main-types/*__},
-            {1-$$__lazy-wildcards/subject/interior/aquarium/env__},
-            {{1-$$__lazy-wildcards/subject/interior/aquarium/env-bg__},|}
-            {1-$$__lazy-wildcards/subject/interior/aquarium/style__},
-            {1-$$__lazy-wildcards/subject/interior/aquarium/env-fish__}
+            __lazy-wildcards/subject/env-bg-interior/aquarium/main__,
+            {1-$$__lazy-wildcards/subject/env-bg-interior/aquarium/main-types/*__},
+            {1-$$__lazy-wildcards/subject/env-bg-interior/aquarium/env__},
+            {{1-$$__lazy-wildcards/subject/env-bg-interior/aquarium/env-bg__},|}
+            {1-$$__lazy-wildcards/subject/env-bg-interior/aquarium/style__},
+            {1-$$__lazy-wildcards/subject/env-bg-interior/aquarium/env-fish__}
         main:
           - aquarium, indoors, interior
         main-types:
@@ -197,9 +197,9 @@ lazy-wildcards:
       hotel-capsule:
         prompts:
           - >-
-            __lazy-wildcards/subject/interior/hotel-capsule/main__,
-            {1-$$__lazy-wildcards/subject/interior/hotel-capsule/main-types/*__},
-            {1-$$__lazy-wildcards/subject/interior/hotel-capsule/env__}
+            __lazy-wildcards/subject/env-bg-interior/hotel-capsule/main__,
+            {1-$$__lazy-wildcards/subject/env-bg-interior/hotel-capsule/main-types/*__},
+            {1-$$__lazy-wildcards/subject/env-bg-interior/hotel-capsule/env__}
         main:
           - Capsule hotel, indoors, scenery
         main-types:
@@ -218,12 +218,12 @@ lazy-wildcards:
       hotel-business-bedroom:
         prompts:
           - >-
-            __lazy-wildcards/subject/interior/hotel-business-bedroom/main__,
-            {1-$$__lazy-wildcards/subject/interior/hotel-business-bedroom/main-trigger-words__},
-            {1-$$__lazy-wildcards/subject/interior/hotel-business-bedroom/env__}
+            __lazy-wildcards/subject/env-bg-interior/hotel-business-bedroom/main__,
+            {1-$$__lazy-wildcards/subject/env-bg-interior/hotel-business-bedroom/main-trigger-words__},
+            {1-$$__lazy-wildcards/subject/env-bg-interior/hotel-business-bedroom/env__}
             {,__lazy-wildcards/subject/moment/random/prompts__|}
-            {,{1-$$__lazy-wildcards/subject/interior/hotel-business-bedroom/style__}|}
-            {0.3::,{1-$$__lazy-wildcards/subject/interior/hotel-business-bedroom/env-bed__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/hotel-business-bedroom/style__}|}
+            {0.3::,{1-$$__lazy-wildcards/subject/env-bg-interior/hotel-business-bedroom/env-bed__}|}
         main:
           - business hotel, hotel_room, scenery, indoors, bedroom, (bed:1.3), curtains, window
         main-trigger-words:
@@ -267,10 +267,10 @@ lazy-wildcards:
       station-subway-corridor-stairs:
         prompts:
           - >-
-            __lazy-wildcards/subject/interior/station-subway-corridor-stairs/main__
-            {,{1-$$__lazy-wildcards/subject/interior/station-subway-corridor-stairs/env-bg__}|}
-            {,{1-$$__lazy-wildcards/subject/interior/station-subway-corridor-stairs/env__}|}
-            {,{1-$$__lazy-wildcards/subject/interior/station-subway-corridor-stairs/style__}|}
+            __lazy-wildcards/subject/env-bg-interior/station-subway-corridor-stairs/main__
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/station-subway-corridor-stairs/env-bg__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/station-subway-corridor-stairs/env__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/station-subway-corridor-stairs/style__}|}
         main:
           - Subway station corridor, jpsta, train_station, on stairs, interior, indoors
         style:
@@ -285,3 +285,35 @@ lazy-wildcards:
           - Subway_Corridor
           - underground shopping areas
           - Japan
+          - stairwell
+      # https://civitai.com/models/626980/utopian-rustic-chinese-interior?modelVersionId=700894
+      Chinese-Utopian-Rustic:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-interior/Chinese-Utopian-Rustic/main__
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/Chinese-Utopian-Rustic/env-bg__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/Chinese-Utopian-Rustic/env__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/Chinese-Utopian-Rustic/style__}|}
+        main:
+          - Utopian Rustic Chinese Interior, scenery
+        env:
+          - wood table, wooden floor, rug, sliding doors
+          - gray velvet couch, gray and yellow cushion
+          - chandelier, lamp, lantern
+          - plant
+          - mountain
+          - tree
+          - teapot, cup
+          - potted plant
+          - vase, flower pot
+          - flower
+          - food on the table
+        env-bg:
+          - big window, can see outside nature
+          - (under roof:1.3)
+          - indoors open to the outdoor nature
+          - buildings outside
+          - garden
+        style:
+          - no humans
+
