@@ -4,29 +4,29 @@ lazy-wildcards:
       random:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/moment/weather/prompts__}
+            {1-3$$__lazy-wildcards/subject/moment/weather/prompts__}
             {,__lazy-wildcards/subject/moment/time/prompts__|}
             {,__lazy-wildcards/subject/moment/moon/prompts__|}
             {,__lazy-wildcards/subject/moment/season/prompts__|}
-            {0.2::,__lazy-wildcards/subject/moment/age/prompts__|}
+            {0.1::,__lazy-wildcards/subject/moment/age/prompts__|}
           - >-
             __lazy-wildcards/subject/moment/time/prompts__
-            {,{1-$$__lazy-wildcards/subject/moment/weather/prompts__}|}
+            {,{1-3$$__lazy-wildcards/subject/moment/weather/prompts__}|}
             {,__lazy-wildcards/subject/moment/moon/prompts__|}
             {,__lazy-wildcards/subject/moment/season/prompts__|}
-            {0.2::,__lazy-wildcards/subject/moment/age/prompts__|}
+            {0.1::,__lazy-wildcards/subject/moment/age/prompts__|}
           - >-
             __lazy-wildcards/subject/moment/moon/prompts__
-            {,{1-$$__lazy-wildcards/subject/moment/weather/prompts__}|}
+            {,{1-3$$__lazy-wildcards/subject/moment/weather/prompts__}|}
             {,__lazy-wildcards/subject/moment/time/prompts__|}
             {,__lazy-wildcards/subject/moment/season/prompts__|}
-            {0.2::,__lazy-wildcards/subject/moment/age/prompts__|}
+            {0.1::,__lazy-wildcards/subject/moment/age/prompts__|}
           - >-
             __lazy-wildcards/subject/moment/season/prompts__
-            {,{1-$$__lazy-wildcards/subject/moment/weather/prompts__}|}
+            {,{1-3$$__lazy-wildcards/subject/moment/weather/prompts__}|}
             {,__lazy-wildcards/subject/moment/time/prompts__|}
             {,__lazy-wildcards/subject/moment/moon/prompts__|}
-            {0.2::,__lazy-wildcards/subject/moment/age/prompts__|}
+            {0.1::,__lazy-wildcards/subject/moment/age/prompts__|}
       weather:
         prompts:
           - >-
@@ -40,10 +40,67 @@ lazy-wildcards:
           - __lazy-wildcards/subject/moment/weather/main-types/*__
           - >-
             {1-$$lightning|lightning bolt|lightning glare}
+          - __lazy-wildcards/subject/moment/weather-*/prompts__
         main-types:
           winter:
             - >-
-              (snowylandscape, {1-$$winter|snow|very cold|snow fall|city snowy street view|snowflake|pure winter}:1.2)
+              (snowylandscape, {1-$$winter|snow|very cold|snow fall|snowy view|snowflake|pure winter}:1.2)
+      weather-natural-disaster-water:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/moment/weather-natural-disaster-water/main__
+            {,{1-3$$__lazy-wildcards/subject/moment/weather-natural-disaster-water/env-bg__}|}
+            {,{1-3$$__lazy-wildcards/subject/moment/weather-natural-disaster-water/env__}|}
+            {,{1-2$$__lazy-wildcards/subject/moment/weather-natural-disaster-water/env-weather__}|}
+            ,{1-4$$__lazy-wildcards/subject/moment/weather-natural-disaster-water/style__}
+        main:
+          - natural disaster, scenery, water
+        env-weather:
+          - Storm
+          - Torrential_Rain
+          - Thunderstorm
+          - Gale_Force_Winds, Typhoon_Winds
+          - Storm_Clouds
+          - Flood
+          - Inundation
+          - Typhoon
+        env:
+          - Flying_Debris
+          - Flood_Debris
+          - Submerged_Vehicles
+          - Waterlogged_Crops
+          - Rising_Waters
+          - broken window
+          - wading
+          - moss
+          - ripples
+          - cumulonimbus cloud
+          - reflective water
+          - bird
+          - fish
+          - wooden plank
+          - box
+        env-bg:
+          - Waterlogged_Land
+          - Flood_Plains
+          - Overflowing_Rivers
+          - Submerged_Buildings
+          - Flooded_Streets
+          - tokyo \(city\)
+          - truss
+          - stairs
+          - stairwell
+        style:
+          - Flood
+          - Waterlogged
+          - Submerged
+          - partially immersed
+          - overgrown
+          - abandoned
+          - dilapidated
+          - rust
+          - no humans
+          - reflection
       time:
         prompts:
           - >-
