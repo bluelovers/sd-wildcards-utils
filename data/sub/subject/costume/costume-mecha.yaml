@@ -1,0 +1,32 @@
+lazy-wildcards:
+  subject:
+    costume:
+      mecha-musume:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/mecha-musume/main__
+            ,({1-$$__lazy-wildcards/subject/costume/mecha-musume/costume-mecha__})
+            {,{1-$$__lazy-wildcards/subject/costume/mecha-musume/costume-elem__}|}
+            {,({1-3$$__lazy-wildcards/subject/costume-tattoo/*/prompts__})|}
+            {,{1-$$__lazy-wildcards/subject/costume/mecha-musume/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/mecha-musume/style__}|}
+        main:
+          - (mecha musume:1.3)
+        costume-mecha:
+          - headgear
+          - mechanical wings
+          - mechanical legs
+          - >-
+            {1-$$thrusters|propeller}
+          - >-
+            {__mix-lazy-auto/color-anything__ |}mechanical arms
+        costume-elem:
+          - cleavage
+        costume-weapon:
+          - cannon
+        style:
+          - fantasy
+          - cyberpunk
+          - cyberpunk neon
+          - Steampunk
+          - science fiction

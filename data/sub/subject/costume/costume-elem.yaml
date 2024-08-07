@@ -86,3 +86,25 @@ lazy-wildcards:
           - yin_yang_tattoo, Taoist_symbolism, circular_design
           - kabbalah_tattoo, Jewish_mysticism, Hebrew_letters, Tree_of_Life
           - tribal_tattoo, indigenous_designs, bold_and_intricate_patterns
+      body-tattoo:
+        prompts:
+          - tattoo
+          - full body tattoo
+          - >-
+            {1-$$breast tattoo|chest tattoo}
+          - >-
+            {1-$$arm tattoo|hand tattoo}
+          - shoulder tattoo
+          - facial tattoo
+          - pubic tattoo
+          - leg tattoo
+          - neck tattoo
+          - stomach tattoo
+          - back tattoo
+      pattern-tattoo:
+        prompts:
+          - number tattoo
+          - heart tattoo
+          - barcode tattoo
+          - flower tattoo
+
