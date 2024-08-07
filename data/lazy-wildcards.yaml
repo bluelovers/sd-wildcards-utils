@@ -49,9 +49,8 @@ lazy-wildcards:
     cover:
         - >-
           {0.2::__lazy-wildcards/book/style-types/*/style-type-adj__,|}
-          (__lazy-wildcards/book/style-types/*/style__:1.35),
-          __lazy-wildcards/book/style-adj/text__
-          {0.3::,{1-6$$__lazy-wildcards/book/style-adj/text__}|}
+          (__lazy-wildcards/book/style-types/*/style__:1.35)
+          {0.3::,{1-6$$__lazy-wildcards/subject/style-book/shared/style-book-text__}|}
     dataset:
       char-base:
         - >-
@@ -90,7 +89,7 @@ lazy-wildcards:
         - >-
           (__lazy-wildcards/prompts/cover__),
           __lazy-wildcards/prompts/dataset/char-base__,
-          {__lazy-wildcards/book/pose__|__lazy-wildcards/prompts/pose__},
+          {__lazy-wildcards/subject/style-book/*/action-pose__|__lazy-wildcards/prompts/pose__},
           (__lazy-wildcards/dataset/background__:1.25)
   dataset:
     char-view:
@@ -114,11 +113,6 @@ lazy-wildcards:
       - __lazy-wildcards/background/color-theme__
       - __lazy-wildcards/background/color-multi__
   book:
-    style-adj:
-      text:
-        - (The text on the cover should be bold and attention-grabbing, with the title of the magazine and a catchy headline. The overall style should be modern and trendy, with a focus on fashion and lifestyle), wall paper,fashion,depth of field, contrapposto,female focus,model, photorealistic,fine fabric emphasis
-      style:
-        - scifi
     style-types:
       magazine-cover:
         style:
@@ -144,8 +138,6 @@ lazy-wildcards:
         style:
           - (comic book, comic cover), action, dynamic, speech bubbles, bang
           - (Dojinshi, doujinshi magazine cover), Graphic Design
-    pose:
-      - (posing in front of a colorful and dynamic background. She has a confident expression and is holding a statement accessory)
-      - (posing with her hands on her hips in an Asian squat position in front of a modern and dynamic background. She exudes confidence and sex appeal, with her daring fashion choices leaving little to the imagination)
+    
 
 
