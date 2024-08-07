@@ -36,11 +36,16 @@ export default Bluebird.map([
 			cwd: __ROOT_DATA
 		}), async (file: string) => {
 			const full_file = join(__ROOT_DATA, file)
-			let data = await readFile(full_file)
+			let data = (await readFile(full_file)).toString()
 
-			await writeFile(full_file, stripBlankLines(data.toString()))
+			let data_new = stripBlankLines(data.toString())
 
-			return parseWildcardsYaml(data, {
+			if (data_new !== data)
+			{
+				await writeFile(full_file, data_new)
+			}
+
+			return parseWildcardsYaml(data_new, {
 				disableUnsafeQuote: true,
 			})
 		})
