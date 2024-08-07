@@ -882,3 +882,57 @@ lazy-wildcards:
           - Egyptian_Jewelry, gold, gemstones
         costume-makeup:
           - Kohl_Makeup, black eye paint, defining eyes
+      # https://civitai.com/models/626038/donm-shroom-knight-sdsdxlpony?modelVersionId=699877
+      Shroom-Knight:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/Shroom-Knight/main__
+            ,Shroom {1-2$$__lazy-wildcards/subject/costume/Shroom-Knight/costume-job__}
+            {,{1-$$__lazy-wildcards/subject/costume/Shroom-Knight/costume__}|}
+            {,{1-2$$__lazy-wildcards/subject/costume/Shroom-Knight/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/Shroom-Knight/env__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/Shroom-Knight/style__}|}
+        main:
+          - DonM5hr00mKn1gh7
+        costume-job:
+          - pirate swashbuckler
+          - witch
+          - burglar
+          - inventor
+          - noble
+          - treasure hunter
+          - adventurer
+          - dragon rider
+          - enchanted armor
+          - savage
+          - monk
+          - thief
+          - pirate gunner
+          - pirate
+          - martial artist
+          - duke
+          - arcane scholar
+          - warlock
+          - wizard
+          - mercenary captain
+          - Knight
+        costume:
+          - Mushroom_Helmet
+          - Armored_Mushroom
+          - Spore_Cloak
+          - Mycelium_Armor
+        costume-weapon:
+          - Fungal_Sword
+          - Shroom_Shield
+          - >-
+            {mushroom|spore|fungus|slime}-inspired weapon
+        env:
+          - Spore_Magic
+          - Fungal_Mount
+          - large mushroom
+          - fungus-based entity
+          - slime
+        style:
+          - >-
+            {mushroom|spore|fungus|slime}-inspired {1-2$$ and $$patterns|elements|designs|texture|appearance}
+
