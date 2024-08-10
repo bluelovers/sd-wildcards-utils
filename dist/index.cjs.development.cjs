@@ -68,6 +68,9 @@ function formatPrompts(value, opts) {
   }
   return value;
 }
+function stripBlankLines(value) {
+  return value.replace(/(\r?\n)[\s\r\n\t\xa0]+(\r?\n)/g, '$1$2').replace(/(\r?\n)(?:\r?\n)(?=[\s\t\xa0])/g, '$1');
+}
 
 function isWildcardsYAMLDocument(doc) {
   return yaml.isDocument(doc);
@@ -185,7 +188,9 @@ function _visitNormalizeScalar(key, node, runtime) {
       node.type = 'PLAIN';
     }
     value = trimPrompts(stripZeroStr(formatPrompts(value, runtime.options)));
-    if (RE_UNSAFE_VALUE.test(value)) {
+    if (!value.length) {
+      throw new SyntaxError(`Invalid SYNTAX [EMPTY_VALUE]. key: ${key}, node: ${node}`);
+    } else if (RE_UNSAFE_VALUE.test(value)) {
       if (node.type === 'PLAIN') {
         node.type = 'BLOCK_LITERAL';
       } else if (node.type === 'BLOCK_FOLDED' && /#/.test(value)) {
@@ -811,6 +816,7 @@ exports.parseWildcardsYaml = parseWildcardsYaml;
 exports.pathsToDotPath = pathsToDotPath;
 exports.pathsToWildcardsPath = pathsToWildcardsPath;
 exports.stringifyWildcardsYamlData = stringifyWildcardsYamlData;
+exports.stripBlankLines = stripBlankLines;
 exports.stripZeroStr = stripZeroStr;
 exports.trimPrompts = trimPrompts;
 exports.uniqueSeqItems = uniqueSeqItems;

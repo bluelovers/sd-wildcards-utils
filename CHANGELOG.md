@@ -3,6 +3,63 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.4](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.3.2...sd-wildcards-utils@1.3.4) (2024-08-10)
+
+
+
+### 🐛　Bug Fixes
+
+* check scalar value length ([d864874](https://github.com/bluelovers/sd-wildcards-utils/commit/d864874183f9f1e7562ab51a462fbf0a4a2c871b))
+* weapen => weapon ([cc60099](https://github.com/bluelovers/sd-wildcards-utils/commit/cc600998b580579a6978d3f22adc52b6a276a1da))
+
+
+### ✨　Features
+
+* mecha-musume ([4e25dbf](https://github.com/bluelovers/sd-wildcards-utils/commit/4e25dbfbf0b49c90c11b13887885a29da88e6cff))
+* Shroom-Knight ([bddba13](https://github.com/bluelovers/sd-wildcards-utils/commit/bddba1355b7b1505b251dee5e8cfeb292339e27a))
+* stripBlankLines ([292a32a](https://github.com/bluelovers/sd-wildcards-utils/commit/292a32a2bc83b52bd8ec5c25a566afbde6559c39))
+
+
+### 📦　Code Refactoring
+
+* costume-ethnicity ([e0ce71b](https://github.com/bluelovers/sd-wildcards-utils/commit/e0ce71bbc6714a50bee45e051190acacc131052e))
+* scenes ([8d4b269](https://github.com/bluelovers/sd-wildcards-utils/commit/8d4b26978a55c5243d80a54ce4e57541deb33054))
+* . ([9e3845d](https://github.com/bluelovers/sd-wildcards-utils/commit/9e3845d97520684dd3634e3ca1a78983b15fc044))
+* style-art-type ([10a1998](https://github.com/bluelovers/sd-wildcards-utils/commit/10a19984cb72b263fb7ec9b8653a966860ab0ec7))
+* biomachine_body_horror ([a8d5d39](https://github.com/bluelovers/sd-wildcards-utils/commit/a8d5d39f6e8649b095b7a4b70c0a66c36d20cc33))
+* subject/style-book/shared/style-adj ([bac1fd1](https://github.com/bluelovers/sd-wildcards-utils/commit/bac1fd17cb2a9882514511cd1ef5c8932c0f9587))
+* rename style- ([895da7e](https://github.com/bluelovers/sd-wildcards-utils/commit/895da7e6fb5a791f192fad06cefd575a0d0ebe4a))
+* rename style- ([8c4841f](https://github.com/bluelovers/sd-wildcards-utils/commit/8c4841f46d9a84179acf808c01c4a47e787cd642))
+
+
+### 🛠　Build System
+
+* update build ([0fcfa45](https://github.com/bluelovers/sd-wildcards-utils/commit/0fcfa45f4c30938051ca4ef534f19bf4712d866b))
+* update build ([968c4ea](https://github.com/bluelovers/sd-wildcards-utils/commit/968c4ea7cd48b0904a64bfb84057cb2d7a5be27b))
+* update build ([73ef0dc](https://github.com/bluelovers/sd-wildcards-utils/commit/73ef0dc2305967f7ad5f3b5e3e4ad2369a53ab71))
+
+
+### ⚙️　Continuous Integration
+
+* update script ([fc1e83f](https://github.com/bluelovers/sd-wildcards-utils/commit/fc1e83f1b27532e6a8ab2223d42ddef0aeaa17f9))
+
+
+### ♻️　Chores
+
+* idea ([58066c9](https://github.com/bluelovers/sd-wildcards-utils/commit/58066c9238e0095a21f849e897ac07c1ef368591))
+
+
+### 🔖　Miscellaneous
+
+* . ([1e9ef13](https://github.com/bluelovers/sd-wildcards-utils/commit/1e9ef13bfbadf743b20109e1974f13115ad60dcd))
+* . ([d103e48](https://github.com/bluelovers/sd-wildcards-utils/commit/d103e483808f5699adecead8be187e5fda16da1f))
+* . ([fdb14fb](https://github.com/bluelovers/sd-wildcards-utils/commit/fdb14fbcc30194e5c3e37161d3adaf87d472dc4b))
+* . ([d2236df](https://github.com/bluelovers/sd-wildcards-utils/commit/d2236df6c0a1b2ad86a2da45ced876cc54b50323))
+* . ([cf24f58](https://github.com/bluelovers/sd-wildcards-utils/commit/cf24f58c540f9f9601fb1a2595eb172111fecfc4))
+* . ([72c808a](https://github.com/bluelovers/sd-wildcards-utils/commit/72c808ad0f4129df548bddc55427a26c8dc48e91))
+
+
+
 ## [1.3.2](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.3.1...sd-wildcards-utils@1.3.2) (2024-08-02)
 
 
