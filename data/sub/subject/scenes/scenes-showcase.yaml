@@ -1,6 +1,27 @@
 lazy-wildcards:
   subject:
     scenes-showcase:
+      bg-color-prompts:
+        prompts:
+          - >-
+            (1girl:1.3), solo focus
+            ,__lazy-wildcards/subject/scenes-showcase/bg-color-prompts/main__
+            ,__lazy-wildcards/dataset/background-color__
+        main:
+          - wolf snout, (wolf girl), white eyes, wolf teeth, (open_mouth, tongue out, saliva, saliva drip), draped white silk, cloth curtains, (from above, looking_up:1.2), (looking at viewer), abandon area, fireflies, (moss slime vines)
+      char-costume-bg-color:
+        prompts:
+          - >-
+            (1girl:1.3), solo focus
+            ,__lazy-wildcards/subject/scenes-showcase/char-costume-bg-color/costume__
+            {,__lazy-wildcards/subject/scenes-showcase/char-costume-bg-color/action-pose__|}
+            ,__lazy-wildcards/dataset/background-color__
+        costume:
+          - (Mauritanian catholic inquisitor sexy girl:1.25), full body, (large breasts:1.25), armor
+          - clean precise, mech suit armor white ceramic armor, glossy carbon fiber, industrial frame with shiny gold metal inlay
+          - succubus, 2 wings, demon horns, tail
+        action-pose:
+          - hands on hips
       throne-sitting-dark:
         prompts:
           - >-

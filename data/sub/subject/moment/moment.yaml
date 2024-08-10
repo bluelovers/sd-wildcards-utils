@@ -41,6 +41,7 @@ lazy-wildcards:
           - >-
             {1-$$lightning|lightning bolt|lightning glare}
           - __lazy-wildcards/subject/moment/weather-*/prompts__
+          - dynamic weather
         main-types:
           winter:
             - >-
@@ -104,7 +105,7 @@ lazy-wildcards:
       time:
         prompts:
           - >-
-            {1-$$sunlight|sunset|cool sun|scorching sun}
+            {1-$$sunlight|sunset|cool sun|scorching sun|bright sun}
           - dawn
           - twilight
           - >-
@@ -113,11 +114,13 @@ lazy-wildcards:
           - day
           - Dusk
           - __cof-location/timeofday/all__
+          - dynamic moment
       moon:
         prompts:
           - >-
             {cold |}full moon
           - moonlight
+          - midnight
       age:
         prompts:
           - medieval

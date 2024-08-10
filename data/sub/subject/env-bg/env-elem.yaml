@@ -12,6 +12,7 @@ lazy-wildcards:
             {6-$$__lazy-wildcards/subject/env-elem/others/env__}
         env:
           - metal partition
+          - (moss slime vines)
       flower:
         prompts:
           - >-
@@ -343,4 +344,35 @@ lazy-wildcards:
           - golden
           - gem
           - pile of skulls
+      circle-transmutation:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/circle-transmutation/env-magic__
+            ,{1-$$__lazy-wildcards/subject/env-elem/circle-transmutation/env__}
+        env-magic:
+          - transmutation circles
+        env:
+          - pentagram symbol
+          - pentagram circles
+          - arcane symbols
+      circle-magic:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/circle-magic/env-magic__
+            ,{1-$$__lazy-wildcards/subject/env-elem/circle-magic/style__}:1.4)
+            {1-$$__lazy-wildcards/subject/env-elem/circle-magic/env__}
+        env-magic:
+          - perfect magic circle
+        env:
+          - fireflies
+          - __lazy-wildcards/subject/env-elem/circle-transmutation/prompts__
+        style:
+          - spell
+          - fusion
+          - vortex
+          - swirling patterns
+      spider-webs:
+        prompts:
+          - >-
+            ({1-$$Cobwebs|spider webs|spider silk}:1.4)
 

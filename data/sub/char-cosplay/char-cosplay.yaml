@@ -387,8 +387,7 @@ lazy-wildcards:
           - mind control
           - see-through
         env:
-          - >-
-            {1-$$holographic|holographic touchscreen|holographic interface}
+          - __lazy-wildcards/subject/env-elem-punk/holographic/prompts__
           - recording
           - >-
             {1-$$chair|invisible chair}
@@ -1035,18 +1034,24 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/main__
+            {,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/expressions__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-hand__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-headwear__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-elem__}|}
             {,{1-$$__lazy-wildcards/subject/costume/police/prompts__}|}
             {0.2::,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-ethnicity__}|}
+            {0.2::,__lazy-wildcards/subject/action-sfw/sitting-*/prompts__|}
+            {0.2::,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/env__}|}
         main:
           - PoorlyDressedPolicewoman, brautiful pol1ceg1rls in a police uniform, policewoman
+        expressions:
+          - smug, grinning smile
         costume-ethnicity:
           - short hair, blonde hair, large breasts, orange eyes
           - long hair
         costume:
+          - police hat, police badge , short sleeves blue shirt, short black pencil skirt
           - >-
             pink bra, leopard print bar,
             blue Police jacket, open jacket,
@@ -1081,6 +1086,8 @@ lazy-wildcards:
           - epaulettes
           - >-
             pink panties, leopard print panties{, panties under pantyhose|}
+        env:
+          - work desk
     # https://mangadex.org/title/8fef2dc5-fd32-4d62-9cb3-4a39275e0ef5/no-longer-allowed-in-another-world
     # https://civitai.com/models/563039/isekai-shikkaku-or-annette-and-tama-pdxl
     Isekai_Shikkaku:
@@ -1752,4 +1759,54 @@ lazy-wildcards:
         style:
           - casual
           - engineering_genius
+    dragons_crown:
+      # https://civitai.com/models/26899/sorceress-dragons-crown?modelVersionId=32196
+      sorceress:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/dragons_crown/sorceress/costume-main__
+            {,__lazy-wildcards/cosplay-char/dragons_crown/sorceress/costume-ethnicity__|}
+            ,__lazy-wildcards/cosplay-char/dragons_crown/sorceress/costume__
+            {,{1-$$__lazy-wildcards/cosplay-char/dragons_crown/sorceress/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/dragons_crown/sorceress/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/dragons_crown/sorceress/action__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/dragons_crown/sorceress/env__}|}
+            {0.2::,{1-$$__lazy-wildcards/cosplay-char/dragons_crown/sorceress/env-bg__}|}
+        costume-main:
+          - sorceress, dcSorc, sorceress \(dragon's crown\), dragons_crown, witch, sorceress \(dragon's crown\) \(cosplay\)
+        costume-ethnicity:
+          - red hair, orange hair, blue eyes, eyelashes, long hair
+        costume:
+          - witch hat, strapless dress, detached sleeves, bare shoulders, side slit, white lace, bra peek
+        costume-elem:
+          - cleavage
+          - purple strapless dress
+          - bust_cup
+          - collarbone
+          - hat over one eye
+          - crossed legs
+          - curvy
+          - pelvic curtain
+          - wide hips
+          - corset
+          - hair over shoulder
+        costume-weapon:
+          - wooden staff, mage staff
+          - holding hat
+          - holding unworn clothes
+          - >-
+            {holding book|hugging_book|open_book}
+          - floating_book
+          - sword
+        action:
+          - leaning forward
+        env:
+          - hexagram, star of david
+          - jack-o'-lantern
+          - magic
+          - pumpkin
+          - skull, skeleton
+        env-bg:
+          - doorway, pov doorway
+          - desk, on desk
 

@@ -316,4 +316,90 @@ lazy-wildcards:
           - garden
         style:
           - no humans
+      steampunk-library:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-interior/steampunk-library/env-bg-main__
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/steampunk-library/env__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/steampunk-library/env-steampunk__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/steampunk-library/env-typewriter__}|}
+        env-bg-main:
+          - steampunk library with clockwork machines, retro-futuristic aesthetic, victorian-style aesthetic, interior, indoors
+        env-typewriter:
+          - typewriter
+          - telegraph_machine
+          - teletypewriter
+          - word_processor
+          - adding_machine
+          - keyboard
+          - printing_press
+          - stenograph_machine
+          - punch_card_machine
+          - rotary_dial_phone
+        env-steampunk:
+          - vacuum_tube_technology, vacuum_tube
+          - music boxes
+          - automated book-fetching machines
+          - clockwork-operated doors
+          - gears
+          - springs
+          - clockwork
+          - steam-powered machines
+          - intricate gears
+          - communication systems
+        env:
+          - grand Victorian-style library
+          - towering bookshelves
+          - dark wood
+          - brass
+          - gas lamps and chandeliers
+          - old books
+          - sound of ticking clocks
+          - walls
+          - furniture
+      witchs_workshop:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-interior/witchs_workshop/env-bg-main__
+            ,{1-$$__lazy-wildcards/subject/env-bg-interior/witchs_workshop/env__}
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/witchs_workshop/env-magical-ingredients__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/witchs_workshop/env-bg__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/witchs_workshop/style__}|}
+        env-bg-main:
+          - Witch's Workshop, alchemy_lab
+        env:
+          - ancient books, ancient texts, open spellbooks
+          - strange artifacts
+          - various magical instruments
+          - jars of mysterious ingredients, colorful bottles and jars, potion_brewing, magical potions, Elixirs
+          - herbs and incense
+          - flasks, beakers
+          - bubbling liquids, glowing liquids
+          - complex charts, __lazy-wildcards/subject/env-elem/circle-transmutation/prompts__
+          - >-
+            {1-$$ and $$green|purple} hue fire
+          - swirl with mist, emit sparks
+          - ornate crystalline containers
+          - crystal_ball
+          - broomstick
+          - __lazy-wildcards/subject/env-elem/circle-magic/prompts__
+        env-magical-ingredients:
+          - magical_ingredients
+          - phoenix feathers
+          - unicorn horns
+          - troll teeth
+          - bat wings
+          - mandrake roots
+          - rare herbs, mystical_herbs
+          - dragon scales
+        env-bg:
+          - tables
+          - floors
+          - walls
+          - grand stone witches_fireplace
+          - magic_cauldron, large black cast-iron pot, roaring fire
+        style:
+          - dark atmospheric
+          - Alchemy
+          - exotic
 

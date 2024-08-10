@@ -7,7 +7,7 @@ lazy-wildcards:
           - >-
             (toilet use:1.5), indoors, restroom, Toilet Scene,
             __lazy-wildcards/subject/action-nsfw-others/toilet-use/main-types/*__,
-            {1-$$__lazy-wildcards/subject/action-nsfw-others/toilet-use/style/main__},
+            {1-$$__lazy-wildcards/subject/action-nsfw-others/toilet-use/style-types/main__},
             {1-$$__lazy-wildcards/subject/action-nsfw-others/toilet-use/env__}
         main-types:
           standing:
@@ -15,8 +15,8 @@ lazy-wildcards:
           sitting:
             - >-
               (sitting:1.2),
-              , {1-$$__lazy-wildcards/subject/action-nsfw-others/toilet-use/style/setting__}
-        style:
+              , {1-$$__lazy-wildcards/subject/action-nsfw-others/toilet-use/style-types/sitting__}
+        style-types:
           main:
             - blush
             - looking back
@@ -52,7 +52,7 @@ lazy-wildcards:
             - >-
               {1-$$clothes lift|lifted by self}
             - underboob
-          setting:
+          sitting:
             - sitting on toilet pooping
             - legs closed
             - knees knocking together

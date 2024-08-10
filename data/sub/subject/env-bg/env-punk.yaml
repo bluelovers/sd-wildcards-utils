@@ -1,6 +1,22 @@
 lazy-wildcards:
   subject:
     env-elem-punk:
+      holographic:
+        prompts:
+          - >-
+            holographic
+            {,{1-$$__lazy-wildcards/subject/env-elem-punk/holographic/env-holographic__}|}
+            {,{1-$$__lazy-wildcards/subject/env-elem-punk/holographic/env__}|}
+            {,{1-$$__lazy-wildcards/subject/env-elem-punk/holographic/style__}|}
+        env-holographic:
+          - >-
+            holographic {1-$$, holographic $$touchscreen|interface|avatar|weapon|technology|map|armor|advertisement|painting \(object\)|monitor}
+        style:
+          - sci-fi, futuristic settings
+        env:
+          - communication devices
+          - display_board
+          - heads-up display
       solarpunk:
         prompts:
           - >-
