@@ -7417,6 +7417,64 @@ lazy-wildcards:
         env-bg:
           - doorway,pov doorway
           - desk,on desk
+    # https://danbooru.donmai.us/posts?tags=chainsaw_man+&z=5
+    chainsaw_man:
+      # https://civitai.com/models/254374/falling-devil-or-chainsaw-man
+      # https://civitai.com/models/39249
+      falling_devil:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-main__,__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-ethnicity__{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-eyes__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-nude__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-elem__}|}{,{1-3$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/expressions__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/env-bg__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/env__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/env-food__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/style__}|}
+        costume-main:
+          - falling_devil_\(chainsaw_man\),fallingdevil,falldevil,falling_devil_\(chainsaw_man\)_\(cosplay\),chainsaw_man
+        costume-ethnicity:
+          - extra arms,disembodied head,severed head,blood on face,blood drip,blood from mouth,nosebleed,blood from eyes,long arms,blood
+        costume:
+          - white chef hat,flat top chef hat
+          - black apron,waist apron
+          - elbow gloves
+          - buttons
+          - chef
+          - shirt tucked in,taut clothes,white shirt
+        costume-eyes:
+          - closed eyes
+          - smug smile
+          - wide smile
+          - blushed
+          - black tears
+        costume-nude:
+          - nude,navel,collarbone,bare arms
+          - open clothes
+        costume-elem:
+          - black underwear
+          - black blood
+          - arms behind back
+          - sweatdrop
+        costume-weapon:
+          - holding head
+          - holding broom
+          - holding menu,holding notepad,holding pencil
+          - holding food
+          - holding fruit
+          - holding plate
+        expressions:
+          - |-
+            (fingersmile,finger to mouth:1.2)
+          - furrowed brow
+          - open mouth
+        style:
+          - alluring
+          - floating
+        env:
+          - table
+          - floating object
+        env-food:
+          - food
+          - fruit
+        env-bg:
+          - desk,kitchen
+          - checkered floor
+          - hallway
   cosplay-others:
     Mobile-Police-Patlabor:
       AV-98-INGRAM:
