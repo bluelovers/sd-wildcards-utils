@@ -182,7 +182,11 @@ export function _visitNormalizeScalar(key: IVisitorFnKey, node: IWildcardsYAMLSc
 
 		value = trimPrompts(stripZeroStr(formatPrompts(value, runtime.options)));
 
-		if (RE_UNSAFE_VALUE.test(value))
+		if (!value.length)
+		{
+			throw new SyntaxError(`Invalid SYNTAX [EMPTY_VALUE]. key: ${key}, node: ${node}`)
+		}
+		else if (RE_UNSAFE_VALUE.test(value))
 		{
 			if (node.type === 'PLAIN')
 			{
