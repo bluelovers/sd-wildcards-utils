@@ -1,14 +1,14 @@
 lazy-wildcards:
   subject:
-    meme:
+    scenes-meme:
       girl-in-tsubo-pot:
         prompts:
           - >-
-            __lazy-wildcards/subject/meme/girl-in-tsubo-pot/main__
-            {,{1-$$__lazy-wildcards/subject/meme/girl-in-tsubo-pot/action__}|}
-            {,{1-$$__lazy-wildcards/subject/meme/girl-in-tsubo-pot/env__}|}
-            {,{1-$$__lazy-wildcards/subject/meme/girl-in-tsubo-pot/expressions__}|}
-            {,{1-$$__lazy-wildcards/subject/meme/girl-in-tsubo-pot/style__}|}
+            __lazy-wildcards/subject/scenes-meme/girl-in-tsubo-pot/main__
+            {,{1-$$__lazy-wildcards/subject/scenes-meme/girl-in-tsubo-pot/action__}|}
+            {,{1-$$__lazy-wildcards/subject/scenes-meme/girl-in-tsubo-pot/env__}|}
+            {,{1-$$__lazy-wildcards/subject/scenes-meme/girl-in-tsubo-pot/expressions__}|}
+            {,{1-$$__lazy-wildcards/subject/scenes-meme/girl-in-tsubo-pot/style__}|}
         main:
           - (chibi girl in tsubo pot:1.3)
         style:
@@ -29,15 +29,15 @@ lazy-wildcards:
       equipment-layout-dogeza:
         prompts:
           - >-
-            __lazy-wildcards/subject/meme/equipment-layout-dogeza/main__
-            ,(__lazy-wildcards/subject/meme/equipment-layout-dogeza/env-on__)
-            ,{1-2$$__lazy-wildcards/subject/meme/equipment-layout-dogeza/costume-nude__}
-            ,{1-$$__lazy-wildcards/subject/meme/equipment-layout-dogeza/costume-unworn__}
-            ,{1-$$__lazy-wildcards/subject/meme/equipment-layout-dogeza/costume-env__}
-            {,{1-$$__lazy-wildcards/subject/meme/equipment-layout-dogeza/costume-sex-toy__}|}
-            {0.2::,{1-$$__lazy-wildcards/subject/meme/equipment-layout-dogeza/costume-elem__}|}
-            ,{1-$$__lazy-wildcards/subject/meme/equipment-layout-dogeza/costume-weapon__}
-            {0.2::,{1-3$$__lazy-wildcards/subject/meme/equipment-layout-dogeza/action__}|}
+            __lazy-wildcards/subject/scenes-meme/equipment-layout-dogeza/main__
+            ,(__lazy-wildcards/subject/scenes-meme/equipment-layout-dogeza/env-on__)
+            ,{1-2$$__lazy-wildcards/subject/scenes-meme/equipment-layout-dogeza/costume-nude__}
+            ,{1-$$__lazy-wildcards/subject/scenes-meme/equipment-layout-dogeza/costume-unworn__}
+            ,{1-$$__lazy-wildcards/subject/scenes-meme/equipment-layout-dogeza/costume-env__}
+            {,{1-$$__lazy-wildcards/subject/scenes-meme/equipment-layout-dogeza/costume-sex-toy__}|}
+            {0.2::,{1-$$__lazy-wildcards/subject/scenes-meme/equipment-layout-dogeza/costume-elem__}|}
+            ,{1-$$__lazy-wildcards/subject/scenes-meme/equipment-layout-dogeza/costume-weapon__}
+            {0.2::,{1-3$$__lazy-wildcards/subject/scenes-meme/equipment-layout-dogeza/action__}|}
         main:
           - >-
             (naked dogeza, dogeza, equipment layout:1.3),
