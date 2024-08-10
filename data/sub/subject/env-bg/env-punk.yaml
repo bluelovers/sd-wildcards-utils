@@ -1,0 +1,72 @@
+lazy-wildcards:
+  subject:
+    env-elem-punk:
+      solarpunk:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/env-elem-punk/solarpunk/main__}:1.2)
+            {,{1-4$$__lazy-wildcards/subject/env-elem-punk/solarpunk/env-bg__}|}
+            ,({1-$$__lazy-wildcards/subject/env-elem-punk/solarpunk/env__}:1.2)
+            {,{1-4$$__lazy-wildcards/subject/env-elem-punk/solarpunk/costume__}|}
+            {,{1-4$$__lazy-wildcards/subject/env-elem-punk/solarpunk/style__}|}
+        main:
+          - solarpunk
+          - naturepunk
+          - Ethnofuturism
+        style:
+          - Green_Technology
+          - combines elements of nature with punk aesthetics
+          - Organic_Materials
+          - renewable energy, energy-efficient systems
+          - Eco_Fashion
+          - urban farming
+          - Tribal_Fashion
+          - Nature-Inspired_Fashion
+          - Solarpunk_Fashion
+          - futuristic designs
+          - Renewable_Materials_Fashion
+          - Sustainable_Utopia
+          - environmental harmony
+          - Features industrial design elements
+        costume:
+          - Hemp_Fabric
+          - Organic_Cotton
+          - Recycled_Clothing
+          - Handcrafted_Clothing
+          - Leafy_Attire
+          - Eco_Warrior_Outfit
+          - Bio_Armor
+          - Urban_Gardener_Attire
+        env:
+          - natural environments, natural elements
+          - solar power, solar panels
+          - wind power, Wind turbine
+          - Green_Rooftop
+          - covered in vegetation
+          - visible machinery and control room
+          - gates
+          - weirs
+          - >-
+            {1-$$rock road|stone road|wooden road}
+          - >-
+            {{wooden|stone|rock} |}stairs
+          - >-
+            {surrounded by |}{1-$$ and $$trees|plants|flowers}
+        env-bg:
+          - Sustainable_Architecture
+          - Vertical_Gardens, gardens that grow upwards on structures
+          - green space
+          - Urban_Forest, Overgrown_City
+          - Ethnic_Village
+          - Cultural_Marketplace
+          - Cultural_Architecture
+          - Indigenous_Landscapes
+          - Nature-Incorporated_Architecture
+          - Organic_Structures
+          - Solar_Cityscape
+          - >-
+            {1-4$$hydroelectric power|Hydroelectric_Dam|Reservoir|Penstock|Turbine_House|Spillway|Fish_Ladder|Intake_Tower}
+          - Solar_Farm
+          - hillside
+          - large artificial lake
+

@@ -1,14 +1,14 @@
 lazy-wildcards:
   subject:
-    food:
+    env-elem-food:
       shaved-ice-animal-shaped:
         prompts:
           - >-
-            __lazy-wildcards/subject/food/shaved-ice-animal-shaped/main__,
-            {1-$$__lazy-wildcards/subject/food/shaved-ice-animal-shaped/main-types/*__},
-            {1-$$__lazy-wildcards/subject/food/shaved-ice-animal-shaped/main-elem__},
-            {1-$$__lazy-wildcards/subject/food/shaved-ice-animal-shaped/style__},
-            {1-$$__lazy-wildcards/subject/food/shaved-ice-animal-shaped/env__}
+            __lazy-wildcards/subject/env-elem-food/shaved-ice-animal-shaped/main__,
+            {1-$$__lazy-wildcards/subject/env-elem-food/shaved-ice-animal-shaped/main-types/*__},
+            {1-$$__lazy-wildcards/subject/env-elem-food/shaved-ice-animal-shaped/main-elem__},
+            {1-$$__lazy-wildcards/subject/env-elem-food/shaved-ice-animal-shaped/style__},
+            {1-$$__lazy-wildcards/subject/env-elem-food/shaved-ice-animal-shaped/env__}
         main:
           - >-
             animal-shaped shaved ice, shaved ice, animal-shaped,
@@ -46,17 +46,30 @@ lazy-wildcards:
           - napkin
           - table
           - reflection
-    food-drink:
+          - drinking
+      tofu:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-food/tofu/env-food__
+            {,{1-$$__lazy-wildcards/subject/env-elem-food/tofu/env-food-elem__}|}
+        env-food:
+          - >-
+            {crispy |}fried tofu{slices|}
+        env-food-elem:
+          - chopped scallions
+          - chili peppers
+          - drizzled with savory sauce
+    env-elem-food-drink:
       # https://civitai.com/models/604678/ramune-sd15?modelVersionId=675915
       # 彈珠汽水
       ramune:
         prompts:
           - >-
-            __lazy-wildcards/subject/food-drink/ramune/main__
-            {,{1-$$__lazy-wildcards/subject/food-drink/ramune/style__}|}
-            {,{1-$$__lazy-wildcards/subject/food-drink/ramune/action-drink__}|}
-            {,{1-$$__lazy-wildcards/subject/food-drink/ramune/env-bottle__}|}
-            {,{1-$$__lazy-wildcards/subject/food-drink/ramune/env__}|}
+            __lazy-wildcards/subject/env-elem-food-drink/ramune/main__
+            {,{1-$$__lazy-wildcards/subject/env-elem-food-drink/ramune/style__}|}
+            {,{1-$$__lazy-wildcards/subject/env-elem-food-drink/ramune/action-drink__}|}
+            {,{1-$$__lazy-wildcards/subject/env-elem-food-drink/ramune/env-bottle__}|}
+            {,{1-$$__lazy-wildcards/subject/env-elem-food-drink/ramune/env__}|}
         main:
           - (ramune, glass_bottle_with_marble, glass marbles, marble_\(toy\), soda:1.3), drink, glass_bottle, bottle, food
         style:
@@ -92,5 +105,4 @@ lazy-wildcards:
           - clear_cubes
         action-drink:
           - pov, pov hands, holding, holding bottle
-          - drinking
 

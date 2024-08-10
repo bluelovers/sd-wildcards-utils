@@ -1,0 +1,261 @@
+lazy-wildcards:
+  subject:
+    costume:
+      # https://civitai.com/models/19620/lora-anthro-cobras
+      snake-anthro_cobra:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/snake-anthro_cobra/main__
+            ,({1-$$__lazy-wildcards/subject/costume/snake-anthro_cobra/costume-ethnicity__})
+            {,{1-$$__lazy-wildcards/subject/costume/snake-anthro_cobra/costume__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/snake-anthro_cobra/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/snake-anthro_cobra/env__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/snake-anthro_cobra/style__}|}
+        main:
+          - anthro_cobra, furrycobra snake, snake_humanoid, snake girl
+        costume-ethnicity:
+          - serpent-like head
+          - >-
+            serpent-like hood, snake hood
+            {, hooded_cobra, expanded_hood|}
+          - scaled skin
+          - slit_pupils, reptilian_eyes, snake eyes
+          - sharp_teeth
+          - snake_tail, elongated_tail
+          - snake body
+          - large eyes
+          - forked tongue
+          - colored sclera
+        costume:
+          - jewelry
+          - plunging neckline, cleavage
+          - very long hair
+          - pelvic curtain
+          - revealing clothes
+          - eyeshadow
+          - snake_hair_ornament
+          - >-
+            gold {1-$$, gold $$armlet|bracelet|choker|circlet}
+        costume-weapon:
+          - scepter
+        env:
+          - >-
+            {1-$$snake|giant_snake|venomous_snake|cobra \(animal\)}
+          - gem
+          - poison
+          - smile
+          - licking snake
+        style:
+          - reptilian_features
+          - threatening_appearance
+          - coiling_motion, sinuous_movement
+          - predatory_gaze
+          - predatory_feature
+          - constriction
+          - egyptian
+      # https://civitai.com/models/20872
+      plant-girl-alraune:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/plant-girl-alraune/main__
+            ,({1-$$__lazy-wildcards/subject/costume/plant-girl-alraune/costume-ethnicity__})
+            {,{1-$$__lazy-wildcards/subject/costume/plant-girl-alraune/costume-eyes__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/plant-girl-alraune/costume__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/plant-girl-alraune/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/plant-girl-alraune/env__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/plant-girl-alraune/env-bg__}|}
+        main:
+          - (alraune, alrauneSH:1.2), alraune_\(megami_tensei\), plant girl, upper body
+        costume-ethnicity:
+          - bell jar
+          - plant hair
+          - vines, thorns
+          - flower
+          - flower-shaped hair
+          - leaf
+        costume:
+          - breasts, navel
+          - wisteria
+          - parted lips
+          - arms at sides
+          - topless
+          - pasties
+          - long hair
+          - hair over eyes
+          - hair over breasts
+          - colored skin
+          - medium breasts
+          - open mouth
+          - pitcher plant
+          - saliva
+          - puffy sleeves
+          -
+          - licking
+          - __lazy-wildcards/subject/env-elem/flower/prompts__
+          - lipstick
+          - collarbone
+          -
+          - drill hair
+          - dress
+          - lily \(flower\)
+        costume-eyes:
+          - symbol-shaped pupils
+          - heart, heart in eye
+        costume-weapon:
+          - holding staff
+        env:
+          - (nectar:1.3)
+          - plant
+          - tentacles
+          - flower censor
+        env-bg:
+          - forest
+      bee_girl:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/bee_girl/main__
+            {,__lazy-wildcards/subject/costume/bee_girl/costume-ethnicity__|}
+            {,{1-$$__lazy-wildcards/subject/costume/bee_girl/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/bee_girl/costume__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/bee_girl/costume-mecha__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/bee_girl/costume-wings__}|}
+            {,({1-$$__lazy-wildcards/subject/costume/bee_girl/env-bg__}:1.3)|}
+            {,{1-$$__lazy-wildcards/subject/costume/bee_girl/env__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/bee_girl/style__}|}
+        main:
+          - (bee girl:1.3), Anthro_Bee
+        costume:
+          - abdomen tail
+          - antennae
+          - striped body
+          - honeycomb_ornament
+          - bee costume
+          - >-
+            bee {1-$$, bee $$exoskeletons|antennae|abdomen tail}
+        costume-mecha:
+          - >-
+            mechanical {1-$$, mechanical $$parts|bee}
+          - Bee_Mechanic_Girl
+          - mechanic suit
+        costume-ethnicity:
+          - queen bee
+          - worker bee
+          - soldier bees
+        costume-wings:
+          - bee wings
+        costume-weapon:
+          - holding sign
+          - >-
+            holding {honeycomb_\(object\)|honeypot|beehive}
+        style:
+          - Beehive_Mechanics
+          - honeycomb_\(pattern\)
+        env:
+          - >-
+            {1-$$honey|honey dipper|honeypot}
+          - larvae
+          - beehive integrated with mechanical elements
+          - gears
+          - machinery
+          - amber \(gemstone\)
+          - honeycomb_\(object\)
+          - >-
+            surrounded by {__lazy-wildcards/subject/costume/bee_girl/costume-ethnicity__|bee}s
+        env-bg:
+          - Beehive background
+          - complex honeycomb background
+          - Bee_Nest background
+          - hexagonal wax cells background
+      zombie-decaying:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/zombie-decaying/main__
+            {,{1-$$__lazy-wildcards/subject/costume/zombie-decaying/costume-ethnicity__}|}
+            ,{1-$$__lazy-wildcards/subject/costume/zombie-decaying/costume__}
+            {,{1-$$__lazy-wildcards/subject/costume/zombie-decaying/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/zombie-decaying/action__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/zombie-decaying/env__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/zombie-decaying/env-bg__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/zombie-decaying/style__}|}
+        main:
+          - undead, zombie, decaying
+        costume-ethnicity:
+          - zombie girl
+          - zombie cyborg girl
+        costume:
+          - decaying flesh
+          - tattered clothes, ripped clothes
+          - disheveled hair, messy hair
+          - stitches
+          - cyberpunk prosthesis
+          - bones
+        costume-weapon:
+          - holding a teddy bear
+        action:
+          - zombie pose
+        style:
+          - cute
+          - eerie
+          - post-apocalyptic
+          - cyberware
+          - decay
+        env:
+          - zombie Meat
+        env-bg:
+          - wasteland
+          - >-
+            {{cyberpunk|wasteland} |}graveyard
+      # https://civitai.com/models/626038/donm-shroom-knight-sdsdxlpony?modelVersionId=699877
+      Shroom-Knight:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/Shroom-Knight/main__
+            ,Shroom {1-2$$__lazy-wildcards/subject/costume/Shroom-Knight/costume-job__}
+            {,{1-$$__lazy-wildcards/subject/costume/Shroom-Knight/costume__}|}
+            {,{1-2$$__lazy-wildcards/subject/costume/Shroom-Knight/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/Shroom-Knight/env__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/Shroom-Knight/style__}|}
+        main:
+          - DonM5hr00mKn1gh7
+        costume-job:
+          - pirate swashbuckler
+          - witch
+          - burglar
+          - inventor
+          - noble
+          - treasure hunter
+          - adventurer
+          - dragon rider
+          - enchanted armor
+          - savage
+          - monk
+          - thief
+          - pirate gunner
+          - pirate
+          - martial artist
+          - duke
+          - arcane scholar
+          - warlock
+          - wizard
+          - mercenary captain
+          - Knight
+        costume:
+          - Mushroom_Helmet
+          - Armored_Mushroom
+          - Spore_Cloak
+          - Mycelium_Armor
+        costume-weapon:
+          - Fungal_Sword
+          - Shroom_Shield
+          - >-
+            {mushroom|spore|fungus|slime}-inspired weapon
+        env:
+          - Spore_Magic
+          - Fungal_Mount
+          - large mushroom
+          - fungus-based entity
+          - slime
+        style:
+          - >-
+            {mushroom|spore|fungus|slime}-inspired {1-2$$ and $$patterns|elements|designs|texture|appearance}
+

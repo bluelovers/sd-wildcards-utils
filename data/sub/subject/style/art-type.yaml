@@ -38,3 +38,81 @@ lazy-wildcards:
           - Strong Contrast
           - pencil sketch
           - charcoal sketch
+      # https://civitai.com/models/15927
+      blueprint-architectural-drawings:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/main__
+            {,{1-2$$__lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/env-architectural__}|}
+            {,{1-$$__lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/style__}|}
+            {,__lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/style-art-type__|}
+        main:
+          - (blueprint:1.3), architectural drawing
+        env-architectural:
+          - old moscow town conceptual style architecture
+          - conceptual style
+          - Chinese ancient architecture
+          - real-estate perspective of conceptual style architecture
+          - Swedish architecture
+          - School building
+          - Zaha Hadid style
+          - traditional chinese room
+          - ruins, rubble ruins
+        style:
+          - dimensions
+          - building
+          - structure
+          - layout
+        style-art-type:
+          - Floor_Plan, top-down perspective
+          - Elevation
+          - Section_Drawing
+          - Site_Plan
+          - Detail_Drawing
+          - Architectural_Rendering
+          - Axonometric_Drawing
+          - Concept_Sketch
+          - Construction_Documents
+          - As-Built_Drawings
+          - Mechanical_Plan
+          - Structural_Drawing
+          - Reflected_Ceiling_Plan
+      # https://civitai.com/models/14892?modelVersionId=17546
+      papercutting-art:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-art-type/papercutting-art/main__
+            {,{1-2$$__lazy-wildcards/subject/style-art-type/papercutting-art/env-paper-type__}|}
+            {,{1-3$$__lazy-wildcards/subject/style-art-type/papercutting-art/style-art-type__}|}
+            {,{1-$$__lazy-wildcards/subject/style-art-type/papercutting-art/style__}|}
+        main:
+          - Papercutting Art, Papercuts, paper cut art
+        style:
+          - decoration
+          - Intricate_Papercuts
+        style-art-type:
+          - Chinese_Papercutting
+          - Silhouette_Papercuts
+          - Lace_Papercuts
+          - Folk_Papercuts
+          - Festival_Papercuts
+          - Window_Papercuts
+          - Storytelling_Papercuts
+          - Modern_Papercuts
+          - Layered_Papercuts
+          - Floral_Papercuts
+          - Animal_Papercuts
+          - Abstract_Papercuts
+        env-paper-type:
+          - Construction_Paper
+          - Origami_Paper
+          - Watercolor_Paper
+          - Cardstock
+          - Tissue_Paper
+          - Kraft_Paper, brown paper
+          - Rice_Paper
+          - Parchment_Paper
+          - Newsprint
+          - Vellum
+          - translucent and smooth paper
+

@@ -1311,18 +1311,18 @@ lazy-wildcards:
           - skin tight
     ShinMegamiTensei:
       # https://civitai.com/models/613904/danu-shin-megami-tensei?modelVersionId=686262
-      Demons-Danu:
+      demons-danu:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/main__
-            ,{3-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/ethnicity__}
-            ,{99-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/ethnicity-hair__}
-            ,{99-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/costume__}
-            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/costume-tattoo__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/costume-elem__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/action__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/costume-weapon__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Danu/env__}|}
+            __lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/main__
+            ,{3-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/ethnicity__}
+            ,{99-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/ethnicity-hair__}
+            ,{99-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/costume__}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/costume-tattoo__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/action__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/env__}|}
         main:
           - DanuSMT, danu_\(megami_tensei\), shin megami tensei
         ethnicity:
@@ -1360,14 +1360,14 @@ lazy-wildcards:
         action:
           - hand on own hip
       # https://civitai.com/models/491563?modelVersionId=546594
-      Demons-Naamah:
+      demons-Naamah:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Naamah/main__
-            ,{3-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Naamah/ethnicity__}
-            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Naamah/costume-wings__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Naamah/costume__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/Demons-Naamah/action__}|}
+            __lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/main__
+            ,{3-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/ethnicity__}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/costume-wings__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/costume__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/action__}|}
         main:
           - Naamah, naamah_\(megami_tensei\), shin megami tensei
         ethnicity:
@@ -1388,6 +1388,18 @@ lazy-wildcards:
           - reaching
           - reaching towards viewer
           - and on own chest
+      demons-Alraune:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Alraune/main__
+            ,__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Alraune/costume-ethnicity__
+            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Alraune/style__}|}
+        main:
+          - alraune, alrauneSH, alraune_\(megami_tensei\), plant girl
+        costume-ethnicity:
+          - long hair, hair over eyes, vines, thorns, navel, hair over breasts, lipstick, red hair, flower, black rose, leaf
+        style:
+          - convenient censoring, hair censor
     Path-to-Nowhere:
       # https://civitai.com/models/428585/mantis-path-to-nowhere
       # https://danbooru.donmai.us/posts?tags=mantis_%28path_to_nowhere%29&z=5
@@ -1629,4 +1641,115 @@ lazy-wildcards:
         expressions:
           - furrowed brow
           - sweat
+      # https://civitai.com/models/629661/guru?modelVersionId=703949
+      guru:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/dragon_ball/guru/main__
+            ,(__lazy-wildcards/cosplay-char/dragon_ball/guru/costume-ethnicity__)
+            {,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/guru/costume__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/guru/env__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/guru/action__}|}
+        main:
+          - guru, old, dragon_ball
+        costume-ethnicity:
+          - antennae, green skin, namekian, pointy ears
+        costume:
+          - regular outfit
+        action:
+          - sitting
+        env:
+          - dragon ball \(object\)
+      # https://danbooru.donmai.us/posts?tags=cell_%28dragon_ball%29+&z=5
+      cell-perfect:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/dragon_ball/cell-perfect/main__
+            {,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/cell-perfect/main-ethnicity__}|}
+            ,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/cell-perfect/costume-ethnicity__}
+            {,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/cell-perfect/costume-wings__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/cell-perfect/costume-tail__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/cell-perfect/env__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/cell-perfect/expressions__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/cell-perfect/style__}|}
+        main:
+          - cell_\(dragon_ball\), perfect cell, dragon_ball, cell_\(dragon_ball\)_\(cosplay\)
+        main-ethnicity:
+          - cell max, alternate form
+          - cell junior
+        costume-ethnicity:
+          - pointy ears, colored skin, joints
+          - >-
+            {green skin|blue skin}
+        costume-wings:
+          - insect wings, black wings
+        expressions:
+          - evil smile
+        costume-tail:
+          - tail vore
+        style:
+          - fusion
+          - (toriyama akira \(style\))
+        env:
+          - dust cloud
+          - electricity
+    code_geass:
+      # https://civitai.com/models/131057/rakshata-chawla-anime-character-or-code-geass-or-ownwaifu?modelVersionId=143945
+      rakshata_chawla:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/main__
+            ,__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/costume-ethnicity__
+            {,__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/costume-weapon__|}
+            {,(__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/costume__)|}
+            {,__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/costume-eyes__|}
+            {,{1-$$__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/action__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/expressions__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/env__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/style__}|}
+        main:
+          - >-
+            rakshata_chawla, code geass,
+            ANIME_Rakshata_Chawla_aiwaifu69, aiwaifu69
+        costume-ethnicity:
+          - >-
+            blonde hair, indian, green eyes, long hair, facial mark, forehead mark,
+            dark_skin, tan_skin, tanned skin, dark skin, dark-skinned, black-skinned, bronze skin, bronzed skin
+        costume:
+          - white lab coat, long sleeves, red shirt, collared shirt
+          - arabian clothes, dress, harem outfit, partially fingerless gloves, veil
+        costume-eyes:
+          - v-shaped eyebrows
+        costume-elem:
+          - black panties
+          - collarbone
+          - lipstick, red lips
+          - makeup
+          - parted lips
+          - hair ornament
+          - earrings
+          - jewelry
+          - midriff
+          - navel piercing
+          - very long hair
+          - sidelocks
+          - >-
+            {1-$$bra|bra peek}
+          - fingernails, nail polish, red nails
+          - navel
+          - underwear
+          - >-
+            open {1-$$, open $$clothes|shirt|coat}
+        costume-weapon:
+          - holding smoking pipe, kiseru
+        action:
+          - hand up
+        env:
+          - knightmare_frame
+        expressions:
+          - calm_expression
+        style:
+          - casual
+          - engineering_genius
 

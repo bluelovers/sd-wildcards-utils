@@ -27,8 +27,15 @@ lazy-wildcards:
             - wisteria
             - cherry blossom, sakura
             - syaoran
+            - >-
+              lily \(flower\)
+              {,white lily|}
+            - wisteria
+            - purple rose
+            - lack rose
           others:
             - blue and ginger scales blooming rose
+            - pitcher plant
       mushroom:
         prompts:
           - >-
@@ -304,3 +311,36 @@ lazy-wildcards:
           - coffee
           - drinks
           - snacks
+      # https://civitai.com/models/22690/hellraiser-puzzle-box
+      Hellraiser-Puzzle-Box:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/Hellraiser-Puzzle-Box/env-main__
+            {,{1-3$$__lazy-wildcards/subject/env-elem/Hellraiser-Puzzle-Box/env-box__}|}
+            {,{1-3$$__lazy-wildcards/subject/env-elem/Hellraiser-Puzzle-Box/env__}|}
+            {,{1-3$$__lazy-wildcards/subject/env-elem/Hellraiser-Puzzle-Box/style__}|}
+        env-main:
+          - Hellraiser Puzzle Box
+        env-box:
+          - mystical puzzle box
+          - cube_artifact
+        style:
+          - impaled
+          - lament_configuration
+          - supernatural
+          - mystical
+          - horror
+          - suffering
+          - dark_magic
+          - geometric_patterns
+          - curses
+          - forbidden
+        env:
+          - >-
+            {1-$$surrounded by blood|blood splatter|blood stain|blood on ground|pool of blood|bleeding|bleeding|blood drip|raining_blood|blood drop|blood spray}
+          - on the floor
+          - ritualistic_artifact
+          - golden
+          - gem
+          - pile of skulls
+

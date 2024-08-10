@@ -2,7 +2,7 @@ lazy-wildcards:
   background:
     color-style:
       - >-
-        ({1-2$$ background, $$multicolored|gradient|solid color|neon color|fluorescent|psychedelic color|fluid color|color splash|color fusion|tie-dye color|colour sequence|rainbow|colored geometric|color bokeh|color stripes|colored confetti|colored marble|colored smoke|colored digital glitch|Abstract colored fractal|colored fractal} background)
+        ({1-3$$ background, $$multicolored|gradient|solid color|neon color|fluorescent|psychedelic color|fluid color|color splash|color fusion|tie-dye color|colour sequence|rainbow|colored geometric|color bokeh|color stripes|colored confetti|colored marble|colored smoke|colored digital glitch|Abstract colored fractal|colored fractal|camouflage|dripping colors|bold color} background)
     color-theme:
       - __mix-lazy-auto/color-anything__ background
     color-transparent:
@@ -31,7 +31,7 @@ lazy-wildcards:
       - __crea-*/location__
       - __lazy-wildcards/background/location/*/prompts__
       - __lazy-wildcards/subject/env-bg-interior/*/prompts__
-      - __lazy-wildcards/subject/theme/*/prompts-bg__
+      - __lazy-wildcards/subject/style-theme/*/prompts-bg__
       - __lazy-wildcards/subject/env-bg-architectural/*/prompts__
       - __lazy-wildcards/subject/env-*/*/prompts__
       - __lazy-wildcards/subject/env-bg/background/prompts__
@@ -114,6 +114,7 @@ lazy-wildcards:
       - cemetery, graveyard
       - Industrial age city
       - located in an urban scene at a scenic bus stop
+      - The messy room filled with super cluttered plants and super cluttered books
     location:
       interior-lava:
         prompts:

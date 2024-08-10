@@ -4,12 +4,15 @@ lazy-wildcards:
       Ancient-Egypt:
         prompts:
           - >-
-            inspired by ({1-$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/main__}:1.2)
+            __lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/main__,
+            inspired by ({1-$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/style-theme__}:1.2)
             {,{1-2$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/costume__}|}
             {,{1-3$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/env-bg__}|}
             {,{1-3$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/env__}|}
             {,{1-$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/style__}|}
         main:
+          - Building_Egyptian, egyptpunkai, egypt, egyptianworld
+        style-theme:
           - Ancient Egypt theme
           - Ancient Egypt civilization theme
           - ancient egyptian theme
@@ -18,6 +21,8 @@ lazy-wildcards:
           - royal beauty
           - historical importance
           - tomb rituals
+          - Ethnofuturism
+          - Cultural_Fusion
         costume:
           - Pharaoh, regal_attire, Egyptian_royalty, royal headdress
           - Anubis, jackal_headgear
@@ -69,14 +74,16 @@ lazy-wildcards:
       Ancient-Egypt-Punk:
         prompts:
           - >-
-            inspired by __lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt-Punk/main__
+            scifi, inspired by {1-$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt-Punk/style-theme__}
             {,{1-2$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt-Punk/costume__}|}
             {,{1-2$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt-Punk/env-bg__}|}
             {,{1-2$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt-Punk/env__}|}
             {,{1-$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt-Punk/style__}|}
             ,__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/prompts__
-        main:
-          - Ancientpunk Egypt, Egyptian Punk, Ancient Egypt Civilization Punk
+        style-theme:
+          - Ancientpunk Egypt
+          - Egyptian Punk
+          - Ancient Egypt Civilization Punk
         style:
           - punk_aesthetic, punk_fashion
           - mechanical_elements

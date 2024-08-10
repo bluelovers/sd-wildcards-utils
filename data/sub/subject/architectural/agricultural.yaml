@@ -47,3 +47,60 @@ lazy-wildcards:
           - __lazy-wildcards/subject/env-elem/flower/prompts__
           - plant
           - laboratory
+      # https://civitai.com/models/626234/traditional-multi-storey-wooden-chinese-restaurant?modelVersionId=700091
+      restaurant-traditional-multi-storey-wooden:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-architectural/restaurant-traditional-multi-storey-wooden/main__
+            ,__lazy-wildcards/subject/env-bg-architectural/restaurant-traditional-multi-storey-wooden/style-main__
+            {,{1-3$$__lazy-wildcards/subject/env-bg-architectural/restaurant-traditional-multi-storey-wooden/env-bg__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg-architectural/restaurant-traditional-multi-storey-wooden/env__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg-architectural/restaurant-traditional-multi-storey-wooden/style__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg-architectural/restaurant-traditional-multi-storey-wooden/env-bg-view__}|}
+        main:
+          - Traditional Multi Storey Wooden Restaurant
+        style:
+          - Martial_Arts_World
+          - social hubs
+          - decorative elements
+          - light rays
+          - landscape
+          - Traditional_Woodwork
+          - >-
+            {medium_shot|wide_shot}
+        style-main:
+          - ancient Chinese styles, traditional Chinese styles
+          - ancient Korean styles, traditional Korean styles
+        env:
+          - Wooden_Interior
+          - Ornate_Carvings, intricate and decorative wood carvings
+          - Paper_Lanterns
+          - Tatami_Floors
+          - Sliding_Doors
+          - Traditional_Furniture
+          - Decorative_Screens
+          - Wooden stairs
+          - table
+          - chair
+          - red Wooden
+          - Wooden fence
+          - Wooden_Beams
+          - Calligraphy_Decor
+          - Exposed_Rafters
+          - Hanging_Scrolls
+          - Lattice_Windows
+          - Bamboo_Decor
+          - Low_Furniture
+          - cushions
+          - >-
+            {1-$$fog|steam|smoke}
+        env-bg:
+          - ancient Traditional_Wooden_Building
+          - ancient Multi_Storey_Building
+          - ancient Chinese_Inn
+          - ancient Korean_Inn
+          - ancient Courtyard
+          - ancient chinese style loft
+        env-bg-view:
+          - indoors, interior
+          - outdoors

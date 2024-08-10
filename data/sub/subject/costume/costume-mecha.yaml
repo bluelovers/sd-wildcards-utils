@@ -16,6 +16,7 @@ lazy-wildcards:
           - headgear
           - mechanical wings
           - mechanical legs
+          - mechanical parts
           - >-
             {1-$$thrusters|propeller}
           - >-
@@ -30,13 +31,15 @@ lazy-wildcards:
           - cyberpunk neon
           - Steampunk
           - science fiction
+      # https://civitai.com/models/24260
+      # https://civitai.com/models/76693?modelVersionId=697939
       biomachine_body_horror:
         prompts:
           - >-
             __lazy-wildcards/subject/costume/biomachine_body_horror/main__
             {,({1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/style__}:1.2)|}
             {,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-types/*__}|}
-            {,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/ethnicity__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-ethnicity__}|}
             {,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-wings__}|}
             {,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/env__}|}
             {,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-breasts__}|}
@@ -51,6 +54,9 @@ lazy-wildcards:
           - erosion
           - fractal art
           - horror \(theme\)
+          - elegant
+          - futuristic
+          - ominous
         style-elem:
           - living being
           - hybrid_technology
@@ -77,6 +83,8 @@ lazy-wildcards:
           - cuts
           - Anatomy
         costume-types:
+          other:
+            - Ornate Princess
           mecha:
             - mechanical arms masterpiece
             - mecha musume
@@ -101,6 +109,8 @@ lazy-wildcards:
             - tendons
             - bones
             - blood vessels
+            - decaying flesh
+            - tattered clothes
         costume-breasts:
           - large breasts
           - cleavage
@@ -122,7 +132,7 @@ lazy-wildcards:
           - blood from eyes
           - clothes lift
           - wrist cutting
-        ethnicity:
+        costume-ethnicity:
           - black sclera
           - fangs
           - mismatched sclera

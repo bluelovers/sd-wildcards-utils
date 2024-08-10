@@ -657,7 +657,6 @@ lazy-wildcards:
           - layering_piece
           - casual_wear
           - minimal_exposure
-      
       graduation_robe:
         prompts:
           - >-
@@ -776,56 +775,21 @@ lazy-wildcards:
           - Egyptian_Jewelry, gold, gemstones
         costume-makeup:
           - Kohl_Makeup, black eye paint, defining eyes
-      # https://civitai.com/models/626038/donm-shroom-knight-sdsdxlpony?modelVersionId=699877
-      Shroom-Knight:
+      # Nyx Stealth Suit (Operation Lovecraft: Fallen Doll)
+      # https://civitai.com/models/632771/costume-nyx-stealth-suit-operation-lovecraft-fallen-doll?modelVersionId=707420
+      Nyx-Stealth-Suit:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume/Shroom-Knight/main__
-            ,Shroom {1-2$$__lazy-wildcards/subject/costume/Shroom-Knight/costume-job__}
-            {,{1-$$__lazy-wildcards/subject/costume/Shroom-Knight/costume__}|}
-            {,{1-2$$__lazy-wildcards/subject/costume/Shroom-Knight/costume-weapon__}|}
-            {,{1-$$__lazy-wildcards/subject/costume/Shroom-Knight/env__}|}
-            {,{1-$$__lazy-wildcards/subject/costume/Shroom-Knight/style__}|}
-        main:
-          - DonM5hr00mKn1gh7
-        costume-job:
-          - pirate swashbuckler
-          - witch
-          - burglar
-          - inventor
-          - noble
-          - treasure hunter
-          - adventurer
-          - dragon rider
-          - enchanted armor
-          - savage
-          - monk
-          - thief
-          - pirate gunner
-          - pirate
-          - martial artist
-          - duke
-          - arcane scholar
-          - warlock
-          - wizard
-          - mercenary captain
-          - Knight
+            __lazy-wildcards/subject/costume/Nyx-Stealth-Suit/costume__,
+            {,{1-$$__lazy-wildcards/subject/costume/Nyx-Stealth-Suit/costume-elem__}|}
         costume:
-          - Mushroom_Helmet
-          - Armored_Mushroom
-          - Spore_Cloak
-          - Mycelium_Armor
-        costume-weapon:
-          - Fungal_Sword
-          - Shroom_Shield
+          - nyxstealthsuit, crop top, underboob, (bodystocking:1.2)
+        costume-elem:
+          - shorts, microshorts
+          - thong, thigh strap
+      # https://danbooru.donmai.us/posts?tags=camouflage_jacket+&z=5
+      # 迷彩
+      camouflage:
+        prompts:
           - >-
-            {mushroom|spore|fungus|slime}-inspired weapon
-        env:
-          - Spore_Magic
-          - Fungal_Mount
-          - large mushroom
-          - fungus-based entity
-          - slime
-        style:
-          - >-
-            {mushroom|spore|fungus|slime}-inspired {1-2$$ and $$patterns|elements|designs|texture|appearance}
+            camouflage{, camouflage {1-3$$, camouflage $$__lazy-wildcards/utils/costume-type2-unworn__}|}

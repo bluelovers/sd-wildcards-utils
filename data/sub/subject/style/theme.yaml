@@ -1,15 +1,15 @@
 lazy-wildcards:
   subject:
-    theme:
+    style-theme:
       # Neo-Falmer World
       # https://civitai.com/models/489745/neo-falmer-world
       NeoFalmerWorld:
         prompts:
-          - __lazy-wildcards/subject/theme/NeoFalmerWorld/prompts-bg__
+          - __lazy-wildcards/subject/style-theme/NeoFalmerWorld/prompts-bg__
         prompts-bg:
           - >-
-            __lazy-wildcards/subject/theme/NeoFalmerWorld/main-bg-*__,
-            __lazy-wildcards/subject/theme/NeoFalmerWorld/main__
+            __lazy-wildcards/subject/style-theme/NeoFalmerWorld/main-bg-*__,
+            __lazy-wildcards/subject/style-theme/NeoFalmerWorld/main__
         style:
           - chitin, (chitin theme:1.2), (rough jagged texture:1.3), glow, jade
         style-adj:
@@ -20,8 +20,8 @@ lazy-wildcards:
           - __lazy-wildcards/dataset/background-color__
         main:
           - >-
-            __lazy-wildcards/subject/theme/NeoFalmerWorld/style__
-            {, __lazy-wildcards/subject/theme/NeoFalmerWorld/style-adj__|}
+            __lazy-wildcards/subject/style-theme/NeoFalmerWorld/style__
+            {, __lazy-wildcards/subject/style-theme/NeoFalmerWorld/style-adj__|}
         main-bg-bathroom:
           - >-
             __lazy-wildcards/subject/env-bg-interior/bathroom/prompts__,
