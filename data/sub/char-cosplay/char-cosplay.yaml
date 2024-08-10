@@ -7,14 +7,14 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/fate/raikou/main__,
-            __lazy-wildcards/cosplay-char/fate/raikou/ethnicity__,
+            __lazy-wildcards/cosplay-char/fate/raikou/costume-ethnicity__,
             __lazy-wildcards/cosplay-char/fate/raikou/costume-types/*__,
             {1-$$__lazy-wildcards/cosplay-char/fate/raikou/style__}
         main:
           - >-
             minamoto no raikou \(fate\),
             fate \(series\)
-        ethnicity:
+        costume-ethnicity:
           - large breasts, parted bangs, purple eyes, (purple hair:1.2), very long hair
         style:
           - hoop earrings
@@ -66,14 +66,14 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/TeddyLoid/MEMEME/main__,
-            {99$$__lazy-wildcards/cosplay-char/TeddyLoid/MEMEME/ethnicity__},
+            {99$$__lazy-wildcards/cosplay-char/TeddyLoid/MEMEME/costume-ethnicity__},
             {1-2$$__lazy-wildcards/cosplay-char/TeddyLoid/MEMEME/costume/*__},
             {3-$$__lazy-wildcards/cosplay-char/TeddyLoid/MEMEME/style__},
             {0-$$__lazy-wildcards/cosplay-char/TeddyLoid/MEMEME/env-bg__}
         main:
           - >-
             mememe, meme, me!me!me!, ME!ME!ME!feat.daoko, meme \(me!me!me!\)
-        ethnicity:
+        costume-ethnicity:
           - long hair
           - blue hair, aqua hair
           - bangs, blunt bangs
@@ -118,7 +118,7 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/bayonetta/bayonetta/main__,
-            __lazy-wildcards/cosplay-char/bayonetta/bayonetta/ethnicity__,
+            __lazy-wildcards/cosplay-char/bayonetta/bayonetta/costume-ethnicity__,
             __lazy-wildcards/cosplay-char/bayonetta/bayonetta/costume/*__,
             {0-$$__lazy-wildcards/cosplay-char/bayonetta/bayonetta/style__},
             {1-$$__lazy-wildcards/cosplay-char/bayonetta/bayonetta/env__},
@@ -126,7 +126,7 @@ lazy-wildcards:
         main:
           - >-
             cereza, bayonetta, mole under mouth
-        ethnicity:
+        costume-ethnicity:
           - blue eyes, __lazy-wildcards/cosplay-char/bayonetta/bayonetta/ethnicity-types/*__
         ethnicity-types:
           long-hair:
@@ -199,12 +199,12 @@ lazy-wildcards:
         prompts-char:
           - >-
             (__lazy-wildcards/cosplay-char/ErgoProxy/Re-L_Mayer/main__),
-            __lazy-wildcards/cosplay-char/ErgoProxy/Re-L_Mayer/ethnicity__,
+            __lazy-wildcards/cosplay-char/ErgoProxy/Re-L_Mayer/costume-ethnicity__,
             {{1-$$__lazy-wildcards/cosplay-char/ErgoProxy/Re-L_Mayer/env__},|}
             __lazy-wildcards/cosplay-char/ErgoProxy/Re-L_Mayer/style__
         main:
           - re-l_mayer, ErgoProxy_ReLMayer, ergo proxy
-        ethnicity:
+        costume-ethnicity:
           - __lazy-wildcards/cosplay-char/ErgoProxy/Re-L_Mayer/ethnicity-makeup__, black hair
         ethnicity-makeup:
           - >-
@@ -238,14 +238,14 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/Neon_Genesis_Evangelion/Ayanami_Rei/main__,
-            __lazy-wildcards/cosplay-char/Neon_Genesis_Evangelion/Ayanami_Rei/ethnicity__,
+            __lazy-wildcards/cosplay-char/Neon_Genesis_Evangelion/Ayanami_Rei/costume-ethnicity__,
             __lazy-wildcards/cosplay-char/Neon_Genesis_Evangelion/Ayanami_Rei/ethnicity-hair__,
             {0.3::__lazy-wildcards/cosplay-char/Neon_Genesis_Evangelion/Ayanami_Rei/costume/*__,|}
             {{1-$$__lazy-wildcards/cosplay-char/Neon_Genesis_Evangelion/Ayanami_Rei/style__},|}
             {1-$$__lazy-wildcards/cosplay-char/Neon_Genesis_Evangelion/Ayanami_Rei/env__}
         main:
           - ppayanamirei, Ayanami Rei, rei ayanami, ayanami rei \(cosplay\), Neon Genesis Evangelion
-        ethnicity:
+        costume-ethnicity:
           - blue hair, red eyes
         ethnicity-hair:
           - short hair
@@ -278,13 +278,13 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/Nier/2b/main__,
-            __lazy-wildcards/cosplay-char/Nier/2b/ethnicity__,
+            __lazy-wildcards/cosplay-char/Nier/2b/costume-ethnicity__,
             {__lazy-wildcards/cosplay-char/Nier/2b/costume-types/type-*__,|}
             __lazy-wildcards/cosplay-char/Nier/2b/costume-eyes/*__,
             {1-$$__lazy-wildcards/cosplay-char/Nier/2b/env__}
         main:
           - nier:automata, nier \(series\), nier, 2bnierdef, 2b, 2b \(nier:automata\)
-        ethnicity:
+        costume-ethnicity:
           - __lazy-wildcards/cosplay-char/Nier/2b/ethnicity-types/*__, hair over one eye
         ethnicity-types:
           2b:
@@ -403,7 +403,7 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/main__,
-            __lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/ethnicity__,
+            __lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/costume-ethnicity__,
             {{1-$$__lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/costume-types/type-*__},|}
             {1-$$__lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/env__}
         main:
@@ -415,7 +415,7 @@ lazy-wildcards:
             - original outfit, white shirt, open clothes, rope, colored sclera, japanese clothes, japanese armor
           type-mecha:
             - white mecha bodysuit, white mecha corset, mecha museum, mechanical parts and weapons, headgear, humanoid robot, android, exposed bones, anatomy, exo-skeleton body, mecha skeleton, rib cage, hip bones, backbones,
-        ethnicity:
+        costume-ethnicity:
           - white hair, long hair, colored sclera
         env:
           - slightly curly hair
@@ -446,14 +446,14 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/onmyoji/enenra/main__,
-            {1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/ethnicity__},
+            {1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/costume-ethnicity__},
             {{1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/costume-types/type-*__},|}
             {1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/costume-elem__},
             {{1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/env-bg__},|}
             {1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/env__}
         main:
           - Enenra, enenra \(onmyoji\), japanese attire
-        ethnicity:
+        costume-ethnicity:
           - hidden ears
           - blue eyes
           - pointy ears
@@ -497,7 +497,7 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/vocaloid/hatsune_miku/main__,
-            {1-$$__lazy-wildcards/cosplay-char/vocaloid/hatsune_miku/ethnicity__},
+            {1-$$__lazy-wildcards/cosplay-char/vocaloid/hatsune_miku/costume-ethnicity__},
             {1-$$__lazy-wildcards/cosplay-char/vocaloid/hatsune_miku/costume/type-*__},
             {1-$$__lazy-wildcards/cosplay-char/vocaloid/hatsune_miku/costume-elem__}
         main:
@@ -506,7 +506,7 @@ lazy-wildcards:
           # https://civitai.com/models/567354/hatsune-miku-bagua-clothes?modelVersionId=632268
           type-bagua:
             - (bagua:1.2), Hatsune Miku Bagua Clothes
-        ethnicity:
+        costume-ethnicity:
           - aqua hair
           - twintails
           - aqua eyes
@@ -544,14 +544,14 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/cosplay-char/ragnarok_online/blacksmith/main__,
             {{1-$$__lazy-wildcards/cosplay-char/ragnarok_online/blacksmith/costume__},|}
-            {{1-$$__lazy-wildcards/cosplay-char/ragnarok_online/blacksmith/ethnicity__},|}
+            {{1-$$__lazy-wildcards/cosplay-char/ragnarok_online/blacksmith/costume-ethnicity__},|}
             {__lazy-wildcards/cosplay-char/ragnarok_online/blacksmith/pose__,|}
             {1-$$__lazy-wildcards/cosplay-char/ragnarok_online/blacksmith/env__}
         main:
           - blacksmith \(ragnarok online\), ragnarok online, bsRO
         costume:
           - red scarf, blue denim shorts, tied shirt, armored gloves, fingerless gloves, crop top, front-tie top, tattoo, underboob, sleeveless shirt, belt, ankle_boots
-        ethnicity:
+        costume-ethnicity:
           - blue hair, blue eye, low twintails
         pose:
           - standing, hand on hip
@@ -615,12 +615,12 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/cosplay-char/queens_blade/menace/main__,
             {{1-$$__lazy-wildcards/cosplay-char/queens_blade/menace/costume-types/*__},|}
-            {1-$$__lazy-wildcards/cosplay-char/queens_blade/menace/ethnicity__},
+            {1-$$__lazy-wildcards/cosplay-char/queens_blade/menace/costume-ethnicity__},
             {{1-$$__lazy-wildcards/cosplay-char/queens_blade/menace/env__},|}
             {1-$$__lazy-wildcards/cosplay-char/queens_blade/menace/costume-elem__}
         main:
           - menace_\(queen's_blade\), menace \(queen's blade\) \(cosplay\), queen's blade, egyptian
-        ethnicity:
+        costume-ethnicity:
           - short hair, bob cut, blunt bangs
           - large breasts
           - >-
@@ -690,7 +690,7 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/rwby/ruby_rose/main__,
-            {{1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/ethnicity__},|}
+            {{1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/costume-ethnicity__},|}
             {{1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/costume-types/type-*__},|}
             {{1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/costume-weapon__},|}
             {1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/style__},
@@ -698,7 +698,7 @@ lazy-wildcards:
             {1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/env__}
         main:
           - rwby, ruby rose, ruby rose \(rwby\), crescent rose
-        ethnicity:
+        costume-ethnicity:
           - short hair
           - red eyes
           - >-
@@ -773,7 +773,7 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/rwby/summer-rose/main__
-            {{1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/ethnicity__},|}
+            {{1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/costume-ethnicity__},|}
             {{1-$$__lazy-wildcards/cosplay-char/rwby/summer-rose/costume__},|}
             {{1-$$__lazy-wildcards/cosplay-char/rwby/summer-rose/costume-elem__},|}
             {{1-$$__lazy-wildcards/cosplay-char/rwby/summer-rose/costume-weqapen__},|}
@@ -800,12 +800,12 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/kumo_desu/karnatia_seri_anabald/main__,
-            {{1-$$__lazy-wildcards/cosplay-char/kumo_desu/karnatia_seri_anabald/ethnicity__},|}
+            {{1-$$__lazy-wildcards/cosplay-char/kumo_desu/karnatia_seri_anabald/costume-ethnicity__},|}
             {1-$$__lazy-wildcards/cosplay-char/kumo_desu/karnatia_seri_anabald/costume__},
             {1-$$__lazy-wildcards/cosplay-char/kumo_desu/karnatia_seri_anabald/costume-elem__}
         main:
           - (karnatia:1.2), kumo_desu_ga_nani_ka
-        ethnicity:
+        costume-ethnicity:
           - red_hair
         costume:
           - red_dress,pendant,cloak
@@ -821,7 +821,7 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/claymore/base/main__,
-            {{1-$$__lazy-wildcards/cosplay-char/claymore/base/ethnicity__},|}
+            {{1-$$__lazy-wildcards/cosplay-char/claymore/base/costume-ethnicity__},|}
             {{1-$$__lazy-wildcards/cosplay-char/claymore/base/costume__},|}
             {1-$$__lazy-wildcards/cosplay-char/claymore/base/costume-elem__}
         utils:
@@ -835,7 +835,7 @@ lazy-wildcards:
               {1-$$__lazy-wildcards/cosplay-char/claymore/base/prompts__}
         main:
           - claymore \(series\)
-        ethnicity:
+        costume-ethnicity:
           - blonde hair
           - __lazy-wildcards/cosplay-char/claymore/base/ethnicity-eyes__
           - pale skin
@@ -901,7 +901,7 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/cosplay-char/blame/cibo/main__,
             {{1-$$__lazy-wildcards/cosplay-char/blame/cibo/main-trigger-words__},|}
-            {{1-$$__lazy-wildcards/cosplay-char/blame/cibo/ethnicity__},|}
+            {{1-$$__lazy-wildcards/cosplay-char/blame/cibo/costume-ethnicity__},|}
             {{1-$$__lazy-wildcards/cosplay-char/blame/cibo/costume__},|}
             {1-$$__lazy-wildcards/cosplay-char/blame/cibo/costume-elem__},
             {1-$$__lazy-wildcards/cosplay-char/blame/cibo/env__}
@@ -910,7 +910,7 @@ lazy-wildcards:
         main-trigger-words:
           - ova
           - movie
-        ethnicity:
+        costume-ethnicity:
           - long hair, white hair, blue eyes, blunt bangs
           - long legs, tall female
         costume:
@@ -1040,10 +1040,10 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-headwear__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-elem__}|}
             {,{1-$$__lazy-wildcards/subject/costume/police/prompts__}|}
-            {0.2::,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/ethnicity__}|}
+            {0.2::,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-ethnicity__}|}
         main:
           - PoorlyDressedPolicewoman, brautiful pol1ceg1rls in a police uniform, policewoman
-        ethnicity:
+        costume-ethnicity:
           - short hair, blonde hair, large breasts, orange eyes
           - long hair
         costume:
@@ -1089,7 +1089,7 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/main__
-            {,{1-$$__lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/ethnicity__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/costume-ethnicity__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/costume__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/costume-elem__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/costume-weapon__}|}
@@ -1097,7 +1097,7 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/cosplay-char/Isekai_Shikkaku/Annette/style__}|}
         main:
           - (Annette:1.3), a beautiful elvish girl
-        ethnicity:
+        costume-ethnicity:
           - orange hair
           - blonde hair
         costume:
@@ -1132,7 +1132,7 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/main__
-            ,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/ethnicity__}
+            ,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume-ethnicity__}
             ,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume-wings__}
             {,__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume__|}
             {,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume-elem__}|}
@@ -1140,7 +1140,7 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/env__}|}
         main:
           - HL, harpie_lady_1, harpie_lady, harpie_lady_\(normal_monster\), yu-gi-oh!, yu-gi-oh! duel monsters, harpie lady \(normal monster\) \(cosplay\), harpy
-        ethnicity:
+        costume-ethnicity:
           - >-
             {1-$$winged arms|feathered arms}
           - blue skin
@@ -1187,14 +1187,14 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/main__
-            ,{2-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/ethnicity__}
+            ,{2-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/costume-ethnicity__}
             {,{1-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/expressions__}|}
             ,{5-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/costume__}
             {,__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/costume-weapon__|}
             {,{1-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/costume-elem__}|}
         main:
           - ubel_\(sousou_no_frieren\), UbelFrieren, ubel, ubel_\(sousou_no_frieren\)_\(cosplay\)
-        ethnicity:
+        costume-ethnicity:
           - long hair
           - green hair
           - side ponytail, hair between eyes, bangs
@@ -1240,14 +1240,14 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/main__
-            ,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/ethnicity__}
+            ,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/costume-ethnicity__}
             {,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/costume-types/*__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/costume-elem__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/action__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/env__}|}
         main:
           - EclipseNightmareBunny, eclipse_(brown_dust_2), brown_dust_2, brown_dust
-        ethnicity:
+        costume-ethnicity:
           - very long hair, ponytail, purple hair, blue eyes, hair over one eye
           - huge breasts
           - black hair
@@ -1293,11 +1293,11 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/Star-Jewel/Reiko-Kanna/main__
-            ,{1-$$__lazy-wildcards/cosplay-char/Star-Jewel/Reiko-Kanna/ethnicity__}
+            ,{1-$$__lazy-wildcards/cosplay-char/Star-Jewel/Reiko-Kanna/costume-ethnicity__}
             {,{1-$$__lazy-wildcards/cosplay-char/Star-Jewel/Reiko-Kanna/costume-elem__}|}
         main:
           - ReikoKanna
-        ethnicity:
+        costume-ethnicity:
           - short hair
           - bob cut
           - blue hair
@@ -1315,7 +1315,7 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/main__
-            ,{3-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/ethnicity__}
+            ,{3-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/costume-ethnicity__}
             ,{99-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/ethnicity-hair__}
             ,{99-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/costume__}
             {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/costume-tattoo__}|}
@@ -1325,7 +1325,7 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/env__}|}
         main:
           - DanuSMT, danu_\(megami_tensei\), shin megami tensei
-        ethnicity:
+        costume-ethnicity:
           - long hair
           - green eyes
           - green hair
@@ -1364,13 +1364,13 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/main__
-            ,{3-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/ethnicity__}
+            ,{3-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/costume-ethnicity__}
             {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/costume-wings__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/costume__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/action__}|}
         main:
           - Naamah, naamah_\(megami_tensei\), shin megami tensei
-        ethnicity:
+        costume-ethnicity:
           - long hair, colored skin, half mask, lipstick, cyborg, mechanical arm, mechanical leg, hairband, gold trim, teeth
           - heterochromia, blue eyes, red eyes
           - blonde hair
@@ -1407,14 +1407,14 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/main__
-            ,{3-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/ethnicity__}
+            ,{3-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-ethnicity__}
             {0.3::,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-wings__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-elem__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-weapon__}|}
         main:
           - Mantis, Mantis \(path_to_nowhere\), path_to_nowhere
-        ethnicity:
+        costume-ethnicity:
           - aqua eyes
           - ahoge
           - monster girl
@@ -1445,7 +1445,7 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/Magi/Myers/main__
-            ,({1-$$__lazy-wildcards/cosplay-char/Magi/Myers/ethnicity__})
+            ,({1-$$__lazy-wildcards/cosplay-char/Magi/Myers/costume-ethnicity__})
             {,{1-$$__lazy-wildcards/cosplay-char/Magi/Myers/costume-headwear__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/Magi/Myers/costume-weapon__}|}
             ,{1-$$__lazy-wildcards/cosplay-char/Magi/Myers/costume__}
@@ -1486,7 +1486,7 @@ lazy-wildcards:
           - magical_weapon
           - whipping
           - holding riding crop
-        ethnicity:
+        costume-ethnicity:
           - yellow eyes, purple hair, long hair
         env:
           - djinn equip
@@ -1504,7 +1504,7 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/Magi/djinn-paimon/main__
-            ,({5-$$__lazy-wildcards/cosplay-char/Magi/djinn-paimon/ethnicity__})
+            ,({5-$$__lazy-wildcards/cosplay-char/Magi/djinn-paimon/costume-ethnicity__})
             {,{1-$$__lazy-wildcards/cosplay-char/Magi/djinn-paimon/costume__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/Magi/djinn-paimon/costume-weapon__}|}
             {,{5-$$__lazy-wildcards/cosplay-char/Magi/djinn-paimon/costume-elem__}|}
@@ -1515,7 +1515,7 @@ lazy-wildcards:
         main:
           - >-
             paimon_magi, Paimon_aiwaifu, paimon_\(magi\), paimon_\(magi\)_\(cosplay\), magi the labyrinth of magic, djinn
-        ethnicity:
+        costume-ethnicity:
           - long hair, blue hair, very long hair, hair between eyes
           - sharp fingernails
           - pointy ears, ear piercing
@@ -1571,14 +1571,14 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/Mahou-Shoujo-ni-Akogarete/Magia-Baiser/main__
-            ,({1-$$__lazy-wildcards/cosplay-char/Mahou-Shoujo-ni-Akogarete/Magia-Baiser/ethnicity__})
+            ,({1-$$__lazy-wildcards/cosplay-char/Mahou-Shoujo-ni-Akogarete/Magia-Baiser/costume-ethnicity__})
             {,{1-$$__lazy-wildcards/cosplay-char/Mahou-Shoujo-ni-Akogarete/Magia-Baiser/costume__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/Mahou-Shoujo-ni-Akogarete/Magia-Baiser/costume-wings__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/Mahou-Shoujo-ni-Akogarete/Magia-Baiser/costume-elem__}|}
         main:
           - >-
             magiabaiser, magia_baiser, magiav1, utena_wz, mahou shoujo ni akogarete
-        ethnicity:
+        costume-ethnicity:
           - short hair, black hair, ahoge, bangs, hair between eyes, yellow eyes, purple hair
         costume:
           - corset, navel, midriff
@@ -1602,7 +1602,7 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/dragon_ball/dr-gero/main__
-            ,({1-$$__lazy-wildcards/cosplay-char/dragon_ball/dr-gero/ethnicity__})
+            ,({1-$$__lazy-wildcards/cosplay-char/dragon_ball/dr-gero/costume-ethnicity__})
             ,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/dr-gero/costume-elem__}
             {,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/dr-gero/action__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/dr-gero/env__}|}
@@ -1610,7 +1610,7 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/dr-gero/style__}|}
         main:
           - (dr gero, dr._gero_\(dragon_ball\), red_ribbon_army), dragon_ball, Android_20
-        ethnicity:
+        costume-ethnicity:
           - white mustache, white facial hair, old man
           - white hair, grey hair
           - blue eyes

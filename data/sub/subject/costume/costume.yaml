@@ -115,7 +115,7 @@ lazy-wildcards:
             {1-$$__lazy-wildcards/subject/costume/slave-girl/costume/*__},
             ({1-$$__lazy-wildcards/subject/costume/slave-girl/style__}),
             {1-$$__lazy-wildcards/subject/costume/slave-girl/style-torn__},
-            {({1-$$__lazy-wildcards/subject/costume/slave-girl/ethnicity__}:1.2),|}
+            {({1-$$__lazy-wildcards/subject/costume/slave-girl/costume-ethnicity__}:1.2),|}
             {1-$$__lazy-wildcards/subject/costume/slave-girl/env__}
             {0.1::, {1-$$__lazy-wildcards/subject/costume/slave-girl/env-bg__}|}
             {0.2::, __lazy-wildcards/subject/moment/age/prompts__|}
@@ -127,7 +127,7 @@ lazy-wildcards:
               {2-$$ragged tunic|tattered clothing|torn clothes, torn clothing}
           type-slave-outfit:
             - slave outfit
-        ethnicity:
+        costume-ethnicity:
           - malnutrition
           - emaciation
           - visible_ribs
@@ -267,7 +267,7 @@ lazy-wildcards:
           - __lazy-wildcards/subject/costume/ofuda-maebari/costume-types/pussy-ofuda__
           - __lazy-wildcards/subject/costume/ofuda-maebari/costume-types/ofuda-bra__
           - slingshot swimsuit ofuda
-        ethnicity:
+        costume-ethnicity:
           jiangshi:
             - >-
               jiangshi, zombie
@@ -444,10 +444,10 @@ lazy-wildcards:
             __lazy-wildcards/subject/costume/game_of_thrones/main__,
             {1-$$__lazy-wildcards/subject/costume/game_of_thrones/main-types/*__},
             {1-$$__lazy-wildcards/subject/costume/game_of_thrones/costume-elem__},
-            {{1-$$__lazy-wildcards/subject/costume/game_of_thrones/ethnicity__},|}
+            {{1-$$__lazy-wildcards/subject/costume/game_of_thrones/costume-ethnicity__},|}
             {{1-$$__lazy-wildcards/subject/costume/game_of_thrones/env-bg__},|}
             {1-$$__lazy-wildcards/subject/costume/game_of_thrones/env__}
-        ethnicity:
+        costume-ethnicity:
           - platinum blonde braid
           - dark chignon hair
         main:
@@ -531,13 +531,13 @@ lazy-wildcards:
           - >-
             {1-$$__lazy-wildcards/subject/costume/Nun/main__}
             {,{1-$$__lazy-wildcards/subject/costume/Nun/costume__}|}
-            {,{1-$$__lazy-wildcards/subject/costume/Nun/ethnicity__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/Nun/costume-ethnicity__}|}
             ,{1-$$__lazy-wildcards/subject/costume/Nun/style__}
             ,{1-$$__lazy-wildcards/subject/costume/Nun/env__}
             {,{1-$$__lazy-wildcards/subject/costume/Nun/env-bg__}|}
         main:
           - nun
-        ethnicity:
+        costume-ethnicity:
           - pale_skin
         costume:
           - >-

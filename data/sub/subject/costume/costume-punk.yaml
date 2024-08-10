@@ -5,7 +5,7 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/subject/costume/punk-insect/main__
-            ,{1-2$$__lazy-wildcards/subject/costume/punk-insect/ethnicity__}
+            ,{1-2$$__lazy-wildcards/subject/costume/punk-insect/costume-ethnicity__}
             {,{1-$$__lazy-wildcards/subject/costume/punk-insect/costume-weapon__}|}
             {,{1-$$__lazy-wildcards/subject/costume/punk-insect/costume-elem__}|}
             {,{1-$$__lazy-wildcards/subject/costume/punk-insect/env__}|}
@@ -28,7 +28,7 @@ lazy-wildcards:
           - insect technology
           - taur
           - Anthro Bugs
-        ethnicity:
+        costume-ethnicity:
           - >-
             insect {1-$$, insect $$girl|exoskeletons|wings|antennae|tail|claws|hair|tattoo|legs|arms|limbs|parts|ears|eyes|horns|joints|tentacles}
           - >-
