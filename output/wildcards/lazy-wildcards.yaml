@@ -7424,11 +7424,12 @@ lazy-wildcards:
       falling_devil:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-main__,__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-ethnicity__{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-eyes__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-nude__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-elem__}|}{,{1-3$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/expressions__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/env-bg__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/env__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/env-food__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/style__}|}
+            __lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-main__,__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-ethnicity__{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-eyes__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-nude__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-elem__}|}{,{1-3$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/expressions__}|}{0.2::,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/env-bg__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/env__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/env-food__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/style__}|}
         costume-main:
           - falling_devil_\(chainsaw_man\),fallingdevil,falldevil,falling_devil_\(chainsaw_man\)_\(cosplay\),chainsaw_man
         costume-ethnicity:
-          - extra arms,disembodied head,severed head,blood on face,blood drip,blood from mouth,nosebleed,blood from eyes,long arms,blood
+          - |-
+            (extra arms,disembodied head,severed head:1.2),blood on face,blood from mouth,nosebleed,(blood drip,blood from eyes:1.2),long arms,blood
         costume:
           - white chef hat,flat top chef hat
           - black apron,waist apron
@@ -7443,13 +7444,15 @@ lazy-wildcards:
           - blushed
           - black tears
         costume-nude:
-          - nude,navel,collarbone,bare arms
+          - nude,navel,collarbone,bare arms,breasts
           - open clothes
         costume-elem:
           - black underwear
           - black blood
           - arms behind back
           - sweatdrop
+          - medium breasts
+          - cleavage
         costume-weapon:
           - holding head
           - holding broom
