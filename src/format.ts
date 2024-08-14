@@ -42,4 +42,5 @@ export function stripBlankLines(value: string)
 	return value
 		.replace(/(\r?\n)[\s\r\n\t\xa0]+(\r?\n)/g, '$1$2')
 		.replace(/(\r?\n)(?:\r?\n)(?=[\s\t\xa0])/g, '$1')
+		.replace(/[ \xa0\t]+$/gm, '')
 }
