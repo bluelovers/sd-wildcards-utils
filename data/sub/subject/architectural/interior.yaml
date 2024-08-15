@@ -402,4 +402,58 @@ lazy-wildcards:
           - dark atmospheric
           - Alchemy
           - exotic
-
+      movie_theater:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-interior/movie_theater/env-bg-main__
+            ,{{1-$$__lazy-wildcards/subject/env-bg-interior/movie_theater/env-bg-types/theater_auditorium__}|{1-3$$__lazy-wildcards/subject/env-bg-interior/movie_theater/env-bg-types/others__}}
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/movie_theater/env-chair__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/movie_theater/env__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/movie_theater/env-elem-food__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/movie_theater/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/movie_theater/style__}|}
+        env-bg-main:
+          - movie theater, cinema, theater, movie house
+        env-elem-food:
+          - popcorn
+          - food
+          - chicken
+          - drinking straw
+          - eating
+          - snacks
+          - drinks
+          - refreshments
+          - soda
+          - candy
+          - cup
+        costume-weapon:
+          - holding bucket
+          - holding food
+        env:
+          - >-
+            heterochromatic eyewear, 3d glasses
+          - movie tickets
+          - movie_poster_display
+          - soundproof_walls
+          - surround_sound_system
+        env-chair:
+          - cushioned seats
+          - recliners
+          - luxurious seating
+          - theater seating
+        style:
+          - (dim lighting:1.4), dark lighting
+          - cinematic lighting
+        env-bg-types:
+          theater_auditorium:
+            - theater_auditorium, large screen for an audience, theater seating, couch
+            - VIP_lounge, luxurious seating, private viewing areas, enhanced services
+          others:
+            - projection_room, projector, projector_beam
+            - concession_stand, sold
+            - lobby, entrance area
+            - >-
+              box_office, ticket sales {1-$$, ticket sales $$counter|booth}
+            - arcade_area, arcade games, entertainment machines
+            - emergency_exit
+            - hallways

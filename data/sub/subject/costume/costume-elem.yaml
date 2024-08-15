@@ -10,6 +10,14 @@ lazy-wildcards:
       religious:
         prompts:
           - cope, ceremonial_cloak
+      button:
+        prompts:
+          - >-
+            buttons
+            {,{1-$$__lazy-wildcards/subject/costume-elem/button/costume-buttons__}|}
+        costume-buttons:
+          - double-breasted
+          - partially unbuttoned
       unzipping:
         prompts:
           - >-
@@ -41,7 +49,14 @@ lazy-wildcards:
           - clothing cutout
           - underboob
           - sideboob
+      # https://civitai.com/models/149711/untied-panties
+      untied-panties:
+        prompts:
+          - (untied panties, falling panties:1.4)
     costume-headwear:
+      others:
+        prompts:
+          - (garrison cap)
       eyewear:
         prompts:
           - >-

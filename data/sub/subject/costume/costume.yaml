@@ -42,10 +42,9 @@ lazy-wildcards:
         makeup:
           - mole under eye
           - red lips
-          - earrings
+          - __lazy-wildcards/dataset/costume-accessories-base__
           - hair bun
           - arm tattoo
-          - jewelry
           - lipstick
           - makeup
           - gold hairband
@@ -330,8 +329,7 @@ lazy-wildcards:
           - floating hair
           - lips
           - bird
-          - jewelry
-          - earrings
+          - __lazy-wildcards/dataset/costume-accessories-base__
           - feathers
           - flower
         env-bg:
@@ -793,3 +791,86 @@ lazy-wildcards:
         prompts:
           - >-
             camouflage{, camouflage {1-3$$, camouflage $$__lazy-wildcards/utils/costume-type2-unworn__}|}
+      # https://tw.news.yahoo.com/%E3%80%90%E7%AF%80%E6%97%A5%E8%8B%B1%E6%96%87%E3%80%91%E7%94%A8%E8%8B%B1%E6%96%87%E8%81%8A%E8%81%96%E8%AA%95%E7%AF%80%EF%BC%81%E4%B8%80%E8%B5%B7%E8%AA%8D%E8%AD%98%E5%90%84%E7%A8%AE%E8%81%96%E8%AA%95%E8%A3%9D%E9%A3%BE%E7%9A%84%E8%8B%B1%E6%96%87%E8%AA%AA%E6%B3%95%E8%88%87%E7%94%B1%E4%BE%86%EF%BC%81-074133750.html
+      santa_bikini:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/santa_bikini/costume__,
+            {,{1-$$__lazy-wildcards/subject/costume/santa_bikini/costume-elem__}|}
+            {0.1::,{1-$$__lazy-wildcards/subject/costume/santa_bikini/costume-hair__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/santa_bikini/costume-weapon__}|}
+            ,{1-$$__lazy-wildcards/subject/costume/santa_bikini/env__}
+            {0.2::,{1-$$__lazy-wildcards/subject/costume/santa_bikini/style__}|}
+        costume:
+          - >-
+            red santa bikini, fur-trimmed bikini,
+            red santa hat, fur-trimmed headwear,
+            red santa gloves, fur-trimmed gloves,
+            navel,
+            christmas, merry christmas
+        costume-elem:
+          - red thighhighs
+          - red capelet, fur-trimmed capelet
+          - red santa boots
+          - fur trim
+          - side-tie bikini bottom
+          - antlers, reindeer_antlers
+          - reindeer costume
+          - santa costume
+          - neck_bell
+          - fang
+          - microskirt
+          - cleavage
+          - fishnet thighhighs
+          - hair ribbon
+          - large breasts
+          - panties
+          - ass visible through thighs
+        costume-hair:
+          - drill_hair
+        costume-weapon:
+          - holding sack, holding bag
+        env:
+          - sack
+          - christmas tree
+          - gift, gift_box, christmas present
+          - bell, jingle_bell
+          - holly, christmas holly
+          - snowman
+          - star \(symbol\)
+          - Mistletoe
+          - Poinsettia
+          - Wreath
+          - Garland
+          - angel tree topper
+          - Christmas stocking
+          - Pine cone
+          - Gingerbread man
+        style:
+          - Christmas Shopping
+      # https://civitai.com/models/308058?modelVersionId=348858
+      eagle-grab-armor:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/eagle-grab-armor/costume-main__
+            {,{1-$$__lazy-wildcards/subject/costume/eagle-grab-armor/costume-elem__}|}
+        costume-main:
+          - (eagle grab armor:1.2), __lazy-wildcards/subject/costume/demon_girl/prompts__, cleavage, navel, bridal gauntlets, bridal legwear, see-through, (topgrab:1.1)
+        costume-elem:
+          - __lazy-wildcards/dataset/costume-accessories-base__
+          - thighhighs
+          - lace trim
+          - revealing clothes
+          - dress
+          - detached sleeves
+          - white thighhighs
+          - halterneck
+          - gold trim
+          - curtains
+          - pubic tattoo
+      # https://civitai.com/models/284907/classical-frilled-nurse-uniform
+      nurse_old_style:
+        prompts:
+          - >-
+            (Classical Frilled Nurse Uniform, nurse_old_style_01:1.2), apron, nurse cap, short sleeves, striped dress, puffy sleeves, vertical stripes, nurse, white apron, puffy short sleeves, pantyhose
+

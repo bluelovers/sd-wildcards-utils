@@ -1,0 +1,14 @@
+lazy-wildcards:
+  subject:
+    scenes-pov:
+      hands-hold-breast:
+        prompts:
+          - >-
+            (pov hands, breast hold:1.3), pov
+            {,{1-$$__lazy-wildcards/subject/scenes-pov/hands-hold-breast/costume__}|}
+            {,{1-$$__lazy-wildcards/subject/scenes-pov/hands-hold-breast/action-sitting__}|}
+        costume:
+          - large breasts
+        action-sitting:
+          - sitting
+          - sitting on person

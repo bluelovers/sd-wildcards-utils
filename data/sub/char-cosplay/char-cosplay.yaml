@@ -19,7 +19,7 @@ lazy-wildcards:
         style:
           - hoop earrings
           - collarbone
-          - earrings
+          - __lazy-wildcards/dataset/costume-accessories-base__
           - hair between eyes
           - lipstick
           - makeup
@@ -28,20 +28,17 @@ lazy-wildcards:
           - bursting breasts
           - thighs
           - braid
-          - hair ornament
           - black panties
           - curvy
           - hair flower
           - collar
           - hair over shoulder
-          - jewelry
           - high collar
           - low-tied long hair
           - ponytail
           - straight hair
           - rope
           - tie
-          - armlet
           - purple panties
         costume-types:
           anything:
@@ -181,7 +178,7 @@ lazy-wildcards:
           - >-
             {1-$$backless outfit|back cutout}
           - shoes
-          - earrings
+          - __lazy-wildcards/dataset/costume-accessories-base__
           - ribbon
           - elbow gloves
           - hair ribbon
@@ -396,7 +393,7 @@ lazy-wildcards:
       louise:
         prompts:
           - long hair,black hair, ribbon, brown eyes, hair bow, boots, sleeveless, black gloves, sailor collar, white dress, white footwear, white bow, single glove, sailor dress
-          - black hair, yellow eyes, dark-skinned female,blunt bangs,makeup, glowing, lipstick, glowing eyes, science fiction
+          - black hair, yellow eyes, __lazy-wildcards/subject/costume-body/dark-skinned/prompts__,blunt bangs,makeup, glowing, lipstick, glowing eyes, science fiction
     onmyoji:
       suzuka_gozen:
         prompts:
@@ -524,7 +521,6 @@ lazy-wildcards:
           - toenail polish
           - nail polish
           - hair bow
-          - jewelry
           - bangs
           - bow
           - socks
@@ -532,11 +528,10 @@ lazy-wildcards:
           - sandals
           - thigh strap
           - skirt hold
-          - earrings
+          - __lazy-wildcards/dataset/costume-accessories-base__
           - short dress
           - red dress
           - tassel
-          - hair ornament
     ragnarok_online:
       blacksmith:
         prompts:
@@ -775,7 +770,7 @@ lazy-wildcards:
             {{1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/costume-ethnicity__},|}
             {{1-$$__lazy-wildcards/cosplay-char/rwby/summer-rose/costume__},|}
             {{1-$$__lazy-wildcards/cosplay-char/rwby/summer-rose/costume-elem__},|}
-            {{1-$$__lazy-wildcards/cosplay-char/rwby/summer-rose/costume-weqapen__},|}
+            {{1-$$__lazy-wildcards/cosplay-char/rwby/summer-rose/costume-weapon__},|}
             {1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/style__},
             {1-$$__lazy-wildcards/cosplay-char/rwby/ruby_rose/env__}
         main:
@@ -786,7 +781,7 @@ lazy-wildcards:
           - Vol9Outfit, red dress, pantyhose, bare shoulders, detached sleeves, long black sleeves, fingerless gloves, white cape, red cape inside, belts
         costume-elem:
           - hood
-        costume-weqapen:
+        costume-weapon:
           - >-
             Sundered Rose,
             axe rifle, stock,
@@ -902,8 +897,10 @@ lazy-wildcards:
             {{1-$$__lazy-wildcards/cosplay-char/blame/cibo/main-trigger-words__},|}
             {{1-$$__lazy-wildcards/cosplay-char/blame/cibo/costume-ethnicity__},|}
             {{1-$$__lazy-wildcards/cosplay-char/blame/cibo/costume__},|}
+            {{1-$$__lazy-wildcards/cosplay-char/blame/cibo/costume-weapon__},|}
             {1-$$__lazy-wildcards/cosplay-char/blame/cibo/costume-elem__},
             {1-$$__lazy-wildcards/cosplay-char/blame/cibo/env__}
+            {,{1-$$__lazy-wildcards/cosplay-char/blame/cibo/style__}|}
         main:
           - cibo, tsutomu nihei, nihei_tsutomu, blame!, blame gakuen!, cyberpunk, cyborg, science fiction, noise \(manga\)
         main-trigger-words:
@@ -916,6 +913,8 @@ lazy-wildcards:
           - body horror, bone, core, facial mark, forehead mark, energy ball, skeleton, spine
           - bodysuit
           - school uniform
+        costume-weapon:
+          - graviton beam emitter
         costume-elem:
           - emblem
           - glowing
@@ -930,10 +929,17 @@ lazy-wildcards:
           - thighhighs
           - thigh gap
           - long sleeves
+          - facial mark
         env:
           - toha heavy industries
           - wire
           - industrial pipes
+          - bridge
+          - exterminator \(blame!\)
+          - cable
+        style:
+          - fleeing, running, science fiction
+          - dystopia
     # https://danbooru.donmai.us/posts?tags=kyoushoku_soukou_guyver+&z=5
     # https://rule34.xxx/index.php?page=post&s=list&tags=guyver
     # https://rule34.xxx/index.php?page=post&s=list&tags=valcuria
@@ -1310,7 +1316,7 @@ lazy-wildcards:
           - blue hair
         costume-elem:
           - navel, navel cutout
-          - jewelry, earrings
+          - __lazy-wildcards/dataset/costume-accessories-base__
           - cleavage, center opening
           - white gloves, elbow gloves
           - blue bodysuit, bare shoulders
@@ -1336,8 +1342,7 @@ lazy-wildcards:
           - long hair
           - green eyes
           - green hair
-          - colored skin, bronze skin
-          - dark-skinned female
+          - __lazy-wildcards/subject/costume-body/dark-skinned/prompts__
         ethnicity-hair:
           - plant hair, hair flower
         costume:
@@ -1548,11 +1553,8 @@ lazy-wildcards:
           - topless, bare_breasts
           - midriff, bare_belly
         costume-elem:
-          - jewelry
-          - armlet
-          - earrings
+          - __lazy-wildcards/dataset/costume-accessories-base__
           - facial mark
-          - necklace
           - hair_tubes
           - gem
         costume-weapon:
@@ -1626,8 +1628,7 @@ lazy-wildcards:
           - brain visible
           - wristband
           - brown pants
-          - earrings
-          - jewelry
+          - __lazy-wildcards/dataset/costume-accessories-base__
           - orange colored shirt
           - android
           - torn clothes
@@ -1666,7 +1667,7 @@ lazy-wildcards:
         action:
           - sitting
         env:
-          - dragon ball \(object\)
+          - dragon ball \(object\), star \(symbol\)
       # https://danbooru.donmai.us/posts?tags=cell_%28dragon_ball%29+&z=5
       cell-perfect:
         prompts:
@@ -1700,6 +1701,13 @@ lazy-wildcards:
         env:
           - dust cloud
           - electricity
+      # https://civitai.com/models/139111/saiyan-scouter-armor-or-concept?modelVersionId=356294
+      saiyan_scouter:
+        prompts:
+          - >-
+            (Saiyan Scouter, Saiyan_Scouter{,__lazy-wildcards/cosplay-char/dragon_ball/saiyan_scouter/costume-headwear__|}, scouter:1.2), tinted eyewear, dragon ball
+        costume-headwear:
+          - __lazy-wildcards/utils/color-base__-tinted eyewear
     code_geass:
       # https://civitai.com/models/131057/rakshata-chawla-anime-character-or-code-geass-or-ownwaifu?modelVersionId=143945
       rakshata_chawla:
@@ -1722,7 +1730,7 @@ lazy-wildcards:
         costume-ethnicity:
           - >-
             blonde hair, indian, green eyes, long hair, facial mark, forehead mark,
-            dark_skin, tan_skin, tanned skin, dark skin, dark-skinned, black-skinned, bronze skin, bronzed skin
+            __lazy-wildcards/subject/costume-body/dark-skinned/prompts__
         costume:
           - white lab coat, long sleeves, red shirt, collared shirt
           - arabian clothes, dress, harem outfit, partially fingerless gloves, veil
@@ -1735,8 +1743,7 @@ lazy-wildcards:
           - makeup
           - parted lips
           - hair ornament
-          - earrings
-          - jewelry
+          - __lazy-wildcards/dataset/costume-accessories-base__
           - midriff
           - navel piercing
           - very long hair
@@ -1824,15 +1831,14 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-elem__}|}
             {,{1-3$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-weapon__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/expressions__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/env-bg__}|}
+            {0.2::,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/env-bg__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/env__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/env-food__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/style__}|}
-           
         costume-main:
           - falling_devil_\(chainsaw_man\), fallingdevil, falldevil, falling_devil_\(chainsaw_man\)_\(cosplay\), chainsaw_man
         costume-ethnicity:
-          - extra arms, disembodied head, severed head, blood on face, blood drip, blood from mouth, nosebleed, blood from eyes, long arms, blood
+          - (extra arms, disembodied head, severed head:1.2), blood on face, blood from mouth, nosebleed, (blood drip, blood from eyes:1.2), long arms, blood
         costume:
           - white chef hat, flat top chef hat
           - black apron, waist apron
@@ -1840,29 +1846,22 @@ lazy-wildcards:
           - buttons
           - chef
           - shirt tucked in, taut clothes, white shirt
-        
-        
         costume-eyes:
           - closed eyes
           - smug smile
           - wide smile
           - blushed
           - black tears
-        
-        
-        
         costume-nude:
-          - nude, navel, collarbone, bare arms
+          - nude, navel, collarbone, bare arms, breasts
           - open clothes
-        
         costume-elem:
           - black underwear
           - black blood
           - arms behind back
-     
           - sweatdrop
-        
-        
+          - medium breasts
+          - cleavage
         costume-weapon:
           - holding head
           - holding broom
@@ -1870,46 +1869,317 @@ lazy-wildcards:
           - holding food
           - holding fruit
           - holding plate
-        
-        
-        
-        
-        
-        
-        
         expressions:
           - (fingersmile, finger to mouth:1.2)
           - furrowed brow
           - open mouth
-        
-        
         style:
           - alluring
           - floating
-        
         env:
           - table
           - floating object
-        
         env-food:
           - food
-          
           - fruit
-        
-        
-        
         env-bg:
           - desk, kitchen
           - checkered floor
           - hallway
-
-
-
-
-
-
-
-
-
-
+    alien-predator:
+      xenomorph:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/alien-predator/xenomorph/costume-main__
+            ,__lazy-wildcards/cosplay-char/alien-predator/xenomorph/costume-ethnicity__
+            {0.3::,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/costume-ethnicity-main__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/action__}|}
+            {,{1-4$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/env-bg__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/env__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/style__}|}
+        costume-main:
+          - (xenomorph, xenomorphdna, FemXeno, xenomilf, xeno, xenomorph style:1.2), alien \(series\), 1other
+        costume-ethnicity-main:
+          - proto-xenomorph
+          - xenomorph queen, alien queen
+        costume-ethnicity:
+          - >-
+            nested mouths, multiple mouths, extra mouth
+            , fangs, teeth, sharp teeth, fang
+            , claws
+            , tail, spiked tail
+            , spines
+        costume-elem:
+          - colored skin
+          - black skin
+          - arm blade
+          - horns
+          - pauldrons
+          - monster girl
+          - shoulder spikes, spikes
+          - fingernails, sharp fingernails
+          - giant monster, giant
+          - drooling, long tongue, mouth drool, tongue out, saliva, saliva trail
+          - armored skin
+        costume-weapon:
+          - laser sight
+          - circular saw, whirligig saw
+        action:
+          - open mouth
+          - crawling
+          - sleeping
+          - squatting
+          - battle, fighting
+          - eating
+        style:
+          - reaching
+          - injury
+          - hissing, puffing up
+          - horror \(theme\)
+          - science fiction
+          - no humans
+          - glowing
+          - see-through
+          - dark theme
+          - incoming attack
+          - death
+          - endoparasitoid extraterrestrial species
+          - strange bio-mechanical structures
+          - metallic
+          - grotesque structure
+          - alien planet
+          - alien_hunting_ground
+          - crash-landed
+        env:
+          - resin
+          - sparkle
+          - monster
+          - leash
+          - green blood
+          - blood
+          - capsule
+          - monitor
+          - skull
+          - egg, ovomorph
+          - tree
+          - machinery
+          - stairs
+          - warship
+          - __lazy-wildcards/subject/env-elem/blood/prompts__
+          - steam
+          - ventilation shaft
+          - corporate_colony
+        env-bg:
+          - xenomorph alien building
+          - bridge
+          - tunnel
+          - swamp
+          - giant derelict spacecraft, spaceship, crashed_predator_ship
+          - xenomorph hive, xenomorph nest
+          - jungle_environment
+          - predator_ship_interior
+          - predator_trophy_room, trophies
+          - alien_temple, ritual site
+    # 新堂エル 変身
+    ShindoL:
+      # https://danbooru.donmai.us/posts?tags=emergence_%28shindol%29&z=2
+      # https://danbooru.donmai.us/posts?tags=yoshida_saki&z=2
+      # https://civitai.com/models/160695
+      yoshida_saki:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/ShindoL/yoshida_saki/main__
+            {,__lazy-wildcards/cosplay-char/ShindoL/yoshida_saki/costume-ethnicity__|}
+            {,__lazy-wildcards/cosplay-char/ShindoL/yoshida_saki/costume__|}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShindoL/yoshida_saki/costume-hair__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShindoL/yoshida_saki/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShindoL/yoshida_saki/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShindoL/yoshida_saki/costume-headwear__}|}
+            {,{1-2$$__lazy-wildcards/cosplay-char/ShindoL/yoshida_saki/expressions__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShindoL/yoshida_saki/env-bg__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShindoL/yoshida_saki/env__}|}
+        main:
+          - yoshida_saki, saki yoshida, tsfmonogatari, shindol_style, emergence \(shindol\), yoshida saki \(cosplay\), NurseCh, Garn3tRumble, nurse_listensteth, Attentive Nurse POV
+        costume-ethnicity:
+          - long hair, black hair, braid, twin braids, hair between eyes
+          - long hair, blonde hair, hair between eyes, piercing, gyaru, ganguro
+        costume:
+          - >-
+            skirt, pleated skirt, long skirt, blue skirt,
+            serafuku,
+            shirt, blue shirt,
+            long sleeves,
+            blue sailor collar,
+            red neckerchief
+          - >-
+            high heels, red footwear,
+            micro shorts,
+            navel, midriff,
+            red nails
+        costume-headwear:
+          - glasses, black-framed eyewear, rectangular eyewear
+          - round eyewear
+        costume-elem:
+          - collarbone
+          - barbell piercing
+          - __lazy-wildcards/dataset/costume-accessories-base__
+          - eyewear lift
+          - star earrings
+          - topless
+          - makeup
+          - tattoo
+          - scratches
+          - braces
+          - v arms
+          - >-
+            bikini{, bikini top only|}, swimsuit
+          - cleavage
+          - __lazy-wildcards/subject/costume-body/dark-skinned/prompts__
+          - fishnet thighhighs
+          - handbag
+          - lipstick
+          - >-
+            open {1-$$, open $$clothes|shirt}
+          - sleeves past wrists
+        costume-hair:
+          - very long hair
+          - hair tie
+          - hair strand
+          - blunt bangs
+          - >-
+            hair over {1-$$, hair over $$shoulder|breasts|one eye}
+          - messy hair
+          - hair between eyes, braid, twin braids
+        costume-weapon:
+          - holding syringe
+          - stethoscope
+        expressions:
+          - happy
+          - (frown:1.2)
+          - >-
+            (crying{, crying with eyes open|}, tears, streaming tears:1.3)
+        env:
+          - syringe
+        env-bg:
+          - chain-link fence
+    sakusei_byoutou:
+      # https://civitai.com/models/412400/sakusei-byoutou-or-nurses?modelVersionId=459640
+      nurses:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/sakusei_byoutou/nurses/main-trigger-words__
+            ,(__lazy-wildcards/cosplay-char/sakusei_byoutou/nurses/costume-ethnicity__)
+            {,{1-2$$__lazy-wildcards/cosplay-char/sakusei_byoutou/nurses/costume__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/sakusei_byoutou/nurses/costume-weapon__}|}
+            {,{1-3$$__lazy-wildcards/cosplay-char/sakusei_byoutou/nurses/expressions__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/sakusei_byoutou/nurses/costume-elem__}|}
+            {,{1-3$$__lazy-wildcards/cosplay-char/sakusei_byoutou/nurses/env-bg__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/sakusei_byoutou/nurses/env__}|}
+            {,{1-3$$__lazy-wildcards/cosplay-char/sakusei_byoutou/nurses/action__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/sakusei_byoutou/nurses/style__}|}
+        main-trigger-words:
+          - sakusei byoutou, sakusei_byoutou_the_animation, breasts
+        costume:
+          - (nurse cap, skirt, thighs:1.2)
+          - white lab coat, ribbed sweater, black turtleneck, oversized clothes, open clothes, sleeves past fingers, sleeves past wrists, long sleeves
+          - elbow gloves, black gloves, black legwear
+          - hospital gown
+          - __lazy-wildcards/subject/costume/nurse_old_style/prompts__
+        costume-ethnicity:
+          - tachibana \(sakusei byoutou\), blue eyes, short hair, blue hair, bob cut
+          - kurokawa \(sakusei byoutou\), red eyes, short hair, light purple hair
+          - yamaguchi \(sakusei byoutou\), red eyes, long hair, light blonde hair
+          - hiramatsu \(sakusei byoutou\), purple eyes, short hair, black hair, ponytail, bangs, empty eyes
+          - mochizuki \(sakusei byoutou\), yellow eyes, long hair, brown hair, bangs
+          - numajiri \(sakusei byoutou\), dark blue eyes,medium hair,side bob cut,sidelocks,hair over one eye,hair behind ear,orange hair,red hair
+          - kiritani \(sakusei byoutou\), purple eyes,tsurime,long hair,very long hair,black hair
+          - amamiya \(sakusei byoutou\), purple eyes, wavy hair, very long hair, orange hair, bangs, crazy eyes
+          - ootsuka \(sakusei byoutou\), androgynous, red eyes, manly, short hair, red hair, bob cut, side ponytail, short ponytail, blunt bangs, hair ribbon
+          - tako tendou \(sakusei byoutou\), black hair, medium hair, messy hair, black eyes, hair between eyes, constricted pupils, crazy eyes
+        costume-weapon:
+          - power tool
+          - holding folder
+          - syringe
+          - emergency medical equipment
+          - stretcher
+        costume-elem:
+          - >-
+            {1-$$animal ears|cat ears|cat tail}
+          - bandages
+          - doctor
+          - nurse
+          - surgical mask, mouth mask
+          - >-
+            {1-$$piercing|tongue piercing}
+          - shaded face
+          - >-
+            {1-$$panties|panties aside}
+          - underwear
+          - sweatdrop
+          - wide hips
+          - >-
+            {1-$$pants pull|pants down}
+          - tattoo
+          - body writing
+          - garter straps
+          - crotch seam
+          - oxygen_mask
+          - school_nurse
+          - white nurse
+          - __lazy-wildcards/subject/costume-elem/button/prompts__
+          - >-
+            {1-$$cleavage|cleavage cutout|breasts out|breast press}
+          - >-
+            open {1-$$, open $$clothes|shirt|coat}
+        env:
+          - keypad
+          - folder
+          - cup, pill
+          - juices
+          - >-
+            cum{, {1-$$cum in pussy|cum inside|cum leak|cum leaking|cum leaking out of pussy|cum on leg|cum on panties|cum on shoe|after ejaculation|cum stain|cum on hand|condom box|condom|condom box|condom packet strip|condom wrapper|condom}|}
+          - patient_gurney, wheeled stretcher
+          - IV_drip
+          - emergency_lights
+          - defibrillator
+          - window
+          - white wall
+          - >-
+            table{, {information counter|service counter|cashiers counter|reception counter|nurse counter}|}
+        env-bg:
+          - hospital
+          - hospital_room, hospital bed, white bed, white bed sheet
+          - ambulance_interior
+          - emergency_room
+          - hospital_corridor, hallways
+          - waiting_room
+          - pharmacy, medications
+          - nurse_station
+          - ambulance_bay, outdoor, ambulances
+          - hospital_cafeteria, dining area
+          - hospital morgue, funeral home
+          - hospital lobby
+        action:
+          - denki_anma
+          - crotch kick
+          - mask pull
+          - kemonomimi_mode, paw pose
+          - reverse rape
+          - semen extraction
+          - eat meals
+        style:
+          - femdom
+          - hentai
+          - presenting
+          - wet
+          - see-through
+        expressions:
+          - tsundere
+          - crazy, crazy girl
+          - angry, angry eyes, angry face
+          - >-
+            tears, {crying|tears of pleasure}
+          - evil face
 

@@ -166,6 +166,32 @@ lazy-wildcards:
           - complex honeycomb background
           - Bee_Nest background
           - hexagonal wax cells background
+      zombie-jiangshi-chinese-taoist-robes:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/zombie-jiangshi-chinese-taoist-robes/costume-ethnicity__
+            {,{1-$$__lazy-wildcards/subject/costume/zombie-jiangshi-chinese-taoist-robes/costume-wings__}|}
+            ,{1-$$__lazy-wildcards/subject/costume/zombie-jiangshi-chinese-taoist-robes/costume-elem__}
+            {,{1-$$__lazy-wildcards/subject/costume/zombie-jiangshi-chinese-taoist-robes/style__}|}
+            ,__lazy-wildcards/subject/env-elem/yin_yang/prompts__
+        costume-ethnicity:
+          - >-
+            (Jiangshi:1.4), chinese clothes, china dress, taoist robes, celestial being uniform
+        costume-wings:
+          - (mechanical wings)
+          - (giant wings:1.1)
+          - detail wings
+        expressions:
+          - expressionless
+        costume-elem:
+          - wet body, see-through
+          - pale skin
+          - (forehead mark:1.2)
+          - claws
+          - (mecha body:1.1), detail mecha body
+          - veil
+        style:
+          - death
       zombie-decaying:
         prompts:
           - >-
@@ -258,4 +284,23 @@ lazy-wildcards:
         style:
           - >-
             {mushroom|spore|fungus|slime}-inspired {1-2$$ and $$patterns|elements|designs|texture|appearance}
+      demon_girl:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/demon_girl/costume-ethnicity__
+            {,{1-$$__lazy-wildcards/subject/costume/demon_girl/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/demon_girl/costume-horns__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/demon_girl/style__}|}
+        costume-ethnicity:
+          - >-
+            demon girl{, demon {1-$$, demon $$horns|tail|wings|eyes}|}
+        costume-elem:
+          - head wings
+          - pointy ears
+        costume-horns:
+          - multiple horns
+          - curled horns
+          - asymmetrical horns
+        style:
+          - bat print
 
