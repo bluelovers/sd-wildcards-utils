@@ -15,10 +15,12 @@ export default (async () =>
 	await lazyImport(await import('./output/build'));
 	await lazyImport(await import('./check'));
 
+	await lazyImport(await import('./output/build-zip'));
+
 	await copy(join(__ROOT_OUTPUT_WILDCARDS, 'lazy-wildcards.yaml'), join('S:/.data/wildcards_dy', 'lazy-wildcards.yaml'), {
 		preserveTimestamps: true,
 		overwrite: true,
-	}).catch(e => console.log(String(e)))
+	}).catch(e => console.error(String(e)))
 
 })().then(() => console.log(new Date().toLocaleString()));
 

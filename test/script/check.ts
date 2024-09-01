@@ -9,6 +9,8 @@ import { readFile } from 'node:fs/promises';
 
 export default (async () => {
 
+	console.log(`Verification...`);
+
 	const obj = await Bluebird.map([
 			join(__ROOT_OUTPUT_WILDCARDS, 'lazy-wildcards.yaml'),
 			//join(__ROOT_DATA, 'lazy-wildcards.yaml'),
@@ -43,5 +45,7 @@ export default (async () => {
 		const e = new AggregateErrorExtra(ret.errors, `Failure or missing some wildcards nodes.`);
 		throw e
 	}
+	
+	console.log(`Verification...Done.`);
 
 })()
