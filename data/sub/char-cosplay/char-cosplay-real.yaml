@@ -1,0 +1,41 @@
+lazy-wildcards:
+  cosplay-real:
+    # 亞美尼亞人
+    Armenian:
+      # 安潔拉・薩拉費恩
+      Angela_Sarafyan:
+        prompts:
+          - >-
+            Angela Sarafyan, lora_sarafyan_girl, AngelaS_SoloTI_v1
+            {,__lazy-wildcards/cosplay-real/Armenian/Angela_Sarafyan/costume-ethnicity__|}
+            {,{1-$$__lazy-wildcards/cosplay-real/Armenian/Angela_Sarafyan/costume-elem__}|}
+        costume-ethnicity:
+          - high_cheekbones, big_eyes, sharp_nose, full_lips, expressive_eyes, thin_eyebrows
+        costume-elem:
+          - beautiful_woman
+          - long_hair
+          - wavy_hair
+    USA:
+      Anya_Taylor_Joy:
+        prompts:
+          - >-
+            anya taylor joy, anya Joy, ATLJ, AnyTayJoy, Anya-Taylor-Joy, AnyaT_SoloTI_v1, furiosa
+            {,{1-$$__lazy-wildcards/cosplay-real/USA/Anya_Taylor_Joy/costume-elem__}|}
+        costume-elem:
+          - distinctive_eyes
+          - pale_skin
+          - platinum_blonde_hair
+          - slender_figure
+          - sharp_facial_features
+    # 澳洲
+    Australian:
+      Claudia_Doumit:
+        prompts:
+          - >-
+            Claudia Doumit, sharp features, full lips
+            {,__lazy-wildcards/cosplay-real/Australian/Claudia_Doumit/costume-ethnicity__|}
+        costume-ethnicity:
+          - >-
+            dark brown hair, (olive skin), brown eyes, medium hair
+            {,(__lazy-wildcards/subject/costume-body/dark-skinned/prompts__:1.2)|}
+

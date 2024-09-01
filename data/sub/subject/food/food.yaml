@@ -53,9 +53,9 @@ lazy-wildcards:
       tofu:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-elem-food/tofu/env-food__
+            __lazy-wildcards/subject/env-elem-food/tofu/env-elem-food__
             {,{1-$$__lazy-wildcards/subject/env-elem-food/tofu/env-food-elem__}|}
-        env-food:
+        env-elem-food:
           - >-
             {crispy |}fried tofu{slices|}
         env-food-elem:

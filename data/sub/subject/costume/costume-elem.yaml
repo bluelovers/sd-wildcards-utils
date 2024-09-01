@@ -7,6 +7,7 @@ lazy-wildcards:
           - large earrings
           - ear chain
           - ear piercing
+          - multiple earrings
       religious:
         prompts:
           - cope, ceremonial_cloak
@@ -53,73 +54,53 @@ lazy-wildcards:
       untied-panties:
         prompts:
           - (untied panties, falling panties:1.4)
-    costume-headwear:
-      others:
-        prompts:
-          - (garrison cap)
-      eyewear:
+      blood:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume-headwear/eyewear/costume-headwear__
-            {,{1-$$__lazy-wildcards/subject/costume-headwear/eyewear/action__}|}
-        costume-headwear:
-          - semi-rimless eyewear
-          - red-framed eyewear
-          - under-rim eyewear
-          - over-rim eyewear
-          - rectangular eyewear
-        action:
-          - adjusting eyewear
-      headwear-religious:
+            {1-$$surrounded by blood|blood splatter|blood stain|blood on ground|pool of blood|bleeding|bleeding|blood drip|raining_blood|blood drop|blood spray}
+      necklace:
+        prompts:
+          - gold_necklace
+          - necklace
+          - flower necklace
+          - feather necklace
+      see-through-clothes:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume-headwear/headwear-religious/costume-headwear__
-            {,{1-$$__lazy-wildcards/subject/costume-headwear/headwear-religious/style__}|}
-            {,{1-$$__lazy-wildcards/subject/costume-headwear/headwear-religious/costume-elem__}|}
-        style:
-          - religious_symbolism, religious_attire
-          - ornate_designs
-          - ceremonial_purpose
-          - distinctive_shape
-        costume-headwear:
-          - miter, tall_pointed_hat
-          - zucchetto, small_skullcap
-          - biretta, square_cap, pom_pom_top
-          - priest_hat, religious_headwear
+            {1-$$__lazy-wildcards/subject/costume-elem/see-through-clothes/costume-elem__}
         costume-elem:
-          - metal headwear
-    costume-tattoo:
-      # 宗教紋身 (Religious Tattoos)
-      religious:
-        prompts:
-          - cross_tattoo, Christian_symbolism
-          - buddha_tattoo, Buddhist_symbolism
-          - hindu_tattoo, Hindu_symbols
-          - angel_wings_tattoo
-          - mandala_tattoo, intricate_geometric_patterns
-          - scripture_tattoo, religious_texts
-          - yin_yang_tattoo, Taoist_symbolism, circular_design
-          - kabbalah_tattoo, Jewish_mysticism, Hebrew_letters, Tree_of_Life
-          - tribal_tattoo, indigenous_designs, bold_and_intricate_patterns
-      body-tattoo:
-        prompts:
-          - tattoo
-          - full body tattoo
+          - see-through
           - >-
-            {1-$$breast tattoo|chest tattoo}
+            wringing {1-$$, wringing $$clothes|shirt}
           - >-
-            {1-$$arm tattoo|hand tattoo}
-          - shoulder tattoo
-          - facial tattoo
-          - pubic tattoo
-          - leg tattoo
-          - neck tattoo
-          - stomach tattoo
-          - back tattoo
-      pattern-tattoo:
+            sweaty {1-$$, sweaty $$clothes|shirt}
+          - >-
+            wet {1-$$, wet $$clothes|shirt}
+          - >-
+            see-through {1-$$, see-through $$clothes|shirt}
+      torn-clothes:
         prompts:
-          - number tattoo
-          - heart tattoo
-          - barcode tattoo
-          - flower tattoo
+          - >-
+            __lazy-wildcards/subject/costume-elem/torn-clothes/costume__
+            {0.2::,__lazy-wildcards/subject/costume-elem/torn-clothes/costume-elem__|}
+        costume:
+          - >-
+            {1-$$ragged tunic, ragged clothes|tattered clothing, tattered clothes|torn clothes, torn clothing|ripped clothes}
+        costume-elem:
+          - >-
+            torn {1-$$, torn $$pantyhose|thighhighs|shirt|pants|dress|skirt|sleeves|bodysuit|cape|shorts|jeans|leotard|legwear|camisole}
+      asymmetrical-clothes:
+        prompts:
+          - >-
+            asymmetrical {1-$$, asymmetrical $$legwear|sleeves|clothes}
+      scar:
+        prompts:
+          - >-
+            {1-$$scar|scar across eye|scar on face|facial scar|cheek scar|battle scar|whip scar|scar on neck}
+            {,stitches|}
+      bound-shackles:
+        prompts:
+          - >-
+            chain, shackles, bound {1-$$, bound $$legs|wrists|together|arms|ankles}
+            {,{1-$$rope around neck|rope|shibari|shibari over clothes}|}
 

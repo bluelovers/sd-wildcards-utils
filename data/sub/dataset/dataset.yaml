@@ -1,5 +1,25 @@
 lazy-wildcards:
   dataset:
+    char-view:
+      - upper body
+      - full body angle, full body view, full_shot, full body
+      - (Face focus, face closeup, face and shoulder only, Portrait, upper_body, face photo)
+      - profile
+      - (closeup, face only, face focus, face closeup, close up of face, face photo)
+      - profile portrait
+    char-view-anything:
+      - __lazy-wildcards/dataset/char-view__
+      - portrait of family
+    background:
+      - __lazy-wildcards/dataset/background-color__
+      - __lazy-wildcards/background/anything__
+      - >-
+        __lazy-wildcards/background/anything__,
+        __lazy-wildcards/dataset/background-color__
+    background-color:
+      - __lazy-wildcards/background/color-transparent__
+      - __lazy-wildcards/background/color-theme__
+      - __lazy-wildcards/background/color-multi__
     food-all:
       - __lazy-wildcards/subject/env-elem-food-*/*/prompts__
       - __lazy-wildcards/subject/env-elem-food/*/prompts__
@@ -21,7 +41,7 @@ lazy-wildcards:
       - __lazy-wildcards/*/*/*/costume-weapon-*__
     costume-accessories-base:
       - >-
-        {1-$$earrings|hair ornament|jewelry|armlet|necklace|ring}
+        {1-$$earrings|hair ornament|jewelry|armlet|necklace|ring|anklet}
     style-artist:
       - >-
         (__lazy-wildcards/subject/style-artist/*/prompts__{:1.4|:1.2|})

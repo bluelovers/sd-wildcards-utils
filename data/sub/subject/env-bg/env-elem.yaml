@@ -12,7 +12,6 @@ lazy-wildcards:
             {6-$$__lazy-wildcards/subject/env-elem/others/env__}
         env:
           - metal partition
-          - (moss slime vines)
       flower:
         prompts:
           - >-
@@ -37,6 +36,7 @@ lazy-wildcards:
           others:
             - blue and ginger scales blooming rose
             - pitcher plant
+            - hydrangea
       mushroom:
         prompts:
           - >-
@@ -65,6 +65,7 @@ lazy-wildcards:
           - delicate_lattice_veil
           - unique_stem
           - stinkhorn
+          - big red maple tree
       leaves-cannabis-marijuana:
         prompts:
           - >-
@@ -207,10 +208,7 @@ lazy-wildcards:
         env:
           - >-
             {1-$$ancient bare tree|bare tree|tree|branch}
-          - >-
-            {1-$$moss slime vines|moss vines}
-          - >-
-            slime_\(substance\), sticky slime
+          - __lazy-wildcards/subject/env-elem/moss/prompts__
           - >-
             {1-$$dirty face|dirty clothes|dirty feet}
           - grass
@@ -220,8 +218,7 @@ lazy-wildcards:
           - molten
           - mysterious waters
           - shadowy vegetation
-          - >-
-            {1-$$foggy environment|thick mist}
+          - __lazy-wildcards/subject/moment/weather-mist/prompts__
           - desolate landscape
           - ghostly figures
           - moonlit water
@@ -343,7 +340,7 @@ lazy-wildcards:
           - ritualistic_artifact
           - golden
           - gem
-          - pile of skulls
+          - __lazy-wildcards/subject/env-elem/skull/prompts__
       circle-transmutation:
         prompts:
           - >-
@@ -384,3 +381,69 @@ lazy-wildcards:
         prompts:
           - >-
             ba gua, tai chi, yin yang
+      gold-gemstone:
+        prompts:
+          - >-
+            gold, gemstone
+            {,{1-$$__lazy-wildcards/subject/env-elem/gold-gemstone/env-gemstone__}|}
+            {,{1-$$__lazy-wildcards/subject/env-elem/gold-gemstone/style__}|}
+        env-gemstone:
+          - gold trim
+          - Malachite, GoldMalachiteWorld
+          - tanzanite \(gemstone\), GoldTanzaniteWorld
+          - amethyst \(gemstone\), GoldAmethystWorld, purple gemstone
+          - >-
+            {1-$$Marble|Marble crackle pattern|Marble swirl pattern|Marble pattern}
+          - __lazy-wildcards/utils/color-base__ gemstone
+          - __lazy-wildcards/utils/color-base__ gold
+          - __lazy-wildcards/utils/color-base__ marble
+          - pearl \(gemstone\)
+          - sapphire \(gemstone\), blue gemstone
+          - silver
+          - glass
+          - chrysoprase, jade \(gemstone\)
+          - ruby \(gemstone\), red gemstone
+          - spinel \(gemstone\), GoldSpinelWorld
+          - platinum
+        style:
+          - crackle pattern
+          - swirl pattern
+          - fluid pattern
+          - dripping pattern
+      # https://civitai.com/models/293128/moss-is-boss-gown-5
+      moss:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/moss/env-main__
+            {,__lazy-wildcards/subject/env-elem/moss/costume__|}
+            {,{1-$$__lazy-wildcards/subject/env-elem/moss/env__}|}
+        env-main:
+          - made of moss, moss-covered
+        costume:
+          - m0ss_dr3ss ,elaborate long dress made of moss
+        env:
+          - >-
+            ({1-$$moss slime vines|moss vines})
+          - >-
+            slime_\(substance\), sticky slime
+          - twigs
+      skull:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/skull/env-main__
+            {,{1-$$__lazy-wildcards/subject/env-elem/skull/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/subject/env-elem/skull/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/subject/env-elem/skull/env__}|}
+        env-main:
+          - skull, skeleton
+        costume-elem:
+          - skull bra
+          - skull necklace
+        env:
+          - pile of skulls
+          - skull decoration
+          - skull_and_crossbones, jolly_roger, pirate symbol, pirate emblem, skull print
+          - crystal skull decoration, crystal skull pattern
+        costume-weapon:
+          - holding skull
+

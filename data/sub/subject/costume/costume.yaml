@@ -156,7 +156,7 @@ lazy-wildcards:
           - rough_skin
           - blemishes
           - scaly skin
-          - scar
+          - __lazy-wildcards/subject/costume-elem/scar/prompts__
           - dry skin
           - calloused skin
           - beige
@@ -873,4 +873,59 @@ lazy-wildcards:
         prompts:
           - >-
             (Classical Frilled Nurse Uniform, nurse_old_style_01:1.2), apron, nurse cap, short sleeves, striped dress, puffy sleeves, vertical stripes, nurse, white apron, puffy short sleeves, pantyhose
+      # https://civitai.com/models/664810/hula-girl?modelVersionId=744005
+      hula_girl:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/hula_girl/costume__
+            {,(__lazy-wildcards/subject/costume/hula_girl/costume-necklace__)|}
+            {,{1-$$__lazy-wildcards/subject/costume/hula_girl/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/hula_girl/action__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/hula_girl/env-bg__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/hula_girl/env__}|}
+        costume:
+          - hula, grass skirt, leaf skirt, thick thighs, navel, barefoot, tribal, bare shoulders
+        costume-necklace:
+          - gold_necklace
+          - necklace
+          - flower necklace
+          - feather necklace
+        costume-elem:
+          - coconut bra
+          - skull bra
+          - __lazy-wildcards/subject/env-elem/skull/prompts__
+          - ong hair
+          - hair flower
+          - bikini
+          - wide hips, curvy
+          - frilled tube top
+          - __lazy-wildcards/dataset/costume-accessories-base__
+        action:
+          - dancing
+        env-bg:
+          - jungle background
+        env:
+          - flower
+          - nature
+          - hibiscus
+          - palm tree
+      # https://civitai.com/models/689500/open-cropped-shirt?modelVersionId=771683
+      open_cropped_shirt:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/open_cropped_shirt/costume-main__
+            {,{1-$$__lazy-wildcards/subject/costume/open_cropped_shirt/costume-elem__}|}
+        costume-main:
+          - (open cropped shirt:1.4)
+        costume-elem:
+          - unbuttoned
+          - cleavage
+          - underboob
+          - open clothes
+          - center opening
+          - breasts out
+      Mechanical_Breast_Clamp_Device:
+        prompts:
+          - >-
+            Mechanical Breast Clamp Device, topless
 

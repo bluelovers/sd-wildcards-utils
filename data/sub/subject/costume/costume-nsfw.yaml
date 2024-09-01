@@ -1,0 +1,88 @@
+lazy-wildcards:
+  subject:
+    costume-nsfw:
+      # https://civitai.com/models/141250/fanny-packing-meat-shield-onarmor-or-concept?modelVersionId=156583
+      # https://danbooru.donmai.us/posts?page=1&tags=meat_armor
+      meat_armor:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-nsfw/meat_armor/costume-main__
+            {,{1-$$__lazy-wildcards/subject/costume-nsfw/meat_armor/action-nsfw__}|}
+            {,{1-$$__lazy-wildcards/subject/costume-nsfw/meat_armor/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/subject/costume-nsfw/meat_armor/expressions__}|}
+            {,{1-$$__lazy-wildcards/subject/costume-nsfw/meat_armor/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/subject/costume-nsfw/meat_armor/env__}|}
+            {,{1-$$__lazy-wildcards/subject/costume-nsfw/meat_armor/style__}|}
+        costume-main:
+          - meat_armor, fanny packing, meat shield, on armor
+        action-nsfw:
+          - belly riding
+          - reverse suspended congress, reverse upright straddle
+          - exhibitionism
+          - public indecency
+          - rape
+          - sex from behind, standing sex
+          - arms behind back
+          - clothed sex
+          - hand on another's head
+        expressions:
+          - heavy breathing
+          - rolling eyes
+          - crying with eyes open
+          - empty eyes
+        costume-elem:
+          - breasts
+          - navel
+          - nude
+          - bit gag, gag, gagged
+          - cleave gag
+          - cloth gag
+          - __lazy-wildcards/subject/costume-elem/bound-shackles/prompts__
+          - __lazy-wildcards/subject/costume-elem/scar/prompts__
+          - barbell piercing
+          - body writing
+          - reverse outfit
+          - cum, sweat, cum overflow, sweatdrop
+        costume-weapon:
+          - shield
+        env:
+          - harness
+          - impaled
+        style:
+          - bdsm
+      # https://civitai.com/models/558218/concept-or-topless-waitress-sdpony?modelVersionId=621408
+      Topless_Waitress:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-nsfw/Topless_Waitress/costume-main__
+            {0.8::,{1-$$__lazy-wildcards/subject/costume-nsfw/Topless_Waitress/costume-weapon-main__}|}
+            {,{1-$$__lazy-wildcards/subject/costume-nsfw/Topless_Waitress/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/subject/costume-nsfw/Topless_Waitress/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/subject/costume-nsfw/Topless_Waitress/env-elem-food__}|}
+            {,{1-$$__lazy-wildcards/subject/costume-nsfw/Topless_Waitress/env__}|}
+        costume-main:
+          - (toplesswaitress:1.2), topless waitress, (topless:1.3)
+        costume-weapon-main:
+          - holding tray with glass
+        costume-weapon:
+          - tray
+          - serving_tray
+          - waitress_tray
+          - holding_glass
+          - holding_tray
+        env-elem-food:
+          - glass
+          - drinking_glass
+          - wine_glass
+          - milk, milk glass
+        costume-elem:
+          - upper body
+          - topless, bare_chest, no_top
+          - breasts on tray
+          - sweat
+          - apron
+          - gingham apron
+          - waist apron
+        env:
+          - menu
+

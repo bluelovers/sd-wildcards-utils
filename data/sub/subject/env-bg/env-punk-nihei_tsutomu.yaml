@@ -1,0 +1,72 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      # https://civitai.com/models/50888?modelVersionId=125891
+      # https://civitai.com/models/146250/abara-lora-tsutomu-nihei
+      nihei_tsutomu-blame-env:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/nihei_tsutomu-blame-env/main-trigger-words__
+            ,__lazy-wildcards/subject/env-bg/nihei_tsutomu-blame-env/env-bg-main__
+            {,{1-$$__lazy-wildcards/subject/env-bg/nihei_tsutomu-blame-env/style__}|}
+        main-trigger-words:
+          - tsutomu nihei, nihei_tsutomu, blame!, blame gakuen!, abara, TNstyle, sidonia_no_kishi
+        env-bg-main:
+          - >-
+            ({1-$$__lazy-wildcards/subject/env-bg/nihei_tsutomu-blame-env/env-bg__})
+            {,{1-$$__lazy-wildcards/subject/env-bg/nihei_tsutomu-blame-env/env__}|}
+          - >-
+            {({1-$$__lazy-wildcards/subject/env-bg/nihei_tsutomu-blame-env/env-bg__}),|}
+            {1-$$__lazy-wildcards/subject/env-bg/nihei_tsutomu-blame-env/env__}
+        env-bg:
+          - tunnel
+          - city ruins
+          - megastructure in background
+          - deep horizon
+          - stairs
+          - mausoleum
+          - lab
+          - giant room
+          - space, spacecraft
+          - tower
+          - hangar
+          - sidonia \(ship\)
+        env:
+          - cables, tubes, industrial pipes
+          - toha heavy industries
+          - wire
+          - bridge
+          - clouds
+          - __lazy-wildcards/subject/moment/weather-mist/prompts__
+          - dark sky, black sky
+          - tentacles
+          - bones
+          - buildings
+          - gauna, gauna mech
+          - concrete walls, metal walls
+          - dome
+          - light particles
+          - star \(sky\), starry sky
+          - walkway
+          - fence
+          - ventilation fan, ventilation shaft
+          - air conditioner
+          - machinery
+          - lantern
+          - drainpipe
+          - letterboxed
+        style:
+          - science fiction
+          - dystopia, destroyed
+          - vast scenery, perspective
+          - futuristic
+          - cyberpunk
+          - decrepit
+          - open space
+          - empty
+          - dark background
+          - no human
+          - flock
+          - blm
+          - biomachine, bioluminescence
+

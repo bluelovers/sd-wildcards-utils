@@ -91,27 +91,7 @@ lazy-wildcards:
           __lazy-wildcards/prompts/dataset/char-base__,
           {__lazy-wildcards/subject/style-book/*/action-pose__|__lazy-wildcards/prompts/pose__},
           (__lazy-wildcards/dataset/background__:1.25)
-  dataset:
-    char-view:
-      - upper body
-      - full body angle, full body view, full_shot, full body
-      - (Face focus, face closeup, face and shoulder only, Portrait, upper_body, face photo)
-      - profile
-      - (closeup, face only, face focus, face closeup, close up of face, face photo)
-      - profile portrait
-    char-view-anything:
-      - __lazy-wildcards/dataset/char-view__
-      - portrait of family
-    background:
-      - __lazy-wildcards/dataset/background-color__
-      - __lazy-wildcards/background/anything__
-      - >-
-        __lazy-wildcards/background/anything__,
-        __lazy-wildcards/dataset/background-color__
-    background-color:
-      - __lazy-wildcards/background/color-transparent__
-      - __lazy-wildcards/background/color-theme__
-      - __lazy-wildcards/background/color-multi__
+
   book:
     style-types:
       magazine-cover:

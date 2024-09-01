@@ -1,0 +1,43 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      # https://civitai.com/models/689322/bgi-battlestar-galactica-interiors?modelVersionId=771492
+      battlestar_galactica_interiors:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-bg/battlestar_galactica_interiors/env-bg-main__}
+            {,{1-$$__lazy-wildcards/subject/env-bg/battlestar_galactica_interiors/env__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg/battlestar_galactica_interiors/costume__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg/battlestar_galactica_interiors/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg/battlestar_galactica_interiors/style__}|}
+        env-bg-main:
+          - battlestar_galactica, battlestar galactica interiors, indoors, interior, science fiction
+        env:
+          - table, desk
+          - machinery
+          - >-
+            {1-$$military vehicle|ground vehicle}
+          - >-
+            {1-$$spacecraft|aircraft|airplane}
+          - monitor
+          - chair
+          - cockpit
+          - computer
+          - robot
+          - stairs
+          - cable
+          - building
+          - clock
+          - window
+          - keyboard \(computer\)
+          - ceiling light
+          - space
+        costume:
+          - fighter jet, helmet
+          - uniform
+        costume-weapon:
+          - gun
+        style:
+          - flying
+          - no humans
+

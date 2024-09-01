@@ -1,0 +1,127 @@
+lazy-wildcards:
+  subject:
+    costume-elem:
+      costume-breasts:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-elem/costume-breasts/costume-breasts-cleavage__}
+            {0.3::,{1-$$__lazy-wildcards/subject/costume-elem/costume-breasts/costume-breasts-out__}|}
+            {,{1$$__lazy-wildcards/subject/costume-elem/costume-breasts/costume-breasts-out-bra__}|}
+            {0.2::,{1-3$$__lazy-wildcards/subject/costume-elem/costume-breasts/costume-breasts-shapes__}|}
+            {0.2::,{1-$$__lazy-wildcards/subject/costume-elem/costume-breasts/costume-breasts-style__}|}
+            {0.2::,__lazy-wildcards/subject/costume-elem/costume-breasts/costume-breasts-action__|}
+            {0.2::,__lazy-wildcards/subject/costume-elem/costume-breasts/costume-breasts-size__|}
+        costume-breasts-style:
+          - jewelry draped between breasts
+          - >-
+            {1-$$wet breasts|sweat_on_breasts|sweaty breasts}
+          - glistening breasts, shiny breasts
+        costume-breasts-size:
+          - >-
+            {1-$$gigantic breasts|hyper breasts}
+          - >-
+            {1-$$no_breasts|flat chest|flat chested|flat breasts}
+          - >-
+            {1-$$small breasts|tiny breasts}
+          - >-
+            medium breasts
+          - huge breasts
+          - big breasts
+          - large breasts
+          - bursting breasts
+        costume-breasts-shapes:
+          - teardrop breasts
+          - athletic breasts
+          - symmetrical breasts
+          - asymmetrical breasts
+          - breasts apart
+          - >-
+            {medium|small|} pointy breasts
+          - >-
+            {medium|small|} perky breasts
+          - >-
+            {1-$$saggy breasts, sagging breasts|drooping breasts|soft breasts|hanging breasts|tarechichi, taretiti}
+          - small sagging breasts
+          - heavy sagging breasts
+          - bulging breasts
+          - bell shaped breasts
+          - deflated breasts
+          - veiny saggy breast
+          - >-
+            {Perfect Full }round breasts
+        costume-breasts-cleavage:
+          - cleavage
+          - >-
+            {1-$$cleavage_cutout|cleavage_window}
+          - cleavage_overflow
+          - >-
+            {1-$$cleavage_pull|cleavage_reach}
+          - cleavage_vore
+        costume-breasts-action:
+          - breasts_squeezed_together
+          - breasts_on_glass
+          - breast squish
+          - covering_breasts
+          - flashing breasts
+          - bouncing_breasts
+        costume-breasts-out:
+          - underboob
+          - >-
+            {one |}breasts out{ of clothes|}{, breasts_outside|}
+          - exposed breasts
+          - sideboob
+          - >-
+            {extended |}downblouse
+        costume-breasts-out-bra:
+          - __lazy-wildcards/subject/costume-elem/breasts-bra-peek/prompts__
+          - __lazy-wildcards/subject/costume-elem/breasts-bra-peek2/prompts__
+          - no bra
+          - __lazy-wildcards/subject/costume-elem/breasts-bra-visible-through-clothes/prompts__
+      # https://civitai.com/models/337704?modelVersionId=378121
+      breasts-bra-peek:
+        prompts:
+          - >-
+            (bra peek:1.2), bra, breasts, cleavage
+            {0.3::,({1-$$__lazy-wildcards/subject/costume-elem/breasts-bra-peek/costume-breasts__})|}
+            {0.3::,{1-$$__lazy-wildcards/subject/costume-elem/breasts-bra-peek/costume-elem__}|}
+        costume-breasts:
+          - bra visible through clothes
+          - downblouse, leaning forward
+          - button gap
+        costume-elem:
+          - collarbone
+          - see-through
+          - (tied shirt:1.2), shirt
+      # https://civitai.com/models/328209/bra-cups-sticking-out-or-goofy-ai?modelVersionId=367821
+      breasts-bra-peek2:
+        prompts:
+          - >-
+            (Bra Cups Sticking Out:1.2),
+            __lazy-wildcards/subject/costume-elem/breasts-bra-peek/prompts__
+      breasts-bra:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-elem/breasts-bra/costume-breasts-bra__}
+        costume-breasts-bra:
+          - bra strap
+          - bow bra
+          - bralines
+          - >-
+            {1-$$lace-trimmed bra|lace bra|lace trim}
+      # https://civitai.com/models/210166/bra-visible-through-clothes-concept-or-goofy-ai
+      breasts-bra-visible-through-clothes:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem/breasts-bra-visible-through-clothes/costume-breasts-bra-visible-through-clothes__
+            {,{1-$$__lazy-wildcards/subject/costume-elem/breasts-bra-visible-through-clothes/costume-breasts-bra__}|}
+            ,{1-$$__lazy-wildcards/subject/costume-elem/breasts-bra-visible-through-clothes/costume-elem__}
+        costume-breasts-bra-visible-through-clothes:
+          - >-
+            (bra_visible_through_clothes:1.2)
+        costume-breasts-bra:
+          - bralines
+        costume-elem:
+          - button gap
+          - shirt tucked in
+          - __lazy-wildcards/subject/costume-elem/see-through-clothes/prompts__
+

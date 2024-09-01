@@ -1,0 +1,73 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      # https://civitai.com/models/154913/taipei-downtow-taiwan?modelVersionId=173687
+      tw-taipei-downtown:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/tw-taipei-downtown/env-bg-main__
+            {,{1-$$__lazy-wildcards/subject/env-bg/tw-taipei-downtown/env-bg-real__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg/tw-taipei-downtown/env__}|}
+            {0.2::,{1-$$__lazy-wildcards/subject/env-bg/tw-taipei-downtown/env-text__}|}
+            {,__lazy-wildcards/utils/scenery-no-humans__|}
+        env-bg-main:
+          - (taipei downtown, taiwan:1.2), real world location, scenery, building, architecture, landscape
+        env-bg-real:
+          - Taipei_101
+          - presidential office building
+        env-text:
+          - traditional chinese text
+        env:
+          - cityscape
+          - skyscrapers, skyline
+          - bustling_streets
+          - street_markets
+          - traditional_architecture
+          - modern_architecture
+          - pedestrian_crossing
+          - public_transport
+          - fireworks
+          - flag
+          - rainbow flag
+          - night sky, night_view
+          - flower
+          - lotus
+          - lily pad
+          - rooftop
+          - water tank
+          - traditional chinese temple
+      # https://civitai.com/models/153624/jiufen-taiwan?modelVersionId=172061
+      tw-jiufen:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/tw-jiufen/env-bg-main__
+            {,{1-$$__lazy-wildcards/subject/env-bg/tw-jiufen/env__}|}
+            {,__lazy-wildcards/utils/scenery-no-humans__|}
+        env-bg-main:
+          - (Jiufen Taiwan, taiwan:1.2), real world location, scenery, building, architecture, landscape
+        env:
+          - mountain_town
+          - traditional_architecture, east asian architecture
+          - narrow_streets
+          - red_lanterns, lantern
+          - tea_house
+          - foggy_scenery, __lazy-wildcards/subject/moment/weather-mist/prompts__
+          - ocean_view
+          - staircases
+          - tourist_spot
+          - night_market
+          - cat
+          - cityscape
+          - skyscrapers, skyline
+          - night sky, night_view
+          - flower
+          - hydrangea
+          - stone wall
+          - grass
+          - floating island
+          - stairs
+          - >-
+            stone {1-$$, stone $$road|fence}
+          - >-
+            wooden {1-$$, wooden $$wall|fence|horse|chair}
+

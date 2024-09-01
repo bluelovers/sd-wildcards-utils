@@ -1,0 +1,77 @@
+lazy-wildcards:
+  subject:
+    costume-tattoo:
+      # 宗教紋身 (Religious Tattoos)
+      religious:
+        prompts:
+          - cross_tattoo, Christian_symbolism
+          - buddha_tattoo, Buddhist_symbolism
+          - hindu_tattoo, Hindu_symbols
+          - angel_wings_tattoo
+          - mandala_tattoo, intricate_geometric_patterns
+          - scripture_tattoo, religious_texts
+          - yin_yang_tattoo, Taoist_symbolism, circular_design
+          - kabbalah_tattoo, Jewish_mysticism, Hebrew_letters, Tree_of_Life
+          - tribal_tattoo, indigenous_designs, bold_and_intricate_patterns
+      body-tattoo:
+        prompts:
+          - tattoo
+          - full body tattoo
+          - >-
+            {1-$$breast tattoo|chest tattoo}
+          - >-
+            {1-$$arm tattoo|hand tattoo}
+          - shoulder tattoo
+          - facial tattoo
+          - pubic tattoo
+          - leg tattoo
+          - neck tattoo
+          - stomach tattoo
+          - back tattoo
+      pattern-tattoo:
+        prompts:
+          - number tattoo
+          - heart tattoo
+          - barcode tattoo
+          - flower tattoo
+      # https://civitai.com/models/372610/irezumi-world-world-morph-lora-flux-or-sdxl-or-sd-15?modelVersionId=416199
+      Japanese-tattoo-Irezumi:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-tattoo/Japanese-tattoo-Irezumi/costume-main__
+            {,{1-$$__lazy-wildcards/subject/costume-tattoo/Japanese-tattoo-Irezumi/costume-elem-tattoo__}|}
+            {,{1-$$__lazy-wildcards/subject/costume-tattoo/Japanese-tattoo-Irezumi/env__}|}
+            {,{1-$$__lazy-wildcards/subject/costume-tattoo/Japanese-tattoo-Irezumi/style__}|}
+        costume-main:
+          - EPIrezumiWorld, Irezumi, Wabori, Harimono, japanese tattoo, japanese style tattoo, traditional japanese tattoo, yakuza, yakuza tattoo
+        costume-elem-tattoo:
+          - full_body_tattoo
+          - bodysuit_tattoo
+          - oriental_tattoo
+          - gangster
+          - japanese_gangster
+        env:
+          - cherry blossoms
+          - japanese_flora
+          - chrysanthemums
+          - lotus
+          - japanese_fauna
+          - Koi_fish
+          - dragons
+          - tigers
+          - mythological_figures
+          - Oni_demons
+          - Tengu
+          - samurai_spirits
+        style:
+          - cyberpunk
+          - scifi
+          - glowing neon lights
+          - science fiction
+          - vivid_colors, striking_hues
+          - Bright_inks
+          - bold_shading
+          - Traditional_tattooing
+          - Tebori_technique
+          - hand_poked_tattoo
+

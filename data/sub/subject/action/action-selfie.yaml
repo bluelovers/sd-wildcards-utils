@@ -1,0 +1,87 @@
+lazy-wildcards:
+  subject:
+    action-pose-selfie:
+      selfie-mirror:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/action-pose-selfie/selfie-mirror/main-trigger-words__
+            {,__lazy-wildcards/subject/action-pose-selfie/selfie-mirror/action-pose__|}
+            {,{1-$$__lazy-wildcards/subject/action-pose-selfie/selfie-mirror/action-elem__}|}
+            {,__lazy-wildcards/subject/action-pose-selfie/selfie-mirror/action-pose-leg__|}
+            {,{1-$$__lazy-wildcards/subject/action-pose-selfie/selfie-mirror/costume__}|}
+            {,{1-2$$__lazy-wildcards/subject/action-pose-selfie/selfie-mirror/env-bg__}|}
+            {,{1-$$__lazy-wildcards/subject/action-pose-selfie/selfie-mirror/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/subject/action-pose-selfie/selfie-mirror/costume-unworn__}|}
+            {,{1-$$__lazy-wildcards/subject/action-pose-selfie/selfie-mirror/style__}|}
+        main-trigger-words:
+          - >-
+            (p_m_s, lewd selfie, mirrorselfie)
+            , pose, iphone, mirror selfie, solo, holding phone
+            , Take a selfie with phone in one hand and cover face
+        costume:
+          - pinafore dress, tie, school badge, wearing uniform, shoes
+          - dress, frills, detached sleeves, frilled choker
+          - maid, maid apron, maid headdress, unconventional maid
+          - sleeves past wrists, pleated skirt, open jacket, open clothes, miniskirt, dress shirt
+        costume-elem:
+          - stockings
+          - pantyhose
+          - abs peek
+          - bare shoulders
+          - tank top
+          - apron
+          - ear piercing
+          - __lazy-wildcards/dataset/costume-accessories-base__
+          - piercing
+          - tattoo
+          - breasts, cleavage
+          - collarbone
+          - mole on breast
+          - no bra
+          - bra peek
+          - ass
+          - sweat
+          - wet
+        action-pose:
+          - standing
+          - >-
+            sitting
+            {, on {chair|bed}|}
+            {,{butterfly sitting}|}
+        action-pose-leg:
+          - legs up, soles
+          - holding dildo between feet
+          - crossed legs
+          - spread legs
+        action-elem:
+          - looking at phone
+          - peace_sign
+          - leaning_forward
+        style:
+          - feet focus
+          - sexy
+          - reflection
+          - background_reflection
+          - ring_light
+          - anarchy symbol
+          - see-through
+        env:
+          - parquet floor
+          - window fog, condensation
+          - captive bead ring
+          - >-
+            {bathroom_mirror|bedroom_mirror|full_body_mirror|dressing_room_mirror|Dirty mirror}
+          - cluttered_background
+          - visible clothing racks
+          - Messy room
+        env-bg:
+          - luxury hotel room
+          - bed
+          - bedroom
+          - bathroom
+          - dressing room
+        costume-unworn:
+          - >-
+            {__lazy-wildcards/utils/costume-type2-unworn__} removed
+          - >-
+            unworn {1-3$$, unworn $$__lazy-wildcards/utils/costume-type2-unworn__}

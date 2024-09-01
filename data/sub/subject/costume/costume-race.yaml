@@ -229,8 +229,7 @@ lazy-wildcards:
           - zombie Meat
         env-bg:
           - wasteland
-          - >-
-            {{cyberpunk|wasteland} |}graveyard
+          - __lazy-wildcards/subject/env-bg/graveyard/prompts__
       # https://civitai.com/models/626038/donm-shroom-knight-sdsdxlpony?modelVersionId=699877
       Shroom-Knight:
         prompts:
@@ -303,4 +302,118 @@ lazy-wildcards:
           - asymmetrical horns
         style:
           - bat print
+      rabbit_girl:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/rabbit_girl/costume-ethnicity-main__
+            {,{1-$$__lazy-wildcards/subject/costume/rabbit_girl/costume-ethnicity__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/rabbit_girl/costume-hair__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/rabbit_girl/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/rabbit_girl/action__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/rabbit_girl/env__}|}
+        costume-ethnicity-main:
+          - >-
+            animal ears, animal ear fluff, rabbit ears
+            , furry female, body fur, fur collar
+            , rabbit girl
+            , rabbit tail
+        costume-ethnicity:
+          - red eyes, colored sclera
+          - white fur
+        costume-hair:
+          - crossed bangs
+          - lone nape hair
+          - white hair
+          - hair between eyes
+          - hair tubes
+          - twin braids
+        costume-elem:
+          - hair ornament
+          - animal nose, snout
+          - monster girl
+          - curvy
+          - sidelocks
+          - thick thighs
+          - rabbit hair ornament
+          - carrot hair ornament
+          - hair ribbon
+          - leotard
+          - leotard under clothes
+          - >-
+            fur-trimmed {1-$$, fur-trimmed $$dress|gloves}
+        action:
+          - biting, cheek biting
+          - hug
+          - sitting, head tilt
+        env:
+          - carrot
+      lizard:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/lizard/costume-ethnicity-main__
+            ,{1-$$__lazy-wildcards/subject/costume/lizard/costume-ethnicity__}
+            {,{1-$$__lazy-wildcards/subject/costume/lizard/costume-elem__}|}
+            ,{1-$$__lazy-wildcards/subject/costume/lizard/costume-eyes__}
+            {,{1-3$$__lazy-wildcards/subject/costume/lizard/costume__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/lizard/costume-hair__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/lizard/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/lizard/env-bg__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/lizard/env-monster__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/lizard/env__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/lizard/style__}|}
+        costume-ethnicity-main:
+          - lizardman, lizard, lizardmen, lizardman \(warhammer fantasy\)
+        costume-ethnicity:
+          - scales, reptilian_skin, scaled_skin
+          - claws, sharp_claws, talons
+          - tail, reptilian_tail, long_tail, expressive_tail
+          - fangs, sharp_teeth, reptilian_teeth, carnivorous_teeth
+          - colored skin
+          - colored scales
+        costume-elem:
+          - tattoos
+          - leather
+          - pelvic curtain, loincloth
+          - __lazy-wildcards/subject/costume-elem/asymmetrical-clothes/prompts__
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - __lazy-wildcards/subject/costume-elem/scar/prompts__
+          - muscular
+          - chest harness
+          - armor
+          - shoulder armor, pauldrons
+          - hood, hooded coat
+          - __lazy-wildcards/subject/costume-elem/bound-shackles/prompts__
+        costume-eyes:
+          - reptilian_eyes, slit_pupils
+          - yellow_eyes
+          - green_eyes
+          - red_eyes
+          - glowing eyes
+        costume:
+          - leather_spikes, spiked_leather, spiked_clothing
+          - leather_jacket, studded_choker, spiked_bracelet, band_t-shirt, combat_boots
+          - lancer
+          - mage priest
+          - warrior
+          - chief
+          - temple guard
+        costume-hair:
+          - mohawk, punk_hair, colored_mohawk, spiked_hair
+        costume-weapon:
+          - spear, polearm
+          - shield
+          - axe
+          - fishing rod
+        env:
+          - saddle
+          - __lazy-wildcards/subject/env-elem/skull/prompts__
+        env-monster:
+          - Suchosaurus, Deinosuchus, crocodiles
+          - dinosaurs
+        env-bg:
+          - decaying_buildings, graffiti
+          - swamp, wet
+          - urban_dystopia
+        style:
+          - tribal
 

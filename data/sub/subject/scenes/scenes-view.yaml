@@ -1,0 +1,52 @@
+lazy-wildcards:
+  subject:
+    scenes-view:
+      gacha:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/scenes-view/gacha/main-trigger-words__
+            , __lazy-wildcards/subject/scenes-view/gacha/style-view__
+            {,{1-$$__lazy-wildcards/subject/scenes-view/gacha/costume__}|}
+            {0.2::,{1-$$__lazy-wildcards/subject/scenes-view/gacha/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/subject/scenes-view/gacha/env-bg__}|}
+            {,{1-$$__lazy-wildcards/subject/scenes-view/gacha/env__}|}
+            {,{1-$$__lazy-wildcards/subject/scenes-view/gacha/style__}|}
+        main-trigger-words:
+          - >-
+            (white background, transparent background:1.4)
+            , (full body)
+            , gacha
+        style-view:
+          - far shot
+          - mid shot
+          - wide view, wide angle
+        style:
+          - hexagon
+          - isometric
+          - Korean style vertical painting
+          - light particles
+          - green circle
+          - character_illustration
+          - concept_art
+        costume:
+          - official alternate costume
+          - sleeveless, chinese clothes, china dress
+          - swimsuit
+        costume-elem:
+          - horns
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - __lazy-wildcards/dataset/costume-accessories-base__
+          - __lazy-wildcards/subject/env-elem/skull/prompts__
+        env:
+          - butterflies
+          - sky
+          - flowers, floating petal
+          - fairy
+          - black water
+          - splash
+          - dragon
+        env-bg:
+          - ocean, sea waves, water splashes
+          - night, starry sky
+          - garden
+

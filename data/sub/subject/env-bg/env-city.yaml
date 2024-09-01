@@ -1,0 +1,43 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      city-traffic:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-bg/city-traffic/style__},
+            __lazy-wildcards/subject/env-bg/city-traffic/func/road-in__,
+            __lazy-wildcards/subject/env-bg/city-traffic/main__,
+            {5-$$__lazy-wildcards/subject/env-bg/city-traffic/env__}
+            {, __lazy-wildcards/subject/moment/random/prompts__|}
+        main:
+          - cityscape, building
+        style:
+          - city-life-overload
+          - ((pedestrian hell))
+        env:
+          - traffic light, road sign
+          - roadway
+          - crowd
+          - greenery, trees
+          - wind, windy
+          - underpass
+          - skywalk
+          - jaywalk
+          - zebra crossing, crosswalk
+          - walk signal
+          - tunnel
+          - parking lot
+          - idewalk
+          - gas station
+          - roadworks
+          - traffic jam
+          - >-
+            {1-$$crossroads|intersection}
+          - >-
+            {1-$$scooter|motorcycle}
+          - >-
+            {1-$$shopping|storefront|signboard}
+        func:
+          road-in:
+            - >-
+              ((busy street in ${country:taiwan})), ${location:taipei} road

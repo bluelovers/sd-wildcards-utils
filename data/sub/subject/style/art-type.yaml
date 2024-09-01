@@ -115,4 +115,27 @@ lazy-wildcards:
           - Newsprint
           - Vellum
           - translucent and smooth paper
+      isometric:
+        prompts:
+          - >-
+            ({1-$$isometric|isometric cutaway}:1.4)
+      mosaic:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-art-type/mosaic/style-main__
+            {,{1-2$$__lazy-wildcards/subject/style-art-type/mosaic/style__}|}
+        style-main:
+          - >-
+            (Mosaic Art, Mosaic:1.3), ArsMJStyle
+        style:
+          - tessellation
+          - geometric_pattern
+          - repeating_pattern
+          - symmetry
+          - colorful, vibrant_colors, multicolored
+          - ancient_art
+          - classical_art
+          - byzantine_art
+          - intricate_design, elaborate_pattern
+          - mosaic background
 

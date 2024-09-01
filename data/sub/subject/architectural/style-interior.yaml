@@ -10,3 +10,16 @@ lazy-wildcards:
             __lazy-wildcards/subject/style-architectural/elven/prompts__,
             elfint,
             elvish interior, elven interior
+      # https://civitai.com/models/467620/lava-interior-stylelava
+      Lava_Interior_style:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-interior/Lava_Interior_style/main-trigger-words__
+            {,({1-$$__lazy-wildcards/subject/env-elem-punk/solarpunk/main__}:1.2)|}
+            {,{1-$$__lazy-wildcards/subject/style-interior/Lava_Interior_style/env__}|}
+            {,{1-4$$__lazy-wildcards/subject/env-elem-punk/solarpunk/style__}|}
+        main-trigger-words:
+          - Lava Interior style, Chris Bosse, Chris Bosse architect, lava architect, lava style, LAVA, indoors
+        env:
+          - black wooden
+          - green light

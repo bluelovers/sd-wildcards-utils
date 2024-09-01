@@ -66,25 +66,37 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/subject/env-bg-interior/asian-east/main__,
             {3-$$__lazy-wildcards/subject/env-bg-interior/asian-east/env__},
-            {1-$$__lazy-wildcards/subject/env-bg-interior/asian-east/style__},
-            {2-$$__lazy-wildcards/subject/env-bg-interior/asian-east/env-bg__}
+            {1-$$__lazy-wildcards/subject/env-bg-interior/asian-east/style__}
+            {,{2-$$__lazy-wildcards/subject/env-bg-interior/asian-east/env-bg__}|}
         main:
           - east asian architecture, interior, indoors
         style:
           - psychedelic
           - prismatic
           - light tone
+          - Red and Dark Wood Chinese Interior
         env:
           - >-
             {1-$$cylinder|cylinder in the middle}
-          - fog
+          - __lazy-wildcards/subject/moment/weather-mist/prompts__
           - reflection
           - the wooden booth
-          - window
+          - >-
+            {1-$$wooden table|round table|teapot on the tray}
+          - >-
+            {1-$$big red maple tree|cherry blossoms}
+          - >-
+            {1-$$red velvet|leather couch with two pillows}
+          - >-
+            {1-$$red velvet carpet|rug}
+          - statue, dark wooden relief sculpture on the wall
+          - window, lattice windows, traditional lattice ceilings
           - lily pad
           - (lotus)
-          - lantern
+          - lantern, vase, red lanterns, ribbon, lamp
           - letterboxed
+          - Redwood furniture
+          - Mahogany Carving
         env-bg:
           - water
           - cloud
@@ -457,3 +469,102 @@ lazy-wildcards:
             - arcade_area, arcade games, entertainment machines
             - emergency_exit
             - hallways
+      # https://civitai.com/models/621731/modern-forest-mansion?modelVersionId=695051
+      modern-forest-mansion:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-interior/modern-forest-mansion/env-bg-main__
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/modern-forest-mansion/env-bg__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/modern-forest-mansion/env__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/modern-forest-mansion/style__}|}
+        env-bg-main:
+          - nature, plant, Modern Forest Mansion, buildings, architecture
+        env:
+          - >-
+            {orange|gray|white} {leather|velvet} {couch|sofa|chair}
+          - >-
+            {wooden|marble} floor
+          - >-
+            {wooden|marble} table
+          - glass window
+          - stairs
+          - stone
+          - glass lamp
+        env-bg:
+          - water, waterfall
+          - >-
+            {kitchen|bedroom|__lazy-wildcards/subject/env-bg-interior/bathroom/prompts__|__lazy-wildcards/subject/env-bg-interior/living_room/prompts__}
+        style:
+          - >-
+            {outdoors, exterior|indoors, interior}
+          - warm lighting
+          - reflection
+      ktv-interior:
+        # https://civitai.com/models/275579/ktv-private-room?modelVersionId=310599
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-interior/ktv-interior/env-bg-main__
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/ktv-interior/env-bg__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/ktv-interior/env-elem-food__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/ktv-interior/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/ktv-interior/action__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/ktv-interior/expressions__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/ktv-interior/env__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/ktv-interior/style__}|}
+        env-bg-main:
+          - (ktv, karaoke, karaokeroom:1.3), (interior, indoors)
+        env-elem-food:
+          - champagne
+          - apple
+          - bottle
+          - banana
+          - food
+          - fruit
+          - tray
+          - french fries
+          - burger
+          - drinking
+          - cup, drink
+        action:
+          - closed eyes
+          - rossed legs
+          - singing
+          - sitting
+          - open mouth
+          - clothes pull
+          - pulling own clothes
+          - hand on another's shoulder
+        expressions:
+          - "> <"
+          - "^ ^"
+        costume-weapon:
+          - holding tray
+          - microphone, at-clm7000tx, wm-610
+          - microphone stand
+          - holding microphone
+          - holding phone
+          - joypad
+        env-bg:
+          - high end clubhouse
+          - private room
+        env:
+          - couch
+          - table
+          - television
+          - champagne
+          - mural
+          - green plants
+          - fireplace
+          - aurora
+          - card
+          - disco ball
+          - karaoke box
+          - denmoku
+        style:
+          - modern style
+          - sense of technolog
+          - chinese style
+          - music
+          - dutch angle
+          - dynmic
+

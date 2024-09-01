@@ -12,3 +12,53 @@ lazy-wildcards:
         action-sitting:
           - sitting
           - sitting on person
+      # https://civitai.com/models/124656/cyber-ui?modelVersionId=136129
+      cyber_ui:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/scenes-pov/cyber_ui/style-main__
+            {0.2::,{1-$$__lazy-wildcards/subject/scenes-pov/cyber_ui/prompts-sub__}|}
+            {,{1-$$__lazy-wildcards/subject/scenes-pov/cyber_ui/env__}|}
+            {,{1-$$__lazy-wildcards/subject/scenes-pov/cyber_ui/style__}|}
+            {0.1::,{1-$$__lazy-wildcards/subject/scenes-pov/cyber_ui/style-artist__}|}
+        style-main:
+          - (cyber_ui, cyberpunk_ui{0.3:::{1.2|1.3|1.4}|})
+        prompts-sub:
+          - with a wire mesh design around it
+          - a computer generated image of a map area on a plate
+          - a computer screen with a wave pattern on it's display screen
+          - a green screen showing the time
+          - a computer generated image of a computer network with a ball on top of it
+          - a barcode on the bottom of the image
+          - a computer screen with a green screen and a red screen on it
+          - with a red arrow in the center
+        style:
+          - volumetric lights
+          - a raytraced image
+          - holography
+          - vfx
+          - computer graphics, computer art
+          - video art
+          - game art
+          - neon_glow
+          - cyber_glow
+        style-artist:
+          - Epsylon Point
+          - Beeple
+          - Altichiero
+        env:
+          - >-
+            {1-$$holographic_interface|floating_interface|hologram|glowing_hologram}
+          - >-
+            {1-$$futuristic_dashboard|digital_dashboard|neon_dashboard|cyber_dashboard}
+          - >-
+            {1-$$glowing_text|neon_signs}
+          - >-
+            {1-$$digital_readouts|cyber_numbers|digital_data|floating_numbers}
+          - >-
+            {1-$$transparent_ui_panels|glass_ui|cyber_ui_panels|clear_interface}
+          - >-
+            {1-$$touchscreen_interface|touch_control|cyber_touchscreen|interactive_hologram}
+          - >-
+            {1-$$digital_overlay|cyber_visuals|neon_ui}
+

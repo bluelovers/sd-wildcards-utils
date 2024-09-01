@@ -33,8 +33,7 @@ lazy-wildcards:
             ((raining)), rain, reflection,
             wet street
             {, wet clothes|}
-          - >-
-            {1-$$foggy|fog|mist|steam|smoke}
+          - __lazy-wildcards/subject/moment/weather-mist/prompts__
           - >-
             {1-$$floating cloud|cloudy|Sea of clouds|dark clouds}
           - __lazy-wildcards/subject/moment/weather/main-types/*__
@@ -42,10 +41,15 @@ lazy-wildcards:
             {1-$$lightning|lightning bolt|lightning glare}
           - __lazy-wildcards/subject/moment/weather-*/prompts__
           - dynamic weather
+          - __lazy-wildcards/subject/moment/weather-star/prompts__
         main-types:
           winter:
             - >-
               (snowylandscape, {1-$$winter|snow|very cold|snow fall|snowy view|snowflake|pure winter}:1.2)
+      weather-mist:
+        prompts:
+          - >-
+            {1-$$foggy|fog|mist|steam|smoke|thick mist}
       weather-natural-disaster-water:
         prompts:
           - >-
@@ -57,7 +61,7 @@ lazy-wildcards:
         main:
           - natural disaster, scenery, water
         env-weather:
-          - Storm
+          - Storm, tempesta
           - Torrential_Rain
           - Thunderstorm
           - Gale_Force_Winds, Typhoon_Winds
@@ -73,7 +77,7 @@ lazy-wildcards:
           - Rising_Waters
           - broken window
           - wading
-          - moss
+          - __lazy-wildcards/subject/env-elem/moss/prompts__
           - ripples
           - cumulonimbus cloud
           - reflective water
@@ -105,7 +109,7 @@ lazy-wildcards:
       time:
         prompts:
           - >-
-            {1-$$sunlight|sunset|cool sun|scorching sun|bright sun}
+            {1-$$sunlight|sunset|cool sun|scorching sun|bright sun|dappled sunlight|light rays}
           - dawn
           - twilight
           - >-
@@ -115,8 +119,15 @@ lazy-wildcards:
           - Dusk
           - __cof-location/timeofday/all__
           - dynamic moment
+      weather-star:
+        prompts:
+          - >-
+            {1-$$star \(sky\)|starry sky|galaxy}
       moon:
         prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/moment/moon/env__}
+        env:
           - >-
             {cold |}full moon
           - moonlight

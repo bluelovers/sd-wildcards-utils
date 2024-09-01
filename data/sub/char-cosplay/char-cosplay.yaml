@@ -116,10 +116,10 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/cosplay-char/bayonetta/bayonetta/main__,
             __lazy-wildcards/cosplay-char/bayonetta/bayonetta/costume-ethnicity__,
-            __lazy-wildcards/cosplay-char/bayonetta/bayonetta/costume/*__,
-            {0-$$__lazy-wildcards/cosplay-char/bayonetta/bayonetta/style__},
-            {1-$$__lazy-wildcards/cosplay-char/bayonetta/bayonetta/env__},
-            {0-$$__lazy-wildcards/cosplay-char/bayonetta/bayonetta/env-bg__}
+            __lazy-wildcards/cosplay-char/bayonetta/bayonetta/costume__,
+            {{1-$$__lazy-wildcards/cosplay-char/bayonetta/bayonetta/costume-elem__},|}
+            {1-$$__lazy-wildcards/cosplay-char/bayonetta/bayonetta/env__}
+            {,{0-$$__lazy-wildcards/cosplay-char/bayonetta/bayonetta/env-bg__}|}
         main:
           - >-
             cereza, bayonetta, mole under mouth
@@ -133,11 +133,9 @@ lazy-wildcards:
           bayonetta3:
             - bayonetta3, twin braids
         costume:
-          anything:
-            - __lazy-wildcards/cosplay-char/bayonetta/bayonetta/costume/type-*__
-          type-bodysuit:
-            - backless outfit, bodysuit, covered nipples, amulet, high heels, navel, elbow gloves, clothing cutout, ribbon
-        style:
+          - backless outfit, bodysuit, covered nipples, amulet, high heels, navel, elbow gloves, clothing cutout, ribbon
+        costume-elem:
+          - sexy minidress
           - clothing cutout
           - makeup
           - >-
@@ -159,30 +157,29 @@ lazy-wildcards:
           - braid
           - >-
             {1-$$weapon|dual wielding}
-          - >-
-            {1-$$riding|motorcycle|motor vehicle}
-        env:
-          - lollipop
-          - sexy minidress
-          - candy
-          - >-
-            gun, handgun
           - glasses
           - black-framed eyewear
           - semi-rimless_eyewear
-          - food
-          - sword
-          - katana
-          - vehicle
+          - shoes
           - vertical-striped thighhighs
           - >-
             {1-$$backless outfit|back cutout}
-          - shoes
           - __lazy-wildcards/dataset/costume-accessories-base__
           - ribbon
           - elbow gloves
           - hair ribbon
           - ponytail
+        env:
+          - lollipop
+          - >-
+            {1-$$riding|motorcycle|motor vehicle}
+          - candy
+          - >-
+            gun, handgun
+          - food
+          - sword
+          - katana
+          - vehicle
         env-bg:
           - twilight
           - night
@@ -374,7 +371,7 @@ lazy-wildcards:
           - >-
             {1-$$navel|covered navel}
           - puffy sleeves
-          - torn clothes
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
           - hand on own hip
           - knee boots
           - large breasts
@@ -717,7 +714,7 @@ lazy-wildcards:
           - white skin
           - >-
             {cape|red cape}
-          - torn clothes
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
           - bare shoulders
           - cross
           - pouch
@@ -860,8 +857,7 @@ lazy-wildcards:
           - transformation
           - faulds
           - knee boots
-          - >-
-            {scar|scar across eye|scar on face}
+          - __lazy-wildcards/subject/costume-elem/scar/prompts__
       # https://civitai.com/models/68216/teresa-claymore
       teresa:
         prompts:
@@ -888,19 +884,20 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/cosplay-char/claymore/base/utils/name-hair-long(name=galatea)__
     # https://civitai.com/models/137944/blame
+    # https://civitai.com/models/50888?modelVersionId=125891
     blame:
       # https://civitai.com/models/204845/cibo-from-blame
-      cibo:
+      blame-cibo:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/blame/cibo/main__,
-            {{1-$$__lazy-wildcards/cosplay-char/blame/cibo/main-trigger-words__},|}
-            {{1-$$__lazy-wildcards/cosplay-char/blame/cibo/costume-ethnicity__},|}
-            {{1-$$__lazy-wildcards/cosplay-char/blame/cibo/costume__},|}
-            {{1-$$__lazy-wildcards/cosplay-char/blame/cibo/costume-weapon__},|}
-            {1-$$__lazy-wildcards/cosplay-char/blame/cibo/costume-elem__},
-            {1-$$__lazy-wildcards/cosplay-char/blame/cibo/env__}
-            {,{1-$$__lazy-wildcards/cosplay-char/blame/cibo/style__}|}
+            __lazy-wildcards/cosplay-char/blame/blame-cibo/main__,
+            {{1-$$__lazy-wildcards/cosplay-char/blame/blame-cibo/main-trigger-words__},|}
+            {{1-$$__lazy-wildcards/cosplay-char/blame/blame-cibo/costume-ethnicity__},|}
+            {{1-$$__lazy-wildcards/cosplay-char/blame/blame-cibo/costume__},|}
+            {{1-$$__lazy-wildcards/cosplay-char/blame/blame-cibo/costume-weapon__},|}
+            {1-$$__lazy-wildcards/cosplay-char/blame/blame-cibo/costume-elem__},
+            {1-$$__lazy-wildcards/cosplay-char/blame/blame-cibo/env__}
+            {,{1-$$__lazy-wildcards/cosplay-char/blame/blame-cibo/style__}|}
         main:
           - cibo, tsutomu nihei, nihei_tsutomu, blame!, blame gakuen!, cyberpunk, cyborg, science fiction, noise \(manga\)
         main-trigger-words:
@@ -919,27 +916,96 @@ lazy-wildcards:
           - emblem
           - glowing
           - humanoid robot
-          - safeguard \(blame!\)
+          - __lazy-wildcards/cosplay-char/blame/blame-safeguard/prompts__
           - joints, robot joints
           - mechanical arms
           - mechanical legs
           - arm cannon
-          - torn clothes
-          - torn legwear
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
           - thighhighs
           - thigh gap
           - long sleeves
           - facial mark
         env:
-          - toha heavy industries
-          - wire
-          - industrial pipes
-          - bridge
           - exterminator \(blame!\)
-          - cable
+          - __lazy-wildcards/subject/env-bg/nihei_tsutomu-blame-env/prompts__
         style:
-          - fleeing, running, science fiction
-          - dystopia
+          - fleeing, running
+      blame-safeguard:
+        prompts:
+          - >-
+            safeguard \(blame!\), safeguard \(puppet\)
+            , joints, robot joints
+            , facial mark, safeguard sign on forehead
+      # https://danbooru.donmai.us/posts?tags=abara&z=2
+      # https://civitai.com/models/656658/kudoudenji-abara?modelVersionId=734689
+      # https://civitai.com/models/656803/digimortal-digimortal?modelVersionId=734859
+      abara-kudou_denji:
+        prompts:
+          - >-
+            KudouDenji, kudou_denji, abara,
+            digimortal, digimortal_\(manga\),
+            Etherow2, ningyou_no_kuni, Aposimz,
+            power armor
+            , tsutomu nihei, nihei_tsutomu
+      # https://civitai.com/models/662751/titania?modelVersionId=741677
+      Aposimz-Titania:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/blame/Aposimz-Titania/main-trigger-words__
+            ,__lazy-wildcards/cosplay-char/blame/Aposimz-Titania/costume-ethnicity__
+            ,__lazy-wildcards/cosplay-char/blame/Aposimz-Titania/costume__
+            {,{1-$$__lazy-wildcards/cosplay-char/blame/Aposimz-Titania/costume-elem__}|}
+        main-trigger-words:
+          - Titania, titania \(ningyou no kuni\), ningyou_no_kuni, Aposimz, tsutomu nihei, nihei_tsutomu
+        costume-ethnicity:
+          - white hair, very long hair, blunt bangs, hair band, twintails, ponytailponytail
+        costume:
+          - elbow gloves, black gloves, dress, frills, armor, black thighhighs, high heels, detached sleeves
+        costume-elem:
+          - hair ribbon
+          - pink eyes
+          - doll joints
+          - android
+          - torn
+      # https://civitai.com/models/662588/aposimz-keisha
+      Aposimz-Keisha:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/blame/Aposimz-Keisha/main-trigger-words__
+            {,__lazy-wildcards/cosplay-char/blame/Aposimz-Keisha/costume-ethnicity__|}
+            ,__lazy-wildcards/cosplay-char/blame/Aposimz-Keisha/costume__
+            {,{1-$$__lazy-wildcards/cosplay-char/blame/Aposimz-Keisha/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/blame/Aposimz-Keisha/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/blame/Aposimz-Keisha/env__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/blame/Aposimz-Keisha/env-bg__}|}
+        main-trigger-words:
+          - keisha, keisha \(ningyou no kuni\), ningyou_no_kuni, Aposimz, tsutomu nihei, nihei_tsutomu
+        costume-ethnicity:
+          - orange hair, short hair
+        costume:
+          - Khaki coat, Khaki hood
+          - Khaki cape
+          - Khaki tight
+          - Khaki bodysuit, skirt
+          - Khaki boots
+          - Khaki pants
+        costume-elem:
+          - hair ribbon
+          - pink eyes
+          - doll joints
+          - android
+          - torn
+          - gas mask
+          - eyepatch
+          - bag, backpack
+        costume-weapon:
+          - pickaxe
+          - rifle, gun
+        env:
+          - tube, cable
+        env-bg:
+          - tunnel
     # https://danbooru.donmai.us/posts?tags=kyoushoku_soukou_guyver+&z=5
     # https://rule34.xxx/index.php?page=post&s=list&tags=guyver
     # https://rule34.xxx/index.php?page=post&s=list&tags=valcuria
@@ -1274,8 +1340,7 @@ lazy-wildcards:
           - fishnet pantyhose
           - playboy bunny
           - red gloves
-          - torn clothes
-          - torn pantyhose
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
           - broken horn
           - curly hair
           - demon horns
@@ -1439,8 +1504,7 @@ lazy-wildcards:
           - half mask
           - midriff
           - arm blade
-          - torn clothes
-          - torn camisole
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
           - cleavage
           - eyes visible through hair
         costume-wings:
@@ -1631,7 +1695,7 @@ lazy-wildcards:
           - __lazy-wildcards/dataset/costume-accessories-base__
           - orange colored shirt
           - android
-          - torn clothes
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
           - orange bandana
           - long sleeves
           - Old_Scientist
@@ -1812,7 +1876,7 @@ lazy-wildcards:
           - jack-o'-lantern
           - magic
           - pumpkin
-          - skull, skeleton
+          - __lazy-wildcards/subject/env-elem/skull/prompts__
         env-bg:
           - doorway, pov doorway
           - desk, on desk
@@ -1833,7 +1897,7 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/expressions__}|}
             {0.2::,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/env-bg__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/env__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/env-food__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/env-elem-food__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/style__}|}
         costume-main:
           - falling_devil_\(chainsaw_man\), fallingdevil, falldevil, falling_devil_\(chainsaw_man\)_\(cosplay\), chainsaw_man
@@ -1879,7 +1943,7 @@ lazy-wildcards:
         env:
           - table
           - floating object
-        env-food:
+        env-elem-food:
           - food
           - fruit
         env-bg:
@@ -2182,4 +2246,971 @@ lazy-wildcards:
           - >-
             tears, {crying|tears of pleasure}
           - evil face
+    steelrisng:
+      # https://civitai.com/models/146278?modelVersionId=234461
+      aegis_automaton:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/steelrisng/aegis_automaton/main-trigger-words__
+            {,__lazy-wildcards/cosplay-char/steelrisng/aegis_automaton/costume-ethnicity__|}
+            {,__lazy-wildcards/cosplay-char/steelrisng/aegis_automaton/costume__|}
+            {,{1-$$__lazy-wildcards/cosplay-char/steelrisng/aegis_automaton/costume-elem__}|}
+        main-trigger-words:
+          - aegis, automaton, mechanical arms, mechanical legs, automaton, doll joints
+        costume-ethnicity:
+          - white hair, brown eyes
+        costume:
+          - white dress, pants, short sleeves, belt, pelvic curtain
+        costume-elem:
+          - lipstick, red makeup
+          - gold trim
+          - chest jewel
+          - __lazy-wildcards/dataset/costume-accessories-base__
+          - mechanical limbs
+    deadman_wonderland:
+      shiro:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/deadman_wonderland/shiro/costume-main__
+            ,__lazy-wildcards/cosplay-char/deadman_wonderland/shiro/costume-ethnicity__
+            ,__lazy-wildcards/cosplay-char/deadman_wonderland/shiro/costume__
+            {,{1-$$__lazy-wildcards/cosplay-char/deadman_wonderland/shiro/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/deadman_wonderland/shiro/action__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/deadman_wonderland/shiro/env__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/deadman_wonderland/shiro/style__}|}
+        costume-main:
+          - shiro \(deadman_wonderland\), shiro_deadmanwonderland, deadman shiro, deadman_wonderland, shiro_\(deadman_wonderland\)_\(cosplay\)
+        costume-ethnicity:
+          - >-
+            hair between eyes,
+            albino,
+            white hair, very long hair, absurdly long hair,
+            (red eyes:1.5), colored eyelashes, white eyelashes,
+            pale skin
+        costume:
+          - white bodysuit with red markings, collarbone, skin tigh
+        costume-elem:
+          - brown gloves, brown mittens
+          - impossible bodysuit, impossible clothes
+          - lips
+          - breasts
+          - thigh gap
+          - median furrow
+          - __lazy-wildcards/subject/costume-elem/scar/prompts__, stitches
+          - metal_collar, metallic_choker, iron_collar
+          - orthopedic_collar
+        env:
+          - __lazy-wildcards/subject/costume-elem/blood/prompts__
+        action:
+          - outstretched hand
+        style:
+          - hexagon
+    macross:
+      # 林明美
+      # https://civitai.com/models/206354/lynn-minmay-macross-lora
+      # https://civitai.com/models/568150/lynn-minmay-or-macross
+      lynn_minmay:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/macross/lynn_minmay/main-trigger-words__
+            {,__lazy-wildcards/cosplay-char/macross/lynn_minmay/costume-ethnicity__|}
+            {,__lazy-wildcards/cosplay-char/macross/lynn_minmay/costume__|}
+            {,{1-$$__lazy-wildcards/cosplay-char/macross/lynn_minmay/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/macross/lynn_minmay/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/macross/lynn_minmay/env__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/macross/lynn_minmay/style__}|}
+        main-trigger-words:
+          - lynn_minmay, lynn_minmay_(cosplay), LynnMinmay, macross
+        costume-ethnicity:
+          - green eyes, long hair
+        costume:
+          - frilled dress, frills, hairband, gloves, puffy short sleeves, veil, white dress
+          - miniskirt, serafuku, white leg warmers
+          - china dress, chinese clothes
+          - bare shoulders, pink bow, brooch, collarbone, pink gloves, pink sash, sleeveless dress
+        costume-elem:
+          - brown hairband
+          - gloves
+          - clothing aside, panties aside
+          - underwear
+          - heart-shaped pupils
+          - ribbon
+          - saliva, sweat
+        costume-weapon:
+          - microphone
+          - holding bag, school bag
+          - hugging doll, doll
+          - hugging object
+        env:
+          - chair
+        style:
+          - retro artstyle, 1980s \(style\)
+      Jenius-emilia_jenius:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/macross/Jenius-emilia_jenius/main-trigger-words__
+            ,__lazy-wildcards/cosplay-char/macross/Jenius-emilia_jenius/costume-ethnicity__
+            {,__lazy-wildcards/cosplay-char/macross/Jenius-emilia_jenius/costume__|}
+            {,{1-$$__lazy-wildcards/cosplay-char/macross/Jenius-emilia_jenius/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/macross/Jenius-emilia_jenius/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/macross/Jenius-emilia_jenius/style__}|}
+        main-trigger-words:
+          - emilia_jenius, emilia_jenius_\(cosplay\), macross_7, meltrandi, zentradi
+        costume-ethnicity:
+          - green eyes, blue eyes, hair behind ear, hair between eyes, pointy ears
+        costume:
+          - Red_pilot_suit_White_bustier_Purple_shoulder_pads_High_collar, pilot suit, spacesuit, purple gloves
+          - military uniform
+        costume-elem:
+          - giant, giantess
+          - headgear
+          - gloves
+          - one eye closed
+          - spacehelmet
+        costume-weapon:
+          - guitar, holding instrument
+        style:
+          - science fiction
+      # https://civitai.com/models/55593?modelVersionId=137657
+      Jenius-mylene_jenius:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/macross/Jenius-mylene_jenius/main-trigger-words__
+            ,__lazy-wildcards/cosplay-char/macross/Jenius-mylene_jenius/costume-ethnicity__
+            {,__lazy-wildcards/cosplay-char/macross/Jenius-mylene_jenius/costume__|}
+            {,{1-$$__lazy-wildcards/cosplay-char/macross/Jenius-mylene_jenius/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/macross/Jenius-mylene_jenius/style__}|}
+        main-trigger-words:
+          - mylene_jenius, mylene, macross, macross_7
+        costume-ethnicity:
+          - hair intakes, long hair, green eyes, pink hair
+        costume:
+          - red leotard, white wristband, headgear
+        costume-weapon:
+          - >-
+            {1-$$__lazy-wildcards/cosplay-char/macross/nekki_basara/costume-weapon__}
+          - holding creature
+        style:
+          - listen_to_my_song
+          - fire bomber
+          - science fiction
+      myung_fang_lone:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/macross/myung_fang_lone/main-trigger-words__
+            {,__lazy-wildcards/cosplay-char/macross/myung_fang_lone/costume-ethnicity__|}
+            {,__lazy-wildcards/cosplay-char/macross/myung_fang_lone/costume__|}
+            {,{1-$$__lazy-wildcards/cosplay-char/macross/myung_fang_lone/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/macross/myung_fang_lone/costume-weapon__}|}
+        main-trigger-words:
+          - myung_fang_lone, macross_plus, macross
+        costume-ethnicity:
+          - sharon apple, blue skin, forehead jewel, pale skin, purple hair, pink hair, multicolored hair, two-tone hair, very long hair, absurdly long hair, hair intakes, pointy ears
+          - dark blue hair, black hair, medium hair, short hair
+        costume:
+          - red_pant_suit
+          - backless outfit, backless dress
+        costume-elem:
+          - __lazy-wildcards/dataset/costume-accessories-base__
+          - forehead jewel
+          - long eyebrows
+          - holographic
+        costume-weapon:
+          - holding microphone
+      sivil:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/macross/sivil/main-trigger-words__
+            ,__lazy-wildcards/cosplay-char/macross/sivil/costume-ethnicity__
+            {,__lazy-wildcards/cosplay-char/macross/sivil/costume__|}
+            {,{1-$$__lazy-wildcards/cosplay-char/macross/sivil/costume-elem__}|}
+        main-trigger-words:
+          - sivilmcseven, sivil, macross, macross_7, protodeviln
+        costume-ethnicity:
+          - red eyes, purple hair, long hair, facial mark, forehead jewel, pale skin, hair behind ear, long pointy ears
+        costume:
+          - purple bodysuit, plugsuit
+        costume-elem:
+          - lipstick
+          - green lips
+          - android
+          - colored skin
+          - interface headset
+          - whisker markings
+          - long fingernails
+          - latex
+          - a beautiful elvish girl
+      # https://civitai.com/models/54929
+      nekki_basara:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/macross/nekki_basara/main-trigger-words__
+            {,__lazy-wildcards/cosplay-char/macross/nekki_basara/costume-ethnicity__|}
+            {,__lazy-wildcards/cosplay-char/macross/nekki_basara/costume__|}
+            ,{1-$$__lazy-wildcards/cosplay-char/macross/nekki_basara/costume-headwear__}
+            {,{1-$$__lazy-wildcards/cosplay-char/macross/nekki_basara/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/macross/nekki_basara/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/macross/nekki_basara/action__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/macross/nekki_basara/env__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/macross/nekki_basara/style__}|}
+        main-trigger-words:
+          - nekki_basara, basara, macross_7, macross, nekki basara \(cosplay\)
+        costume-ethnicity:
+          - brown_eyes, brown_hair, spiked hair, yellow eyes
+        costume:
+          - black_jacket, sleeveless_jacket, shoulder pads, white jacket
+          - white shirt, denim
+          - collared shirt, necktie, pants
+        costume-headwear:
+          - glasses, round_eyewear
+        costume-elem:
+          - shiny hair, shiny skin
+          - v-shaped_eyebrows
+          - sweat
+          - wristband
+          - fighter jet
+          - pilot suit
+        action:
+          - singing
+          - flying
+          - hand in pocket
+        costume-weapon:
+          - guitar
+          - electric guitar
+          - holding instrument, playing guitar, holding plectrum, plectrum
+          - holding_microphone
+          - microphone, microphone_stand
+          - instrument
+        env:
+          - aircraft, airplane, military vehicle, mecha, variable fighter, cockpit, fire valkyrie
+          - fire
+          - mecha danshi, mechabare
+          - missile
+          - star \(sky\)
+          - cloud
+        style:
+          - listen_to_my_song
+          - fire bomber
+          - science fiction
+    devilman:
+      siren:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/devilman/siren/costume-main__
+            ,__lazy-wildcards/cosplay-char/devilman/siren/costume-ethnicity__
+            {,__lazy-wildcards/cosplay-char/devilman/siren/costume__|}
+            {,{1-$$__lazy-wildcards/cosplay-char/devilman/siren/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/devilman/siren/action__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/devilman/siren/env__}|}
+        costume-main:
+          - siren_\(devilman\), siren, devilman
+        costume-ethnicity:
+          - >-
+            wings, hair wings, head wings, large head wings,
+            feathered wings, white wings,
+            hair between eyes,
+            (claws, talons:1.2),
+            antennae hair,
+            bird tail, bird legs,
+            abs
+        costume:
+          - nude, navel
+        costume-elem:
+          - evil smile
+          - demon girl, angel wings
+          - half-harpy
+          - monster girl
+        action:
+          - relaxing
+        env:
+          - feathers
+    # 松本零士
+    matsumoto_leiji:
+      # https://civitai.com/models/80788?modelVersionId=140989
+      queen_emeraldas:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/costume-main__
+            ,__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/costume-hair__
+            ,{1-$$__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/costume-eyes__}
+            ,__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/costume-scar__
+            {,__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/costume__|}
+            {,{1-$$__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/costume-weapon__}|}
+            ,{1-$$__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/env-symbol__}
+            {,{1-$$__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/env__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/style__}|}
+        costume-main:
+          - queen_emeraldas, emeraldas \(cosplay\), ginga tetsudou 999, space pirate
+        costume-hair:
+          - long hair, absurdly long hair, blonde_hair
+        costume:
+          - pirate_outfit, long coat, black and red cape
+        costume-scar:
+          - scar, facial_scar, cheek_scar
+        costume-eyes:
+          - lavender_eyes, violet_eyes, purple_eyes, distinct_eyes
+          - v-shaped eyebrows
+        costume-elem:
+          - flowing hair
+          - captain hat
+          - pirate queen, pirate, pirate costume
+          - lean_body
+          - __lazy-wildcards/subject/costume-elem/scar/prompts__
+          - ginger_hair, orange hair
+          - bodysuit
+          - black cloak
+          - skirt
+          - red clothes
+          - black clothes
+          - white accessories
+          - white gloves, white boots
+          - white scarf
+          - skull hair ornament
+          - thigh holster
+        costume-weapon:
+          - handgun, pistol
+          - gravity_saber, sword, rapier
+          - sci-fi weapon
+          - holding sword
+        env-symbol:
+          - skull_and_crossbones, jolly_roger, pirate symbol, pirate emblem, skull print
+          - star \(symbol\)
+        env:
+          - queen_emeraldas \(ship\), spacecraft
+          - space
+          - planet, moon
+        style:
+          - science fiction
+          - retro artstyle
+          - matsumoto leiji \(style\)
+    The_Small_Giant_Microman:
+      # https://civitai.com/models/123934?modelVersionId=135212
+      ardenpurple:
+        prompts:
+          - ardenpurple, long robe, black robe, big hat, jewelry, microman
+    gundam:
+      # https://civitai.com/models/126668?modelVersionId=138535
+      mari:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/gundam/mari/main-trigger-words__
+            ,__lazy-wildcards/cosplay-char/gundam/mari/costume-ethnicity__
+            ,__lazy-wildcards/cosplay-char/gundam/mari/costume__
+            {,{__lazy-wildcards/cosplay-char/gundam/mari/costume-elem__}|}
+            {,{__lazy-wildcards/cosplay-char/gundam/mari/costume-weapon__}|}
+            {,{__lazy-wildcards/cosplay-char/gundam/mari/env__}|}
+            {,{__lazy-wildcards/cosplay-char/gundam/mari/style__}|}
+        main-trigger-words:
+          - mari, zeon
+        costume-ethnicity:
+          - big hair, purple hair, purple eyes
+        costume:
+          - char aznable \(cosplay\), red umiform, red micro mini skirt, white gloves, military uniform
+        costume-elem:
+          - __lazy-wildcards/dataset/costume-accessories-base__
+          - epaulets
+          - medals
+          - cap, military_hat
+          - magical accessories
+          - magical girl
+          - frills
+          - eyemask
+          - magical ensign
+        costume-weapon:
+          - wand, staff
+          - holding staff
+        env:
+          - floating
+        style:
+          - retro artstyle
+      qubeley:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/gundam/qubeley/main-trigger-words__
+            {,{__lazy-wildcards/cosplay-char/gundam/qubeley/costume-elem__}|}
+            {,{__lazy-wildcards/cosplay-char/gundam/qubeley/costume-weapon__}|}
+            {,{__lazy-wildcards/cosplay-char/gundam/qubeley/style__}|}
+        main-trigger-words:
+          - qubeley, 1mobilesuit, pink eye, zeon, neo zeon
+        costume-elem:
+          - mobile suit
+          - (butterfly wings:1.2), insect wings
+          - angel \(evangelion\)
+          - cyborg
+          - v-fin
+        costume-weapon:
+          - funnels \(gundam\), funnel, funnel effect
+          - axis \(gundam\)
+          - bit \(gundam\)
+          - beam_rifle, energy gun
+          - shield
+          - beam saber
+          - beam attack, energy beam
+        style:
+          - science fiction
+          - no humans
+          - machinery
+          - flying, booster effect
+    senjou_no_valkyria:
+      # https://civitai.com/models/119109/selvaria-blessenjou-no-valkyria?modelVersionId=374193
+      selvaria_bles:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/senjou_no_valkyria/selvaria_bles/main-trigger-words__
+            ,__lazy-wildcards/cosplay-char/senjou_no_valkyria/selvaria_bles/costume-ethnicity__}
+            {,__lazy-wildcards/cosplay-char/senjou_no_valkyria/selvaria_bles/costume__|}
+            {,{__lazy-wildcards/cosplay-char/senjou_no_valkyria/selvaria_bles/costume-weapon__}|}
+            {,{__lazy-wildcards/cosplay-char/senjou_no_valkyria/selvaria_bles/costume-elem__}|}
+            {,{__lazy-wildcards/cosplay-char/senjou_no_valkyria/selvaria_bles/action__}|}
+            {,{__lazy-wildcards/cosplay-char/senjou_no_valkyria/selvaria_bles/style__}|}
+        main-trigger-words:
+          - selvaria_bles, senjou_no_valkyria_\(series\)
+        costume-ethnicity:
+          - very long hair, hair between eyes, red eyes, white hair
+        costume:
+          - military uniform, bare shoulders, detached sleeves
+          - black bikini
+          - highleg leotard, pantyhose, playboy bunny, rabbit ears
+        costume-weapon:
+          - sheath, sheathed
+          - holding shield
+          - sword
+          - holding polearm
+          - >-
+            holding cup
+            {, {1-$$pouring|pouring onto self}|}
+        action:
+          - arm under breasts
+          - crossed legs
+          - sitting
+        costume-elem:
+          - skirt
+          - underbust
+          - detached collar
+          - fake animal ears
+          - high heels
+          - black gloves, half gloves, wrist cuffs
+          - detached sleeves
+          - cleavage
+          - partially shaded face
+          - thigh strap
+          - gold trim
+        style:
+          - fighting stance
+    dark_souls:
+      # https://civitai.com/models/152575/rosaria-dark-souls-ds3?modelVersionId=740508
+      # https://darksouls.fandom.com/wiki/Rosaria,_Mother_of_Rebirth
+      rosaria:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/dark_souls/rosaria/main-trigger-words__
+            ,__lazy-wildcards/cosplay-char/dark_souls/rosaria/costume-ethnicity__
+            {,{1-$$__lazy-wildcards/cosplay-char/dark_souls/rosaria/costume-hair__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/dark_souls/rosaria/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/dark_souls/rosaria/action__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/dark_souls/rosaria/env-bg__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/dark_souls/rosaria/env__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/dark_souls/rosaria/style__}|}
+        main-trigger-words:
+          - Rosaria, rosaria_mother_of_rebirth, dark souls \(series\)
+        costume-hair:
+          - cum on hair
+          - grey streaked hair
+          - fluid on hair
+        costume-ethnicity:
+          - black hair, very long hair, pale skin, (hair over eyes:1.3)
+        costume-elem:
+          - __lazy-wildcards/subject/costume-elem/costume-breasts/prompts__
+          - dress
+        action:
+          - sitting
+        env:
+          - dark curtains
+        env-bg:
+          - in bed
+          - dark castle
+        style:
+          - horror \(theme\)
+          - dark lighting
+          - flesh
+          - on side
+    elden_ring:
+      # https://civitai.com/models/651997/night-maiden-elden-ring?modelVersionId=729414
+      night_maiden:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/elden_ring/night_maiden/main-trigger-words__
+            ,{1-$$__lazy-wildcards/cosplay-char/elden_ring/night_maiden/costume__}
+            {,{1-$$__lazy-wildcards/cosplay-char/elden_ring/night_maiden/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/elden_ring/night_maiden/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/elden_ring/night_maiden/action__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/elden_ring/night_maiden/env__}|}
+        main-trigger-words:
+          - nightmaiden, night_maiden \(elden_ring\)
+        costume:
+          - helmet, white veil, gold trim, covered eyes, headdress
+          - armored dress, white cape, long sleeves, black footwear
+        costume-elem:
+          - robe
+          - facial
+          - black lips
+        costume-weapon:
+          - holding sickle
+          - hammer
+          - knife, dagger
+        action:
+          - own hands together
+        env:
+          - slime sex
+          - torch, candle
+          - statue
+          - arch
+          - glowing
+          - leaf
+          - reflection
+          - bridge
+          - cave
+          - chair
+    girls_und_panzer:
+      # https://civitai.com/models/303411/ooarai-winter-school-uniform-girls-und-panzer?modelVersionId=340642
+      ooarai-winter-school-uniform:
+        prompts:
+          - >-
+            ooarai winter school uniform, (dark blue pea coat, green pleated skirt, black socks, brown loafers), ooarai school uniform, girls_und_panzer
+    record_of_lodoss_war:
+      # https://civitai.com/models/668262/deedlit-locon-version-record-of-lodoss-war?modelVersionId=748064
+      deedlit:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/record_of_lodoss_war/deedlit/costume-ethnicity__
+            {,{1-2$$__lazy-wildcards/cosplay-char/record_of_lodoss_war/deedlit/costume__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/record_of_lodoss_war/deedlit/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/record_of_lodoss_war/deedlit/expressions__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/record_of_lodoss_war/deedlit/action__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/record_of_lodoss_war/deedlit/env-bg__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/record_of_lodoss_war/deedlit/env__}|}
+        costume-ethnicity:
+          - deedlit, blonde hair, green eyes, absurdly long hair, long pointy ears, a beautiful elvish girl
+        costume:
+          - green_sleeveless_short_dress_blue_pauldrons_blue_breastplate_two-sided_cape_circlet_belt
+          - green_sleeveless_short_dress
+          - white_gown_puffy_short_sleeves_frills_pearl_necklace_pearl_earrings_circlet_white_elbow_gloves_green_hair_ribbon_hair_up_single_hair_bun
+          - strapless_black_dress_pelvic_curtain_gold_circlet_usekh_collar_gem_red_loincloth
+        costume-elem:
+          - green dress
+          - head chain
+          - sleeveless
+          - blue cape
+          - breastplate
+          - __lazy-wildcards/dataset/costume-accessories-base__
+          - clothes lift, dress lift
+          - grin
+          - short dress
+          - shoulder armor, pauldrons
+          - thong
+          - underwear
+          - barefoot
+          - blue gloves
+          - high heels, high heel boots
+          - thick thighs, thighs
+          - gold trim
+          - gem, red gemstone
+          - floating hair
+        costume-weapon:
+          - scarf
+          - sword
+          - holding instrument
+        expressions:
+          - blowing kiss
+        env:
+          - bird
+          - butterfly
+          - circlet
+          - wind lift, wind
+          - tree
+          - water
+        env-bg:
+          - forest
+        action:
+          - bird on hand
+          - arm support
+          - soaking feet
+          - __lazy-wildcards/subject/action-sfw/stance-archery/prompts__
+    # https://civitai.com/models/397076/fallout-pack-lora-flux-sd-xl-pony?modelVersionId=442833
+    fallout:
+      char:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/fallout/char/main-trigger-words__
+            {,__lazy-wildcards/cosplay-char/fallout/char/costume-ethnicity__|}
+            {,{1-2$$__lazy-wildcards/cosplay-char/fallout/char/costume__}|}
+            ,{1-$$__lazy-wildcards/cosplay-char/fallout/char/costume-weapon__}
+            {,{1-$$__lazy-wildcards/cosplay-char/fallout/char/env-bg__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/fallout/char/env__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/fallout/char/style__}|}
+        main-trigger-words:
+          - (science fiction, fallout theme, fallout:1.2)
+        costume-ethnicity:
+          - ghoul
+        costume:
+          - blue bodysutit, fallout vault uniform, vaultsuit
+          - power armor, robot, mecha, military vehicle, mask, gas mask
+          - necktie, collared shirt, coat, red necktie, brown headwear, brown coat, fedora,trench coat
+        costume-weapon:
+          - pip boy on hand
+          - pipboy3000, pip boy
+          - machine gun
+          - gatling gun
+          - ammunition belt
+          - minigun
+        env:
+          - >-
+            nuka cola,
+            {1-$$nuka cola text on bottle|quantum text on bottle},
+            coca-cola, soda bottle,
+            cola, rocket shaped bottle
+          - letterboxed
+          - wheel, tire, car, vehicle focus, ground vehicle, motor vehicle
+          - nuka cola bill board backround
+        env-bg:
+          - nuke, mushroom cloud, explosion, outdoors, sky
+          - wasteland
+          - fallout vault
+        style:
+          - steampunk
+    kamen_rider:
+      # https://civitai.com/models/676727/clotho-from-kamen-rider-gotchard?modelVersionId=757548
+      clotho:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/kamen_rider/clotho/main-trigger-words__
+            ,__lazy-wildcards/cosplay-char/kamen_rider/clotho/costume-ethnicity__
+            {,{1-$$__lazy-wildcards/cosplay-char/kamen_rider/clotho/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/kamen_rider/clotho/style__}|}
+        main-trigger-words:
+          - krgclotho, clotho, clotho_\(kamen_rider_gotchard\), kamen_rider_gotchard
+        costume-ethnicity:
+          - mole under mouth, piercing, makeup, braid, brown hair, mole
+        costume-elem:
+          - pants
+          - veil
+          - shoulder cutout
+          - __lazy-wildcards/dataset/costume-accessories-base__
+          - navel, midriff, crop top, underboob
+          - muscular
+          - gold trim
+        style:
+          - reverse trap, tomboy
+          - see-through
+    mad_max:
+      furiosa:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/mad_max/furiosa/main-trigger-words__
+            ,__lazy-wildcards/cosplay-char/mad_max/others/main-trigger-words__
+            ,__lazy-wildcards/cosplay-char/mad_max/furiosa/costume-ethnicity__
+            {,__lazy-wildcards/cosplay-char/mad_max/furiosa/costume-hair__|}
+            {,__lazy-wildcards/cosplay-char/mad_max/furiosa/costume__|}
+            {,{1-$$__lazy-wildcards/cosplay-char/mad_max/furiosa/costume-weapon__}|}
+        main-trigger-words:
+          - furiosa, imperator furiosa
+        costume-hair:
+          - brown hair, red hair, long hair
+          - short hair
+        costume-ethnicity:
+          - dirty face, black paint on face
+        costume:
+          - brown jacket, brown pants, bare shoulders
+        costume-elem:
+          - blood on face
+          - brown belt
+          - >-
+            {1-$$goggles|goggles around neck}
+          - single mechanical arm
+          - shirt
+          - tattoo
+        costume-weapon:
+          - holding gun, shotgun
+          - harpoon, harpoon gun
+      others:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/mad_max/others/main-trigger-words__
+            ,{1-$$__lazy-wildcards/cosplay-char/mad_max/others/env-vehicle__}
+            {,{1-$$__lazy-wildcards/cosplay-char/mad_max/others/costume-headwear__}|}
+            {0.3::,{1-$$__lazy-wildcards/cosplay-char/mad_max/others/costume-char__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/mad_max/others/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/mad_max/others/env__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/mad_max/others/env-bg__}|}
+        main-trigger-words:
+          - mad_max, madmax, post-apocalypse, post_apocalyptic_attire
+        env-vehicle:
+          - boat fitted with wheels, boat with legs, boat with treads, plane with treads, hovering submarine, improvised structure
+          - aircraft carrier fitted with mechanical legs
+          - tactical vest
+          - muscle car, ford falcon
+          - bigfoot \(mad max\), dodge fargo, monster truck
+        costume-char:
+          - The History Man
+          - The Organic Mechanic
+          - Black Thumb
+          - Guardian of Gastown
+          - The Bullet Farmer
+          - War Boys
+          - Immortan Joe
+        costume-headwear:
+          - madmax mask
+          - hockey mask
+        costume-elem:
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - dirty face
+        env:
+          - desert, sand
+          - __lazy-wildcards/subject/env-elem/skull/prompts__
+          - chain
+          - __lazy-wildcards/subject/moment/weather-mist/prompts__
+        env-bg:
+          - __lazy-wildcards/subject/env-bg/SavageVerse/prompts__
+          - Gastown
+    mazinger:
+      # https://civitai.com/models/679142/aila-mazinger-skl?modelVersionId=760188
+      Aila:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/mazinger/Aila/main-trigger-words__
+            ,__lazy-wildcards/cosplay-char/mazinger/Aila/costume-ethnicity__
+            {,__lazy-wildcards/cosplay-char/mazinger/Aila/costume__|}
+            ,__lazy-wildcards/cosplay-char/mazinger/Aila/costume-headwear__
+            ,{1-$$__lazy-wildcards/cosplay-char/mazinger/Aila/costume-elem__}
+        main-trigger-words:
+          - AilaSKL, mazinger_\(series\)
+        costume-ethnicity:
+          - long hair, blue eyes, large breasts, black hair
+        costume:
+          - white dress, cleavage, bare shoulders, scarf, sideboob, white pelvic curtain
+        costume-headwear:
+          - tiara
+        costume-elem:
+          - armband
+          - wrist braces
+          - blue_gemstone
+          - __lazy-wildcards/dataset/costume-accessories-base__
+    witchblade:
+      sara_pezzini:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/witchblade/sara_pezzini/main-trigger-words__
+            {,{1-$$__lazy-wildcards/cosplay-char/witchblade/sara_pezzini/costume-ethnicity__}|}
+            ,__lazy-wildcards/cosplay-char/witchblade/sara_pezzini/costume__
+            {,{1-$$__lazy-wildcards/cosplay-char/witchblade/sara_pezzini/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/witchblade/sara_pezzini/env__}|}
+        main-trigger-words:
+          - sara_pezzini, witchblade, WitchbladeS
+        costume-ethnicity:
+          - red lips, brown eyes, long hair, brown hair
+          - red hair
+        costume:
+          - facial mark, scales, revealing clothes, gauntlets, bikini armor, Metal_wire_facial_marks, metal_scales, navel
+        costume-elem:
+          - metal_tendrils_lingerie
+          - armor_thong
+          - Armor_bra
+          - silver
+          - spikes
+          - wings
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - claws
+          - sideboob
+          - crotch plate
+          - black sclera, colored sclera
+          - piercing
+          - sharp fingernails
+          - tattoo
+        env:
+          - fire
+          - magic
+          - new york city
+          - ruby
+          - diamond
+          - sapphire
+    comics-dc:
+      harley_quinn:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/comics-dc/harley_quinn/main-trigger-words__
+            ,__lazy-wildcards/cosplay-char/comics-dc/harley_quinn/costume-ethnicity__
+            {,__lazy-wildcards/cosplay-char/comics-dc/harley_quinn/costume__|}
+            {,{1-$$__lazy-wildcards/cosplay-char/comics-dc/harley_quinn/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/comics-dc/harley_quinn/expressions__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/comics-dc/harley_quinn/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/comics-dc/harley_quinn/style__}|}
+        main-trigger-words:
+          - pikkyharleyquinn, harley quinn \(cosplay\), batman_\(series\), suicide squad
+        costume:
+          - harley quinn \(suicide squad\), thighhighs, navel, cleavage, jacket, open clothes, shorts, midriff, black thighhighs, bracelet, open jacket, black jacket, crop top, short shorts, tattoo, chain, spikes, cropped jacket, spiked bracelet, spiked collar, micro shorts, multicolored jacket
+          - harley quinn \(classic\), jester costume, clown, red and black bodysuit, multicolored bodysuit
+        costume-ethnicity:
+          - bangs, blue eyes, blonde hair, twintails, blue hair, multicolored hair, choker, gradient hair, makeup, piercing, pink hair, lips, lipstick, red lips
+        costume-weapon:
+          - baseball bat
+          - club \(weapon\), spiked club
+          - holding baseball bat
+          - hammer
+          - holding hammer
+        costume-elem:
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - __lazy-wildcards/dataset/costume-accessories-base__
+          - crown
+          - open jacket
+          - short sleeves
+          - fishnets
+          - chain
+          - spiked collar
+          - fingerless gloves, black gloves, gloves
+          - spiked bracelet
+          - multicolored clothes
+        expressions:
+          - crazy smile
+        style:
+          - red and black
+    golden_boy:
+      # https://civitai.com/models/94159/terayama-reiko-anime-golden-boy-ponyxl-sd15?modelVersionId=100443
+      terayama_reiko:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/main-trigger-words__
+            {,__lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/costume-ethnicity__|}
+            {,__lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/costume__|}
+            {,__lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/costume-hair__|}
+            {,{1-$$__lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/action__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/env-bg__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/env-vehicle__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/env-elem-food__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/style__}|}
+        main-trigger-words:
+          - terayama reiko, ReikoTerayama_aiwaifu
+        costume-ethnicity:
+          - black hair, makeup, lipstick, brown eyes
+        costume-hair:
+          - long hair
+          - single hair bun, short hair, forehead
+        costume:
+          - red bikesuit, red biker clothes
+          - kimono, yellow kimono, hair ornament, intricate kimono, tabi
+        costume-elem:
+          - __lazy-wildcards/subject/costume-elem/unzipping/prompts__
+          - motorcycle helmet
+          - unworn helmet
+        action:
+          - standing near motorcycle
+        env-bg:
+          - highway background
+          - mountains and sky background
+          - east asian architecture
+        env-elem-food:
+          - beer can, beer
+          - drink can
+        env-vehicle:
+          - motor vehicle, red motorcycle
+        style:
+          - tricky glance
+    azur_lane:
+      golden_hind:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/azur_lane/golden_hind/main-trigger-words__
+            ,__lazy-wildcards/cosplay-char/azur_lane/golden_hind/costume-headwear__
+            {,__lazy-wildcards/cosplay-char/azur_lane/golden_hind/costume-ethnicity__|}
+            {,__lazy-wildcards/cosplay-char/azur_lane/golden_hind/costume__|}
+            {,{1-$$__lazy-wildcards/cosplay-char/azur_lane/golden_hind/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/azur_lane/golden_hind/expressions__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/azur_lane/golden_hind/action__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/azur_lane/golden_hind/env__}|}
+        main-trigger-words:
+          - golden_hind_\(azur_lane\), goldenhind, azur_lane
+        costume:
+          - navel, black dress, center opening, bare shoulders, cuffs
+          - white elbow gloves, wedding dress, bridal veil,
+        costume-ethnicity:
+          - >-
+            very long hair, {black|purple} hair, {blue|purple} eyes, hair over one eye
+        costume-elem:
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - __lazy-wildcards/dataset/costume-accessories-base__
+          - bandaged arm
+          - between breasts
+          - breast curtains
+          - cleavage
+          - hair between eyes
+          - mole under mouth
+          - sideboob
+          - bandages
+          - gold trim
+        expressions:
+          - seductive smile
+          - saliva, saliva trail
+          - licking lips
+        costume-headwear:
+          - antlers, hair ornament, hair on horn, asymmetrical antlers, asymmetrical horns, reindeer antlers
+        action:
+          - arms up
+          - crossed legs
+          - sitting
+          - standing on water
+          - simulated handjob
+        env:
+          - dark blue tentacles, suction cups, suggestive fluid, wet, tentacle between breasts
+          - broken
+          - hip vent
+          - slime \(substance\)
+          - chained, shackles
+          - cannon
+          - treasure chest
+          - tempesta
+    ys:
+      # Earth Goddess Maia
+      # https://isu.fandom.com/wiki/Maia
+      # https://civitai.com/models/704414/earth-goddess-maia-ys?modelVersionId=787935
+      maia:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/ys/maia/main-trigger-words__
+            ,__lazy-wildcards/cosplay-char/ys/maia/costume-ethnicity__
+            {,{1-$$__lazy-wildcards/cosplay-char/ys/maia/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/ys/maia/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/ys/maia/action__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/ys/maia/env__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/ys/maia/style__}|}
+        main-trigger-words:
+          - EarthGoddessMaiaYs, Earth Goddess Maia, ys
+        costume-ethnicity:
+          - very long hair, blue hair, white drill hair, drill_curls, white wooden_hair, blue lips, __lazy-wildcards/subject/costume-body/dark-skinned/prompts__, leafy_hair, hair flower, blue orb
+        costume-elem:
+          - hair ornament
+          - cleavage
+          - closed eyes
+          - yellow halo
+          - wooden_arms, moss-covered_arms, vine_wrapped_arms
+          - gold trim
+        costume-weapon:
+          - giant pearl
+          - crystal ball
+          - mystic orb
+          - sacred sphere
+          - divine crystal
+          - holding orb
+        env:
+          - tree_branch_covering, wooden_vines
+          - blue leafy, green leafy
+          - white wooden
+          - yellow flower, white flower
+        style:
+          - tritheism_deity, creation deity
+          - world_creator, earth_shaper
+          - greek_mythology
+          - dream_world, mythological_dream
+        action:
+          - long_sleep, deity_sleep, dreaming
 
