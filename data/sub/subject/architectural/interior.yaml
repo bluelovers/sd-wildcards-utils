@@ -276,21 +276,30 @@ lazy-wildcards:
           - sheet
           - wardrobe
       # https://civitai.com/models/623723/subway-station-corridor-in-japan?modelVersionId=697293
+      # https://civitai.com/models/716111/japanese-underground-passage?modelVersionId=800810
       station-subway-corridor-stairs:
         prompts:
           - >-
             __lazy-wildcards/subject/env-bg-interior/station-subway-corridor-stairs/main__
             {,{1-$$__lazy-wildcards/subject/env-bg-interior/station-subway-corridor-stairs/env-bg__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/station-subway-corridor-stairs/costume-weapon__}|}
             {,{1-$$__lazy-wildcards/subject/env-bg-interior/station-subway-corridor-stairs/env__}|}
             {,{1-$$__lazy-wildcards/subject/env-bg-interior/station-subway-corridor-stairs/style__}|}
         main:
-          - Subway station corridor, jpsta, train_station, on stairs, interior, indoors
+          - Subway station corridor, jpsta, train_station, on stairs, interior, indoors, UGPW
+        costume-weapon:
+          - luggage
+          - briefcase
         style:
           - subway station design
+          - clean_passage
         env:
-          - Tile_Walls
+          - tiled_walls
+          - tiled_floor
+          - ceiling
+          - public_telephone
           - >-
-            {1-$$Signage|bilingual signs indicating directions|exits signs|facilities signs}
+            {1-$$Signage|bilingual signs indicating directions|exits signs|facilities signs|signboard|floor_markings}
           - >-
             __lazy-wildcards/subject/env-elem/Vending-Machines/prompts__
         env-bg:

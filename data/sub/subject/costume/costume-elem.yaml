@@ -85,7 +85,7 @@ lazy-wildcards:
             {0.2::,__lazy-wildcards/subject/costume-elem/torn-clothes/costume-elem__|}
         costume:
           - >-
-            {1-$$ragged tunic, ragged clothes|tattered clothing, tattered clothes|torn clothes, torn clothing|ripped clothes}
+            {1-$$ragged tunic, ragged clothes|tattered clothing, tattered clothes|torn clothes, torn clothing|ripped clothes|damaged}
         costume-elem:
           - >-
             torn {1-$$, torn $$pantyhose|thighhighs|shirt|pants|dress|skirt|sleeves|bodysuit|cape|shorts|jeans|leotard|legwear|camisole}
@@ -103,4 +103,69 @@ lazy-wildcards:
           - >-
             chain, shackles, bound {1-$$, bound $$legs|wrists|together|arms|ankles}
             {,{1-$$rope around neck|rope|shibari|shibari over clothes}|}
+      condom:
+        prompts:
+          - >-
+            condom
+            {,{1-$$__lazy-wildcards/subject/costume-elem/condom/env-condom__}|}
+            {,{1-$$__lazy-wildcards/subject/costume-elem/condom/env-condom-box__}|}
+            {,{1-$$__lazy-wildcards/subject/costume-elem/condom/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/subject/costume-elem/condom/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/subject/costume-elem/condom/style__}|}
+        costume-weapon:
+          - holding condom
+        costume-elem:
+          - condom left inside
+          - condom in mouth
+        env-condom:
+          - used condom
+          - condom belt
+        env-condom-box:
+          - condom box
+          - condom packet strip
+          - condom wrapper
+        style:
+          - pointless condom
+          - colored condom
+          - multiple condoms
+      cum:
+        prompts:
+          - >-
+            cum
+            {,__lazy-wildcards/subject/costume-elem/cum/expressions__|}
+            {,__lazy-wildcards/subject/costume-elem/cum/costume-elem2__|}
+            {,__lazy-wildcards/subject/costume-elem/cum/costume-elem__|}
+            {,__lazy-wildcards/subject/costume-elem/cum/action__|}
+            {,__lazy-wildcards/subject/costume-elem/cum/style__|}
+            {,__lazy-wildcards/subject/costume-elem/cum/style-cum-overflow__|}
+            {,__lazy-wildcards/subject/costume-elem/condom/prompts__|}
+        costume-elem:
+          - out of pussy, cum in pussy
+          - >-
+            cum on {1-$$, cum on $$hands|hair|breasts|clothes|gloves|body|tongue|legs|stomach|panties|shoe|lips}
+          - >-
+            cum in {1-$$, cum in $$ass|pussy}
+          - cum inside
+        costume-elem2:
+          - cum in throat
+          - vomiting_cum, vic, vomit, vomithing
+          - cum in mouth, saliva
+        style:
+          - cum bubble
+          - off-color semen
+          - cum stain
+          - cumdrip
+          - cum string
+        style-cum-overflow:
+          - cum_pool
+          - projectile cum
+          - cum overflow
+          - excessive cum
+          - cum plugged
+          - cum inflation
+          - cum leak, cum leaking
+        action:
+          - after ejaculation
+        expressions:
+          - fucked silly
 

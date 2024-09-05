@@ -1,0 +1,36 @@
+lazy-wildcards:
+  subject:
+    scenes-pov-nsfw:
+      Standing_Doggy_Style:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/scenes-pov-nsfw/Standing_Doggy_Style/main-trigger-words__
+            {,{1-$$__lazy-wildcards/subject/scenes-pov-nsfw/Standing_Doggy_Style/style-pov__}|}
+            ,(__lazy-wildcards/subject/scenes-pov-nsfw/Standing_Doggy_Style/action-nsfw-doggystyle__:1.3)
+            {,__lazy-wildcards/subject/action-nsfw-others/grab/prompts__|}
+            {,{1-$$__lazy-wildcards/subject/scenes-pov-nsfw/Standing_Doggy_Style/action__}|}
+        main-trigger-words:
+          - (pov doggy_style:1.3), doggy style position
+        action-nsfw-doggystyle:
+          - doggystyle looking
+          - doggystyle looking away
+          - doggystyle curving back towards viewer
+          - doggystyle curving back neck pull
+        action:
+          - imminent penetration
+          - reaching for viewer
+        style-pov:
+          - rear view
+          - pov male
+      Standing_Missionary:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/scenes-pov-nsfw/Standing_Missionary/main-trigger-words__
+            {,{1-$$__lazy-wildcards/subject/scenes-pov-nsfw/Standing_Missionary/style-pov__}|}
+            {,__lazy-wildcards/subject/action-nsfw-others/grab/prompts__|}
+            {,{1-$$__lazy-wildcards/subject/scenes-pov-nsfw/Standing_Doggy_Style/action__}|}
+        main-trigger-words:
+          - (Pov Standing Missionary:1.3)
+        style-pov:
+          - pov male
+

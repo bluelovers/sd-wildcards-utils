@@ -283,8 +283,7 @@ lazy-wildcards:
           - >-
             {1-$$veiny tentacles|tentacle_porn|multiple_tentacles|sexualized_tentacles}
           - suction_cups
-          - >-
-            {1-$$cum|cum on body|cum on breasts|cumdrip}
+          - __lazy-wildcards/subject/costume-elem/cum/prompts__
           - distome
           - slime \(substance\)
       Vending-Machines:
@@ -384,7 +383,7 @@ lazy-wildcards:
       gold-gemstone:
         prompts:
           - >-
-            gold, gemstone
+            gold, gemstone, gemtech
             {,{1-$$__lazy-wildcards/subject/env-elem/gold-gemstone/env-gemstone__}|}
             {,{1-$$__lazy-wildcards/subject/env-elem/gold-gemstone/style__}|}
         env-gemstone:
@@ -405,11 +404,16 @@ lazy-wildcards:
           - ruby \(gemstone\), red gemstone
           - spinel \(gemstone\), GoldSpinelWorld
           - platinum
+          - amber \(gemstone\)
+          - glowing gem
         style:
           - crackle pattern
           - swirl pattern
           - fluid pattern
           - dripping pattern
+          - internal reflections
+          - transparent
+          - inner details
       # https://civitai.com/models/293128/moss-is-boss-gown-5
       moss:
         prompts:
@@ -423,10 +427,11 @@ lazy-wildcards:
           - m0ss_dr3ss ,elaborate long dress made of moss
         env:
           - >-
-            ({1-$$moss slime vines|moss vines})
+            ({1-$$moss slime vines|moss vines|mossy_surface})
           - >-
             slime_\(substance\), sticky slime
           - twigs
+          - overgrown
       skull:
         prompts:
           - >-
@@ -446,4 +451,97 @@ lazy-wildcards:
           - crystal skull decoration, crystal skull pattern
         costume-weapon:
           - holding skull
+      GreenRockWorld:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/GreenRockWorld/main__{0.3:::{1.2|1.3|1.4}|})
+            {,{1-$$__lazy-wildcards/subject/env-elem/GreenRockWorld/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/subject/env-elem/GreenRockWorld/env__}|}
+            {,{1-$$__lazy-wildcards/subject/env-elem/GreenRockWorld/style__}|}
+        main:
+          - GreenRockWorld, green_rocks
+        costume-elem:
+          - stone clothes
+        env:
+          - __lazy-wildcards/subject/env-elem/moss/prompts__
+          - rocky_terrain
+        style:
+          - fantasy_landscape
+          - emerald_glow
+          - nature_spirits
+      stairs:
+        prompts:
+          - >-
+            stairs
+            {0.7::,({1-3$$__lazy-wildcards/subject/env-elem/stairs/env-stairs__})|}
+            {,{1-$$__lazy-wildcards/subject/env-elem/stairs/env-stairs-style__}|}
+            {,{1-$$__lazy-wildcards/subject/env-elem/stairs/action__}|}
+            {,{1-$$__lazy-wildcards/subject/env-elem/stairs/env__}|}
+            {0.2::,{1-$$__lazy-wildcards/subject/env-elem/stairs/style__}|}
+        env-stairs:
+          - spiral stairs
+          - grand stairs
+          - carpeted stairs
+          - floating stairs
+          - curved stairs
+        env-stairs-style:
+          - wooden stairs
+          - stone stairs
+          - rock stairs
+          - metal stairs
+          - tree stairs
+        env:
+          - stairwell
+          - __lazy-wildcards/subject/env-elem/railing/prompts__
+        action:
+          - sitting
+        style:
+          - classical Style
+          - minimalist style
+          - open_concept
+          - country style
+          - luxury style
+          - industrial style
+          - victorian style
+      railing:
+        prompts:
+          - >-
+            railing
+            {,{1-2$$__lazy-wildcards/subject/env-elem/railing/env-railing__}|}
+            {,{1-$$__lazy-wildcards/subject/env-elem/railing/action__}|}
+            {,{1-$$__lazy-wildcards/subject/env-elem/railing/style__}|}
+        env-railing:
+          - wrought_iron_railing
+          - glass_railing
+          - wooden_railing
+          - industrial_railing
+        style:
+          - raw_materials
+        action:
+          - on railing
+          - hand on railing
+          - standing on one leg
+          - against railing
+          - arm support
+      papers-flyers:
+        prompts:
+          - >-
+            papers
+            , {1-$$__lazy-wildcards/subject/env-elem/papers-flyers/env__}
+        env:
+          - Scattered Flyers
+          - blowing_papers
+          - local_business_ads
+          - event_flyers
+          - posters_and_graffiti
+      advertisement_billboards-floor:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/advertisement_billboards-floor/env-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/advertisement_billboards-floor/env__}|}
+        env-main:
+          - Floor Advertisement Boards, advertisement_boards, advertisement_billboards
+        env:
+          - menu_advertisements
+          - street_art
 

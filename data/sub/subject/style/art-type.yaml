@@ -138,4 +138,50 @@ lazy-wildcards:
           - byzantine_art
           - intricate_design, elaborate_pattern
           - mosaic background
+      # https://civitai.com/models/28531/miniature-world-style?modelVersionId=34223
+      miniature:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-art-type/miniature/style-main__
+            {,{1-2$$__lazy-wildcards/subject/style-art-type/miniature/style__}|}
+        style-main:
+          - >-
+            (mini\(ttp\), miniature, miniature model{0.3:::{1.2|1.3|1.4}|}), pmini style, landscape
+        env-bg:
+          - plate
+          - cup
+          - bowl
+          - on table
+          - on floor
+        style:
+          - isometric style
+          - crisp
+          - ntricate
+          - vibrant
+      # https://civitai.com/models/553811/stained-glass-sd15-sdxl-pony-flux?modelVersionId=653863
+      stained_glass:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-art-type/stained_glass/style-main__{0.3:::{1.2|1.3|1.4}|})
+            {0.3::,{1-$$__lazy-wildcards/subject/style-art-type/stained_glass/env__}|}
+            {0.2::,{1-$$__lazy-wildcards/subject/style-art-type/stained_glass/env-bg__}|}
+            {,{1-$$__lazy-wildcards/subject/style-art-type/stained_glass/style__}|}
+        style-main:
+          - stained_glass, stained_glass_print, sglass style
+        env:
+          - stained_glass_window
+          - leadwork
+          - religious_symbol
+          - bird_motif
+          - circle
+        env-bg:
+          - gothic_cathedral
+          - forest_scenery
+        style:
+          - colorful_light
+          - geometric_pattern
+          - art_nouveau
+          - floral_design
+          - feminine_silhouette
+          - flowing_lines
 

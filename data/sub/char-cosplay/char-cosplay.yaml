@@ -513,8 +513,7 @@ lazy-wildcards:
           - holding
           - toeless footwear
           - dress
-          - >-
-            {1-$$double bun|hair bun}
+          - __lazy-wildcards/subject/costume-hair/hair-bun/prompts__
           - toenail polish
           - nail polish
           - hair bow
@@ -2202,8 +2201,7 @@ lazy-wildcards:
           - folder
           - cup, pill
           - juices
-          - >-
-            cum{, {1-$$cum in pussy|cum inside|cum leak|cum leaking|cum leaking out of pussy|cum on leg|cum on panties|cum on shoe|after ejaculation|cum stain|cum on hand|condom box|condom|condom box|condom packet strip|condom wrapper|condom}|}
+          - __lazy-wildcards/subject/costume-elem/cum/prompts__
           - patient_gurney, wheeled stretcher
           - IV_drip
           - emergency_lights
@@ -2769,7 +2767,7 @@ lazy-wildcards:
           - glowing
           - leaf
           - reflection
-          - bridge
+          - __lazy-wildcards/subject/env-bg-architectural/bridge/prompts__
           - cave
           - chair
     girls_und_panzer:
@@ -3213,4 +3211,136 @@ lazy-wildcards:
           - dream_world, mythological_dream
         action:
           - long_sleep, deity_sleep, dreaming
+    miHoYo:
+      # https://civitai.com/models/96278/raven-natasha-cioara-or-honkai-impact-3rd-or-lora-or-game
+      raven_honkai_impact:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/miHoYo/raven_honkai_impact/main-trigger-words__
+            ,__lazy-wildcards/cosplay-char/miHoYo/raven_honkai_impact/costume-ethnicity__
+            {,{1-2$$__lazy-wildcards/cosplay-char/miHoYo/raven_honkai_impact/costume__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/miHoYo/raven_honkai_impact/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/miHoYo/raven_honkai_impact/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/miHoYo/raven_honkai_impact/env__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/miHoYo/raven_honkai_impact/action__}|}
+        main-trigger-words:
+          - raven_\(honkai_impact\), honkai \(series\), mihoyo
+        costume-ethnicity:
+          - grey hair, short hair, red eyes, mole under mouth
+        costume:
+          - black bodysuit, official bodysuit, cape, hood
+          - grey shirt, black necktie, black skirt, black thighhigs
+          - cleavage cutout, clothing cutout, denim, jeans, jacket, open jacket, tank top
+          - bartender
+        costume-elem:
+          - >-
+            hood{, {1-$$hood down|hood up}|}
+          - armored bodysuit
+          - asymmetrical hair
+          - belt buckle
+          - black belt, loose belt
+          - black cloak, two-sided cloak, cape
+          - black gloves, clawed gauntlets, claws
+          - eyes visible through hair
+          - shiny clothes
+          - taut clothes, taut shirt
+          - two-sided fabric
+          - cleavage
+          - naked hoodie
+          - naked jacket
+          - naked cloak
+          - symbol-shaped pupils, x-shaped pupils
+          - high heels
+          - brown pantyhose
+          - feather trim
+          - lace trim
+          - nail polish
+          - bird, crow
+        costume-weapon:
+          - holding shoes, unworn shoes
+          - dagger, knife
+          - holding dagger, holding knife
+        env:
+          - broken screen
+          - flat screen tv, television
+          - calendar \(object\)
+        action:
+          - hands in pockets
+          - hand on own hip
+    shin_sekai_yori:
+      # https://civitai.com/models/716412/saki-watanabe-shin-sekai-yori?modelVersionId=801155
+      watanabe_saki:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/main-trigger-words__
+            ,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/costume-ethnicity__}
+            {,{1-2$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/costume__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/expressions__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env-bg__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env-monster__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/style__}|}
+        main-trigger-words:
+          - watanabe_saki, Saki Watanabe, Shinsekai, shin_sekai_yori
+        costume-ethnicity:
+          - short hair
+          - long hair
+          - swept bangs
+          - ponytail, split ponytail
+          - brown hair
+        costume:
+          - uniform, school uniform, short sleeves, bow, purple bow,skirt, pleated skirt, purple skirt
+          - sportswear, bare shoulders, gloves, elbow gloves, fingerless gloves, pants, white pants, sleeveless, black belt
+          - t-shirt
+          - japanese clothes, kimono
+          - samurai, japanese armor
+        costume-elem:
+          - drawstring waist
+          - sunglasses, oversized glasses, tinted eyewear
+          - safari helmet, hood, hoodie
+          - golden brooch
+          - black leggings
+          - shorts leggings
+          - hair ornament, hairclip
+        costume-weapon:
+          - holding mask
+        expressions:
+          - looking away
+          - looking down
+        style:
+          - yuri
+          - futuristic_design
+          - deep_shadows
+          - ambient_sound
+          - Rural Aesthetic
+          - Cantus, Cursed Power, Psychokinesis
+        env:
+          - air bubble, bubble
+          - fire, burning
+          - lush_nature, verdant_plants
+          - wooden_bridge
+          - distant_mountains
+          - __lazy-wildcards/subject/moment/weather-mist/prompts__
+          - river, boat
+        env-bg:
+          - cage, in cage
+          - red sky
+          - traditional_japanese_architecture
+          - school_building, shoji
+          - japanese_courtyard
+          - hallway
+          - mysterious_architecture
+          - shrine
+          - ancient_ruins
+          - japanese_village
+          - rice_fields
+          - traditional_japanese_house
+        env-monster:
+          - squealer
+          - kiroumaru
+          - queerat
+          - Monster Rats
+          - naked mole rats
 

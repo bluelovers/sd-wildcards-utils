@@ -1,0 +1,16 @@
+lazy-wildcards:
+  subject:
+    costume-hair:
+      hair-bun:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-hair/hair-bun/costume-hair-bun-main__}
+            {,{1-$$__lazy-wildcards/subject/costume-hair/hair-bun/costume-hair-bun__}|}
+        costume-hair-bun-main:
+          - hair bun
+          - bun cover
+        costume-hair-bun:
+          - double bun
+          - single hair bun
+          - cone hair bun
+

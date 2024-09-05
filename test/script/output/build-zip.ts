@@ -11,7 +11,15 @@ export default Bluebird.resolve()
 		let zip = new JSZip();
 
 		zip_add_file(zip, join(__ROOT_OUTPUT_WILDCARDS, 'lazy-wildcards.yaml'));
+		
 		zip_add_file(zip, join(__ROOT_DATA, 'others/billions_of_all_in_one.yaml'));
+
+		zip_add_file(zip, join(__ROOT_DATA, 'cf/bundle/corn-flakes-aio-bundle-sex.yaml'));
+
+		zip_add_file(zip, join(__ROOT_DATA, 'others/corn-flakes-daoist-priest.yaml'));
+		zip_add_file(zip, join(__ROOT_DATA, 'others/corn-flakes-jiangshi.yaml'));
+		zip_add_file(zip, join(__ROOT_DATA, 'others/corn-flakes-martial-artist.yaml'));
+		zip_add_file(zip, join(__ROOT_DATA, 'others/corn-flakes-onmyoji.yaml'));
 
 		fixedJSZipDate(zip, new Date('2000-12-24 23:00:00Z'))
 

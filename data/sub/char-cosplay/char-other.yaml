@@ -112,3 +112,44 @@ lazy-wildcards:
           - catwalk \(walkway\)
           - >-
             ({1-$$cockpit|control stick|pilot chair|open hatch}:1.3)
+    gundam:
+      # https://danbooru.donmai.us/posts?tags=zeong&z=1
+      zeon-zeong:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-others/gundam/zeon-zeong/costume-ethnicity__
+            {,{1-$$__lazy-wildcards/cosplay-others/gundam/zeon-zeong/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-others/gundam/zeon-zeong/action-pose__}|}
+            {,{1-$$__lazy-wildcards/cosplay-others/gundam/zeon-zeong/style__}|}
+        costume-ethnicity:
+          - zeong, zeong \(cosplay\), one-eyed, colored skin, robot, mecha, zeon
+        costume-elem:
+          - claws, long fingernails, yellow nails
+          - glowing eyes
+          - halo, multicolored halo
+          - organs
+          - white gloves
+          - mecha armor, mecha armored dress, mecha focus, machinery
+          - mobile suit
+          - finger cannon, beam cannon
+          - >-
+            {1-2$$red eyes|pink eyes|yellow eyes|pink eyes}
+          - >-
+            {1-$$purple_gray skin|muted_purple skin|grayish_purple skin}
+          - >-
+            {1-$$red horns|red antennae}
+          - thrusters, vernier thrusters
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - with a shadow of her
+        action-pose:
+          - reaching towards viewer, reaching
+          - open hands
+          - looking down
+        style:
+          - glowing
+          - flying, floating
+          - no humans
+          - science fiction
+          - straight-on
+          - style parody, redesign
+

@@ -17,33 +17,47 @@ lazy-wildcards:
         prompts:
           - >-
             (__lazy-wildcards/subject/costume/china-dress/main__)
-            {,{1-$$__lazy-wildcards/subject/costume/china-dress/style__}|}
-            {,{1-$$__lazy-wildcards/subject/costume/china-dress/makeup__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/china-dress/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/china-dress/costume-sleeves__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/china-dress/costume-makeup__}|}
             {,{1-$$__lazy-wildcards/subject/costume/china-dress/env__}|}
-            {,{1-$$__lazy-wildcards/subject/costume/china-dress/style-sub__}|}
         prompts-extra:
           - >-
             __lazy-wildcards/subject/costume/china-dress/prompts__
             {,__lazy-wildcards/subject/costume/china-dress/action__|}
-        style:
+        main:
+          - (old-shanghaibeauty, old shanghai beauty, china dress, chinese clothes), 舊上海美人
+        costume-elem:
           - pelvic curtain, pelvic curtain dress
           - multiple straps around the waist
-        style-sub:
           - floral print
           - thighhighs
           - two-sided dress
           - two-sided fabric
-          - short sleeves
-          - long sleeves
           - dragon print
+          - cleavage
+          - cleavage cutout
+          - garter belt
+          - >-
+            {1-$$pelvic curtain|pelvic curtain lift}
+          - gold trim
+          - side slit
+          - breast curtains
+          - no panties
+          - spiked bracelet
+        costume-sleeves:
           - sleeveless dress
-        main:
-          - (old-shanghaibeauty, old shanghai beauty, china dress, chinese clothes), 舊上海美人
-        makeup:
+          - detached sleeves
+          - sleeves past wrists
+          - bare shoulders
+          - short sleeves
+          - wide sleeves
+          - long sleeves
+        costume-makeup:
           - mole under eye
           - red lips
           - __lazy-wildcards/dataset/costume-accessories-base__
-          - hair bun
+          - __lazy-wildcards/subject/costume-hair/hair-bun/prompts__
           - arm tattoo
           - lipstick
           - makeup
@@ -928,4 +942,22 @@ lazy-wildcards:
         prompts:
           - >-
             Mechanical Breast Clamp Device, topless
+      strapless_pothole_tube_dress:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/strapless_pothole_tube_dress/costume-main__
+            {,{1-$$__lazy-wildcards/subject/costume/strapless_pothole_tube_dress/costume-elem__}|}
+        costume-main:
+          - strapless pothole tube dress
+        costume-elem:
+          - strapless
+          - pothole_dress
+          - cutout_dress
+          - Spandex
+          - Pothole Strapless Mini Dress
+      # https://civitai.com/models/714029/hinatazaka46-10th-single-uniform?modelVersionId=798519
+      Hinatazaka46_10th_Single_Uniform:
+        prompts:
+          - >-
+            hinatazaka46 10th single uniform, olive green shirt, white collar
 

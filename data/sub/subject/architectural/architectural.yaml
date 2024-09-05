@@ -7,7 +7,34 @@ lazy-wildcards:
             {underground, Underground |}Car Parking, road, concrete, parking
       alley:
         prompts:
-          - (fence, alley, power_lines:1.5)
+          - >-
+            __lazy-wildcards/subject/env-bg-architectural/alley/env-main__
+            {,{1-$$__lazy-wildcards/subject/env-bg-architectural/alley/env__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg-architectural/alley/env-bg__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg-architectural/alley/style__}|}
+        env-main:
+          - (fence, alley, power_lines{:{1.2|1.3|1.4}|}), aira1109
+        env:
+          - >-
+            {1-$$narrow_street|damp_narrow_alley}
+          - wooden_walls
+          - stone_walls
+          - tiled_roof
+          - bicycle
+          - small_garden
+          - concrete_pavement
+          - stone_pavement
+          - small_shrine
+          - stone_lantern
+          - street_lamp
+          - puddles_in_alley
+          - posters_and_graffiti
+        env-bg:
+          - Residential Alley, residential_buildings
+          - on road
+        style:
+          - outdoors
+          - Japan
       asian-east:
         prompts:
           - >-

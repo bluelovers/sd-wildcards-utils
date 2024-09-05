@@ -25,6 +25,7 @@ lazy-wildcards:
             ,({1-$$__lazy-wildcards/subject/env-elem-punk/solarpunk/env__}:1.2)
             {,{1-4$$__lazy-wildcards/subject/env-elem-punk/solarpunk/costume__}|}
             {,{1-4$$__lazy-wildcards/subject/env-elem-punk/solarpunk/style__}|}
+            {,__lazy-wildcards/utils/scenery-no-humans__|}
         main:
           - solarpunk
           - naturepunk
@@ -62,6 +63,7 @@ lazy-wildcards:
           - visible machinery and control room
           - gates
           - weirs
+          - __lazy-wildcards/subject/env-elem/stairs/prompts__
           - >-
             {1-$$rock road|stone road|wooden road}
           - >-
@@ -85,4 +87,48 @@ lazy-wildcards:
           - Solar_Farm
           - hillside
           - large artificial lake
+      # https://civitai.com/models/370751/microchipworld
+      MicroChipWorld:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-punk/MicroChipWorld/env-main__{0.3:::{1.2|1.3|1.4}|})
+            {,{1-$$__lazy-wildcards/subject/env-elem-punk/MicroChipWorld/env__}|}
+            {0.1::,{1-$$__lazy-wildcards/subject/env-elem-punk/MicroChipWorld/env-prompts__}|}
+            {,{1-$$__lazy-wildcards/subject/env-elem-punk/MicroChipWorld/env-bg__}|}
+            {,{1-$$__lazy-wildcards/subject/env-elem-punk/MicroChipWorld/style__}|}
+        env-main:
+          - MicroChipWorld, microchip
+        env-prompts:
+          - washing machine future
+          - computer future
+        env:
+          - __lazy-wildcards/subject/env-elem-punk/circuit_board/prompts__
+        env-bg:
+          - cyber city
+        style:
+          - nanotechnology
+          - cyberpunk
+          - digital_world
+          - techno_aesthetics
+      circuit_board:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/env-elem-punk/circuit_board/env__})
+            {,{1-$$__lazy-wildcards/subject/env-elem-punk/circuit_board/style__}|}
+        env:
+          - circuit_board
+          - printed_circuit_board
+          - electronic_component
+          - microchip
+          - capacitors
+          - resistors
+          - transistors
+          - solder_points
+          - heat_sinks
+          - diodes
+          - power_connectors
+        style:
+          - circuit_pattern
+          - printed_circuit_lines
+          - techno_aesthetics
 

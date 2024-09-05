@@ -40,4 +40,26 @@ lazy-wildcards:
         style:
           - flying
           - no humans
+      rocket_launch_site:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/rocket_launch_site/env-bg-main__
+            {,{1-3$$__lazy-wildcards/subject/env-bg/rocket_launch_site/env-bg__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg/rocket_launch_site/env__}|}
+        env-bg-main:
+          - rocket_launch_site
+        env-bg:
+          - launch_pad, launch_site, rocket_platform, launch_tower, rocket_tower
+          - control_center
+          - assembly_building, rocket_assembly
+          - fueling_station, rocket_fueling, propellant_depot
+          - service_tower, launch_tower
+          - ground_station
+          - tracking_station
+          - launch_control_room, launch_monitoring
+          - space_center
+          - spaceport
+        env:
+          - gantry
+          - ground_support_equipment
 
