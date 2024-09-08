@@ -544,4 +544,14 @@ lazy-wildcards:
         env:
           - menu_advertisements
           - street_art
-
+      pool:
+        prompts:
+          - >-
+            {1-2$$__lazy-wildcards/subject/env-elem/pool/env-main__}
+            {,{1-$$__lazy-wildcards/subject/env-elem/pool/env__}|}
+        env-main:
+          - poolside
+          - pool
+        env:
+          - empty pool
+          - pool ladder

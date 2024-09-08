@@ -420,14 +420,14 @@ lazy-wildcards:
       aries:
         prompts:
           - >-
-            __lazy-wildcards/subject/ethnicity-fantasy/aries/main__,
-            {1-$$__lazy-wildcards/subject/ethnicity-fantasy/aries/costume__}
-            {, {1-$$__lazy-wildcards/subject/ethnicity-fantasy/aries/style__}|}
-            {, {1-$$__lazy-wildcards/subject/ethnicity-fantasy/aries/env__}|}
+            __lazy-wildcards/subject/costume-ethnicity-race/aries/main__,
+            {1-$$__lazy-wildcards/subject/costume-ethnicity-race/aries/costume__}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/aries/style__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/aries/env__}|}
         prompts-extra:
           - >-
-            __lazy-wildcards/subject/ethnicity-fantasy/aries/prompts__,
-            {1-$$__lazy-wildcards/subject/ethnicity-fantasy/aries/env-bg__}
+            __lazy-wildcards/subject/costume-ethnicity-race/aries/prompts__,
+            {1-$$__lazy-wildcards/subject/costume-ethnicity-race/aries/env-bg__}
         style:
           - sheep girl
           - sheep ears
@@ -453,8 +453,3 @@ lazy-wildcards:
       elf:
         prompts:
           - a beautiful elvish girl
-
-
-
-
-          

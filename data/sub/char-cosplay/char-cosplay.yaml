@@ -513,7 +513,7 @@ lazy-wildcards:
           - holding
           - toeless footwear
           - dress
-          - __lazy-wildcards/subject/costume-hair/hair-bun/prompts__
+          - __lazy-wildcards/subject/costume-ethnicity-hair/hair-bun/prompts__
           - toenail polish
           - nail polish
           - hair bow
@@ -3343,6 +3343,43 @@ lazy-wildcards:
           - queerat
           - Monster Rats
           - naked mole rats
+      # https://danbooru.donmai.us/posts?tags=akizuki_maria+&z=5
+      # https://civitai.com/models/732177/maria-akizuki-shin-sekai-yori?modelVersionId=818762
+      akizuki_maria:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/shin_sekai_yori/akizuki_maria/main-trigger-words__
+            ,__lazy-wildcards/cosplay-char/shin_sekai_yori/akizuki_maria/costume-ethnicity-main__
+            ,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/akizuki_maria/costume-ethnicity__}
+            {,{1-2$$__lazy-wildcards/cosplay-char/shin_sekai_yori/akizuki_maria/costume__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/akizuki_maria/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/akizuki_maria/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/expressions__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env-bg__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env-monster__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/style__}|}
+        main-trigger-words:
+          - akizuki_maria , Maria Akizuki, Shinsekai, shin_sekai_yori
+        costume-ethnicity-main:
+          - blue eyes, blunt bangs, red hair
+        costume-ethnicity:
+          - long hair, very long hair
+          - braid, twin braids, hair over shoulder
+          - braid, sidelocks, hair bun, double bun, hair tubes
+        costume:
+          - uniform, school uniform, short sleeves, bow, purple bow, pleated skirt, purple skirt
+          - hat, flower, sun hat, hat flower, yellow belt, blouse, long sleeves, rolled up sleeves
+          - yellow belt, blouse, long sleeves, rolled up sleeves, boots, high waist pants, knee boots, brown footwear
+          - hat, sun hat, hat flower, yellow belt, blouse, long sleeves, rolled up sleeves, boots, high waist pants, knee boots, brown footwear
+          - japanese clothes, kimono
+        costume-elem:
+          - side-tie panties
+          - pantyhose pull
+          - barefoot
+          - hair ornament, flower
+        costume-weapon:
+          - hand fan
     # 《Tenchi Muyo! War on Geminar》（日文标题: 異世界の聖騎士物語）
     Tenchi_Muyo:
       # https://civitai.com/models/724786/doll-or-tenchi-muyo-war-on-geminar?modelVersionId=810464
@@ -3418,5 +3455,5 @@ lazy-wildcards:
     3x3_eyes:
       ayanokouji_pai:
         prompts:
-          - ayanokouji pai, parvati iv, ayanokouji pai \(cosplay\), parvati iv \(cosplay\), 3x3_eyes, __lazy-wildcards/subject/costume-ethnicity/third-eye/costume-eyes-main__
+          - ayanokouji pai, parvati iv, ayanokouji pai \(cosplay\), parvati iv \(cosplay\), 3x3_eyes, __lazy-wildcards/subject/costume-ethnicity-eyes/third-eye/costume-eyes-main__
 

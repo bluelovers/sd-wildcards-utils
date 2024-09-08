@@ -253,17 +253,7 @@ lazy-wildcards:
         action:
           pose:
             - against fence
-      pool:
-        prompts:
-          - >-
-            {1-2$$__lazy-wildcards/background/location/pool/main__},
-            {0-3$$__lazy-wildcards/background/location/pool/env__}
-        main:
-          - poolside
-          - pool
-        env:
-          - empty pool
-          - pool ladder
+
       ruins-city:
         prompts:
           - >-

@@ -131,4 +131,30 @@ lazy-wildcards:
           - circuit_pattern
           - printed_circuit_lines
           - techno_aesthetics
+      conspiracytech:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-punk/conspiracytech/style-main__
+            {,{1-$$__lazy-wildcards/subject/env-elem-punk/conspiracytech/env__}|}
+            {,{1-$$__lazy-wildcards/subject/env-elem-punk/conspiracytech/style__}|}
+        style-main:
+          - conspiracytech
+        env:
+          - foil
+          - occult_symbol
+          - masonic_symbol
+        style:
+          - scifi
+          - occult
+          - illuminati
+          - eerie
+          - conspiracy_theory
+          - futuristic_technology
+          - cyberpunk
+          - metallic_texture
+          - reflective_surface
+          - arcane
+          - secret_society
+          - creepy
+          - unsettling
 
