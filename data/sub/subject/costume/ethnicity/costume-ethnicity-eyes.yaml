@@ -1,0 +1,39 @@
+lazy-wildcards:
+  subject:
+    costume-ethnicity-eyes:
+      # https://civitai.com/models/728222/triclops?modelVersionId=814306
+      third-eye:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-eyes/third-eye/costume-eyes-main__
+            {,{1-$$__lazy-wildcards/subject/costume-ethnicity-eyes/third-eye/costume-eyes__}|}
+            {0.3::,{1-$$__lazy-wildcards/subject/costume-ethnicity-eyes/third-eye/costume-elem__}|}
+            {0.2::,{1-$$__lazy-wildcards/subject/costume-ethnicity-eyes/third-eye/style__}|}
+        costume-eyes-main:
+          - third_eye, 3x3_eyes, ThirdEye, triclops
+        costume-eyes:
+          - demonic third eye
+          - fayan eyes
+          - extra_eye
+        costume-elem:
+          - forehead_mark
+          - three_eyed_species
+        style:
+          - mystic_eye
+          - supernatural
+      fayan-eyes:
+        prompts:
+          - >-
+            fayan eyes
+            {, __lazy-wildcards/subject/costume-ethnicity-eyes/third-eye/prompts__|}
+            {, __lazy-wildcards/subject/costume-ethnicity-eyes/fayan-eyes/env__|}
+        env:
+          - Buddhist mantra
+      cyclops:
+        prompts:
+          - >-
+            cyclops, cyclop, One eye
+            {0.2::, __lazy-wildcards/subject/costume-ethnicity-eyes/cyclops/costume-elem__|}
+        costume-elem:
+          - monstrous_humanoid
+

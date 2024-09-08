@@ -390,7 +390,7 @@ lazy-wildcards:
       louise:
         prompts:
           - long hair,black hair, ribbon, brown eyes, hair bow, boots, sleeveless, black gloves, sailor collar, white dress, white footwear, white bow, single glove, sailor dress
-          - black hair, yellow eyes, __lazy-wildcards/subject/costume-body/dark-skinned/prompts__,blunt bangs,makeup, glowing, lipstick, glowing eyes, science fiction
+          - black hair, yellow eyes, __lazy-wildcards/subject/costume-ethnicity-body/dark-skinned/prompts__,blunt bangs,makeup, glowing, lipstick, glowing eyes, science fiction
     onmyoji:
       suzuka_gozen:
         prompts:
@@ -1406,7 +1406,7 @@ lazy-wildcards:
           - long hair
           - green eyes
           - green hair
-          - __lazy-wildcards/subject/costume-body/dark-skinned/prompts__
+          - __lazy-wildcards/subject/costume-ethnicity-body/dark-skinned/prompts__
         ethnicity-hair:
           - plant hair, hair flower
         costume:
@@ -1793,7 +1793,7 @@ lazy-wildcards:
         costume-ethnicity:
           - >-
             blonde hair, indian, green eyes, long hair, facial mark, forehead mark,
-            __lazy-wildcards/subject/costume-body/dark-skinned/prompts__
+            __lazy-wildcards/subject/costume-ethnicity-body/dark-skinned/prompts__
         costume:
           - white lab coat, long sleeves, red shirt, collared shirt
           - arabian clothes, dress, harem outfit, partially fingerless gloves, veil
@@ -2099,7 +2099,7 @@ lazy-wildcards:
           - >-
             bikini{, bikini top only|}, swimsuit
           - cleavage
-          - __lazy-wildcards/subject/costume-body/dark-skinned/prompts__
+          - __lazy-wildcards/subject/costume-ethnicity-body/dark-skinned/prompts__
           - fishnet thighhighs
           - handbag
           - lipstick
@@ -3184,7 +3184,7 @@ lazy-wildcards:
         main-trigger-words:
           - EarthGoddessMaiaYs, Earth Goddess Maia, ys
         costume-ethnicity:
-          - very long hair, blue hair, white drill hair, drill_curls, white wooden_hair, blue lips, __lazy-wildcards/subject/costume-body/dark-skinned/prompts__, leafy_hair, hair flower, blue orb
+          - very long hair, blue hair, white drill hair, drill_curls, white wooden_hair, blue lips, __lazy-wildcards/subject/costume-ethnicity-body/dark-skinned/prompts__, leafy_hair, hair flower, blue orb
         costume-elem:
           - hair ornament
           - cleavage
@@ -3343,4 +3343,80 @@ lazy-wildcards:
           - queerat
           - Monster Rats
           - naked mole rats
+    # 《Tenchi Muyo! War on Geminar》（日文标题: 異世界の聖騎士物語）
+    Tenchi_Muyo:
+      # https://civitai.com/models/724786/doll-or-tenchi-muyo-war-on-geminar?modelVersionId=810464
+      # https://civitai.com/models/154060/doll-third-tenchi-muyo-war-on-geminar?modelVersionId=172599
+      doll_third:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/Tenchi_Muyo/doll_third/main-trigger-words__
+            ,{1-$$__lazy-wildcards/cosplay-char/Tenchi_Muyo/doll_third/costume-ethnicity__}
+            {,__lazy-wildcards/cosplay-char/Tenchi_Muyo/doll_third/costume__|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Tenchi_Muyo/doll_third/costume-hair__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Tenchi_Muyo/doll_third/env-bg__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Tenchi_Muyo/doll_third/style__}|}
+        main-trigger-words:
+          - doll_third, doll_\(isekai_no_seikishi_monogatari\), Tenchi Muyo! War on Geminars, long hair
+        costume-ethnicity:
+          - doll_form, Short_stature, purple eyes, (green hair, long bang, bangs_covering_eyes:1.2), hair ornament, pale_skin
+          - mexiah_form, Tall_figure, tanned_skin, well_endowed, green_eyes, pink_hair
+        costume:
+          - teacher_uniform, professional_attire
+        costume-hair:
+          - left_shoulder_hair
+          - gravity_defying_hair, flared_hair, voluminous_hair, side_out_hair, Curled_hair
+        env-bg:
+          - medieval_architecture, futuristic_architecture
+          - castle
+          - palace
+          - academy
+          - temple
+          - sanctuary
+          - mecha_hangar
+          - battle_arena
+          - floating_island
+          - magic_runes, ancient_ruins
+          - fantasy_forest
+        style:
+          - magic_technology
+          - royalty
+          - military_academy
+    Slayers:
+      # https://civitai.com/models/714293/naga-the-serpent-or-slayers-or-3-attires?modelVersionId=798811
+      naga_the_serpent:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/Slayers/naga_the_serpent/main-trigger-words__
+            ,{1-$$__lazy-wildcards/cosplay-char/Slayers/naga_the_serpent/costume-ethnicity__}
+            {,__lazy-wildcards/cosplay-char/Slayers/naga_the_serpent/costume__|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Slayers/naga_the_serpent/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Slayers/naga_the_serpent/action-pose__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Slayers/naga_the_serpent/style__}|}
+        main-trigger-words:
+          - naga_the_serpent, naga the serpent \(cosplay\), Slayers
+        costume-ethnicity:
+          - blue eyes, purple hair, long hair, large breasts, antenna hair, bangs, hair intakes, jewelry, lipstick, hair intakes
+        costume:
+          - Bikini_Naga_ownwaifu, swimsuit, cleavage, navel, strapless bikini, bra, collarbone, covered nipples, bare shoulders, purple bikini, o-ring bikini, purple bra
+          - BikiniArmorCape_Naga_ownwaifu, cape, cleavage, thigh strap, navel, revealing clothes, shoulder armor, shoulder spikes, gloves, spikes, black gloves, armor, necklace, pauldrons, sheath, covered nipples, skull, thighs, bikini armor
+          - NSFW_Naga_ownwaifu, nude, navel
+        costume-elem:
+          - __lazy-wildcards/dataset/costume-accessories-base__
+          - cleavage, navel, midriff
+          - cape
+          - shoulder spikes, spiked pauldrons
+          - spiked armor
+          - highleg bikini
+        action-pose:
+          - ojou-sama pose
+          - hand on own chest
+          - yawning
+        style:
+          - 1990s \(style\), retro artstyle
+    # https://danbooru.donmai.us/posts?tags=3x3_eyes+&z=5
+    3x3_eyes:
+      ayanokouji_pai:
+        prompts:
+          - ayanokouji pai, parvati iv, ayanokouji pai \(cosplay\), parvati iv \(cosplay\), 3x3_eyes, __lazy-wildcards/subject/costume-ethnicity/third-eye/costume-eyes-main__
 
