@@ -86,7 +86,9 @@ jobs:
         name: run script
         if: success()
         #        env:
-        run: yarn run ci:build
+        run: |
+          yarn run ci:build
+          yarn run ci:build:copy
       -
         name: Push output
         if: success()
