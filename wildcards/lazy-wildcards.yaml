@@ -365,16 +365,6 @@ lazy-wildcards:
         action:
           pose:
             - against fence
-      pool:
-        prompts:
-          - >-
-            {1-2$$__lazy-wildcards/background/location/pool/main__},{0-3$$__lazy-wildcards/background/location/pool/env__}
-        main:
-          - poolside
-          - pool
-        env:
-          - empty pool
-          - pool ladder
       ruins-city:
         prompts:
           - >-
@@ -1091,7 +1081,7 @@ lazy-wildcards:
         - Mushrooms
     scenery-no-humans:
       - >-
-        {1-$$scenery|outdoors|no humans|horizon|landscape}
+        {1-$$scenery|outdoors|no humans|horizon|landscape|ultra wide angle|HDRI Panorama View|360 panorama}
   subject:
     style-art-type:
       sketch-pen-landscape:
@@ -1998,43 +1988,6 @@ lazy-wildcards:
       base:
         prompts:
           - noble man
-    ethnicity-fantasy:
-      # 白羊宮，牡羊座
-      aries:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/ethnicity-fantasy/aries/main__,{1-$$__lazy-wildcards/subject/ethnicity-fantasy/aries/costume__}{,{1-$$__lazy-wildcards/subject/ethnicity-fantasy/aries/style__}|}{,{1-$$__lazy-wildcards/subject/ethnicity-fantasy/aries/env__}|}
-        prompts-extra:
-          - >-
-            __lazy-wildcards/subject/ethnicity-fantasy/aries/prompts__,{1-$$__lazy-wildcards/subject/ethnicity-fantasy/aries/env-bg__}
-        style:
-          - sheep girl
-          - sheep ears
-          - year of the goat
-        main:
-          - Ariespunk,ARSPUNK,sheep horns,sheep tail,wavy hair,Pointy ears,barefoot
-        costume:
-          - bandage,dress,navel,gloves
-          - sheep costume
-        env:
-          - fluffy
-          - fur
-          - stuffed sheep
-          - goat
-          - wool
-          - lamb
-          - sheep horns
-          - sheep tail
-          - animal
-          - horns
-        env-bg:
-          - forest
-      erlf:
-        prompts:
-          - a beautiful elvish girl
-      clockwork-cyborg:
-        prompts:
-          - clockwork cyborg,clockwork body,clockwork arms,clockwork legs,gears in eyes,clockwork face
     env-bg:
       city-traffic:
         prompts:
@@ -2131,10 +2084,17 @@ lazy-wildcards:
           - open space
           - empty
           - dark background
-          - no human
+          - __lazy-wildcards/utils/scenery-no-humans__
           - flock
           - blm
           - biomachine,bioluminescence
+          - industrial style
+      # https://knightsofsidonia.fandom.com/ja/wiki/%E3%82%B7%E3%83%89%E3%83%8B%E3%82%A2%E7%99%BE%E6%99%AF
+      # https://civitai.com/models/729982/100-sights-of-sidonia?modelVersionId=816301
+      100-Sights-of-Sidonia:
+        prompts:
+          - >-
+            (シドニア百景,100-sights-of-sidonia{:{1.2|1.3|1.4}|}),__lazy-wildcards/subject/env-bg/nihei_tsutomu-blame-env/prompts__
       battlestar_galactica_interiors:
         prompts:
           - >-
@@ -4148,6 +4108,16 @@ lazy-wildcards:
         env:
           - menu_advertisements
           - street_art
+      pool:
+        prompts:
+          - >-
+            {1-2$$__lazy-wildcards/subject/env-elem/pool/env-main__}{,{1-$$__lazy-wildcards/subject/env-elem/pool/env__}|}
+        env-main:
+          - poolside
+          - pool
+        env:
+          - empty pool
+          - pool ladder
     env-elem-punk:
       holographic:
         prompts:
@@ -4266,6 +4236,30 @@ lazy-wildcards:
           - circuit_pattern
           - printed_circuit_lines
           - techno_aesthetics
+      conspiracytech:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-punk/conspiracytech/style-main__{,{1-$$__lazy-wildcards/subject/env-elem-punk/conspiracytech/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem-punk/conspiracytech/style__}|}
+        style-main:
+          - conspiracytech
+        env:
+          - foil
+          - occult_symbol
+          - masonic_symbol
+        style:
+          - scifi
+          - occult
+          - illuminati
+          - eerie
+          - conspiracy_theory
+          - futuristic_technology
+          - cyberpunk
+          - metallic_texture
+          - reflective_surface
+          - arcane
+          - secret_society
+          - creepy
+          - unsettling
     env-bg-real-world-location:
       # https://civitai.com/models/62198/kowloon-walled-city-tset?modelVersionId=66738
       kowloon-walled-city:
@@ -4336,11 +4330,156 @@ lazy-wildcards:
           - Saqqara
           - Nubian
           - real_world_location
-    costume-body:
-      dark-skinned:
-        prompts:
-          - dark_skin,tan_skin,tanned skin,dark skin,dark-skinned,black-skinned,bronze skin,bronzed skin
     costume-elem:
+      earrings:
+        prompts:
+          - earrings
+          - large earrings
+          - ear chain
+          - ear piercing
+          - multiple earrings
+          - crystal earrings
+      necklace:
+        prompts:
+          - gold_necklace
+          - necklace
+          - flower necklace
+          - feather necklace
+          - skull necklace
+      religious:
+        prompts:
+          - cope,ceremonial_cloak
+      button:
+        prompts:
+          - >-
+            buttons{,{1-$$__lazy-wildcards/subject/costume-elem/button/costume-buttons__}|}
+        costume-buttons:
+          - double-breasted
+          - partially unbuttoned
+      unzipping:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem/unzipping/costume__{0.1::,{1-$$__lazy-wildcards/subject/costume-elem/unzipping/action__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/unzipping/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/unzipping/costume-elem-zipper__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/unzipping/costume-eyes__}|}
+        costume:
+          - >-
+            (unzipping,undressing:1.4),zipper,({unzipped|partially unzipped}:1.2),half naked
+        costume-eyes:
+          - averting eyes
+          - heart-shaped pupils
+        action:
+          - undressing another
+        costume-elem-zipper:
+          - full-length zipper
+          - zipper pull tab
+          - front zipper
+          - breast zipper
+        costume-elem:
+          - cleavage
+          - open bodysuit
+          - no bra
+          - center opening,chest open
+          - blush
+          - clothing cutout
+          - underboob
+          - sideboob
+      # https://civitai.com/models/149711/untied-panties
+      untied-panties:
+        prompts:
+          - |-
+            (untied panties,falling panties:1.4)
+      blood:
+        prompts:
+          - >-
+            {1-$$surrounded by blood|blood splatter|blood stain|blood on ground|pool of blood|bleeding|bleeding|blood drip|raining_blood|blood drop|blood spray}
+      see-through-clothes:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-elem/see-through-clothes/costume-elem__}
+        costume-elem:
+          - see-through
+          - >-
+            wringing {1-$$,wringing $$clothes|shirt}
+          - >-
+            sweaty {1-$$,sweaty $$clothes|shirt}
+          - >-
+            wet {1-$$,wet $$clothes|shirt}
+          - >-
+            see-through {1-$$,see-through $$clothes|shirt}
+      torn-clothes:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem/torn-clothes/costume__{0.2::,__lazy-wildcards/subject/costume-elem/torn-clothes/costume-elem__|}
+        costume:
+          - >-
+            {1-$$ragged tunic,ragged clothes|tattered clothing,tattered clothes|torn clothes,torn clothing|ripped clothes|damaged}
+        costume-elem:
+          - >-
+            torn {1-$$,torn $$pantyhose|thighhighs|shirt|pants|dress|skirt|sleeves|bodysuit|cape|shorts|jeans|leotard|legwear|camisole}
+      asymmetrical-clothes:
+        prompts:
+          - >-
+            asymmetrical {1-$$,asymmetrical $$legwear|sleeves|clothes}
+      scar:
+        prompts:
+          - >-
+            {1-$$scar|scar across eye|scar on face|facial scar|cheek scar|battle scar|whip scar|scar on neck}{,stitches|}
+      bound-shackles:
+        prompts:
+          - >-
+            chain,shackles,bound {1-$$,bound $$legs|wrists|together|arms|ankles}{,{1-$$rope around neck|rope|shibari|shibari over clothes}|}
+      condom:
+        prompts:
+          - >-
+            condom{,{1-$$__lazy-wildcards/subject/costume-elem/condom/env-condom__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/condom/env-condom-box__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/condom/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/condom/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/condom/style__}|}
+        costume-weapon:
+          - holding condom
+        costume-elem:
+          - condom left inside
+          - condom in mouth
+        env-condom:
+          - used condom
+          - condom belt
+        env-condom-box:
+          - condom box
+          - condom packet strip
+          - condom wrapper
+        style:
+          - pointless condom
+          - colored condom
+          - multiple condoms
+      cum:
+        prompts:
+          - >-
+            cum{,__lazy-wildcards/subject/costume-elem/cum/expressions__|}{,__lazy-wildcards/subject/costume-elem/cum/costume-elem2__|}{,__lazy-wildcards/subject/costume-elem/cum/costume-elem__|}{,__lazy-wildcards/subject/costume-elem/cum/action__|}{,__lazy-wildcards/subject/costume-elem/cum/style__|}{,__lazy-wildcards/subject/costume-elem/cum/style-cum-overflow__|}{,__lazy-wildcards/subject/costume-elem/condom/prompts__|}
+        costume-elem:
+          - out of pussy,cum in pussy
+          - >-
+            cum on {1-$$,cum on $$hands|hair|breasts|clothes|gloves|body|tongue|legs|stomach|panties|shoe|lips}
+          - >-
+            cum in {1-$$,cum in $$ass|pussy}
+          - cum inside
+        costume-elem2:
+          - cum in throat
+          - vomiting_cum,vic,vomit,vomithing
+          - cum in mouth,saliva
+        style:
+          - cum bubble
+          - off-color semen
+          - cum stain
+          - cumdrip
+          - cum string
+        style-cum-overflow:
+          - cum_pool
+          - projectile cum
+          - cum overflow
+          - excessive cum
+          - cum plugged
+          - cum inflation
+          - cum leak,cum leaking
+        action:
+          - after ejaculation
+        expressions:
+          - fucked silly
       costume-breasts:
         prompts:
           - >-
@@ -4459,169 +4598,6 @@ lazy-wildcards:
       breasts-clothes:
         prompts:
           - breast curtains
-      earrings:
-        prompts:
-          - earrings
-          - large earrings
-          - ear chain
-          - ear piercing
-          - multiple earrings
-      religious:
-        prompts:
-          - cope,ceremonial_cloak
-      button:
-        prompts:
-          - >-
-            buttons{,{1-$$__lazy-wildcards/subject/costume-elem/button/costume-buttons__}|}
-        costume-buttons:
-          - double-breasted
-          - partially unbuttoned
-      unzipping:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/costume-elem/unzipping/costume__{0.1::,{1-$$__lazy-wildcards/subject/costume-elem/unzipping/action__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/unzipping/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/unzipping/costume-elem-zipper__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/unzipping/costume-eyes__}|}
-        costume:
-          - >-
-            (unzipping,undressing:1.4),zipper,({unzipped|partially unzipped}:1.2),half naked
-        costume-eyes:
-          - averting eyes
-          - heart-shaped pupils
-        action:
-          - undressing another
-        costume-elem-zipper:
-          - full-length zipper
-          - zipper pull tab
-          - front zipper
-          - breast zipper
-        costume-elem:
-          - cleavage
-          - open bodysuit
-          - no bra
-          - center opening,chest open
-          - blush
-          - clothing cutout
-          - underboob
-          - sideboob
-      # https://civitai.com/models/149711/untied-panties
-      untied-panties:
-        prompts:
-          - |-
-            (untied panties,falling panties:1.4)
-      blood:
-        prompts:
-          - >-
-            {1-$$surrounded by blood|blood splatter|blood stain|blood on ground|pool of blood|bleeding|bleeding|blood drip|raining_blood|blood drop|blood spray}
-      necklace:
-        prompts:
-          - gold_necklace
-          - necklace
-          - flower necklace
-          - feather necklace
-      see-through-clothes:
-        prompts:
-          - >-
-            {1-$$__lazy-wildcards/subject/costume-elem/see-through-clothes/costume-elem__}
-        costume-elem:
-          - see-through
-          - >-
-            wringing {1-$$,wringing $$clothes|shirt}
-          - >-
-            sweaty {1-$$,sweaty $$clothes|shirt}
-          - >-
-            wet {1-$$,wet $$clothes|shirt}
-          - >-
-            see-through {1-$$,see-through $$clothes|shirt}
-      torn-clothes:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/costume-elem/torn-clothes/costume__{0.2::,__lazy-wildcards/subject/costume-elem/torn-clothes/costume-elem__|}
-        costume:
-          - >-
-            {1-$$ragged tunic,ragged clothes|tattered clothing,tattered clothes|torn clothes,torn clothing|ripped clothes|damaged}
-        costume-elem:
-          - >-
-            torn {1-$$,torn $$pantyhose|thighhighs|shirt|pants|dress|skirt|sleeves|bodysuit|cape|shorts|jeans|leotard|legwear|camisole}
-      asymmetrical-clothes:
-        prompts:
-          - >-
-            asymmetrical {1-$$,asymmetrical $$legwear|sleeves|clothes}
-      scar:
-        prompts:
-          - >-
-            {1-$$scar|scar across eye|scar on face|facial scar|cheek scar|battle scar|whip scar|scar on neck}{,stitches|}
-      bound-shackles:
-        prompts:
-          - >-
-            chain,shackles,bound {1-$$,bound $$legs|wrists|together|arms|ankles}{,{1-$$rope around neck|rope|shibari|shibari over clothes}|}
-      condom:
-        prompts:
-          - >-
-            condom{,{1-$$__lazy-wildcards/subject/costume-elem/condom/env-condom__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/condom/env-condom-box__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/condom/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/condom/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/condom/style__}|}
-        costume-weapon:
-          - holding condom
-        costume-elem:
-          - condom left inside
-          - condom in mouth
-        env-condom:
-          - used condom
-          - condom belt
-        env-condom-box:
-          - condom box
-          - condom packet strip
-          - condom wrapper
-        style:
-          - pointless condom
-          - colored condom
-          - multiple condoms
-      cum:
-        prompts:
-          - >-
-            cum{,__lazy-wildcards/subject/costume-elem/cum/expressions__|}{,__lazy-wildcards/subject/costume-elem/cum/costume-elem2__|}{,__lazy-wildcards/subject/costume-elem/cum/costume-elem__|}{,__lazy-wildcards/subject/costume-elem/cum/action__|}{,__lazy-wildcards/subject/costume-elem/cum/style__|}{,__lazy-wildcards/subject/costume-elem/cum/style-cum-overflow__|}{,__lazy-wildcards/subject/costume-elem/condom/prompts__|}
-        costume-elem:
-          - out of pussy,cum in pussy
-          - >-
-            cum on {1-$$,cum on $$hands|hair|breasts|clothes|gloves|body|tongue|legs|stomach|panties|shoe|lips}
-          - >-
-            cum in {1-$$,cum in $$ass|pussy}
-          - cum inside
-        costume-elem2:
-          - cum in throat
-          - vomiting_cum,vic,vomit,vomithing
-          - cum in mouth,saliva
-        style:
-          - cum bubble
-          - off-color semen
-          - cum stain
-          - cumdrip
-          - cum string
-        style-cum-overflow:
-          - cum_pool
-          - projectile cum
-          - cum overflow
-          - excessive cum
-          - cum plugged
-          - cum inflation
-          - cum leak,cum leaking
-        action:
-          - after ejaculation
-        expressions:
-          - fucked silly
-    costume-face:
-      ahegao:
-        prompts:
-          - Ahegao,Tongue Out,out
-    costume-hair:
-      hair-bun:
-        prompts:
-          - >-
-            {1-$$__lazy-wildcards/subject/costume-hair/hair-bun/costume-hair-bun-main__}{,{1-$$__lazy-wildcards/subject/costume-hair/hair-bun/costume-hair-bun__}|}
-        costume-hair-bun-main:
-          - hair bun
-          - bun cover
-        costume-hair-bun:
-          - double bun
-          - single hair bun
-          - cone hair bun
     costume-headwear:
       others:
         prompts:
@@ -4795,6 +4771,9 @@ lazy-wildcards:
           - microscopic_machines
           - nanobots
           - monster
+      clockwork-cyborg:
+        prompts:
+          - clockwork cyborg,clockwork body,clockwork arms,clockwork legs,gears in eyes,clockwork face
       others:
         prompts:
           - >-
@@ -5091,369 +5070,6 @@ lazy-wildcards:
           - Insect
           - __lazy-wildcards/subject/env-elem/spider-webs/prompts__
           - flower
-      snake-anthro_cobra:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/costume/snake-anthro_cobra/main__,({1-$$__lazy-wildcards/subject/costume/snake-anthro_cobra/costume-ethnicity__}){,{1-$$__lazy-wildcards/subject/costume/snake-anthro_cobra/costume__}|}{,{1-$$__lazy-wildcards/subject/costume/snake-anthro_cobra/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume/snake-anthro_cobra/env__}|}{,{1-$$__lazy-wildcards/subject/costume/snake-anthro_cobra/style__}|}
-        main:
-          - anthro_cobra,furrycobra snake,snake_humanoid,snake girl
-        costume-ethnicity:
-          - serpent-like head
-          - >-
-            serpent-like hood,snake hood{,hooded_cobra,expanded_hood|}
-          - scaled skin
-          - slit_pupils,reptilian_eyes,snake eyes
-          - sharp_teeth
-          - snake_tail,elongated_tail
-          - snake body
-          - large eyes
-          - forked tongue
-          - colored sclera
-        costume:
-          - jewelry
-          - plunging neckline,cleavage
-          - very long hair
-          - pelvic curtain
-          - revealing clothes
-          - eyeshadow
-          - snake_hair_ornament
-          - >-
-            gold {1-$$,gold $$armlet|bracelet|choker|circlet}
-        costume-weapon:
-          - scepter
-        env:
-          - >-
-            {1-$$snake|giant_snake|venomous_snake|cobra \(animal\)}
-          - gem
-          - poison
-          - smile
-          - licking snake
-        style:
-          - reptilian_features
-          - threatening_appearance
-          - coiling_motion,sinuous_movement
-          - predatory_gaze
-          - predatory_feature
-          - constriction
-          - egyptian
-      # https://civitai.com/models/20872
-      plant-girl-alraune:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/costume/plant-girl-alraune/main__,({1-$$__lazy-wildcards/subject/costume/plant-girl-alraune/costume-ethnicity__}){,{1-$$__lazy-wildcards/subject/costume/plant-girl-alraune/costume-eyes__}|}{,{1-$$__lazy-wildcards/subject/costume/plant-girl-alraune/costume__}|}{,{1-$$__lazy-wildcards/subject/costume/plant-girl-alraune/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume/plant-girl-alraune/env__}|}{,{1-$$__lazy-wildcards/subject/costume/plant-girl-alraune/env-bg__}|}
-        main:
-          - |-
-            (alraune,alrauneSH:1.2),alraune_\(megami_tensei\),plant girl,upper body
-        costume-ethnicity:
-          - bell jar
-          - plant hair
-          - vines,thorns
-          - flower
-          - flower-shaped hair
-          - leaf
-        costume:
-          - breasts,navel
-          - wisteria
-          - parted lips
-          - arms at sides
-          - topless
-          - pasties
-          - long hair
-          - hair over eyes
-          - hair over breasts
-          - colored skin
-          - medium breasts
-          - open mouth
-          - pitcher plant
-          - saliva
-          - puffy sleeves
-
-          - 
-          - licking
-          - __lazy-wildcards/subject/env-elem/flower/prompts__
-          - lipstick
-          - collarbone
-          - drill hair
-          - dress
-          - lily \(flower\)
-        costume-eyes:
-          - symbol-shaped pupils
-          - heart,heart in eye
-        costume-weapon:
-          - holding staff
-        env:
-          - |-
-            (nectar:1.3)
-          - plant
-          - tentacles
-          - flower censor
-        env-bg:
-          - forest
-      bee_girl:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/costume/bee_girl/main__{,__lazy-wildcards/subject/costume/bee_girl/costume-ethnicity__|}{,{1-$$__lazy-wildcards/subject/costume/bee_girl/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume/bee_girl/costume__}|}{,{1-$$__lazy-wildcards/subject/costume/bee_girl/costume-mecha__}|}{,{1-$$__lazy-wildcards/subject/costume/bee_girl/costume-wings__}|}{,({1-$$__lazy-wildcards/subject/costume/bee_girl/env-bg__}:1.3)|}{,{1-$$__lazy-wildcards/subject/costume/bee_girl/env__}|}{,{1-$$__lazy-wildcards/subject/costume/bee_girl/style__}|}
-        main:
-          - |-
-            (bee girl:1.3),Anthro_Bee
-        costume:
-          - abdomen tail
-          - antennae
-          - striped body
-          - honeycomb_ornament
-          - bee costume
-          - >-
-            bee {1-$$,bee $$exoskeletons|antennae|abdomen tail}
-        costume-mecha:
-          - >-
-            mechanical {1-$$,mechanical $$parts|bee}
-          - Bee_Mechanic_Girl
-          - mechanic suit
-        costume-ethnicity:
-          - queen bee
-          - worker bee
-          - soldier bees
-        costume-wings:
-          - bee wings
-        costume-weapon:
-          - holding sign
-          - >-
-            holding {honeycomb_\(object\)|honeypot|beehive}
-        style:
-          - Beehive_Mechanics
-          - honeycomb_\(pattern\)
-        env:
-          - >-
-            {1-$$honey|honey dipper|honeypot}
-          - larvae
-          - beehive integrated with mechanical elements
-          - gears
-          - machinery
-          - amber \(gemstone\)
-          - honeycomb_\(object\)
-          - >-
-            surrounded by {__lazy-wildcards/subject/costume/bee_girl/costume-ethnicity__|bee}s
-        env-bg:
-          - Beehive background
-          - complex honeycomb background
-          - Bee_Nest background
-          - hexagonal wax cells background
-      zombie-jiangshi-chinese-taoist-robes:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/costume/zombie-jiangshi-chinese-taoist-robes/costume-ethnicity__{,{1-$$__lazy-wildcards/subject/costume/zombie-jiangshi-chinese-taoist-robes/costume-wings__}|},{1-$$__lazy-wildcards/subject/costume/zombie-jiangshi-chinese-taoist-robes/costume-elem__}{,{1-$$__lazy-wildcards/subject/costume/zombie-jiangshi-chinese-taoist-robes/style__}|},__lazy-wildcards/subject/env-elem/yin_yang/prompts__
-        costume-ethnicity:
-          - >-
-            (Jiangshi:1.4),chinese clothes,china dress,taoist robes,celestial being uniform
-        costume-wings:
-          - (mechanical wings)
-          - |-
-            (giant wings:1.1)
-          - detail wings
-        expressions:
-          - expressionless
-        costume-elem:
-          - wet body,see-through
-          - pale skin
-          - |-
-            (forehead mark:1.2)
-          - claws
-          - |-
-            (mecha body:1.1),detail mecha body
-          - veil
-        style:
-          - death
-      zombie-decaying:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/costume/zombie-decaying/main__{,{1-$$__lazy-wildcards/subject/costume/zombie-decaying/costume-ethnicity__}|},{1-$$__lazy-wildcards/subject/costume/zombie-decaying/costume__}{,{1-$$__lazy-wildcards/subject/costume/zombie-decaying/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume/zombie-decaying/action__}|}{,{1-$$__lazy-wildcards/subject/costume/zombie-decaying/env__}|}{,{1-$$__lazy-wildcards/subject/costume/zombie-decaying/env-bg__}|}{,{1-$$__lazy-wildcards/subject/costume/zombie-decaying/style__}|}
-        main:
-          - undead,zombie,decaying
-        costume-ethnicity:
-          - zombie girl
-          - zombie cyborg girl
-        costume:
-          - decaying flesh
-          - tattered clothes,ripped clothes
-          - disheveled hair,messy hair
-          - stitches
-          - cyberpunk prosthesis
-          - bones
-        costume-weapon:
-          - holding a teddy bear
-        action:
-          - zombie pose
-        style:
-          - cute
-          - eerie
-          - post-apocalyptic
-          - cyberware
-          - decay
-        env:
-          - zombie Meat
-        env-bg:
-          - wasteland
-          - __lazy-wildcards/subject/env-bg/graveyard/prompts__
-      # https://civitai.com/models/626038/donm-shroom-knight-sdsdxlpony?modelVersionId=699877
-      Shroom-Knight:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/costume/Shroom-Knight/main__,Shroom {1-2$$__lazy-wildcards/subject/costume/Shroom-Knight/costume-job__}{,{1-$$__lazy-wildcards/subject/costume/Shroom-Knight/costume__}|}{,{1-2$$__lazy-wildcards/subject/costume/Shroom-Knight/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume/Shroom-Knight/env__}|}{,{1-$$__lazy-wildcards/subject/costume/Shroom-Knight/style__}|}
-        main:
-          - DonM5hr00mKn1gh7
-        costume-job:
-          - pirate swashbuckler
-          - witch
-          - burglar
-          - inventor
-          - noble
-          - treasure hunter
-          - adventurer
-          - dragon rider
-          - enchanted armor
-          - savage
-          - monk
-          - thief
-          - pirate gunner
-          - pirate
-          - martial artist
-          - duke
-          - arcane scholar
-          - warlock
-          - wizard
-          - mercenary captain
-          - Knight
-        costume:
-          - Mushroom_Helmet
-          - Armored_Mushroom
-          - Spore_Cloak
-          - Mycelium_Armor
-        costume-weapon:
-          - Fungal_Sword
-          - Shroom_Shield
-          - >-
-            {mushroom|spore|fungus|slime}-inspired weapon
-        env:
-          - Spore_Magic
-          - Fungal_Mount
-          - large mushroom
-          - fungus-based entity
-          - slime
-        style:
-          - >-
-            {mushroom|spore|fungus|slime}-inspired {1-2$$ and $$patterns|elements|designs|texture|appearance}
-      demon_girl:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/costume/demon_girl/costume-ethnicity__{,{1-$$__lazy-wildcards/subject/costume/demon_girl/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume/demon_girl/costume-horns__}|}{,{1-$$__lazy-wildcards/subject/costume/demon_girl/style__}|}
-        costume-ethnicity:
-          - >-
-            demon girl{,demon {1-$$,demon $$horns|tail|wings|eyes}|}
-        costume-elem:
-          - head wings
-          - pointy ears
-        costume-horns:
-          - multiple horns
-          - curled horns
-          - asymmetrical horns
-        style:
-          - bat print
-      rabbit_girl:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/costume/rabbit_girl/costume-ethnicity-main__{,{1-$$__lazy-wildcards/subject/costume/rabbit_girl/costume-ethnicity__}|}{,{1-$$__lazy-wildcards/subject/costume/rabbit_girl/costume-hair__}|}{,{1-$$__lazy-wildcards/subject/costume/rabbit_girl/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume/rabbit_girl/action__}|}{,{1-$$__lazy-wildcards/subject/costume/rabbit_girl/env__}|}
-        costume-ethnicity-main:
-          - >-
-            animal ears,animal ear fluff,rabbit ears,furry female,body fur,fur collar,rabbit girl,rabbit tail
-        costume-ethnicity:
-          - red eyes,colored sclera
-          - white fur
-        costume-hair:
-          - crossed bangs
-          - lone nape hair
-          - white hair
-          - hair between eyes
-          - hair tubes
-          - twin braids
-        costume-elem:
-          - hair ornament
-          - animal nose,snout
-          - monster girl
-          - curvy
-          - sidelocks
-          - thick thighs
-          - rabbit hair ornament
-          - carrot hair ornament
-          - hair ribbon
-          - leotard
-          - leotard under clothes
-          - >-
-            fur-trimmed {1-$$,fur-trimmed $$dress|gloves}
-        action:
-          - biting,cheek biting
-          - hug
-          - sitting,head tilt
-        env:
-          - carrot
-      lizard:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/costume/lizard/costume-ethnicity-main__,{1-$$__lazy-wildcards/subject/costume/lizard/costume-ethnicity__}{,{1-$$__lazy-wildcards/subject/costume/lizard/costume-elem__}|},{1-$$__lazy-wildcards/subject/costume/lizard/costume-eyes__}{,{1-3$$__lazy-wildcards/subject/costume/lizard/costume__}|}{,{1-$$__lazy-wildcards/subject/costume/lizard/costume-hair__}|}{,{1-$$__lazy-wildcards/subject/costume/lizard/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume/lizard/env-bg__}|}{,{1-$$__lazy-wildcards/subject/costume/lizard/env-monster__}|}{,{1-$$__lazy-wildcards/subject/costume/lizard/env__}|}{,{1-$$__lazy-wildcards/subject/costume/lizard/style__}|}
-        costume-ethnicity-main:
-          - lizardman,lizard,lizardmen,lizardman \(warhammer fantasy\)
-        costume-ethnicity:
-          - scales,reptilian_skin,scaled_skin
-          - claws,sharp_claws,talons
-          - tail,reptilian_tail,long_tail,expressive_tail
-          - fangs,sharp_teeth,reptilian_teeth,carnivorous_teeth
-          - colored skin
-          - colored scales
-        costume-elem:
-          - tattoos
-          - leather
-          - pelvic curtain,loincloth
-          - __lazy-wildcards/subject/costume-elem/asymmetrical-clothes/prompts__
-          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
-          - __lazy-wildcards/subject/costume-elem/scar/prompts__
-          - muscular
-          - chest harness
-          - armor
-          - shoulder armor,pauldrons
-          - hood,hooded coat
-          - __lazy-wildcards/subject/costume-elem/bound-shackles/prompts__
-        costume-eyes:
-          - reptilian_eyes,slit_pupils
-          - yellow_eyes
-          - green_eyes
-          - red_eyes
-          - glowing eyes
-        costume:
-          - leather_spikes,spiked_leather,spiked_clothing
-          - leather_jacket,studded_choker,spiked_bracelet,band_t-shirt,combat_boots
-          - lancer
-          - mage priest
-          - warrior
-          - chief
-          - temple guard
-        costume-hair:
-          - mohawk,punk_hair,colored_mohawk,spiked_hair
-        costume-weapon:
-          - spear,polearm
-          - shield
-          - axe
-          - fishing rod
-        env:
-          - saddle
-          - __lazy-wildcards/subject/env-elem/skull/prompts__
-        env-monster:
-          - Suchosaurus,Deinosuchus,crocodiles
-          - dinosaurs
-        env-bg:
-          - decaying_buildings,graffiti
-          - swamp,wet
-          - urban_dystopia
-        style:
-          - tribal
       japanese-clothes:
         prompts:
           - >-
@@ -5504,7 +5120,7 @@ lazy-wildcards:
           - mole under eye
           - red lips
           - __lazy-wildcards/dataset/costume-accessories-base__
-          - __lazy-wildcards/subject/costume-hair/hair-bun/prompts__
+          - __lazy-wildcards/subject/costume-ethnicity-hair/hair-bun/prompts__
           - arm tattoo
           - lipstick
           - makeup
@@ -6229,7 +5845,7 @@ lazy-wildcards:
             __lazy-wildcards/subject/costume/eagle-grab-armor/costume-main__{,{1-$$__lazy-wildcards/subject/costume/eagle-grab-armor/costume-elem__}|}
         costume-main:
           - |-
-            (eagle grab armor:1.2),__lazy-wildcards/subject/costume/demon_girl/prompts__,cleavage,navel,bridal gauntlets,bridal legwear,see-through,(topgrab:1.1)
+            (eagle grab armor:1.2),__lazy-wildcards/subject/costume-ethnicity-race/demon_girl/prompts__,cleavage,navel,bridal gauntlets,bridal legwear,see-through,(topgrab:1.1)
         costume-elem:
           - __lazy-wildcards/dataset/costume-accessories-base__
           - thighhighs
@@ -6461,6 +6077,454 @@ lazy-wildcards:
           - Traditional_tattooing
           - Tebori_technique
           - hand_poked_tattoo
+    costume-ethnicity-body:
+      dark-skinned:
+        prompts:
+          - dark_skin,tan_skin,tanned skin,dark skin,dark-skinned,black-skinned,bronze skin,bronzed skin
+    costume-ethnicity-eyes:
+      # https://civitai.com/models/728222/triclops?modelVersionId=814306
+      third-eye:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-eyes/third-eye/costume-eyes-main__{,{1-$$__lazy-wildcards/subject/costume-ethnicity-eyes/third-eye/costume-eyes__}|}{0.3::,{1-$$__lazy-wildcards/subject/costume-ethnicity-eyes/third-eye/costume-elem__}|}{0.2::,{1-$$__lazy-wildcards/subject/costume-ethnicity-eyes/third-eye/style__}|}
+        costume-eyes-main:
+          - third_eye,3x3_eyes,ThirdEye,triclops
+        costume-eyes:
+          - demonic third eye
+          - fayan eyes
+          - extra_eye
+        costume-elem:
+          - forehead_mark
+          - three_eyed_species
+        style:
+          - mystic_eye
+          - supernatural
+      fayan-eyes:
+        prompts:
+          - >-
+            fayan eyes{,__lazy-wildcards/subject/costume-ethnicity-eyes/third-eye/prompts__|}{,__lazy-wildcards/subject/costume-ethnicity-eyes/fayan-eyes/env__|}
+        env:
+          - Buddhist mantra
+      cyclops:
+        prompts:
+          - >-
+            cyclops,cyclop,One eye{0.2::,__lazy-wildcards/subject/costume-ethnicity-eyes/cyclops/costume-elem__|}
+        costume-elem:
+          - monstrous_humanoid
+    costume-face:
+      ahegao:
+        prompts:
+          - Ahegao,Tongue Out,out
+    costume-ethnicity-hair:
+      hair-bun:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-ethnicity-hair/hair-bun/costume-hair-bun-main__}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-hair/hair-bun/costume-hair-bun__}|}
+        costume-hair-bun-main:
+          - hair bun
+          - bun cover
+        costume-hair-bun:
+          - double bun
+          - single hair bun
+          - cone hair bun
+    costume-ethnicity-race:
+      # https://civitai.com/models/19620/lora-anthro-cobras
+      snake-anthro_cobra:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/snake-anthro_cobra/main__,({1-$$__lazy-wildcards/subject/costume-ethnicity-race/snake-anthro_cobra/costume-ethnicity__}){,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/snake-anthro_cobra/costume__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/snake-anthro_cobra/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/snake-anthro_cobra/env__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/snake-anthro_cobra/style__}|}
+        main:
+          - anthro_cobra,furrycobra snake,snake_humanoid,snake girl
+        costume-ethnicity:
+          - serpent-like head
+          - >-
+            serpent-like hood,snake hood{,hooded_cobra,expanded_hood|}
+          - scaled skin
+          - slit_pupils,reptilian_eyes,snake eyes
+          - sharp_teeth
+          - snake_tail,elongated_tail
+          - snake body
+          - large eyes
+          - forked tongue
+          - colored sclera
+        costume:
+          - jewelry
+          - plunging neckline,cleavage
+          - very long hair
+          - pelvic curtain
+          - revealing clothes
+          - eyeshadow
+          - snake_hair_ornament
+          - >-
+            gold {1-$$,gold $$armlet|bracelet|choker|circlet}
+        costume-weapon:
+          - scepter
+        env:
+          - >-
+            {1-$$snake|giant_snake|venomous_snake|cobra \(animal\)}
+          - gem
+          - poison
+          - smile
+          - licking snake
+        style:
+          - reptilian_features
+          - threatening_appearance
+          - coiling_motion,sinuous_movement
+          - predatory_gaze
+          - predatory_feature
+          - constriction
+          - egyptian
+      # https://civitai.com/models/20872
+      plant-girl-alraune:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/plant-girl-alraune/main__,({1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant-girl-alraune/costume-ethnicity__}){,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant-girl-alraune/costume-eyes__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant-girl-alraune/costume__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant-girl-alraune/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant-girl-alraune/env__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant-girl-alraune/env-bg__}|}
+        main:
+          - |-
+            (alraune,alrauneSH:1.2),alraune_\(megami_tensei\),plant girl,upper body
+        costume-ethnicity:
+          - bell jar
+          - plant hair
+          - vines,thorns
+          - flower
+          - flower-shaped hair
+          - leaf
+        costume:
+          - breasts,navel
+          - wisteria
+          - parted lips
+          - arms at sides
+          - topless
+          - pasties
+          - long hair
+          - hair over eyes
+          - hair over breasts
+          - colored skin
+          - medium breasts
+          - open mouth
+          - pitcher plant
+          - saliva
+          - puffy sleeves
+
+          - 
+          - licking
+          - __lazy-wildcards/subject/env-elem/flower/prompts__
+          - lipstick
+          - collarbone
+          - drill hair
+          - dress
+          - lily \(flower\)
+        costume-eyes:
+          - symbol-shaped pupils
+          - heart,heart in eye
+        costume-weapon:
+          - holding staff
+        env:
+          - |-
+            (nectar:1.3)
+          - plant
+          - tentacles
+          - flower censor
+        env-bg:
+          - forest
+      bee_girl:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/bee_girl/main__{,__lazy-wildcards/subject/costume-ethnicity-race/bee_girl/costume-ethnicity__|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/bee_girl/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/bee_girl/costume__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/bee_girl/costume-mecha__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/bee_girl/costume-wings__}|}{,({1-$$__lazy-wildcards/subject/costume-ethnicity-race/bee_girl/env-bg__}:1.3)|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/bee_girl/env__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/bee_girl/style__}|}
+        main:
+          - |-
+            (bee girl:1.3),Anthro_Bee
+        costume:
+          - abdomen tail
+          - antennae
+          - striped body
+          - honeycomb_ornament
+          - bee costume
+          - >-
+            bee {1-$$,bee $$exoskeletons|antennae|abdomen tail}
+        costume-mecha:
+          - >-
+            mechanical {1-$$,mechanical $$parts|bee}
+          - Bee_Mechanic_Girl
+          - mechanic suit
+        costume-ethnicity:
+          - queen bee
+          - worker bee
+          - soldier bees
+        costume-wings:
+          - bee wings
+        costume-weapon:
+          - holding sign
+          - >-
+            holding {honeycomb_\(object\)|honeypot|beehive}
+        style:
+          - Beehive_Mechanics
+          - honeycomb_\(pattern\)
+        env:
+          - >-
+            {1-$$honey|honey dipper|honeypot}
+          - larvae
+          - beehive integrated with mechanical elements
+          - gears
+          - machinery
+          - amber \(gemstone\)
+          - honeycomb_\(object\)
+          - >-
+            surrounded by {__lazy-wildcards/subject/costume-ethnicity-race/bee_girl/costume-ethnicity__|bee}s
+        env-bg:
+          - Beehive background
+          - complex honeycomb background
+          - Bee_Nest background
+          - hexagonal wax cells background
+      zombie-jiangshi-chinese-taoist-robes:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/zombie-jiangshi-chinese-taoist-robes/costume-ethnicity__{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-jiangshi-chinese-taoist-robes/costume-wings__}|},{1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-jiangshi-chinese-taoist-robes/costume-elem__}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-jiangshi-chinese-taoist-robes/style__}|},__lazy-wildcards/subject/env-elem/yin_yang/prompts__
+        costume-ethnicity:
+          - >-
+            (Jiangshi:1.4),chinese clothes,china dress,taoist robes,celestial being uniform
+        costume-wings:
+          - (mechanical wings)
+          - |-
+            (giant wings:1.1)
+          - detail wings
+        expressions:
+          - expressionless
+        costume-elem:
+          - wet body,see-through
+          - pale skin
+          - |-
+            (forehead mark:1.2)
+          - claws
+          - |-
+            (mecha body:1.1),detail mecha body
+          - veil
+        style:
+          - death
+      zombie-decaying:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/zombie-decaying/main__{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-decaying/costume-ethnicity__}|},{1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-decaying/costume__}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-decaying/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-decaying/action__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-decaying/env__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-decaying/env-bg__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-decaying/style__}|}
+        main:
+          - undead,zombie,decaying
+        costume-ethnicity:
+          - zombie girl
+          - zombie cyborg girl
+        costume:
+          - decaying flesh
+          - tattered clothes,ripped clothes
+          - disheveled hair,messy hair
+          - stitches
+          - cyberpunk prosthesis
+          - bones
+        costume-weapon:
+          - holding a teddy bear
+        action:
+          - zombie pose
+        style:
+          - cute
+          - eerie
+          - post-apocalyptic
+          - cyberware
+          - decay
+        env:
+          - zombie Meat
+        env-bg:
+          - wasteland
+          - __lazy-wildcards/subject/env-bg/graveyard/prompts__
+      # https://civitai.com/models/626038/donm-shroom-knight-sdsdxlpony?modelVersionId=699877
+      Shroom-Knight:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/Shroom-Knight/main__,Shroom {1-2$$__lazy-wildcards/subject/costume-ethnicity-race/Shroom-Knight/costume-job__}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/Shroom-Knight/costume__}|}{,{1-2$$__lazy-wildcards/subject/costume-ethnicity-race/Shroom-Knight/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/Shroom-Knight/env__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/Shroom-Knight/style__}|}
+        main:
+          - DonM5hr00mKn1gh7
+        costume-job:
+          - pirate swashbuckler
+          - witch
+          - burglar
+          - inventor
+          - noble
+          - treasure hunter
+          - adventurer
+          - dragon rider
+          - enchanted armor
+          - savage
+          - monk
+          - thief
+          - pirate gunner
+          - pirate
+          - martial artist
+          - duke
+          - arcane scholar
+          - warlock
+          - wizard
+          - mercenary captain
+          - Knight
+        costume:
+          - Mushroom_Helmet
+          - Armored_Mushroom
+          - Spore_Cloak
+          - Mycelium_Armor
+        costume-weapon:
+          - Fungal_Sword
+          - Shroom_Shield
+          - >-
+            {mushroom|spore|fungus|slime}-inspired weapon
+        env:
+          - Spore_Magic
+          - Fungal_Mount
+          - large mushroom
+          - fungus-based entity
+          - slime
+        style:
+          - >-
+            {mushroom|spore|fungus|slime}-inspired {1-2$$ and $$patterns|elements|designs|texture|appearance}
+      demon_girl:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/demon_girl/costume-ethnicity__{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/demon_girl/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/demon_girl/costume-horns__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/demon_girl/style__}|}
+        costume-ethnicity:
+          - >-
+            demon girl{,demon {1-$$,demon $$horns|tail|wings|eyes}|}
+        costume-elem:
+          - head wings
+          - pointy ears
+        costume-horns:
+          - multiple horns
+          - curled horns
+          - asymmetrical horns
+        style:
+          - bat print
+      rabbit_girl:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/rabbit_girl/costume-ethnicity-main__{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/rabbit_girl/costume-ethnicity__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/rabbit_girl/costume-hair__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/rabbit_girl/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/rabbit_girl/action__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/rabbit_girl/env__}|}
+        costume-ethnicity-main:
+          - >-
+            animal ears,animal ear fluff,rabbit ears,furry female,body fur,fur collar,rabbit girl,rabbit tail
+        costume-ethnicity:
+          - red eyes,colored sclera
+          - white fur
+        costume-hair:
+          - crossed bangs
+          - lone nape hair
+          - white hair
+          - hair between eyes
+          - hair tubes
+          - twin braids
+        costume-elem:
+          - hair ornament
+          - animal nose,snout
+          - monster girl
+          - curvy
+          - sidelocks
+          - thick thighs
+          - rabbit hair ornament
+          - carrot hair ornament
+          - hair ribbon
+          - leotard
+          - leotard under clothes
+          - >-
+            fur-trimmed {1-$$,fur-trimmed $$dress|gloves}
+        action:
+          - biting,cheek biting
+          - hug
+          - sitting,head tilt
+        env:
+          - carrot
+      lizard:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-ethnicity-main__,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-ethnicity__}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-elem__}|},{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-eyes__}{,{1-3$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-hair__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/env-bg__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/env-monster__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/env__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/style__}|}
+        costume-ethnicity-main:
+          - lizardman,lizard,lizardmen,lizardman \(warhammer fantasy\)
+        costume-ethnicity:
+          - scales,reptilian_skin,scaled_skin
+          - claws,sharp_claws,talons
+          - tail,reptilian_tail,long_tail,expressive_tail
+          - fangs,sharp_teeth,reptilian_teeth,carnivorous_teeth
+          - colored skin
+          - colored scales
+        costume-elem:
+          - tattoos
+          - leather
+          - pelvic curtain,loincloth
+          - __lazy-wildcards/subject/costume-elem/asymmetrical-clothes/prompts__
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - __lazy-wildcards/subject/costume-elem/scar/prompts__
+          - muscular
+          - chest harness
+          - armor
+          - shoulder armor,pauldrons
+          - hood,hooded coat
+          - __lazy-wildcards/subject/costume-elem/bound-shackles/prompts__
+        costume-eyes:
+          - reptilian_eyes,slit_pupils
+          - yellow_eyes
+          - green_eyes
+          - red_eyes
+          - glowing eyes
+        costume:
+          - leather_spikes,spiked_leather,spiked_clothing
+          - leather_jacket,studded_choker,spiked_bracelet,band_t-shirt,combat_boots
+          - lancer
+          - mage priest
+          - warrior
+          - chief
+          - temple guard
+        costume-hair:
+          - mohawk,punk_hair,colored_mohawk,spiked_hair
+        costume-weapon:
+          - spear,polearm
+          - shield
+          - axe
+          - fishing rod
+        env:
+          - saddle
+          - __lazy-wildcards/subject/env-elem/skull/prompts__
+        env-monster:
+          - Suchosaurus,Deinosuchus,crocodiles
+          - dinosaurs
+        env-bg:
+          - decaying_buildings,graffiti
+          - swamp,wet
+          - urban_dystopia
+        style:
+          - tribal
+      # 白羊宮，牡羊座
+      aries:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/aries/main__,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/aries/costume__}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/aries/style__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/aries/env__}|}
+        prompts-extra:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/aries/prompts__,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/aries/env-bg__}
+        style:
+          - sheep girl
+          - sheep ears
+          - year of the goat
+        main:
+          - Ariespunk,ARSPUNK,sheep horns,sheep tail,wavy hair,Pointy ears,barefoot
+        costume:
+          - bandage,dress,navel,gloves
+          - sheep costume
+        env:
+          - fluffy
+          - fur
+          - stuffed sheep
+          - goat
+          - wool
+          - lamb
+          - sheep horns
+          - sheep tail
+          - animal
+          - horns
+        env-bg:
+          - forest
+      elf:
+        prompts:
+          - a beautiful elvish girl
     env-bg-architectural:
       agricultural_zone:
         prompts:
@@ -7805,7 +7869,7 @@ lazy-wildcards:
             Claudia Doumit,sharp features,full lips{,__lazy-wildcards/cosplay-real/Australian/Claudia_Doumit/costume-ethnicity__|}
         costume-ethnicity:
           - >-
-            dark brown hair,(olive skin),brown eyes,medium hair{,(__lazy-wildcards/subject/costume-body/dark-skinned/prompts__:1.2)|}
+            dark brown hair,(olive skin),brown eyes,medium hair{,(__lazy-wildcards/subject/costume-ethnicity-body/dark-skinned/prompts__:1.2)|}
   cosplay-char:
     fate:
       # 源賴光
@@ -8167,7 +8231,7 @@ lazy-wildcards:
       louise:
         prompts:
           - long hair,black hair,ribbon,brown eyes,hair bow,boots,sleeveless,black gloves,sailor collar,white dress,white footwear,white bow,single glove,sailor dress
-          - black hair,yellow eyes,__lazy-wildcards/subject/costume-body/dark-skinned/prompts__,blunt bangs,makeup,glowing,lipstick,glowing eyes,science fiction
+          - black hair,yellow eyes,__lazy-wildcards/subject/costume-ethnicity-body/dark-skinned/prompts__,blunt bangs,makeup,glowing,lipstick,glowing eyes,science fiction
     onmyoji:
       suzuka_gozen:
         prompts:
@@ -8281,7 +8345,7 @@ lazy-wildcards:
           - holding
           - toeless footwear
           - dress
-          - __lazy-wildcards/subject/costume-hair/hair-bun/prompts__
+          - __lazy-wildcards/subject/costume-ethnicity-hair/hair-bun/prompts__
           - toenail polish
           - nail polish
           - hair bow
@@ -9063,7 +9127,7 @@ lazy-wildcards:
           - long hair
           - green eyes
           - green hair
-          - __lazy-wildcards/subject/costume-body/dark-skinned/prompts__
+          - __lazy-wildcards/subject/costume-ethnicity-body/dark-skinned/prompts__
         ethnicity-hair:
           - plant hair,hair flower
         costume:
@@ -9395,7 +9459,7 @@ lazy-wildcards:
             rakshata_chawla,code geass,ANIME_Rakshata_Chawla_aiwaifu69,aiwaifu69
         costume-ethnicity:
           - >-
-            blonde hair,indian,green eyes,long hair,facial mark,forehead mark,__lazy-wildcards/subject/costume-body/dark-skinned/prompts__
+            blonde hair,indian,green eyes,long hair,facial mark,forehead mark,__lazy-wildcards/subject/costume-ethnicity-body/dark-skinned/prompts__
         costume:
           - white lab coat,long sleeves,red shirt,collared shirt
           - arabian clothes,dress,harem outfit,partially fingerless gloves,veil
@@ -9659,7 +9723,7 @@ lazy-wildcards:
           - >-
             bikini{,bikini top only|},swimsuit
           - cleavage
-          - __lazy-wildcards/subject/costume-body/dark-skinned/prompts__
+          - __lazy-wildcards/subject/costume-ethnicity-body/dark-skinned/prompts__
           - fishnet thighhighs
           - handbag
           - lipstick
@@ -10584,7 +10648,7 @@ lazy-wildcards:
         main-trigger-words:
           - EarthGoddessMaiaYs,Earth Goddess Maia,ys
         costume-ethnicity:
-          - very long hair,blue hair,white drill hair,drill_curls,white wooden_hair,blue lips,__lazy-wildcards/subject/costume-body/dark-skinned/prompts__,leafy_hair,hair flower,blue orb
+          - very long hair,blue hair,white drill hair,drill_curls,white wooden_hair,blue lips,__lazy-wildcards/subject/costume-ethnicity-body/dark-skinned/prompts__,leafy_hair,hair flower,blue orb
         costume-elem:
           - hair ornament
           - cleavage
@@ -10728,6 +10792,101 @@ lazy-wildcards:
           - queerat
           - Monster Rats
           - naked mole rats
+      # https://danbooru.donmai.us/posts?tags=akizuki_maria+&z=5
+      # https://civitai.com/models/732177/maria-akizuki-shin-sekai-yori?modelVersionId=818762
+      akizuki_maria:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/shin_sekai_yori/akizuki_maria/main-trigger-words__,__lazy-wildcards/cosplay-char/shin_sekai_yori/akizuki_maria/costume-ethnicity-main__,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/akizuki_maria/costume-ethnicity__}{,{1-2$$__lazy-wildcards/cosplay-char/shin_sekai_yori/akizuki_maria/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/akizuki_maria/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/akizuki_maria/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/expressions__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env-bg__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env-monster__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/style__}|}
+        main-trigger-words:
+          - akizuki_maria,Maria Akizuki,Shinsekai,shin_sekai_yori
+        costume-ethnicity-main:
+          - blue eyes,blunt bangs,red hair
+        costume-ethnicity:
+          - long hair,very long hair
+          - braid,twin braids,hair over shoulder
+          - braid,sidelocks,hair bun,double bun,hair tubes
+        costume:
+          - uniform,school uniform,short sleeves,bow,purple bow,pleated skirt,purple skirt
+          - hat,flower,sun hat,hat flower,yellow belt,blouse,long sleeves,rolled up sleeves
+          - yellow belt,blouse,long sleeves,rolled up sleeves,boots,high waist pants,knee boots,brown footwear
+          - hat,sun hat,hat flower,yellow belt,blouse,long sleeves,rolled up sleeves,boots,high waist pants,knee boots,brown footwear
+          - japanese clothes,kimono
+        costume-elem:
+          - side-tie panties
+          - pantyhose pull
+          - barefoot
+          - hair ornament,flower
+        costume-weapon:
+          - hand fan
+    # 《Tenchi Muyo! War on Geminar》（日文标题: 異世界の聖騎士物語）
+    Tenchi_Muyo:
+      # https://civitai.com/models/724786/doll-or-tenchi-muyo-war-on-geminar?modelVersionId=810464
+      # https://civitai.com/models/154060/doll-third-tenchi-muyo-war-on-geminar?modelVersionId=172599
+      doll_third:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/Tenchi_Muyo/doll_third/main-trigger-words__,{1-$$__lazy-wildcards/cosplay-char/Tenchi_Muyo/doll_third/costume-ethnicity__}{,__lazy-wildcards/cosplay-char/Tenchi_Muyo/doll_third/costume__|}{,{1-$$__lazy-wildcards/cosplay-char/Tenchi_Muyo/doll_third/costume-hair__}|}{,{1-$$__lazy-wildcards/cosplay-char/Tenchi_Muyo/doll_third/env-bg__}|}{,{1-$$__lazy-wildcards/cosplay-char/Tenchi_Muyo/doll_third/style__}|}
+        main-trigger-words:
+          - |-
+            doll_third,doll_\(isekai_no_seikishi_monogatari\),Tenchi Muyo! War on Geminars,long hair
+        costume-ethnicity:
+          - |-
+            doll_form,Short_stature,purple eyes,(green hair,long bang,bangs_covering_eyes:1.2),hair ornament,pale_skin
+          - mexiah_form,Tall_figure,tanned_skin,well_endowed,green_eyes,pink_hair
+        costume:
+          - teacher_uniform,professional_attire
+        costume-hair:
+          - left_shoulder_hair
+          - gravity_defying_hair,flared_hair,voluminous_hair,side_out_hair,Curled_hair
+        env-bg:
+          - medieval_architecture,futuristic_architecture
+          - castle
+          - palace
+          - academy
+          - temple
+          - sanctuary
+          - mecha_hangar
+          - battle_arena
+          - floating_island
+          - magic_runes,ancient_ruins
+          - fantasy_forest
+        style:
+          - magic_technology
+          - royalty
+          - military_academy
+    Slayers:
+      # https://civitai.com/models/714293/naga-the-serpent-or-slayers-or-3-attires?modelVersionId=798811
+      naga_the_serpent:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/Slayers/naga_the_serpent/main-trigger-words__,{1-$$__lazy-wildcards/cosplay-char/Slayers/naga_the_serpent/costume-ethnicity__}{,__lazy-wildcards/cosplay-char/Slayers/naga_the_serpent/costume__|}{,{1-$$__lazy-wildcards/cosplay-char/Slayers/naga_the_serpent/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/Slayers/naga_the_serpent/action-pose__}|}{,{1-$$__lazy-wildcards/cosplay-char/Slayers/naga_the_serpent/style__}|}
+        main-trigger-words:
+          - naga_the_serpent,naga the serpent \(cosplay\),Slayers
+        costume-ethnicity:
+          - blue eyes,purple hair,long hair,large breasts,antenna hair,bangs,hair intakes,jewelry,lipstick,hair intakes
+        costume:
+          - Bikini_Naga_ownwaifu,swimsuit,cleavage,navel,strapless bikini,bra,collarbone,covered nipples,bare shoulders,purple bikini,o-ring bikini,purple bra
+          - BikiniArmorCape_Naga_ownwaifu,cape,cleavage,thigh strap,navel,revealing clothes,shoulder armor,shoulder spikes,gloves,spikes,black gloves,armor,necklace,pauldrons,sheath,covered nipples,skull,thighs,bikini armor
+          - NSFW_Naga_ownwaifu,nude,navel
+        costume-elem:
+          - __lazy-wildcards/dataset/costume-accessories-base__
+          - cleavage,navel,midriff
+          - cape
+          - shoulder spikes,spiked pauldrons
+          - spiked armor
+          - highleg bikini
+        action-pose:
+          - ojou-sama pose
+          - hand on own chest
+          - yawning
+        style:
+          - 1990s \(style\),retro artstyle
+    # https://danbooru.donmai.us/posts?tags=3x3_eyes+&z=5
+    3x3_eyes:
+      ayanokouji_pai:
+        prompts:
+          - ayanokouji pai,parvati iv,ayanokouji pai \(cosplay\),parvati iv \(cosplay\),3x3_eyes,__lazy-wildcards/subject/costume-ethnicity-eyes/third-eye/costume-eyes-main__
     im-the-evil-lord-of-an-intergalactic-empire:
       Chengshi_Sera_Tourei:
         prompts:
