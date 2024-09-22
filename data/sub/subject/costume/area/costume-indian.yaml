@@ -1,0 +1,27 @@
+lazy-wildcards:
+  subject:
+    costume:
+      saree:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/saree/costume-main__)
+            {, {1-$$__lazy-wildcards/subject/costume/saree/costume-elem__}|}
+        costume-main:
+          - saree
+        costume-elem:
+          - Traditional Indian clothing
+      # https://civitai.com/models/763755/extreme-low-rise-saree?modelVersionId=854253
+      saree-low:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/saree-low/costume-main__)
+            , __lazy-wildcards/subject/costume/saree/prompts__
+            {, {1-$$__lazy-wildcards/subject/costume/saree-low/costume-elem__}|}
+        costume-main:
+          - Ultra Low rise Saree, cleavage, navel
+        costume-elem:
+          - exposed_hips
+          - bare_back
+          - navel_focus
+          - low_rise
+          - midriff

@@ -45,4 +45,32 @@ lazy-wildcards:
         style-elem:
           - cyberpunk, 1980s
           - motion blur
+      # https://civitai.com/models/269592/fractal-geometry-style-fluxsdxl15?modelVersionId=314363
+      Fractal_Geometry:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-elem/Fractal_Geometry/style-main__
+            {, {1-$$__lazy-wildcards/subject/style-elem/Fractal_Geometry/style__}|}
+            {0.2::, {1-$$__lazy-wildcards/subject/style-elem/Fractal_Geometry/style-elem__}|}
+            {0.2::, {1-$$__lazy-wildcards/subject/style-elem/Fractal_Geometry/env-bg__}|}
+        style-main:
+          - >-
+            (YhnrFractal1, ral-frctlgmtry{:{1.2|1.3|1.4}|}), Fractal Geometry Style
+        style:
+          - meahophontron of colorful ral-frctlgmtry
+        style-elem:
+          - colorful fractal
+          - fractal chaos
+          - abstract art
+          - mandelbrot set
+          - inside a fractal
+          - fractal zoom
+          - spirals
+          - fractal object
+          - fractal world
+          - vivid colors
+          - sexy
+          - sensual
+        env-bg:
+          - fractal landscape
 

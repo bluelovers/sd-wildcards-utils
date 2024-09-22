@@ -51,21 +51,6 @@ lazy-wildcards:
           - tower
           - torii
           - watercraft
-      station:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-bg-architectural/station/main-types/*__,
-            {1-$$__lazy-wildcards/subject/env-bg-architectural/station/env__},
-            {1-$$__lazy-wildcards/subject/env-bg-architectural/station/env-bg__}
-        main-types:
-          # 地下鐵 / 捷運
-          metro:
-            - Subway, Metro
-        env:
-          - window
-        env-bg:
-          - subway interior
-          - carriage
       ruin-decrepit-center:
         prompts:
           - >-

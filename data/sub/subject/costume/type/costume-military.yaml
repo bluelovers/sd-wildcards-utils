@@ -1,0 +1,28 @@
+lazy-wildcards:
+  subject:
+    costume:
+      # https://civitai.com/models/768688/military-uniform-of-chinese-red-army?modelVersionId=859737
+      Military_Uniform_of_Chinese_Red_Army:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/Military_Uniform_of_Chinese_Red_Army/costume-main__
+            , ({1-$$__lazy-wildcards/subject/costume/Military_Uniform_of_Chinese_Red_Army/costume__})
+            {, {1-$$__lazy-wildcards/subject/costume/Military_Uniform_of_Chinese_Red_Army/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/Military_Uniform_of_Chinese_Red_Army/action-pose__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/Military_Uniform_of_Chinese_Red_Army/costume-weapon__}|}
+        costume-main:
+          - (redarmy), military uniform
+        costume:
+          - (military cap, red star on cap, red_star)
+          - belt, shirt
+          - red collar badge
+        costume-elem:
+          - pants
+          - red_armband
+          - military_boots
+        action-pose:
+          - salute, standing
+        costume-weapon:
+          - holding gun
+          - rifle and bayonet
+

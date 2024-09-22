@@ -157,4 +157,30 @@ lazy-wildcards:
           - secret_society
           - creepy
           - unsettling
+      # https://civitai.com/models/593545/depressive-machines-csdln-sd-15-ponyxl-flux?modelVersionId=857190
+      Depressive_Machines:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-punk/Depressive_Machines/env-bg__
+            {,{1-$$__lazy-wildcards/subject/env-elem-punk/Depressive_Machines/env__}|}
+            {,{1-$$__lazy-wildcards/subject/env-elem-punk/Depressive_Machines/style__}|}
+        env-bg:
+          - >-
+            (Depressive Machines, televisions everywhere, cables everywhere{:{1.2|1.3|1.4}|})
+        env:
+          - >-
+            {1-$$television_screens|glitchy_screens|broken_monitors}
+          - >-
+            {1-$$rusty_machinery|mechanical_decay}
+          - overgrown_wires
+          - heavy_rain_outside
+          - abandoned_factory
+        style:
+          - dim_lighting
+          - industrial_horror
+          - urban_decay
+          - mechanical_sentience
+          - steampunk_gloom
+          - depressive_aura
+          - __lazy-wildcards/utils/color-base__ lighting
 

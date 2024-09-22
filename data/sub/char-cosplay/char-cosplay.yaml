@@ -464,8 +464,7 @@ lazy-wildcards:
           - tight clothing
           - white panty
           - tight panty
-          - >-
-            {1-$$holding|holding smoking pipe|smoking pipe|smoke|kiseru}
+          - __lazy-wildcards/subject/costume-weapon/smoking_pipe/prompts__
           - hair bow
           - jewelry
           - >-
@@ -3456,4 +3455,46 @@ lazy-wildcards:
       ayanokouji_pai:
         prompts:
           - ayanokouji pai, parvati iv, ayanokouji pai \(cosplay\), parvati iv \(cosplay\), 3x3_eyes, __lazy-wildcards/subject/costume-ethnicity-eyes/third-eye/costume-eyes-main__
+    durarara:
+      # https://civitai.com/models/20614/celty-sturluson-durarara-pdxl-update?modelVersionId=24527
+      celty_sturluson:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/durarara/celty_sturluson/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/durarara/celty_sturluson/costume-headwear__
+            {, {__lazy-wildcards/cosplay-char/durarara/celty_sturluson/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/durarara/celty_sturluson/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/durarara/celty_sturluson/action-pose__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/durarara/celty_sturluson/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/durarara/celty_sturluson/env__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/durarara/celty_sturluson/style__}|}
+        main-trigger-words:
+          - celty, celty sturluson, celty sturluson \(cosplay\), durarara!!
+        costume-headwear:
+          - (animal helmet, motorcycle helmet, yellow helmet, cat ear helmet, black smoke)
+        costume:
+          - black bodysuit, black biker clothes, black bikesuit, black leather
+        costume-elem:
+          - (dullahan, headless, black smoke)
+          - (cat ears), animal ears, fake animal ears
+          - helmet
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-elem/costume-breasts/costume-breasts-out__}
+          - collarbone
+          - partially unzipped
+          - clothed sex
+          - sweat
+        action-pose:
+          - arms up
+          - facing away
+        costume-weapon:
+          - holding scythe
+          - holding phone, smartphone
+        env:
+          - casting couch
+          - bed sheet
+          - on roof
+        style:
+          - darkness
+          - from side
 

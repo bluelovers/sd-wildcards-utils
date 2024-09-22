@@ -1,0 +1,27 @@
+lazy-wildcards:
+  cosplay-char:
+    sky-freedom:
+      aimi:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/sky-freedom/aimi/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/sky-freedom/aimi/costume-ethnicity__
+            {, __lazy-wildcards/cosplay-char/sky-freedom/aimi/costume__|}
+            {, {1-$$__lazy-wildcards/cosplay-char/sky-freedom/aimi/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/sky-freedom/aimi/costume-weapon__}|}
+        main-trigger-words:
+          - aimi, aimi_\(sky-freedom\), sky-freedom
+        costume-ethnicity:
+          - purple eyes, long hair, black hair, blunt bangs, sidelocks in a hime cut, (mole under mouth:1.2)
+        costume:
+          - __lazy-wildcards/subject/costume-ethnicity-race/demon_girl/prompts__
+          - white shirt, black bow, black pleated skirt
+          - ribbed shirt, ribbed sweater, sleeveless, sleeveless sweater, sweater
+          - swimsuit, thigh gap
+          - off-shoulder shirt, oversized_clothes
+        costume-elem:
+          - (surgical mask, mouth mask)
+          - bunching hair, collarbone
+          - large breasts
+        costume-weapon:
+          - (geforce_rtx_3090_ti, graphics card)

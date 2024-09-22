@@ -1,97 +1,6 @@
 lazy-wildcards:
   subject:
     costume:
-      japanese-clothes:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/costume/japanese-clothes/costume-types/*__
-            {,__lazy-wildcards/subject/costume/japanese-clothes/style__|}
-        costume-types:
-          type-oiran:
-            - (oiran, hair ornament, japanese clothes, kimono, geta)
-        style:
-          - floral print
-          - off shoulder
-          - geta
-      china-dress:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume/china-dress/main__)
-            {,{1-$$__lazy-wildcards/subject/costume/china-dress/costume-elem__}|}
-            {,{1-$$__lazy-wildcards/subject/costume/china-dress/costume-sleeves__}|}
-            {,{1-$$__lazy-wildcards/subject/costume/china-dress/costume-makeup__}|}
-            {,{1-$$__lazy-wildcards/subject/costume/china-dress/env__}|}
-        prompts-extra:
-          - >-
-            __lazy-wildcards/subject/costume/china-dress/prompts__
-            {,__lazy-wildcards/subject/costume/china-dress/action__|}
-        main:
-          - (old-shanghaibeauty, old shanghai beauty, china dress, chinese clothes), 舊上海美人
-        costume-elem:
-          - pelvic curtain, pelvic curtain dress
-          - multiple straps around the waist
-          - floral print
-          - thighhighs
-          - two-sided dress
-          - two-sided fabric
-          - dragon print
-          - cleavage
-          - cleavage cutout
-          - garter belt
-          - >-
-            {1-$$pelvic curtain|pelvic curtain lift}
-          - gold trim
-          - side slit
-          - breast curtains
-          - no panties
-          - spiked bracelet
-        costume-sleeves:
-          - sleeveless dress
-          - detached sleeves
-          - sleeves past wrists
-          - bare shoulders
-          - short sleeves
-          - wide sleeves
-          - long sleeves
-        costume-makeup:
-          - mole under eye
-          - red lips
-          - __lazy-wildcards/dataset/costume-accessories-base__
-          - __lazy-wildcards/subject/costume-ethnicity-hair/hair-bun/prompts__
-          - arm tattoo
-          - lipstick
-          - makeup
-          - gold hairband
-          - sidelocks
-          - hair flower
-        action:
-          - chair, sitting
-        env:
-          - instrument
-          - flower
-      korean-clothes:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume/korean-clothes/main__)
-            {,{1-$$__lazy-wildcards/subject/costume/korean-clothes/style__}|}
-            {,{1-$$__lazy-wildcards/subject/costume/korean-clothes/makeup__}|}
-            {,{1-$$__lazy-wildcards/subject/costume/korean-clothes/env__}|}
-        main:
-          - hanbok, korean clothes, clothed underbust, hanfu
-        makeup:
-          - red lips
-          - lipstick
-        style:
-          - closed mouth
-          - long sleeves
-          - traditional clothes
-        env:
-          - ribbon
-          - red ribbon
-      mixin-asian-clothes:
-        prompts:
-          - >-
-            {2-$$__lazy-wildcards/subject/costume/japanese-clothes/prompts__|__lazy-wildcards/subject/costume/china-dress/prompts__|__lazy-wildcards/subject/costume/korean-clothes/prompts__}
       office-lady:
         prompts:
           - office lady, zhiyezhuang, formal, collared shirt, vest, pencil skirt, pantyhose
@@ -960,4 +869,18 @@ lazy-wildcards:
         prompts:
           - >-
             hinatazaka46 10th single uniform, olive green shirt, white collar
+      sweater:
+        prompts:
+          - >-
+            sweater
+            {,{1-$$__lazy-wildcards/subject/costume/sweater/costume__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/sweater/costume-elem__}|}
+        costume:
+          - ribbed shirt, ribbed sweater
+          - sleeveless, sleeveless sweater
+          - turtleneck sweater
+          - virgin killer sweater
+        costume-elem:
+          - navel
+          - torn sweater
 

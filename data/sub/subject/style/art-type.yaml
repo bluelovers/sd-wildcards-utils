@@ -184,4 +184,58 @@ lazy-wildcards:
           - floral_design
           - feminine_silhouette
           - flowing_lines
+      # https://civitai.com/models/749593/pixrochar?modelVersionId=838276
+      pixel-sprite-sheet:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-art-type/pixel-sprite-sheet/style-main__{0.3:::{1.2|1.3|1.4}|})
+            {,{1-$$__lazy-wildcards/subject/style-art-type/pixel-sprite-sheet/style__}|}
+            {0.3::,{1-$$__lazy-wildcards/subject/style-art-type/pixel-sprite-sheet/costume__}|}
+        style-main:
+          - >-
+            pixel art
+            , rochar, RoSprite
+            , Ragnarok online Art style,
+            , persistent character sprite sheet
+        costume:
+          - Feminine ninja, fishnet, fur, mask
+          - Feminine mummy
+          - Feminine acolyte
+        style:
+          - vivid color
+          - exaggerated body proportion
+          - front view and back view
+          - battle stand
+      murals:
+        prompts:
+          - >-
+            (intricate murals, MuralBG{0.3:::{1.2|1.3|1.4}|})
+      # https://civitai.com/models/779878/pre-historic-cave-paintings?modelVersionId=872200
+      cave_paintings:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/style-main__}
+            {,{1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/style__}|}
+            {0.3::,{1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/env-monster__}|}
+            {,{1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/env-bg__}|}
+        style-main:
+          - (cave paintings, cave art{0.3:::{1.2|1.3|1.4}|}), rock art
+        env-monster:
+          - prehistoric_animal
+        env-bg:
+          - cave_interior
+          - ritual_space
+          - sacred_cave
+          - Lascaux Cave, France
+          - Altamira Cave, Spain
+          - Chauvet Cave, France
+          - Sulawesi Caves, Indonesia
+        style:
+          - Pre-historic Cave Paintings
+          - cave_art_animal, animal_painting
+          - hunting_scene, primitive_hunting, prehistoric_hunter
+          - cave_human_figure, primitive_human, shaman_painting
+          - prehistoric_symbol, geometric_pattern, cave_art_abstract
+          - handprint_art, prehistoric_handprint, cave_handprint
+          - natural_pigment, ochre_painting, charcoal_painting
 

@@ -35,3 +35,12 @@ lazy-wildcards:
           - priest_hat, religious_headwear
         costume-elem:
           - metal headwear
+      mask_mouth:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/costume-headwear/mask_mouth/costume-headwear__})
+        costume-headwear:
+          - surgical mask
+          - ninja mask
+          - mouth mask
+
