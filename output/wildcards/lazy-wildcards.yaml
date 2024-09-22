@@ -195,8 +195,6 @@ lazy-wildcards:
       - art nouveau architecture
       - korean architecture
       - large forest,enchanting forest,dense forest,lush forest,tall trees,canopy,overgrown scenery
-      - Subway,Metro
-      - Metro,carriage,subway,subway interior,window
       - rural school
       - in dungeon
       - prison cell
@@ -887,16 +885,6 @@ lazy-wildcards:
       - __mix-lazy-auto/color-anything__ latex bodysuit
       - draped white silk,cloth curtains
       - divine goddess,shiny skin
-    sweater:
-      - ribbed sweater
-      - sleeveless sweater
-      - sweater
-      - intricate clothes
-    mask:
-      mouth:
-        - ninja mask
-        - surgical mask
-        - mouth mask
   utils:
     interior-style-anything:
       - __mix-lazy-auto/interior-style-anything__
@@ -1254,6 +1242,53 @@ lazy-wildcards:
           - floral_design
           - feminine_silhouette
           - flowing_lines
+      # https://civitai.com/models/749593/pixrochar?modelVersionId=838276
+      pixel-sprite-sheet:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-art-type/pixel-sprite-sheet/style-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/style-art-type/pixel-sprite-sheet/style__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-art-type/pixel-sprite-sheet/costume__}|}
+        style-main:
+          - >-
+            pixel art,rochar,RoSprite,Ragnarok online Art style,persistent character sprite sheet
+        costume:
+          - Feminine ninja,fishnet,fur,mask
+          - Feminine mummy
+          - Feminine acolyte
+        style:
+          - vivid color
+          - exaggerated body proportion
+          - front view and back view
+          - battle stand
+      murals:
+        prompts:
+          - >-
+            (intricate murals,MuralBG{0.3:::{1.2|1.3|1.4}|})
+      # https://civitai.com/models/779878/pre-historic-cave-paintings?modelVersionId=872200
+      cave_paintings:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/style-main__}{,{1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/style__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/env-monster__}|}{,{1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/env-bg__}|}
+        style-main:
+          - |-
+            (cave paintings,cave art{0.3:::{1.2|1.3|1.4}|}),rock art
+        env-monster:
+          - prehistoric_animal
+        env-bg:
+          - cave_interior
+          - ritual_space
+          - sacred_cave
+          - Lascaux Cave,France
+          - Altamira Cave,Spain
+          - Chauvet Cave,France
+          - Sulawesi Caves,Indonesia
+        style:
+          - Pre-historic Cave Paintings
+          - cave_art_animal,animal_painting
+          - hunting_scene,primitive_hunting,prehistoric_hunter
+          - cave_human_figure,primitive_human,shaman_painting
+          - prehistoric_symbol,geometric_pattern,cave_art_abstract
+          - handprint_art,prehistoric_handprint,cave_handprint
+          - natural_pigment,ochre_painting,charcoal_painting
     style-artist:
       comic:
         prompts:
@@ -1401,6 +1436,31 @@ lazy-wildcards:
         style-elem:
           - cyberpunk,1980s
           - motion blur
+      # https://civitai.com/models/269592/fractal-geometry-style-fluxsdxl15?modelVersionId=314363
+      Fractal_Geometry:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-elem/Fractal_Geometry/style-main__{,{1-$$__lazy-wildcards/subject/style-elem/Fractal_Geometry/style__}|}{0.2::,{1-$$__lazy-wildcards/subject/style-elem/Fractal_Geometry/style-elem__}|}{0.2::,{1-$$__lazy-wildcards/subject/style-elem/Fractal_Geometry/env-bg__}|}
+        style-main:
+          - >-
+            (YhnrFractal1,ral-frctlgmtry{:{1.2|1.3|1.4}|}),Fractal Geometry Style
+        style:
+          - meahophontron of colorful ral-frctlgmtry
+        style-elem:
+          - colorful fractal
+          - fractal chaos
+          - abstract art
+          - mandelbrot set
+          - inside a fractal
+          - fractal zoom
+          - spirals
+          - fractal object
+          - fractal world
+          - vivid colors
+          - sexy
+          - sensual
+        env-bg:
+          - fractal landscape
     style-elem-texture:
       iron-skin:
         prompts:
@@ -2267,7 +2327,7 @@ lazy-wildcards:
       ruins-station-train:
         prompts:
           - >-
-            abandoned train station,__lazy-wildcards/subject/env-bg-architectural/station/prompts__,__lazy-wildcards/subject/env-bg/ruins-city-common/prompts__
+            abandoned train station,__lazy-wildcards/subject/env-bg-interior/station/prompts__,__lazy-wildcards/subject/env-bg/ruins-city-common/prompts__
       dirty-street:
         prompts:
           - >-
@@ -2885,6 +2945,18 @@ lazy-wildcards:
           - __lazy-wildcards/utils/scenery-no-humans__
           - sunset_over_water
           - Japan
+      cave:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-bg/cave/env-bg-main__}{,{1-$$__lazy-wildcards/subject/env-bg/cave/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/cave/style__}|}
+        env-bg-main:
+          - cavern
+          - cave
+        env-bg:
+          - dark cavern
+          - rugged cave-like environment
+        style:
+          - spelunking,caving
       post-apocalyptic:
         prompts:
           - >-
@@ -4260,6 +4332,601 @@ lazy-wildcards:
           - secret_society
           - creepy
           - unsettling
+      # https://civitai.com/models/593545/depressive-machines-csdln-sd-15-ponyxl-flux?modelVersionId=857190
+      Depressive_Machines:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-punk/Depressive_Machines/env-bg__{,{1-$$__lazy-wildcards/subject/env-elem-punk/Depressive_Machines/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem-punk/Depressive_Machines/style__}|}
+        env-bg:
+          - >-
+            (Depressive Machines,televisions everywhere,cables everywhere{:{1.2|1.3|1.4}|})
+        env:
+          - >-
+            {1-$$television_screens|glitchy_screens|broken_monitors}
+          - >-
+            {1-$$rusty_machinery|mechanical_decay}
+          - overgrown_wires
+          - heavy_rain_outside
+          - abandoned_factory
+        style:
+          - dim_lighting
+          - industrial_horror
+          - urban_decay
+          - mechanical_sentience
+          - steampunk_gloom
+          - depressive_aura
+          - __lazy-wildcards/utils/color-base__ lighting
+    env-bg-interior:
+      station:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-interior/station/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg-interior/station/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/station/env-bg__}|}
+        env-bg-main:
+          # 地下鐵 / 捷運
+          - Subway,Metro
+        env:
+          - window
+        env-bg:
+          - subway interior
+          - carriage
+      # https://civitai.com/models/623723/subway-station-corridor-in-japan?modelVersionId=697293
+      # https://civitai.com/models/716111/japanese-underground-passage?modelVersionId=800810
+      station-subway-corridor-stairs:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-interior/station-subway-corridor-stairs/main__{,{1-$$__lazy-wildcards/subject/env-bg-interior/station-subway-corridor-stairs/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/station-subway-corridor-stairs/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/station-subway-corridor-stairs/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/station-subway-corridor-stairs/style__}|}
+        main:
+          - Subway station corridor,jpsta,train_station,on stairs,interior,indoors,UGPW
+        costume-weapon:
+          - luggage
+          - briefcase
+        style:
+          - subway station design
+          - clean_passage
+        env:
+          - tiled_walls
+          - tiled_floor
+          - ceiling
+          - public_telephone
+          - >-
+            {1-$$Signage|bilingual signs indicating directions|exits signs|facilities signs|signboard|floor_markings}
+          - >-
+            __lazy-wildcards/subject/env-elem/Vending-Machines/prompts__
+        env-bg:
+          - Subway_Corridor
+          - underground shopping areas
+          - Japan
+          - stairwell
+      # https://civitai.com/models/777396/subway-platform?modelVersionId=869446
+      subway_station_platform:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-interior/subway_station_platform/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg-interior/subway_station_platform/env-bg__}|}){,[{1-$$__lazy-wildcards/subject/env-bg-interior/subway_station_platform/env__}]|}{,[{1-$$__lazy-wildcards/subject/env-bg-interior/subway_station_platform/style__}]|}
+        env-bg-main:
+          - subway station platform
+        env-bg:
+          - station_tunnel
+          - incoming_train,train_lights
+        env:
+          - platform_edge
+          - platform_lines
+          - subway_safety_barrier
+          - platform_bench
+          - ticket_machine
+          - digital_signage
+          - vending_machine
+          - subway_advertisement,platform_poster,station_banner
+          - station_crowd,commuter,busy_station,waiting_people
+          - subway_passage,station_corridor,escalator,subway_exit
+        style:
+          - station_mural
+          - platform_art
+          - decorative_ceiling
+          - historical_station
+          - fluorescent_lighting
+          - ambient_lighting
+          - station_lighting
+          - platform_shadows
+      traditional-cjk:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-interior/traditional-cjk/main-types/*__,{1-$$__lazy-wildcards/subject/env-bg-interior/traditional-cjk/style__},{1-$$__lazy-wildcards/subject/env-bg-interior/traditional-cjk/env__},__lazy-wildcards/subject/env-bg-interior/asian-east/main__
+        main-types:
+          # 傳統日本室內設計，以榻榻米、滑動的紙門、被褥為特徵。
+          traditional_japanese_interior:
+            - traditional_japanese_interior,Traditional Japanese interior,tatami_mats,sliding_shoji_doors,futons,traditional_japanese_rooms
+          # 傳統中國室內設計，以雕刻的木家具、絲綢畫卷、精緻的花格窗為特徵。
+          traditional_chinese_interior:
+            - traditional_chinese_interior,Traditional Chinese interior,carved_wooden_furniture,silk_scrolls,intricate_lattice_windows
+          # 傳統韓國室內設計，以地暖、紙門、低矮的桌子為特徵。
+          traditional_korean_interior:
+            - traditional_korean_interior,Traditional Korean interior,ondol_heated_floors,paper_doors,low_tables,traditional_korean_houses
+        style:
+          - natural_light_diffusion
+        env:
+          - tatami
+          # 障子，以紙屏風、滑動門、自然光擴散為特徵。
+          - shoji,paper_screens,sliding_doors,sliding_shoji_doors
+          # 襖，以不透明的屏風、滑動隔板、傳統日本室內為特徵。
+          - fusuma,opaque_screens,sliding_partitions
+          # 床の間
+          - tokonoma
+          # 壁龕
+          - alcove_display
+          - decorative_scrolls
+          - flower_arrangements
+          # 韓國紙門，以傳統韓紙、木框架、滑動機制為特徵。
+          - korean_paper_doors,traditional_hanji_paper,wooden_frames,sliding_mechanism
+          - traditional_hanji_paper
+          # 溫突，以地暖、傳統韓國房屋、加熱的石地板為特徵。
+          - ondol,underfloor_heating,heated_stone_floors
+          - carved_wooden_furniture
+          - intricate_woodwork
+          - traditional_designs
+          - cultural_motifs
+          - wooden_frames
+          - sliding_mechanism
+          - opaque_screens
+          - sliding_partitions
+          - paper_screens
+          - sliding_doors
+          - futons
+          - silk_scrolls
+          - intricate_lattice_windows
+          - low_tables
+          - andcrafted_details
+          - Handcrafted details
+          - carved_panels
+          - embroidered_textiles
+          - artisan_decor
+          - ornate_furniture
+          - traditional_artifacts
+          - natural_materials
+          - >-
+            {1-$$Chinese window grilles|paper-cut for window decoration|Chinese window decoration}
+      asian-east:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-interior/asian-east/main__,{3-$$__lazy-wildcards/subject/env-bg-interior/asian-east/env__},{1-$$__lazy-wildcards/subject/env-bg-interior/asian-east/style__}{,{2-$$__lazy-wildcards/subject/env-bg-interior/asian-east/env-bg__}|}
+        main:
+          - east asian architecture,interior,indoors
+        style:
+          - psychedelic
+          - prismatic
+          - light tone
+          - Red and Dark Wood Chinese Interior
+        env:
+          - >-
+            {1-$$cylinder|cylinder in the middle}
+          - __lazy-wildcards/subject/moment/weather-mist/prompts__
+          - reflection
+          - the wooden booth
+          - >-
+            {1-$$wooden table|round table|teapot on the tray}
+          - >-
+            {1-$$big red maple tree|cherry blossoms}
+          - >-
+            {1-$$red velvet|leather couch with two pillows}
+          - >-
+            {1-$$red velvet carpet|rug}
+          - statue,dark wooden relief sculpture on the wall
+          - window,lattice windows,traditional lattice ceilings
+          - lily pad
+          - (lotus)
+          - lantern,vase,red lanterns,ribbon,lamp
+          - letterboxed
+          - Redwood furniture
+          - Mahogany Carving
+        env-bg:
+          - water
+          - cloud
+          - sky
+          - wall
+          - bridge
+          - |-
+            (wooden bridge:1.2)
+      bathroom:
+        prompts:
+          - >-
+            {99$$ with $$__lazy-wildcards/subject/env-bg-interior/bathroom/main-object__},{1-$$__lazy-wildcards/subject/env-bg-interior/bathroom/env-object__},{1-$$__lazy-wildcards/subject/env-bg-interior/bathroom/env__}{,{1-$$__lazy-wildcards/subject/env-bg-interior/bathroom/env-bg__}|}
+        main-object:
+          - bath
+          - a sink
+          - bathroom
+        env-object:
+          - toilet
+          - handrails
+          - faucet
+          - door
+          - mirror
+          - window
+        env:
+          - >-
+            {1-$$soap|soap bottle}
+        env-bg:
+          - >-
+            {1-$$tiles|tile floor|tile wall}
+      living_room:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-interior/living_room/main__,{(__lazy-wildcards/utils/interior-style-anything__),|}{1-$$__lazy-wildcards/subject/env-bg-interior/living_room/env-object__},{1-$$__lazy-wildcards/subject/env-bg-interior/living_room/env-bg__}
+        main:
+          - interior design,living room
+        env-object:
+          - sofa
+          - coffee table
+          - armchair
+          - rug
+          - lamp
+          - curtain
+          - cushion
+          - vase
+          - book
+          - stool
+          - chair
+          - shelf
+          - bar
+        env-bg:
+          - ceiling
+          - floor
+          - wall
+          - window
+      japanese-tatami:
+        prompts:
+          - >-
+            indoors,interior,traditional_japanese_interior,tatami,japanese writing,calligraphy,{1-$$__lazy-wildcards/subject/env-bg-interior/aquarium/env__}
+        env:
+          - >-
+            {1-$$sword|katana}
+          - scroll
+      aquarium:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-interior/aquarium/main__,{1-$$__lazy-wildcards/subject/env-bg-interior/aquarium/main-types/*__},{1-$$__lazy-wildcards/subject/env-bg-interior/aquarium/env__},{{1-$$__lazy-wildcards/subject/env-bg-interior/aquarium/env-bg__},|}{1-$$__lazy-wildcards/subject/env-bg-interior/aquarium/style__},{1-$$__lazy-wildcards/subject/env-bg-interior/aquarium/env-fish__}
+        main:
+          - aquarium,indoors,interior
+        main-types:
+          aquarium-tunnel:
+            - |-
+              (aquarium tunnel:1.2),underwater_tunnel
+          jellyfish_tank:
+            - jellyfish_tank,floating_jellyfish,transparent_tank,glowing_effect
+          shark_tank:
+            - shark_tank,large_aquarium
+        style:
+          - colorful_ecosystem
+          - immersive_experience
+          - panoramic_view
+          - thrilling_exhibit
+          - underwater_exhibit
+          - submerged_displays
+          - diverse_species
+        env-fish:
+          - tropical_fish
+          - predatory_fish
+          - shark
+          - >-
+            {1-$$marine_life|sea_creatures|ocean_dwellers}
+          - jellyfish
+        env:
+          - fish_tanks
+          - aquatic_exhibits
+          - decorative_aquascape
+          - aquatic_habitat
+        env-bg:
+          - >-
+            {1-$$coral_reef|vibrant_corals}
+      hotel-capsule:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-interior/hotel-capsule/main__,{1-$$__lazy-wildcards/subject/env-bg-interior/hotel-capsule/main-types/*__},{1-$$__lazy-wildcards/subject/env-bg-interior/hotel-capsule/env__}
+        main:
+          - Capsule hotel,indoors,scenery
+        main-types:
+          type-inside:
+            - television,pillow,bed
+          type-outside:
+            - hallway
+        env:
+          - glasses
+          - light
+          - wooden floor
+          - ceiling light
+      Internet_Cafes_inside:
+        prompts:
+          - Internet Cafe,cybercafe,necafe,scenery,indoors,computer,door,chair,monitor,still life,mouse (computer),desk
+      hotel-business-bedroom:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-interior/hotel-business-bedroom/main__,{1-$$__lazy-wildcards/subject/env-bg-interior/hotel-business-bedroom/main-trigger-words__},{1-$$__lazy-wildcards/subject/env-bg-interior/hotel-business-bedroom/env__}{,__lazy-wildcards/subject/moment/random/prompts__|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/hotel-business-bedroom/style__}|}{0.3::,{1-$$__lazy-wildcards/subject/env-bg-interior/hotel-business-bedroom/env-bed__}|}
+        main:
+          - |-
+            business hotel,hotel_room,scenery,indoors,bedroom,(bed:1.3),curtains,window
+        main-trigger-words:
+          - toyoko-inn
+          - apahotel
+        style:
+          - neutral_colors,beige,grey,white
+          - efficient_layout,space_optimization
+          - comfortable_setting
+          - hotel_room_decor
+          - stylish_interior
+          - coordinated_furnishings
+          - aesthetic_appeal
+        env-bed:
+          - single_bed,compact_size,solo_travel
+          - double bed,double bed room
+          - twin room,twin bed room
+          - twin bed
+        env:
+          - pillow
+          - lamp
+          - table
+          - chair
+          - book
+          - desk
+          - television
+          - air conditioner
+          - blinds
+          - phone
+          - >-
+            window_view,{1-$$cityscape|natural_light|outdoor_scenery}
+          - nightstand
+          - notebook
+          - >-
+            mirror{,{1-$$vanity_mirror|full_length_mirror|mirror_reflection}|}
+          - >-
+            {1-$$dressing_table|makeup_area|dressing_area}
+          - sheet
+          - wardrobe
+      # https://civitai.com/models/626980/utopian-rustic-chinese-interior?modelVersionId=700894
+      Chinese-Utopian-Rustic:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-interior/Chinese-Utopian-Rustic/main__{,{1-$$__lazy-wildcards/subject/env-bg-interior/Chinese-Utopian-Rustic/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/Chinese-Utopian-Rustic/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/Chinese-Utopian-Rustic/style__}|}
+        main:
+          - Utopian Rustic Chinese Interior,scenery
+        env:
+          - wood table,wooden floor,rug,sliding doors
+          - gray velvet couch,gray and yellow cushion
+          - chandelier,lamp,lantern
+          - plant
+          - mountain
+          - tree
+          - teapot,cup
+          - potted plant
+          - vase,flower pot
+          - flower
+          - food on the table
+        env-bg:
+          - big window,can see outside nature
+          - |-
+            (under roof:1.3)
+          - indoors open to the outdoor nature
+          - buildings outside
+          - garden
+        style:
+          - no humans
+      steampunk-library:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-interior/steampunk-library/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg-interior/steampunk-library/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/steampunk-library/env-steampunk__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/steampunk-library/env-typewriter__}|}
+        env-bg-main:
+          - steampunk library with clockwork machines,retro-futuristic aesthetic,victorian-style aesthetic,interior,indoors
+        env-typewriter:
+          - typewriter
+          - telegraph_machine
+          - teletypewriter
+          - word_processor
+          - adding_machine
+          - keyboard
+          - printing_press
+          - stenograph_machine
+          - punch_card_machine
+          - rotary_dial_phone
+        env-steampunk:
+          - vacuum_tube_technology,vacuum_tube
+          - music boxes
+          - automated book-fetching machines
+          - clockwork-operated doors
+          - gears
+          - springs
+          - clockwork
+          - steam-powered machines
+          - intricate gears
+          - communication systems
+        env:
+          - grand Victorian-style library
+          - towering bookshelves
+          - dark wood
+          - brass
+          - gas lamps and chandeliers
+          - old books
+          - sound of ticking clocks
+          - walls
+          - furniture
+      witchs_workshop:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-interior/witchs_workshop/env-bg-main__,{1-$$__lazy-wildcards/subject/env-bg-interior/witchs_workshop/env__}{,{1-$$__lazy-wildcards/subject/env-bg-interior/witchs_workshop/env-magical-ingredients__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/witchs_workshop/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/witchs_workshop/style__}|}
+        env-bg-main:
+          - |-
+            Witch's Workshop,alchemy_lab
+        env:
+          - ancient books,ancient texts,open spellbooks
+          - strange artifacts
+          - various magical instruments
+          - jars of mysterious ingredients,colorful bottles and jars,potion_brewing,magical potions,Elixirs
+          - herbs and incense
+          - flasks,beakers
+          - bubbling liquids,glowing liquids
+          - complex charts,__lazy-wildcards/subject/env-elem/circle-transmutation/prompts__
+          - >-
+            {1-$$ and $$green|purple} hue fire
+          - swirl with mist,emit sparks
+          - ornate crystalline containers
+          - crystal_ball
+          - broomstick
+          - __lazy-wildcards/subject/env-elem/circle-magic/prompts__
+        env-magical-ingredients:
+          - magical_ingredients
+          - phoenix feathers
+          - unicorn horns
+          - troll teeth
+          - bat wings
+          - mandrake roots
+          - rare herbs,mystical_herbs
+          - dragon scales
+        env-bg:
+          - tables
+          - floors
+          - walls
+          - grand stone witches_fireplace
+          - magic_cauldron,large black cast-iron pot,roaring fire
+        style:
+          - dark atmospheric
+          - Alchemy
+          - exotic
+      movie_theater:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-interior/movie_theater/env-bg-main__,{{1-$$__lazy-wildcards/subject/env-bg-interior/movie_theater/env-bg-types/theater_auditorium__}|{1-3$$__lazy-wildcards/subject/env-bg-interior/movie_theater/env-bg-types/others__}}{,{1-$$__lazy-wildcards/subject/env-bg-interior/movie_theater/env-chair__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/movie_theater/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/movie_theater/env-elem-food__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/movie_theater/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/movie_theater/style__}|}
+        env-bg-main:
+          - movie theater,cinema,theater,movie house
+        env-elem-food:
+          - popcorn
+          - food
+          - chicken
+          - drinking straw
+          - eating
+          - snacks
+          - drinks
+          - refreshments
+          - soda
+          - candy
+          - cup
+        costume-weapon:
+          - holding bucket
+          - holding food
+        env:
+          - >-
+            heterochromatic eyewear,3d glasses
+          - movie tickets
+          - movie_poster_display
+          - soundproof_walls
+          - surround_sound_system
+        env-chair:
+          - cushioned seats
+          - recliners
+          - luxurious seating
+          - theater seating
+        style:
+          - |-
+            (dim lighting:1.4),dark lighting
+          - cinematic lighting
+        env-bg-types:
+          theater_auditorium:
+            - theater_auditorium,large screen for an audience,theater seating,couch
+            - VIP_lounge,luxurious seating,private viewing areas,enhanced services
+          others:
+            - projection_room,projector,projector_beam
+            - concession_stand,sold
+            - lobby,entrance area
+            - >-
+              box_office,ticket sales {1-$$,ticket sales $$counter|booth}
+            - arcade_area,arcade games,entertainment machines
+            - emergency_exit
+            - hallways
+      # https://civitai.com/models/621731/modern-forest-mansion?modelVersionId=695051
+      modern-forest-mansion:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-interior/modern-forest-mansion/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg-interior/modern-forest-mansion/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/modern-forest-mansion/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/modern-forest-mansion/style__}|}
+        env-bg-main:
+          - nature,plant,Modern Forest Mansion,buildings,architecture
+        env:
+          - >-
+            {orange|gray|white} {leather|velvet} {couch|sofa|chair}
+          - >-
+            {wooden|marble} floor
+          - >-
+            {wooden|marble} table
+          - glass window
+          - stairs
+          - stone
+          - glass lamp
+        env-bg:
+          - water,waterfall
+          - >-
+            {kitchen|bedroom|__lazy-wildcards/subject/env-bg-interior/bathroom/prompts__|__lazy-wildcards/subject/env-bg-interior/living_room/prompts__}
+        style:
+          - >-
+            {outdoors,exterior|indoors,interior}
+          - warm lighting
+          - reflection
+      ktv-interior:
+        # https://civitai.com/models/275579/ktv-private-room?modelVersionId=310599
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-interior/ktv-interior/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg-interior/ktv-interior/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/ktv-interior/env-elem-food__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/ktv-interior/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/ktv-interior/action__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/ktv-interior/expressions__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/ktv-interior/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/ktv-interior/style__}|}
+        env-bg-main:
+          - |-
+            (ktv,karaoke,karaokeroom:1.3),(interior,indoors)
+        env-elem-food:
+          - champagne
+          - apple
+          - bottle
+          - banana
+          - food
+          - fruit
+          - tray
+          - french fries
+          - burger
+          - drinking
+          - cup,drink
+        action:
+          - closed eyes
+          - rossed legs
+          - singing
+          - sitting
+          - open mouth
+          - clothes pull
+          - pulling own clothes
+          - |-
+            hand on another's shoulder
+        expressions:
+          - "> <"
+          - ^ ^
+        costume-weapon:
+          - holding tray
+          - microphone,at-clm7000tx,wm-610
+          - microphone stand
+          - holding microphone
+          - holding phone
+          - joypad
+        env-bg:
+          - high end clubhouse
+          - private room
+        env:
+          - couch
+          - table
+          - television
+          - champagne
+          - mural
+          - green plants
+          - fireplace
+          - aurora
+          - card
+          - disco ball
+          - karaoke box
+          - denmoku
+        style:
+          - modern style
+          - sense of technolog
+          - chinese style
+          - music
+          - dutch angle
+          - dynmic
     env-bg-real-world-location:
       # https://civitai.com/models/62198/kowloon-walled-city-tset?modelVersionId=66738
       kowloon-walled-city:
@@ -4630,6 +5297,14 @@ lazy-wildcards:
           - priest_hat,religious_headwear
         costume-elem:
           - metal headwear
+      mask_mouth:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/costume-headwear/mask_mouth/costume-headwear__})
+        costume-headwear:
+          - surgical mask
+          - ninja mask
+          - mouth mask
     costume:
       mecha-musume:
         prompts:
@@ -5070,88 +5745,6 @@ lazy-wildcards:
           - Insect
           - __lazy-wildcards/subject/env-elem/spider-webs/prompts__
           - flower
-      japanese-clothes:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/costume/japanese-clothes/costume-types/*__{,__lazy-wildcards/subject/costume/japanese-clothes/style__|}
-        costume-types:
-          type-oiran:
-            - (oiran,hair ornament,japanese clothes,kimono,geta)
-        style:
-          - floral print
-          - off shoulder
-          - geta
-      china-dress:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume/china-dress/main__){,{1-$$__lazy-wildcards/subject/costume/china-dress/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume/china-dress/costume-sleeves__}|}{,{1-$$__lazy-wildcards/subject/costume/china-dress/costume-makeup__}|}{,{1-$$__lazy-wildcards/subject/costume/china-dress/env__}|}
-        prompts-extra:
-          - >-
-            __lazy-wildcards/subject/costume/china-dress/prompts__{,__lazy-wildcards/subject/costume/china-dress/action__|}
-        main:
-          - (old-shanghaibeauty,old shanghai beauty,china dress,chinese clothes),舊上海美人
-        costume-elem:
-          - pelvic curtain,pelvic curtain dress
-          - multiple straps around the waist
-          - floral print
-          - thighhighs
-          - two-sided dress
-          - two-sided fabric
-          - dragon print
-          - cleavage
-          - cleavage cutout
-          - garter belt
-          - >-
-            {1-$$pelvic curtain|pelvic curtain lift}
-          - gold trim
-          - side slit
-          - breast curtains
-          - no panties
-          - spiked bracelet
-        costume-sleeves:
-          - sleeveless dress
-          - detached sleeves
-          - sleeves past wrists
-          - bare shoulders
-          - short sleeves
-          - wide sleeves
-          - long sleeves
-        costume-makeup:
-          - mole under eye
-          - red lips
-          - __lazy-wildcards/dataset/costume-accessories-base__
-          - __lazy-wildcards/subject/costume-ethnicity-hair/hair-bun/prompts__
-          - arm tattoo
-          - lipstick
-          - makeup
-          - gold hairband
-          - sidelocks
-          - hair flower
-        action:
-          - chair,sitting
-        env:
-          - instrument
-          - flower
-      korean-clothes:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume/korean-clothes/main__){,{1-$$__lazy-wildcards/subject/costume/korean-clothes/style__}|}{,{1-$$__lazy-wildcards/subject/costume/korean-clothes/makeup__}|}{,{1-$$__lazy-wildcards/subject/costume/korean-clothes/env__}|}
-        main:
-          - hanbok,korean clothes,clothed underbust,hanfu
-        makeup:
-          - red lips
-          - lipstick
-        style:
-          - closed mouth
-          - long sleeves
-          - traditional clothes
-        env:
-          - ribbon
-          - red ribbon
-      mixin-asian-clothes:
-        prompts:
-          - >-
-            {2-$$__lazy-wildcards/subject/costume/japanese-clothes/prompts__|__lazy-wildcards/subject/costume/china-dress/prompts__|__lazy-wildcards/subject/costume/korean-clothes/prompts__}
       office-lady:
         prompts:
           - office lady,zhiyezhuang,formal,collared shirt,vest,pencil skirt,pantyhose
@@ -5930,6 +6523,146 @@ lazy-wildcards:
         prompts:
           - >-
             hinatazaka46 10th single uniform,olive green shirt,white collar
+      sweater:
+        prompts:
+          - >-
+            sweater{,{1-$$__lazy-wildcards/subject/costume/sweater/costume__}|}{,{1-$$__lazy-wildcards/subject/costume/sweater/costume-elem__}|}
+        costume:
+          - ribbed shirt,ribbed sweater
+          - sleeveless,sleeveless sweater
+          - turtleneck sweater
+          - virgin killer sweater
+        costume-elem:
+          - navel
+          - torn sweater
+      Military_Uniform_of_Chinese_Red_Army:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/Military_Uniform_of_Chinese_Red_Army/costume-main__,({1-$$__lazy-wildcards/subject/costume/Military_Uniform_of_Chinese_Red_Army/costume__}){,{1-$$__lazy-wildcards/subject/costume/Military_Uniform_of_Chinese_Red_Army/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume/Military_Uniform_of_Chinese_Red_Army/action-pose__}|}{,{1-$$__lazy-wildcards/subject/costume/Military_Uniform_of_Chinese_Red_Army/costume-weapon__}|}
+        costume-main:
+          - (redarmy),military uniform
+        costume:
+          - (military cap,red star on cap,red_star)
+          - belt,shirt
+          - red collar badge
+        costume-elem:
+          - pants
+          - red_armband
+          - military_boots
+        action-pose:
+          - salute,standing
+        costume-weapon:
+          - holding gun
+          - rifle and bayonet
+      japanese-clothes:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/japanese-clothes/costume-types/*__{,__lazy-wildcards/subject/costume/japanese-clothes/style__|}
+        costume-types:
+          type-oiran:
+            - (oiran,hair ornament,japanese clothes,kimono,geta)
+        style:
+          - floral print
+          - off shoulder
+          - geta
+      china-dress:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/china-dress/main__){,{1-$$__lazy-wildcards/subject/costume/china-dress/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume/china-dress/costume-sleeves__}|}{,{1-$$__lazy-wildcards/subject/costume/china-dress/costume-makeup__}|}{,{1-$$__lazy-wildcards/subject/costume/china-dress/env__}|}
+        prompts-extra:
+          - >-
+            __lazy-wildcards/subject/costume/china-dress/prompts__{,__lazy-wildcards/subject/costume/china-dress/action__|}
+        main:
+          - (old-shanghaibeauty,old shanghai beauty,china dress,chinese clothes),舊上海美人
+        costume-elem:
+          - pelvic curtain,pelvic curtain dress
+          - multiple straps around the waist
+          - floral print
+          - thighhighs
+          - two-sided dress
+          - two-sided fabric
+          - dragon print
+          - cleavage
+          - cleavage cutout
+          - garter belt
+          - >-
+            {1-$$pelvic curtain|pelvic curtain lift}
+          - gold trim
+          - side slit
+          - breast curtains
+          - no panties
+          - spiked bracelet
+        costume-sleeves:
+          - sleeveless dress
+          - detached sleeves
+          - sleeves past wrists
+          - bare shoulders
+          - short sleeves
+          - wide sleeves
+          - long sleeves
+        costume-makeup:
+          - mole under eye
+          - red lips
+          - __lazy-wildcards/dataset/costume-accessories-base__
+          - __lazy-wildcards/subject/costume-ethnicity-hair/hair-bun/prompts__
+          - arm tattoo
+          - lipstick
+          - makeup
+          - gold hairband
+          - sidelocks
+          - hair flower
+        action:
+          - chair,sitting
+        env:
+          - instrument
+          - flower
+      korean-clothes:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/korean-clothes/main__){,{1-$$__lazy-wildcards/subject/costume/korean-clothes/style__}|}{,{1-$$__lazy-wildcards/subject/costume/korean-clothes/makeup__}|}{,{1-$$__lazy-wildcards/subject/costume/korean-clothes/env__}|}
+        main:
+          - hanbok,korean clothes,clothed underbust,hanfu
+        makeup:
+          - red lips
+          - lipstick
+        style:
+          - closed mouth
+          - long sleeves
+          - traditional clothes
+        env:
+          - ribbon
+          - red ribbon
+      mixin-asian-clothes:
+        prompts:
+          - >-
+            {2-$$__lazy-wildcards/subject/costume/japanese-clothes/prompts__|__lazy-wildcards/subject/costume/china-dress/prompts__|__lazy-wildcards/subject/costume/korean-clothes/prompts__}
+      # https://civitai.com/models/776149/hanfu-lingerie3-or?modelVersionId=868078
+      # https://civitai.com/models/775064/hanfu-lingerie2-or
+      # https://civitai.com/models/774405/hanfu-lingerie-or
+      hanfu_lingerie:
+        prompts:
+          - (hanfu lingerie),see-through
+      saree:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/saree/costume-main__){,{1-$$__lazy-wildcards/subject/costume/saree/costume-elem__}|}
+        costume-main:
+          - saree
+        costume-elem:
+          - Traditional Indian clothing
+      # https://civitai.com/models/763755/extreme-low-rise-saree?modelVersionId=854253
+      saree-low:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/saree-low/costume-main__),__lazy-wildcards/subject/costume/saree/prompts__{,{1-$$__lazy-wildcards/subject/costume/saree-low/costume-elem__}|}
+        costume-main:
+          - Ultra Low rise Saree,cleavage,navel
+        costume-elem:
+          - exposed_hips
+          - bare_back
+          - navel_focus
+          - low_rise
+          - midriff
     costume-nsfw:
       # https://civitai.com/models/141250/fanny-packing-meat-shield-onarmor-or-concept?modelVersionId=156583
       # https://danbooru.donmai.us/posts?page=1&tags=meat_armor
@@ -6525,6 +7258,11 @@ lazy-wildcards:
       elf:
         prompts:
           - a beautiful elvish girl
+    costume-weapon:
+      smoking_pipe:
+        prompts:
+          - >-
+            smoking pipe{,{1-$$holding smoking pipe,kiseru|smoke}|}
     env-bg-architectural:
       agricultural_zone:
         prompts:
@@ -6608,19 +7346,6 @@ lazy-wildcards:
           - tower
           - torii
           - watercraft
-      station:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-bg-architectural/station/main-types/*__,{1-$$__lazy-wildcards/subject/env-bg-architectural/station/env__},{1-$$__lazy-wildcards/subject/env-bg-architectural/station/env-bg__}
-        main-types:
-          # 地下鐵 / 捷運
-          metro:
-            - Subway,Metro
-        env:
-          - window
-        env-bg:
-          - subway interior
-          - carriage
       ruin-decrepit-center:
         prompts:
           - >-
@@ -6795,535 +7520,6 @@ lazy-wildcards:
           - ancient_bridge
           - >-
             {1-$$ice_bridge|frost_bridge|frozen_bridge}
-    env-bg-interior:
-      traditional-cjk:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-bg-interior/traditional-cjk/main-types/*__,{1-$$__lazy-wildcards/subject/env-bg-interior/traditional-cjk/style__},{1-$$__lazy-wildcards/subject/env-bg-interior/traditional-cjk/env__},__lazy-wildcards/subject/env-bg-interior/asian-east/main__
-        main-types:
-          # 傳統日本室內設計，以榻榻米、滑動的紙門、被褥為特徵。
-          traditional_japanese_interior:
-            - traditional_japanese_interior,Traditional Japanese interior,tatami_mats,sliding_shoji_doors,futons,traditional_japanese_rooms
-          # 傳統中國室內設計，以雕刻的木家具、絲綢畫卷、精緻的花格窗為特徵。
-          traditional_chinese_interior:
-            - traditional_chinese_interior,Traditional Chinese interior,carved_wooden_furniture,silk_scrolls,intricate_lattice_windows
-          # 傳統韓國室內設計，以地暖、紙門、低矮的桌子為特徵。
-          traditional_korean_interior:
-            - traditional_korean_interior,Traditional Korean interior,ondol_heated_floors,paper_doors,low_tables,traditional_korean_houses
-        style:
-          - natural_light_diffusion
-        env:
-          - tatami
-          # 障子，以紙屏風、滑動門、自然光擴散為特徵。
-          - shoji,paper_screens,sliding_doors,sliding_shoji_doors
-          # 襖，以不透明的屏風、滑動隔板、傳統日本室內為特徵。
-          - fusuma,opaque_screens,sliding_partitions
-          # 床の間
-          - tokonoma
-          # 壁龕
-          - alcove_display
-          - decorative_scrolls
-          - flower_arrangements
-          # 韓國紙門，以傳統韓紙、木框架、滑動機制為特徵。
-          - korean_paper_doors,traditional_hanji_paper,wooden_frames,sliding_mechanism
-          - traditional_hanji_paper
-          # 溫突，以地暖、傳統韓國房屋、加熱的石地板為特徵。
-          - ondol,underfloor_heating,heated_stone_floors
-          - carved_wooden_furniture
-          - intricate_woodwork
-          - traditional_designs
-          - cultural_motifs
-          - wooden_frames
-          - sliding_mechanism
-          - opaque_screens
-          - sliding_partitions
-          - paper_screens
-          - sliding_doors
-          - futons
-          - silk_scrolls
-          - intricate_lattice_windows
-          - low_tables
-          - andcrafted_details
-          - Handcrafted details
-          - carved_panels
-          - embroidered_textiles
-          - artisan_decor
-          - ornate_furniture
-          - traditional_artifacts
-          - natural_materials
-          - >-
-            {1-$$Chinese window grilles|paper-cut for window decoration|Chinese window decoration}
-      asian-east:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-bg-interior/asian-east/main__,{3-$$__lazy-wildcards/subject/env-bg-interior/asian-east/env__},{1-$$__lazy-wildcards/subject/env-bg-interior/asian-east/style__}{,{2-$$__lazy-wildcards/subject/env-bg-interior/asian-east/env-bg__}|}
-        main:
-          - east asian architecture,interior,indoors
-        style:
-          - psychedelic
-          - prismatic
-          - light tone
-          - Red and Dark Wood Chinese Interior
-        env:
-          - >-
-            {1-$$cylinder|cylinder in the middle}
-          - __lazy-wildcards/subject/moment/weather-mist/prompts__
-          - reflection
-          - the wooden booth
-          - >-
-            {1-$$wooden table|round table|teapot on the tray}
-          - >-
-            {1-$$big red maple tree|cherry blossoms}
-          - >-
-            {1-$$red velvet|leather couch with two pillows}
-          - >-
-            {1-$$red velvet carpet|rug}
-          - statue,dark wooden relief sculpture on the wall
-          - window,lattice windows,traditional lattice ceilings
-          - lily pad
-          - (lotus)
-          - lantern,vase,red lanterns,ribbon,lamp
-          - letterboxed
-          - Redwood furniture
-          - Mahogany Carving
-        env-bg:
-          - water
-          - cloud
-          - sky
-          - wall
-          - bridge
-          - |-
-            (wooden bridge:1.2)
-      bathroom:
-        prompts:
-          - >-
-            {99$$ with $$__lazy-wildcards/subject/env-bg-interior/bathroom/main-object__},{1-$$__lazy-wildcards/subject/env-bg-interior/bathroom/env-object__},{1-$$__lazy-wildcards/subject/env-bg-interior/bathroom/env__}{,{1-$$__lazy-wildcards/subject/env-bg-interior/bathroom/env-bg__}|}
-        main-object:
-          - bath
-          - a sink
-          - bathroom
-        env-object:
-          - toilet
-          - handrails
-          - faucet
-          - door
-          - mirror
-          - window
-        env:
-          - >-
-            {1-$$soap|soap bottle}
-        env-bg:
-          - >-
-            {1-$$tiles|tile floor|tile wall}
-      living_room:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-bg-interior/living_room/main__,{(__lazy-wildcards/utils/interior-style-anything__),|}{1-$$__lazy-wildcards/subject/env-bg-interior/living_room/env-object__},{1-$$__lazy-wildcards/subject/env-bg-interior/living_room/env-bg__}
-        main:
-          - interior design,living room
-        env-object:
-          - sofa
-          - coffee table
-          - armchair
-          - rug
-          - lamp
-          - curtain
-          - cushion
-          - vase
-          - book
-          - stool
-          - chair
-          - shelf
-          - bar
-        env-bg:
-          - ceiling
-          - floor
-          - wall
-          - window
-      japanese-tatami:
-        prompts:
-          - >-
-            indoors,interior,traditional_japanese_interior,tatami,japanese writing,calligraphy,{1-$$__lazy-wildcards/subject/env-bg-interior/aquarium/env__}
-        env:
-          - >-
-            {1-$$sword|katana}
-          - scroll
-      aquarium:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-bg-interior/aquarium/main__,{1-$$__lazy-wildcards/subject/env-bg-interior/aquarium/main-types/*__},{1-$$__lazy-wildcards/subject/env-bg-interior/aquarium/env__},{{1-$$__lazy-wildcards/subject/env-bg-interior/aquarium/env-bg__},|}{1-$$__lazy-wildcards/subject/env-bg-interior/aquarium/style__},{1-$$__lazy-wildcards/subject/env-bg-interior/aquarium/env-fish__}
-        main:
-          - aquarium,indoors,interior
-        main-types:
-          aquarium-tunnel:
-            - |-
-              (aquarium tunnel:1.2),underwater_tunnel
-          jellyfish_tank:
-            - jellyfish_tank,floating_jellyfish,transparent_tank,glowing_effect
-          shark_tank:
-            - shark_tank,large_aquarium
-        style:
-          - colorful_ecosystem
-          - immersive_experience
-          - panoramic_view
-          - thrilling_exhibit
-          - underwater_exhibit
-          - submerged_displays
-          - diverse_species
-        env-fish:
-          - tropical_fish
-          - predatory_fish
-          - shark
-          - >-
-            {1-$$marine_life|sea_creatures|ocean_dwellers}
-          - jellyfish
-        env:
-          - fish_tanks
-          - aquatic_exhibits
-          - decorative_aquascape
-          - aquatic_habitat
-        env-bg:
-          - >-
-            {1-$$coral_reef|vibrant_corals}
-      hotel-capsule:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-bg-interior/hotel-capsule/main__,{1-$$__lazy-wildcards/subject/env-bg-interior/hotel-capsule/main-types/*__},{1-$$__lazy-wildcards/subject/env-bg-interior/hotel-capsule/env__}
-        main:
-          - Capsule hotel,indoors,scenery
-        main-types:
-          type-inside:
-            - television,pillow,bed
-          type-outside:
-            - hallway
-        env:
-          - glasses
-          - light
-          - wooden floor
-          - ceiling light
-      Internet_Cafes_inside:
-        prompts:
-          - Internet Cafe,cybercafe,necafe,scenery,indoors,computer,door,chair,monitor,still life,mouse (computer),desk
-      hotel-business-bedroom:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-bg-interior/hotel-business-bedroom/main__,{1-$$__lazy-wildcards/subject/env-bg-interior/hotel-business-bedroom/main-trigger-words__},{1-$$__lazy-wildcards/subject/env-bg-interior/hotel-business-bedroom/env__}{,__lazy-wildcards/subject/moment/random/prompts__|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/hotel-business-bedroom/style__}|}{0.3::,{1-$$__lazy-wildcards/subject/env-bg-interior/hotel-business-bedroom/env-bed__}|}
-        main:
-          - |-
-            business hotel,hotel_room,scenery,indoors,bedroom,(bed:1.3),curtains,window
-        main-trigger-words:
-          - toyoko-inn
-          - apahotel
-        style:
-          - neutral_colors,beige,grey,white
-          - efficient_layout,space_optimization
-          - comfortable_setting
-          - hotel_room_decor
-          - stylish_interior
-          - coordinated_furnishings
-          - aesthetic_appeal
-        env-bed:
-          - single_bed,compact_size,solo_travel
-          - double bed,double bed room
-          - twin room,twin bed room
-          - twin bed
-        env:
-          - pillow
-          - lamp
-          - table
-          - chair
-          - book
-          - desk
-          - television
-          - air conditioner
-          - blinds
-          - phone
-          - >-
-            window_view,{1-$$cityscape|natural_light|outdoor_scenery}
-          - nightstand
-          - notebook
-          - >-
-            mirror{,{1-$$vanity_mirror|full_length_mirror|mirror_reflection}|}
-          - >-
-            {1-$$dressing_table|makeup_area|dressing_area}
-          - sheet
-          - wardrobe
-      # https://civitai.com/models/623723/subway-station-corridor-in-japan?modelVersionId=697293
-      # https://civitai.com/models/716111/japanese-underground-passage?modelVersionId=800810
-      station-subway-corridor-stairs:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-bg-interior/station-subway-corridor-stairs/main__{,{1-$$__lazy-wildcards/subject/env-bg-interior/station-subway-corridor-stairs/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/station-subway-corridor-stairs/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/station-subway-corridor-stairs/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/station-subway-corridor-stairs/style__}|}
-        main:
-          - Subway station corridor,jpsta,train_station,on stairs,interior,indoors,UGPW
-        costume-weapon:
-          - luggage
-          - briefcase
-        style:
-          - subway station design
-          - clean_passage
-        env:
-          - tiled_walls
-          - tiled_floor
-          - ceiling
-          - public_telephone
-          - >-
-            {1-$$Signage|bilingual signs indicating directions|exits signs|facilities signs|signboard|floor_markings}
-          - >-
-            __lazy-wildcards/subject/env-elem/Vending-Machines/prompts__
-        env-bg:
-          - Subway_Corridor
-          - underground shopping areas
-          - Japan
-          - stairwell
-      # https://civitai.com/models/626980/utopian-rustic-chinese-interior?modelVersionId=700894
-      Chinese-Utopian-Rustic:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-bg-interior/Chinese-Utopian-Rustic/main__{,{1-$$__lazy-wildcards/subject/env-bg-interior/Chinese-Utopian-Rustic/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/Chinese-Utopian-Rustic/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/Chinese-Utopian-Rustic/style__}|}
-        main:
-          - Utopian Rustic Chinese Interior,scenery
-        env:
-          - wood table,wooden floor,rug,sliding doors
-          - gray velvet couch,gray and yellow cushion
-          - chandelier,lamp,lantern
-          - plant
-          - mountain
-          - tree
-          - teapot,cup
-          - potted plant
-          - vase,flower pot
-          - flower
-          - food on the table
-        env-bg:
-          - big window,can see outside nature
-          - |-
-            (under roof:1.3)
-          - indoors open to the outdoor nature
-          - buildings outside
-          - garden
-        style:
-          - no humans
-      steampunk-library:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-bg-interior/steampunk-library/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg-interior/steampunk-library/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/steampunk-library/env-steampunk__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/steampunk-library/env-typewriter__}|}
-        env-bg-main:
-          - steampunk library with clockwork machines,retro-futuristic aesthetic,victorian-style aesthetic,interior,indoors
-        env-typewriter:
-          - typewriter
-          - telegraph_machine
-          - teletypewriter
-          - word_processor
-          - adding_machine
-          - keyboard
-          - printing_press
-          - stenograph_machine
-          - punch_card_machine
-          - rotary_dial_phone
-        env-steampunk:
-          - vacuum_tube_technology,vacuum_tube
-          - music boxes
-          - automated book-fetching machines
-          - clockwork-operated doors
-          - gears
-          - springs
-          - clockwork
-          - steam-powered machines
-          - intricate gears
-          - communication systems
-        env:
-          - grand Victorian-style library
-          - towering bookshelves
-          - dark wood
-          - brass
-          - gas lamps and chandeliers
-          - old books
-          - sound of ticking clocks
-          - walls
-          - furniture
-      witchs_workshop:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-bg-interior/witchs_workshop/env-bg-main__,{1-$$__lazy-wildcards/subject/env-bg-interior/witchs_workshop/env__}{,{1-$$__lazy-wildcards/subject/env-bg-interior/witchs_workshop/env-magical-ingredients__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/witchs_workshop/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/witchs_workshop/style__}|}
-        env-bg-main:
-          - |-
-            Witch's Workshop,alchemy_lab
-        env:
-          - ancient books,ancient texts,open spellbooks
-          - strange artifacts
-          - various magical instruments
-          - jars of mysterious ingredients,colorful bottles and jars,potion_brewing,magical potions,Elixirs
-          - herbs and incense
-          - flasks,beakers
-          - bubbling liquids,glowing liquids
-          - complex charts,__lazy-wildcards/subject/env-elem/circle-transmutation/prompts__
-          - >-
-            {1-$$ and $$green|purple} hue fire
-          - swirl with mist,emit sparks
-          - ornate crystalline containers
-          - crystal_ball
-          - broomstick
-          - __lazy-wildcards/subject/env-elem/circle-magic/prompts__
-        env-magical-ingredients:
-          - magical_ingredients
-          - phoenix feathers
-          - unicorn horns
-          - troll teeth
-          - bat wings
-          - mandrake roots
-          - rare herbs,mystical_herbs
-          - dragon scales
-        env-bg:
-          - tables
-          - floors
-          - walls
-          - grand stone witches_fireplace
-          - magic_cauldron,large black cast-iron pot,roaring fire
-        style:
-          - dark atmospheric
-          - Alchemy
-          - exotic
-      movie_theater:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-bg-interior/movie_theater/env-bg-main__,{{1-$$__lazy-wildcards/subject/env-bg-interior/movie_theater/env-bg-types/theater_auditorium__}|{1-3$$__lazy-wildcards/subject/env-bg-interior/movie_theater/env-bg-types/others__}}{,{1-$$__lazy-wildcards/subject/env-bg-interior/movie_theater/env-chair__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/movie_theater/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/movie_theater/env-elem-food__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/movie_theater/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/movie_theater/style__}|}
-        env-bg-main:
-          - movie theater,cinema,theater,movie house
-        env-elem-food:
-          - popcorn
-          - food
-          - chicken
-          - drinking straw
-          - eating
-          - snacks
-          - drinks
-          - refreshments
-          - soda
-          - candy
-          - cup
-        costume-weapon:
-          - holding bucket
-          - holding food
-        env:
-          - >-
-            heterochromatic eyewear,3d glasses
-          - movie tickets
-          - movie_poster_display
-          - soundproof_walls
-          - surround_sound_system
-        env-chair:
-          - cushioned seats
-          - recliners
-          - luxurious seating
-          - theater seating
-        style:
-          - |-
-            (dim lighting:1.4),dark lighting
-          - cinematic lighting
-        env-bg-types:
-          theater_auditorium:
-            - theater_auditorium,large screen for an audience,theater seating,couch
-            - VIP_lounge,luxurious seating,private viewing areas,enhanced services
-          others:
-            - projection_room,projector,projector_beam
-            - concession_stand,sold
-            - lobby,entrance area
-            - >-
-              box_office,ticket sales {1-$$,ticket sales $$counter|booth}
-            - arcade_area,arcade games,entertainment machines
-            - emergency_exit
-            - hallways
-      # https://civitai.com/models/621731/modern-forest-mansion?modelVersionId=695051
-      modern-forest-mansion:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-bg-interior/modern-forest-mansion/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg-interior/modern-forest-mansion/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/modern-forest-mansion/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/modern-forest-mansion/style__}|}
-        env-bg-main:
-          - nature,plant,Modern Forest Mansion,buildings,architecture
-        env:
-          - >-
-            {orange|gray|white} {leather|velvet} {couch|sofa|chair}
-          - >-
-            {wooden|marble} floor
-          - >-
-            {wooden|marble} table
-          - glass window
-          - stairs
-          - stone
-          - glass lamp
-        env-bg:
-          - water,waterfall
-          - >-
-            {kitchen|bedroom|__lazy-wildcards/subject/env-bg-interior/bathroom/prompts__|__lazy-wildcards/subject/env-bg-interior/living_room/prompts__}
-        style:
-          - >-
-            {outdoors,exterior|indoors,interior}
-          - warm lighting
-          - reflection
-      ktv-interior:
-        # https://civitai.com/models/275579/ktv-private-room?modelVersionId=310599
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-bg-interior/ktv-interior/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg-interior/ktv-interior/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/ktv-interior/env-elem-food__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/ktv-interior/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/ktv-interior/action__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/ktv-interior/expressions__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/ktv-interior/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/ktv-interior/style__}|}
-        env-bg-main:
-          - |-
-            (ktv,karaoke,karaokeroom:1.3),(interior,indoors)
-        env-elem-food:
-          - champagne
-          - apple
-          - bottle
-          - banana
-          - food
-          - fruit
-          - tray
-          - french fries
-          - burger
-          - drinking
-          - cup,drink
-        action:
-          - closed eyes
-          - rossed legs
-          - singing
-          - sitting
-          - open mouth
-          - clothes pull
-          - pulling own clothes
-          - |-
-            hand on another's shoulder
-        expressions:
-          - "> <"
-          - ^ ^
-        costume-weapon:
-          - holding tray
-          - microphone,at-clm7000tx,wm-610
-          - microphone stand
-          - holding microphone
-          - holding phone
-          - joypad
-        env-bg:
-          - high end clubhouse
-          - private room
-        env:
-          - couch
-          - table
-          - television
-          - champagne
-          - mural
-          - green plants
-          - fireplace
-          - aurora
-          - card
-          - disco ball
-          - karaoke box
-          - denmoku
-        style:
-          - modern style
-          - sense of technolog
-          - chinese style
-          - music
-          - dutch angle
-          - dynmic
     style-architectural:
       elven:
         prompts:
@@ -7826,6 +8022,7 @@ lazy-wildcards:
       - __cf-*/weapon__
       - __lazy-wildcards/*/*/*/costume-weapon__
       - __lazy-wildcards/*/*/*/costume-weapon-*__
+      - __lazy-wildcards/subject/costume-weapon/*/prompts__
     costume-accessories-base:
       - >-
         {1-$$earrings|hair ornament|jewelry|armlet|necklace|ring|anklet}
@@ -7836,41 +8033,39 @@ lazy-wildcards:
         ({1-3$$__lazy-wildcards/subject/style-artist/*/prompts__}{:1.4|:1.2|})
       - >-
         ({1-2$$__lazy-wildcards/subject/style-artist/dark/prompts__},{1-2$$__lazy-wildcards/subject/style-artist/*/prompts__}{:1.4|:1.2|})
-  cosplay-real:
-    # 亞美尼亞人
-    Armenian:
-      # 安潔拉・薩拉費恩
-      Angela_Sarafyan:
-        prompts:
-          - >-
-            Angela Sarafyan,lora_sarafyan_girl,AngelaS_SoloTI_v1{,__lazy-wildcards/cosplay-real/Armenian/Angela_Sarafyan/costume-ethnicity__|}{,{1-$$__lazy-wildcards/cosplay-real/Armenian/Angela_Sarafyan/costume-elem__}|}
-        costume-ethnicity:
-          - high_cheekbones,big_eyes,sharp_nose,full_lips,expressive_eyes,thin_eyebrows
-        costume-elem:
-          - beautiful_woman
-          - long_hair
-          - wavy_hair
-    USA:
-      Anya_Taylor_Joy:
-        prompts:
-          - >-
-            anya taylor joy,anya Joy,ATLJ,AnyTayJoy,Anya-Taylor-Joy,AnyaT_SoloTI_v1,furiosa{,{1-$$__lazy-wildcards/cosplay-real/USA/Anya_Taylor_Joy/costume-elem__}|}
-        costume-elem:
-          - distinctive_eyes
-          - pale_skin
-          - platinum_blonde_hair
-          - slender_figure
-          - sharp_facial_features
-    # 澳洲
-    Australian:
-      Claudia_Doumit:
-        prompts:
-          - >-
-            Claudia Doumit,sharp features,full lips{,__lazy-wildcards/cosplay-real/Australian/Claudia_Doumit/costume-ethnicity__|}
-        costume-ethnicity:
-          - >-
-            dark brown hair,(olive skin),brown eyes,medium hair{,(__lazy-wildcards/subject/costume-ethnicity-body/dark-skinned/prompts__:1.2)|}
   cosplay-char:
+    hentai-game:
+      Hamiro_Ryakudatsusha_no_Inen:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/hentai-game/Hamiro_Ryakudatsusha_no_Inen/main-trigger-words__,__lazy-wildcards/cosplay-char/hentai-game/Hamiro_Ryakudatsusha_no_Inen/costume-ethnicity__,{1-$$__lazy-wildcards/cosplay-char/hentai-game/Hamiro_Ryakudatsusha_no_Inen/costume__}
+        main-trigger-words:
+          - HamiroRyakudatsusha
+        costume-ethnicity:
+          - |-
+            long hair,(red hair,hair over one eye:1.2),(hair tubes,hair stick),hair over shoulder,yellow eyes
+        costume:
+          - red dress,navel,cleavage,bare shoulders,center opening,plunging neckline
+          - red pelvic curtain,side slit
+          - hair ornament,thigh strap
+    yasei_no_last_boss_ga_arawareta:
+      ruphas_mafahl:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/yasei_no_last_boss_ga_arawareta/ruphas_mafahl/costume-ethnicity__{,{1-$$__lazy-wildcards/cosplay-char/yasei_no_last_boss_ga_arawareta/ruphas_mafahl/costume__}|},{1-$$__lazy-wildcards/cosplay-char/yasei_no_last_boss_ga_arawareta/ruphas_mafahl/costume-wings__}{,{1-$$__lazy-wildcards/cosplay-char/yasei_no_last_boss_ga_arawareta/ruphas_mafahl/costume-elem__}|}
+        costume-ethnicity:
+          - ruphas mafahl,zzRuphas,red eyes,blonde hair,long hair
+        costume:
+          - red cape,tiara
+          - cleavage,white dress,long sleeves
+        costume-wings:
+          - black wings,feathered wings
+        costume-elem:
+          - angel
+          - glasses,red-framed eyewear,semi-rimless eyewear,under-rim eyewear
+          - high ponytail
+          - long fingers
+          - sidelocks
     fate:
       # 源賴光
       # https://civitai.com/models/453729/minamoto-no-raikou-or-fatestaynight-or-15-attires-or-kofi-commissioned?modelVersionId=505140
@@ -8298,8 +8493,7 @@ lazy-wildcards:
           - tight clothing
           - white panty
           - tight panty
-          - >-
-            {1-$$holding|holding smoking pipe|smoking pipe|smoke|kiseru}
+          - __lazy-wildcards/subject/costume-weapon/smoking_pipe/prompts__
           - hair bow
           - jewelry
           - >-
@@ -10887,6 +11081,42 @@ lazy-wildcards:
       ayanokouji_pai:
         prompts:
           - ayanokouji pai,parvati iv,ayanokouji pai \(cosplay\),parvati iv \(cosplay\),3x3_eyes,__lazy-wildcards/subject/costume-ethnicity-eyes/third-eye/costume-eyes-main__
+    durarara:
+      # https://civitai.com/models/20614/celty-sturluson-durarara-pdxl-update?modelVersionId=24527
+      celty_sturluson:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/durarara/celty_sturluson/main-trigger-words__,__lazy-wildcards/cosplay-char/durarara/celty_sturluson/costume-headwear__{,{__lazy-wildcards/cosplay-char/durarara/celty_sturluson/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/durarara/celty_sturluson/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/durarara/celty_sturluson/action-pose__}|}{,{1-$$__lazy-wildcards/cosplay-char/durarara/celty_sturluson/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/durarara/celty_sturluson/env__}|}{,{1-$$__lazy-wildcards/cosplay-char/durarara/celty_sturluson/style__}|}
+        main-trigger-words:
+          - |-
+            celty,celty sturluson,celty sturluson \(cosplay\),durarara!!
+        costume-headwear:
+          - (animal helmet,motorcycle helmet,yellow helmet,cat ear helmet,black smoke)
+        costume:
+          - black bodysuit,black biker clothes,black bikesuit,black leather
+        costume-elem:
+          - (dullahan,headless,black smoke)
+          - (cat ears),animal ears,fake animal ears
+          - helmet
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-elem/costume-breasts/costume-breasts-out__}
+          - collarbone
+          - partially unzipped
+          - clothed sex
+          - sweat
+        action-pose:
+          - arms up
+          - facing away
+        costume-weapon:
+          - holding scythe
+          - holding phone,smartphone
+        env:
+          - casting couch
+          - bed sheet
+          - on roof
+        style:
+          - darkness
+          - from side
     im-the-evil-lord-of-an-intergalactic-empire:
       Chengshi_Sera_Tourei:
         prompts:
@@ -10905,6 +11135,62 @@ lazy-wildcards:
           - hair ribbon
           - black panties
           - gold trim
+    sky-freedom:
+      aimi:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/sky-freedom/aimi/main-trigger-words__,__lazy-wildcards/cosplay-char/sky-freedom/aimi/costume-ethnicity__{,__lazy-wildcards/cosplay-char/sky-freedom/aimi/costume__|}{,{1-$$__lazy-wildcards/cosplay-char/sky-freedom/aimi/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/sky-freedom/aimi/costume-weapon__}|}
+        main-trigger-words:
+          - aimi,aimi_\(sky-freedom\),sky-freedom
+        costume-ethnicity:
+          - |-
+            purple eyes,long hair,black hair,blunt bangs,sidelocks in a hime cut,(mole under mouth:1.2)
+        costume:
+          - __lazy-wildcards/subject/costume-ethnicity-race/demon_girl/prompts__
+          - white shirt,black bow,black pleated skirt
+          - ribbed shirt,ribbed sweater,sleeveless,sleeveless sweater,sweater
+          - swimsuit,thigh gap
+          - off-shoulder shirt,oversized_clothes
+        costume-elem:
+          - (surgical mask,mouth mask)
+          - bunching hair,collarbone
+          - large breasts
+        costume-weapon:
+          - (geforce_rtx_3090_ti,graphics card)
+  cosplay-real:
+    # 亞美尼亞人
+    Armenian:
+      # 安潔拉・薩拉費恩
+      Angela_Sarafyan:
+        prompts:
+          - >-
+            Angela Sarafyan,lora_sarafyan_girl,AngelaS_SoloTI_v1{,__lazy-wildcards/cosplay-real/Armenian/Angela_Sarafyan/costume-ethnicity__|}{,{1-$$__lazy-wildcards/cosplay-real/Armenian/Angela_Sarafyan/costume-elem__}|}
+        costume-ethnicity:
+          - high_cheekbones,big_eyes,sharp_nose,full_lips,expressive_eyes,thin_eyebrows
+        costume-elem:
+          - beautiful_woman
+          - long_hair
+          - wavy_hair
+    USA:
+      Anya_Taylor_Joy:
+        prompts:
+          - >-
+            anya taylor joy,anya Joy,ATLJ,AnyTayJoy,Anya-Taylor-Joy,AnyaT_SoloTI_v1,furiosa{,{1-$$__lazy-wildcards/cosplay-real/USA/Anya_Taylor_Joy/costume-elem__}|}
+        costume-elem:
+          - distinctive_eyes
+          - pale_skin
+          - platinum_blonde_hair
+          - slender_figure
+          - sharp_facial_features
+    # 澳洲
+    Australian:
+      Claudia_Doumit:
+        prompts:
+          - >-
+            Claudia Doumit,sharp features,full lips{,__lazy-wildcards/cosplay-real/Australian/Claudia_Doumit/costume-ethnicity__|}
+        costume-ethnicity:
+          - >-
+            dark brown hair,(olive skin),brown eyes,medium hair{,(__lazy-wildcards/subject/costume-ethnicity-body/dark-skinned/prompts__:1.2)|}
   cosplay-others:
     Mobile-Police-Patlabor:
       # https://danbooru.donmai.us/posts?tags=av-98_ingram
