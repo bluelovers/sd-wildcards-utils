@@ -1,0 +1,113 @@
+navi_atlas:
+  generator:
+    urban_photography:
+      - "__navi_atlas/generator/urban__ {, __navi_atlas/image_effects__|}, __navi_atlas/composition_types__ composition"
+    lands_photography:
+      - "__navi_atlas/generator/scenery__ {, __navi_atlas/image_effects__|}, __navi_atlas/composition_types__ composition"
+    scenery:
+      - "__navi_atlas/generator/lands__, {__navi_atlas/vibe__|} scenery"
+    lands:
+      - "(__navi_atlas/land_type__) {, __navi_atlas/lighting_condition__|}"
+    urban:
+      - "({__navi_atlas/urban_areas/sub_developed__|__navi_atlas/urban_areas/mid_developed__|__navi_atlas/urban_areas/over_developed__}) {, __navi_atlas/lighting_condition__|}"
+  land_type:
+    - mountainous terrain landscape
+    - rolling hills landscape
+    - dense forests landscape
+    - vast plains landscape
+    - coastal cliffs landscape
+    - desert landscape
+    - desert dunes lands
+    - flowerbed meadows landscape
+    - tropical islands landscape
+    - volcanic landscape
+    - icy expanses landscape
+    - tundra landscape
+    - canyon landscape
+    - swampy wetlands landscape ,clouds
+    - islands archipelago
+    - floating rocks landscape
+    - wide savanna landscape
+    - vast ocean
+    - steamy sulfur lands, natural hotssprings
+    - magic forest landscape
+    - barren wasteland landscape
+    - mesa plateau landscape
+    - dense rain forest landscape
+    - dry quarry landscape
+  lighting_condition:
+    - golden hour sunset
+    - misty , heavy fog
+    - harsh midday sun
+    - eerie night, supernatural ,moon light
+    - overcast skies
+    - stormy weather
+    - twilight
+    - aurora borealis
+    - bioluminescent glow , bioluminescent plants
+    - stary night
+    - deep underground, very dark, cavern
+  vibe:
+    - epic
+    - wild and untamed
+    - surreal and dreamlike
+    - ancient and mystical
+    - tranquil and meditative
+    - energetic and dynamic
+    - isolated and lonely
+    - joyful and lively
+  image_effects:
+    - vintage filter
+    - high contrast
+    - sepia tones
+    - hdr (high dynamic range)
+    - grainy texture
+    - bokeh
+    - depth of field blur
+  urban_areas:
+    sub_developed:
+      - ancient ruins
+      - suburban neighborhood
+      - countryside town
+      - nomad camp
+      - Deserted outpost, fence,
+      - industrial ruins
+      - the slums
+    mid_developed:
+      - residential area
+      - dark alleyway
+      - urban skyline landscape
+      - Pedestrian-friendly city center
+      - Cultural district
+      - Suburban sprawl
+      - Waterfront promenade
+      - entertainment district
+      - military base
+      - Industrial district
+      - public park
+      - Shopping district
+      - city outskirts
+    over_developed:
+      - Futuristic mega-city, dense buildings
+      - Cyberpunk alleyways
+      - Floating city platforms
+      - High-tech research facilities
+      - Spaceport
+      - intergalactic hub
+      - interconnected cityscape
+      - Neon-lit streets
+      - metropolis
+      - advanced Underwater city
+      - power plant
+      - planetary colony, 
+  composition_types:
+    - Rule of Thirds
+    - Leading Lines
+    - Symmetry
+    - Framing
+    - Diagonal Lines
+    - Golden Ratio
+    - Minimalism
+    - Overlapping Elements
+    - Balance
+
