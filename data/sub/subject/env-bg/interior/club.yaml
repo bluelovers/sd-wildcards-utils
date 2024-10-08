@@ -1,0 +1,108 @@
+lazy-wildcards:
+  subject:
+    env-bg-interior:
+      # https://civitai.com/models/815517/cyberpunk-club?modelVersionId=911938
+      cyberpunk_club:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-interior/cyberpunk_club/env-bg-main__
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/cyberpunk_club/env__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/cyberpunk_club/costume__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/cyberpunk_club/style__}|}
+        env-bg-main:
+          - cyclu, cyberpunk club, indoors, interior, bar \(place\), concert
+        costume:
+          - futuristic_clothing, cybernetics, cyberpunk_outfit, augmented_humans
+        env:
+          - neon_lights, holographic_ads, bright_lights_in_darkness, glowing_signs, blinking_lights, interactive_lighting, geometric_patterns, dynamic_floor_lights, stage lights
+          - crowded_club
+          - dj_booth
+          - cyber_bar, robotic_bartender, futuristic_bar
+          - glowing_drinks, fluorescent_liquid, cup, drinking glass
+          - dance_floor, projection_mapping
+          - discarded_machines, techno_slums
+          - transparent_walls, glass_walls, reflected_glare, urban_scenery_through_windows
+          - vr_area, virtual_reality_headset, digital_world
+          - cyber_interaction, futuristic_entertainment
+          - tile floor
+          - graffiti
+          - stool
+          - __lazy-wildcards/subject/env-bg-interior/strip_club/prompts__
+        style:
+          - electronic_music, music_waveforms, vibrating_floor
+          - futuristic_design
+          - ambient lighting, atmospheric effects
+          - science fiction
+          - reflection
+      strip_club:
+        prompts:
+          - >-
+            {3-$$__lazy-wildcards/subject/env-bg-interior/strip_club/action__}
+            , {1-$$__lazy-wildcards/subject/env-bg-interior/strip_club/env-pole__}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/strip_club/costume__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/strip_club/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/strip_club/env__}|}
+            {, __lazy-wildcards/subject/env-bg-interior/strip_club/env-bg-floor__|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/strip_club/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/strip_club/style__}|}
+        action:
+          - pole dancing
+          - squatting, crouching, spread legs
+          - arm support
+          - arms behind back
+          - pole masturbation
+          - holding pole
+          - pole between ass
+          - arms over head
+          - arms up
+        env-pole:
+          - pole, stripper pole
+        env:
+          - money
+        costume:
+          - stripper, pole dancer
+          - belly dancer outfit
+          - revealing clothes, slutty outfit
+          - arabian clothes, harem outfit
+          - bikini
+        costume-elem:
+          - high heels
+          - topless
+          - partially clothed
+          - petite
+          - __lazy-wildcards/subject/costume-ethnicity-body/curvy_female/prompts__
+          - toes
+          - underwear
+          - blush
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/prompts__
+          - ass visible through thighs, cameltoe
+          - bottomless
+          - pelvic curtain
+          - __lazy-wildcards/subject/costume-elem/cum/prompts__
+          - __lazy-wildcards/subject/costume-elem/pussy_juice/prompts__
+          - ass focus, from behind
+          - thong
+          - __lazy-wildcards/subject/costume-elem/chain-acc/prompts__
+          - navel piercing
+          - piercing
+          - __lazy-wildcards/subject/costume-elem-expressions/seductive/prompts__
+          - covering breasts
+          - star pasties
+        env-bg:
+          - strip club
+          - nightclub
+        env-bg-floor:
+          - mirror_stage, reflective_surface, shiny_stage
+          - mirror_floor, reflective_floor, shiny_floor
+          - mirror_podium, reflective_podium, shiny_platform
+        style:
+          - slut
+          - reaching out
+          - toned
+          - looking back
+          - >-
+            {1-$$reflection|dual_reflection|performance_reflection|shiny_metallic_surface|display_reflection|elegant_reflection}
+          - luxury_showcase, luxurious_stage, opulent_showcase
+          - mirror_lighting_effect, reflected_light, complex_lighting, reflected_glow
+          - dance_reflection, mirrored_dance, dual_movement
+

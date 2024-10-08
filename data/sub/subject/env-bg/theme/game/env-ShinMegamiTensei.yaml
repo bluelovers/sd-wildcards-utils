@@ -1,0 +1,25 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      ShinMegamiTensei-Tokyo_Millennium:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/ShinMegamiTensei-Tokyo_Millennium/env-bg-main__
+            {, {1-2$$__lazy-wildcards/subject/env-bg/ShinMegamiTensei-Tokyo_Millennium/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/ShinMegamiTensei-Tokyo_Millennium/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/ShinMegamiTensei-Tokyo_Millennium/style__}|}
+        env-bg-main:
+          - Tokyo_Millennium, post-apocalyptic_city, dystopian_world
+        env-bg:
+          - Center_District, City_center, ruling_government
+          - Valhalla, Entertainment_district
+          - Valhalla, gladiator_tournaments
+          - Private_mansion, guarded_residence, elite_dwelling
+          - Arcadia, Utopian_district, demon-free_zone, false_paradise
+          - Holytown, Religious_center, church_district
+          - Factory_District, Industrial_zone, mining_site
+        env:
+          - Order_of_Messiah, Religious_order, messianic_cult, divine_rulers
+          - Millennium_News_Network, City_news, propaganda_broadcasts, information_contro
+        style:
+          - Great_Cataclysm, World_ending_event, apocalyptic_disaster, city_rebirt

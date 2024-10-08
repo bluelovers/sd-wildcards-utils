@@ -47,6 +47,7 @@ lazy-wildcards:
       - __cornf-*/prompt-object__
       - __cornf-house/prompt-full__
       - __lazy-wildcards/subject/moment/random/prompts__
+      - __Bo/constructions/random__
       - >-
         {1-$$__lazy-wildcards/subject/moment/*/prompts__}
       - japanese onsen, onsen
@@ -233,24 +234,6 @@ lazy-wildcards:
             - the_sun_\(tarot\)
             - judgement_\(tarot\)
             - the_world_\(tarot\)
-      fence:
-        prompts:
-          - >-
-            {1-2$$__lazy-wildcards/background/location/fence/main__},
-            {0-3$$__lazy-wildcards/background/location/fence/env__},
-            {0-1$$__lazy-wildcards/background/location/fence/action/*__}
-        main:
-          - fence
-          - chain-link fence, chain_link_fence
-          - wooden fence
-          - bamboo fence
-          - wire_fence
-          - barbed_wire
-        env:
-          - rooftop
-        action:
-          pose:
-            - against fence
       ruins-city:
         prompts:
           - >-

@@ -1,0 +1,157 @@
+lazy-wildcards:
+  cosplay-char:
+    one-punch_man:
+      # https://civitai.com/models/130782/mosquito-girl-anime-character-or-one-punch-man-or-ownwaifu?modelVersionId=143568
+      mosquito_musume:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/one-punch_man/mosquito_musume/costume-ethnicity__
+            {, __lazy-wildcards/cosplay-char/one-punch_man/mosquito_musume/costume__}
+            {, {1-$$__lazy-wildcards/cosplay-char/one-punch_man/mosquito_musume/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/one-punch_man/mosquito_musume/costume-eyes__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/one-punch_man/mosquito_musume/expressions__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/one-punch_man/mosquito_musume/action-pose__}|}
+        costume-ethnicity:
+          - mosquito musume, antennae, mosquito girl, mosquito wings, one-punch man, navel, single horn, insect wings, spikes, long_hair, red_eyes, makeup, lipstick, lips
+        costume:
+          - MosquitoGirl_white, armor, white_hair, bodysuit
+          - MosquitoGirl_red, yellow_eyes, pink_hair, weapon, dark_skin, very_long_hair, animal_print, colored_skin, striped
+        costume-elem:
+          - apron, naked apron
+          - bandages, bandaid
+          - frills
+          - hanging breasts
+          - monster girl, arthropod girl
+          - underboob
+          - claws
+          - ribbon
+          - helmet
+        costume-eyes:
+          - jitome
+        expressions:
+          - smirk
+        action-pose:
+          - bent over
+          - hands on own chest
+      # https://civitai.com/models/129570/do-s-anime-character-or-one-punch-man-or-ownwaifu?modelVersionId=222811
+      kaijin_hime_do-s:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/one-punch_man/kaijin_hime_do-s/costume-ethnicity__
+            , {1-$$__lazy-wildcards/cosplay-char/one-punch_man/kaijin_hime_do-s/costume__}
+            , __lazy-wildcards/cosplay-char/one-punch_man/kaijin_hime_do-s/costume-headwear__
+            {, {1-$$__lazy-wildcards/cosplay-char/one-punch_man/kaijin_hime_do-s/costume-elem__}|}
+        costume-ethnicity:
+          - kaijin hime do-s, long hair, blonde hair, breasts, heart, red eyes, large breasts, colored sclera, black sclera, hair ornament, hair flower, black rose, very long hair, toned, makeup
+        costume:
+          - spiked collar, spikes, facial mark, forehead mark, thighs, collarbone
+          - bondage outfit, underboob, gloves, thighhighs, dominatrix, o-ring, black gloves, elbow gloves, jewelry, bare shoulders, single elbow glove, cleavage, asymmetrical legwear, o-ring top, latex, bdsm, latex legwear, skin tight
+        costume-headwear:
+          - Masked_KaijinHimeDo-S_ownwaifu, mask, mouth mask, gas mask
+          - UnMasked_KaijinHimeDo-S_ownwaifu
+        costume-elem:
+          - hair pulled back
+      # https://civitai.com/models/219231/psykos-one-punch-man-lora
+      psykos:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/one-punch_man/psykos/costume-ethnicity__
+            , {1-$$__lazy-wildcards/cosplay-char/one-punch_man/psykos/costume__}
+            , {1-$$__lazy-wildcards/cosplay-char/one-punch_man/psykos/costume-headwear__}
+            {, {1-$$__lazy-wildcards/cosplay-char/one-punch_man/psykos/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/one-punch_man/psykos/env__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/one-punch_man/psykos/action-pose__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/one-punch_man/psykos/expressions__}|}
+        costume-ethnicity:
+          - psykos, psychos_\(one-punch_man\), aqua hair, earrings, blue eyes, wavy hair, hair between eyes
+        costume:
+          - white dress, underbust, breast curtains
+          - bridal gauntlets, detached sleeves
+        costume-elem:
+          - huge breast, breasts apart
+          - snake print, gold trim
+          - shoulder cutout
+          - bracelet
+          - shoulder blades
+          - v-shaped eyebrows
+          - floating hair
+          - navel, stomach
+          - wide hips
+        env:
+          - aura, electricity, glowing, psychic, telekinesis
+          - floating, floating object, floating rock
+        costume-headwear:
+          - black-framed eyewear, glasses, rectangular eyewear
+        action-pose:
+          - arms behind head
+          - arm at side, arm at side, hand on own head
+        expressions:
+          - grin, smile
+    tenkuu_shinpan:
+      # https://civitai.com/models/817105/yayoi-kusakabe-or-high-rise-invasion-or-3-attires?modelVersionId=913717
+      # https://civitai.com/models/134319/yayoi-kusakabe-high-rise-invasion?modelVersionId=147924
+      yayoi_kusakabe:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/tenkuu_shinpan/yayoi_kusakabe/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/tenkuu_shinpan/yayoi_kusakabe/costume-ethnicity__
+            {, {1-2$$__lazy-wildcards/cosplay-char/tenkuu_shinpan/yayoi_kusakabe/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/tenkuu_shinpan/yayoi_kusakabe/costume-headwear__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/tenkuu_shinpan/yayoi_kusakabe/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/tenkuu_shinpan/yayoi_kusakabe/env-bg__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/tenkuu_shinpan/yayoi_kusakabe/style__}|}
+        main-trigger-words:
+          - yayoi kusakabe, tenkuu_shinpan, high-rise invasion
+        costume-ethnicity:
+          - pink hair, pink eyes, spiked hair, black headband, long hair, hair over one eye, lipstick, makeup, lips, hairband, pink lips, bangs, hair ornament, one eye covered, black hairband, flipped hair, big hair
+        costume:
+          - MainOutfit_YayoiKusakabe_ownwaifu, blue jacket, blue necktie, breast pocket, police uniform, policewoman, collared shirt, black necktie, white shirt, belt, necktie, armband, pantyhose, pencil skirt, black belt, long sleeves, formal, suit, miniskirt, pocket, black pantyhose, skirt suit
+        costume-headwear:
+          - (Masked_YayoiKusakabe_ownwaifu, mask on head, masked, pink hair, no eyes, solid oval eyes:1.2)
+          - mask, white headwear, white mask
+        costume-elem:
+          - large breasts
+          - messy hair
+          - __lazy-wildcards/subject/costume-ethnicity-body/curvy_female/prompts__
+        env-bg:
+          - rooftop
+          - garden on the roof, rooftop garden
+          - rooftop terrace
+          - >-
+            {Super |}high-rise building
+        style:
+          - MangaBW_YayoiKusakabe_ownwaifu
+          - horror \(theme\)
+          - seductive
+    The_World_God_Only_Knows:
+      # https://civitai.com/models/817974/nora-floriann-leoria-the-world-god-only-knows?modelVersionId=914669
+      nora_floriann_leoria:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/The_World_God_Only_Knows/nora_floriann_leoria/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/The_World_God_Only_Knows/nora_floriann_leoria/costume-ethnicity__
+            {, {1-2$$__lazy-wildcards/cosplay-char/The_World_God_Only_Knows/nora_floriann_leoria/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/The_World_God_Only_Knows/nora_floriann_leoria/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/The_World_God_Only_Knows/nora_floriann_leoria/action-pose__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/The_World_God_Only_Knows/nora_floriann_leoria/env__}|}
+        main-trigger-words:
+          - NoraFloriannLeoria, The_World_God_Only_Knows, kami nomi zo shiru sekai
+        costume-ethnicity:
+          - long hair, skull hair ornament, purple eyes, white hair, wavy hair
+        costume:
+          - black dress, cleavage, detached sleeves, black choker, black leotard, short shorts, black shorts, white thighhighs, red belt
+        costume-elem:
+          - (__lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__:1.2)
+          - horns
+          - skull
+          - bare shoulders
+          - flowing hair
+          - pink_hagoromo, spiritual_cloak, pink_aura_cloak
+        action-pose:
+          - hand on own chin
+          - hand on own hip
+          - lying
+          - sitting
+        env:
+          - __lazy-wildcards/subject/env-elem/chair/prompts__
+

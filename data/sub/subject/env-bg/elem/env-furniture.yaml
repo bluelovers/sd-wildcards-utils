@@ -1,0 +1,34 @@
+lazy-wildcards:
+  subject:
+    env-elem:
+      chair:
+        prompts:
+          - >-
+            {1-2$$__lazy-wildcards/subject/env-elem/chair/env-chair__}
+            {, {1-$$__lazy-wildcards/subject/env-elem/chair/action-pose__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/chair/style__}|}
+        env-chair:
+          - cushioned seats
+          - recliners
+          - luxurious seating
+          - theater seating
+          - armchair
+          - chair
+          - invisible chair
+          - pilot chair
+          - >-
+            {__mix-lazy-auto/color-anything__ |}{{leather|velvet|wooden} |}{couch|sofa|chair}
+          - couch
+          - sofa
+          - discarded chairs
+          - beach_chair
+          - throne
+          - Recliner
+          - stool
+        action-pose:
+          - hand on own chin
+          - lying
+          - sitting
+        style:
+          - discarded
+

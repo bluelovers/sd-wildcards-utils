@@ -1,0 +1,31 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      # https://civitai.com/models/210581/carcosa-city-xl-sd15-f1d?modelVersionId=268186
+      carcosa_city:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/carcosa_city/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/carcosa_city/env__}|}
+            {, ({1-3$$__lazy-wildcards/subject/env-bg/carcosa_city/env-bg__})|}
+            {0.3::, {1-$$__lazy-wildcards/subject/env-bg/carcosa_city/style__}|}
+        env-bg-main:
+          - (carcosa city style)
+        env:
+          - moss_covered_walls
+          - occult_symbols
+          - non_euclidean_geometry
+          - black stars
+          - twin suns
+        env-bg:
+          - Endless Dusk and Starry Sky, eternal_sunset, starry_sky, yellow_hue, surreal_lighting
+          - Ancient and Decaying Buildings, decaying_building, ancient_city
+          - Twisted Streets and Non-Euclidean Geometry, twisted_street, impossible_architecture, paradoxical_space
+          - Pale Lake and Shattered Moon, pale_lake, shattered_moon, eerie_landscape, supernatural_lake
+          - Mysterious Black Towers, black_tower, alien_architecture, mysterious_structure, forbidden_tower
+          - foggy_plaza, statues_in_fog, eerie_atmosphere, abandoned_square
+          - Hidden Underground Passages, underground_passage, hidden_tunnels, forbidden_path
+        style:
+          - The King in Yellow's Presence, ominous_presence, invisible_terror, psychological_horror
+          - eerie_atmosphere
+

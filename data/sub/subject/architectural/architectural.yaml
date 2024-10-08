@@ -238,4 +238,57 @@ lazy-wildcards:
           - ancient_bridge
           - >-
             {1-$$ice_bridge|frost_bridge|frozen_bridge}
+      # https://civitai.com/models/825976/style-of-treehouse-433?modelVersionId=923694
+      treehouse:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-architectural/treehouse/env-bg-main__
+            {, {1-2$$__lazy-wildcards/subject/env-bg-architectural/treehouse/env-bg-treehouse__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/treehouse/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/treehouse/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/treehouse/style__}|}
+        env-bg-main:
+          - (treehouse, style of treehouse:1.2), tree
+        env-bg-treehouse:
+          - Rustic Treehouse, rustic_architecture
+          - modern_treehouse, geometric_architecture, eco_friendly_design, modern_integration
+          - adventure_treehouse, explorer_theme
+          - tribal_treehouse, bamboo_structure, palm_leaves_roof, handcrafted_architecture
+          - eco_treehouse, sustainable_design
+          - fantasy_treehouse, mystical_architecture, tower_structure
+          - minimalist_treehouse, simple_design, functional_architecture
+        env-bg:
+          - rainforest
+          - magic_forest, enchanted_environment
+          - quiet_forest
+          - lake_side
+          - garden
+          - giant tree
+        env:
+          - wooden_bridge
+          - rope_ladder
+          - ladder
+          - stairs
+          - wooden_house
+          - natural_materials
+          - hidden_architecture
+          - minimalist_architecture
+          - playful_architecture
+          - glass_windows
+          - natural_landscape
+          - mailbox \(incoming mail\)
+          - pinwheel
+          - fruit tree
+          - __lazy-wildcards/subject/env-elem/lamp/prompts__
+          - plant roots
+          - tire, tire swing
+        style:
+          - outdoor_exploration
+          - natural integration
+          - indigenous_design
+          - environmentally_friendly
+          - natural_conservation
+          - green_living
+          - storybook_design
+          - __lazy-wildcards/utils/scenery-no-humans__
 

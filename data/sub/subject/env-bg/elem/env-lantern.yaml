@@ -1,0 +1,50 @@
+lazy-wildcards:
+  subject:
+    env-elem:
+      lamp:
+        prompts:
+          - >-
+            {1-3$$__lazy-wildcards/subject/env-elem/lamp/env__}
+            {, {1-4$$__lazy-wildcards/subject/env-elem/lamp/style__}|}
+        env:
+          - lamp
+          - lampshades
+          - __lazy-wildcards/subject/env-elem/lantern/prompts__
+          - candle, candlelight
+          - chandelier
+          - wall_sconce, wall lamp
+          - floor_lamp
+          - arc_lamp
+          - reading_lamp
+          - table_lamp
+          - desk_lamp
+          - bedside_lamp
+          - ceiling_light, flush_mounted
+          - recessed_lighting, downlight
+          - >-
+            {{classic|modern} |}street lamp
+          - LED Strip Lighting
+        style:
+          - crystal_lighting
+          - luxury_lighting
+          - vintage_design, vintage_sconce
+          - elegant_lighting
+          - indirect_lighting
+          - decorative_lighting
+          - practical_lighting
+          - hidden_lighting
+          - ambient_lighting
+          - cyberpunk_aesthetic
+      lantern:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/lantern/env__}
+            {, {1-4$$__lazy-wildcards/subject/env-elem/lantern/style__}|}
+        env:
+          - lantern
+          - paper_lantern
+        style:
+          - japanese_lighting
+          - soft_lighting
+          - cultural_lighting
+

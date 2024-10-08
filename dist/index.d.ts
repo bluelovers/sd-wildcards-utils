@@ -300,6 +300,14 @@ export declare function createDefaultVisitWildcardsYAMLOptions(opts?: IOptionsPa
 export declare function validWildcardsYamlData<T extends IRecordWildcards | IWildcardsYAMLDocument | Document$1>(data: T | unknown, opts?: IOptionsSharedWildcardsYaml): asserts data is T;
 export declare function isSafeKey<T extends string>(key: T | unknown): key is T;
 export declare function _validKey<T extends string>(key: T | unknown): asserts key is T;
+export declare function _checkValue(value: string): {
+	value: string;
+	match: string;
+	index: number;
+	near: string;
+	error: string;
+};
+export declare function _nearString(value: string, index: number, match: string, offset?: number): string;
 export declare function mergeWildcardsYAMLDocumentRoots<T extends Pick<Document$1<YAMLMap>, "contents">>(ls: [
 	T,
 	...any[]

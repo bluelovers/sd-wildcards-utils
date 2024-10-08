@@ -1,0 +1,28 @@
+lazy-wildcards:
+  subject:
+    costume-elem-expressions:
+      yandere_trance:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-expressions/yandere_trance/expressions__
+            {, ({1-$$__lazy-wildcards/subject/costume-elem-expressions/yandere_trance/action-pose__})|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/yandere_trance/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/yandere_trance/style__}|}
+        expressions:
+          - >-
+            (yandere, yandere trance{0.3:::{1.2|1.3|1.4}|})
+        action-pose:
+          - hands on own face
+          - hands on own cheeks
+        costume-elem:
+          - makeup, lipstick
+          - blush
+          - heart-shaped pupils
+          - heavy breathing, visible breath
+        style:
+          - happy female
+      seductive:
+        prompts:
+          - >-
+            {1-$$seductive smile|seductive|voluptuous}
+

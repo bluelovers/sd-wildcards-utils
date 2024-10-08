@@ -34,7 +34,7 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/subject/costume/slave-girl/main__,
-            {1-$$__lazy-wildcards/subject/costume/slave-girl/costume/*__},
+            {1-$$__lazy-wildcards/subject/costume/slave-girl/costume__},
             ({1-$$__lazy-wildcards/subject/costume/slave-girl/style__}),
             {1-$$__lazy-wildcards/subject/costume/slave-girl/style-torn__},
             {({1-$$__lazy-wildcards/subject/costume/slave-girl/costume-ethnicity__}:1.2),|}
@@ -44,11 +44,8 @@ lazy-wildcards:
         main:
           - slave, slavegirl
         costume:
-          type-torn:
-            - >-
-              {2-$$ragged tunic|tattered clothing|torn clothes, torn clothing}
-          type-slave-outfit:
-            - slave outfit
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - slave outfit
         costume-ethnicity:
           - malnutrition
           - emaciation
@@ -209,7 +206,7 @@ lazy-wildcards:
           - censored
           - convenient censoring
           - partially visible vulva
-          - pussy juice
+          - __lazy-wildcards/subject/costume-elem/pussy_juice/prompts__
           - uncensored
           - gigantic breasts
           - saggy breasts
@@ -883,4 +880,16 @@ lazy-wildcards:
         costume-elem:
           - navel
           - torn sweater
+      martial_arts:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/martial_arts/style-main__
+            {, {1-$$__lazy-wildcards/subject/costume/martial_arts/costume__}|}
+        style-main:
+          - (martial arts{0.3:::{1.2|1.3|1.4}|})
+        costume:
+          - robe
+          - chinese clothes
+          - japanese clothes
+          - dress
 

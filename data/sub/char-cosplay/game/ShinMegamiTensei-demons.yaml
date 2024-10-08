@@ -1,0 +1,92 @@
+lazy-wildcards:
+  cosplay-char:
+    ShinMegamiTensei:
+      # https://civitai.com/models/613904/danu-shin-megami-tensei?modelVersionId=686262
+      demons-danu:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/main__
+            ,{3-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/costume-ethnicity__}
+            ,{99-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/ethnicity-hair__}
+            ,{99-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/costume__}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/costume-tattoo__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/action__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/env__}|}
+        main:
+          - DanuSMT, danu_\(megami_tensei\), shin megami tensei
+        costume-ethnicity:
+          - long hair
+          - green eyes
+          - green hair
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+        ethnicity-hair:
+          - plant hair, hair flower
+        costume:
+          - hair ornament
+          - hair flower
+          - navel
+          - jewelry
+          - bracelet
+          - nail polish, red nails
+          - navel piercing
+          - topless
+        costume-elem:
+          - monster girl
+          - cape
+          - brown footwear
+          - brown skirt
+          - fur trim
+          - mask
+          - pelvic curtain
+        costume-tattoo:
+          - mandala_tattoo
+          - scripture_tattoo
+        costume-weapon:
+          - holding staff
+        env:
+          - clover, shamrock
+        action:
+          - hand on own hip
+      # https://civitai.com/models/491563?modelVersionId=546594
+      demons-Naamah:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/main__
+            ,{3-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/costume-ethnicity__}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/costume-wings__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/costume__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/action__}|}
+        main:
+          - Naamah, naamah_\(megami_tensei\), shin megami tensei
+        costume-ethnicity:
+          - long hair, colored skin, half mask, lipstick, cyborg, mechanical arm, mechanical leg, hairband, gold trim, teeth
+          - heterochromia, blue eyes, red eyes
+          - blonde hair
+          - white skin
+          - sharp fingernails
+        costume-wings:
+          - black wings
+        costume:
+          - fishnet gloves, asymmetrical gloves,
+          - fishnets, asymmetrical legwear
+          - bare shoulders
+          - black thighhighs, fishnet thighhighs
+          - glowing eye
+        action:
+          - reaching
+          - reaching towards viewer
+          - and on own chest
+      demons-Alraune:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Alraune/main__
+            ,__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Alraune/costume-ethnicity__
+            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Alraune/style__}|}
+        main:
+          - alraune, alrauneSH, alraune_\(megami_tensei\), plant girl
+        costume-ethnicity:
+          - long hair, hair over eyes, vines, thorns, navel, hair over breasts, lipstick, red hair, flower, black rose, leaf
+        style:
+          - convenient censoring, hair censor

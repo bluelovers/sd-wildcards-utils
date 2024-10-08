@@ -33,4 +33,28 @@ lazy-wildcards:
           chitin-theme:
             - >-
               chitin ${obj}
+      MarbleSteelmeshWorld:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-theme/MarbleSteelmeshWorld/main-trigger-words__
+            {, {1-$$__lazy-wildcards/subject/style-theme/MarbleSteelmeshWorld/env__}|}
+            {, {1-$$__lazy-wildcards/subject/style-theme/MarbleSteelmeshWorld/style__}|}
+        main-trigger-words:
+          - MarbleSteelmeshWorld
+        env:
+          - __lazy-wildcards/subject/env-elem/fence/prompts__
+          - __lazy-wildcards/subject/env-elem/industrial-pipes/prompts__
+          - metal_grate
+          - mesh_bridge
+          - industrial_platform
+          - rusty_surface
+          - industrial_building
+          - metal_pipeline
+          - guard_rail
+          - mesh_window
+          - barred_window.
+        style:
+          - metal_shadows
+          - cold_light
+          - mesh_shadows
 

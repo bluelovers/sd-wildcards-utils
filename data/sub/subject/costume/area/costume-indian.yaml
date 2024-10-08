@@ -25,3 +25,39 @@ lazy-wildcards:
           - navel_focus
           - low_rise
           - midriff
+      # https://civitai.com/models/157103/djinnindianpersion-concept-lora-or-ownwaifu?modelVersionId=176379
+      djinn_indian:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/djinn_indian/costume__
+            {0.7::, {1-$$__lazy-wildcards/subject/costume/djinn_indian/costume-ethnicity__}|}
+            {0.7::, {1-$$__lazy-wildcards/subject/costume/djinn_indian/costume-hair__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/djinn_indian/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/djinn_indian/env__}|}
+        costume-ethnicity:
+          - long legs, tall female
+          - __lazy-wildcards/subject/costume-ethnicity-body/curvy_female/prompts__
+          - (__lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__:1.2)
+        costume:
+          - >-
+            (CONCEPT_Djinn_Indian_persion_ownwaifu, bodypaint, full-body tattoo, tattoo, mayan_tattoos full body, bodypaint:1.2)
+            , arabian clothes, tribal, dress, navel, see-through, veil, sari
+            , necklace, jewelry, bracelet, earrings, armlet
+            , makeup, lipstick, lips, red lips
+            , cleavage, underboob
+            , dreadlocks
+            , intricate dress
+            , gold
+            , chain, belly chain
+            , Embroidery
+        costume-elem:
+          - large breasts
+          - __lazy-wildcards/subject/costume-elem/chain-acc/prompts__
+        costume-hair:
+          - long hair, very long hair, absurdly long hair
+          - curly hair, big hair, wavy hair
+          - black hair
+          - braid
+        env:
+          - tree
+

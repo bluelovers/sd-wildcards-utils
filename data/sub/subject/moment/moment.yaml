@@ -49,7 +49,7 @@ lazy-wildcards:
       weather-mist:
         prompts:
           - >-
-            {1-$$foggy|fog|mist|steam|smoke|thick mist|dense_fog}
+            {1-$$foggy|fog|mist, misty|steam|smoke|thick mist|dense_fog}
       weather-natural-disaster-water:
         prompts:
           - >-
@@ -132,6 +132,9 @@ lazy-wildcards:
             {cold |}full moon
           - moonlight
           - midnight
+          - shattered_moon
+          - half_moon
+          - crescent moon, crescent
       age:
         prompts:
           - medieval

@@ -1,6 +1,10 @@
 lazy-wildcards:
   subject:
     style-art-type:
+      others:
+        prompts:
+          - retro futurism style
+          - smoke sketch style
       sketch-pen-landscape:
         prompts:
           - >-
@@ -43,7 +47,7 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/main__
-            {,{1-2$$__lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/env-architectural__}|}
+            {0.2::,{1-2$$__lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/env-architectural__}|}
             {,{1-$$__lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/style__}|}
             {,__lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/style-art-type__|}
         main:
@@ -77,6 +81,13 @@ lazy-wildcards:
           - Mechanical_Plan
           - Structural_Drawing
           - Reflected_Ceiling_Plan
+          - technical drawing
+          - Blueprint Schematic Drawing, schematic
+          - Character Design Sheet, character reference sheet, character turn around
+          - industrial design sketch
+          - sketch
+        env:
+          - english text
       # https://civitai.com/models/14892?modelVersionId=17546
       papercutting-art:
         prompts:
@@ -216,11 +227,11 @@ lazy-wildcards:
           - >-
             {1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/style-main__}
             {,{1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/style__}|}
-            {0.3::,{1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/env-monster__}|}
+            {0.3::,{1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/env-creatures__}|}
             {,{1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/env-bg__}|}
         style-main:
           - (cave paintings, cave art{0.3:::{1.2|1.3|1.4}|}), rock art
-        env-monster:
+        env-creatures:
           - prehistoric_animal
         env-bg:
           - cave_interior

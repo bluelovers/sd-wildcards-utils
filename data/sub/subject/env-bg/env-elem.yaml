@@ -432,25 +432,6 @@ lazy-wildcards:
             slime_\(substance\), sticky slime
           - twigs
           - overgrown
-      skull:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-elem/skull/env-main__
-            {,{1-$$__lazy-wildcards/subject/env-elem/skull/costume-elem__}|}
-            {,{1-$$__lazy-wildcards/subject/env-elem/skull/costume-weapon__}|}
-            {,{1-$$__lazy-wildcards/subject/env-elem/skull/env__}|}
-        env-main:
-          - skull, skeleton
-        costume-elem:
-          - skull bra
-          - skull necklace
-        env:
-          - pile of skulls
-          - skull decoration
-          - skull_and_crossbones, jolly_roger, pirate symbol, pirate emblem, skull print
-          - crystal skull decoration, crystal skull pattern
-        costume-weapon:
-          - holding skull
       GreenRockWorld:
         prompts:
           - >-
@@ -503,6 +484,7 @@ lazy-wildcards:
           - luxury style
           - industrial style
           - victorian style
+          - spiraling upwards
       railing:
         prompts:
           - >-
@@ -555,3 +537,41 @@ lazy-wildcards:
         env:
           - empty pool
           - pool ladder
+      fence:
+        prompts:
+          - >-
+            {1-2$$__lazy-wildcards/subject/env-elem/fence/env__}
+            {, {1-$$__lazy-wildcards/subject/env-elem/fence/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/fence/action-pose__}|}
+        env:
+          - fence
+          - chain-link fence, chain_link_fence
+          - wooden fence
+          - bamboo fence
+          - wire_fence
+          - barbed_wire
+          - safety_fence
+          - >-
+            {steel|iron} mesh, wire mesh, metal mesh, metal_fence
+        env-bg:
+          - rooftop
+        action-pose:
+          - against fence
+      industrial-pipes:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/industrial-pipes/env-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/industrial-pipes/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/industrial-pipes/costume-weapon__}|}
+        env-main:
+          - cables, tubes
+          - industrial pipes
+          - wire
+        env:
+          - cables everywhere
+          - hanging_cables
+          - metal_chains
+          - industrial_wires
+          - dangling_chains
+        costume-weapon:
+          - holding cable

@@ -21,4 +21,29 @@ lazy-wildcards:
           - high ponytail
           - long fingers
           - sidelocks
+    im-the-evil-lord-of-an-intergalactic-empire:
+      # https://civitai.com/models/720609/chengshi-sera-tourei-im-the-evil-lord-of-an-intergalactic-empire?modelVersionId=805776
+      Chengshi_Sera_Tourei:
+        prompts:
+            - >-
+              __lazy-wildcards/cosplay-char/im-the-evil-lord-of-an-intergalactic-empire/Chengshi_Sera_Tourei/main-trigger-words__
+              {,__lazy-wildcards/cosplay-char/im-the-evil-lord-of-an-intergalactic-empire/Chengshi_Sera_Tourei/costume-ethnicity__|}
+              ,__lazy-wildcards/cosplay-char/im-the-evil-lord-of-an-intergalactic-empire/Chengshi_Sera_Tourei/costume__
+              {,{1-$$__lazy-wildcards/cosplay-char/im-the-evil-lord-of-an-intergalactic-empire/Chengshi_Sera_Tourei/costume-elem__}|}
+        main-trigger-words:
+          - ChengshiSeraTourei
+        costume-ethnicity:
+          - short hair, brown hair, brown eyes, medium breasts, purple eyes
+        costume:
+          - >-
+            (detached sleeves, sleeves past wrists, bare shoulders:1.2), wide sleeves, long sleeves,
+            black thighhighs,
+            (cleavage, cleavage cutout:1.2),
+            (garter belt, red dress, pelvic curtain:1.2), chinese dress
+        costume-elem:
+          - hair bun, bun cover
+          - hair between eyes
+          - hair ribbon
+          - black panties
+          - gold trim
 

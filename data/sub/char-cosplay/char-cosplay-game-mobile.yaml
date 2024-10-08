@@ -1,0 +1,96 @@
+lazy-wildcards:
+  cosplay-char:
+    onmyoji:
+      suzuka_gozen:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/main__,
+            __lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/costume-ethnicity__,
+            {{1-$$__lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/costume-types/type-*__},|}
+            {1-$$__lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/env__}
+        main:
+          - suzuka_gozen_(onmyoji), onmyoji, onmyoji:_the_card_game, onmyouji
+        costume-types:
+          type-original-outfit:
+            - original outfit
+          type-dress:
+            - original outfit, white shirt, open clothes, rope, colored sclera, japanese clothes, japanese armor
+          type-mecha:
+            - white mecha bodysuit, white mecha corset, mecha museum, mechanical parts and weapons, headgear, humanoid robot, android, exposed bones, anatomy, exo-skeleton body, mecha skeleton, rib cage, hip bones, backbones,
+        costume-ethnicity:
+          - white hair, long hair, colored sclera
+        env:
+          - slightly curly hair
+          - blue eyes
+          - expressionless
+          - ponytail
+          - earphones
+          - white pantyhose
+          - string bikini
+          - highleg panties
+          - garter
+          - necktie
+          - suspender
+          - gloves
+          - spider lily print
+          - bonsai
+          - kimono
+          - in tree
+          - haori
+          - fur rug
+          - bow
+          - center opening
+          - breasts apart
+          - black sclera
+          - sideboob
+          - slit pupils
+      enenra:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/onmyoji/enenra/main__,
+            {1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/costume-ethnicity__},
+            {{1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/costume-types/type-*__},|}
+            {1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/costume-elem__},
+            {{1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/env-bg__},|}
+            {1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/env__}
+        main:
+          - Enenra, enenra \(onmyoji\), japanese attire
+        costume-ethnicity:
+          - hidden ears
+          - blue eyes
+          - pointy ears
+          - blunt bangs
+        costume-types:
+          type-kimono:
+            - kimono
+          type-yukata:
+            - yukata
+        costume-elem:
+          - >-
+            {1-$$earrings|hoop earrings}
+          - (light purple attire)
+          - showing panty
+          - tight clothing
+          - white panty
+          - tight panty
+          - __lazy-wildcards/subject/costume-weapon/smoking_pipe/prompts__
+          - hair bow
+          - jewelry
+          - >-
+            {1-$$long sleeves|wide sleeves}
+          - sidelocks
+          - sideboob
+          - bare shoulders
+          - underwear
+          - clothes lift
+        env:
+          - alluring legs
+          - seductive smile
+          - seducing the viewer
+          - water drop
+          - soaking hands
+        env-bg:
+          - beach
+          - heian
+          - on the blanket
+

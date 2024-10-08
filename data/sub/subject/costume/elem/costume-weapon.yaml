@@ -6,3 +6,42 @@ lazy-wildcards:
           - >-
             smoking pipe
             {, {1-$$holding smoking pipe, kiseru|smoke}|}
+      umbrella:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-weapon/umbrella/env-umbrella__
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/umbrella/costume-weapon__}}
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/umbrella/style-umbrella__}}
+        env-umbrella:
+          - umbrella
+          - Oil-paper umbrellas, Japanese Wagasa
+          - parasol
+          - folding umbrella
+          - Bubble Umbrella
+          - Storm Umbrella
+          - Travel Umbrella
+          - Kids Umbrella
+          - leaf umbrella
+        style-umbrella:
+          - closed umbrella
+          - __mix-lazy-auto/color-anything__ umbrella
+          - shared umbrella
+          - transparent umbrella
+        costume-weapon:
+          - holding umbrella, with an umbrella
+          - umbrella over shoulder
+      umbrella_others:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-weapon/umbrella_others/env-umbrella__
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/umbrella/style-umbrella__}}
+        env-umbrella:
+          - beach umbrella
+          - Golf Umbrella
+          - Patio Umbrella
+          - Market Umbrella
+          - Fishing Umbrella
+          - Cantilever Umbrella
+          - Personal Sun Shade Umbrella
+          - Sun Umbrella
+

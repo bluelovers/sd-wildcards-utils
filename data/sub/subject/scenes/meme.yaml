@@ -117,3 +117,24 @@ lazy-wildcards:
         env-on:
           - on bed, bedroom
           - on floor, floor
+      iced_latte_with_breast_milk:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/scenes-meme/iced_latte_with_breast_milk/main-trigger-words__
+            , __lazy-wildcards/subject/scenes-meme/iced_latte_with_breast_milk/costume__
+            , __lazy-wildcards/subject/scenes-meme/iced_latte_with_breast_milk/costume-weapon__
+            {, {1-$$__lazy-wildcards/subject/scenes-meme/iced_latte_with_breast_milk/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/scenes-meme/iced_latte_with_breast_milk/env__}|}
+        main-trigger-words:
+          - meme_iced_latte_with_breast_milk_ownwaifu, meme, iced_latte_with_breast_milk_\(meme\)
+        costume:
+          - barista, green_apron, (naked_apron, cleavage, sideboob, collarbone:1.2), apron, breasts, starbucks, logo_parody
+        costume-weapon:
+          - cafe, cup, coffee, holding, holding_cup, disposable_cup
+        costume-elem:
+          - __lazy-wildcards/subject/costume-ethnicity-body/curvy_female/prompts__
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/prompts__
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-out/prompts__
+        env:
+          - suggestive_fluid
+          - sparkle

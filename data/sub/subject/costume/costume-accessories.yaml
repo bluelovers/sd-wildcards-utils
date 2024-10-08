@@ -16,3 +16,12 @@ lazy-wildcards:
           - flower necklace
           - feather necklace
           - skull necklace
+      chain-acc:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-elem/chain-acc/costume-elem__}
+        costume-elem:
+          - chain leash
+          - chain necklace
+          - chain
+          - belly chain

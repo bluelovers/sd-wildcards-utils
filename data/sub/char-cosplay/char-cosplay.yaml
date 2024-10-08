@@ -109,81 +109,6 @@ lazy-wildcards:
         env-bg:
           - striped background
           - yellow background
-    # https://zh.wikipedia.org/zh-tw/%E9%AD%94%E5%85%B5%E9%A9%9A%E5%A4%A9%E9%8C%84
-    bayonetta:
-      bayonetta:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/bayonetta/bayonetta/main__,
-            __lazy-wildcards/cosplay-char/bayonetta/bayonetta/costume-ethnicity__,
-            __lazy-wildcards/cosplay-char/bayonetta/bayonetta/costume__,
-            {{1-$$__lazy-wildcards/cosplay-char/bayonetta/bayonetta/costume-elem__},|}
-            {1-$$__lazy-wildcards/cosplay-char/bayonetta/bayonetta/env__}
-            {,{0-$$__lazy-wildcards/cosplay-char/bayonetta/bayonetta/env-bg__}|}
-        main:
-          - >-
-            cereza, bayonetta, mole under mouth
-        costume-ethnicity:
-          - blue eyes, __lazy-wildcards/cosplay-char/bayonetta/bayonetta/ethnicity-types/*__
-        ethnicity-types:
-          long-hair:
-            - bayonetta1, very long hair, long hair, hair ribbon, ponytail
-          bayonetta2:
-            - bayonetta2, short hair
-          bayonetta3:
-            - bayonetta3, twin braids
-        costume:
-          - backless outfit, bodysuit, covered nipples, amulet, high heels, navel, elbow gloves, clothing cutout, ribbon
-        costume-elem:
-          - sexy minidress
-          - clothing cutout
-          - makeup
-          - >-
-            {1-$$cleavage|cleavage cutout}
-          - holding
-          - hand on hip
-          - lipstick
-          - eyeshadow
-          - parted lips
-          - ass
-          - looking back
-          - alternate hair length
-          - toned
-          - curvy
-          - narrow waist
-          - mature female
-          - magic
-          - streaked hair
-          - braid
-          - >-
-            {1-$$weapon|dual wielding}
-          - glasses
-          - black-framed eyewear
-          - semi-rimless_eyewear
-          - shoes
-          - vertical-striped thighhighs
-          - >-
-            {1-$$backless outfit|back cutout}
-          - __lazy-wildcards/dataset/costume-accessories-base__
-          - ribbon
-          - elbow gloves
-          - hair ribbon
-          - ponytail
-        env:
-          - lollipop
-          - >-
-            {1-$$riding|motorcycle|motor vehicle}
-          - candy
-          - >-
-            gun, handgun
-          - food
-          - sword
-          - katana
-          - vehicle
-        env-bg:
-          - twilight
-          - night
-          - moon
     ErgoProxy:
       Re-L_Mayer:
         prompts:
@@ -390,100 +315,7 @@ lazy-wildcards:
       louise:
         prompts:
           - long hair,black hair, ribbon, brown eyes, hair bow, boots, sleeveless, black gloves, sailor collar, white dress, white footwear, white bow, single glove, sailor dress
-          - black hair, yellow eyes, __lazy-wildcards/subject/costume-ethnicity-body/dark-skinned/prompts__,blunt bangs,makeup, glowing, lipstick, glowing eyes, science fiction
-    onmyoji:
-      suzuka_gozen:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/main__,
-            __lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/costume-ethnicity__,
-            {{1-$$__lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/costume-types/type-*__},|}
-            {1-$$__lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/env__}
-        main:
-          - suzuka_gozen_(onmyoji), onmyoji, onmyoji:_the_card_game, onmyouji
-        costume-types:
-          type-original-outfit:
-            - original outfit
-          type-dress:
-            - original outfit, white shirt, open clothes, rope, colored sclera, japanese clothes, japanese armor
-          type-mecha:
-            - white mecha bodysuit, white mecha corset, mecha museum, mechanical parts and weapons, headgear, humanoid robot, android, exposed bones, anatomy, exo-skeleton body, mecha skeleton, rib cage, hip bones, backbones,
-        costume-ethnicity:
-          - white hair, long hair, colored sclera
-        env:
-          - slightly curly hair
-          - blue eyes
-          - expressionless
-          - ponytail
-          - earphones
-          - white pantyhose
-          - string bikini
-          - highleg panties
-          - garter
-          - necktie
-          - suspender
-          - gloves
-          - spider lily print
-          - bonsai
-          - kimono
-          - in tree
-          - haori
-          - fur rug
-          - bow
-          - center opening
-          - breasts apart
-          - black sclera
-          - sideboob
-          - slit pupils
-      enenra:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/onmyoji/enenra/main__,
-            {1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/costume-ethnicity__},
-            {{1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/costume-types/type-*__},|}
-            {1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/costume-elem__},
-            {{1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/env-bg__},|}
-            {1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/env__}
-        main:
-          - Enenra, enenra \(onmyoji\), japanese attire
-        costume-ethnicity:
-          - hidden ears
-          - blue eyes
-          - pointy ears
-          - blunt bangs
-        costume-types:
-          type-kimono:
-            - kimono
-          type-yukata:
-            - yukata
-        costume-elem:
-          - >-
-            {1-$$earrings|hoop earrings}
-          - (light purple attire)
-          - showing panty
-          - tight clothing
-          - white panty
-          - tight panty
-          - __lazy-wildcards/subject/costume-weapon/smoking_pipe/prompts__
-          - hair bow
-          - jewelry
-          - >-
-            {1-$$long sleeves|wide sleeves}
-          - sidelocks
-          - sideboob
-          - bare shoulders
-          - underwear
-          - clothes lift
-        env:
-          - alluring legs
-          - seductive smile
-          - seducing the viewer
-          - water drop
-          - soaking hands
-        env-bg:
-          - beach
-          - heian
-          - on the blanket
+          - black hair, yellow eyes, __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__,blunt bangs,makeup, glowing, lipstick, glowing eyes, science fiction
     vocaloid:
       hatsune_miku:
         prompts:
@@ -1096,68 +928,6 @@ lazy-wildcards:
           - Monster, power armor
         costume-elem:
           - bio armor, biosuit
-    # https://x.com/CheLA_777
-    CheLA77:
-      # https://x.com/CheLA_777/status/1799009419126325744/photo/1
-      # https://civitai.com/models/601494/poorly-dressed-policewoman-chela77?modelVersionId=672283
-      PoorlyDressedPolicewoman:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/main__
-            {,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/expressions__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-hand__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-headwear__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-elem__}|}
-            {,{1-$$__lazy-wildcards/subject/costume/police/prompts__}|}
-            {0.2::,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-ethnicity__}|}
-            {0.2::,__lazy-wildcards/subject/action-sfw/sitting-*/prompts__|}
-            {0.2::,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/env__}|}
-        main:
-          - PoorlyDressedPolicewoman, brautiful pol1ceg1rls in a police uniform, policewoman
-        expressions:
-          - smug, grinning smile
-        costume-ethnicity:
-          - short hair, blonde hair, large breasts, orange eyes
-          - long hair
-        costume:
-          - police hat, police badge , short sleeves blue shirt, short black pencil skirt
-          - >-
-            pink bra, leopard print bar,
-            blue Police jacket, open jacket,
-            cleavage,
-            white shirt
-        costume-hand:
-          - >-
-            {1-$$fingernails|long fingernails|nail polish}
-          - fingerless gloves
-          - >-
-            {1-$$cuffs|handcuffs}
-        costume-headwear:
-          - peaked cap
-          - police hat
-        costume-elem:
-          - >-
-            {1-$$earrings|hoop earrings}
-          - >-
-            {1-$$crop top|midriff}
-          - long sleeves
-          - jewelry
-          - short shorts
-          - choker
-          - collared shirt
-          - necklace
-          - piercing
-          - pink leopard print
-          - thigh strap, thighband pantyhose, black pantyhose
-          - sagging breasts
-          - detached collar
-          - garter straps
-          - epaulettes
-          - >-
-            pink panties, leopard print panties{, panties under pantyhose|}
-        env:
-          - work desk
     # https://mangadex.org/title/8fef2dc5-fd32-4d62-9cb3-4a39275e0ef5/no-longer-allowed-in-another-world
     # https://civitai.com/models/563039/isekai-shikkaku-or-annette-and-tama-pdxl
     Isekai_Shikkaku:
@@ -1257,6 +1027,49 @@ lazy-wildcards:
           - magical_hats_(yu-gi-oh!)
           - harpie's pet dragon
           - cyber shield (yu-gi-oh!)
+      # https://civitai.com/models/445758/ishizu-ishtar-or-yu-gi-oh-or-kofi-commissioned-or-ownwaifu?modelVersionId=496363
+      # https://civitai.com/models/43754
+      ishizu_ishtar:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/main-trigger-words__
+            {, {1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/costume-ethnicity__}|}
+            , {1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/costume__}
+            {, {1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/env__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/env-bg__}|}
+        main-trigger-words:
+          - ANIME_YuGiOh_IshizuIshtar_ownwaifu, ishizu_ishtar, yu-gi-oh!, ancient egyptian
+        costume-ethnicity:
+          - blue eyes, black hair, long hair, collarbone, lips, lipstick, makeup, __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+        costume:
+          - eye of horus, jewelry, millennium necklace, gold bracelet, gold armlet, gold crown, hair tubes, cleavage, eyeshadow, forehead jewel, gold bracer
+          - hood, dress, cape, ancient egyptian clothes, ankh, white dress, cloak
+        costume-elem:
+          - closed mouth
+          - sleeveless dress
+          - white veil, mouth veil
+          - gold trim
+          - sidelocks
+          - groin
+          - hooded cloak, hood up
+          - gold chain
+          - o-ring
+          - v-shaped eyebrows
+          - wide sleeves
+          - blush
+          - bare shoulders
+          - collarbone
+          - pelvic curtain
+        costume-weapon:
+          - holding card
+          - duel disk
+          - card \(medium\)
+        env:
+          - blue gemstone, gem, green gemstone
+        env-bg:
+          - sand dune
     sousou_no_frieren:
       # https://civitai.com/models/421109/ubel-sousou-no-frieren
       # https://danbooru.donmai.us/posts?tags=ubel_%28sousou_no_frieren%29&z=2
@@ -1385,96 +1198,6 @@ lazy-wildcards:
           - blue bodysuit, bare shoulders
           - lipstick
           - skin tight
-    ShinMegamiTensei:
-      # https://civitai.com/models/613904/danu-shin-megami-tensei?modelVersionId=686262
-      demons-danu:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/main__
-            ,{3-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/costume-ethnicity__}
-            ,{99-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/ethnicity-hair__}
-            ,{99-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/costume__}
-            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/costume-tattoo__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/costume-elem__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/action__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/costume-weapon__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/env__}|}
-        main:
-          - DanuSMT, danu_\(megami_tensei\), shin megami tensei
-        costume-ethnicity:
-          - long hair
-          - green eyes
-          - green hair
-          - __lazy-wildcards/subject/costume-ethnicity-body/dark-skinned/prompts__
-        ethnicity-hair:
-          - plant hair, hair flower
-        costume:
-          - hair ornament
-          - hair flower
-          - navel
-          - jewelry
-          - bracelet
-          - nail polish, red nails
-          - navel piercing
-          - topless
-        costume-elem:
-          - monster girl
-          - cape
-          - brown footwear
-          - brown skirt
-          - fur trim
-          - mask
-          - pelvic curtain
-        costume-tattoo:
-          - mandala_tattoo
-          - scripture_tattoo
-        costume-weapon:
-          - holding staff
-        env:
-          - clover, shamrock
-        action:
-          - hand on own hip
-      # https://civitai.com/models/491563?modelVersionId=546594
-      demons-Naamah:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/main__
-            ,{3-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/costume-ethnicity__}
-            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/costume-wings__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/costume__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/action__}|}
-        main:
-          - Naamah, naamah_\(megami_tensei\), shin megami tensei
-        costume-ethnicity:
-          - long hair, colored skin, half mask, lipstick, cyborg, mechanical arm, mechanical leg, hairband, gold trim, teeth
-          - heterochromia, blue eyes, red eyes
-          - blonde hair
-          - white skin
-          - sharp fingernails
-        costume-wings:
-          - black wings
-        costume:
-          - fishnet gloves, asymmetrical gloves,
-          - fishnets, asymmetrical legwear
-          - bare shoulders
-          - black thighhighs, fishnet thighhighs
-          - glowing eye
-        action:
-          - reaching
-          - reaching towards viewer
-          - and on own chest
-      demons-Alraune:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Alraune/main__
-            ,__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Alraune/costume-ethnicity__
-            {,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Alraune/style__}|}
-        main:
-          - alraune, alrauneSH, alraune_\(megami_tensei\), plant girl
-        costume-ethnicity:
-          - long hair, hair over eyes, vines, thorns, navel, hair over breasts, lipstick, red hair, flower, black rose, leaf
-        style:
-          - convenient censoring, hair censor
     Path-to-Nowhere:
       # https://civitai.com/models/428585/mantis-path-to-nowhere
       # https://danbooru.donmai.us/posts?tags=mantis_%28path_to_nowhere%29&z=5
@@ -1792,7 +1515,7 @@ lazy-wildcards:
         costume-ethnicity:
           - >-
             blonde hair, indian, green eyes, long hair, facial mark, forehead mark,
-            __lazy-wildcards/subject/costume-ethnicity-body/dark-skinned/prompts__
+            __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
         costume:
           - white lab coat, long sleeves, red shirt, collared shirt
           - arabian clothes, dress, harem outfit, partially fingerless gloves, veil
@@ -2098,7 +1821,7 @@ lazy-wildcards:
           - >-
             bikini{, bikini top only|}, swimsuit
           - cleavage
-          - __lazy-wildcards/subject/costume-ethnicity-body/dark-skinned/prompts__
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
           - fishnet thighhighs
           - handbag
           - lipstick
@@ -2718,7 +2441,7 @@ lazy-wildcards:
         costume-ethnicity:
           - black hair, very long hair, pale skin, (hair over eyes:1.3)
         costume-elem:
-          - __lazy-wildcards/subject/costume-elem/costume-breasts/prompts__
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/prompts__
           - dress
         action:
           - sitting
@@ -3183,7 +2906,7 @@ lazy-wildcards:
         main-trigger-words:
           - EarthGoddessMaiaYs, Earth Goddess Maia, ys
         costume-ethnicity:
-          - very long hair, blue hair, white drill hair, drill_curls, white wooden_hair, blue lips, __lazy-wildcards/subject/costume-ethnicity-body/dark-skinned/prompts__, leafy_hair, hair flower, blue orb
+          - very long hair, blue hair, white drill hair, drill_curls, white wooden_hair, blue lips, __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__, leafy_hair, hair flower, blue orb
         costume-elem:
           - hair ornament
           - cleavage
@@ -3279,7 +3002,7 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/expressions__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env-bg__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env-monster__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env-creatures__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/style__}|}
         main-trigger-words:
           - watanabe_saki, Saki Watanabe, Shinsekai, shin_sekai_yori
@@ -3336,7 +3059,7 @@ lazy-wildcards:
           - japanese_village
           - rice_fields
           - traditional_japanese_house
-        env-monster:
+        env-creatures:
           - squealer
           - kiroumaru
           - queerat
@@ -3356,7 +3079,7 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/expressions__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env-bg__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env-monster__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env-creatures__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/style__}|}
         main-trigger-words:
           - akizuki_maria , Maria Akizuki, Shinsekai, shin_sekai_yori
@@ -3478,8 +3201,7 @@ lazy-wildcards:
           - (dullahan, headless, black smoke)
           - (cat ears), animal ears, fake animal ears
           - helmet
-          - >-
-            {1-$$__lazy-wildcards/subject/costume-elem/costume-breasts/costume-breasts-out__}
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-out/prompts__
           - collarbone
           - partially unzipped
           - clothed sex
@@ -3497,4 +3219,22 @@ lazy-wildcards:
         style:
           - darkness
           - from side
+    saiyuki:
+      yaone:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/saiyuki/yaone/main-trigger-words__
+            {, __lazy-wildcards/cosplay-char/saiyuki/yaone/costume__|}
+            {, {1-$$__lazy-wildcards/cosplay-char/saiyuki/yaone/costume-elem__}|}
+        main-trigger-words:
+          - yaone, saiyuki, high ponytail, pointy ears, purple hair
+        costume:
+          - def1
+          - def2, open kimono, yellow kimono, leotard, white legwear, yellow footwear, fingerless gloves, belt, waste ribbon
+        costume-elem:
+          - pantyhose
+          - bikini top only
+          - bridal gauntlets
+          - ribbon
+          - twin braids, twintails
 

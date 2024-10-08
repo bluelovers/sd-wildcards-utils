@@ -1,0 +1,128 @@
+lazy-wildcards:
+  cosplay-char:
+    birdie_wing:
+      vipere:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/birdie_wing/vipere/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/birdie_wing/vipere/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/birdie_wing/vipere/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/birdie_wing/vipere/env__}|}
+        main-trigger-words:
+          - vipere_birdiewinggolfgirlsstory, vipere_\(birdie_wing\)
+        costume-ethnicity:
+          - black_hair, jewelry, makeup, red_eyes, long_hair, lipstick, necklace, bangs, earrings, blunt_bangs, multicolored_hair
+        costume-elem:
+          - open_mouth
+          - bodysuit
+          - clothing cutout
+          - ear piercing
+        env:
+          - golf ball
+    cyberpunk2077:
+      lucy:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/cyberpunk2077/lucy/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/cyberpunk2077/lucy/costume-ethnicity__
+            {, {1-2$$__lazy-wildcards/cosplay-char/cyberpunk2077/lucy/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/cyberpunk2077/lucy/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/cyberpunk2077/lucy/costume-weapon__}|}
+        main-trigger-words:
+          - lucy, lucy_\(cyberpunk\), lucyna, cyberpunk edgerunners, cyberpunk 2077
+        costume-ethnicity:
+          - asymmetrical hair, bob cut, colored eyelashes, eyeshadow under eye, gradient hair, lipstick, multicolored eyes, multicolored hair, red lips, white hair, short hair, parted bangs, red eyeliner, bangs, cyborg, makeup, blue hair, collarbone, pink hair, blue eyes, shiny
+        costume:
+          - BikiniMix_Lucy_ownwaifu, swimsuit, navel, cleavage, bare shoulders, side-tie bikini bottom
+          - CowPrintBikini_Lucy_ownwaifu, cow print, animal print, thighhighs, navel, swimsuit, print bikini, cleavage, side-tie bikini bottom
+          - Hoodie_Lucy_ownwaifu, hood, hood up, jacket, cigarette, hoodie, smoking, long sleeves
+          - Kimono_Lucy_ownwaifu, bare shoulders, bodysuit, floral print, japanese clothes, obi, off shoulder, sash, white kimono, hagoita
+          - MainOutfit_Lucy_ownwaifu, bare shoulders, white shorts, off shoulder, bodysuit, open clothes, open jacket, off-shoulder jacket, cropped jacket, white jacket, black leotard, leotard, hip vent, highleg leotard, long sleeves, belt, highleg, covered navel, sleeveless turtleneck leotard, thighhighs, stirrup legwear
+          - NSFW_Lucy_ownwaifu, completely nude, navel, nude
+          - PlayboyBunny_Lucy_ownwaifu, playboy bunny, cleavage, wrist cuffs, rabbit tail, black leotard, black bow, detached collar, covered navel, black bowtie, highleg leotard, strapless leotard, bare shoulders, fake tail
+          - Slingshotbikini_Lucy_ownwaifu, pink one-piece swimsuit, slingshot swimsuit, thighs, cleavage, fake tail, rabbit tail, white bikini
+          - SlingshotbikiniBlack_Lucy_ownwaifu, open jacket, open clothes, navel, bare shoulders, white jacket, black leotard, off shoulder, swimsuit, long sleeves, covered nipples
+          - WhiteBikini_Lucy_ownwaifu, swimsuit, white bikini, navel, skindentation
+          - WhiteSwimsuit_Lucy_ownwaifu, white one-piece swimsuit, cleavage, bare shoulders, covered navel, see-through, bracelet, highleg swimsuit, thighs
+        costume-elem:
+          - underboob
+          - toned
+          - abs
+        costume-weapon:
+          - smoking, holding cigarette, cigarette
+    galaxy_express_999:
+      maetel:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/galaxy_express_999/maetel/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/galaxy_express_999/maetel/costume-ethnicity__
+            {, {1-2$$__lazy-wildcards/cosplay-char/galaxy_express_999/maetel/costume__}|}
+            , __lazy-wildcards/cosplay-char/galaxy_express_999/maetel/costume-headwear__
+            {, {1-$$__lazy-wildcards/cosplay-char/galaxy_express_999/maetel/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/galaxy_express_999/maetel/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/galaxy_express_999/maetel/env-vehicle__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/galaxy_express_999/maetel/env__}|}
+        main-trigger-words:
+          - maetel, maetel \(cosplay\), ginga_tetsudou_999, galaxy express 999, hair focus
+        costume-ethnicity:
+          - Hairdown_Maetel_ownwaifu, blonde hair, very long hair, brown eyes, lipstick, makeup, bangs
+        costume:
+          - black dress, fur trim, long dress
+          - NSFW_Maetel_ownwaifu, nude, navel
+          - capelet, turtleneck, black capelet
+        costume-headwear:
+          - (HatDress_Maetel_ownwaifu, ushanka, papakha:1.2), fur hat, black headwear
+        costume-elem:
+          - hair between eyes
+          - fur-trimmed jacket, fur coat
+          - blush
+          - hair spread out
+          - black thighhighs
+          - black cape
+          - high heels
+        costume-weapon:
+          - holding briefcase, briefcase
+        env-vehicle:
+          - space train, steam locomotive, locomotive
+        env:
+          - wine, alcohol
+          - snow
+          - lamppost
+    gargoyles:
+      # https://civitai.com/models/184923/demona-cartoon-character-or-gargoyles-tv-show-ortier-03-patreon-requestor-2-outfits-or-ownwaifu?modelVersionId=207578
+      demona:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/gargoyles/demona/costume-ethnicity-main__
+            , __lazy-wildcards/cosplay-char/gargoyles/demona/costume-ethnicity__
+            {, {1-2$$__lazy-wildcards/cosplay-char/gargoyles/demona/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/gargoyles/demona/costume-wings__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/gargoyles/demona/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/gargoyles/demona/env__}|}
+        costume-ethnicity-main:
+          - demona, gargoyles, long hair, gold earrings, jewelry, red hair, gold headband, big hair, thick thighs, makeup, gold armlet, makeup, lipstick, red lips, gold hoop earrings, gold tiara
+        costume-ethnicity:
+          - >-
+            demona_gargoyles_ownwaifu
+            , colored skin, (blue skin:1.1)
+            , pointy ears
+            , tail, demon tail
+            , colored sclera, red eyes
+            , claws
+            , monster girl, demon girl
+            , toned, muscular female
+          - human_demona_ownwaifu
+        costume:
+          - belt, midriff, navel, cleavage, loincloth, bare shoulders, crop top, pelvic curtain
+        costume-wings:
+          - wings, bat wings, dragon wings, demon wings
+        costume-elem:
+          - curvy, narrow waist
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - revealing clothes
+          - sleeveless shirt
+        env:
+          - sunset
+          - wading, water
+          - full moon
+

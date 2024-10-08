@@ -1,0 +1,146 @@
+lazy-wildcards:
+  cosplay-char:
+    last_origin:
+      eva:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/last_origin/eva/main-trigger-words__
+            {, __lazy-wildcards/cosplay-char/last_origin/eva/costume-ethnicity__|}
+            , __lazy-wildcards/cosplay-char/last_origin/eva/costume__
+        main-trigger-words:
+          - Eva \(Last Origin\), EvaLO
+        costume-ethnicity:
+          - long hair, large breasts, brown eyes, blue hair, black hair
+        costume:
+          - (hood, hood up), (long sleeves, wide sleeves, sleeves past wrists:1.2), robe, long dress, white dress
+    # GLC_归龙潮
+    # https://glc.haowancheng.cn/
+    glc:
+      # https://civitai.com/models/798741/glc?modelVersionId=893157
+      changms:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/glc/changms/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/glc/changms/costume-ethnicity__
+            {, __lazy-wildcards/cosplay-char/glc/changms/costume__}
+            , __lazy-wildcards/cosplay-char/glc/changms/costume-headwear__
+            , {1-$$__lazy-wildcards/cosplay-char/glc/changms/costume-elem__}
+        main-trigger-words:
+          - changms
+        costume-ethnicity:
+          - red eyes, (black hair, streaked hair, aqua hair, two-tone hair), (hair bun, double bun, blunt bangs)
+        costume:
+          - chinese clothes, (red skirt, pleated skirt, miniskirt), clothing cutout, black pantyhose, (long sleeves, wide sleeves), ribbon, brown loafers
+        costume-headwear:
+          - tinted eyewear
+        costume-elem:
+          - earrings, jewelry
+          - tassel, longevity lock
+    # https://zh.wikipedia.org/zh-tw/%E9%AD%94%E5%85%B5%E9%A9%9A%E5%A4%A9%E9%8C%84
+    bayonetta:
+      bayonetta:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/bayonetta/bayonetta/main__,
+            __lazy-wildcards/cosplay-char/bayonetta/bayonetta/costume-ethnicity__,
+            __lazy-wildcards/cosplay-char/bayonetta/bayonetta/costume__,
+            {{1-$$__lazy-wildcards/cosplay-char/bayonetta/bayonetta/costume-elem__},|}
+            {1-$$__lazy-wildcards/cosplay-char/bayonetta/bayonetta/env__}
+            {,{0-$$__lazy-wildcards/cosplay-char/bayonetta/bayonetta/env-bg__}|}
+        main:
+          - >-
+            cereza, bayonetta, mole under mouth
+        costume-ethnicity:
+          - blue eyes, __lazy-wildcards/cosplay-char/bayonetta/bayonetta/ethnicity-types/*__
+        ethnicity-types:
+          long-hair:
+            - bayonetta1, very long hair, long hair, hair ribbon, ponytail
+          bayonetta2:
+            - bayonetta2, short hair
+          bayonetta3:
+            - bayonetta3, twin braids
+        costume:
+          - backless outfit, bodysuit, covered nipples, amulet, high heels, navel, elbow gloves, clothing cutout, ribbon
+        costume-elem:
+          - sexy minidress
+          - clothing cutout
+          - makeup
+          - >-
+            {1-$$cleavage|cleavage cutout}
+          - holding
+          - hand on hip
+          - lipstick
+          - eyeshadow
+          - parted lips
+          - ass
+          - looking back
+          - alternate hair length
+          - toned
+          - curvy
+          - narrow waist
+          - mature female
+          - magic
+          - streaked hair
+          - braid
+          - >-
+            {1-$$weapon|dual wielding}
+          - glasses
+          - black-framed eyewear
+          - semi-rimless_eyewear
+          - shoes
+          - vertical-striped thighhighs
+          - >-
+            {1-$$backless outfit|back cutout}
+          - __lazy-wildcards/dataset/costume-accessories-base__
+          - ribbon
+          - elbow gloves
+          - hair ribbon
+          - ponytail
+        env:
+          - lollipop
+          - >-
+            {1-$$riding|motorcycle|motor vehicle}
+          - candy
+          - >-
+            gun, handgun
+          - food
+          - sword
+          - katana
+          - vehicle
+        env-bg:
+          - twilight
+          - night
+          - moon
+    the_king_of_fighters:
+      # https://civitai.com/models/136258/kolin-or-street-fighter-game-character-or-ownwaifu?modelVersionId=150284
+      kolin:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/the_king_of_fighters/kolin/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/the_king_of_fighters/kolin/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/the_king_of_fighters/kolin/costume__}|}
+            , __lazy-wildcards/cosplay-char/the_king_of_fighters/kolin/costume-headwear__
+            {, {1-$$__lazy-wildcards/cosplay-char/the_king_of_fighters/kolin/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/the_king_of_fighters/kolin/env__}|}
+        main-trigger-words:
+          - kolin, kolin_\(cosplay\), street fighter, kolin_streetfighter_aiwaifu
+        costume-ethnicity:
+          - blonde hair, blue eyes, very long hair, wide hips, wavy hair, big hair
+        costume:
+          - blue footwear, fur-trimmed footwear, blue gloves
+          - blue jacket, fur trim, winter coat, russian clothes
+          - blue bikini
+        costume-headwear:
+          - (ushanka, papakha:1.2), fur hat, black headwear
+        costume-elem:
+          - floating hair
+          - fur trim
+          - black thighhighs
+          - forehead
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - panties
+        env:
+          - standing on the stage
+          - ice crystal
+          - snow
+

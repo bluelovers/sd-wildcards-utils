@@ -1,0 +1,35 @@
+lazy-wildcards:
+  subject:
+    style-theme:
+      # https://civitai.com/models/823949/vibrant-calavera-sd1-sdxl-pony-flux?modelVersionId=921359
+      Day_of_the_Dead:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-theme/Day_of_the_Dead/style-main__
+            {, {1-$$__lazy-wildcards/subject/style-theme/Day_of_the_Dead/env__}|}
+            {, {1-$$__lazy-wildcards/subject/style-theme/Day_of_the_Dead/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-theme/Day_of_the_Dead/env-bg__}|}
+        style-main:
+          - ArsMJStyle, Vibrant Calavera, skull, Day of the Dead style, Dia de los Muertos
+        costume-elem:
+          - bodypaint, tattoo
+          - calavera_makeup, skeleton_face_paint, the Day of the Dead-inspired makeup
+          - traditional_mexican_dress
+          - festive_clothing
+          - chain
+          - sugar skull girl
+        env:
+          - __lazy-wildcards/subject/env-elem/skull/prompts__
+          - sugar skull
+          - flowers
+          - marigold, cempasúchil, orange_flower
+          - decorative_flower
+          - rose
+          - ornate_skull
+          - papel_picado, decorative_banner, colorful_paper_flags
+          - festive_decorations
+          - candles, altar_candles
+        env-bg:
+          - altar, ofrenda, ceremonial_altar, memorial_altar
+          - decorated_grave, cemetery_decoration, grave_flowers, memorial_grave
+

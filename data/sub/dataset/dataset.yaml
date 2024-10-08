@@ -30,6 +30,7 @@ lazy-wildcards:
     costume-ethnicity:
       - __cf-*/ethnicity__
       - __lazy-wildcards/subject/ethnicity-*/*/prompts__
+      - __lazy-wildcards/subject/costume-ethnicity-*/*/prompts__
       - __lazy-wildcards/*/*/*/costume-ethnicity__
       - __lazy-wildcards/*/*/*/ethnicity-types/*__
       - __lazy-wildcards/*/*/*/ethnicity-makeup__
@@ -51,3 +52,12 @@ lazy-wildcards:
       - >-
         ({1-2$$__lazy-wildcards/subject/style-artist/dark/prompts__}
         , {1-2$$__lazy-wildcards/subject/style-artist/*/prompts__}{:1.4|:1.2|})
+    env-creatures:
+      - >-
+        {1-2$$__lazy-wildcards/*/*/*/env-creatures__}
+      - __lazy-wildcards/cosplay-others/*/*/prompts__
+      - __Bo/creatures/random__
+    env-vehicle:
+      - __lazy-wildcards/*/*/*/env-vehicle__
+      - __Bo/vehicles/random__
+

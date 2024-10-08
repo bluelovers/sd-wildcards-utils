@@ -1,7 +1,68 @@
 lazy-wildcards:
   subject:
-    costume-ethnicity-body:
+    costume-ethnicity-body-skin-tone:
+      # https://civitai.com/models/562884?modelVersionId=715574
       dark-skinned:
         prompts:
-          - dark_skin, tan_skin, tanned skin, dark skin, dark-skinned, black-skinned, bronze skin, bronzed skin
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned-black/costume-ethnicity__, bronze skin, bronzed skin, cinematic Bronze tan tanning skin tone
+      dark-skinned-black-deep:
+        prompts:
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned-black/costume-ethnicity__, cinematic Vantablack dark black skin tone
+      dark-skinned-black:
+        prompts:
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned-black/costume-ethnicity__, cinematic dark black skin tone
+        costume-ethnicity:
+          - dark_skin, tan_skin, tanned skin, dark skin, dark-skinned, black-skinned
+      white-skinned-ice-cold:
+        prompts:
+          - cinematic white ice cold skin tone, pale_skin
+      neutral-skinned:
+        prompts:
+          - cinematic normal neutral skin tone
+    costume-ethnicity-body:
+      curvy_female:
+        prompts:
+          - curvy, narrow waist, curvy figure, curvy female, curvaceous, wide hips
+      # https://civitai.com/models/820573/danielle-sharp-body-type?modelVersionId=917591
+      Danielle_Sharp_Body_Type:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-body/Danielle_Sharp_Body_Type/costume-ethnicity__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-body/Danielle_Sharp_Body_Type/costume-elem__}|}
+        costume-ethnicity:
+          - dksbody, collarbone, skinny waist
+        costume-elem:
+          - pale skin tone
+          - thigh gap
+          - collarbone
+          - nude dksbody
+          - thin dksbody
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-shapes-sagging/prompts__
+      # https://civitai.com/models/129130/hourglass-body-shape-sd15sdxlpony-or-olaz?modelVersionId=141478
+      Hourglass_Body_Shape:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-body/Hourglass_Body_Shape/costume-ethnicity__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-body/Hourglass_Body_Shape/costume-elem__}|}
+        costume-ethnicity:
+          - hourglass body shape, hourglass_figure, full_bust, curvy_body
+        costume-elem:
+          - >-
+            {large breasts|medium breasts}
+          - >-
+            {1-$$thin waist|slim waist}
+          - curvy_hips
+          - collarbone
+          - nude
+          - shapely_body
+          - __lazy-wildcards/subject/costume-ethnicity-body/curvy_female/prompts__
+      # https://civitai.com/models/580857/realistic-skin-texture-style-xl-detailed-skin-sd15-flux1d?modelVersionId=712234
+      skin_texture:
+        prompts:
+          - >-
+            (cinematic skin texture style, detailed skin{0.3:::{1.2|1.3|1.4}|})
+            {, __lazy-wildcards/subject/costume-ethnicity-body/skin_texture/costume-ethnicity__|}
+        costume-ethnicity:
+          - skin pore
+          # - freckles
 

@@ -16,4 +16,62 @@ lazy-wildcards:
           - red dress, navel, cleavage, bare shoulders, center opening, plunging neckline
           - red pelvic curtain, side slit
           - hair ornament, thigh strap
+    # https://civitai.com/models/107429/viper-gts-hentai-protagonist-style
+    viper_series:
+      # https://civitai.com/models/231600/carrera-viper-series
+      # https://civitai.com/models/789886/carrera-or-viper-gts-or-5-attires?modelVersionId=883296
+      carrera:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/viper_series/carrera/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/viper_series/carrera/costume-ethnicity__
+            {, {1-2$$__lazy-wildcards/cosplay-char/viper_series/carrera/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/viper_series/carrera/costume-elem__}|}
+            {, __lazy-wildcards/cosplay-char/viper_series/carrera/costume-wings__|}
+            {, {1-$$__lazy-wildcards/cosplay-char/viper_series/carrera/env__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/viper_series/carrera/action-pose__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/viper_series/carrera/style__}|}
+        main-trigger-words:
+          - carrera, carreravi, viper_\(series\)
+        costume-ethnicity:
+          - demon tail, demon girl, green hair, horns, navel, red eyes, long pointy ears, parted bangs, makeup, lipstick
+        costume:
+          - shoulder armor, black cape, skull, armlet
+          - halterneck, elbow gloves, highleg panties, thigh boots, high heels
+          - BodySuit_ViperGST_Carrera_ownwaifu, elbow gloves, navel, thighhighs, midriff, covered nipples, highleg, bare shoulders, sidelocks, revealing clothes, impossible clothes, cleavage, long sleeves, purple gloves, purple thighhighs, detached sleeves, highleg panties, leotard, collarbone
+          - Chained_ViperGST_Carrera_ownwaifu, nude, collar, bracelet, chain,  bdsm, bondage, bound, cuffs, leash, maebari, tail, navel, neck ring
+          - FeatherWings_ViperGST_Carrera_ownwaifu, wings, thighhighs, thigh boots, elbow gloves, navel, covered nipples, feathered wings
+          - NakedApron_ViperGST_Carrera_ownwaifu, naked apron, cleavage
+          - NSFW_ViperGST_Carrera_ownwaifu, nude, navel
+        costume-elem:
+          - pelvic curtain
+          - skull necklace
+          - breasts apart
+          - collarbone
+          - detached sleeves
+          - revealing clothes
+          - shoulder armor
+          - blue scarf
+          - two-sided cape
+          - two-sided fabric
+          - covered nipples
+          - elbow gloves
+          - breasts apart
+          - tattoo
+          - midriff
+          - covered nipples
+          - navel
+          - cleavage
+        costume-wings:
+          - bat wings
+          - feathered wings
+        env:
+          - __lazy-wildcards/subject/env-elem/circle-magic/prompts__
+        style:
+          - 1990s \(style\)
+        action-pose:
+          - arched back, arms behind head
+          - finger to mouth
+          - hand on own hip
+          - legs apart
 

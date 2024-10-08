@@ -1,0 +1,116 @@
+lazy-wildcards:
+  subject:
+    style:
+      # https://civitai.com/models/466170/zdzislaw-beksinski-concepts-wildcard
+      zdzislaw_beksinski:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style/zdzislaw_beksinski/style-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-3$$__lazy-wildcards/subject/style/zdzislaw_beksinski/env-bg__}|}
+            {, {1-5$$__lazy-wildcards/subject/style/zdzislaw_beksinski/env__}|}
+            {, {1-$$__lazy-wildcards/subject/style/zdzislaw_beksinski/env-weather__}|}
+            {0.3::, {1-2$$__lazy-wildcards/subject/style/zdzislaw_beksinski/env-creatures__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/style/zdzislaw_beksinski/env-chair__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/style/zdzislaw_beksinski/env-vehicle__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/style/zdzislaw_beksinski/costume-wings__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/style/zdzislaw_beksinski/costume-weapon__}|}
+            {, {1-5$$__lazy-wildcards/subject/style/zdzislaw_beksinski/style__}|}
+        style-main:
+          - beksinski style, zdzislaw beksinski
+        env:
+          - ethereal figures
+          - skeletons, bones
+          - >-
+            {statue|mournful statues}
+          - crumbling
+          - __lazy-wildcards/subject/env-elem/moss/prompts__
+          - twisted trees
+          - bridge
+          - machines
+          - __lazy-wildcards/subject/env-elem/stairs/prompts__
+          - bleeding walls
+          - transparent cages
+          - ancient artifacts
+          - books
+          - floating, glowing
+          - rusted rides
+          - tattered tents
+          - carved faces
+          - ancient gate, entrance
+          - intricate carvings
+          - giant clock
+          - ancient pillars
+          - >-
+            {buried in sand|half-buried}
+          - tapestry
+          - twisting pathways, impossible directions
+          - giant mushrooms
+        env-creatures:
+          - soldiers
+          - ghostly sentinels
+          - mechanical creature
+          - fallen angel
+          - frozen creatures
+        env-bg:
+          - ruined city
+          - twisted skyscrapers
+          - wasteland
+          - >-
+            {church|underwater cathedral}
+          - __lazy-wildcards/subject/env-bg/graveyard/prompts__
+          - industrial complex
+          - mansion, Victorian
+          - maze, twisted corridors, labyrinth, disorientation
+          - prison
+          - desert, sand dunes
+          - ancient library
+          - abandoned carnival
+          - cliffs
+          - stormy sea, nautical
+          - spiraling tower
+          - ruined temple
+          - dark hall
+          - dilapidated theater
+        env-chair:
+          - throne
+          - bone throne
+        env-vehicle:
+          - ghost ship
+        env-weather:
+          - blood-red sky
+          - __lazy-wildcards/subject/moment/weather-mist/prompts__
+          - stormy sky
+          - frozen, ice, cold
+        costume-wings:
+          - broken wings
+        costume-weapon:
+          - rusted weaponry
+        style:
+          - cyberpunk
+          - dystopian
+          - post-apocalyptic
+          - dark atmosphere, dark landscape
+          - marching
+          - barren, desolate, dilapidated
+          - battlefield, war, death
+          - grotesque, organic, pulsating
+          - gothic
+          - horror, surreal
+          - empty, shadows, creepy
+          - abandoned
+          - mysterious
+          - fused, struggling, break free
+          - body horror
+          - ancient, forgotten
+          - twisted
+          - shadowy figure
+          - dark void
+          - technology
+          - sorrowful
+          - swirling vortex
+          - lost civilization
+          - wailing, silence, tragedy
+          - rusting, dormant
+          - religious
+          - existential
+

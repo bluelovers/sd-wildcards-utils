@@ -1,0 +1,64 @@
+lazy-wildcards:
+  cosplay-char:
+    ShinMegamiTensei:
+      # https://civitai.com/models/147888
+      beth:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/ShinMegamiTensei/beth/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/ShinMegamiTensei/beth/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/beth/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/beth/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/beth/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/beth/env-bg__}|}
+        main-trigger-words:
+          - beth_\(megami_tensei\), bethsmtii, shin megami tensei ii
+        costume-ethnicity:
+          - >-
+            long hair, black hair, straight hair, sleek black
+            , jewelry
+            , cross
+            , headband
+            , red_lipstick
+        costume:
+          - white cape, cape_with_messian_symbol, Religious_cape, messian_symbol_cape, holy_knight_cape
+          - messian_cross_earrings, cross_earrings, religious_earrings, messian_symbol_jewelry
+          - bandana_with_messian_symbol, Religious_bandana, symbol_headband, messian_church_bandana
+          - Blue_dress, armored_corset, blue shirt
+        costume-elem:
+          - holy_knight, holy_knight_armor
+          - armored_pads, armored_gloves, knee_pads, armored boots
+          - long white gloves, heeled_boots, armored_heels, elbow gloves, elbow pads, thigh boots
+          - white footwear
+          - white gloves
+          - naked cape
+          - belt, belt pouch
+          - breastplate
+        costume-weapon:
+          - katana, sword
+        env-bg:
+          - __lazy-wildcards/subject/env-bg/ShinMegamiTensei-Tokyo_Millennium/prompts__
+      jenna_angel:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/ShinMegamiTensei/jenna_angel/main-trigger-words__
+            {, __lazy-wildcards/cosplay-char/ShinMegamiTensei/jenna_angel/costume-ethnicity__|}
+            {0.8::, {1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/jenna_angel/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/jenna_angel/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/jenna_angel/expressions__}|}
+        main-trigger-words:
+          - jennadds, jenna_angel, digital devil saga, jenna angel \(cosplay\)
+        costume-ethnicity:
+          - long_hair, silver_hair, black hair
+        costume:
+          - labcoat, pants, lab_coat
+        costume-elem:
+          - pale_skin
+          - sharp_features, high_cheekbones
+          - futuristic_uniform
+          - military_fashion
+        expressions:
+          - cold_expression
+          - serious
+          - ruthless
+

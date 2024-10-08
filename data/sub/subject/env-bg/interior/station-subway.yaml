@@ -58,8 +58,7 @@ lazy-wildcards:
         env-bg-main:
           - subway station platform
         env-bg:
-          - station_tunnel
-          - incoming_train, train_lights
+          - __lazy-wildcards/subject/env-bg-interior/subway_railway/prompts__
         env:
           - platform_edge
           - platform_lines
@@ -80,3 +79,17 @@ lazy-wildcards:
           - ambient_lighting
           - station_lighting
           - platform_shadows
+      subway_railway:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/env-bg-interior/subway_railway/env-bg-main__})
+            {,{1-$$__lazy-wildcards/subject/env-bg-interior/subway_railway/env-bg__}|}
+        env-bg-main:
+          - Railway, Railroad
+          - Streetcar Tracks, Tram Tracks
+          - Metro Tracks, Subway Tracks
+          - Train Tracks, Railway Tracks
+        env-bg:
+          - station_tunnel
+          - incoming_train, train_lights
+

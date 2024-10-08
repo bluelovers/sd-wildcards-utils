@@ -25,3 +25,65 @@ lazy-wildcards:
           - large breasts
         costume-weapon:
           - (geforce_rtx_3090_ti, graphics card)
+    # https://x.com/CheLA_777
+    CheLA77:
+      # https://x.com/CheLA_777/status/1799009419126325744/photo/1
+      # https://civitai.com/models/601494/poorly-dressed-policewoman-chela77?modelVersionId=672283
+      PoorlyDressedPolicewoman:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/main__
+            {,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/expressions__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-hand__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-headwear__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/police/prompts__}|}
+            {0.2::,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-ethnicity__}|}
+            {0.2::,__lazy-wildcards/subject/action-sfw/sitting-*/prompts__|}
+            {0.2::,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/env__}|}
+        main:
+          - PoorlyDressedPolicewoman, brautiful pol1ceg1rls in a police uniform, policewoman
+        expressions:
+          - smug, grinning smile
+        costume-ethnicity:
+          - short hair, blonde hair, large breasts, orange eyes
+          - long hair
+        costume:
+          - police hat, police badge , short sleeves blue shirt, short black pencil skirt
+          - >-
+            pink bra, leopard print bar,
+            blue Police jacket, open jacket,
+            cleavage,
+            white shirt
+        costume-hand:
+          - >-
+            {1-$$fingernails|long fingernails|nail polish}
+          - fingerless gloves
+          - >-
+            {1-$$cuffs|handcuffs}
+        costume-headwear:
+          - peaked cap
+          - police hat
+        costume-elem:
+          - >-
+            {1-$$earrings|hoop earrings}
+          - >-
+            {1-$$crop top|midriff}
+          - long sleeves
+          - jewelry
+          - short shorts
+          - choker
+          - collared shirt
+          - necklace
+          - piercing
+          - pink leopard print
+          - thigh strap, thighband pantyhose, black pantyhose
+          - sagging breasts
+          - detached collar
+          - garter straps
+          - epaulettes
+          - >-
+            pink panties, leopard print panties{, panties under pantyhose|}
+        env:
+          - work desk

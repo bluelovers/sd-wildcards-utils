@@ -1,0 +1,27 @@
+lazy-wildcards:
+  subject:
+    env-elem:
+      skull:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/skull/env-main__
+            {,{1-$$__lazy-wildcards/subject/env-elem/skull/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/subject/env-elem/skull/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/subject/env-elem/skull/env__}|}
+        env-main:
+          - skull, skeleton
+        costume-elem:
+          - skull bra
+          - skull necklace
+        env:
+          - pile of skulls
+          - skull decoration
+          - __lazy-wildcards/subject/env-elem/skull_and_crossbones/prompts__
+          - crystal skull decoration, crystal skull pattern
+          - decorated_skull
+        costume-weapon:
+          - holding skull
+      skull_and_crossbones:
+        prompts:
+          - skull_and_crossbones, jolly_roger, pirate symbol, pirate emblem, skull print
+

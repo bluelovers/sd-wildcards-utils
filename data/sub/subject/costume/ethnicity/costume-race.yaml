@@ -210,7 +210,7 @@ lazy-wildcards:
           - zombie cyborg girl
         costume:
           - decaying flesh
-          - tattered clothes, ripped clothes
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
           - disheveled hair, messy hair
           - stitches
           - cyberpunk prosthesis
@@ -358,7 +358,7 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-hair__}|}
             {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-weapon__}|}
             {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/env-bg__}|}
-            {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/env-monster__}|}
+            {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/env-creatures__}|}
             {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/env__}|}
             {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/style__}|}
         costume-ethnicity-main:
@@ -407,7 +407,7 @@ lazy-wildcards:
         env:
           - saddle
           - __lazy-wildcards/subject/env-elem/skull/prompts__
-        env-monster:
+        env-creatures:
           - Suchosaurus, Deinosuchus, crocodiles
           - dinosaurs
         env-bg:
@@ -453,3 +453,48 @@ lazy-wildcards:
       elf:
         prompts:
           - a beautiful elvish girl
+      # https://note.com/plum_code/n/n616a57bda009
+      # https://civitai.com/models/227403/plumbeer-furrymix
+      furry:
+        prompts:
+          - (furry, anthro, Fluffy body:1.3), (Fluffy)
+      ghost_costume:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/ghost_costume/costume__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/ghost_costume/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/ghost_costume/action-pose__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/ghost_costume/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/ghost_costume/style__}|}
+        costume:
+          - gh0st, white cloth, covered face, ghost costume, breasts
+        costume-elem:
+          - faceless, no face
+          - sexy_costume
+          - sheer_fabric
+          - (semi_transparent, see-through:1.2)
+          - lace
+          - form_fitting
+          - short_dress
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - plunging_neckline
+          - cutout
+          - high_slit
+          - cleavage
+          - ghost_makeup, face_paint
+          - ghost_mask
+          - translucent_veil
+          - high_heels
+          - gloves
+          - dark_circles
+          - skimpy underwear
+          - floating clothes, floating
+        action-pose:
+          - kneeling
+        env:
+          - faux_chains
+        style:
+          - supernatural
+          - blue_accents
+          - silver_accents
+          - Halloween

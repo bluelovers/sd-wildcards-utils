@@ -1,16 +1,16 @@
 lazy-wildcards:
   subject:
-    costume-elem:
+    costume-ethnicity-breasts:
       costume-breasts:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/costume-elem/costume-breasts/costume-breasts-cleavage__}
-            {0.3::,{1-$$__lazy-wildcards/subject/costume-elem/costume-breasts/costume-breasts-out__}|}
-            {,{1$$__lazy-wildcards/subject/costume-elem/costume-breasts/costume-breasts-out-bra__}|}
-            {0.2::,{1-3$$__lazy-wildcards/subject/costume-elem/costume-breasts/costume-breasts-shapes__}|}
-            {0.2::,{1-$$__lazy-wildcards/subject/costume-elem/costume-breasts/costume-breasts-style__}|}
-            {0.2::,__lazy-wildcards/subject/costume-elem/costume-breasts/costume-breasts-action__|}
-            {0.2::,__lazy-wildcards/subject/costume-elem/costume-breasts/costume-breasts-size__|}
+            {1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/costume-breasts-cleavage__}
+            {0.3::,__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-out/prompts__|}
+            {,{1$$__lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/costume-breasts-out-bra__}|}
+            {0.2::,{1-3$$__lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/costume-breasts-shapes__}|}
+            {0.2::,{1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/costume-breasts-style__}|}
+            {0.2::,__lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/costume-breasts-action__|}
+            {0.2::,__lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/costume-breasts-size__|}
         costume-breasts-style:
           - jewelry draped between breasts
           - >-
@@ -39,14 +39,10 @@ lazy-wildcards:
             {medium|small|} pointy breasts
           - >-
             {medium|small|} perky breasts
-          - >-
-            {1-$$saggy breasts, sagging breasts|drooping breasts|soft breasts|hanging breasts|tarechichi, taretiti}
-          - small sagging breasts
-          - heavy sagging breasts
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-shapes-sagging/prompts__
           - bulging breasts
           - bell shaped breasts
           - deflated breasts
-          - veiny saggy breast
           - >-
             {Perfect Full }round breasts
         costume-breasts-cleavage:
@@ -73,17 +69,45 @@ lazy-wildcards:
           - >-
             {extended |}downblouse
         costume-breasts-out-bra:
-          - __lazy-wildcards/subject/costume-elem/breasts-bra-peek/prompts__
-          - __lazy-wildcards/subject/costume-elem/breasts-bra-peek2/prompts__
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-peek/prompts__
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-peek2/prompts__
           - no bra
-          - __lazy-wildcards/subject/costume-elem/breasts-bra-visible-through-clothes/prompts__
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-visible-through-clothes/prompts__
+      breasts-out:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-out/costume-breasts-out__}{0.3:::{1.2|1.3|1.4}|})
+        costume-breasts-out:
+          - underboob
+          - >-
+            {one |}breasts out{ of clothes|}{, breasts_outside|}
+          - exposed breasts
+          - sideboob
+          - >-
+            {extended |}downblouse
+      breasts-shapes-sagging:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-shapes-sagging/costume-breasts-shapes-sagging__}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-shapes-sagging/costume-breasts-shapes__}|}
+        costume-breasts-shapes-sagging:
+          - >-
+            {1-$$saggy breasts, sagging breasts|drooping breasts|soft breasts|hanging breasts|tarechichi, taretiti}
+          - small sagging breasts
+          - heavy sagging breasts
+          - veiny saggy breast
+        costume-breasts-shapes:
+          - teardrop breasts
+          - symmetrical breasts
+          - asymmetrical breasts
+          - breasts apart
       # https://civitai.com/models/337704?modelVersionId=378121
       breasts-bra-peek:
         prompts:
           - >-
             (bra peek:1.2), bra, breasts, cleavage
-            {0.3::,({1-$$__lazy-wildcards/subject/costume-elem/breasts-bra-peek/costume-breasts__})|}
-            {0.3::,{1-$$__lazy-wildcards/subject/costume-elem/breasts-bra-peek/costume-elem__}|}
+            {0.3::,({1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-peek/costume-breasts__})|}
+            {0.3::,{1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-peek/costume-elem__}|}
         costume-breasts:
           - bra visible through clothes
           - downblouse, leaning forward
@@ -92,16 +116,17 @@ lazy-wildcards:
           - collarbone
           - see-through
           - (tied shirt:1.2), shirt
+          - bra lift
       # https://civitai.com/models/328209/bra-cups-sticking-out-or-goofy-ai?modelVersionId=367821
       breasts-bra-peek2:
         prompts:
           - >-
             (Bra Cups Sticking Out:1.2),
-            __lazy-wildcards/subject/costume-elem/breasts-bra-peek/prompts__
+            __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-peek/prompts__
       breasts-bra:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/costume-elem/breasts-bra/costume-breasts-bra__}
+            {1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra/costume-breasts-bra__}
         costume-breasts-bra:
           - bra strap
           - bow bra
@@ -114,9 +139,9 @@ lazy-wildcards:
       breasts-bra-visible-through-clothes:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume-elem/breasts-bra-visible-through-clothes/costume-breasts-bra-visible-through-clothes__
-            {,{1-$$__lazy-wildcards/subject/costume-elem/breasts-bra-visible-through-clothes/costume-breasts-bra__}|}
-            ,{1-$$__lazy-wildcards/subject/costume-elem/breasts-bra-visible-through-clothes/costume-elem__}
+            __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-visible-through-clothes/costume-breasts-bra-visible-through-clothes__
+            {,{1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-visible-through-clothes/costume-breasts-bra__}|}
+            ,{1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-visible-through-clothes/costume-elem__}
         costume-breasts-bra-visible-through-clothes:
           - >-
             (bra_visible_through_clothes:1.2)

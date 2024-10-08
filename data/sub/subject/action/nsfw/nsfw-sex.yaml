@@ -29,7 +29,7 @@ lazy-wildcards:
           - >-
             covered pussy, covering, covering crotch, censored,
             open clothes, panty pull, panties around one leg, underwear,
-            pussy juice, __lazy-wildcards/subject/costume-elem/cum/prompts__,
+            __lazy-wildcards/subject/costume-elem/pussy_juice/prompts__, __lazy-wildcards/subject/costume-elem/cum/prompts__,
             breasts
         style:
           - shy
@@ -97,3 +97,40 @@ lazy-wildcards:
           - closed mouth
         style:
           - sexually suggestive
+      # https://civitai.com/models/205709?modelVersionId=231606
+      yandere-sex:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/action-nsfw-sex/yandere-sex/action-main__
+            {, __lazy-wildcards/subject/costume-elem-expressions/yandere_trance/prompts__|}
+            {, {1-$$__lazy-wildcards/subject/action-nsfw-sex/yandere-sex/action-nsfw-sex__}|}
+            {, {1-$$__lazy-wildcards/subject/action-nsfw-sex/yandere-sex/costume__}|}
+            {, {1-$$__lazy-wildcards/subject/action-nsfw-sex/yandere-sex/style__}|}
+        action-main:
+          - >-
+            (yandere sex, yandere{0.3:::{1.2|1.3|1.4}|})
+            , (crazy eyes, yandere_eyes, crazy expression{0.3:::{1.2|1.3|1.4}|})
+            , sex, girl on top, nsfw
+        action-nsfw-sex:
+          - >-
+            {cowgirl position|reverse cowgirl position, from behind, sex from behind}
+          - happy sex
+          - clothed sex
+          - rape, reverse rape, reverse forced impregnation
+          - squatting on penis
+        costume:
+          - __lazy-wildcards/subject/costume-elem/cum/prompts__
+          - blood on face
+          - __lazy-wildcards/subject/costume-elem/saliva/prompts__
+          - sweat
+          - no panties
+          - no bra
+          - vaginal, partially visible vulva
+          - spread legs
+          - blush
+          - finger to mouth
+          - stomach
+          - pleasure face
+        style:
+          - hetero
+          - sleep molestation
