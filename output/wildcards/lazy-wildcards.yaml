@@ -175,6 +175,7 @@ lazy-wildcards:
       - __cornf-*/prompt-object__
       - __cornf-house/prompt-full__
       - __lazy-wildcards/subject/moment/random/prompts__
+      - __Bo/constructions/random__
       - >-
         {1-$$__lazy-wildcards/subject/moment/*/prompts__}
       - japanese onsen,onsen
@@ -347,22 +348,6 @@ lazy-wildcards:
             - the_sun_\(tarot\)
             - judgement_\(tarot\)
             - the_world_\(tarot\)
-      fence:
-        prompts:
-          - >-
-            {1-2$$__lazy-wildcards/background/location/fence/main__},{0-3$$__lazy-wildcards/background/location/fence/env__},{0-1$$__lazy-wildcards/background/location/fence/action/*__}
-        main:
-          - fence
-          - chain-link fence,chain_link_fence
-          - wooden fence
-          - bamboo fence
-          - wire_fence
-          - barbed_wire
-        env:
-          - rooftop
-        action:
-          pose:
-            - against fence
       ruins-city:
         prompts:
           - >-
@@ -519,6 +504,8 @@ lazy-wildcards:
       - voluminous_look
       - elegant_finish
       - two side up
+      - hair spread out
+      - big hair
     haircuts-multis:
       - >-
         {1-4$$ hair,$$__person/regular/haircuts-*__} hair
@@ -668,7 +655,6 @@ lazy-wildcards:
         - (one breast out,one breast slip,one_breast_out_of_clothes),unaligned_breasts,showing breast
         - (downblouse,tank top,breasts_out,leaning forward,bent over)
         - lifted by self,dress lift,from below
-        - squatting,crouching,spread legs,arm support,stripper pole,pole dancing,arms behind back
         - lewd,sexy,erotic,alluring,ewitching,charming,mesmerizing,enchanting,voluptuous,sexy posing,Sex Position,hentai
         - hand on own chest,grabbing herself breasts,grabbing own breasts,hands on own breasts,breast press,hand on tit
         - squatting spread legs position,squatting,spread legs,crouching
@@ -817,7 +803,7 @@ lazy-wildcards:
       - (military hat)
     clothes:
       - __cf-*/prompt-costume__
-      - __Bo/chars/char-regular/female/bocloths__
+      - __Bo/chars/char-*/female/bocloths__
       - __Bo/clothings/*/female-attire__
       - __lazy-wildcards/subject/costume/*/prompts__
       - >-
@@ -1072,6 +1058,10 @@ lazy-wildcards:
         {1-$$scenery|outdoors|no humans|horizon|landscape|ultra wide angle|HDRI Panorama View|360 panorama}
   subject:
     style-art-type:
+      others:
+        prompts:
+          - retro futurism style
+          - smoke sketch style
       sketch-pen-landscape:
         prompts:
           - >-
@@ -1110,7 +1100,7 @@ lazy-wildcards:
       blueprint-architectural-drawings:
         prompts:
           - >-
-            __lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/main__{,{1-2$$__lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/env-architectural__}|}{,{1-$$__lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/style__}|}{,__lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/style-art-type__|}
+            __lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/main__{0.2::,{1-2$$__lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/env-architectural__}|}{,{1-$$__lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/style__}|}{,__lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/style-art-type__|}
         main:
           - |-
             (blueprint:1.3),architectural drawing
@@ -1143,6 +1133,13 @@ lazy-wildcards:
           - Mechanical_Plan
           - Structural_Drawing
           - Reflected_Ceiling_Plan
+          - technical drawing
+          - Blueprint Schematic Drawing,schematic
+          - Character Design Sheet,character reference sheet,character turn around
+          - industrial design sketch
+          - sketch
+        env:
+          - english text
       # https://civitai.com/models/14892?modelVersionId=17546
       papercutting-art:
         prompts:
@@ -1267,11 +1264,11 @@ lazy-wildcards:
       cave_paintings:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/style-main__}{,{1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/style__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/env-monster__}|}{,{1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/env-bg__}|}
+            {1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/style-main__}{,{1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/style__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/env-creatures__}|}{,{1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/env-bg__}|}
         style-main:
           - |-
             (cave paintings,cave art{0.3:::{1.2|1.3|1.4}|}),rock art
-        env-monster:
+        env-creatures:
           - prehistoric_animal
         env-bg:
           - cave_interior
@@ -1514,6 +1511,8 @@ lazy-wildcards:
           - Sandification
           - Lithification
     style-theme:
+      # Neo-Falmer World
+      # https://civitai.com/models/489745/neo-falmer-world
       NeoFalmerWorld:
         prompts:
           - __lazy-wildcards/subject/style-theme/NeoFalmerWorld/prompts-bg__
@@ -1541,6 +1540,158 @@ lazy-wildcards:
           chitin-theme:
             - >-
               chitin ${obj}
+      MarbleSteelmeshWorld:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-theme/MarbleSteelmeshWorld/main-trigger-words__{,{1-$$__lazy-wildcards/subject/style-theme/MarbleSteelmeshWorld/env__}|}{,{1-$$__lazy-wildcards/subject/style-theme/MarbleSteelmeshWorld/style__}|}
+        main-trigger-words:
+          - MarbleSteelmeshWorld
+        env:
+          - __lazy-wildcards/subject/env-elem/fence/prompts__
+          - __lazy-wildcards/subject/env-elem/industrial-pipes/prompts__
+          - metal_grate
+          - mesh_bridge
+          - industrial_platform
+          - rusty_surface
+          - industrial_building
+          - metal_pipeline
+          - guard_rail
+          - mesh_window
+          - barred_window
+        style:
+          - metal_shadows
+          - cold_light
+          - mesh_shadows
+      Day_of_the_Dead:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-theme/Day_of_the_Dead/style-main__{,{1-$$__lazy-wildcards/subject/style-theme/Day_of_the_Dead/env__}|}{,{1-$$__lazy-wildcards/subject/style-theme/Day_of_the_Dead/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/style-theme/Day_of_the_Dead/env-bg__}|}
+        style-main:
+          - ArsMJStyle,Vibrant Calavera,skull,Day of the Dead style,Dia de los Muertos
+        costume-elem:
+          - bodypaint,tattoo
+          - calavera_makeup,skeleton_face_paint,the Day of the Dead-inspired makeup
+          - traditional_mexican_dress
+          - festive_clothing
+          - chain
+          - sugar skull girl
+        env:
+          - __lazy-wildcards/subject/env-elem/skull/prompts__
+          - sugar skull
+          - flowers
+          - marigold,cempasúchil,orange_flower
+          - decorative_flower
+          - rose
+          - ornate_skull
+          - papel_picado,decorative_banner,colorful_paper_flags
+          - festive_decorations
+          - candles,altar_candles
+        env-bg:
+          - altar,ofrenda,ceremonial_altar,memorial_altar
+          - decorated_grave,cemetery_decoration,grave_flowers,memorial_grave
+    style:
+      zdzislaw_beksinski:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style/zdzislaw_beksinski/style-main__{0.3:::{1.2|1.3|1.4}|}){,{1-3$$__lazy-wildcards/subject/style/zdzislaw_beksinski/env-bg__}|}{,{1-5$$__lazy-wildcards/subject/style/zdzislaw_beksinski/env__}|}{,{1-$$__lazy-wildcards/subject/style/zdzislaw_beksinski/env-weather__}|}{0.3::,{1-2$$__lazy-wildcards/subject/style/zdzislaw_beksinski/env-creatures__}|}{0.3::,{1-$$__lazy-wildcards/subject/style/zdzislaw_beksinski/env-chair__}|}{0.3::,{1-$$__lazy-wildcards/subject/style/zdzislaw_beksinski/env-vehicle__}|}{0.3::,{1-$$__lazy-wildcards/subject/style/zdzislaw_beksinski/costume-wings__}|}{0.3::,{1-$$__lazy-wildcards/subject/style/zdzislaw_beksinski/costume-weapon__}|}{,{1-5$$__lazy-wildcards/subject/style/zdzislaw_beksinski/style__}|}
+        style-main:
+          - beksinski style,zdzislaw beksinski
+        env:
+          - ethereal figures
+          - skeletons,bones
+          - >-
+            {statue|mournful statues}
+          - crumbling
+          - __lazy-wildcards/subject/env-elem/moss/prompts__
+          - twisted trees
+          - bridge
+          - machines
+          - __lazy-wildcards/subject/env-elem/stairs/prompts__
+          - bleeding walls
+          - transparent cages
+          - ancient artifacts
+          - books
+          - floating,glowing
+          - rusted rides
+          - tattered tents
+          - carved faces
+          - ancient gate,entrance
+          - intricate carvings
+          - giant clock
+          - ancient pillars
+          - >-
+            {buried in sand|half-buried}
+          - tapestry
+          - twisting pathways,impossible directions
+          - giant mushrooms
+        env-creatures:
+          - soldiers
+          - ghostly sentinels
+          - mechanical creature
+          - fallen angel
+          - frozen creatures
+        env-bg:
+          - ruined city
+          - twisted skyscrapers
+          - wasteland
+          - >-
+            {church|underwater cathedral}
+          - __lazy-wildcards/subject/env-bg/graveyard/prompts__
+          - industrial complex
+          - mansion,Victorian
+          - maze,twisted corridors,labyrinth,disorientation
+          - prison
+          - desert,sand dunes
+          - ancient library
+          - abandoned carnival
+          - cliffs
+          - stormy sea,nautical
+          - spiraling tower
+          - ruined temple
+          - dark hall
+          - dilapidated theater
+        env-chair:
+          - throne
+          - bone throne
+        env-vehicle:
+          - ghost ship
+        env-weather:
+          - blood-red sky
+          - __lazy-wildcards/subject/moment/weather-mist/prompts__
+          - stormy sky
+          - frozen,ice,cold
+        costume-wings:
+          - broken wings
+        costume-weapon:
+          - rusted weaponry
+        style:
+          - cyberpunk
+          - dystopian
+          - post-apocalyptic
+          - dark atmosphere,dark landscape
+          - marching
+          - barren,desolate,dilapidated
+          - battlefield,war,death
+          - grotesque,organic,pulsating
+          - gothic
+          - horror,surreal
+          - empty,shadows,creepy
+          - abandoned
+          - mysterious
+          - fused,struggling,break free
+          - body horror
+          - ancient,forgotten
+          - twisted
+          - shadowy figure
+          - dark void
+          - technology
+          - sorrowful
+          - swirling vortex
+          - lost civilization
+          - wailing,silence,tragedy
+          - rusting,dormant
+          - religious
+          - existential
     scenes-meme:
       girl-in-tsubo-pot:
         prompts:
@@ -1645,6 +1796,24 @@ lazy-wildcards:
         env-on:
           - on bed,bedroom
           - on floor,floor
+      iced_latte_with_breast_milk:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/scenes-meme/iced_latte_with_breast_milk/main-trigger-words__,__lazy-wildcards/subject/scenes-meme/iced_latte_with_breast_milk/costume__,__lazy-wildcards/subject/scenes-meme/iced_latte_with_breast_milk/costume-weapon__{,{1-$$__lazy-wildcards/subject/scenes-meme/iced_latte_with_breast_milk/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/scenes-meme/iced_latte_with_breast_milk/env__}|}
+        main-trigger-words:
+          - meme_iced_latte_with_breast_milk_ownwaifu,meme,iced_latte_with_breast_milk_\(meme\)
+        costume:
+          - |-
+            barista,green_apron,(naked_apron,cleavage,sideboob,collarbone:1.2),apron,breasts,starbucks,logo_parody
+        costume-weapon:
+          - cafe,cup,coffee,holding,holding_cup,disposable_cup
+        costume-elem:
+          - __lazy-wildcards/subject/costume-ethnicity-body/curvy_female/prompts__
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/prompts__
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-out/prompts__
+        env:
+          - suggestive_fluid
+          - sparkle
       CzechCasting:
         prompts:
           - >-
@@ -1856,7 +2025,7 @@ lazy-wildcards:
       weather-mist:
         prompts:
           - >-
-            {1-$$foggy|fog|mist|steam|smoke|thick mist|dense_fog}
+            {1-$$foggy|fog|mist,misty|steam|smoke|thick mist|dense_fog}
       weather-natural-disaster-water:
         prompts:
           - >-
@@ -1934,6 +2103,9 @@ lazy-wildcards:
             {cold |}full moon
           - moonlight
           - midnight
+          - shattered_moon
+          - half_moon
+          - crescent moon,crescent
       age:
         prompts:
           - medieval
@@ -2599,10 +2771,10 @@ lazy-wildcards:
       hollow_earth:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-bg/hollow_earth/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg/hollow_earth/env-bg__}|},{1-$$__lazy-wildcards/subject/env-bg/hollow_earth/env__}{,{1-$$__lazy-wildcards/subject/env-bg/hollow_earth/env-monster__}|}{,{1-$$__lazy-wildcards/subject/env-bg/hollow_earth/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/env-bg/hollow_earth/style__}|}
+            __lazy-wildcards/subject/env-bg/hollow_earth/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg/hollow_earth/env-bg__}|},{1-$$__lazy-wildcards/subject/env-bg/hollow_earth/env__}{,{1-$$__lazy-wildcards/subject/env-bg/hollow_earth/env-creatures__}|}{,{1-$$__lazy-wildcards/subject/env-bg/hollow_earth/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/env-bg/hollow_earth/style__}|}
         env-bg-main:
           - hollow_earth,underground_ecosystem,monster_kingdom,lost_civilization,bioluminescent_plants,landscapes,monsterverse
-        env-monster:
+        env-creatures:
           - prehistoric_beasts,Ancient and colossal creatures,giant monster
           - dinosaurs
           - giant insects
@@ -2794,7 +2966,7 @@ lazy-wildcards:
       SavageVerse:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-bg/SavageVerse/main-trigger-words__{,{1-$$__lazy-wildcards/subject/env-bg/SavageVerse/costume__}|}{,{1-$$__lazy-wildcards/subject/env-bg/SavageVerse/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-bg/SavageVerse/costume-hair__}|}{,{1-$$__lazy-wildcards/subject/env-bg/SavageVerse/env-monster__}|}{,{1-$$__lazy-wildcards/subject/env-bg/SavageVerse/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/SavageVerse/style__}|}
+            __lazy-wildcards/subject/env-bg/SavageVerse/main-trigger-words__{,{1-$$__lazy-wildcards/subject/env-bg/SavageVerse/costume__}|}{,{1-$$__lazy-wildcards/subject/env-bg/SavageVerse/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-bg/SavageVerse/costume-hair__}|}{,{1-$$__lazy-wildcards/subject/env-bg/SavageVerse/env-creatures__}|}{,{1-$$__lazy-wildcards/subject/env-bg/SavageVerse/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/SavageVerse/style__}|}
         main-trigger-words:
           - EPSavageVerse,SaVi,Savage_Design,Savage theme
         costume:
@@ -2820,7 +2992,7 @@ lazy-wildcards:
           - messy hair
           - wavy hair
           - big_hair
-        env-monster:
+        env-creatures:
           - quadruped,winged dragon
           - bear
           - snake
@@ -2874,7 +3046,8 @@ lazy-wildcards:
         env-bg:
           - Ancient Era Graveyard
           - churchyard
-          - crypt
+          - >-
+            {underground |}crypt
           - mausoleum
           - megalithic_tomb
           - floating_island_graveyard
@@ -2899,6 +3072,7 @@ lazy-wildcards:
           - tree
           - __lazy-wildcards/subject/env-elem/moss/prompts__
           - candle
+          - ancient sarcophagus
         style:
           - cybernetic
           - enchanted
@@ -3422,6 +3596,49 @@ lazy-wildcards:
             - whispering hollows,murmuring echoes,hidden passages,abode of ancient spirits
             - starfire nexus,celestial convergence,radiant energies,nexus of cosmic power
             - crystal veil,shimmering crystals,mystical barrier,realm of magical protection
+      carcosa_city:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/carcosa_city/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg/carcosa_city/env__}|}{,({1-3$$__lazy-wildcards/subject/env-bg/carcosa_city/env-bg__})|}{0.3::,{1-$$__lazy-wildcards/subject/env-bg/carcosa_city/style__}|}
+        env-bg-main:
+          - (carcosa city style)
+        env:
+          - moss_covered_walls
+          - occult_symbols
+          - non_euclidean_geometry
+          - black stars
+          - twin suns
+        env-bg:
+          - Endless Dusk and Starry Sky,eternal_sunset,starry_sky,yellow_hue,surreal_lighting
+          - Ancient and Decaying Buildings,decaying_building,ancient_city
+          - Twisted Streets and Non-Euclidean Geometry,twisted_street,impossible_architecture,paradoxical_space
+          - Pale Lake and Shattered Moon,pale_lake,shattered_moon,eerie_landscape,supernatural_lake
+          - Mysterious Black Towers,black_tower,alien_architecture,mysterious_structure,forbidden_tower
+          - foggy_plaza,statues_in_fog,eerie_atmosphere,abandoned_square
+          - Hidden Underground Passages,underground_passage,hidden_tunnels,forbidden_path
+        style:
+          - |-
+            The King in Yellow's Presence,ominous_presence,invisible_terror,psychological_horror
+          - eerie_atmosphere
+      ShinMegamiTensei-Tokyo_Millennium:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/ShinMegamiTensei-Tokyo_Millennium/env-bg-main__{,{1-2$$__lazy-wildcards/subject/env-bg/ShinMegamiTensei-Tokyo_Millennium/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/ShinMegamiTensei-Tokyo_Millennium/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/ShinMegamiTensei-Tokyo_Millennium/style__}|}
+        env-bg-main:
+          - Tokyo_Millennium,post-apocalyptic_city,dystopian_world
+        env-bg:
+          - Center_District,City_center,ruling_government
+          - Valhalla,Entertainment_district
+          - Valhalla,gladiator_tournaments
+          - Private_mansion,guarded_residence,elite_dwelling
+          - Arcadia,Utopian_district,demon-free_zone,false_paradise
+          - Holytown,Religious_center,church_district
+          - Factory_District,Industrial_zone,mining_site
+        env:
+          - Order_of_Messiah,Religious_order,messianic_cult,divine_rulers
+          - Millennium_News_Network,City_news,propaganda_broadcasts,information_contro
+        style:
+          - Great_Cataclysm,World_ending_event,apocalyptic_disaster,city_rebirt
       Japanese-Festival-Bon-Odori:
         prompts:
           - >-
@@ -4084,22 +4301,6 @@ lazy-wildcards:
             slime_\(substance\),sticky slime
           - twigs
           - overgrown
-      skull:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-elem/skull/env-main__{,{1-$$__lazy-wildcards/subject/env-elem/skull/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-elem/skull/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/env-elem/skull/env__}|}
-        env-main:
-          - skull,skeleton
-        costume-elem:
-          - skull bra
-          - skull necklace
-        env:
-          - pile of skulls
-          - skull decoration
-          - skull_and_crossbones,jolly_roger,pirate symbol,pirate emblem,skull print
-          - crystal skull decoration,crystal skull pattern
-        costume-weapon:
-          - holding skull
       GreenRockWorld:
         prompts:
           - >-
@@ -4144,6 +4345,7 @@ lazy-wildcards:
           - luxury style
           - industrial style
           - victorian style
+          - spiraling upwards
       railing:
         prompts:
           - >-
@@ -4190,6 +4392,196 @@ lazy-wildcards:
         env:
           - empty pool
           - pool ladder
+      fence:
+        prompts:
+          - >-
+            {1-2$$__lazy-wildcards/subject/env-elem/fence/env__}{,{1-$$__lazy-wildcards/subject/env-elem/fence/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-elem/fence/action-pose__}|}
+        env:
+          - fence
+          - chain-link fence,chain_link_fence
+          - wooden fence
+          - bamboo fence
+          - wire_fence
+          - barbed_wire
+          - safety_fence
+          - >-
+            {steel|iron} mesh,wire mesh,metal mesh,metal_fence
+        env-bg:
+          - rooftop
+        action-pose:
+          - against fence
+      industrial-pipes:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/industrial-pipes/env-main__{,{1-$$__lazy-wildcards/subject/env-elem/industrial-pipes/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem/industrial-pipes/costume-weapon__}|}
+        env-main:
+          - cables,tubes
+          - industrial pipes
+          - wire
+        env:
+          - cables everywhere
+          - hanging_cables
+          - metal_chains
+          - industrial_wires
+          - dangling_chains
+        costume-weapon:
+          - holding cable
+      occult:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/occult/style-main__}{0.2::,__lazy-wildcards/subject/env-elem/occult/costume__|}{,{1-$$__lazy-wildcards/subject/env-elem/occult/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem/occult/style__}|}
+        style-main:
+          - occult practices
+          - occult rituals
+          - occult symbols
+          - occult
+        costume:
+          - __lazy-wildcards/subject/costume/Nun/prompts__
+        env:
+          - __lazy-wildcards/subject/env-elem-punk/conspiracytech/prompts__
+          - ritualistic objects
+          - __lazy-wildcards/subject/env-elem/circle-magic/prompts__
+          - reflective materials
+        style:
+          - sacred geometry
+          - occult and ritualistic aesthetics
+          - pentagramle
+          - circular pattern of stars
+          - star of david
+          - occultism
+          - illuminati
+          - sacred
+          - surreal art
+      chair:
+        prompts:
+          - >-
+            {1-2$$__lazy-wildcards/subject/env-elem/chair/env-chair__}{,{1-$$__lazy-wildcards/subject/env-elem/chair/action-pose__}|}{,{1-$$__lazy-wildcards/subject/env-elem/chair/style__}|}
+        env-chair:
+          - cushioned seats
+          - recliners
+          - luxurious seating
+          - theater seating
+          - armchair
+          - chair
+          - invisible chair
+          - pilot chair
+          - >-
+            {__mix-lazy-auto/color-anything__ |}{{leather|velvet|wooden} |}{couch|sofa|chair}
+          - couch
+          - sofa
+          - discarded chairs
+          - beach_chair
+          - throne
+          - Recliner
+          - stool
+        action-pose:
+          - hand on own chin
+          - lying
+          - sitting
+        style:
+          - discarded
+      lamp:
+        prompts:
+          - >-
+            {1-3$$__lazy-wildcards/subject/env-elem/lamp/env__}{,{1-4$$__lazy-wildcards/subject/env-elem/lamp/style__}|}
+        env:
+          - lamp
+          - lampshades
+          - __lazy-wildcards/subject/env-elem/lantern/prompts__
+          - candle,candlelight
+          - chandelier
+          - wall_sconce,wall lamp
+          - floor_lamp
+          - arc_lamp
+          - reading_lamp
+          - table_lamp
+          - desk_lamp
+          - bedside_lamp
+          - ceiling_light,flush_mounted
+          - recessed_lighting,downlight
+          - >-
+            {{classic|modern} |}street lamp
+          - LED Strip Lighting
+        style:
+          - crystal_lighting
+          - luxury_lighting
+          - vintage_design,vintage_sconce
+          - elegant_lighting
+          - indirect_lighting
+          - decorative_lighting
+          - practical_lighting
+          - hidden_lighting
+          - ambient_lighting
+          - cyberpunk_aesthetic
+      lantern:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/lantern/env__}{,{1-4$$__lazy-wildcards/subject/env-elem/lantern/style__}|}
+        env:
+          - lantern
+          - paper_lantern
+        style:
+          - japanese_lighting
+          - soft_lighting
+          - cultural_lighting
+      tentacles-play:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/tentacles-play/env-tentacles__{,({1-$$__lazy-wildcards/subject/env-elem/tentacles-play/env-tentacles-play__})|}{,{1-$$__lazy-wildcards/subject/env-elem/tentacles-play/env-tentacles-style__}|}{,{1-$$__lazy-wildcards/subject/env-elem/tentacles-play/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-elem/tentacles-play/env__}|}
+        env-tentacles:
+          - tentacles,eldritchtentacle,rindou,nsfw
+        env-tentacles-play:
+          - tentacle around
+          - tentacle around leg
+          - tentacle between breasts
+          - Tentacle Rub Crotch
+          - tentacle stimulate crotch
+          - sexualized tentacles,tentacle porn,tentacle sex
+        costume-elem:
+          - clothing aside
+          - open mouth
+          - habit
+          - breasts
+          - vaginal
+          - bottomless
+          - closed eyes tightly,ecstasy,painful
+          - biting own lip
+          - blush
+          - sweat
+          - urination
+        env-tentacles-style:
+          - suction cups
+          - giant tentacles
+          - spiked tentacles
+          - mucus,Tentacle mucus,Mucus produced by the tentacles
+          - slime,Tentacle slime,The slimy coating on the tentacles
+          - veiny tentacles
+          - multiple tentacles
+          - transparent tentacles,glass tentacles
+        env:
+          - wet
+          - Marine slime
+          - slime \(substance\)
+      skull:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/skull/env-main__{,{1-$$__lazy-wildcards/subject/env-elem/skull/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-elem/skull/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/env-elem/skull/env__}|}
+        env-main:
+          - skull,skeleton
+        costume-elem:
+          - skull bra
+          - skull necklace
+        env:
+          - pile of skulls
+          - skull decoration
+          - __lazy-wildcards/subject/env-elem/skull_and_crossbones/prompts__
+          - crystal skull decoration,crystal skull pattern
+          - decorated_skull
+        costume-weapon:
+          - holding skull
+      skull_and_crossbones:
+        prompts:
+          - skull_and_crossbones,jolly_roger,pirate symbol,pirate emblem,skull print
     env-elem-punk:
       holographic:
         prompts:
@@ -4356,7 +4748,175 @@ lazy-wildcards:
           - steampunk_gloom
           - depressive_aura
           - __lazy-wildcards/utils/color-base__ lighting
+      # https://civitai.com/models/329635/xuer-dieselpunk?modelVersionId=369373
+      dieselpunk:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-punk/dieselpunk/style-main__{,{1-2$$__lazy-wildcards/subject/env-elem-punk/dieselpunk/costume__}|}{,({1-$$__lazy-wildcards/subject/env-elem-punk/dieselpunk/costume-headwear__}:1.2)|}{,{1-$$__lazy-wildcards/subject/env-elem-punk/dieselpunk/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-elem-punk/dieselpunk/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/env-elem-punk/dieselpunk/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem-punk/dieselpunk/env-vehicle__}|}{,{1-2$$__lazy-wildcards/subject/env-elem-punk/dieselpunk/env-bg__}|}
+        style-main:
+          - xuer dieselpunk
+        costume:
+          - Armored Soldiers
+          - Mechanical Armor
+          - retro_flight_suit,leather_helmet,vintage_goggles,aviator_gear
+          - midriff,goggles on head,necklace,skirt,bare shoulders,cleveage,bikini panties,sleeveless
+        costume-elem:
+          - diesel_pack
+          - plump thighs
+          - arm tattoo
+          - crop top
+        costume-headwear:
+          - vintage_goggles
+          - leather_helmet
+          - goggles on head
+        costume-weapon:
+          - retro_futuristic_weapon
+        env:
+          - smoke_stacks
+          - diesel_engines,diesel_machinery
+          - industrial_conveyor
+          - heavy_industry
+          - anti_aircraft_turret
+          - diesel_exhaust
+          - wet
+        env-vehicle:
+          - Zeppelins,Warplanes,diesel_engine_aircraft,retro_futuristic_flying_machine
+          - giant_war_machine,diesel_robot,tank_like_mech,mechanical_giant
+        env-bg:
+          - Industrial Cityscape,industrial_city,factory_buildings
+          - mechanical_factory
+          - retro_military_base,concrete_bunker,barbed_wire_fence
+          - Smog-Filled Streets,smog_filled_street,industrial_street_lamp
+          - brick_buildings
+      # https://civitai.com/models/535810/nuclear-hazard-style-lora-fluxsdxlpony?modelVersionId=595622
+      Nuclear_Hazard:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-punk/Nuclear_Hazard/style-main__{,{1-$$__lazy-wildcards/subject/env-elem-punk/Nuclear_Hazard/env-symbol__}|}{0.3::,{1-2$$__lazy-wildcards/subject/env-elem-punk/Nuclear_Hazard/costume__}|}{,{1-$$__lazy-wildcards/subject/env-elem-punk/Nuclear_Hazard/env__}|}{,{1-2$$__lazy-wildcards/subject/env-elem-punk/Nuclear_Hazard/env-bg__}|}{0.2::,{1-$$__lazy-wildcards/subject/env-elem-punk/Nuclear_Hazard/env-elem-food__}|}{,{1-$$__lazy-wildcards/subject/env-elem-punk/Nuclear_Hazard/env-creatures__}|}{0.2::,{1-2$$__lazy-wildcards/subject/env-elem-punk/Nuclear_Hazard/env-vehicle__}|}{,{1-2$$__lazy-wildcards/subject/env-elem-punk/Nuclear_Hazard/style__}|}
+        style-main:
+          - nuclearhazard,nuclear hazard,radiation,nuclearpunk
+        costume:
+          - hazmat suit,radiation_suit,survivor,post_apocalyptic_suit,gas_mask,survival_gear
+        env-vehicle:
+          - battle car
+          - battle tank
+        env-symbol:
+          - (nuclear symbols,radiation_symbol,hazard_sign,yellow_warning,nuclear_warning,caution_sign)
+        env:
+          - nuclear reactor
+          - beach,pool
+          - nuclear_waste_barrel,toxic_barrel,waste_container,radiation_warning
+          - radiation_cloud,toxic_air,fallout_cloud,radioactive_fog
+        env-bg:
+          - desolate_city,ruins,post_apocalyptic_setting,destroyed_buildings,wasteland
+          - nuclear_facility,apocalyptic_factory,destroyed_powerplant,post_apocalyptic_machine
+          - cooling_tower,collapsed_building,nuclear_plant_disaster,ruined_tower
+        env-elem-food:
+          - drink,glass,hamburger,hotdog
+        env-creatures:
+          - cat
+          - mutated_creature
+          - mutant_animal
+        style:
+          - >-
+            {interior|exterior}
+          - radioactive_mutation,radiation_exposure
+          - post_nuclear_disaster
     env-bg-interior:
+      # https://civitai.com/models/815517/cyberpunk-club?modelVersionId=911938
+      cyberpunk_club:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-interior/cyberpunk_club/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg-interior/cyberpunk_club/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/cyberpunk_club/costume__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/cyberpunk_club/style__}|}
+        env-bg-main:
+          - cyclu,cyberpunk club,indoors,interior,bar \(place\),concert
+        costume:
+          - futuristic_clothing,cybernetics,cyberpunk_outfit,augmented_humans
+        env:
+          - neon_lights,holographic_ads,bright_lights_in_darkness,glowing_signs,blinking_lights,interactive_lighting,geometric_patterns,dynamic_floor_lights,stage lights
+          - crowded_club
+          - dj_booth
+          - cyber_bar,robotic_bartender,futuristic_bar
+          - glowing_drinks,fluorescent_liquid,cup,drinking glass
+          - dance_floor,projection_mapping
+          - discarded_machines,techno_slums
+          - transparent_walls,glass_walls,reflected_glare,urban_scenery_through_windows
+          - vr_area,virtual_reality_headset,digital_world
+          - cyber_interaction,futuristic_entertainment
+          - tile floor
+          - graffiti
+          - stool
+          - __lazy-wildcards/subject/env-bg-interior/strip_club/prompts__
+        style:
+          - electronic_music,music_waveforms,vibrating_floor
+          - futuristic_design
+          - ambient lighting,atmospheric effects
+          - science fiction
+          - reflection
+      strip_club:
+        prompts:
+          - >-
+            {3-$$__lazy-wildcards/subject/env-bg-interior/strip_club/action__},{1-$$__lazy-wildcards/subject/env-bg-interior/strip_club/env-pole__}{,{1-$$__lazy-wildcards/subject/env-bg-interior/strip_club/costume__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/strip_club/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/strip_club/env__}|}{,__lazy-wildcards/subject/env-bg-interior/strip_club/env-bg-floor__|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/strip_club/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/strip_club/style__}|}
+        action:
+          - pole dancing
+          - squatting,crouching,spread legs
+          - arm support
+          - arms behind back
+          - pole masturbation
+          - holding pole
+          - pole between ass
+          - arms over head
+          - arms up
+        env-pole:
+          - pole,stripper pole
+        env:
+          - money
+        costume:
+          - stripper,pole dancer
+          - belly dancer outfit
+          - revealing clothes,slutty outfit
+          - arabian clothes,harem outfit
+          - bikini
+        costume-elem:
+          - high heels
+          - topless
+          - partially clothed
+          - petite
+          - __lazy-wildcards/subject/costume-ethnicity-body/curvy_female/prompts__
+          - toes
+          - underwear
+          - blush
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/prompts__
+          - ass visible through thighs,cameltoe
+          - bottomless
+          - pelvic curtain
+          - __lazy-wildcards/subject/costume-elem/cum/prompts__
+          - __lazy-wildcards/subject/costume-elem/pussy_juice/prompts__
+          - ass focus,from behind
+          - thong
+          - __lazy-wildcards/subject/costume-elem/chain-acc/prompts__
+          - navel piercing
+          - piercing
+          - __lazy-wildcards/subject/costume-elem-expressions/seductive/prompts__
+          - covering breasts
+          - star pasties
+        env-bg:
+          - strip club
+          - nightclub
+        env-bg-floor:
+          - mirror_stage,reflective_surface,shiny_stage
+          - mirror_floor,reflective_floor,shiny_floor
+          - mirror_podium,reflective_podium,shiny_platform
+        style:
+          - slut
+          - reaching out
+          - toned
+          - looking back
+          - >-
+            {1-$$reflection|dual_reflection|performance_reflection|shiny_metallic_surface|display_reflection|elegant_reflection}
+          - luxury_showcase,luxurious_stage,opulent_showcase
+          - mirror_lighting_effect,reflected_light,complex_lighting,reflected_glow
+          - dance_reflection,mirrored_dance,dual_movement
       station:
         prompts:
           - >-
@@ -4405,8 +4965,7 @@ lazy-wildcards:
         env-bg-main:
           - subway station platform
         env-bg:
-          - station_tunnel
-          - incoming_train,train_lights
+          - __lazy-wildcards/subject/env-bg-interior/subway_railway/prompts__
         env:
           - platform_edge
           - platform_lines
@@ -4427,6 +4986,18 @@ lazy-wildcards:
           - ambient_lighting
           - station_lighting
           - platform_shadows
+      subway_railway:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/env-bg-interior/subway_railway/env-bg-main__}){,{1-$$__lazy-wildcards/subject/env-bg-interior/subway_railway/env-bg__}|}
+        env-bg-main:
+          - Railway,Railroad
+          - Streetcar Tracks,Tram Tracks
+          - Metro Tracks,Subway Tracks
+          - Train Tracks,Railway Tracks
+        env-bg:
+          - station_tunnel
+          - incoming_train,train_lights
       traditional-cjk:
         prompts:
           - >-
@@ -5013,6 +5584,15 @@ lazy-wildcards:
           - flower necklace
           - feather necklace
           - skull necklace
+      chain-acc:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-elem/chain-acc/costume-elem__}
+        costume-elem:
+          - chain leash
+          - chain necklace
+          - chain
+          - belly chain
       religious:
         prompts:
           - cope,ceremonial_cloak
@@ -5078,7 +5658,7 @@ lazy-wildcards:
             __lazy-wildcards/subject/costume-elem/torn-clothes/costume__{0.2::,__lazy-wildcards/subject/costume-elem/torn-clothes/costume-elem__|}
         costume:
           - >-
-            {1-$$ragged tunic,ragged clothes|tattered clothing,tattered clothes|torn clothes,torn clothing|ripped clothes|damaged}
+            {1-$$ragged tunic,ragged clothes|tattered clothing,tattered clothes|torn clothes,torn clothing|ripped clothes|damaged|tearing clothes}
         costume-elem:
           - >-
             torn {1-$$,torn $$pantyhose|thighhighs|shirt|pants|dress|skirt|sleeves|bodysuit|cape|shorts|jeans|leotard|legwear|camisole}
@@ -5143,128 +5723,27 @@ lazy-wildcards:
           - cum plugged
           - cum inflation
           - cum leak,cum leaking
+          - bukkake
         action:
           - after ejaculation
         expressions:
           - fucked silly
-      costume-breasts:
+      saliva:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/costume-elem/costume-breasts/costume-breasts-cleavage__}{0.3::,{1-$$__lazy-wildcards/subject/costume-elem/costume-breasts/costume-breasts-out__}|}{,{1$$__lazy-wildcards/subject/costume-elem/costume-breasts/costume-breasts-out-bra__}|}{0.2::,{1-3$$__lazy-wildcards/subject/costume-elem/costume-breasts/costume-breasts-shapes__}|}{0.2::,{1-$$__lazy-wildcards/subject/costume-elem/costume-breasts/costume-breasts-style__}|}{0.2::,__lazy-wildcards/subject/costume-elem/costume-breasts/costume-breasts-action__|}{0.2::,__lazy-wildcards/subject/costume-elem/costume-breasts/costume-breasts-size__|}
-        costume-breasts-style:
-          - jewelry draped between breasts
-          - >-
-            {1-$$wet breasts|sweat_on_breasts|sweaty breasts}
-          - glistening breasts,shiny breasts
-        costume-breasts-size:
-          - >-
-            {1-$$gigantic breasts|hyper breasts}
-          - >-
-            {1-$$no_breasts|flat chest|flat chested|flat breasts}
-          - >-
-            {1-$$small breasts|tiny breasts}
-          - >-
-            medium breasts
-          - huge breasts
-          - big breasts
-          - large breasts
-          - bursting breasts
-        costume-breasts-shapes:
-          - teardrop breasts
-          - athletic breasts
-          - symmetrical breasts
-          - asymmetrical breasts
-          - breasts apart
-          - >-
-            {medium|small|} pointy breasts
-          - >-
-            {medium|small|} perky breasts
-          - >-
-            {1-$$saggy breasts,sagging breasts|drooping breasts|soft breasts|hanging breasts|tarechichi,taretiti}
-          - small sagging breasts
-          - heavy sagging breasts
-          - bulging breasts
-          - bell shaped breasts
-          - deflated breasts
-          - veiny saggy breast
-          - >-
-            {Perfect Full }round breasts
-        costume-breasts-cleavage:
-          - cleavage
-          - >-
-            {1-$$cleavage_cutout|cleavage_window}
-          - cleavage_overflow
-          - >-
-            {1-$$cleavage_pull|cleavage_reach}
-          - cleavage_vore
-        costume-breasts-action:
-          - breasts_squeezed_together
-          - breasts_on_glass
-          - breast squish
-          - covering_breasts
-          - flashing breasts
-          - bouncing_breasts
-        costume-breasts-out:
-          - underboob
-          - >-
-            {one |}breasts out{ of clothes|}{,breasts_outside|}
-          - exposed breasts
-          - sideboob
-          - >-
-            {extended |}downblouse
-        costume-breasts-out-bra:
-          - __lazy-wildcards/subject/costume-elem/breasts-bra-peek/prompts__
-          - __lazy-wildcards/subject/costume-elem/breasts-bra-peek2/prompts__
-          - no bra
-          - __lazy-wildcards/subject/costume-elem/breasts-bra-visible-through-clothes/prompts__
-      # https://civitai.com/models/337704?modelVersionId=378121
-      breasts-bra-peek:
-        prompts:
-          - >-
-            (bra peek:1.2),bra,breasts,cleavage{0.3::,({1-$$__lazy-wildcards/subject/costume-elem/breasts-bra-peek/costume-breasts__})|}{0.3::,{1-$$__lazy-wildcards/subject/costume-elem/breasts-bra-peek/costume-elem__}|}
-        costume-breasts:
-          - bra visible through clothes
-          - downblouse,leaning forward
-          - button gap
+            ({1-$$__lazy-wildcards/subject/costume-elem/saliva/costume-elem__}{0.3:::{1.2|1.3|1.4}|}){0.3::,__lazy-wildcards/subject/costume-elem/saliva/expressions__|}
         costume-elem:
-          - collarbone
-          - see-through
-          - |-
-            (tied shirt:1.2),shirt
-      # https://civitai.com/models/328209/bra-cups-sticking-out-or-goofy-ai?modelVersionId=367821
-      breasts-bra-peek2:
+          - saliva
+          - drooling
+          - saliva trail
+          - saliva drip
+        expressions:
+          - open_mouth
+          - close_mouth
+      pussy_juice:
         prompts:
           - >-
-            (Bra Cups Sticking Out:1.2),__lazy-wildcards/subject/costume-elem/breasts-bra-peek/prompts__
-      breasts-bra:
-        prompts:
-          - >-
-            {1-$$__lazy-wildcards/subject/costume-elem/breasts-bra/costume-breasts-bra__}
-        costume-breasts-bra:
-          - bra strap
-          - bow bra
-          - bralines
-          - shelf_bra
-          - cupless_bra
-          - >-
-            {1-$$lace-trimmed bra|lace bra|lace trim}
-      # https://civitai.com/models/210166/bra-visible-through-clothes-concept-or-goofy-ai
-      breasts-bra-visible-through-clothes:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/costume-elem/breasts-bra-visible-through-clothes/costume-breasts-bra-visible-through-clothes__{,{1-$$__lazy-wildcards/subject/costume-elem/breasts-bra-visible-through-clothes/costume-breasts-bra__}|},{1-$$__lazy-wildcards/subject/costume-elem/breasts-bra-visible-through-clothes/costume-elem__}
-        costume-breasts-bra-visible-through-clothes:
-          - >-
-            (bra_visible_through_clothes:1.2)
-        costume-breasts-bra:
-          - bralines
-        costume-elem:
-          - button gap
-          - shirt tucked in
-          - __lazy-wildcards/subject/costume-elem/see-through-clothes/prompts__
-      breasts-clothes:
-        prompts:
-          - breast curtains
+            {1-$$pussy juice|pussy juice drip}
     costume-headwear:
       others:
         prompts:
@@ -5407,7 +5886,7 @@ lazy-wildcards:
             - bones
             - blood vessels
             - decaying flesh
-            - tattered clothes
+            - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
             - monsterification
             - ribs
         costume-breasts:
@@ -5770,15 +6249,12 @@ lazy-wildcards:
       slave-girl:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume/slave-girl/main__,{1-$$__lazy-wildcards/subject/costume/slave-girl/costume/*__},({1-$$__lazy-wildcards/subject/costume/slave-girl/style__}),{1-$$__lazy-wildcards/subject/costume/slave-girl/style-torn__},{({1-$$__lazy-wildcards/subject/costume/slave-girl/costume-ethnicity__}:1.2),|}{1-$$__lazy-wildcards/subject/costume/slave-girl/env__}{0.1::,{1-$$__lazy-wildcards/subject/costume/slave-girl/env-bg__}|}{0.2::,__lazy-wildcards/subject/moment/age/prompts__|}
+            __lazy-wildcards/subject/costume/slave-girl/main__,{1-$$__lazy-wildcards/subject/costume/slave-girl/costume__},({1-$$__lazy-wildcards/subject/costume/slave-girl/style__}),{1-$$__lazy-wildcards/subject/costume/slave-girl/style-torn__},{({1-$$__lazy-wildcards/subject/costume/slave-girl/costume-ethnicity__}:1.2),|}{1-$$__lazy-wildcards/subject/costume/slave-girl/env__}{0.1::,{1-$$__lazy-wildcards/subject/costume/slave-girl/env-bg__}|}{0.2::,__lazy-wildcards/subject/moment/age/prompts__|}
         main:
           - slave,slavegirl
         costume:
-          type-torn:
-            - >-
-              {2-$$ragged tunic|tattered clothing|torn clothes,torn clothing}
-          type-slave-outfit:
-            - slave outfit
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - slave outfit
         costume-ethnicity:
           - malnutrition
           - emaciation
@@ -5934,7 +6410,7 @@ lazy-wildcards:
           - censored
           - convenient censoring
           - partially visible vulva
-          - pussy juice
+          - __lazy-wildcards/subject/costume-elem/pussy_juice/prompts__
           - uncensored
           - gigantic breasts
           - saggy breasts
@@ -6535,6 +7011,18 @@ lazy-wildcards:
         costume-elem:
           - navel
           - torn sweater
+      martial_arts:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/martial_arts/style-main__{,{1-$$__lazy-wildcards/subject/costume/martial_arts/costume__}|}
+        style-main:
+          - |-
+            (martial arts{0.3:::{1.2|1.3|1.4}|})
+        costume:
+          - robe
+          - chinese clothes
+          - japanese clothes
+          - dress
       Military_Uniform_of_Chinese_Red_Army:
         prompts:
           - >-
@@ -6663,6 +7151,29 @@ lazy-wildcards:
           - navel_focus
           - low_rise
           - midriff
+      # https://civitai.com/models/157103/djinnindianpersion-concept-lora-or-ownwaifu?modelVersionId=176379
+      djinn_indian:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/djinn_indian/costume__{0.7::,{1-$$__lazy-wildcards/subject/costume/djinn_indian/costume-ethnicity__}|}{0.7::,{1-$$__lazy-wildcards/subject/costume/djinn_indian/costume-hair__}|}{,{1-$$__lazy-wildcards/subject/costume/djinn_indian/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume/djinn_indian/env__}|}
+        costume-ethnicity:
+          - long legs,tall female
+          - __lazy-wildcards/subject/costume-ethnicity-body/curvy_female/prompts__
+          - |-
+            (__lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__:1.2)
+        costume:
+          - >-
+            (CONCEPT_Djinn_Indian_persion_ownwaifu,bodypaint,full-body tattoo,tattoo,mayan_tattoos full body,bodypaint:1.2),arabian clothes,tribal,dress,navel,see-through,veil,sari,necklace,jewelry,bracelet,earrings,armlet,makeup,lipstick,lips,red lips,cleavage,underboob,dreadlocks,intricate dress,gold,chain,belly chain,Embroidery
+        costume-elem:
+          - large breasts
+          - __lazy-wildcards/subject/costume-elem/chain-acc/prompts__
+        costume-hair:
+          - long hair,very long hair,absurdly long hair
+          - curly hair,big hair,wavy hair
+          - black hair
+          - braid
+        env:
+          - tree
     costume-nsfw:
       # https://civitai.com/models/141250/fanny-packing-meat-shield-onarmor-or-concept?modelVersionId=156583
       # https://danbooru.donmai.us/posts?page=1&tags=meat_armor
@@ -6810,10 +7321,212 @@ lazy-wildcards:
           - Traditional_tattooing
           - Tebori_technique
           - hand_poked_tattoo
-    costume-ethnicity-body:
+    costume-ethnicity-body-skin-tone:
+      # https://civitai.com/models/562884?modelVersionId=715574
       dark-skinned:
         prompts:
-          - dark_skin,tan_skin,tanned skin,dark skin,dark-skinned,black-skinned,bronze skin,bronzed skin
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned-black/costume-ethnicity__,bronze skin,bronzed skin,cinematic Bronze tan tanning skin tone
+      dark-skinned-black-deep:
+        prompts:
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned-black/costume-ethnicity__,cinematic Vantablack dark black skin tone
+      dark-skinned-black:
+        prompts:
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned-black/costume-ethnicity__,cinematic dark black skin tone
+        costume-ethnicity:
+          - dark_skin,tan_skin,tanned skin,dark skin,dark-skinned,black-skinned
+      white-skinned-ice-cold:
+        prompts:
+          - cinematic white ice cold skin tone,pale_skin
+      neutral-skinned:
+        prompts:
+          - cinematic normal neutral skin tone
+    costume-ethnicity-body:
+      curvy_female:
+        prompts:
+          - curvy,narrow waist,curvy figure,curvy female,curvaceous,wide hips
+      # https://civitai.com/models/820573/danielle-sharp-body-type?modelVersionId=917591
+      Danielle_Sharp_Body_Type:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-body/Danielle_Sharp_Body_Type/costume-ethnicity__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-ethnicity-body/Danielle_Sharp_Body_Type/costume-elem__}|}
+        costume-ethnicity:
+          - dksbody,collarbone,skinny waist
+        costume-elem:
+          - pale skin tone
+          - thigh gap
+          - collarbone
+          - nude dksbody
+          - thin dksbody
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-shapes-sagging/prompts__
+      # https://civitai.com/models/129130/hourglass-body-shape-sd15sdxlpony-or-olaz?modelVersionId=141478
+      Hourglass_Body_Shape:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-body/Hourglass_Body_Shape/costume-ethnicity__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-ethnicity-body/Hourglass_Body_Shape/costume-elem__}|}
+        costume-ethnicity:
+          - hourglass body shape,hourglass_figure,full_bust,curvy_body
+        costume-elem:
+          - >-
+            {large breasts|medium breasts}
+          - >-
+            {1-$$thin waist|slim waist}
+          - curvy_hips
+          - collarbone
+          - nude
+          - shapely_body
+          - __lazy-wildcards/subject/costume-ethnicity-body/curvy_female/prompts__
+      # https://civitai.com/models/580857/realistic-skin-texture-style-xl-detailed-skin-sd15-flux1d?modelVersionId=712234
+      skin_texture:
+        prompts:
+          - >-
+            (cinematic skin texture style,detailed skin{0.3:::{1.2|1.3|1.4}|}){,__lazy-wildcards/subject/costume-ethnicity-body/skin_texture/costume-ethnicity__|}
+        costume-ethnicity:
+          - skin pore
+          # - freckles
+
+    costume-ethnicity-breasts:
+      costume-breasts:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/costume-breasts-cleavage__}{0.3::,__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-out/prompts__|}{,{1$$__lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/costume-breasts-out-bra__}|}{0.2::,{1-3$$__lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/costume-breasts-shapes__}|}{0.2::,{1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/costume-breasts-style__}|}{0.2::,__lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/costume-breasts-action__|}{0.2::,__lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/costume-breasts-size__|}
+        costume-breasts-style:
+          - jewelry draped between breasts
+          - >-
+            {1-$$wet breasts|sweat_on_breasts|sweaty breasts}
+          - glistening breasts,shiny breasts
+        costume-breasts-size:
+          - >-
+            {1-$$gigantic breasts|hyper breasts}
+          - >-
+            {1-$$no_breasts|flat chest|flat chested|flat breasts}
+          - >-
+            {1-$$small breasts|tiny breasts}
+          - >-
+            medium breasts
+          - huge breasts
+          - big breasts
+          - large breasts
+          - bursting breasts
+        costume-breasts-shapes:
+          - teardrop breasts
+          - athletic breasts
+          - symmetrical breasts
+          - asymmetrical breasts
+          - breasts apart
+          - >-
+            {medium|small|} pointy breasts
+          - >-
+            {medium|small|} perky breasts
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-shapes-sagging/prompts__
+          - bulging breasts
+          - bell shaped breasts
+          - deflated breasts
+          - >-
+            {Perfect Full }round breasts
+        costume-breasts-cleavage:
+          - cleavage
+          - >-
+            {1-$$cleavage_cutout|cleavage_window}
+          - cleavage_overflow
+          - >-
+            {1-$$cleavage_pull|cleavage_reach}
+          - cleavage_vore
+        costume-breasts-action:
+          - breasts_squeezed_together
+          - breasts_on_glass
+          - breast squish
+          - covering_breasts
+          - flashing breasts
+          - bouncing_breasts
+        costume-breasts-out:
+          - underboob
+          - >-
+            {one |}breasts out{ of clothes|}{,breasts_outside|}
+          - exposed breasts
+          - sideboob
+          - >-
+            {extended |}downblouse
+        costume-breasts-out-bra:
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-peek/prompts__
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-peek2/prompts__
+          - no bra
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-visible-through-clothes/prompts__
+      breasts-out:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-out/costume-breasts-out__}{0.3:::{1.2|1.3|1.4}|})
+        costume-breasts-out:
+          - underboob
+          - >-
+            {one |}breasts out{ of clothes|}{,breasts_outside|}
+          - exposed breasts
+          - sideboob
+          - >-
+            {extended |}downblouse
+      breasts-shapes-sagging:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-shapes-sagging/costume-breasts-shapes-sagging__}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-shapes-sagging/costume-breasts-shapes__}|}
+        costume-breasts-shapes-sagging:
+          - >-
+            {1-$$saggy breasts,sagging breasts|drooping breasts|soft breasts|hanging breasts|tarechichi,taretiti}
+          - small sagging breasts
+          - heavy sagging breasts
+          - veiny saggy breast
+        costume-breasts-shapes:
+          - teardrop breasts
+          - symmetrical breasts
+          - asymmetrical breasts
+          - breasts apart
+      # https://civitai.com/models/337704?modelVersionId=378121
+      breasts-bra-peek:
+        prompts:
+          - >-
+            (bra peek:1.2),bra,breasts,cleavage{0.3::,({1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-peek/costume-breasts__})|}{0.3::,{1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-peek/costume-elem__}|}
+        costume-breasts:
+          - bra visible through clothes
+          - downblouse,leaning forward
+          - button gap
+        costume-elem:
+          - collarbone
+          - see-through
+          - |-
+            (tied shirt:1.2),shirt
+          - bra lift
+      # https://civitai.com/models/328209/bra-cups-sticking-out-or-goofy-ai?modelVersionId=367821
+      breasts-bra-peek2:
+        prompts:
+          - >-
+            (Bra Cups Sticking Out:1.2),__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-peek/prompts__
+      breasts-bra:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra/costume-breasts-bra__}
+        costume-breasts-bra:
+          - bra strap
+          - bow bra
+          - bralines
+          - shelf_bra
+          - cupless_bra
+          - >-
+            {1-$$lace-trimmed bra|lace bra|lace trim}
+      # https://civitai.com/models/210166/bra-visible-through-clothes-concept-or-goofy-ai
+      breasts-bra-visible-through-clothes:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-visible-through-clothes/costume-breasts-bra-visible-through-clothes__{,{1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-visible-through-clothes/costume-breasts-bra__}|},{1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-visible-through-clothes/costume-elem__}
+        costume-breasts-bra-visible-through-clothes:
+          - >-
+            (bra_visible_through_clothes:1.2)
+        costume-breasts-bra:
+          - bralines
+        costume-elem:
+          - button gap
+          - shirt tucked in
+          - __lazy-wildcards/subject/costume-elem/see-through-clothes/prompts__
+      breasts-clothes:
+        prompts:
+          - breast curtains
     costume-ethnicity-eyes:
       # https://civitai.com/models/728222/triclops?modelVersionId=814306
       third-eye:
@@ -7045,7 +7758,7 @@ lazy-wildcards:
           - zombie cyborg girl
         costume:
           - decaying flesh
-          - tattered clothes,ripped clothes
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
           - disheveled hair,messy hair
           - stitches
           - cyberpunk prosthesis
@@ -7169,7 +7882,7 @@ lazy-wildcards:
       lizard:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-ethnicity-main__,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-ethnicity__}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-elem__}|},{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-eyes__}{,{1-3$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-hair__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/env-bg__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/env-monster__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/env__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/style__}|}
+            __lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-ethnicity-main__,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-ethnicity__}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-elem__}|},{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-eyes__}{,{1-3$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-hair__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/env-bg__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/env-creatures__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/env__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/style__}|}
         costume-ethnicity-main:
           - lizardman,lizard,lizardmen,lizardman \(warhammer fantasy\)
         costume-ethnicity:
@@ -7216,7 +7929,7 @@ lazy-wildcards:
         env:
           - saddle
           - __lazy-wildcards/subject/env-elem/skull/prompts__
-        env-monster:
+        env-creatures:
           - Suchosaurus,Deinosuchus,crocodiles
           - dinosaurs
         env-bg:
@@ -7258,11 +7971,111 @@ lazy-wildcards:
       elf:
         prompts:
           - a beautiful elvish girl
+      # https://note.com/plum_code/n/n616a57bda009
+      # https://civitai.com/models/227403/plumbeer-furrymix
+      furry:
+        prompts:
+          - |-
+            (furry,anthro,Fluffy body:1.3),(Fluffy)
+      ghost_costume:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/ghost_costume/costume__{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/ghost_costume/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/ghost_costume/action-pose__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/ghost_costume/env__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/ghost_costume/style__}|}
+        costume:
+          - gh0st,white cloth,covered face,ghost costume,breasts
+        costume-elem:
+          - faceless,no face
+          - sexy_costume
+          - sheer_fabric
+          - |-
+            (semi_transparent,see-through:1.2)
+          - lace
+          - form_fitting
+          - short_dress
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - plunging_neckline
+          - cutout
+          - high_slit
+          - cleavage
+          - ghost_makeup,face_paint
+          - ghost_mask
+          - translucent_veil
+          - high_heels
+          - gloves
+          - dark_circles
+          - skimpy underwear
+          - floating clothes,floating
+        action-pose:
+          - kneeling
+        env:
+          - faux_chains
+        style:
+          - supernatural
+          - blue_accents
+          - silver_accents
+          - Halloween
     costume-weapon:
       smoking_pipe:
         prompts:
           - >-
             smoking pipe{,{1-$$holding smoking pipe,kiseru|smoke}|}
+      umbrella:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-weapon/umbrella/env-umbrella__{,{1-$$__lazy-wildcards/subject/costume-weapon/umbrella/costume-weapon__}}{,{1-$$__lazy-wildcards/subject/costume-weapon/umbrella/style-umbrella__}}
+        env-umbrella:
+          - umbrella
+          - Oil-paper umbrellas,Japanese Wagasa
+          - parasol
+          - folding umbrella
+          - Bubble Umbrella
+          - Storm Umbrella
+          - Travel Umbrella
+          - Kids Umbrella
+          - leaf umbrella
+        style-umbrella:
+          - closed umbrella
+          - __mix-lazy-auto/color-anything__ umbrella
+          - shared umbrella
+          - transparent umbrella
+        costume-weapon:
+          - holding umbrella,with an umbrella
+          - umbrella over shoulder
+      umbrella_others:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-weapon/umbrella_others/env-umbrella__{,{1-$$__lazy-wildcards/subject/costume-weapon/umbrella/style-umbrella__}}
+        env-umbrella:
+          - beach umbrella
+          - Golf Umbrella
+          - Patio Umbrella
+          - Market Umbrella
+          - Fishing Umbrella
+          - Cantilever Umbrella
+          - Personal Sun Shade Umbrella
+          - Sun Umbrella
+    costume-elem-expressions:
+      yandere_trance:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-expressions/yandere_trance/expressions__{,({1-$$__lazy-wildcards/subject/costume-elem-expressions/yandere_trance/action-pose__})|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/yandere_trance/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/yandere_trance/style__}|}
+        expressions:
+          - >-
+            (yandere,yandere trance{0.3:::{1.2|1.3|1.4}|})
+        action-pose:
+          - hands on own face
+          - hands on own cheeks
+        costume-elem:
+          - makeup,lipstick
+          - blush
+          - heart-shaped pupils
+          - heavy breathing,visible breath
+        style:
+          - happy female
+      seductive:
+        prompts:
+          - >-
+            {1-$$seductive smile|seductive|voluptuous}
     env-bg-architectural:
       agricultural_zone:
         prompts:
@@ -7520,6 +8333,56 @@ lazy-wildcards:
           - ancient_bridge
           - >-
             {1-$$ice_bridge|frost_bridge|frozen_bridge}
+      # https://civitai.com/models/825976/style-of-treehouse-433?modelVersionId=923694
+      treehouse:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-architectural/treehouse/env-bg-main__{,{1-2$$__lazy-wildcards/subject/env-bg-architectural/treehouse/env-bg-treehouse__}|}{,{1-$$__lazy-wildcards/subject/env-bg-architectural/treehouse/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-architectural/treehouse/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg-architectural/treehouse/style__}|}
+        env-bg-main:
+          - |-
+            (treehouse,style of treehouse:1.2),tree
+        env-bg-treehouse:
+          - Rustic Treehouse,rustic_architecture
+          - modern_treehouse,geometric_architecture,eco_friendly_design,modern_integration
+          - adventure_treehouse,explorer_theme
+          - tribal_treehouse,bamboo_structure,palm_leaves_roof,handcrafted_architecture
+          - eco_treehouse,sustainable_design
+          - fantasy_treehouse,mystical_architecture,tower_structure
+          - minimalist_treehouse,simple_design,functional_architecture
+        env-bg:
+          - rainforest
+          - magic_forest,enchanted_environment
+          - quiet_forest
+          - lake_side
+          - garden
+          - giant tree
+        env:
+          - wooden_bridge
+          - rope_ladder
+          - ladder
+          - stairs
+          - wooden_house
+          - natural_materials
+          - hidden_architecture
+          - minimalist_architecture
+          - playful_architecture
+          - glass_windows
+          - natural_landscape
+          - mailbox \(incoming mail\)
+          - pinwheel
+          - fruit tree
+          - __lazy-wildcards/subject/env-elem/lamp/prompts__
+          - plant roots
+          - tire,tire swing
+        style:
+          - outdoor_exploration
+          - natural integration
+          - indigenous_design
+          - environmentally_friendly
+          - natural_conservation
+          - green_living
+          - storybook_design
+          - __lazy-wildcards/utils/scenery-no-humans__
     style-architectural:
       elven:
         prompts:
@@ -7674,6 +8537,114 @@ lazy-wildcards:
           - leaning forward
           - collarbone
           - full body
+    action-nsfw-others:
+      lift_by_self_with_mouth:
+        prompts:
+          - lifting shirt with mouth,clothes in mouth,mouth hold,shirt in mouth,shirtlifthent
+      toilet-use:
+        prompts:
+          - >-
+            (toilet use:1.5),indoors,restroom,Toilet Scene,__lazy-wildcards/subject/action-nsfw-others/toilet-use/main-types/*__,{1-$$__lazy-wildcards/subject/action-nsfw-others/toilet-use/style-types/main__},{1-$$__lazy-wildcards/subject/action-nsfw-others/toilet-use/env__}
+        main-types:
+          standing:
+            - standing
+          sitting:
+            - >-
+              (sitting:1.2),{1-$$__lazy-wildcards/subject/action-nsfw-others/toilet-use/style-types/sitting__}
+        style-types:
+          main:
+            - blush
+            - looking back
+            - embarrassed
+            - surprised
+            - reaching out
+            - caught
+            - moderate cleavage
+            - no pants
+            - no panties
+            - bored,tired
+            - unamused
+            - not phase
+            - panties above knees
+            - panties below knees
+            - |-
+              (panty pull:1.5)
+            - bottomless
+            - |-
+              (peeing,pee:1.2)
+            - toilet paper
+            - full blush
+            - shy
+            - shameful face
+            - breathing
+            - trembling
+            - spread legs
+            - surprised eyes
+            - open mouth
+            - wavy mouth
+            - |-
+              (stomach ache:1.5)
+            - |-
+              (close eyes:1.2)
+            - private fitting room mirror selfie
+            - flashing breasts
+            - >-
+              {1-$$clothes lift|lifted by self}
+            - underboob
+          sitting:
+            - sitting on toilet pooping
+            - legs closed
+            - knees knocking together
+            - hands on knees
+        env:
+          - toilet stall
+      undressing:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/action-nsfw-others/undressing/main__,{1-$$__lazy-wildcards/subject/action-nsfw-others/undressing/main-sub__},{1-$$__lazy-wildcards/subject/action-nsfw-others/undressing/action-elem__},{1-$$__lazy-wildcards/subject/action-nsfw-others/undressing/style__}
+        main:
+          - |-
+            (undressing:1.2),half naked
+        main-sub:
+          - undressing_in_public
+          - >-
+            {1-$$undressing_self|pulled by self|lifted_by_self}
+          - undressing_with_mouth
+          - pulling down pants
+          - pulling bikini string
+          - >-
+            {1-$$undressing_another|lifted_by_another}
+          - undressing_partner
+        action-elem:
+          - breast press
+          - breasts out
+          - hand on waist
+          - underboob
+          - __lazy-wildcards/subject/costume-elem/pussy_juice/prompts__
+        style:
+          - horny
+          - laying on back
+          - laying on bed
+          - looking at partner
+          - nude
+          - selfie
+          - open clothes
+          - heart
+          - clothes pull
+          - cleavage
+      grab:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/action-nsfw-others/grab/action-nsfw-grab__{0.3:::{1.2|1.3|1.4}|})
+        action-nsfw-grab:
+          - breast grab
+          - butt grab
+          - arm grab
+          - torso grab
+          - waist grab
+          - head grab
+          - chin grab
+          - neck grab
     action-nsfw-bdsm:
       # Sunvibe BDSM
       # https://civitai.com/models/495326/sunvibe-bdsm?modelVersionId=550669
@@ -7784,113 +8755,6 @@ lazy-wildcards:
         env-bg:
           - white brick wall
           - __mix-lazy-auto/color-anything__ brick wall
-    action-nsfw-others:
-      # https://civitai.com/models/23680?modelVersionId=28285
-      toilet-use:
-        prompts:
-          - >-
-            (toilet use:1.5),indoors,restroom,Toilet Scene,__lazy-wildcards/subject/action-nsfw-others/toilet-use/main-types/*__,{1-$$__lazy-wildcards/subject/action-nsfw-others/toilet-use/style-types/main__},{1-$$__lazy-wildcards/subject/action-nsfw-others/toilet-use/env__}
-        main-types:
-          standing:
-            - standing
-          sitting:
-            - >-
-              (sitting:1.2),{1-$$__lazy-wildcards/subject/action-nsfw-others/toilet-use/style-types/sitting__}
-        style-types:
-          main:
-            - blush
-            - looking back
-            - embarrassed
-            - surprised
-            - reaching out
-            - caught
-            - moderate cleavage
-            - no pants
-            - no panties
-            - bored,tired
-            - unamused
-            - not phase
-            - panties above knees
-            - panties below knees
-            - |-
-              (panty pull:1.5)
-            - bottomless
-            - |-
-              (peeing,pee:1.2)
-            - toilet paper
-            - full blush
-            - shy
-            - shameful face
-            - breathing
-            - trembling
-            - spread legs
-            - surprised eyes
-            - open mouth
-            - wavy mouth
-            - |-
-              (stomach ache:1.5)
-            - |-
-              (close eyes:1.2)
-            - private fitting room mirror selfie
-            - flashing breasts
-            - >-
-              {1-$$clothes lift|lifted by self}
-            - underboob
-          sitting:
-            - sitting on toilet pooping
-            - legs closed
-            - knees knocking together
-            - hands on knees
-        env:
-          - toilet stall
-      undressing:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/action-nsfw-others/undressing/main__,{1-$$__lazy-wildcards/subject/action-nsfw-others/undressing/main-sub__},{1-$$__lazy-wildcards/subject/action-nsfw-others/undressing/action-elem__},{1-$$__lazy-wildcards/subject/action-nsfw-others/undressing/style__}
-        main:
-          - |-
-            (undressing:1.2),half naked
-        main-sub:
-          - undressing_in_public
-          - >-
-            {1-$$undressing_self|pulled by self|lifted_by_self}
-          - undressing_with_mouth
-          - pulling down pants
-          - pulling bikini string
-          - >-
-            {1-$$undressing_another|lifted_by_another}
-          - undressing_partner
-        action-elem:
-          - breast press
-          - breasts out
-          - hand on waist
-          - underboob
-          - >-
-            {1-$$pussy juice|pussy juice drip}
-        style:
-          - horny
-          - laying on back
-          - laying on bed
-          - looking at partner
-          - nude
-          - selfie
-          - open clothes
-          - heart
-          - clothes pull
-          - cleavage
-      grab:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/action-nsfw-others/grab/action-nsfw-grab__{0.3:::{1.2|1.3|1.4}|})
-        action-nsfw-grab:
-          - breast grab
-          - butt grab
-          - arm grab
-          - torso grab
-          - waist grab
-          - head grab
-          - chin grab
-          - neck grab
     action-nsfw-sex:
       sitting-sex:
         prompts:
@@ -7912,7 +8776,7 @@ lazy-wildcards:
             __lazy-wildcards/subject/action-nsfw-sex/aftersex/main__,{({1-$$__lazy-wildcards/subject/action-nsfw-sex/aftersex/pose__}:1.2),|}{1-$$__lazy-wildcards/subject/action-nsfw-sex/aftersex/style__},{1-$$__lazy-wildcards/subject/action-nsfw-sex/aftersex/env__}
         main:
           - >-
-            covered pussy,covering,covering crotch,censored,open clothes,panty pull,panties around one leg,underwear,pussy juice,__lazy-wildcards/subject/costume-elem/cum/prompts__,breasts
+            covered pussy,covering,covering crotch,censored,open clothes,panty pull,panties around one leg,underwear,__lazy-wildcards/subject/costume-elem/pussy_juice/prompts__,__lazy-wildcards/subject/costume-elem/cum/prompts__,breasts
         style:
           - shy
           - embarrassed
@@ -7974,6 +8838,37 @@ lazy-wildcards:
           - closed mouth
         style:
           - sexually suggestive
+      # https://civitai.com/models/205709?modelVersionId=231606
+      yandere-sex:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/action-nsfw-sex/yandere-sex/action-main__{,__lazy-wildcards/subject/costume-elem-expressions/yandere_trance/prompts__|}{,{1-$$__lazy-wildcards/subject/action-nsfw-sex/yandere-sex/action-nsfw-sex__}|}{,{1-$$__lazy-wildcards/subject/action-nsfw-sex/yandere-sex/costume__}|}{,{1-$$__lazy-wildcards/subject/action-nsfw-sex/yandere-sex/style__}|}
+        action-main:
+          - >-
+            (yandere sex,yandere{0.3:::{1.2|1.3|1.4}|}),(crazy eyes,yandere_eyes,crazy expression{0.3:::{1.2|1.3|1.4}|}),sex,girl on top,nsfw
+        action-nsfw-sex:
+          - >-
+            {cowgirl position|reverse cowgirl position,from behind,sex from behind}
+          - happy sex
+          - clothed sex
+          - rape,reverse rape,reverse forced impregnation
+          - squatting on penis
+        costume:
+          - __lazy-wildcards/subject/costume-elem/cum/prompts__
+          - blood on face
+          - __lazy-wildcards/subject/costume-elem/saliva/prompts__
+          - sweat
+          - no panties
+          - no bra
+          - vaginal,partially visible vulva
+          - spread legs
+          - blush
+          - finger to mouth
+          - stomach
+          - pleasure face
+        style:
+          - hetero
+          - sleep molestation
   dataset:
     style:
       - >-
@@ -8013,6 +8908,7 @@ lazy-wildcards:
     costume-ethnicity:
       - __cf-*/ethnicity__
       - __lazy-wildcards/subject/ethnicity-*/*/prompts__
+      - __lazy-wildcards/subject/costume-ethnicity-*/*/prompts__
       - __lazy-wildcards/*/*/*/costume-ethnicity__
       - __lazy-wildcards/*/*/*/ethnicity-types/*__
       - __lazy-wildcards/*/*/*/ethnicity-makeup__
@@ -8033,8 +8929,463 @@ lazy-wildcards:
         ({1-3$$__lazy-wildcards/subject/style-artist/*/prompts__}{:1.4|:1.2|})
       - >-
         ({1-2$$__lazy-wildcards/subject/style-artist/dark/prompts__},{1-2$$__lazy-wildcards/subject/style-artist/*/prompts__}{:1.4|:1.2|})
+    env-creatures:
+      - >-
+        {1-2$$__lazy-wildcards/*/*/*/env-creatures__}
+      - __lazy-wildcards/cosplay-others/*/*/prompts__
+      - __Bo/creatures/random__
+    env-vehicle:
+      - __lazy-wildcards/*/*/*/env-vehicle__
+      - __Bo/vehicles/random__
   cosplay-char:
+    birdie_wing:
+      vipere:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/birdie_wing/vipere/main-trigger-words__,__lazy-wildcards/cosplay-char/birdie_wing/vipere/costume-ethnicity__{,{1-$$__lazy-wildcards/cosplay-char/birdie_wing/vipere/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/birdie_wing/vipere/env__}|}
+        main-trigger-words:
+          - vipere_birdiewinggolfgirlsstory,vipere_\(birdie_wing\)
+        costume-ethnicity:
+          - black_hair,jewelry,makeup,red_eyes,long_hair,lipstick,necklace,bangs,earrings,blunt_bangs,multicolored_hair
+        costume-elem:
+          - open_mouth
+          - bodysuit
+          - clothing cutout
+          - ear piercing
+        env:
+          - golf ball
+    cyberpunk2077:
+      lucy:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/cyberpunk2077/lucy/main-trigger-words__,__lazy-wildcards/cosplay-char/cyberpunk2077/lucy/costume-ethnicity__{,{1-2$$__lazy-wildcards/cosplay-char/cyberpunk2077/lucy/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/cyberpunk2077/lucy/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/cyberpunk2077/lucy/costume-weapon__}|}
+        main-trigger-words:
+          - lucy,lucy_\(cyberpunk\),lucyna,cyberpunk edgerunners,cyberpunk 2077
+        costume-ethnicity:
+          - asymmetrical hair,bob cut,colored eyelashes,eyeshadow under eye,gradient hair,lipstick,multicolored eyes,multicolored hair,red lips,white hair,short hair,parted bangs,red eyeliner,bangs,cyborg,makeup,blue hair,collarbone,pink hair,blue eyes,shiny
+        costume:
+          - BikiniMix_Lucy_ownwaifu,swimsuit,navel,cleavage,bare shoulders,side-tie bikini bottom
+          - CowPrintBikini_Lucy_ownwaifu,cow print,animal print,thighhighs,navel,swimsuit,print bikini,cleavage,side-tie bikini bottom
+          - Hoodie_Lucy_ownwaifu,hood,hood up,jacket,cigarette,hoodie,smoking,long sleeves
+          - Kimono_Lucy_ownwaifu,bare shoulders,bodysuit,floral print,japanese clothes,obi,off shoulder,sash,white kimono,hagoita
+          - MainOutfit_Lucy_ownwaifu,bare shoulders,white shorts,off shoulder,bodysuit,open clothes,open jacket,off-shoulder jacket,cropped jacket,white jacket,black leotard,leotard,hip vent,highleg leotard,long sleeves,belt,highleg,covered navel,sleeveless turtleneck leotard,thighhighs,stirrup legwear
+          - NSFW_Lucy_ownwaifu,completely nude,navel,nude
+          - PlayboyBunny_Lucy_ownwaifu,playboy bunny,cleavage,wrist cuffs,rabbit tail,black leotard,black bow,detached collar,covered navel,black bowtie,highleg leotard,strapless leotard,bare shoulders,fake tail
+          - Slingshotbikini_Lucy_ownwaifu,pink one-piece swimsuit,slingshot swimsuit,thighs,cleavage,fake tail,rabbit tail,white bikini
+          - SlingshotbikiniBlack_Lucy_ownwaifu,open jacket,open clothes,navel,bare shoulders,white jacket,black leotard,off shoulder,swimsuit,long sleeves,covered nipples
+          - WhiteBikini_Lucy_ownwaifu,swimsuit,white bikini,navel,skindentation
+          - WhiteSwimsuit_Lucy_ownwaifu,white one-piece swimsuit,cleavage,bare shoulders,covered navel,see-through,bracelet,highleg swimsuit,thighs
+        costume-elem:
+          - underboob
+          - toned
+          - abs
+        costume-weapon:
+          - smoking,holding cigarette,cigarette
+    galaxy_express_999:
+      maetel:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/galaxy_express_999/maetel/main-trigger-words__,__lazy-wildcards/cosplay-char/galaxy_express_999/maetel/costume-ethnicity__{,{1-2$$__lazy-wildcards/cosplay-char/galaxy_express_999/maetel/costume__}|},__lazy-wildcards/cosplay-char/galaxy_express_999/maetel/costume-headwear__{,{1-$$__lazy-wildcards/cosplay-char/galaxy_express_999/maetel/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/galaxy_express_999/maetel/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/galaxy_express_999/maetel/env-vehicle__}|}{,{1-$$__lazy-wildcards/cosplay-char/galaxy_express_999/maetel/env__}|}
+        main-trigger-words:
+          - maetel,maetel \(cosplay\),ginga_tetsudou_999,galaxy express 999,hair focus
+        costume-ethnicity:
+          - Hairdown_Maetel_ownwaifu,blonde hair,very long hair,brown eyes,lipstick,makeup,bangs
+        costume:
+          - black dress,fur trim,long dress
+          - NSFW_Maetel_ownwaifu,nude,navel
+          - capelet,turtleneck,black capelet
+        costume-headwear:
+          - |-
+            (HatDress_Maetel_ownwaifu,ushanka,papakha:1.2),fur hat,black headwear
+        costume-elem:
+          - hair between eyes
+          - fur-trimmed jacket,fur coat
+          - blush
+          - hair spread out
+          - black thighhighs
+          - black cape
+          - high heels
+        costume-weapon:
+          - holding briefcase,briefcase
+        env-vehicle:
+          - space train,steam locomotive,locomotive
+        env:
+          - wine,alcohol
+          - snow
+          - lamppost
+    gargoyles:
+      # https://civitai.com/models/184923/demona-cartoon-character-or-gargoyles-tv-show-ortier-03-patreon-requestor-2-outfits-or-ownwaifu?modelVersionId=207578
+      demona:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/gargoyles/demona/costume-ethnicity-main__,__lazy-wildcards/cosplay-char/gargoyles/demona/costume-ethnicity__{,{1-2$$__lazy-wildcards/cosplay-char/gargoyles/demona/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/gargoyles/demona/costume-wings__}|}{,{1-$$__lazy-wildcards/cosplay-char/gargoyles/demona/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/gargoyles/demona/env__}|}
+        costume-ethnicity-main:
+          - demona,gargoyles,long hair,gold earrings,jewelry,red hair,gold headband,big hair,thick thighs,makeup,gold armlet,makeup,lipstick,red lips,gold hoop earrings,gold tiara
+        costume-ethnicity:
+          - >-
+            demona_gargoyles_ownwaifu,colored skin,(blue skin:1.1),pointy ears,tail,demon tail,colored sclera,red eyes,claws,monster girl,demon girl,toned,muscular female
+          - human_demona_ownwaifu
+        costume:
+          - belt,midriff,navel,cleavage,loincloth,bare shoulders,crop top,pelvic curtain
+        costume-wings:
+          - wings,bat wings,dragon wings,demon wings
+        costume-elem:
+          - curvy,narrow waist
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - revealing clothes
+          - sleeveless shirt
+        env:
+          - sunset
+          - wading,water
+          - full moon
+    one-punch_man:
+      # https://civitai.com/models/130782/mosquito-girl-anime-character-or-one-punch-man-or-ownwaifu?modelVersionId=143568
+      mosquito_musume:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/one-punch_man/mosquito_musume/costume-ethnicity__{,__lazy-wildcards/cosplay-char/one-punch_man/mosquito_musume/costume__}{,{1-$$__lazy-wildcards/cosplay-char/one-punch_man/mosquito_musume/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/one-punch_man/mosquito_musume/costume-eyes__}|}{,{1-$$__lazy-wildcards/cosplay-char/one-punch_man/mosquito_musume/expressions__}|}{,{1-$$__lazy-wildcards/cosplay-char/one-punch_man/mosquito_musume/action-pose__}|}
+        costume-ethnicity:
+          - mosquito musume,antennae,mosquito girl,mosquito wings,one-punch man,navel,single horn,insect wings,spikes,long_hair,red_eyes,makeup,lipstick,lips
+        costume:
+          - MosquitoGirl_white,armor,white_hair,bodysuit
+          - MosquitoGirl_red,yellow_eyes,pink_hair,weapon,dark_skin,very_long_hair,animal_print,colored_skin,striped
+        costume-elem:
+          - apron,naked apron
+          - bandages,bandaid
+          - frills
+          - hanging breasts
+          - monster girl,arthropod girl
+          - underboob
+          - claws
+          - ribbon
+          - helmet
+        costume-eyes:
+          - jitome
+        expressions:
+          - smirk
+        action-pose:
+          - bent over
+          - hands on own chest
+      # https://civitai.com/models/129570/do-s-anime-character-or-one-punch-man-or-ownwaifu?modelVersionId=222811
+      kaijin_hime_do-s:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/one-punch_man/kaijin_hime_do-s/costume-ethnicity__,{1-$$__lazy-wildcards/cosplay-char/one-punch_man/kaijin_hime_do-s/costume__},__lazy-wildcards/cosplay-char/one-punch_man/kaijin_hime_do-s/costume-headwear__{,{1-$$__lazy-wildcards/cosplay-char/one-punch_man/kaijin_hime_do-s/costume-elem__}|}
+        costume-ethnicity:
+          - kaijin hime do-s,long hair,blonde hair,breasts,heart,red eyes,large breasts,colored sclera,black sclera,hair ornament,hair flower,black rose,very long hair,toned,makeup
+        costume:
+          - spiked collar,spikes,facial mark,forehead mark,thighs,collarbone
+          - bondage outfit,underboob,gloves,thighhighs,dominatrix,o-ring,black gloves,elbow gloves,jewelry,bare shoulders,single elbow glove,cleavage,asymmetrical legwear,o-ring top,latex,bdsm,latex legwear,skin tight
+        costume-headwear:
+          - Masked_KaijinHimeDo-S_ownwaifu,mask,mouth mask,gas mask
+          - UnMasked_KaijinHimeDo-S_ownwaifu
+        costume-elem:
+          - hair pulled back
+      # https://civitai.com/models/219231/psykos-one-punch-man-lora
+      psykos:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/one-punch_man/psykos/costume-ethnicity__,{1-$$__lazy-wildcards/cosplay-char/one-punch_man/psykos/costume__},{1-$$__lazy-wildcards/cosplay-char/one-punch_man/psykos/costume-headwear__}{,{1-$$__lazy-wildcards/cosplay-char/one-punch_man/psykos/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/one-punch_man/psykos/env__}|}{,{1-$$__lazy-wildcards/cosplay-char/one-punch_man/psykos/action-pose__}|}{,{1-$$__lazy-wildcards/cosplay-char/one-punch_man/psykos/expressions__}|}
+        costume-ethnicity:
+          - psykos,psychos_\(one-punch_man\),aqua hair,earrings,blue eyes,wavy hair,hair between eyes
+        costume:
+          - white dress,underbust,breast curtains
+          - bridal gauntlets,detached sleeves
+        costume-elem:
+          - huge breast,breasts apart
+          - snake print,gold trim
+          - shoulder cutout
+          - bracelet
+          - shoulder blades
+          - v-shaped eyebrows
+          - floating hair
+          - navel,stomach
+          - wide hips
+        env:
+          - aura,electricity,glowing,psychic,telekinesis
+          - floating,floating object,floating rock
+        costume-headwear:
+          - black-framed eyewear,glasses,rectangular eyewear
+        action-pose:
+          - arms behind head
+          - arm at side,arm at side,hand on own head
+        expressions:
+          - grin,smile
+    tenkuu_shinpan:
+      # https://civitai.com/models/817105/yayoi-kusakabe-or-high-rise-invasion-or-3-attires?modelVersionId=913717
+      # https://civitai.com/models/134319/yayoi-kusakabe-high-rise-invasion?modelVersionId=147924
+      yayoi_kusakabe:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/tenkuu_shinpan/yayoi_kusakabe/main-trigger-words__,__lazy-wildcards/cosplay-char/tenkuu_shinpan/yayoi_kusakabe/costume-ethnicity__{,{1-2$$__lazy-wildcards/cosplay-char/tenkuu_shinpan/yayoi_kusakabe/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/tenkuu_shinpan/yayoi_kusakabe/costume-headwear__}|}{,{1-$$__lazy-wildcards/cosplay-char/tenkuu_shinpan/yayoi_kusakabe/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/tenkuu_shinpan/yayoi_kusakabe/env-bg__}|}{,{1-$$__lazy-wildcards/cosplay-char/tenkuu_shinpan/yayoi_kusakabe/style__}|}
+        main-trigger-words:
+          - yayoi kusakabe,tenkuu_shinpan,high-rise invasion
+        costume-ethnicity:
+          - pink hair,pink eyes,spiked hair,black headband,long hair,hair over one eye,lipstick,makeup,lips,hairband,pink lips,bangs,hair ornament,one eye covered,black hairband,flipped hair,big hair
+        costume:
+          - MainOutfit_YayoiKusakabe_ownwaifu,blue jacket,blue necktie,breast pocket,police uniform,policewoman,collared shirt,black necktie,white shirt,belt,necktie,armband,pantyhose,pencil skirt,black belt,long sleeves,formal,suit,miniskirt,pocket,black pantyhose,skirt suit
+        costume-headwear:
+          - |-
+            (Masked_YayoiKusakabe_ownwaifu,mask on head,masked,pink hair,no eyes,solid oval eyes:1.2)
+          - mask,white headwear,white mask
+        costume-elem:
+          - large breasts
+          - messy hair
+          - __lazy-wildcards/subject/costume-ethnicity-body/curvy_female/prompts__
+        env-bg:
+          - rooftop
+          - garden on the roof,rooftop garden
+          - rooftop terrace
+          - >-
+            {Super |}high-rise building
+        style:
+          - MangaBW_YayoiKusakabe_ownwaifu
+          - horror \(theme\)
+          - seductive
+    The_World_God_Only_Knows:
+      # https://civitai.com/models/817974/nora-floriann-leoria-the-world-god-only-knows?modelVersionId=914669
+      nora_floriann_leoria:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/The_World_God_Only_Knows/nora_floriann_leoria/main-trigger-words__,__lazy-wildcards/cosplay-char/The_World_God_Only_Knows/nora_floriann_leoria/costume-ethnicity__{,{1-2$$__lazy-wildcards/cosplay-char/The_World_God_Only_Knows/nora_floriann_leoria/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/The_World_God_Only_Knows/nora_floriann_leoria/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/The_World_God_Only_Knows/nora_floriann_leoria/action-pose__}|}{,{1-$$__lazy-wildcards/cosplay-char/The_World_God_Only_Knows/nora_floriann_leoria/env__}|}
+        main-trigger-words:
+          - NoraFloriannLeoria,The_World_God_Only_Knows,kami nomi zo shiru sekai
+        costume-ethnicity:
+          - long hair,skull hair ornament,purple eyes,white hair,wavy hair
+        costume:
+          - black dress,cleavage,detached sleeves,black choker,black leotard,short shorts,black shorts,white thighhighs,red belt
+        costume-elem:
+          - |-
+            (__lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__:1.2)
+          - horns
+          - skull
+          - bare shoulders
+          - flowing hair
+          - pink_hagoromo,spiritual_cloak,pink_aura_cloak
+        action-pose:
+          - hand on own chin
+          - hand on own hip
+          - lying
+          - sitting
+        env:
+          - __lazy-wildcards/subject/env-elem/chair/prompts__
+    onmyoji:
+      suzuka_gozen:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/main__,__lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/costume-ethnicity__,{{1-$$__lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/costume-types/type-*__},|}{1-$$__lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/env__}
+        main:
+          - |-
+            suzuka_gozen_(onmyoji),onmyoji,onmyoji:_the_card_game,onmyouji
+        costume-types:
+          type-original-outfit:
+            - original outfit
+          type-dress:
+            - original outfit,white shirt,open clothes,rope,colored sclera,japanese clothes,japanese armor
+          type-mecha:
+            - white mecha bodysuit,white mecha corset,mecha museum,mechanical parts and weapons,headgear,humanoid robot,android,exposed bones,anatomy,exo-skeleton body,mecha skeleton,rib cage,hip bones,backbones
+        costume-ethnicity:
+          - white hair,long hair,colored sclera
+        env:
+          - slightly curly hair
+          - blue eyes
+          - expressionless
+          - ponytail
+          - earphones
+          - white pantyhose
+          - string bikini
+          - highleg panties
+          - garter
+          - necktie
+          - suspender
+          - gloves
+          - spider lily print
+          - bonsai
+          - kimono
+          - in tree
+          - haori
+          - fur rug
+          - bow
+          - center opening
+          - breasts apart
+          - black sclera
+          - sideboob
+          - slit pupils
+      enenra:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/onmyoji/enenra/main__,{1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/costume-ethnicity__},{{1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/costume-types/type-*__},|}{1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/costume-elem__},{{1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/env-bg__},|}{1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/env__}
+        main:
+          - Enenra,enenra \(onmyoji\),japanese attire
+        costume-ethnicity:
+          - hidden ears
+          - blue eyes
+          - pointy ears
+          - blunt bangs
+        costume-types:
+          type-kimono:
+            - kimono
+          type-yukata:
+            - yukata
+        costume-elem:
+          - >-
+            {1-$$earrings|hoop earrings}
+          - (light purple attire)
+          - showing panty
+          - tight clothing
+          - white panty
+          - tight panty
+          - __lazy-wildcards/subject/costume-weapon/smoking_pipe/prompts__
+          - hair bow
+          - jewelry
+          - >-
+            {1-$$long sleeves|wide sleeves}
+          - sidelocks
+          - sideboob
+          - bare shoulders
+          - underwear
+          - clothes lift
+        env:
+          - alluring legs
+          - seductive smile
+          - seducing the viewer
+          - water drop
+          - soaking hands
+        env-bg:
+          - beach
+          - heian
+          - on the blanket
+    last_origin:
+      eva:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/last_origin/eva/main-trigger-words__{,__lazy-wildcards/cosplay-char/last_origin/eva/costume-ethnicity__|},__lazy-wildcards/cosplay-char/last_origin/eva/costume__
+        main-trigger-words:
+          - Eva \(Last Origin\),EvaLO
+        costume-ethnicity:
+          - long hair,large breasts,brown eyes,blue hair,black hair
+        costume:
+          - |-
+            (hood,hood up),(long sleeves,wide sleeves,sleeves past wrists:1.2),robe,long dress,white dress
+    # GLC_归龙潮
+    # https://glc.haowancheng.cn/
+    glc:
+      # https://civitai.com/models/798741/glc?modelVersionId=893157
+      changms:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/glc/changms/main-trigger-words__,__lazy-wildcards/cosplay-char/glc/changms/costume-ethnicity__{,__lazy-wildcards/cosplay-char/glc/changms/costume__},__lazy-wildcards/cosplay-char/glc/changms/costume-headwear__,{1-$$__lazy-wildcards/cosplay-char/glc/changms/costume-elem__}
+        main-trigger-words:
+          - changms
+        costume-ethnicity:
+          - red eyes,(black hair,streaked hair,aqua hair,two-tone hair),(hair bun,double bun,blunt bangs)
+        costume:
+          - chinese clothes,(red skirt,pleated skirt,miniskirt),clothing cutout,black pantyhose,(long sleeves,wide sleeves),ribbon,brown loafers
+        costume-headwear:
+          - tinted eyewear
+        costume-elem:
+          - earrings,jewelry
+          - tassel,longevity lock
+    # https://zh.wikipedia.org/zh-tw/%E9%AD%94%E5%85%B5%E9%A9%9A%E5%A4%A9%E9%8C%84
+    bayonetta:
+      bayonetta:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/bayonetta/bayonetta/main__,__lazy-wildcards/cosplay-char/bayonetta/bayonetta/costume-ethnicity__,__lazy-wildcards/cosplay-char/bayonetta/bayonetta/costume__,{{1-$$__lazy-wildcards/cosplay-char/bayonetta/bayonetta/costume-elem__},|}{1-$$__lazy-wildcards/cosplay-char/bayonetta/bayonetta/env__}{,{0-$$__lazy-wildcards/cosplay-char/bayonetta/bayonetta/env-bg__}|}
+        main:
+          - >-
+            cereza,bayonetta,mole under mouth
+        costume-ethnicity:
+          - blue eyes,__lazy-wildcards/cosplay-char/bayonetta/bayonetta/ethnicity-types/*__
+        ethnicity-types:
+          long-hair:
+            - bayonetta1,very long hair,long hair,hair ribbon,ponytail
+          bayonetta2:
+            - bayonetta2,short hair
+          bayonetta3:
+            - bayonetta3,twin braids
+        costume:
+          - backless outfit,bodysuit,covered nipples,amulet,high heels,navel,elbow gloves,clothing cutout,ribbon
+        costume-elem:
+          - sexy minidress
+          - clothing cutout
+          - makeup
+          - >-
+            {1-$$cleavage|cleavage cutout}
+          - holding
+          - hand on hip
+          - lipstick
+          - eyeshadow
+          - parted lips
+          - ass
+          - looking back
+          - alternate hair length
+          - toned
+          - curvy
+          - narrow waist
+          - mature female
+          - magic
+          - streaked hair
+          - braid
+          - >-
+            {1-$$weapon|dual wielding}
+          - glasses
+          - black-framed eyewear
+          - semi-rimless_eyewear
+          - shoes
+          - vertical-striped thighhighs
+          - >-
+            {1-$$backless outfit|back cutout}
+          - __lazy-wildcards/dataset/costume-accessories-base__
+          - ribbon
+          - elbow gloves
+          - hair ribbon
+          - ponytail
+        env:
+          - lollipop
+          - >-
+            {1-$$riding|motorcycle|motor vehicle}
+          - candy
+          - >-
+            gun,handgun
+          - food
+          - sword
+          - katana
+          - vehicle
+        env-bg:
+          - twilight
+          - night
+          - moon
+    the_king_of_fighters:
+      # https://civitai.com/models/136258/kolin-or-street-fighter-game-character-or-ownwaifu?modelVersionId=150284
+      kolin:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/the_king_of_fighters/kolin/main-trigger-words__,__lazy-wildcards/cosplay-char/the_king_of_fighters/kolin/costume-ethnicity__{,{1-$$__lazy-wildcards/cosplay-char/the_king_of_fighters/kolin/costume__}|},__lazy-wildcards/cosplay-char/the_king_of_fighters/kolin/costume-headwear__{,{1-$$__lazy-wildcards/cosplay-char/the_king_of_fighters/kolin/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/the_king_of_fighters/kolin/env__}|}
+        main-trigger-words:
+          - kolin,kolin_\(cosplay\),street fighter,kolin_streetfighter_aiwaifu
+        costume-ethnicity:
+          - blonde hair,blue eyes,very long hair,wide hips,wavy hair,big hair
+        costume:
+          - blue footwear,fur-trimmed footwear,blue gloves
+          - blue jacket,fur trim,winter coat,russian clothes
+          - blue bikini
+        costume-headwear:
+          - |-
+            (ushanka,papakha:1.2),fur hat,black headwear
+        costume-elem:
+          - floating hair
+          - fur trim
+          - black thighhighs
+          - forehead
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - panties
+        env:
+          - standing on the stage
+          - ice crystal
+          - snow
     hentai-game:
+      # https://www.getchu.com/soft.phtml?id=929294&gc=gc
       Hamiro_Ryakudatsusha_no_Inen:
         prompts:
           - >-
@@ -8048,6 +9399,55 @@ lazy-wildcards:
           - red dress,navel,cleavage,bare shoulders,center opening,plunging neckline
           - red pelvic curtain,side slit
           - hair ornament,thigh strap
+    # https://civitai.com/models/107429/viper-gts-hentai-protagonist-style
+    viper_series:
+      # https://civitai.com/models/231600/carrera-viper-series
+      # https://civitai.com/models/789886/carrera-or-viper-gts-or-5-attires?modelVersionId=883296
+      carrera:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/viper_series/carrera/main-trigger-words__,__lazy-wildcards/cosplay-char/viper_series/carrera/costume-ethnicity__{,{1-2$$__lazy-wildcards/cosplay-char/viper_series/carrera/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/viper_series/carrera/costume-elem__}|}{,__lazy-wildcards/cosplay-char/viper_series/carrera/costume-wings__|}{,{1-$$__lazy-wildcards/cosplay-char/viper_series/carrera/env__}|}{,{1-$$__lazy-wildcards/cosplay-char/viper_series/carrera/action-pose__}|}{,{1-$$__lazy-wildcards/cosplay-char/viper_series/carrera/style__}|}
+        main-trigger-words:
+          - carrera,carreravi,viper_\(series\)
+        costume-ethnicity:
+          - demon tail,demon girl,green hair,horns,navel,red eyes,long pointy ears,parted bangs,makeup,lipstick
+        costume:
+          - shoulder armor,black cape,skull,armlet
+          - halterneck,elbow gloves,highleg panties,thigh boots,high heels
+          - BodySuit_ViperGST_Carrera_ownwaifu,elbow gloves,navel,thighhighs,midriff,covered nipples,highleg,bare shoulders,sidelocks,revealing clothes,impossible clothes,cleavage,long sleeves,purple gloves,purple thighhighs,detached sleeves,highleg panties,leotard,collarbone
+          - Chained_ViperGST_Carrera_ownwaifu,nude,collar,bracelet,chain,bdsm,bondage,bound,cuffs,leash,maebari,tail,navel,neck ring
+          - FeatherWings_ViperGST_Carrera_ownwaifu,wings,thighhighs,thigh boots,elbow gloves,navel,covered nipples,feathered wings
+          - NakedApron_ViperGST_Carrera_ownwaifu,naked apron,cleavage
+          - NSFW_ViperGST_Carrera_ownwaifu,nude,navel
+        costume-elem:
+          - pelvic curtain
+          - skull necklace
+          - breasts apart
+          - collarbone
+          - detached sleeves
+          - revealing clothes
+          - shoulder armor
+          - blue scarf
+          - two-sided cape
+          - two-sided fabric
+          - covered nipples
+          - elbow gloves
+          - tattoo
+          - midriff
+          - navel
+          - cleavage
+        costume-wings:
+          - bat wings
+          - feathered wings
+        env:
+          - __lazy-wildcards/subject/env-elem/circle-magic/prompts__
+        style:
+          - 1990s \(style\)
+        action-pose:
+          - arched back,arms behind head
+          - finger to mouth
+          - hand on own hip
+          - legs apart
     yasei_no_last_boss_ga_arawareta:
       ruphas_mafahl:
         prompts:
@@ -8066,6 +9466,25 @@ lazy-wildcards:
           - high ponytail
           - long fingers
           - sidelocks
+    im-the-evil-lord-of-an-intergalactic-empire:
+      # https://civitai.com/models/720609/chengshi-sera-tourei-im-the-evil-lord-of-an-intergalactic-empire?modelVersionId=805776
+      Chengshi_Sera_Tourei:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/im-the-evil-lord-of-an-intergalactic-empire/Chengshi_Sera_Tourei/main-trigger-words__{,__lazy-wildcards/cosplay-char/im-the-evil-lord-of-an-intergalactic-empire/Chengshi_Sera_Tourei/costume-ethnicity__|},__lazy-wildcards/cosplay-char/im-the-evil-lord-of-an-intergalactic-empire/Chengshi_Sera_Tourei/costume__{,{1-$$__lazy-wildcards/cosplay-char/im-the-evil-lord-of-an-intergalactic-empire/Chengshi_Sera_Tourei/costume-elem__}|}
+        main-trigger-words:
+          - ChengshiSeraTourei
+        costume-ethnicity:
+          - short hair,brown hair,brown eyes,medium breasts,purple eyes
+        costume:
+          - >-
+            (detached sleeves,sleeves past wrists,bare shoulders:1.2),wide sleeves,long sleeves,black thighhighs,(cleavage,cleavage cutout:1.2),(garter belt,red dress,pelvic curtain:1.2),chinese dress
+        costume-elem:
+          - hair bun,bun cover
+          - hair between eyes
+          - hair ribbon
+          - black panties
+          - gold trim
     fate:
       # 源賴光
       # https://civitai.com/models/453729/minamoto-no-raikou-or-fatestaynight-or-15-attires-or-kofi-commissioned?modelVersionId=505140
@@ -8168,76 +9587,6 @@ lazy-wildcards:
         env-bg:
           - striped background
           - yellow background
-    # https://zh.wikipedia.org/zh-tw/%E9%AD%94%E5%85%B5%E9%A9%9A%E5%A4%A9%E9%8C%84
-    bayonetta:
-      bayonetta:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/bayonetta/bayonetta/main__,__lazy-wildcards/cosplay-char/bayonetta/bayonetta/costume-ethnicity__,__lazy-wildcards/cosplay-char/bayonetta/bayonetta/costume__,{{1-$$__lazy-wildcards/cosplay-char/bayonetta/bayonetta/costume-elem__},|}{1-$$__lazy-wildcards/cosplay-char/bayonetta/bayonetta/env__}{,{0-$$__lazy-wildcards/cosplay-char/bayonetta/bayonetta/env-bg__}|}
-        main:
-          - >-
-            cereza,bayonetta,mole under mouth
-        costume-ethnicity:
-          - blue eyes,__lazy-wildcards/cosplay-char/bayonetta/bayonetta/ethnicity-types/*__
-        ethnicity-types:
-          long-hair:
-            - bayonetta1,very long hair,long hair,hair ribbon,ponytail
-          bayonetta2:
-            - bayonetta2,short hair
-          bayonetta3:
-            - bayonetta3,twin braids
-        costume:
-          - backless outfit,bodysuit,covered nipples,amulet,high heels,navel,elbow gloves,clothing cutout,ribbon
-        costume-elem:
-          - sexy minidress
-          - clothing cutout
-          - makeup
-          - >-
-            {1-$$cleavage|cleavage cutout}
-          - holding
-          - hand on hip
-          - lipstick
-          - eyeshadow
-          - parted lips
-          - ass
-          - looking back
-          - alternate hair length
-          - toned
-          - curvy
-          - narrow waist
-          - mature female
-          - magic
-          - streaked hair
-          - braid
-          - >-
-            {1-$$weapon|dual wielding}
-          - glasses
-          - black-framed eyewear
-          - semi-rimless_eyewear
-          - shoes
-          - vertical-striped thighhighs
-          - >-
-            {1-$$backless outfit|back cutout}
-          - __lazy-wildcards/dataset/costume-accessories-base__
-          - ribbon
-          - elbow gloves
-          - hair ribbon
-          - ponytail
-        env:
-          - lollipop
-          - >-
-            {1-$$riding|motorcycle|motor vehicle}
-          - candy
-          - >-
-            gun,handgun
-          - food
-          - sword
-          - katana
-          - vehicle
-        env-bg:
-          - twilight
-          - night
-          - moon
     ErgoProxy:
       Re-L_Mayer:
         prompts:
@@ -8426,93 +9775,7 @@ lazy-wildcards:
       louise:
         prompts:
           - long hair,black hair,ribbon,brown eyes,hair bow,boots,sleeveless,black gloves,sailor collar,white dress,white footwear,white bow,single glove,sailor dress
-          - black hair,yellow eyes,__lazy-wildcards/subject/costume-ethnicity-body/dark-skinned/prompts__,blunt bangs,makeup,glowing,lipstick,glowing eyes,science fiction
-    onmyoji:
-      suzuka_gozen:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/main__,__lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/costume-ethnicity__,{{1-$$__lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/costume-types/type-*__},|}{1-$$__lazy-wildcards/cosplay-char/onmyoji/suzuka_gozen/env__}
-        main:
-          - |-
-            suzuka_gozen_(onmyoji),onmyoji,onmyoji:_the_card_game,onmyouji
-        costume-types:
-          type-original-outfit:
-            - original outfit
-          type-dress:
-            - original outfit,white shirt,open clothes,rope,colored sclera,japanese clothes,japanese armor
-          type-mecha:
-            - white mecha bodysuit,white mecha corset,mecha museum,mechanical parts and weapons,headgear,humanoid robot,android,exposed bones,anatomy,exo-skeleton body,mecha skeleton,rib cage,hip bones,backbones
-        costume-ethnicity:
-          - white hair,long hair,colored sclera
-        env:
-          - slightly curly hair
-          - blue eyes
-          - expressionless
-          - ponytail
-          - earphones
-          - white pantyhose
-          - string bikini
-          - highleg panties
-          - garter
-          - necktie
-          - suspender
-          - gloves
-          - spider lily print
-          - bonsai
-          - kimono
-          - in tree
-          - haori
-          - fur rug
-          - bow
-          - center opening
-          - breasts apart
-          - black sclera
-          - sideboob
-          - slit pupils
-      enenra:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/onmyoji/enenra/main__,{1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/costume-ethnicity__},{{1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/costume-types/type-*__},|}{1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/costume-elem__},{{1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/env-bg__},|}{1-$$__lazy-wildcards/cosplay-char/onmyoji/enenra/env__}
-        main:
-          - Enenra,enenra \(onmyoji\),japanese attire
-        costume-ethnicity:
-          - hidden ears
-          - blue eyes
-          - pointy ears
-          - blunt bangs
-        costume-types:
-          type-kimono:
-            - kimono
-          type-yukata:
-            - yukata
-        costume-elem:
-          - >-
-            {1-$$earrings|hoop earrings}
-          - (light purple attire)
-          - showing panty
-          - tight clothing
-          - white panty
-          - tight panty
-          - __lazy-wildcards/subject/costume-weapon/smoking_pipe/prompts__
-          - hair bow
-          - jewelry
-          - >-
-            {1-$$long sleeves|wide sleeves}
-          - sidelocks
-          - sideboob
-          - bare shoulders
-          - underwear
-          - clothes lift
-        env:
-          - alluring legs
-          - seductive smile
-          - seducing the viewer
-          - water drop
-          - soaking hands
-        env-bg:
-          - beach
-          - heian
-          - on the blanket
+          - black hair,yellow eyes,__lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__,blunt bangs,makeup,glowing,lipstick,glowing eyes,science fiction
     vocaloid:
       hatsune_miku:
         prompts:
@@ -9051,56 +10314,6 @@ lazy-wildcards:
           - Monster,power armor
         costume-elem:
           - bio armor,biosuit
-    # https://x.com/CheLA_777
-    CheLA77:
-      # https://x.com/CheLA_777/status/1799009419126325744/photo/1
-      # https://civitai.com/models/601494/poorly-dressed-policewoman-chela77?modelVersionId=672283
-      PoorlyDressedPolicewoman:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/main__{,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/expressions__}|}{,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-hand__}|}{,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-headwear__}|}{,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume/police/prompts__}|}{0.2::,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-ethnicity__}|}{0.2::,__lazy-wildcards/subject/action-sfw/sitting-*/prompts__|}{0.2::,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/env__}|}
-        main:
-          - PoorlyDressedPolicewoman,brautiful pol1ceg1rls in a police uniform,policewoman
-        expressions:
-          - smug,grinning smile
-        costume-ethnicity:
-          - short hair,blonde hair,large breasts,orange eyes
-          - long hair
-        costume:
-          - police hat,police badge,short sleeves blue shirt,short black pencil skirt
-          - >-
-            pink bra,leopard print bar,blue Police jacket,open jacket,cleavage,white shirt
-        costume-hand:
-          - >-
-            {1-$$fingernails|long fingernails|nail polish}
-          - fingerless gloves
-          - >-
-            {1-$$cuffs|handcuffs}
-        costume-headwear:
-          - peaked cap
-          - police hat
-        costume-elem:
-          - >-
-            {1-$$earrings|hoop earrings}
-          - >-
-            {1-$$crop top|midriff}
-          - long sleeves
-          - jewelry
-          - short shorts
-          - choker
-          - collared shirt
-          - necklace
-          - piercing
-          - pink leopard print
-          - thigh strap,thighband pantyhose,black pantyhose
-          - sagging breasts
-          - detached collar
-          - garter straps
-          - epaulettes
-          - >-
-            pink panties,leopard print panties{,panties under pantyhose|}
-        env:
-          - work desk
     # https://mangadex.org/title/8fef2dc5-fd32-4d62-9cb3-4a39275e0ef5/no-longer-allowed-in-another-world
     # https://civitai.com/models/563039/isekai-shikkaku-or-annette-and-tama-pdxl
     Isekai_Shikkaku:
@@ -9193,6 +10406,44 @@ lazy-wildcards:
             harpie's pet dragon
           - |-
             cyber shield (yu-gi-oh!)
+      # https://civitai.com/models/445758/ishizu-ishtar-or-yu-gi-oh-or-kofi-commissioned-or-ownwaifu?modelVersionId=496363
+      # https://civitai.com/models/43754
+      ishizu_ishtar:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/main-trigger-words__{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/costume-ethnicity__}|},{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/costume__}{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/env__}|}{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/env-bg__}|}
+        main-trigger-words:
+          - |-
+            ANIME_YuGiOh_IshizuIshtar_ownwaifu,ishizu_ishtar,yu-gi-oh!,ancient egyptian
+        costume-ethnicity:
+          - blue eyes,black hair,long hair,collarbone,lips,lipstick,makeup,__lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+        costume:
+          - eye of horus,jewelry,millennium necklace,gold bracelet,gold armlet,gold crown,hair tubes,cleavage,eyeshadow,forehead jewel,gold bracer
+          - hood,dress,cape,ancient egyptian clothes,ankh,white dress,cloak
+        costume-elem:
+          - closed mouth
+          - sleeveless dress
+          - white veil,mouth veil
+          - gold trim
+          - sidelocks
+          - groin
+          - hooded cloak,hood up
+          - gold chain
+          - o-ring
+          - v-shaped eyebrows
+          - wide sleeves
+          - blush
+          - bare shoulders
+          - collarbone
+          - pelvic curtain
+        costume-weapon:
+          - holding card
+          - duel disk
+          - card \(medium\)
+        env:
+          - blue gemstone,gem,green gemstone
+        env-bg:
+          - sand dune
     sousou_no_frieren:
       # https://civitai.com/models/421109/ubel-sousou-no-frieren
       # https://danbooru.donmai.us/posts?tags=ubel_%28sousou_no_frieren%29&z=2
@@ -9309,82 +10560,6 @@ lazy-wildcards:
           - blue bodysuit,bare shoulders
           - lipstick
           - skin tight
-    ShinMegamiTensei:
-      # https://civitai.com/models/613904/danu-shin-megami-tensei?modelVersionId=686262
-      demons-danu:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/main__,{3-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/costume-ethnicity__},{99-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/ethnicity-hair__},{99-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/costume__}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/costume-tattoo__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/action__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/env__}|}
-        main:
-          - DanuSMT,danu_\(megami_tensei\),shin megami tensei
-        costume-ethnicity:
-          - long hair
-          - green eyes
-          - green hair
-          - __lazy-wildcards/subject/costume-ethnicity-body/dark-skinned/prompts__
-        ethnicity-hair:
-          - plant hair,hair flower
-        costume:
-          - hair ornament
-          - hair flower
-          - navel
-          - jewelry
-          - bracelet
-          - nail polish,red nails
-          - navel piercing
-          - topless
-        costume-elem:
-          - monster girl
-          - cape
-          - brown footwear
-          - brown skirt
-          - fur trim
-          - mask
-          - pelvic curtain
-        costume-tattoo:
-          - mandala_tattoo
-          - scripture_tattoo
-        costume-weapon:
-          - holding staff
-        env:
-          - clover,shamrock
-        action:
-          - hand on own hip
-      # https://civitai.com/models/491563?modelVersionId=546594
-      demons-Naamah:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/main__,{3-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/costume-ethnicity__}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/costume-wings__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/action__}|}
-        main:
-          - Naamah,naamah_\(megami_tensei\),shin megami tensei
-        costume-ethnicity:
-          - long hair,colored skin,half mask,lipstick,cyborg,mechanical arm,mechanical leg,hairband,gold trim,teeth
-          - heterochromia,blue eyes,red eyes
-          - blonde hair
-          - white skin
-          - sharp fingernails
-        costume-wings:
-          - black wings
-        costume:
-          - fishnet gloves,asymmetrical gloves
-          - fishnets,asymmetrical legwear
-          - bare shoulders
-          - black thighhighs,fishnet thighhighs
-          - glowing eye
-        action:
-          - reaching
-          - reaching towards viewer
-          - and on own chest
-      demons-Alraune:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Alraune/main__,__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Alraune/costume-ethnicity__{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Alraune/style__}|}
-        main:
-          - alraune,alrauneSH,alraune_\(megami_tensei\),plant girl
-        costume-ethnicity:
-          - long hair,hair over eyes,vines,thorns,navel,hair over breasts,lipstick,red hair,flower,black rose,leaf
-        style:
-          - convenient censoring,hair censor
     Path-to-Nowhere:
       # https://civitai.com/models/428585/mantis-path-to-nowhere
       # https://danbooru.donmai.us/posts?tags=mantis_%28path_to_nowhere%29&z=5
@@ -9653,7 +10828,7 @@ lazy-wildcards:
             rakshata_chawla,code geass,ANIME_Rakshata_Chawla_aiwaifu69,aiwaifu69
         costume-ethnicity:
           - >-
-            blonde hair,indian,green eyes,long hair,facial mark,forehead mark,__lazy-wildcards/subject/costume-ethnicity-body/dark-skinned/prompts__
+            blonde hair,indian,green eyes,long hair,facial mark,forehead mark,__lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
         costume:
           - white lab coat,long sleeves,red shirt,collared shirt
           - arabian clothes,dress,harem outfit,partially fingerless gloves,veil
@@ -9917,7 +11092,7 @@ lazy-wildcards:
           - >-
             bikini{,bikini top only|},swimsuit
           - cleavage
-          - __lazy-wildcards/subject/costume-ethnicity-body/dark-skinned/prompts__
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
           - fishnet thighhighs
           - handbag
           - lipstick
@@ -10446,7 +11621,7 @@ lazy-wildcards:
           - |-
             black hair,very long hair,pale skin,(hair over eyes:1.3)
         costume-elem:
-          - __lazy-wildcards/subject/costume-elem/costume-breasts/prompts__
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/prompts__
           - dress
         action:
           - sitting
@@ -10842,7 +12017,7 @@ lazy-wildcards:
         main-trigger-words:
           - EarthGoddessMaiaYs,Earth Goddess Maia,ys
         costume-ethnicity:
-          - very long hair,blue hair,white drill hair,drill_curls,white wooden_hair,blue lips,__lazy-wildcards/subject/costume-ethnicity-body/dark-skinned/prompts__,leafy_hair,hair flower,blue orb
+          - very long hair,blue hair,white drill hair,drill_curls,white wooden_hair,blue lips,__lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__,leafy_hair,hair flower,blue orb
         costume-elem:
           - hair ornament
           - cleavage
@@ -10924,7 +12099,7 @@ lazy-wildcards:
       watanabe_saki:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/main-trigger-words__,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/costume-ethnicity__}{,{1-2$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/expressions__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env-bg__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env-monster__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/style__}|}
+            __lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/main-trigger-words__,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/costume-ethnicity__}{,{1-2$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/expressions__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env-bg__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env-creatures__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/style__}|}
         main-trigger-words:
           - watanabe_saki,Saki Watanabe,Shinsekai,shin_sekai_yori
         costume-ethnicity:
@@ -10980,7 +12155,7 @@ lazy-wildcards:
           - japanese_village
           - rice_fields
           - traditional_japanese_house
-        env-monster:
+        env-creatures:
           - squealer
           - kiroumaru
           - queerat
@@ -10991,7 +12166,7 @@ lazy-wildcards:
       akizuki_maria:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/shin_sekai_yori/akizuki_maria/main-trigger-words__,__lazy-wildcards/cosplay-char/shin_sekai_yori/akizuki_maria/costume-ethnicity-main__,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/akizuki_maria/costume-ethnicity__}{,{1-2$$__lazy-wildcards/cosplay-char/shin_sekai_yori/akizuki_maria/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/akizuki_maria/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/akizuki_maria/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/expressions__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env-bg__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env-monster__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/style__}|}
+            __lazy-wildcards/cosplay-char/shin_sekai_yori/akizuki_maria/main-trigger-words__,__lazy-wildcards/cosplay-char/shin_sekai_yori/akizuki_maria/costume-ethnicity-main__,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/akizuki_maria/costume-ethnicity__}{,{1-2$$__lazy-wildcards/cosplay-char/shin_sekai_yori/akizuki_maria/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/akizuki_maria/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/akizuki_maria/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/expressions__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env-bg__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env-creatures__}|}{,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/style__}|}
         main-trigger-words:
           - akizuki_maria,Maria Akizuki,Shinsekai,shin_sekai_yori
         costume-ethnicity-main:
@@ -11098,8 +12273,7 @@ lazy-wildcards:
           - (dullahan,headless,black smoke)
           - (cat ears),animal ears,fake animal ears
           - helmet
-          - >-
-            {1-$$__lazy-wildcards/subject/costume-elem/costume-breasts/costume-breasts-out__}
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-out/prompts__
           - collarbone
           - partially unzipped
           - clothed sex
@@ -11117,24 +12291,144 @@ lazy-wildcards:
         style:
           - darkness
           - from side
-    im-the-evil-lord-of-an-intergalactic-empire:
-      Chengshi_Sera_Tourei:
+    saiyuki:
+      yaone:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/im-the-evil-lord-of-an-intergalactic-empire/Chengshi_Sera_Tourei/main-trigger-words__{,__lazy-wildcards/cosplay-char/im-the-evil-lord-of-an-intergalactic-empire/Chengshi_Sera_Tourei/costume-ethnicity__|},__lazy-wildcards/cosplay-char/im-the-evil-lord-of-an-intergalactic-empire/Chengshi_Sera_Tourei/costume__{,{1-$$__lazy-wildcards/cosplay-char/im-the-evil-lord-of-an-intergalactic-empire/Chengshi_Sera_Tourei/costume-elem__}|}
+            __lazy-wildcards/cosplay-char/saiyuki/yaone/main-trigger-words__{,__lazy-wildcards/cosplay-char/saiyuki/yaone/costume__|}{,{1-$$__lazy-wildcards/cosplay-char/saiyuki/yaone/costume-elem__}|}
         main-trigger-words:
-          - ChengshiSeraTourei
-        costume-ethnicity:
-          - short hair,brown hair,brown eyes,medium breasts,purple eyes
+          - yaone,saiyuki,high ponytail,pointy ears,purple hair
         costume:
-          - >-
-            (detached sleeves,sleeves past wrists,bare shoulders:1.2),wide sleeves,long sleeves,black thighhighs,(cleavage,cleavage cutout:1.2),(garter belt,red dress,pelvic curtain:1.2),chinese dress
+          - def1
+          - def2,open kimono,yellow kimono,leotard,white legwear,yellow footwear,fingerless gloves,belt,waste ribbon
         costume-elem:
-          - hair bun,bun cover
-          - hair between eyes
-          - hair ribbon
-          - black panties
-          - gold trim
+          - pantyhose
+          - bikini top only
+          - bridal gauntlets
+          - ribbon
+          - twin braids,twintails
+    ShinMegamiTensei:
+      # https://civitai.com/models/613904/danu-shin-megami-tensei?modelVersionId=686262
+      demons-danu:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/main__,{3-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/costume-ethnicity__},{99-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/ethnicity-hair__},{99-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/costume__}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/costume-tattoo__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/action__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-danu/env__}|}
+        main:
+          - DanuSMT,danu_\(megami_tensei\),shin megami tensei
+        costume-ethnicity:
+          - long hair
+          - green eyes
+          - green hair
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+        ethnicity-hair:
+          - plant hair,hair flower
+        costume:
+          - hair ornament
+          - hair flower
+          - navel
+          - jewelry
+          - bracelet
+          - nail polish,red nails
+          - navel piercing
+          - topless
+        costume-elem:
+          - monster girl
+          - cape
+          - brown footwear
+          - brown skirt
+          - fur trim
+          - mask
+          - pelvic curtain
+        costume-tattoo:
+          - mandala_tattoo
+          - scripture_tattoo
+        costume-weapon:
+          - holding staff
+        env:
+          - clover,shamrock
+        action:
+          - hand on own hip
+      # https://civitai.com/models/491563?modelVersionId=546594
+      demons-Naamah:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/main__,{3-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/costume-ethnicity__}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/costume-wings__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Naamah/action__}|}
+        main:
+          - Naamah,naamah_\(megami_tensei\),shin megami tensei
+        costume-ethnicity:
+          - long hair,colored skin,half mask,lipstick,cyborg,mechanical arm,mechanical leg,hairband,gold trim,teeth
+          - heterochromia,blue eyes,red eyes
+          - blonde hair
+          - white skin
+          - sharp fingernails
+        costume-wings:
+          - black wings
+        costume:
+          - fishnet gloves,asymmetrical gloves
+          - fishnets,asymmetrical legwear
+          - bare shoulders
+          - black thighhighs,fishnet thighhighs
+          - glowing eye
+        action:
+          - reaching
+          - reaching towards viewer
+          - and on own chest
+      demons-Alraune:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Alraune/main__,__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Alraune/costume-ethnicity__{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/demons-Alraune/style__}|}
+        main:
+          - alraune,alrauneSH,alraune_\(megami_tensei\),plant girl
+        costume-ethnicity:
+          - long hair,hair over eyes,vines,thorns,navel,hair over breasts,lipstick,red hair,flower,black rose,leaf
+        style:
+          - convenient censoring,hair censor
+      beth:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/ShinMegamiTensei/beth/main-trigger-words__,__lazy-wildcards/cosplay-char/ShinMegamiTensei/beth/costume-ethnicity__{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/beth/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/beth/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/beth/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/beth/env-bg__}|}
+        main-trigger-words:
+          - beth_\(megami_tensei\),bethsmtii,shin megami tensei ii
+        costume-ethnicity:
+          - >-
+            long hair,black hair,straight hair,sleek black,jewelry,cross,headband,red_lipstick
+        costume:
+          - white cape,cape_with_messian_symbol,Religious_cape,messian_symbol_cape,holy_knight_cape
+          - messian_cross_earrings,cross_earrings,religious_earrings,messian_symbol_jewelry
+          - bandana_with_messian_symbol,Religious_bandana,symbol_headband,messian_church_bandana
+          - Blue_dress,armored_corset,blue shirt
+        costume-elem:
+          - holy_knight,holy_knight_armor
+          - armored_pads,armored_gloves,knee_pads,armored boots
+          - long white gloves,heeled_boots,armored_heels,elbow gloves,elbow pads,thigh boots
+          - white footwear
+          - white gloves
+          - naked cape
+          - belt,belt pouch
+          - breastplate
+        costume-weapon:
+          - katana,sword
+        env-bg:
+          - __lazy-wildcards/subject/env-bg/ShinMegamiTensei-Tokyo_Millennium/prompts__
+      jenna_angel:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/ShinMegamiTensei/jenna_angel/main-trigger-words__{,__lazy-wildcards/cosplay-char/ShinMegamiTensei/jenna_angel/costume-ethnicity__|}{0.8::,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/jenna_angel/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/jenna_angel/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/jenna_angel/expressions__}|}
+        main-trigger-words:
+          - jennadds,jenna_angel,digital devil saga,jenna angel \(cosplay\)
+        costume-ethnicity:
+          - long_hair,silver_hair,black hair
+        costume:
+          - labcoat,pants,lab_coat
+        costume-elem:
+          - pale_skin
+          - sharp_features,high_cheekbones
+          - futuristic_uniform
+          - military_fashion
+        expressions:
+          - cold_expression
+          - serious
+          - ruthless
     sky-freedom:
       aimi:
         prompts:
@@ -11157,6 +12451,56 @@ lazy-wildcards:
           - large breasts
         costume-weapon:
           - (geforce_rtx_3090_ti,graphics card)
+    # https://x.com/CheLA_777
+    CheLA77:
+      # https://x.com/CheLA_777/status/1799009419126325744/photo/1
+      # https://civitai.com/models/601494/poorly-dressed-policewoman-chela77?modelVersionId=672283
+      PoorlyDressedPolicewoman:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/main__{,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/expressions__}|}{,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-hand__}|}{,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-headwear__}|}{,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume/police/prompts__}|}{0.2::,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-ethnicity__}|}{0.2::,__lazy-wildcards/subject/action-sfw/sitting-*/prompts__|}{0.2::,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/env__}|}
+        main:
+          - PoorlyDressedPolicewoman,brautiful pol1ceg1rls in a police uniform,policewoman
+        expressions:
+          - smug,grinning smile
+        costume-ethnicity:
+          - short hair,blonde hair,large breasts,orange eyes
+          - long hair
+        costume:
+          - police hat,police badge,short sleeves blue shirt,short black pencil skirt
+          - >-
+            pink bra,leopard print bar,blue Police jacket,open jacket,cleavage,white shirt
+        costume-hand:
+          - >-
+            {1-$$fingernails|long fingernails|nail polish}
+          - fingerless gloves
+          - >-
+            {1-$$cuffs|handcuffs}
+        costume-headwear:
+          - peaked cap
+          - police hat
+        costume-elem:
+          - >-
+            {1-$$earrings|hoop earrings}
+          - >-
+            {1-$$crop top|midriff}
+          - long sleeves
+          - jewelry
+          - short shorts
+          - choker
+          - collared shirt
+          - necklace
+          - piercing
+          - pink leopard print
+          - thigh strap,thighband pantyhose,black pantyhose
+          - sagging breasts
+          - detached collar
+          - garter straps
+          - epaulettes
+          - >-
+            pink panties,leopard print panties{,panties under pantyhose|}
+        env:
+          - work desk
   cosplay-real:
     # 亞美尼亞人
     Armenian:
@@ -11190,7 +12534,7 @@ lazy-wildcards:
             Claudia Doumit,sharp features,full lips{,__lazy-wildcards/cosplay-real/Australian/Claudia_Doumit/costume-ethnicity__|}
         costume-ethnicity:
           - >-
-            dark brown hair,(olive skin),brown eyes,medium hair{,(__lazy-wildcards/subject/costume-ethnicity-body/dark-skinned/prompts__:1.2)|}
+            dark brown hair,(olive skin),brown eyes,medium hair{,(__lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__:1.2)|}
   cosplay-others:
     Mobile-Police-Patlabor:
       # https://danbooru.donmai.us/posts?tags=av-98_ingram
