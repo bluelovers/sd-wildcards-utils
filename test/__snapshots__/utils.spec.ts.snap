@@ -1,5 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`_checkValue invalid " __lazy-wildcards/subject/__env-elem/stairs/prompts__ " 1`] = `
+{
+  "error": "Invalid Syntax [UNSAFE_SYNTAX] "/__" in value near "ldcards/subject/__env-elem/stairs"",
+  "index": 25,
+  "match": "/__",
+  "near": "ldcards/subject/__env-elem/stairs",
+  "value": " __lazy-wildcards/subject/__env-elem/stairs/prompts__ ",
+}
+`;
+
+exports[`_checkValue invalid " __lazy-wildcards/subject/env-elem/stairs/prompts_ " 1`] = `
+{
+  "error": "Invalid Syntax [UNSAFE_SYNTAX] "_ " in value near "/stairs/prompts_ "",
+  "index": 49,
+  "match": "_ ",
+  "near": "/stairs/prompts_ ",
+  "value": " __lazy-wildcards/subject/env-elem/stairs/prompts_ ",
+}
+`;
+
+exports[`_checkValue invalid " __lazy-wildcards/subject/env-elem__/stairs/prompts__ " 1`] = `
+{
+  "error": "Invalid Syntax [UNSAFE_SYNTAX] "__/" in value near "ubject/env-elem__/stairs/prompts_"",
+  "index": 34,
+  "match": "__/",
+  "near": "ubject/env-elem__/stairs/prompts_",
+  "value": " __lazy-wildcards/subject/env-elem__/stairs/prompts__ ",
+}
+`;
+
+exports[`_checkValue invalid " _lazy-wildcards/subject/env-elem/stairs/prompts__ " 1`] = `
+{
+  "error": "Invalid Syntax [UNSAFE_SYNTAX] " _" in value near " _lazy-wildcards/"",
+  "index": 0,
+  "match": " _",
+  "near": " _lazy-wildcards/",
+  "value": " _lazy-wildcards/subject/env-elem/stairs/prompts__ ",
+}
+`;
+
+exports[`_checkValue invalid " {__lazy-wildcards/subject/env-elem/stairs/prompts_} " 1`] = `
+{
+  "error": "Invalid Syntax [UNSAFE_SYNTAX] "_}" in value near "/stairs/prompts_} "",
+  "index": 50,
+  "match": "_}",
+  "near": "/stairs/prompts_} ",
+  "value": " {__lazy-wildcards/subject/env-elem/stairs/prompts_} ",
+}
+`;
+
+exports[`_checkValue invalid " {_lazy-wildcards/subject/env-elem/stairs/prompts__} " 1`] = `
+{
+  "error": "Invalid Syntax [UNSAFE_SYNTAX] "{_" in value near " {_lazy-wildcards/"",
+  "index": 1,
+  "match": "{_",
+  "near": " {_lazy-wildcards/",
+  "value": " {_lazy-wildcards/subject/env-elem/stairs/prompts__} ",
+}
+`;
+
 exports[`doc.options 1`] = `
 {
   "_directives": Directives {
