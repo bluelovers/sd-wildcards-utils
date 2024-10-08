@@ -1,4 +1,4 @@
-import { isDocument as t, isMap as e, visit as n, isScalar as r, isPair as i, isNode as o, isSeq as a, stringify as s, parseDocument as l } from "yaml";
+import { isDocument as t, isMap as e, isPair as n, isScalar as r, isNode as i, visit as o, isSeq as a, stringify as s, parseDocument as l } from "yaml";
 
 import { defaultChecker as c, array_unique_overwrite as d } from "array-hyper-unique";
 
@@ -69,7 +69,7 @@ function formatPrompts(t, e) {
 }
 
 function stripBlankLines(t) {
-  return t.replace(/(\r?\n)[\s\r\n\t\xa0]+(\r?\n)/g, "$1$2").replace(/(\r?\n)(?:\r?\n)(?=[\s\t\xa0])/g, "$1");
+  return t.replace(/(\r?\n)[\s\r\n\t\xa0]+(\r?\n)/g, "$1$2").replace(/(\r?\n)(?:\r?\n)(?=[\s\t\xa0])/g, "$1").replace(/[ \xa0\t]+$/gm, "");
 }
 
 function isWildcardsYAMLDocument(e) {
@@ -84,8 +84,90 @@ function isWildcardsYAMLMap(t) {
   return e(t);
 }
 
+function _validMap(t, e, ...r) {
+  const i = e.items.findIndex((t => !n(t) || null == (null == t ? void 0 : t.value)));
+  if (-1 !== i) {
+    const n = handleVisitPathsFull(t, e, ...r);
+    throw new SyntaxError(`Invalid SYNTAX. paths: [${n}], key: ${t}, node: ${e}, elem: ${e.items[i]}`);
+  }
+}
+
+function _validSeq(t, e, ...n) {
+  const i = e.items.findIndex((t => !r(t)));
+  if (-1 !== i) {
+    const r = handleVisitPathsFull(t, e, ...n);
+    throw new SyntaxError(`Invalid SYNTAX. paths: [${r}], indexKey: ${t} key: ${t}, node: ${e}, index: ${i}, node: ${e.items[i]}`);
+  }
+}
+
+function _validPair(t, e, ...n) {
+  const r = e.key;
+  if (!isSafeKey("string" == typeof r ? r : r.value)) {
+    const i = handleVisitPathsFull(t, e, ...n);
+    throw new SyntaxError(`Invalid Key. paths: [${i}], key: ${t}, keyNodeValue: "${null == r ? void 0 : r.value}", keyNode: ${r}`);
+  }
+}
+
+function createDefaultVisitWildcardsYAMLOptions(t) {
+  var e;
+  let n = {
+    Map: _validMap,
+    Seq: _validSeq
+  };
+  if (null !== (e = t) && void 0 !== e || (t = {}), t.allowUnsafeKey || (n.Pair = _validPair), 
+  !t.disableUniqueItemValues) {
+    const t = n.Seq;
+    n.Seq = (e, n, ...r) => {
+      t(e, n, ...r), uniqueSeqItems(n.items);
+    };
+  }
+  return n;
+}
+
+function validWildcardsYamlData(n, r) {
+  var o;
+  if (null !== (o = r) && void 0 !== o || (r = {}), t(n)) {
+    if (i(n.contents) && !e(n.contents)) throw TypeError(`The 'contents' property of the provided YAML document must be a YAMLMap. Received: ${n.contents}`);
+    visitWildcardsYAML(n, createDefaultVisitWildcardsYAMLOptions(r)), n = n.toJSON();
+  }
+  if (null == n) {
+    if (r.allowEmptyDocument) return;
+    throw new TypeError(`The provided JSON contents should not be empty. ${n}`);
+  }
+  let a = Object.keys(n);
+  if (!a.length) throw TypeError("The provided JSON contents must contain at least one key.");
+  if (1 !== a.length && !r.allowMultiRoot) throw TypeError("The provided JSON object cannot have more than one root key. Only one root key is allowed unless explicitly allowed by the 'allowMultiRoot' option.");
+}
+
+function isSafeKey(t) {
+  return "string" == typeof t && /^[._\w-]+$/.test(t) && !/^[\._-]|[\._-]$/.test(t);
+}
+
+function _validKey(t) {
+  if (!isSafeKey(t)) throw new SyntaxError(`Invalid Key. key: ${t}`);
+}
+
+function _checkValue(t) {
+  let e = /(?:^|[\s{},])_(?=[^_]|$)|(?<!_)_(?:[\s{},]|$)|\/_+|_+\/(?!\()/.exec(t);
+  if (e) {
+    let n = _nearString(t, e.index, e[0]), r = e[0];
+    return {
+      value: t,
+      match: r,
+      index: e.index,
+      near: n,
+      error: `Invalid Syntax [UNSAFE_SYNTAX] "${r}" in value near "${n}"`
+    };
+  }
+}
+
+function _nearString(t, e, n, r = 15) {
+  let i = Math.max(0, e - r);
+  return t.slice(i, e + ((null == n ? void 0 : n.length) || 0) + r);
+}
+
 function visitWildcardsYAML(t, e) {
-  return n(t, e);
+  return o(t, e);
 }
 
 function defaultCheckerIgnoreCase(t, e) {
@@ -130,7 +212,7 @@ function deepFindSingleRootAt(n, r) {
 }
 
 function _handleVisitPathsCore(t) {
-  return t.filter((t => i(t)));
+  return t.filter((t => n(t)));
 }
 
 function convertPairsToPathsList(t) {
@@ -164,7 +246,9 @@ function _visitNormalizeScalar(t, e, n) {
     if (n.checkUnsafeQuote && f.test(r)) throw new SyntaxError(`Invalid SYNTAX [UNSAFE_QUOTE]. key: ${t}, node: ${e}`);
     if (("QUOTE_DOUBLE" === e.type || "QUOTE_SINGLE" === e.type && !r.includes("\\")) && (e.type = "PLAIN"), 
     r = trimPrompts(stripZeroStr(formatPrompts(r, n.options))), !r.length) throw new SyntaxError(`Invalid SYNTAX [EMPTY_VALUE]. key: ${t}, node: ${e}`);
-    h.test(r) && ("PLAIN" === e.type || "BLOCK_FOLDED" === e.type && /#/.test(r)) && (e.type = "BLOCK_LITERAL"), 
+    h.test(r) && ("PLAIN" === e.type || "BLOCK_FOLDED" === e.type && /#/.test(r)) && (e.type = "BLOCK_LITERAL");
+    let i = _checkValue(r);
+    if (null != i && i.error) throw new SyntaxError(`${i.error}. key: ${t}, node: ${e}`);
     e.value = r;
   }
 }
@@ -176,69 +260,6 @@ function getTopRootContents(t) {
 
 function getTopRootNodes(t) {
   return getTopRootContents(t).items;
-}
-
-function _validMap(t, e, ...n) {
-  const r = e.items.findIndex((t => !i(t) || null == (null == t ? void 0 : t.value)));
-  if (-1 !== r) {
-    const i = handleVisitPathsFull(t, e, ...n);
-    throw new SyntaxError(`Invalid SYNTAX. paths: [${i}], key: ${t}, node: ${e}, elem: ${e.items[r]}`);
-  }
-}
-
-function _validSeq(t, e, ...n) {
-  const i = e.items.findIndex((t => !r(t)));
-  if (-1 !== i) {
-    const r = handleVisitPathsFull(t, e, ...n);
-    throw new SyntaxError(`Invalid SYNTAX. paths: [${r}], indexKey: ${t} key: ${t}, node: ${e}, index: ${i}, node: ${e.items[i]}`);
-  }
-}
-
-function _validPair(t, e, ...n) {
-  const r = e.key;
-  if (!isSafeKey("string" == typeof r ? r : r.value)) {
-    const i = handleVisitPathsFull(t, e, ...n);
-    throw new SyntaxError(`Invalid Key. paths: [${i}], key: ${t}, keyNodeValue: "${null == r ? void 0 : r.value}", keyNode: ${r}`);
-  }
-}
-
-function createDefaultVisitWildcardsYAMLOptions(t) {
-  var e;
-  let n = {
-    Map: _validMap,
-    Seq: _validSeq
-  };
-  if (null !== (e = t) && void 0 !== e || (t = {}), t.allowUnsafeKey || (n.Pair = _validPair), 
-  !t.disableUniqueItemValues) {
-    const t = n.Seq;
-    n.Seq = (e, n, ...r) => {
-      t(e, n, ...r), uniqueSeqItems(n.items);
-    };
-  }
-  return n;
-}
-
-function validWildcardsYamlData(n, r) {
-  var i;
-  if (null !== (i = r) && void 0 !== i || (r = {}), t(n)) {
-    if (o(n.contents) && !e(n.contents)) throw TypeError(`The 'contents' property of the provided YAML document must be a YAMLMap. Received: ${n.contents}`);
-    visitWildcardsYAML(n, createDefaultVisitWildcardsYAMLOptions(r)), n = n.toJSON();
-  }
-  if (null == n) {
-    if (r.allowEmptyDocument) return;
-    throw new TypeError(`The provided JSON contents should not be empty. ${n}`);
-  }
-  let a = Object.keys(n);
-  if (!a.length) throw TypeError("The provided JSON contents must contain at least one key.");
-  if (1 !== a.length && !r.allowMultiRoot) throw TypeError("The provided JSON object cannot have more than one root key. Only one root key is allowed unless explicitly allowed by the 'allowMultiRoot' option.");
-}
-
-function isSafeKey(t) {
-  return "string" == typeof t && /^[._\w-]+$/.test(t) && !/^[\._-]|[\._-]$/.test(t);
-}
-
-function _validKey(t) {
-  if (!isSafeKey(t)) throw new SyntaxError(`Invalid Key. key: ${t}`);
 }
 
 const y = /(?<!#[^\n]*)__([&~!@])?([*\w\/_\-]+)(\([^\n#]+\))?__/, g = /*#__PURE__*/ new RegExp(y, y.flags + "g"), v = /^[\w\-_\/]+$/;
@@ -406,13 +427,13 @@ function _findPathCore(t, e, n, r, i, o) {
 }
 
 function checkAllSelfLinkWildcardsExists(e, n) {
-  var r, i;
+  var r, o;
   null !== (r = n) && void 0 !== r || (n = {});
   const a = n.maxErrors > 0 ? n.maxErrors : 10;
-  t(e) || o(e) || (e = parseWildcardsYaml(e));
+  t(e) || i(e) || (e = parseWildcardsYaml(e));
   const s = e.toString(), l = e.toJSON();
   let c = matchDynamicPromptsWildcardsAll(s, !0), isMatchIgnore = () => !1;
-  null !== (i = n.ignore) && void 0 !== i && i.length && (isMatchIgnore = m(n.ignore));
+  null !== (o = n.ignore) && void 0 !== o && o.length && (isMatchIgnore = m(n.ignore));
   const d = [], u = [];
   for (const t of c) {
     if (isMatchIgnore(t.name)) {
@@ -469,5 +490,5 @@ function parseWildcardsYaml(t, e) {
   return validWildcardsYamlData(r, e), r;
 }
 
-export { y as RE_DYNAMIC_PROMPTS_WILDCARDS, g as RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL, v as RE_WILDCARDS_NAME, _findPathCore, _handleVisitPathsCore, _matchDynamicPromptsWildcardsCore, _mergeSeqCore, _mergeWildcardsYAMLDocumentRootsCore, _toJSON, _validKey, _validMap, _validPair, _validSeq, _visitNormalizeScalar, assertWildcardsName, checkAllSelfLinkWildcardsExists, convertPairsToPathsList, convertWildcardsNameToPaths, createDefaultVisitWildcardsYAMLOptions, deepFindSingleRootAt, parseWildcardsYaml as default, defaultCheckerIgnoreCase, defaultOptionsParseDocument, defaultOptionsStringify, defaultOptionsStringifyMinify, findPath, findPathOptionsToGlobOptions, findWildcardsYAMLPathsAll, formatPrompts, getOptionsFromDocument, getOptionsShared, getTopRootContents, getTopRootNodes, handleVisitPaths, handleVisitPathsFull, isDynamicPromptsWildcards, isSafeKey, isWildcardsName, isWildcardsPathSyntx, isWildcardsYAMLDocument, isWildcardsYAMLDocumentAndContentsIsMap, isWildcardsYAMLMap, matchDynamicPromptsWildcards, matchDynamicPromptsWildcardsAll, matchDynamicPromptsWildcardsAllGenerator, mergeFindSingleRoots, mergeSeq, mergeWildcardsYAMLDocumentJsonBy, mergeWildcardsYAMLDocumentRoots, normalizeDocument, parseWildcardsYaml, pathsToDotPath, pathsToWildcardsPath, stringifyWildcardsYamlData, stripBlankLines, stripZeroStr, trimPrompts, uniqueSeqItems, uniqueSeqItemsChecker, validWildcardsYamlData, visitWildcardsYAML, wildcardsPathToPaths };
+export { y as RE_DYNAMIC_PROMPTS_WILDCARDS, g as RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL, v as RE_WILDCARDS_NAME, _checkValue, _findPathCore, _handleVisitPathsCore, _matchDynamicPromptsWildcardsCore, _mergeSeqCore, _mergeWildcardsYAMLDocumentRootsCore, _nearString, _toJSON, _validKey, _validMap, _validPair, _validSeq, _visitNormalizeScalar, assertWildcardsName, checkAllSelfLinkWildcardsExists, convertPairsToPathsList, convertWildcardsNameToPaths, createDefaultVisitWildcardsYAMLOptions, deepFindSingleRootAt, parseWildcardsYaml as default, defaultCheckerIgnoreCase, defaultOptionsParseDocument, defaultOptionsStringify, defaultOptionsStringifyMinify, findPath, findPathOptionsToGlobOptions, findWildcardsYAMLPathsAll, formatPrompts, getOptionsFromDocument, getOptionsShared, getTopRootContents, getTopRootNodes, handleVisitPaths, handleVisitPathsFull, isDynamicPromptsWildcards, isSafeKey, isWildcardsName, isWildcardsPathSyntx, isWildcardsYAMLDocument, isWildcardsYAMLDocumentAndContentsIsMap, isWildcardsYAMLMap, matchDynamicPromptsWildcards, matchDynamicPromptsWildcardsAll, matchDynamicPromptsWildcardsAllGenerator, mergeFindSingleRoots, mergeSeq, mergeWildcardsYAMLDocumentJsonBy, mergeWildcardsYAMLDocumentRoots, normalizeDocument, parseWildcardsYaml, pathsToDotPath, pathsToWildcardsPath, stringifyWildcardsYamlData, stripBlankLines, stripZeroStr, trimPrompts, uniqueSeqItems, uniqueSeqItemsChecker, validWildcardsYamlData, visitWildcardsYAML, wildcardsPathToPaths };
 //# sourceMappingURL=index.esm.mjs.map
