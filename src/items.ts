@@ -11,6 +11,7 @@ import {
 } from './types';
 import { formatPrompts, stripZeroStr, trimPrompts } from './format';
 import { isWildcardsYAMLDocument, isWildcardsYAMLMap } from './is';
+import { _checkValue } from './valid';
 
 export function visitWildcardsYAML(node: Node | Document | null, visitorOptions: IOptionsVisitor)
 {
@@ -196,6 +197,12 @@ export function _visitNormalizeScalar(key: IVisitorFnKey, node: IWildcardsYAMLSc
 			{
 				node.type = 'BLOCK_LITERAL'
 			}
+		}
+
+		let res = _checkValue(value);
+		if (res?.error) 
+		{
+			throw new SyntaxError(`${res.error}. key: ${key}, node: ${node}`)
 		}
 
 		node.value = value;

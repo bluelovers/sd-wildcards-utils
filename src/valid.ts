@@ -130,3 +130,30 @@ export function _validKey<T extends string>(key: T | unknown): asserts key is T
 		throw new SyntaxError(`Invalid Key. key: ${key}`)
 	}
 }
+
+export function _checkValue(value: string) 
+{
+	let m = /(?:^|[\s{},])_(?=[^_]|$)|(?<!_)_(?:[\s{},]|$)|\/_+|_+\/(?!\()/.exec(value)
+
+	if (m)
+	{
+		let near = _nearString(value, m!.index, m![0]);
+		let match = m![0];
+
+		return {
+			value,
+			match,
+			index: m!.index,
+			near,
+			error: `Invalid Syntax [UNSAFE_SYNTAX] "${match}" in value near "${near}"`
+		}
+	}
+}
+
+export function _nearString(value: string, index: number, match: string, offset: number = 15) 
+{
+	let s = Math.max(0, index - offset);
+	let e = index + (match?.length || 0) + offset;
+
+	return value.slice(s, e)
+}

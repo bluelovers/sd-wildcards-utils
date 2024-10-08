@@ -5,6 +5,7 @@
 
 import { isWildcardsName, matchDynamicPromptsWildcards } from '../src/util';
 import parseWildcardsYaml, { getOptionsFromDocument } from '../src/index';
+import { _checkValue } from '../src/valid';
 
 beforeAll(async () =>
 {
@@ -99,5 +100,42 @@ describe(`matchDynamicPromptsWildcards`, () =>
 		expect(isWildcardsName(actual.name)).toBeTruthy();
 
 	});
+
+})
+
+describe(`_checkValue`, () => {
+
+	describe(`valid`, () => {
+
+		test.each([
+			'2b_\(nier:automata\)_\(cosplay\)',
+			'purple_gray',
+		])(`%j`, (input) => {
+
+			let actual = _checkValue(input);
+
+			expect(actual).toBeUndefined();
+		})
+
+	})
+
+	describe(`invalid`, () => {
+
+		test.each([
+			' __lazy-wildcards/subject/env-elem/stairs/prompts_ ',
+			' __lazy-wildcards/subject/__env-elem/stairs/prompts__ ',
+			' {__lazy-wildcards/subject/env-elem/stairs/prompts_} ',
+			' _lazy-wildcards/subject/env-elem/stairs/prompts__ ',
+			' __lazy-wildcards/subject/env-elem__/stairs/prompts__ ',
+			' {_lazy-wildcards/subject/env-elem/stairs/prompts__} ',
+		])(`%j`, (input) => {
+
+			let actual = _checkValue(input);
+
+			expect(actual).not.toBeUndefined();
+			expect(actual).toMatchSnapshot();
+		})
+
+	})
 
 })
