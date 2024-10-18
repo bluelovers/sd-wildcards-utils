@@ -38,22 +38,23 @@ lazy-wildcards:
           - science fiction
       # https://civitai.com/models/24260
       # https://civitai.com/models/76693?modelVersionId=697939
+      # https://civitai.com/models/142146/carnage-style-blood-and-gore-nsfw-nsfanywhere
       biomachine_body_horror:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume/biomachine_body_horror/main__
+            __lazy-wildcards/subject/costume/biomachine_body_horror/style-main__
             {,({1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/style__}:1.2)|}
-            {,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-types/*__}|}
+            {,{1-6$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-types/*__}|}
             {,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-ethnicity__}|}
             {,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-wings__}|}
             {,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/env__}|}
             {,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-breasts__}|}
             {,{1-6$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-elem__}|}
             {,{1-6$$__lazy-wildcards/subject/costume/biomachine_body_horror/style-elem__}|}
-        main:
-          - (body horror, BPNK, biomachine:1.3)
+        style-main:
+          - (body horror, BPNK, biomachine:1.3), CarnageStyle, Carnage Style
         style:
-          - bloody
+          - bloody, blood_red
           - zentangle
           - dark art
           - erosion
@@ -87,6 +88,7 @@ lazy-wildcards:
           - eldritch abomination
           - cuts
           - Anatomy
+          - life-fluid, fluid, bodyfluid
         costume-types:
           other:
             - Ornate Princess
@@ -118,6 +120,7 @@ lazy-wildcards:
             - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
             - monsterification
             - ribs
+            - stomach mouth
         costume-breasts:
           - large breasts
           - cleavage

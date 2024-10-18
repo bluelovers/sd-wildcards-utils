@@ -75,7 +75,11 @@ lazy-wildcards:
             {1-$$ragged tunic, ragged clothes|tattered clothing, tattered clothes|torn clothes, torn clothing|ripped clothes|damaged|tearing clothes}
         costume-elem:
           - >-
-            torn {1-$$, torn $$pantyhose|thighhighs|shirt|pants|dress|skirt|sleeves|bodysuit|cape|shorts|jeans|leotard|legwear|camisole}
+            torn {1-$$, torn $$pantyhose|thighhighs|shirt|pants|dress|skirt|sleeves, mismatched sleeves|bodysuit|cape|shorts|jeans|leotard|legwear|camisole}
+      mismatched-clothes:
+        prompts:
+          - >-
+            mismatched {1-$$, mismatched $$legwear|sleeves|clothes}
       asymmetrical-clothes:
         prompts:
           - >-

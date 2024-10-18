@@ -1,20 +1,20 @@
 lazy-wildcards:
   subject:
-    style:
+    style-artist:
       # https://civitai.com/models/466170/zdzislaw-beksinski-concepts-wildcard
       zdzislaw_beksinski:
         prompts:
           - >-
-            (__lazy-wildcards/subject/style/zdzislaw_beksinski/style-main__{0.3:::{1.2|1.3|1.4}|})
-            {, {1-3$$__lazy-wildcards/subject/style/zdzislaw_beksinski/env-bg__}|}
-            {, {1-5$$__lazy-wildcards/subject/style/zdzislaw_beksinski/env__}|}
-            {, {1-$$__lazy-wildcards/subject/style/zdzislaw_beksinski/env-weather__}|}
-            {0.3::, {1-2$$__lazy-wildcards/subject/style/zdzislaw_beksinski/env-creatures__}|}
-            {0.3::, {1-$$__lazy-wildcards/subject/style/zdzislaw_beksinski/env-chair__}|}
-            {0.3::, {1-$$__lazy-wildcards/subject/style/zdzislaw_beksinski/env-vehicle__}|}
-            {0.3::, {1-$$__lazy-wildcards/subject/style/zdzislaw_beksinski/costume-wings__}|}
-            {0.3::, {1-$$__lazy-wildcards/subject/style/zdzislaw_beksinski/costume-weapon__}|}
-            {, {1-5$$__lazy-wildcards/subject/style/zdzislaw_beksinski/style__}|}
+            (__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/style-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-3$$__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/env-bg__}|}
+            {, {1-5$$__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/env__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/env-moment__}|}
+            {0.3::, {1-2$$__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/env-creatures__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/env-chair__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/env-vehicle__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/costume-wings__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/costume-weapon__}|}
+            {, {1-5$$__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/style__}|}
         style-main:
           - beksinski style, zdzislaw beksinski
         env:
@@ -62,7 +62,7 @@ lazy-wildcards:
           - mansion, Victorian
           - maze, twisted corridors, labyrinth, disorientation
           - prison
-          - desert, sand dunes
+          - __lazy-wildcards/subject/env-bg/desert/prompts__
           - ancient library
           - abandoned carnival
           - cliffs
@@ -76,7 +76,7 @@ lazy-wildcards:
           - bone throne
         env-vehicle:
           - ghost ship
-        env-weather:
+        env-moment:
           - blood-red sky
           - __lazy-wildcards/subject/moment/weather-mist/prompts__
           - stormy sky
@@ -113,4 +113,31 @@ lazy-wildcards:
           - rusting, dormant
           - religious
           - existential
+      # https://civitai.com/models/251053/akira-style
+      akira:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/akira/style-main__
+            {, {1-$$__lazy-wildcards/subject/style-artist/akira/env__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/akira/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/akira/style__}|}
+        style-main:
+          - style akirafilm, akira_\(manga\), akira style
+        env:
+          - escaping gas and steam
+        env-bg:
+          - gigantic industrial cryogenic containment facility
+          - large factory machine
+          - new tokyo, Neo-Tokyo in Akira
+          - destroyed skyscraper
+        style:
+          - reminiscent
+          - retro
+      # https://www.facebook.com/SkyFreeDom.CandyClub
+      # https://www.pixiv.net/users/1017056/artworks
+      # https://x.com/skyfreedom_212/media
+      # https://danbooru.donmai.us/posts?tags=sky-freedom&z=5
+      sky-freedom:
+        prompts:
+          - sky-freedom, sky-freedom style, by sky-freedom
 

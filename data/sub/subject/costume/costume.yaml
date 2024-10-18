@@ -139,11 +139,11 @@ lazy-wildcards:
       ofuda-maebari:
         prompts:
           - >-
-            (__lazy-wildcards/subject/costume/ofuda-maebari/main__),
+            (__lazy-wildcards/subject/costume/ofuda-maebari/env-main__),
             ({1-$$__lazy-wildcards/subject/costume/ofuda-maebari/prompts-costume__}:1.2)
             {, {1-$$__lazy-wildcards/subject/costume/ofuda-maebari/env__}|}
             , {1-$$__lazy-wildcards/subject/costume/ofuda-maebari/style__}
-        main:
+        env-main:
           - ofuda, paper_talismans
         prompts-costume:
           - __lazy-wildcards/subject/costume/ofuda-maebari/costume-types/ofuda__
@@ -785,7 +785,7 @@ lazy-wildcards:
           - detached sleeves
           - white thighhighs
           - halterneck
-          - gold trim
+          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
           - curtains
           - pubic tattoo
       # https://civitai.com/models/284907/classical-frilled-nurse-uniform

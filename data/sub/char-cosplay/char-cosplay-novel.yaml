@@ -45,5 +45,32 @@ lazy-wildcards:
           - hair between eyes
           - hair ribbon
           - black panties
-          - gold trim
+          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
+    overlord:
+      # https://civitai.com/models/172134/pestonya-shortcake-wanko-human-form-or-overlord
+      pestonya_shortcake_wanko:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/overlord/pestonya_shortcake_wanko/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/overlord/pestonya_shortcake_wanko/costume-ethnicity__
+            {, {1-2$$__lazy-wildcards/cosplay-char/overlord/pestonya_shortcake_wanko/costume__}|}
+            {0.7::, {1-$$__lazy-wildcards/cosplay-char/overlord/pestonya_shortcake_wanko/costume-headwear__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/overlord/pestonya_shortcake_wanko/costume-elem__}|}
+        main-trigger-words:
+          - pestonya_shortcake_wanko, overlord_\(maruyama\), Pestonya_OV
+        costume-ethnicity:
+          - (fake dog ears), long hair, black hair, black headwear, black headgear, scar
+        costume:
+          - black and white frilled maid dress with long sleeves, gold bowtie, long skirt, pleated skirt
+          - black bikini, black footwear
+        costume-headwear:
+          - (black mask, covered eyes)
+        costume-elem:
+          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
+          - choker
+          - black frilled apron
+          - bdsm harness
+          - topless gear
+          - humanization
+          - center frills
 

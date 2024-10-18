@@ -125,4 +125,67 @@ lazy-wildcards:
           - sunset
           - wading, water
           - full moon
-
+    # https://civitai.com/models/841706/konosuba-fantastic-days-style?modelVersionId=941688
+    Konosuba:
+      style:
+        prompts:
+          - Konosuba, konofan, kono_subarashii_sekai_ni_shukufuku_wo!
+    # https://civitai.com/models/90883/code-geass-style-lora
+    code_geass:
+      # https://civitai.com/models/131057/rakshata-chawla-anime-character-or-code-geass-or-ownwaifu?modelVersionId=143945
+      rakshata_chawla:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/main__
+            ,__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/costume-ethnicity__
+            {,__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/costume-weapon__|}
+            {,(__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/costume__)|}
+            {,__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/costume-eyes__|}
+            {,{1-$$__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/action__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/expressions__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/env__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/style__}|}
+        main:
+          - >-
+            rakshata_chawla, code geass,
+            ANIME_Rakshata_Chawla_aiwaifu69, aiwaifu69
+        costume-ethnicity:
+          - >-
+            blonde hair, indian, green eyes, long hair, facial mark, forehead mark,
+            __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+        costume:
+          - white lab coat, long sleeves, red shirt, collared shirt
+          - arabian clothes, dress, harem outfit, partially fingerless gloves, veil
+        costume-eyes:
+          - v-shaped eyebrows
+        costume-elem:
+          - black panties
+          - collarbone
+          - lipstick, red lips
+          - makeup
+          - parted lips
+          - hair ornament
+          - __lazy-wildcards/dataset/costume-accessories-base__
+          - midriff
+          - navel piercing
+          - very long hair
+          - sidelocks
+          - >-
+            {1-$$bra|bra peek}
+          - fingernails, nail polish, red nails
+          - navel
+          - underwear
+          - >-
+            open {1-$$, open $$clothes|shirt|coat}
+        costume-weapon:
+          - holding smoking pipe, kiseru
+        action:
+          - hand up
+        env:
+          - knightmare_frame
+        expressions:
+          - calm_expression
+        style:
+          - casual
+          - engineering_genius

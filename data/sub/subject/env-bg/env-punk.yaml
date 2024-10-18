@@ -64,10 +64,7 @@ lazy-wildcards:
           - gates
           - weirs
           - __lazy-wildcards/subject/env-elem/stairs/prompts__
-          - >-
-            {1-$$rock road|stone road|wooden road}
-          - >-
-            {{wooden|stone|rock} |}stairs
+          - __lazy-wildcards/subject/env-elem/road/prompts__
           - >-
             {surrounded by |}{1-$$ and $$trees|plants|flowers}
         env-bg:

@@ -1,0 +1,49 @@
+lazy-wildcards:
+  subject:
+    env-elem-food-drink:
+      # https://civitai.com/models/604678/ramune-sd15?modelVersionId=675915
+      # 彈珠汽水
+      ramune:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-food-drink/ramune/main__
+            {,{1-$$__lazy-wildcards/subject/env-elem-food-drink/ramune/style__}|}
+            {,{1-$$__lazy-wildcards/subject/env-elem-food-drink/ramune/action-drink__}|}
+            {,{1-$$__lazy-wildcards/subject/env-elem-food-drink/ramune/env-bottle__}|}
+            {,{1-$$__lazy-wildcards/subject/env-elem-food-drink/ramune/env__}|}
+        main:
+          - (ramune, glass_bottle_with_marble, glass marbles, marble_\(toy\), soda:1.3), drink, glass_bottle, bottle
+        style:
+          - Japanese_soda, Japanese_drink
+          - unique_sealing_method
+          - traditional_packaging
+          - traditional_beverage
+          - cultural_refreshment
+          - regional_flavor
+          - refreshing_beverage
+          - cold_drink
+          - thirst_quencher
+          - summer_favorite
+          - still life
+          - sparkling_beverage
+          - carbonation
+          - drink_chilling
+        env-bottle:
+          - glass_bottle, glass_bottle_with_marble, glass marbles
+          - marble_stop
+          - bottle_closure
+          - soda bottle
+          - fizzy_texture
+          - bubbles
+          - effervescence
+          - screw_cap
+          - marble_\(toy\)
+        env:
+          - paper lantern
+          - summer
+          - frozen_water
+          - ice_cubes
+          - clear_cubes
+        action-drink:
+          - pov, pov hands, holding, holding bottle
+

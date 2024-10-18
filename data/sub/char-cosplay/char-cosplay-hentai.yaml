@@ -1,77 +1,57 @@
 lazy-wildcards:
-  cosplay-char:
-    hentai-game:
-      # https://www.getchu.com/soft.phtml?id=929294&gc=gc
-      Hamiro_Ryakudatsusha_no_Inen:
+  cosplay-char-hentai:
+    # Yarima Queen
+    # ヤーリマクィーン
+    # https://www.dlsite.com/pro/work/=/product_id/VJ007512.html/?locale=zh_TW
+    # https://www.animenewsnetwork.com/encyclopedia/anime.php?id=3113
+    Sex_Demon_Queen:
+      # 女戦士「リマ」
+      # https://civitai.com/models/857980/rime-linna-hentai-sex-demon-queen-ponyxl-sd15?modelVersionId=959989
+      rime:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/hentai-game/Hamiro_Ryakudatsusha_no_Inen/main-trigger-words__
-            , __lazy-wildcards/cosplay-char/hentai-game/Hamiro_Ryakudatsusha_no_Inen/costume-ethnicity__
-            , {1-$$__lazy-wildcards/cosplay-char/hentai-game/Hamiro_Ryakudatsusha_no_Inen/costume__}
+            __lazy-wildcards/cosplay-char-hentai/Sex_Demon_Queen/rime/main-trigger-words__
+            , __lazy-wildcards/cosplay-char-hentai/Sex_Demon_Queen/rime/costume-ethnicity__
+            {0.7::, __lazy-wildcards/cosplay-char-hentai/Sex_Demon_Queen/rime/costume__|}
+            {, {1-$$__lazy-wildcards/cosplay-char-hentai/Sex_Demon_Queen/rime/costume-weapon__}|}
+            {, __lazy-wildcards/cosplay-char-hentai/Sex_Demon_Queen/rime/style__|}
+            {0.2::, __lazy-wildcards/cosplay-char-hentai/Sex_Demon_Queen/rime/style-main__|}
         main-trigger-words:
-          - HamiroRyakudatsusha
+          - rime, rime_(yarima_queen), yarima_queen
         costume-ethnicity:
-          - long hair, (red hair, hair over one eye:1.2), (hair tubes, hair stick), hair over shoulder, yellow eyes
+          - red hair, long hair, brown eyes
         costume:
-          - red dress, navel, cleavage, bare shoulders, center opening, plunging neckline
-          - red pelvic curtain, side slit
-          - hair ornament, thigh strap
-    # https://civitai.com/models/107429/viper-gts-hentai-protagonist-style
-    viper_series:
-      # https://civitai.com/models/231600/carrera-viper-series
-      # https://civitai.com/models/789886/carrera-or-viper-gts-or-5-attires?modelVersionId=883296
-      carrera:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/viper_series/carrera/main-trigger-words__
-            , __lazy-wildcards/cosplay-char/viper_series/carrera/costume-ethnicity__
-            {, {1-2$$__lazy-wildcards/cosplay-char/viper_series/carrera/costume__}|}
-            {, {1-$$__lazy-wildcards/cosplay-char/viper_series/carrera/costume-elem__}|}
-            {, __lazy-wildcards/cosplay-char/viper_series/carrera/costume-wings__|}
-            {, {1-$$__lazy-wildcards/cosplay-char/viper_series/carrera/env__}|}
-            {, {1-$$__lazy-wildcards/cosplay-char/viper_series/carrera/action-pose__}|}
-            {, {1-$$__lazy-wildcards/cosplay-char/viper_series/carrera/style__}|}
-        main-trigger-words:
-          - carrera, carreravi, viper_\(series\)
-        costume-ethnicity:
-          - demon tail, demon girl, green hair, horns, navel, red eyes, long pointy ears, parted bangs, makeup, lipstick
-        costume:
-          - shoulder armor, black cape, skull, armlet
-          - halterneck, elbow gloves, highleg panties, thigh boots, high heels
-          - BodySuit_ViperGST_Carrera_ownwaifu, elbow gloves, navel, thighhighs, midriff, covered nipples, highleg, bare shoulders, sidelocks, revealing clothes, impossible clothes, cleavage, long sleeves, purple gloves, purple thighhighs, detached sleeves, highleg panties, leotard, collarbone
-          - Chained_ViperGST_Carrera_ownwaifu, nude, collar, bracelet, chain,  bdsm, bondage, bound, cuffs, leash, maebari, tail, navel, neck ring
-          - FeatherWings_ViperGST_Carrera_ownwaifu, wings, thighhighs, thigh boots, elbow gloves, navel, covered nipples, feathered wings
-          - NakedApron_ViperGST_Carrera_ownwaifu, naked apron, cleavage
-          - NSFW_ViperGST_Carrera_ownwaifu, nude, navel
-        costume-elem:
-          - pelvic curtain
-          - skull necklace
-          - breasts apart
-          - collarbone
-          - detached sleeves
-          - revealing clothes
-          - shoulder armor
-          - blue scarf
-          - two-sided cape
-          - two-sided fabric
-          - covered nipples
-          - elbow gloves
-          - breasts apart
-          - tattoo
-          - midriff
-          - covered nipples
-          - navel
-          - cleavage
-        costume-wings:
-          - bat wings
-          - feathered wings
-        env:
-          - __lazy-wildcards/subject/env-elem/circle-magic/prompts__
+          - bikini armor, red shoulder armor, red pauldrons, elbow pads, fingerless gloves, green shorts, midriff, boots, knee pads
+          - yellow armor, yellow pauldrons, elbow gloves, black leotard, center opening, red thigh boots
+        costume-weapon:
+          - holding sword
+        style-main:
+          - retro artstyle
         style:
-          - 1990s \(style\)
-        action-pose:
-          - arched back, arms behind head
-          - finger to mouth
-          - hand on own hip
-          - legs apart
+          - Dark_fantasy
+          - erotic_fantasy
+          - Seduction, lust_magic
+          - betrayal_scenario
+          - deceptive_hospitality
+      # 魔法使いの「クーリー
+      # https://civitai.com/models/659278?modelVersionId=737790
+      kuri:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char-hentai/Sex_Demon_Queen/kuri/main-trigger-words__
+            , __lazy-wildcards/cosplay-char-hentai/Sex_Demon_Queen/kuri/costume-ethnicity__
+            {0.7::, __lazy-wildcards/cosplay-char-hentai/Sex_Demon_Queen/kuri/costume__|}
+            {, {1-$$__lazy-wildcards/cosplay-char-hentai/Sex_Demon_Queen/kuri/costume-weapon__}|}
+            {, __lazy-wildcards/cosplay-char-hentai/Sex_Demon_Queen/rime/style__|}
+            {0.2::, __lazy-wildcards/cosplay-char-hentai/Sex_Demon_Queen/rime/style-main__|}
+        main-trigger-words:
+          - kuri, kuri_(yarima_queen), yarima_queen
+        costume-ethnicity:
+          - blue hair, high ponytail, hair bow, blue eyes, (mole under mouth:0.8)
+        costume:
+          - chest sarashi, open robe, fingerless gloves, belt pouch, long skirt, blue skirt, curvy, midriff, navel, yellow footwear, boots
+          - white armor, elbow gloves, single gauntlet, thigh boots, highleg leotard, center opening, revealing clothes
+        costume-weapon:
+          - holding spear
+          - holding polearm
 

@@ -25,3 +25,16 @@ lazy-wildcards:
           - chain necklace
           - chain
           - belly chain
+      gold-trim:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem/gold-trim/costume-elem-main__
+            {0.3::, {1-$$__lazy-wildcards/subject/costume-elem/gold-trim/costume-elem__}|}
+        costume-elem-main:
+          - gold trim, gold-trimmed
+        costume-elem:
+          - gold-stitched
+          - gold-embroidery
+          - gold-decorative
+          - gold lace, gold lace trim, gold lace-trimmed
+

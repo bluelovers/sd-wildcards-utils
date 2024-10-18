@@ -123,13 +123,14 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/bee_girl/env__}|}
             {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/bee_girl/style__}|}
         main:
-          - (bee girl:1.3), Anthro_Bee
+          - (bee girl:1.3), Anthro_Bee, Wasp Girl
         costume:
           - abdomen tail
           - antennae
           - striped body
           - honeycomb_ornament
           - bee costume
+          - wasp abdomen
           - >-
             bee {1-$$, bee $$exoskeletons|antennae|abdomen tail}
         costume-mecha:
@@ -142,7 +143,7 @@ lazy-wildcards:
           - worker bee
           - soldier bees
         costume-wings:
-          - bee wings
+          - bee wings, wasp wings
         costume-weapon:
           - holding sign
           - >-
@@ -166,30 +167,51 @@ lazy-wildcards:
           - complex honeycomb background
           - Bee_Nest background
           - hexagonal wax cells background
+      # https://civitai.com/models/856886/jiangshi-costume-lora-sd15?modelVersionId=958727
+      # https://danbooru.donmai.us/posts?tags=jiangshi&z=5
       zombie-jiangshi-chinese-taoist-robes:
         prompts:
           - >-
             __lazy-wildcards/subject/costume-ethnicity-race/zombie-jiangshi-chinese-taoist-robes/costume-ethnicity__
-            {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-jiangshi-chinese-taoist-robes/costume-wings__}|}
-            ,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-jiangshi-chinese-taoist-robes/costume-elem__}
-            {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-jiangshi-chinese-taoist-robes/style__}|}
-            ,__lazy-wildcards/subject/env-elem/yin_yang/prompts__
+            {0.3::, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-jiangshi-chinese-taoist-robes/costume-wings__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-jiangshi-chinese-taoist-robes/expressions__}|}
+            , {1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-jiangshi-chinese-taoist-robes/costume-elem__}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-jiangshi-chinese-taoist-robes/action-pose__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-jiangshi-chinese-taoist-robes/style__}|}
+            , __lazy-wildcards/subject/env-elem/yin_yang/prompts__
         costume-ethnicity:
           - >-
-            (Jiangshi:1.4), chinese clothes, china dress, taoist robes, celestial being uniform
+            (Jiangshi:1.4), chinese clothes, china dress, taoist robes, celestial being uniform, jiangshi costume
         costume-wings:
           - (mechanical wings)
           - (giant wings:1.1)
           - detail wings
         expressions:
           - expressionless
+          - upturned eyes
+          - open mouth
+          - tongue out
         costume-elem:
           - wet body, see-through
           - pale skin
+          - purple skin
           - (forehead mark:1.2)
-          - claws
+          - claws, sharp fingernails, long fingernails
           - (mecha body:1.1), detail mecha body
           - veil
+          - __lazy-wildcards/subject/costume/ofuda-maebari/prompts__
+          - side-tie panties, string panties
+          - pelvic curtain
+          - bottomless
+          - breast curtains
+          - sleeves past wrists
+          - sharp toenails
+          - qingdai guanmao
+          - heart-shaped pupils
+          - platform footwear
+        action-pose:
+          - hands up, outstretched arms
+          - zombie pose
         style:
           - death
       zombie-decaying:
@@ -204,7 +226,7 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-decaying/env-bg__}|}
             {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-decaying/style__}|}
         main:
-          - undead, zombie, decaying
+          - undead, zombie, decaying, ZombieCh, dead skin, CNzombie, jiangshi
         costume-ethnicity:
           - zombie girl
           - zombie cyborg girl
@@ -219,6 +241,7 @@ lazy-wildcards:
           - holding a teddy bear
         action:
           - zombie pose
+          - open mouth
         style:
           - cute
           - eerie
@@ -347,6 +370,7 @@ lazy-wildcards:
           - sitting, head tilt
         env:
           - carrot
+      # https://civitai.com/models/86142/reptile-girl
       lizard:
         prompts:
           - >-
@@ -362,7 +386,7 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/env__}|}
             {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/style__}|}
         costume-ethnicity-main:
-          - lizardman, lizard, lizardmen, lizardman \(warhammer fantasy\)
+          - lizardman, lizard, lizardmen, lizardman \(warhammer fantasy\), reptile, reptile girl
         costume-ethnicity:
           - scales, reptilian_skin, scaled_skin
           - claws, sharp_claws, talons
@@ -370,6 +394,7 @@ lazy-wildcards:
           - fangs, sharp_teeth, reptilian_teeth, carnivorous_teeth
           - colored skin
           - colored scales
+          - glistening scales
         costume-elem:
           - tattoos
           - leather
@@ -498,3 +523,63 @@ lazy-wildcards:
           - blue_accents
           - silver_accents
           - Halloween
+      # https://civitai.com/models/254264/sphinx-girl
+      sphinx:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/sphinx/costume-ethnicity-main__
+            {0.7::, ({1-2$$__lazy-wildcards/subject/costume-ethnicity-race/sphinx/costume-ethnicity__}:1.2)|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/sphinx/costume-wings__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/sphinx/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/sphinx/action-pose__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/sphinx/costume__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/sphinx/expressions__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/sphinx/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/sphinx/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/sphinx/style__}|}
+        costume-ethnicity-main:
+          - (sphinx:1.2), paws, pawpads, claws, 4 legged, lion_body, lion tail
+        costume-ethnicity:
+          - Androsphinx, human head
+          - criosphinx, ram_horns
+          - hieracosphinx, bird_of_prey_head, eagle head
+        costume:
+          - ancient egyptian clothes
+        costume-elem:
+          - normal hands
+          - winged arms
+          - humanoid_creature, fantasy_creature, mythical_beast
+          - black sclera
+          - feather hair
+          - sharp teeth
+          - facial mark
+          - tail ornament
+          - pelvic curtain
+          - stirrup footwear
+          - cat ears
+          - __lazy-wildcards/dataset/costume-accessories-base__
+          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
+          - monster girl
+        costume-wings:
+          - eagle_wings, feathered_wings
+        action-pose:
+          - sitting
+          - guarding pose
+          - flying
+          - crossed arms
+          - head tilt
+          - relaxing
+        costume-weapon:
+          - broken sword, broken weapon
+        expressions:
+          - grin
+        env-bg:
+          - __lazy-wildcards/subject/env-bg/desert/prompts__
+          - temple
+          - throne
+        style:
+          - egyptian_mythology, riddle_guardian
+          - egypt
+          - glowing
+          - monsterification
+

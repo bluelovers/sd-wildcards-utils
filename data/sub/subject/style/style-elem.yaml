@@ -73,4 +73,56 @@ lazy-wildcards:
           - sensual
         env-bg:
           - fractal landscape
+      # https://civitai.com/models/110450/shadowed-elegance-cursed-beauty-style-lora
+      Shadowed_Elegance:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-elem/Shadowed_Elegance/style-main__
+            {, {1-$$__lazy-wildcards/subject/style-elem/Shadowed_Elegance/costume__}|}
+            {, {1-$$__lazy-wildcards/subject/style-elem/Shadowed_Elegance/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-elem/Shadowed_Elegance/env__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/style-elem/Shadowed_Elegance/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/style-elem/Shadowed_Elegance/style__}|}
+        style-main:
+          - style by NTY, yoshitaka amano, Cursed beauty
+        costume:
+          - dark dress, exposed
+          - flower armor
+          - colorful dress
+          - see-through dress
+        costume-elem:
+          - long white hair
+          - red eye
+          - __lazy-wildcards/subject/costume-tattoo/body-tattoo/prompts__
+          - skeleton
+        env:
+          - flowers
+          - hyphae
+        env-bg:
+          - bed
+        style:
+          - yoshitaka amano character design
+          - pale red
+          - innocence
+          - muted colors
+          - grief
+          - impressionist oil paint style
+          - swirling energy
+          - crushing despair
+          - lustful
+          - smooth
+      Frosted_Glass_Geometry:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-elem/Frosted_Glass_Geometry/style-main__
+            {, {1-$$__lazy-wildcards/subject/style-elem/Frosted_Glass_Geometry/env__}|}
+            {0.2::, {1-$$__lazy-wildcards/subject/style-elem/Frosted_Glass_Geometry/env-vehicle__}|}
+        style-main:
+          - Frosted Glass Geometry, mosha, Frosted Glass, microsoft style
+        env:
+          - keyboard
+          - cellphone, Folder, Office Supplies, Screen
+          - skull
+        env-vehicle:
+          - sport car
 

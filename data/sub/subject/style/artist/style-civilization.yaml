@@ -1,0 +1,18 @@
+lazy-wildcards:
+  subject:
+    style-artist:
+      # https://civitai.com/models/105636/mixtec-codex-historic-mesoamerican-style
+      Mixtec_Codex:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/Mixtec_Codex/style-main__)
+            {, {1-$$__lazy-wildcards/subject/style-artist/Mixtec_Codex/style__}|}
+        style-main:
+          - Mixtec Codex, Codex Nuttall-Zouche, NuttallZouche, historic Mesoamerican style
+        style:
+          - Mixtec_manuscript
+          - pre-Columbian_art
+          - painted_codex, codex_illustration, Manuscript_painting
+          - ancient_civilisation
+          - Eight-Deer_Jaguar-Claw
+          - glyph_paintings

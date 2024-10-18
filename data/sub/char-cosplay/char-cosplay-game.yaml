@@ -143,4 +143,51 @@ lazy-wildcards:
           - standing on the stage
           - ice crystal
           - snow
+    arcana_heart:
+      mei-fang:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/arcana_heart/mei-fang/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/arcana_heart/mei-fang/costume-ethnicity__
+            , __lazy-wildcards/cosplay-char/arcana_heart/mei-fang/costume__
+            {, {1-$$__lazy-wildcards/cosplay-char/arcana_heart/mei-fang/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/arcana_heart/mei-fang/env__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/arcana_heart/mei-fang/style__}|}
+        main-trigger-words:
+          - mei-fang, arcana_heart
+        costume-ethnicity:
+          - bun cover, cable, ass, blue hair, breasts, bun cover, hairclip, android
+        costume:
+          - orange cropped jakect, orange shrug \(clothing\), orange thighhighs
+        costume-elem:
+          - white highleg leotard, navel
+          - cleavage cutout
+        env:
+          - baozi
+        style:
+          - fighting_stance
+    code_vein:
+      # https://civitai.com/models/70215/invading-executioner-code-vein
+      invading_executioner:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/code_vein/invading_executioner/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/code_vein/invading_executioner/costume-ethnicity__
+            {0.7::, {1-$$__lazy-wildcards/cosplay-char/code_vein/invading_executioner/costume-headwear__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/code_vein/invading_executioner/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/code_vein/invading_executioner/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/code_vein/invading_executioner/costume-weapon__}|}
+        main-trigger-words:
+          - invading executioner, code_vein
+        costume-ethnicity:
+          - colored skin, blue skin, glowing eyes, orange eyes, black scleras, colored scleras, twintails, very long hair, cleavage, underboob, glowing eye, claws
+        costume-headwear:
+          - (mask, eyepatch, one eye covered:1.2)
+        costume:
+          - bikini armor
+        costume-elem:
+          - no feet
+          - faulds
+        costume-weapon:
+          - polearm
 

@@ -380,40 +380,6 @@ lazy-wildcards:
         prompts:
           - >-
             ba gua, tai chi, yin yang
-      gold-gemstone:
-        prompts:
-          - >-
-            gold, gemstone, gemtech
-            {,{1-$$__lazy-wildcards/subject/env-elem/gold-gemstone/env-gemstone__}|}
-            {,{1-$$__lazy-wildcards/subject/env-elem/gold-gemstone/style__}|}
-        env-gemstone:
-          - gold trim
-          - Malachite, GoldMalachiteWorld
-          - tanzanite \(gemstone\), GoldTanzaniteWorld
-          - amethyst \(gemstone\), GoldAmethystWorld, purple gemstone
-          - >-
-            {1-$$Marble|Marble crackle pattern|Marble swirl pattern|Marble pattern}
-          - __lazy-wildcards/utils/color-base__ gemstone
-          - __lazy-wildcards/utils/color-base__ gold
-          - __lazy-wildcards/utils/color-base__ marble
-          - pearl \(gemstone\)
-          - sapphire \(gemstone\), blue gemstone
-          - silver
-          - glass
-          - chrysoprase, jade \(gemstone\)
-          - ruby \(gemstone\), red gemstone
-          - spinel \(gemstone\), GoldSpinelWorld
-          - platinum
-          - amber \(gemstone\)
-          - glowing gem
-        style:
-          - crackle pattern
-          - swirl pattern
-          - fluid pattern
-          - dripping pattern
-          - internal reflections
-          - transparent
-          - inner details
       # https://civitai.com/models/293128/moss-is-boss-gown-5
       moss:
         prompts:
@@ -450,41 +416,6 @@ lazy-wildcards:
           - fantasy_landscape
           - emerald_glow
           - nature_spirits
-      stairs:
-        prompts:
-          - >-
-            stairs
-            {0.7::,({1-3$$__lazy-wildcards/subject/env-elem/stairs/env-stairs__})|}
-            {,{1-$$__lazy-wildcards/subject/env-elem/stairs/env-stairs-style__}|}
-            {,{1-$$__lazy-wildcards/subject/env-elem/stairs/action__}|}
-            {,{1-$$__lazy-wildcards/subject/env-elem/stairs/env__}|}
-            {0.2::,{1-$$__lazy-wildcards/subject/env-elem/stairs/style__}|}
-        env-stairs:
-          - spiral stairs
-          - grand stairs
-          - carpeted stairs
-          - floating stairs
-          - curved stairs
-        env-stairs-style:
-          - wooden stairs
-          - stone stairs
-          - rock stairs
-          - metal stairs
-          - tree stairs
-        env:
-          - stairwell
-          - __lazy-wildcards/subject/env-elem/railing/prompts__
-        action:
-          - sitting
-        style:
-          - classical Style
-          - minimalist style
-          - open_concept
-          - country style
-          - luxury style
-          - industrial style
-          - victorian style
-          - spiraling upwards
       railing:
         prompts:
           - >-
@@ -568,10 +499,11 @@ lazy-wildcards:
           - industrial pipes
           - wire
         env:
-          - cables everywhere
-          - hanging_cables
-          - metal_chains
-          - industrial_wires
-          - dangling_chains
+          - cables everywhere, scattered cables
+          - hanging cables
+          - metal chains
+          - industrial wires
+          - dangling chains
+          - corroded pipes
         costume-weapon:
           - holding cable

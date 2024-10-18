@@ -17,7 +17,7 @@ lazy-wildcards:
           - invisible chair
           - pilot chair
           - >-
-            {__mix-lazy-auto/color-anything__ |}{{leather|velvet|wooden} |}{couch|sofa|chair}
+            {0.3::__mix-lazy-auto/color-anything__ |}{{1-2$$ and $$leather|velvet|wooden|rattan|wicker|stone|metal} |}{couch|sofa|chair}
           - couch
           - sofa
           - discarded chairs
@@ -25,10 +25,29 @@ lazy-wildcards:
           - throne
           - Recliner
           - stool
+          - __lazy-wildcards/subject/env-elem/rattan-chair/env-chair__
         action-pose:
           - hand on own chin
           - lying
           - sitting
         style:
           - discarded
+          - modern chair
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/rattan-chair/style__}
+      # https://civitai.com/models/377816/rattan-chair
+      rattan-chair:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/rattan-chair/env-chair__
+            {, {1-$$__lazy-wildcards/subject/env-elem/chair/action-pose__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/rattan-chair/style__}|}
+        env-chair:
+          - >-
+            {0.3::__mix-lazy-auto/color-anything__ |}{1-$$ chair, $$rattan|wicker} chair
+        style:
+          - discarded
+          - peacock chair
+          - >-
+            {1-$$ style, $$rattan|wicker} style
 

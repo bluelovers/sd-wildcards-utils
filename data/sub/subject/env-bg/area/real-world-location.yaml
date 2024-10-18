@@ -5,17 +5,15 @@ lazy-wildcards:
       kowloon-walled-city:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-bg-real-world-location/kowloon-walled-city/main__,
-            {{1-$$__lazy-wildcards/subject/env-bg-real-world-location/kowloon-walled-city/main-types/*__},|}
-            {1-$$__lazy-wildcards/subject/env-bg-real-world-location/kowloon-walled-city/env__},
-            {1-$$__lazy-wildcards/subject/env-bg-real-world-location/kowloon-walled-city/style__}
-        main:
+            __lazy-wildcards/subject/env-bg-real-world-location/kowloon-walled-city/env-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg-real-world-location/kowloon-walled-city/env-bg__}|}
+            , {1-$$__lazy-wildcards/subject/env-bg-real-world-location/kowloon-walled-city/env__}
+            {, {1-$$__lazy-wildcards/subject/env-bg-real-world-location/kowloon-walled-city/style__}|}
+        env-main:
           - kowloon walled city, hong_kong, real_world_location
-        main-types:
-          densely_packed_buildings:
-            - densely_packed_buildings, close_proximity, high_rise_structures, urban_sprawl.
-          hidden_alleys:
-            - narrow_alleyways, hidden_alleys, concealed_passages, secret_routes, labyrinthine_paths
+        env-bg:
+          - densely_packed_buildings, close_proximity, high_rise_structures, urban_sprawl.
+          - narrow_alleyways, hidden_alleys, concealed_passages, secret_routes, labyrinthine_paths
         style:
           - high_density_buildings
           - extremely close and packed structures
@@ -40,7 +38,7 @@ lazy-wildcards:
       landmark:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-bg-real-world-location/landmark/main-types/*__, real_world_location
+            (__lazy-wildcards/subject/env-bg-real-world-location/landmark/main-types/*__), real_world_location, landmark
         main-types:
           base:
             - Statue_of_Liberty
@@ -54,6 +52,8 @@ lazy-wildcards:
             - Grand_Canyon, vast_gorge, layered_rock_formations
             - Pyramids_of_Giza, desert_landscape
             - Abu_Simbel, colossal_statues, rock_temples, Ramses_II
+          usa:
+            - golden_gate_bridge
           North_American:
             - Yellowstone_National_Park
             - Yosemite_National_Park
@@ -63,6 +63,35 @@ lazy-wildcards:
             - Multnomah_Falls
           tw-taiwan:
             - Taipei_101
+          jp:
+            - tokyo_tower
+            - golden_pavilion, kyoto, japan
+          italy:
+            - leaning_tower_of_pisa
+          england_london:
+            - big_ben
+          greece_athens:
+            - parthenon
+          brazil:
+            - iguazu_falls, waterfall, rainforest, nature
+          # 阿拉伯聯合大公國
+          uae:
+            - burj_khalifa, dubai, uae, skyscraper, tallest_building, modern_architecture
+          ireland:
+            - cliffs_of_moher, ireland, cliff, ocean, dramatic_landscape
+          new_zealand:
+            - waitomo_glowworm_caves, cave, glowworm, bioluminescence
+          turkey:
+            - >-
+              cappadocia
+              {, {1-$$hot_air_balloon|cave_hotels}|}
+              {, {1-$$fairy_chimneys|magical_landscape}|}
+          rome:
+            - >-
+              {1-$$st_peters_basilica|vatican_city}
+              {, {1-$$catholicism|renaissance_architectur|dome|spirituality}|}
+          france:
+            - eiffel_tower
       elem-interior:
         prompts:
           - Indian_mausoleum
@@ -73,4 +102,11 @@ lazy-wildcards:
           - Saqqara
           - Nubian
           - real_world_location
+      country:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-real-world-location/country/env__), real_world_location
+        env:
+          - portugal
+          - tokyo, japan
 

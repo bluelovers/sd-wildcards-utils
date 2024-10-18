@@ -15,6 +15,7 @@ export default (async () => {
 			join(__ROOT_OUTPUT_WILDCARDS, 'lazy-wildcards.yaml'),
 			//join(__ROOT_DATA, 'lazy-wildcards.yaml'),
 			join(__ROOT_DATA, 'cf', 'bundle', 'corn-flakes-aio-bundle-sex.yaml'),
+			join(__ROOT_DATA, 'others', 'navi_atlas.yaml'),
 		], (file: any) =>
 		{
 			return readFile(file)
@@ -30,7 +31,7 @@ export default (async () => {
 		})
 	;
 
-	let ret = checkAllSelfLinkWildcardsExists(obj, {
+	let ret = checkAllSelfLinkWildcardsExists(obj as any, {
 		ignore: [
 			//'cf-*/**',
 			//'crea-*/**',

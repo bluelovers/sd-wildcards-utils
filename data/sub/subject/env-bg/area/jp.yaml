@@ -68,4 +68,13 @@ lazy-wildcards:
         style:
           - neon_lights
           - __lazy-wildcards/utils/scenery-no-humans__
+      jp-kyoto-cherry_blossom:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/jp-kyoto-cherry_blossom/env-bg-main__)
+            {, {1-$$__lazy-wildcards/subject/env-bg/jp-yakuza-tenkaichi/costume__}|}
+        env-bg-main:
+          - kyoto, japan, cherry_blossom, spring, hanami
+        costume:
+          - kimono, traditional_japan
 

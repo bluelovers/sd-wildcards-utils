@@ -25,4 +25,63 @@ lazy-wildcards:
         costume-weapon:
           - holding gun
           - rifle and bayonet
+      # https://civitai.com/models/168595/national-revolutionary-army-lora?modelVersionId=938254
+      National_Revolutionary_Army:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/National_Revolutionary_Army/main-trigger-words__
+            , __lazy-wildcards/subject/costume/National_Revolutionary_Army/costume-year__
+            {, {1-2$$__lazy-wildcards/subject/costume/National_Revolutionary_Army/costume__}|}
+            {, {1-2$$__lazy-wildcards/subject/costume/National_Revolutionary_Army/costume-color__}|}
+            {, {1-2$$__lazy-wildcards/subject/costume/National_Revolutionary_Army/costume-headwear__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/National_Revolutionary_Army/costume-elem__}|}
+            {, {1-3$$__lazy-wildcards/subject/costume/National_Revolutionary_Army/costume-weapon__}|}
+        main-trigger-words:
+          - National Revolutionary Army
+        costume:
+          - NRA militia
+          - NRA soldier
+          - NRA officer
+          - CCP soldier, red scarf
+        costume-year:
+          - NRA1926
+          - NRA1936
+          - NRA1944
+        costume-color:
+          - khaki uniform
+          - brown uniform
+          - yellow uniform
+          - green uniform
+          - blue uniform
+          - oliver green uniform
+          - desert uniform
+        costume-headwear:
+          - helmet badge
+          - german helmet
+          - NRA cap, cap badge
+          - cap badge with gold trim
+          - US helmet
+          - UK helmet
+          - JP helmet
+          - FR helmet, french helmet
+        costume-elem:
+          - Eisenhower jacket
+          - fengtian officer
+          - leg wrappings, leg_wrap, infantryman's puttee, black shoes
+          - sling
+          - leather belt pouch
+          - backpack
+          - chest name badge
+          - straw sandals
+        costume-weapon:
+          - rifle, bolt_action
+          - long broadsword
+          - holding binoculars
+          - holding_gun
+          - aiming gun
+          - holster, handgun, Mauser C96 pistol, box pistol, box gun
+          - holster, handgun, pistol, M1911
+          - MP18 SMG, leather SMG pouch
+          - ZB-26, LMG
+          - thompson SMG, submachine gun
 

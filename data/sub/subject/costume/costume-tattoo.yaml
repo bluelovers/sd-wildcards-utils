@@ -2,8 +2,11 @@ lazy-wildcards:
   subject:
     costume-tattoo:
       # 宗教紋身 (Religious Tattoos)
-      religious:
+      religious-tattoo:
         prompts:
+          - >-
+            {1-2$$__lazy-wildcards/subject/costume-tattoo/religious-tattoo/costume-tattoo__}
+        costume-tattoo:
           - cross_tattoo, Christian_symbolism
           - buddha_tattoo, Buddhist_symbolism
           - hindu_tattoo, Hindu_symbols
@@ -15,6 +18,13 @@ lazy-wildcards:
           - tribal_tattoo, indigenous_designs, bold_and_intricate_patterns
       body-tattoo:
         prompts:
+          - >-
+            __lazy-wildcards/subject/costume-tattoo/body-tattoo/main-trigger-words__
+            , {1-$$__lazy-wildcards/subject/costume-tattoo/body-tattoo/costume-tattoo__}
+            {, __lazy-wildcards/subject/costume-tattoo/pattern-tattoo/prompts__|}
+        main-trigger-words:
+          - DarkTatExStarz
+        costume-tattoo:
           - tattoo
           - full body tattoo
           - >-
@@ -30,6 +40,9 @@ lazy-wildcards:
           - back tattoo
       pattern-tattoo:
         prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-tattoo/pattern-tattoo/costume-tattoo__}
+        costume-tattoo:
           - number tattoo
           - heart tattoo
           - barcode tattoo
@@ -39,12 +52,12 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/subject/costume-tattoo/Japanese-tattoo-Irezumi/costume-main__
-            {,{1-$$__lazy-wildcards/subject/costume-tattoo/Japanese-tattoo-Irezumi/costume-elem-tattoo__}|}
+            {,{1-$$__lazy-wildcards/subject/costume-tattoo/Japanese-tattoo-Irezumi/costume-tattoo__}|}
             {,{1-$$__lazy-wildcards/subject/costume-tattoo/Japanese-tattoo-Irezumi/env__}|}
             {,{1-$$__lazy-wildcards/subject/costume-tattoo/Japanese-tattoo-Irezumi/style__}|}
         costume-main:
           - EPIrezumiWorld, Irezumi, Wabori, Harimono, japanese tattoo, japanese style tattoo, traditional japanese tattoo, yakuza, yakuza tattoo
-        costume-elem-tattoo:
+        costume-tattoo:
           - full_body_tattoo
           - bodysuit_tattoo
           - oriental_tattoo

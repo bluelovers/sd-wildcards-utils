@@ -1,0 +1,48 @@
+lazy-wildcards:
+  cosplay-char:
+    vtuber:
+      # https://civitai.com/models/839076/giwi-worm-vtuber?modelVersionId=938740
+      # https://youtube.fandom.com/wiki/Giwi
+      # https://danbooru.donmai.us/posts?tags=giwi_%28vtuber%29&z=1
+      giwi:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/vtuber/giwi/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/vtuber/giwi/costume-ethnicity__
+            {, {1-2$$__lazy-wildcards/cosplay-char/vtuber/giwi/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/vtuber/giwi/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/vtuber/giwi/expressions__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/vtuber/giwi/env-bg__}|}
+        main-trigger-words:
+          - giwi, GiwiNun, GiwiVT, giwi_\(vtuber\)
+        costume-ethnicity:
+          - >-
+            red eyes, symbol-shaped pupils, yellow sclera, x-shaped pupils
+            , glasses, brown-framed eyewear, round eyewear
+            , worm
+            , purple hair
+            , (stomach mouth:1.2)
+        costume:
+          - playboy_bunny
+          - office_lady, button shirt
+          - crop top, short shorts
+          - leotard
+          - stomach, sports_bra
+          - camisole, panties
+        costume-elem:
+          - sexy, milf
+          - cleavage
+          - twintails
+          - (sharp_teeth, fangs)
+          - sweaty
+          - colored tongue, long tongue, purple tongue
+          - freckles
+          - gloves
+          - claws
+          - monster girl
+          - gangster
+        expressions:
+          - happy, cool
+        env-bg:
+          - at home
+

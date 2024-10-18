@@ -1,0 +1,83 @@
+lazy-wildcards:
+  subject:
+    style-elem:
+      # https://civitai.com/models/163054/sympattern-generate-various-symbolic-and-geometric-patterns
+      sympattern:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-elem/sympattern/style-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-elem/sympattern/style-pattern__}|}
+            {, {1-$$__lazy-wildcards/subject/style-elem/sympattern/style__}|}
+        style-main:
+          - sympattern, geometric pattern
+        style-pattern:
+          - Cubic
+          - Hexagonal
+          - Triangular
+          - starry sky
+          - planets
+          - moons
+          - all seeing eye
+          - angel wings
+          - cthulhu
+          - ominous atmosphere
+          - grass
+          - leaves
+        style:
+          - geometric pattern wallpaper
+          - doodle pattern
+          - vibrant
+          - colorful
+          - Doodle
+          - vignette
+          - symbolic patterns
+      glitch_art:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-elem/glitch_art/style-main__
+            {, {1-$$__lazy-wildcards/subject/style-elem/glitch_art/style__}|}
+        style-main:
+          - (glitch art, Glitching, glitch), Fault art
+        style:
+          - datastream_glitch
+          - fragmented_images
+      digital_rain:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-elem/sympattern/style-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-elem/sympattern/style__}|}
+        style-main:
+          - digital rain, matrix style
+        style:
+          - cyberpunk aesthetic
+          - virtual reality aesthetic
+          - __lazy-wildcards/subject/style-elem/glitch_art/prompts__
+          - digital rain background
+          - hacker theme
+          - green code aesthetic
+      # https://civitai.com/models/229166/code-style-cuz-richyrich515-wanted-me-to-ship-it
+      code_style:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-elem/code_style/style-main__)
+            {, {1-$$__lazy-wildcards/subject/style-elem/code_style/env-text__}|}
+            {, {1-$$__lazy-wildcards/subject/style-elem/code_style/style__}|}
+        style-main:
+          - code_style, codestyle
+        env-text:
+          - english text, source code
+          - zero and one
+        style:
+          - __lazy-wildcards/subject/style-elem/digital_rain/prompts__
+      # https://civitai.com/models/193008/binary-code-digital-art
+      binary_code_style:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-elem/binary_code_style/style-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-elem/binary_code_style/style__}|}
+        style-main:
+          - >-
+            {1-$$ and $$binary code|digital art}, only zero and one
+        style:
+          - __lazy-wildcards/subject/style-elem/digital_rain/prompts__
+

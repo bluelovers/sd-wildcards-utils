@@ -1,0 +1,79 @@
+lazy-wildcards:
+  subject:
+    env-elem:
+      road:
+        prompts:
+          - >-
+            ({1-2$$__lazy-wildcards/subject/env-elem/road/env__})
+            {0.4::, {1-$$__lazy-wildcards/subject/env-elem/road/env-style__}|}
+        env:
+          - rock road
+          - stone road
+          - wooden road
+          - brick road
+          - cement floor
+          - asphalt road
+          - gravel road
+          - dirt path, dirt road, muddy path
+          - marble floor
+          - tile floor
+          - grated walkway
+          - steel road
+          - perforated metal floor
+          - glass floor
+          - bamboo floor
+          - rubber path
+        env-style:
+          - dirty
+          - cobblestone
+          - old street
+          - historic road
+          - wooden planks
+          - pedestrian area
+          - sidewalk
+          - mosaic pavement
+          - decorative floor
+          - decorative tile
+          - industrial walkway
+          - transparent material
+          - high-tech floor
+          - metal grate
+          - eco-friendly materials
+          - floating walkway
+      stairs:
+        prompts:
+          - >-
+            stairs
+            {0.7::,({1-3$$__lazy-wildcards/subject/env-elem/stairs/env-stairs__})|}
+            {,{1-2$$__lazy-wildcards/subject/env-elem/stairs/env-stairs-style__}|}
+            {,{1-$$__lazy-wildcards/subject/env-elem/stairs/action__}|}
+            {,{1-$$__lazy-wildcards/subject/env-elem/stairs/env__}|}
+            {0.2::,{1-$$__lazy-wildcards/subject/env-elem/stairs/style__}|}
+        env-stairs:
+          - spiral stairs
+          - grand stairs
+          - carpeted stairs
+          - floating stairs
+          - curved stairs
+        env-stairs-style:
+          - wooden stairs
+          - stone stairs
+          - rock stairs
+          - metal stairs
+          - tree stairs
+          - perforated metal stairs
+          - glass stairs
+        env:
+          - stairwell
+          - __lazy-wildcards/subject/env-elem/railing/prompts__
+        action:
+          - sitting
+        style:
+          - classical Style
+          - minimalist style
+          - open_concept
+          - country style
+          - luxury style
+          - industrial style
+          - victorian style
+          - spiraling upwards

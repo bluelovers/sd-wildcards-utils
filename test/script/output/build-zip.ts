@@ -13,6 +13,7 @@ export default Bluebird.resolve()
 		zip_add_file(zip, join(__ROOT_OUTPUT_WILDCARDS, 'lazy-wildcards.yaml'));
 		
 		zip_add_file(zip, join(__ROOT_DATA, 'others/billions_of_all_in_one.yaml'));
+		zip_add_file(zip, join(__ROOT_DATA, 'others/navi_atlas.yaml'));
 
 		zip_add_file(zip, join(__ROOT_DATA, 'cf/bundle/corn-flakes-aio-bundle-sex.yaml'));
 

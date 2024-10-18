@@ -1,0 +1,62 @@
+lazy-wildcards:
+  subject:
+    env-elem:
+      gold-gemstone:
+        prompts:
+          - >-
+            gold, gemstone, gemtech
+            {,{1-$$__lazy-wildcards/subject/env-elem/gold-gemstone/env-gemstone__}|}
+            {,{1-$$__lazy-wildcards/subject/env-elem/gold-gemstone/style__}|}
+        env-gemstone:
+          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
+          - Malachite, GoldMalachiteWorld
+          - tanzanite \(gemstone\), GoldTanzaniteWorld
+          - amethyst \(gemstone\), GoldAmethystWorld, purple gemstone
+          - >-
+            {1-$$Marble|Marble crackle pattern|Marble swirl pattern|Marble pattern}
+          - __lazy-wildcards/utils/color-base__ gemstone
+          - __lazy-wildcards/utils/color-base__ gold
+          - __lazy-wildcards/utils/color-base__ marble
+          - pearl \(gemstone\)
+          - sapphire \(gemstone\), blue gemstone
+          - silver
+          - glass
+          - chrysoprase, jade \(gemstone\)
+          - ruby \(gemstone\), red gemstone
+          - spinel \(gemstone\), GoldSpinelWorld
+          - platinum
+          - amber \(gemstone\)
+          - glowing gem
+        style:
+          - crackle pattern
+          - swirl pattern
+          - fluid pattern
+          - dripping pattern
+          - internal reflections
+          - transparent
+          - inner details
+      # https://civitai.com/models/98615
+      gold-dripping:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/gold-dripping/env-main__
+            {0.3::, {1-$$__lazy-wildcards/subject/env-elem/gold-dripping/env-bg__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/env-elem/gold-dripping/costume__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/env-elem/gold-dripping/env__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/env-elem/gold-dripping/style__}|}
+        env-main:
+          - gold LQDGOD concept, (dripping, liquid:1.2) in the style of LQDGOD
+        env-bg:
+          - in front of LQDGOD gold storm sea
+          - inside a glass made of LQDGOD gold
+          - LQDGOD gold city
+          - LQDGOD gold moon
+        costume:
+          - dripping gold bodysuit, LQDGOD bodysuit
+        env:
+          - LQDGOD gold slime
+          - LQDGOD liquid gold water
+          - LQDGOD gold tree
+        style:
+          - summoning energy
+

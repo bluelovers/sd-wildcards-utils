@@ -46,7 +46,7 @@ lazy-wildcards:
         env-bg:
           - Cave_Formation
           - Ancient_Ruin
-          - Desert
+          - __lazy-wildcards/subject/env-bg/desert/prompts__
           - Fossilized_Rock
           - Sedimentary_Rock
           - Metamorphic_Rock
@@ -58,3 +58,34 @@ lazy-wildcards:
           - Cracked
           - Sandification
           - Lithification
+      # https://civitai.com/models/199118/moon-sciwhite?modelVersionId=224029
+      SciWhite:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-elem-texture/SciWhite/style-main__
+            {, {1-$$__lazy-wildcards/subject/style-elem-texture/SciWhite/env__}|}
+            {, {1-$$__lazy-wildcards/subject/style-elem-texture/SciWhite/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/style-elem-texture/SciWhite/style-main__}|}
+        style-main:
+          - SciWhite texture, m01n texture, in the style of m01n
+        style:
+          - white texture
+          - clear texture
+          - translucent texture
+          - dull texture
+          - glossy texture
+          - metallic texture
+          - reflective texture
+          - shiny texture
+          - scifi fashion
+        env:
+          - intricate box shapes artifact
+          - futuristic and complex computer with keyboard
+          - futuristic seismic meter with black screen
+          - water inside
+        env-bg:
+          - over clear skies background
+          - research facility room interior
+          - street passage with structures
+          - over clear white background
+

@@ -1050,7 +1050,7 @@ lazy-wildcards:
           - closed mouth
           - sleeveless dress
           - white veil, mouth veil
-          - gold trim
+          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
           - sidelocks
           - groin
           - hooded cloak, hood up
@@ -1493,64 +1493,6 @@ lazy-wildcards:
             (Saiyan Scouter, Saiyan_Scouter{,__lazy-wildcards/cosplay-char/dragon_ball/saiyan_scouter/costume-headwear__|}, scouter:1.2), tinted eyewear, dragon ball
         costume-headwear:
           - __lazy-wildcards/utils/color-base__-tinted eyewear
-    code_geass:
-      # https://civitai.com/models/131057/rakshata-chawla-anime-character-or-code-geass-or-ownwaifu?modelVersionId=143945
-      rakshata_chawla:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/main__
-            ,__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/costume-ethnicity__
-            {,__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/costume-weapon__|}
-            {,(__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/costume__)|}
-            {,__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/costume-eyes__|}
-            {,{1-$$__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/costume-elem__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/action__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/expressions__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/env__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/style__}|}
-        main:
-          - >-
-            rakshata_chawla, code geass,
-            ANIME_Rakshata_Chawla_aiwaifu69, aiwaifu69
-        costume-ethnicity:
-          - >-
-            blonde hair, indian, green eyes, long hair, facial mark, forehead mark,
-            __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
-        costume:
-          - white lab coat, long sleeves, red shirt, collared shirt
-          - arabian clothes, dress, harem outfit, partially fingerless gloves, veil
-        costume-eyes:
-          - v-shaped eyebrows
-        costume-elem:
-          - black panties
-          - collarbone
-          - lipstick, red lips
-          - makeup
-          - parted lips
-          - hair ornament
-          - __lazy-wildcards/dataset/costume-accessories-base__
-          - midriff
-          - navel piercing
-          - very long hair
-          - sidelocks
-          - >-
-            {1-$$bra|bra peek}
-          - fingernails, nail polish, red nails
-          - navel
-          - underwear
-          - >-
-            open {1-$$, open $$clothes|shirt|coat}
-        costume-weapon:
-          - holding smoking pipe, kiseru
-        action:
-          - hand up
-        env:
-          - knightmare_frame
-        expressions:
-          - calm_expression
-        style:
-          - casual
-          - engineering_genius
     dragons_crown:
       # https://civitai.com/models/26899/sorceress-dragons-crown?modelVersionId=32196
       sorceress:
@@ -1983,7 +1925,7 @@ lazy-wildcards:
           - white dress, pants, short sleeves, belt, pelvic curtain
         costume-elem:
           - lipstick, red makeup
-          - gold trim
+          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
           - chest jewel
           - __lazy-wildcards/dataset/costume-accessories-base__
           - mechanical limbs
@@ -2415,7 +2357,7 @@ lazy-wildcards:
           - cleavage
           - partially shaded face
           - thigh strap
-          - gold trim
+          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
         style:
           - fighting stance
     dark_souls:
@@ -2469,7 +2411,7 @@ lazy-wildcards:
         main-trigger-words:
           - nightmaiden, night_maiden \(elden_ring\)
         costume:
-          - helmet, white veil, gold trim, covered eyes, headdress
+          - helmet, white veil, __lazy-wildcards/subject/costume-elem/gold-trim/prompts__, covered eyes, headdress
           - armored dress, white cape, long sleeves, black footwear
         costume-elem:
           - robe
@@ -2534,7 +2476,7 @@ lazy-wildcards:
           - blue gloves
           - high heels, high heel boots
           - thick thighs, thighs
-          - gold trim
+          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
           - gem, red gemstone
           - floating hair
         costume-weapon:
@@ -2619,7 +2561,7 @@ lazy-wildcards:
           - __lazy-wildcards/dataset/costume-accessories-base__
           - navel, midriff, crop top, underboob
           - muscular
-          - gold trim
+          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
         style:
           - reverse trap, tomboy
           - see-through
@@ -2686,7 +2628,7 @@ lazy-wildcards:
           - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
           - dirty face
         env:
-          - desert, sand
+          - __lazy-wildcards/subject/env-bg/desert/prompts__
           - __lazy-wildcards/subject/env-elem/skull/prompts__
           - chain
           - __lazy-wildcards/subject/moment/weather-mist/prompts__
@@ -2867,7 +2809,7 @@ lazy-wildcards:
           - mole under mouth
           - sideboob
           - bandages
-          - gold trim
+          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
         expressions:
           - seductive smile
           - saliva, saliva trail
@@ -2913,7 +2855,7 @@ lazy-wildcards:
           - closed eyes
           - yellow halo
           - wooden_arms, moss-covered_arms, vine_wrapped_arms
-          - gold trim
+          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
         costume-weapon:
           - giant pearl
           - crystal ball
