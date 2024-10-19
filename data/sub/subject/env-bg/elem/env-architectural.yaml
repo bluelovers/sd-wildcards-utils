@@ -77,3 +77,52 @@ lazy-wildcards:
           - industrial style
           - victorian style
           - spiraling upwards
+      # https://civitai.com/models/858481/sewers?modelVersionId=960511
+      sewer:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/sewer/env-main__
+            {, ({1-$$__lazy-wildcards/subject/env-elem/sewer/env-bg__})|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/sewer/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/sewer/env-creatures__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/sewer/style__}|}
+
+        env-main:
+          - sewer, sewers
+        env-bg:
+          - sewer_tunnel 
+          - dark_tunnel
+          - flooded_sewers
+          - ancient_sewers
+          - brick_tunnels, stone walls 
+        env:
+          - damp_environment, damp_atmosphere 
+          - dim_green_light
+          - flickering_lights
+          - sewer_grates
+          - rusty_grate
+          - manhole_cover
+          - floating_trash, debris_float
+          - murky_water, polluted_water
+          - knee_deep_water
+          - maintenance_tools
+          
+          - overgrown_moss 
+          - low_ceiling 
+          - water
+        env-creatures:
+          - sewer_monster
+          - rats_swarm
+          - tentacle_monster 
+          - giant rats
+
+        style:
+          - urban_grime 
+          - lurking_in_shadows 
+          - claustrophobic_space
+          - creepy_noise
+          - subsurface scattering
+          - medieval
+          - fantasy
+
+
