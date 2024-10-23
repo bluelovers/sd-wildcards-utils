@@ -16,6 +16,8 @@ export default (async () => {
 			//join(__ROOT_DATA, 'lazy-wildcards.yaml'),
 			join(__ROOT_DATA, 'cf', 'bundle', 'corn-flakes-aio-bundle-sex.yaml'),
 			join(__ROOT_DATA, 'others', 'navi_atlas.yaml'),
+			join(__ROOT_DATA, 'others', 'CharaCreatorWildcards/eye_assambler.yaml'),
+			join(__ROOT_DATA, 'others', 'CharaCreatorWildcards/hair_assambler.yaml'),
 		], (file: any) =>
 		{
 			return readFile(file)
@@ -38,6 +40,7 @@ export default (async () => {
 			'Bo/**',
 			'person/**',
 			'halloween/**',
+			'chara_creator/**',
 		]
 	})
 
