@@ -60,7 +60,7 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 
 		ensureDirSync(outPath);
 
-		expect(actual.map(v => v.source).sort().join('\n')).toMatchFile(join(
+		expect(actual.map(v => v.source).sort().join('\n') + '\n\n').toMatchFile(join(
 			outPath,
 			file + '.txt'
 		))
