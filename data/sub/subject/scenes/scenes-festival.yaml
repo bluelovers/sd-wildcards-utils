@@ -1,0 +1,33 @@
+lazy-wildcards:
+  subject:
+    scenes-festival:
+      # https://civitai.com/models/851265/trick-or-treat?modelVersionId=952414
+      halloween_trick_or_treat:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/scenes-festival/halloween_trick_or_treat/style-main__
+            {, {1-$$__lazy-wildcards/subject/scenes-festival/halloween_trick_or_treat/expressions__}|}
+            {0.7::, {1-$$__lazy-wildcards/subject/scenes-festival/halloween_trick_or_treat/env__}|}
+            {, {1-$$__lazy-wildcards/subject/scenes-festival/halloween_trick_or_treat/style-pov__}|}
+            {, {1-$$__lazy-wildcards/subject/scenes-festival/halloween_trick_or_treat/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/scenes-festival/halloween_trick_or_treat/style__}|}
+        style-main:
+          - trick_or_treat, trick_or_treat_bag
+        env:
+          - candy_bag
+          - chocolate_candy
+          - candy_wrappers
+          - lollipops
+          - candy_corn
+          - candy_bowl
+        costume-weapon:
+          - holding bucket
+        expressions:
+          - grin
+          - smile
+          - open mouth
+        style-pov:
+          - standing in open front door
+        style:
+          - __lazy-wildcards/subject/style-theme/halloween/prompts__
+          - cute, kawaii

@@ -1,0 +1,253 @@
+chara_creator:
+  generators:
+    random_hair_extended:
+      - "__chara_creator/hair_color/sequencer_color_extended__ __chara_creator/hair_form/sequencer_form__ {__chara_creator/hair_form/acessories/*__|||}"  
+    random_hair_colorless:
+      - "__chara_creator/hair_form/sequencer_form__ {__chara_creator/hair_form/acessories/*__|||}" 
+    random_hair:
+      - "{__chara_creator/hair_color/sequencer_color_natural__|__chara_creator/hair_color/color_range/*__} __chara_creator/hair_form/sequencer_form__ {__chara_creator/hair_form/acessories/*__|||}" 
+  hair_color:
+    sequencer_color_extended:
+      - "__chara_creator/hair_color/color_modifier/*__ __chara_creator/hair_color/color_range/natural/*__ __chara_creator/hair_color/color_range/*__"
+    sequencer_color_natural:
+      - "{__chara_creator/hair_color/color_modifier/*__| | } __chara_creator/hair_color/color_range/natural/*__ __chara_creator/hair_color/color_range/natural/*__"
+    color_modifier:
+      streaked:
+        - streaked hair, 
+      gradient:
+        - gradient hair, 
+      multicolored:
+        - multicolored hair, 
+      two-tone:
+        - two-tone hair, 
+      inner-color:
+        - colored inner hair, 
+    color_range:
+      neon:
+        cyan:
+          - cyan hair, glowing hair, 
+        magenta:
+          - magenta hair, glowing hair, 
+        yellow:
+          - yellow hair, glowing hair, 
+        lime:
+          - lime green hair, glowing hair, 
+      vivid:
+        blue:
+          - blue hair, 
+        dark_blue:
+          - dark blue hair, 
+        aqua:
+          - aqua hair, 
+        pink:
+          - pink hair, 
+        purple:
+          - purple hair, 
+        lavender:
+          - lavender hair, 
+        green:
+          - green hair, 
+        dark_green:
+          - dark green hair, 
+        red:
+          - red hair, 
+        ginger:
+          - ginger red hair, 
+        orange:
+          - orange hair, 
+        pastel: #IllustriousXL
+          - iridescent hair, pastel colors, 
+        rainbow:
+          - rainbow hair, 
+      natural:
+        blonde:
+          - blonde hair, 
+        platinum_blonde:
+          - platinum blonde hair, 
+        brown:
+          - brown hair, 
+        light_brown:
+          - light brown hair, 
+        black:
+          - black hair, 
+        gray:
+          - gray hair, 
+        white:
+          - white hair, 
+  hair_morphs: #IllustriousXL
+    slimy:
+      - slime hair, translucent hair, 
+    flaming:
+      - fiery hair, glowing hair, embers, 
+    energy:
+      - energy hair, glowing hair, light particles, 
+    liquid:
+      - liquid hair, 
+    tentacle:
+      - tentacle hair, 
+    mechanical:
+      - mechanical hair, metallic hair, chrome, 
+    crystal:
+      - crystal hair, houseki no kuni, 
+    cloud:
+      - cloud hair, translucent hair, 
+  hair_form:
+    sequencer_form:
+      - "__chara_creator/hair_form/base_hairdo/*__ { | |__chara_creator/hair_form/hair_flow/*__} { |__chara_creator/hair_form/addons/front/*__} { |__chara_creator/hair_form/addons/back/*__|__chara_creator/hair_form/addons/side/*__} { | | |__chara_creator/hair_form/addons/top/*__} { | |__chara_creator/hair_form/modifiers/*__}"
+    hair_flow:
+      smooth:
+        - straight hair, 
+      curly:
+        - curly hair,
+      blunt:
+        - blunt ends,
+      messy:
+        - messy hair, 
+      spiky:
+        - spiked hair, 
+      drills:
+        - drill hair, 
+      dreadlocks:
+        - dreadlocks, 
+    base_hairdo:
+      other:
+        undercut:
+          - undercut, 
+        afro:
+          - afro, 
+      long_hair:
+        basic:
+          - long hair, 
+        extra:
+          - absurdly long hair, 
+        low-tied:
+          - low-tied long hair, 
+        hime_cut:
+          - hime cut, 
+      medium_hair:
+        basic:
+          - medium hair, 
+        flipped:
+          - medium hair, flipped hair, 
+      short_hair:
+        bowl_cut: #IllustriousXL
+          - bowl cut, 
+        inverted_bob: #IllustriousXL
+          - inverted bob, 
+        basic:
+          - short hair, 
+        extra:
+          - very short hair, 
+        bob_cut:
+          - bob cut, 
+        pixie_cut:
+          - pixie cut, 
+        with_sidelocks:
+          - short hair with long locks, 
+    addons:
+      front:
+        arched_bangs: #IllustriousXL
+          - arched bangs, 
+        diagonal_bangs: #IllustriousXL
+          - diagonal bangs, 
+        forehead:
+          - forehead, 
+        pulled_bangs:
+          - bangs pinned back, hair slicked back, 
+        blunt_bangs:
+          - blunt bangs, 
+        asymmetrical_bangs:
+          - asymmetrical bangs, 
+        long_bangs:
+          - hair over eyes, eyes_visible_through_hair, 
+        one_eye_bangs:
+          - hair over one eye, 
+        crossed_bangs:
+          - crossed bangs, 
+        swept_bangs:
+          - swept bangs, 
+        parted_bangs:
+          - parted bangs, 
+      side:
+        cornrows: #IllustriousXL
+          - cornrows, 
+        sidelocks_low-tied: #IllustriousXL
+          - low-tied sidelocks, 
+        onetail:
+          - one side up , 
+        twintails:
+          - twintails,
+        twintails_low:
+          - low twintails, 
+        twinbraids:  
+          - twin braids,
+        twin_braids_low:  
+          - low twin braids, low twintails, 
+        hairbun_cone:
+          - cone hair bun,
+        hairbun_double:
+          - double bun, 
+        pigtails:
+          - short pigtails, 
+        flaps:
+          - hair flaps, 
+      back:
+        ponytail_low: #IllustriousXL
+          - low ponytail, 
+        ponytail:
+          - ponytail, 
+        ponytail_folded:
+          - folded ponytail, 
+        ponytail_high:
+          - high ponytail, 
+        ponytail_short:
+          - short ponytail, 
+        ponytail_braided:
+          - braided ponytail, 
+      top:
+        intakes: #IllustriousXL
+          - hair intakes, 
+        topknot: #IllustriousXL
+          - topknot, 
+        ahoge:
+          - ahoge, 
+        ahoge_large:
+          - huge ahoge, ahoge, 
+        ahoge_heart:
+          - heart ahoge, 
+        ahoge_douple:
+          - antenna hair, double ahoge,  
+    acessories:
+      bun_cover:
+        - bun cover, hairpods, 
+      hair_bell:
+        - hair ornament, hair bell, 
+      hair_bobbles:
+        - hair ornament, hair bobbles, 
+      hair_bow:
+        - hair ornament, hair bow, 
+      hair_ribbon:
+        - hair ornament, hair ribbon, 
+      hairclip:
+        - hair ornament, hairclip, 
+      hairpin_basic:
+        - hair ornament, hairpin, 
+      hairpin_flower:
+        - hair ornament, hair flower, 
+      hairband:
+        - hairband, 
+      beads:
+        - hair beads, 
+    modifiers:
+        loose_strands: #IllustriousXL
+          - loose hair strand, 
+        thick_hair: #IllustriousXL
+          - big hair, 
+        cowlick: #IllustriousXL
+          - cowlick, 
+        braid:
+          - braid, 
+        asymmetrical:
+          - asymmetrical hair, 
+        sidelocks:
+          - sidelocks, 

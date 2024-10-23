@@ -101,6 +101,11 @@ lazy-wildcards:
           - symmetrical breasts
           - asymmetrical breasts
           - breasts apart
+      breasts-downblouse:
+        prompts:
+          - >-
+            downblouse, leaning forward
+            {, begging|}
       # https://civitai.com/models/337704?modelVersionId=378121
       breasts-bra-peek:
         prompts:
@@ -110,7 +115,7 @@ lazy-wildcards:
             {0.3::,{1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-peek/costume-elem__}|}
         costume-breasts:
           - bra visible through clothes
-          - downblouse, leaning forward
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-downblouse/prompts__
           - button gap
         costume-elem:
           - collarbone

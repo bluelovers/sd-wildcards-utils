@@ -1,0 +1,91 @@
+chara_creator:
+  generators:
+    random_eyes_extended:
+      - "__chara_creator/eye_form/sequencer_form__ __chara_creator/eye_color/sequencer_color_extended__ {__chara_creator/eye_color/modifiers/*__||}{__chara_creator/eye_color/modifiers/*__||||}" 
+    random_eyes_colorless:
+      - "__chara_creator/eye_form/sequencer_form__{__chara_creator/eye_color/modifiers/*__|||}{__chara_creator/eye_color/modifiers/*__||||}" 
+    random_eyes:
+      - "__chara_creator/eye_form/sequencer_form__ __chara_creator/eye_color/sequencer_color_natural__{__chara_creator/eye_color/modifiers/*__|||}{__chara_creator/eye_color/modifiers/*__||||}"  
+  eye_form:
+    sequencer_form:
+      - "{__chara_creator/eye_form/eye_shape/*__|} {__chara_creator/eye_form/pupils/*__||}" 
+    pupils:
+      ringed:
+        - ringed eyes, 
+      blank:
+        - blank eyes, 
+      beastial:
+        - slit pupils, 
+      cross-shaped:
+        - cross-shaped pupils, 
+      heart-shaped:
+        - heart-shaped pupils, 
+      x-shaped:
+        - x-shaped pupils, 
+      random_symbol:
+        - symbol-shaped pupils, 
+    eye_shape: #IllustriousXL
+      natural:
+        - " "
+      jitome:
+        - jitome, 
+      tareme:
+        - tareme, 
+      tsurime:
+        - tsurime, 
+      sanpaku:
+        - sanpaku, 
+      circle_eyes:
+        - solid circle eyes, 
+  eye_color:
+    sequencer_color_extended:
+      - "__chara_creator/eye_color/iris/*__ {__chara_creator/eye_color/sclera/*__|||}"
+    sequencer_color_natural:
+      - "__chara_creator/eye_color/iris/*__ "
+    sclera:
+      black:
+        - black sclera, 
+      red:
+        - red sclera, 
+      blue:
+        - blue sclera, 
+      yellow:
+        - yellow sclera, 
+    iris: 
+      chromatic:
+        - multicolored eyes, 
+      aqua:
+        - aqua eyes, 
+      blue:
+        - blue eyes, 
+      brown:
+        - brown eyes, 
+      black:
+        - black eyes, 
+      silver:
+        - grey eyes, 
+      green:
+        - green eyes, 
+      orange:
+        - orange eyes, 
+      pink:
+        - pink eyes, 
+      purple:
+        - purple eyes, 
+      red:
+        - red eyes, 
+      yellow:
+        - yellow eyes, 
+    modifiers:
+      sparking:
+        - sparkling eyes, 
+      eyelashes:
+        - colored eyelashes, 
+      eye_shadow:
+        - eyeshadow, 
+      heterochromia:
+        - heterochromia, 
+      glowing:
+        - glowing eyes, 
+      eyebags:
+        - bags under eyes, 

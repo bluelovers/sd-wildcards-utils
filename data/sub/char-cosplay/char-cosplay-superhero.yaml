@@ -1,0 +1,24 @@
+lazy-wildcards:
+  cosplay-char:
+    Marvel_Comics:
+      # https://civitai.com/models/765456/american-dream-marvel-comics?modelVersionId=856163
+      American_Dream:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/Marvel_Comics/American_Dream/main-trigger-words__
+            {, __lazy-wildcards/cosplay-char/Marvel_Comics/American_Dream/costume-ethnicity__|}
+            {, {1-2$$__lazy-wildcards/cosplay-char/Marvel_Comics/American_Dream/costume__}|}
+            , __lazy-wildcards/cosplay-char/Marvel_Comics/American_Dream/costume-headwear__
+            {, {1-$$__lazy-wildcards/cosplay-char/Marvel_Comics/American_Dream/costume-weapon__}|}
+        main-trigger-words:
+          - AmericanDream
+        costume-ethnicity:
+          - blonde_hair, long_hair, blue_eyes, red_lipstick
+        costume-headwear:
+          - ADUnmasked
+          - (mask:1.2)
+        costume:
+          - superhero, bodysuit, star \(symbol\), red_fingerless_gloves, white_sleeves, blue_shoulders
+        costume-weapon:
+          - adshield, shield
+

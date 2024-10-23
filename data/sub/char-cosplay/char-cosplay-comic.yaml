@@ -154,4 +154,29 @@ lazy-wildcards:
           - sitting
         env:
           - __lazy-wildcards/subject/env-elem/chair/prompts__
+    # https://danbooru.donmai.us/posts?tags=getbackers&z=1
+    getbackers:
+      # https://civitai.com/models/115524?modelVersionId=124992
+      # https://danbooru.donmai.us/posts?tags=akabane_kuroudo&z=2
+      akabane_kuroudo:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/getbackers/akabane_kuroudo/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/getbackers/akabane_kuroudo/costume-ethnicity__
+            , __lazy-wildcards/cosplay-char/getbackers/akabane_kuroudo/costume__
+            {, {1-$$__lazy-wildcards/cosplay-char/getbackers/akabane_kuroudo/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/getbackers/akabane_kuroudo/action-pose__}|}
+        main-trigger-words:
+          - akabane_kuroudo, AkabaneKuroudo, kuroudo akabane, getbackers
+        costume-ethnicity:
+          - black hair, hair between eyes
+        costume:
+          - (hat over eyes, black formal clothes, white gloves, long coat)
+        costume-weapon:
+          - holding card
+        action-pose:
+          - adjusting headwear
+          - adjusting clothes
+          - hand in pocket
+          - head tilt
 

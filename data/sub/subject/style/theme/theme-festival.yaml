@@ -32,4 +32,41 @@ lazy-wildcards:
         env-bg:
           - altar, ofrenda, ceremonial_altar, memorial_altar
           - decorated_grave, cemetery_decoration, grave_flowers, memorial_grave
+      halloween:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-theme/halloween/style-main__
+            {, {1-$$__lazy-wildcards/subject/style-theme/halloween/env-bg__}|}
+            {, {1-2$$__lazy-wildcards/subject/style-theme/halloween/costume__}|}
+            {, {1-$$__lazy-wildcards/subject/style-theme/halloween/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-theme/halloween/action-pose__}|}
+            {, {1-$$__lazy-wildcards/subject/style-theme/halloween/env__}|}
+            {, {1-$$__lazy-wildcards/subject/style-theme/halloween/style__}|}
+        style-main:
+          - halloween
+        env:
+          - jack_o_lantern, jack-o'-lantern
+          - ghost_decorations
+          - doorstep_pumpkins
+          - fog_machine
+          - spider_web_decorations
+          - glowing_eyes_decorations
+        env-bg:
+          - haunted_house
+          - halloween_street
+          - front_door_decorations
+        costume:
+          - witch_costume, pointy hat, cloak, broomstick
+          - vampire_costume, dressed as a vampire, with a cape, fangs, and fake blood
+          - ghost_costume, made of a white sheet with cut-out eyeholes
+          - mask_wearing
+          - halloween costume
+        costume-elem:
+          - cosplay
+          - fangs, fang out, teeth
+        action-pose:
+          - claw pose
+        style:
+          - spooky_lights
+          - creepy_sounds
 

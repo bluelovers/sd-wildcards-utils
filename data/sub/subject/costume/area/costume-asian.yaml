@@ -98,3 +98,44 @@ lazy-wildcards:
       hanfu_lingerie:
         prompts:
           - (hanfu lingerie), see-through
+      # https://civitai.com/models/23715?modelVersionId=28331
+      # https://civitai.com/models/109114/tq-hmong-clothes-or-trang-phuc-hmong-or-clothing-lora
+      # https://civitai.com/models/143263
+      # https://civitai.com/models/875243
+      miaozu_hmong:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/miaozu_hmong/main-trigger-words__
+            {, __lazy-wildcards/subject/costume/miaozu_hmong/costume__}
+            , __lazy-wildcards/subject/costume/miaozu_hmong/costume-headwear__
+            {, {1-$$__lazy-wildcards/subject/costume/miaozu_hmong/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/miaozu_hmong/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/miaozu_hmong/style__}|}
+        main-trigger-words:
+          - (miaozu, hmong, miao, miaojiang)
+        costume:
+          - (hmong costume, miaozu costume, hmong dress, miaozu dress)
+        costume-elem:
+          - pleated skirts, hmong_skirt
+          - >-
+            silver ornaments
+            , silver {1-$$, silver $$jewelry|necklaces|bracelets|earrings}
+          - traditional clothing, women's traditional attire
+          - silver horns
+          - bare shoulders
+        costume-headwear:
+          - (silver_headdress, miao_headpieces, hmong headwear:1.2)
+        env-bg:
+          - hmong_village
+          - mountainous areas
+          - wooden_stilt_house, wooden houses built on stilts to adapt to the terrain
+          - terraced fields
+          - lush forests
+        style:
+          - miao_embroidery, miao_textiles
+          - colorful embroidery
+          - intricate geometric patterns
+          - festivals, ceremonies
+          - tribal_fashion, Hmong and Miao cultures
+          - blending ancient craftsmanship with bold color palettes
+          - miao_drum_dance

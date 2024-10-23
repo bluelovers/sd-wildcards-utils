@@ -108,3 +108,14 @@ lazy-wildcards:
           - head grab
           - chin grab
           - neck grab
+      pose-bottom-open-legs:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/action-nsfw-others/pose-bottom-open-legs/action-pose__}
+        action-pose:
+          - >-
+            {1-$$spread legs|open legs}
+          - >-
+            {1-$$squatting|crouching|squatting cowgirl position}
+          - (straddle)
+

@@ -1,0 +1,61 @@
+lazy-wildcards:
+  subject:
+    env-elem:
+      mud:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/mud/env-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/mud/style__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/mud/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/mud/env__}|}
+        env-main:
+          - (mud, silt:1.2), dirty, dirt, soil, Loam, clay, wet, mdpt1, mud pit, muddy
+        style:
+          - >-
+            ({1-$$plastered with mud|smeared with mud|splashes mud}:1.2)
+          - ominous_presence
+          - unsettling_noises
+          - spectral_appearance
+          - night
+          - hostile_environment
+          - foreboding_atmosphere
+          - creepy_vibes
+          - hidden_perils
+          - forgotten_civilization
+          - partially submerged
+        env:
+          - >-
+            {1-$$ancient bare tree|bare tree|tree|branch}
+          - __lazy-wildcards/subject/env-elem/moss/prompts__
+          - >-
+            {1-$$dirty face|dirty clothes|dirty feet}
+          - grass
+          - overgrown with thick vines
+          - >-
+            {1-$$lush vegetation|dense underbrush|overgrown landmarks}
+          - molten
+          - mysterious waters
+          - shadowy vegetation
+          - __lazy-wildcards/subject/moment/weather-mist/prompts__
+          - desolate landscape
+          - ghostly figures
+          - moonlit water
+          - nocturnal creatures
+          - dark foliage
+          - unclear waters
+          - dense underbrush
+          - twisted trees
+          - treacherous terrain
+          - mysterious glow
+        env-bg:
+          - wetlands, marsh
+          - swamp
+          - lake
+          - dark background
+          - >-
+            {1-$$dark swamp|gloomy marsh|haunted_swamp|murky swamp|forbidding swamp|ominous swamp}
+          - >-
+            {1-$$swamp ruins|ancient structures}
+          - enchanted_swamp
+          - __lazy-wildcards/subject/env-bg/swamp-*/prompts__
+

@@ -269,4 +269,40 @@ lazy-wildcards:
             {interior|exterior}
           - radioactive_mutation, radiation_exposure
           - post_nuclear_disaster
+      # https://civitai.com/models/871343/greebles-add-details-for-machinery?modelVersionId=975320
+      # https://en.wikipedia.org/wiki/Greeble
+      # https://home.gamer.com.tw/artwork.php?sn=5004538
+      greebles:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-punk/greebles/env-style__
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/greebles/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/greebles/style__}|}
+        env-style:
+          - >-
+            (greebles, greeblies{0.3:::{1.2|1.3|1.4}|})
+            , complex surfaces
+        env:
+          - small mechanical details added to large surfaces
+          - detailed vehicle
+          - detailed mecha
+          - detailed robot
+          - numerous small components
+          - futuristic mechanics
+          - visible bolts
+          - visible pipes
+          - visible gears
+          - mecha_parts
+          - pistons
+          - servos
+          - hydraulics
+          - external mechanisms
+        style:
+          - kitbashing
+          - illusion of complexity
+          - sci-fi
+          - industrial aesthetic
+          - nurnies
+          - greebly
+          - greeble-heavy designs
 
