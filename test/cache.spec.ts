@@ -75,7 +75,7 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 
 		ensureDirSync(outPath);
 
-		expect(findWildcardsYAMLPathsAll(obj).map(s => pathsToWildcardsPath(s, true)).join('\n')).toMatchFile(join(
+		expect(findWildcardsYAMLPathsAll(obj).map(s => pathsToWildcardsPath(s, true)).join('\n')+'\n\n').toMatchFile(join(
 			outPath,
 			file + '.txt'
 		))
