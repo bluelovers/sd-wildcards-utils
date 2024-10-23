@@ -22,6 +22,9 @@ export default Bluebird.resolve()
 		zip_add_file(zip, join(__ROOT_DATA, 'others/corn-flakes-martial-artist.yaml'));
 		zip_add_file(zip, join(__ROOT_DATA, 'others/corn-flakes-onmyoji.yaml'));
 
+		zip_add_file(zip, join(__ROOT_DATA, 'others/CharaCreatorWildcards/eye_assambler.yaml'), 'CharaCreatorWildcards/eye_assambler.yaml');
+		zip_add_file(zip, join(__ROOT_DATA, 'others/CharaCreatorWildcards/hair_assambler.yaml'), 'CharaCreatorWildcards/hair_assambler.yaml');
+
 		fixedJSZipDate(zip, new Date('2000-12-24 23:00:00Z'))
 
 		await zip.generateAsync({
