@@ -16,6 +16,7 @@ import {
 } from '../src/index';
 import { toMatchFile } from 'jest-file-snapshot2';
 import { ensureDir, ensureDirSync, ensureFile, ensureFileSync } from 'fs-extra';
+import picomatch from 'picomatch';
 
 expect.extend({ toMatchFile });
 
@@ -28,6 +29,35 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 {
 
 	test.skip(`dummy`, () => {});
+
+	const isMatch01 = picomatch([
+		'./*.yaml',
+		'sub/**/*.yaml',
+	], {
+		ignore: [
+			'./cf',
+			'./others',
+		],
+	});
+
+	const isMatch02 = picomatch([
+		'__lazy-wildcards/prompts/**',
+		'__lazy-wildcards/book/**',
+		
+		'__lazy-wildcards/costume/**',
+		'__lazy-wildcards/char/**',
+		'__lazy-wildcards/background/**',
+
+		'__lazy-wildcards/dataset/**',
+
+		'__mix-lazy-auto/**',
+
+		'__lazy-wildcards/utils/**',
+
+		'__lazy-wildcards/cosplay-*/*/*/prompts__',
+
+		'__lazy-wildcards/subject/*/*/prompts__',
+	]);
 
 	test.each(globSync([
 		'cf/costumes/*.yaml',
@@ -50,13 +80,13 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 
 		let actual = matchDynamicPromptsWildcardsAll(obj.toString(), true);
 
-		let outPath = dirname(join(
+		let outPath = join(
 			__ROOT,
 			'test',
 			'__file_snapshots__',
 			'matchDynamicPromptsWildcardsAll',
-			file
-		));
+			//file
+		);
 
 		ensureDirSync(outPath);
 
@@ -65,20 +95,47 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 			file + '.txt'
 		))
 
-		outPath = dirname(join(
+		outPath = join(
 			__ROOT,
 			'test',
 			'__file_snapshots__',
 			'findWildcardsYAMLPathsAll',
-			file
-		));
+			//file
+		);
 
 		ensureDirSync(outPath);
 
-		expect(findWildcardsYAMLPathsAll(obj).map(s => pathsToWildcardsPath(s, true)).join('\n')+'\n\n').toMatchFile(join(
+		let list = findWildcardsYAMLPathsAll(obj).map(s => pathsToWildcardsPath(s, true));
+
+		expect(list.join('\n')+'\n\n').toMatchFile(join(
 			outPath,
 			file + '.txt'
 		))
+
+		if (isMatch01(file))
+		{
+			list = list.filter(s => isMatch02(s));
+
+			if (list.length)
+			{
+				outPath = join(
+					__ROOT,
+					'test',
+					'__file_snapshots__',
+					'entry',
+					//file
+				);
+
+				expect(list.join('\n') + '\n\n').toMatchFile(join(
+					outPath,
+					file + '.txt'
+				))
+			}
+			else
+			{
+				console.error('[error]', file)
+			}
+		}
 
 	});
 
