@@ -20,12 +20,15 @@ lazy-wildcards:
         {__lazy-wildcards/char/pose/pose-anything__|__lazy-wildcards/char/pose/pose-nsfw__}
     hair:
       - >-
-        __lazy-wildcards/char/hair-length__,__lazy-wildcards/char/haircolor__{,__lazy-wildcards/char/haircuts-multis__|}{,__lazy-wildcards/char/hair-style-multi__|}
+        __lazy-wildcards/char/hair-length__{,__lazy-wildcards/char/haircuts-multis__|}{,__lazy-wildcards/char/hair-style-multi__|}{,__lazy-wildcards/subject/costume-elem-accessories/hair_ornament/prompts__|}
+    hair-with-color:
+      - >-
+        __lazy-wildcards/char/haircolor__,__lazy-wildcards/prompts/hair__
     hair-all:
       - >-
-        {3::__lazy-wildcards/prompts/hair__| 0.1::__lazy-wildcards/char/hair-bald__}
-      - >-
-        __lazy-wildcards/prompts/hair__
+        {3::{__lazy-wildcards/prompts/hair__|__lazy-wildcards/prompts/hair-with-color__}|0.1::__lazy-wildcards/char/hair-bald__}
+      - __lazy-wildcards/prompts/hair__
+      - __lazy-wildcards/prompts/hair-with-color__
     eyes:
       - (__lazy-wildcards/char/eyecolor__)
       - >-
