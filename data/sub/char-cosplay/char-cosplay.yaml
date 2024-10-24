@@ -973,7 +973,7 @@ lazy-wildcards:
           - closed mouth
           - sleeveless dress
           - white veil, mouth veil
-          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
           - sidelocks
           - groin
           - hooded cloak, hood up
@@ -1542,7 +1542,7 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/cosplay-char/alien-predator/xenomorph/costume-main__
             ,__lazy-wildcards/cosplay-char/alien-predator/xenomorph/costume-ethnicity__
-            {0.3::,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/costume-ethnicity-main__}|}
+            {0.3::,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/env-creatures__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/costume-elem__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/costume-weapon__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/action__}|}
@@ -1550,8 +1550,8 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/env__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/style__}|}
         costume-main:
-          - (xenomorph, xenomorphdna, FemXeno, xenomilf, xeno, xenomorph style:1.2), alien \(series\), 1other
-        costume-ethnicity-main:
+          - (xenomorph, xenomorphdna, FemXeno, xenomilf, xeno, xenomorph style, nv_xenodna:1.2), alien \(series\), 1other
+        env-creatures:
           - proto-xenomorph
           - xenomorph queen, alien queen
         costume-ethnicity:
@@ -1848,7 +1848,7 @@ lazy-wildcards:
           - white dress, pants, short sleeves, belt, pelvic curtain
         costume-elem:
           - lipstick, red makeup
-          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
           - chest jewel
           - __lazy-wildcards/dataset/costume-accessories-base__
           - mechanical limbs
@@ -2280,7 +2280,7 @@ lazy-wildcards:
           - cleavage
           - partially shaded face
           - thigh strap
-          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
         style:
           - fighting stance
     dark_souls:
@@ -2334,7 +2334,7 @@ lazy-wildcards:
         main-trigger-words:
           - nightmaiden, night_maiden \(elden_ring\)
         costume:
-          - helmet, white veil, __lazy-wildcards/subject/costume-elem/gold-trim/prompts__, covered eyes, headdress
+          - helmet, white veil, __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__, covered eyes, headdress
           - armored dress, white cape, long sleeves, black footwear
         costume-elem:
           - robe
@@ -2399,7 +2399,7 @@ lazy-wildcards:
           - blue gloves
           - high heels, high heel boots
           - thick thighs, thighs
-          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
           - gem, red gemstone
           - floating hair
         costume-weapon:
@@ -2484,7 +2484,7 @@ lazy-wildcards:
           - __lazy-wildcards/dataset/costume-accessories-base__
           - navel, midriff, crop top, underboob
           - muscular
-          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
         style:
           - reverse trap, tomboy
           - see-through
@@ -2732,7 +2732,7 @@ lazy-wildcards:
           - mole under mouth
           - sideboob
           - bandages
-          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
         expressions:
           - seductive smile
           - saliva, saliva trail
@@ -2778,7 +2778,7 @@ lazy-wildcards:
           - closed eyes
           - yellow halo
           - wooden_arms, moss-covered_arms, vine_wrapped_arms
-          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
         costume-weapon:
           - giant pearl
           - crystal ball

@@ -48,6 +48,7 @@ lazy-wildcards:
           - barcode tattoo
           - flower tattoo
       # https://civitai.com/models/372610/irezumi-world-world-morph-lora-flux-or-sdxl-or-sd-15?modelVersionId=416199
+      # https://civitai.com/models/170447/irezumi-yakuzas-tattoos-concept-or-ownwaifu?modelVersionId=191518
       Japanese-tattoo-Irezumi:
         prompts:
           - >-
@@ -56,7 +57,7 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/subject/costume-tattoo/Japanese-tattoo-Irezumi/env__}|}
             {,{1-$$__lazy-wildcards/subject/costume-tattoo/Japanese-tattoo-Irezumi/style__}|}
         costume-main:
-          - EPIrezumiWorld, Irezumi, Wabori, Harimono, japanese tattoo, japanese style tattoo, traditional japanese tattoo, yakuza, yakuza tattoo
+          - EPIrezumiWorld, Irezumi, Wabori, Harimono, japanese tattoo, japanese style tattoo, traditional japanese tattoo, yakuza, yakuza tattoo, CONCEPT_irezumi_YakuzaTattoo_ownwaifu
         costume-tattoo:
           - full_body_tattoo
           - bodysuit_tattoo
@@ -64,18 +65,18 @@ lazy-wildcards:
           - gangster
           - japanese_gangster
         env:
-          - cherry blossoms
-          - japanese_flora
-          - chrysanthemums
-          - lotus
-          - japanese_fauna
-          - Koi_fish
-          - dragons
-          - tigers
-          - mythological_figures
-          - Oni_demons
-          - Tengu
-          - samurai_spirits
+          - cherry blossoms patterns
+          - japanese_flora patterns
+          - chrysanthemums patterns
+          - lotus patterns
+          - japanese_fauna patterns
+          - Koi_fish patterns
+          - dragons patterns
+          - tigers patterns
+          - mythological_figures patterns
+          - Oni_demons patterns
+          - Tengu patterns
+          - samurai_spirits patterns
         style:
           - cyberpunk
           - scifi

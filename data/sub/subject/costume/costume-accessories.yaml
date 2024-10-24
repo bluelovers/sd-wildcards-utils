@@ -1,6 +1,6 @@
 lazy-wildcards:
   subject:
-    costume-elem:
+    costume-elem-accessories:
       earrings:
         prompts:
           - earrings
@@ -19,7 +19,7 @@ lazy-wildcards:
       chain-acc:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/costume-elem/chain-acc/costume-elem__}
+            {1-$$__lazy-wildcards/subject/costume-elem-accessories/chain-acc/costume-elem__}
         costume-elem:
           - chain leash
           - chain necklace
@@ -28,8 +28,8 @@ lazy-wildcards:
       gold-trim:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume-elem/gold-trim/costume-elem-main__
-            {0.3::, {1-$$__lazy-wildcards/subject/costume-elem/gold-trim/costume-elem__}|}
+            __lazy-wildcards/subject/costume-elem-accessories/gold-trim/costume-elem-main__
+            {0.3::, {1-$$__lazy-wildcards/subject/costume-elem-accessories/gold-trim/costume-elem__}|}
         costume-elem-main:
           - gold trim, gold-trimmed
         costume-elem:
@@ -43,4 +43,24 @@ lazy-wildcards:
           - >-
             (idcard, id_card, name tag)
             {, lanyard|}
+      # __chara_creator/hair_form/acessories/*__
+      hair_ornament:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-accessories/hair_ornament/costume-elem-main__
+            {0.8::, {1-3$$__lazy-wildcards/subject/costume-elem-accessories/hair_ornament/costume-elem__}|}
+        costume-elem-main:
+          - hair ornament
+        costume-elem:
+          - bun cover
+          - hairpods
+          - hair bell
+          - hair bobbles
+          - hair bow
+          - hair ribbon
+          - hairclip
+          - hairpin
+          - hair flower
+          - hairband
+          - hair beads
 

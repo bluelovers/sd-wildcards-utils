@@ -118,4 +118,9 @@ lazy-wildcards:
           - >-
             {1-$$squatting|crouching|squatting cowgirl position}
           - (straddle)
+      bound:
+        prompts:
+          - >-
+            bound
+            {, bound {1-$$, bound $$legs|arms|wrists|ankles|feet|together}|}
 

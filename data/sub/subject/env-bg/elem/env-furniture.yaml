@@ -50,4 +50,24 @@ lazy-wildcards:
           - peacock chair
           - >-
             {1-$$ style, $$rattan|wicker} style
+      coffin:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/coffin/env-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/coffin/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/coffin/action__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/coffin/style__}|}
+        env-main:
+          - coffin
+        env:
+          - open_coffin
+          - vampire_coffin
+          - ancient_coffin
+        action:
+          - lying inside coffin
+          - lying
+        style:
+          - funeral_scene
+          - gothic_style
+          - burial_ritual
 
