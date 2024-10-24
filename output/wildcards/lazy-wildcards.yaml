@@ -8020,6 +8020,26 @@ lazy-wildcards:
           - chinese clothes
           - japanese clothes
           - dress
+      armor:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/armor/costume__{,{1-$$__lazy-wildcards/subject/costume/armor/costume-elem__}|}
+        costume:
+          - armor
+          - bikini armor
+        costume-elem:
+          - vambraces
+          - shoulder armor,pauldrons
+          - breastplate
+      armor-spiked:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume/armor-spiked/costume-elem__}{0.3::,__lazy-wildcards/subject/costume/armor/prompts__|}
+        costume-elem:
+          - spiked armor
+          - spiked collar
+          - spiked bracelet
+          - shoulder spikes,spiked pauldrons
       Military_Uniform_of_Chinese_Red_Army:
         prompts:
           - >-
