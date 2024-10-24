@@ -504,7 +504,7 @@ lazy-wildcards:
       - hair intakes
       - >-
         {low |}twin braids
-      - double bun
+      - __lazy-wildcards/subject/costume-ethnicity-hair/*/prompts__
       - tendril bangs hairstyle
       - voluminous_look
       - elegant_finish
@@ -512,7 +512,8 @@ lazy-wildcards:
       - hair spread out
       - big hair
       - loose hair strand
-      - __chara_creator/hair_form/sequencer_form__
+      - >-
+        {1-3$$__chara_creator/hair_morphs/*__}
     haircuts-multis:
       - >-
         {1-4$$ hair,$$__person/regular/haircuts-*__} hair
@@ -544,6 +545,7 @@ lazy-wildcards:
       - >-
         Shaggy Mullet Hair Style,shaggyMullet,shaggyMullet hair,(disheveled,messy hair,thinned hair)
       - rolled lob hairstyle,elegant_finish
+      - __chara_creator/hair_form/sequencer_form__
     hair-bald:
       - >-
         (Completely bald,bald,bald girl:1.3)
@@ -3337,6 +3339,7 @@ lazy-wildcards:
           - __lazy-wildcards/subject/env-elem/moss/prompts__
           - candle
           - ancient sarcophagus
+          - __lazy-wildcards/subject/env-elem/coffin/prompts__
         style:
           - cybernetic
           - enchanted
@@ -3344,6 +3347,9 @@ lazy-wildcards:
           - medieval
           - ancient
           - wasteland
+          - funeral_scene
+          - gothic_style
+          - burial_ritual
       # https://civitai.com/models/599667/beaches-in-japan?modelVersionId=670190
       beach_park:
         prompts:
@@ -3897,6 +3903,19 @@ lazy-wildcards:
           - |-
             The King in Yellow's Presence,ominous_presence,invisible_terror,psychological_horror
           - eerie_atmosphere
+      tetris:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/tetris/style-main__{,{1-$$__lazy-wildcards/subject/env-bg/tetris/env__}|}{0.3::,{1-$$__lazy-wildcards/subject/env-bg/tetris/style__}|}
+        style-main:
+          - >-
+            (tetris{0.3:::{1.2|1.3|1.4}|})
+        env:
+          - >-
+            tetris_blocks{,{1-$$I-block|O-block|T-block|S-block|Z-block|L-block|J-block}|}
+          - falling_blocks
+        style:
+          - game_screen_ui
       ShinMegamiTensei-Tokyo_Millennium:
         prompts:
           - >-
@@ -4774,12 +4793,29 @@ lazy-wildcards:
           - peacock chair
           - >-
             {1-$$ style,$$rattan|wicker} style
+      coffin:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/coffin/env-main__{,{1-$$__lazy-wildcards/subject/env-elem/coffin/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem/coffin/action__}|}{,{1-$$__lazy-wildcards/subject/env-elem/coffin/style__}|}
+        env-main:
+          - coffin
+        env:
+          - open_coffin
+          - vampire_coffin
+          - ancient_coffin
+        action:
+          - lying inside coffin
+          - lying
+        style:
+          - funeral_scene
+          - gothic_style
+          - burial_ritual
       gold-gemstone:
         prompts:
           - >-
             gold,gemstone,gemtech{,{1-$$__lazy-wildcards/subject/env-elem/gold-gemstone/env-gemstone__}|}{,{1-$$__lazy-wildcards/subject/env-elem/gold-gemstone/style__}|}
         env-gemstone:
-          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
           - Malachite,GoldMalachiteWorld
           - tanzanite \(gemstone\),GoldTanzaniteWorld
           - amethyst \(gemstone\),GoldAmethystWorld,purple gemstone
@@ -4929,31 +4965,31 @@ lazy-wildcards:
       tentacles-play:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-elem/tentacles-play/env-tentacles__{,({1-$$__lazy-wildcards/subject/env-elem/tentacles-play/env-tentacles-play__})|}{,{1-$$__lazy-wildcards/subject/env-elem/tentacles-play/env-tentacles-style__}|}{,{1-$$__lazy-wildcards/subject/env-elem/tentacles-play/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-elem/tentacles-play/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem/tentacles-play/env-bg__}|}
+            __lazy-wildcards/subject/env-elem/tentacles-play/env-tentacles__{,({1-$$__lazy-wildcards/subject/env-elem/tentacles-play/env-tentacles-play__})|}{,{1-$$__lazy-wildcards/subject/env-elem/tentacles-play/env-tentacles-style__}|}{,{1-$$__lazy-wildcards/subject/env-elem/tentacles-play/expressions__}|}{,{1-$$__lazy-wildcards/subject/env-elem/tentacles-play/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-elem/tentacles-play/action__}|}{,{1-$$__lazy-wildcards/subject/env-elem/tentacles-play/env__}|}{0.3::,{1-$$__lazy-wildcards/subject/env-elem/tentacles-play/env-bg__}|}{0.3::,__lazy-wildcards/subject/env-elem/tentacles-play/style__|}
         env-tentacles:
           - tentacles,eldritchtentacle,rindou,nsfw
         env-tentacles-play:
-          - tentacle around
+          - tentacle around,astride tentacle
           - tentacle around leg
           - tentacle between breasts
-          - Tentacle Rub Crotch
+          - Tentacle Rub Crotch,crotch rub
           - tentacle stimulate crotch
           - sexualized tentacles,tentacle porn,tentacle sex
           - tentacles strangling,tentacles coiling,tentacles bondage,tentacles strangling body
           - tentacles crawl all over the body
+          - straddling huge tentacle
         costume-elem:
           - clothing aside
-          - open mouth
           - habit
           - breasts
-          - vaginal
+          - pussy,vaginal,vagina
+          - anal
           - bottomless
-          - closed eyes tightly,ecstasy,painful
           - biting own lip
-          - blush
           - sweat
           - urination
           - tentacles coiling
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
         env-tentacles-style:
           - suction cups
           - giant tentacles
@@ -4970,6 +5006,28 @@ lazy-wildcards:
           - slime \(substance\)
         env-bg:
           - lying inside tentacles coffin
+        expressions:
+          - open mouth
+          - grin
+          - expressionless
+          - blush
+          - closed eyes tightly,ecstasy,painful
+        action:
+          - restrained
+          - astride
+          - __lazy-wildcards/subject/action-nsfw-sex/imminent/prompts__
+          - __lazy-wildcards/subject/action-nsfw-others/bound/prompts__
+          - __lazy-wildcards/subject/action-nsfw-others/pose-bottom-open-legs/prompts__
+        style:
+          - from side
+          - from behind
+          - from inside
+          - from outside
+          - from top
+          - from bottom
+          - from side to side
+          - from behind to front
+          - from top to bottom
       skull:
         prompts:
           - >-
@@ -5332,7 +5390,7 @@ lazy-wildcards:
           - __lazy-wildcards/subject/costume-elem/pussy_juice/prompts__
           - ass focus,from behind
           - thong
-          - __lazy-wildcards/subject/costume-elem/chain-acc/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/chain-acc/prompts__
           - navel piercing
           - piercing
           - __lazy-wildcards/subject/costume-elem-expressions/seductive/prompts__
@@ -6461,7 +6519,7 @@ lazy-wildcards:
         env:
           - black wooden
           - green light
-    costume-elem:
+    costume-elem-accessories:
       earrings:
         prompts:
           - earrings
@@ -6480,7 +6538,7 @@ lazy-wildcards:
       chain-acc:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/costume-elem/chain-acc/costume-elem__}
+            {1-$$__lazy-wildcards/subject/costume-elem-accessories/chain-acc/costume-elem__}
         costume-elem:
           - chain leash
           - chain necklace
@@ -6489,7 +6547,7 @@ lazy-wildcards:
       gold-trim:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume-elem/gold-trim/costume-elem-main__{0.3::,{1-$$__lazy-wildcards/subject/costume-elem/gold-trim/costume-elem__}|}
+            __lazy-wildcards/subject/costume-elem-accessories/gold-trim/costume-elem-main__{0.3::,{1-$$__lazy-wildcards/subject/costume-elem-accessories/gold-trim/costume-elem__}|}
         costume-elem-main:
           - gold trim,gold-trimmed
         costume-elem:
@@ -6502,6 +6560,26 @@ lazy-wildcards:
         prompts:
           - >-
             (idcard,id_card,name tag){,lanyard|}
+      # __chara_creator/hair_form/acessories/*__
+      hair_ornament:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-accessories/hair_ornament/costume-elem-main__{0.8::,{1-3$$__lazy-wildcards/subject/costume-elem-accessories/hair_ornament/costume-elem__}|}
+        costume-elem-main:
+          - hair ornament
+        costume-elem:
+          - bun cover
+          - hairpods
+          - hair bell
+          - hair bobbles
+          - hair bow
+          - hair ribbon
+          - hairclip
+          - hairpin
+          - hair flower
+          - hairband
+          - hair beads
+    costume-elem:
       religious:
         prompts:
           - cope,ceremonial_cloak
@@ -7840,7 +7918,7 @@ lazy-wildcards:
           - detached sleeves
           - white thighhighs
           - halterneck
-          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
           - curtains
           - pubic tattoo
       # https://civitai.com/models/284907/classical-frilled-nurse-uniform
@@ -8048,7 +8126,7 @@ lazy-wildcards:
           - garter belt
           - >-
             {1-$$pelvic curtain|pelvic curtain lift}
-          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
           - side slit
           - breast curtains
           - no panties
@@ -8176,7 +8254,7 @@ lazy-wildcards:
             (CONCEPT_Djinn_Indian_persion_ownwaifu,bodypaint,full-body tattoo,tattoo,mayan_tattoos full body,bodypaint:1.2),arabian clothes,tribal,dress,navel,see-through,veil,sari,necklace,jewelry,bracelet,earrings,armlet,makeup,lipstick,lips,red lips,cleavage,underboob,dreadlocks,intricate dress,gold,chain,belly chain,Embroidery
         costume-elem:
           - large breasts
-          - __lazy-wildcards/subject/costume-elem/chain-acc/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/chain-acc/prompts__
         costume-hair:
           - long hair,very long hair,absurdly long hair
           - curly hair,big hair,wavy hair
@@ -8306,12 +8384,13 @@ lazy-wildcards:
           - barcode tattoo
           - flower tattoo
       # https://civitai.com/models/372610/irezumi-world-world-morph-lora-flux-or-sdxl-or-sd-15?modelVersionId=416199
+      # https://civitai.com/models/170447/irezumi-yakuzas-tattoos-concept-or-ownwaifu?modelVersionId=191518
       Japanese-tattoo-Irezumi:
         prompts:
           - >-
             __lazy-wildcards/subject/costume-tattoo/Japanese-tattoo-Irezumi/costume-main__{,{1-$$__lazy-wildcards/subject/costume-tattoo/Japanese-tattoo-Irezumi/costume-tattoo__}|}{,{1-$$__lazy-wildcards/subject/costume-tattoo/Japanese-tattoo-Irezumi/env__}|}{,{1-$$__lazy-wildcards/subject/costume-tattoo/Japanese-tattoo-Irezumi/style__}|}
         costume-main:
-          - EPIrezumiWorld,Irezumi,Wabori,Harimono,japanese tattoo,japanese style tattoo,traditional japanese tattoo,yakuza,yakuza tattoo
+          - EPIrezumiWorld,Irezumi,Wabori,Harimono,japanese tattoo,japanese style tattoo,traditional japanese tattoo,yakuza,yakuza tattoo,CONCEPT_irezumi_YakuzaTattoo_ownwaifu
         costume-tattoo:
           - full_body_tattoo
           - bodysuit_tattoo
@@ -8319,18 +8398,18 @@ lazy-wildcards:
           - gangster
           - japanese_gangster
         env:
-          - cherry blossoms
-          - japanese_flora
-          - chrysanthemums
-          - lotus
-          - japanese_fauna
-          - Koi_fish
-          - dragons
-          - tigers
-          - mythological_figures
-          - Oni_demons
-          - Tengu
-          - samurai_spirits
+          - cherry blossoms patterns
+          - japanese_flora patterns
+          - chrysanthemums patterns
+          - lotus patterns
+          - japanese_fauna patterns
+          - Koi_fish patterns
+          - dragons patterns
+          - tigers patterns
+          - mythological_figures patterns
+          - Oni_demons patterns
+          - Tengu patterns
+          - samurai_spirits patterns
         style:
           - cyberpunk
           - scifi
@@ -8590,7 +8669,7 @@ lazy-wildcards:
       hair-bun:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/costume-ethnicity-hair/hair-bun/costume-hair-bun-main__}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-hair/hair-bun/costume-hair-bun__}|}
+            {1-$$__lazy-wildcards/subject/costume-ethnicity-hair/hair-bun/costume-hair-bun-main__}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-hair/hair-bun/costume-hair-bun__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-hair/hair-bun/costume-elem__}|}
         costume-hair-bun-main:
           - hair bun
           - bun cover
@@ -8598,6 +8677,8 @@ lazy-wildcards:
           - double bun
           - single hair bun
           - cone hair bun
+        costume-elem:
+          - hairpods
     costume-ethnicity-race:
       # https://civitai.com/models/19620/lora-anthro-cobras
       snake-anthro_cobra:
@@ -9089,7 +9170,7 @@ lazy-wildcards:
           - stirrup footwear
           - cat ears
           - __lazy-wildcards/dataset/costume-accessories-base__
-          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
           - monster girl
         costume-wings:
           - eagle_wings,feathered_wings
@@ -9425,6 +9506,10 @@ lazy-wildcards:
           - >-
             {1-$$squatting|crouching|squatting cowgirl position}
           - (straddle)
+      bound:
+        prompts:
+          - >-
+            bound{,bound {1-$$,bound $$legs|arms|wrists|ankles|feet|together}|}
     action-nsfw-bdsm:
       # Sunvibe BDSM
       # https://civitai.com/models/495326/sunvibe-bdsm?modelVersionId=550669
@@ -9649,6 +9734,24 @@ lazy-wildcards:
         style:
           - hetero
           - sleep molestation
+      imminent:
+        prompts:
+          - >-
+            imminent{,__lazy-wildcards/subject/action-nsfw-sex/imminent/action-imminent__|}{,__lazy-wildcards/subject/action-nsfw-sex/imminent/action-imminent2__|}
+        action-imminent:
+          - >-
+            imminent {1-$$,imminent $$penetration|vaginal|rape|anal|bestiality|cunnilingus}
+          - >-
+            imminent {1-$$,imminent $$fellatio|kiss|oral}
+          - >-
+            imminent {1-$$,imminent $$footjob}
+          - >-
+            imminent {1-$$,imminent $$paizuri}
+        action-imminent2:
+          - >-
+            imminent {1-$$,imminent $$grope}
+          - >-
+            imminent {1-$$,imminent $$ejaculation}
   dataset:
     style:
       - >-
@@ -10357,7 +10460,7 @@ lazy-wildcards:
           - hair between eyes
           - hair ribbon
           - black panties
-          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
     overlord:
       # https://civitai.com/models/172134/pestonya-shortcake-wanko-human-form-or-overlord
       pestonya_shortcake_wanko:
@@ -10374,7 +10477,7 @@ lazy-wildcards:
         costume-headwear:
           - (black mask,covered eyes)
         costume-elem:
-          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
           - choker
           - black frilled apron
           - bdsm harness
@@ -11296,7 +11399,7 @@ lazy-wildcards:
           - closed mouth
           - sleeveless dress
           - white veil,mouth veil
-          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
           - sidelocks
           - groin
           - hooded cloak,hood up
@@ -11799,11 +11902,11 @@ lazy-wildcards:
       xenomorph:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/alien-predator/xenomorph/costume-main__,__lazy-wildcards/cosplay-char/alien-predator/xenomorph/costume-ethnicity__{0.3::,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/costume-ethnicity-main__}|}{,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/action__}|}{,{1-4$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/env-bg__}|}{,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/env__}|}{,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/style__}|}
+            __lazy-wildcards/cosplay-char/alien-predator/xenomorph/costume-main__,__lazy-wildcards/cosplay-char/alien-predator/xenomorph/costume-ethnicity__{0.3::,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/env-creatures__}|}{,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/action__}|}{,{1-4$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/env-bg__}|}{,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/env__}|}{,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/style__}|}
         costume-main:
           - |-
-            (xenomorph,xenomorphdna,FemXeno,xenomilf,xeno,xenomorph style:1.2),alien \(series\),1other
-        costume-ethnicity-main:
+            (xenomorph,xenomorphdna,FemXeno,xenomilf,xeno,xenomorph style,nv_xenodna:1.2),alien \(series\),1other
+        env-creatures:
           - proto-xenomorph
           - xenomorph queen,alien queen
         costume-ethnicity:
@@ -12069,7 +12172,7 @@ lazy-wildcards:
           - white dress,pants,short sleeves,belt,pelvic curtain
         costume-elem:
           - lipstick,red makeup
-          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
           - chest jewel
           - __lazy-wildcards/dataset/costume-accessories-base__
           - mechanical limbs
@@ -12426,7 +12529,7 @@ lazy-wildcards:
           - cleavage
           - partially shaded face
           - thigh strap
-          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
         style:
           - fighting stance
     dark_souls:
@@ -12469,7 +12572,7 @@ lazy-wildcards:
         main-trigger-words:
           - nightmaiden,night_maiden \(elden_ring\)
         costume:
-          - helmet,white veil,__lazy-wildcards/subject/costume-elem/gold-trim/prompts__,covered eyes,headdress
+          - helmet,white veil,__lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__,covered eyes,headdress
           - armored dress,white cape,long sleeves,black footwear
         costume-elem:
           - robe
@@ -12528,7 +12631,7 @@ lazy-wildcards:
           - blue gloves
           - high heels,high heel boots
           - thick thighs,thighs
-          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
           - gem,red gemstone
           - floating hair
         costume-weapon:
@@ -12602,7 +12705,7 @@ lazy-wildcards:
           - __lazy-wildcards/dataset/costume-accessories-base__
           - navel,midriff,crop top,underboob
           - muscular
-          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
         style:
           - reverse trap,tomboy
           - see-through
@@ -12809,7 +12912,7 @@ lazy-wildcards:
           - mole under mouth
           - sideboob
           - bandages
-          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
         expressions:
           - seductive smile
           - saliva,saliva trail
@@ -12849,7 +12952,7 @@ lazy-wildcards:
           - closed eyes
           - yellow halo
           - wooden_arms,moss-covered_arms,vine_wrapped_arms
-          - __lazy-wildcards/subject/costume-elem/gold-trim/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
         costume-weapon:
           - giant pearl
           - crystal ball
