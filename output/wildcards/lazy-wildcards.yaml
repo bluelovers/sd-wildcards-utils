@@ -1065,9 +1065,12 @@ lazy-wildcards:
         - Strawberries
         - Blueberries
         - Mushrooms
+    scenery:
+      - >-
+        {1-$$scenery|outdoors|horizon|landscape|ultra wide angle,very wide shot,wide angle shot|HDRI Panorama View|360 panorama}
     scenery-no-humans:
       - >-
-        {1-$$scenery|outdoors|no humans|horizon|landscape|ultra wide angle|HDRI Panorama View|360 panorama}
+        __lazy-wildcards/utils/scenery__{,no humans|}
   subject:
     style-art-type:
       others:
@@ -1210,13 +1213,14 @@ lazy-wildcards:
           - intricate_design,elaborate_pattern
           - mosaic background
       # https://civitai.com/models/28531/miniature-world-style?modelVersionId=34223
+      # https://civitai.com/models/227021/miniature-models-lora-flux-sdxl-sd15?modelVersionId=256087
       miniature:
         prompts:
           - >-
-            __lazy-wildcards/subject/style-art-type/miniature/style-main__{,{1-2$$__lazy-wildcards/subject/style-art-type/miniature/style__}|}
+            __lazy-wildcards/subject/style-art-type/miniature/style-main__{,{1-2$$__lazy-wildcards/subject/style-art-type/miniature/env-bg__}|}{,{1-$$__lazy-wildcards/subject/style-art-type/miniature/style__}|}
         style-main:
           - >-
-            (mini\(ttp\),miniature,miniature model{0.3:::{1.2|1.3|1.4}|}),pmini style,landscape
+            (mini\(ttp\),miniature,miniature model{0.3:::{1.2|1.3|1.4}|}),pmini style,M1n14tur3,landscape
         env-bg:
           - plate
           - cup
@@ -2920,15 +2924,6 @@ lazy-wildcards:
           - creek
           - fallen tree
           - waterfall
-      Stonehenge:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-bg/Stonehenge/main__{,{1-$$__lazy-wildcards/subject/env-bg/Stonehenge/env__}|}
-        main:
-          - Stonehenge
-        env:
-          - ancient_stone_circle
-          - massive_sarsen_stones
       market:
         prompts:
           - >-
@@ -3417,6 +3412,10 @@ lazy-wildcards:
           - vast dunes,sand dunes
           - hidden desert sanctuary
           - arid landscape
+      # https://civitai.com/models/397692/fantasy-jungle?modelVersionId=986468
+      ruins-jungle:
+        prompts:
+          - ruins in a fantasy jungle,FanJu
       post-apocalyptic:
         prompts:
           - >-
@@ -3938,6 +3937,67 @@ lazy-wildcards:
           - Millennium_News_Network,City_news,propaganda_broadcasts,information_contro
         style:
           - Great_Cataclysm,World_ending_event,apocalyptic_disaster,city_rebirt
+      outer_space:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/outer_space/env-bg-main__{,{1-4$$__lazy-wildcards/subject/env-bg/outer_space/env-bg__}|}
+        env-bg-main:
+          - outer_space
+        env-bg:
+          - galaxy
+          - black_hole
+          - asteroid_belt
+          - void
+          - nebula
+          - starfield
+          - supernova
+          - space_station
+          - spaceship
+          - asteroid
+          - exoplanet
+          - __lazy-wildcards/subject/env-bg/planet/prompts__
+          - __lazy-wildcards/subject/env-bg/sunspot/prompts__
+          - __lazy-wildcards/subject/env-bg/corona/prompts__
+          - vast empty outer space
+      planet:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/planet/env-bg-main__{,{1-3$$__lazy-wildcards/subject/env-bg/planet/env-bg__}|}
+        env-bg-main:
+          - planet
+        env-bg:
+          - earth_\(planet\)
+          - mars \(planet\)
+          - jupiter \(planet\)
+          - saturn \(planet\)
+          - uranus \(planet\)
+          - neptune \(planet\)
+          - pluto \(planet\)
+          - sun
+          - moon
+          - solar system
+      # https://civitai.com/models/256688/sunspot-sd15?modelVersionId=289437
+      sunspot:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/sunspot/env-bg__){,{1-3$$__lazy-wildcards/subject/env-bg/sunspot/env__}|}
+        env-bg:
+          - sunspot,5un5p0t sun
+        env:
+          - rising high in the sky above
+          - solar flares
+          - distant
+      # https://civitai.com/models/256513/corona-sd15?modelVersionId=289231
+      corona:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/corona/env-bg__{0.3:::{1.2|1.3|1.4}|}){0.7::,{1-3$$__lazy-wildcards/subject/env-bg/corona/env__}|}
+        env-bg:
+          - corona eclipse,C0r0n4 eclipse
+        env:
+          - during a corona eclipse,during a C0r0n4 eclipse
+          - rising high in the sky above
+          - surrounded by bright solar corona
       Japanese-Festival-Bon-Odori:
         prompts:
           - >-
@@ -4466,31 +4526,6 @@ lazy-wildcards:
           - golden
           - gem
           - __lazy-wildcards/subject/env-elem/skull/prompts__
-      circle-transmutation:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-elem/circle-transmutation/env-magic__,{1-$$__lazy-wildcards/subject/env-elem/circle-transmutation/env__}
-        env-magic:
-          - transmutation circles
-        env:
-          - pentagram symbol
-          - pentagram circles
-          - arcane symbols
-      circle-magic:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/env-elem/circle-magic/env-magic__,{1-$$__lazy-wildcards/subject/env-elem/circle-magic/style__}:1.4) {1-$$__lazy-wildcards/subject/env-elem/circle-magic/env__}
-        env-magic:
-          - perfect magic circle
-        env:
-          - fireflies
-          - __lazy-wildcards/subject/env-elem/circle-transmutation/prompts__
-        style:
-          - spell
-          - fusion
-          - vortex
-          - swirling patterns
-          - fluid
       spider-webs:
         prompts:
           - >-
@@ -4965,6 +5000,31 @@ lazy-wildcards:
           - japanese_lighting
           - soft_lighting
           - cultural_lighting
+      circle-magic:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/circle-magic/env-magic__,{1-$$__lazy-wildcards/subject/env-elem/circle-magic/style__}:1.4) {1-$$__lazy-wildcards/subject/env-elem/circle-magic/env__}
+        env-magic:
+          - perfect magic circle
+        env:
+          - fireflies
+          - __lazy-wildcards/subject/env-elem/circle-transmutation/prompts__
+        style:
+          - spell
+          - fusion
+          - vortex
+          - swirling patterns
+          - fluid
+      circle-transmutation:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/circle-transmutation/env-magic__,{1-$$__lazy-wildcards/subject/env-elem/circle-transmutation/env__}
+        env-magic:
+          - transmutation circles
+        env:
+          - pentagram symbol
+          - pentagram circles
+          - arcane symbols
       tentacles-play:
         prompts:
           - >-
@@ -6192,6 +6252,15 @@ lazy-wildcards:
         env:
           - portugal
           - tokyo,japan
+      Stonehenge:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-real-world-location/Stonehenge/env-bg__{,{1-$$__lazy-wildcards/subject/env-bg-real-world-location/Stonehenge/env__}|}
+        env-bg:
+          - Stonehenge
+        env:
+          - ancient_stone_circle
+          - massive_sarsen_stones
     env-bg-architectural:
       agricultural_zone:
         prompts:
@@ -7711,10 +7780,10 @@ lazy-wildcards:
       sfw-civitai:
         prompts:
           - >-
-            upper body,portrait,face focus,__lazy-wildcards/subject/costume/sfw-civitai/main__{,{1-$$__lazy-wildcards/subject/costume/sfw-civitai/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume/sfw-civitai/style__}|}
+            __lazy-wildcards/subject/costume/sfw-civitai/main__,({1-$$__lazy-wildcards/subject/costume/sfw-civitai/costume-elem__}:1.2),({1-$$__lazy-wildcards/subject/costume/sfw-civitai/style__}:1.2)
         main:
           - >-
-            (1girl:1.6),solo,(fully clothes,fully clothed:1.2),upper body,close-up portrait,face focus,sfw,safe_for_work
+            (1girl:1.6),solo,solo focus,(fully clothes,fully clothed:1.2),upper body,close-up portrait,face focus,sfw,safe_for_work
         costume-elem:
           - Conservative Clothing
           - conservative_dress
@@ -8034,7 +8103,7 @@ lazy-wildcards:
       armor-spiked:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/costume/armor-spiked/costume-elem__}{0.3::,__lazy-wildcards/subject/costume/armor/prompts__|}
+            {2-$$__lazy-wildcards/subject/costume/armor-spiked/costume-elem__}{0.3::,__lazy-wildcards/subject/costume/armor/prompts__|}
         costume-elem:
           - spiked armor
           - spiked collar
@@ -9279,6 +9348,32 @@ lazy-wildcards:
         prompts:
           - >-
             {1-$$seductive smile|seductive|voluptuous}
+    action-pose:
+      floating:
+        prompts:
+          - >-
+            ({1-3$$__lazy-wildcards/subject/action-pose/floating/action-fly__}{0.3:::{1.2|1.3|1.4}|}){,({1-$$__lazy-wildcards/subject/action-pose/floating/env-bg__})|}{,{1-$$__lazy-wildcards/subject/action-pose/floating/env__}|}{,{1-$$__lazy-wildcards/subject/action-pose/floating/style__}|}
+        action-fly:
+          - fly
+          - flying
+          - floating,Floatation
+          - holding balloons
+          - telekinesis,telekines
+          - arm up,motion blur
+        env-bg:
+          - above clouds
+          - in the sky
+          - __lazy-wildcards/subject/env-bg/outer_space/env-bg-main__
+          - floating_island
+        env:
+          - lots of balloons
+          - floating object
+        style:
+          - __lazy-wildcards/utils/scenery__
+          - weightlessness,imponderability,zero_gravity,Zero-G
+          - freefall
+          - floating,Floatation
+          - Levity
     action-pose-selfie:
       selfie-mirror:
         prompts:
@@ -10152,6 +10247,169 @@ lazy-wildcards:
           - adjusting clothes
           - hand in pocket
           - head tilt
+    yu-gi-oh:
+      # https://danbooru.donmai.us/posts?tags=harpie_lady
+      # https://danbooru.donmai.us/posts?tags=harpie_lady_%28normal_monster%29
+      # https://civitai.com/models/611599/harpy-lady-yugioh?modelVersionId=683689
+      harpie-lady:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/main__,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume-ethnicity__},{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume-wings__}{,__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume__|}{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/env__}|}
+        main:
+          - |-
+            HL,harpie_lady_1,harpie_lady,harpie_lady_\(normal_monster\),yu-gi-oh!,yu-gi-oh! duel monsters,harpie lady \(normal monster\) \(cosplay\),harpy
+        costume-ethnicity:
+          - >-
+            {1-$$winged arms|feathered arms}
+          - blue skin
+          - claws
+          - pink hair
+          - pointy ears
+          - bird tail
+          - green eyes
+          - long hair,very long hair
+        costume:
+          - blue bodysuit,purple tights,harpy,winged arms,blue wings
+          - gold armor,purple tights,winged arms,purple wings
+          - purple armor,purple tights,winged arms,green wings
+        costume-elem:
+          - purple tights
+          - spiked armor
+          - cyber harpie lady \(cosplay\),cyber_harpie_lady
+          - bare shoulders
+          - collar
+          - collarbone
+          - open clothes
+          - strapless leotard
+          - bikini armor
+          - black pantyhose
+          - black thighhighs
+          - clothing cutout
+          - garter straps
+          - navel,navel cutout
+          - pantyhose
+        costume-wings:
+          - aqua feathers,aqua wings
+          - green feathers,green wings
+          - feathered wings
+        costume-weapon:
+          - holding,holding card
+        env:
+          - |-
+            magical_hats_(yu-gi-oh!)
+          - |-
+            harpie's pet dragon
+          - |-
+            cyber shield (yu-gi-oh!)
+      # https://civitai.com/models/445758/ishizu-ishtar-or-yu-gi-oh-or-kofi-commissioned-or-ownwaifu?modelVersionId=496363
+      # https://civitai.com/models/43754
+      ishizu_ishtar:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/main-trigger-words__{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/costume-ethnicity__}|},{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/costume__}{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/env__}|}{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/env-bg__}|}
+        main-trigger-words:
+          - |-
+            ANIME_YuGiOh_IshizuIshtar_ownwaifu,ishizu_ishtar,yu-gi-oh!,ancient egyptian
+        costume-ethnicity:
+          - blue eyes,black hair,long hair,collarbone,lips,lipstick,makeup,__lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+        costume:
+          - eye of horus,jewelry,millennium necklace,gold bracelet,gold armlet,gold crown,hair tubes,cleavage,eyeshadow,forehead jewel,gold bracer
+          - hood,dress,cape,ancient egyptian clothes,ankh,white dress,cloak
+        costume-elem:
+          - closed mouth
+          - sleeveless dress
+          - white veil,mouth veil
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
+          - sidelocks
+          - groin
+          - hooded cloak,hood up
+          - gold chain
+          - o-ring
+          - v-shaped eyebrows
+          - wide sleeves
+          - blush
+          - bare shoulders
+          - collarbone
+          - pelvic curtain
+        costume-weapon:
+          - holding card
+          - duel disk
+          - card \(medium\)
+        env:
+          - blue gemstone,gem,green gemstone
+        env-bg:
+          - sand dune
+      # https://civitai.com/models/161567/dark-magician-girl-or-yu-gi-oh?modelVersionId=181858
+      dark_magician_girl:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/yu-gi-oh/dark_magician_girl/main-trigger-words__{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/dark_magician_girl/costume-ethnicity__}|},{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/dark_magician_girl/costume-headwear__},{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/dark_magician_girl/costume__}{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/dark_magician_girl/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/dark_magician_girl/env__}|}
+        main-trigger-words:
+          - |-
+            ANIME_dark_magician_girl_YuGiOh_ownwaifu,dark_magician_girl,dark_magician_girl_\(cosplay\),yu-gi-oh!
+        costume-ethnicity:
+          - blonde hair,blush stickers,green eyes,long hair,spiked hair,breasts,hair between eyes,bangs,bright pupils
+        costume-headwear:
+          - wizard hat,blue headwear
+        costume:
+          - >-
+            blue dress,off shoulder,bare shoulders,detached sleeves,pink cape,pink skirt,showgirl skirt,vambraces,cleavage,collarbone,downblouse,pentagram,star \(symbol\),fingerless gloves,choker,gem,jewelry
+        costume-elem:
+          - medium breasts
+        costume-weapon:
+          - >-
+            wand{,holding wand|}
+        env:
+          - __lazy-wildcards/subject/env-elem/circle-magic/prompts__
+    sousou_no_frieren:
+      # https://civitai.com/models/421109/ubel-sousou-no-frieren
+      # https://danbooru.donmai.us/posts?tags=ubel_%28sousou_no_frieren%29&z=2
+      ubel:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/main__,{2-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/costume-ethnicity__}{,{1-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/expressions__}|},{5-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/costume__}{,__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/costume-weapon__|}{,{1-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/costume-elem__}|}
+        main:
+          - ubel_\(sousou_no_frieren\),UbelFrieren,ubel,ubel_\(sousou_no_frieren\)_\(cosplay\)
+        costume-ethnicity:
+          - long hair
+          - green hair
+          - side ponytail,hair between eyes,bangs
+          - green eyes
+          - double-parted bangs
+          - high ponytail
+        expressions:
+          - closed mouth
+          - smile
+        costume:
+          - black choker
+          - halterneck
+          - bare shoulders
+          - black dress
+          - sleeveless dress
+          - pleated dress
+          - medium breasts
+          - single glove
+          - black gloves
+          - belt
+          - black socks
+          - boots
+          - black footwear
+          - suspenders hanging
+        costume-elem:
+          - armlet
+          - armband
+          - collarbone
+          - o-ring,o-ring choker
+          - ear piercing
+          - arm strap
+          - sidelocks
+          - sweatdrop
+          - sweaty armpits
+          - sweat
+        costume-weapon:
+          - holding
+          - holding polearm
+          - holding weapon
     onmyoji:
       suzuka_gozen:
         prompts:
@@ -10238,6 +10496,83 @@ lazy-wildcards:
           - beach
           - heian
           - on the blanket
+    Brown-Dust:
+      # https://civitai.com/models/611537/eclipse-nightmare-bunny-brown-dust-2
+      Eclipse:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/main__,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/costume-ethnicity__}{,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/costume-types/*__}|}{,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/action__}|}{,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/env__}|}
+        main:
+          - EclipseNightmareBunny,eclipse_(brown_dust_2),brown_dust_2,brown_dust
+        costume-ethnicity:
+          - very long hair,ponytail,purple hair,blue eyes,hair over one eye
+          - huge breasts
+          - black hair
+          - colored inner hair
+          - purple hair
+        costume-types:
+          Nightmare-Bunny:
+            - gloves,long sleeves,navel,cleavage,bare shoulders,fishnet pantyhose,bowtie,rabbit ears,red bow,black leotard,purple coat,wrist cuffs,strapless,detached collar,highleg
+        costume-elem:
+          - demon girl
+          - fishnet pantyhose
+          - playboy bunny
+          - red gloves
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - broken horn
+          - curly hair
+          - demon horns
+          - horn ornament
+          - horn ring
+          - shirt overhang
+          - chest tattoo
+          - horn ribbon
+        costume-weapon:
+          - drinking glass,wine glass
+          - holding cup
+          - champagne bottle
+          - holding tray
+          - book
+        action:
+          - arm up
+          - lying,on back
+        env:
+          - floating book
+          - floating object
+          - floating,flying
+          - shadow
+          - aura
+    Path-to-Nowhere:
+      # https://civitai.com/models/428585/mantis-path-to-nowhere
+      # https://danbooru.donmai.us/posts?tags=mantis_%28path_to_nowhere%29&z=5
+      Mantis:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/main__,{3-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-ethnicity__}{0.3::,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-wings__}|}{,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-weapon__}|}
+        main:
+          - Mantis,Mantis \(path_to_nowhere\),path_to_nowhere
+        costume-ethnicity:
+          - aqua eyes
+          - ahoge
+          - monster girl
+          - green hair
+          - green eyes
+        costume:
+          - black shirt,short shorts,strapless
+        costume-elem:
+          - mask
+          - half mask
+          - midriff
+          - arm blade
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - cleavage
+          - eyes visible through hair
+        costume-wings:
+          - insect wings
+          - green wings
+          - energy wings
+        costume-weapon:
+          - scythe
     last_origin:
       eva:
         prompts:
@@ -11350,245 +11685,6 @@ lazy-wildcards:
             {holding a large crosier,|}large crosier
           - Wand
           - staff
-    yu-gi-oh:
-      # https://danbooru.donmai.us/posts?tags=harpie_lady
-      # https://danbooru.donmai.us/posts?tags=harpie_lady_%28normal_monster%29
-      # https://civitai.com/models/611599/harpy-lady-yugioh?modelVersionId=683689
-      harpie-lady:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/main__,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume-ethnicity__},{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume-wings__}{,__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume__|}{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/env__}|}
-        main:
-          - |-
-            HL,harpie_lady_1,harpie_lady,harpie_lady_\(normal_monster\),yu-gi-oh!,yu-gi-oh! duel monsters,harpie lady \(normal monster\) \(cosplay\),harpy
-        costume-ethnicity:
-          - >-
-            {1-$$winged arms|feathered arms}
-          - blue skin
-          - claws
-          - pink hair
-          - pointy ears
-          - bird tail
-          - green eyes
-          - long hair,very long hair
-        costume:
-          - blue bodysuit,purple tights,harpy,winged arms,blue wings
-          - gold armor,purple tights,winged arms,purple wings
-          - purple armor,purple tights,winged arms,green wings
-        costume-elem:
-          - purple tights
-          - spiked armor
-          - cyber harpie lady \(cosplay\),cyber_harpie_lady
-          - bare shoulders
-          - collar
-          - collarbone
-          - open clothes
-          - strapless leotard
-          - bikini armor
-          - black pantyhose
-          - black thighhighs
-          - clothing cutout
-          - garter straps
-          - navel,navel cutout
-          - pantyhose
-        costume-wings:
-          - aqua feathers,aqua wings
-          - green feathers,green wings
-          - feathered wings
-        costume-weapon:
-          - holding,holding card
-        env:
-          - |-
-            magical_hats_(yu-gi-oh!)
-          - |-
-            harpie's pet dragon
-          - |-
-            cyber shield (yu-gi-oh!)
-      # https://civitai.com/models/445758/ishizu-ishtar-or-yu-gi-oh-or-kofi-commissioned-or-ownwaifu?modelVersionId=496363
-      # https://civitai.com/models/43754
-      ishizu_ishtar:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/main-trigger-words__{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/costume-ethnicity__}|},{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/costume__}{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/env__}|}{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/env-bg__}|}
-        main-trigger-words:
-          - |-
-            ANIME_YuGiOh_IshizuIshtar_ownwaifu,ishizu_ishtar,yu-gi-oh!,ancient egyptian
-        costume-ethnicity:
-          - blue eyes,black hair,long hair,collarbone,lips,lipstick,makeup,__lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
-        costume:
-          - eye of horus,jewelry,millennium necklace,gold bracelet,gold armlet,gold crown,hair tubes,cleavage,eyeshadow,forehead jewel,gold bracer
-          - hood,dress,cape,ancient egyptian clothes,ankh,white dress,cloak
-        costume-elem:
-          - closed mouth
-          - sleeveless dress
-          - white veil,mouth veil
-          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
-          - sidelocks
-          - groin
-          - hooded cloak,hood up
-          - gold chain
-          - o-ring
-          - v-shaped eyebrows
-          - wide sleeves
-          - blush
-          - bare shoulders
-          - collarbone
-          - pelvic curtain
-        costume-weapon:
-          - holding card
-          - duel disk
-          - card \(medium\)
-        env:
-          - blue gemstone,gem,green gemstone
-        env-bg:
-          - sand dune
-    sousou_no_frieren:
-      # https://civitai.com/models/421109/ubel-sousou-no-frieren
-      # https://danbooru.donmai.us/posts?tags=ubel_%28sousou_no_frieren%29&z=2
-      ubel:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/main__,{2-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/costume-ethnicity__}{,{1-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/expressions__}|},{5-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/costume__}{,__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/costume-weapon__|}{,{1-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/costume-elem__}|}
-        main:
-          - ubel_\(sousou_no_frieren\),UbelFrieren,ubel,ubel_\(sousou_no_frieren\)_\(cosplay\)
-        costume-ethnicity:
-          - long hair
-          - green hair
-          - side ponytail,hair between eyes,bangs
-          - green eyes
-          - double-parted bangs
-          - high ponytail
-        expressions:
-          - closed mouth
-          - smile
-        costume:
-          - black choker
-          - halterneck
-          - bare shoulders
-          - black dress
-          - sleeveless dress
-          - pleated dress
-          - medium breasts
-          - single glove
-          - black gloves
-          - belt
-          - black socks
-          - boots
-          - black footwear
-          - suspenders hanging
-        costume-elem:
-          - armlet
-          - armband
-          - collarbone
-          - o-ring,o-ring choker
-          - ear piercing
-          - arm strap
-          - sidelocks
-          - sweatdrop
-          - sweaty armpits
-          - sweat
-        costume-weapon:
-          - holding
-          - holding polearm
-          - holding weapon
-    Brown-Dust:
-      # https://civitai.com/models/611537/eclipse-nightmare-bunny-brown-dust-2
-      Eclipse:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/main__,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/costume-ethnicity__}{,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/costume-types/*__}|}{,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/action__}|}{,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/env__}|}
-        main:
-          - EclipseNightmareBunny,eclipse_(brown_dust_2),brown_dust_2,brown_dust
-        costume-ethnicity:
-          - very long hair,ponytail,purple hair,blue eyes,hair over one eye
-          - huge breasts
-          - black hair
-          - colored inner hair
-          - purple hair
-        costume-types:
-          Nightmare-Bunny:
-            - gloves,long sleeves,navel,cleavage,bare shoulders,fishnet pantyhose,bowtie,rabbit ears,red bow,black leotard,purple coat,wrist cuffs,strapless,detached collar,highleg
-        costume-elem:
-          - demon girl
-          - fishnet pantyhose
-          - playboy bunny
-          - red gloves
-          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
-          - broken horn
-          - curly hair
-          - demon horns
-          - horn ornament
-          - horn ring
-          - shirt overhang
-          - chest tattoo
-          - horn ribbon
-        costume-weapon:
-          - drinking glass,wine glass
-          - holding cup
-          - champagne bottle
-          - holding tray
-          - book
-        action:
-          - arm up
-          - lying,on back
-        env:
-          - floating book
-          - floating object
-          - floating,flying
-          - shadow
-          - aura
-    # https://zh.wikipedia.org/zh-tw/STAR%E2%98%86jewel
-    Star-Jewel:
-      # https://civitai.com/models/613899/reiko-kanna-star-jewel?modelVersionId=686256
-      Reiko-Kanna:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/Star-Jewel/Reiko-Kanna/main__,{1-$$__lazy-wildcards/cosplay-char/Star-Jewel/Reiko-Kanna/costume-ethnicity__}{,{1-$$__lazy-wildcards/cosplay-char/Star-Jewel/Reiko-Kanna/costume-elem__}|}
-        main:
-          - ReikoKanna
-        costume-ethnicity:
-          - short hair
-          - bob cut
-          - blue hair
-        costume-elem:
-          - navel,navel cutout
-          - __lazy-wildcards/dataset/costume-accessories-base__
-          - cleavage,center opening
-          - white gloves,elbow gloves
-          - blue bodysuit,bare shoulders
-          - lipstick
-          - skin tight
-    Path-to-Nowhere:
-      # https://civitai.com/models/428585/mantis-path-to-nowhere
-      # https://danbooru.donmai.us/posts?tags=mantis_%28path_to_nowhere%29&z=5
-      Mantis:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/main__,{3-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-ethnicity__}{0.3::,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-wings__}|}{,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-weapon__}|}
-        main:
-          - Mantis,Mantis \(path_to_nowhere\),path_to_nowhere
-        costume-ethnicity:
-          - aqua eyes
-          - ahoge
-          - monster girl
-          - green hair
-          - green eyes
-        costume:
-          - black shirt,short shorts,strapless
-        costume-elem:
-          - mask
-          - half mask
-          - midriff
-          - arm blade
-          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
-          - cleavage
-          - eyes visible through hair
-        costume-wings:
-          - insect wings
-          - green wings
-          - energy wings
-        costume-weapon:
-          - scythe
     Magi:
       # https://civitai.com/models/620498/myers-magi?modelVersionId=693655
       # https://danbooru.donmai.us/posts/1625247
@@ -13662,6 +13758,27 @@ lazy-wildcards:
           - __lazy-wildcards/subject/action-nsfw-others/pose-bottom-open-legs/prompts__
         costume-weapon:
           - holding staff,bo staff
+    # https://zh.wikipedia.org/zh-tw/STAR%E2%98%86jewel
+    Star-Jewel:
+      # https://civitai.com/models/613899/reiko-kanna-star-jewel?modelVersionId=686256
+      Reiko-Kanna:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char-hentai/Star-Jewel/Reiko-Kanna/main__,{1-$$__lazy-wildcards/cosplay-char-hentai/Star-Jewel/Reiko-Kanna/costume-ethnicity__}{,{1-$$__lazy-wildcards/cosplay-char-hentai/Star-Jewel/Reiko-Kanna/costume-elem__}|}
+        main:
+          - ReikoKanna
+        costume-ethnicity:
+          - short hair
+          - bob cut
+          - blue hair
+        costume-elem:
+          - navel,navel cutout
+          - __lazy-wildcards/dataset/costume-accessories-base__
+          - cleavage,center opening
+          - white gloves,elbow gloves
+          - blue bodysuit,bare shoulders
+          - lipstick
+          - skin tight
   cosplay-real:
     # 亞美尼亞人
     Armenian:
