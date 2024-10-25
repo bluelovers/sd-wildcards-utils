@@ -109,4 +109,13 @@ lazy-wildcards:
         env:
           - portugal
           - tokyo, japan
-
+      Stonehenge:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-real-world-location/Stonehenge/env-bg__
+            {,{1-$$__lazy-wildcards/subject/env-bg-real-world-location/Stonehenge/env__}|}
+        env-bg:
+          - Stonehenge
+        env:
+          - ancient_stone_circle
+          - massive_sarsen_stones

@@ -172,4 +172,27 @@ lazy-wildcards:
           - __lazy-wildcards/subject/action-nsfw-others/pose-bottom-open-legs/prompts__
         costume-weapon:
           - holding staff, bo staff
+    # https://zh.wikipedia.org/zh-tw/STAR%E2%98%86jewel
+    Star-Jewel:
+      # https://civitai.com/models/613899/reiko-kanna-star-jewel?modelVersionId=686256
+      Reiko-Kanna:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char-hentai/Star-Jewel/Reiko-Kanna/main__
+            ,{1-$$__lazy-wildcards/cosplay-char-hentai/Star-Jewel/Reiko-Kanna/costume-ethnicity__}
+            {,{1-$$__lazy-wildcards/cosplay-char-hentai/Star-Jewel/Reiko-Kanna/costume-elem__}|}
+        main:
+          - ReikoKanna
+        costume-ethnicity:
+          - short hair
+          - bob cut
+          - blue hair
+        costume-elem:
+          - navel, navel cutout
+          - __lazy-wildcards/dataset/costume-accessories-base__
+          - cleavage, center opening
+          - white gloves, elbow gloves
+          - blue bodysuit, bare shoulders
+          - lipstick
+          - skin tight
 

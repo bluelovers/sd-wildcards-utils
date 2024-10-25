@@ -10,13 +10,13 @@ lazy-wildcards:
           - armor
           - bikini armor
         costume-elem:
-          - vambraces 
+          - vambraces
           - shoulder armor, pauldrons
-          - breastplate 
+          - breastplate
       armor-spiked:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/costume/armor-spiked/costume-elem__}
+            {2-$$__lazy-wildcards/subject/costume/armor-spiked/costume-elem__}
             {0.3::, __lazy-wildcards/subject/costume/armor/prompts__|}
         costume-elem:
           - spiked armor

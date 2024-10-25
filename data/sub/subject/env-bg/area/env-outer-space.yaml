@@ -1,0 +1,69 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      outer_space:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/outer_space/env-bg-main__
+            {, {1-4$$__lazy-wildcards/subject/env-bg/outer_space/env-bg__}|}
+        env-bg-main:
+          - outer_space
+        env-bg:
+          - galaxy
+          - black_hole
+          - asteroid_belt
+          - void
+          - nebula
+          - starfield
+          - supernova
+          - space_station
+          - spaceship
+          - asteroid
+          - exoplanet
+          - __lazy-wildcards/subject/env-bg/planet/prompts__
+          - __lazy-wildcards/subject/env-bg/sunspot/prompts__
+          - __lazy-wildcards/subject/env-bg/corona/prompts__
+          - vast empty outer space
+      planet:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/planet/env-bg-main__
+            {, {1-3$$__lazy-wildcards/subject/env-bg/planet/env-bg__}|}
+        env-bg-main:
+          - planet
+        env-bg:
+          - earth_\(planet\)
+          - mars \(planet\)
+          - jupiter \(planet\)
+          - saturn \(planet\)
+          - uranus \(planet\)
+          - neptune \(planet\)
+          - pluto \(planet\)
+          - sun
+          - moon
+          - solar system
+      # https://civitai.com/models/256688/sunspot-sd15?modelVersionId=289437
+      sunspot:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/sunspot/env-bg__)
+            {, {1-3$$__lazy-wildcards/subject/env-bg/sunspot/env__}|}
+        env-bg:
+          - sunspot, 5un5p0t sun
+        env:
+          - rising high in the sky above
+          - solar flares
+          - distant
+      # https://civitai.com/models/256513/corona-sd15?modelVersionId=289231
+      corona:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/corona/env-bg__{0.3:::{1.2|1.3|1.4}|})
+            {0.7::, {1-3$$__lazy-wildcards/subject/env-bg/corona/env__}|}
+        env-bg:
+          - corona eclipse, C0r0n4 eclipse
+        env:
+          - during a corona eclipse, during a C0r0n4 eclipse
+          - rising high in the sky above
+          - surrounded by bright solar corona
+

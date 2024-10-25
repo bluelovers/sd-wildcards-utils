@@ -1,0 +1,32 @@
+lazy-wildcards:
+  subject:
+    env-elem:
+      circle-magic:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/circle-magic/env-magic__
+            ,{1-$$__lazy-wildcards/subject/env-elem/circle-magic/style__}:1.4)
+            {1-$$__lazy-wildcards/subject/env-elem/circle-magic/env__}
+        env-magic:
+          - perfect magic circle
+        env:
+          - fireflies
+          - __lazy-wildcards/subject/env-elem/circle-transmutation/prompts__
+        style:
+          - spell
+          - fusion
+          - vortex
+          - swirling patterns
+          - fluid
+      circle-transmutation:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/circle-transmutation/env-magic__
+            ,{1-$$__lazy-wildcards/subject/env-elem/circle-transmutation/env__}
+        env-magic:
+          - transmutation circles
+        env:
+          - pentagram symbol
+          - pentagram circles
+          - arcane symbols
+

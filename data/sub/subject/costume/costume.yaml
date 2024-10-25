@@ -547,16 +547,15 @@ lazy-wildcards:
       sfw-civitai:
         prompts:
           - >-
-            upper body, portrait, face focus,
             __lazy-wildcards/subject/costume/sfw-civitai/main__
-            {,{1-$$__lazy-wildcards/subject/costume/sfw-civitai/costume-elem__}|}
-            {,{1-$$__lazy-wildcards/subject/costume/sfw-civitai/style__}|}
+            , ({1-$$__lazy-wildcards/subject/costume/sfw-civitai/costume-elem__}:1.2)
+            , ({1-$$__lazy-wildcards/subject/costume/sfw-civitai/style__}:1.2)
         main:
           - >-
-            (1girl:1.6), solo,
-            (fully clothes, fully clothed:1.2),
-            upper body, close-up portrait, face focus,
-            sfw, safe_for_work
+            (1girl:1.6), solo, solo focus
+            , (fully clothes, fully clothed:1.2)
+            , upper body, close-up portrait, face focus
+            , sfw, safe_for_work
         costume-elem:
           - Conservative Clothing
           - conservative_dress

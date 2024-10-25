@@ -1,0 +1,33 @@
+lazy-wildcards:
+  subject:
+    action-pose:
+      # https://civitai.com/models/95708/fly-4-in-1-concept?modelVersionId=102202
+      floating:
+        prompts:
+          - >-
+            ({1-3$$__lazy-wildcards/subject/action-pose/floating/action-fly__}{0.3:::{1.2|1.3|1.4}|})
+            {, ({1-$$__lazy-wildcards/subject/action-pose/floating/env-bg__})|}
+            {, {1-$$__lazy-wildcards/subject/action-pose/floating/env__}|}
+            {, {1-$$__lazy-wildcards/subject/action-pose/floating/style__}|}
+        action-fly:
+          - fly
+          - flying
+          - floating, Floatation
+          - holding balloons
+          - telekinesis, telekines
+          - arm up, motion blur
+        env-bg:
+          - above clouds
+          - in the sky
+          - __lazy-wildcards/subject/env-bg/outer_space/env-bg-main__
+          - floating_island
+        env:
+          - lots of balloons
+          - floating object
+        style:
+          - __lazy-wildcards/utils/scenery__
+          - weightlessness, imponderability, zero_gravity, Zero-G
+          - freefall
+          - floating, Floatation
+          - Levity
+

@@ -93,4 +93,91 @@ lazy-wildcards:
           - beach
           - heian
           - on the blanket
+    Brown-Dust:
+      # https://civitai.com/models/611537/eclipse-nightmare-bunny-brown-dust-2
+      Eclipse:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/main__
+            ,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/costume-ethnicity__}
+            {,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/costume-types/*__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/action__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/env__}|}
+        main:
+          - EclipseNightmareBunny, eclipse_(brown_dust_2), brown_dust_2, brown_dust
+        costume-ethnicity:
+          - very long hair, ponytail, purple hair, blue eyes, hair over one eye
+          - huge breasts
+          - black hair
+          - colored inner hair
+          - purple hair
+        costume-types:
+          Nightmare-Bunny:
+            - gloves, long sleeves, navel, cleavage, bare shoulders, fishnet pantyhose, bowtie, rabbit ears, red bow, black leotard, purple coat, wrist cuffs, strapless, detached collar, highleg
+        costume-elem:
+          - demon girl
+          - fishnet pantyhose
+          - playboy bunny
+          - red gloves
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - broken horn
+          - curly hair
+          - demon horns
+          - horn ornament
+          - horn ring
+          - shirt overhang
+          - chest tattoo
+          - horn ribbon
+        costume-weapon:
+          - drinking glass, wine glass
+          - holding cup
+          - champagne bottle
+          - holding tray
+          - book
+        action:
+          - arm up
+          - lying, on back
+        env:
+          - floating book
+          - floating object
+          - floating, flying
+          - shadow
+          - aura
+    Path-to-Nowhere:
+      # https://civitai.com/models/428585/mantis-path-to-nowhere
+      # https://danbooru.donmai.us/posts?tags=mantis_%28path_to_nowhere%29&z=5
+      Mantis:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/main__
+            ,{3-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-ethnicity__}
+            {0.3::,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-wings__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-weapon__}|}
+        main:
+          - Mantis, Mantis \(path_to_nowhere\), path_to_nowhere
+        costume-ethnicity:
+          - aqua eyes
+          - ahoge
+          - monster girl
+          - green hair
+          - green eyes
+        costume:
+          - black shirt, short shorts, strapless
+        costume-elem:
+          - mask
+          - half mask
+          - midriff
+          - arm blade
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - cleavage
+          - eyes visible through hair
+        costume-wings:
+          - insect wings
+          - green wings
+          - energy wings
+        costume-weapon:
+          - scythe
 

@@ -179,4 +179,191 @@ lazy-wildcards:
           - adjusting clothes
           - hand in pocket
           - head tilt
+    yu-gi-oh:
+      # https://danbooru.donmai.us/posts?tags=harpie_lady
+      # https://danbooru.donmai.us/posts?tags=harpie_lady_%28normal_monster%29
+      # https://civitai.com/models/611599/harpy-lady-yugioh?modelVersionId=683689
+      harpie-lady:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/main__
+            ,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume-ethnicity__}
+            ,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume-wings__}
+            {,__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume__|}
+            {,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/env__}|}
+        main:
+          - HL, harpie_lady_1, harpie_lady, harpie_lady_\(normal_monster\), yu-gi-oh!, yu-gi-oh! duel monsters, harpie lady \(normal monster\) \(cosplay\), harpy
+        costume-ethnicity:
+          - >-
+            {1-$$winged arms|feathered arms}
+          - blue skin
+          - claws
+          - pink hair
+          - pointy ears
+          - bird tail
+          - green eyes
+          - long hair, very long hair
+        costume:
+          - blue bodysuit, purple tights, harpy, winged arms, blue wings
+          - gold armor, purple tights, winged arms, purple wings
+          - purple armor, purple tights, winged arms, green wings
+        costume-elem:
+          - purple tights
+          - spiked armor
+          - cyber harpie lady \(cosplay\), cyber_harpie_lady
+          - bare shoulders
+          - collar
+          - collarbone
+          - open clothes
+          - strapless leotard
+          - bikini armor
+          - black pantyhose
+          - black thighhighs
+          - clothing cutout
+          - garter straps
+          - navel, navel cutout
+          - pantyhose
+        costume-wings:
+          - aqua feathers, aqua wings
+          - green feathers, green wings
+          - feathered wings
+        costume-weapon:
+          - holding, holding card
+        env:
+          - magical_hats_(yu-gi-oh!)
+          - harpie's pet dragon
+          - cyber shield (yu-gi-oh!)
+      # https://civitai.com/models/445758/ishizu-ishtar-or-yu-gi-oh-or-kofi-commissioned-or-ownwaifu?modelVersionId=496363
+      # https://civitai.com/models/43754
+      ishizu_ishtar:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/main-trigger-words__
+            {, {1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/costume-ethnicity__}|}
+            , {1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/costume__}
+            {, {1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/env__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/ishizu_ishtar/env-bg__}|}
+        main-trigger-words:
+          - ANIME_YuGiOh_IshizuIshtar_ownwaifu, ishizu_ishtar, yu-gi-oh!, ancient egyptian
+        costume-ethnicity:
+          - blue eyes, black hair, long hair, collarbone, lips, lipstick, makeup, __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+        costume:
+          - eye of horus, jewelry, millennium necklace, gold bracelet, gold armlet, gold crown, hair tubes, cleavage, eyeshadow, forehead jewel, gold bracer
+          - hood, dress, cape, ancient egyptian clothes, ankh, white dress, cloak
+        costume-elem:
+          - closed mouth
+          - sleeveless dress
+          - white veil, mouth veil
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
+          - sidelocks
+          - groin
+          - hooded cloak, hood up
+          - gold chain
+          - o-ring
+          - v-shaped eyebrows
+          - wide sleeves
+          - blush
+          - bare shoulders
+          - collarbone
+          - pelvic curtain
+        costume-weapon:
+          - holding card
+          - duel disk
+          - card \(medium\)
+        env:
+          - blue gemstone, gem, green gemstone
+        env-bg:
+          - sand dune
+      # https://civitai.com/models/161567/dark-magician-girl-or-yu-gi-oh?modelVersionId=181858
+      dark_magician_girl:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/yu-gi-oh/dark_magician_girl/main-trigger-words__
+            {, {1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/dark_magician_girl/costume-ethnicity__}|}
+            , {1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/dark_magician_girl/costume-headwear__}
+            , {1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/dark_magician_girl/costume__}
+            {, {1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/dark_magician_girl/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/dark_magician_girl/env__}|}
+        main-trigger-words:
+          - ANIME_dark_magician_girl_YuGiOh_ownwaifu, dark_magician_girl, dark_magician_girl_\(cosplay\), yu-gi-oh!
+        costume-ethnicity:
+          - blonde hair, blush stickers, green eyes, long hair, spiked hair, breasts, hair between eyes, bangs, bright pupils
+        costume-headwear:
+          - wizard hat, blue headwear
+        costume:
+          - >-
+            blue dress
+            , off shoulder, bare shoulders, detached sleeves
+            , pink cape
+            , pink skirt, showgirl skirt
+            , vambraces
+            , cleavage, collarbone, downblouse
+            , pentagram, star \(symbol\)
+            , fingerless gloves
+            , choker, gem, jewelry
+        costume-elem:
+          - medium breasts
+        costume-weapon:
+          - >-
+            wand{, holding wand|}
+        env:
+          - __lazy-wildcards/subject/env-elem/circle-magic/prompts__
+    sousou_no_frieren:
+      # https://civitai.com/models/421109/ubel-sousou-no-frieren
+      # https://danbooru.donmai.us/posts?tags=ubel_%28sousou_no_frieren%29&z=2
+      ubel:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/main__
+            ,{2-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/costume-ethnicity__}
+            {,{1-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/expressions__}|}
+            ,{5-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/costume__}
+            {,__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/costume-weapon__|}
+            {,{1-$$__lazy-wildcards/cosplay-char/sousou_no_frieren/ubel/costume-elem__}|}
+        main:
+          - ubel_\(sousou_no_frieren\), UbelFrieren, ubel, ubel_\(sousou_no_frieren\)_\(cosplay\)
+        costume-ethnicity:
+          - long hair
+          - green hair
+          - side ponytail, hair between eyes, bangs
+          - green eyes
+          - double-parted bangs
+          - high ponytail
+        expressions:
+          - closed mouth
+          - smile
+        costume:
+          - black choker
+          - halterneck
+          - bare shoulders
+          - black dress
+          - sleeveless dress
+          - pleated dress
+          - medium breasts
+          - single glove
+          - black gloves
+          - belt
+          - black socks
+          - boots
+          - black footwear
+          - suspenders hanging
+        costume-elem:
+          - armlet
+          - armband
+          - collarbone
+          - o-ring, o-ring choker
+          - ear piercing
+          - arm strap
+          - sidelocks
+          - sweatdrop
+          - sweaty armpits
+          - sweat
+        costume-weapon:
+          - holding
+          - holding polearm
+          - holding weapon
 
