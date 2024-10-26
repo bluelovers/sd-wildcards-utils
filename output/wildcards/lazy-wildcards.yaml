@@ -1039,6 +1039,17 @@ lazy-wildcards:
         (from below,looking down,ass visible through thighs:1.2)
     view:
       - front view
+      - from side
+      - from behind
+      - from inside
+      - from outside
+      - from top
+      - from bottom
+      - from below
+      - from side to side
+      - from behind to front
+      - from top to bottom
+      - from above
     # 作物
     crops:
       # 必要作物
@@ -2153,6 +2164,43 @@ lazy-wildcards:
             (dark dim fantasy atmosphere) full body portrait of (sexy sitting on a dark throne in a gossamer dress),cinematic lighting,(torn clothes:1.5),(see-through:1.5)
         style:
           - psychedelic dripping colors,psychedelic vibrant colors,cgsociety saturated colors,bold psychedelic colors
+      World_Morph:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/scenes-showcase/World_Morph/style-main__,{0.6::({1-2$$__lazy-wildcards/subject/scenes-showcase/World_Morph/env__|__lazy-wildcards/subject/scenes-showcase/World_Morph/costume-weapon__|__lazy-wildcards/subject/scenes-showcase/World_Morph/env-vehicle__|__lazy-wildcards/subject/scenes-showcase/World_Morph/env-bg__}:1.4)|0.4::__lazy-wildcards/subject/scenes-showcase/World_Morph/prompts-costume__}{,{1-$$__lazy-wildcards/subject/scenes-showcase/World_Morph/style__}|},__lazy-wildcards/dataset/background-color__
+        style-main:
+          - World Morph
+        prompts-costume:
+          - >-
+            1girl,1other,solo focus,face focus,__lazy-wildcards/subject/scenes-showcase/World_Morph/costume__,{0.3::(__lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__:1.1)|},{__lazy-wildcards/prompts/hair__|}
+        costume:
+          - bikini armor
+        costume-weapon:
+          - laser rifle
+        env:
+          - coffee machine
+          - floor cleaning robots
+          - toaster in kitchen
+          - computer
+          - battle mech
+          - weighted companion cube
+        env-vehicle:
+          - truck
+          - riding a motorcycle
+          - battle tank on battlefield
+          - warship
+          - dirigible
+          - space_craft
+        env-bg:
+          - city
+          - house
+          - tower
+          - skyscrapers
+        style:
+          - concept art
+          - scifi
+          - futuristic
+          - fantasy
     scenes-view:
       gacha:
         prompts:
@@ -3080,7 +3128,7 @@ lazy-wildcards:
       market_religious:
         prompts:
           - >-
-            A bustling market square in a religious city where vendors sell items decorated with a variety of religious symbols. Colorful rugs with intricate patterns of mandalas,prayer beads with crosses,crescent moons,and other symbols hang from stalls. The architecture of the surrounding buildings features carvings and murals depicting scenes from different religions.{,{1-10$$__lazy-wildcards/subject/env-bg/religious_city/prompts-elem__}|}
+            A bustling market square in a religious city where vendors sell items decorated with a variety of religious symbols. Colorful rugs with intricate patterns of mandalas,prayer beads with crosses,crescent moons,and other symbols hang from stalls. The architecture of the surrounding buildings features carvings and murals depicting scenes from different religions{,{1-10$$__lazy-wildcards/subject/env-bg/religious_city/prompts-elem__}|}
       religious_city:
         prompts:
           - >-
@@ -3918,6 +3966,37 @@ lazy-wildcards:
           - falling_blocks
         style:
           - game_screen_ui
+      World_Morph:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/World_Morph/style-main__,({1-2$$__lazy-wildcards/subject/env-bg/World_Morph/env__|__lazy-wildcards/subject/env-bg/World_Morph/costume__|__lazy-wildcards/subject/env-bg/World_Morph/env-vehicle__|__lazy-wildcards/subject/env-bg/World_Morph/env-bg__}:1.4){,{1-$$__lazy-wildcards/subject/env-bg/World_Morph/style__}|}
+        style-main:
+          - World Morph
+        costume:
+          - bikini armor
+        env:
+          - coffee machine
+          - floor cleaning robots
+          - toaster in kitchen
+          - computer
+          - battle mech
+        env-vehicle:
+          - truck
+          - riding a motorcycle
+          - battle tank on battlefield
+          - warship
+          - dirigible
+          - space_craft
+        env-bg:
+          - city
+          - house
+          - tower
+          - skyscrapers
+        style:
+          - concept art
+          - scifi
+          - futuristic
+          - fantasy
       ShinMegamiTensei-Tokyo_Millennium:
         prompts:
           - >-
@@ -4809,6 +4888,7 @@ lazy-wildcards:
           - Recliner
           - stool
           - __lazy-wildcards/subject/env-elem/rattan-chair/env-chair__
+          - wheelchair
         action-pose:
           - hand on own chin
           - lying
@@ -5028,7 +5108,7 @@ lazy-wildcards:
       tentacles-play:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-elem/tentacles-play/env-tentacles__{,({1-$$__lazy-wildcards/subject/env-elem/tentacles-play/env-tentacles-play__})|}{,{1-$$__lazy-wildcards/subject/env-elem/tentacles-play/env-tentacles-style__}|}{,{1-$$__lazy-wildcards/subject/env-elem/tentacles-play/expressions__}|}{,{1-$$__lazy-wildcards/subject/env-elem/tentacles-play/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-elem/tentacles-play/action__}|}{,{1-$$__lazy-wildcards/subject/env-elem/tentacles-play/env__}|}{0.3::,{1-$$__lazy-wildcards/subject/env-elem/tentacles-play/env-bg__}|}{0.3::,__lazy-wildcards/subject/env-elem/tentacles-play/style__|}
+            __lazy-wildcards/subject/env-elem/tentacles-play/env-tentacles__{,({1-$$__lazy-wildcards/subject/env-elem/tentacles-play/env-tentacles-play__})|}{,{1-$$__lazy-wildcards/subject/env-elem/tentacles-play/env-tentacles-style__}|}{,{1-$$__lazy-wildcards/subject/env-elem/tentacles-play/expressions__}|}{,{1-$$__lazy-wildcards/subject/env-elem/tentacles-play/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-elem/tentacles-play/action__}|}{,{1-$$__lazy-wildcards/subject/env-elem/tentacles-play/env__}|}{0.3::,{1-$$__lazy-wildcards/subject/env-elem/tentacles-play/env-bg__}|}
         env-tentacles:
           - tentacles,eldritchtentacle,rindou,nsfw
         env-tentacles-play:
@@ -5081,16 +5161,59 @@ lazy-wildcards:
           - __lazy-wildcards/subject/action-nsfw-sex/imminent/prompts__
           - __lazy-wildcards/subject/action-nsfw-others/bound/prompts__
           - __lazy-wildcards/subject/action-nsfw-others/pose-bottom-open-legs/prompts__
+      # https://civitai.com/models/875670/slime-tech-world-morph?modelVersionId=980301
+      # https://civitai.com/models/122848/meltinglove-lobotomy-corporation
+      # https://civitai.com/models/62065/covered-in-strange-fluid
+      # https://civitai.com/models/367974/slime-world
+      # https://civitai.com/models/83272/liquid-metal-slime-girl
+      # https://civitai.com/models/642996/slime-sexsdxlpony
+      # https://civitai.com/models/185683/slimeworld-or-slime-girl-helper-and-concept
+      slime:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/slime/env-main__{,{1-$$__lazy-wildcards/subject/env-elem/slime/env-creatures__}|}{,{1-$$__lazy-wildcards/subject/env-elem/slime/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-elem/slime/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem/slime/style__}|}
+        env-main:
+          - inspired by nv_slimetech,inspired by slime,SlimeC,SlimeWorld
+        env:
+          - tendrils
+          - pouring liquid
+          - slime \(substance\)
+          - surrounded by slime
+          - covered by slime
+          - GreenSlimeAI
+          - whiteSlimeAI
+          - bones and skulls
+          - wet,lotion
+          - slime thick dripping
+        env-creatures:
+          - slime \(creature\)
+          - slime shapeshifter
+          - metal slime
+          - transparent slime
+          - coloed slime
+        costume-elem:
+          - transparent body
+          - liquid body
+          - metal skin,made of metal
+          - liquid metal girl
+          - synthetic girl
+          - slime girl
         style:
-          - from side
-          - from behind
-          - from inside
-          - from outside
-          - from top
-          - from bottom
-          - from side to side
-          - from behind to front
-          - from top to bottom
+          - translucent
+          - slime_tech,slime_technology
+          - scifi fashion
+          - melting
+          - slime sex
+          - goopy
+          - see-through
+          - liquid
+          - soaked
+          - strange fluid
+          - thick dripping
+          - skinny
+          - Soap film interference
+          - Veined
+          - lattice,Fine mesh
       skull:
         prompts:
           - >-
@@ -6803,6 +6926,25 @@ lazy-wildcards:
         expressions:
           - open_mouth
           - close_mouth
+      bandages:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-elem/bandages/costume-elem__}
+        costume-elem:
+          - bandages
+          - bandaid
+          - bandaged head
+          - arm sling
+          - bandage over one eye
+          - bandaged chest
+          - bandaged neck
+          - bandaid on face
+          - patient_bandaged
+          - bandaged leg
+          - bandaged arm
+          - bandaged shoulder
+          - bandaged knee
+          - blood_on_bandages
       pussy_juice:
         prompts:
           - >-
@@ -7290,28 +7432,6 @@ lazy-wildcards:
           - Insect
           - __lazy-wildcards/subject/env-elem/spider-webs/prompts__
           - flower
-      office-lady:
-        prompts:
-          - office lady,zhiyezhuang,formal,collared shirt,vest,pencil skirt,pantyhose
-      maid:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/costume/maid/main__{0.3::,{1-$$__lazy-wildcards/subject/costume/maid/style__}|}
-        style:
-          - cleavage
-          - puffed sleeves
-          - ornate apron
-          - glasses
-        main:
-          - __lazy-wildcards/subject/costume/maid/utils/maid-color-01(c=blue,c2=white)__
-          - |-
-            __lazy-wildcards/subject/costume/maid/utils/maid-color-01(c!=__mix-lazy-auto/color-anything__,c2=white)__
-          - __lazy-wildcards/subject/costume/maid/utils/maid-color-01(c=__mix-lazy-auto/color-anything__,c2=white)__
-          - __lazy-wildcards/subject/costume/maid/utils/maid-color-01(c=__mix-lazy-auto/color-anything__,c2=__mix-lazy-auto/color-anything__)__
-        utils:
-          maid-color-01:
-            - >-
-              maid headdress,detached collar,${c:blue} ribbon,{long|short} sleeves,breasts strap,${c:blue} corset,high-waist,${c2:white} apron,frilled apron,${c:blue} skirt,frilled skirt,${c:blue} boots
       slave-girl:
         prompts:
           - >-
@@ -7689,94 +7809,6 @@ lazy-wildcards:
       wings-elem:
         prompts:
           - multiple_wings
-      Nun:
-        prompts:
-          - >-
-            {1-$$__lazy-wildcards/subject/costume/Nun/main__}{,{1-$$__lazy-wildcards/subject/costume/Nun/costume__}|}{,{1-$$__lazy-wildcards/subject/costume/Nun/costume-ethnicity__}|},{1-$$__lazy-wildcards/subject/costume/Nun/style__},{1-$$__lazy-wildcards/subject/costume/Nun/env__}{,{1-$$__lazy-wildcards/subject/costume/Nun/env-bg__}|}
-        main:
-          - nun
-        costume-ethnicity:
-          - pale_skin
-        costume:
-          - >-
-            {1-$$religious_attire|religious_uniform}
-          - >-
-            {1-$$veils|nun veils}
-          - hidden_face
-          - traditional_nun_attire
-          - modest_clothing
-          - rosary,prayer_beads
-        style:
-          - mystical_rituals
-          - hidden_knowledge
-          - peaceful_aura
-          - gentle_presence
-          - holy
-          - pious_lifestyle
-          - religious_dedication
-          - sanctity
-          - religious_art
-          - sacred_space
-          - private_prayer
-          - spiritual_themes
-          - religious_themes
-        env:
-          - religious_symbols
-          - occult_symbols
-          - stained_glass_windows
-          - pews
-          - crucifix
-          - church_bell
-          - religious_paintings
-        env-bg:
-          - >-
-            {1-$$church|cathedral|chapel|monastery}
-          - religious_building
-          - altar
-          - church_interior
-          - bell_tower
-      # https://civitai.com/models/579225?modelVersionId=671994
-      Nun-Dark:
-        prompts:
-          - >-
-            {1-$$__lazy-wildcards/subject/costume/Nun-Dark/main__}{,{1-$$__lazy-wildcards/subject/costume/Nun-Dark/costume__}|},{1-$$__lazy-wildcards/subject/costume/Nun-Dark/style__},{1-$$__lazy-wildcards/subject/costume/Nun-Dark/env__}{,{1-$$__lazy-wildcards/subject/costume/Nun-Dark/env-bg__}|},{1-$$__lazy-wildcards/subject/costume/Nun/prompts__}
-        main:
-          - dark nun
-        costume:
-          - >-
-            {1-$$dark_clothing|dark_religious_attire}
-          - gothic_nun,gothic_attire
-          - demonic_nun,demonic_possession
-        style:
-          - gothic_aesthetic
-          - >-
-            {1-$$sinister|eerie_atmosphere|dark_aura|cursed|malevolent_expression|ominous_presence}
-          - dark_magic
-          - supernatural_affliction
-          - haunted_appearance
-          - chilling_appearance
-          - shadows_and_darkness
-        env:
-          - >-
-            {1-$$spectral_figures|ghostly_presence|ghostly_aura}
-          - inverted_cross,cross of saint peter
-        env-bg:
-          - haunted_monastery
-      police:
-        prompts:
-          - >-
-            {{1-$$__lazy-wildcards/subject/costume/police/costume__},|}{{1-$$__lazy-wildcards/subject/costume/police/costume-weapon__},|}{1-$$__lazy-wildcards/subject/costume/police/costume-elem__}
-        costume:
-          - police_cap
-          - police_uniform
-        costume-elem:
-          - police_badge
-          - utility_belt
-        costume-weapon:
-          - >-
-            {1-$$walkie-talkie|holding walkie-talkie}
-          - handcuffs
-          - law_enforcement_tool
       sfw-civitai:
         prompts:
           - >-
@@ -8182,9 +8214,148 @@ lazy-wildcards:
           - MP18 SMG,leather SMG pouch
           - ZB-26,LMG
           - thompson SMG,submachine gun
+      patient_gown:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/patient_gown/costume__{,{1-$$__lazy-wildcards/subject/costume/patient_gown/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume/patient_gown/action-pose__}|}{,{1-$$__lazy-wildcards/subject/costume/patient_gown/env-bg__}|}{,{1-$$__lazy-wildcards/subject/costume/patient_gown/env__}|}{,{1-$$__lazy-wildcards/subject/costume/patient_gown/env-chair__}|}
+        costume:
+          - hospital gown,patient_gown
+        costume-elem:
+          - pink bra
+          - open clothes
+          - open shirt
+          - striped,striped clothes
+          - oxygen mask
+          - __lazy-wildcards/subject/costume-elem/bandages/prompts__
+          - blush,light blush
+          - pantyhose
+          - v-collar
+        env-bg:
+          - hospital bed
+          - hospital
+        env:
+          - intravenous drip
+          - iv stand
+          - blood bag
+        env-chair:
+          - wheelchair
+        action-pose:
+          - on back
+          - >-
+            {sitting|lying}{ on bed|}
       Malaysia_Non-Muslim_School_Uniform:
         prompts:
           - (blue_pinafore,white shirt,white skirt),Malaysia Non-Muslim School Uniform
+      police:
+        prompts:
+          - >-
+            {{1-$$__lazy-wildcards/subject/costume/police/costume__},|}{{1-$$__lazy-wildcards/subject/costume/police/costume-weapon__},|}{1-$$__lazy-wildcards/subject/costume/police/costume-elem__}
+        costume:
+          - police_cap
+          - police_uniform
+        costume-elem:
+          - police_badge
+          - utility_belt
+        costume-weapon:
+          - >-
+            {1-$$walkie-talkie|holding walkie-talkie}
+          - handcuffs
+          - law_enforcement_tool
+      Nun:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume/Nun/main__}{,{1-$$__lazy-wildcards/subject/costume/Nun/costume__}|}{,{1-$$__lazy-wildcards/subject/costume/Nun/costume-ethnicity__}|},{1-$$__lazy-wildcards/subject/costume/Nun/style__},{1-$$__lazy-wildcards/subject/costume/Nun/env__}{,{1-$$__lazy-wildcards/subject/costume/Nun/env-bg__}|}
+        main:
+          - nun
+        costume-ethnicity:
+          - pale_skin
+        costume:
+          - >-
+            {1-$$religious_attire|religious_uniform}
+          - >-
+            {1-$$veils|nun veils}
+          - hidden_face
+          - traditional_nun_attire
+          - modest_clothing
+          - rosary,prayer_beads
+        style:
+          - mystical_rituals
+          - hidden_knowledge
+          - peaceful_aura
+          - gentle_presence
+          - holy
+          - pious_lifestyle
+          - religious_dedication
+          - sanctity
+          - religious_art
+          - sacred_space
+          - private_prayer
+          - spiritual_themes
+          - religious_themes
+        env:
+          - religious_symbols
+          - occult_symbols
+          - stained_glass_windows
+          - pews
+          - crucifix
+          - church_bell
+          - religious_paintings
+        env-bg:
+          - >-
+            {1-$$church|cathedral|chapel|monastery}
+          - religious_building
+          - altar
+          - church_interior
+          - bell_tower
+      # https://civitai.com/models/579225?modelVersionId=671994
+      Nun-Dark:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume/Nun-Dark/main__}{,{1-$$__lazy-wildcards/subject/costume/Nun-Dark/costume__}|},{1-$$__lazy-wildcards/subject/costume/Nun-Dark/style__},{1-$$__lazy-wildcards/subject/costume/Nun-Dark/env__}{,{1-$$__lazy-wildcards/subject/costume/Nun-Dark/env-bg__}|},{1-$$__lazy-wildcards/subject/costume/Nun/prompts__}
+        main:
+          - dark nun
+        costume:
+          - >-
+            {1-$$dark_clothing|dark_religious_attire}
+          - gothic_nun,gothic_attire
+          - demonic_nun,demonic_possession
+        style:
+          - gothic_aesthetic
+          - >-
+            {1-$$sinister|eerie_atmosphere|dark_aura|cursed|malevolent_expression|ominous_presence}
+          - dark_magic
+          - supernatural_affliction
+          - haunted_appearance
+          - chilling_appearance
+          - shadows_and_darkness
+        env:
+          - >-
+            {1-$$spectral_figures|ghostly_presence|ghostly_aura}
+          - inverted_cross,cross of saint peter
+        env-bg:
+          - haunted_monastery
+      office-lady:
+        prompts:
+          - office lady,zhiyezhuang,formal,collared shirt,vest,pencil skirt,pantyhose
+      maid:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/maid/main__{0.3::,{1-$$__lazy-wildcards/subject/costume/maid/style__}|}
+        style:
+          - cleavage
+          - puffed sleeves
+          - ornate apron
+          - glasses
+        main:
+          - __lazy-wildcards/subject/costume/maid/utils/maid-color-01(c=blue,c2=white)__
+          - |-
+            __lazy-wildcards/subject/costume/maid/utils/maid-color-01(c!=__mix-lazy-auto/color-anything__,c2=white)__
+          - __lazy-wildcards/subject/costume/maid/utils/maid-color-01(c=__mix-lazy-auto/color-anything__,c2=white)__
+          - __lazy-wildcards/subject/costume/maid/utils/maid-color-01(c=__mix-lazy-auto/color-anything__,c2=__mix-lazy-auto/color-anything__)__
+        utils:
+          maid-color-01:
+            - >-
+              maid headdress,detached collar,${c:blue} ribbon,{long|short} sleeves,breasts strap,${c:blue} corset,high-waist,${c2:white} apron,frilled apron,${c:blue} skirt,frilled skirt,${c:blue} boots
       japanese-clothes:
         prompts:
           - >-
@@ -8849,8 +9020,6 @@ lazy-wildcards:
           - pitcher plant
           - saliva
           - puffy sleeves
-
-          - 
           - licking
           - __lazy-wildcards/subject/env-elem/flower/prompts__
           - lipstick
@@ -9349,6 +9518,7 @@ lazy-wildcards:
           - >-
             {1-$$seductive smile|seductive|voluptuous}
     action-pose:
+      # https://civitai.com/models/95708/fly-4-in-1-concept?modelVersionId=102202
       floating:
         prompts:
           - >-
@@ -9374,6 +9544,10 @@ lazy-wildcards:
           - freefall
           - floating,Floatation
           - Levity
+      outstretched_arms:
+        prompts:
+          - >-
+            outstretched_arms,reaching_out{0.3::,{from side|from above|from bottom}|}
     action-pose-selfie:
       selfie-mirror:
         prompts:
@@ -10095,6 +10269,37 @@ lazy-wildcards:
         style:
           - casual
           - engineering_genius
+    # https://danbooru.donmai.us/posts?tags=saber_marionette_j&z=5
+    # https://danbooru.donmai.us/posts?tags=saber_marionette_r&z=5
+    saber_marionette_j:
+      style:
+        prompts:
+          - >-
+            saber_marionette_j{,{1-$$__lazy-wildcards/cosplay-char/saber_marionette_j/style/style:__}|}{0.2::,{1-$$__lazy-wildcards/cosplay-char/saber_marionette_j/style/style-art:__}|}
+        style-art:
+          - 1990s \(style\)
+          - retro artstyle
+        style:
+          - sci-fi_theme
+          - android
+      # https://civitai.com/models/63494/luchs-saber-marionette-j
+      luchs:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/saber_marionette_j/luchs/main-trigger-words__,__lazy-wildcards/cosplay-char/saber_marionette_j/luchs/costume-ethnicity__,__lazy-wildcards/cosplay-char/saber_marionette_j/luchs/costume__{,{1-$$__lazy-wildcards/cosplay-char/saber_marionette_j/luchs/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/saber_marionette_j/luchs/expressions__}|},__lazy-wildcards/cosplay-char/saber_marionette_j/style/prompts__
+        main-trigger-words:
+          - luchs
+        costume-ethnicity:
+          - blue hair,lipstick,hair over eyes,makeup
+        costume:
+          - >-
+            military uniform,crop top,midriff,navel,epaulettes,red necktie,long sleeves,cleavage
+        costume-elem:
+          - battle_armor
+          - purple panties
+          - black thighhighs
+        expressions:
+          - cool_expression
     one-punch_man:
       # https://civitai.com/models/130782/mosquito-girl-anime-character-or-one-punch-man-or-ownwaifu?modelVersionId=143568
       mosquito_musume:
@@ -10361,6 +10566,24 @@ lazy-wildcards:
             wand{,holding wand|}
         env:
           - __lazy-wildcards/subject/env-elem/circle-magic/prompts__
+      # https://civitai.com/models/856013/high-priestess-of-prophecy-or-yu-gi-oh-or-2-attires?modelVersionId=957760
+      high_priestess_of_prophecy:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/yu-gi-oh/high_priestess_of_prophecy/main-trigger-words__{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/high_priestess_of_prophecy/costume-ethnicity__}|},{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/high_priestess_of_prophecy/costume-headwear__}{,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/high_priestess_of_prophecy/costume__}|},{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/high_priestess_of_prophecy/costume-elem__}
+        main-trigger-words:
+          - |-
+            high_priestess_of_prophecy,MainOutfit_HighPriestessOfProphecy_ownwaifu,high priestess of prophecy \(cosplay\),yu-gi-oh!
+        costume-ethnicity:
+          - pink hair,long hair,green eyes,gem,jewelry,groin,choker,collarbone
+        costume-headwear:
+          - hat,wizard hat,witch hat
+        costume:
+          - >-
+            midriff,navel,cleavage,white thighhighs,garter straps,skirt,miniskirt,white shorts,cameltoe,zettai ryouiki,belt,garter belt,impossible shirt,impossible clothes
+          - NSFW_HighPriestessOfProphecy_ownwaifu,navel
+        costume-elem:
+          - elbow gloves,white gloves,bare shoulders,detached sleeves,cape
     sousou_no_frieren:
       # https://civitai.com/models/421109/ubel-sousou-no-frieren
       # https://danbooru.donmai.us/posts?tags=ubel_%28sousou_no_frieren%29&z=2
@@ -10782,6 +11005,16 @@ lazy-wildcards:
           - Holding_Revolver,Revolver
           - Holding_Bazooka,Bazooka
           - Holding_rocket_launcher,rocket_launcher
+    Arena_of_Valor:
+      # https://civitai.com/models/888803/grakkaovmodellora?modelVersionId=994577
+      Grakk:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/Arena_of_Valor/Grakk/main-trigger-words__,__lazy-wildcards/cosplay-char/Arena_of_Valor/Grakk/costume__
+        main-trigger-words:
+          - Grakk_AoV,Grakk,Arena_of_Valor
+        costume:
+          - glowing,horns,pauldrons,shoulder armor,collarbone,cleavage,breasts,armor,chain,gauntlets,navel,loincloth,pelvic curtain,shackles,spikes,helmet,leg,thighs,cuffs,barefoot
     yasei_no_last_boss_ga_arawareta:
       ruphas_mafahl:
         prompts:
