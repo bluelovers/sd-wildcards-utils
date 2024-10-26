@@ -22,6 +22,7 @@ import { parseDocument, YAMLMap } from 'yaml';
 import { groupSplitConfig } from './split-config';
 import { findPath, pathsToWildcardsPath } from '../../../src/find';
 import { IFindPathEntry, IRecordWildcards } from '../../../src/types';
+import { consoleLogger } from 'debug-color2/logger';
 
 const _splitSpecific2 = escapeSplit({ delimiter: '/', escaper: '\\' });
 
@@ -62,7 +63,7 @@ export default (async () =>
 				cwd: __ROOT_DATA,
 			}), (file: string) =>
 			{
-				console.log(file);
+				consoleLogger.gray.debug(file);
 
 				let path = join(__ROOT_DATA, file);
 				let buf = readFileSync(path);
@@ -104,7 +105,7 @@ export default (async () =>
 
 	for (let [group, listRoot] of Object.entries(map))
 	{
-		console.log(`create`, group, listRoot.length);
+		consoleLogger.debug(`create`, group, listRoot.length);
 
 		let refs: string[] = [];
 
