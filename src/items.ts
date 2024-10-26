@@ -9,7 +9,7 @@ import {
 	IWildcardsYAMLMapRoot,
 	IWildcardsYAMLPair, IWildcardsYAMLScalar,
 } from './types';
-import { formatPrompts, stripZeroStr, trimPrompts } from './format';
+import { formatPrompts } from './format';
 import { isWildcardsYAMLDocument, isWildcardsYAMLMap } from './is';
 import { _checkValue } from './valid';
 
@@ -181,7 +181,7 @@ export function _visitNormalizeScalar(key: IVisitorFnKey, node: IWildcardsYAMLSc
 			node.type = 'PLAIN';
 		}
 
-		value = trimPrompts(stripZeroStr(formatPrompts(value, runtime.options)));
+		value = formatPrompts(value, runtime.options);
 
 		if (!value.length)
 		{
@@ -200,7 +200,7 @@ export function _visitNormalizeScalar(key: IVisitorFnKey, node: IWildcardsYAMLSc
 		}
 
 		let res = _checkValue(value);
-		if (res?.error) 
+		if (res?.error)
 		{
 			throw new SyntaxError(`${res.error}. key: ${key}, node: ${node}`)
 		}
