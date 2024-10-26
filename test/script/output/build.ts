@@ -6,8 +6,10 @@ import { __ROOT_DATA, __ROOT_OUTPUT_WILDCARDS } from '../../__root';
 import {
 	defaultOptionsStringifyMinify, IWildcardsYAMLDocument,
 	mergeFindSingleRoots,
+	normalizeWildcardsYamlString,
 	parseWildcardsYaml,
-	stringifyWildcardsYamlData, stripBlankLines,
+	stringifyWildcardsYamlData,
+	stripBlankLines,
 } from '../../../src/index';
 // @ts-ignore
 import { outputFile, writeFile } from 'fs-extra';
@@ -38,11 +40,12 @@ export default Bluebird.map([
 			const full_file = join(__ROOT_DATA, file)
 			let data = (await readFile(full_file)).toString()
 
-			let data_new = stripBlankLines(data.toString())
+			let data_new = stripBlankLines(normalizeWildcardsYamlString(data), true)
 
 			if (data_new !== data)
 			{
-				await writeFile(full_file, data_new)
+				console.log(`update`, file);
+				await writeFile(full_file, data_new);
 			}
 
 			return parseWildcardsYaml(data_new, {
