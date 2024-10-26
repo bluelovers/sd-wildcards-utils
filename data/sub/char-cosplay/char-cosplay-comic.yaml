@@ -312,6 +312,31 @@ lazy-wildcards:
             wand{, holding wand|}
         env:
           - __lazy-wildcards/subject/env-elem/circle-magic/prompts__
+      # https://civitai.com/models/856013/high-priestess-of-prophecy-or-yu-gi-oh-or-2-attires?modelVersionId=957760
+      high_priestess_of_prophecy:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/yu-gi-oh/high_priestess_of_prophecy/main-trigger-words__
+            {, {1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/high_priestess_of_prophecy/costume-ethnicity__}|}
+            , {1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/high_priestess_of_prophecy/costume-headwear__}
+            {, {1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/high_priestess_of_prophecy/costume__}|}
+            , {1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/high_priestess_of_prophecy/costume-elem__}
+        main-trigger-words:
+          - high_priestess_of_prophecy, MainOutfit_HighPriestessOfProphecy_ownwaifu, high priestess of prophecy \(cosplay\), yu-gi-oh!
+        costume-ethnicity:
+          - pink hair, long hair, green eyes, gem, jewelry, groin, choker, collarbone
+        costume-headwear:
+          - hat, wizard hat, witch hat
+        costume:
+          - >-
+            midriff, navel, cleavage
+            , white thighhighs, garter straps
+            , skirt, miniskirt, white shorts, cameltoe, zettai ryouiki
+            , belt, garter belt, impossible shirt
+            , impossible clothes
+          - NSFW_HighPriestessOfProphecy_ownwaifu, navel
+        costume-elem:
+          - elbow gloves, white gloves, bare shoulders, detached sleeves, cape
     sousou_no_frieren:
       # https://civitai.com/models/421109/ubel-sousou-no-frieren
       # https://danbooru.donmai.us/posts?tags=ubel_%28sousou_no_frieren%29&z=2

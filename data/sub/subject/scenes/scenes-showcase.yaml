@@ -37,3 +37,47 @@ lazy-wildcards:
           - (dark dim fantasy atmosphere) full body portrait of (sexy sitting on a dark throne in a gossamer dress), cinematic lighting, (torn clothes:1.5), (see-through:1.5)
         style:
           - psychedelic dripping colors, psychedelic vibrant colors, cgsociety saturated colors, bold psychedelic colors
+      World_Morph:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/scenes-showcase/World_Morph/style-main__
+            , {0.6::({1-2$$__lazy-wildcards/subject/scenes-showcase/World_Morph/env__|__lazy-wildcards/subject/scenes-showcase/World_Morph/costume-weapon__|__lazy-wildcards/subject/scenes-showcase/World_Morph/env-vehicle__|__lazy-wildcards/subject/scenes-showcase/World_Morph/env-bg__}:1.4)|0.4::__lazy-wildcards/subject/scenes-showcase/World_Morph/prompts-costume__}
+            {, {1-$$__lazy-wildcards/subject/scenes-showcase/World_Morph/style__}|}
+            , __lazy-wildcards/dataset/background-color__
+        style-main:
+          - World Morph
+        prompts-costume:
+          - >-
+            1girl, 1other
+            , solo focus, face focus
+            , __lazy-wildcards/subject/scenes-showcase/World_Morph/costume__
+            , {0.3::(__lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__:1.1)|}
+            , {__lazy-wildcards/prompts/hair__|}
+        costume:
+          - bikini armor
+        costume-weapon:
+          - laser rifle
+        env:
+          - coffee machine
+          - floor cleaning robots
+          - toaster in kitchen
+          - computer
+          - battle mech
+          - weighted companion cube
+        env-vehicle:
+          - truck
+          - riding a motorcycle
+          - battle tank on battlefield
+          - warship
+          - dirigible
+          - space_craft
+        env-bg:
+          - city
+          - house
+          - tower
+          - skyscrapers
+        style:
+          - concept art
+          - scifi
+          - futuristic
+          - fantasy

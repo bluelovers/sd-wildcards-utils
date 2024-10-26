@@ -189,3 +189,46 @@ lazy-wildcards:
         style:
           - casual
           - engineering_genius
+    # https://danbooru.donmai.us/posts?tags=saber_marionette_j&z=5
+    # https://danbooru.donmai.us/posts?tags=saber_marionette_r&z=5
+    saber_marionette_j:
+      style:
+        prompts:
+          - >-
+            saber_marionette_j
+            {, {1-$$__lazy-wildcards/cosplay-char/saber_marionette_j/style/style:__}|}
+            {0.2::, {1-$$__lazy-wildcards/cosplay-char/saber_marionette_j/style/style-art:__}|}
+        style-art:
+          - 1990s \(style\)
+          - retro artstyle
+        style:
+          - sci-fi_theme
+          - android
+      # https://civitai.com/models/63494/luchs-saber-marionette-j
+      luchs:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/saber_marionette_j/luchs/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/saber_marionette_j/luchs/costume-ethnicity__
+            , __lazy-wildcards/cosplay-char/saber_marionette_j/luchs/costume__
+            {, {1-$$__lazy-wildcards/cosplay-char/saber_marionette_j/luchs/costume-elem__}|}
+            {, {  1-$$__lazy-wildcards/cosplay-char/saber_marionette_j/luchs/expressions__}|}
+            , __lazy-wildcards/cosplay-char/saber_marionette_j/style/prompts__
+        main-trigger-words:
+          - luchs
+        costume-ethnicity:
+          - blue hair, lipstick, hair over eyes, makeup
+        costume:
+          - >-
+            military uniform, crop top, midriff, navel
+            , epaulettes
+            , red necktie
+            , long sleeves
+            , cleavage
+        costume-elem:
+          - battle_armor
+          - purple panties
+          - black thighhighs
+        expressions:
+          - cool_expression
+

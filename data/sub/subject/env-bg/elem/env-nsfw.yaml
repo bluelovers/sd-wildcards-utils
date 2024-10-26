@@ -68,14 +68,61 @@ lazy-wildcards:
           - __lazy-wildcards/subject/action-nsfw-sex/imminent/prompts__
           - __lazy-wildcards/subject/action-nsfw-others/bound/prompts__
           - __lazy-wildcards/subject/action-nsfw-others/pose-bottom-open-legs/prompts__
+      # https://civitai.com/models/875670/slime-tech-world-morph?modelVersionId=980301
+      # https://civitai.com/models/122848/meltinglove-lobotomy-corporation
+      # https://civitai.com/models/62065/covered-in-strange-fluid
+      # https://civitai.com/models/367974/slime-world
+      # https://civitai.com/models/83272/liquid-metal-slime-girl
+      # https://civitai.com/models/642996/slime-sexsdxlpony
+      # https://civitai.com/models/185683/slimeworld-or-slime-girl-helper-and-concept
+      slime:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/slime/env-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/slime/env-creatures__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/slime/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/slime/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/slime/style__}|}
+        env-main:
+          - inspired by nv_slimetech, inspired by slime, SlimeC, SlimeWorld
+        env:
+          - tendrils
+          - pouring liquid
+          - slime \(substance\)
+          - surrounded by slime
+          - covered by slime
+          - GreenSlimeAI
+          - whiteSlimeAI
+          - bones and skulls
+          - wet, lotion
+          - slime thick dripping
+        env-creatures:
+          - slime \(creature\)
+          - slime shapeshifter
+          - metal slime
+          - transparent slime
+          - coloed slime
+        costume-elem:
+          - transparent body
+          - liquid body
+          - metal skin, made of metal
+          - liquid metal girl
+          - synthetic girl
+          - slime girl
         style:
-          - from side
-          - from behind
-          - from inside
-          - from outside
-          - from top
-          - from bottom
-          - from side to side
-          - from behind to front
-          - from top to bottom
+          - translucent
+          - slime_tech, slime_technology
+          - scifi fashion
+          - melting
+          - slime sex
+          - goopy
+          - see-through
+          - liquid
+          - soaked
+          - strange fluid
+          - thick dripping
+          - skinny
+          - Soap film interference
+          - Veined
+          - lattice, Fine mesh
 

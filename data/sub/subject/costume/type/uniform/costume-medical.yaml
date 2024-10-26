@@ -1,0 +1,40 @@
+lazy-wildcards:
+  subject:
+    costume:
+      # https://civitai.com/models/68475/a-certain-kind-of-hospital-gown
+      # https://civitai.com/models/886644/patient-gown
+      patient_gown:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/patient_gown/costume__
+            {, {1-$$__lazy-wildcards/subject/costume/patient_gown/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/patient_gown/action-pose__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/patient_gown/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/patient_gown/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/patient_gown/env-chair__}|}
+        costume:
+          - hospital gown, patient_gown
+        costume-elem:
+          - pink bra
+          - open clothes
+          - open shirt
+          - striped, striped clothes
+          - oxygen mask
+          - __lazy-wildcards/subject/costume-elem/bandages/prompts__
+          - blush, light blush
+          - pantyhose
+          - v-collar
+        env-bg:
+          - hospital bed
+          - hospital
+        env:
+          - intravenous drip
+          - iv stand
+          - blood bag
+        env-chair:
+          - wheelchair
+        action-pose:
+          - on back
+          - >-
+            {sitting|lying}{ on bed|}
+

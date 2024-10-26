@@ -1,0 +1,37 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      World_Morph:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/World_Morph/style-main__
+            , ({1-2$$__lazy-wildcards/subject/env-bg/World_Morph/env__|__lazy-wildcards/subject/env-bg/World_Morph/costume__|__lazy-wildcards/subject/env-bg/World_Morph/env-vehicle__|__lazy-wildcards/subject/env-bg/World_Morph/env-bg__}:1.4)
+            {, {1-$$__lazy-wildcards/subject/env-bg/World_Morph/style__}|}
+        style-main:
+          - World Morph
+        costume:
+          - bikini armor
+        
+        env:
+          - coffee machine
+          - floor cleaning robots
+          - toaster in kitchen
+          - computer
+          - battle mech
+        env-vehicle:
+          - truck
+          - riding a motorcycle
+          - battle tank on battlefield
+          - warship
+          - dirigible
+          - space_craft
+        env-bg:
+          - city
+          - house
+          - tower
+          - skyscrapers
+        style:
+          - concept art
+          - scifi
+          - futuristic
+          - fantasy
