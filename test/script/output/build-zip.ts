@@ -5,13 +5,14 @@ import { join, basename } from 'path';
 import { __ROOT_DATA, __ROOT_OUTPUT_WILDCARDS } from '../../__root';
 import { readFile, outputFile } from 'fs-extra';
 import crypto from 'crypto';
+import { consoleLogger } from 'debug-color2/logger';
 
 export default Bluebird.resolve()
 	.then(async () => {
 		let zip = new JSZip();
 
 		zip_add_file(zip, join(__ROOT_OUTPUT_WILDCARDS, 'lazy-wildcards.yaml'));
-		
+
 		zip_add_file(zip, join(__ROOT_DATA, 'others/billions_of_all_in_one.yaml'));
 		zip_add_file(zip, join(__ROOT_DATA, 'others/navi_atlas.yaml'));
 
@@ -37,8 +38,8 @@ export default Bluebird.resolve()
 		}).then(buf => {
 			const md5 = crypto.createHash('md5');
 			const result = md5.update(buf).digest('hex');
-			
-			console.dir(result);
+
+			consoleLogger.yellow.info(result);
 
 			return outputFile(join(__ROOT_OUTPUT_WILDCARDS, 'lazy-wildcards.yaml.zip'), buf)
 		})

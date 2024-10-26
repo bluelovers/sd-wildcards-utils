@@ -16,6 +16,7 @@ import { outputFile, writeFile } from 'fs-extra';
 import { mergeWildcardsYAMLDocumentRoots } from '../../../src/merge';
 // @ts-ignore
 import { globSync } from 'fs';
+import { consoleLogger } from 'debug-color2/logger';
 
 export default Bluebird.map([
 	join(__ROOT_DATA, 'lazy-wildcards.yaml'),
@@ -44,7 +45,7 @@ export default Bluebird.map([
 
 			if (data_new !== data)
 			{
-				console.log(`update`, file);
+				consoleLogger.info(`update`, file);
 				await writeFile(full_file, data_new);
 			}
 
@@ -57,7 +58,7 @@ export default Bluebird.map([
 	})
 	.then(json =>
 {
-	console.log(`create`, join(__ROOT_OUTPUT_WILDCARDS, 'lazy-wildcards.yaml'));
+	consoleLogger.success(`create`, join(__ROOT_OUTPUT_WILDCARDS, 'lazy-wildcards.yaml'));
 
 	let out = stringifyWildcardsYamlData(json, defaultOptionsStringifyMinify());
 	return outputFile(join(__ROOT_OUTPUT_WILDCARDS, 'lazy-wildcards.yaml'), out)

@@ -8,6 +8,7 @@ import { copy } from 'fs-extra';
 import { join } from 'path';
 // @ts-ignore
 import { globSync } from 'fs';
+import { consoleLogger } from 'debug-color2/logger';
 
 export default Bluebird.each(globSync([
 	'.github/workflows/build.yml',
@@ -16,7 +17,7 @@ export default Bluebird.each(globSync([
 ], {
 	cwd: __ROOT,
 }), (file: string) => {
-	console.log(`copy`, file);
+	consoleLogger.debug(`copy`, file);
 	return copy(join(__ROOT, file), join(__ROOT_OUTPUT, file), {
 		preserveTimestamps: true,
 		dereference: true,

@@ -6,10 +6,11 @@ import { AggregateErrorExtra } from 'lazy-aggregate-error';
 // @ts-ignore
 import Bluebird from 'bluebird';
 import { readFile } from 'node:fs/promises';
+import { consoleLogger } from 'debug-color2/logger';
 
 export default (async () => {
 
-	console.log(`Verification...`);
+	consoleLogger.log(`Verification...`);
 
 	const obj = await Bluebird.map([
 			join(__ROOT_OUTPUT_WILDCARDS, 'lazy-wildcards.yaml'),
@@ -49,7 +50,7 @@ export default (async () => {
 		const e = new AggregateErrorExtra(ret.errors, `Failure or missing some wildcards nodes.`);
 		throw e
 	}
-	
-	console.log(`Verification...Done.`);
+
+	consoleLogger.success(`Verification...Done.`);
 
 })()
