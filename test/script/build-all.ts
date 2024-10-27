@@ -10,6 +10,8 @@ async function lazyImport(m: any)
 
 export default (async () =>
 {
+	let start = new Date();
+
 	await lazyImport(await import('./output/copy'));
 	await lazyImport(await import('./output/split'));
 	await lazyImport(await import('./output/build'));
@@ -22,6 +24,10 @@ export default (async () =>
 		overwrite: true,
 	}).catch(e => console.error(String(e)))
 
-})().then(() => console.log(new Date().toLocaleString()));
+	let end = new Date();
+
+	console.log(start.toLocaleString(), '->', end.toLocaleString(), 'total', (end.getTime() - start.getTime()) / 1000)
+
+})();
 
 
