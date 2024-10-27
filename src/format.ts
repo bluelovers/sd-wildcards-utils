@@ -29,6 +29,7 @@ export function normalizeWildcardsYamlString(value: string)
 		.replace(/\|\s(\d+(?:\.\d+)?::)/gm, '|$1')
 		.replace(/^[ \t]+-[ \t]*$/gm, '')
 		.replace(/^([ \t]+-)[ \t][ ,.]+/gm, '$1 ')
+		.replace(/^([ \t]+-[^\n]+),+$/gm, '$1')
 	;
 	return value
 }
