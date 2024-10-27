@@ -391,4 +391,29 @@ lazy-wildcards:
           - holding
           - holding polearm
           - holding weapon
+    Brave_New_World:
+      # https://civitai.com/models/157972/cha-juhee-or-brave-new-world-or-manhwa
+      Cha_Juhee:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/Brave_New_World/Cha_Juhee/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/Brave_New_World/Cha_Juhee/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/Brave_New_World/Cha_Juhee/expressions__}|}
+            {, {1-2$$__lazy-wildcards/cosplay-char/Brave_New_World/Cha_Juhee/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/Brave_New_World/Cha_Juhee/costume-elem__}|}
+        main-trigger-words:
+          - Cha Juhee, Juheedef, Brave New World
+        costume-ethnicity:
+          - black hair, grey eyes, long hair, eyelashes, pink lips
+        expressions:
+          - parted lips
+          - smile, grin
+        costume:
+          - black shirt, collared shirt, red skirt, pencil skirt, covered navel
+          - bondage outfit, bare shoulders, dominatrix, leotard, latex, latex gloves, elbow gloves
+          - choker, black choker, animal hood, jingle bell, cat hood, fake tail, animal ears,  neck bell, hood up, tail, black nails, hoodie, cat tail, neck bell, hood up, tail, black nails, hoodie, cat tail
+        costume-elem:
+          - hoop earrings
+          - lingerie
+          - cleavage
 

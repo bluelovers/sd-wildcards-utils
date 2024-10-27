@@ -5,18 +5,36 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/subject/env-bg/World_Morph/style-main__
-            , ({1-2$$__lazy-wildcards/subject/env-bg/World_Morph/env__|__lazy-wildcards/subject/env-bg/World_Morph/costume__|__lazy-wildcards/subject/env-bg/World_Morph/env-vehicle__|__lazy-wildcards/subject/env-bg/World_Morph/env-bg__}:1.4)
+            , __lazy-wildcards/subject/env-bg/World_Morph/main-trigger-words__
             {, {1-$$__lazy-wildcards/subject/env-bg/World_Morph/style__}|}
         style-main:
           - World Morph
+        main-trigger-words:
+          - >-
+            {0.7::({1-2$$__lazy-wildcards/subject/env-bg/World_Morph/main-trigger-words-01__}:1.4)|0.3::__lazy-wildcards/subject/env-bg/World_Morph/main-trigger-words-02__}
+        main-trigger-words-01:
+          - __lazy-wildcards/subject/env-bg/World_Morph/env__
+          - __lazy-wildcards/subject/env-bg/World_Morph/costume-weapon__
+          - __lazy-wildcards/subject/env-bg/World_Morph/env-vehicle__
+          - >-
+            {1-$$__lazy-wildcards/subject/env-bg/World_Morph/env-bg__}
+        main-trigger-words-02:
+          - >-
+            {1-2$$__lazy-wildcards/subject/env-bg/World_Morph/costume__}
+            {0.3::, (__lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__:1.1)|}
+            {, __lazy-wildcards/prompts/hair__|}
+            {0.3::,  __lazy-wildcards/subject/costume-ethnicity-race/furry/prompts__|}
         costume:
           - bikini armor
+        costume-weapon:
+          - laser rifle
         env:
           - coffee machine
           - floor cleaning robots
           - toaster in kitchen
           - computer
           - battle mech
+          - weighted companion cube
         env-vehicle:
           - truck
           - riding a motorcycle

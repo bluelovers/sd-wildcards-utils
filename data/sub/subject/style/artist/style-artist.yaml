@@ -113,31 +113,38 @@ lazy-wildcards:
           - rusting, dormant
           - religious
           - existential
-      # https://civitai.com/models/251053/akira-style
-      akira:
+      # https://civitai.com/models/180403/todd-macfarlane-comic-artist
+      Todd_Macfarlane:
         prompts:
           - >-
-            __lazy-wildcards/subject/style-artist/akira/style-main__
-            {, {1-$$__lazy-wildcards/subject/style-artist/akira/env__}|}
-            {, {1-$$__lazy-wildcards/subject/style-artist/akira/env-bg__}|}
-            {, {1-$$__lazy-wildcards/subject/style-artist/akira/style__}|}
+            __lazy-wildcards/subject/style-artist/Todd_Macfarlane/style-main__
+            {, {1-$$__lazy-wildcards/subject/style-artist/Todd_Macfarlane/costume__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/Todd_Macfarlane/action-pose__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/Todd_Macfarlane/env__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/Todd_Macfarlane/style__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/style-artist/Todd_Macfarlane/style-art__}|}
         style-main:
-          - style akirafilm, akira_\(manga\), akira style
+          - by Todd MacFarlane style, by toddmac2023 style
+        costume:
+          - spawn \(spawn\)
+          - muscular_characters
+          - superhero costume
+          - cape, long collar
+          - spike armor
+          - glowing green eyes
+          - cowboy hat
         env:
-          - escaping gas and steam
-        env-bg:
-          - gigantic industrial cryogenic containment facility
-          - large factory machine
-          - new tokyo, Neo-Tokyo in Akira
-          - destroyed skyscraper
+          - webbing
+          - chain
+        action-pose:
+          - battle pose
+          - dynamic_pose
         style:
-          - reminiscent
-          - retro
-      # https://www.facebook.com/SkyFreeDom.CandyClub
-      # https://www.pixiv.net/users/1017056/artworks
-      # https://x.com/skyfreedom_212/media
-      # https://danbooru.donmai.us/posts?tags=sky-freedom&z=5
-      sky-freedom:
-        prompts:
-          - sky-freedom, sky-freedom style, by sky-freedom
+          - vibrant colors
+          - gothic_aesthetic
+          - spawn_\(comic\)
+        style-art:
+          - comic style, comic_artist, dark_comic_art
+          - detailed_linework
+          - 90s_comic_style
 

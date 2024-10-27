@@ -192,4 +192,38 @@ lazy-wildcards:
           - bandaged shoulder
           - bandaged knee
           - blood_on_bandages
+      sleeves:
+        prompts:
+          - >-
+            {1-4$$__lazy-wildcards/subject/costume-elem/sleeves/costume-elem__}
+            {, {1-2$$__lazy-wildcards/subject/costume-elem/sleeves/costume-sleeves-size__}|}
+        costume-elem:
+          - wide sleeves
+          - puffy sleeves
+          - frilled sleeves
+          - ribbon-trimmed sleeves
+          - detached sleeves
+          - ribbed sleeves
+          - sheer sleeves
+          - feather-trimmed sleeves
+          - juliet sleeves
+          - flowing sleeves
+          - flipper sleeves
+          - billowing sleeves
+          - draped sleeves
+          - batwing sleeves
+          - bell sleeves
+          - off-the-shoulder sleeves
+          - beaded sleeves
+          - embroidered sleeves
+          - jeweled sleeves
+          - dramatic sleeves
+          - lace sleeves
+          - slashed sleeves
+          - rolled sleeves
+          - tattoo sleeves
+        costume-sleeves-size:
+          - short sleeves
+          - long sleeves
+          - sleeves past wrists
 

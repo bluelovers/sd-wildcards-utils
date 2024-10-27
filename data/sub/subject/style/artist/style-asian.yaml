@@ -1,0 +1,166 @@
+lazy-wildcards:
+  subject:
+    style-artist:
+      # https://civitai.com/models/251053/akira-style
+      akira:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/akira/style-main__
+            {, {1-$$__lazy-wildcards/subject/style-artist/akira/env__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/akira/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/akira/style__}|}
+        style-main:
+          - style akirafilm, akira_\(manga\), akira style
+        env:
+          - escaping gas and steam
+        env-bg:
+          - gigantic industrial cryogenic containment facility
+          - large factory machine
+          - new tokyo, Neo-Tokyo in Akira
+          - destroyed skyscraper
+        style:
+          - reminiscent
+          - retro
+      # https://www.facebook.com/SkyFreeDom.CandyClub
+      # https://www.pixiv.net/users/1017056/artworks
+      # https://x.com/skyfreedom_212/media
+      # https://danbooru.donmai.us/posts?tags=sky-freedom&z=5
+      sky-freedom:
+        prompts:
+          - sky-freedom style, by sky-freedom
+      # https://www.pixiv.net/users/3699481/artworks
+      # https://civitai.com/models/179062/ccbuchicatbuchi-artist-style
+      # https://x.com/C_mieco
+      CatBuchi:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/CatBuchi/style-artist__
+            {0.7::, {1-$$__lazy-wildcards/subject/style-artist/CatBuchi/costume-elem__}|}
+        style-artist:
+          - CatBuchi style, by CatBuchi
+        costume-elem:
+          - __lazy-wildcards/subject/costume-ethnicity-body/plump_girl/prompts__
+      # https://civitai.com/models/189620/ishida-sui-tokyo-ghoul-zakki-artist-style
+      # https://civitai.com/models/7749
+      Ishida_Sui:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/Ishida_Sui/style-artist__
+            {0.1::, __lazy-wildcards/subject/style-artist/Ishida_Sui/main-trigger-words__|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/Ishida_Sui/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/Ishida_Sui/style__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/style-artist/Ishida_Sui/style-art__}|}
+        style-artist:
+          - by Ishida Sui style
+        main-trigger-words:
+          - kirishima touka
+          - kaneki ken
+          - tokyo_ghoul, tokyo_ghoul:re
+        costume-elem:
+          - swept bangs
+          - thick white eyebrows
+          - white hair
+          - hair over one eye
+          - ear piercing
+          - tattoo
+          - colored sclera
+          - red eyes
+          - pale skin
+          - masked_character
+        style:
+          - flat color
+          - dark_fantasy
+          - psychological_horror
+          - gore
+        style-art:
+          - illustrations
+          - watercolor
+          - detailed_linework
+      # https://civitai.com/models/230229/narumi-kakinouchi-vampire-princess-miyu-artist-style
+      Narumi_Kakinouchi:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/Narumi_Kakinouchi/style-artist__
+            {0.2::, __lazy-wildcards/subject/style-artist/Narumi_Kakinouchi/main-trigger-words__|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/Narumi_Kakinouchi/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/Narumi_Kakinouchi/env__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/style-artist/Narumi_Kakinouchi/style-art__}|}
+        style-artist:
+          - by Narumi_Kakinouchi style
+        main-trigger-words:
+          - Miyu Yamano, miyu \(vampire princess miyu\)
+          - vampire princess miyu
+        costume-elem:
+          - japanese clothes
+          - white kimono
+          - blunt bangs
+          - hair over shoulder
+          - single hair bun
+          - train \(clothing\)
+          - ankle ribbon
+          - hime cut
+          - tress ribbon
+        env:
+          - calla lily
+        style-art:
+          - illustrations
+          - watercolor \(medium\)
+          - retro artstyle, 1990s \(style\)
+      # https://civitai.com/models/153381/akiman-yasuda-akira-turn-a-gundam-star-ocean-55-artist-style
+      Akiman:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/Akiman/style-artist__
+        style-artist:
+          - by Akiman style, by Yasuda akira style
+      # https://civitai.com/models/49599/urushihara-satoshi-langrisser-front-innocent-artist-style
+      # https://danbooru.donmai.us/posts?tags=urushihara_satoshi&z=5
+      Urushihara_Satoshi:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/Urushihara_Satoshi/style-artist__
+            {0.2::, __lazy-wildcards/subject/style-artist/Urushihara_Satoshi/main-trigger-words__|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/Urushihara_Satoshi/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/Urushihara_Satoshi/costume-weapon__}|}
+            {0.7::, {1-$$__lazy-wildcards/subject/style-artist/Urushihara_Satoshi/style-art__}|}
+        style-artist:
+          - by urushihara_satoshi style, Satoshi Urushihara, urushiharas
+        main-trigger-words:
+          - growlanser
+          - Langrisser
+          - Front Innocent
+        costume-elem:
+          - cleavage
+          - shoulder armor
+          - cape
+          - bodysuit
+          - covered navel
+          - long hair
+          - shiny clothes
+          - puffy sleeves
+          - puffy short sleeves
+          - fantasy_armor
+          - elaborate_hair
+          - belly chain
+          - bridal garter
+          - covering crotch
+          - revealing clothes
+          - shrug \(clothing\)
+          - armored boots
+          - center opening
+          - leotard
+          - __lazy-wildcards/subject/costume/armor/prompts__
+          - __lazy-wildcards/subject/costume-elem/sleeves/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
+        costume-weapon:
+          - __lazy-wildcards/subject/costume-weapon/sword-sheath/prompts__
+        style:
+          - elegant
+          - fantasy
+          - erotic_art
+          - glossy_art_style
+        style-art:
+          - retro artstyle
+          - 1990s \(style\)
+          - 1980s \(style\)
+

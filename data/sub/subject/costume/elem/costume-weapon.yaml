@@ -44,4 +44,20 @@ lazy-wildcards:
           - Cantilever Umbrella
           - Personal Sun Shade Umbrella
           - Sun Umbrella
+      # 鞘
+      sword-sheath:
+        prompts:
+          - >-
+            {2-$$__lazy-wildcards/subject/costume-weapon/sword-sheath/costume-weapon__}
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/sword-sheath/costume-weapon-elem__}|}
+        costume-weapon:
+          - holding sheath
+          - sheathed
+          - sheath
+          - scabbard
+          - holding sword
+          - sheath on back
+        costume-weapon-elem:
+          - sword on back
+          - planted sword
 

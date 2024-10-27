@@ -40,45 +40,16 @@ lazy-wildcards:
       World_Morph:
         prompts:
           - >-
-            __lazy-wildcards/subject/scenes-showcase/World_Morph/style-main__
-            , {0.6::({1-2$$__lazy-wildcards/subject/scenes-showcase/World_Morph/env__|__lazy-wildcards/subject/scenes-showcase/World_Morph/costume-weapon__|__lazy-wildcards/subject/scenes-showcase/World_Morph/env-vehicle__|__lazy-wildcards/subject/scenes-showcase/World_Morph/env-bg__}:1.4)|0.4::__lazy-wildcards/subject/scenes-showcase/World_Morph/prompts-costume__}
-            {, {1-$$__lazy-wildcards/subject/scenes-showcase/World_Morph/style__}|}
+            __lazy-wildcards/subject/env-bg/World_Morph/style-main__
+            , __lazy-wildcards/subject/scenes-showcase/World_Morph/main-trigger-words__
+            {, {1-$$__lazy-wildcards/subject/env-bg/World_Morph/style__}|}
             , __lazy-wildcards/dataset/background-color__
-        style-main:
-          - World Morph
+        main-trigger-words:
+          - >-
+            {0.7::({1-2$$__lazy-wildcards/subject/env-bg/World_Morph/main-trigger-words-01__}:1.4)|0.3::__lazy-wildcards/subject/scenes-showcase/World_Morph/prompts-costume__}
         prompts-costume:
           - >-
             1girl, 1other
             , solo focus, face focus
-            , __lazy-wildcards/subject/scenes-showcase/World_Morph/costume__
-            , {0.3::(__lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__:1.1)|}
-            , {__lazy-wildcards/prompts/hair__|}
-        costume:
-          - bikini armor
-        costume-weapon:
-          - laser rifle
-        env:
-          - coffee machine
-          - floor cleaning robots
-          - toaster in kitchen
-          - computer
-          - battle mech
-          - weighted companion cube
-        env-vehicle:
-          - truck
-          - riding a motorcycle
-          - battle tank on battlefield
-          - warship
-          - dirigible
-          - space_craft
-        env-bg:
-          - city
-          - house
-          - tower
-          - skyscrapers
-        style:
-          - concept art
-          - scifi
-          - futuristic
-          - fantasy
+            , __lazy-wildcards/subject/env-bg/World_Morph/main-trigger-words-02__
 

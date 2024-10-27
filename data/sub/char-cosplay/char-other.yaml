@@ -152,4 +152,48 @@ lazy-wildcards:
           - science fiction
           - straight-on
           - style parody, redesign
+    Battle_robot:
+      style:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/cosplay-others/Battle_robot/style/style__}
+        style:
+          - science fiction
+          - no humans
+          - glowing
+          - robot, mecha
+          - gameplay mechanics
+          - military
+      # https://civitai.com/models/317825?modelVersionId=356444
+      # https://civitai.com/models/317825?modelVersionId=358033
+      non-humanoid_robot:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/cosplay-others/Battle_robot/non-humanoid_robot/costume-ethnicity__}
+            {, {1-$$__lazy-wildcards/cosplay-others/Battle_robot/non-humanoid_robot/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-others/Battle_robot/non-humanoid_robot/costume-weapon__}|}
+            , __lazy-wildcards/cosplay-others/Battle_robot/style/prompts__
+        costume-ethnicity:
+          - battlerobot, non-humanoid robot
+          - militaryrobot
+        costume-elem:
+          - mechanical parts
+          - mechanical wings
+          - mechanical arms
+          - digital camouflage
+          - monitor head
+          - led eye
+          - heavy armor mecha robot
+          - woodland camouflage
+          - military vehicle
+          - 4 legs
+        costume-weapon:
+          - holding weapon
+          - weapon
+          - assault rifle
+          - machine gun
+          - arm shield
+          - shoulder cannon
+          - rocket launcher
+          - smoke grenade
 
