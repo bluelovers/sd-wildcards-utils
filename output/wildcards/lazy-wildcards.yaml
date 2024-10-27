@@ -26,7 +26,7 @@ lazy-wildcards:
         __lazy-wildcards/char/haircolor__,__lazy-wildcards/prompts/hair__
     hair-all:
       - >-
-        {3::{__lazy-wildcards/prompts/hair__|__lazy-wildcards/prompts/hair-with-color__}|0.1::__lazy-wildcards/char/hair-bald__}
+        {3::__lazy-wildcards/prompts/hair__|3::__lazy-wildcards/prompts/hair-with-color__|0.1::__lazy-wildcards/char/hair-bald__}
       - __lazy-wildcards/prompts/hair__
       - __lazy-wildcards/prompts/hair-with-color__
     eyes:
@@ -1896,7 +1896,35 @@ lazy-wildcards:
           - rusting,dormant
           - religious
           - existential
-      # https://civitai.com/models/251053/akira-style
+      # https://civitai.com/models/180403/todd-macfarlane-comic-artist
+      Todd_Macfarlane:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/Todd_Macfarlane/style-main__{,{1-$$__lazy-wildcards/subject/style-artist/Todd_Macfarlane/costume__}|}{,{1-$$__lazy-wildcards/subject/style-artist/Todd_Macfarlane/action-pose__}|}{,{1-$$__lazy-wildcards/subject/style-artist/Todd_Macfarlane/env__}|}{,{1-$$__lazy-wildcards/subject/style-artist/Todd_Macfarlane/style__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-artist/Todd_Macfarlane/style-art__}|}
+        style-main:
+          - by Todd MacFarlane style,by toddmac2023 style
+        costume:
+          - spawn \(spawn\)
+          - muscular_characters
+          - superhero costume
+          - cape,long collar
+          - spike armor
+          - glowing green eyes
+          - cowboy hat
+        env:
+          - webbing
+          - chain
+        action-pose:
+          - battle pose
+          - dynamic_pose
+        style:
+          - vibrant colors
+          - gothic_aesthetic
+          - spawn_\(comic\)
+        style-art:
+          - comic style,comic_artist,dark_comic_art
+          - detailed_linework
+          - 90s_comic_style
       akira:
         prompts:
           - >-
@@ -1919,7 +1947,130 @@ lazy-wildcards:
       # https://danbooru.donmai.us/posts?tags=sky-freedom&z=5
       sky-freedom:
         prompts:
-          - sky-freedom,sky-freedom style,by sky-freedom
+          - sky-freedom style,by sky-freedom
+      # https://www.pixiv.net/users/3699481/artworks
+      # https://civitai.com/models/179062/ccbuchicatbuchi-artist-style
+      # https://x.com/C_mieco
+      CatBuchi:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/CatBuchi/style-artist__{0.7::,{1-$$__lazy-wildcards/subject/style-artist/CatBuchi/costume-elem__}|}
+        style-artist:
+          - CatBuchi style,by CatBuchi
+        costume-elem:
+          - __lazy-wildcards/subject/costume-ethnicity-body/plump_girl/prompts__
+      # https://civitai.com/models/189620/ishida-sui-tokyo-ghoul-zakki-artist-style
+      # https://civitai.com/models/7749
+      Ishida_Sui:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/Ishida_Sui/style-artist__{0.1::,__lazy-wildcards/subject/style-artist/Ishida_Sui/main-trigger-words__|}{,{1-$$__lazy-wildcards/subject/style-artist/Ishida_Sui/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/style-artist/Ishida_Sui/style__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-artist/Ishida_Sui/style-art__}|}
+        style-artist:
+          - by Ishida Sui style
+        main-trigger-words:
+          - kirishima touka
+          - kaneki ken
+          - |-
+            tokyo_ghoul,tokyo_ghoul:re
+        costume-elem:
+          - swept bangs
+          - thick white eyebrows
+          - white hair
+          - hair over one eye
+          - ear piercing
+          - tattoo
+          - colored sclera
+          - red eyes
+          - pale skin
+          - masked_character
+        style:
+          - flat color
+          - dark_fantasy
+          - psychological_horror
+          - gore
+        style-art:
+          - illustrations
+          - watercolor
+          - detailed_linework
+      # https://civitai.com/models/230229/narumi-kakinouchi-vampire-princess-miyu-artist-style
+      Narumi_Kakinouchi:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/Narumi_Kakinouchi/style-artist__{0.2::,__lazy-wildcards/subject/style-artist/Narumi_Kakinouchi/main-trigger-words__|}{,{1-$$__lazy-wildcards/subject/style-artist/Narumi_Kakinouchi/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/style-artist/Narumi_Kakinouchi/env__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-artist/Narumi_Kakinouchi/style-art__}|}
+        style-artist:
+          - by Narumi_Kakinouchi style
+        main-trigger-words:
+          - Miyu Yamano,miyu \(vampire princess miyu\)
+          - vampire princess miyu
+        costume-elem:
+          - japanese clothes
+          - white kimono
+          - blunt bangs
+          - hair over shoulder
+          - single hair bun
+          - train \(clothing\)
+          - ankle ribbon
+          - hime cut
+          - tress ribbon
+        env:
+          - calla lily
+        style-art:
+          - illustrations
+          - watercolor \(medium\)
+          - retro artstyle,1990s \(style\)
+      # https://civitai.com/models/153381/akiman-yasuda-akira-turn-a-gundam-star-ocean-55-artist-style
+      Akiman:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/Akiman/style-artist__
+        style-artist:
+          - by Akiman style,by Yasuda akira style
+      # https://civitai.com/models/49599/urushihara-satoshi-langrisser-front-innocent-artist-style
+      # https://danbooru.donmai.us/posts?tags=urushihara_satoshi&z=5
+      Urushihara_Satoshi:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/Urushihara_Satoshi/style-artist__{0.2::,__lazy-wildcards/subject/style-artist/Urushihara_Satoshi/main-trigger-words__|}{,{1-$$__lazy-wildcards/subject/style-artist/Urushihara_Satoshi/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/style-artist/Urushihara_Satoshi/costume-weapon__}|}{0.7::,{1-$$__lazy-wildcards/subject/style-artist/Urushihara_Satoshi/style-art__}|}
+        style-artist:
+          - by urushihara_satoshi style,Satoshi Urushihara,urushiharas
+        main-trigger-words:
+          - growlanser
+          - Langrisser
+          - Front Innocent
+        costume-elem:
+          - cleavage
+          - shoulder armor
+          - cape
+          - bodysuit
+          - covered navel
+          - long hair
+          - shiny clothes
+          - puffy sleeves
+          - puffy short sleeves
+          - fantasy_armor
+          - elaborate_hair
+          - belly chain
+          - bridal garter
+          - covering crotch
+          - revealing clothes
+          - shrug \(clothing\)
+          - armored boots
+          - center opening
+          - leotard
+          - __lazy-wildcards/subject/costume/armor/prompts__
+          - __lazy-wildcards/subject/costume-elem/sleeves/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
+        costume-weapon:
+          - __lazy-wildcards/subject/costume-weapon/sword-sheath/prompts__
+        style:
+          - elegant
+          - fantasy
+          - erotic_art
+          - glossy_art_style
+        style-art:
+          - retro artstyle
+          - 1990s \(style\)
+          - 1980s \(style\)
       Mixtec_Codex:
         prompts:
           - >-
@@ -2167,40 +2318,13 @@ lazy-wildcards:
       World_Morph:
         prompts:
           - >-
-            __lazy-wildcards/subject/scenes-showcase/World_Morph/style-main__,{0.6::({1-2$$__lazy-wildcards/subject/scenes-showcase/World_Morph/env__|__lazy-wildcards/subject/scenes-showcase/World_Morph/costume-weapon__|__lazy-wildcards/subject/scenes-showcase/World_Morph/env-vehicle__|__lazy-wildcards/subject/scenes-showcase/World_Morph/env-bg__}:1.4)|0.4::__lazy-wildcards/subject/scenes-showcase/World_Morph/prompts-costume__}{,{1-$$__lazy-wildcards/subject/scenes-showcase/World_Morph/style__}|},__lazy-wildcards/dataset/background-color__
-        style-main:
-          - World Morph
+            __lazy-wildcards/subject/env-bg/World_Morph/style-main__,__lazy-wildcards/subject/scenes-showcase/World_Morph/main-trigger-words__{,{1-$$__lazy-wildcards/subject/env-bg/World_Morph/style__}|},__lazy-wildcards/dataset/background-color__
+        main-trigger-words:
+          - >-
+            {0.7::({1-2$$__lazy-wildcards/subject/env-bg/World_Morph/main-trigger-words-01__}:1.4)|0.3::__lazy-wildcards/subject/scenes-showcase/World_Morph/prompts-costume__}
         prompts-costume:
           - >-
-            1girl,1other,solo focus,face focus,__lazy-wildcards/subject/scenes-showcase/World_Morph/costume__,{0.3::(__lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__:1.1)|},{__lazy-wildcards/prompts/hair__|}
-        costume:
-          - bikini armor
-        costume-weapon:
-          - laser rifle
-        env:
-          - coffee machine
-          - floor cleaning robots
-          - toaster in kitchen
-          - computer
-          - battle mech
-          - weighted companion cube
-        env-vehicle:
-          - truck
-          - riding a motorcycle
-          - battle tank on battlefield
-          - warship
-          - dirigible
-          - space_craft
-        env-bg:
-          - city
-          - house
-          - tower
-          - skyscrapers
-        style:
-          - concept art
-          - scifi
-          - futuristic
-          - fantasy
+            1girl,1other,solo focus,face focus,__lazy-wildcards/subject/env-bg/World_Morph/main-trigger-words-02__
     scenes-view:
       gacha:
         prompts:
@@ -3969,17 +4093,32 @@ lazy-wildcards:
       World_Morph:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-bg/World_Morph/style-main__,({1-2$$__lazy-wildcards/subject/env-bg/World_Morph/env__|__lazy-wildcards/subject/env-bg/World_Morph/costume__|__lazy-wildcards/subject/env-bg/World_Morph/env-vehicle__|__lazy-wildcards/subject/env-bg/World_Morph/env-bg__}:1.4){,{1-$$__lazy-wildcards/subject/env-bg/World_Morph/style__}|}
+            __lazy-wildcards/subject/env-bg/World_Morph/style-main__,__lazy-wildcards/subject/env-bg/World_Morph/main-trigger-words__{,{1-$$__lazy-wildcards/subject/env-bg/World_Morph/style__}|}
         style-main:
           - World Morph
+        main-trigger-words:
+          - >-
+            {0.7::({1-2$$__lazy-wildcards/subject/env-bg/World_Morph/main-trigger-words-01__}:1.4)|0.3::__lazy-wildcards/subject/env-bg/World_Morph/main-trigger-words-02__}
+        main-trigger-words-01:
+          - __lazy-wildcards/subject/env-bg/World_Morph/env__
+          - __lazy-wildcards/subject/env-bg/World_Morph/costume-weapon__
+          - __lazy-wildcards/subject/env-bg/World_Morph/env-vehicle__
+          - >-
+            {1-$$__lazy-wildcards/subject/env-bg/World_Morph/env-bg__}
+        main-trigger-words-02:
+          - >-
+            {1-2$$__lazy-wildcards/subject/env-bg/World_Morph/costume__}{0.3::,(__lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__:1.1)|}{,__lazy-wildcards/prompts/hair__|}{0.3::,__lazy-wildcards/subject/costume-ethnicity-race/furry/prompts__|}
         costume:
           - bikini armor
+        costume-weapon:
+          - laser rifle
         env:
           - coffee machine
           - floor cleaning robots
           - toaster in kitchen
           - computer
           - battle mech
+          - weighted companion cube
         env-vehicle:
           - truck
           - riding a motorcycle
@@ -6945,6 +7084,39 @@ lazy-wildcards:
           - bandaged shoulder
           - bandaged knee
           - blood_on_bandages
+      sleeves:
+        prompts:
+          - >-
+            {1-4$$__lazy-wildcards/subject/costume-elem/sleeves/costume-elem__}{,{1-2$$__lazy-wildcards/subject/costume-elem/sleeves/costume-sleeves-size__}|}
+        costume-elem:
+          - wide sleeves
+          - puffy sleeves
+          - frilled sleeves
+          - ribbon-trimmed sleeves
+          - detached sleeves
+          - ribbed sleeves
+          - sheer sleeves
+          - feather-trimmed sleeves
+          - juliet sleeves
+          - flowing sleeves
+          - flipper sleeves
+          - billowing sleeves
+          - draped sleeves
+          - batwing sleeves
+          - bell sleeves
+          - off-the-shoulder sleeves
+          - beaded sleeves
+          - embroidered sleeves
+          - jeweled sleeves
+          - dramatic sleeves
+          - lace sleeves
+          - slashed sleeves
+          - rolled sleeves
+          - tattoo sleeves
+        costume-sleeves-size:
+          - short sleeves
+          - long sleeves
+          - sleeves past wrists
       pussy_juice:
         prompts:
           - >-
@@ -8132,6 +8304,8 @@ lazy-wildcards:
           - vambraces
           - shoulder armor,pauldrons
           - breastplate
+          - faulds
+          - armored boots
       armor-spiked:
         prompts:
           - >-
@@ -8742,11 +8916,22 @@ lazy-wildcards:
       skin_texture:
         prompts:
           - >-
-            (cinematic skin texture style,detailed skin{0.3:::{1.2|1.3|1.4}|}){,__lazy-wildcards/subject/costume-ethnicity-body/skin_texture/costume-ethnicity__|}
+            (cinematic skin texture style,detailed skin{0.3:::{1.2|1.3|1.4}|}){,__lazy-wildcards/subject/costume-ethnicity-body/skin_texture/costume-ethnicity__|}{0.2::,__lazy-wildcards/subject/costume-ethnicity-body/skin_texture/costume-ethnicity2__|}
         costume-ethnicity:
           - skin pore
-          # - freckles
-
+        costume-ethnicity2:
+          - freckles
+      plump_girl:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-ethnicity-body/plump_girl/costume-ethnicity__}
+        costume-ethnicity:
+          - >-
+            plump{ girl|}
+          - fat
+          - full-figure
+          - >-
+            {extra |}curvy plump
     costume-ethnicity-breasts:
       costume-breasts:
         prompts:
@@ -9495,6 +9680,21 @@ lazy-wildcards:
           - Cantilever Umbrella
           - Personal Sun Shade Umbrella
           - Sun Umbrella
+      # 鞘
+      sword-sheath:
+        prompts:
+          - >-
+            {2-$$__lazy-wildcards/subject/costume-weapon/sword-sheath/costume-weapon__}{,{1-$$__lazy-wildcards/subject/costume-weapon/sword-sheath/costume-weapon-elem__}|}
+        costume-weapon:
+          - holding sheath
+          - sheathed
+          - sheath
+          - scabbard
+          - holding sword
+          - sheath on back
+        costume-weapon-elem:
+          - sword on back
+          - planted sword
     costume-elem-expressions:
       yandere_trance:
         prompts:
@@ -10633,6 +10833,27 @@ lazy-wildcards:
           - holding
           - holding polearm
           - holding weapon
+    Brave_New_World:
+      # https://civitai.com/models/157972/cha-juhee-or-brave-new-world-or-manhwa
+      Cha_Juhee:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/Brave_New_World/Cha_Juhee/main-trigger-words__,__lazy-wildcards/cosplay-char/Brave_New_World/Cha_Juhee/costume-ethnicity__{,{1-$$__lazy-wildcards/cosplay-char/Brave_New_World/Cha_Juhee/expressions__}|}{,{1-2$$__lazy-wildcards/cosplay-char/Brave_New_World/Cha_Juhee/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/Brave_New_World/Cha_Juhee/costume-elem__}|}
+        main-trigger-words:
+          - Cha Juhee,Juheedef,Brave New World
+        costume-ethnicity:
+          - black hair,grey eyes,long hair,eyelashes,pink lips
+        expressions:
+          - parted lips
+          - smile,grin
+        costume:
+          - black shirt,collared shirt,red skirt,pencil skirt,covered navel
+          - bondage outfit,bare shoulders,dominatrix,leotard,latex,latex gloves,elbow gloves
+          - choker,black choker,animal hood,jingle bell,cat hood,fake tail,animal ears,neck bell,hood up,tail,black nails,hoodie,cat tail,neck bell,hood up,tail,black nails,hoodie,cat tail
+        costume-elem:
+          - hoop earrings
+          - lingerie
+          - cleavage
     onmyoji:
       suzuka_gozen:
         prompts:
@@ -14188,6 +14409,47 @@ lazy-wildcards:
           - science fiction
           - straight-on
           - style parody,redesign
+    Battle_robot:
+      style:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/cosplay-others/Battle_robot/style/style__}
+        style:
+          - science fiction
+          - no humans
+          - glowing
+          - robot,mecha
+          - gameplay mechanics
+          - military
+      # https://civitai.com/models/317825?modelVersionId=356444
+      # https://civitai.com/models/317825?modelVersionId=358033
+      non-humanoid_robot:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/cosplay-others/Battle_robot/non-humanoid_robot/costume-ethnicity__}{,{1-$$__lazy-wildcards/cosplay-others/Battle_robot/non-humanoid_robot/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-others/Battle_robot/non-humanoid_robot/costume-weapon__}|},__lazy-wildcards/cosplay-others/Battle_robot/style/prompts__
+        costume-ethnicity:
+          - battlerobot,non-humanoid robot
+          - militaryrobot
+        costume-elem:
+          - mechanical parts
+          - mechanical wings
+          - mechanical arms
+          - digital camouflage
+          - monitor head
+          - led eye
+          - heavy armor mecha robot
+          - woodland camouflage
+          - military vehicle
+          - 4 legs
+        costume-weapon:
+          - holding weapon
+          - weapon
+          - assault rifle
+          - machine gun
+          - arm shield
+          - shoulder cannon
+          - rocket launcher
+          - smoke grenade
 mix-lazy-auto:
   # @example __mix-lazy-auto/color-anything__
   # "color-anything" (total: 999 => 228, save 771 ) is merge from
