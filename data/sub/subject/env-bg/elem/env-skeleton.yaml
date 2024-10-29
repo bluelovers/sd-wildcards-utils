@@ -1,6 +1,7 @@
 lazy-wildcards:
   subject:
     env-elem:
+      # https://civitai.com/models/575912/pixai-skull-and-bones-world-morph
       skull:
         prompts:
           - >-
@@ -9,16 +10,27 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/subject/env-elem/skull/costume-weapon__}|}
             {,{1-$$__lazy-wildcards/subject/env-elem/skull/env__}|}
         env-main:
-          - skull, skeleton
+          - skull, skeleton, bones, TranslucentVisibility
         costume-elem:
           - skull bra
           - skull necklace
+          - skull hair ornament
+          - skull shield
+          - skull helmet
+          - skull mask
+          - half skeleton mask
+          - bones carving skin
+          - exo-bones mecha
+          - half skeleton body
         env:
           - pile of skulls
           - skull decoration
           - __lazy-wildcards/subject/env-elem/skull_and_crossbones/prompts__
           - crystal skull decoration, crystal skull pattern
           - decorated_skull
+          - bones
+          - bones carving
+          - glowing skeleton
         costume-weapon:
           - holding skull
       skull_and_crossbones:

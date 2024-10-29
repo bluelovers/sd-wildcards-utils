@@ -1,0 +1,94 @@
+lazy-wildcards:
+  subject:
+    env-elem:
+      books:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/books/env-book__}
+            {, {1-$$__lazy-wildcards/subject/env-elem/books/env__}|}
+        env-book:
+          - floating_books
+          - dusty_books
+          - ancient_scrolls
+          - piles_of_books
+          - book_of_spells
+          - old books
+          - antique_documents
+        env:
+          - mystical_symbols
+          - quill_and_ink
+      bookshelves:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/bookshelves/env-book__}
+            {, {1-$$__lazy-wildcards/subject/env-elem/bookshelves/env__}|}
+        env-book:
+          - towering_bookshelves
+          - rows_of_bookshelves
+          - personal_bookshelves
+          - bestseller_shelf
+        env:
+          - library_ladder
+          - metal_shelves
+          - file_cabinets
+          - organized_files
+          - restricted_area_sign, restricted_access
+      bookstore:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/bookstore/env-bg__}
+            {, {1-$$__lazy-wildcards/subject/env-elem/bookstore/env-book__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/bookstore/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/bookstore/style__}|}
+        env-book:
+          - bestseller_shelf
+          - reading_area, reading_nook
+          - books_on_display
+        env:
+          - cash_register
+          - rows of shelves
+        env-bg:
+          - bookstore
+          - bookstore_interior
+        style:
+          - quiet_ambiance
+          - cozy_ambiance
+          - friendly_ambiance
+          - literary
+      # https://civitai.com/models/347450/books-world
+      books_world:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/books_world/env-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/books_world/env-book__}|}
+            {, {1-3$$__lazy-wildcards/subject/env-elem/books_world/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/books_world/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/books_world/style__}|}
+        env-main:
+          - BooksWorld, books
+        env-book:
+          - __lazy-wildcards/subject/env-elem/bookshelves/prompts__
+          - __lazy-wildcards/subject/env-elem/books/prompts__
+        env:
+          - magical lighting
+          - candles, lamps
+          - antique_furniture
+          - cobwebs_in_corners, dusty_environment
+          - reading_area, reading_nook
+          - writing_desk
+          - lamp_on_desk
+          - old_leather_chair
+          - cash_register
+        env-bg:
+          - ancient_library
+          - enormous_book_hall
+          - large_library
+          - archive_room
+          - private_study
+          - records_room
+          - __lazy-wildcards/subject/env-elem/bookstore/prompts__
+        style:
+          - quiet_ambiance
+          - cozy_ambiance
+          - friendly_ambiance
+

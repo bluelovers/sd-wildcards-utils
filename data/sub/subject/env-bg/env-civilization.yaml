@@ -143,4 +143,43 @@ lazy-wildcards:
           - futuristic world
           - pyramids-inspired spaceport
           - Futuristic fortress
+      # https://civitai.com/models/72415?modelVersionId=78488
+      JavaPunk:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-civilization/JavaPunk/style-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/JavaPunk/costume__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/JavaPunk/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/JavaPunk/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/JavaPunk/env-creatures__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/JavaPunk/style__}|}
+        style-main:
+          - javapunkai, javanese
+        costume:
+          - javanese_clothes
+          - cultural_mask_artifacts
+          - mechanical_arm_braces
+        env-bg:
+          - ancient_mechanical_city
+          - tropical_jungle
+          - stone_temple_ruins
+          - jungle_cityscape
+          - ancient_ruins_with_technology
+          - javaneseinterior, javanese interior
+        env:
+          - carved_wooden_elements
+          - indonesian text, javanese_text
+          - hanging_vines
+          - king bed with curtain
+          - stone wall
+        env-creatures:
+          - exotic_creatures
+        style:
+          - traditional_batik_patterns
+          - mechanical_totems
+          - rustic_metal_work
+          - sepia_tone
+          - exotic
+          - natural_forest_light
+          - flower pattern
 

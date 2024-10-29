@@ -10,6 +10,7 @@ lazy-wildcards:
           - lamp
           - lampshades
           - __lazy-wildcards/subject/env-elem/lantern/prompts__
+          - __lazy-wildcards/subject/env-elem/gaslamp/prompts__
           - candle, candlelight
           - chandelier
           - wall_sconce, wall lamp
@@ -47,4 +48,10 @@ lazy-wildcards:
           - japanese_lighting
           - soft_lighting
           - cultural_lighting
+      gaslamp:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/gaslamp/env__}
+        env:
+          - gaslamp, gas_lamp
 

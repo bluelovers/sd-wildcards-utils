@@ -406,13 +406,14 @@ lazy-wildcards:
       industrial-pipes:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-elem/industrial-pipes/env-main__
+            {1-$$__lazy-wildcards/subject/env-elem/industrial-pipes/env-main__}
             {, {1-$$__lazy-wildcards/subject/env-elem/industrial-pipes/env__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem/industrial-pipes/costume-weapon__}|}
         env-main:
           - cables, tubes
           - industrial pipes
           - wire
+          - drainpipe
         env:
           - cables everywhere, scattered cables
           - hanging cables
@@ -420,6 +421,8 @@ lazy-wildcards:
           - industrial wires
           - dangling chains
           - corroded pipes
+          - visible pipes
+          - metal pipeline, metal pipes
         costume-weapon:
           - holding cable
 

@@ -193,7 +193,7 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/env-elem-punk/dieselpunk/env-vehicle__}|}
             {, {1-2$$__lazy-wildcards/subject/env-elem-punk/dieselpunk/env-bg__}|}
         style-main:
-          - xuer dieselpunk
+          - xuer dieselpunk, dieselpunk theme, Decopunk theme, coalpunk theme, CoalPunkAI
         costume:
           - Armored Soldiers
           - Mechanical Armor
@@ -290,7 +290,7 @@ lazy-wildcards:
           - numerous small components
           - futuristic mechanics
           - visible bolts
-          - visible pipes
+          - __lazy-wildcards/subject/env-elem/industrial-pipes/prompts__
           - visible gears
           - mecha_parts
           - pistons
@@ -305,4 +305,69 @@ lazy-wildcards:
           - nurnies
           - greebly
           - greeble-heavy designs
+      # https://civitai.com/models/87257/steampunkbundle-konyconi?modelVersionId=92855
+      steampunk-bundle:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-punk/steampunk-bundle/style-main__
+            {0.8::, {1-$$__lazy-wildcards/subject/env-elem-punk/steampunk-bundle/style-trigger-words__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/steampunk-bundle/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/steampunk-bundle/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/steampunk-bundle/style__}|}
+        style-main:
+          - steampunk, steampunk-inspired
+        style-trigger-words:
+          - SteampunkAI, steampunk theme
+          - CogpunkAI, cogpunk theme, cog
+          - AetherpunkAI, Aetherpunk theme, Arcanepunk theme
+          - Victorianpunkai, victorian_era
+          - ManyPipesAI
+          - ManyGaugesAI, Gauges
+          - CoalPunkAI, coalpunk theme, dieselpunk theme, Decopunk theme
+          - GasLampFantasyAI, gaslamp
+        env:
+          - __lazy-wildcards/subject/env-elem-punk/dieselpunk/prompts__
+          - __lazy-wildcards/subject/env-elem/industrial-pipes/prompts__
+          - __lazy-wildcards/subject/env-elem/gaslamp/prompts__
+          - alchemy_apparatus
+          - mystical_fog
+          - antique_furniture
+          - dark_alley
+          - occult_symbols
+          - gothic_mansion
+          - __lazy-wildcards/subject/env-elem-punk/cog_gears/prompts__
+          - brass_mechanics
+          - steam-powered_gadgets
+          - steam_smoke
+        costume-elem:
+          - __lazy-wildcards/subject/costume-elem/Jetpack/prompts__
+          - vintage_leather
+          - victorian_garments
+          - belt
+        style:
+          - mechanical_aesthetics
+      cog_gears:
+        prompts:
+          - >-
+            CogpunkAI, {1-$$__lazy-wildcards/subject/env-elem-punk/cog_gears/env-main__}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/cog_gears/env__}|}
+        env-main:
+          - >-
+            {exposed |}gears
+          - >-
+            {exposed |}cog, cogwheels
+          - pinion
+          - sprocket
+          - rack
+          - intricate_gearworks
+          - clockwork
+        env:
+          - machinery
+          - handcrafted_machines
+          - grungy_environment
+          - vintage_machinery
+          - brass_mechanics
+          - mechanical_aesthetics
+          - rustic_metals
+          - mechanical_innards
 
