@@ -1201,10 +1201,19 @@ lazy-wildcards:
           - Newsprint
           - Vellum
           - translucent and smooth paper
+      # https://civitai.com/models/461566/isometric?modelVersionId=513667
       isometric:
         prompts:
           - >-
-            ({1-$$isometric|isometric cutaway}:1.4)
+            ({1-$$__lazy-wildcards/subject/style-art-type/isometric/style-main__}:1.4){,{1-$$__lazy-wildcards/subject/style-art-type/isometric/env-bg__}|}{,{1-$$__lazy-wildcards/subject/style-art-type/isometric/env-bg__}|}
+        style-main:
+          - isometric
+          - isometric cutaway
+          - isometriciterior,isometric iterior,isometric interior
+        env-bg:
+          - indoors,interior
+        style:
+          - __lazy-wildcards/utils/scenery-no-humans__
       mosaic:
         prompts:
           - >-
@@ -1725,7 +1734,6 @@ lazy-wildcards:
           - industrial_platform
           - rusty_surface
           - industrial_building
-          - metal_pipeline
           - guard_rail
           - mesh_window
           - barred_window
@@ -2729,7 +2737,7 @@ lazy-wildcards:
           - hangar
           - sidonia \(ship\)
         env:
-          - cables,tubes,industrial pipes
+          - __lazy-wildcards/subject/env-elem/industrial-pipes/prompts__
           - toha heavy industries
           - wire
           - __lazy-wildcards/subject/env-bg-architectural/bridge/prompts__
@@ -2750,7 +2758,6 @@ lazy-wildcards:
           - air conditioner
           - machinery
           - lantern
-          - drainpipe
           - letterboxed
           - flickering_monitors
           - dark_terminal
@@ -2995,7 +3002,7 @@ lazy-wildcards:
           - door
           - mirror
           - window
-          - industrial pipe
+          - __lazy-wildcards/subject/env-elem/industrial-pipes/prompts__
       forest:
         main:
           - large forest
@@ -3382,7 +3389,7 @@ lazy-wildcards:
           - __lazy-wildcards/subject/env-elem/moss/prompts__
           - silk,spider web
           - leaf
-          - industrial pipe,tentacles
+          - __lazy-wildcards/subject/env-elem/industrial-pipes/prompts__,tentacles
           - __lazy-wildcards/subject/moment/weather-star/prompts__
           - crack
           - windmill
@@ -4104,7 +4111,7 @@ lazy-wildcards:
           - __lazy-wildcards/subject/env-bg/World_Morph/costume-weapon__
           - __lazy-wildcards/subject/env-bg/World_Morph/env-vehicle__
           - >-
-            {1-$$__lazy-wildcards/subject/env-bg/World_Morph/env-bg__}
+            {1-2$$__lazy-wildcards/subject/env-bg/World_Morph/env-bg__}
         main-trigger-words-02:
           - >-
             {1-2$$__lazy-wildcards/subject/env-bg/World_Morph/costume__}{0.3::,(__lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__:1.1)|}{,__lazy-wildcards/prompts/hair__|}{0.3::,__lazy-wildcards/subject/costume-ethnicity-race/furry/prompts__|}
@@ -4119,6 +4126,7 @@ lazy-wildcards:
           - computer
           - battle mech
           - weighted companion cube
+          - cat
         env-vehicle:
           - truck
           - riding a motorcycle
@@ -4131,6 +4139,10 @@ lazy-wildcards:
           - house
           - tower
           - skyscrapers
+          - ocean,during a thunderstorm,lightning
+          - on tropical beach
+          - outer_space,floating in space
+          - tavern background
         style:
           - concept art
           - scifi
@@ -4158,7 +4170,7 @@ lazy-wildcards:
       outer_space:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-bg/outer_space/env-bg-main__{,{1-4$$__lazy-wildcards/subject/env-bg/outer_space/env-bg__}|}
+            __lazy-wildcards/subject/env-bg/outer_space/env-bg-main__{,{1-4$$__lazy-wildcards/subject/env-bg/outer_space/env-bg__}|}{0.4::,{1-4$$__lazy-wildcards/subject/env-bg/outer_space/env-bg-style__}|}
         env-bg-main:
           - outer_space
         env-bg:
@@ -4177,6 +4189,8 @@ lazy-wildcards:
           - __lazy-wildcards/subject/env-bg/sunspot/prompts__
           - __lazy-wildcards/subject/env-bg/corona/prompts__
           - vast empty outer space
+        env-bg-style:
+          - floating in space
       planet:
         prompts:
           - >-
@@ -4480,6 +4494,40 @@ lazy-wildcards:
           - futuristic world
           - pyramids-inspired spaceport
           - Futuristic fortress
+      # https://civitai.com/models/72415?modelVersionId=78488
+      JavaPunk:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-civilization/JavaPunk/style-main__{,{1-$$__lazy-wildcards/subject/env-elem-civilization/JavaPunk/costume__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/JavaPunk/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/JavaPunk/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/JavaPunk/env-creatures__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/JavaPunk/style__}|}
+        style-main:
+          - javapunkai,javanese
+        costume:
+          - javanese_clothes
+          - cultural_mask_artifacts
+          - mechanical_arm_braces
+        env-bg:
+          - ancient_mechanical_city
+          - tropical_jungle
+          - stone_temple_ruins
+          - jungle_cityscape
+          - ancient_ruins_with_technology
+          - javaneseinterior,javanese interior
+        env:
+          - carved_wooden_elements
+          - indonesian text,javanese_text
+          - hanging_vines
+          - king bed with curtain
+          - stone wall
+        env-creatures:
+          - exotic_creatures
+        style:
+          - traditional_batik_patterns
+          - mechanical_totems
+          - rustic_metal_work
+          - sepia_tone
+          - exotic
+          - natural_forest_light
+          - flower pattern
     env-elem:
       others:
         prompts:
@@ -4854,11 +4902,12 @@ lazy-wildcards:
       industrial-pipes:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-elem/industrial-pipes/env-main__{,{1-$$__lazy-wildcards/subject/env-elem/industrial-pipes/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem/industrial-pipes/costume-weapon__}|}
+            {1-$$__lazy-wildcards/subject/env-elem/industrial-pipes/env-main__}{,{1-$$__lazy-wildcards/subject/env-elem/industrial-pipes/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem/industrial-pipes/costume-weapon__}|}
         env-main:
           - cables,tubes
           - industrial pipes
           - wire
+          - drainpipe
         env:
           - cables everywhere,scattered cables
           - hanging cables
@@ -4866,6 +4915,8 @@ lazy-wildcards:
           - industrial wires
           - dangling chains
           - corroded pipes
+          - visible pipes
+          - metal pipeline,metal pipes
         costume-weapon:
           - holding cable
       occult:
@@ -5004,6 +5055,87 @@ lazy-wildcards:
           - subsurface scattering
           - medieval
           - fantasy
+      books:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/books/env-book__}{,{1-$$__lazy-wildcards/subject/env-elem/books/env__}|}
+        env-book:
+          - floating_books
+          - dusty_books
+          - ancient_scrolls
+          - piles_of_books
+          - book_of_spells
+          - old books
+          - antique_documents
+        env:
+          - mystical_symbols
+          - quill_and_ink
+      bookshelves:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/bookshelves/env-book__}{,{1-$$__lazy-wildcards/subject/env-elem/bookshelves/env__}|}
+        env-book:
+          - towering_bookshelves
+          - rows_of_bookshelves
+          - personal_bookshelves
+          - bestseller_shelf
+        env:
+          - library_ladder
+          - metal_shelves
+          - file_cabinets
+          - organized_files
+          - restricted_area_sign,restricted_access
+      bookstore:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/bookstore/env-bg__}{,{1-$$__lazy-wildcards/subject/env-elem/bookstore/env-book__}|}{,{1-$$__lazy-wildcards/subject/env-elem/bookstore/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem/bookstore/style__}|}
+        env-book:
+          - bestseller_shelf
+          - reading_area,reading_nook
+          - books_on_display
+        env:
+          - cash_register
+          - rows of shelves
+        env-bg:
+          - bookstore
+          - bookstore_interior
+        style:
+          - quiet_ambiance
+          - cozy_ambiance
+          - friendly_ambiance
+          - literary
+      # https://civitai.com/models/347450/books-world
+      books_world:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/books_world/env-main__{,{1-$$__lazy-wildcards/subject/env-elem/books_world/env-book__}|}{,{1-3$$__lazy-wildcards/subject/env-elem/books_world/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-elem/books_world/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem/books_world/style__}|}
+        env-main:
+          - BooksWorld,books
+        env-book:
+          - __lazy-wildcards/subject/env-elem/bookshelves/prompts__
+          - __lazy-wildcards/subject/env-elem/books/prompts__
+        env:
+          - magical lighting
+          - candles,lamps
+          - antique_furniture
+          - cobwebs_in_corners,dusty_environment
+          - reading_area,reading_nook
+          - writing_desk
+          - lamp_on_desk
+          - old_leather_chair
+          - cash_register
+        env-bg:
+          - ancient_library
+          - enormous_book_hall
+          - large_library
+          - archive_room
+          - private_study
+          - records_room
+          - __lazy-wildcards/subject/env-elem/bookstore/prompts__
+        style:
+          - quiet_ambiance
+          - cozy_ambiance
+          - friendly_ambiance
       chair:
         prompts:
           - >-
@@ -5164,6 +5296,7 @@ lazy-wildcards:
           - twisted trees
           - treacherous terrain
           - mysterious glow
+          - hanging_vines
         env-bg:
           - wetlands,marsh
           - swamp
@@ -5183,6 +5316,7 @@ lazy-wildcards:
           - lamp
           - lampshades
           - __lazy-wildcards/subject/env-elem/lantern/prompts__
+          - __lazy-wildcards/subject/env-elem/gaslamp/prompts__
           - candle,candlelight
           - chandelier
           - wall_sconce,wall lamp
@@ -5219,6 +5353,12 @@ lazy-wildcards:
           - japanese_lighting
           - soft_lighting
           - cultural_lighting
+      gaslamp:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/gaslamp/env__}
+        env:
+          - gaslamp,gas_lamp
       circle-magic:
         prompts:
           - >-
@@ -5321,7 +5461,7 @@ lazy-wildcards:
           - covered by slime
           - GreenSlimeAI
           - whiteSlimeAI
-          - bones and skulls
+          - __lazy-wildcards/subject/env-elem/skull/prompts__
           - wet,lotion
           - slime thick dripping
         env-creatures:
@@ -5358,21 +5498,36 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/subject/env-elem/skull/env-main__{,{1-$$__lazy-wildcards/subject/env-elem/skull/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-elem/skull/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/env-elem/skull/env__}|}
         env-main:
-          - skull,skeleton
+          - skull,skeleton,bones,TranslucentVisibility
         costume-elem:
           - skull bra
           - skull necklace
+          - skull hair ornament
+          - skull shield
+          - skull helmet
+          - skull mask
+          - half skeleton mask
+          - bones carving skin
+          - exo-bones mecha
+          - half skeleton body
         env:
           - pile of skulls
           - skull decoration
           - __lazy-wildcards/subject/env-elem/skull_and_crossbones/prompts__
           - crystal skull decoration,crystal skull pattern
           - decorated_skull
+          - bones
+          - bones carving
+          - glowing skeleton
         costume-weapon:
           - holding skull
       skull_and_crossbones:
         prompts:
           - skull_and_crossbones,jolly_roger,pirate symbol,pirate emblem,skull print
+      parking_meter:
+        prompts:
+          - >-
+            (parking meter:1.2)
     env-elem-punk:
       holographic:
         prompts:
@@ -5542,7 +5697,7 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/subject/env-elem-punk/dieselpunk/style-main__{,{1-2$$__lazy-wildcards/subject/env-elem-punk/dieselpunk/costume__}|}{,({1-$$__lazy-wildcards/subject/env-elem-punk/dieselpunk/costume-headwear__}:1.2)|}{,{1-$$__lazy-wildcards/subject/env-elem-punk/dieselpunk/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-elem-punk/dieselpunk/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/env-elem-punk/dieselpunk/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem-punk/dieselpunk/env-vehicle__}|}{,{1-2$$__lazy-wildcards/subject/env-elem-punk/dieselpunk/env-bg__}|}
         style-main:
-          - xuer dieselpunk
+          - xuer dieselpunk,dieselpunk theme,Decopunk theme,coalpunk theme,CoalPunkAI
         costume:
           - Armored Soldiers
           - Mechanical Armor
@@ -5628,7 +5783,7 @@ lazy-wildcards:
           - numerous small components
           - futuristic mechanics
           - visible bolts
-          - visible pipes
+          - __lazy-wildcards/subject/env-elem/industrial-pipes/prompts__
           - visible gears
           - mecha_parts
           - pistons
@@ -5643,6 +5798,66 @@ lazy-wildcards:
           - nurnies
           - greebly
           - greeble-heavy designs
+      # https://civitai.com/models/87257/steampunkbundle-konyconi?modelVersionId=92855
+      steampunk-bundle:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-punk/steampunk-bundle/style-main__{0.8::,{1-$$__lazy-wildcards/subject/env-elem-punk/steampunk-bundle/style-trigger-words__}|}{,{1-$$__lazy-wildcards/subject/env-elem-punk/steampunk-bundle/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem-punk/steampunk-bundle/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-elem-punk/steampunk-bundle/style__}|}
+        style-main:
+          - steampunk,steampunk-inspired
+        style-trigger-words:
+          - SteampunkAI,steampunk theme
+          - CogpunkAI,cogpunk theme,cog
+          - AetherpunkAI,Aetherpunk theme,Arcanepunk theme
+          - Victorianpunkai,victorian_era
+          - ManyPipesAI
+          - ManyGaugesAI,Gauges
+          - CoalPunkAI,coalpunk theme,dieselpunk theme,Decopunk theme
+          - GasLampFantasyAI,gaslamp
+        env:
+          - __lazy-wildcards/subject/env-elem-punk/dieselpunk/prompts__
+          - __lazy-wildcards/subject/env-elem/industrial-pipes/prompts__
+          - __lazy-wildcards/subject/env-elem/gaslamp/prompts__
+          - alchemy_apparatus
+          - mystical_fog
+          - antique_furniture
+          - dark_alley
+          - occult_symbols
+          - gothic_mansion
+          - __lazy-wildcards/subject/env-elem-punk/cog_gears/prompts__
+          - brass_mechanics
+          - steam-powered_gadgets
+          - steam_smoke
+        costume-elem:
+          - __lazy-wildcards/subject/costume-elem/Jetpack/prompts__
+          - vintage_leather
+          - victorian_garments
+          - belt
+        style:
+          - mechanical_aesthetics
+      cog_gears:
+        prompts:
+          - >-
+            CogpunkAI,{1-$$__lazy-wildcards/subject/env-elem-punk/cog_gears/env-main__}{,{1-$$__lazy-wildcards/subject/env-elem-punk/cog_gears/env__}|}
+        env-main:
+          - >-
+            {exposed |}gears
+          - >-
+            {exposed |}cog,cogwheels
+          - pinion
+          - sprocket
+          - rack
+          - intricate_gearworks
+          - clockwork
+        env:
+          - machinery
+          - handcrafted_machines
+          - grungy_environment
+          - vintage_machinery
+          - brass_mechanics
+          - mechanical_aesthetics
+          - rustic_metals
+          - mechanical_innards
     env-bg-interior:
       # https://civitai.com/models/815517/cyberpunk-club?modelVersionId=911938
       cyberpunk_club:
@@ -7117,6 +7332,16 @@ lazy-wildcards:
           - short sleeves
           - long sleeves
           - sleeves past wrists
+      Jetpack:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-elem/Jetpack/costume-elem__}{,{1-$$__lazy-wildcards/subject/costume-elem/Jetpack/action__}|}
+        costume-elem:
+          - Jetpack
+          - Rocket pack
+          - Personal flying device
+        action:
+          - flying
       pussy_juice:
         prompts:
           - >-
@@ -9722,7 +9947,7 @@ lazy-wildcards:
       floating:
         prompts:
           - >-
-            ({1-3$$__lazy-wildcards/subject/action-pose/floating/action-fly__}{0.3:::{1.2|1.3|1.4}|}){,({1-$$__lazy-wildcards/subject/action-pose/floating/env-bg__})|}{,{1-$$__lazy-wildcards/subject/action-pose/floating/env__}|}{,{1-$$__lazy-wildcards/subject/action-pose/floating/style__}|}
+            ({1-3$$__lazy-wildcards/subject/action-pose/floating/action-fly__}{0.3:::{1.2|1.3|1.4}|}){0.3::,{1-$$__lazy-wildcards/subject/action-pose/floating/costume-elem__}|}{,({1-$$__lazy-wildcards/subject/action-pose/floating/env-bg__})|}{,{1-$$__lazy-wildcards/subject/action-pose/floating/env__}|}{,{1-$$__lazy-wildcards/subject/action-pose/floating/style__}|}
         action-fly:
           - fly
           - flying
@@ -9735,6 +9960,8 @@ lazy-wildcards:
           - in the sky
           - __lazy-wildcards/subject/env-bg/outer_space/env-bg-main__
           - floating_island
+        costume-elem:
+          - __lazy-wildcards/subject/costume-elem/Jetpack/prompts__
         env:
           - lots of balloons
           - floating object
@@ -9884,6 +10111,10 @@ lazy-wildcards:
       lift_by_self_with_mouth:
         prompts:
           - lifting shirt with mouth,clothes in mouth,mouth hold,shirt in mouth,shirtlifthent
+      # https://civitai.com/models/898849/beijinibeijing-bikiniclothes-lift-up?modelVersionId=1005739
+      clothes_lift_up:
+        prompts:
+          - beijini_bikini,tank top,clothes lift up,undress,underboob
       toilet-use:
         prompts:
           - >-
