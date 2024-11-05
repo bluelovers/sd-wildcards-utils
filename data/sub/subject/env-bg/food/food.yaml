@@ -7,6 +7,12 @@ lazy-wildcards:
           - meat on bone
           - poultry leg
           - lunch box
+          - meatballs
+          - noodle_soup
+        utils:
+          name-cuisine:
+            - >-
+              ${name} food, ${name} cuisine
       shaved-ice-animal-shaped:
         prompts:
           - >-
@@ -57,9 +63,65 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/subject/env-elem-food/tofu/env-food-elem__}|}
         env-elem-food:
           - >-
-            {crispy |}fried tofu{slices|}
+            {crispy |}fried tofu{ slices|}
+          - mapo tofu
+          - tofu_soup
+          - stinky_tofu
         env-food-elem:
           - chopped scallions
-          - chili peppers
+          - chili peppers, spicy_dish
           - drizzled with savory sauce
+          - Sichuan_cuisine
+          - minced_meat
+          - appetizer
+          - street_food
+      kebab:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-food/kebab/env-elem-food-main__
+            {0.7::, __lazy-wildcards/subject/env-elem-food/kebab/env-elem-food-flavor__|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/kebab/env-elem-food__}|}
+        env-elem-food-main:
+          - kebab
+        env-elem-food-flavor:
+          - german doner
+          - shish_kebab, middle_eastern_cuisine
+          - seekh_kebab, indian_cuisine
+          - kofta_kebab, spiced_meatballs, middle_eastern_cuisine
+          - gyros, greek_cuisine
+          - __lazy-wildcards/subject/env-elem-food/kebab-*/prompts__
+          - chapli_kebab, pakistani_cuisine
+          - kashmiri_kebab, indian_cuisine
+          - jujeh_kebab, saffron_marinated, iranian_cuisine, grilled_chicken
+        env-elem-food:
+          - skewered_meat
+          - grilled_vegetables
+          - minced_meat
+          - spicy_flavor, aromatic_spices
+          - grilled_dish
+          - tzatziki_sauce
+          - pita_bread_wrapper
+          - pan_fried_patties
+      kebab-turkish:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-food/kebab-turkish/env-elem-food-main__
+            {0.7::, __lazy-wildcards/subject/env-elem-food/kebab-turkish/env-elem-food-flavor__|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/kebab-turkish/env-elem-food__}|}
+        env-elem-food-main:
+          - kebab, turkish food, turkish cuisine
+        env-elem-food-flavor:
+          # 旋转烤肉串
+          - doner_kebab
+          # 辣味烤肉串
+          - adana_kebab
+          # 伊斯肯德烤肉
+          - iskender_kebab, layered_meat
+        env-elem-food:
+          - rotisserie_meat
+          - flatbread_wrapper
+          - spicy_meat, spicy_flavor, turkish_spices
+          - grilled_dish
+          - tomato_sauce
+          - yogurt_topping
 

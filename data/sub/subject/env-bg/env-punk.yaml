@@ -17,16 +17,20 @@ lazy-wildcards:
           - communication devices
           - display_board
           - heads-up display
+      # https://civitai.com/models/43944/solarpunkai-konyconi
       solarpunk:
         prompts:
           - >-
-            ({1-$$__lazy-wildcards/subject/env-elem-punk/solarpunk/main__}:1.2)
+            __lazy-wildcards/subject/env-elem-punk/solarpunk/style-trigger-words__
+            , ({1-$$__lazy-wildcards/subject/env-elem-punk/solarpunk/style-main__}:1.2)
             {,{1-4$$__lazy-wildcards/subject/env-elem-punk/solarpunk/env-bg__}|}
             ,({1-$$__lazy-wildcards/subject/env-elem-punk/solarpunk/env__}:1.2)
             {,{1-4$$__lazy-wildcards/subject/env-elem-punk/solarpunk/costume__}|}
             {,{1-4$$__lazy-wildcards/subject/env-elem-punk/solarpunk/style__}|}
             {,__lazy-wildcards/utils/scenery-no-humans__|}
-        main:
+        style-trigger-words:
+          - solarpunkai, green-powered
+        style-main:
           - solarpunk
           - naturepunk
           - Ethnofuturism
@@ -54,6 +58,7 @@ lazy-wildcards:
           - Eco_Warrior_Outfit
           - Bio_Armor
           - Urban_Gardener_Attire
+          - solar4rmor
         env:
           - natural environments, natural elements
           - solar power, solar panels

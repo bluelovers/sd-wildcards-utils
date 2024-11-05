@@ -5,28 +5,61 @@ lazy-wildcards:
         prompts:
           - >-
             (__lazy-wildcards/subject/env-elem/circle-magic/env-magic__
-            ,{1-$$__lazy-wildcards/subject/env-elem/circle-magic/style__}:1.4)
-            {1-$$__lazy-wildcards/subject/env-elem/circle-magic/env__}
+            , {1-$$__lazy-wildcards/subject/env-elem/circle-magic/style__}:1.4)
+            , {1-$$__lazy-wildcards/subject/env-elem/circle-magic/env__}
         env-magic:
-          - perfect magic circle
+          - perfect magic circle, magical circle
         env:
           - fireflies
           - __lazy-wildcards/subject/env-elem/circle-transmutation/prompts__
+          - __lazy-wildcards/subject/env-elem/circle-pentagram/prompts__
+          - magic shield
+          - magic portal
         style:
           - spell
           - fusion
           - vortex
           - swirling patterns
           - fluid
+          - mantra
+          - glowing
       circle-transmutation:
         prompts:
           - >-
             __lazy-wildcards/subject/env-elem/circle-transmutation/env-magic__
-            ,{1-$$__lazy-wildcards/subject/env-elem/circle-transmutation/env__}
+            , {1-$$__lazy-wildcards/subject/env-elem/circle-transmutation/env__}
         env-magic:
           - transmutation circles
         env:
           - pentagram symbol
-          - pentagram circles
+          - __lazy-wildcards/subject/env-elem/circle-pentagram/prompts__
           - arcane symbols
+      # https://civitai.com/models/917102/pentagramcircleconcept?modelVersionId=1026502
+      circle-pentagram:
+        prompts:
+          - >-
+            pentagram {1-$$, pentagram $$circles|symbol}, pentagramcircleconcept
+      # https://civitai.com/models/146658/world-of-oilslick?modelVersionId=163382
+      oilslick:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/oilslick/env-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/oilslick/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/oilslick/style__}|}
+        env-main:
+          - worldofoilslick, oilslick, oil_slick
+        env:
+          - rainbow_oil_slick
+          - oil_on_water
+          - rainbow_puddles
+        style:
+          - fluid_swirl_patterns, fluid_art
+          - metallic_shine
+          - dark_industrial_vibe
+          - highlights_and_shadows
+          - grunge_texture
+          - iridescent_glow, color_gradient
+          - iridescent_surface
+          - colorful_reflection
+          - polluted_surface, industrial_pollution
 

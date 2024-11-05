@@ -1,0 +1,30 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      ruins-stone:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-bg/ruins-stone/env-bg__}
+            {, {1-$$__lazy-wildcards/subject/env-bg/ruins-stone/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/ruins-stone/style__}|}
+        env-bg:
+          - ancient_stone_temple, stone shrine
+          - sacred_altar, stone_altar
+          - stone_ruins
+          - underground_shrine, underground ruins, underground temple
+          - ritual_site
+          - rock_cut_architecture
+        env:
+          - stone_pillars
+          - ancient_statues, stone_statues, totem_statues
+          - ancient_stone_steps, stepped_terraces
+          - weathered_stone
+          - engraved_walls
+          - stone_altar
+          - stone architecture, stone building
+          - desert_ruins
+        style:
+          - overgrown, mossy
+          - hieroglyphic_carvings
+          - ancient jungle, rainforest_ambiance, jungle_ruins
+

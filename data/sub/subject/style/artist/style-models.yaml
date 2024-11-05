@@ -1,0 +1,31 @@
+lazy-wildcards:
+  subject:
+    style-artist:
+      # https://civitai.com/models/905953/fairytale-utopia-or-retro-healithc-illustration-style?modelVersionId=1013790
+      dui:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/dui/style-main__
+            {, {1-$$__lazy-wildcards/subject/style-artist/dui/env__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/dui/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/dui/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/dui/style__}|}
+        style-main:
+          - dui, Fairytale Utopia
+        env:
+          - cherry tree, spring
+          - train front in the middle of the street, railway
+          - breeze, petals
+          - surrounded by a huge chinese dragon in the background
+        costume-elem:
+          - A grim reaper in a large hooded cloak
+        costume-weapon:
+          - holding a long scythe
+          - holding a branch of flowers
+        style:
+          - illustration style
+          - Shinkai Makoto style
+          - inksketch Qingxing
+          - Retro Healithc Illustration Style
+          - digital art style
+

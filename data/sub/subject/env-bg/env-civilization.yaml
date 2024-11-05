@@ -182,4 +182,50 @@ lazy-wildcards:
           - exotic
           - natural_forest_light
           - flower pattern
+      # https://civitai.com/models/270561/mayangoldworld?modelVersionId=304985
+      Mayan_World:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-civilization/Mayan_World/style-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/Mayan_World/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/Mayan_World/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/Mayan_World/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/Mayan_World/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/Mayan_World/style__}|}
+        style-main:
+          - mayanworld, Cultura maya, Mayan, ancient_maya
+        costume-elem:
+          - Maya peoples
+          - ritual_masks
+          - jade_ornaments
+        costume-weapon:
+          - obsidian_weapons
+          - tiki_torch
+        env-bg:
+          - ancient_jungle_temple
+          - >-
+            mayan_pyramid
+            {, {tikal|chichen_itza}|}
+          - stone_ruins
+          - stone_altar
+          - sacred_cenote
+          - maya_maze architecture, stone building
+          - ancient_ball_court
+          - ceremonial_plaza
+          - kukulkan_temple
+        env:
+          - ceremonial_fire
+          - jungle_overgrowth
+          - ancient_calendar
+          - tropical_rainforest
+          - stone_statues, totem_statues
+          - obsidian
+          - ancient_stone_steps, stepped_terraces
+          - engravings
+        style:
+          - hieroglyphic_carvings
+          - sacred_animal_symbols
+          - sun_and_moon_symbols
+          - mystical_aura
+          - rainforest_ambiance
 

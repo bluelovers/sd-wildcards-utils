@@ -33,4 +33,80 @@ lazy-wildcards:
           - (Pov Standing Missionary:1.3)
         style-pov:
           - pov male
+      # https://civitai.com/models/483161/pov-against-the-wall-v20?modelVersionId=540226
+      Pov_against_the_wall:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/scenes-pov-nsfw/Pov_against_the_wall/style-pov-main__
+            {0.8::, (__lazy-wildcards/subject/scenes-pov-nsfw/Pov_against_the_wall/action-nsfw__)|}
+            {, {1-$$__lazy-wildcards/subject/scenes-pov-nsfw/Pov_against_the_wall/style-pov__}|}
+            {0.8::, {1-$$__lazy-wildcards/subject/scenes-pov-nsfw/Pov_against_the_wall/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/scenes-pov-nsfw/Pov_against_the_wall/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/scenes-pov-nsfw/Pov_against_the_wall/action__}|}
+        style-pov-main:
+          - >-
+            (Pov against the wall, against the wall, against_wall{0.3:::{1.2|1.3|1.4}|}), pov, solo focus
+        action-nsfw:
+          - no sex
+          - standing sex, pussy, breasts
+          - one leg up, pussy juice, breasts
+          - straddling, pussy juice, breasts
+          - doggy, sex from behind, butt, back, doggystyle, ass ripple
+          - doggy straddling, sex from behind, butt, back, ass ripple
+          - hand on wall, Kabedon, Kabedon POV, kabedon against wall
+          - footkabedon, Foot Kabedon, standing on one leg
+        costume-elem:
+          - penis
+          - wide hips
+          - bikini aside
+          - no panties
+          - clothes lift
+          - panties around one leg
+          - pussy juice
+          - bouncing breasts
+          - __lazy-wildcards/subject/costume-elem/cum/prompts__
+          - height difference
+        env-bg:
+          - wall
+          - rocky backdrop
+          - toilet stall
+          - pillar
+        style-pov:
+          - (first person perspectives, First-person perspective:1.2)
+          - pov male
+          - pov hands
+          - futa with female, futanari
+        action:
+          - nsfw, sex
+          - bent over
+          - hetero
+          - clothed sex
+          - torso grab, holding another's wrist
+          - fingering
+      # https://civitai.com/models/9975/window-voyeur?modelVersionId=11859
+      Window_Voyeur:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/scenes-pov-nsfw/Window_Voyeur/main-trigger-words__
+            {, {1-$$__lazy-wildcards/subject/scenes-pov-nsfw/Window_Voyeur/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/scenes-pov-nsfw/Window_Voyeur/action__}|}
+            {, {1-$$__lazy-wildcards/subject/scenes-pov-nsfw/Window_Voyeur/env__}|}
+            {, {1-$$__lazy-wildcards/subject/scenes-pov-nsfw/Window_Voyeur/style__}|}
+        main-trigger-words:
+          - window voyeur, from outside window
+        costume-elem:
+          - nude
+          - wearing a garter and stockings
+          - voluptuous
+        action:
+          - cooking naked
+          - sleeping woman
+          - holding a cup of coffee
+          - head rest, head tilt
+          - arm support
+          - leaning forward
+        env:
+          - at night
+        style:
+          - from above
 

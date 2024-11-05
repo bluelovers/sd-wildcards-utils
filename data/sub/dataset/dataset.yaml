@@ -21,12 +21,15 @@ lazy-wildcards:
       - __lazy-wildcards/background/color-theme__
       - __lazy-wildcards/background/color-multi__
     food-all:
-      - __lazy-wildcards/subject/env-elem-food-*/*/prompts__
-      - __lazy-wildcards/subject/env-elem-food/*/prompts__
-      - __lazy-wildcards/*/*/*/env-elem-food*__
-      - __lazy-wildcards/*/*/*/env-food*__
+      - >-
+        {1-2$$__lazy-wildcards/subject/env-elem-food*/*/prompts__}
+      - >-
+        {1-6$$__lazy-wildcards/*/*/*/env-elem-food*__}
       - __cornf-meal/prompt-object__
       - __cornf-meal/drink__
+    food-all-multi:
+      - >-
+        {1-2$$__lazy-wildcards/dataset/food-all__}
     costume-ethnicity:
       - __cf-*/ethnicity__
       - __lazy-wildcards/subject/ethnicity-*/*/prompts__

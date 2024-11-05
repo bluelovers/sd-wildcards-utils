@@ -135,7 +135,8 @@ lazy-wildcards:
         - Mushrooms
     scenery:
       - >-
-        {1-$$scenery|outdoors|horizon|landscape|ultra wide angle, very wide shot, wide angle shot|HDRI Panorama View|360 panorama}
+        scenery
+        {, {1-$$outdoors|horizon|landscape|ultra wide angle, very wide shot, wide angle shot|HDRI Panorama View|360 panorama|aerial view, drone view}|}
     scenery-no-humans:
       - >-
         __lazy-wildcards/utils/scenery__

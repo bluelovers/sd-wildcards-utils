@@ -180,4 +180,21 @@ lazy-wildcards:
           - energy wings
         costume-weapon:
           - scythe
+    NIKKE:
+      # https://civitai.com/models/19661/nikke-scarlet
+      Scarlet:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/NIKKE/Scarlet/main-trigger-words__
+            {, __lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-ethnicity__|}
+            , {1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume__}
+            {, {1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-elem__}|}
+        main-trigger-words:
+          - scarlet, scarlet_\(nikke\), goddess of victory nikke
+        costume-ethnicity:
+          - grey_hair, long_hair
+        costume:
+          - hat, dress, cleavage, bare_shoulders, horns, off_shoulder, white_dress
+        costume-elem:
+          - drunk
 

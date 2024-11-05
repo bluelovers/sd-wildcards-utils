@@ -544,4 +544,82 @@ lazy-wildcards:
           - music
           - dutch angle
           - dynmic
+      1970s_sunken_living_room:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-interior/1970s_sunken_living_room/style-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/1970s_sunken_living_room/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/1970s_sunken_living_room/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/1970s_sunken_living_room/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/1970s_sunken_living_room/style__}|}
+        style-main:
+          - sunken interior style, sunken space design
+        env-bg:
+          - sunken_living_room
+        env:
+          - wood_paneling, wood_paneling_walls
+          - shag_carpet, plush_carpeting
+          - lava_lamps
+          - __lazy-wildcards/subject/env-elem/rattan-chair/prompts__
+          - macrame_wall_hangings
+          - wraparound_seating
+          - sunken_fireplace
+          - textured_walls
+        costume-elem:
+          - bell_bottoms
+          - polyester_fabric
+          - fringed_clothing
+          - platform_shoes
+        style:
+          - orange_and_brown_palette
+          - bold_wallpaper_patterns
+          - psychedelic_patterns
+          - disco_fashion
+          - neutral_color_scheme
+          - soft_lighting
+          - modern_furniture, vintage_decor, eclectic_style, mixed_interior
+          - open_space_design
+          - floor_cushions_and_throws
+          - cozy_space, social_area, warm_ambiance
+          - boho style
+          - industrial style
+          - sunken
+      # https://civitai.com/models/117515/hive-interiordesign-or
+      hive-design:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-interior/hive-design/style-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-2$$__lazy-wildcards/subject/env-bg-interior/hive-design/style-interior__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/hive-design/style__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/hive-design/env__}|}
+        style-main:
+          - hive design, hive-like structure, xs-hive-design, hive-inspired, hive interior design, hexagonal_pattern
+        style-interior:
+          - modern style
+          - futuristic style
+          - eco style, nature-inspired
+          - cyberpunk style
+          - steampunk style, antique_vibes
+          - fantasy style
+          - industrial style
+        style:
+          - geometric_design
+          - biomimicry
+          - neutral_colors
+          - metallic_finishes
+        env:
+          - honeycomb_lighting, hexagonal_lamps
+          - open_space
+          - geometric_furniture
+          - seamless_walls
+          - moss_wall
+          - wooden_hexagons
+          - glass_panels
+          - bronze_hexagons
+          - gear_decor
+          - metal_frame
+          - vacuum_tubes
+          - glowing_crystals
+          - vine_decor
+          - hexagonal_architecture
 

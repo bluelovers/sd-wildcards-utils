@@ -1,0 +1,51 @@
+lazy-wildcards:
+  subject:
+    env-elem-food:
+      # https://civitai.com/models/21079
+      Taiwanese_Food:
+        prompts:
+          - >-
+            {1-2$$__lazy-wildcards/subject/env-elem-food/Taiwanese_Food/env-elem-food__}
+            , __lazy-wildcards/subject/env-elem-food/Taiwanese_Food/env-elem-food-main__
+        env-elem-food-main:
+          - __lazy-wildcards/subject/env-elem-food/others/utils/name-cuisine(name=taiwanese)__
+            , __lazy-wildcards/subject/env-elem-food/others/utils/name-cuisine(name=taiwan)__
+            , local_specialty
+        env-elem-food:
+          - Bawan
+          - beef noodle soup
+          - braised pork rice
+          - bubble tea
+          - Guabao
+          - iron egg
+          - millet mochi
+          - oyster omelet
+          - oyster vermicelli
+          - pan fried buns
+          - pepper bun
+          - pineapple cake
+          - rice noodles
+          - fried rice noodles
+          - scallion pancake
+          - stinky tofu
+          - sun cake
+      # 小卷湯麵
+      fresh_squid_noodle_soup:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-food/fresh_squid_noodle_soup/env-elem-food-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/fresh_squid_noodle_soup/env-elem-food__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/fresh_squid_noodle_soup/style__}|}
+        env-elem-food-main:
+          - (fresh_squid:1.2), noodle_soup, __lazy-wildcards/subject/env-elem-food/Taiwanese_Food/env-elem-food-main__
+        env-elem-food:
+          - garnished_with_scallions, green_onions
+          - ginger_strips, aromatic_herbs
+          - food_garnish, soup_topping
+          - white_noodles
+          - squid_rings
+          - light_soup
+          - full-sized squid
+        style:
+          - appetizing_scent, umami_flavor
+

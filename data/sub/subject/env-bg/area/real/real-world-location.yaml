@@ -52,6 +52,8 @@ lazy-wildcards:
             - Grand_Canyon, vast_gorge, layered_rock_formations
             - Pyramids_of_Giza, desert_landscape
             - Abu_Simbel, colossal_statues, rock_temples, Ramses_II
+            - angkor_wat, cambodian_temple, ancient_cambodia, jungle_ruins
+            - borobudur, buddhist_temple, stone_stupa, indonesian_temple
           usa:
             - golden_gate_bridge
           North_American:
@@ -92,6 +94,9 @@ lazy-wildcards:
               {, {1-$$catholicism|renaissance_architectur|dome|spirituality}|}
           france:
             - eiffel_tower
+          inca:
+            - >-
+              Machu_Picchu{, inca_ruins, mountain_temple, stone_terraces|}
       elem-interior:
         prompts:
           - Indian_mausoleum
