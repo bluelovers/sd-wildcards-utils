@@ -1078,7 +1078,7 @@ lazy-wildcards:
         - Mushrooms
     scenery:
       - >-
-        {1-$$scenery|outdoors|horizon|landscape|ultra wide angle,very wide shot,wide angle shot|HDRI Panorama View|360 panorama}
+        scenery{,{1-$$outdoors|horizon|landscape|ultra wide angle,very wide shot,wide angle shot|HDRI Panorama View|360 panorama|aerial view,drone view}|}
     scenery-no-humans:
       - >-
         __lazy-wildcards/utils/scenery__{,no humans|}
@@ -1322,6 +1322,15 @@ lazy-wildcards:
           - prehistoric_symbol,geometric_pattern,cave_art_abstract
           - handprint_art,prehistoric_handprint,cave_handprint
           - natural_pigment,ochre_painting,charcoal_painting
+      icon-game:
+        prompts:
+          - >-
+            (game icon institute,game icon,gen-icon-material,IconsMi,SKSKS app icon,Game Icon Institute3d,icon{0.3:::{1.2|1.3|1.4}|})
+      # https://civitai.com/models/60132/vector-illustration
+      vector_art:
+        prompts:
+          - >-
+            (vector_art,vector illustration{0.3:::{1.2|1.3|1.4}|})
     style-artist-name:
       comic:
         prompts:
@@ -1611,6 +1620,26 @@ lazy-wildcards:
             {1-$$ and $$binary code|digital art},only zero and one
         style:
           - __lazy-wildcards/subject/style-elem/digital_rain/prompts__
+      food:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-elem/food/style-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/style-elem/food/style__}|}{,{1-$$__lazy-wildcards/subject/style-elem/food/env-elem-food__}|}{0.2::,{1-$$__lazy-wildcards/subject/style-elem/food/env-elem-food-flavor__}|}
+        style-main:
+          - food focus,Yummy,foodphoto,foodshot,Food Photography,fodm4st3r style,HEZI,food platters,foodporn,food porn,foodstyle
+        style:
+          - plating_art,fine_dining,food_arrangement,elegant_plating
+          - macro_food,food_close_up,detailed_texture,high_resolution
+          - rustic_food,farm_to_table,natural_presentation,vintage_plates
+        env-elem-food:
+          - glistening_sauce,sauce_drip
+          - food_gloss,appetizing_texture,food_shine
+          - colorful_vegetables,vibrant_food,fresh_ingredients,healthy_food
+          - steam_rising,hot_food,freshly_cooked,appetizing_steam
+        env-elem-food-flavor:
+          - juicy_meat,grilled_texture,tender_appearance,meat_gloss
+          - melting_cheese,cheese_pull,creamy_texture,savory_food
+          - dessert_drizzle,syrup_drip,sweet_sauce,dessert_topping
+          - glossy_glaze,dessert_glaze,caramelized_top
     style-elem-texture:
       iron-skin:
         prompts:
@@ -1949,6 +1978,7 @@ lazy-wildcards:
         style:
           - reminiscent
           - retro
+          - a frame of a animated film of style akirafilm
       # https://www.facebook.com/SkyFreeDom.CandyClub
       # https://www.pixiv.net/users/1017056/artworks
       # https://x.com/skyfreedom_212/media
@@ -2092,6 +2122,28 @@ lazy-wildcards:
           - ancient_civilisation
           - Eight-Deer_Jaguar-Claw
           - glyph_paintings
+      dui:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/dui/style-main__{,{1-$$__lazy-wildcards/subject/style-artist/dui/env__}|}{,{1-$$__lazy-wildcards/subject/style-artist/dui/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/style-artist/dui/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/style-artist/dui/style__}|}
+        style-main:
+          - dui,Fairytale Utopia
+        env:
+          - cherry tree,spring
+          - train front in the middle of the street,railway
+          - breeze,petals
+          - surrounded by a huge chinese dragon in the background
+        costume-elem:
+          - A grim reaper in a large hooded cloak
+        costume-weapon:
+          - holding a long scythe
+          - holding a branch of flowers
+        style:
+          - illustration style
+          - Shinkai Makoto style
+          - inksketch Qingxing
+          - Retro Healithc Illustration Style
+          - digital art style
     scenes-meme:
       girl-in-tsubo-pot:
         prompts:
@@ -2288,6 +2340,75 @@ lazy-wildcards:
             (Pov Standing Missionary:1.3)
         style-pov:
           - pov male
+      # https://civitai.com/models/483161/pov-against-the-wall-v20?modelVersionId=540226
+      Pov_against_the_wall:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/scenes-pov-nsfw/Pov_against_the_wall/style-pov-main__{0.8::,(__lazy-wildcards/subject/scenes-pov-nsfw/Pov_against_the_wall/action-nsfw__)|}{,{1-$$__lazy-wildcards/subject/scenes-pov-nsfw/Pov_against_the_wall/style-pov__}|}{0.8::,{1-$$__lazy-wildcards/subject/scenes-pov-nsfw/Pov_against_the_wall/env-bg__}|}{,{1-$$__lazy-wildcards/subject/scenes-pov-nsfw/Pov_against_the_wall/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/scenes-pov-nsfw/Pov_against_the_wall/action__}|}
+        style-pov-main:
+          - >-
+            (Pov against the wall,against the wall,against_wall{0.3:::{1.2|1.3|1.4}|}),pov,solo focus
+        action-nsfw:
+          - no sex
+          - standing sex,pussy,breasts
+          - one leg up,pussy juice,breasts
+          - straddling,pussy juice,breasts
+          - doggy,sex from behind,butt,back,doggystyle,ass ripple
+          - doggy straddling,sex from behind,butt,back,ass ripple
+          - hand on wall,Kabedon,Kabedon POV,kabedon against wall
+          - footkabedon,Foot Kabedon,standing on one leg
+        costume-elem:
+          - penis
+          - wide hips
+          - bikini aside
+          - no panties
+          - clothes lift
+          - panties around one leg
+          - pussy juice
+          - bouncing breasts
+          - __lazy-wildcards/subject/costume-elem/cum/prompts__
+          - height difference
+        env-bg:
+          - wall
+          - rocky backdrop
+          - toilet stall
+          - pillar
+        style-pov:
+          - |-
+            (first person perspectives,First-person perspective:1.2)
+          - pov male
+          - pov hands
+          - futa with female,futanari
+        action:
+          - nsfw,sex
+          - bent over
+          - hetero
+          - clothed sex
+          - |-
+            torso grab,holding another's wrist
+          - fingering
+      # https://civitai.com/models/9975/window-voyeur?modelVersionId=11859
+      Window_Voyeur:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/scenes-pov-nsfw/Window_Voyeur/main-trigger-words__{,{1-$$__lazy-wildcards/subject/scenes-pov-nsfw/Window_Voyeur/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/scenes-pov-nsfw/Window_Voyeur/action__}|}{,{1-$$__lazy-wildcards/subject/scenes-pov-nsfw/Window_Voyeur/env__}|}{,{1-$$__lazy-wildcards/subject/scenes-pov-nsfw/Window_Voyeur/style__}|}
+        main-trigger-words:
+          - window voyeur,from outside window
+        costume-elem:
+          - nude
+          - wearing a garter and stockings
+          - voluptuous
+        action:
+          - cooking naked
+          - sleeping woman
+          - holding a cup of coffee
+          - head rest,head tilt
+          - arm support
+          - leaning forward
+        env:
+          - at night
+        style:
+          - from above
     scenes-showcase:
       bg-color-prompts:
         prompts:
@@ -4097,6 +4218,30 @@ lazy-wildcards:
           - falling_blocks
         style:
           - game_screen_ui
+      ruins-stone:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-bg/ruins-stone/env-bg__}{,{1-$$__lazy-wildcards/subject/env-bg/ruins-stone/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/ruins-stone/style__}|}
+        env-bg:
+          - ancient_stone_temple,stone shrine
+          - sacred_altar,stone_altar
+          - stone_ruins
+          - underground_shrine,underground ruins,underground temple
+          - ritual_site
+          - rock_cut_architecture
+        env:
+          - stone_pillars
+          - ancient_statues,stone_statues,totem_statues
+          - ancient_stone_steps,stepped_terraces
+          - weathered_stone
+          - engraved_walls
+          - stone_altar
+          - stone architecture,stone building
+          - desert_ruins
+        style:
+          - overgrown,mossy
+          - hieroglyphic_carvings
+          - ancient jungle,rainforest_ambiance,jungle_ruins
       World_Morph:
         prompts:
           - >-
@@ -4167,6 +4312,32 @@ lazy-wildcards:
           - Millennium_News_Network,City_news,propaganda_broadcasts,information_contro
         style:
           - Great_Cataclysm,World_ending_event,apocalyptic_disaster,city_rebirt
+      Treasure_Hoard:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/Treasure_Hoard/env-bg-main__{0.3:::{1.2|1.3|1.4}|}){,{2-$$__lazy-wildcards/subject/env-bg/Treasure_Hoard/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/Treasure_Hoard/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/Treasure_Hoard/style__}|}
+        env-bg-main:
+          - treho,Treasure Hoard,treasure chest,treasure chamber,treasure
+        env:
+          - gold coins,gold bars,gold pile,piles_of_gold
+          - crystal,gem,gemstones,jewels
+          - __lazy-wildcards/dataset/costume-accessories-base__
+          - shield,weapon
+          - royal_treasure,crown,encrusted_gems,luxury_items
+          - skull
+          - open_chest
+          - ancient_relics,mythical_artifacts
+          - gilded_statues
+          - mysterious_scrolls,books,ancient_texts,dusty_parchment
+        env-bg:
+          - ancient_vault,hidden_room
+        style:
+          - subsurface scattering
+          - __lazy-wildcards/utils/scenery-no-humans__
+          - dim_lighting
+          - shiny,reflective_surface,shimmering,glowing
+          - wealth_display,overflowing
+          - antique_objects
       outer_space:
         prompts:
           - >-
@@ -4528,6 +4699,46 @@ lazy-wildcards:
           - exotic
           - natural_forest_light
           - flower pattern
+      # https://civitai.com/models/270561/mayangoldworld?modelVersionId=304985
+      Mayan_World:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-civilization/Mayan_World/style-main__{,{1-$$__lazy-wildcards/subject/env-elem-civilization/Mayan_World/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/Mayan_World/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/Mayan_World/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/Mayan_World/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/Mayan_World/style__}|}
+        style-main:
+          - mayanworld,Cultura maya,Mayan,ancient_maya
+        costume-elem:
+          - Maya peoples
+          - ritual_masks
+          - jade_ornaments
+        costume-weapon:
+          - obsidian_weapons
+          - tiki_torch
+        env-bg:
+          - ancient_jungle_temple
+          - >-
+            mayan_pyramid{,{tikal|chichen_itza}|}
+          - stone_ruins
+          - stone_altar
+          - sacred_cenote
+          - maya_maze architecture,stone building
+          - ancient_ball_court
+          - ceremonial_plaza
+          - kukulkan_temple
+        env:
+          - ceremonial_fire
+          - jungle_overgrowth
+          - ancient_calendar
+          - tropical_rainforest
+          - stone_statues,totem_statues
+          - obsidian
+          - ancient_stone_steps,stepped_terraces
+          - engravings
+        style:
+          - hieroglyphic_carvings
+          - sacred_animal_symbols
+          - sun_and_moon_symbols
+          - mystical_aura
+          - rainforest_ambiance
     env-elem:
       others:
         prompts:
@@ -4871,16 +5082,53 @@ lazy-wildcards:
         env:
           - menu_advertisements
           - street_art
+      # https://civitai.com/models/540480?modelVersionId=1029323
+      # https://civitai.com/models/128310/rei-no-pool
+      # https://civitai.com/models/102930/xsarchi131hotel-pool
       pool:
         prompts:
           - >-
-            {1-2$$__lazy-wildcards/subject/env-elem/pool/env-main__}{,{1-$$__lazy-wildcards/subject/env-elem/pool/env__}|}
-        env-main:
+            __lazy-wildcards/subject/env-elem/pool/main-trigger-words__,{1-2$$__lazy-wildcards/subject/env-elem/pool/env-bg-main__}{,{1-3$$__lazy-wildcards/subject/env-elem/pool/env-pool__}|}{,{1-$$__lazy-wildcards/subject/env-elem/pool/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem/pool/style__}|}
+        main-trigger-words:
+          - JPPL,swimming pool,rei no pool,shs reinopool,reinopool
+        env-bg-main:
           - poolside
           - pool
-        env:
+        env-pool:
           - empty pool
           - pool ladder
+          - >-
+            {Japanese |}Public Pool
+          - rooftop pool,elevated_pool
+          - hotel pool
+          - infinity_pool
+          - luxury_pool
+          - natural_pool,eco_pool
+          - hot_spring,onsen,steam
+          - stone_pool,rocks
+          - kiddie_pool,children_pool
+          - lagoon_pool,sandy_edge,tropical_design,irregular_shape,lagoon_style
+          - plunge_pool,deep_pool
+        env:
+          - window
+          - ceiling
+          - indoors
+          - tile floor
+          - tile wall
+          - ocean_view
+          - clear_water
+          - vegetation
+          - natural_landscape
+          - water_slide
+          - city_view
+          - skyline_view
+          - spa_resort
+          - water_park
+          - cool_water
+        style:
+          - seamless_edge
+          - horizon_blend
+          - relaxing_environment
       fence:
         prompts:
           - >-
@@ -5001,6 +5249,7 @@ lazy-wildcards:
           - tree stairs
           - perforated metal stairs
           - glass stairs
+          - ancient_stone_steps
         env:
           - stairwell
           - __lazy-wildcards/subject/env-elem/railing/prompts__
@@ -5180,6 +5429,7 @@ lazy-wildcards:
         style:
           - discarded
           - peacock chair
+          - rattan_furniture
           - >-
             {1-$$ style,$$rattan|wicker} style
       coffin:
@@ -5362,18 +5612,23 @@ lazy-wildcards:
       circle-magic:
         prompts:
           - >-
-            (__lazy-wildcards/subject/env-elem/circle-magic/env-magic__,{1-$$__lazy-wildcards/subject/env-elem/circle-magic/style__}:1.4) {1-$$__lazy-wildcards/subject/env-elem/circle-magic/env__}
+            (__lazy-wildcards/subject/env-elem/circle-magic/env-magic__,{1-$$__lazy-wildcards/subject/env-elem/circle-magic/style__}:1.4),{1-$$__lazy-wildcards/subject/env-elem/circle-magic/env__}
         env-magic:
-          - perfect magic circle
+          - perfect magic circle,magical circle
         env:
           - fireflies
           - __lazy-wildcards/subject/env-elem/circle-transmutation/prompts__
+          - __lazy-wildcards/subject/env-elem/circle-pentagram/prompts__
+          - magic shield
+          - magic portal
         style:
           - spell
           - fusion
           - vortex
           - swirling patterns
           - fluid
+          - mantra
+          - glowing
       circle-transmutation:
         prompts:
           - >-
@@ -5382,8 +5637,34 @@ lazy-wildcards:
           - transmutation circles
         env:
           - pentagram symbol
-          - pentagram circles
+          - __lazy-wildcards/subject/env-elem/circle-pentagram/prompts__
           - arcane symbols
+      # https://civitai.com/models/917102/pentagramcircleconcept?modelVersionId=1026502
+      circle-pentagram:
+        prompts:
+          - >-
+            pentagram {1-$$,pentagram $$circles|symbol},pentagramcircleconcept
+      # https://civitai.com/models/146658/world-of-oilslick?modelVersionId=163382
+      oilslick:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/oilslick/env-main__{,{1-$$__lazy-wildcards/subject/env-elem/oilslick/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem/oilslick/style__}|}
+        env-main:
+          - worldofoilslick,oilslick,oil_slick
+        env:
+          - rainbow_oil_slick
+          - oil_on_water
+          - rainbow_puddles
+        style:
+          - fluid_swirl_patterns,fluid_art
+          - metallic_shine
+          - dark_industrial_vibe
+          - highlights_and_shadows
+          - grunge_texture
+          - iridescent_glow,color_gradient
+          - iridescent_surface
+          - colorful_reflection
+          - polluted_surface,industrial_pollution
       tentacles-play:
         prompts:
           - >-
@@ -5542,11 +5823,14 @@ lazy-wildcards:
           - communication devices
           - display_board
           - heads-up display
+      # https://civitai.com/models/43944/solarpunkai-konyconi
       solarpunk:
         prompts:
           - >-
-            ({1-$$__lazy-wildcards/subject/env-elem-punk/solarpunk/main__}:1.2){,{1-4$$__lazy-wildcards/subject/env-elem-punk/solarpunk/env-bg__}|},({1-$$__lazy-wildcards/subject/env-elem-punk/solarpunk/env__}:1.2){,{1-4$$__lazy-wildcards/subject/env-elem-punk/solarpunk/costume__}|}{,{1-4$$__lazy-wildcards/subject/env-elem-punk/solarpunk/style__}|}{,__lazy-wildcards/utils/scenery-no-humans__|}
-        main:
+            __lazy-wildcards/subject/env-elem-punk/solarpunk/style-trigger-words__,({1-$$__lazy-wildcards/subject/env-elem-punk/solarpunk/style-main__}:1.2){,{1-4$$__lazy-wildcards/subject/env-elem-punk/solarpunk/env-bg__}|},({1-$$__lazy-wildcards/subject/env-elem-punk/solarpunk/env__}:1.2){,{1-4$$__lazy-wildcards/subject/env-elem-punk/solarpunk/costume__}|}{,{1-4$$__lazy-wildcards/subject/env-elem-punk/solarpunk/style__}|}{,__lazy-wildcards/utils/scenery-no-humans__|}
+        style-trigger-words:
+          - solarpunkai,green-powered
+        style-main:
           - solarpunk
           - naturepunk
           - Ethnofuturism
@@ -5574,6 +5858,7 @@ lazy-wildcards:
           - Eco_Warrior_Outfit
           - Bio_Armor
           - Urban_Gardener_Attire
+          - solar4rmor
         env:
           - natural environments,natural elements
           - solar power,solar panels
@@ -6534,6 +6819,77 @@ lazy-wildcards:
           - music
           - dutch angle
           - dynmic
+      1970s_sunken_living_room:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-interior/1970s_sunken_living_room/style-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg-interior/1970s_sunken_living_room/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/1970s_sunken_living_room/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/1970s_sunken_living_room/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/1970s_sunken_living_room/style__}|}
+        style-main:
+          - sunken interior style,sunken space design
+        env-bg:
+          - sunken_living_room
+        env:
+          - wood_paneling,wood_paneling_walls
+          - shag_carpet,plush_carpeting
+          - lava_lamps
+          - __lazy-wildcards/subject/env-elem/rattan-chair/prompts__
+          - macrame_wall_hangings
+          - wraparound_seating
+          - sunken_fireplace
+          - textured_walls
+        costume-elem:
+          - bell_bottoms
+          - polyester_fabric
+          - fringed_clothing
+          - platform_shoes
+        style:
+          - orange_and_brown_palette
+          - bold_wallpaper_patterns
+          - psychedelic_patterns
+          - disco_fashion
+          - neutral_color_scheme
+          - soft_lighting
+          - modern_furniture,vintage_decor,eclectic_style,mixed_interior
+          - open_space_design
+          - floor_cushions_and_throws
+          - cozy_space,social_area,warm_ambiance
+          - boho style
+          - industrial style
+          - sunken
+      # https://civitai.com/models/117515/hive-interiordesign-or
+      hive-design:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-interior/hive-design/style-main__{0.3:::{1.2|1.3|1.4}|}){,{1-2$$__lazy-wildcards/subject/env-bg-interior/hive-design/style-interior__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/hive-design/style__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/hive-design/env__}|}
+        style-main:
+          - hive design,hive-like structure,xs-hive-design,hive-inspired,hive interior design,hexagonal_pattern
+        style-interior:
+          - modern style
+          - futuristic style
+          - eco style,nature-inspired
+          - cyberpunk style
+          - steampunk style,antique_vibes
+          - fantasy style
+          - industrial style
+        style:
+          - geometric_design
+          - biomimicry
+          - neutral_colors
+          - metallic_finishes
+        env:
+          - honeycomb_lighting,hexagonal_lamps
+          - open_space
+          - geometric_furniture
+          - seamless_walls
+          - moss_wall
+          - wooden_hexagons
+          - glass_panels
+          - bronze_hexagons
+          - gear_decor
+          - metal_frame
+          - vacuum_tubes
+          - glowing_crystals
+          - vine_decor
+          - hexagonal_architecture
     env-elem-food-drink:
       ramune:
         prompts:
@@ -6576,12 +6932,61 @@ lazy-wildcards:
         action-drink:
           - pov,pov hands,holding,holding bottle
     env-elem-food:
+      # https://civitai.com/models/21079
+      Taiwanese_Food:
+        prompts:
+          - >-
+            {1-2$$__lazy-wildcards/subject/env-elem-food/Taiwanese_Food/env-elem-food__},__lazy-wildcards/subject/env-elem-food/Taiwanese_Food/env-elem-food-main__
+        env-elem-food-main:
+          - __lazy-wildcards/subject/env-elem-food/others/utils/name-cuisine(name=taiwanese)__,__lazy-wildcards/subject/env-elem-food/others/utils/name-cuisine(name=taiwan)__,local_specialty
+        env-elem-food:
+          - Bawan
+          - beef noodle soup
+          - braised pork rice
+          - bubble tea
+          - Guabao
+          - iron egg
+          - millet mochi
+          - oyster omelet
+          - oyster vermicelli
+          - pan fried buns
+          - pepper bun
+          - pineapple cake
+          - rice noodles
+          - fried rice noodles
+          - scallion pancake
+          - stinky tofu
+          - sun cake
+      # 小卷湯麵
+      fresh_squid_noodle_soup:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-food/fresh_squid_noodle_soup/env-elem-food-main__{,{1-$$__lazy-wildcards/subject/env-elem-food/fresh_squid_noodle_soup/env-elem-food__}|}{,{1-$$__lazy-wildcards/subject/env-elem-food/fresh_squid_noodle_soup/style__}|}
+        env-elem-food-main:
+          - |-
+            (fresh_squid:1.2),noodle_soup,__lazy-wildcards/subject/env-elem-food/Taiwanese_Food/env-elem-food-main__
+        env-elem-food:
+          - garnished_with_scallions,green_onions
+          - ginger_strips,aromatic_herbs
+          - food_garnish,soup_topping
+          - white_noodles
+          - squid_rings
+          - light_soup
+          - full-sized squid
+        style:
+          - appetizing_scent,umami_flavor
       others:
         prompts:
           - fried calamari
           - meat on bone
           - poultry leg
           - lunch box
+          - meatballs
+          - noodle_soup
+        utils:
+          name-cuisine:
+            - >-
+              ${name} food,${name} cuisine
       shaved-ice-animal-shaped:
         prompts:
           - >-
@@ -6621,11 +7026,63 @@ lazy-wildcards:
             __lazy-wildcards/subject/env-elem-food/tofu/env-elem-food__{,{1-$$__lazy-wildcards/subject/env-elem-food/tofu/env-food-elem__}|}
         env-elem-food:
           - >-
-            {crispy |}fried tofu{slices|}
+            {crispy |}fried tofu{ slices|}
+          - mapo tofu
+          - tofu_soup
+          - stinky_tofu
         env-food-elem:
           - chopped scallions
-          - chili peppers
+          - chili peppers,spicy_dish
           - drizzled with savory sauce
+          - Sichuan_cuisine
+          - minced_meat
+          - appetizer
+          - street_food
+      kebab:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-food/kebab/env-elem-food-main__{0.7::,__lazy-wildcards/subject/env-elem-food/kebab/env-elem-food-flavor__|}{,{1-$$__lazy-wildcards/subject/env-elem-food/kebab/env-elem-food__}|}
+        env-elem-food-main:
+          - kebab
+        env-elem-food-flavor:
+          - german doner
+          - shish_kebab,middle_eastern_cuisine
+          - seekh_kebab,indian_cuisine
+          - kofta_kebab,spiced_meatballs,middle_eastern_cuisine
+          - gyros,greek_cuisine
+          - __lazy-wildcards/subject/env-elem-food/kebab-*/prompts__
+          - chapli_kebab,pakistani_cuisine
+          - kashmiri_kebab,indian_cuisine
+          - jujeh_kebab,saffron_marinated,iranian_cuisine,grilled_chicken
+        env-elem-food:
+          - skewered_meat
+          - grilled_vegetables
+          - minced_meat
+          - spicy_flavor,aromatic_spices
+          - grilled_dish
+          - tzatziki_sauce
+          - pita_bread_wrapper
+          - pan_fried_patties
+      kebab-turkish:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-food/kebab-turkish/env-elem-food-main__{0.7::,__lazy-wildcards/subject/env-elem-food/kebab-turkish/env-elem-food-flavor__|}{,{1-$$__lazy-wildcards/subject/env-elem-food/kebab-turkish/env-elem-food__}|}
+        env-elem-food-main:
+          - kebab,turkish food,turkish cuisine
+        env-elem-food-flavor:
+          # 旋转烤肉串
+          - doner_kebab
+          # 辣味烤肉串
+          - adana_kebab
+          # 伊斯肯德烤肉
+          - iskender_kebab,layered_meat
+        env-elem-food:
+          - rotisserie_meat
+          - flatbread_wrapper
+          - spicy_meat,spicy_flavor,turkish_spices
+          - grilled_dish
+          - tomato_sauce
+          - yogurt_topping
     env-bg-real-world-location:
       # https://civitai.com/models/62198/kowloon-walled-city-tset?modelVersionId=66738
       kowloon-walled-city:
@@ -6675,6 +7132,8 @@ lazy-wildcards:
             - Grand_Canyon,vast_gorge,layered_rock_formations
             - Pyramids_of_Giza,desert_landscape
             - Abu_Simbel,colossal_statues,rock_temples,Ramses_II
+            - angkor_wat,cambodian_temple,ancient_cambodia,jungle_ruins
+            - borobudur,buddhist_temple,stone_stupa,indonesian_temple
           usa:
             - golden_gate_bridge
           North_American:
@@ -6712,6 +7171,9 @@ lazy-wildcards:
               {1-$$st_peters_basilica|vatican_city}{,{1-$$catholicism|renaissance_architectur|dome|spirituality}|}
           france:
             - eiffel_tower
+          inca:
+            - >-
+              Machu_Picchu{,inca_ruins,mountain_temple,stone_terraces|}
       elem-interior:
         prompts:
           - Indian_mausoleum
@@ -7062,7 +7524,7 @@ lazy-wildcards:
       Lava_Interior_style:
         prompts:
           - >-
-            __lazy-wildcards/subject/style-interior/Lava_Interior_style/main-trigger-words__{,({1-$$__lazy-wildcards/subject/env-elem-punk/solarpunk/main__}:1.2)|}{,{1-$$__lazy-wildcards/subject/style-interior/Lava_Interior_style/env__}|}{,{1-4$$__lazy-wildcards/subject/env-elem-punk/solarpunk/style__}|}
+            __lazy-wildcards/subject/style-interior/Lava_Interior_style/main-trigger-words__{,({1-$$__lazy-wildcards/subject/env-elem-punk/solarpunk/style-main__}:1.2)|}{,{1-$$__lazy-wildcards/subject/style-interior/Lava_Interior_style/env__}|}{,{1-4$$__lazy-wildcards/subject/env-elem-punk/solarpunk/style__}|}
         main-trigger-words:
           - Lava Interior style,Chris Bosse,Chris Bosse architect,lava architect,lava style,LAVA,indoors
         env:
@@ -9304,6 +9766,11 @@ lazy-wildcards:
       breasts-clothes:
         prompts:
           - breast curtains
+      # https://civitai.com/models/903901/nippleless-not-safe-nudity?modelVersionId=1011512
+      # https://civitai.com/models/104726
+      no_nipples:
+        prompts:
+          - nonipples,Nipless
     costume-ethnicity-eyes:
       # https://civitai.com/models/728222/triclops?modelVersionId=814306
       third-eye:
@@ -10505,12 +10972,15 @@ lazy-wildcards:
       - __lazy-wildcards/background/color-theme__
       - __lazy-wildcards/background/color-multi__
     food-all:
-      - __lazy-wildcards/subject/env-elem-food-*/*/prompts__
-      - __lazy-wildcards/subject/env-elem-food/*/prompts__
-      - __lazy-wildcards/*/*/*/env-elem-food*__
-      - __lazy-wildcards/*/*/*/env-food*__
+      - >-
+        {1-2$$__lazy-wildcards/subject/env-elem-food*/*/prompts__}
+      - >-
+        {1-6$$__lazy-wildcards/*/*/*/env-elem-food*__}
       - __cornf-meal/prompt-object__
       - __cornf-meal/drink__
+    food-all-multi:
+      - >-
+        {1-2$$__lazy-wildcards/dataset/food-all__}
     costume-ethnicity:
       - __cf-*/ethnicity__
       - __lazy-wildcards/subject/ethnicity-*/*/prompts__
@@ -11248,6 +11718,20 @@ lazy-wildcards:
           - energy wings
         costume-weapon:
           - scythe
+    NIKKE:
+      # https://civitai.com/models/19661/nikke-scarlet
+      Scarlet:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/NIKKE/Scarlet/main-trigger-words__{,__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-ethnicity__|},{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume__}{,{1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-elem__}|}
+        main-trigger-words:
+          - scarlet,scarlet_\(nikke\),goddess of victory nikke
+        costume-ethnicity:
+          - grey_hair,long_hair
+        costume:
+          - hat,dress,cleavage,bare_shoulders,horns,off_shoulder,white_dress
+        costume-elem:
+          - drunk
     last_origin:
       eva:
         prompts:
@@ -11420,7 +11904,7 @@ lazy-wildcards:
       Tank_Girl:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/Tank_Girl/Tank_Girl/main-trigger-words__{,{1-2$$__lazy-wildcards/cosplay-char/Tank_Girl/Tank_Girl/costume-hair__}|},{1-2$$__lazy-wildcards/cosplay-char/Tank_Girl/Tank_Girl/costume__}{,{1-$$__lazy-wildcards/cosplay-char/Tank_Girl/Tank_Girl/costume-headwear__}|}{,{1-$$__lazy-wildcards/cosplay-char/Tank_Girl/Tank_Girl/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/Tank_Girl/Tank_Girl/env-food__}|}{,{1-$$__lazy-wildcards/cosplay-char/Tank_Girl/Tank_Girl/costume-weapon__}|}
+            __lazy-wildcards/cosplay-char/Tank_Girl/Tank_Girl/main-trigger-words__{,{1-2$$__lazy-wildcards/cosplay-char/Tank_Girl/Tank_Girl/costume-hair__}|},{1-2$$__lazy-wildcards/cosplay-char/Tank_Girl/Tank_Girl/costume__}{,{1-$$__lazy-wildcards/cosplay-char/Tank_Girl/Tank_Girl/costume-headwear__}|}{,{1-$$__lazy-wildcards/cosplay-char/Tank_Girl/Tank_Girl/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/Tank_Girl/Tank_Girl/env-elem-food__}|}{,{1-$$__lazy-wildcards/cosplay-char/Tank_Girl/Tank_Girl/costume-weapon__}|}
         main-trigger-words:
           - TGTankGirl
         costume-hair:
@@ -11447,7 +11931,7 @@ lazy-wildcards:
         costume-headwear:
           - TankGirlHelmet,green_helmet
           - TankGirlGoggles,goggles_on_forehead,goggles
-        env-food:
+        env-elem-food:
           - Smoking_A_Cigarette,cigarette_in_mouth,smoking_a_cigarette
           - Smoking_A_Cigar,cigar_in_mouth,smoking_a_cigar
         costume-weapon:
@@ -14298,6 +14782,29 @@ lazy-wildcards:
           - finger to mouth
           - hand on own hip
           - legs apart
+    # https://eiyuu-senki-gold.fandom.com/wiki/Main_Page
+    Eiyuu_Senki:
+      # https://civitai.com/models/386787/kublai-khan-eiyuu-senki
+      Kublai_Khan:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char-hentai/Eiyuu_Senki/Kublai_Khan/main-trigger-words__,__lazy-wildcards/cosplay-char-hentai/Eiyuu_Senki/Kublai_Khan/costume-ethnicity__
+        main-trigger-words:
+          - KublaiKhan,kublai_khan_\(eiyuu_senki\)
+        costume-ethnicity:
+          - long hair,blue hair,single braid,red eyes,navel,cleavage,jewelry,medium breasts,cape,hair over one eye,bridal gauntlets,bracelet,bikini top only
+    tokyo_necro:
+      # https://civitai.com/models/914089/itachi-otome-tokyo-necro-suicide-mission?modelVersionId=1023064
+      itachi_otome:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char-hentai/tokyo_necro/itachi_otome/main-trigger-words__,__lazy-wildcards/cosplay-char-hentai/tokyo_necro/itachi_otome/costume-ethnicity__,__lazy-wildcards/cosplay-char-hentai/tokyo_necro/itachi_otome/costume__
+        main-trigger-words:
+          - itachi_otome,ItachiOtome,tokyo_necro,tokyo_necro_suicide_mission
+        costume-ethnicity:
+          - long hair,blonde hair,pink hair,gradient hair,brown hair,hair ornament,__lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+        costume:
+          - black thighhighs,navel,jewelry,purple eyes,hairband,earrings,detached sleeves,wide sleeves,underboob,tassel,jingle bell,miko,hair bell
     Sex_Demon_Queen:
       # 女戦士「リマ」
       # https://civitai.com/models/857980/rime-linna-hentai-sex-demon-queen-ponyxl-sd15?modelVersionId=959989
