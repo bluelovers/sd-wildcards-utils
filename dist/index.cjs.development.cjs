@@ -54,22 +54,33 @@ function getOptionsFromDocument(doc, opts) {
 }
 
 function stripZeroStr(value) {
-  return value.replace(/[\x00\u200b]+/g, '').replace(/^[\s\xa0]+|[\s\xa0]+$/gm, '');
+  return value.replace(/[\x00\u200b]+/g, '');
 }
 function trimPrompts(value) {
-  return value.replace(/^\s+|\s+$/g, '').replace(/\n\s*\n/g, '\n');
+  return value.replace(/\xa0/g, ' ').replace(/^\s+|\s+$/g, '').replace(/^\s+|\s+$/gm, '').replace(/\n\s*\n/g, '\n').replace(/\s+/gm, ' ').replace(/[ ,.]+(?=,|$)/gm, '').replace(/,\s*(?=,|$)/g, '');
+}
+function normalizeWildcardsYamlString(value) {
+  value = stripZeroStr(value).replace(/\xa0/g, ' ').replace(/[,.]+(?=,)/gm, '').replace(/[ .]+$/gm, '').replace(/\{\s+(\d+(?:\.\d+)?(?:-(?:\d+(?:\.\d+)?)?\$\$|::))/gm, '{$1').replace(/\|\s(\d+(?:\.\d+)?::)/gm, '|$1').replace(/^[ \t]+-[ \t]*$/gm, '').replace(/^([ \t]+-)[ \t][ ,.]+/gm, '$1 ').replace(/^([ \t]+-[^\n]+),+$/gm, '$1');
+  return value;
 }
 function formatPrompts(value, opts) {
   var _opts;
   (_opts = opts) !== null && _opts !== void 0 ? _opts : opts = {};
-  value = value.replace(/[\s\xa0]+/gm, ' ').replace(/[\s,.]+(?=,|$)/gm, '');
+  value = stripZeroStr(value);
+  value = trimPrompts(value);
+  value = normalizeWildcardsYamlString(value);
   if (opts.minifyPrompts) {
     value = value.replace(/(,)\s+/gm, '$1').replace(/\s+(,)/gm, '$1').replace(/(?<=,\|})\s+/gm, '').replace(/\s+(?=\{(?:\s*\d+(?:\.\d+)?::)?,)/gm, '');
   }
   return value;
 }
-function stripBlankLines(value) {
-  return value.replace(/(\r?\n)[\s\r\n\t\xa0]+(\r?\n)/g, '$1$2').replace(/(\r?\n)(?:\r?\n)(?=[\s\t\xa0])/g, '$1').replace(/[ \xa0\t]+$/gm, '');
+function stripBlankLines(value, appendEOF) {
+  value = value.replace(/(\r?\n)[\s\r\n\t\xa0]+(\r?\n)/g, '$1$2').replace(/(\r?\n)(?:\r?\n)(?=[\s\t\xa0])/g, '$1').replace(/[ \xa0\t]+$/gm, '');
+  if (appendEOF) {
+    value = value.replace(/\s+$/, '');
+    value += '\n\n';
+  }
+  return value;
 }
 
 function isWildcardsYAMLDocument(doc) {
@@ -286,7 +297,7 @@ function _visitNormalizeScalar(key, node, runtime) {
     } else if (node.type === 'QUOTE_DOUBLE' || node.type === 'QUOTE_SINGLE' && !value.includes('\\')) {
       node.type = 'PLAIN';
     }
-    value = trimPrompts(stripZeroStr(formatPrompts(value, runtime.options)));
+    value = formatPrompts(value, runtime.options);
     if (!value.length) {
       throw new SyntaxError(`Invalid SYNTAX [EMPTY_VALUE]. key: ${key}, node: ${node}`);
     } else if (RE_UNSAFE_VALUE.test(value)) {
@@ -491,6 +502,7 @@ function mergeWildcardsYAMLDocumentJsonBy(ls, opts) {
   return opts.deepmerge(ls.map(_toJSON));
 }
 function _toJSON(v) {
+  // @ts-ignore
   return yaml.isDocument(v) ? v.toJSON() : v;
 }
 function _mergeSeqCore(a, b) {
@@ -622,6 +634,12 @@ function _findPathCore(data, paths, findOpts, prefix, list, _cache) {
           value
         });
         continue;
+      } else if (!deep && _cache.findOpts.allowWildcardsAtEndMatchRecord && current.includes('*') && typeof value === 'object' && value) {
+        list.push({
+          key: target,
+          value
+        });
+        continue;
       }
       if (!current.includes('*') || notArray && !deep) {
         throw new TypeError(`Invalid Type. paths: [${target}], isMatch: ${bool}, deep: ${deep}, deep paths: [${paths}], notArray: ${notArray}, match: [${search}], value: ${value}, _cache : ${JSON.stringify(_cache)}`);
@@ -678,7 +696,8 @@ function checkAllSelfLinkWildcardsExists(obj, chkOpts) {
     try {
       list = findPath(json, paths, {
         onlyFirstMatchAll: true,
-        throwWhenNotFound: true
+        throwWhenNotFound: true,
+        allowWildcardsAtEndMatchRecord: chkOpts.allowWildcardsAtEndMatchRecord
       });
     } catch (e) {
       errors.push(e);
@@ -837,6 +856,7 @@ exports.mergeSeq = mergeSeq;
 exports.mergeWildcardsYAMLDocumentJsonBy = mergeWildcardsYAMLDocumentJsonBy;
 exports.mergeWildcardsYAMLDocumentRoots = mergeWildcardsYAMLDocumentRoots;
 exports.normalizeDocument = normalizeDocument;
+exports.normalizeWildcardsYamlString = normalizeWildcardsYamlString;
 exports.parseWildcardsYaml = parseWildcardsYaml;
 exports.pathsToDotPath = pathsToDotPath;
 exports.pathsToWildcardsPath = pathsToWildcardsPath;

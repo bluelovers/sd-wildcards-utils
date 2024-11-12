@@ -2,7 +2,7 @@ import os
 import re
 
 # 指定需要遍歷的路徑
-your_path = 'C:\\Users\\User\\Downloads\\_cocoa_mochi_\\txt2img-images'
+your_path = 'C:\\Users\\User\\Downloads\\新增資料夾 (6)'
 
 # 遍歷指定路徑下的所有.txt文件
 for root, dirs, files in os.walk(your_path):
@@ -35,5 +35,7 @@ for root, dirs, files in os.walk(your_path):
 
                 if negative_prompt_found:
                     lines_new.pop(0)
+
+                lines_new.insert(0, 'n0n1pp1e5')
 
                 f.writelines(lines_new)
