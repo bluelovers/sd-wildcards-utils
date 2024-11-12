@@ -3,6 +3,96 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.10](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.3.7...sd-wildcards-utils@1.3.10) (2024-11-12)
+
+
+### BREAKING CHANGES
+
+* add allowWildcardsAtEndMatchRecord
+* update format handler
+
+
+
+### 🐛　Bug Fixes
+
+* wrong filename ([fbe16a4](https://github.com/bluelovers/sd-wildcards-utils/commit/fbe16a4cc4ed163928c53183c9d6d709e926f131))
+
+
+### ✨　Features
+
+* add allowWildcardsAtEndMatchRecord ([e839836](https://github.com/bluelovers/sd-wildcards-utils/commit/e83983638427185fce12ce13657e167ece6def4e))
+
+
+### 📦　Code Refactoring
+
+* update format handler ([c683be5](https://github.com/bluelovers/sd-wildcards-utils/commit/c683be598a9c1232e1750e580c019e0ce12b0122))
+* update and refactor some wildcards ([ff5a927](https://github.com/bluelovers/sd-wildcards-utils/commit/ff5a927ee29a6e0ca01bb6081f66daf60e1542c6))
+
+
+### 🚨　Tests
+
+* snap all useable entry ([b1a2307](https://github.com/bluelovers/sd-wildcards-utils/commit/b1a23078d66be0c97fa4e6403ba6fc5788b6d13a))
+* fix wrong snap path ([5f68685](https://github.com/bluelovers/sd-wildcards-utils/commit/5f68685699405ce65a8d6de02d1933ea8c7bda57))
+
+
+### 🛠　Build System
+
+* update snapshots ([219adaa](https://github.com/bluelovers/sd-wildcards-utils/commit/219adaa2f1198afd37076603775b887002076cb0))
+* update build ([16ddbb7](https://github.com/bluelovers/sd-wildcards-utils/commit/16ddbb7e63deb21acb72cf5ba0ecd10c2f3be14c))
+* update snapshots ([e52dcc6](https://github.com/bluelovers/sd-wildcards-utils/commit/e52dcc63722a945bc85a5445ab36398b92bd5c9f))
+* update build ([53e9b5b](https://github.com/bluelovers/sd-wildcards-utils/commit/53e9b5b4fc4e74383b912120d38d9f9859a071c8))
+* update snapshots ([c00f47f](https://github.com/bluelovers/sd-wildcards-utils/commit/c00f47f56077eb730d3425d1f58669eeec5b4ae4))
+* update build ([15e75c6](https://github.com/bluelovers/sd-wildcards-utils/commit/15e75c677c304900dc8bcbb31495f939bbc86619))
+* update snapshots ([50d4f40](https://github.com/bluelovers/sd-wildcards-utils/commit/50d4f403d208e9f960723e86d438839fb77e2220))
+* update build ([26d8e87](https://github.com/bluelovers/sd-wildcards-utils/commit/26d8e87e3492038918773cbe2fd18cf7fdc5d8a6))
+* update snapshots ([bd68993](https://github.com/bluelovers/sd-wildcards-utils/commit/bd689939e2450691887d98085245969fac2639e5))
+* update build ([333a647](https://github.com/bluelovers/sd-wildcards-utils/commit/333a64723eb877c03ca32b6235be855fd32fa005))
+* update snapshots ([930e4ac](https://github.com/bluelovers/sd-wildcards-utils/commit/930e4ac0c1d18cfbc605cf6bc48d0ce55930dce5))
+* update build ([8e367e6](https://github.com/bluelovers/sd-wildcards-utils/commit/8e367e69cff812462bf063123e9f07a9f7c0ecda))
+* update build ([60a398b](https://github.com/bluelovers/sd-wildcards-utils/commit/60a398b15c6390f860cc8dc26842de37c680e63f))
+* update build ([265f0aa](https://github.com/bluelovers/sd-wildcards-utils/commit/265f0aacd33a2fab891292725aa26a921a1f7866))
+* update snapshots ([43acd16](https://github.com/bluelovers/sd-wildcards-utils/commit/43acd163d514e8969f6b92fca6e8e57588788414))
+* update build ([fb2a9c3](https://github.com/bluelovers/sd-wildcards-utils/commit/fb2a9c3d0edb64231195084adf3cb025b67778d6))
+* update snapshots ([7519605](https://github.com/bluelovers/sd-wildcards-utils/commit/75196057667510fcc52be1fb85097f5cb039a79f))
+* update snapshots ([0b7d35d](https://github.com/bluelovers/sd-wildcards-utils/commit/0b7d35d418305e360008b9d0787f4301b11f4b75))
+* update build ([b103f83](https://github.com/bluelovers/sd-wildcards-utils/commit/b103f83c90a2d9069da957447e973aadbae333fa))
+* update snapshots ([674a83d](https://github.com/bluelovers/sd-wildcards-utils/commit/674a83d7713d33849574106eaf7da223deff9929))
+* update build ([f46a06b](https://github.com/bluelovers/sd-wildcards-utils/commit/f46a06b0ef681535135c6224f7959f481aa2e672))
+
+
+### ⚙️　Continuous Integration
+
+* update log ([918894e](https://github.com/bluelovers/sd-wildcards-utils/commit/918894e16e0169ff18b945f9af3c34f634f69526))
+* . ([4593260](https://github.com/bluelovers/sd-wildcards-utils/commit/45932603baad883f7ab48255f2daacc1b09765cb))
+
+
+### ♻️　Chores
+
+* 清除列表結尾 , 號 ([9b93760](https://github.com/bluelovers/sd-wildcards-utils/commit/9b9376029ad5f6085da3350a2a7f46a15b35bb36))
+
+
+### 🔖　Miscellaneous
+
+* . ([eddeb50](https://github.com/bluelovers/sd-wildcards-utils/commit/eddeb50df69b0ffc0318110d855d6b4f25b997c6))
+* . ([ae1ea76](https://github.com/bluelovers/sd-wildcards-utils/commit/ae1ea76b6095084f5fb6a35876e726308531e969))
+* . ([6b6182c](https://github.com/bluelovers/sd-wildcards-utils/commit/6b6182cfe5db15b4d565685abab6831612cb7216))
+* . ([46268b1](https://github.com/bluelovers/sd-wildcards-utils/commit/46268b18e6af6b1fb0fcbadac446e529cdabf4cf))
+* . ([f8ac629](https://github.com/bluelovers/sd-wildcards-utils/commit/f8ac62931571b8b134f5731abf1c78e003dae40e))
+* . ([8de7e08](https://github.com/bluelovers/sd-wildcards-utils/commit/8de7e08d83dccc3896857907bf36ae85208f1cab))
+* . ([d7d582a](https://github.com/bluelovers/sd-wildcards-utils/commit/d7d582ae3ee985d2c805c1a681efbf0543a087a6))
+* . ([a833905](https://github.com/bluelovers/sd-wildcards-utils/commit/a833905b3377ab12d753a54b2cc4a6e398cea5ed))
+* . ([a310f58](https://github.com/bluelovers/sd-wildcards-utils/commit/a310f58bc80ecc5e123839620b22f35dc48bb531))
+* . ([40ba0f4](https://github.com/bluelovers/sd-wildcards-utils/commit/40ba0f47975dd17fd2013b76916f3e9c505506aa))
+* . ([56efd93](https://github.com/bluelovers/sd-wildcards-utils/commit/56efd93bc9988321af16835f282596e22136337a))
+* . ([3e55cd7](https://github.com/bluelovers/sd-wildcards-utils/commit/3e55cd776494fe1f474e3eb6c581c12494760e68))
+* . ([525aad9](https://github.com/bluelovers/sd-wildcards-utils/commit/525aad9005e205ad8fc3623af9b7758a9619124a))
+* . ([52cc7be](https://github.com/bluelovers/sd-wildcards-utils/commit/52cc7be2728059028285deaf9de61b8145d42b56))
+* . ([3ed753a](https://github.com/bluelovers/sd-wildcards-utils/commit/3ed753ae0ddf20f7ba3b27342c18250fdc51370c))
+* . ([3d6bda5](https://github.com/bluelovers/sd-wildcards-utils/commit/3d6bda59eb3098dcf99e61d75eebffc2ce328613))
+* . ([8956b77](https://github.com/bluelovers/sd-wildcards-utils/commit/8956b773543f240acdf06964e55868466ed24519))
+
+
+
 ## [1.3.7](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.3.6...sd-wildcards-utils@1.3.7) (2024-10-08)
 
 

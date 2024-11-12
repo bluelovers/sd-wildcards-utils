@@ -37,6 +37,7 @@ export function mergeWildcardsYAMLDocumentJsonBy<T extends Document | unknown, R
 
 export function _toJSON<T extends Document | unknown, R = IRecordWildcards>(v: T): R
 {
+	// @ts-ignore
 	return isDocument(v) ? v.toJSON() : v
 }
 
