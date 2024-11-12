@@ -15,10 +15,18 @@ export default (async () => {
 	const obj = await Bluebird.map([
 			join(__ROOT_OUTPUT_WILDCARDS, 'lazy-wildcards.yaml'),
 			//join(__ROOT_DATA, 'lazy-wildcards.yaml'),
+
 			join(__ROOT_DATA, 'cf', 'bundle', 'corn-flakes-aio-bundle-sex.yaml'),
+
 			join(__ROOT_DATA, 'others', 'navi_atlas.yaml'),
+
 			join(__ROOT_DATA, 'others', 'CharaCreatorWildcards/eye_assambler.yaml'),
 			join(__ROOT_DATA, 'others', 'CharaCreatorWildcards/hair_assambler.yaml'),
+
+			join(__ROOT_DATA, 'others', 'Vision/Background-Africa.yaml'),
+			join(__ROOT_DATA, 'others', 'Vision/Background-North-America.yaml'),
+			join(__ROOT_DATA, 'others', 'Vision/Background-South-America.yaml'),
+			
 		], (file: any) =>
 		{
 			return readFile(file)
@@ -42,7 +50,9 @@ export default (async () => {
 			'person/**',
 			'halloween/**',
 			'chara_creator/**',
-		]
+			'Vision/**',
+		],
+		allowWildcardsAtEndMatchRecord: true,
 	})
 
 	if (ret.errors.length)

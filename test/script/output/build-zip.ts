@@ -26,6 +26,10 @@ export default Bluebird.resolve()
 		zip_add_file(zip, join(__ROOT_DATA, 'others/CharaCreatorWildcards/eye_assambler.yaml'), 'CharaCreatorWildcards/eye_assambler.yaml');
 		zip_add_file(zip, join(__ROOT_DATA, 'others/CharaCreatorWildcards/hair_assambler.yaml'), 'CharaCreatorWildcards/hair_assambler.yaml');
 
+		zip_add_file(zip, join(__ROOT_DATA, 'others/Vision/Background-Africa.yaml'), 'Vision/Background-Africa.yaml');
+		zip_add_file(zip, join(__ROOT_DATA, 'others/Vision/Background-North-America.yaml'), 'Vision/Background-North-America.yaml');
+		zip_add_file(zip, join(__ROOT_DATA, 'others/Vision/Background-South-America.yaml'), 'Vision/Background-South-America.yaml');
+
 		fixedJSZipDate(zip, new Date('2000-12-24 23:00:00Z'))
 
 		await zip.generateAsync({
