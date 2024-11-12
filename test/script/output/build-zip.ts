@@ -6,6 +6,9 @@ import { __ROOT_DATA, __ROOT_OUTPUT_WILDCARDS } from '../../__root';
 import { readFile, outputFile } from 'fs-extra';
 import crypto from 'crypto';
 import { consoleLogger } from 'debug-color2/logger';
+import { globSync, glob } from 'fs';
+import { dir } from 'console';
+import { normalize } from 'upath2';
 
 export default Bluebird.resolve()
 	.then(async () => {
@@ -23,12 +26,14 @@ export default Bluebird.resolve()
 		zip_add_file(zip, join(__ROOT_DATA, 'others/corn-flakes-martial-artist.yaml'));
 		zip_add_file(zip, join(__ROOT_DATA, 'others/corn-flakes-onmyoji.yaml'));
 
-		zip_add_file(zip, join(__ROOT_DATA, 'others/CharaCreatorWildcards/eye_assambler.yaml'), 'CharaCreatorWildcards/eye_assambler.yaml');
-		zip_add_file(zip, join(__ROOT_DATA, 'others/CharaCreatorWildcards/hair_assambler.yaml'), 'CharaCreatorWildcards/hair_assambler.yaml');
-
-		zip_add_file(zip, join(__ROOT_DATA, 'others/Vision/Background-Africa.yaml'), 'Vision/Background-Africa.yaml');
-		zip_add_file(zip, join(__ROOT_DATA, 'others/Vision/Background-North-America.yaml'), 'Vision/Background-North-America.yaml');
-		zip_add_file(zip, join(__ROOT_DATA, 'others/Vision/Background-South-America.yaml'), 'Vision/Background-South-America.yaml');
+		globSync([
+			'CharaCreatorWildcards/*.yaml',
+			'Vision/*.yaml',
+		], {
+			cwd: join(__ROOT_DATA, 'others'), 
+		}).forEach(v => {
+			zip_add_file(zip, join(__ROOT_DATA, 'others', v), v);
+		});
 
 		fixedJSZipDate(zip, new Date('2000-12-24 23:00:00Z'))
 

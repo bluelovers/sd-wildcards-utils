@@ -7,6 +7,7 @@ import { AggregateErrorExtra } from 'lazy-aggregate-error';
 import Bluebird from 'bluebird';
 import { readFile } from 'node:fs/promises';
 import { consoleLogger } from 'debug-color2/logger';
+import { globSync } from 'fs';
 
 export default (async () => {
 
@@ -20,12 +21,14 @@ export default (async () => {
 
 			join(__ROOT_DATA, 'others', 'navi_atlas.yaml'),
 
-			join(__ROOT_DATA, 'others', 'CharaCreatorWildcards/eye_assambler.yaml'),
-			join(__ROOT_DATA, 'others', 'CharaCreatorWildcards/hair_assambler.yaml'),
-
-			join(__ROOT_DATA, 'others', 'Vision/Background-Africa.yaml'),
-			join(__ROOT_DATA, 'others', 'Vision/Background-North-America.yaml'),
-			join(__ROOT_DATA, 'others', 'Vision/Background-South-America.yaml'),
+			...globSync([
+				'CharaCreatorWildcards/*.yaml',
+				'Vision/*.yaml',
+			], {
+				cwd: join(__ROOT_DATA, 'others'),
+			}).map(v => {
+				return join(__ROOT_DATA, 'others', v)
+			}),
 			
 		], (file: any) =>
 		{
