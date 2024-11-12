@@ -622,4 +622,32 @@ lazy-wildcards:
           - glowing_crystals
           - vine_decor
           - hexagonal_architecture
+      # https://civitai.com/models/922180/warehouse?modelVersionId=1032238
+      warehouse:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-bg-interior/warehouse/env-bg__}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/warehouse/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/warehouse/style__}|}
+        env-bg:
+          - warehouse
+          - warehouse_interior
+        env:
+          - storage_area
+          - industrial_building
+          - storage_rack
+          - pallet
+          - stacked_boxes
+          - metal_beams
+          - concrete_floor
+          - industrial_lighting
+          - reflective floor
+          - shelf, cardboard
+          - forklift
+          - conveyor_belt
+          - industrial_fan
+          - high_ceiling
+        style:
+          - cold_lighting
+          - utilitarian_design
 

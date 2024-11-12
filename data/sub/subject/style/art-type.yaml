@@ -271,4 +271,45 @@ lazy-wildcards:
         prompts:
           - >-
             (vector_art, vector illustration{0.3:::{1.2|1.3|1.4}|})
+      # https://civitai.com/models/141063/watercolor-style-lora
+      # https://civitai.com/models/198866/vintage-anime-watercolor-stylehttps://civitai.com/models/198866/vintage-anime-watercolor-style
+      # https://civitai.com/models/83572/watercolor-stickers-lora
+      # https://civitai.com/models/105784/watercolor-or
+      # https://civitai.com/models/93762/i-watercolor-senery
+      # https://civitai.com/models/107609/watercolor-paint
+      # https://civitai.com/models/200510/watercolorayaya
+      # https://civitai.com/models/224469/mtg-rebecca-guay-watercolor-artstyle
+      watercolor:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-art-type/watercolor/style-art-main__{, {1-$$__lazy-wildcards/subject/style-art-type/watercolor/style-art__}|}{0.3:::{1.2|1.3|1.4}|})
+            , xuer mind bending murals
+            {, {1-$$__lazy-wildcards/subject/style-art-type/watercolor/style__}|}
+            {0.2::, {1-$$__lazy-wildcards/subject/style-art-type/watercolor/style-artist__}|}
+        style-art-main:
+          - watercolor style
+        style-art:
+          - watercolor \(medium\)
+          - transparent watercolor
+          - wet_on_wet_watercolor, blended_wet_effect, Wet-on-wet Watercolor Painting
+          - wet_on_dry_watercolor, Wet-On-Dry Watercolor Technique
+          - drip, dripping watercolor, watercolor_drips, watercolor drops
+        style:
+          - traditional media
+          - watercolor senery
+          - flat color
+          - thick lines
+          - painting \(medium\)
+          - Watercolor sticker
+          - painting, watercolor painting
+          - layered_transparency
+          - watercolor_blur
+          - watercolor_bleed
+          - expressive_watercolor, bold_strokes
+          - sharp_watercolor_edges
+          - watercolor background
+        style-artist:
+          - akihiro yamada
+          - takada akemi, Akemi Takada
+          - Rebecca Guay
 

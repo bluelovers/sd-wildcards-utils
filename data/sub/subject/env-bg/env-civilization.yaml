@@ -228,4 +228,39 @@ lazy-wildcards:
           - sun_and_moon_symbols
           - mystical_aura
           - rainforest_ambiance
+      # https://civitai.com/models/921779/mesoamerican-fantasy-character?modelVersionId=1031779
+      # https://civitai.com/models/921719/aztec-architecture?modelVersionId=1031713
+      # https://civitai.com/models/237150/aztec-civilization
+      # https://civitai.com/models/270436/aztecworld
+      # https://civitai.com/models/523278/dynamic-wildcard-aztec-unleashed
+      # https://civitai.com/models/71819/totempunk-redone-konyconi
+      # https://civitai.com/models/52697/tutorial-konyconi-style-lora
+      # https://civitai.com/models/188747/ancient-aztec-clothes
+      aztec:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-civilization/aztec/style-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/aztec/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/aztec/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/aztec/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/aztec/style__}|}
+        style-main:
+          - aztcar, aztar, AztecWorld, aztec, ancient_mesoamerican, aztec_architecture, aztec_style, sd_mai, Aztec civilization, ancient_civilization, TotempunkAI, mesoamerica
+        env-bg:
+          - stone_temple, step_pyramid
+          - __cf-aztec/location__
+        env:
+          - stone_carvings
+          - throne
+        costume-elem:
+          - aztec_clothing, ceremonial_attire, gold_jewelry, ancient aztec clothes
+          - feathered_headdress
+          - Cloaks, Tunics
+          - __cf-aztec/prompt-costume__
+          - aztec priest
+        style:
+          - geometric_patterns, tribal_patterns, mesoamerican_fashion, ancient_symbols, mesoamerican_art
+          - aztec_patterns
+          - sun_symbol
+          - animal_motif
 

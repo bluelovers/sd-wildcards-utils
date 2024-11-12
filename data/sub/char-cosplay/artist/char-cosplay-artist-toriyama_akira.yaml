@@ -1,0 +1,28 @@
+lazy-wildcards:
+  cosplay-char:
+    dr._slump:
+      # https://civitai.com/models/705709/arale-norimaki-dr-slump?modelVersionId=1035675
+      norimaki_arale:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/dr._slump/norimaki_arale/main-trigger-words__
+            {, __lazy-wildcards/cosplay-char/dr._slump/norimaki_arale/costume-ethnicity__|}
+            , __lazy-wildcards/cosplay-char/dr._slump/norimaki_arale/costume-headwear__
+            {, __lazy-wildcards/cosplay-char/dr._slump/norimaki_arale/costume__|}
+            {, {1-$$__lazy-wildcards/cosplay-char/dr._slump/norimaki_arale/costume-weapon__}|}
+            {0.2::, {1-$$__lazy-wildcards/cosplay-char/dr._slump/norimaki_arale/style-art__}|}
+        main-trigger-words:
+          - norimaki_arale, norimaki arale \(cosplay\), ds-norimakiarale
+        costume-ethnicity:
+          - purple hair, long hair, blue eyes
+        costume:
+          - japanese clothes, haori, kimono, white obi, purple boots
+          - overall shorts, ds-norimakiarale outfit, red shirt, blue overalls, yellow socks, blue shoes
+        costume-headwear:
+          - goggles on head, headphones, red helmet, glasses, black-framed eyewear, pink hat, winged hat
+        costume-weapon:
+          - poop on a stick
+        style-art:
+          - chibi
+          - toriyama_akira_\(style\)
+
