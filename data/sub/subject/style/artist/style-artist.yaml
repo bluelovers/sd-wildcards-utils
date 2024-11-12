@@ -147,4 +147,52 @@ lazy-wildcards:
           - comic style, comic_artist, dark_comic_art
           - detailed_linework
           - 90s_comic_style
+      # https://rule34.xxx/index.php?page=post&s=list&tags=hagiwara_kazushi
+      # https://danbooru.donmai.us/posts?tags=hagiwara_kazushi
+      # https://civitai.com/models/128447/illustrious-xl-kazushi-hagiwara-bastard-artist-style?modelVersionId=140627
+      Kazushi_Hagiwara:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/style-main__
+            {, {1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/costume-elem__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/action-pose__}|}
+            {0.3::, {1-2$$__lazy-wildcards/dataset/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/style__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/style-art__}|}
+        style-main:
+          - hagiwara_kazushi, Kazushi_Hagiwara, bastard!!
+        costume-elem:
+          - long hair
+          - breasts, cleavage
+          - elbow gloves
+          - white hair
+          - sideboob
+          - arms behind back
+          - barefoot
+          - __lazy-wildcards/subject/costume-elem-accessories/chain-acc/prompts__
+          - __lazy-wildcards/subject/costume-ethnicity-race/demon_girl/prompts__
+          - open clothes
+          - revealing clothes
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+          - covered nipples
+          - gold bikini
+          - gold jewelry
+          - headdress
+          - pelvic curtain, loincloth
+          - bikini armor
+          - arabian clothes, harem outfit
+          - pointy ears
+          - curvaceous
+          - cape
+          - fingerless gloves
+          - __lazy-wildcards/subject/costume/armor/prompts__
+        action-pose:
+          - lying
+        style:
+          - hetero
+          - bdsm
+        style-art:
+          - 1990s \(style\)
+          - 1980s \(style\)
+          - retro artstyle
 

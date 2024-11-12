@@ -16,6 +16,9 @@ lazy-wildcards:
       - >-
         __lazy-wildcards/background/anything__,
         __lazy-wildcards/dataset/background-color__
+      - >-
+        {1-2$$__lazy-wildcards/background/anything__},
+        __lazy-wildcards/dataset/background-color__
     background-color:
       - __lazy-wildcards/background/color-transparent__
       - __lazy-wildcards/background/color-theme__
