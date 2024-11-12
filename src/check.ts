@@ -78,6 +78,7 @@ export function checkAllSelfLinkWildcardsExists(obj: IRecordWildcards | Node | D
 			list = findPath(json, paths, {
 				onlyFirstMatchAll: true,
 				throwWhenNotFound: true,
+				allowWildcardsAtEndMatchRecord: chkOpts.allowWildcardsAtEndMatchRecord,
 			})
 		}
 		catch (e)

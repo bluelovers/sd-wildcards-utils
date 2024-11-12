@@ -106,7 +106,7 @@ export interface IFindPathEntry
 	 * A list of values found in the data structure.
 	 * Note: This list will always contain a single value since the `findPath` function does not support wildcard matching for values.
 	 */
-	value: string[];
+	value: string[] | IRecordWildcards;
 }
 
 export interface IOptionsMergeWilcardsYAMLDocumentJsonBy
@@ -137,6 +137,7 @@ export interface IOptionsFind
 	throwWhenNotFound?: boolean,
 	ignore?: Glob;
 	globOpts?: PicomatchOptions,
+	allowWildcardsAtEndMatchRecord?: boolean,
 }
 
 export interface ICachesFindPath
@@ -184,7 +185,7 @@ export interface IMatchDynamicPromptsWildcardsEntry
 	isStarWildcards: boolean;
 }
 
-export interface IOptionsCheckAllSelfLinkWildcardsExists
+export interface IOptionsCheckAllSelfLinkWildcardsExists extends Pick<IOptionsFind, "allowWildcardsAtEndMatchRecord">
 {
 	ignore?: string[]
 	maxErrors?: number,

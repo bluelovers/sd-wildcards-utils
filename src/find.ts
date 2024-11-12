@@ -110,6 +110,14 @@ export function _findPathCore(data: IRecordWildcards, paths: string[], findOpts:
 				}); // Add the found path and its corresponding value to the list.
 				continue;
 			}
+			else if (!deep && _cache.findOpts.allowWildcardsAtEndMatchRecord && current.includes('*') && typeof value === 'object' && value)
+			{
+				list.push({
+					key: target,
+					value,
+				}); // Add the found path and its corresponding value to the list.
+				continue;
+			}
 
 			if (!current.includes('*') || notArray && !deep)
 			{
