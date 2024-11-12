@@ -185,6 +185,7 @@ lazy-wildcards:
       - __navi_atlas/generator/lands__
       - __lazy-wildcards/subject/env-bg-real-world-location/landmark/prompts__
       - __lazy-wildcards/subject/env-bg-real-world-location/*/prompts__
+      - __Vision/Background/Landscapes/*__
       - japanese onsen,onsen
       - dirty alley
       - Study,Quiet room with low seating cushions,scroll-filled shelves lining the walls,a small writing desk with ink pots and papyrus scrolls,intricate woven rugs,and decorative hieroglyphic carvings
@@ -1331,6 +1332,44 @@ lazy-wildcards:
         prompts:
           - >-
             (vector_art,vector illustration{0.3:::{1.2|1.3|1.4}|})
+      # https://civitai.com/models/141063/watercolor-style-lora
+      # https://civitai.com/models/198866/vintage-anime-watercolor-stylehttps://civitai.com/models/198866/vintage-anime-watercolor-style
+      # https://civitai.com/models/83572/watercolor-stickers-lora
+      # https://civitai.com/models/105784/watercolor-or
+      # https://civitai.com/models/93762/i-watercolor-senery
+      # https://civitai.com/models/107609/watercolor-paint
+      # https://civitai.com/models/200510/watercolorayaya
+      # https://civitai.com/models/224469/mtg-rebecca-guay-watercolor-artstyle
+      watercolor:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-art-type/watercolor/style-art-main__{,{1-$$__lazy-wildcards/subject/style-art-type/watercolor/style-art__}|}{0.3:::{1.2|1.3|1.4}|}),xuer mind bending murals{,{1-$$__lazy-wildcards/subject/style-art-type/watercolor/style__}|}{0.2::,{1-$$__lazy-wildcards/subject/style-art-type/watercolor/style-artist__}|}
+        style-art-main:
+          - watercolor style
+        style-art:
+          - watercolor \(medium\)
+          - transparent watercolor
+          - wet_on_wet_watercolor,blended_wet_effect,Wet-on-wet Watercolor Painting
+          - wet_on_dry_watercolor,Wet-On-Dry Watercolor Technique
+          - drip,dripping watercolor,watercolor_drips,watercolor drops
+        style:
+          - traditional media
+          - watercolor senery
+          - flat color
+          - thick lines
+          - painting \(medium\)
+          - Watercolor sticker
+          - painting,watercolor painting
+          - layered_transparency
+          - watercolor_blur
+          - watercolor_bleed
+          - expressive_watercolor,bold_strokes
+          - sharp_watercolor_edges
+          - watercolor background
+        style-artist:
+          - akihiro yamada
+          - takada akemi,Akemi Takada
+          - Rebecca Guay
     style-artist-name:
       comic:
         prompts:
@@ -1625,7 +1664,7 @@ lazy-wildcards:
           - >-
             (__lazy-wildcards/subject/style-elem/food/style-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/style-elem/food/style__}|}{,{1-$$__lazy-wildcards/subject/style-elem/food/env-elem-food__}|}{0.2::,{1-$$__lazy-wildcards/subject/style-elem/food/env-elem-food-flavor__}|}
         style-main:
-          - food focus,Yummy,foodphoto,foodshot,Food Photography,fodm4st3r style,HEZI,food platters,foodporn,food porn,foodstyle
+          - food focus,Yummy,foodphoto,foodshot,Food Photography,fodm4st3r style,HEZI,anime food,food platters,foodporn,food porn,foodstyle
         style:
           - plating_art,fine_dining,food_arrangement,elegant_plating
           - macro_food,food_close_up,detailed_texture,high_resolution
@@ -1962,6 +2001,50 @@ lazy-wildcards:
           - comic style,comic_artist,dark_comic_art
           - detailed_linework
           - 90s_comic_style
+      # https://rule34.xxx/index.php?page=post&s=list&tags=hagiwara_kazushi
+      # https://danbooru.donmai.us/posts?tags=hagiwara_kazushi
+      # https://civitai.com/models/128447/illustrious-xl-kazushi-hagiwara-bastard-artist-style?modelVersionId=140627
+      Kazushi_Hagiwara:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/style-main__{,{1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/costume-elem__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/action-pose__}|}{0.3::,{1-2$$__lazy-wildcards/dataset/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/style__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/style-art__}|}
+        style-main:
+          - |-
+            hagiwara_kazushi,Kazushi_Hagiwara,bastard!!
+        costume-elem:
+          - long hair
+          - breasts,cleavage
+          - elbow gloves
+          - white hair
+          - sideboob
+          - arms behind back
+          - barefoot
+          - __lazy-wildcards/subject/costume-elem-accessories/chain-acc/prompts__
+          - __lazy-wildcards/subject/costume-ethnicity-race/demon_girl/prompts__
+          - open clothes
+          - revealing clothes
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+          - covered nipples
+          - gold bikini
+          - gold jewelry
+          - headdress
+          - pelvic curtain,loincloth
+          - bikini armor
+          - arabian clothes,harem outfit
+          - pointy ears
+          - curvaceous
+          - cape
+          - fingerless gloves
+          - __lazy-wildcards/subject/costume/armor/prompts__
+        action-pose:
+          - lying
+        style:
+          - hetero
+          - bdsm
+        style-art:
+          - 1990s \(style\)
+          - 1980s \(style\)
+          - retro artstyle
       akira:
         prompts:
           - >-
@@ -4739,78 +4822,38 @@ lazy-wildcards:
           - sun_and_moon_symbols
           - mystical_aura
           - rainforest_ambiance
+      # https://civitai.com/models/921779/mesoamerican-fantasy-character?modelVersionId=1031779
+      # https://civitai.com/models/921719/aztec-architecture?modelVersionId=1031713
+      # https://civitai.com/models/237150/aztec-civilization
+      # https://civitai.com/models/270436/aztecworld
+      # https://civitai.com/models/523278/dynamic-wildcard-aztec-unleashed
+      # https://civitai.com/models/71819/totempunk-redone-konyconi
+      # https://civitai.com/models/52697/tutorial-konyconi-style-lora
+      # https://civitai.com/models/188747/ancient-aztec-clothes
+      aztec:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-civilization/aztec/style-main__{,{1-$$__lazy-wildcards/subject/env-elem-civilization/aztec/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/aztec/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/aztec/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/aztec/style__}|}
+        style-main:
+          - aztcar,aztar,AztecWorld,aztec,ancient_mesoamerican,aztec_architecture,aztec_style,sd_mai,Aztec civilization,ancient_civilization,TotempunkAI,mesoamerica
+        env-bg:
+          - stone_temple,step_pyramid
+          - __cf-aztec/location__
+        env:
+          - stone_carvings
+          - throne
+        costume-elem:
+          - aztec_clothing,ceremonial_attire,gold_jewelry,ancient aztec clothes
+          - feathered_headdress
+          - Cloaks,Tunics
+          - __cf-aztec/prompt-costume__
+          - aztec priest
+        style:
+          - geometric_patterns,tribal_patterns,mesoamerican_fashion,ancient_symbols,mesoamerican_art
+          - aztec_patterns
+          - sun_symbol
+          - animal_motif
     env-elem:
-      others:
-        prompts:
-          - __lazy-wildcards/subject/env-elem/others/env__
-          - >-
-            {1-$$__lazy-wildcards/subject/env-elem/others/env__}
-          - >-
-            {3-$$__lazy-wildcards/subject/env-elem/others/env__}
-          - >-
-            {6-$$__lazy-wildcards/subject/env-elem/others/env__}
-        env:
-          - metal partition
-      flower:
-        prompts:
-          - >-
-            {1-$$__lazy-wildcards/subject/env-elem/flower/main-types/*__}{,{1-$$__lazy-wildcards/subject/env-elem/flower/env__}|}
-        env:
-          - flower
-          - falling petals
-          - petals on liquid
-          - petals
-        main-types:
-          common:
-            - wisteria
-            - cherry blossom,sakura
-            - syaoran
-            - >-
-              lily \(flower\){,white lily|}
-            - purple rose
-            - lack rose
-          others:
-            - blue and ginger scales blooming rose
-            - pitcher plant
-            - hydrangea
-      mushroom:
-        prompts:
-          - >-
-            {1-$$__lazy-wildcards/subject/env-elem/mushroom/main__},mushroom
-          - >-
-            __lazy-wildcards/subject/env-elem/mushroom/main__
-        main:
-          - mushroom
-          - Amanita_muscaria
-          - Hericium_erinaceus
-          - Hydnellum_peckii
-      mushroom-wrong:
-        prompts:
-          - >-
-            {1-$$__lazy-wildcards/subject/env-elem/mushroom-wrong/main__},mushroom
-          - >-
-            __lazy-wildcards/subject/env-elem/mushroom-wrong/main__,mushroom
-        main:
-          - Coprinus_comatus
-          - Laccaria_amethystina
-          - Clathrus_ruber
-          - Mycena_chlorophos
-          - Lactarius_indigo
-      plant-elem:
-        prompts:
-          - delicate_lattice_veil
-          - unique_stem
-          - stinkhorn
-          - big red maple tree
-      leaves-cannabis-marijuana:
-        prompts:
-          - >-
-            {1-$$__lazy-wildcards/subject/env-elem/leaves-cannabis-marijuana/main__},{0-$$__lazy-wildcards/subject/env-elem/leaves-cannabis-marijuana/env__}
-        main:
-          - marijuana leaves
-          - green cannabis leaves
-        env:
-          - covered in plants
       # https://civitai.com/models/44566
       # https://prompts.co.kr/articles/366
       manhole-cover:
@@ -5167,6 +5210,10 @@ lazy-wildcards:
           - metal pipeline,metal pipes
         costume-weapon:
           - holding cable
+      # https://civitai.com/models/923032/tree-figure?modelVersionId=1033185
+      tree_figure:
+        prompts:
+          - tree figure,tree
       occult:
         prompts:
           - >-
@@ -5385,6 +5432,82 @@ lazy-wildcards:
           - quiet_ambiance
           - cozy_ambiance
           - friendly_ambiance
+      others:
+        prompts:
+          - __lazy-wildcards/subject/env-elem/others/env__
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/others/env__}
+          - >-
+            {3-$$__lazy-wildcards/subject/env-elem/others/env__}
+          - >-
+            {6-$$__lazy-wildcards/subject/env-elem/others/env__}
+        env:
+          - metal partition
+      flower:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/flower/main-types/*__}{,{1-$$__lazy-wildcards/subject/env-elem/flower/env__}|}
+        env:
+          - flower
+          - falling petals
+          - petals on liquid
+          - petals
+        main-types:
+          common:
+            - wisteria
+            - cherry blossom,sakura
+            - syaoran
+            - >-
+              lily \(flower\){,white lily|}
+            - purple rose
+            - lack rose
+          others:
+            - blue and ginger scales blooming rose
+            - pitcher plant
+            - hydrangea
+      mushroom:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/mushroom/main__},mushroom
+          - >-
+            __lazy-wildcards/subject/env-elem/mushroom/main__
+        main:
+          - mushroom
+          - Amanita_muscaria
+          - Hericium_erinaceus
+          - Hydnellum_peckii
+      mushroom-wrong:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/mushroom-wrong/main__},mushroom
+          - >-
+            __lazy-wildcards/subject/env-elem/mushroom-wrong/main__,mushroom
+        main:
+          - Coprinus_comatus
+          - Laccaria_amethystina
+          - Clathrus_ruber
+          - Mycena_chlorophos
+          - Lactarius_indigo
+      plant-elem:
+        prompts:
+          - __lazy-wildcards/subject/env-elem/plant-elem/env__
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/plant-elem/env__}
+        env:
+          - delicate_lattice_veil
+          - unique_stem
+          - stinkhorn
+          - big red maple tree
+          - persimmon branches
+      leaves-cannabis-marijuana:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/leaves-cannabis-marijuana/main__},{0-$$__lazy-wildcards/subject/env-elem/leaves-cannabis-marijuana/env__}
+        main:
+          - marijuana leaves
+          - green cannabis leaves
+        env:
+          - covered in plants
       chair:
         prompts:
           - >-
@@ -5612,7 +5735,7 @@ lazy-wildcards:
       circle-magic:
         prompts:
           - >-
-            (__lazy-wildcards/subject/env-elem/circle-magic/env-magic__,{1-$$__lazy-wildcards/subject/env-elem/circle-magic/style__}:1.4),{1-$$__lazy-wildcards/subject/env-elem/circle-magic/env__}
+            (__lazy-wildcards/subject/env-elem/circle-magic/env-magic__,{1-$$__lazy-wildcards/subject/env-elem/circle-magic/style__}{0.3:::{1.2|1.3|1.4}|}),{1-$$__lazy-wildcards/subject/env-elem/circle-magic/env__}
         env-magic:
           - perfect magic circle,magical circle
         env:
@@ -6890,6 +7013,32 @@ lazy-wildcards:
           - glowing_crystals
           - vine_decor
           - hexagonal_architecture
+      # https://civitai.com/models/922180/warehouse?modelVersionId=1032238
+      warehouse:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-bg-interior/warehouse/env-bg__}{,{1-$$__lazy-wildcards/subject/env-bg-interior/warehouse/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/warehouse/style__}|}
+        env-bg:
+          - warehouse
+          - warehouse_interior
+        env:
+          - storage_area
+          - industrial_building
+          - storage_rack
+          - pallet
+          - stacked_boxes
+          - metal_beams
+          - concrete_floor
+          - industrial_lighting
+          - reflective floor
+          - shelf,cardboard
+          - forklift
+          - conveyor_belt
+          - industrial_fan
+          - high_ceiling
+        style:
+          - cold_lighting
+          - utilitarian_design
     env-elem-food-drink:
       ramune:
         prompts:
@@ -10967,6 +11116,8 @@ lazy-wildcards:
       - __lazy-wildcards/background/anything__
       - >-
         __lazy-wildcards/background/anything__,__lazy-wildcards/dataset/background-color__
+      - >-
+        {1-2$$__lazy-wildcards/background/anything__},__lazy-wildcards/dataset/background-color__
     background-color:
       - __lazy-wildcards/background/color-transparent__
       - __lazy-wildcards/background/color-theme__
@@ -14645,6 +14796,25 @@ lazy-wildcards:
           - cold_expression
           - serious
           - ruthless
+    dr._slump:
+      norimaki_arale:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/dr._slump/norimaki_arale/main-trigger-words__{,__lazy-wildcards/cosplay-char/dr._slump/norimaki_arale/costume-ethnicity__|},__lazy-wildcards/cosplay-char/dr._slump/norimaki_arale/costume-headwear__{,__lazy-wildcards/cosplay-char/dr._slump/norimaki_arale/costume__|}{,{1-$$__lazy-wildcards/cosplay-char/dr._slump/norimaki_arale/costume-weapon__}|}{0.2::,{1-$$__lazy-wildcards/cosplay-char/dr._slump/norimaki_arale/style-art__}|}
+        main-trigger-words:
+          - norimaki_arale,norimaki arale \(cosplay\),ds-norimakiarale
+        costume-ethnicity:
+          - purple hair,long hair,blue eyes
+        costume:
+          - japanese clothes,haori,kimono,white obi,purple boots
+          - overall shorts,ds-norimakiarale outfit,red shirt,blue overalls,yellow socks,blue shoes
+        costume-headwear:
+          - goggles on head,headphones,red helmet,glasses,black-framed eyewear,pink hat,winged hat
+        costume-weapon:
+          - poop on a stick
+        style-art:
+          - chibi
+          - toriyama_akira_\(style\)
     sky-freedom:
       aimi:
         prompts:
