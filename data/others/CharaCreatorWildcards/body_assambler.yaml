@@ -1,0 +1,120 @@
+chara_creator:
+  generators:
+    random_aged_body:
+      - "__chara_creator/body_form_female/sequencer_aged_body_form__ __chara_creator/body_color/sequencer_color_natural__"
+    random_aged_body_extended:
+      - "__chara_creator/body_form_female/sequencer_aged_body_form__ __chara_creator/body_color/sequencer_color_extended__"
+    random_body_extended:
+      - "__chara_creator/body_form_female/sequencer_body_form__ __chara_creator/body_color/sequencer_color_extended__"
+    random_body:
+      - "__chara_creator/body_form_female/sequencer_body_form__ __chara_creator/body_color/sequencer_color_natural__"
+  body_form_female:
+    sequencer_body_form:
+      - "{__chara_creator/body_form_female/build/*__|} {__chara_creator/body_form_female/stature/*__|} {__chara_creator/body_form_female/chest_size/*__} {__chara_creator/body_form_female/other_modifiers/*__|}"
+    sequencer_aged_body_form:
+      - "{__chara_creator/body_form_female/age/old__} {__chara_creator/body_form_female/build/*__||} {__chara_creator/body_form_female/stature/*__|} {__chara_creator/body_form_female/chest_size/*__||sagging breasts, } "
+      - "{__chara_creator/body_form_female/age/middle-aged__} {__chara_creator/body_form_female/build/*__||} {__chara_creator/body_form_female/stature/*__|} {__chara_creator/body_form_female/chest_size/*__|} {__chara_creator/body_form_female/other_modifiers/*__|}"
+      - "{__chara_creator/body_form_female/age/unrestricted__} {__chara_creator/body_form_female/build/*__||} {__chara_creator/body_form_female/stature/*__|} {__chara_creator/body_form_female/chest_size/*__|} {__chara_creator/body_form_female/other_modifiers/*__|}"
+      - "{__chara_creator/body_form_female/age/unrestricted__} {__chara_creator/body_form_female/build/*__||} {__chara_creator/body_form_female/stature/*__|} {__chara_creator/body_form_female/chest_size/*__|} {__chara_creator/body_form_female/other_modifiers/*__|}"
+      - "{__chara_creator/body_form_female/age/teenage__} {__chara_creator/body_form_female/build/thin__||} {__chara_creator/body_form_female/stature/*__|} {__chara_creator/body_form_female/chest_size/A-cup__|__chara_creator/body_form_female/chest_size/B-cup__|}"
+      - "{__chara_creator/body_form_female/age/kid__} {__chara_creator/body_form_female/chest_size/A-cup__|}"
+    stature:
+      tall:
+        - tall female, slender body, 
+      normal:
+        - " "
+      short:
+        - shortstack, 
+    build:
+      thin:
+        - skinny, slim, 
+      balanced:
+        - curvy, 
+      chubby:
+        - chubby, plump, 
+      jacked:
+        - muscular female, 
+    age:
+      old:
+        - (old woman), mature female, aged up, wrinkled skin, 
+      middle-aged:
+        - mature female, 
+      unrestricted:
+        - " "
+      teenage:
+        - teenage, 
+      kid:
+        - (child), cute face, 
+    chest_size:
+      unrestricted:
+        - " "
+      A-cup:
+        - small breasts,
+      B-cup:
+        - medium breasts,
+      D-cup:
+        - large breasts,
+      F-cup:
+        - huge breasts, 
+    other_modifiers:
+      wide_hips:
+        - wide hips, 
+      thick_thigh:
+        - thick thighs, 
+  body_color:
+    sequencer_color_extended:
+      - "__chara_creator/body_color/colored_skin/*__ {__chara_creator/body_color/modifiers/*__|}"
+      - "__chara_creator/body_color/natural_skin/*__ {__chara_creator/body_color/modifiers/*__|}"
+      - "__chara_creator/body_color/material_skin/*__ {__chara_creator/body_color/modifiers/*__|}"
+    sequencer_color_natural:
+      - "__chara_creator/body_color/natural_skin/*__ "
+    colored_skin:
+      black:
+        - colored skin, black skin, 
+      white:
+        - colored skin, white skin, albino, 
+      grey:
+        - colored skin, grey skin, 
+      red:
+        - colored skin, red skin, 
+      green:
+        - colored skin, green skin, 
+      blue:
+        - colored skin, blue skin, 
+      aqua:
+        - colored skin, aqua skin, 
+      purple:
+        - colored skin, purple skin, 
+      pink:
+        - colored skin, pink skin, 
+    material_skin:
+      slimy:
+        - "slime skin, translucent skin, translucent body, melting, __chara_creator/body_color/colored_skin/*__"
+      scaly:
+        - "colored skin, scales, {green skin, | red skin, | aqua skin, }"
+      rocky:
+        - colored skin, rock skin, breaking skin, grey skin, rough skin, 
+      silver:
+        - colored skin, metal skin, silver skin, shiny skin, cyborg, 
+      golden:
+        - colored skin, metal skin, golden skin, shiny skin, cyborg, 
+    natural_skin:
+      light:
+        - " "
+      light_extra:
+        - pale skin, 
+      dark:
+        - dark skin, 
+      dark_extra:
+        - very dark skin, 
+    modifiers:
+      freckles:
+        - body freckles,  
+      glowing:
+        - glowing skin, 
+      gradient:
+        - "gradient skin, {__chara_creator/body_color/colored_skin/*__|||black skin,|white skin,}"
+      tow-tone:
+        - " multicolored skin, __chara_creator/body_color/colored_skin/*__"
+      markings:
+        - body markings, 
