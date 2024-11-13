@@ -107,7 +107,7 @@ export default (async () =>
 	{
 		consoleLogger.debug(`create`, group, listRoot.length);
 
-		let refs: string[] = [];
+		let refs: IFindPathEntry["value"] = [];
 
 		let list = listRoot.reduce((a, vv) =>
 		{
@@ -121,7 +121,7 @@ export default (async () =>
 			}));
 
 			return a
-		}, [] as string[][][]).flat(2);
+		}, [] as IFindPathEntry["value"][][]).flat(2);
 
 		let lenOld = list.length;
 
