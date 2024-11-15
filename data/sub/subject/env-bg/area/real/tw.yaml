@@ -13,7 +13,7 @@ lazy-wildcards:
         env-bg-main:
           - (taipei downtown, taiwan:1.2), real world location, scenery, building, architecture, landscape
         env-bg-real:
-          - Taipei_101
+          - __lazy-wildcards/subject/env-bg/tw-taipei_101/prompts__
           - presidential office building
         env-text:
           - traditional chinese text
@@ -36,6 +36,20 @@ lazy-wildcards:
           - rooftop
           - water tank
           - traditional chinese temple
+      tw-taipei_101:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/tw-taipei_101/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/tw-taipei_101/env__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/env-bg/tw-taipei_101/style__}|}
+            {, __lazy-wildcards/utils/scenery-no-humans__|}
+        env-bg-main:
+          - Taipei_101
+        env:
+          - Taipei_101_fireworks, Tower_fireworks, __lazy-wildcards/subject/env-bg/fireworks/prompts__
+        style:
+          - New_Year_countdown, End_of_year, celebration_countdown, festive_midnight
+          - joyful_celebration
       # https://civitai.com/models/153624/jiufen-taiwan?modelVersionId=172061
       tw-jiufen:
         prompts:

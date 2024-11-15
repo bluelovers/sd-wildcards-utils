@@ -19,4 +19,6 @@ https://civitai.com/models/449400
 - https://civitai.com/user/C0rn_Fl4k3s/models
 - https://civitai.com/models/138970/billions-of-wildcards-character-vehicle-scenery-building-creature-scifi-fantasy-magic-all-you-want
 - https://github.com/sdbds/stable-diffusion-webui-wildcards
-
+- https://civitai.com/models/934903
+- https://civitai.com/models/863333
+- https://civitai.com/models/272654?modelVersionId=317312

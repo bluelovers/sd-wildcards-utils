@@ -49,4 +49,17 @@ lazy-wildcards:
           - ocean, sea waves, water splashes
           - night, starry sky
           - garden
+      view-aerial:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/scenes-view/view-aerial/style-view-main__
+            {, {1-$$__lazy-wildcards/subject/scenes-view/view-aerial/style-view__}|}
+        style-view-main:
+          - aerial, Aerial_perspective, wide_angle, top_down_shot
+        style-view:
+          - Indoor_top_down, Interior_perspective, ceiling_view, downward_gaze_inside
+          - Outdoor_top_down, Exterior_perspective, overhead_view_outdoors, open_space_aerial
+          - Overhead_perspective, Extreme_high_angle, expansive_scope, panoramic_downward_view
+          - Wide-angle_overlook, Expansive_top-down_view, broad_field_of_vision, zoomed_out_perspective
+          - Aerial_view_centered, Centered_focus, top-down_from_center, balanced_downward_view
 

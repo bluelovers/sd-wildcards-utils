@@ -12,12 +12,14 @@ lazy-wildcards:
       - portrait of family
     background:
       - __lazy-wildcards/dataset/background-color__
-      - __lazy-wildcards/background/anything__
+      - __lazy-wildcards/subject/env-bg*/*/prompts__
       - >-
-        __lazy-wildcards/background/anything__,
+        {1-2$$__lazy-wildcards/subject/env-bg*/*/prompts__}
+      - >-
+        __lazy-wildcards/subject/env-bg*/*/prompts__,
         __lazy-wildcards/dataset/background-color__
       - >-
-        {1-2$$__lazy-wildcards/background/anything__},
+        {1-2$$__lazy-wildcards/subject/env-bg*/*/prompts__},
         __lazy-wildcards/dataset/background-color__
     background-color:
       - __lazy-wildcards/background/color-transparent__

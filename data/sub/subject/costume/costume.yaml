@@ -621,21 +621,7 @@ lazy-wildcards:
         costume-weapon:
           - holding sack, holding bag
         env:
-          - sack
-          - christmas tree
-          - gift, gift_box, christmas present
-          - bell, jingle_bell
-          - holly, christmas holly
-          - snowman
-          - star \(symbol\)
-          - Mistletoe
-          - Poinsettia
-          - Wreath
-          - Garland
-          - angel tree topper
-          - Christmas stocking
-          - Pine cone
-          - Gingerbread man
+          - __lazy-wildcards/subject/env-bg/christmas/prompts__
         style:
           - Christmas Shopping
       # https://civitai.com/models/308058?modelVersionId=348858

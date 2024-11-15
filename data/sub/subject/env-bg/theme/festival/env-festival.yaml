@@ -1,0 +1,55 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      # https://civitai.com/models/243970/xmas-tech-world-morph
+      # https://civitai.com/models/227442/christmas-style-lora
+      # https://civitai.com/models/220170
+      christmas:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/christmas/style-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/christmas/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/christmas/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/christmas/costume-elem__}|}
+        style-main:
+          - XmasTech, christmas, x-mas, Xmas, ChristmasQuiron style, Christmas decorations, ChristmasWintery, Christmas theme, merry christmas
+        costume-elem:
+          - Santa_Claus, festive_santa_hat
+          - red_and_white_costume
+        env:
+          - sack
+          - christmas tree
+          - gift, gift_box, christmas present
+          - bell, jingle_bell
+          - holly, christmas holly
+          - snowman
+          - star \(symbol\)
+          - Mistletoe
+          - Poinsettia
+          - Wreath
+          - Garland
+          - angel tree topper
+          - Christmas stocking
+          - Pine cone
+          - Gingerbread man
+          - Christmas_lights, Colorful_string_lights
+        env-bg:
+          - __lazy-wildcards/subject/moment/weather-snow/prompts__
+      fireworks:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/fireworks/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/fireworks/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/fireworks/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/fireworks/style__}|}
+        env-bg-main:
+          - fireworks, Fireworks_display
+        env-bg:
+          - Night_sky_fireworks, fireworks_lighting, Illuminated_sky, night_sky_illumination
+        env:
+          - colorful_explosion, vibrant_show
+          - Pyrotechnics_show
+          - dynamic_firework_patterns, Artistic_firework_patterns
+        style:
+          - celebratory_show, Festive_atmosphere
+

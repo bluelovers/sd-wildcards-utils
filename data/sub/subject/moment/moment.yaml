@@ -33,16 +33,16 @@ lazy-wildcards:
           - __lazy-wildcards/subject/moment/weather-mist/prompts__
           - >-
             {1-$$floating cloud|cloudy|Sea of clouds|dark clouds}
-          - __lazy-wildcards/subject/moment/weather/main-types/*__
+          - __lazy-wildcards/subject/moment/weather-snow/prompts__
           - __lazy-wildcards/subject/moment/weather-lightning/prompts__
           - __lazy-wildcards/subject/moment/weather-raging-storm/prompts__
           - __lazy-wildcards/subject/moment/weather-*/prompts__
           - dynamic weather
           - __lazy-wildcards/subject/moment/weather-star/prompts__
-        main-types:
-          winter:
-            - >-
-              (snowylandscape, {1-$$winter|snow|very cold|snow fall|snowy view|snowflake|pure winter}:1.2)
+      weather-snow:
+        prompts:
+          - >-
+            ({1-$$winter, Wintery|snow|very cold|snow fall, Winter snowfall|snowy view|snowflake|pure winter|snowylandscape, snowy landscape|Snowy setting}:1.2)
       weather-lightning:
         prompts:
           - >-
