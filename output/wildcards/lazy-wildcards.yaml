@@ -152,223 +152,6 @@ lazy-wildcards:
         pure {2-3$$ background,pure $$__lazy-wildcards/utils/color-base__} background,__lazy-wildcards/background/color-style__
       - >-
         neon {2-3$$ background,neon $$__lazy-wildcards/utils/color-base__} background,__lazy-wildcards/background/color-style__
-    anything:
-      - photo of __cof-location/place/*__,__cof-location/weather__ weather,during __cof-location/season__,__cof-location/timeofday/all__
-      - __cf-*/location__
-      - __cof-location/place/*__
-      - __cof-location/weather__
-      - __cof-location/season__
-      - __cof-location/timeofday/all__
-      - __cornf-*/location__
-      - __crea-*/location__
-      - __lazy-wildcards/background/location/*/prompts__
-      - __lazy-wildcards/subject/style-theme/*/prompts-bg__
-      - __lazy-wildcards/subject/env-*/*/prompts__
-      - __lazy-wildcards/subject/env-bg/background/prompts__
-      - __lazy-wildcards/subject/env-bg-*/*/prompts__
-      - >-
-        {1-3$$__lazy-wildcards/subject/env-*/*/prompts__}
-      - >-
-        {__lazy-wildcards/subject/env-bg/background/prompts__|__lazy-wildcards/subject/env-bg-*/*/prompts__|__lazy-wildcards/subject/env-bg/*/prompts__}{,{1-3$$__lazy-wildcards/subject/env-elem/*/prompts__}|}
-      - >-
-        {3-6$$__lazy-wildcards/*/*/*/env-*__}
-      - >-
-        {3-6$$__lazy-wildcards/*/*/*/env__}
-      - __cornf-furniture/prompt-full__
-      - __cornf-*/prompt-object__
-      - __cornf-house/prompt-full__
-      - __lazy-wildcards/subject/moment/random/prompts__
-      - __Bo/constructions/random__
-      - >-
-        {1-$$__lazy-wildcards/subject/moment/*/prompts__}
-      - __navi_atlas/generator/urban__
-      - __navi_atlas/generator/lands__
-      - __lazy-wildcards/subject/env-bg-real-world-location/landmark/prompts__
-      - __lazy-wildcards/subject/env-bg-real-world-location/*/prompts__
-      - __Vision/Background/Landscapes/*__
-      - japanese onsen,onsen
-      - dirty alley
-      - Study,Quiet room with low seating cushions,scroll-filled shelves lining the walls,a small writing desk with ink pots and papyrus scrolls,intricate woven rugs,and decorative hieroglyphic carvings
-      - Grooming Area,Elegant space with polished ebony mirrors reflecting flickering candlelight,intricately carved wooden stools arranged neatly around a central basin,jars of fragrant oils and cosmetics neatly arranged on shelves,and servants standing by with combs and brushes
-      - Garden Pavilion,Tranquil space with a bubbling fountain at its center,lush greenery winding along trellises,mosaic tiles creating intricate patterns on the ground,woven wicker furniture with plush cushions,and the sweet scent of blooming flowers
-      - Solarium,Serene room with glass walls offering panoramic views of the Nile,potted palms adding a touch of greenery,mosaic tiles depicting aquatic scenes underfoot,chaise lounges draped in silk throws,and golden sconces illuminating the space
-      - Bathhouse,Steam-filled chamber with a sunken bathing pool lined with tiles,shelves stacked with aromatic oils and perfumes,woven baskets for towels,flickering oil lamps,and intricate tile mosaics depicting scenes of daily life
-      - construction site background
-      - cliff,cliff scenery,mountainside,cliff face
-      - Intricately Detailed Cinematic Bamboo forest
-      - street corner
-      - east_asian_architecture,east asian architecture
-      - architecture,bridge,east asian architecture,lantern,letterboxed,pagoda,tower,torii,tower,watercraft
-      - ancient japanese buildings
-      - roman architecture background
-      - art nouveau architecture
-      - korean architecture
-      - large forest,enchanting forest,dense forest,lush forest,tall trees,canopy,overgrown scenery
-      - rural school
-      - in dungeon
-      - prison cell
-      - prison
-      - cloud city,cloudtop sky-city
-      - downtown,city
-      - floating platforms,floating buildings
-      - Majestic Baroque halls
-      - OldTaipei,scenery,outdoors,building,power lines,city,alley,street,road,motor vehicle,utility pole
-      - Caribbean,dark tunnel,china street
-      - (in Venice)
-      - A mystical swamp with dark waters and thick vegetation
-      - >-
-        ((pedestrian hell)),__lazy-wildcards/subject/env-bg/city-traffic/func/road-in__,scooter,motorcycle,wind,trees,crowd,traffic light,road sign,cityscape,shopping,storefront,signboard,building,greenery,{city-life-overload,|}{night,neon lights,|}{((raining)),rain,wet street,reflection,wet clothes|}
-      - flare,fog,wet,wet body,rain,raining,night,neon lights,twilight
-      - perspective photo of the house on clift,post-apocalypse,brutalist,brutal green covered with green grass,many people,neon light,forest,jungle atmosphere,sunset,sunshine cinematic
-      - >-
-        (in river),splash,splashing,({sun flare,lens flare,sunset|moonlight|dawn|twilight} background,low horizon),backlighting
-      - mangrove forest biome
-      - |-
-        (flower,falling petals,petals on liquid,petals,cherry blossom:0.8)
-      - underground facility
-      - |-
-        (in line in front of a movie theater with friends:1.4)
-      - grass,on soccer field
-      - above clouds,Scenery
-      - in a glamorous restaurant
-      - (beautiful detailed glow,beautiful detailed ice,beautiful detailed water,snowflake)
-      - japanese building,dirt road,willow tree,stone fence,river
-      - Chinese calligraphy in background
-      - crowded train interior
-      - news anchor in front of big screen,facing viewer,back screen is big which is from the floor to ceiling and left to right
-      - >-
-        (floating:1.3),{1-$$floating stalls|floating sky_buoys|floating hovering_merchant_stands|floating_islands|aerial_stalls|sky_market|floating platform}
-      - Industrial age city
-      - located in an urban scene at a scenic bus stop
-      - The messy room filled with super cluttered plants and super cluttered books
-      - hotel lobby interior
-      - interior perfume shop
-      - quaint village with cobblestone streets and hanging flower baskets
-    location:
-      interior-lava:
-        prompts:
-          - >-
-            __lazy-wildcards/background/location/interior-lava/main__,__lazy-wildcards/background/location/interior-lava/style__
-        style:
-          - Lava style,LAVA architecture,Chris Bosses,Chris Bosse,Chris Bosse architect,bio botanical
-        main:
-          - a hip space hotel lobby interior with incredible natural light. Futuristic botanical hotel lobby interior
-          - a chocolate tasting room,interior design,sci-fi,brutal,Futuristic botanical
-          - interior perfume shop modern style,black wooden and green light,brutal
-      temple:
-        prompts:
-          - __lazy-wildcards/background/location/temple/main-types/*__
-        main-types:
-          Meditation-Chamber:
-            - temple,Meditation Chamber,Serene space with a tranquil reflecting pool,lush greenery creating a peaceful atmosphere,soft sunlight filtering through stained glass windows,and cushions arranged for quiet contemplation
-          others:
-            - borobudur temple
-      casino:
-        prompts:
-          - >-
-            __lazy-wildcards/background/location/casino/style__,{1-$$__lazy-wildcards/background/location/casino/main-types/*__},{1-$$__lazy-wildcards/background/location/casino/env__}
-          - >-
-            __lazy-wildcards/background/location/casino/style__,__lazy-wildcards/background/location/casino/main-types/*__,{1-$$__lazy-wildcards/background/location/casino/env__}
-        style:
-          - casino,gambling,set in Gambling Den
-        env:
-          - chip
-          - dice
-          - card
-          - money
-          - bills
-          - betting ticket
-          - cheating \(competitive\)
-          - house_of_cards
-        main-types:
-          roulette:
-            - roulette,roulette table
-          poker:
-            - poker table,poker chip,poker,casino card table,card
-          table:
-            - casino table
-          slot-machine:
-            - >-
-              slot machine,Slot Machine Area,{1-$$__lazy-wildcards/background/location/casino/env-slot-machine__}
-        env-slot-machine:
-          - rows of colorful slot machines
-          - flashing lights
-          - electronic sounds
-          - patrons pulling levers
-          - overflowing coin trays
-        action:
-          dice:
-            - holding dice,dice
-          poker:
-            - playing card,card,__lazy-wildcards/utils/action/playing-card/poker-playing__,holding card
-            - >-
-              playing card,card,{1-3$$__lazy-wildcards/utils/action/playing-card/poker-card__},holding card
-      tarot:
-        prompts:
-          - >-
-            {1-$$__lazy-wildcards/background/location/tarot/main__},{0-2$$__lazy-wildcards/background/location/tarot/action/*__},__lazy-wildcards/background/location/tarot/elem/cards_tarot__,{0-3$$__lazy-wildcards/background/location/tarot/elem/cards_tarot_type__},{1-$$__lazy-wildcards/background/location/tarot/env__},{1-$$__lazy-wildcards/background/location/tarot/style__}
-        main:
-          - a table with a lot of tarot cards
-          - a tarot card in the middle of the table
-          - >-
-            {3d papercut shadow box of |}a deck of tarot cards spilled on a table
-        style:
-          - occult
-          - arcana
-          - psychedelic
-          - magic
-        action:
-          pose:
-            - elbows_on_table
-          telling:
-            - |-
-              (fortune_telling,card_reading:1.2),fortune_teller
-        env:
-          - tarot_cards on table,on table
-          - house_of_cards
-          - candle
-          - a lot of tarot_cards
-          - omikuji
-          - spiritual_guidance
-        elem:
-          cards_tarot:
-            - |-
-              (tarot_cards,tarot_\(card\):1.2)
-          cards_tarot_type:
-            - the_fool_\(tarot\)
-            - the_magician_\(tarot\)
-            - the_high_priestess_\(tarot\)
-            - the_empress_\(tarot\)
-            - the_emperor_\(tarot\)
-            - the_hierophant_\(tarot\)
-            - the_lovers_\(tarot\)
-            - the_chariot_\(tarot\)
-            - strength_\(tarot\)
-            - the_hermit_\(tarot\)
-            - wheel_of_fortune_\(tarot\)
-            - justice_\(tarot\)
-            - the_hanged_man_\(tarot\)
-            - death_\(tarot\)
-            - temperance_\(tarot\)
-            - the_devil_\(tarot\)
-            - the_tower_\(tarot\)
-            - the_star_\(tarot\)
-            - the_moon_\(tarot\)
-            - the_sun_\(tarot\)
-            - judgement_\(tarot\)
-            - the_world_\(tarot\)
-      ruins-city:
-        prompts:
-          - >-
-            __lazy-wildcards/background/location/ruins-city/main__{0.2::,__lazy-wildcards/background/location/ruins-city/city__}
-        main:
-          - >-
-            long-shot ruins,building,window frame,cracked window,wall corner,upturned,abandoned,metal,industrial,fence,moody,cracked mud,urban,__lazy-wildcards/background/location/ruins-city/area__
-        area:
-          - suburbs
-          - canalside
-        city:
-          - london
   char:
     eyes-expressions:
       - >-
@@ -572,8 +355,7 @@ lazy-wildcards:
         - breast rest on table
         - leaning against motorcycle
         - cigarette in mouth
-        - __lazy-wildcards/background/location/*/action/*__
-        - __lazy-wildcards/*/*/*/action-pose__
+        - __lazy-wildcards/*/*/*/action*__
         - holding a soccer
         - walking away
         - sitting on a table
@@ -1209,6 +991,7 @@ lazy-wildcards:
           - Vellum
           - translucent and smooth paper
       # https://civitai.com/models/461566/isometric?modelVersionId=513667
+      # https://civitai.com/models/107391/playstation-1-old-game-background-maps?modelVersionId=115479
       isometric:
         prompts:
           - >-
@@ -1783,56 +1566,7 @@ lazy-wildcards:
           - street passage with structures
           - over clear white background
     style-theme:
-      # Neo-Falmer World
-      # https://civitai.com/models/489745/neo-falmer-world
-      NeoFalmerWorld:
-        prompts:
-          - __lazy-wildcards/subject/style-theme/NeoFalmerWorld/prompts-bg__
-        prompts-bg:
-          - >-
-            __lazy-wildcards/subject/style-theme/NeoFalmerWorld/main-bg-*__,__lazy-wildcards/subject/style-theme/NeoFalmerWorld/main__
-        style:
-          - |-
-            chitin,(chitin theme:1.2),(rough jagged texture:1.3),glow,jade
-        style-adj:
-          - green glow
-          - green theme
-          - __mix-lazy-auto/color-anything__ glow
-          - __mix-lazy-auto/color-anything__ theme
-          - __lazy-wildcards/dataset/background-color__
-        main:
-          - >-
-            __lazy-wildcards/subject/style-theme/NeoFalmerWorld/style__{,__lazy-wildcards/subject/style-theme/NeoFalmerWorld/style-adj__|}
-        main-bg-bathroom:
-          - >-
-            __lazy-wildcards/subject/env-bg-interior/bathroom/prompts__,chitin {2-$$,chitin $$__lazy-wildcards/subject/env-bg-interior/bathroom/main-object__}{,chitin {1-$$,chitin $$__lazy-wildcards/subject/env-bg-interior/bathroom/env-object__}|}
-        costume:
-          - chitin armoured dress
-        utils:
-          chitin-theme:
-            - >-
-              chitin ${obj}
-      MarbleSteelmeshWorld:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/style-theme/MarbleSteelmeshWorld/main-trigger-words__{,{1-$$__lazy-wildcards/subject/style-theme/MarbleSteelmeshWorld/env__}|}{,{1-$$__lazy-wildcards/subject/style-theme/MarbleSteelmeshWorld/style__}|}
-        main-trigger-words:
-          - MarbleSteelmeshWorld
-        env:
-          - __lazy-wildcards/subject/env-elem/fence/prompts__
-          - __lazy-wildcards/subject/env-elem/industrial-pipes/prompts__
-          - metal_grate
-          - mesh_bridge
-          - industrial_platform
-          - rusty_surface
-          - industrial_building
-          - guard_rail
-          - mesh_window
-          - barred_window
-        style:
-          - metal_shadows
-          - cold_light
-          - mesh_shadows
+      # https://civitai.com/models/823949/vibrant-calavera-sd1-sdxl-pony-flux?modelVersionId=921359
       Day_of_the_Dead:
         prompts:
           - >-
@@ -1892,6 +1626,110 @@ lazy-wildcards:
         style:
           - spooky_lights
           - creepy_sounds
+      # https://civitai.com/models/198853/ghost-nocturnaljapanese-monster-lora
+      ghost_nocturnal:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-theme/ghost_nocturnal/style-main__{,{1-$$__lazy-wildcards/subject/style-theme/ghost_nocturnal/env-creatures__}|}{,{1-$$__lazy-wildcards/subject/style-theme/ghost_nocturnal/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/style-theme/ghost_nocturnal/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/style-theme/ghost_nocturnal/env__}|}{,{1-$$__lazy-wildcards/subject/style-theme/ghost_nocturnal/style__}|}{,{1-$$__lazy-wildcards/subject/style-theme/ghost_nocturnal/env-bg__}|}
+        style-main:
+          - hyakki_yakou,ghost nocturnal,youkai,yokai
+        env-creatures:
+          - oni,oni horns
+          - tengu
+          - kappa
+          - umbrella_youkai
+          - wheel_youkai
+          - one-eyed_monster
+          - arthropod girl,arthropod limbs
+          - snake_youkai,snake
+          - traditional youkai
+          - Fox Spirit,fox_youkai,Kitsune
+        costume-elem:
+          - wooden_geta
+          - kimono
+          - japanese clothes
+          - __lazy-wildcards/subject/costume-elem/sleeves/prompts__
+          - platform footwea
+          - fox mask
+          - oni mask
+          - sash
+          - noh mask
+          - magatama
+          - horns
+        costume-weapon:
+          - taiko_drum
+          - kagura_bell
+          - __lazy-wildcards/subject/costume-weapon/smoking_pipe/prompts__
+          - __lazy-wildcards/subject/costume-weapon/umbrella/prompts__
+        env-bg:
+          - dark_forest
+          - shrine_gate
+          - abandoned_temple
+          - old_village
+        env:
+          - full_moon
+          - misty_night,__lazy-wildcards/subject/moment/weather-mist/prompts__
+          - __lazy-wildcards/subject/env-elem/lantern/prompts__
+          - festival_flag
+          - cherry blossoms
+          - white flower,red flower,leaf
+          - wooden
+          - pinwheel
+          - wooden machinery
+        style:
+          - eerie_glow
+          - traditional_japanese_festival
+          - luxurious,glamorous
+          - >-
+            {1-$$ style,$$asian|korean|japanese} style
+      NeoFalmerWorld:
+        prompts:
+          - __lazy-wildcards/subject/style-theme/NeoFalmerWorld/prompts-bg__
+        prompts-bg:
+          - >-
+            __lazy-wildcards/subject/style-theme/NeoFalmerWorld/main-bg-*__,__lazy-wildcards/subject/style-theme/NeoFalmerWorld/main__
+        style:
+          - |-
+            chitin,(chitin theme:1.2),(rough jagged texture:1.3),glow,jade
+        style-adj:
+          - green glow
+          - green theme
+          - __mix-lazy-auto/color-anything__ glow
+          - __mix-lazy-auto/color-anything__ theme
+          - __lazy-wildcards/dataset/background-color__
+        main:
+          - >-
+            __lazy-wildcards/subject/style-theme/NeoFalmerWorld/style__{,__lazy-wildcards/subject/style-theme/NeoFalmerWorld/style-adj__|}
+        main-bg-bathroom:
+          - >-
+            __lazy-wildcards/subject/env-bg-interior/bathroom/prompts__,chitin {2-$$,chitin $$__lazy-wildcards/subject/env-bg-interior/bathroom/main-object__}{,chitin {1-$$,chitin $$__lazy-wildcards/subject/env-bg-interior/bathroom/env-object__}|}
+        costume:
+          - chitin armoured dress
+        utils:
+          chitin-theme:
+            - >-
+              chitin ${obj}
+      MarbleSteelmeshWorld:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-theme/MarbleSteelmeshWorld/main-trigger-words__{,{1-$$__lazy-wildcards/subject/style-theme/MarbleSteelmeshWorld/env__}|}{,{1-$$__lazy-wildcards/subject/style-theme/MarbleSteelmeshWorld/style__}|}
+        main-trigger-words:
+          - MarbleSteelmeshWorld
+        env:
+          - __lazy-wildcards/subject/env-elem/fence/prompts__
+          - __lazy-wildcards/subject/env-elem/industrial-pipes/prompts__
+          - metal_grate
+          - mesh_bridge
+          - industrial_platform
+          - rusty_surface
+          - industrial_building
+          - guard_rail
+          - mesh_window
+          - barred_window
+        style:
+          - metal_shadows
+          - cold_light
+          - mesh_shadows
     style-artist:
       # https://civitai.com/models/466170/zdzislaw-beksinski-concepts-wildcard
       zdzislaw_beksinski:
@@ -2602,6 +2440,18 @@ lazy-wildcards:
           - ocean,sea waves,water splashes
           - night,starry sky
           - garden
+      view-aerial:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/scenes-view/view-aerial/style-view-main__{,{1-$$__lazy-wildcards/subject/scenes-view/view-aerial/style-view__}|}
+        style-view-main:
+          - aerial,Aerial_perspective,wide_angle,top_down_shot
+        style-view:
+          - Indoor_top_down,Interior_perspective,ceiling_view,downward_gaze_inside
+          - Outdoor_top_down,Exterior_perspective,overhead_view_outdoors,open_space_aerial
+          - Overhead_perspective,Extreme_high_angle,expansive_scope,panoramic_downward_view
+          - Wide-angle_overlook,Expansive_top-down_view,broad_field_of_vision,zoomed_out_perspective
+          - Aerial_view_centered,Centered_focus,top-down_from_center,balanced_downward_view
     scenes-pov:
       hands-hold-breast:
         prompts:
@@ -2676,16 +2526,16 @@ lazy-wildcards:
           - __lazy-wildcards/subject/moment/weather-mist/prompts__
           - >-
             {1-$$floating cloud|cloudy|Sea of clouds|dark clouds}
-          - __lazy-wildcards/subject/moment/weather/main-types/*__
+          - __lazy-wildcards/subject/moment/weather-snow/prompts__
           - __lazy-wildcards/subject/moment/weather-lightning/prompts__
           - __lazy-wildcards/subject/moment/weather-raging-storm/prompts__
           - __lazy-wildcards/subject/moment/weather-*/prompts__
           - dynamic weather
           - __lazy-wildcards/subject/moment/weather-star/prompts__
-        main-types:
-          winter:
-            - >-
-              (snowylandscape,{1-$$winter|snow|very cold|snow fall|snowy view|snowflake|pure winter}:1.2)
+      weather-snow:
+        prompts:
+          - >-
+            ({1-$$winter,Wintery|snow|very cold|snow fall,Winter snowfall|snowy view|snowflake|pure winter|snowylandscape,snowy landscape|Snowy setting}:1.2)
       weather-lightning:
         prompts:
           - >-
@@ -2902,6 +2752,102 @@ lazy-wildcards:
       base:
         prompts:
           - noble man
+    env-bg-anything:
+      cof:
+        prompts:
+          - photo of __cof-location/place/*__,__cof-location/weather__ weather,during __cof-location/season__,__cof-location/timeofday/all__
+          - __cf-*/location__
+          - __cof-location/place/*__
+          - __cof-location/weather__
+          - __cof-location/season__
+          - __cof-location/timeofday/all__
+          - __cornf-*/location__
+          - __crea-*/location__
+          - __cornf-furniture/prompt-full__
+          - __cornf-*/prompt-object__
+          - __cornf-house/prompt-full__
+      navi_atlas:
+        prompts:
+          - __navi_atlas/generator/urban__
+          - __navi_atlas/generator/lands__
+      DaemonaVision:
+        prompts:
+          - __Vision/Background/Landscapes/*__
+      Bo:
+        prompts:
+          - __Bo/constructions/random__
+      self-link:
+        prompts:
+          - >-
+            {1-3$$__lazy-wildcards/*/*/*/env-bg*__}
+          - >-
+            {3-6$$__lazy-wildcards/*/*/*/env*__}
+          - >-
+            {1-3$$__lazy-wildcards/subject/env-elem*/*/prompts__}
+          - __lazy-wildcards/subject/style-theme*/*/prompts*__
+          - __lazy-wildcards/subject/moment/random/prompts__
+          - >-
+            {1-3$$__lazy-wildcards/subject/moment/*/prompts__}
+      unorganized:
+        prompts:
+          - japanese onsen,onsen
+          - dirty alley
+          - Study,Quiet room with low seating cushions,scroll-filled shelves lining the walls,a small writing desk with ink pots and papyrus scrolls,intricate woven rugs,and decorative hieroglyphic carvings
+          - Grooming Area,Elegant space with polished ebony mirrors reflecting flickering candlelight,intricately carved wooden stools arranged neatly around a central basin,jars of fragrant oils and cosmetics neatly arranged on shelves,and servants standing by with combs and brushes
+          - Garden Pavilion,Tranquil space with a bubbling fountain at its center,lush greenery winding along trellises,mosaic tiles creating intricate patterns on the ground,woven wicker furniture with plush cushions,and the sweet scent of blooming flowers
+          - Solarium,Serene room with glass walls offering panoramic views of the Nile,potted palms adding a touch of greenery,mosaic tiles depicting aquatic scenes underfoot,chaise lounges draped in silk throws,and golden sconces illuminating the space
+          - Bathhouse,Steam-filled chamber with a sunken bathing pool lined with tiles,shelves stacked with aromatic oils and perfumes,woven baskets for towels,flickering oil lamps,and intricate tile mosaics depicting scenes of daily life
+          - construction site background
+          - cliff,cliff scenery,mountainside,cliff face
+          - Intricately Detailed Cinematic Bamboo forest
+          - street corner
+          - east_asian_architecture,east asian architecture
+          - architecture,bridge,east asian architecture,lantern,letterboxed,pagoda,tower,torii,tower,watercraft
+          - ancient japanese buildings
+          - roman architecture background
+          - art nouveau architecture
+          - korean architecture
+          - large forest,enchanting forest,dense forest,lush forest,tall trees,canopy,overgrown scenery
+          - rural school
+          - in dungeon
+          - prison cell
+          - prison
+          - cloud city,cloudtop sky-city
+          - downtown,city
+          - floating platforms,floating buildings
+          - Majestic Baroque halls
+          - OldTaipei,scenery,outdoors,building,power lines,city,alley,street,road,motor vehicle,utility pole
+          - Caribbean,dark tunnel,china street
+          - (in Venice)
+          - A mystical swamp with dark waters and thick vegetation
+          - >-
+            ((pedestrian hell)),__lazy-wildcards/subject/env-bg/city-traffic/func/road-in__,scooter,motorcycle,wind,trees,crowd,traffic light,road sign,cityscape,shopping,storefront,signboard,building,greenery,{city-life-overload,|}{night,neon lights,|}{((raining)),rain,wet street,reflection,wet clothes|}
+          - flare,fog,wet,wet body,rain,raining,night,neon lights,twilight
+          - perspective photo of the house on clift,post-apocalypse,brutalist,brutal green covered with green grass,many people,neon light,forest,jungle atmosphere,sunset,sunshine cinematic
+          - >-
+            (in river),splash,splashing,({sun flare,lens flare,sunset|moonlight|dawn|twilight} background,low horizon),backlighting
+          - mangrove forest biome
+          - |-
+            (flower,falling petals,petals on liquid,petals,cherry blossom:0.8)
+          - underground facility
+          - |-
+            (in line in front of a movie theater with friends:1.4)
+          - grass,on soccer field
+          - above clouds,Scenery
+          - in a glamorous restaurant
+          - (beautiful detailed glow,beautiful detailed ice,beautiful detailed water,snowflake)
+          - japanese building,dirt road,willow tree,stone fence,river
+          - Chinese calligraphy in background
+          - crowded train interior
+          - news anchor in front of big screen,facing viewer,back screen is big which is from the floor to ceiling and left to right
+          - >-
+            (floating:1.3),{1-$$floating stalls|floating sky_buoys|floating hovering_merchant_stands|floating_islands|aerial_stalls|sky_market|floating platform}
+          - Industrial age city
+          - located in an urban scene at a scenic bus stop
+          - The messy room filled with super cluttered plants and super cluttered books
+          - hotel lobby interior
+          - interior perfume shop
+          - quaint village with cobblestone streets and hanging flower baskets
     env-bg:
       city-traffic:
         prompts:
@@ -3823,6 +3769,26 @@ lazy-wildcards:
       ruins-jungle:
         prompts:
           - ruins in a fantasy jungle,FanJu
+      temple:
+        prompts:
+          - __lazy-wildcards/subject/env-bg/temple/main-types/*__
+        main-types:
+          Meditation-Chamber:
+            - temple,Meditation Chamber,Serene space with a tranquil reflecting pool,lush greenery creating a peaceful atmosphere,soft sunlight filtering through stained glass windows,and cushions arranged for quiet contemplation
+          others:
+            - borobudur temple
+      ruins-city:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/ruins-city/main__{0.2::,__lazy-wildcards/subject/env-bg/ruins-city/city__}
+        main:
+          - >-
+            long-shot ruins,building,window frame,cracked window,wall corner,upturned,abandoned,metal,industrial,fence,moody,cracked mud,urban,__lazy-wildcards/subject/env-bg/ruins-city/area__
+        area:
+          - suburbs
+          - canalside
+        city:
+          - london
       post-apocalyptic:
         prompts:
           - >-
@@ -4312,6 +4278,97 @@ lazy-wildcards:
           - |-
             The King in Yellow's Presence,ominous_presence,invisible_terror,psychological_horror
           - eerie_atmosphere
+      tarot:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-bg/tarot/env-main__}{,{1-2$$__lazy-wildcards/subject/env-bg/tarot/action-types/*__}|},__lazy-wildcards/subject/env-bg/tarot/env-elem-types/cards_tarot__{,{1-3$$__lazy-wildcards/subject/env-bg/tarot/env-elem-types/cards_tarot_type__}|},{1-$$__lazy-wildcards/subject/env-bg/tarot/env__},{1-$$__lazy-wildcards/subject/env-bg/tarot/style__}
+        env-main:
+          - a table with a lot of tarot cards
+          - a tarot card in the middle of the table
+          - >-
+            {3d papercut shadow box of |}a deck of tarot cards spilled on a table
+        style:
+          - occult
+          - arcana
+          - psychedelic
+          - magic
+        action-types:
+          pose:
+            - elbows_on_table
+          telling:
+            - |-
+              (fortune_telling,card_reading:1.2),fortune_teller
+        env:
+          - tarot_cards on table,on table
+          - house_of_cards
+          - candle
+          - a lot of tarot_cards
+          - omikuji
+          - spiritual_guidance
+        env-elem-types:
+          cards_tarot:
+            - |-
+              (tarot_cards,tarot_\(card\):1.2)
+          cards_tarot_type:
+            - the_fool_\(tarot\)
+            - the_magician_\(tarot\)
+            - the_high_priestess_\(tarot\)
+            - the_empress_\(tarot\)
+            - the_emperor_\(tarot\)
+            - the_hierophant_\(tarot\)
+            - the_lovers_\(tarot\)
+            - the_chariot_\(tarot\)
+            - strength_\(tarot\)
+            - the_hermit_\(tarot\)
+            - wheel_of_fortune_\(tarot\)
+            - justice_\(tarot\)
+            - the_hanged_man_\(tarot\)
+            - death_\(tarot\)
+            - temperance_\(tarot\)
+            - the_devil_\(tarot\)
+            - the_tower_\(tarot\)
+            - the_star_\(tarot\)
+            - the_moon_\(tarot\)
+            - the_sun_\(tarot\)
+            - judgement_\(tarot\)
+            - the_world_\(tarot\)
+      casino:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/casino/style__,{1-$$__lazy-wildcards/subject/env-bg/casino/main-types/*__},{1-$$__lazy-wildcards/subject/env-bg/casino/env__},{1-$$__lazy-wildcards/subject/env-bg/casino/action-types/*__}
+        style:
+          - casino,gambling,set in Gambling Den
+        env:
+          - chip
+          - dice
+          - card
+          - money
+          - bills
+          - betting ticket
+          - cheating \(competitive\)
+          - house_of_cards
+        main-types:
+          roulette:
+            - roulette,roulette table
+          poker:
+            - poker table,poker chip,poker,casino card table,card
+          table:
+            - casino table
+          slot-machine:
+            - >-
+              slot machine,Slot Machine Area,{1-$$__lazy-wildcards/subject/env-bg/casino/env-slot-machine__}
+        env-slot-machine:
+          - rows of colorful slot machines
+          - flashing lights
+          - electronic sounds
+          - patrons pulling levers
+          - overflowing coin trays
+        action-types:
+          dice:
+            - holding dice,dice
+          poker:
+            - >-
+              playing card,card,{__lazy-wildcards/utils/action/playing-card/poker-playing__|{1-3$$__lazy-wildcards/utils/action/playing-card/poker-card__}},holding card
       tetris:
         prompts:
           - >-
@@ -4419,6 +4476,48 @@ lazy-wildcards:
           - Millennium_News_Network,City_news,propaganda_broadcasts,information_contro
         style:
           - Great_Cataclysm,World_ending_event,apocalyptic_disaster,city_rebirt
+      christmas:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/christmas/style-main__{,{1-$$__lazy-wildcards/subject/env-bg/christmas/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/christmas/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/christmas/costume-elem__}|}
+        style-main:
+          - XmasTech,christmas,x-mas,Xmas,ChristmasQuiron style,Christmas decorations,ChristmasWintery,Christmas theme,merry christmas
+        costume-elem:
+          - Santa_Claus,festive_santa_hat
+          - red_and_white_costume
+        env:
+          - sack
+          - christmas tree
+          - gift,gift_box,christmas present
+          - bell,jingle_bell
+          - holly,christmas holly
+          - snowman
+          - star \(symbol\)
+          - Mistletoe
+          - Poinsettia
+          - Wreath
+          - Garland
+          - angel tree topper
+          - Christmas stocking
+          - Pine cone
+          - Gingerbread man
+          - Christmas_lights,Colorful_string_lights
+        env-bg:
+          - __lazy-wildcards/subject/moment/weather-snow/prompts__
+      fireworks:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/fireworks/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg/fireworks/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/fireworks/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/fireworks/style__}|}
+        env-bg-main:
+          - fireworks,Fireworks_display
+        env-bg:
+          - Night_sky_fireworks,fireworks_lighting,Illuminated_sky,night_sky_illumination
+        env:
+          - colorful_explosion,vibrant_show
+          - Pyrotechnics_show
+          - dynamic_firework_patterns,Artistic_firework_patterns
+        style:
+          - celebratory_show,Festive_atmosphere
       Treasure_Hoard:
         prompts:
           - >-
@@ -4534,7 +4633,7 @@ lazy-wildcards:
           - summer
         env-bg:
           - Yagura,festival_stage,elevated_platform,central_structure
-          - Hanabi,fireworks_display,colorful_explosions,night_sky_illumination
+          - Hanabi,__lazy-wildcards/subject/env-bg/fireworks/prompts__
       # 人中之龍 龍が如く
       jp-yakuza-tenkaichi:
         prompts:
@@ -4581,7 +4680,7 @@ lazy-wildcards:
           - |-
             (taipei downtown,taiwan:1.2),real world location,scenery,building,architecture,landscape
         env-bg-real:
-          - Taipei_101
+          - __lazy-wildcards/subject/env-bg/tw-taipei_101/prompts__
           - presidential office building
         env-text:
           - traditional chinese text
@@ -4604,6 +4703,17 @@ lazy-wildcards:
           - rooftop
           - water tank
           - traditional chinese temple
+      tw-taipei_101:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/tw-taipei_101/env-bg-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg/tw-taipei_101/env__}|}{0.3::,{1-$$__lazy-wildcards/subject/env-bg/tw-taipei_101/style__}|}{,__lazy-wildcards/utils/scenery-no-humans__|}
+        env-bg-main:
+          - Taipei_101,Taipei101
+        env:
+          - Taipei_101_fireworks,Tower_fireworks,__lazy-wildcards/subject/env-bg/fireworks/prompts__
+        style:
+          - New_Year_countdown,End_of_year,celebration_countdown,festive_midnight
+          - joyful_celebration
       # https://civitai.com/models/153624/jiufen-taiwan?modelVersionId=172061
       tw-jiufen:
         prompts:
@@ -7063,6 +7173,41 @@ lazy-wildcards:
         style:
           - cold_lighting
           - utilitarian_design
+      interior-lava:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-interior/Lava_Interior_style/prompts__,__lazy-wildcards/subject/env-bg-interior/interior-lava/env-bg__,__lazy-wildcards/subject/env-bg-interior/interior-lava/style__
+        style:
+          - LAVA architecture,bio botanical
+        env-bg:
+          - a hip space hotel lobby interior with incredible natural light. Futuristic botanical hotel lobby interior
+          - a chocolate tasting room,interior design,sci-fi,brutal,Futuristic botanical
+          - interior perfume shop modern style,black wooden and green light,brutal
+      # https://civitai.com/models/80976/inside-elevator
+      elevator_interior:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-interior/elevator_interior/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg-interior/elevator_interior/env__}|}{,{1-2$$__lazy-wildcards/subject/env-bg-interior/elevator_interior/style-view__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/elevator_interior/style__}|}
+        env-bg-main:
+          - elevator_interior,elevator_cabin,elevator_scene,elevator
+        env:
+          - mirror_wall,reflective_surface,elevator_mirror
+          - elevator_button_panel,floor_buttons,control_panel
+          - elevator_handrail,safety_handle
+          - elevator_floor,reflective_floor,metal_floor
+          - closing_doors,elevator_exit
+          - crowded elevator
+        style-view:
+          - top_down_view
+          - overhead_shot
+          - front_view,elevator_front
+          - side_view,profile_shot
+          - mirror_reflection,multiple_reflections
+          - low_angle_shot
+          - from below
+          - from behind
+        style:
+          - ceiling_light,elevator_lighting
     env-elem-food-drink:
       ramune:
         prompts:
@@ -7699,7 +7844,7 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/subject/style-interior/Lava_Interior_style/main-trigger-words__{,({1-$$__lazy-wildcards/subject/env-elem-punk/solarpunk/style-main__}:1.2)|}{,{1-$$__lazy-wildcards/subject/style-interior/Lava_Interior_style/env__}|}{,{1-4$$__lazy-wildcards/subject/env-elem-punk/solarpunk/style__}|}
         main-trigger-words:
-          - Lava Interior style,Chris Bosse,Chris Bosse architect,lava architect,lava style,LAVA,indoors
+          - Lava Interior style,Chris Bosses,Chris Bosse,Chris Bosse architect,lava architect,lava style,LAVA,indoors
         env:
           - black wooden
           - green light
@@ -9020,21 +9165,7 @@ lazy-wildcards:
         costume-weapon:
           - holding sack,holding bag
         env:
-          - sack
-          - christmas tree
-          - gift,gift_box,christmas present
-          - bell,jingle_bell
-          - holly,christmas holly
-          - snowman
-          - star \(symbol\)
-          - Mistletoe
-          - Poinsettia
-          - Wreath
-          - Garland
-          - angel tree topper
-          - Christmas stocking
-          - Pine cone
-          - Gingerbread man
+          - __lazy-wildcards/subject/env-bg/christmas/prompts__
         style:
           - Christmas Shopping
       # https://civitai.com/models/308058?modelVersionId=348858
@@ -11137,11 +11268,13 @@ lazy-wildcards:
       - portrait of family
     background:
       - __lazy-wildcards/dataset/background-color__
-      - __lazy-wildcards/background/anything__
+      - __lazy-wildcards/subject/env-bg*/*/prompts__
       - >-
-        __lazy-wildcards/background/anything__,__lazy-wildcards/dataset/background-color__
+        {1-2$$__lazy-wildcards/subject/env-bg*/*/prompts__}
       - >-
-        {1-2$$__lazy-wildcards/background/anything__},__lazy-wildcards/dataset/background-color__
+        __lazy-wildcards/subject/env-bg*/*/prompts__,__lazy-wildcards/dataset/background-color__
+      - >-
+        {1-2$$__lazy-wildcards/subject/env-bg*/*/prompts__},__lazy-wildcards/dataset/background-color__
     background-color:
       - __lazy-wildcards/background/color-transparent__
       - __lazy-wildcards/background/color-theme__
