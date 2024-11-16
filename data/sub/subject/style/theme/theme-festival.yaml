@@ -69,4 +69,66 @@ lazy-wildcards:
         style:
           - spooky_lights
           - creepy_sounds
+      # https://civitai.com/models/198853/ghost-nocturnaljapanese-monster-lora
+      ghost_nocturnal:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-theme/ghost_nocturnal/style-main__
+            {, {1-$$__lazy-wildcards/subject/style-theme/ghost_nocturnal/env-creatures__}|}
+            {, {1-$$__lazy-wildcards/subject/style-theme/ghost_nocturnal/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-theme/ghost_nocturnal/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/style-theme/ghost_nocturnal/env__}|}
+            {, {1-$$__lazy-wildcards/subject/style-theme/ghost_nocturnal/style__}|}
+            {, {1-$$__lazy-wildcards/subject/style-theme/ghost_nocturnal/env-bg__}|}
+        style-main:
+          - hyakki_yakou, ghost nocturnal, youkai, yokai
+        env-creatures:
+          - oni, oni horns
+          - tengu
+          - kappa
+          - umbrella_youkai
+          - wheel_youkai
+          - one-eyed_monster
+          - arthropod girl, arthropod limbs
+          - snake_youkai, snake
+          - traditional youkai
+          - Fox Spirit, fox_youkai, Kitsune
+        costume-elem:
+          - wooden_geta
+          - kimono
+          - japanese clothes
+          - __lazy-wildcards/subject/costume-elem/sleeves/prompts__
+          - platform footwea
+          - fox mask
+          - oni mask
+          - sash
+          - noh mask
+          - magatama
+          - horns
+        costume-weapon:
+          - taiko_drum
+          - kagura_bell
+          - __lazy-wildcards/subject/costume-weapon/smoking_pipe/prompts__
+          - __lazy-wildcards/subject/costume-weapon/umbrella/prompts__
+        env-bg:
+          - dark_forest
+          - shrine_gate
+          - abandoned_temple
+          - old_village
+        env:
+          - full_moon
+          - misty_night, __lazy-wildcards/subject/moment/weather-mist/prompts__
+          - __lazy-wildcards/subject/env-elem/lantern/prompts__
+          - festival_flag
+          - cherry blossoms
+          - white flower, red flower, leaf
+          - wooden
+          - pinwheel
+          - wooden machinery
+        style:
+          - eerie_glow
+          - traditional_japanese_festival
+          - luxurious, glamorous
+          - >-
+            {1-$$ style, $$asian|korean|japanese} style
 

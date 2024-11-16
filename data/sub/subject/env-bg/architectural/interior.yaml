@@ -653,12 +653,41 @@ lazy-wildcards:
       interior-lava:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-bg-interior/interior-lava/env-bg__,
-            __lazy-wildcards/subject/env-bg-interior/interior-lava/style__
+            __lazy-wildcards/subject/style-interior/Lava_Interior_style/prompts__
+            , __lazy-wildcards/subject/env-bg-interior/interior-lava/env-bg__
+            , __lazy-wildcards/subject/env-bg-interior/interior-lava/style__
         style:
-          - Lava style, LAVA architecture, Chris Bosses, Chris Bosse, Chris Bosse architect, bio botanical
+          - LAVA architecture, bio botanical
         env-bg:
           - a hip space hotel lobby interior with incredible natural light. Futuristic botanical hotel lobby interior
           - a chocolate tasting room, interior design, sci-fi, brutal,Futuristic botanical
           - interior perfume shop modern style, black wooden and green light, brutal
+      # https://civitai.com/models/80976/inside-elevator
+      elevator_interior:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-interior/elevator_interior/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/elevator_interior/env__}|}
+            {, {1-2$$__lazy-wildcards/subject/env-bg-interior/elevator_interior/style-view__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/elevator_interior/style__}|}
+        env-bg-main:
+          - elevator_interior, elevator_cabin, elevator_scene, elevator
+        env:
+          - mirror_wall, reflective_surface, elevator_mirror
+          - elevator_button_panel, floor_buttons, control_panel
+          - elevator_handrail, safety_handle
+          - elevator_floor, reflective_floor, metal_floor
+          - closing_doors, elevator_exit
+          - crowded elevator
+        style-view:
+          - top_down_view
+          - overhead_shot
+          - front_view, elevator_front
+          - side_view, profile_shot
+          - mirror_reflection, multiple_reflections
+          - low_angle_shot
+          - from below
+          - from behind
+        style:
+          - ceiling_light, elevator_lighting
 
