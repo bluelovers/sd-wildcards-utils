@@ -263,4 +263,44 @@ lazy-wildcards:
           - aztec_patterns
           - sun_symbol
           - animal_motif
+      # https://civitai.com/models/71287/tang-fashion-style
+      Tang_Dynasty:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-civilization/Tang_Dynasty/style-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/Tang_Dynasty/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/Tang_Dynasty/action__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/Tang_Dynasty/costume-weapon__}|}
+            {, {1-3$$__lazy-wildcards/subject/env-elem-civilization/Tang_Dynasty/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/Tang_Dynasty/style__}|}
+        style-main:
+          - Tang Dynasty, Tang, ancient_china, ancient_chinese, tang_dynasty_fashion
+        env-bg:
+          - imperial_palace, chinese_palace
+          - buddhist_temple
+          - pagoda
+          - courtyard_garden
+          - ancient_market
+          - chinese_pavilion
+          - ancient_chinese_architecture
+        costume-elem:
+          - chinese_robe
+          - hanfu
+          - tang_dynasty_dress
+          - hairstick
+          - wide_sleeves
+          - hair_bun
+          - jade_ornaments
+        action:
+          - chinese_dance
+        costume-weapon:
+          - chinese_music_instruments
+          - pipa
+        style:
+          - silk_road_culture
+          - chinese_painting
+          - dunhuang_mural
+          - buddhist_art
+          - taoist_influence
+          - confucian_philosophy
 

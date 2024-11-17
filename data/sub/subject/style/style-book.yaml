@@ -12,6 +12,53 @@ lazy-wildcards:
         action-pose:
           - (posing in front of a colorful and dynamic background. She has a confident expression and is holding a statement accessory)
           - (posing with her hands on her hips in an Asian squat position in front of a modern and dynamic background. She exudes confidence and sex appeal, with her daring fashion choices leaving little to the imagination)
+      shared-cover:
+        prompts:
+          - >-
+            {0.2::__lazy-wildcards/book/style-types/*/style-type-adj__,|}
+            (__lazy-wildcards/book/style-types/*/style__:1.35)
+            {0.3::,{1-6$$__lazy-wildcards/subject/style-book/shared/style-book-text__}|}
+        utils:
+          cover:
+            - >-
+              (${v:__lazy-wildcards/book/style-types/*/style__}:1.35)
+              {0.3::,{1-6$$__lazy-wildcards/subject/style-book/shared/style-book-text__}|}
+      cover-magazine:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-book/shared-cover/utils/cover(v=__lazy-wildcards/subject/style-book/cover-magazine/style__)__
+        style:
+          - (advertising style, Magazine cover-style illustration of a fashionable woman), (Fashion Magazine Cover)
+          - (advertising style, Magazine cover-style illustration of a confident woman)
+      # https://zh.wikipedia.org/zh-tw/%E7%B4%99%E6%BC%BF%E9%9B%9C%E8%AA%8C
+      # https://civitai.com/models/488380/pulp-magazine
+      cover-magazine-pulp:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-book/shared-cover/utils/cover(v=__lazy-wildcards/subject/style-book/cover-magazine-pulp/style__)__
+        style-type-adj:
+          - (the pulps, pulp magazine, pulpmagazine:1.2), retro artstyle
+        style:
+          - >-
+            __lazy-wildcards/book/style-types/magazine-pulp-cover/style-type-adj__,
+            __lazy-wildcards/book/style-types/magazine-cover/style__
+      cover-magazine-playboy:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-book/shared-cover/utils/cover(v=__lazy-wildcards/subject/style-book/cover-magazine-playboy/style__)__
+        style-type-adj:
+          - PlayboyCoverQuiron style, playboy cover
+        style:
+          - >-
+            __lazy-wildcards/book/style-types/magazine-playboy-cover/style-type-adj__,
+            __lazy-wildcards/book/style-types/magazine-cover/style__
+      cover-comic:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-book/shared-cover/utils/cover(v=__lazy-wildcards/subject/style-book/cover-comic/style__)__
+        style:
+          - (comic book, comic cover), action, dynamic, speech bubbles, bang
+          - (Dojinshi, doujinshi magazine cover), Graphic Design
       # https://civitai.com/models/50400/old-newspaper-style?modelVersionId=54932
       newspaper-style-old:
         prompts:

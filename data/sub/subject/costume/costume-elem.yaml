@@ -226,4 +226,33 @@ lazy-wildcards:
           - short sleeves
           - long sleeves
           - sleeves past wrists
+      # https://civitai.com/models/299367/soapy-skinsoap-censor
+      # https://civitai.com/models/24612/conceptsoap-bubble-censorbubble-bra
+      # https://civitai.com/models/594751/ms-real-lite-soapy-foam-lora
+      # https://civitai.com/models/80763/reel-boobshowerpress
+      # https://civitai.com/models/109678/soap-bubbles
+      # https://civitai.com/models/285049/0156-bubble-bathsd15pdxlsdxl
+      # https://civitai.com/models/125010/bubble-bath
+      # https://civitai.com/models/592109/soap-bubblessdillpony?modelVersionId=680814
+      soap_bubbles:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem/soap_bubbles/costume__
+            {, {1-$$__lazy-wildcards/subject/costume-elem/soap_bubbles/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem/soap_bubbles/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem/soap_bubbles/env-bg__}|}
+        costume:
+          - soap bubbles, soapy, foam, soap bubbles, bubblebra, s04py, ruanyi0156, soapy skin, soap censor
+        costume-elem:
+          - wet
+          - nude, naked
+          - breasts
+          - barefoot
+        action:
+          - bath, bubble bath, taking bath
+          - bathing
+          - shower
+        env-bg:
+          - bathroom
+          - bathtub
 
