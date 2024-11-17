@@ -992,12 +992,14 @@ lazy-wildcards:
           - translucent and smooth paper
       # https://civitai.com/models/461566/isometric?modelVersionId=513667
       # https://civitai.com/models/107391/playstation-1-old-game-background-maps?modelVersionId=115479
+      # https://civitai.com/models/80713/table-rpg-dandd-maps-isometric-level
       isometric:
         prompts:
           - >-
-            ({1-$$__lazy-wildcards/subject/style-art-type/isometric/style-main__}:1.4){,{1-$$__lazy-wildcards/subject/style-art-type/isometric/env-bg__}|}{,{1-$$__lazy-wildcards/subject/style-art-type/isometric/env-bg__}|}
+            (__lazy-wildcards/subject/style-art-type/isometric/style-main__{,{1-$$__lazy-wildcards/subject/style-art-type/isometric/style-main__}|}:1.4){,{1-$$__lazy-wildcards/subject/style-art-type/isometric/env-bg__}|}{,{1-$$__lazy-wildcards/subject/style-art-type/isometric/env-bg__}|}
+        style-art-main:
+          - isometricnive,isometric
         style-main:
-          - isometric
           - isometric cutaway
           - isometriciterior,isometric iterior,isometric interior
         env-bg:
@@ -1275,6 +1277,49 @@ lazy-wildcards:
         action-pose:
           - (posing in front of a colorful and dynamic background. She has a confident expression and is holding a statement accessory)
           - (posing with her hands on her hips in an Asian squat position in front of a modern and dynamic background. She exudes confidence and sex appeal,with her daring fashion choices leaving little to the imagination)
+      shared-cover:
+        prompts:
+          - >-
+            {0.2::__lazy-wildcards/book/style-types/*/style-type-adj__,|}(__lazy-wildcards/book/style-types/*/style__:1.35){0.3::,{1-6$$__lazy-wildcards/subject/style-book/shared/style-book-text__}|}
+        utils:
+          cover:
+            - >-
+              (${v:__lazy-wildcards/book/style-types/*/style__}:1.35){0.3::,{1-6$$__lazy-wildcards/subject/style-book/shared/style-book-text__}|}
+      cover-magazine:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-book/shared-cover/utils/cover(v=__lazy-wildcards/subject/style-book/cover-magazine/style__)__
+        style:
+          - (advertising style,Magazine cover-style illustration of a fashionable woman),(Fashion Magazine Cover)
+          - (advertising style,Magazine cover-style illustration of a confident woman)
+      # https://zh.wikipedia.org/zh-tw/%E7%B4%99%E6%BC%BF%E9%9B%9C%E8%AA%8C
+      # https://civitai.com/models/488380/pulp-magazine
+      cover-magazine-pulp:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-book/shared-cover/utils/cover(v=__lazy-wildcards/subject/style-book/cover-magazine-pulp/style__)__
+        style-type-adj:
+          - |-
+            (the pulps,pulp magazine,pulpmagazine:1.2),retro artstyle
+        style:
+          - >-
+            __lazy-wildcards/book/style-types/magazine-pulp-cover/style-type-adj__,__lazy-wildcards/book/style-types/magazine-cover/style__
+      cover-magazine-playboy:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-book/shared-cover/utils/cover(v=__lazy-wildcards/subject/style-book/cover-magazine-playboy/style__)__
+        style-type-adj:
+          - PlayboyCoverQuiron style,playboy cover
+        style:
+          - >-
+            __lazy-wildcards/book/style-types/magazine-playboy-cover/style-type-adj__,__lazy-wildcards/book/style-types/magazine-cover/style__
+      cover-comic:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-book/shared-cover/utils/cover(v=__lazy-wildcards/subject/style-book/cover-comic/style__)__
+        style:
+          - (comic book,comic cover),action,dynamic,speech bubbles,bang
+          - (Dojinshi,doujinshi magazine cover),Graphic Design
       # https://civitai.com/models/50400/old-newspaper-style?modelVersionId=54932
       newspaper-style-old:
         prompts:
@@ -2170,7 +2215,7 @@ lazy-wildcards:
           - sheath
           - oxygen tank
           - cardboard box
-          - magazine (weapon)
+          - magazine \(weapon\)
         costume-sex-toy:
           - ball gag
           - egg vibrator
@@ -4747,246 +4792,6 @@ lazy-wildcards:
             stone {1-$$,stone $$road|fence}
           - >-
             wooden {1-$$,wooden $$wall|fence|horse|chair}
-    env-elem-civilization:
-      Ancient-Egypt:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/main__,inspired by ({1-$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/style-theme__}:1.2){,{1-2$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/costume__}|}{,{1-3$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/env-bg__}|} {{1-4$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/costume-weapon__},|}{,{1-3$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/style__}|}
-        main:
-          - Building_Egyptian,egyptpunkai,egypt,egyptianworld
-        style-theme:
-          - Ancient Egypt theme
-          - Ancient Egypt civilization theme
-          - ancient egyptian theme
-        style:
-          - ancient_technology
-          - royal beauty
-          - historical importance
-          - tomb rituals
-          - Ethnofuturism
-          - Cultural_Fusion
-          - lost civilization,mystery lost technology theme
-        costume:
-          - Pharaoh,regal_attire,Egyptian_royalty,royal headdress
-          - Anubis,jackal_headgear
-          - Scarab,sacred_insect
-          - Egyptian_armor
-          - ceremonial attire
-          - |-
-            Sphinx,lion's body,human head
-          - god of mummification
-          - falcon head
-          - god of the sun
-          - Mummy
-          - preserved bodies
-          - linen wrappings
-          - amulets
-          - Cleopatra,queen of Egypt
-          - Bastet,cat goddess
-          - goddess of fertility
-          - Tutankhamun
-          - boy king
-          - golden mask
-        costume-weapon:
-          - Ankh,ancient_cross
-          - >-
-            scepter|was_scepter
-          - khopes,curved sword
-          - scimitar,curved sword
-          - incense_burner
-          - canopic_jar,store and preserve the viscera
-          - maat_feather
-          - ceremonial_knife
-          - staff_of_osiris
-          - shabti,Small figurines placed in tombs
-          - small tools
-        env:
-          - >-
-            ancient egyptian {1-$$,ancient egyptian $$flag|symbol|hieroglyphic|technology|artifacts|design|hieroglyphic symbol|art}
-          - triangular structures
-          - ancient script,symbolic writing,sacred inscriptions
-          - Nefertiti,iconic bust
-          - sun disk
-          - Papyrus,ancient paper,scrolls,early writing materials
-          - Caravan,camel trains,desert trave
-          - stone columns
-          - Pharaoh Throne
-          - cat
-          - lotus_flower
-          - udjat_eye
-          - vulture_crown
-          - menat_necklace
-          - gold_bangles
-          - earrings_with_amulets
-          - egyptian_belt
-        env-bg:
-          - >-
-            ancient egyptian {1-$$,ancient egyptian $$architecture|Pyramids|structures|tombs}
-          - monumental architecture
-          - Obelisk,stone pillar,ancient monument
-          - __cf-ancient-egypt/location__
-          - Ancient_Cities
-          - bustling marketplaces
-          - residential structures
-          - public squares
-          - Nile_River,fertile banks
-          - |-
-            Pharaoh's_Palace
-          - Ancient_Temples
-          - Oasis,greenery in the desert,water sources
-          - refuge for travelers
-          - __lazy-wildcards/subject/env-bg/desert/prompts__
-          - sea waves
-          - Camel Journey
-          - Frame
-      Ancient-Egypt-Punk:
-        prompts:
-          - >-
-            scifi,inspired by {1-$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt-Punk/style-theme__}{,{1-2$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt-Punk/costume__}|}{,{1-2$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt-Punk/env-bg__}|}{,{1-2$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt-Punk/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt-Punk/style__}|},__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/prompts__
-        style-theme:
-          - Ancientpunk Egypt
-          - Egyptian Punk
-          - Ancient Egypt Civilization Punk
-        style:
-          - punk_aesthetic,punk_fashion
-          - mechanical_elements,mechanical appendages
-          - cyber_aesthetic
-          - futuristic technology,futuristic elements
-          - ancient modern,technological_fusion,ancient_egyptian_futurism
-          - >-
-            mystical_technology,lost_technology
-        costume:
-          - Cyborg_Pharaoh
-          - Anubis_Punk
-          - Punk_Scarab,mechanical_beetle
-          - |-
-            Pharaoh's_Mech,mechanical_warrior,royal_robot
-          - holographic_pharaohs
-          - cyber_mummies
-          - egyptian_techno_deities,robotic gods
-        env:
-          - neon_lights
-          - Hieroglyphic_Circuits
-          - mystical_devices
-          - Cyber_Ankh,digital_symbols
-          - __lazy-wildcards/subject/env-elem-punk/holographic/prompts__
-          - glowing runes
-          - energy generator
-          - flying around
-        env-bg:
-          - Techno_Pyramids,futuristic_pyramids
-          - Pyramid_Skyscraper
-          - towering_structures
-          - ancient_future_architecture
-          - futuristic egyptian megacity
-          - futuristic world
-          - pyramids-inspired spaceport
-          - Futuristic fortress
-      # https://civitai.com/models/72415?modelVersionId=78488
-      JavaPunk:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-elem-civilization/JavaPunk/style-main__{,{1-$$__lazy-wildcards/subject/env-elem-civilization/JavaPunk/costume__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/JavaPunk/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/JavaPunk/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/JavaPunk/env-creatures__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/JavaPunk/style__}|}
-        style-main:
-          - javapunkai,javanese
-        costume:
-          - javanese_clothes
-          - cultural_mask_artifacts
-          - mechanical_arm_braces
-        env-bg:
-          - ancient_mechanical_city
-          - tropical_jungle
-          - stone_temple_ruins
-          - jungle_cityscape
-          - ancient_ruins_with_technology
-          - javaneseinterior,javanese interior
-        env:
-          - carved_wooden_elements
-          - indonesian text,javanese_text
-          - hanging_vines
-          - king bed with curtain
-          - stone wall
-        env-creatures:
-          - exotic_creatures
-        style:
-          - traditional_batik_patterns
-          - mechanical_totems
-          - rustic_metal_work
-          - sepia_tone
-          - exotic
-          - natural_forest_light
-          - flower pattern
-      # https://civitai.com/models/270561/mayangoldworld?modelVersionId=304985
-      Mayan_World:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-elem-civilization/Mayan_World/style-main__{,{1-$$__lazy-wildcards/subject/env-elem-civilization/Mayan_World/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/Mayan_World/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/Mayan_World/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/Mayan_World/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/Mayan_World/style__}|}
-        style-main:
-          - mayanworld,Cultura maya,Mayan,ancient_maya
-        costume-elem:
-          - Maya peoples
-          - ritual_masks
-          - jade_ornaments
-        costume-weapon:
-          - obsidian_weapons
-          - tiki_torch
-        env-bg:
-          - ancient_jungle_temple
-          - >-
-            mayan_pyramid{,{tikal|chichen_itza}|}
-          - stone_ruins
-          - stone_altar
-          - sacred_cenote
-          - maya_maze architecture,stone building
-          - ancient_ball_court
-          - ceremonial_plaza
-          - kukulkan_temple
-        env:
-          - ceremonial_fire
-          - jungle_overgrowth
-          - ancient_calendar
-          - tropical_rainforest
-          - stone_statues,totem_statues
-          - obsidian
-          - ancient_stone_steps,stepped_terraces
-          - engravings
-        style:
-          - hieroglyphic_carvings
-          - sacred_animal_symbols
-          - sun_and_moon_symbols
-          - mystical_aura
-          - rainforest_ambiance
-      # https://civitai.com/models/921779/mesoamerican-fantasy-character?modelVersionId=1031779
-      # https://civitai.com/models/921719/aztec-architecture?modelVersionId=1031713
-      # https://civitai.com/models/237150/aztec-civilization
-      # https://civitai.com/models/270436/aztecworld
-      # https://civitai.com/models/523278/dynamic-wildcard-aztec-unleashed
-      # https://civitai.com/models/71819/totempunk-redone-konyconi
-      # https://civitai.com/models/52697/tutorial-konyconi-style-lora
-      # https://civitai.com/models/188747/ancient-aztec-clothes
-      aztec:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-elem-civilization/aztec/style-main__{,{1-$$__lazy-wildcards/subject/env-elem-civilization/aztec/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/aztec/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/aztec/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/aztec/style__}|}
-        style-main:
-          - aztcar,aztar,AztecWorld,aztec,ancient_mesoamerican,aztec_architecture,aztec_style,sd_mai,Aztec civilization,ancient_civilization,TotempunkAI,mesoamerica
-        env-bg:
-          - stone_temple,step_pyramid
-          - __cf-aztec/location__
-        env:
-          - stone_carvings
-          - throne
-        costume-elem:
-          - aztec_clothing,ceremonial_attire,gold_jewelry,ancient aztec clothes
-          - feathered_headdress
-          - Cloaks,Tunics
-          - __cf-aztec/prompt-costume__
-          - aztec priest
-        style:
-          - geometric_patterns,tribal_patterns,mesoamerican_fashion,ancient_symbols,mesoamerican_art
-          - aztec_patterns
-          - sun_symbol
-          - animal_motif
     env-elem:
       # https://civitai.com/models/44566
       # https://prompts.co.kr/articles/366
@@ -6400,6 +6205,281 @@ lazy-wildcards:
           - mechanical_aesthetics
           - rustic_metals
           - mechanical_innards
+    env-elem-civilization:
+      Ancient-Egypt:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/main__,inspired by ({1-$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/style-theme__}:1.2){,{1-2$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/costume__}|}{,{1-3$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/env-bg__}|} {{1-4$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/costume-weapon__},|}{,{1-3$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/style__}|}
+        main:
+          - Building_Egyptian,egyptpunkai,egypt,egyptianworld
+        style-theme:
+          - Ancient Egypt theme
+          - Ancient Egypt civilization theme
+          - ancient egyptian theme
+        style:
+          - ancient_technology
+          - royal beauty
+          - historical importance
+          - tomb rituals
+          - Ethnofuturism
+          - Cultural_Fusion
+          - lost civilization,mystery lost technology theme
+        costume:
+          - Pharaoh,regal_attire,Egyptian_royalty,royal headdress
+          - Anubis,jackal_headgear
+          - Scarab,sacred_insect
+          - Egyptian_armor
+          - ceremonial attire
+          - |-
+            Sphinx,lion's body,human head
+          - god of mummification
+          - falcon head
+          - god of the sun
+          - Mummy
+          - preserved bodies
+          - linen wrappings
+          - amulets
+          - Cleopatra,queen of Egypt
+          - Bastet,cat goddess
+          - goddess of fertility
+          - Tutankhamun
+          - boy king
+          - golden mask
+        costume-weapon:
+          - Ankh,ancient_cross
+          - >-
+            scepter|was_scepter
+          - khopes,curved sword
+          - scimitar,curved sword
+          - incense_burner
+          - canopic_jar,store and preserve the viscera
+          - maat_feather
+          - ceremonial_knife
+          - staff_of_osiris
+          - shabti,Small figurines placed in tombs
+          - small tools
+        env:
+          - >-
+            ancient egyptian {1-$$,ancient egyptian $$flag|symbol|hieroglyphic|technology|artifacts|design|hieroglyphic symbol|art}
+          - triangular structures
+          - ancient script,symbolic writing,sacred inscriptions
+          - Nefertiti,iconic bust
+          - sun disk
+          - Papyrus,ancient paper,scrolls,early writing materials
+          - Caravan,camel trains,desert trave
+          - stone columns
+          - Pharaoh Throne
+          - cat
+          - lotus_flower
+          - udjat_eye
+          - vulture_crown
+          - menat_necklace
+          - gold_bangles
+          - earrings_with_amulets
+          - egyptian_belt
+        env-bg:
+          - >-
+            ancient egyptian {1-$$,ancient egyptian $$architecture|Pyramids|structures|tombs}
+          - monumental architecture
+          - Obelisk,stone pillar,ancient monument
+          - __cf-ancient-egypt/location__
+          - Ancient_Cities
+          - bustling marketplaces
+          - residential structures
+          - public squares
+          - Nile_River,fertile banks
+          - |-
+            Pharaoh's_Palace
+          - Ancient_Temples
+          - Oasis,greenery in the desert,water sources
+          - refuge for travelers
+          - __lazy-wildcards/subject/env-bg/desert/prompts__
+          - sea waves
+          - Camel Journey
+          - Frame
+      Ancient-Egypt-Punk:
+        prompts:
+          - >-
+            scifi,inspired by {1-$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt-Punk/style-theme__}{,{1-2$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt-Punk/costume__}|}{,{1-2$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt-Punk/env-bg__}|}{,{1-2$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt-Punk/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt-Punk/style__}|},__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/prompts__
+        style-theme:
+          - Ancientpunk Egypt
+          - Egyptian Punk
+          - Ancient Egypt Civilization Punk
+        style:
+          - punk_aesthetic,punk_fashion
+          - mechanical_elements,mechanical appendages
+          - cyber_aesthetic
+          - futuristic technology,futuristic elements
+          - ancient modern,technological_fusion,ancient_egyptian_futurism
+          - >-
+            mystical_technology,lost_technology
+        costume:
+          - Cyborg_Pharaoh
+          - Anubis_Punk
+          - Punk_Scarab,mechanical_beetle
+          - |-
+            Pharaoh's_Mech,mechanical_warrior,royal_robot
+          - holographic_pharaohs
+          - cyber_mummies
+          - egyptian_techno_deities,robotic gods
+        env:
+          - neon_lights
+          - Hieroglyphic_Circuits
+          - mystical_devices
+          - Cyber_Ankh,digital_symbols
+          - __lazy-wildcards/subject/env-elem-punk/holographic/prompts__
+          - glowing runes
+          - energy generator
+          - flying around
+        env-bg:
+          - Techno_Pyramids,futuristic_pyramids
+          - Pyramid_Skyscraper
+          - towering_structures
+          - ancient_future_architecture
+          - futuristic egyptian megacity
+          - futuristic world
+          - pyramids-inspired spaceport
+          - Futuristic fortress
+      # https://civitai.com/models/72415?modelVersionId=78488
+      JavaPunk:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-civilization/JavaPunk/style-main__{,{1-$$__lazy-wildcards/subject/env-elem-civilization/JavaPunk/costume__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/JavaPunk/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/JavaPunk/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/JavaPunk/env-creatures__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/JavaPunk/style__}|}
+        style-main:
+          - javapunkai,javanese
+        costume:
+          - javanese_clothes
+          - cultural_mask_artifacts
+          - mechanical_arm_braces
+        env-bg:
+          - ancient_mechanical_city
+          - tropical_jungle
+          - stone_temple_ruins
+          - jungle_cityscape
+          - ancient_ruins_with_technology
+          - javaneseinterior,javanese interior
+        env:
+          - carved_wooden_elements
+          - indonesian text,javanese_text
+          - hanging_vines
+          - king bed with curtain
+          - stone wall
+        env-creatures:
+          - exotic_creatures
+        style:
+          - traditional_batik_patterns
+          - mechanical_totems
+          - rustic_metal_work
+          - sepia_tone
+          - exotic
+          - natural_forest_light
+          - flower pattern
+      # https://civitai.com/models/270561/mayangoldworld?modelVersionId=304985
+      Mayan_World:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-civilization/Mayan_World/style-main__{,{1-$$__lazy-wildcards/subject/env-elem-civilization/Mayan_World/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/Mayan_World/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/Mayan_World/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/Mayan_World/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/Mayan_World/style__}|}
+        style-main:
+          - mayanworld,Cultura maya,Mayan,ancient_maya
+        costume-elem:
+          - Maya peoples
+          - ritual_masks
+          - jade_ornaments
+        costume-weapon:
+          - obsidian_weapons
+          - tiki_torch
+        env-bg:
+          - ancient_jungle_temple
+          - >-
+            mayan_pyramid{,{tikal|chichen_itza}|}
+          - stone_ruins
+          - stone_altar
+          - sacred_cenote
+          - maya_maze architecture,stone building
+          - ancient_ball_court
+          - ceremonial_plaza
+          - kukulkan_temple
+        env:
+          - ceremonial_fire
+          - jungle_overgrowth
+          - ancient_calendar
+          - tropical_rainforest
+          - stone_statues,totem_statues
+          - obsidian
+          - ancient_stone_steps,stepped_terraces
+          - engravings
+        style:
+          - hieroglyphic_carvings
+          - sacred_animal_symbols
+          - sun_and_moon_symbols
+          - mystical_aura
+          - rainforest_ambiance
+      # https://civitai.com/models/921779/mesoamerican-fantasy-character?modelVersionId=1031779
+      # https://civitai.com/models/921719/aztec-architecture?modelVersionId=1031713
+      # https://civitai.com/models/237150/aztec-civilization
+      # https://civitai.com/models/270436/aztecworld
+      # https://civitai.com/models/523278/dynamic-wildcard-aztec-unleashed
+      # https://civitai.com/models/71819/totempunk-redone-konyconi
+      # https://civitai.com/models/52697/tutorial-konyconi-style-lora
+      # https://civitai.com/models/188747/ancient-aztec-clothes
+      aztec:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-civilization/aztec/style-main__{,{1-$$__lazy-wildcards/subject/env-elem-civilization/aztec/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/aztec/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/aztec/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/aztec/style__}|}
+        style-main:
+          - aztcar,aztar,AztecWorld,aztec,ancient_mesoamerican,aztec_architecture,aztec_style,sd_mai,Aztec civilization,ancient_civilization,TotempunkAI,mesoamerica
+        env-bg:
+          - stone_temple,step_pyramid
+          - __cf-aztec/location__
+        env:
+          - stone_carvings
+          - throne
+        costume-elem:
+          - aztec_clothing,ceremonial_attire,gold_jewelry,ancient aztec clothes
+          - feathered_headdress
+          - Cloaks,Tunics
+          - __cf-aztec/prompt-costume__
+          - aztec priest
+        style:
+          - geometric_patterns,tribal_patterns,mesoamerican_fashion,ancient_symbols,mesoamerican_art
+          - aztec_patterns
+          - sun_symbol
+          - animal_motif
+      # https://civitai.com/models/71287/tang-fashion-style
+      Tang_Dynasty:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-civilization/Tang_Dynasty/style-main__{,{1-$$__lazy-wildcards/subject/env-elem-civilization/Tang_Dynasty/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/Tang_Dynasty/action__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/Tang_Dynasty/costume-weapon__}|}{,{1-3$$__lazy-wildcards/subject/env-elem-civilization/Tang_Dynasty/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/Tang_Dynasty/style__}|}
+        style-main:
+          - Tang Dynasty,Tang,ancient_china,ancient_chinese,tang_dynasty_fashion
+        env-bg:
+          - imperial_palace,chinese_palace
+          - buddhist_temple
+          - pagoda
+          - courtyard_garden
+          - ancient_market
+          - chinese_pavilion
+          - ancient_chinese_architecture
+        costume-elem:
+          - chinese_robe
+          - hanfu
+          - tang_dynasty_dress
+          - hairstick
+          - wide_sleeves
+          - hair_bun
+          - jade_ornaments
+        action:
+          - chinese_dance
+        costume-weapon:
+          - chinese_music_instruments
+          - pipa
+        style:
+          - silk_road_culture
+          - chinese_painting
+          - dunhuang_mural
+          - buddhist_art
+          - taoist_influence
+          - confucian_philosophy
     env-bg-interior:
       # https://civitai.com/models/815517/cyberpunk-club?modelVersionId=911938
       cyberpunk_club:
@@ -7189,7 +7269,7 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/subject/env-bg-interior/elevator_interior/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg-interior/elevator_interior/env__}|}{,{1-2$$__lazy-wildcards/subject/env-bg-interior/elevator_interior/style-view__}|}{,{1-$$__lazy-wildcards/subject/env-bg-interior/elevator_interior/style__}|}
         env-bg-main:
-          - elevator_interior,elevator_cabin,elevator_scene,elevator
+          - elevator_interior,elevator_cabin,elevator_scene,elevator,Inside elevator
         env:
           - mirror_wall,reflective_surface,elevator_mirror
           - elevator_button_panel,floor_buttons,control_panel
@@ -8112,6 +8192,32 @@ lazy-wildcards:
           - short sleeves
           - long sleeves
           - sleeves past wrists
+      # https://civitai.com/models/299367/soapy-skinsoap-censor
+      # https://civitai.com/models/24612/conceptsoap-bubble-censorbubble-bra
+      # https://civitai.com/models/594751/ms-real-lite-soapy-foam-lora
+      # https://civitai.com/models/80763/reel-boobshowerpress
+      # https://civitai.com/models/109678/soap-bubbles
+      # https://civitai.com/models/285049/0156-bubble-bathsd15pdxlsdxl
+      # https://civitai.com/models/125010/bubble-bath
+      # https://civitai.com/models/592109/soap-bubblessdillpony?modelVersionId=680814
+      soap_bubbles:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem/soap_bubbles/costume__{,{1-$$__lazy-wildcards/subject/costume-elem/soap_bubbles/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/soap_bubbles/action__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/soap_bubbles/env-bg__}|}
+        costume:
+          - soap bubbles,soapy,foam,soap bubbles,bubblebra,s04py,ruanyi0156,soapy skin,soap censor
+        costume-elem:
+          - wet
+          - nude,naked
+          - breasts
+          - barefoot
+        action:
+          - bath,bubble bath,taking bath
+          - bathing
+          - shower
+        env-bg:
+          - bathroom
+          - bathtub
       Jetpack:
         prompts:
           - >-
@@ -8200,13 +8306,14 @@ lazy-wildcards:
       # https://civitai.com/models/24260
       # https://civitai.com/models/76693?modelVersionId=697939
       # https://civitai.com/models/142146/carnage-style-blood-and-gore-nsfw-nsfanywhere
+      # https://civitai.com/models/165507/bio-mecha?modelVersionId=186295
       biomachine_body_horror:
         prompts:
           - >-
             __lazy-wildcards/subject/costume/biomachine_body_horror/style-main__{,({1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/style__}:1.2)|}{,{1-6$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-types/*__}|}{,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-ethnicity__}|}{,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-wings__}|}{,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/env__}|}{,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-breasts__}|}{,{1-6$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-elem__}|}{,{1-6$$__lazy-wildcards/subject/costume/biomachine_body_horror/style-elem__}|}
         style-main:
           - |-
-            (body horror,BPNK,biomachine:1.3),CarnageStyle,Carnage Style
+            (body horror,BPNK,biomachine,biomecha,bio mecha,bio-mechanical:1.3),CarnageStyle,Carnage Style
         style:
           - bloody,blood_red
           - zentangle
@@ -8265,7 +8372,7 @@ lazy-wildcards:
             - flayed_skin
             - Undead_Anatomy
             - tissues
-            - muscles
+            - muscles,muscle tissue
             - tendons
             - bones
             - blood vessels
