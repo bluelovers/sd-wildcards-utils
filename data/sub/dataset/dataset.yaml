@@ -90,4 +90,13 @@ lazy-wildcards:
     env-vehicle:
       - __lazy-wildcards/*/*/*/env-vehicle*__
       - __Bo/vehicles/random__
+    style:
+      - >-
+        {1-6$$__lazy-wildcards/subject/style-*/*/prompts__}
+      - >-
+        {1-6$$__lazy-wildcards/*/*/*/style*__}
+      - >-
+        {1-2$$__lazy-wildcards/subject/style-*/*/prompts__},
+        {1-4$$__lazy-wildcards/*/*/*/style*__}
+
 
