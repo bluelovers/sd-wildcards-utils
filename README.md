@@ -21,13 +21,19 @@ __lazy-wildcards/dataset/background-color__
 
 __lazy-wildcards/prompts/showcase__
 
+__lazy-wildcards/costume/costume__
+__lazy-wildcards/costume/costume-color__
 __lazy-wildcards/cosplay-char/*/*/prompts__
-__lazy-wildcards/costume/clothes__
-
 __lazy-wildcards/subject/costume/sfw-civitai/prompts__
 
 __lazy-wildcards/prompts/hair__
 __lazy-wildcards/char/haircolor__
+
+__lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+__lazy-wildcards/subject/costume-ethnicity-race/furry/prompts__
+
+__lazy-wildcards/utils/scenery-no-humans__
+__lazy-wildcards/utils/scenery__
 
 __lazy-wildcards/dataset/style__
 __lazy-wildcards/subject/moment/random/prompts__
