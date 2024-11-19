@@ -9,13 +9,13 @@ lazy-wildcards:
   prompts:
     costume:
       - >-
-        {__lazy-wildcards/costume/nsfw__|__lazy-wildcards/costume/clothes__}
+        {__lazy-wildcards/subject/costume-anything/nsfw/prompts__|__lazy-wildcards/subject/costume-anything/clothes/prompts__}
     costume-with-color:
       - >-
-        __lazy-wildcards/costume/color-theme__
+        __lazy-wildcards/utils/costume-color-theme__
         {,__lazy-wildcards/prompts/costume__|}
       - >-
-        {__lazy-wildcards/costume/color-theme__,|}
+        {__lazy-wildcards/utils/costume-color-theme__,|}
         __lazy-wildcards/prompts/costume__
     pose:
       - >-
@@ -82,7 +82,7 @@ lazy-wildcards:
           {0.3::(__lazy-wildcards/char/mouth__:1.4),|}
           (__lazy-wildcards/char/eyecolor__),
           __lazy-wildcards/prompts/hair-all__,
-          __lazy-wildcards/costume/nsfw-nude__,
+          __lazy-wildcards/subject/costume-anything/nsfw-nude/prompts__,
           {0.3::__lazy-wildcards/char/lips-color__,|}
           {0.3::__lazy-wildcards/char/eyeliner-color__,|}
           {0.3::__lazy-wildcards/char/eyeshadow-color__,|}
