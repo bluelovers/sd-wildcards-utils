@@ -31,6 +31,9 @@ export default Bluebird.map([
 		return mergeWildcardsYAMLDocumentRoots(ls)
 	})
 	.then(async (doc: any) => {
+
+		await _ReadAndupdateFile('lazy-wildcards.yaml');
+
 		// @ts-ignore
 		let ls = await Bluebird.map<string[]>(globSync([
 			'sub/**/*.{yaml,yml}',
@@ -38,16 +41,7 @@ export default Bluebird.map([
 		], {
 			cwd: __ROOT_DATA
 		}), async (file: string) => {
-			const full_file = join(__ROOT_DATA, file)
-			let data = (await readFile(full_file)).toString()
-
-			let data_new = stripBlankLines(normalizeWildcardsYamlString(data), true)
-
-			if (data_new !== data)
-			{
-				consoleLogger.info(`update`, file);
-				await writeFile(full_file, data_new);
-			}
+			let data_new = await _ReadAndupdateFile(file);
 
 			return parseWildcardsYaml(data_new, {
 				disableUnsafeQuote: true,
@@ -63,3 +57,20 @@ export default Bluebird.map([
 	let out = stringifyWildcardsYamlData(json, defaultOptionsStringifyMinify());
 	return outputFile(join(__ROOT_OUTPUT_WILDCARDS, 'lazy-wildcards.yaml'), out)
 })
+
+async function _ReadAndupdateFile(file: string, disableUpdate?: boolean)
+{
+	const full_file = join(__ROOT_DATA, file);
+
+	let data = (await readFile(full_file)).toString()
+
+	let data_new = stripBlankLines(normalizeWildcardsYamlString(data), true);
+
+	if (!disableUpdate && data_new !== data)
+	{
+		consoleLogger.info(`update`, file);
+		await writeFile(full_file, data_new);
+	}
+
+	return data_new
+}
