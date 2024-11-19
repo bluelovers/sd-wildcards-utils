@@ -15,13 +15,13 @@ lazy-wildcards:
       shared-cover:
         prompts:
           - >-
-            {0.2::__lazy-wildcards/book/style-types/*/style-type-adj__,|}
-            (__lazy-wildcards/book/style-types/*/style__:1.35)
+            {0.2::__lazy-wildcards/subject/style-book/*/style-type-adj__,|}
+            (__lazy-wildcards/subject/style-book/cover-*/style__:1.35)
             {0.3::,{1-6$$__lazy-wildcards/subject/style-book/shared/style-book-text__}|}
         utils:
           cover:
             - >-
-              (${v:__lazy-wildcards/book/style-types/*/style__}:1.35)
+              (${v:__lazy-wildcards/subject/style-book/*/style__}:1.35)
               {0.3::,{1-6$$__lazy-wildcards/subject/style-book/shared/style-book-text__}|}
       cover-magazine:
         prompts:
@@ -40,8 +40,8 @@ lazy-wildcards:
           - (the pulps, pulp magazine, pulpmagazine:1.2), retro artstyle
         style:
           - >-
-            __lazy-wildcards/book/style-types/magazine-pulp-cover/style-type-adj__,
-            __lazy-wildcards/book/style-types/magazine-cover/style__
+            __lazy-wildcards/subject/style-book/cover-magazine-pulp/style-type-adj__,
+            __lazy-wildcards/subject/style-book/cover-magazine/style__
       cover-magazine-playboy:
         prompts:
           - >-
@@ -50,8 +50,8 @@ lazy-wildcards:
           - PlayboyCoverQuiron style, playboy cover
         style:
           - >-
-            __lazy-wildcards/book/style-types/magazine-playboy-cover/style-type-adj__,
-            __lazy-wildcards/book/style-types/magazine-cover/style__
+            __lazy-wildcards/subject/style-book/cover-magazine-playboy/style-type-adj__,
+            __lazy-wildcards/subject/style-book/cover-magazine/style__
       cover-comic:
         prompts:
           - >-
