@@ -62,4 +62,31 @@ lazy-wildcards:
         env:
           - gantry
           - ground_support_equipment
+      crashed_starships:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/crashed_starships/env-bg-main__:{1.2|1.3|1.4})
+            {, {1-$$__lazy-wildcards/subject/env-bg/crashed_starships/env__}|}
+            {, {1-2$$__lazy-wildcards/subject/env-bg/crashed_starships/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/crashed_starships/style__}|}
+        env-bg-main:
+          - crashed starships, broken starships
+        env-bg:
+          - Desert Planet Battlefield
+          - ruins
+          - forest, jungle
+          - snowy_environment, frozen_landscape
+          - exotic_terrain
+          - icy_ruins
+        env:
+          - burnt metal
+          - smoking wreckage
+          - sandstorm
+          - __lazy-wildcards/subject/env-elem/moss/prompts__
+          - electrical_sparks
+          - icy_wreckage
+          - abandoned_ship
+          - glowing_mist
+        style:
+          - post_apocalyptic
 

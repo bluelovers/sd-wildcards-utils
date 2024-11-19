@@ -1,0 +1,104 @@
+lazy-wildcards:
+  subject:
+    costume-sport:
+      # https://civitai.com/models/961007/baseball-manager-girls-who-the-boys-they-like?modelVersionId=1075952
+      sport_manager:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-sport/sport_manager/main-trigger-words__
+            {, {1-2$$__lazy-wildcards/subject/costume-sport/sport_manager/costume-ethnicity__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-sport/sport_manager/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-sport/sport_manager/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-sport/sport_manager/action-pose__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-sport/sport_manager/style__}|}
+        main-trigger-words:
+          - Girl16, sport_manager, sportswear, manager
+        costume-ethnicity:
+          - basketball_manager, __lazy-wildcards/subject/costume-sport/baseball/prompts__
+          - volleyball_manager
+        costume-elem:
+          - long hair
+          - long sleeves
+          - navel
+          - low twintails
+          - groin
+          - highleg
+          - side-tie pantie
+          - lace trim
+          - headwear
+          - string panties
+          - hair_tied_back
+          - __lazy-wildcards/subject/costume-sport/sport/prompts__
+          - plaid skirt
+          - sleeves past wrists
+          - zipper pull tab
+        costume-weapon:
+          - clipboard_holding
+        action-pose:
+          - motivational_pose
+        style:
+          - team_dedication
+          - calm_and_collected
+          - highschool_life
+          - rookie_manager
+          - strict_but_kind
+          - fictional_manager
+          - energetic_female
+      sport:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-sport/sport/costume-elem__}
+        costume-elem:
+          - track jacket
+          - track suit
+          - red jacket
+          - open jacket
+          - white shirt
+          - hooded track jacket
+          - hood
+          - track pants
+      # https://danbooru.donmai.us/posts?tags=baseball_uniform&z=2
+      baseball:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-sport/baseball/main-trigger-words__
+            , {1-$$__lazy-wildcards/subject/costume-sport/baseball/costume__}
+            {, {1-$$__lazy-wildcards/subject/costume-sport/baseball/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-sport/baseball/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-sport/baseball/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-sport/baseball/env-bg__}|}
+        main-trigger-words:
+          - baseball, B4seballGirl, Girl16
+        costume:
+          - baseball cap
+          - baseball helmet
+          - baseball jersey
+          - baseball uniform
+          - catcher's mask
+          - baseball mitt
+        costume-elem:
+          - umpire
+          - dirty clothes
+          - dirty face
+        costume-weapon:
+          - baseball \(object\)
+          - >-
+            {metal |}baseball bat
+          - holding baseball bat
+          - holding baseball \(object\), holding ball
+        action:
+          - pitching
+          - playing sports
+        env-bg:
+          - baseball stadium, baseball field
+      # https://civitai.com/models/961030/chiharu-azuma-venus-eleven-vivid
+      football:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-sport/football/main-trigger-words__
+            , {1-$$__lazy-wildcards/subject/costume-sport/football/costume__}
+        main-trigger-words:
+          - ChiharuAzuma, soccer, football
+        costume:
+          - sportswear, soccer uniform, sleeveless
+

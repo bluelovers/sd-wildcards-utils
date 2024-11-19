@@ -124,4 +124,33 @@ lazy-wildcards:
           - grilled_dish
           - tomato_sauce
           - yogurt_topping
+      # https://civitai.com/models/249905/tableside-kitchen-gourmands-society?modelVersionId=282020
+      tamago_kake_gohan:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-food/tamago_kake_gohan/env-elem-food__
+            {, __lazy-wildcards/subject/env-elem-food/tamago_kake_gohan/env-elem-food-egg__|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/tamago_kake_gohan/env-elem-food__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/tamago_kake_gohan/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/tamago_kake_gohan/style__}|}
+        env-elem-food-main:
+          - Tamago kake gohan, japanese_food, rice_bowl, raw_egg, TKGS, rice
+        env-elem-food-egg:
+          - __mix-lazy-auto/color-anything__ TKGS, __mix-lazy-auto/color-anything__ raw_egg
+          - iridescent TKGS, iridescent raw_egg, rainbow_color
+        env-elem-food:
+          - Egg over rice
+          - Japanese-style egg and rice
+          - Rice topped with egg
+          - Oyakodon
+          - soy_sauce
+          - japanese_breakfast
+          - comfort_food
+          - egg_yolk_shine
+        env:
+          - wooden_table
+        style:
+          - minimalist_presentation
+          - gradient
+          - still life
 

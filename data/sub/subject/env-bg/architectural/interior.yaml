@@ -690,4 +690,50 @@ lazy-wildcards:
           - from behind
         style:
           - ceiling_light, elevator_lighting
+      # 會議室
+      conference_room:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-interior/conference_room/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/conference_room/env-table__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/conference_room/env-chair__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/conference_room/env-wall__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/conference_room/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/conference_room/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/conference_room/style__}|}
+        env-bg-main:
+          - conference room
+        env-bg:
+          - futuristic_meeting_room
+        env-table:
+          - conference_table
+          - wooden_table
+          - large_table
+          - long board table
+        env-chair:
+          - office_chair
+          - leather_chair
+        env-wall:
+          - metal_wall
+          - glass_wall
+          - urban_view
+        env:
+          - whiteboard
+          - large_screen
+          - office_environment
+          - hologram_projector, hologram_display
+          - touch_screen_panel
+          - tech_interface
+          - crystal_chandelier
+          - heavy_curtains
+          - projector_screen
+          - wooden_furniture
+          - bookcase
+        style:
+          - modern_lighting
+          - futuristic_lighting
+          - luxury_interior
+          - classroom_style
+          - minimalist_interior, simple_design
+          - formal
 

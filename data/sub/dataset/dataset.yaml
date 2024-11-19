@@ -35,20 +35,40 @@ lazy-wildcards:
     food-all-multi:
       - >-
         {1-2$$__lazy-wildcards/dataset/food-all__}
+    costume:
+      - >-
+        {1-2$$__lazy-wildcards/dataset/costume-elem__}
+        {, {1-3$$__lazy-wildcards/*/*/*/costume*__}|}
+    costume-color:
+      - >-
+        __lazy-wildcards/dataset/costume__
+        {, {__lazy-wildcards/utils/costume-color-theme-multi__|__lazy-wildcards/utils/costume-color-theme__}|}
     costume-ethnicity:
       - __cf-*/ethnicity__
       - __lazy-wildcards/subject/ethnicity-*/*/prompts__
       - __lazy-wildcards/subject/costume-ethnicity-*/*/prompts__
-      - __lazy-wildcards/*/*/*/costume-ethnicity__
-      - __lazy-wildcards/*/*/*/ethnicity-types/*__
-      - __lazy-wildcards/*/*/*/ethnicity-makeup__
-      - __lazy-wildcards/*/*/*/ethnicity-eyes__
-      - __lazy-wildcards/*/*/*/ethnicity-hair__
+      - __lazy-wildcards/*/*/*/costume-ethnicity*__
+      - __lazy-wildcards/*/*/*/ethnicity*__
+    costume-elem:
+      - __lazy-wildcards/subject/costume*/*/prompts__
+      - >-
+        {1-2$$__lazy-wildcards/subject/costume*/*/prompts__}
+      - >-
+        {1-6$$__lazy-wildcards/subject/costume-elem*/*/prompts__}
+      - >-
+        {1-6$$__lazy-wildcards/*/*/*/costume*__}
+      - __lazy-wildcards/subject/costume/sfw-civitai/prompts__
+      # - __lazy-wildcards/subject/costume-anything/clothes/prompts__
+      - __lazy-wildcards/cosplay-*/*/*/prompts__
+      - __cf-*/prompt-costume__
+      - __Bo/chars/char-*/female/bocloths__
+      - __Bo/clothings/*/female-attire__
+      - >-
+        {1-3$$__lazy-wildcards/dataset/costume-ethnicity__}
     costume-weapon:
       - __cf-*/weapon__
-      - __lazy-wildcards/*/*/*/costume-weapon__
-      - __lazy-wildcards/*/*/*/costume-weapon-*__
-      - __lazy-wildcards/subject/costume-weapon/*/prompts__
+      - __lazy-wildcards/*/*/*/costume-weapon*__
+      - __lazy-wildcards/subject/costume-weapon*/*/prompts__
     costume-accessories-base:
       - >-
         {1-$$earrings|hair ornament|jewelry|armlet|necklace|ring|anklet}
@@ -64,10 +84,10 @@ lazy-wildcards:
         {1-2$$__lazy-wildcards/subject/style-artist/*/prompts__}
     env-creatures:
       - >-
-        {1-2$$__lazy-wildcards/*/*/*/env-creatures__}
+        {1-2$$__lazy-wildcards/*/*/*/env-creatures*__}
       - __lazy-wildcards/cosplay-others/*/*/prompts__
       - __Bo/creatures/random__
     env-vehicle:
-      - __lazy-wildcards/*/*/*/env-vehicle__
+      - __lazy-wildcards/*/*/*/env-vehicle*__
       - __Bo/vehicles/random__
 
