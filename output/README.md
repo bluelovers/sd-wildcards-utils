@@ -21,9 +21,9 @@ __lazy-wildcards/dataset/background-color__
 
 __lazy-wildcards/prompts/showcase__
 
+__lazy-wildcards/costume/costume__
+__lazy-wildcards/costume/costume-color__
 __lazy-wildcards/cosplay-char/*/*/prompts__
-__lazy-wildcards/costume/clothes__
-
 __lazy-wildcards/subject/costume/sfw-civitai/prompts__
 
 __lazy-wildcards/prompts/hair__
