@@ -28,7 +28,7 @@ export default Bluebird.resolve()
 
 		globSync([
 			'CharaCreatorWildcards/*.yaml',
-			'Vision/*.yaml',
+			'Vision/fake-dummy-wildcards.yaml',
 		], {
 			cwd: join(__ROOT_DATA, 'others'), 
 		}).forEach(v => {
