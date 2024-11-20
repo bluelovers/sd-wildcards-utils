@@ -432,12 +432,11 @@ lazy-wildcards:
           downblouse,cleavage,ceiling,(peek panties,panty peek,pussy peek),selfie pose,squatting,crouching
         - >-
           {from behind|from side|from above|from below|},(in container,stuck,trash can,trashcan),garbage,trash,after sex,anus,ass wobble,pussy,cum in ass,beaten up,helpless
-        - __cof-sex-positions/prompt-solo__
-        - __cof-sex-positions/prompt-man-woman__
-        - __cof-sex-positions/prompt-two-women__
-        - __cof-sex-positions/prompt-mix__
-        - __cof-sex-positions/prompt-all__
-        - __lazy-wildcards/subject/action-nsfw-*/*/prompts__
+        - __cof-sex-*/prompt-solo__
+        - __cof-sex-*/prompt-women__
+        - __cof-sex-*/prompt-mix__
+        - __cof-sex-*/prompt-all__
+        - __lazy-wildcards/subject/action-nsfw*/*/prompts__
         - hands on thighs,nude,completely nude,barefoot,toes,toenails
     lips-color:
       - __mix-lazy-auto/color-anything__ lips
@@ -7568,6 +7567,41 @@ lazy-wildcards:
         env:
           - ancient_stone_circle
           - massive_sarsen_stones
+      # 極地區域
+      polar_region:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-real-world-location/polar_region/env-bg-real__{,{1-$$__lazy-wildcards/subject/env-bg-real-world-location/polar_region/env-bg-main__}|}{,{1-$$__lazy-wildcards/subject/env-bg-real-world-location/polar_region/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg-real-world-location/polar_region/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-real-world-location/polar_region/env-creatures__}|}
+        env-bg-real:
+          # 南極
+          - antarctica
+          # 北極
+          - arctic
+          # 冰島
+          - iceland
+        env-bg-main:
+          - polar_region
+          - ice_landscape
+          - frozen_landscapes
+        env-bg:
+          - iceberg
+          - glacial_crevasse,perilous_crevasse
+          - aurora_borealis
+          - __lazy-wildcards/subject/moment/weather-snow/prompts__
+          - cold_ocean
+        env:
+          - floating_ice
+          - cracked_ice
+          - blue_ice
+          - frozen_surface
+          - fractured_ice,unstable_surface
+          - icy_reflection
+          - thin_ice
+          - icy_void
+        env-creatures:
+          - polar_bear
+          - penguins
+          - seals
     env-bg-architectural:
       agricultural_zone:
         prompts:
@@ -15568,6 +15602,32 @@ lazy-wildcards:
           - blue bodysuit,bare shoulders
           - lipstick
           - skin tight
+    bible_black:
+      # https://civitai.com/models/335325/bible-black-school-uniform-2-outfit-or-experimental-outfit-concept-lora-or-ownwaifu
+      SchoolDress:
+        prompts:
+          - >-
+            {1-2$$__lazy-wildcards/cosplay-char-hentai/bible_black/SchoolDress/main-trigger-words__},__lazy-wildcards/cosplay-char-hentai/bible_black/SchoolDress/main-trigger-words2__,{1-2$$__lazy-wildcards/cosplay-char-hentai/bible_black/SchoolDress/costume__}{,{1-$$__lazy-wildcards/cosplay-char-hentai/bible_black/SchoolDress/costume-elem__}|}{,{1-2$$__lazy-wildcards/cosplay-char-hentai/bible_black/SchoolDress/action__}|}{,{1-2$$__lazy-wildcards/cosplay-char-hentai/bible_black/SchoolDress/expressions__}|}
+        main-trigger-words2:
+          - bible_black,shin_bible_black
+        main-trigger-words:
+          - CLOTHING_BibleBlack_SchoolDress_ownwaifu
+          - CosplayRealistic_BibleBlack_SchoolDress_ownwaifu
+        costume:
+          - black vest,red skirt,white shirt,collared shirt,suspenders,school uniform,black thighhighs,zettai ryouiki,necktie,long sleeves,pleated skirt,red necktie
+        costume-elem:
+          - pink hair,short hair
+          - blonde hair,long hair,blue eyes
+          - open shirt,breasts exposed,unbuttoned shirt
+          - large hoop earring
+        action:
+          - contrapposto,hand on hip
+          - from above,sitting
+          - wading,looking back
+          - from front,standing
+          - spread legs
+        expressions:
+          - slight smile
   cosplay-real:
     # 亞美尼亞人
     Armenian:
