@@ -1,4 +1,4 @@
-name: build
+name: actions-zip-it
 
 on:
   workflow_dispatch:
@@ -52,8 +52,8 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
       -
-        name: bundle Stable Diffusion wildcards
-        uses: bluelovers/actions-zip-it@v1.0.0
+        name: actions-zip-it
+        uses: bluelovers/actions-zip-it@v1.0.2
         with:
           paths: |
             output/wildcards/*.yaml
