@@ -124,4 +124,43 @@ lazy-wildcards:
         env:
           - ancient_stone_circle
           - massive_sarsen_stones
+      # 極地區域
+      polar_region:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-real-world-location/polar_region/env-bg-real__
+            {, {1-$$__lazy-wildcards/subject/env-bg-real-world-location/polar_region/env-bg-main__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-real-world-location/polar_region/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-real-world-location/polar_region/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-real-world-location/polar_region/env-creatures__}|}
+        env-bg-real:
+          # 南極
+          - antarctica
+          # 北極
+          - arctic
+          # 冰島
+          - iceland
+        env-bg-main:
+          - polar_region
+          - ice_landscape
+          - frozen_landscapes
+        env-bg:
+          - iceberg
+          - glacial_crevasse, perilous_crevasse
+          - aurora_borealis
+          - __lazy-wildcards/subject/moment/weather-snow/prompts__
+          - cold_ocean
+        env:
+          - floating_ice
+          - cracked_ice
+          - blue_ice
+          - frozen_surface
+          - fractured_ice, unstable_surface
+          - icy_reflection
+          - thin_ice
+          - icy_void
+        env-creatures:
+          - polar_bear
+          - penguins
+          - seals
 

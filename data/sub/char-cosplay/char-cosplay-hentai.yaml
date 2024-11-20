@@ -195,4 +195,35 @@ lazy-wildcards:
           - blue bodysuit, bare shoulders
           - lipstick
           - skin tight
+    bible_black:
+      # https://civitai.com/models/335325/bible-black-school-uniform-2-outfit-or-experimental-outfit-concept-lora-or-ownwaifu
+      SchoolDress:
+        prompts:
+          - >-
+            {1-2$$__lazy-wildcards/cosplay-char-hentai/bible_black/SchoolDress/main-trigger-words__}
+            , __lazy-wildcards/cosplay-char-hentai/bible_black/SchoolDress/main-trigger-words2__
+            , {1-2$$__lazy-wildcards/cosplay-char-hentai/bible_black/SchoolDress/costume__}
+            {, {1-$$__lazy-wildcards/cosplay-char-hentai/bible_black/SchoolDress/costume-elem__}|}
+            {, {1-2$$__lazy-wildcards/cosplay-char-hentai/bible_black/SchoolDress/action__}|}
+            {, {1-2$$__lazy-wildcards/cosplay-char-hentai/bible_black/SchoolDress/expressions__}|}
+        main-trigger-words2:
+          - bible_black, shin_bible_black
+        main-trigger-words:
+          - CLOTHING_BibleBlack_SchoolDress_ownwaifu
+          - CosplayRealistic_BibleBlack_SchoolDress_ownwaifu
+        costume:
+          - black vest, red skirt, white shirt, collared shirt, suspenders, school uniform, black thighhighs, zettai ryouiki, necktie, long sleeves, pleated skirt, red necktie
+        costume-elem:
+          - pink hair, short hair
+          - blonde hair,  long hair, blue eyes
+          - open shirt, breasts exposed, unbuttoned shirt
+          - large hoop earring
+        action:
+          - contrapposto, hand on hip
+          - from above, sitting
+          - wading, looking back
+          - from front, standing
+          - spread legs
+        expressions:
+          - slight smile
 
