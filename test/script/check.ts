@@ -53,6 +53,7 @@ export default (async () => {
 			'halloween/**',
 			'chara_creator/**',
 			'Vision/**',
+			'navi_atlas/**',
 		],
 		allowWildcardsAtEndMatchRecord: true,
 	})
