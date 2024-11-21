@@ -21,6 +21,10 @@ lazy-wildcards:
       - >-
         {1-2$$__lazy-wildcards/subject/env-bg*/*/prompts__},
         __lazy-wildcards/dataset/background-color__
+      - >-
+        {1-2$$__lazy-wildcards/subject/env-bg*/*/prompts__|__lazy-wildcards/subject/env-bg-anything/model-*/prompts__}
+        {, __lazy-wildcards/subject/env-bg-anything/self-link/prompts__|}
+        {, __lazy-wildcards/dataset/background-color__|}
     background-color:
       - __lazy-wildcards/background/color-transparent__
       - __lazy-wildcards/background/color-theme__
