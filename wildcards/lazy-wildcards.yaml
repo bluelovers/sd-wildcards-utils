@@ -2677,7 +2677,7 @@ lazy-wildcards:
         prompts:
           - noble man
     env-bg-anything:
-      cof:
+      model-cof:
         prompts:
           - photo of __cof-location/place/*__,__cof-location/weather__ weather,during __cof-location/season__,__cof-location/timeofday/all__
           - __cf-*/location__
@@ -2690,15 +2690,11 @@ lazy-wildcards:
           - __cornf-furniture/prompt-full__
           - __cornf-*/prompt-object__
           - __cornf-house/prompt-full__
-      navi_atlas:
+      model-navi_atlas:
         prompts:
           - __navi_atlas/generator/urban__
           - __navi_atlas/generator/lands__
-      DaemonaVision:
-        prompts:
-          - __Vision/Background/Landscapes/*__
-          - __Vision/Background/*__
-      Bo:
+      model-Bo:
         prompts:
           - __Bo/constructions/random__
       self-link:
@@ -11554,6 +11550,8 @@ lazy-wildcards:
         __lazy-wildcards/subject/env-bg*/*/prompts__,__lazy-wildcards/dataset/background-color__
       - >-
         {1-2$$__lazy-wildcards/subject/env-bg*/*/prompts__},__lazy-wildcards/dataset/background-color__
+      - >-
+        {1-2$$__lazy-wildcards/subject/env-bg*/*/prompts__|__lazy-wildcards/subject/env-bg-anything/model-*/prompts__}{,__lazy-wildcards/subject/env-bg-anything/self-link/prompts__|}{,__lazy-wildcards/dataset/background-color__|}
     background-color:
       - __lazy-wildcards/background/color-transparent__
       - __lazy-wildcards/background/color-theme__
