@@ -19,7 +19,6 @@ export default Bluebird.resolve()
 		zip_add_file(zip, join(__ROOT_DATA, 'others/fake-dummy-wildcards.yaml'));
 
 		zip_add_file(zip, join(__ROOT_DATA, 'others/billions_of_all_in_one.yaml'));
-		// zip_add_file(zip, join(__ROOT_DATA, 'others/navi_atlas.yaml'));
 
 		zip_add_file(zip, join(__ROOT_DATA, 'cf/bundle/corn-flakes-aio-bundle-sex.yaml'));
 
@@ -32,6 +31,7 @@ export default Bluebird.resolve()
 		globSync([
 			'CharaCreatorWildcards/*.yaml',
 			'Vision/fake-dummy-wildcards.yaml',
+			'navi_atlas.yaml',
 		], {
 			cwd: join(__ROOT_DATA, 'others'), 
 		}).forEach(v => {

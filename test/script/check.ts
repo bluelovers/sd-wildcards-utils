@@ -19,11 +19,10 @@ export default (async () => {
 
 			join(__ROOT_DATA, 'cf', 'bundle', 'corn-flakes-aio-bundle-sex.yaml'),
 
-			join(__ROOT_DATA, 'others', 'navi_atlas.yaml'),
-
 			...globSync([
 				'CharaCreatorWildcards/*.yaml',
 				'Vision/*.yaml',
+				'navi_atlas.yaml',
 			], {
 				cwd: join(__ROOT_DATA, 'others'),
 			}).map(v => {
