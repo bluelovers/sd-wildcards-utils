@@ -107,15 +107,16 @@ lazy-wildcards:
       bathroom:
         prompts:
           - >-
-            {99$$ with $$__lazy-wildcards/subject/env-bg-interior/bathroom/main-object__},
-            {1-$$__lazy-wildcards/subject/env-bg-interior/bathroom/env-object__},
+            {1-$$ with $$__lazy-wildcards/subject/env-bg-interior/bathroom/env-main__},
+            {1-$$__lazy-wildcards/subject/env-bg-interior/bathroom/env-elem-object__},
             {1-$$__lazy-wildcards/subject/env-bg-interior/bathroom/env__}
             {, {1-$$__lazy-wildcards/subject/env-bg-interior/bathroom/env-bg__}|}
-        main-object:
+        env-main:
           - bath
           - a sink
           - bathroom
-        env-object:
+          - bathtub
+        env-elem-object:
           - toilet
           - handrails
           - faucet
@@ -125,6 +126,8 @@ lazy-wildcards:
         env:
           - >-
             {1-$$soap|soap bottle}
+          - bath stool
+          - sponge
         env-bg:
           - >-
             {1-$$tiles|tile floor|tile wall}
