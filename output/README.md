@@ -78,6 +78,8 @@ We appreciate the contributions of these amazing creators who made wildcards:
 
 # Other Wildcards
 
+We appreciate the contributions of these amazing creators who made wildcards:
+
 - ~~(Wildcards Vision Background Around the World)~~
   ~~https://civitai.com/models/934903~~
 - (Chara Creator Wildcards)
