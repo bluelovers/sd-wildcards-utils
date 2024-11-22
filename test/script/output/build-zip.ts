@@ -2,7 +2,7 @@ import JSZip from 'jszip';
 import Bluebird from 'bluebird';
 import { fixedJSZipDate } from 'jszip-fixed-date';
 import { join, basename } from 'path';
-import { __ROOT_DATA, __ROOT_OUTPUT_WILDCARDS } from '../../__root';
+import { __ROOT_DATA, __ROOT_OUTPUT, __ROOT_OUTPUT_WILDCARDS } from '../../__root';
 import { readFile, outputFile } from 'fs-extra';
 import crypto from 'crypto';
 import { consoleLogger } from 'debug-color2/logger';
@@ -15,8 +15,9 @@ export default Bluebird.resolve()
 		let zip = new JSZip();
 
 		zip_add_file(zip, join(__ROOT_OUTPUT_WILDCARDS, 'lazy-wildcards.yaml'));
+		zip_add_file(zip, join(__ROOT_OUTPUT, 'README.md'));
 
-		zip_add_file(zip, join(__ROOT_DATA, 'others/fake-dummy-wildcards.yaml'));
+		// zip_add_file(zip, join(__ROOT_DATA, 'others/fake-dummy-wildcards.yaml'));
 
 		zip_add_file(zip, join(__ROOT_DATA, 'others/billions_of_all_in_one.yaml'));
 
