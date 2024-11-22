@@ -71,14 +71,17 @@ Learn the syntax
 
 We appreciate the contributions of these amazing creators who made wildcards:
 
-- ~~https://gist.github.com/bluelovers/5dd82472d21cbaa7203b36c34612434b~~
 - (civitai user: C0rn_Fl4k3s)
   https://civitai.com/user/C0rn_Fl4k3s/models
 - (Billions of Wildcards on civitai)
   https://civitai.com/models/138970/billions-of-wildcards-character-vehicle-scenery-building-creature-scifi-fantasy-magic-all-you-want
+
+# Other Wildcards
+
 - ~~(Wildcards Vision Background Around the World)~~
   ~~https://civitai.com/models/934903~~
 - (Chara Creator Wildcards)
   https://civitai.com/models/863333
 - (Misc Wildcards Vault)
   https://civitai.com/models/272654?modelVersionId=317312
+
