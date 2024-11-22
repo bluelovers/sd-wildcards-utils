@@ -270,8 +270,6 @@ lazy-wildcards:
       - hair spread out
       - big hair
       - loose hair strand
-      - >-
-        {1-3$$__chara_creator/hair_morphs/*__}
     haircuts-multis:
       - >-
         {1-4$$ hair,$$__person/regular/haircuts-*__} hair
@@ -303,7 +301,6 @@ lazy-wildcards:
       - >-
         Shaggy Mullet Hair Style,shaggyMullet,shaggyMullet hair,(disheveled,messy hair,thinned hair)
       - rolled lob hairstyle,elegant_finish
-      - __chara_creator/hair_form/sequencer_form__
     hair-bald:
       - >-
         (Completely bald,bald,bald girl:1.3)
@@ -1626,7 +1623,7 @@ lazy-wildcards:
             __lazy-wildcards/subject/style-theme/NeoFalmerWorld/style__{,__lazy-wildcards/subject/style-theme/NeoFalmerWorld/style-adj__|}
         main-bg-bathroom:
           - >-
-            __lazy-wildcards/subject/env-bg-interior/bathroom/prompts__,chitin {2-$$,chitin $$__lazy-wildcards/subject/env-bg-interior/bathroom/main-object__}{,chitin {1-$$,chitin $$__lazy-wildcards/subject/env-bg-interior/bathroom/env-object__}|}
+            __lazy-wildcards/subject/env-bg-interior/bathroom/prompts__,chitin {2-$$,chitin $$__lazy-wildcards/subject/env-bg-interior/bathroom/env-main__}{,chitin {1-$$,chitin $$__lazy-wildcards/subject/env-bg-interior/bathroom/env-elem-object__}|}
         costume:
           - chitin armoured dress
         utils:
@@ -2690,10 +2687,6 @@ lazy-wildcards:
           - __cornf-furniture/prompt-full__
           - __cornf-*/prompt-object__
           - __cornf-house/prompt-full__
-      model-navi_atlas:
-        prompts:
-          - __navi_atlas/generator/urban__
-          - __navi_atlas/generator/lands__
       model-Bo:
         prompts:
           - __Bo/constructions/random__
@@ -6657,12 +6650,13 @@ lazy-wildcards:
       bathroom:
         prompts:
           - >-
-            {99$$ with $$__lazy-wildcards/subject/env-bg-interior/bathroom/main-object__},{1-$$__lazy-wildcards/subject/env-bg-interior/bathroom/env-object__},{1-$$__lazy-wildcards/subject/env-bg-interior/bathroom/env__}{,{1-$$__lazy-wildcards/subject/env-bg-interior/bathroom/env-bg__}|}
-        main-object:
+            {1-$$ with $$__lazy-wildcards/subject/env-bg-interior/bathroom/env-main__},{1-$$__lazy-wildcards/subject/env-bg-interior/bathroom/env-elem-object__},{1-$$__lazy-wildcards/subject/env-bg-interior/bathroom/env__}{,{1-$$__lazy-wildcards/subject/env-bg-interior/bathroom/env-bg__}|}
+        env-main:
           - bath
           - a sink
           - bathroom
-        env-object:
+          - bathtub
+        env-elem-object:
           - toilet
           - handrails
           - faucet
@@ -6672,6 +6666,8 @@ lazy-wildcards:
         env:
           - >-
             {1-$$soap|soap bottle}
+          - bath stool
+          - sponge
         env-bg:
           - >-
             {1-$$tiles|tile floor|tile wall}
@@ -7969,7 +7965,6 @@ lazy-wildcards:
         prompts:
           - >-
             (idcard,id_card,name tag){,lanyard|}
-      # __chara_creator/hair_form/acessories/*__
       hair_ornament:
         prompts:
           - >-
@@ -8304,6 +8299,10 @@ lazy-wildcards:
         env-bg:
           - bathroom
           - bathtub
+        env:
+          - soap bottle
+          - soap
+          - bar soap
       Jetpack:
         prompts:
           - >-
@@ -10997,6 +10996,35 @@ lazy-wildcards:
         prompts:
           - >-
             {1-$$seductive smile|seductive|voluptuous}
+    action-pose-bathing:
+      showering:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/action-pose-bathing/showering/action-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/action-pose-bathing/showering/action__}|}{,{1-$$__lazy-wildcards/subject/action-pose-bathing/showering/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/action-pose-bathing/showering/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/action-pose-bathing/showering/env__}|}{,{1-$$__lazy-wildcards/subject/action-pose-bathing/showering/style__}|}
+        action-main:
+          - In the shower,intheshower,water spraying,showering,bathing
+        action:
+          - water masturbation
+          - shower selfie
+        costume-weapon:
+          - holding a shower head,holding shower head
+          - shower head,shower spray
+        costume-elem:
+          - shower cap
+          - >-
+            {1-$$wet|wet hair|washing hair}
+          - __lazy-wildcards/subject/costume-elem/soap_bubbles/prompts__
+          - steam censor
+          - clothed bath,see-through clothes
+        env:
+          - shower gel
+          - shower curtain
+        env-bg:
+          - shower \(place\)
+          - __lazy-wildcards/subject/env-bg-interior/bathroom/prompts__
+        style:
+          - __lazy-wildcards/utils/view__
+          - looking down at viewer
     action-pose:
       # https://civitai.com/models/95708/fly-4-in-1-concept?modelVersionId=102202
       floating:
