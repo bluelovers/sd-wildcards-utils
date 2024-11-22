@@ -65,7 +65,7 @@ Learn the syntax
 
 # Node.js
 
-- [sd-wildcards-utils](https://github.com/bluelovers/sd-wildcards-utils/tree/dev) - Parse Stable Diffusion wildcards source to a YAML object.
+- [sd-wildcards-utils](https://www.npmjs.com/package/sd-wildcards-utils) - Parse Stable Diffusion wildcards source to a YAML object.
 
 # Credits (Requirement to Install)
 
