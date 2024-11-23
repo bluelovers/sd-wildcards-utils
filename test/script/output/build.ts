@@ -50,7 +50,7 @@ export default Bluebird.map([
 
 		return mergeFindSingleRoots(doc, ls)
 	})
-	.then(json =>
+	.then(async (json) =>
 {
 	consoleLogger.success(`create`, join(__ROOT_OUTPUT_WILDCARDS, 'lazy-wildcards.yaml'));
 
