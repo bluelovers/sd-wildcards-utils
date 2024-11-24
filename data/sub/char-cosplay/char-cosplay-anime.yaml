@@ -231,4 +231,23 @@ lazy-wildcards:
           - black thighhighs
         expressions:
           - cool_expression
+    rakuen_tsuihou:
+      # https://civitai.com/models/202928/angela-balzac-expelled-from-paradise
+      # https://civitai.com/models/72156/costumedeva-battle-suitangela-balzac-cosplay-cosplay
+      # https://civitai.com/models/974634/angela-balzac-rakuen-tsuihou?modelVersionId=1091388
+      # https://danbooru.donmai.us/posts?tags=rakuen_tsuihou+&z=5
+      angela_balzac:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/rakuen_tsuihou/angela_balzac/main-trigger-words__
+            {, {1-$$__lazy-wildcards/cosplay-char/rakuen_tsuihou/angela_balzac/costume-ethnicity__}|}
+            , {1-$$__lazy-wildcards/cosplay-char/rakuen_tsuihou/angela_balzac/costume__}
+        main-trigger-words:
+          - angela balzac, angelabalzacRT, rakuen_tsuihou, Expelled from Paradise
+        costume-ethnicity:
+          - long hair, bangs, twintails, low twintails, hair ornament
+          - blue eyes
+          - blonde hair
+        costume:
+          - deva battle suit, gloves, bare shoulders, black gloves, elbow gloves, armor, leotard, covered navel, turtleneck, headgear, halterneck, highleg, highleg leotard, headgear
 
