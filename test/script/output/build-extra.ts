@@ -6,11 +6,18 @@ import { readFile } from 'node:fs/promises';
 import parseWildcardsYaml, { defaultOptionsStringifyMinify, IWildcardsYAMLDocument, mergeFindSingleRoots, stringifyWildcardsYamlData } from '../../../src';
 import { outputFile } from 'fs-extra';
 import { consoleLogger } from 'debug-color2/logger';
+// @ts-ignore
+import { globSync } from 'fs';
 
 export default Bluebird.map([
 	join(__ROOT_OUTPUT_WILDCARDS, 'lazy-wildcards.yaml'),
-	join(__ROOT_DATA, 'others/Extra/char.yaml'),
-	join(__ROOT_DATA, 'others/Extra/env-bg-anything.yaml'),
+	// join(__ROOT_DATA, 'others/Extra/char.yaml'),
+	// join(__ROOT_DATA, 'others/Extra/env-bg-anything.yaml'),
+	...globSync([
+		'others/Extra/*.yaml',
+	], {
+		cwd: __ROOT_DATA,
+	}),
 ], (file: any) => {
 	return readFile(file)
 		.then(data => parseWildcardsYaml(data, {
@@ -28,5 +35,5 @@ export default Bluebird.map([
 		.then(() => consoleLogger.info('Copied lazy-wildcards.yaml to stable-diffusion-webui'))
 			.catch(e => consoleLogger.error(String(e)))
 		;
-});
+}).catch(e => consoleLogger.error(String(e)));
 
