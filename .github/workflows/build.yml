@@ -99,7 +99,7 @@ jobs:
           BRANCH: main
           FOLDER: output
           SKIP_EMPTY_COMMITS: true
-          MESSAGE: "build: update build"
+          MESSAGE: "build: update build [skip ci]"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           COMMIT_NAME: "GitHub Action"
           COMMIT_EMAIL: "action@github.com"
