@@ -1,0 +1,81 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      # 下水道
+      # https://civitai.com/models/858481/sewers?modelVersionId=960511
+      tunnel-sewer:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/tunnel-sewer/env-bg-main__
+            {, ({1-$$__lazy-wildcards/subject/env-bg/tunnel-sewer/env-bg__})|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/tunnel-sewer/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/tunnel-sewer/env-creatures__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/tunnel-sewer/style__}|}
+        env-bg-main:
+          - sewer, sewers
+        env-bg:
+          - sewer_tunnel
+          - dark_tunnel
+          - flooded_sewers
+          - ancient_sewers
+          - brick_tunnels, stone walls
+        env:
+          - damp_environment, damp_atmosphere
+          - dim_green_light
+          - flickering_lights
+          - sewer_grates
+          - rusty_grate
+          - manhole_cover
+          - floating_trash, debris_float
+          - murky_water, polluted_water
+          - knee_deep_water
+          - maintenance_tools
+          - overgrown_moss
+          - low_ceiling
+          - water
+        env-creatures:
+          - sewer_monster
+          - rats_swarm
+          - tentacle_monster
+          - giant rats
+        style:
+          - urban_grime
+          - lurking_in_shadows
+          - claustrophobic_space
+          - creepy_noise
+          - subsurface scattering
+          - medieval
+          - fantasy
+      # https://civitai.com/models/404805/light-tunnel-or-rainbow-tunnel?modelVersionId=451343
+      light_tunnel:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/light_tunnel/env-bg-main__
+            {, {1-2$$__lazy-wildcards/subject/env-bg/light_tunnel/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/light_tunnel/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/light_tunnel/style__}|}
+        env-bg-main:
+          - Light Tunnel
+        env-bg:
+          - Rainbow Tunnel
+          - Star Tunnel
+          - Spiralen Tunnel
+          - >-
+            {LED|RGB|Christmas} Light Tunnel
+        env:
+          - stairs
+          - lighting rounded
+          - walkway
+          - blooming stars
+          - luminescent petals
+        style:
+          - colorful
+          - abstract
+          - reflection
+          - Futuristic
+          - Dramatic
+          - otherworldly fragrance
+          - glowwave
+          - glowing neon
+          - silhouette
+

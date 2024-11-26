@@ -1,0 +1,19 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      # 雪梨歌劇院
+      # https://civitai.com/models/624683/sydney-opera-house-bennelong-point-in-sydney-australia?modelVersionId=698738
+      sydney_opera_house:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/sydney_opera_house/env-bg__{0.3:::{1.2|1.3|1.4}|:1.1})
+            {, {1-$$__lazy-wildcards/subject/env-bg/sydney_opera_house/env__}|}
+        env-bg:
+          - Sydney Opera House
+        env:
+          - sky, blue sky
+          - cloud
+          - water, ocean, reflection
+          - watercraft, ship, boat
+          - night sky
+
