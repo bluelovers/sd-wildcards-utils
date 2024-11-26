@@ -292,4 +292,51 @@ lazy-wildcards:
           - green_living
           - storybook_design
           - __lazy-wildcards/utils/scenery-no-humans__
+      # https://civitai.com/models/438473/desert-buildings-isometric-sdxl-and-sd15?modelVersionId=488424
+      desert_buildings:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-architectural/desert_buildings/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-3$$__lazy-wildcards/subject/env-bg-architectural/desert_buildings/env-bg-buildings__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/desert_buildings/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/desert_buildings/env__}|}
+        env-bg-main:
+          - desert_buildings, IsometricDesert
+        env-bg-buildings:
+          - middle_eastern_buildings, ornamental_tiles
+          - north_african_buildings
+          - bustling_market
+          - brick_houses
+          - futuristic_desert_buildings
+          - desert_religious_buildings
+          - minaret_tower
+        env-bg:
+          - desert_sunrise_background
+          - green_oasis_integration
+          - village
+          - desert
+        env:
+          - ornamental_tiles
+          - arched_windows
+          - courtyard_fountain
+          - narrow_alleyways
+          - wooden_lattice
+          - staircase_layout, stairs
+          - desert_mountain_backdrop
+          - solar_panel_roofs
+          - glass_facades
+          - high_tech_structures
+          - domed_roof, dome
+          - carved_stone_walls
+          - wooden door, wooden gate
+          - carpet, rug
+          - barrel, pot, crate
+          - fruit
+          - palm tree
+          - platform
+          - __lazy-wildcards/utils/color-base__ cloth
+          - ladder
+          - wooden chair
+          - sign
+          - cactus
 
