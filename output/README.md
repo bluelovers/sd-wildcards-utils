@@ -45,8 +45,8 @@ __lazy-wildcards/subject/moment/random/prompts__
   https://github.com/bluelovers/stable-diffusion-webui/tree/dev-bluelovers
 - sd-dynamic-prompts (branch: pr/infotext-001)
   https://github.com/bluelovers/sd-dynamic-prompts/tree/pr/infotext-001
-  _
-  read https://civitai.com/articles/6313/unofficial-dynamicprompts-bugfix
+- *dynamicprompts (recommend install this bugfix for unlock full power)*
+  https://civitai.com/articles/6313/unofficial-dynamicprompts-bugfix
 - sd-webui-agent-scheduler (branch: patch-1)
   https://github.com/bluelovers/sd-webui-agent-scheduler/tree/patch-1
 - sd-webui-bilingual-localization
@@ -54,18 +54,16 @@ __lazy-wildcards/subject/moment/random/prompts__
 
 # Extension
 
-- https://github.com/bluelovers/sd-webui-pnginfo-beautify
-- https://github.com/bluelovers/sd-webui-pnginfo-injection
+- make pnginfo readable
+  https://github.com/bluelovers/sd-webui-pnginfo-beautify
+- *recommend install this if u want upload image to civitai*
+  https://github.com/bluelovers/sd-webui-pnginfo-injection
 
 # SYNTAX
 
 Learn the syntax
 
 - https://github.com/adieyal/sd-dynamic-prompts/blob/main/docs/SYNTAX.md
-
-# Node.js
-
-- [sd-wildcards-utils](https://www.npmjs.com/package/sd-wildcards-utils) - Parse Stable Diffusion wildcards source to a YAML object.
 
 # Credits (Requirement to Install)
 
@@ -87,3 +85,6 @@ We appreciate the contributions of these amazing creators who made wildcards:
 - (Misc Wildcards Vault)
   https://civitai.com/models/272654?modelVersionId=317312
 
+# Node.js
+
+- [sd-wildcards-utils](https://www.npmjs.com/package/sd-wildcards-utils) - Parse Stable Diffusion wildcards source to a YAML object.
