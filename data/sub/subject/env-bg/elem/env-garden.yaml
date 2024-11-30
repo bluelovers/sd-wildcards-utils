@@ -1,0 +1,90 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      # 鯉魚池
+      koi_pond:
+        prompts:
+          - koi pond
+      garden:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/garden/env-bg-main__
+            {, {1-3$$__lazy-wildcards/subject/env-bg/garden-*/env-bg*__}|}
+            {, {1-6$$__lazy-wildcards/subject/env-bg/garden-*/env__}|}
+        env-bg-main:
+          - garden
+      garden-japanese:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/garden-japanese/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/garden-japanese/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/garden-japanese/env__}|}
+        env-bg-main:
+          - japanese_garden
+        env-bg:
+          - zen_garden
+          - rock_garden
+          - tatami_room_view
+        env:
+          - stone_lantern
+          - __lazy-wildcards/subject/env-bg/koi_pond/prompts__
+          - bamboo_forest
+          - wooden_bridge
+      garden-english:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/garden-english/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/garden-english/env__}|}
+        env-bg-main:
+          - english_garden
+        env:
+          - rose_archway
+          - hedge_maze
+          - stone_fountain
+          - wooden_gazebo
+          - well_trimmed_lawn
+          - vines_on_gazebo
+      # 地中海庭院
+      garden-mediterranean_courtyard:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/garden-mediterranean_courtyard/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/garden-mediterranean_courtyard/env__}|}
+        env-bg-main:
+          - Mediterranean Courtyard
+        env:
+          - terracotta_tiles
+          - olive_trees
+          - iron_railing
+          - lavender_bush
+          - outdoor_furniture
+          - bright_sunlight
+      garden-modern_courtyard:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/garden-modern_courtyard/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/garden-modern_courtyard/env__}|}
+        env-bg-main:
+          - modern_courtyard
+        env:
+          - glass_walls
+          - geometric_paving
+          - garden_lighting
+          - planted_wall
+          - small_pool
+          - minimalist_design
+      garden-fantasy_garden:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/garden-fantasy_garden/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/garden-fantasy_garden/env__}|}
+        env-bg-main:
+          - fantasy_garden
+        env:
+          - glowing_plants
+          - floating_rocks
+          - enchanted_fountain
+          - misty_walkway
+          - gothic_architecture
+          - ethereal_lighting
+

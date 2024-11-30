@@ -226,4 +226,121 @@ lazy-wildcards:
           - spread legs
         expressions:
           - slight smile
+    sakusei_byoutou:
+      # https://civitai.com/models/412400/sakusei-byoutou-or-nurses?modelVersionId=459640
+      nurses:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char-hentai/sakusei_byoutou/nurses/main-trigger-words__
+            ,(__lazy-wildcards/cosplay-char-hentai/sakusei_byoutou/nurses/costume-ethnicity__)
+            {,{1-2$$__lazy-wildcards/cosplay-char-hentai/sakusei_byoutou/nurses/costume__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char-hentai/sakusei_byoutou/nurses/costume-weapon__}|}
+            {,{1-3$$__lazy-wildcards/cosplay-char-hentai/sakusei_byoutou/nurses/expressions__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char-hentai/sakusei_byoutou/nurses/costume-elem__}|}
+            {,{1-3$$__lazy-wildcards/cosplay-char-hentai/sakusei_byoutou/nurses/env-bg__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char-hentai/sakusei_byoutou/nurses/env__}|}
+            {,{1-3$$__lazy-wildcards/cosplay-char-hentai/sakusei_byoutou/nurses/action__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char-hentai/sakusei_byoutou/nurses/style__}|}
+        main-trigger-words:
+          - sakusei byoutou, sakusei_byoutou_the_animation, breasts
+        costume:
+          - (nurse cap, skirt, thighs:1.2)
+          - white lab coat, ribbed sweater, black turtleneck, oversized clothes, open clothes, sleeves past fingers, sleeves past wrists, long sleeves
+          - elbow gloves, black gloves, black legwear
+          - hospital gown
+          - __lazy-wildcards/subject/costume/nurse_old_style/prompts__
+        costume-ethnicity:
+          - tachibana \(sakusei byoutou\), blue eyes, short hair, blue hair, bob cut
+          - kurokawa \(sakusei byoutou\), red eyes, short hair, light purple hair
+          - yamaguchi \(sakusei byoutou\), red eyes, long hair, light blonde hair
+          - hiramatsu \(sakusei byoutou\), purple eyes, short hair, black hair, ponytail, bangs, empty eyes
+          - mochizuki \(sakusei byoutou\), yellow eyes, long hair, brown hair, bangs
+          - numajiri \(sakusei byoutou\), dark blue eyes,medium hair,side bob cut,sidelocks,hair over one eye,hair behind ear,orange hair,red hair
+          - kiritani \(sakusei byoutou\), purple eyes,tsurime,long hair,very long hair,black hair
+          - amamiya \(sakusei byoutou\), purple eyes, wavy hair, very long hair, orange hair, bangs, crazy eyes
+          - ootsuka \(sakusei byoutou\), androgynous, red eyes, manly, short hair, red hair, bob cut, side ponytail, short ponytail, blunt bangs, hair ribbon
+          - tako tendou \(sakusei byoutou\), black hair, medium hair, messy hair, black eyes, hair between eyes, constricted pupils, crazy eyes
+        costume-weapon:
+          - power tool
+          - holding folder
+          - syringe
+          - emergency medical equipment
+          - stretcher
+        costume-elem:
+          - >-
+            {1-$$animal ears|cat ears|cat tail}
+          - bandages
+          - doctor
+          - nurse
+          - surgical mask, mouth mask
+          - >-
+            {1-$$piercing|tongue piercing}
+          - shaded face
+          - >-
+            {1-$$panties|panties aside}
+          - underwear
+          - sweatdrop
+          - wide hips
+          - >-
+            {1-$$pants pull|pants down}
+          - tattoo
+          - body writing
+          - garter straps
+          - crotch seam
+          - oxygen_mask
+          - school_nurse
+          - white nurse
+          - __lazy-wildcards/subject/costume-elem/button/prompts__
+          - >-
+            {1-$$cleavage|cleavage cutout|breasts out|breast press}
+          - >-
+            open {1-$$, open $$clothes|shirt|coat}
+        env:
+          - keypad
+          - folder
+          - cup, pill
+          - juices
+          - __lazy-wildcards/subject/costume-elem/cum/prompts__
+          - patient_gurney, wheeled stretcher
+          - IV_drip
+          - emergency_lights
+          - defibrillator
+          - window
+          - white wall
+          - >-
+            table{, {information counter|service counter|cashiers counter|reception counter|nurse counter}|}
+        env-bg:
+          - hospital
+          - hospital_room, hospital bed, white bed, white bed sheet
+          - ambulance_interior
+          - emergency_room
+          - hospital_corridor, hallways
+          - waiting_room
+          - pharmacy, medications
+          - nurse_station
+          - ambulance_bay, outdoor, ambulances
+          - hospital_cafeteria, dining area
+          - hospital morgue, funeral home
+          - hospital lobby
+        action:
+          - denki_anma
+          - crotch kick
+          - mask pull
+          - kemonomimi_mode, paw pose
+          - reverse rape
+          - semen extraction
+          - eat meals
+        style:
+          - femdom
+          - hentai
+          - presenting
+          - wet
+          - see-through
+        expressions:
+          - tsundere
+          - crazy, crazy girl
+          - angry, angry eyes, angry face
+          - >-
+            tears, {crying|tears of pleasure}
+          - evil face
 

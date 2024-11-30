@@ -1,0 +1,34 @@
+lazy-wildcards:
+  utils-dataset:
+    costume:
+      prompts:
+        - >-
+          {1-2$$__lazy-wildcards/utils-dataset/costume/costume__}
+          {, {1-3$$__lazy-wildcards/utils-dataset/costume/costume-elem__}|}
+      prompts-color:
+        - >-
+          __lazy-wildcards/utils-dataset/costume/prompts__
+          {, {__lazy-wildcards/utils/costume-color-theme-multi__|__lazy-wildcards/utils/costume-color-theme__}|}
+      costume:
+        - __lazy-wildcards/subject/costume/*/prompts__
+        - __lazy-wildcards/subject/costume/sfw-civitai/prompts__
+        - __lazy-wildcards/cosplay-*/*/*/prompts__
+        - __cf-*/prompt-costume__
+        - __Bo/chars/char-*/female/bocloths__
+        - __Bo/clothings/*/female-attire__
+      costume-ethnicity:
+        - __cf-*/ethnicity__
+        - __lazy-wildcards/subject/ethnicity-*/*/prompts__
+        - __lazy-wildcards/subject/costume-ethnicity-*/*/prompts__
+        - __lazy-wildcards/*/*/*/costume-ethnicity*__
+        - __lazy-wildcards/*/*/*/ethnicity*__
+      costume-elem:
+        - >-
+          {1-3$$__lazy-wildcards/subject/costume-*/*/prompts__}
+        - >-
+          {1-6$$__lazy-wildcards/subject/costume-elem*/*/prompts__}
+        - >-
+          {1-6$$__lazy-wildcards/*/*/*/costume*__}
+        - >-
+          {1-3$$__lazy-wildcards/utils-dataset/costume/costume-ethnicity__}
+

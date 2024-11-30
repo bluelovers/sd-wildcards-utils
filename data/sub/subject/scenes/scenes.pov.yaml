@@ -61,4 +61,31 @@ lazy-wildcards:
             {1-$$touchscreen_interface|touch_control|cyber_touchscreen|interactive_hologram}
           - >-
             {1-$$digital_overlay|cyber_visuals|neon_ui}
+      # https://civitai.com/models/986434?modelVersionId=1107786
+      car_wash_breasts:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/scenes-pov/car_wash_breasts/main-trigger-words__
+            , __lazy-wildcards/subject/scenes-pov/car_wash_breasts/action-main__
+            {, {1-$$__lazy-wildcards/subject/scenes-pov/car_wash_breasts/action__}|}
+            {, {1-$$__lazy-wildcards/subject/scenes-pov/car_wash_breasts/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/scenes-pov/car_wash_breasts/env__}|}
+        main-trigger-words:
+          - bcw, washing vehicle, car wash \(place\), vehicle interior
+        action-main:
+          - breasts on glass, leaning forward
+        action:
+          - against glass
+          - holding sponge
+          - hand on glass
+        costume-elem:
+          - no bra
+          - covered nipples
+          - navel
+          - see-through
+          - swimsuit, bikini
+          - sweat
+        env:
+          - soap bubbles
+          - wet
 

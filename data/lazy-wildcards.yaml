@@ -17,9 +17,6 @@ lazy-wildcards:
       - >-
         {__lazy-wildcards/utils/costume-color-theme__,|}
         __lazy-wildcards/prompts/costume__
-    pose:
-      - >-
-        {__lazy-wildcards/char/pose/pose-anything__|__lazy-wildcards/char/pose/pose-nsfw__}
     hair:
       - >-
         __lazy-wildcards/char/hair-length__
@@ -63,12 +60,12 @@ lazy-wildcards:
       face:
         - >-
           __lazy-wildcards/prompts/dataset/char-base__,
-          {__lazy-wildcards/prompts/pose__,|}
+          {__lazy-wildcards/dataset/action__,|}
           __lazy-wildcards/dataset/background__
       face-simple:
         - >-
           __lazy-wildcards/prompts/dataset/char-base__,
-          {__lazy-wildcards/prompts/pose__,|}
+          {__lazy-wildcards/dataset/action__,|}
           __lazy-wildcards/dataset/background-color__,
       char-nude:
         - >-
@@ -82,12 +79,12 @@ lazy-wildcards:
           {0.3::__lazy-wildcards/char/eyeliner-color__,|}
           {0.3::__lazy-wildcards/char/eyeshadow-color__,|}
           {0.1::__lazy-wildcards/char/expressions__|0.3::__lazy-wildcards/char/expressions__2|},
-          {__lazy-wildcards/prompts/pose__,|}
+          {__lazy-wildcards/dataset/action__,|}
           __lazy-wildcards/dataset/background-color__,
       cover:
         - >-
           (__lazy-wildcards/subject/style-book/shared-cover/prompts__),
           __lazy-wildcards/prompts/dataset/char-base__,
-          {__lazy-wildcards/subject/style-book/*/action-pose__|__lazy-wildcards/prompts/pose__},
+          {__lazy-wildcards/subject/style-book/*/action-pose__|__lazy-wildcards/dataset/action__},
           (__lazy-wildcards/dataset/background__:1.25)
 
