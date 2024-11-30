@@ -15,9 +15,6 @@ lazy-wildcards:
         __lazy-wildcards/utils/costume-color-theme__{,__lazy-wildcards/prompts/costume__|}
       - >-
         {__lazy-wildcards/utils/costume-color-theme__,|}__lazy-wildcards/prompts/costume__
-    pose:
-      - >-
-        {__lazy-wildcards/char/pose/pose-anything__|__lazy-wildcards/char/pose/pose-nsfw__}
     hair:
       - >-
         __lazy-wildcards/char/hair-length__{,__lazy-wildcards/char/haircuts-multis__|}{,__lazy-wildcards/char/hair-style-multi__|}{,__lazy-wildcards/subject/costume-elem-accessories/hair_ornament/prompts__|}
@@ -42,16 +39,16 @@ lazy-wildcards:
           __lazy-wildcards/dataset/char-view__,1girl,__lazy-wildcards/prompts/eyes__,__lazy-wildcards/prompts/hair-all__,__lazy-wildcards/prompts/costume-with-color__,__lazy-wildcards/prompts/mouth__,{0.1::__lazy-wildcards/char/expressions__|0.3::__lazy-wildcards/char/expressions2__|}
       face:
         - >-
-          __lazy-wildcards/prompts/dataset/char-base__,{__lazy-wildcards/prompts/pose__,|}__lazy-wildcards/dataset/background__
+          __lazy-wildcards/prompts/dataset/char-base__,{__lazy-wildcards/dataset/action__,|}__lazy-wildcards/dataset/background__
       face-simple:
         - >-
-          __lazy-wildcards/prompts/dataset/char-base__,{__lazy-wildcards/prompts/pose__,|}__lazy-wildcards/dataset/background-color__
+          __lazy-wildcards/prompts/dataset/char-base__,{__lazy-wildcards/dataset/action__,|}__lazy-wildcards/dataset/background-color__
       char-nude:
         - >-
-          __lazy-wildcards/dataset/char-view__,1girl,{0.3::(__lazy-wildcards/char/mouth__:1.4),|}(__lazy-wildcards/char/eyecolor__),__lazy-wildcards/prompts/hair-all__,__lazy-wildcards/subject/costume-anything/nsfw-nude/prompts__,{0.3::__lazy-wildcards/char/lips-color__,|}{0.3::__lazy-wildcards/char/eyeliner-color__,|}{0.3::__lazy-wildcards/char/eyeshadow-color__,|}{0.1::__lazy-wildcards/char/expressions__|0.3::__lazy-wildcards/char/expressions__2|},{__lazy-wildcards/prompts/pose__,|}__lazy-wildcards/dataset/background-color__
+          __lazy-wildcards/dataset/char-view__,1girl,{0.3::(__lazy-wildcards/char/mouth__:1.4),|}(__lazy-wildcards/char/eyecolor__),__lazy-wildcards/prompts/hair-all__,__lazy-wildcards/subject/costume-anything/nsfw-nude/prompts__,{0.3::__lazy-wildcards/char/lips-color__,|}{0.3::__lazy-wildcards/char/eyeliner-color__,|}{0.3::__lazy-wildcards/char/eyeshadow-color__,|}{0.1::__lazy-wildcards/char/expressions__|0.3::__lazy-wildcards/char/expressions__2|},{__lazy-wildcards/dataset/action__,|}__lazy-wildcards/dataset/background-color__
       cover:
         - >-
-          (__lazy-wildcards/subject/style-book/shared-cover/prompts__),__lazy-wildcards/prompts/dataset/char-base__,{__lazy-wildcards/subject/style-book/*/action-pose__|__lazy-wildcards/prompts/pose__},(__lazy-wildcards/dataset/background__:1.25)
+          (__lazy-wildcards/subject/style-book/shared-cover/prompts__),__lazy-wildcards/prompts/dataset/char-base__,{__lazy-wildcards/subject/style-book/*/action-pose__|__lazy-wildcards/dataset/action__},(__lazy-wildcards/dataset/background__:1.25)
     showcase:
       - |-
         female fifty-something,pear-shaped,inuit,golden eyes,large ears,unusual face shape,sandy blonde voluminous curls hair,curiosity wearing sleeveless jumpsuit,cut-out lingerie set,fishing tackle bag,playing with necklace,playing with a necklace with a seductive glance,adding an element of elegance and allure,sunset lighting,the warm,golden glow of a sunset,adding a romantic and enchanting feel to the scene,a vibrant street market,with vendors showcasing their unique crafts and products,lecture hall,cutting board,shoe rack,dryer,carpet,travertine stone,rya knots tapestry,bioluminescent organisms,pendant lights,torn clothes,sexy body,wet,drunk,bottles fallen on the floor,unconscious
@@ -75,7 +72,7 @@ lazy-wildcards:
       - |-
         1girl,solo,under boob,up skirt,downblouse,cleavage,(from below,looking down,ass visible through thighs:1.2),ceiling,(peek panties,panty peek,pussy peek),selfie pose,squatting,crouching,__lazy-wildcards/prompts/hair__,__lazy-wildcards/prompts/eyes__,__lazy-wildcards/dataset/background__,(flower,falling petals,petals on liquid,petals,cherry blossom:0.8)
       - |-
-        upper_body,1girl,breasts,collarbone,covered_mouth,gag,gagged,improvised_gag,mask,mouth_mask,surgical_mask,solo,forehead,(shirt:1.2),bar,underwear,cleavage,(asymmetrical breasts,cleavage_overflow:1.6),({1-$$Taretiti|saggy breasts|drooping breasts|soft breasts|sagging breasts|hanging breasts}:1.2),__lazy-wildcards/utils/costume-color-theme__,__lazy-wildcards/prompts/hair__,__lazy-wildcards/prompts/eyes__,__lazy-wildcards/dataset/background-color__,(flower,falling petals,petals on liquid,petals,cherry blossom:0.8),{__lazy-wildcards/prompts/pose__}
+        upper_body,1girl,breasts,collarbone,covered_mouth,gag,gagged,improvised_gag,mask,mouth_mask,surgical_mask,solo,forehead,(shirt:1.2),bar,underwear,cleavage,(asymmetrical breasts,cleavage_overflow:1.6),({1-$$Taretiti|saggy breasts|drooping breasts|soft breasts|sagging breasts|hanging breasts}:1.2),__lazy-wildcards/utils/costume-color-theme__,__lazy-wildcards/prompts/hair__,__lazy-wildcards/prompts/eyes__,__lazy-wildcards/dataset/background-color__,(flower,falling petals,petals on liquid,petals,cherry blossom:0.8),{__lazy-wildcards/dataset/action__}
       - >-
         (silhouette:1.2),jianying,1girl,nude,(in river),splash,({sun rays,sunset|moonlight|dawn|twilight} background,low horizon),backlighting,contour light,body contour light,light particles,__lazy-wildcards/prompts/hair__,__lazy-wildcards/dataset/background-color__,(flower,falling petals,petals on liquid,petals,cherry blossom:0.8)
       - >-
@@ -304,68 +301,6 @@ lazy-wildcards:
     hair-bald:
       - >-
         (Completely bald,bald,bald girl:1.3)
-    pose:
-      pose-anything:
-        - __person/nsfw/poses__
-        - meditative pose
-        - covering mouth,hand over own mouth
-        - wakeupyawn,yawning,covering mouth
-        - wakeupstretch,stretching,arm behind head
-        - (bouquet,holding bouquet)
-        - (carrying one plate of food,carrying food)
-        - relaxing,doze off
-        - (taking a selfie in the mirror)
-        - fingernails,zombie pose
-        - paw pose
-        - hands inside pocket,hand in pocket,hands in pockets
-        - from behind,pelvis,butt crack,look at viewer
-        - head rest on hand,head_on_hand,head_rest
-        - breast rest on table
-        - leaning against motorcycle
-        - cigarette in mouth
-        - __lazy-wildcards/*/*/*/action*__
-        - holding a soccer
-        - walking away
-        - sitting on a table
-        - ass support,big butt,from behind,sitting_on_railing,sitting on object
-        - sitting_on_railing,sitting on object
-        - |-
-          (lightning from arms,lightning on arms,holding lightning),( lightning glare on palm,lightning glare from palm:1.6),(lightning bolt symbol on palm)
-      pose-bottom:
-        sitting:
-          - (yokozuwari)
-          - (cross-legged sitting,sitting with legs crossed)
-          - >-
-            {1-$$lotus position|meditative pose}
-          - wariza,sitting,w-sitting,hand between legs,between legs
-      pose-bottom-nsfw:
-        open-legs:
-          - >-
-            {1-$$spread legs|open legs}
-          - >-
-            {1-$$squatting|crouching|squatting cowgirl position}
-          - (straddle)
-      pose-nsfw:
-        - (one breast out,one breast slip,one_breast_out_of_clothes),unaligned_breasts,showing breast
-        - (downblouse,tank top,breasts_out,leaning forward,bent over)
-        - lifted by self,dress lift,from below
-        - lewd,sexy,erotic,alluring,ewitching,charming,mesmerizing,enchanting,voluptuous,sexy posing,Sex Position,hentai
-        - hand on own chest,grabbing herself breasts,grabbing own breasts,hands on own breasts,breast press,hand on tit
-        - squatting spread legs position,squatting,spread legs,crouching
-        - clothes lift,lifted by self,underboob
-        - bath,bathing,steam
-        - female masturbation
-        - open clothes,exhibitionism,public indecency,naked coat
-        - >-
-          downblouse,cleavage,ceiling,(peek panties,panty peek,pussy peek),selfie pose,squatting,crouching
-        - >-
-          {from behind|from side|from above|from below|},(in container,stuck,trash can,trashcan),garbage,trash,after sex,anus,ass wobble,pussy,cum in ass,beaten up,helpless
-        - __cof-sex-*/prompt-solo__
-        - __cof-sex-*/prompt-women__
-        - __cof-sex-*/prompt-mix__
-        - __cof-sex-*/prompt-all__
-        - __lazy-wildcards/subject/action-nsfw*/*/prompts__
-        - hands on thighs,nude,completely nude,barefoot,toes,toenails
     lips-color:
       - __mix-lazy-auto/color-anything__ lips
     mouth-style:
@@ -2361,6 +2296,29 @@ lazy-wildcards:
             {1-$$touchscreen_interface|touch_control|cyber_touchscreen|interactive_hologram}
           - >-
             {1-$$digital_overlay|cyber_visuals|neon_ui}
+      # https://civitai.com/models/986434?modelVersionId=1107786
+      car_wash_breasts:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/scenes-pov/car_wash_breasts/main-trigger-words__,__lazy-wildcards/subject/scenes-pov/car_wash_breasts/action-main__{,{1-$$__lazy-wildcards/subject/scenes-pov/car_wash_breasts/action__}|}{,{1-$$__lazy-wildcards/subject/scenes-pov/car_wash_breasts/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/scenes-pov/car_wash_breasts/env__}|}
+        main-trigger-words:
+          - bcw,washing vehicle,car wash \(place\),vehicle interior
+        action-main:
+          - breasts on glass,leaning forward
+        action:
+          - against glass
+          - holding sponge
+          - hand on glass
+        costume-elem:
+          - no bra
+          - covered nipples
+          - navel
+          - see-through
+          - swimsuit,bikini
+          - sweat
+        env:
+          - soap bubbles
+          - wet
     moment:
       random:
         prompts:
@@ -3948,6 +3906,83 @@ lazy-wildcards:
           - shiny,reflective_surface,shimmering,glowing
           - wealth_display,overflowing
           - antique_objects
+      koi_pond:
+        prompts:
+          - koi pond
+      garden:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/garden/env-bg-main__{,{1-3$$__lazy-wildcards/subject/env-bg/garden-*/env-bg*__}|}{,{1-6$$__lazy-wildcards/subject/env-bg/garden-*/env__}|}
+        env-bg-main:
+          - garden
+      garden-japanese:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/garden-japanese/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg/garden-japanese/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/garden-japanese/env__}|}
+        env-bg-main:
+          - japanese_garden
+        env-bg:
+          - zen_garden
+          - rock_garden
+          - tatami_room_view
+        env:
+          - stone_lantern
+          - __lazy-wildcards/subject/env-bg/koi_pond/prompts__
+          - bamboo_forest
+          - wooden_bridge
+      garden-english:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/garden-english/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg/garden-english/env__}|}
+        env-bg-main:
+          - english_garden
+        env:
+          - rose_archway
+          - hedge_maze
+          - stone_fountain
+          - wooden_gazebo
+          - well_trimmed_lawn
+          - vines_on_gazebo
+      # 地中海庭院
+      garden-mediterranean_courtyard:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/garden-mediterranean_courtyard/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg/garden-mediterranean_courtyard/env__}|}
+        env-bg-main:
+          - Mediterranean Courtyard
+        env:
+          - terracotta_tiles
+          - olive_trees
+          - iron_railing
+          - lavender_bush
+          - outdoor_furniture
+          - bright_sunlight
+      garden-modern_courtyard:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/garden-modern_courtyard/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg/garden-modern_courtyard/env__}|}
+        env-bg-main:
+          - modern_courtyard
+        env:
+          - glass_walls
+          - geometric_paving
+          - garden_lighting
+          - planted_wall
+          - small_pool
+          - minimalist_design
+      garden-fantasy_garden:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/garden-fantasy_garden/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg/garden-fantasy_garden/env__}|}
+        env-bg-main:
+          - fantasy_garden
+        env:
+          - glowing_plants
+          - floating_rocks
+          - enchanted_fountain
+          - misty_walkway
+          - gothic_architecture
+          - ethereal_lighting
       outer_space:
         prompts:
           - >-
@@ -4947,6 +4982,10 @@ lazy-wildcards:
           - funeral_scene
           - gothic_style
           - burial_ritual
+      # 曬衣架
+      drying_rack:
+        prompts:
+          - drying rack
       gold-gemstone:
         prompts:
           - >-
@@ -7948,6 +7987,10 @@ lazy-wildcards:
           - surgical mask
           - ninja mask
           - mouth mask
+      # 越南斗笠 Non La
+      traditional_Vietnamese_conical_hat:
+        prompts:
+          - traditional Vietnamese conical hat,Non la
     costume:
       mecha-musume:
         prompts:
@@ -10409,6 +10452,77 @@ lazy-wildcards:
         style:
           - __lazy-wildcards/utils/view__
           - looking down at viewer
+    action-pose-anything:
+      pose-self-link:
+        prompts:
+          - >-
+            {1-5$$__lazy-wildcards/*/*/*/action*__}
+      pose-anything:
+        prompts:
+          - meditative pose
+          - covering mouth,hand over own mouth
+          - wakeupyawn,yawning,covering mouth
+          - wakeupstretch,stretching,arm behind head
+          - (bouquet,holding bouquet)
+          - (carrying one plate of food,carrying food)
+          - relaxing,doze off
+          - (taking a selfie in the mirror)
+          - fingernails,zombie pose
+          - paw pose
+          - hands inside pocket,hand in pocket,hands in pockets
+          - from behind,pelvis,butt crack,look at viewer
+          - head rest on hand,head_on_hand,head_rest
+          - breast rest on table
+          - leaning against motorcycle
+          - cigarette in mouth
+          - holding a soccer
+          - walking away
+          - sitting on a table
+          - ass support,big butt,from behind,sitting_on_railing,sitting on object
+          - sitting_on_railing,sitting on object
+          - |-
+            (lightning from arms,lightning on arms,holding lightning),( lightning glare on palm,lightning glare from palm:1.6),(lightning bolt symbol on palm)
+      pose-bottom-sitting:
+        prompts:
+          - (yokozuwari)
+          - (cross-legged sitting,sitting with legs crossed)
+          - >-
+            {1-$$lotus position|meditative pose}
+          - wariza,sitting,w-sitting,hand between legs,between legs
+      pose-bottom-nsfw-open-legs:
+        prompts:
+          - >-
+            {1-$$spread legs|open legs}
+          - >-
+            {1-$$squatting|crouching|squatting cowgirl position}
+          - (straddle)
+      pose-nsfw:
+        prompts:
+          - (one breast out,one breast slip,one_breast_out_of_clothes),unaligned_breasts,showing breast
+          - (downblouse,tank top,breasts_out,leaning forward,bent over)
+          - lifted by self,dress lift,from below
+          - lewd,sexy,erotic,alluring,ewitching,charming,mesmerizing,enchanting,voluptuous,sexy posing,Sex Position,hentai
+          - hand on own chest,grabbing herself breasts,grabbing own breasts,hands on own breasts,breast press,hand on tit
+          - squatting spread legs position,squatting,spread legs,crouching
+          - clothes lift,lifted by self,underboob
+          - bath,bathing,steam
+          - female masturbation
+          - open clothes,exhibitionism,public indecency,naked coat
+          - >-
+            downblouse,cleavage,ceiling,(peek panties,panty peek,pussy peek),selfie pose,squatting,crouching
+          - >-
+            {from behind|from side|from above|from below|},(in container,stuck,trash can,trashcan),garbage,trash,after sex,anus,ass wobble,pussy,cum in ass,beaten up,helpless
+          # - __lazy-wildcards/subject/action-nsfw*/*/prompts__
+          - hands on thighs,nude,completely nude,barefoot,toes,toenails
+      model-cof:
+        prompts:
+          - __cof-sex-*/prompt-solo__
+          - __cof-sex-*/prompt-women__
+          - __cof-sex-*/prompt-mix__
+          - __cof-sex-*/prompt-all__
+      model-Bo:
+        prompts:
+          - __person/nsfw/poses__
     action-pose:
       # https://civitai.com/models/95708/fly-4-in-1-concept?modelVersionId=102202
       floating:
@@ -10942,6 +11056,36 @@ lazy-wildcards:
             imminent {1-$$,imminent $$grope}
           - >-
             imminent {1-$$,imminent $$ejaculation}
+  utils-dataset:
+    costume:
+      prompts:
+        - >-
+          {1-2$$__lazy-wildcards/utils-dataset/costume/costume__}{,{1-3$$__lazy-wildcards/utils-dataset/costume/costume-elem__}|}
+      prompts-color:
+        - >-
+          __lazy-wildcards/utils-dataset/costume/prompts__{,{__lazy-wildcards/utils/costume-color-theme-multi__|__lazy-wildcards/utils/costume-color-theme__}|}
+      costume:
+        - __lazy-wildcards/subject/costume/*/prompts__
+        - __lazy-wildcards/subject/costume/sfw-civitai/prompts__
+        - __lazy-wildcards/cosplay-*/*/*/prompts__
+        - __cf-*/prompt-costume__
+        - __Bo/chars/char-*/female/bocloths__
+        - __Bo/clothings/*/female-attire__
+      costume-ethnicity:
+        - __cf-*/ethnicity__
+        - __lazy-wildcards/subject/ethnicity-*/*/prompts__
+        - __lazy-wildcards/subject/costume-ethnicity-*/*/prompts__
+        - __lazy-wildcards/*/*/*/costume-ethnicity*__
+        - __lazy-wildcards/*/*/*/ethnicity*__
+      costume-elem:
+        - >-
+          {1-3$$__lazy-wildcards/subject/costume-*/*/prompts__}
+        - >-
+          {1-6$$__lazy-wildcards/subject/costume-elem*/*/prompts__}
+        - >-
+          {1-6$$__lazy-wildcards/*/*/*/costume*__}
+        - >-
+          {1-3$$__lazy-wildcards/utils-dataset/costume/costume-ethnicity__}
   dataset:
     char-view:
       - upper body
@@ -10979,33 +11123,13 @@ lazy-wildcards:
       - >-
         {1-2$$__lazy-wildcards/dataset/food-all__}
     costume:
-      - >-
-        {1-2$$__lazy-wildcards/dataset/costume-elem__}{,{1-3$$__lazy-wildcards/*/*/*/costume*__}|}
+      - __lazy-wildcards/utils-dataset/costume/prompts__
     costume-color:
-      - >-
-        __lazy-wildcards/dataset/costume__{,{__lazy-wildcards/utils/costume-color-theme-multi__|__lazy-wildcards/utils/costume-color-theme__}|}
+      - __lazy-wildcards/utils-dataset/costume/prompts-color__
     costume-ethnicity:
-      - __cf-*/ethnicity__
-      - __lazy-wildcards/subject/ethnicity-*/*/prompts__
-      - __lazy-wildcards/subject/costume-ethnicity-*/*/prompts__
-      - __lazy-wildcards/*/*/*/costume-ethnicity*__
-      - __lazy-wildcards/*/*/*/ethnicity*__
+      - __lazy-wildcards/utils-dataset/costume/costume-ethnicity__
     costume-elem:
-      - __lazy-wildcards/subject/costume*/*/prompts__
-      - >-
-        {1-2$$__lazy-wildcards/subject/costume*/*/prompts__}
-      - >-
-        {1-6$$__lazy-wildcards/subject/costume-elem*/*/prompts__}
-      - >-
-        {1-6$$__lazy-wildcards/*/*/*/costume*__}
-      - __lazy-wildcards/subject/costume/sfw-civitai/prompts__
-      # - __lazy-wildcards/subject/costume-anything/clothes/prompts__
-      - __lazy-wildcards/cosplay-*/*/*/prompts__
-      - __cf-*/prompt-costume__
-      - __Bo/chars/char-*/female/bocloths__
-      - __Bo/clothings/*/female-attire__
-      - >-
-        {1-3$$__lazy-wildcards/dataset/costume-ethnicity__}
+      - __lazy-wildcards/utils-dataset/costume/costume-elem__
     costume-weapon:
       - __cf-*/weapon__
       - __lazy-wildcards/*/*/*/costume-weapon*__
@@ -11037,6 +11161,14 @@ lazy-wildcards:
         {1-6$$__lazy-wildcards/*/*/*/style*__}
       - >-
         {1-2$$__lazy-wildcards/subject/style-*/*/prompts__},{1-4$$__lazy-wildcards/*/*/*/style*__}
+    action:
+      - >-
+        __lazy-wildcards/subject/action*/*/prompts__
+      - >-
+        {1-6$$__lazy-wildcards/*/*/*/action*__}
+      - __lazy-wildcards/subject/action-pose-anything/model-*/prompts__
+      - >-
+        {__lazy-wildcards/subject/action*/*/prompts__|__lazy-wildcards/subject/action-pose-anything/model-*/prompts__},{1-2$$__lazy-wildcards/*/*/*/action*__}
   cosplay-char:
     birdie_wing:
       vipere:
@@ -13376,115 +13508,6 @@ lazy-wildcards:
           - syringe
         env-bg:
           - chain-link fence
-    sakusei_byoutou:
-      # https://civitai.com/models/412400/sakusei-byoutou-or-nurses?modelVersionId=459640
-      nurses:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/sakusei_byoutou/nurses/main-trigger-words__,(__lazy-wildcards/cosplay-char/sakusei_byoutou/nurses/costume-ethnicity__){,{1-2$$__lazy-wildcards/cosplay-char/sakusei_byoutou/nurses/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/sakusei_byoutou/nurses/costume-weapon__}|}{,{1-3$$__lazy-wildcards/cosplay-char/sakusei_byoutou/nurses/expressions__}|}{,{1-$$__lazy-wildcards/cosplay-char/sakusei_byoutou/nurses/costume-elem__}|}{,{1-3$$__lazy-wildcards/cosplay-char/sakusei_byoutou/nurses/env-bg__}|}{,{1-$$__lazy-wildcards/cosplay-char/sakusei_byoutou/nurses/env__}|}{,{1-3$$__lazy-wildcards/cosplay-char/sakusei_byoutou/nurses/action__}|}{,{1-$$__lazy-wildcards/cosplay-char/sakusei_byoutou/nurses/style__}|}
-        main-trigger-words:
-          - sakusei byoutou,sakusei_byoutou_the_animation,breasts
-        costume:
-          - |-
-            (nurse cap,skirt,thighs:1.2)
-          - white lab coat,ribbed sweater,black turtleneck,oversized clothes,open clothes,sleeves past fingers,sleeves past wrists,long sleeves
-          - elbow gloves,black gloves,black legwear
-          - hospital gown
-          - __lazy-wildcards/subject/costume/nurse_old_style/prompts__
-        costume-ethnicity:
-          - tachibana \(sakusei byoutou\),blue eyes,short hair,blue hair,bob cut
-          - kurokawa \(sakusei byoutou\),red eyes,short hair,light purple hair
-          - yamaguchi \(sakusei byoutou\),red eyes,long hair,light blonde hair
-          - hiramatsu \(sakusei byoutou\),purple eyes,short hair,black hair,ponytail,bangs,empty eyes
-          - mochizuki \(sakusei byoutou\),yellow eyes,long hair,brown hair,bangs
-          - numajiri \(sakusei byoutou\),dark blue eyes,medium hair,side bob cut,sidelocks,hair over one eye,hair behind ear,orange hair,red hair
-          - kiritani \(sakusei byoutou\),purple eyes,tsurime,long hair,very long hair,black hair
-          - amamiya \(sakusei byoutou\),purple eyes,wavy hair,very long hair,orange hair,bangs,crazy eyes
-          - ootsuka \(sakusei byoutou\),androgynous,red eyes,manly,short hair,red hair,bob cut,side ponytail,short ponytail,blunt bangs,hair ribbon
-          - tako tendou \(sakusei byoutou\),black hair,medium hair,messy hair,black eyes,hair between eyes,constricted pupils,crazy eyes
-        costume-weapon:
-          - power tool
-          - holding folder
-          - syringe
-          - emergency medical equipment
-          - stretcher
-        costume-elem:
-          - >-
-            {1-$$animal ears|cat ears|cat tail}
-          - bandages
-          - doctor
-          - nurse
-          - surgical mask,mouth mask
-          - >-
-            {1-$$piercing|tongue piercing}
-          - shaded face
-          - >-
-            {1-$$panties|panties aside}
-          - underwear
-          - sweatdrop
-          - wide hips
-          - >-
-            {1-$$pants pull|pants down}
-          - tattoo
-          - body writing
-          - garter straps
-          - crotch seam
-          - oxygen_mask
-          - school_nurse
-          - white nurse
-          - __lazy-wildcards/subject/costume-elem/button/prompts__
-          - >-
-            {1-$$cleavage|cleavage cutout|breasts out|breast press}
-          - >-
-            open {1-$$,open $$clothes|shirt|coat}
-        env:
-          - keypad
-          - folder
-          - cup,pill
-          - juices
-          - __lazy-wildcards/subject/costume-elem/cum/prompts__
-          - patient_gurney,wheeled stretcher
-          - IV_drip
-          - emergency_lights
-          - defibrillator
-          - window
-          - white wall
-          - >-
-            table{,{information counter|service counter|cashiers counter|reception counter|nurse counter}|}
-        env-bg:
-          - hospital
-          - hospital_room,hospital bed,white bed,white bed sheet
-          - ambulance_interior
-          - emergency_room
-          - hospital_corridor,hallways
-          - waiting_room
-          - pharmacy,medications
-          - nurse_station
-          - ambulance_bay,outdoor,ambulances
-          - hospital_cafeteria,dining area
-          - hospital morgue,funeral home
-          - hospital lobby
-        action:
-          - denki_anma
-          - crotch kick
-          - mask pull
-          - kemonomimi_mode,paw pose
-          - reverse rape
-          - semen extraction
-          - eat meals
-        style:
-          - femdom
-          - hentai
-          - presenting
-          - wet
-          - see-through
-        expressions:
-          - tsundere
-          - crazy,crazy girl
-          - angry,angry eyes,angry face
-          - >-
-            tears,{crying|tears of pleasure}
-          - evil face
     steelrisng:
       # https://civitai.com/models/146278?modelVersionId=234461
       aegis_automaton:
@@ -13922,6 +13945,21 @@ lazy-wildcards:
           - __lazy-wildcards/subject/env-bg-architectural/bridge/prompts__
           - cave
           - chair
+      # https://civitai.com/models/84282/nepheli-elden-ring-15ponyxl?modelVersionId=267723
+      # https://civitai.com/models/579053/nepheli-loux
+      Nepheli:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/elden_ring/Nepheli/main-trigger-words__,{1-$$__lazy-wildcards/cosplay-char/elden_ring/Nepheli/costume__}{,{1-$$__lazy-wildcards/cosplay-char/elden_ring/Nepheli/costume-elem__}|}
+        main-trigger-words:
+          - Nepheli \(elden_ring\),Nephelixl,nepheli_loux
+        costume:
+          - >-
+            {shoulder armor|single pauldron},tube top,midriff,bracers,pelvic curtain,chain belt,rope,barefoot
+        costume-elem:
+          - headband
+          - head scarf
+          - black neckwear
     girls_und_panzer:
       # https://civitai.com/models/303411/ooarai-winter-school-uniform-girls-und-panzer?modelVersionId=340642
       ooarai-winter-school-uniform:
@@ -15055,6 +15093,115 @@ lazy-wildcards:
           - spread legs
         expressions:
           - slight smile
+    sakusei_byoutou:
+      # https://civitai.com/models/412400/sakusei-byoutou-or-nurses?modelVersionId=459640
+      nurses:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char-hentai/sakusei_byoutou/nurses/main-trigger-words__,(__lazy-wildcards/cosplay-char-hentai/sakusei_byoutou/nurses/costume-ethnicity__){,{1-2$$__lazy-wildcards/cosplay-char-hentai/sakusei_byoutou/nurses/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char-hentai/sakusei_byoutou/nurses/costume-weapon__}|}{,{1-3$$__lazy-wildcards/cosplay-char-hentai/sakusei_byoutou/nurses/expressions__}|}{,{1-$$__lazy-wildcards/cosplay-char-hentai/sakusei_byoutou/nurses/costume-elem__}|}{,{1-3$$__lazy-wildcards/cosplay-char-hentai/sakusei_byoutou/nurses/env-bg__}|}{,{1-$$__lazy-wildcards/cosplay-char-hentai/sakusei_byoutou/nurses/env__}|}{,{1-3$$__lazy-wildcards/cosplay-char-hentai/sakusei_byoutou/nurses/action__}|}{,{1-$$__lazy-wildcards/cosplay-char-hentai/sakusei_byoutou/nurses/style__}|}
+        main-trigger-words:
+          - sakusei byoutou,sakusei_byoutou_the_animation,breasts
+        costume:
+          - |-
+            (nurse cap,skirt,thighs:1.2)
+          - white lab coat,ribbed sweater,black turtleneck,oversized clothes,open clothes,sleeves past fingers,sleeves past wrists,long sleeves
+          - elbow gloves,black gloves,black legwear
+          - hospital gown
+          - __lazy-wildcards/subject/costume/nurse_old_style/prompts__
+        costume-ethnicity:
+          - tachibana \(sakusei byoutou\),blue eyes,short hair,blue hair,bob cut
+          - kurokawa \(sakusei byoutou\),red eyes,short hair,light purple hair
+          - yamaguchi \(sakusei byoutou\),red eyes,long hair,light blonde hair
+          - hiramatsu \(sakusei byoutou\),purple eyes,short hair,black hair,ponytail,bangs,empty eyes
+          - mochizuki \(sakusei byoutou\),yellow eyes,long hair,brown hair,bangs
+          - numajiri \(sakusei byoutou\),dark blue eyes,medium hair,side bob cut,sidelocks,hair over one eye,hair behind ear,orange hair,red hair
+          - kiritani \(sakusei byoutou\),purple eyes,tsurime,long hair,very long hair,black hair
+          - amamiya \(sakusei byoutou\),purple eyes,wavy hair,very long hair,orange hair,bangs,crazy eyes
+          - ootsuka \(sakusei byoutou\),androgynous,red eyes,manly,short hair,red hair,bob cut,side ponytail,short ponytail,blunt bangs,hair ribbon
+          - tako tendou \(sakusei byoutou\),black hair,medium hair,messy hair,black eyes,hair between eyes,constricted pupils,crazy eyes
+        costume-weapon:
+          - power tool
+          - holding folder
+          - syringe
+          - emergency medical equipment
+          - stretcher
+        costume-elem:
+          - >-
+            {1-$$animal ears|cat ears|cat tail}
+          - bandages
+          - doctor
+          - nurse
+          - surgical mask,mouth mask
+          - >-
+            {1-$$piercing|tongue piercing}
+          - shaded face
+          - >-
+            {1-$$panties|panties aside}
+          - underwear
+          - sweatdrop
+          - wide hips
+          - >-
+            {1-$$pants pull|pants down}
+          - tattoo
+          - body writing
+          - garter straps
+          - crotch seam
+          - oxygen_mask
+          - school_nurse
+          - white nurse
+          - __lazy-wildcards/subject/costume-elem/button/prompts__
+          - >-
+            {1-$$cleavage|cleavage cutout|breasts out|breast press}
+          - >-
+            open {1-$$,open $$clothes|shirt|coat}
+        env:
+          - keypad
+          - folder
+          - cup,pill
+          - juices
+          - __lazy-wildcards/subject/costume-elem/cum/prompts__
+          - patient_gurney,wheeled stretcher
+          - IV_drip
+          - emergency_lights
+          - defibrillator
+          - window
+          - white wall
+          - >-
+            table{,{information counter|service counter|cashiers counter|reception counter|nurse counter}|}
+        env-bg:
+          - hospital
+          - hospital_room,hospital bed,white bed,white bed sheet
+          - ambulance_interior
+          - emergency_room
+          - hospital_corridor,hallways
+          - waiting_room
+          - pharmacy,medications
+          - nurse_station
+          - ambulance_bay,outdoor,ambulances
+          - hospital_cafeteria,dining area
+          - hospital morgue,funeral home
+          - hospital lobby
+        action:
+          - denki_anma
+          - crotch kick
+          - mask pull
+          - kemonomimi_mode,paw pose
+          - reverse rape
+          - semen extraction
+          - eat meals
+        style:
+          - femdom
+          - hentai
+          - presenting
+          - wet
+          - see-through
+        expressions:
+          - tsundere
+          - crazy,crazy girl
+          - angry,angry eyes,angry face
+          - >-
+            tears,{crying|tears of pleasure}
+          - evil face
   cosplay-real:
     # 亞美尼亞人
     Armenian:
