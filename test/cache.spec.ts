@@ -30,13 +30,29 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 
 	test.skip(`dummy`, () => {});
 
+	[
+		'matchDynamicPromptsWildcardsAll',
+		'findWildcardsYAMLPathsAll',
+		'entryAll',
+	].forEach(name => {
+		let outPath = join(
+			__ROOT,
+			'test',
+			'__file_snapshots__',
+			name,
+		);
+
+		ensureDirSync(outPath);
+	});
+
 	const isMatch01 = picomatch([
-		'./*.yaml',
-		'sub/**/*.yaml',
+		'data/*.yaml',
+		'data/sub/**/*.yaml',
+		'output/wildcards/**/*.yaml',
 	], {
 		ignore: [
-			'./cf',
-			'./others',
+			'data/cf',
+			'data/others',
 		],
 	});
 
@@ -53,6 +69,7 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 		'__mix-lazy-auto/**',
 
 		'__lazy-wildcards/utils/**',
+		'__lazy-wildcards/utils-dataset/**',
 
 		'__lazy-wildcards/cosplay-*/*/*/prompts__',
 
@@ -60,17 +77,21 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 	]);
 
 	test.each(globSync([
-		'cf/costumes/*.yaml',
-		'cf/other/*.yaml',
-		'cf/creatures/*.yaml',
-		'others/**/*.yaml',
-		'*.yaml',
-		'sub/**/*.yaml',
+		'data/cf/costumes/*.yaml',
+		'data/cf/other/*.yaml',
+		'data/cf/creatures/*.yaml',
+		'data/others/**/*.yaml',
+		'data/**/*.yaml',
+		'data/*.yaml',
+		'data/sub/**/*.yaml',
+		'output/wildcards/**/*.yaml',
 	], {
-		cwd: __ROOT_DATA,
+		cwd: __ROOT,
 	}))(`%s`, (file) =>
 	{
-		let path = join(__ROOT_DATA, file);
+		// console.log(file);
+
+		let path = join(__ROOT, file);
 		let buf = readFileSync(path);
 
 		let obj = parseWildcardsYaml(buf, {
@@ -78,22 +99,27 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 			allowUnsafeKey: true,
 		});
 
-		let actual = matchDynamicPromptsWildcardsAll(obj.toString(), true);
+		let outPath: string;
 
-		let outPath = join(
-			__ROOT,
-			'test',
-			'__file_snapshots__',
-			'matchDynamicPromptsWildcardsAll',
-			//file
-		);
+		if (!file.startsWith('output'))
+		{
+			let actual = matchDynamicPromptsWildcardsAll(obj.toString(), true);
 
-		ensureDirSync(outPath);
+			outPath = join(
+				__ROOT,
+				'test',
+				'__file_snapshots__',
+				'matchDynamicPromptsWildcardsAll',
+				//file
+			);
 
-		expect(actual.map(v => v.source).sort().join('\n') + '\n\n').toMatchFile(join(
-			outPath,
-			file + '.txt'
-		))
+			// ensureDirSync(outPath);
+
+			expect(actual.map(v => v.source).sort().join('\n') + '\n\n').toMatchFile(join(
+				outPath,
+				file + '.txt'
+			))
+		}
 
 		outPath = join(
 			__ROOT,
@@ -103,7 +129,7 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 			//file
 		);
 
-		ensureDirSync(outPath);
+		// ensureDirSync(outPath);
 
 		let list = findWildcardsYAMLPathsAll(obj).map(s => pathsToWildcardsPath(s, true));
 
@@ -122,7 +148,7 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 					__ROOT,
 					'test',
 					'__file_snapshots__',
-					'entry',
+					'entryAll',
 					//file
 				);
 

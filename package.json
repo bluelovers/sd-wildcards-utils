@@ -55,6 +55,7 @@
     "lint:eslint": "ynpx eslint --ext .ts,.tsx,.mts,.cts ./",
     "pretest": "echo pretest",
     "test": "yarn run test:jest:snapshot",
+    "test:jest:snapshot:cache": "yarn run test:jest -- -u test/cache.spec.ts",
     "test:jest": "jest --passWithNoTests",
     "test:jest:clearCache": "jest --clearCache",
     "test:jest:coverage": "yarn run test:jest -- --coverage",
