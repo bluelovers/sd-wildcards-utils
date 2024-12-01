@@ -71,9 +71,9 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 		'__lazy-wildcards/utils/**',
 		'__lazy-wildcards/utils-dataset/**',
 
-		'__lazy-wildcards/cosplay-*/*/*/prompts__',
+		'__lazy-wildcards/cosplay-*/*/*/prompts*__',
 
-		'__lazy-wildcards/subject/*/*/prompts__',
+		'__lazy-wildcards/subject/*/*/prompts*__',
 	]);
 
 	test.each(globSync([
