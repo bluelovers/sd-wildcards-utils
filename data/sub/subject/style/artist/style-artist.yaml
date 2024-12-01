@@ -195,4 +195,35 @@ lazy-wildcards:
           - 1990s \(style\)
           - 1980s \(style\)
           - retro artstyle
+      # https://civitai.com/models/277846/nana-ai-yazawa-style
+      NANA_Ai_Yazawa:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/style-main__
+            {0.4::, {1-$$__lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/style-art__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/action__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/style__}|}
+        style-main:
+          - nana_\(series\), Ai Yazawa, yazawa_ai_\(style\)
+        style-art:
+          - manga
+          - drawing lines
+          - ink lines
+          - black and white
+        style:
+          - punk
+          - spider web print
+        costume-elem:
+          - leather jacket
+          - black boots
+          - ornate ring
+          - nail polish
+          - wavy hair
+          - makeup, lipstick
+          - bare shoulders
+          - ear piercing
+          - claw ring
+        action:
+          - smoking
 
