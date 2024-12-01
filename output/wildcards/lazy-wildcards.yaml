@@ -222,11 +222,13 @@ lazy-wildcards:
       - colored inner hair
       - gradient hair
       - streaked hair
-    haircolor:
+    haircolor-multi:
       - >-
         {2-3$$ hair,$$__mix-lazy-auto/color-anything__} hair,{1-2$$__lazy-wildcards/char/haircolor-style__}
+      - __lazy-wildcards/char/haircolor__
+    haircolor:
       - >-
-        __mix-lazy-auto/color-anything__ hair{,{1-2$$__lazy-wildcards/char/haircolor-style__}|}
+        __mix-lazy-auto/color-anything__ hair{0.3::,{1-2$$__lazy-wildcards/char/haircolor-style__}|}
     hair-style-multi:
       - >-
         {1-4$$__lazy-wildcards/char/hair-style__}
@@ -602,6 +604,11 @@ lazy-wildcards:
     scenery-no-humans:
       - >-
         __lazy-wildcards/utils/scenery__{,no humans|}
+    fn:
+      # __lazy-wildcards/utils/fn/style-inspired(v=lego)__
+      style-inspired:
+        - >-
+          inspired by ${v},${v}-inspired,style of ${v},${v} style
   subject:
     style-art-type:
       others:
@@ -611,21 +618,21 @@ lazy-wildcards:
       sketch-pen-landscape:
         prompts:
           - >-
-            __lazy-wildcards/subject/style-art-type/sketch-pen-landscape/main__,__lazy-wildcards/subject/style-art-type/sketch-pen-base/prompts__
-        main:
+            __lazy-wildcards/subject/style-art-type/sketch-pen-landscape/style-art-main__,__lazy-wildcards/subject/style-art-type/sketch-pen-base/prompts__
+        style-art-main:
           - |-
             (XCYP) Landscape Sketch,(Sketch Landscape:1.4)
       sketch-pen-portrait:
         prompts:
           - >-
-            __lazy-wildcards/subject/style-art-type/sketch-pen-portrait/main__,__lazy-wildcards/subject/style-art-type/sketch-pen-base/prompts__
-        main:
+            __lazy-wildcards/subject/style-art-type/sketch-pen-portrait/style-art-main__,__lazy-wildcards/subject/style-art-type/sketch-pen-base/prompts__
+        style-art-main:
           - (Sketch portrait,portrait)
       sketch-pen-base:
         prompts:
           - >-
-            __lazy-wildcards/subject/style-art-type/sketch-pen-base/main__,{__lazy-wildcards/subject/style-art-type/sketch-pen-base/style-color__,|}({3-$$__lazy-wildcards/subject/style-art-type/sketch-pen-base/style__})
-        main:
+            __lazy-wildcards/subject/style-art-type/sketch-pen-base/style-art-main__,{__lazy-wildcards/subject/style-art-type/sketch-pen-base/style-color__,|}({3-$$__lazy-wildcards/subject/style-art-type/sketch-pen-base/style__})
+        style-art-main:
           - |-
             (XCYP) Sketch,(Sketch:1.4),(Pen Drawing:2)
         style-color:
@@ -649,8 +656,8 @@ lazy-wildcards:
       blueprint-architectural-drawings:
         prompts:
           - >-
-            __lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/style-main__{0.2::,{1-2$$__lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/env-architectural__}|}{,{1-$$__lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/style__}|}{,{1-2$$__lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/style-art-type__}|}
-        style-main:
+            __lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/style-art-main__{0.2::,{1-2$$__lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/env-architectural__}|}{,{1-$$__lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/style__}|}{,{1-2$$__lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/style-art-type__}|}
+        style-art-main:
           - |-
             (blueprint:1.3),architectural drawing,techdraw,davincisketch,UFO_Alchemy
         env-architectural:
@@ -733,7 +740,7 @@ lazy-wildcards:
       isometric:
         prompts:
           - >-
-            (__lazy-wildcards/subject/style-art-type/isometric/style-main__{,{1-$$__lazy-wildcards/subject/style-art-type/isometric/style-main__}|}:1.4){,{1-$$__lazy-wildcards/subject/style-art-type/isometric/env-bg__}|}{,{1-$$__lazy-wildcards/subject/style-art-type/isometric/env-bg__}|}
+            (__lazy-wildcards/subject/style-art-type/isometric/style-art-main__{,{1-$$__lazy-wildcards/subject/style-art-type/isometric/style-main__}|}:1.4){,{1-$$__lazy-wildcards/subject/style-art-type/isometric/env-bg__}|}{,{1-$$__lazy-wildcards/subject/style-art-type/isometric/env-bg__}|}
         style-art-main:
           - isometricnive,isometric
         style-main:
@@ -746,8 +753,8 @@ lazy-wildcards:
       mosaic:
         prompts:
           - >-
-            __lazy-wildcards/subject/style-art-type/mosaic/style-main__{,{1-2$$__lazy-wildcards/subject/style-art-type/mosaic/style__}|}
-        style-main:
+            __lazy-wildcards/subject/style-art-type/mosaic/style-art-main__{,{1-2$$__lazy-wildcards/subject/style-art-type/mosaic/style__}|}
+        style-art-main:
           - >-
             (Mosaic Art,Mosaic:1.3),ArsMJStyle
         style:
@@ -766,8 +773,8 @@ lazy-wildcards:
       miniature:
         prompts:
           - >-
-            __lazy-wildcards/subject/style-art-type/miniature/style-main__{,{1-2$$__lazy-wildcards/subject/style-art-type/miniature/env-bg__}|}{,{1-$$__lazy-wildcards/subject/style-art-type/miniature/style__}|}
-        style-main:
+            __lazy-wildcards/subject/style-art-type/miniature/style-art-main__{,{1-2$$__lazy-wildcards/subject/style-art-type/miniature/env-bg__}|}{,{1-$$__lazy-wildcards/subject/style-art-type/miniature/style__}|}
+        style-art-main:
           - >-
             (mini\(ttp\),miniature,miniature model{0.3:::{1.2|1.3|1.4}|}),pmini style,M1n14tur3,landscape
         env-bg:
@@ -785,8 +792,8 @@ lazy-wildcards:
       stained_glass:
         prompts:
           - >-
-            (__lazy-wildcards/subject/style-art-type/stained_glass/style-main__{0.3:::{1.2|1.3|1.4}|}){0.3::,{1-$$__lazy-wildcards/subject/style-art-type/stained_glass/env__}|}{0.2::,{1-$$__lazy-wildcards/subject/style-art-type/stained_glass/env-bg__}|}{,{1-$$__lazy-wildcards/subject/style-art-type/stained_glass/style__}|}
-        style-main:
+            (__lazy-wildcards/subject/style-art-type/stained_glass/style-art-main__{0.3:::{1.2|1.3|1.4}|}){0.3::,{1-$$__lazy-wildcards/subject/style-art-type/stained_glass/env__}|}{0.2::,{1-$$__lazy-wildcards/subject/style-art-type/stained_glass/env-bg__}|}{,{1-$$__lazy-wildcards/subject/style-art-type/stained_glass/style__}|}
+        style-art-main:
           - stained_glass,stained_glass_print,sglass style
         env:
           - stained_glass_window
@@ -808,8 +815,8 @@ lazy-wildcards:
       pixel-sprite-sheet:
         prompts:
           - >-
-            (__lazy-wildcards/subject/style-art-type/pixel-sprite-sheet/style-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/style-art-type/pixel-sprite-sheet/style__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-art-type/pixel-sprite-sheet/costume__}|}
-        style-main:
+            (__lazy-wildcards/subject/style-art-type/pixel-sprite-sheet/style-art-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/style-art-type/pixel-sprite-sheet/style__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-art-type/pixel-sprite-sheet/costume__}|}
+        style-art-main:
           - >-
             pixel art,rochar,RoSprite,ROSprites,Ragnarok online Art style,persistent character sprite sheet
         costume:
@@ -834,8 +841,8 @@ lazy-wildcards:
       cave_paintings:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/style-main__}{,{1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/style__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/env-creatures__}|}{,{1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/env-bg__}|}
-        style-main:
+            __lazy-wildcards/subject/style-art-type/cave_paintings/style-art-main__{,{1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/style__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/env-creatures__}|}{,{1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/env-bg__}|}
+        style-art-main:
           - |-
             (cave paintings,cave art{0.3:::{1.2|1.3|1.4}|}),rock art
         env-creatures:
@@ -921,6 +928,17 @@ lazy-wildcards:
         prompts:
           - >-
             satellite map,__lazy-wildcards/subject/style-art-type/map/prompts__
+      Lego:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-art-type/Lego/style-art-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/style-art-type/Lego/style__}|}
+        style-art-main:
+          - >-
+            lego,LegoAI,LEGO BrickHeadz,LEGO MiniFig,LEGO Creator,lego world,BJ_Lego bricks,__lazy-wildcards/utils/fn/style-inspired(v=lego)__,lgo,Lego Style
+        style:
+          - lego material
+          - LEGO_Pixel
+          - __lazy-wildcards/subject/style-art-type/isometric/style-art-main__
     style-artist-name:
       comic:
         prompts:
@@ -1218,12 +1236,13 @@ lazy-wildcards:
         style:
           - datastream_glitch
           - fragmented_images
+      # https://civitai.com/models/79314/matrix-command-line-style
       digital_rain:
         prompts:
           - >-
-            (__lazy-wildcards/subject/style-elem/sympattern/style-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/style-elem/sympattern/style__}|}
-        style-main:
-          - digital rain,matrix style
+            (__lazy-wildcards/subject/style-elem/digital_rain/style-art-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/style-elem/digital_rain/style__}|}
+        style-art-main:
+          - digital rain,matrix style,matrixCommandLineStyle
         style:
           - cyberpunk aesthetic
           - virtual reality aesthetic
@@ -1694,6 +1713,30 @@ lazy-wildcards:
           - 1990s \(style\)
           - 1980s \(style\)
           - retro artstyle
+      # https://civitai.com/models/277846/nana-ai-yazawa-style
+      NANA_Ai_Yazawa:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/style-main__{0.4::,{1-$$__lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/style-art__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/action__}|}
+        style-main:
+          - nana_\(series\),Ai Yazawa,yazawa_ai_\(style\),punk
+        style-art:
+          - manga
+          - drawing lines
+          - ink lines
+          - black and white
+        costume-elem:
+          - leather jacket
+          - black boots
+          - ornate ring
+          - nail polish
+          - wavy hair
+          - makeup,lipstick
+          - bare shoulders
+          - ear piercing
+          - claw ring
+        action:
+          - smoking
       akira:
         prompts:
           - >-
@@ -2156,6 +2199,8 @@ lazy-wildcards:
             EPIrezumiWorld,Irezumi,Wabori,Harimono,japanese tattoo,japanese style tattoo,traditional japanese tattoo,yakuza,yakuza tattoo,(1girl:1.3),1other,mangrove forest biome,(dripping colors background,colored smoke background)
           - smartphone on the ground
           - a gameboy on a table
+          - >-
+            (dark celestialskin body,celestial body),glowing,silhouette,flat color,very long hair,A mystical swamp with dark waters and thick vegetation,pale colored background,ethereal colored background,(abstract colored background:1.4){,{1-$$fantasy|wings}|}
       char-costume-bg-color:
         prompts:
           - >-
@@ -2345,7 +2390,7 @@ lazy-wildcards:
       weather-snow:
         prompts:
           - >-
-            ({1-$$winter,Wintery|snow|very cold|snow fall,Winter snowfall|snowy view|snowflake|pure winter|snowylandscape,snowy landscape|Snowy setting}:1.2)
+            ({1-$$winter,Wintery|snow|very cold|snow fall,Winter snowfall|snowy view|snowflake,drifting snowflakes|pure winter|snowylandscape,snowy landscape|Snowy setting}:1.2)
       weather-lightning:
         prompts:
           - >-
@@ -4193,7 +4238,7 @@ lazy-wildcards:
       tw-taipei_101:
         prompts:
           - >-
-            (__lazy-wildcards/subject/env-bg/tw-taipei_101/env-bg-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg/tw-taipei_101/env__}|}{0.3::,{1-$$__lazy-wildcards/subject/env-bg/tw-taipei_101/style__}|}{,__lazy-wildcards/utils/scenery-no-humans__|}
+            (__lazy-wildcards/subject/env-bg/tw-taipei_101/env-bg-main__{0.3:::{1.2|1.3|1.4}|}){0.4::,{1-$$__lazy-wildcards/subject/env-bg/tw-taipei_101/env__}|}{0.3::,{1-$$__lazy-wildcards/subject/env-bg/tw-taipei_101/style__}|}{,__lazy-wildcards/utils/scenery-no-humans__|}
         env-bg-main:
           - Taipei_101,Taipei101
         env:
@@ -5626,7 +5671,7 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/subject/env-elem-punk/steampunk-bundle/style-main__{0.8::,{1-$$__lazy-wildcards/subject/env-elem-punk/steampunk-bundle/style-trigger-words__}|}{,{1-$$__lazy-wildcards/subject/env-elem-punk/steampunk-bundle/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem-punk/steampunk-bundle/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-elem-punk/steampunk-bundle/style__}|}
         style-main:
-          - steampunk,steampunk-inspired
+          - __lazy-wildcards/utils/fn/style-inspired(v=steampunk)__
         style-trigger-words:
           - SteampunkAI,steampunk theme
           - CogpunkAI,cogpunk theme,cog
@@ -7532,6 +7577,55 @@ lazy-wildcards:
           - wooden chair
           - sign
           - cactus
+      ice_brick_house:
+        prompts:
+          - >-
+            {1-2$$__lazy-wildcards/subject/env-bg-architectural/ice_brick_house/env-bg-main__}{,{1-2$$__lazy-wildcards/subject/env-bg-architectural/ice_brick_house/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg-architectural/ice_brick_house/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-architectural/ice_brick_house/style__}|}
+        env-bg-main:
+          # 冰磚屋
+          - ice_brick_house
+          # 雪屋
+          - igloo
+        env-bg:
+          - curved_tunnel_entry
+          - arctic_landscape
+          - polar_aurora
+          - frosted_pattern_walls
+          - arctic_village
+        env:
+          - snow_bricks
+          - glowing_firepit
+          - animal_tracks_in_snow
+          - transparent_ice_bricks
+          - frozen_artifacts
+          - ice_furniture
+          - fur_covering
+          - polished_ice_surface
+          - frosted_edge_design
+          - cozy_interior_in_ice
+          - ice steps
+          - __lazy-wildcards/subject/moment/weather-snow/prompts__
+        style:
+          - colorful_lighting
+          - reflected_light_rainbow
+          - light_reflection_effects
+          - blue_and_white_lighting
+      ice_castle:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-bg-architectural/ice_castle/env-bg-main__}{,{1-$$__lazy-wildcards/subject/env-bg-architectural/ice_castle/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-architectural/ice_castle/env-creatures__}|}{,{1-$$__lazy-wildcards/subject/env-bg-architectural/ice_brick_house/style__}|}
+        env-bg-main:
+          - fantasy_ice_castle
+          - crystalline_throne
+          - ice steps
+        env:
+          - floating_ice_crystals
+          - magical_glowing_runes
+          - gem_embellishments
+          - >-
+            {1-$$__lazy-wildcards/subject/env-bg-architectural/ice_brick_house/env__}
+        env-creatures:
+          - ethereal_snow_creatures
     style-architectural:
       elven:
         prompts:
@@ -7613,6 +7707,10 @@ lazy-wildcards:
           - hair flower
           - hairband
           - hair beads
+      # 肩帶荷葉邊
+      shoulder_strap_ruffles:
+        prompts:
+          - (shoulder strap ruffles,ruffle shoulder straps)
     costume-anything:
       nsfw-Bo:
         prompts:
@@ -9578,6 +9676,30 @@ lazy-wildcards:
       neutral-skinned:
         prompts:
           - cinematic normal neutral skin tone
+    costume-ethnicity-body-skin:
+      Celestial_Skin:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/costume-ethnicity-body-skin/Celestial_Skin/costume-ethnicity__}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-ethnicity-body-skin/Celestial_Skin/costume-elem__}|}{0.3::,{1-$$__lazy-wildcards/subject/costume-ethnicity-body-skin/Celestial_Skin/env__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-body-skin/Celestial_Skin/style__}|}
+        costume-ethnicity:
+          - dark celestialskin body,celestial body
+          - void cosmic body
+        costume-elem:
+          - colored skin
+          - jet black skin
+          - giant
+          - alien
+        env:
+          - space
+          - sky
+          - sunset
+          - planet
+          - galaxy
+        style:
+          - flat color
+          - silhouette
+          - glowing
+          - eldritch_abomination
     costume-ethnicity-body:
       curvy_female:
         prompts:
