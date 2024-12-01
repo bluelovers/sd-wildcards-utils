@@ -32,6 +32,7 @@ __lazy-wildcards/cosplay-char/*/*/prompts__
 __lazy-wildcards/subject/costume/sfw-civitai/prompts__
 
 __lazy-wildcards/prompts/hair__
+__lazy-wildcards/char/haircolor-multi__
 __lazy-wildcards/char/haircolor__
 
 __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
@@ -102,6 +103,8 @@ We appreciate the contributions of these amazing creators who made wildcards:
   https://civitai.com/models/863333
 - (Misc Wildcards Vault)
   https://civitai.com/models/272654?modelVersionId=317312
+- civitai user: tg_love
+  https://civitai.com/user/tg_love
 
 # Node.js
 
