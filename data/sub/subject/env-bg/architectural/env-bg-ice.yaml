@@ -1,0 +1,59 @@
+lazy-wildcards:
+  subject:
+    env-bg-architectural:
+      ice_brick_house:
+        prompts:
+          - >-
+            {1-2$$__lazy-wildcards/subject/env-bg-architectural/ice_brick_house/env-bg-main__}
+            {, {1-2$$__lazy-wildcards/subject/env-bg-architectural/ice_brick_house/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/ice_brick_house/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/ice_brick_house/style__}|}
+        env-bg-main:
+          # 冰磚屋
+          - ice_brick_house
+          # 雪屋
+          - igloo
+        env-bg:
+          - curved_tunnel_entry
+          - arctic_landscape
+          - polar_aurora
+          - frosted_pattern_walls
+          - arctic_village
+        env:
+          - snow_bricks
+          - glowing_firepit
+          - animal_tracks_in_snow
+          - transparent_ice_bricks
+          - frozen_artifacts
+          - ice_furniture
+          - fur_covering
+          - polished_ice_surface
+          - frosted_edge_design
+          - cozy_interior_in_ice
+          - ice steps
+          - __lazy-wildcards/subject/moment/weather-snow/prompts__
+        style:
+          - colorful_lighting
+          - reflected_light_rainbow
+          - light_reflection_effects
+          - blue_and_white_lighting
+      ice_castle:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-bg-architectural/ice_castle/env-bg-main__}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/ice_castle/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/ice_castle/env-creatures__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/ice_brick_house/style__}|}
+        env-bg-main:
+          - fantasy_ice_castle
+          - crystalline_throne
+          - ice steps
+        env:
+          - floating_ice_crystals
+          - magical_glowing_runes
+          - gem_embellishments
+          - >-
+            {1-$$__lazy-wildcards/subject/env-bg-architectural/ice_brick_house/env__}
+        env-creatures:
+          - ethereal_snow_creatures
+

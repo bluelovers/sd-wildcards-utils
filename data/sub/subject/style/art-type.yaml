@@ -8,24 +8,24 @@ lazy-wildcards:
       sketch-pen-landscape:
         prompts:
           - >-
-            __lazy-wildcards/subject/style-art-type/sketch-pen-landscape/main__,
+            __lazy-wildcards/subject/style-art-type/sketch-pen-landscape/style-art-main__,
             __lazy-wildcards/subject/style-art-type/sketch-pen-base/prompts__
-        main:
+        style-art-main:
           - (XCYP) Landscape Sketch, (Sketch Landscape:1.4)
       sketch-pen-portrait:
         prompts:
           - >-
-            __lazy-wildcards/subject/style-art-type/sketch-pen-portrait/main__,
+            __lazy-wildcards/subject/style-art-type/sketch-pen-portrait/style-art-main__,
             __lazy-wildcards/subject/style-art-type/sketch-pen-base/prompts__
-        main:
+        style-art-main:
           - (Sketch portrait, portrait)
       sketch-pen-base:
         prompts:
           - >-
-            __lazy-wildcards/subject/style-art-type/sketch-pen-base/main__,
+            __lazy-wildcards/subject/style-art-type/sketch-pen-base/style-art-main__,
             {__lazy-wildcards/subject/style-art-type/sketch-pen-base/style-color__,|}
             ({3-$$__lazy-wildcards/subject/style-art-type/sketch-pen-base/style__})
-        main:
+        style-art-main:
           - (XCYP) Sketch, (Sketch:1.4), (Pen Drawing:2)
         style-color:
           - >-
@@ -49,11 +49,11 @@ lazy-wildcards:
       blueprint-architectural-drawings:
         prompts:
           - >-
-            __lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/style-main__
+            __lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/style-art-main__
             {0.2::, {1-2$$__lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/env-architectural__}|}
             {, {1-$$__lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/style__}|}
             {, {1-2$$__lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/style-art-type__}|}
-        style-main:
+        style-art-main:
           - (blueprint:1.3), architectural drawing, techdraw, davincisketch, UFO_Alchemy
         env-architectural:
           - old moscow town conceptual style architecture
@@ -138,7 +138,7 @@ lazy-wildcards:
       isometric:
         prompts:
           - >-
-            (__lazy-wildcards/subject/style-art-type/isometric/style-main__{, {1-$$__lazy-wildcards/subject/style-art-type/isometric/style-main__}|}:1.4)
+            (__lazy-wildcards/subject/style-art-type/isometric/style-art-main__{, {1-$$__lazy-wildcards/subject/style-art-type/isometric/style-main__}|}:1.4)
             {, {1-$$__lazy-wildcards/subject/style-art-type/isometric/env-bg__}|}
             {, {1-$$__lazy-wildcards/subject/style-art-type/isometric/env-bg__}|}
         style-art-main:
@@ -153,9 +153,9 @@ lazy-wildcards:
       mosaic:
         prompts:
           - >-
-            __lazy-wildcards/subject/style-art-type/mosaic/style-main__
+            __lazy-wildcards/subject/style-art-type/mosaic/style-art-main__
             {,{1-2$$__lazy-wildcards/subject/style-art-type/mosaic/style__}|}
-        style-main:
+        style-art-main:
           - >-
             (Mosaic Art, Mosaic:1.3), ArsMJStyle
         style:
@@ -174,10 +174,10 @@ lazy-wildcards:
       miniature:
         prompts:
           - >-
-            __lazy-wildcards/subject/style-art-type/miniature/style-main__
+            __lazy-wildcards/subject/style-art-type/miniature/style-art-main__
             {,{1-2$$__lazy-wildcards/subject/style-art-type/miniature/env-bg__}|}
             {,{1-$$__lazy-wildcards/subject/style-art-type/miniature/style__}|}
-        style-main:
+        style-art-main:
           - >-
             (mini\(ttp\), miniature, miniature model{0.3:::{1.2|1.3|1.4}|}), pmini style, M1n14tur3, landscape
         env-bg:
@@ -195,11 +195,11 @@ lazy-wildcards:
       stained_glass:
         prompts:
           - >-
-            (__lazy-wildcards/subject/style-art-type/stained_glass/style-main__{0.3:::{1.2|1.3|1.4}|})
+            (__lazy-wildcards/subject/style-art-type/stained_glass/style-art-main__{0.3:::{1.2|1.3|1.4}|})
             {0.3::,{1-$$__lazy-wildcards/subject/style-art-type/stained_glass/env__}|}
             {0.2::,{1-$$__lazy-wildcards/subject/style-art-type/stained_glass/env-bg__}|}
             {,{1-$$__lazy-wildcards/subject/style-art-type/stained_glass/style__}|}
-        style-main:
+        style-art-main:
           - stained_glass, stained_glass_print, sglass style
         env:
           - stained_glass_window
@@ -221,10 +221,10 @@ lazy-wildcards:
       pixel-sprite-sheet:
         prompts:
           - >-
-            (__lazy-wildcards/subject/style-art-type/pixel-sprite-sheet/style-main__{0.3:::{1.2|1.3|1.4}|})
+            (__lazy-wildcards/subject/style-art-type/pixel-sprite-sheet/style-art-main__{0.3:::{1.2|1.3|1.4}|})
             {,{1-$$__lazy-wildcards/subject/style-art-type/pixel-sprite-sheet/style__}|}
             {0.3::,{1-$$__lazy-wildcards/subject/style-art-type/pixel-sprite-sheet/costume__}|}
-        style-main:
+        style-art-main:
           - >-
             pixel art
             , rochar, RoSprite, ROSprites
@@ -252,11 +252,11 @@ lazy-wildcards:
       cave_paintings:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/style-main__}
+            __lazy-wildcards/subject/style-art-type/cave_paintings/style-art-main__
             {,{1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/style__}|}
             {0.3::,{1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/env-creatures__}|}
             {,{1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/env-bg__}|}
-        style-main:
+        style-art-main:
           - (cave paintings, cave art{0.3:::{1.2|1.3|1.4}|}), rock art
         env-creatures:
           - prehistoric_animal
@@ -346,4 +346,18 @@ lazy-wildcards:
           - >-
             satellite map
             , __lazy-wildcards/subject/style-art-type/map/prompts__
+      Lego:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-art-type/Lego/style-art-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-art-type/Lego/style__}|}
+        style-art-main:
+          - >-
+            lego, LegoAI, LEGO BrickHeadz, LEGO MiniFig, LEGO Creator, lego world, BJ_Lego bricks
+            , __lazy-wildcards/utils/fn/style-inspired(v=lego)__
+            , lgo, Lego Style
+        style:
+          - lego material
+          - LEGO_Pixel
+          - __lazy-wildcards/subject/style-art-type/isometric/style-art-main__
 

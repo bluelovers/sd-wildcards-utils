@@ -1,0 +1,32 @@
+lazy-wildcards:
+  subject:
+    costume-ethnicity-body-skin:
+      # https://civitai.com/models/162016?modelVersionId=182397
+      # https://civitai.com/models/6900
+      Celestial_Skin:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/costume-ethnicity-body-skin/Celestial_Skin/costume-ethnicity__}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-body-skin/Celestial_Skin/costume-elem__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/costume-ethnicity-body-skin/Celestial_Skin/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-body-skin/Celestial_Skin/style__}|}
+        costume-ethnicity:
+          - dark celestialskin body, celestial body
+          - void cosmic body
+        costume-elem:
+          - colored skin
+          - jet black skin
+          - giant
+          - alien
+        env:
+          - space
+          - sky
+          - sunset
+          - planet
+          - galaxy
+        style:
+          - flat color
+          - silhouette
+          - glowing
+          - eldritch_abomination
+
