@@ -4,19 +4,10 @@
 # https://civitai.com/user/C0rn_Fl4k3s/models
 # https://civitai.com/models/138970/billions-of-wildcards-character-vehicle-scenery-building-creature-scifi-fantasy-magic-all-you-want
 # https://github.com/sdbds/stable-diffusion-webui-wildcards
+# https://civitai.com/search/models?modelType=Wildcards&sortBy=models_v9
 #
 lazy-wildcards:
   prompts:
-    costume:
-      - >-
-        {__lazy-wildcards/subject/costume-anything/nsfw/prompts__|__lazy-wildcards/subject/costume-anything/clothes/prompts__}
-    costume-with-color:
-      - >-
-        __lazy-wildcards/utils/costume-color-theme__
-        {,__lazy-wildcards/prompts/costume__|}
-      - >-
-        {__lazy-wildcards/utils/costume-color-theme__,|}
-        __lazy-wildcards/prompts/costume__
     hair:
       - >-
         __lazy-wildcards/char/hair-length__
@@ -54,7 +45,7 @@ lazy-wildcards:
           1girl,
           __lazy-wildcards/prompts/eyes__,
           __lazy-wildcards/prompts/hair-all__,
-          __lazy-wildcards/prompts/costume-with-color__,
+          __lazy-wildcards/dataset/costume-with-color__,
           __lazy-wildcards/prompts/mouth__,
           {0.1::__lazy-wildcards/char/expressions__|0.3::__lazy-wildcards/char/expressions2__|}
       face:
