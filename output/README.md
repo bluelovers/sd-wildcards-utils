@@ -15,6 +15,8 @@ Think of wildcards as magic words that unlock creative possibilities. They allow
 
 see https://github.com/bluelovers/sd-wildcards-utils?tab=readme-ov-file#trigger-words
 
+see https://github.com/bluelovers/sd-wildcards-utils/docs/README.md
+
 ```
 __lazy-wildcards/prompts/dataset/face__
 
@@ -97,6 +99,7 @@ We appreciate the contributions of these amazing creators who made wildcards:
 
 We appreciate the contributions of these amazing creators who made wildcards:
 
+- https://civitai.com/search/models?modelType=Wildcards&sortBy=models_v9
 - ~~(Wildcards Vision Background Around the World)~~
   ~~https://civitai.com/models/934903~~
 - (Chara Creator Wildcards)

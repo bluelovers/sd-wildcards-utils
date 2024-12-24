@@ -26,7 +26,8 @@ export default Bluebird.map([
 	// join(__ROOT_DATA, 'others/Extra/char.yaml'),
 	// join(__ROOT_DATA, 'others/Extra/env-bg-anything.yaml'),
 	...globAbsolute([
-		'others/lazy-wildcards/*.yaml',
+		'others/lazy-wildcards/**/*.yaml',
+		'others/lazy-model-yaml/**/*.yaml',
 	], {
 		cwd: __ROOT_DATA,
 	}),
