@@ -135,7 +135,7 @@ lazy-wildcards:
         expressions:
           - fucked silly
           - blush
-          - ahegao
+          - __lazy-wildcards/subject/costume-elem-expressions/ahegao/prompts__
           - open mouth
           - tears
         env:
@@ -394,4 +394,50 @@ lazy-wildcards:
       tree_figure:
         prompts:
           - tree figure, tree
+      urban-elem:
+        prompts:
+          - >-
+            {6-$$__lazy-wildcards/subject/env-elem/urban-elem/env__}
+        env:
+          - banner
+          - blinds
+          - tanabata
+          - petals
+          - real world location
+          - gate
+          - horizon
+          - radio antenna
+          - box
+          - ground vehicle
+          - ferris wheel
+          - train
+          - road
+          - river
+          - condensation trail
+          - boat
+          - ivy
+          - fish
+          - door
+          - flower
+          - windmill
+          - fruit
+          - potted plant
+          - lamppost
+          - fountain
+          - blue flower
+          - bamboo
+          - seagull
+          - railing
+          - bicycle
+          - couch
+          - poster \(object\)
+          - rooftop
+          - town
+          - poolside
+      pole:
+        prompts:
+          - >-
+            {6-$$__lazy-wildcards/subject/env-elem/pole/env-pole__}
+        env-pole:
+          - wooden pole
 
