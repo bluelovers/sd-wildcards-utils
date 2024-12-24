@@ -748,4 +748,51 @@ lazy-wildcards:
           - chinese clothes
           - japanese clothes
           - dress
+      # https://civitai.com/models/867374/battle-vest-patch-jacket
+      battle_vest:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/battle_vest/costume-main__
+            , {1-$$__lazy-wildcards/subject/costume/battle_vest/costume__}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/battle_vest/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/battle_vest/style__}|}
+        costume-main:
+          - dsbtlvst
+        costume:
+          - battle vest
+          - battle jacket
+          - metal vest
+        costume-elem:
+          - cuts
+          - kutte
+          - cut-off
+          - sleeveless
+          - jacket adorned
+          - patches
+        style:
+          - Punk fashion
+      # https://civitai.com/models/275017/vintage-peplum-suit-dress-or-peplum-the-planet?modelVersionId=309995
+      vintage_peplum_suit_dress:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/vintage_peplum_suit_dress/costume__)
+            {, {1-$$__lazy-wildcards/subject/costume/vintage_peplum_suit_dress/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/vintage_peplum_suit_dress/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/vintage_peplum_suit_dress/style__}|}
+        costume:
+          - Vintage Peplum Suit Dress, PEPLUM, dr3ss, dress, suit, suit_dress, fascinator, gloves
+        costume-elem:
+          - high_waist
+          - double_breasted
+          - heels
+          - hat
+          - formal_attire
+          - wide voluminous PEPLUM
+          - skirt
+        costume-weapon:
+          - handbag
+        style:
+          - vintage_fashion
+          - retro-futurism
+          - steampunk
 

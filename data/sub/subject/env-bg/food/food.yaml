@@ -59,15 +59,15 @@ lazy-wildcards:
       tofu:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-elem-food/tofu/env-elem-food__
-            {,{1-$$__lazy-wildcards/subject/env-elem-food/tofu/env-food-elem__}|}
-        env-elem-food:
+            __lazy-wildcards/subject/env-elem-food/tofu/env-elem-food-main__
+            {,{1-$$__lazy-wildcards/subject/env-elem-food/tofu/env-elem-food__}|}
+        env-elem-food-main:
           - >-
             {crispy |}fried tofu{ slices|}
           - mapo tofu
           - tofu_soup
           - stinky_tofu
-        env-food-elem:
+        env-elem-food:
           - chopped scallions
           - chili peppers, spicy_dish
           - drizzled with savory sauce
@@ -153,4 +153,30 @@ lazy-wildcards:
           - minimalist_presentation
           - gradient
           - still life
+      # https://civitai.com/models/221021
+      # https://civitai.com/models/220976/gingerbread-house
+      Gingerbread:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/env-elem-food/Gingerbread/env-elem-food-main__}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/Gingerbread/env-elem-food__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/Gingerbread/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/Gingerbread/env-creatures__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/Gingerbread/style__}|}
+        env-elem-food-main:
+          - Gingerbread_man, gingerbread people
+          - Gingerbread_House
+        env-elem-food:
+          - food, cookie
+        env-bg:
+          - a festive holiday village
+        env-creatures:
+          - full of gingerbread people
+          - gingerbread creatures
+          - gingerbread animals
+          - gingerbread robot
+          - gingerbread mechanical
+        style:
+          - no humans
+          - food focus
 

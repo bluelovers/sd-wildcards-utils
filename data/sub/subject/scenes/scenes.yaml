@@ -1,0 +1,25 @@
+lazy-wildcards:
+  subject:
+    scenes:
+      # https://civitai.com/models/271141/ophelia-parody-shot-female-partially-drowning?modelVersionId=305634
+      female_partially_drowning:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/scenes/female_partially_drowning/main-trigger-words__
+            {, {1-$$__lazy-wildcards/subject/scenes/female_partially_drowning/expressions__}|}
+            {, {1-$$__lazy-wildcards/subject/scenes/female_partially_drowning/env__}|}
+            {, {1-$$__lazy-wildcards/subject/scenes/female_partially_drowning/style__}|}
+        main-trigger-words:
+          - female partially drowning, ophesyle, water, partially submerged
+        expressions:
+          - closed eyes
+          - emotionless
+        env:
+          - branches
+          - swamp
+          - day
+          - sunrise
+        style:
+          - on back
+          - from side
+

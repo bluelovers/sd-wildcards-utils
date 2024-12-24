@@ -416,4 +416,63 @@ lazy-wildcards:
           - hoop earrings
           - lingerie
           - cleavage
+    outer_zone:
+      # https://civitai.com/models/190643/misery-outer-zone?modelVersionId=291736
+      misery:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/outer_zone/misery/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/outer_zone/misery/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/outer_zone/misery/expressions__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/outer_zone/misery/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/outer_zone/misery/action-pose__}|}
+        main-trigger-words:
+          - misery, misery_\(outer_zone\)
+        costume-ethnicity:
+          - >-
+            green eyes
+            , hair over one eye
+            , pointy ears, elf, elvish girl
+            , very long hair
+            , (green hair:1.2), (blue hair:1.2), multicolored hair, two-tone hair
+        costume-weapon:
+          - alcohol, drinking glass, wine, wine glass
+        costume-elem:
+          - lace trim
+          - bare legs, barefoot
+          - cleavage
+          - halterneck
+          - nightgown
+          - wavy hair
+          - black gloves
+          - black thighhighs
+          - black dress
+          - choker
+          - zettai ryouiki
+        action-pose:
+          - knees up, legs folded
+          - finger to own chin
+          - reaching
+        expressions:
+          - seductive smile
+    Tales_of_Wedding_Rings:
+      # https://civitai.com/models/1020949/peridot-tales-of-wedding-rings?modelVersionId=1144811
+      Peridot:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/Tales_of_Wedding_Rings/Peridot/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/Tales_of_Wedding_Rings/Peridot/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/Tales_of_Wedding_Rings/Peridot/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/Tales_of_Wedding_Rings/Peridot/costume-elem__}|}
+        main-trigger-words:
+          - Peridot, PeridotR1ngs
+        costume-ethnicity:
+          - long hair, white hair, pointy ears, dark elf, (hair over one eye, choker:1.3), __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+        costume:
+          - hood, hooded cloak, cloak, green dress
+          - dark hood, dark hooded cloak, dark cloak
+        costume-elem:
+          - cleavage
+          - bare shoulders
+          - jewelry
 

@@ -60,4 +60,36 @@ lazy-wildcards:
           - braid
         env:
           - tree
+      # https://civitai.com/models/1003974/tangkhul-dress?modelVersionId=1125271
+      Tangkhul_Dress:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/Tangkhul_Dress/costume__
+            {, {1-$$__lazy-wildcards/subject/costume/Tangkhul_Dress/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/Tangkhul_Dress/env__}|}
+            {, {1-3$$__lazy-wildcards/subject/costume/Tangkhul_Dress/env-bg__}|}
+        costume:
+          - Tangkhul Dress, Tangkhul Naga Tribe, tangkhul, indian
+        costume-elem:
+          - traditional_female_clothing
+          - red_black_white_pattern
+          - handwoven_textiles
+          - tribal_accessories
+          - tribal_shawl
+          - feather_headgear
+          - beaded_necklace
+          - tribal_bamboo_decor
+          - shell_ornaments
+          - vibrant_textiles
+        env:
+          - cultural_artifacts
+        env-bg:
+          - bamboo_hut
+          - tribal_village
+          - thatched_roof
+          - lush_forest
+          - rolling_hills
+          - traditional_landscape
+          - traditional_marketplace
+          - bamboo_architecture
 

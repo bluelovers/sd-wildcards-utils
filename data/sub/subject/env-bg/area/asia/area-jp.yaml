@@ -1,0 +1,136 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      # 日本盂蘭盆節
+      # https://civitai.com/models/615027/japanese-festival?modelVersionId=687529
+      Japanese-Festival-Bon-Odori:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/Japanese-Festival-Bon-Odori/main__
+            {,{1-$$__lazy-wildcards/subject/env-bg/Japanese-Festival-Bon-Odori/costume__}|}
+            {0.2::,{1-$$__lazy-wildcards/subject/env-bg/Japanese-Festival-Bon-Odori/action__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg/Japanese-Festival-Bon-Odori/env__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg/Japanese-Festival-Bon-Odori/env-bg__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg/Japanese-Festival-Bon-Odori/style__}|}
+        main:
+          - bonodori, night, lantern, Japanese_Festival, Bon Odori Venue, Obon_Festival
+        style:
+          - traditional_celebration
+          - festive_decorations
+          - cultural_events
+          - nighttime_ambiance
+          - glowing_lights
+        costume:
+          - Yukata, traditional_summer_kimono
+        action:
+          - traditional_dance
+          - circular_dance_patterns
+        env:
+          - Festival_Lanterns, paper_lanterns
+          - Obon_Lanterns, floating_lanterns, river_ceremony
+          - Taiko_Drums, large_drums
+          - Spirit_Boat, ceremonial_boat
+          - building
+          - summer
+        env-bg:
+          - Yagura, festival_stage, elevated_platform, central_structure
+          - Hanabi, __lazy-wildcards/subject/env-bg/fireworks/prompts__
+      # 人中之龍 龍が如く
+      jp-yakuza-tenkaichi:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/jp-yakuza-tenkaichi/env-bg-main__
+            {,{1-$$__lazy-wildcards/subject/env-bg/jp-yakuza-tenkaichi/env__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg/jp-yakuza-tenkaichi/costume__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg/jp-yakuza-tenkaichi/style__}|}
+        env-bg-main:
+          - tenkaichi_dori, red_neon_gate, ryuu_ga_gotoku_\(series\), yakuza_\(series\)
+        env:
+          - street
+          - night
+          - storefront
+          - advertisement_billboards
+          - restaurants, izakaya
+          - night_clubs, hostess_club
+          - convenience_stores
+          - department_store
+          - SEGA_arcade
+          - movie_theater
+          - wet_pavement
+          - __lazy-wildcards/subject/env-elem/papers-flyers/prompts__
+          - __lazy-wildcards/subject/env-elem/advertisement_billboards-floor/prompts__
+          - traffic_cones
+          - __lazy-wildcards/subject/env-bg-architectural/alley/prompts__
+        costume:
+          - business_attire
+          - drunk_people
+          - fashionable_people
+        style:
+          - neon_lights
+          - __lazy-wildcards/utils/scenery-no-humans__
+      # https://civitai.com/models/220932/japanese-food-stores-red-bench-food-stalls-and-shops
+      Japanese-food-stores-red-bench:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/Japanese-food-stores-red-bench/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/Japanese-food-stores-red-bench/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/Japanese-food-stores-red-bench/action-pose__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/Japanese-food-stores-red-bench/style__}|}
+        env-bg-main:
+          - jpstore, red bench, traditional japanese storefront
+        env:
+          - food, wagashi
+          - oil-paper umbrella
+          - japanese_furniture
+          - noren
+          - wooden_structure
+          - paper_lanterns
+          - potted_plants
+          - narrow_alley
+          - stone_pavement
+          - urban_setting
+          - food stalls
+          - food shops
+        action-pose:
+          - sitting
+          - arms behind back
+          - eating dango
+        style:
+          - traditional_design, traditional_japanese_aesthetics
+      # 和室
+      # https://civitai.com/models/221079/washitsu-japanese-style-room-with-shouji-and-tatami?modelVersionId=249332
+      # https://civitai.com/models/37050/washitsu-sd15
+      washitsu:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/washitsu/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/washitsu/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/washitsu/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/washitsu/style__}|}
+        env-bg-main:
+          - washitsu, washitsus, tatami, shouji, shoji
+        env-bg:
+          - traditional tatami flooring
+          - tokonoma
+          - traditional japanese room
+          - zen interior
+        env:
+          - room divider
+          - sliding_doors
+          - futon
+          - fusuma
+          - wooden beams
+          - chabudai
+          - zabuton
+          - tea_set
+          - built-in shelves
+          - minimalist furniture
+          - hanging scroll
+          - ikebana
+        style:
+          - washitsu style
+          - traditional japanese style
+          - soft lighting
+          - japanese minimalism
+          - japanese culture
+

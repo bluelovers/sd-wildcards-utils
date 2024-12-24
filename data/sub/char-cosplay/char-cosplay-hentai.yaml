@@ -343,4 +343,25 @@ lazy-wildcards:
           - >-
             tears, {crying|tears of pleasure}
           - evil face
+    mama_x_holic:
+      # https://civitai.com/models/481690/senga-sally-mama-x-holic-miwaku-no-mama-to-amaama-kankei
+      senga_sally:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char-hentai/mama_x_holic/senga_sally/main-trigger-words__
+            , __lazy-wildcards/cosplay-char-hentai/mama_x_holic/senga_sally/costume-ethnicity__
+            {, {1-2$$__lazy-wildcards/cosplay-char-hentai/mama_x_holic/senga_sally/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char-hentai/mama_x_holic/senga_sally/costume-elem__}|}
+        main-trigger-words:
+          - sengasally, senga_sally, mama_x_holic
+        costume-ethnicity:
+          - >-
+            mature female, short hair, hair over one eye
+            , dragon horns
+            , purple lips
+            {, __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__|}
+        costume:
+          - egyptian clothes, cleavage, underboob, neck ring, armlet, bracelet
+        costume-elem:
+          - off shoulders, collarbone
 

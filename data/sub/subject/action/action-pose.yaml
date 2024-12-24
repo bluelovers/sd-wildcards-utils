@@ -38,4 +38,35 @@ lazy-wildcards:
           - >-
             outstretched_arms, reaching_out
             {0.3::, {from side|from above|from bottom}|}
+      # https://civitai.com/models/190750
+      middle_finger:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/action-pose/middle_finger/action-main__}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/action-pose/middle_finger/action__}|}
+            {, {1-$$__lazy-wildcards/subject/action-pose/middle_finger/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/action-pose/middle_finger/expressions__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/action-pose/middle_finger/style__}|}
+        action-main:
+          - middle finger, gesture
+          - flipping off
+        action:
+          - one hand middle finger
+          - fuck you at viewer
+        costume-elem:
+          - fingernails
+          - nail polish
+          - v-shaped eyebrows
+          - half-closed eyes
+        expressions:
+          - smile
+          - open mouth, teeth
+          - evil smile
+          - ":P, smirking"
+          - angry_expression
+          - smirk
+        style:
+          - hand_focus
+          - lens_focus
+          - close-up
 

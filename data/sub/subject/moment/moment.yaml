@@ -31,14 +31,23 @@ lazy-wildcards:
         prompts:
           - __lazy-wildcards/subject/moment/weather-rain/prompts__
           - __lazy-wildcards/subject/moment/weather-mist/prompts__
-          - >-
-            {1-$$floating cloud|cloudy|Sea of clouds|dark clouds}
+          - __lazy-wildcards/subject/moment/weather-clouds/prompts__
           - __lazy-wildcards/subject/moment/weather-snow/prompts__
           - __lazy-wildcards/subject/moment/weather-lightning/prompts__
           - __lazy-wildcards/subject/moment/weather-raging-storm/prompts__
+          - __lazy-wildcards/subject/moment/weather-star/prompts__
           - __lazy-wildcards/subject/moment/weather-*/prompts__
           - dynamic weather
-          - __lazy-wildcards/subject/moment/weather-star/prompts__
+          - __lazy-wildcards/subject/moment/magic-tempests/prompts__
+      weather-clouds:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/moment/weather-clouds/env-moment__}
+        env-moment:
+          - floating cloud
+          - cloudy
+          - Sea of clouds
+          - dark clouds
       weather-snow:
         prompts:
           - >-

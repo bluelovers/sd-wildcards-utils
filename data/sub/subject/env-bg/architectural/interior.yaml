@@ -739,4 +739,39 @@ lazy-wildcards:
           - classroom_style
           - minimalist_interior, simple_design
           - formal
+      # https://civitai.com/models/211625/doorway?modelVersionId=238396
+      # https://civitai.com/search/models?baseModel=Other&baseModel=SD%201.5&sortBy=models_v9&query=Doorway
+      # https://civitai.com/models/45397/pov-doorway-concept
+      # https://civitai.com/models/148384/pose-open-door
+      doorway:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-interior/doorway/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/doorway/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/doorway/action__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/doorway/expressions__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/doorway/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/doorway/style__}|}
+        env-bg-main:
+          - drway, doorway, pov doorway, door, doorknob
+        env-bg:
+          - dark room
+          - dark background
+        action:
+          - standing in the doorway
+          - looking towards the viewer
+          - open door,  opening door
+        costume-elem:
+          - blush
+          - sweat
+          - upper body
+        expressions:
+          - seductive smile
+        style:
+          - seductive
+          - from above
+          - backlit photo
+          - light bokeh
+          - >-
+            {indoors, from outside looking in|outdoors, from inside looking out}
 

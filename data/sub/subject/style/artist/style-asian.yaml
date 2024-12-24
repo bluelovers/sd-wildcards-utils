@@ -164,4 +164,44 @@ lazy-wildcards:
           - retro artstyle
           - 1990s \(style\)
           - 1980s \(style\)
+      # https://danbooru.donmai.us/posts?tags=sekiyu_%28spartan%29
+      # https://www.pixiv.net/users/405129/artworks
+      # https://civitai.com/models/190902/sekiyu-spartan-style?modelVersionId=214397
+      sekiyu_spartan:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/sekiyu_spartan/style-artist__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-artist/sekiyu_spartan/costume-elem__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/style-artist/sekiyu_spartan/action__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/sekiyu_spartan/style__}|}
+        style-artist:
+          - sekiyu_\(spartan\), sekiyustyle, sekiyu_\(spartan\) style, by sekiyu_\(spartan\)
+        costume-elem:
+          - gigantic breasts
+          - thick thighs
+          - earmuffs
+          - huge ass
+          - ghost tail
+          - curvy
+          - deep skin
+          - feet out of frame
+          - >-
+            ass{, ass focus|}
+          - giant, giantess
+          - fat mons
+          - cameltoe
+          - muscular
+        action:
+          - femdom
+          - amazon position
+          - sitting on face
+          - >-
+            {1-$$grabbing own ass|hand on own ass}
+          - looking back
+          - looking down
+          - squatting
+        style:
+          - out of frame
+          - from behind
+          - from below
 

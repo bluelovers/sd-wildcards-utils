@@ -189,6 +189,59 @@ lazy-wildcards:
         style:
           - casual
           - engineering_genius
+      # https://civitai.com/models/998534/kallen-stadtfeld-fanart-dora-version-code-geass?modelVersionId=1118996
+      kouzuki_kallen:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/code_geass/kouzuki_kallen/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/code_geass/kouzuki_kallen/costume-ethnicity__
+            {, __lazy-wildcards/cosplay-char/code_geass/kouzuki_kallen/costume-ethnicity-hair__}
+            {, {1-2$$__lazy-wildcards/cosplay-char/code_geass/kouzuki_kallen/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/code_geass/kouzuki_kallen/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/code_geass/kouzuki_kallen/expressions__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/code_geass/kouzuki_kallen/action-pose__}|}
+        main-trigger-words:
+          - kouzuki_kallen, Kallen Stadtfeld, KallenCodeGeass, code_geass
+        costume-ethnicity:
+          - red hair, short hair
+        costume-ethnicity-hair:
+          - kallen_stadtfeld_straight_hair
+          - kallen_stadtfeld_spiked_hair
+        costume:
+          - brown_chest_harness_detached_sleeves_red_crop_top_brown_short_shorts
+          - red_bodysuit_grey_bodysuit_long_sleeves_shoulder_pads
+          - pink_playboy_bunny
+          - multicolored_bodysuit_black_bodysuit_red_bodysuit_orange_bodysuit
+          - yellow_jacket_white_collared_shirt_green_necktie_green_skirt_belt
+          - yellow_dress_detached_collar_ribbon_choker_juliet_sleeves
+          - red_sleeveless_open_bodysuit
+          - schooluniform, school uniform
+          - resistance outfit, bare shoulders, detached sleeves, midriff, navel, shorts, sleeveless, thighhighs, turtleneck
+          - arabian clothes, puffy long sleeves, raglan sleeves, see-through sleeves
+        costume-elem:
+          - badge
+          - cleavage
+          - detached collar
+          - wrist cuffs
+          - red headband
+          - partially unzipped
+          - bracelet
+          - see-through sarong
+          - front-tie bikini top
+          - multi-strapped bikini bottom
+          - visor cap
+          - rabbit ears
+          - open clothes
+        expressions:
+          - chestnut mouth
+          - light blush
+          - blush
+          - empty eyes
+          - scowl
+        action-pose:
+          - spread legs
+          - arms behind head
+          - arm up
     # https://danbooru.donmai.us/posts?tags=saber_marionette_j&z=5
     # https://danbooru.donmai.us/posts?tags=saber_marionette_r&z=5
     saber_marionette_j:
@@ -250,4 +303,31 @@ lazy-wildcards:
           - blonde hair
         costume:
           - deva battle suit, gloves, bare shoulders, black gloves, elbow gloves, armor, leotard, covered navel, turtleneck, headgear, halterneck, highleg, highleg leotard, headgear
+    # 鬼神童子ZENKI
+    kishin_douji_zenki:
+      # https://civitai.com/models/181126/lessgreater-zenki-enno-chiaki-lessremakegreater-demon-god-child-zenki
+      enno_chiaki:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/kishin_douji_zenki/enno_chiaki/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/kishin_douji_zenki/enno_chiaki/costume-ethnicity__
+            {0.7::, __lazy-wildcards/cosplay-char/kishin_douji_zenki/enno_chiaki/costume__|}
+            {, {1-$$__lazy-wildcards/cosplay-char/kishin_douji_zenki/enno_chiaki/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/kishin_douji_zenki/enno_chiaki/env__}|}
+            {0.3::, {1-$$__lazy-wildcards/cosplay-char/kishin_douji_zenki/enno_chiaki/style-art__}|}
+        main-trigger-words:
+          - enno_chiaki, kishin_douji_zenki
+        costume-ethnicity:
+          - purple eyes, black hair, long hair, twintails, hair bobbles
+        costume:
+          - white miko, white japanese clothes, white shirt, white skirt
+        costume-elem:
+          - ribbon-trimmed clothes, ribbon-trimmed sleeves, ribbon trim
+          - bracelet
+        env:
+          - __lazy-wildcards/subject/env-elem/circle-pentagram/prompts__
+        style-art:
+          - 1990s \(style\)
+          - 1980s \(style\)
+          - retro artstyle
 

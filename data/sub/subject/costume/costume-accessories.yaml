@@ -3,14 +3,21 @@ lazy-wildcards:
     costume-elem-accessories:
       earrings:
         prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-elem-accessories/earrings/costume-elem__}
+        costume-elem:
           - earrings
           - large earrings
           - ear chain
           - ear piercing
           - multiple earrings
           - crystal earrings
+          - stud earrings
       necklace:
         prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-elem-accessories/necklace/costume-elem__}
+        costume-elem:
           - gold_necklace
           - necklace
           - flower necklace
@@ -66,4 +73,22 @@ lazy-wildcards:
       shoulder_strap_ruffles:
         prompts:
           - (shoulder strap ruffles, ruffle shoulder straps)
+      # https://civitai.com/models/1025246/winter-style-dress-fur-trim?modelVersionId=1149740
+      fur_trim:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-accessories/fur_trim/costume-elem-main__
+            {, {1-$$__lazy-wildcards/subject/costume-elem-accessories/fur_trim/costume-elem-fur__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-elem-accessories/fur_trim/costume-elem__}|}
+        costume-elem-main:
+          - fur trim, dswntr
+        costume-elem-fur:
+          - fur hem
+          - fur collar
+          - fur cuffs
+        costume-elem:
+          - v-neckline
+          - princess neckline
+          - mini skirt
+          - dress
 

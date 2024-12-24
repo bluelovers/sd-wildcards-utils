@@ -4,6 +4,42 @@ lazy-wildcards:
       curvy_female:
         prompts:
           - curvy, narrow waist, curvy figure, curvy female, curvaceous, wide hips
+      # 苗条
+      slender:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-body/slender/costume-ethnicity-body__{0.3:::{1.2|1.3|1.4}|})
+        costume-ethnicity-body:
+          - slender
+      skinny:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-body/slender/costume-ethnicity-body__
+            , __lazy-wildcards/subject/costume-ethnicity-body/skinny/costume-ethnicity-body__{0.3:::{1.2|1.3|1.4}|})
+        costume-ethnicity-body:
+          - skinny
+      # 骨感皮包骨头
+      skinny_emaciated:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-body/slender/costume-ethnicity-body__
+            , __lazy-wildcards/subject/costume-ethnicity-body/skinny/costume-ethnicity-body__)
+            , ({1-$$__lazy-wildcards/subject/costume-ethnicity-body/skinny_emaciated/costume-ethnicity-body__}{0.3:::{1.2|1.3|1.4}|})
+        costume-ethnicity-body:
+          - emaciated
+          - gaunt
+          - bony
+          - extreme thinness
+      skinny_emaciated_rib:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-body/skinny/costume-ethnicity-body__
+            , {1-$$__lazy-wildcards/subject/costume-ethnicity-body/skinny_emaciated/costume-ethnicity-body__})
+            , ({1-$$__lazy-wildcards/subject/costume-ethnicity-body/skinny_emaciated_rib/costume-ethnicity-body__}{0.3:::{1.2|1.3|1.4}|})
+        costume-ethnicity-body:
+          - prominent ribs
+          - visible ribcage
+          - evident ribcage outline
       # https://civitai.com/models/820573/danielle-sharp-body-type?modelVersionId=917591
       Danielle_Sharp_Body_Type:
         prompts:

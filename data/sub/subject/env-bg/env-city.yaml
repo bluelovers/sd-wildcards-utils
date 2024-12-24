@@ -5,7 +5,7 @@ lazy-wildcards:
         prompts:
           - >-
             {1-$$__lazy-wildcards/subject/env-bg/city-traffic/style__},
-            __lazy-wildcards/subject/env-bg/city-traffic/func/road-in__,
+            __lazy-wildcards/subject/env-bg/city-traffic/fn/road-in__,
             __lazy-wildcards/subject/env-bg/city-traffic/main__,
             {5-$$__lazy-wildcards/subject/env-bg/city-traffic/env__}
             {, __lazy-wildcards/subject/moment/random/prompts__|}
@@ -37,7 +37,7 @@ lazy-wildcards:
             {1-$$scooter|motorcycle}
           - >-
             {1-$$shopping|storefront|signboard}
-        func:
+        fn:
           road-in:
             - >-
               ((busy street in ${country:taiwan})), ${location:taipei} road

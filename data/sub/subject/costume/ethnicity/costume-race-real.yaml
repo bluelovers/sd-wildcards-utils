@@ -1,0 +1,51 @@
+lazy-wildcards:
+  subject:
+    costume-ethnicity-race:
+      # https://civitai.com/models/299307/indian-beuty
+      # https://civitai.com/models/193934/indianbridallook
+      indian:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/indian/costume-ethnicity-race__
+            {0.3::, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/indian/costume__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/indian/costume-elem__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/indian/action__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/indian/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/indian/style__}|}
+        costume-ethnicity-race:
+          - Indian Girl, Indian Beauty, orna, Indian Model, Indian Actress
+        costume:
+          - saree
+          - lehenga choli
+          - salwar kameez
+          - Indian bridal attire, Indian Bridal, Indian bride
+        costume-elem:
+          - traditional_clothing
+          - gold_jewelry
+          - henna_tattoos
+          - maang_tikka
+          - bangles
+          - braided_hair
+          - flower_hair_decoration
+          - long_hair
+          - modern_hairstyle
+          - wheatish_skin
+          - bright_eyes
+          - sharp_facial_features
+          - traditional indian jewellery
+          - Sindoor, sindur
+          - sindoor on hair partings
+          - Indian Makeup Style
+          - sindhoor on head
+        action:
+          - garba_dance
+        env:
+          - diya_lamps
+          - indian_architecture
+          - red_bricks
+          - decorative_rugs
+        style:
+          - gorgeous and bold
+          - vibrant_colors
+          - intricate_designs
+

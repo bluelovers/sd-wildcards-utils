@@ -1,0 +1,178 @@
+lazy-wildcards:
+  subject:
+    env-bg-architectural:
+      # https://civitai.com/models/270508/wooden-apartment-commonly-seen-in-japan-sd15
+      # https://civitai.com/models/19021/japanese-apartment-blockdanchi
+      # https://civitai.com/models/19016/bunka10taku
+      japanese_apartment_exterior:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-architectural/japanese_apartment_exterior/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/japanese_apartment_exterior/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/japanese_apartment_exterior/env__}|}
+        env-bg-main:
+          - >-
+            bunkajutaku, danchi, bunka10taku, bunka10taku
+            , japanese_apartment_exterior, traditional_japanese_apartment
+            , real world location
+        env-bg:
+          - train_tracks_near_apartment
+          - __lazy-wildcards/subject/env-bg-architectural/japanese_apartment_hallway/prompts__
+          - small_japanese_apartment, studio_apartment
+        env:
+          - power lines, utility pole
+          - tree
+          - window, railing
+          - house
+          - fence
+          - narrow_street
+          - bicycle_parking_area
+          - mailboxes
+          - vending_machine
+          - wooden
+          - door
+          - wooden apartment
+          - ladder
+          - stairs
+          - exterior, outdoors
+      # https://civitai.com/models/203276/apartment-hallway-sd15
+      japanese_apartment_hallway:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-architectural/japanese_apartment_hallway/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/japanese_apartment_hallway/env-bg__}|}
+        env-bg-main:
+          - rouka, japanese_apartment_hallway, door
+        env-bg:
+          - outside hallway
+          - window
+      # https://civitai.com/models/19422/retro-showa-era
+      # https://civitai.com/models/829642/japanese-apartment-interior-kitchen-bedroom-living-room
+      japanese_apartment_interior:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-architectural/japanese_apartment_interior/env-bg-main__
+            {, {1-2$$__lazy-wildcards/subject/env-bg-architectural/japanese_apartment_interior/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/japanese_apartment_interior/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/japanese_apartment_interior/style__}|}
+        env-bg-main:
+          - >-
+            showaretro
+            , japane5eapartment1inter10r, interior
+            , japanese_apartment_interior, traditional_japanese_apartment
+        env-bg:
+          - genkan
+          - tatami_room
+          - compact_kitchen, kitchen, JPkitchen
+          - unit_bathroom
+          - balcony_with_laundry
+          - apartment_windows_light
+          - living room, couch
+          - bedroom, futon bed
+        env:
+          - low_table
+          - wooden_flooring
+          - tatami_flooring
+          - sliding_paper_door
+          - smart_home_features
+          - cupboard
+          - messy
+        style:
+          - retro Showa era
+      # https://civitai.com/models/157944/japanese-store-front
+      japanese_store_front:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-architectural/japanese_store_front/env-bg-main__
+            {, {1-2$$__lazy-wildcards/subject/env-bg-architectural/japanese_store_front/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/japanese_store_front/env__}|}
+        env-bg-main:
+          - >-
+            japanese_store_front, traditional_japanese_store, traditional_japanese_storefront
+            , stores, japanese
+            , store signs
+        env-bg:
+          - japanese_tea_shop
+          - wagashi_shop, japanese_sweets_display
+          - pottery_shop, handmade_ceramics
+          - row of japanese_storefront
+        env:
+          - flat facing wall with posters stuck on it
+          - pillar
+          - vending machines
+          - wooden_building
+          - noren
+          - wooden_grille_windows
+          - handwritten_signboard
+          - shoji_sliding_door
+          - wooden_counter
+          - traditional_japanese_goods
+          - hanging_paper_lantern
+          - wood_beam_ceiling
+          - traditional_tea_set
+          - hanging_scroll
+          - bamboo_display_rack
+          - kyoto_street_view
+          - stone_paved_path
+          - japanese_storefront_row
+          - paper_window_glow
+          - wet_stone_path
+      # https://civitai.com/models/186378/torii-red?modelVersionId=209262
+      # https://civitai.com/models/186411/multiple-torii-senbon-torii-multiple-red-torii-along-a-path
+      # https://civitai.com/models/186401/stone-torii?modelVersionId=209296
+      torii:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-architectural/torii/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/torii/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/torii/env-torii-style__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/torii/env-shrine-style__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/torii/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/torii/style__}|}
+        env-bg-main:
+          - torii, toriibg, multtorii
+        env-bg:
+          - torii_bridge
+          - the Fushimi Inari Shrine
+          - Multiple Torii, senbon Torii, multiple torii along a path, row_of_torii, thousand_torii_path
+          - seaside_torii
+        env-torii-style:
+          - red torii, vermilion_torii
+          - stone torii
+          - wooden torii
+          - crack torii, broken torii
+          - minimal_torii
+          - tide_and_torii
+          - urban_torii
+          - sunlight_through_torii
+        env-shrine-style:
+          - ocean_shrine
+          - ancient_shrine
+          - rural_shrine
+          - mountain_forest_shrine
+          - hidden_shrine
+          - street_shrine
+        env:
+          - tree
+          - >-
+            {stairs|__lazy-wildcards/subject/env-elem/stairs/prompts__}
+          - nature
+          - mountain
+          - cliff
+          - waterfall
+          - rocks
+          - ruins
+          - autumn
+          - traditional_japanese_architecture
+          - forest_temple_path
+          - shinto_shrine_entrance
+          - mountain_shrine_path
+          - mystical_pathway
+          - mossy_stepping_stones
+        style:
+          - scary, horror
+          - from below
+          - silhouette
+          - __lazy-wildcards/utils/scenery-no-humans__
+          - modern_and_traditional_contrast
+

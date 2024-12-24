@@ -580,4 +580,85 @@ lazy-wildcards:
           - egypt
           - glowing
           - monsterification
+      # https://civitai.com/models/75395/crab-people-loha
+      # https://civitai.com/models/295525/crabarmor-sd15-paseer
+      # https://civitai.com/models/363733/crab-outfit?modelVersionId=406437
+      Crab-Humanoid_Species:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/Crab-Humanoid_Species/costume-ethnicity-race__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/Crab-Humanoid_Species/costume-ethnicity__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/Crab-Humanoid_Species/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/Crab-Humanoid_Species/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/Crab-Humanoid_Species/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/Crab-Humanoid_Species/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/Crab-Humanoid_Species/style__}|}
+        costume-ethnicity-race:
+          - Crab-Humanoid Species, Crab folk, Crabfolk, kaniishou
+        costume-ethnicity:
+          - >-
+            {huge |}crab lower body, extra legs
+          - chitinous_armor, shell_armor
+          - crustacean_traits
+          - >-
+            {crab girl|0.2::crab man}
+          - >-
+            {huge |}crab claw
+          - >-
+            {huge |}crab limbs
+        costume-elem:
+          - anthropomorphic_species
+          - hybrid_anatomy
+          - coral_crown
+          - seaweed_clothing
+          - tribal_accessories
+          - arthropod limbs
+          - shell bikini
+          - shell bra
+          - shell panties
+          - shell dress
+          - shell skirt
+          - belt
+          - >-
+            crab {1-$$, crab $$armor|suit|furry}
+        env-bg:
+          - coastal_village
+          - underwater_city
+          - tide_pool_cave
+          - coral_structures
+          - seashell_buildings
+          - reef_home
+          - sunset_on_beach
+        env:
+          - bioluminescent_lights, bioluminescent_plants
+          - crab_leg_bridges
+        action:
+          - pearl_diving
+        style:
+          - marine_rituals
+          - tide_worship
+          - aquatic_magic
+          - deep_sea_atmosphere
+          - __lazy-wildcards/utils/fn/style-inspired(v=crab)__
+          - __lazy-wildcards/utils/fn/style-inspired(v=shell)__
+      slime_girl:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/slime_girl/costume-ethnicity-main__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/Crab-Humanoid_Species/costume-ethnicity__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/Crab-Humanoid_Species/costume-elem__}|}
+        costume-ethnicity-main:
+          - slime girl
+        costume-ethnicity:
+          # https://civitai.com/models/158609/mintslime-skin-character-creation?modelVersionId=178296
+          - mintslimeskin
+          - metal skin, made of metal
+          - liquid metal girl
+          - synthetic girl
+          - liquid body
+          - dripping skin
+        costume-elem:
+          - luminescent translucent body
+          - transparent body
+          - dripping
 

@@ -23,6 +23,7 @@ lazy-wildcards:
           - glass floor
           - bamboo floor
           - rubber path
+          - stone_paved_path
         env-style:
           - dirty
           - cobblestone
@@ -43,12 +44,14 @@ lazy-wildcards:
       stairs:
         prompts:
           - >-
-            stairs
+            __lazy-wildcards/subject/env-elem/stairs/env-main__
             {0.7::,({1-3$$__lazy-wildcards/subject/env-elem/stairs/env-stairs__})|}
             {,{1-2$$__lazy-wildcards/subject/env-elem/stairs/env-stairs-style__}|}
             {,{1-$$__lazy-wildcards/subject/env-elem/stairs/action__}|}
             {,{1-$$__lazy-wildcards/subject/env-elem/stairs/env__}|}
             {0.2::,{1-$$__lazy-wildcards/subject/env-elem/stairs/style__}|}
+        env-main:
+          - stairs
         env-stairs:
           - spiral stairs
           - grand stairs
@@ -67,6 +70,8 @@ lazy-wildcards:
         env:
           - stairwell
           - __lazy-wildcards/subject/env-elem/railing/prompts__
+          - staircase_layout
+          - ladder
         action:
           - sitting
         style:

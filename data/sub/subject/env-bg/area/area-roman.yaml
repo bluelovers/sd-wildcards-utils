@@ -1,0 +1,44 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      # https://civitai.com/models/347130/roman-interior
+      Ancient_Roman_Interior_Design:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/Ancient_Roman_Interior_Design/style-main__
+            {, {1-2$$__lazy-wildcards/subject/env-bg/Ancient_Roman_Interior_Design/env-bg__}|}
+            {, {1-2$$__lazy-wildcards/subject/env-bg/Ancient_Roman_Interior_Design/env__}|}
+            {, {1-2$$__lazy-wildcards/subject/env-bg/Ancient_Roman_Interior_Design/style__}|}
+        style-main:
+          - Ancient Roman Interior Design, RomInt
+        env-bg:
+          - ancient_roman_atrium, compluvium, impluvium
+          - ancient_roman_kitchen, terra_cotta_stove, spice_jars
+          - ancient_roman_dining_room, Triclinium
+          - ancient_roman_bedroom, bed, blanket
+          - ancient_roman_bathroom, Balneum
+          - peristyle_garden, lush_garden, Peristyle
+        env:
+          - mosaic_flooring
+          - stone_flooring
+          - marble_flooring
+          - mythological_fresco, luxurious_fresco, painted_walls
+          - klinai
+          - blanket
+          - low_table
+          - simple_furniture
+          - marble_interiors
+          - decorative_columns
+          - bench
+          - statue
+          - candles
+          - fountain
+          - fireplace
+          - pool
+        style:
+          - open_air_light
+          - functional_design
+          - warm_light
+          - candlelight_ambience
+          - intimate_space
+
