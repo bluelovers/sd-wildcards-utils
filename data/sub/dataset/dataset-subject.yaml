@@ -5,14 +5,17 @@ lazy-wildcards:
         - >-
           {1-2$$__lazy-wildcards/utils-dataset/costume/costume__}
           {, {1-3$$__lazy-wildcards/utils-dataset/costume/costume-elem__}|}
-      prompts-color:
+      prompts-with-color:
         - >-
           __lazy-wildcards/utils-dataset/costume/prompts__
           {, {__lazy-wildcards/utils/costume-color-theme-multi__|__lazy-wildcards/utils/costume-color-theme__}|}
+        - >-
+          {1-2$$__lazy-wildcards/utils-dataset/costume/prompts__|{__lazy-wildcards/utils/costume-color-theme-multi__|__lazy-wildcards/utils/costume-color-theme__}}
       costume:
         - __lazy-wildcards/subject/costume/*/prompts__
         - __lazy-wildcards/subject/costume/sfw-civitai/prompts__
         - __lazy-wildcards/cosplay-*/*/*/prompts__
+        - __lazy-wildcards/subject/costume-anything*/*/prompts__
         - __cf-*/prompt-costume__
         - __Bo/chars/char-*/female/bocloths__
         - __Bo/clothings/*/female-attire__
