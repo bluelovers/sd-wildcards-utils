@@ -25,4 +25,124 @@ lazy-wildcards:
         prompts:
           - >-
             {1-$$seductive smile|seductive|voluptuous}
+      # https://civitai.com/models/631023/tongue-outahegao?modelVersionId=705421
+      # https://civitai.com/models/537390/perfect-ahegao
+      # https://civitai.com/models/114626/hdaahegao-sd15
+      # https://www.pixiv.net/tags/%E3%82%AA%E3%83%9B%E9%A1%94
+      ahegao:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/ahegao/expressions-main__{0.3:::{1.2|1.3|1.4}|})
+            {0.3::, {1-$$__lazy-wildcards/subject/costume-elem-expressions/ahegao/expressions-trigger-words__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/costume-elem-expressions/ahegao/expressions__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/costume-elem-expressions/ahegao/costume-elem__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/costume-elem-expressions/ahegao/style__}|}
+        expressions-main:
+          - Ahegao, Ohogao
+        expressions-trigger-words:
+          - HDA_Ahegao
+        expressions:
+          - open mouth
+          - wide eyes
+          - crossed eyes
+          - rolling eyes
+          - Tongue Out
+          - blush
+          - asymmetrical_expression
+          - teasing
+          - eyes_up
+          - eyes_rolling_back
+          - eye_roll
+        costume-elem:
+          - tears
+          - sweat
+          - heart-shaped pupils
+          - __lazy-wildcards/subject/costume-elem/saliva/prompts__
+          - sweatdrop
+        style:
+          - close-up
+          - motion_lines
+      # https://civitai.com/models/189973/pornmaster-tongue-fetishahegaofucked-sillytongue-outfacialbukkakecum-on-tonguewide-open-mouthmouth-pulloral-cavityuvulasaliva-dripnose-piercinglong-tonguecross-eyed
+      # https://civitai.com/models/24530/fucked-silly-from-behind-or-sex-act-lora-220
+      # https://civitai.com/models/84619/fucked-silly-after-sex-locon
+      # https://civitai.com/models/261335/ohogao-fucked-silly
+      fucked_silly:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/fucked_silly/expressions-main__{0.3:::{1.2|1.3|1.4}|})
+            {0.8::, __lazy-wildcards/subject/costume-elem-expressions/ahegao/prompts__|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/fucked_silly/expressions__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/fucked_silly/action__}|}
+        expressions-main:
+          - fucked silly
+        expressions:
+          - rolling eyes
+          - >-
+            {wide |}open mouth
+          - uvula
+          - drunk
+          - unfocused_eyes
+          - flushed_face
+          - silly_expression
+          - blush
+          - tipsy
+          - exhausted
+          - torogao
+          - Dazed
+          - Climax
+          - Confused
+        costume-elem:
+          - clenched teeth
+          - half-closed eyes
+          - spiral_eyes
+        action:
+          - looking up
+          - oral invitation
+          - after sex
+          - dizzy, woozy
+          - wobbly_pose, swaying_pose
+          - slouching
+      # https://civitai.com/models/53448/looking-disgusted-facial-expression
+      # https://danbooru.donmai.us/posts?tags=disgust+&z=5
+      disgusted:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/disgusted/expressions-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/disgusted/expressions__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/disgusted/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/disgusted/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/disgusted/style__}|}
+        expressions-main:
+          - disgusted, disgust, looking disgusted, disgust_face, disgust facial expression
+        expressions:
+          - >-
+            {very |}angry
+          - disappointed
+          - scowl
+          - grimace
+          - frown
+          - gloom \(expression\)
+          - narrowed eyes
+          - furrowed brow
+          - annoyed
+          - scorn
+          - negative_emotions
+          - averting eyes
+        costume-elem:
+          - (shaded face:1.2)
+          - turn pale
+          - clenched teeth
+          - empty eyes
+          - open mouth
+          - teeth
+          - half-closed eyes
+          - wrinkled nose
+        action:
+          - looking down
+          - stepping back
+        style:
+          - from above
+          - from below
+          - dutch angle
+          - foreshortening
 
