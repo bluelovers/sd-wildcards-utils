@@ -1,12 +1,12 @@
 lazy-wildcards:
   subject:
-    costume-ethnicity-hair:
+    costume-ethnicity-hair-style:
       hair-bun:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/costume-ethnicity-hair/hair-bun/costume-hair-bun-main__}
-            {,{1-$$__lazy-wildcards/subject/costume-ethnicity-hair/hair-bun/costume-hair-bun__}|}
-            {,{1-$$__lazy-wildcards/subject/costume-ethnicity-hair/hair-bun/costume-elem__}|}
+            {1-$$__lazy-wildcards/subject/costume-ethnicity-hair-style/hair-bun/costume-hair-bun-main__}
+            {,{1-$$__lazy-wildcards/subject/costume-ethnicity-hair-style/hair-bun/costume-hair-bun__}|}
+            {,{1-$$__lazy-wildcards/subject/costume-ethnicity-hair-style/hair-bun/costume-elem__}|}
         costume-hair-bun-main:
           - hair bun
           - bun cover
