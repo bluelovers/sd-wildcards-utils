@@ -40,7 +40,11 @@ export default Bluebird.resolve()
 		});
 		*/
 
-		fixedJSZipDate(zip, new Date('2000-12-24 23:00:00Z'))
+		fixedJSZipDate(zip, new Date('2000-12-24 23:00:00Z'));
+
+		const zipFile = join(__ROOT_OUTPUT_WILDCARDS, 'lazy-wildcards.yaml.zip');
+
+		const resultOld = md5Buffer(await readFile(zipFile).catch(e => null));
 
 		await zip.generateAsync({
 			type: 'nodebuffer',
@@ -50,12 +54,12 @@ export default Bluebird.resolve()
 				level: 9
 			},
 		}).then(buf => {
-			const md5 = crypto.createHash('md5');
-			const result = md5.update(buf).digest('hex');
+			const result = md5Buffer(buf);
 
-			consoleLogger.yellow.info(result);
+			consoleLogger.green.info(resultOld);
+			if (resultOld !== result) consoleLogger.yellow.info(result);
 
-			return outputFile(join(__ROOT_OUTPUT_WILDCARDS, 'lazy-wildcards.yaml.zip'), buf)
+			return outputFile(zipFile, buf)
 		})
 	})
 ;
@@ -63,4 +67,21 @@ export default Bluebird.resolve()
 function zip_add_file(zip: JSZip, src_path: string, zip_filename?: string)
 {
 	return zip.file(zip_filename ?? basename(src_path), readFile(src_path));
+}
+
+function md5Buffer(buf: Uint8Array | null)
+{
+	try
+	{
+		if (buf)
+		{
+			return crypto.createHash('md5').update(buf).digest('hex');
+		}
+	}
+	catch (e)
+	{
+
+	}
+
+	return null
 }
