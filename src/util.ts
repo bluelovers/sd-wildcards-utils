@@ -1,5 +1,17 @@
 import { array_unique_overwrite } from 'array-hyper-unique';
-import { IMatchDynamicPromptsWildcardsEntry } from './types';
+import {
+	IMatchDynamicPromptsWildcardsEntry,
+	IVisitPathsNode,
+	IYamlNodeTypeSymbol
+} from './types';
+
+export const SYMBOL_YAML_NODE_TYPE_ALIAS = Symbol.for('yaml.alias');
+export const SYMBOL_YAML_NODE_TYPE_DOC = Symbol.for('yaml.document');
+export const SYMBOL_YAML_NODE_TYPE_MAP = Symbol.for('yaml.map');
+export const SYMBOL_YAML_NODE_TYPE_PAIR = Symbol.for('yaml.pair');
+export const SYMBOL_YAML_NODE_TYPE_SCALAR = Symbol.for('yaml.scalar');
+export const SYMBOL_YAML_NODE_TYPE_SEQ = Symbol.for('yaml.seq');
+export const SYMBOL_YAML_NODE_TYPE = Symbol.for('yaml.node.type');
 
 export const RE_DYNAMIC_PROMPTS_WILDCARDS = /(?<!#[^\n]*)__([&~!@])?([*\w\/_\-]+)(\([^\n#]+\))?__/
 
@@ -191,4 +203,29 @@ export function wildcardsPathToPaths(path: string)
 	}
 
 	return convertWildcardsNameToPaths(path);
+}
+
+export function getNodeTypeSymbol(node: IVisitPathsNode): IYamlNodeTypeSymbol
+{
+	// @ts-ignore
+	return node[SYMBOL_YAML_NODE_TYPE]
+}
+
+export function getNodeType(node: IVisitPathsNode)
+{
+	try
+	{
+		return Symbol.keyFor(getNodeTypeSymbol(node))
+	}
+	catch (e)
+	{
+
+	}
+}
+
+export function isSameNodeType(a: IVisitPathsNode, b: IVisitPathsNode)
+{
+	const s = getNodeTypeSymbol(a);
+
+	return s && getNodeTypeSymbol(b) === s;
 }
