@@ -6,6 +6,8 @@ exports[`merge.spec mergeFindSingleRoots 1`] = `
     "root2": {
       "sub1": [
         123,
+      ],
+      "sub1-1": [
         123,
       ],
       "sub2": {
@@ -34,6 +36,8 @@ exports[`merge.spec mergeFindSingleRoots 2`] = `
   root2:
     sub1:
       - 123
+    sub1-1:
+      - 123
     sub2:
       sub2-1:
         - 456
@@ -47,4 +51,179 @@ exports[`merge.spec mergeFindSingleRoots 2`] = `
 "
 `;
 
-exports[`merge.spec mergeFindSingleRoots 3`] = `"Current does not support deep merge at paths: ["root","root2","sub2"], a: {"sub2-1":[456],"sub2-2":[789]}, b: [123]"`;
+exports[`merge.spec mergeFindSingleRoots: Single Seq 1`] = `
+{
+  "root": {
+    "root2": {
+      "sub1": [
+        123,
+      ],
+      "sub1-1": [
+        123,
+      ],
+      "sub2": {
+        "sub2-1": [
+          456,
+        ],
+        "sub2-2": [
+          789,
+        ],
+      },
+    },
+  },
+}
+`;
+
+exports[`merge.spec mergeFindSingleRoots: Single Seq 2`] = `
+"root:
+  root2:
+    sub1:
+      - 123
+    sub1-1:
+      - 123
+    sub2:
+      sub2-1:
+        - 456
+      sub2-2:
+        - 789
+"
+`;
+
+exports[`merge.spec mergeFindSingleRoots: Single Seq 3`] = `
+{
+  "root": {
+    "root2": {
+      "sub1": [
+        123,
+        123456,
+      ],
+      "sub1-1": [
+        123,
+      ],
+      "sub2": {
+        "sub2-1": [
+          456,
+        ],
+        "sub2-2": [
+          789,
+        ],
+      },
+    },
+  },
+}
+`;
+
+exports[`merge.spec mergeFindSingleRoots: Single Seq 4`] = `
+"root:
+  root2:
+    sub1:
+      - 123
+      - 123456
+    sub1-1:
+      - 123
+    sub2:
+      sub2-1:
+        - 456
+      sub2-2:
+        - 789
+"
+`;
+
+exports[`merge.spec mergeFindSingleRoots: deep merge: level 2 1`] = `
+{
+  "root": {
+    "root2": {
+      "sub1": [
+        123,
+        123456,
+      ],
+      "sub1-1": [
+        123,
+      ],
+      "sub2": {
+        "sub2-1": [
+          456,
+          456789,
+        ],
+        "sub2-2": [
+          789,
+        ],
+      },
+    },
+  },
+}
+`;
+
+exports[`merge.spec mergeFindSingleRoots: deep merge: level 2 2`] = `
+"root:
+  root2:
+    sub1:
+      - 123
+      - 123456
+    sub1-1:
+      - 123
+    sub2:
+      sub2-1:
+        - 456
+        - 456789
+      sub2-2:
+        - 789
+"
+`;
+
+exports[`merge.spec mergeFindSingleRoots: multi merge 1`] = `
+{
+  "root": {
+    "root2": {
+      "sub1": [
+        123,
+        123456,
+      ],
+      "sub1-1": [
+        123,
+        123456,
+      ],
+      "sub2": {
+        "sub2-1": [
+          456,
+        ],
+        "sub2-2": [
+          789,
+        ],
+      },
+      "sub4": {
+        "sub2-1": [
+          456,
+        ],
+        "sub2-2": [
+          789,
+        ],
+      },
+    },
+  },
+}
+`;
+
+exports[`merge.spec mergeFindSingleRoots: multi merge 2`] = `
+"root:
+  root2:
+    sub1:
+      - 123
+      - 123456
+    sub1-1:
+      - 123
+      - 123456
+    sub2:
+      sub2-1:
+        - 456
+      sub2-2:
+        - 789
+    sub4:
+      sub2-1:
+        - 456
+      sub2-2:
+        - 789
+"
+`;
+
+exports[`merge.spec mergeFindSingleRoots: throw 1`] = `"Only allow merge same node type at paths: ["root","root2","sub2"], a: yaml.map, b: yaml.seq"`;
