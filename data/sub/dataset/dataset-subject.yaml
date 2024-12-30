@@ -34,4 +34,52 @@ lazy-wildcards:
           {1-6$$__lazy-wildcards/*/*/*/costume*__}
         - >-
           {1-3$$__lazy-wildcards/utils-dataset/costume/costume-ethnicity__}
+    char:
+      haircuts:
+        prompts-multis:
+          - >-
+            {1-4$$__lazy-wildcards/utils-dataset/char/haircuts/haircuts-multis__}
+        prompts:
+          - >-
+            __lazy-wildcards/utils-dataset/char/haircuts/haircuts__
+        haircuts-multis:
+          - >-
+            {1-3$$ hair, $$__cf-*/hairstyle__ hair}
+          - >-
+            {1-3$$ hair, $$__person/regular/haircuts-*__} hair
+          - >-
+            {1-3$$__lazy-wildcards/utils-dataset/char/haircuts/haircuts-others__}
+          - >-
+            {1-3$$__lazy-wildcards/utils-dataset/char/haircuts/haircuts__}
+        haircuts:
+          - __cf-*/hairstyle__ hair
+          - __person/regular/haircuts-*__ hair
+          - __lazy-wildcards/utils-dataset/char/haircuts/haircuts-others__
+        haircuts-others:
+          - blunt bangs
+          - swept bangs
+          - crossed bangs
+          - parted bangs
+          - drill hair
+          - twin drill hair
+          - Wavy Side Bangs hair
+          - hair pulled back, Folded tied hair
+          - curly frizzy flowy hair
+          - >-
+            ahoge, antenna hair,
+            {huge ahoge|heart ahoge}
+          - wolf tail hairstyle
+          - feathered haircutfeathered haircut
+          - Layered Wavy Cut with Curtain Bangs hair
+          - box braids
+          - folded ponytail
+          - swept bangs
+          - rolled_hairstyle
+          - curled_hair
+          - >-
+            {Messy |}Side Swept Hair
+          # https://civitai.com/models/553481/shaggy-mullet-hair-style-sd15-sdxl-pony?modelVersionId=615957
+          - >-
+            Shaggy Mullet Hair Style, shaggyMullet, shaggyMullet hair, (disheveled, messy hair, thinned hair)
+          - rolled lob hairstyle, elegant_finish
 

@@ -49,6 +49,11 @@ lazy-wildcards:
     costume-accessories-base:
       - >-
         {1-$$earrings|hair ornament|jewelry|armlet|necklace|ring|anklet}
+    char-haircuts:
+      - >-
+        {0.6::__lazy-wildcards/utils-dataset/char/haircuts/prompts-multis__|0.4::__lazy-wildcards/utils-dataset/char/haircuts/prompts__}
+      - __lazy-wildcards/utils-dataset/char/haircuts/prompts-multis__
+      - __lazy-wildcards/utils-dataset/char/haircuts/prompts__
     style-artist:
       - >-
         (__lazy-wildcards/subject/style-artist-name/*/prompts__{:1.4|:1.2|})
