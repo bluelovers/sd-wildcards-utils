@@ -59,7 +59,7 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 	const isMatch02 = picomatch([
 		'__lazy-wildcards/prompts/**',
 		'__lazy-wildcards/book/**',
-		
+
 		'__lazy-wildcards/costume/**',
 		'__lazy-wildcards/char/**',
 		'__lazy-wildcards/background/**',
@@ -72,6 +72,7 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 		'__lazy-wildcards/utils-dataset/**',
 
 		'__lazy-wildcards/cosplay-*/*/*/prompts*__',
+		'__lazy-wildcards/real-cosplay*/*/*/prompts*__',
 
 		'__lazy-wildcards/subject/*/*/prompts*__',
 	]);
@@ -81,7 +82,7 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 		'data/cf/other/*.yaml',
 		'data/cf/creatures/*.yaml',
 		'data/others/**/*.yaml',
-		'data/**/*.yaml',
+		'data/*/*.yaml',
 		'data/*.yaml',
 		'data/sub/**/*.yaml',
 		'output/wildcards/**/*.yaml',
