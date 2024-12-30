@@ -1,10 +1,10 @@
 // @ts-ignore
 import Bluebird from 'bluebird';
 import { join, resolve } from 'path';
-import { __ROOT_DATA, __ROOT_OUTPUT_WILDCARDS } from '../../__root';
+import { __ROOT_DATA, __ROOT_OUTPUT_WILDCARDS, __ROOT_TEST } from '../../__root';
 import { readFile } from 'node:fs/promises';
 import parseWildcardsYaml, { defaultOptionsStringifyMinify, IWildcardsYAMLDocument, mergeFindSingleRoots, stringifyWildcardsYamlData } from '../../../src';
-import { outputFile } from 'fs-extra';
+import { copy, outputFile } from 'fs-extra';
 import { consoleLogger } from 'debug-color2/logger';
 // @ts-ignore
 import { globSync } from 'fs';
@@ -45,7 +45,14 @@ export default Bluebird.map([
 {
 	let out = stringifyWildcardsYamlData(json, defaultOptionsStringifyMinify());
 
-	return outputFile(join('S:/.data/wildcards_dy', 'lazy-wildcards.yaml'), out)
+	let outFile = join(__ROOT_TEST, 'output', 'lazy-wildcards.yaml');
+
+	await outputFile(outFile, out);
+
+	return copy(outFile, join('S:/.data/wildcards_dy', 'lazy-wildcards.yaml'), {
+		overwrite: true,
+		preserveTimestamps: true,
+	})
 		.then(() => consoleLogger.info('Copied lazy-wildcards.yaml to stable-diffusion-webui'))
 			.catch(e => consoleLogger.error(String(e)))
 		;
