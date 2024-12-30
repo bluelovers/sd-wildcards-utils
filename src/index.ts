@@ -11,8 +11,10 @@ import {
 import { _visitNormalizeScalar, visitWildcardsYAML } from './items';
 import { createDefaultVisitWildcardsYAMLOptions, validWildcardsYamlData } from './valid';
 import {
-	IOptionsParseDocument, IOptionsStringify,
+	IOptionsParseDocument,
+	IOptionsStringify,
 	IOptionsVisitor,
+	IParseWildcardsYamlInputSource,
 	IRecordWildcards,
 	IWildcardsYAMLDocument,
 	IWildcardsYAMLDocumentParsed,
@@ -127,7 +129,7 @@ export function stringifyWildcardsYamlData<T extends IRecordWildcards | IWildcar
  * Then, it validates the parsed data using the `validWildcardsYamlData` function.
  * Finally, it returns the parsed data.
  */
-export function parseWildcardsYaml<Contents extends YAMLMap = IWildcardsYAMLMapRoot, Strict extends boolean = true>(source: string | Uint8Array,
+export function parseWildcardsYaml<Contents extends YAMLMap = IWildcardsYAMLMapRoot, Strict extends boolean = true>(source: IParseWildcardsYamlInputSource,
 	opts?: IOptionsParseDocument,
 ): Contents extends ParsedNode
 	? IWildcardsYAMLDocumentParsed<Contents, Strict>
