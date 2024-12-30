@@ -114,12 +114,23 @@ export function mergeFindSingleRoots<T extends IWildcardsYAMLMapRoot | IWildcard
 								{
 									try
 									{
+										if (isSeq(pair.value))
+										{
+											let sub2 = sub.get(pair.key);
+
+											if (isSeq(sub2))
+											{
+												_mergeSeqCore(sub2, pair.value);
+												continue;
+											}
+										}
+
 										sub.add(pair, false);
 									}
 									catch (e: any)
 									{
 										errKeys.push(pair.key.value);
-										errors.push(e)
+										errors.push(e);
 									}
 								}
 

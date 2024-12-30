@@ -107,7 +107,7 @@ root:
         - 456789
 `
 
-		expect(() => _mergeFindSingleRoots(souce, souce2)).toThrowErrorMatchingSnapshot();
+		_mergeFindSingleRoots(souce, souce2)
 
 	});
 
@@ -125,13 +125,13 @@ root:
         - 789
 `
 
-		expect(() => _mergeFindSingleRoots(souce, souce2)).toThrowErrorMatchingSnapshot();
+		_mergeFindSingleRoots(souce, souce2, true);
 
 	});
 
 })
 
-function _mergeFindSingleRoots(souce: IParseWildcardsYamlInputSource, souce2: IParseWildcardsYamlInputSource)
+function _mergeFindSingleRoots(souce: IParseWildcardsYamlInputSource, souce2: IParseWildcardsYamlInputSource, shouldThrow?: boolean)
 {
 	let doc = parseWildcardsYaml(souce, {
 		allowEmptyDocument: true,
@@ -143,16 +143,23 @@ function _mergeFindSingleRoots(souce: IParseWildcardsYamlInputSource, souce2: IP
 		keepSourceTokens: false,
 	});
 
-	let actual = mergeFindSingleRoots(doc, doc2);
-	let actualString = stringifyWildcardsYamlData(actual);
+	if (shouldThrow)
+	{
+		expect(() => mergeFindSingleRoots(doc, doc2)).toThrowErrorMatchingSnapshot();
+	}
+	else
+	{
+		let actual = mergeFindSingleRoots(doc, doc2);
+		let actualString = stringifyWildcardsYamlData(actual);
 
-	expect(actual).toMatchSnapshot();
-	expect(actualString).toMatchSnapshot();
+		expect(actual).toMatchSnapshot();
+		expect(actualString).toMatchSnapshot();
 
-	return {
-		doc,
-		doc2,
-		actual,
-		actualString,
-	} as const
+		return {
+			doc,
+			doc2,
+			actual,
+			actualString,
+		} as const
+	}
 }
