@@ -5,4 +5,8 @@ lazy-wildcards:
       Malaysia_Non-Muslim_School_Uniform:
         prompts:
           - (blue_pinafore, white shirt, white skirt), Malaysia Non-Muslim School Uniform
+      school_uniform:
+        prompts:
+          - >-
+            {__lazy-wildcards/subject/moment/season/main__ |}school uniform
 

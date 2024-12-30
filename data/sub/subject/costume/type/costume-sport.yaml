@@ -1,20 +1,20 @@
 lazy-wildcards:
   subject:
-    costume-sport:
+    costume:
       # https://civitai.com/models/961007/baseball-manager-girls-who-the-boys-they-like?modelVersionId=1075952
       sport_manager:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume-sport/sport_manager/main-trigger-words__
-            {, {1-2$$__lazy-wildcards/subject/costume-sport/sport_manager/costume-ethnicity__}|}
-            {, {1-$$__lazy-wildcards/subject/costume-sport/sport_manager/costume-elem__}|}
-            {, {1-$$__lazy-wildcards/subject/costume-sport/sport_manager/costume-weapon__}|}
-            {, {1-$$__lazy-wildcards/subject/costume-sport/sport_manager/action-pose__}|}
-            {, {1-$$__lazy-wildcards/subject/costume-sport/sport_manager/style__}|}
+            __lazy-wildcards/subject/costume/sport_manager/main-trigger-words__
+            {, {1-2$$__lazy-wildcards/subject/costume/sport_manager/costume-ethnicity__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/sport_manager/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/sport_manager/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/sport_manager/action-pose__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/sport_manager/style__}|}
         main-trigger-words:
           - Girl16, sport_manager, sportswear, manager
         costume-ethnicity:
-          - basketball_manager, __lazy-wildcards/subject/costume-sport/baseball/prompts__
+          - basketball_manager, __lazy-wildcards/subject/costume/baseball/prompts__
           - volleyball_manager
         costume-elem:
           - long hair
@@ -28,7 +28,7 @@ lazy-wildcards:
           - headwear
           - string panties
           - hair_tied_back
-          - __lazy-wildcards/subject/costume-sport/sport/prompts__
+          - __lazy-wildcards/subject/costume/sport/prompts__
           - plaid skirt
           - sleeves past wrists
           - zipper pull tab
@@ -47,7 +47,7 @@ lazy-wildcards:
       sport:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/costume-sport/sport/costume-elem__}
+            {1-$$__lazy-wildcards/subject/costume/sport/costume-elem__}
         costume-elem:
           - track jacket
           - track suit
@@ -61,12 +61,12 @@ lazy-wildcards:
       baseball:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume-sport/baseball/main-trigger-words__
-            , {1-$$__lazy-wildcards/subject/costume-sport/baseball/costume__}
-            {, {1-$$__lazy-wildcards/subject/costume-sport/baseball/costume-elem__}|}
-            {, {1-$$__lazy-wildcards/subject/costume-sport/baseball/costume-weapon__}|}
-            {, {1-$$__lazy-wildcards/subject/costume-sport/baseball/action__}|}
-            {, {1-$$__lazy-wildcards/subject/costume-sport/baseball/env-bg__}|}
+            __lazy-wildcards/subject/costume/baseball/main-trigger-words__
+            , {1-$$__lazy-wildcards/subject/costume/baseball/costume__}
+            {, {1-$$__lazy-wildcards/subject/costume/baseball/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/baseball/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/baseball/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/baseball/env-bg__}|}
         main-trigger-words:
           - baseball, B4seballGirl, Girl16
         costume:
@@ -95,8 +95,8 @@ lazy-wildcards:
       football:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume-sport/football/main-trigger-words__
-            , {1-$$__lazy-wildcards/subject/costume-sport/football/costume__}
+            __lazy-wildcards/subject/costume/football/main-trigger-words__
+            , {1-$$__lazy-wildcards/subject/costume/football/costume__}
         main-trigger-words:
           - ChiharuAzuma, soccer, football
         costume:

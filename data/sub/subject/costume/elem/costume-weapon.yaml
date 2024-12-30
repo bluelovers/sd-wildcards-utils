@@ -60,4 +60,40 @@ lazy-wildcards:
         costume-weapon-elem:
           - sword on back
           - planted sword
+      # https://civitai.com/models/155846/pillow-hug-holding-pillow-with-speech-bubble-concept-lora?modelVersionId=224397
+      pillow_hug:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/costume-weapon/pillow_hug/costume-weapon__}
+            {, {1-2$$__lazy-wildcards/subject/costume-weapon/pillow_hug/costume-weapon-pillow__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/pillow_hug/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/pillow_hug/style__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/pillow_hug/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/pillow_hug/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/pillow_hug/style-spoken__}|}
+        costume-weapon:
+          - pillow hug
+          - holding pillow
+        costume-weapon-pillow:
+          - yes-pillow
+          - no-pillow
+          - __lazy-wildcards/utils/color-base__ pillow
+        action:
+          - lying
+          - on stomach
+          - top-down bottom-up
+        costume-elem:
+          - __lazy-wildcards/subject/costume-elem/pussy_juice/prompts__
+          - pajamas
+          - half naked
+        env-bg:
+          - on bed
+        style:
+          - from behind
+          - from side
+        style-spoken:
+          - spoken blush
+          - spoken question mark
+          - spoken exclamation mark
+          - spoken heart
 

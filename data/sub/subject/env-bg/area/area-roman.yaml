@@ -5,18 +5,18 @@ lazy-wildcards:
       Ancient_Roman_Interior_Design:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-bg/Ancient_Roman_Interior_Design/style-main__
+            (__lazy-wildcards/subject/env-bg/Ancient_Roman_Interior_Design/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
             {, {1-2$$__lazy-wildcards/subject/env-bg/Ancient_Roman_Interior_Design/env-bg__}|}
-            {, {1-2$$__lazy-wildcards/subject/env-bg/Ancient_Roman_Interior_Design/env__}|}
-            {, {1-2$$__lazy-wildcards/subject/env-bg/Ancient_Roman_Interior_Design/style__}|}
-        style-main:
-          - Ancient Roman Interior Design, RomInt
+            {, {1-$$__lazy-wildcards/subject/env-bg/Ancient_Roman_Interior_Design/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/Ancient_Roman_Interior_Design/style__}|}
+        env-bg-main:
+          - Ancient Roman Interior Design, __lazy-wildcards/subject/env-bg/Ancient_Roman/env-bg-main__
         env-bg:
           - ancient_roman_atrium, compluvium, impluvium
           - ancient_roman_kitchen, terra_cotta_stove, spice_jars
           - ancient_roman_dining_room, Triclinium
           - ancient_roman_bedroom, bed, blanket
-          - ancient_roman_bathroom, Balneum
+          - ancient_roman_bathroom, Balneum, bath house
           - peristyle_garden, lush_garden, Peristyle
         env:
           - mosaic_flooring
@@ -35,10 +35,67 @@ lazy-wildcards:
           - fountain
           - fireplace
           - pool
+          - roman pillars
         style:
           - open_air_light
           - functional_design
           - warm_light
           - candlelight_ambience
           - intimate_space
+      # https://civitai.com/models/87760/fantastic-rome
+      # https://civitai.com/models/277087/roman-world
+      Ancient_Roman:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/Ancient_Roman/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-2$$__lazy-wildcards/subject/env-bg/Ancient_Roman/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/Ancient_Roman/env__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/env-bg/Ancient_Roman/env-vehicle__}|}
+            {, {1-2$$__lazy-wildcards/subject/env-bg/Ancient_Roman/costume__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/Ancient_Roman/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/Ancient_Roman/costume-weapon__}|}
+        env-bg-main:
+          - Ancient Roman Design, RomInt, fantrome, Ancient Roman, EdobAncientRome, romanworld, __lazy-wildcards/utils/fn/style-inspired(v=ancient_roman)__
+        env-bg:
+          - ancient roman city
+          - ancient roman ruins
+          - ancient roman aqueducts
+          - ancient roman palace
+          - ancient roman palace interior
+          - ancient roman fortress
+          - ancient roman gardens
+          - >-
+            {floor of the |}roman colosseum
+          - ancient_roman_bathroom, Balneum, bath house
+          - ancient roman marketplace
+          - ancient roman army barracks
+          - ancient roman temple
+          - ancient roman vineyard
+          - ancient roman battlefield
+          - ancient roman plaza
+        env:
+          - roman pillars
+          - marble floor
+          - marble columns
+          - marble steps
+          - black marble
+          - white marble
+        env-vehicle:
+          - chariot
+        costume:
+          - roman soldier
+          - loriseg armor
+          - Roman gladiator, gladiator armor
+          - roman stolas, roman togas
+        costume-elem:
+          - red tunic
+          - red shirt
+          - sandals
+          - galea helmet
+          - flutter cape
+          - roman cloak
+        costume-weapon:
+          - roman sword
+          - roman shield
+          - roman spear
 

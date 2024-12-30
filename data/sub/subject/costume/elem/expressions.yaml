@@ -29,6 +29,7 @@ lazy-wildcards:
       # https://civitai.com/models/537390/perfect-ahegao
       # https://civitai.com/models/114626/hdaahegao-sd15
       # https://www.pixiv.net/tags/%E3%82%AA%E3%83%9B%E9%A1%94
+      # https://civitai.com/models/196514/mesugao-seductive-pleasure-face?modelVersionId=220946
       ahegao:
         prompts:
           - >-
@@ -38,7 +39,7 @@ lazy-wildcards:
             {0.3::, {1-$$__lazy-wildcards/subject/costume-elem-expressions/ahegao/costume-elem__}|}
             {0.3::, {1-$$__lazy-wildcards/subject/costume-elem-expressions/ahegao/style__}|}
         expressions-main:
-          - Ahegao, Ohogao
+          - Ahegao, Ohogao, mesugao
         expressions-trigger-words:
           - HDA_Ahegao
         expressions:
@@ -53,12 +54,16 @@ lazy-wildcards:
           - eyes_up
           - eyes_rolling_back
           - eye_roll
+          - __lazy-wildcards/subject/costume-ethnicity-face/tongue_out_to_the_side/prompts__
+          - seductive
+          - pleasure face
+          - open mouth
+          - aroused
         costume-elem:
           - tears
-          - sweat
           - heart-shaped pupils
           - __lazy-wildcards/subject/costume-elem/saliva/prompts__
-          - sweatdrop
+          - __lazy-wildcards/subject/costume-elem/sweat/prompts__
         style:
           - close-up
           - motion_lines
@@ -145,4 +150,38 @@ lazy-wildcards:
           - from below
           - dutch angle
           - foreshortening
+      # https://civitai.com/models/196486/netorare-face-cheating-ntr-face?modelVersionId=220916
+      netorare_face:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/netorare_face/expressions-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/netorare_face/expressions__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/netorare_face/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/netorare_face/action__}|}
+        expressions-main:
+          - netorare face, netorare, ntrgao, ntr face
+        expressions:
+          - false smile
+          - flustered
+          - panicking
+          - rushing
+          - forced smile
+          - blush
+          - __lazy-wildcards/subject/costume-elem/see-through-clothes/prompts__
+          - __lazy-wildcards/subject/costume-elem/sweat/prompts__
+          - nose blush
+          - trembling
+        costume-elem:
+          - half-closed eyes
+          - empty eyes
+          - purple eyes
+          - stray pubic hair
+          - heart-shaped pupils
+          - symbol-shaped pupils
+        action:
+          - cheating
+          - standing
+          - arms behind back
+          - standing
+          - double w
 

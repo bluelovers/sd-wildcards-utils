@@ -252,8 +252,7 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/cosplay-char/saber_marionette_j/style/style:__}|}
             {0.2::, {1-$$__lazy-wildcards/cosplay-char/saber_marionette_j/style/style-art:__}|}
         style-art:
-          - 1990s \(style\)
-          - retro artstyle
+          - __lazy-wildcards/subject/style-art-type/1990s_style/style__
         style:
           - sci-fi_theme
           - android
@@ -327,7 +326,39 @@ lazy-wildcards:
         env:
           - __lazy-wildcards/subject/env-elem/circle-pentagram/prompts__
         style-art:
-          - 1990s \(style\)
-          - 1980s \(style\)
+          - __lazy-wildcards/subject/style-art-type/1990s_style/style__
+          - __lazy-wildcards/subject/style-art-type/1980s_style/style__
           - retro artstyle
+    little_witch_academia:
+      # https://civitai.com/models/161810/sucy-manbavaran-little-witch-academia-lora
+      sucy_manbavaran:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/little_witch_academia/sucy_manbavaran/main-trigger-words__
+            {, __lazy-wildcards/cosplay-char/little_witch_academia/sucy_manbavaran/costume-ethnicity__|}
+            {, __lazy-wildcards/cosplay-char/little_witch_academia/sucy_manbavaran/costume__|}
+            {, {1-$$__lazy-wildcards/cosplay-char/little_witch_academia/sucy_manbavaran/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/little_witch_academia/sucy_manbavaran/costume-weapon__}|}
+        main-trigger-words:
+          - sucy_manbavaran, sucy_manbavaran_\(cosplay\), little_witch_academia
+        costume-ethnicity:
+          - long hair, purple hair, (hair over one eye, purple eyeshadow, pale skin:1.3), makeup, __lazy-wildcards/subject/costume-ethnicity-face/sharp_teeth/prompts__
+        costume:
+          - purple hat, witch, witch hat, luna nova school uniform, belt, wide sleeves, dress
+        costume-elem:
+          - half-closed eyes
+          - blue robe
+          - red eyes
+          - purple eyes
+          - black choker
+          - two-sided headwear
+          - two-sided fabric
+          - small breasts
+        costume-weapon:
+          - poison
+          - holding mushroom
+          - holding vial
+          - holding potion
+          - holding broom
+          - holding juice box, drinking straw
 

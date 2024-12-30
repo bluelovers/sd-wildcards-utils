@@ -795,4 +795,86 @@ lazy-wildcards:
           - vintage_fashion
           - retro-futurism
           - steampunk
+      # https://civitai.com/models/328764/final-fantasy-tactics-dancer-outfit?modelVersionId=368417
+      final_fantasy_tactics_dancer_outfit:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/final_fantasy_tactics_dancer_outfit/costume__)
+            {, {1-$$__lazy-wildcards/subject/costume/final_fantasy_tactics_dancer_outfit/costume-elem__}|}
+        costume:
+          - >-
+            agridnc, MLDncpdxl
+            , bare shoulders, sleeveless croptop, sleeveless crop top, sleeveless
+            , underboob, navel, midriff
+            , shawl
+            , jewelry, bracelets, earrings
+            , long skirt, halter
+            , side slit
+            , high heeled sandals, gold shoes
+        costume-elem:
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
+          - brown crop top
+      cape_dress:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/cape_dress/costume__{0.3:::{1.2|1.3|1.4}|})
+        costume:
+          - cape dress
+      # https://civitai.com/models/303626/silk-robecape-dress?modelVersionId=340876
+      silk_robe_cape_dress:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/silk_robe_cape_dress/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/silk_robe_cape_dress/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/silk_robe_cape_dress/action__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/costume/silk_robe_cape_dress/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/silk_robe_cape_dress/style__}|}
+        costume:
+          - silk robe, silk cape dress, cape dress, t1g3rr0b3, long sleeves, belt
+        costume-elem:
+          - flowing_fabric
+          - high_slit
+          - draped_clothing
+          - deep_v_neckline
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
+          - jewel_embellishments
+          - aristocratic_character
+          - noblewoman
+          - luxury_clothing
+          - fantasy_gown
+          - formal_attire
+          - thigh boots
+          - __lazy-wildcards/utils/color-base__ robe
+          - high heel boots
+        env-bg:
+          - ballroom
+        action:
+          - elegant_pose
+        style:
+          - silky_texture
+          - shiny_material
+          - embellished_design
+          - monochromatic_palette
+          - royal __lazy-wildcards/utils/color-base__
+          - crimson red
+          - emerald_green
+          - pastel_tones
+          - regal_aesthetic
+          - fantasy_setting
+          - high_fashion
+      # https://civitai.com/models/259068/sheer-gothic-dress-and-crown?modelVersionId=292130
+      sheer_gothic_dress:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/sheer_gothic_dress/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/sheer_gothic_dress/costume-headwear__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/sheer_gothic_dress/costume-elem__}|}
+        costume:
+          - g0thicsh33rdr3ss, sheer gothic dress, see-through dress, choker, gothic
+        costume-headwear:
+          - gothic crown
+        costume-elem:
+          - black sheer dress
+          - red sheer dress
+          - black panties
 

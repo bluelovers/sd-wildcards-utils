@@ -192,8 +192,8 @@ lazy-wildcards:
           - hetero
           - bdsm
         style-art:
-          - 1990s \(style\)
-          - 1980s \(style\)
+          - __lazy-wildcards/subject/style-art-type/1990s_style/style__
+          - __lazy-wildcards/subject/style-art-type/1980s_style/style__
           - retro artstyle
       # https://civitai.com/models/277846/nana-ai-yazawa-style
       NANA_Ai_Yazawa:
@@ -222,4 +222,64 @@ lazy-wildcards:
           - claw ring
         action:
           - smoking
+      # https://civitai.com/models/187015/stephanie-law-style
+      Stephanie_Law:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/Stephanie_Law/style-artist__
+            {, {1-$$__lazy-wildcards/subject/style-artist/Stephanie_Law/style-art__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/Stephanie_Law/env-creatures__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/Stephanie_Law/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/Stephanie_Law/style__}|}
+        style-artist:
+          - stephanie_law_style, __lazy-wildcards/utils/fn/style-inspired(v=Stephanie_Law)__
+        env-creatures:
+          - fairies
+          - spirits
+          - dragons
+        env-bg:
+          - enchanted_forest
+          - floating_islands
+          - magical_realm
+          - ethereal_landscape
+        style-art:
+          - watercolor
+          - ethereal
+          - dreamlike
+          - fantasy_art
+          - surreal
+          - mythology
+          - nature_and_myth
+          - gouache
+        style:
+          - abstract_elements
+          - organic_shapes
+          - nature_inspired
+          - intricate_patterns
+          - floral_motifs
+          - mystical_symbols
+          - soft_palette
+          - gradient_tones
+          - translucent_effect
+          - delicate_strokes, delicate lines
+          - celestial_themes
+          - visual_poetry
+          - decorative flair
+          - delicate_art
+      # https://x.com/thiccwithaq
+      # https://civitai.com/models/132837/nyantcha-thiccwithaq-style-or-goofy-ai?modelVersionId=146152
+      # https://civitai.com/models/174631/thiccwithaqnyantcha-style
+      Nyantcha:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/Nyantcha/style-artist__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-artist/Nyantcha/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/Nyantcha/style__}|}
+        style-artist:
+          - nyantcha style, ThiccWithaQ style, Nyantcha
+        costume-elem:
+          - expressive faces
+        style:
+          - cell shading
+          - anime-inspired
 

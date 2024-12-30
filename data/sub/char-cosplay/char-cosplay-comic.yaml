@@ -384,9 +384,7 @@ lazy-wildcards:
           - ear piercing
           - arm strap
           - sidelocks
-          - sweatdrop
-          - sweaty armpits
-          - sweat
+          - __lazy-wildcards/subject/costume-elem/sweat/prompts__
         costume-weapon:
           - holding
           - holding polearm
@@ -475,4 +473,32 @@ lazy-wildcards:
           - cleavage
           - bare shoulders
           - jewelry
+    Hell_Teacher_Jigoku_Sensei_Nube:
+      # https://civitai.com/models/1004579/minki-jigoku-sensei-nube-or?modelVersionId=1125928
+      # https://danbooru.donmai.us/posts?tags=minki_%28jigoku_sensei_nube%29&z=2
+      Minki:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/Hell_Teacher_Jigoku_Sensei_Nube/Minki/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/Hell_Teacher_Jigoku_Sensei_Nube/Minki/costume-ethnicity__
+            {0.7::, __lazy-wildcards/cosplay-char/Hell_Teacher_Jigoku_Sensei_Nube/Minki/costume__|}
+            {, {1-$$__lazy-wildcards/cosplay-char/Hell_Teacher_Jigoku_Sensei_Nube/Minki/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/Hell_Teacher_Jigoku_Sensei_Nube/Minki/expressions__}|}
+        main-trigger-words:
+          - Minki, minki_jsn, minki_\(jigoku_sensei_nube\), jigoku_sensei_nube
+        costume-ethnicity:
+          - (single horn, long hair, twintails:1.2), green eyes, pink hair
+        costume:
+          - bikini armor, elbow gloves, black bikini, side-tie bikini bottom, thighhighs, claws
+        costume-elem:
+          - oversized forearms
+          - revealing clothes
+          - oversized limbs
+          - single gauntlet
+          - bikini top lift
+          - fingerless gloves
+          - breastplate
+        expressions:
+          - \n/
+          - ";d"
 

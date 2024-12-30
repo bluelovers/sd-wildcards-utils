@@ -549,7 +549,7 @@ lazy-wildcards:
           - humanoid_creature, fantasy_creature, mythical_beast
           - black sclera
           - feather hair
-          - sharp teeth
+          - __lazy-wildcards/subject/costume-ethnicity-face/sharp_teeth/prompts__
           - facial mark
           - tail ornament
           - pelvic curtain
@@ -645,10 +645,17 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/subject/costume-ethnicity-race/slime_girl/costume-ethnicity-main__
-            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/Crab-Humanoid_Species/costume-ethnicity__}|}
-            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/Crab-Humanoid_Species/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/slime_girl/env-creatures__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/slime_girl/costume-ethnicity__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/slime_girl/costume-elem__}|}
         costume-ethnicity-main:
-          - slime girl
+          - slime girl, __lazy-wildcards/subject/env-elem/slime/env-main__
+        env-creatures:
+          - slime \(creature\)
+          - slime shapeshifter
+          - metal slime
+          - transparent slime
+          - coloed slime
         costume-ethnicity:
           # https://civitai.com/models/158609/mintslime-skin-character-creation?modelVersionId=178296
           - mintslimeskin
@@ -661,4 +668,64 @@ lazy-wildcards:
           - luminescent translucent body
           - transparent body
           - dripping
+      # https://civitai.com/models/1069590/tiger-woman?modelVersionId=1200546
+      tiger_girl:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-race/tiger_girl/costume-ethnicity-main__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/tiger_girl/costume-ethnicity__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/tiger_girl/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/tiger_girl/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/tiger_girl/env__}|}
+            {, {1-3$$__lazy-wildcards/subject/costume-ethnicity-race/tiger_girl/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/tiger_girl/style__}|}
+        costume-ethnicity-main:
+          - tiger_girl, beastfolk, furry
+        costume-ethnicity:
+          - tiger ears
+          - tiger tail, striped tail
+          - striped fur
+          - tiger print
+          - tiger stripes
+          - tiger paws, clawed hands
+        costume-elem:
+          - fur capelet
+          - striped hair
+          - anthropomorphic character, feral character
+          - glowing eyes
+          - __lazy-wildcards/subject/costume-elem-accessories/fur-trim/prompts__
+          - tribal accessories
+          - leather outfit
+          - jungle attire
+          - wild hair
+          - yellow eyes
+          - fangs
+          - striped skin
+          - pelvic curtain
+          - __lazy-wildcards/subject/costume-ethnicity-face/sharp_teeth/prompts__
+          - body fur
+          - >-
+            {orange|white|black} fur
+          - red sclera
+          - slit pupils
+          - >-
+            {__lazy-wildcards/subject/costume-ethnicity-body-tail/tail_ornament/prompts__|__lazy-wildcards/subject/costume-ethnicity-body-tail/tail/prompts__}
+          - animal ear fluff
+        action:
+          - slashing motion
+          - pouncing
+          - roaring
+          - crouching pose
+        env:
+          - wildlife surroundings
+        env-bg:
+          - tribal camp
+          - cave den
+          - tropical forest
+          - jungle setting
+        style:
+          - wild theme
+          - light shaft through trees
+          - orange and black palette
+          - animal markings
 

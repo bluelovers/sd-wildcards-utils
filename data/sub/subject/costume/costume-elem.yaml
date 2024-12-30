@@ -200,6 +200,16 @@ lazy-wildcards:
           - bandaged shoulder
           - bandaged knee
           - blood_on_bandages
+      sweat:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem/sweat/costume-elem-main__
+            {, {1-$$__lazy-wildcards/subject/costume-elem/sweat/costume-elem__}|}
+        costume-elem-main:
+          - sweat, sweaty
+        costume-elem:
+          - sweatdrop
+          - sweaty armpits
       sleeves:
         prompts:
           - >-

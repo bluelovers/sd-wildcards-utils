@@ -8,4 +8,48 @@ lazy-wildcards:
       clothes_lift_up:
         prompts:
           - beijini_bikini, tank top, clothes lift up, undress, underboob
+      # https://civitai.com/models/1015093/lying-on-bed-skirt-lift?modelVersionId=1138067
+      lying_on_bed_skirt_lift:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/action-nsfw-others/lying_on_bed_skirt_lift/action-main__
+            {, {1-$$__lazy-wildcards/subject/action-nsfw-others/lying_on_bed_skirt_lift/expressions__}|}
+            {, {1-$$__lazy-wildcards/subject/action-nsfw-others/lying_on_bed_skirt_lift/action__}|}
+            {, {1-$$__lazy-wildcards/subject/action-nsfw-others/lying_on_bed_skirt_lift/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/action-nsfw-others/lying_on_bed_skirt_lift/env__}|}
+            {, {1-$$__lazy-wildcards/subject/action-nsfw-others/lying_on_bed_skirt_lift/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/action-nsfw-others/lying_on_bed_skirt_lift/style__}|}
+        action-main:
+          - lying on bed, skirt lift, on back
+        action:
+          - relaxed_pose, carefree
+          - looking_up
+        expressions:
+          - naughty face
+          - blush
+          - teasing smile
+          - closed eyes
+        costume-elem:
+          - short nightgown
+          - frilled skirt
+          - panty peek
+          - skirt_up
+          - partially_exposed
+          - short_skirt
+          - thigh_exposure
+          - knee_socks
+          - bare_legs
+          - skirt removed
+        env-bg:
+          - bedroom
+        env:
+          - pillows
+          - bed
+        style:
+          - intimate_setting
+          - slice_of_life
+          - character_focus
+          - soft_mood
+          - cozy_atmosphere
+          - soft_lighting
 

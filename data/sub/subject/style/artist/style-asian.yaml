@@ -106,7 +106,7 @@ lazy-wildcards:
         style-art:
           - illustrations
           - watercolor \(medium\)
-          - retro artstyle, 1990s \(style\)
+          - __lazy-wildcards/subject/style-art-type/1990s_style/style__
       # https://civitai.com/models/153381/akiman-yasuda-akira-turn-a-gundam-star-ocean-55-artist-style
       Akiman:
         prompts:
@@ -161,9 +161,9 @@ lazy-wildcards:
           - erotic_art
           - glossy_art_style
         style-art:
+          - __lazy-wildcards/subject/style-art-type/1990s_style/style__
+          - __lazy-wildcards/subject/style-art-type/1980s_style/style__
           - retro artstyle
-          - 1990s \(style\)
-          - 1980s \(style\)
       # https://danbooru.donmai.us/posts?tags=sekiyu_%28spartan%29
       # https://www.pixiv.net/users/405129/artworks
       # https://civitai.com/models/190902/sekiyu-spartan-style?modelVersionId=214397
@@ -204,4 +204,85 @@ lazy-wildcards:
           - out of frame
           - from behind
           - from below
+      # https://civitai.com/models/100853/matsuo-hiromi-daisho-romance
+      matsuo_hiromi:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/matsuo_hiromi/style-artist__)
+            {, {1-$$__lazy-wildcards/subject/style-artist/matsuo_hiromi/costume-elem__}|}
+            {, {1-2$$__lazy-wildcards/subject/style-artist/matsuo_hiromi/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/matsuo_hiromi/env__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/matsuo_hiromi/action__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/matsuo_hiromi/style__}|}
+        style-artist:
+          - matsuo_hiromi, japanese_romanticism, __lazy-wildcards/utils/fn/style-inspired(v=matsuo_hiromi)__, daisho romance
+        costume-elem:
+          - kimono
+          - hakama
+          - hair_accessory
+          - bob_cut
+          - japanese_clothing
+          - delicate_facial_features
+          - lace_trim
+          - formal_attire
+        env-bg:
+          - traditional_architecture
+          - japanese_garden
+          - tea_house
+        env:
+          - shoji_windows
+          - autumn_leaves
+        action:
+          - elegant_pose
+        style:
+          - taisho_romance
+          - sunset_lighting
+          - embroidered_pattern
+          - floral_motif
+          - vintage_fashion
+          - soft_shading
+          - pastel_palette
+          - hand-drawn_lines
+          - romantic_aesthetic
+          - taisho_era
+          - nostalgic_setting
+          - traditional_culture
+      # https://civitai.com/models/242289/artist-style-rsef-style?modelVersionId=273361
+      # https://x.com/_rsef_
+      # https://www.pixiv.net/users/8816066/artworks
+      rsef_style:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/rsef_style/style-artist__)
+            {, {1-$$__lazy-wildcards/subject/style-artist/rsef_style/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/rsef_style/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/rsef_style/env__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/rsef_style/style__}|}
+        style-artist:
+          - rsef style, fevercell style
+        env-bg:
+          - abstract_background
+          - futuristic_landscape
+        env:
+          - energy_auras
+        costume-elem:
+          - human_machine_hybrid
+        style:
+          - psychedelic_art
+          - futuristic_design
+          - vivid_colors
+          - dynamic_composition
+          - digital_aesthetics
+          - high_contrast
+          - neon_lighting
+          - holographic_effects
+          - gradient_blend
+          - glitch_effects
+          - chromatic_aberration
+          - geometric_patterns
+          - overlapping_shapes
+          - motion_blur
+          - cybernetic_elements
+          - mystical_vibes
+          - science_fantasy
 

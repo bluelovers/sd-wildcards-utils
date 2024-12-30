@@ -6,6 +6,8 @@ lazy-wildcards:
           - __Bo/clothings/nsfw/female-attire__
       nsfw:
         prompts:
+          - __lazy-wildcards/subject/costume-anything/nsfw/costume__
+        costume:
           - side-tie panties, cleavage, multi-strapped panties, highleg panties, string panties, groin, strap slip, denim, denim bikini
           - partially unbuttoned, button bursting, revealing clothing, open buttons, straining clothing, cleavage
           - ripped clothes, torn clothes, tattered clothes
@@ -18,12 +20,25 @@ lazy-wildcards:
           - (naked, nude, hood, long cloak:1.3)
       nsfw-nude:
         prompts:
+          - __lazy-wildcards/subject/costume-anything/nsfw-nude/costume__
+        costume:
           - nude, topless, breasts out, breasts slip, cleavage, see-through cleavage, see-through, breasts focus, unaligned_breasts
           - naked, bare, nude, completely nude, no bra, nobar, cleavage
           - Open Jacket, Open Clothes, Bare Chest, Exposed Chest, no bra, nobar
           - no bra, nobar
+      costume-mixin:
+        prompts:
+          - __lazy-wildcards/subject/costume-anything/costume-mixin/costume__
+        costume:
+          # https://civitai.com/posts/10784867
+          # https://civitai.com/posts/10775129
+          - wearing a sleeveless tan vest, denim overalls, hiking boots, bandana, gloves, PoorlyDressedPolicewoman, brautiful pol1ceg1rls in a police uniform, policewoman, smug, grinning smile, pink bra, leopard print bar, blue Police jacket, open jacket, cleavage, white shirt, handcuffs, nail polish, necklace, detached collar, jewelry, collared shirt, epaulettes, thigh strap, thighband pantyhose, black pantyhose, police_cap, utility_belt, armlet
+          # https://civitai.com/posts/10924772
+          - Aztec wearing an aztec brown hide vest, embroidered leggings, decorated moccasins, aztec tattoos, decorative armband, ceremonial nose ring, green eyes, side ponytail, hair between eyes, bangs, high ponytail, green hair, double-parted bangs, long hair, smile, boots, sleeveless dress, belt, single glove, black socks, black dress, pleated dress, suspenders hanging, black gloves, black choker, medium breasts, holding polearm, snake_hair_ornament, ribbon-trimmed clothes, ribbon-trimmed sleeves, ribbon trim, blue hair, lipstick, hair over eyes, makeup, mandala_tattoo, intricate_geometric_patterns, sweat, sweaty, animal ears, animal ear fluff, rabbit ears, furry female, body fur, fur collar, rabbit girl, rabbit tail, animal nose, snout, sitting, head tilt, biting, cheek biting, hug, fayan eyes, third_eye, 3x3_eyes, ThirdEye, triclops, Buddhist mantra
       clothes:
         prompts:
+          - __lazy-wildcards/subject/costume-anything/clothes/costume__
+        costume:
           - ((ancient egyptian theme)), golden ornaments, ancient egyptian sailor_shirt, ancient egyptian pleated_skirt, bowtie
           - Collared shirts
           - school uniform, sweater, miniskirt
@@ -33,8 +48,6 @@ lazy-wildcards:
           - breastless dress
           - (bare shoulders, detached sleeves, strapless dress, long dress, corset)
           - cape, cross-laced clothes, hexagram, white transparent thighhighs, miniskirt, dress, thong, elbow laced panties, visible panties
-          - >-
-            {__lazy-wildcards/subject/moment/season/main__ |}school uniform
           - >-
             sosexyburuma,
             buruma, Bloomers, Old Japanese Gym Uniform, School Swimsuit, burumashorts, navy buruma, thong buruma,
@@ -77,6 +90,8 @@ lazy-wildcards:
           - divine goddess, shiny skin
       military-unorganized:
         prompts:
+          - __lazy-wildcards/subject/costume-anything/military-unorganized/costume__
+        costume:
           - (royal ribbons, royal insignia, officer cap, sword, empire waist dress, detailed fabrics)
           - (military costume, military hat)
           - military flightsuit

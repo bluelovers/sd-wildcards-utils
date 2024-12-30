@@ -29,4 +29,25 @@ lazy-wildcards:
           - silhouette
           - glowing
           - eldritch_abomination
+      oily_skin:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/costume-ethnicity-body-skin/oily_skin/costume-ethnicity__}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-body-skin/oily_skin/costume-elem__}|}
+        costume-ethnicity:
+          - oily skin, oiled skin
+          - skinny oily skin, skinny oiled skin
+        costume-elem:
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin/glossy_skin/prompts__
+      glossy_skin:
+        prompts:
+          - >-
+            perfect glossy body, perfect glossy skin, perfect glistening skin, perfect glocy skin
+      tanlines:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/costume-ethnicity-body-skin/tanlines/costume-ethnicity__}{0.3:::{1.2|1.3|1.4}|})
+        costume-ethnicity:
+          - tanlines
+          - suntanned
 

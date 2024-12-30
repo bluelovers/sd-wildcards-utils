@@ -35,7 +35,7 @@ lazy-wildcards:
           - anal
           - bottomless
           - biting own lip
-          - sweat
+          - __lazy-wildcards/subject/costume-elem/sweat/prompts__
           - urination
           - tentacles coiling
           - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
@@ -78,8 +78,7 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/subject/env-elem/slime/env-main__
-            {, {1-$$__lazy-wildcards/subject/env-elem/slime/env-creatures__}|}
-            {, {1-$$__lazy-wildcards/subject/env-elem/slime/costume-elem__}|}
+            {0.7::, {1-$$__lazy-wildcards/subject/env-elem/slime/env-creatures__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem/slime/env__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem/slime/style__}|}
         env-main:
@@ -96,12 +95,6 @@ lazy-wildcards:
           - wet, lotion
           - slime thick dripping
         env-creatures:
-          - slime \(creature\)
-          - slime shapeshifter
-          - metal slime
-          - transparent slime
-          - coloed slime
-        costume-elem:
           - __lazy-wildcards/subject/costume-ethnicity-race/slime_girl/prompts__
         style:
           - translucent

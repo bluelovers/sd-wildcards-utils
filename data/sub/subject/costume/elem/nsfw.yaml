@@ -4,5 +4,14 @@ lazy-wildcards:
       pussy_juice:
         prompts:
           - >-
-              {1-$$pussy juice|pussy juice drip}
+              ({1-$$__lazy-wildcards/subject/costume-elem/pussy_juice/costume-main__})
+              {, {1-$$__lazy-wildcards/subject/costume-elem/pussy_juice/costume-elem__}|}
+        costume-main:
+          - pussy juice, lovejuice, pussyjuice
+          - pussy juice drip
+          - pussy juice drip through clothes
+          - pussy juice trail
+        costume-elem:
+          - pussy juice puddle
+          - pussy juice stain
 

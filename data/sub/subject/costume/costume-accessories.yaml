@@ -38,7 +38,7 @@ lazy-wildcards:
             __lazy-wildcards/subject/costume-elem-accessories/gold-trim/costume-elem-main__
             {0.3::, {1-$$__lazy-wildcards/subject/costume-elem-accessories/gold-trim/costume-elem__}|}
         costume-elem-main:
-          - gold trim, gold-trimmed
+          - gold trim, gold-trimmed, gold threading
         costume-elem:
           - gold-stitched
           - gold-embroidery
@@ -74,14 +74,14 @@ lazy-wildcards:
         prompts:
           - (shoulder strap ruffles, ruffle shoulder straps)
       # https://civitai.com/models/1025246/winter-style-dress-fur-trim?modelVersionId=1149740
-      fur_trim:
+      fur-trim:
         prompts:
           - >-
-            (__lazy-wildcards/subject/costume-elem-accessories/fur_trim/costume-elem-main__
-            {, {1-$$__lazy-wildcards/subject/costume-elem-accessories/fur_trim/costume-elem-fur__}|}{0.3:::{1.2|1.3|1.4}|})
-            {, {1-$$__lazy-wildcards/subject/costume-elem-accessories/fur_trim/costume-elem__}|}
+            (__lazy-wildcards/subject/costume-elem-accessories/fur-trim/costume-elem-main__
+            {, {1-$$__lazy-wildcards/subject/costume-elem-accessories/fur-trim/costume-elem-fur__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-elem-accessories/fur-trim/costume-elem__}|}
         costume-elem-main:
-          - fur trim, dswntr
+          - fur trim, dswntr, fur-trimmed
         costume-elem-fur:
           - fur hem
           - fur collar
