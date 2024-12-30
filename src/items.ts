@@ -1,13 +1,16 @@
 import { array_unique_overwrite, defaultChecker } from 'array-hyper-unique';
-import { Document, isDocument, isMap, isPair, isScalar, Node, ParsedNode, visit, visitor, YAMLMap } from 'yaml';
+import { Document, isDocument, isMap, isPair, isScalar, isSeq, Node, ParsedNode, visit, visitor, YAMLMap } from 'yaml';
 import {
 	IOptionsParseDocument,
 	IOptionsVisitor,
-	IResultDeepFindSingleRootAt, IVisitorFnKey, IVisitPathsList,
+	IResultDeepFindSingleRootAt,
+	IVisitorFnKey,
+	IVisitPathsList,
 	IVisitPathsNodeList,
 	IWildcardsYAMLDocument,
 	IWildcardsYAMLMapRoot,
-	IWildcardsYAMLPair, IWildcardsYAMLScalar,
+	IWildcardsYAMLPair,
+	IWildcardsYAMLScalar,
 } from './types';
 import { formatPrompts } from './format';
 import { isWildcardsYAMLDocument, isWildcardsYAMLMap } from './is';
@@ -67,10 +70,15 @@ export function deepFindSingleRootAt(node: ParsedNode | Document.Parsed | IWildc
 
 		let key = child.key.value;
 
-		let paths = result?.paths ?? [];
+		let paths = result?.paths?.slice() ?? [];
 		(paths as any as string[]).push(key);
 
 		let value = child.value;
+
+		if (isSeq(value))
+		{
+			return result
+		}
 
 		return deepFindSingleRootAt(value, {
 			paths,

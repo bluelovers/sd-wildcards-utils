@@ -4,10 +4,14 @@ import {
 	IOptionsMergeWilcardsYAMLDocumentJsonBy,
 	IRecordWildcards,
 	IWildcardsYAMLDocument,
-	IWildcardsYAMLMapRoot, IWildcardsYAMLPair, IWildcardsYAMLSeq,
+	IWildcardsYAMLMapRoot,
+	IWildcardsYAMLPair,
+	IWildcardsYAMLPairValue,
+	IWildcardsYAMLSeq,
 } from './types';
 import { deepFindSingleRootAt } from './items';
 import { AggregateErrorExtra } from 'lazy-aggregate-error';
+import { getNodeType, isSameNodeType } from './util';
 
 export function mergeWildcardsYAMLDocumentRoots<T extends Pick<Document<YAMLMap>, 'contents'>>(ls: [T, ...any[]])
 {
@@ -77,23 +81,24 @@ export function mergeFindSingleRoots<T extends IWildcardsYAMLMapRoot | IWildcard
 	for (let node of list)
 	{
 		let result = deepFindSingleRootAt(node);
+		let paths = result?.paths;
 
 		if (result)
 		{
-			let current = doc.getIn(result.paths) as IWildcardsYAMLMapRoot;
+			let current = doc.getIn(paths) as IWildcardsYAMLMapRoot;
 
 			if (current)
 			{
 				if (!isMap(current))
 				{
-					throw new TypeError(`Only YAMLMap can be merged. node: ${current}`)
+					throw new TypeError(`Only YAMLMap can be merged [1]. path: ${paths}, type: ${getNodeType(current)} node: ${current}`)
 				}
 
 				result.value.items
 					// @ts-ignore
 					.forEach((p: IWildcardsYAMLPair) => {
 						const key = p.key.value;
-						const sub = current.get(key);
+						const sub: IWildcardsYAMLPairValue = current.get(key);
 
 						if (sub)
 						{
@@ -120,12 +125,19 @@ export function mergeFindSingleRoots<T extends IWildcardsYAMLMapRoot | IWildcard
 
 								if (errors.length)
 								{
-									throw new AggregateErrorExtra(errors, `Failure when merging sub YAMLMap. Paths: ${JSON.stringify(result.paths.concat(key))}. Conflicting keys: ${JSON.stringify(errKeys)}`);
+									throw new AggregateErrorExtra(errors, `Failure when merging sub YAMLMap. Paths: ${JSON.stringify(paths.concat(key))}. Conflicting keys: ${JSON.stringify(errKeys)}`);
 								}
 							}
 							else
 							{
-								throw new TypeError(`Current does not support deep merge at paths: ${JSON.stringify(result.paths.concat(key))}, a: ${sub}, b: ${p.value}`)
+								if (!isSameNodeType(sub, p.value))
+								{
+									throw new TypeError(`Only allow merge same node type at paths: ${JSON.stringify(paths.concat(key))}, a: ${getNodeType(sub)}, b: ${getNodeType(p.value)}`)
+								}
+								else
+								{
+									throw new TypeError(`Current does not support deep merge at paths: ${JSON.stringify(paths.concat(key))}, a: ${sub}, b: ${p.value}`)
+								}
 							}
 						}
 						else
@@ -137,12 +149,12 @@ export function mergeFindSingleRoots<T extends IWildcardsYAMLMapRoot | IWildcard
 			}
 			else
 			{
-				doc.setIn(result.paths, result.value)
+				doc.setIn(paths, result.value)
 			}
 		}
 		else
 		{
-			throw new TypeError(`Only YAMLMap can be merged. node: ${node}`)
+			throw new TypeError(`Only YAMLMap can be merged [2]. path: ${paths}, node: ${node}`)
 		}
 	}
 
