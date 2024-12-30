@@ -16,6 +16,14 @@ import {
 	YAMLSeq,
 } from 'yaml';
 import { Glob,PicomatchOptions } from 'picomatch';
+import {
+	SYMBOL_YAML_NODE_TYPE_ALIAS,
+	SYMBOL_YAML_NODE_TYPE_DOC,
+	SYMBOL_YAML_NODE_TYPE_MAP,
+	SYMBOL_YAML_NODE_TYPE_PAIR,
+	SYMBOL_YAML_NODE_TYPE_SCALAR,
+	SYMBOL_YAML_NODE_TYPE_SEQ
+} from './util';
 
 export type IOmitParsedNodeContents<T extends Node | Document, P extends ParsedNode | Document.Parsed> =
 	Omit<P, 'contents'>
@@ -190,3 +198,7 @@ export interface IOptionsCheckAllSelfLinkWildcardsExists extends Pick<IOptionsFi
 	ignore?: string[]
 	maxErrors?: number,
 }
+
+export type IParseWildcardsYamlInputSource = string | Uint8Array
+
+export type IYamlNodeTypeSymbol = typeof SYMBOL_YAML_NODE_TYPE_ALIAS | typeof SYMBOL_YAML_NODE_TYPE_DOC | typeof SYMBOL_YAML_NODE_TYPE_MAP | typeof SYMBOL_YAML_NODE_TYPE_PAIR | typeof SYMBOL_YAML_NODE_TYPE_SCALAR | typeof SYMBOL_YAML_NODE_TYPE_SEQ
