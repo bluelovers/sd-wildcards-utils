@@ -1,0 +1,16 @@
+lazy-wildcards:
+  subject:
+    costume-ethnicity-body-elem:
+      # https://civitai.com/models/109337/body-horror-mouth-belly
+      stomach_mouth:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-body-elem/stomach_mouth/costume-ethnicity__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-body-elem/stomach_mouth/costume-elem__}|}
+        costume-ethnicity:
+          - stomach mouth, bodyhorror, mouth belly
+        costume-elem:
+          - extra mouth
+          - __lazy-wildcards/subject/costume-ethnicity-face/sharp_teeth/prompts__
+          - monster girl
+

@@ -1,0 +1,42 @@
+lazy-wildcards:
+  subject:
+    costume:
+      # https://civitai.com/models/234197/v-shaped-slingshot-swimsuit-wide-fabric?modelVersionId=264068
+      # https://civitai.com/models/234206/v-shaped-slingshot-swimsuit-string-type?modelVersionId=264079
+      v-shaped_slingshot_swimsuit:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/v-shaped_slingshot_swimsuit/costume-main__
+            {, {1-$$__lazy-wildcards/subject/costume/v-shaped_slingshot_swimsuit/costume__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/v-shaped_slingshot_swimsuit/costume-elem__}|}
+            {0.2::, {1-$$__lazy-wildcards/subject/costume/v-shaped_slingshot_swimsuit/action__}|}
+        costume-main:
+          - vsuit, vstring, v-shaped slingshot swimsuit, navel, stomach
+        costume:
+          - wide fabric
+          - string type
+          - >-
+            ${v=!__lazy-wildcards/utils/color-base__}
+            ${v} vsuit, ${v} vstring, ${v} slingshot swimsuit
+        costume-elem:
+          - strap gap
+          - wide hips
+          - mature female
+          - thick thighs
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin/oily_skin/prompts__
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin/glossy_skin/prompts__
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin/tanlines/prompts__
+          - partially visible vulva
+          - covered nipples
+          - micro bikini
+          - curvy
+          - pubic hair peek
+          - groin
+          - necktie between breasts
+          - >-
+            o-ring{ swimsuit|}
+        action:
+          - hand on hip
+          - arms behind head, arms up
+          - __lazy-wildcards/subject/action-nsfw-others/pose-bottom-open-legs/prompts__
+

@@ -1,0 +1,46 @@
+lazy-wildcards:
+  subject:
+    costume-ethnicity-face:
+      # https://civitai.com/models/67632/better-sharp-teeth
+      sharp_teeth:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-face/sharp_teeth/costume-ethnicity__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-face/sharp_teeth/expressions__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-face/sharp_teeth/costume-elem__}|}
+        costume-ethnicity:
+          - sharp teeth
+        expressions:
+          - clenched teeth
+          - evil smile
+          - open mouth
+          - tongue out
+          - smile
+          - grin
+        costume-elem:
+          - fangs, fang
+          - teeth
+          - bigger teeth
+      long_tongue:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-ethnicity-face/long_tongue/costume-ethnicity__}
+        costume-ethnicity:
+          - very long tongue
+          - long tongue
+      forked_tongue:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-face/forked_tongue/costume-ethnicity__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-face/forked_tongue/costume-elem__}|}
+        costume-ethnicity:
+          - forked_tongue, slit tongue, slittongue, sidetongue
+        costume-elem:
+          - __lazy-wildcards/subject/costume-ethnicity-face/tongue_out_to_the_side/prompts__
+      tongue_out_to_the_side:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-ethnicity-face/tongue_out_to_the_side/costume-ethnicity__}
+        costume-ethnicity:
+          - Tongue out to the side, sidetongue
+

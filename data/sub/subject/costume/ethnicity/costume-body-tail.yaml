@@ -1,0 +1,28 @@
+lazy-wildcards:
+  subject:
+    costume-ethnicity-body-tail:
+      tail:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-body-tail/tail/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-body-tail/tail/action-pose__}|}
+        costume-ethnicity:
+          - tail
+        action-pose:
+          - tail raised
+      tail_ornament:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-body-tail/tail/prompts__
+            , __lazy-wildcards/subject/costume-ethnicity-body-tail/tail_ornament/costume-elem-main__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-body-tail/tail_ornament/costume-elem__}|}
+        costume-elem-main:
+          - tail ornament
+        costume-elem:
+          - tail bow
+          - tail ribbon
+          - tail bell
+          - tail piercing
+          - tail ring
+          - tail flower
+
