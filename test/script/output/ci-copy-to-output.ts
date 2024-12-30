@@ -12,7 +12,7 @@ import { consoleLogger } from 'debug-color2/logger';
 
 export default (async () => {
 
-	await copy(join(__ROOT, './test/__file_snapshots__/findWildcardsYAMLPathsAll'), join(__ROOT_OUTPUT, '__file_snapshots__/findWildcardsYAMLPathsAll'), {
+	await copy(join(__ROOT, './test/__file_snapshots__/entryAll'), join(__ROOT_OUTPUT, '__file_snapshots__/entryAll'), {
 		preserveTimestamps: true,
 		dereference: true,
 	});
