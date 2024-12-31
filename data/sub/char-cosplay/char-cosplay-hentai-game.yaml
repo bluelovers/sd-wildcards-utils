@@ -86,6 +86,19 @@ lazy-wildcards:
           - KublaiKhan, kublai_khan_\(eiyuu_senki\)
         costume-ethnicity:
           - long hair, blue hair, single braid, red eyes, navel, cleavage, jewelry, medium breasts, cape, hair over one eye, bridal gauntlets, bracelet, bikini top only
+      # https://civitai.com/models/1074868/catherine-eiyuu-senki?modelVersionId=1206618
+      Catherine:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char-hentai/Eiyuu_Senki/Catherine/main-trigger-words__
+            , __lazy-wildcards/cosplay-char-hentai/Eiyuu_Senki/Catherine/costume-ethnicity__
+            {0.7::, __lazy-wildcards/cosplay-char-hentai/Eiyuu_Senki/Catherine/costume__|}
+        main-trigger-words:
+          - CatherineES
+        costume-ethnicity:
+          - blonde hair, purple eyes, hair bun, double bun
+        costume:
+          - thighhighs, long sleeves, dress, jewelry, earrings, puffy sleeveless, crown, between breasts, bridal gauntlets
     tokyo_necro:
       # https://civitai.com/models/914089/itachi-otome-tokyo-necro-suicide-mission?modelVersionId=1023064
       itachi_otome:

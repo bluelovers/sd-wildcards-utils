@@ -40,6 +40,7 @@ lazy-wildcards:
       # https://civitai.com/models/76693?modelVersionId=697939
       # https://civitai.com/models/142146/carnage-style-blood-and-gore-nsfw-nsfanywhere
       # https://civitai.com/models/165507/bio-mecha?modelVersionId=186295
+      # https://civitai.com/models/270285/abomination?modelVersionId=304691
       biomachine_body_horror:
         prompts:
           - >-
@@ -53,7 +54,7 @@ lazy-wildcards:
             {,{1-6$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-elem__}|}
             {,{1-6$$__lazy-wildcards/subject/costume/biomachine_body_horror/style-elem__}|}
         style-main:
-          - (body horror, BPNK, biomachine, biomecha, bio mecha, bio-mechanical:1.3), CarnageStyle, Carnage Style
+          - (body horror, BPNK, biomachine, biomecha, bio mecha, bio-mechanical:1.3), CarnageStyle, Carnage Style, Abomination, abo
         style:
           - bloody, blood_red
           - zentangle

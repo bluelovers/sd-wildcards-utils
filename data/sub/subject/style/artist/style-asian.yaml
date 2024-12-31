@@ -285,4 +285,78 @@ lazy-wildcards:
           - cybernetic_elements
           - mystical_vibes
           - science_fantasy
-
+      # https://rule34.xxx/index.php?page=post&s=list&tags=hagiwara_kazushi
+      # https://danbooru.donmai.us/posts?tags=hagiwara_kazushi
+      # https://civitai.com/models/128447/illustrious-xl-kazushi-hagiwara-bastard-artist-style?modelVersionId=140627
+      Kazushi_Hagiwara:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/style-main__
+            {, {1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/costume-elem__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/action-pose__}|}
+            {0.3::, {1-2$$__lazy-wildcards/dataset/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/style__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/style-art__}|}
+        style-main:
+          - hagiwara_kazushi, Kazushi_Hagiwara, bastard!!
+        costume-elem:
+          - long hair
+          - breasts, cleavage
+          - elbow gloves
+          - white hair
+          - sideboob
+          - arms behind back
+          - barefoot
+          - __lazy-wildcards/subject/costume-elem-accessories/chain-acc/prompts__
+          - __lazy-wildcards/subject/costume-ethnicity-race/demon_girl/prompts__
+          - open clothes
+          - revealing clothes
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+          - covered nipples
+          - gold bikini
+          - gold jewelry
+          - headdress
+          - pelvic curtain, loincloth
+          - bikini armor
+          - arabian clothes, harem outfit
+          - pointy ears
+          - curvaceous
+          - cape
+          - fingerless gloves
+          - __lazy-wildcards/subject/costume/armor/prompts__
+        action-pose:
+          - lying
+        style:
+          - hetero
+          - bdsm
+        style-art:
+          - __lazy-wildcards/subject/style-art-type/1990s_style/style__
+          - __lazy-wildcards/subject/style-art-type/1980s_style/style__
+          - retro artstyle
+      # https://civitai.com/models/277846/nana-ai-yazawa-style
+      NANA_Ai_Yazawa:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/style-main__
+            {0.4::, {1-$$__lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/style-art__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/action__}|}
+        style-main:
+          - nana_\(series\), Ai Yazawa, yazawa_ai_\(style\), punk
+        style-art:
+          - manga
+          - drawing lines
+          - ink lines
+          - black and white
+        costume-elem:
+          - leather jacket
+          - black boots
+          - ornate ring
+          - nail polish
+          - wavy hair
+          - makeup, lipstick
+          - bare shoulders
+          - ear piercing
+          - claw ring
+        action:
+          - smoking

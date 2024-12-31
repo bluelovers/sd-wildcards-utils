@@ -84,4 +84,58 @@ lazy-wildcards:
           - MP18 SMG, leather SMG pouch
           - ZB-26, LMG
           - thompson SMG, submachine gun
+      # https://civitai.com/models/288909/gothic-military-dresses?modelVersionId=324870
+      Gothic_Military_Dress:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/Gothic_Military_Dress/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/Gothic_Military_Dress/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/Gothic_Military_Dress/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/Gothic_Military_Dress/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/Gothic_Military_Dress/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/Gothic_Military_Dress/style__}|}
+        costume:
+          - m1l1t4ry, necktie, gloves, dress, peaked cap, puffy dress, short sleeves, Gothic Military Dress
+        env-bg:
+          - military barracks, lockers, racks, cleaning supplies
+          - castle_interior
+          - gothic_architecture
+        env:
+          - beds
+          - ceremonial_setting
+        costume-elem:
+          - black dress
+          - black gloves
+          - platform heels
+          - hime cut
+          - military_uniform
+          - gothic_dress
+          - long_coat_dress
+          - corset_design
+          - high_collar
+          - double_breasted
+          - epaulets
+          - ornamental_buttons
+          - chain_accessories
+          - belted_waist
+          - asymmetric_hems
+          - layered_skirt
+          - black_fabric
+          - leather_accents
+          - velvet_trim
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
+          - silver_accessories
+          - combat_boots
+          - military_hat
+          - leather_gloves
+          - stockings
+          - lace_choker
+        action:
+          - commanding_pose
+        style:
+          - gothic_fashion
+          - dark_fashion
+          - metal_embellishments
+          - embroidery_detailing
+          - satin_texture
 
