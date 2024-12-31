@@ -1621,7 +1621,7 @@ lazy-wildcards:
           - >-
             (__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/style-main__{0.3:::{1.2|1.3|1.4}|}){,{1-3$$__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/env-bg__}|}{,{1-5$$__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/env__}|}{,{1-$$__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/env-moment__}|}{0.3::,{1-2$$__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/env-creatures__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/env-chair__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/env-vehicle__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/costume-wings__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/costume-weapon__}|}{,{1-5$$__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/style__}|}
         style-main:
-          - beksinski style,zdzislaw beksinski
+          - __lazy-wildcards/utils/fn/style-inspired(v=beksinski)__,__lazy-wildcards/utils/fn/style-inspired(v=zdzislaw_beksinski)__
         env:
           - ethereal figures
           - skeletons,bones
@@ -1724,7 +1724,7 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/subject/style-artist/Todd_Macfarlane/style-main__{,{1-$$__lazy-wildcards/subject/style-artist/Todd_Macfarlane/costume__}|}{,{1-$$__lazy-wildcards/subject/style-artist/Todd_Macfarlane/action-pose__}|}{,{1-$$__lazy-wildcards/subject/style-artist/Todd_Macfarlane/env__}|}{,{1-$$__lazy-wildcards/subject/style-artist/Todd_Macfarlane/style__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-artist/Todd_Macfarlane/style-art__}|}
         style-main:
-          - by Todd MacFarlane style,by toddmac2023 style
+          - __lazy-wildcards/utils/fn/style-inspired(v=Todd_MacFarlane)__,__lazy-wildcards/utils/fn/style-inspired(v=toddmac2023)__
         costume:
           - spawn \(spawn\)
           - muscular_characters
@@ -1746,75 +1746,7 @@ lazy-wildcards:
         style-art:
           - comic style,comic_artist,dark_comic_art
           - detailed_linework
-          - 90s_comic_style
-      # https://rule34.xxx/index.php?page=post&s=list&tags=hagiwara_kazushi
-      # https://danbooru.donmai.us/posts?tags=hagiwara_kazushi
-      # https://civitai.com/models/128447/illustrious-xl-kazushi-hagiwara-bastard-artist-style?modelVersionId=140627
-      Kazushi_Hagiwara:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/style-main__{,{1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/costume-elem__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/action-pose__}|}{0.3::,{1-2$$__lazy-wildcards/dataset/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/style__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/style-art__}|}
-        style-main:
-          - |-
-            hagiwara_kazushi,Kazushi_Hagiwara,bastard!!
-        costume-elem:
-          - long hair
-          - breasts,cleavage
-          - elbow gloves
-          - white hair
-          - sideboob
-          - arms behind back
-          - barefoot
-          - __lazy-wildcards/subject/costume-elem-accessories/chain-acc/prompts__
-          - __lazy-wildcards/subject/costume-ethnicity-race/demon_girl/prompts__
-          - open clothes
-          - revealing clothes
-          - __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
-          - covered nipples
-          - gold bikini
-          - gold jewelry
-          - headdress
-          - pelvic curtain,loincloth
-          - bikini armor
-          - arabian clothes,harem outfit
-          - pointy ears
-          - curvaceous
-          - cape
-          - fingerless gloves
-          - __lazy-wildcards/subject/costume/armor/prompts__
-        action-pose:
-          - lying
-        style:
-          - hetero
-          - bdsm
-        style-art:
           - __lazy-wildcards/subject/style-art-type/1990s_style/style__
-          - __lazy-wildcards/subject/style-art-type/1980s_style/style__
-          - retro artstyle
-      # https://civitai.com/models/277846/nana-ai-yazawa-style
-      NANA_Ai_Yazawa:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/style-main__{0.4::,{1-$$__lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/style-art__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/action__}|}
-        style-main:
-          - nana_\(series\),Ai Yazawa,yazawa_ai_\(style\),punk
-        style-art:
-          - manga
-          - drawing lines
-          - ink lines
-          - black and white
-        costume-elem:
-          - leather jacket
-          - black boots
-          - ornate ring
-          - nail polish
-          - wavy hair
-          - makeup,lipstick
-          - bare shoulders
-          - ear piercing
-          - claw ring
-        action:
-          - smoking
       # https://civitai.com/models/187015/stephanie-law-style
       Stephanie_Law:
         prompts:
@@ -2125,6 +2057,74 @@ lazy-wildcards:
           - cybernetic_elements
           - mystical_vibes
           - science_fantasy
+      # https://rule34.xxx/index.php?page=post&s=list&tags=hagiwara_kazushi
+      # https://danbooru.donmai.us/posts?tags=hagiwara_kazushi
+      # https://civitai.com/models/128447/illustrious-xl-kazushi-hagiwara-bastard-artist-style?modelVersionId=140627
+      Kazushi_Hagiwara:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/style-main__{,{1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/costume-elem__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/action-pose__}|}{0.3::,{1-2$$__lazy-wildcards/dataset/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/style__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/style-art__}|}
+        style-main:
+          - |-
+            hagiwara_kazushi,Kazushi_Hagiwara,bastard!!
+        costume-elem:
+          - long hair
+          - breasts,cleavage
+          - elbow gloves
+          - white hair
+          - sideboob
+          - arms behind back
+          - barefoot
+          - __lazy-wildcards/subject/costume-elem-accessories/chain-acc/prompts__
+          - __lazy-wildcards/subject/costume-ethnicity-race/demon_girl/prompts__
+          - open clothes
+          - revealing clothes
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+          - covered nipples
+          - gold bikini
+          - gold jewelry
+          - headdress
+          - pelvic curtain,loincloth
+          - bikini armor
+          - arabian clothes,harem outfit
+          - pointy ears
+          - curvaceous
+          - cape
+          - fingerless gloves
+          - __lazy-wildcards/subject/costume/armor/prompts__
+        action-pose:
+          - lying
+        style:
+          - hetero
+          - bdsm
+        style-art:
+          - __lazy-wildcards/subject/style-art-type/1990s_style/style__
+          - __lazy-wildcards/subject/style-art-type/1980s_style/style__
+          - retro artstyle
+      # https://civitai.com/models/277846/nana-ai-yazawa-style
+      NANA_Ai_Yazawa:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/style-main__{0.4::,{1-$$__lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/style-art__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/action__}|}
+        style-main:
+          - nana_\(series\),Ai Yazawa,yazawa_ai_\(style\),punk
+        style-art:
+          - manga
+          - drawing lines
+          - ink lines
+          - black and white
+        costume-elem:
+          - leather jacket
+          - black boots
+          - ornate ring
+          - nail polish
+          - wavy hair
+          - makeup,lipstick
+          - bare shoulders
+          - ear piercing
+          - claw ring
+        action:
+          - smoking
       Mixtec_Codex:
         prompts:
           - >-
@@ -2475,13 +2475,14 @@ lazy-wildcards:
           - >-
             1girl,1other,solo focus,face focus,__lazy-wildcards/subject/env-bg/World_Morph/main-trigger-words-02__
     scenes-view:
+      # https://danbooru.donmai.us/posts?tags=tachi-e&z=1
       gacha:
         prompts:
           - >-
             __lazy-wildcards/subject/scenes-view/gacha/main-trigger-words__,__lazy-wildcards/subject/scenes-view/gacha/style-view__{,{1-$$__lazy-wildcards/subject/scenes-view/gacha/costume__}|}{0.2::,{1-$$__lazy-wildcards/subject/scenes-view/gacha/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/scenes-view/gacha/env-bg__}|}{,{1-$$__lazy-wildcards/subject/scenes-view/gacha/env__}|}{,{1-$$__lazy-wildcards/subject/scenes-view/gacha/style__}|}
         main-trigger-words:
           - >-
-            (white background,transparent background:1.4),(full body),gacha
+            (white background,transparent background:1.4),(full body),(gacha,tachi-e{0.3:::{1.2|1.3|1.4}|})
         style-view:
           - far shot
           - mid shot
@@ -2492,8 +2493,9 @@ lazy-wildcards:
           - Korean style vertical painting
           - light particles
           - green circle
-          - character_illustration
+          - character_illustration,game cg
           - concept_art
+          - official art
         costume:
           - official alternate costume
           - sleeveless,chinese clothes,china dress
@@ -7355,6 +7357,10 @@ lazy-wildcards:
           - full-sized squid
         style:
           - appetizing_scent,umami_flavor
+      # https://civitai.com/models/1016821/rou-geng-tang?modelVersionId=1140062
+      Rou_Geng_Tang:
+        prompts:
+          - Rou Geng Tang
       others:
         prompts:
           - fried calamari
@@ -8778,6 +8784,29 @@ lazy-wildcards:
           - soap bottle
           - soap
           - bar soap
+      wings-angel:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/costume-elem/wings-angel/costume-wings__}{,{1-$$__lazy-wildcards/subject/costume-elem/wings-elem/prompts__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem/wings-angel/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/wings-angel/env__}|}
+        costume-elem:
+          - white wings
+          - feathered wings
+        costume-wings:
+          - angel wings
+          - seraph wings
+        env:
+          - gold
+          - jewels
+          - diamonds
+          - >-
+            {1-$$pearls|pearl necklace}
+          - valuable objects everywhere
+      wings-demon:
+        prompts:
+          - demon_wings
+      wings-elem:
+        prompts:
+          - multiple_wings
       Jetpack:
         prompts:
           - >-
@@ -8844,6 +8873,13 @@ lazy-wildcards:
       traditional_Vietnamese_conical_hat:
         prompts:
           - traditional Vietnamese conical hat,Non la
+      # https://civitai.com/models/328517/seraphim-blindfold?modelVersionId=368149
+      blindfold-angel:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/costume-headwear/blindfold-angel/costume-headwear__}{0.3:::{1.2|1.3|1.4}|})
+        costume-headwear:
+          - angel_mask,seraphim blindfold,seraph blindfold,blindfold
     costume:
       mecha-musume:
         prompts:
@@ -8879,13 +8915,14 @@ lazy-wildcards:
       # https://civitai.com/models/76693?modelVersionId=697939
       # https://civitai.com/models/142146/carnage-style-blood-and-gore-nsfw-nsfanywhere
       # https://civitai.com/models/165507/bio-mecha?modelVersionId=186295
+      # https://civitai.com/models/270285/abomination?modelVersionId=304691
       biomachine_body_horror:
         prompts:
           - >-
             __lazy-wildcards/subject/costume/biomachine_body_horror/style-main__{,({1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/style__}:1.2)|}{,{1-6$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-types/*__}|}{,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-ethnicity__}|}{,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-wings__}|}{,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/env__}|}{,{1-$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-breasts__}|}{,{1-6$$__lazy-wildcards/subject/costume/biomachine_body_horror/costume-elem__}|}{,{1-6$$__lazy-wildcards/subject/costume/biomachine_body_horror/style-elem__}|}
         style-main:
           - |-
-            (body horror,BPNK,biomachine,biomecha,bio mecha,bio-mechanical:1.3),CarnageStyle,Carnage Style
+            (body horror,BPNK,biomachine,biomecha,bio mecha,bio-mechanical:1.3),CarnageStyle,Carnage Style,Abomination,abo
         style:
           - bloody,blood_red
           - zentangle
@@ -9434,30 +9471,6 @@ lazy-wildcards:
           - sarashi,topless,cleavage cutout,budget sarashi,chest sarashi,bandages
           - fundoshi,bottomless
           - t-back
-      wings-angel:
-        prompts:
-          - >-
-            angel,{1-$$__lazy-wildcards/subject/costume/wings-angel/costume__},({1-$$__lazy-wildcards/subject/costume/wings-angel/costume-wings__}{,{1-$$__lazy-wildcards/subject/costume/wings-elem/prompts__}|}:1.3) {1-$$__lazy-wildcards/subject/costume/wings-angel/env__}
-        costume:
-          - barefoot with a bracelet on her legs
-          - bracelets on her wrists and arms
-          - gypsy clothes
-          - beautiful face covered by a transparent cloth
-        costume-wings:
-          - angel_wings
-        env:
-          - gold
-          - jewels
-          - diamonds
-          - >-
-            {1-$$pearls|pearl necklace}
-          - valuable objects everywhere
-      wings-demon:
-        prompts:
-          - demon_wings
-      wings-elem:
-        prompts:
-          - multiple_wings
       sfw-civitai:
         prompts:
           - >-
@@ -9865,6 +9878,59 @@ lazy-wildcards:
           - black sheer dress
           - red sheer dress
           - black panties
+      # https://civitai.com/models/265516/plunge-overalls-and-crop-top?modelVersionId=299391
+      # https://civitai.com/models/83700?modelVersionId=88950
+      plunge_overalls:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/plunge_overalls/costume-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume/plunge_overalls/costume__}|}{,{1-$$__lazy-wildcards/subject/costume/plunge_overalls/costume-elem__}|}
+        costume-main:
+          - plung30v3r4ll,plunge overalls,deep v overalls,underboob,baggy overalls,naked overalls,cleavage
+        costume:
+          - crop tank top
+          - naked suspenders
+        costume-elem:
+          - denim
+          - sleeveless,bare shoulders
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-shapes-sagging/prompts__
+          - no bra
+      # https://civitai.com/models/268186/net-dress?modelVersionId=302356
+      net_dress:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/net_dress/costume__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume/net_dress/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume/net_dress/action-pose__}|}{,{1-$$__lazy-wildcards/subject/costume/net_dress/style__}|}
+        costume:
+          - gr1ddr3ss,net dress,high heels,puffy sleeves,see-through
+        costume-elem:
+          - black net dress
+          - fashionable attire
+          - sheer_fabric
+          - lace_trim
+          - stiletto_heels
+          - ankle_strap_heels
+          - matching_accessories
+          - elegant_jewelry
+        action-pose:
+          - confident_pose
+          - graceful_pose
+          - seductive_pose
+        style:
+          - elegant_fashion
+          - mesh_pattern
+          - delicate_embroidery
+          - shimmering_effect
+          - glossy_texture
+      # https://civitai.com/models/293104/pastel-origami-gown-or-extremely-flammable?modelVersionId=329433
+      origami_gown:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/origami_gown/costume__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume/origami_gown/costume-elem__}|}
+        costume:
+          - pastel origami gown,origami,dr3ss,multicolored dress
+        costume-elem:
+          - pastel yellow blue pink
+          - |-
+            pastel {1-3$$,pastel $$__lazy-wildcards/utils/color-base__}
       armor:
         prompts:
           - >-
@@ -9960,6 +10026,55 @@ lazy-wildcards:
           - MP18 SMG,leather SMG pouch
           - ZB-26,LMG
           - thompson SMG,submachine gun
+      # https://civitai.com/models/288909/gothic-military-dresses?modelVersionId=324870
+      Gothic_Military_Dress:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/Gothic_Military_Dress/costume__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume/Gothic_Military_Dress/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume/Gothic_Military_Dress/action__}|}{,{1-$$__lazy-wildcards/subject/costume/Gothic_Military_Dress/env-bg__}|}{,{1-$$__lazy-wildcards/subject/costume/Gothic_Military_Dress/env__}|}{,{1-$$__lazy-wildcards/subject/costume/Gothic_Military_Dress/style__}|}
+        costume:
+          - m1l1t4ry,necktie,gloves,dress,peaked cap,puffy dress,short sleeves,Gothic Military Dress
+        env-bg:
+          - military barracks,lockers,racks,cleaning supplies
+          - castle_interior
+          - gothic_architecture
+        env:
+          - beds
+          - ceremonial_setting
+        costume-elem:
+          - black dress
+          - black gloves
+          - platform heels
+          - hime cut
+          - military_uniform
+          - gothic_dress
+          - long_coat_dress
+          - corset_design
+          - high_collar
+          - double_breasted
+          - epaulets
+          - ornamental_buttons
+          - chain_accessories
+          - belted_waist
+          - asymmetric_hems
+          - layered_skirt
+          - black_fabric
+          - leather_accents
+          - velvet_trim
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
+          - silver_accessories
+          - combat_boots
+          - military_hat
+          - leather_gloves
+          - stockings
+          - lace_choker
+        action:
+          - commanding_pose
+        style:
+          - gothic_fashion
+          - dark_fashion
+          - metal_embellishments
+          - embroidery_detailing
+          - satin_texture
       sport_manager:
         prompts:
           - >-
@@ -11698,6 +11813,23 @@ lazy-wildcards:
           - light shaft through trees
           - orange and black palette
           - animal markings
+      angel:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-ethnicity-race/angel/costume-ethnicity__}
+        costume-ethnicity:
+          - angel
+          - seraph angel,seraphim angel
+          - biblically accurate angel
+        costume-elem:
+          - barefoot with a bracelet on her legs
+          - bracelets on her wrists and arms
+          - gypsy clothes
+          - beautiful face covered by a transparent cloth
+          - __lazy-wildcards/subject/costume-elem/wings-angel/prompts__
+          - __lazy-wildcards/subject/costume-headwear/blindfold-angel/prompts__
+          - halo
+          - head wings
     costume-weapon:
       smoking_pipe:
         prompts:
@@ -13561,6 +13693,124 @@ lazy-wildcards:
         expressions:
           - \n/
           - ;d
+    fate:
+      # 源賴光
+      # https://civitai.com/models/453729/minamoto-no-raikou-or-fatestaynight-or-15-attires-or-kofi-commissioned?modelVersionId=505140
+      raikou:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/fate/raikou/main__,__lazy-wildcards/cosplay-char/fate/raikou/costume-ethnicity__,__lazy-wildcards/cosplay-char/fate/raikou/costume-types/*__,{1-$$__lazy-wildcards/cosplay-char/fate/raikou/style__}
+        main:
+          - >-
+            minamoto no raikou \(fate\),fate \(series\)
+        costume-ethnicity:
+          - |-
+            large breasts,parted bangs,purple eyes,(purple hair:1.2),very long hair
+        style:
+          - hoop earrings
+          - collarbone
+          - __lazy-wildcards/dataset/costume-accessories-base__
+          - hair between eyes
+          - lipstick
+          - makeup
+          - cleavage
+          - mature female
+          - bursting breasts
+          - thighs
+          - braid
+          - black panties
+          - curvy
+          - hair flower
+          - collar
+          - hair over shoulder
+          - high collar
+          - low-tied long hair
+          - ponytail
+          - straight hair
+          - rope
+          - tie
+          - purple panties
+        costume-types:
+          anything:
+            - Apron_Raikou_ownwaifu,apron,long sleeves,turtleneck sweater,floral print,long skirt,purple shirt
+            - Bra_Raikou_ownwaifu,bare shoulders,cleavage,sports bra,yoga pants,bracelet,brown belt,casual,hair ornament,hair scrunchie,high-waist pants,navel,sportswear,tight pants
+            - Bunny_Raikou_ownwaifu,bare shoulders,playboy bunny,rabbit ears,wrist cuffs,highleg leotard,purple leotard,covered navel,rabbit tail,bowtie,strapless leotard,fishnets,black pantyhose,fishnet pantyhose,thighband pantyhose,black bow,black bowtie,cameltoe,detached sleeves,shiny clothes
+            - BusinessSuit_Raikou_ownwaifu,white shirt,collared shirt,office lady,black skirt,pencil skirt,dress shirt,long sleeves,shirt tucked in,belt,black pantyhose
+            - Chinese_Raikou_ownwaifu,china dress,chinese clothes,purple dress,bare shoulders,sleeveless,side slit,purple gloves,feather boa,folded fan,sleeveless dress,covered navel,floral print
+            - CowPrint_Raikou_ownwaifu,eyepatch bikini,fake horns,animal print,bare shoulders,cow print,cleavage,cow horns,elbow gloves,neck bell,swimsuit,animal ears,cow tail,cowbell,navel,white bikini,white thighh
+            - EyePatchBikini_Raikou_ownwaifu,minamoto no raikou \(swimsuit lancer\) \(fate\),bare shoulders,eyepatch bikini,purple bikini,armlet,choker,beads,cleavage,navel,side-tie bikini bottom,thighs,black gloves,single glove,fingerless gloves,pouch,strapless bikini
+            - Kimino_Raikou_ownwaifu,japanese clothes,sash,obi,hair ornament,purple kimono,floral print,cleavage,hair flower,long sleeves,wide sleeves,fur trim,kimono
+            - MainOutfit_Raikou_ownwaifu,high collar,purple bodysuit,fingerless gloves,black gloves,tabard,ribbed sleeves,arm guards,covered navel,japanese armor,loincloth,armor,kote,tassel,sheath,pelvic curtain,quiver,wagashi
+            - MainOutfitRedRopes_ownwaifu,purple bodysuit,fingerless gloves,black gloves,ribbed sleeves,covered navel,japanese armor,arm guards,loincloth,armor,kote,tabard,sheath,impossible bodysuit,shiny clothes,red rope
+            - NSFW_Raikou_ownwaifu,completely nude,navel,cleavage,nude,armlet
+            - Shibari_Raikou_ownwaifu,nude,navel,shibari,bound legs,collar,gagged,improvised gag,red rope
+            - Sweater_Raikou_ownwaifu,ribbed sweater,turtleneck sweater,long sleeves,white sweater,purple sweater,casual,sweater dress,dolphin shorts,pink shorts,bare shoulders,clothing cutout,cleavage cutout,covered navel,sleeveless turtleneck
+            - Swimsuit_Raikou_ownwaifu,bare shoulders,navel,cleavage,collarbone,swimsuit,thighs,purple bikini,purple panties,micro bikini,side-tie bikini bottom,minamoto no raikou \(swimsuit lancer\) \(fate\),highleg bikini,leg ribbon
+            - VirginDestroyerSweater_Raikou_ownwaifu,bare shoulders,detached sleeves,revealing clothes,ribbed sleeves,virgin killer sweater,white thighhighs,navel,panties,ribbed sweater,side-tie panties,sweater,turtleneck,turtleneck sweater,underboob,white panties,white sweater
+      # https://danbooru.donmai.us/posts?page=2&tags=nero_claudius_%28fate%29
+      # https://civitai.com/models/56215/nero-claudius-30-outfits-fate-30-lora
+      # https://civitai.com/models/30413/nero-claudius-bride-lycoris
+      # https://civitai.com/models/10087/nero-claudius-fate-lora
+      # https://civitai.com/search/models?baseModel=SD%201.5&sortBy=models_v9&query=Nero
+      nero_claudius:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/fate/nero_claudius/main-trigger-words__{,__lazy-wildcards/cosplay-char/fate/nero_claudius/costume-ethnicity__|}{,{1-2$$__lazy-wildcards/cosplay-char/fate/nero_claudius/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/fate/nero_claudius/costume-elem__}|}
+        main-trigger-words:
+          - nero_claudius_\(fate\),fate \(series\),nero claudius \(fate\) \(cosplay\)
+        costume-ethnicity:
+          - blonde hair,green eyes,braid,bangs,collarbone,french braid,short hair
+        costume:
+          - Default,NeroOriginalOutfit
+          - Bride1st,NeroCCC Form,nero claudius \(bride\) \(fate\)
+          - Bride2nd,SecondOutfit,(flared pants),thighs,nero claudius \(bride\) \(second ascension\) \(fate\)
+          - Bride3rd,FinalBrideClothing,nero claudius \(bride\) \(third ascension\) \(fate\)
+          - FinalAscension,3rdPhaseOutfit,gauntlet
+          - NeroBikini,StripedBikini,striped bikini
+          - ModernCrimson,NeroSwimdress
+          - SwimCaster,NeroFGOSwimsuit,see-through sleeves,white dress
+          - SilkofVenus,FormalDress
+          - FirRace,TM-RaceQueen
+          - MaruMaid,MaidClothing,(miniskirt),epaulet
+          - SecRace,2ndRaceOutfit,mismatched legwear
+          - DBcos,DangerousBeast Costume,thighhigh
+          - TOTcosplay,NurseCostume
+          - OlympianBloomers,SportUniform
+          - Draco1st,BeastFirstOutfit
+          - QueenDraco,BeastNeroClothing
+          - B3,3rdOutfit,horns
+          - BeastVI,WhoreofBabylon
+          - RedLightning,ThongSwimwear
+          - NobleRed,PrinceClothing,leggings
+          - |-
+            IdolEmperor,Nero's IdolDress
+          - VenusSaber,Nero Venus Form
+          - |-
+            BathNero,Nero's Bathrobe
+          - |-
+            MythologyEmperor,Nero's Mythology Armor
+          - TyrantRhapsodia,Live Costume
+          - MoonCrux,PugilismForm
+          - BattleOlympia,ColosseumClothing,belt,cape
+          - ReturnMatch,ReturnConcertOutfit
+          - HSTO,TravelOutfit
+        costume-elem:
+          - >-
+            {zipped|unzipped}
+          - hair intakes,ahoge
+          - sling bikini top
+          - hair bun
+          - cleavage
+          - red dress
+          - long sleeves
+          - juliet sleeves,puffy sleeves,puffy detached sleeves
+          - red ribbon
+          - epaulettes
+          - white bodysuit
+          - leotard
+          - zipper pull tab
+          - loose belt
+          - center opening
     onmyoji:
       suzuka_gozen:
         prompts:
@@ -14067,60 +14317,6 @@ lazy-wildcards:
           - happy,cool
         env-bg:
           - at home
-    fate:
-      # 源賴光
-      # https://civitai.com/models/453729/minamoto-no-raikou-or-fatestaynight-or-15-attires-or-kofi-commissioned?modelVersionId=505140
-      raikou:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/fate/raikou/main__,__lazy-wildcards/cosplay-char/fate/raikou/costume-ethnicity__,__lazy-wildcards/cosplay-char/fate/raikou/costume-types/*__,{1-$$__lazy-wildcards/cosplay-char/fate/raikou/style__}
-        main:
-          - >-
-            minamoto no raikou \(fate\),fate \(series\)
-        costume-ethnicity:
-          - |-
-            large breasts,parted bangs,purple eyes,(purple hair:1.2),very long hair
-        style:
-          - hoop earrings
-          - collarbone
-          - __lazy-wildcards/dataset/costume-accessories-base__
-          - hair between eyes
-          - lipstick
-          - makeup
-          - cleavage
-          - mature female
-          - bursting breasts
-          - thighs
-          - braid
-          - black panties
-          - curvy
-          - hair flower
-          - collar
-          - hair over shoulder
-          - high collar
-          - low-tied long hair
-          - ponytail
-          - straight hair
-          - rope
-          - tie
-          - purple panties
-        costume-types:
-          anything:
-            - Apron_Raikou_ownwaifu,apron,long sleeves,turtleneck sweater,floral print,long skirt,purple shirt
-            - Bra_Raikou_ownwaifu,bare shoulders,cleavage,sports bra,yoga pants,bracelet,brown belt,casual,hair ornament,hair scrunchie,high-waist pants,navel,sportswear,tight pants
-            - Bunny_Raikou_ownwaifu,bare shoulders,playboy bunny,rabbit ears,wrist cuffs,highleg leotard,purple leotard,covered navel,rabbit tail,bowtie,strapless leotard,fishnets,black pantyhose,fishnet pantyhose,thighband pantyhose,black bow,black bowtie,cameltoe,detached sleeves,shiny clothes
-            - BusinessSuit_Raikou_ownwaifu,white shirt,collared shirt,office lady,black skirt,pencil skirt,dress shirt,long sleeves,shirt tucked in,belt,black pantyhose
-            - Chinese_Raikou_ownwaifu,china dress,chinese clothes,purple dress,bare shoulders,sleeveless,side slit,purple gloves,feather boa,folded fan,sleeveless dress,covered navel,floral print
-            - CowPrint_Raikou_ownwaifu,eyepatch bikini,fake horns,animal print,bare shoulders,cow print,cleavage,cow horns,elbow gloves,neck bell,swimsuit,animal ears,cow tail,cowbell,navel,white bikini,white thighh
-            - EyePatchBikini_Raikou_ownwaifu,minamoto no raikou \(swimsuit lancer\) \(fate\),bare shoulders,eyepatch bikini,purple bikini,armlet,choker,beads,cleavage,navel,side-tie bikini bottom,thighs,black gloves,single glove,fingerless gloves,pouch,strapless bikini
-            - Kimino_Raikou_ownwaifu,japanese clothes,sash,obi,hair ornament,purple kimono,floral print,cleavage,hair flower,long sleeves,wide sleeves,fur trim,kimono
-            - MainOutfit_Raikou_ownwaifu,high collar,purple bodysuit,fingerless gloves,black gloves,tabard,ribbed sleeves,arm guards,covered navel,japanese armor,loincloth,armor,kote,tassel,sheath,pelvic curtain,quiver,wagashi
-            - MainOutfitRedRopes_ownwaifu,purple bodysuit,fingerless gloves,black gloves,ribbed sleeves,covered navel,japanese armor,arm guards,loincloth,armor,kote,tabard,sheath,impossible bodysuit,shiny clothes,red rope
-            - NSFW_Raikou_ownwaifu,completely nude,navel,cleavage,nude,armlet
-            - Shibari_Raikou_ownwaifu,nude,navel,shibari,bound legs,collar,gagged,improvised gag,red rope
-            - Sweater_Raikou_ownwaifu,ribbed sweater,turtleneck sweater,long sleeves,white sweater,purple sweater,casual,sweater dress,dolphin shorts,pink shorts,bare shoulders,clothing cutout,cleavage cutout,covered navel,sleeveless turtleneck
-            - Swimsuit_Raikou_ownwaifu,bare shoulders,navel,cleavage,collarbone,swimsuit,thighs,purple bikini,purple panties,micro bikini,side-tie bikini bottom,minamoto no raikou \(swimsuit lancer\) \(fate\),highleg bikini,leg ribbon
-            - VirginDestroyerSweater_Raikou_ownwaifu,bare shoulders,detached sleeves,revealing clothes,ribbed sleeves,virgin killer sweater,white thighhighs,navel,panties,ribbed sweater,side-tie panties,sweater,turtleneck,turtleneck sweater,underboob,white panties,white sweater
     TeddyLoid:
       # https://zh.moegirl.org.cn/zh-tw/ME!ME!ME!
       MEMEME:
@@ -16726,6 +16922,17 @@ lazy-wildcards:
           - KublaiKhan,kublai_khan_\(eiyuu_senki\)
         costume-ethnicity:
           - long hair,blue hair,single braid,red eyes,navel,cleavage,jewelry,medium breasts,cape,hair over one eye,bridal gauntlets,bracelet,bikini top only
+      # https://civitai.com/models/1074868/catherine-eiyuu-senki?modelVersionId=1206618
+      Catherine:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char-hentai/Eiyuu_Senki/Catherine/main-trigger-words__,__lazy-wildcards/cosplay-char-hentai/Eiyuu_Senki/Catherine/costume-ethnicity__{0.7::,__lazy-wildcards/cosplay-char-hentai/Eiyuu_Senki/Catherine/costume__|}
+        main-trigger-words:
+          - CatherineES
+        costume-ethnicity:
+          - blonde hair,purple eyes,hair bun,double bun
+        costume:
+          - thighhighs,long sleeves,dress,jewelry,earrings,puffy sleeveless,crown,between breasts,bridal gauntlets
     tokyo_necro:
       # https://civitai.com/models/914089/itachi-otome-tokyo-necro-suicide-mission?modelVersionId=1023064
       itachi_otome:
