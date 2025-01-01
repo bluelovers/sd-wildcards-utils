@@ -826,15 +826,24 @@ lazy-wildcards:
           - game character
       # https://civitai.com/models/88900/gmic-iconpixel-style?modelVersionId=94602
       # https://civitai.com/models/1010793/pixeldreamlora?modelVersionId=1133034
+      # https://civitai.com/models/1034297/pixelmonster
       pixel-game-icon:
         prompts:
           - >-
             (__lazy-wildcards/subject/style-art-type/pixel-game-icon/style-art-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/style-art-type/pixel-game-icon/style__}|}
         style-art-main:
-          - Game Icon Institute,pixel art
+          - Game Icon Institute,pixel art,xiangsu,xiang su,pixel,pixelart,pixel art
         style:
           - 2d Pixel Art
           - sprite style
+          - 16-bit,16bit
+          - 8bit,8-bit
+      pixel-dos-game:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-art-type/pixel-dos-game/style-art-main__{0.3:::{1.2|1.3|1.4}|})
+        style-art-main:
+          - __lazy-wildcards/subject/style-art-type/pixel-game-icon/style-art-main__,8bit,8-bit,1990s,ega_graphics,VESA
       murals:
         prompts:
           - >-
@@ -1017,6 +1026,51 @@ lazy-wildcards:
           - __lazy-wildcards/subject/style-art-type/1980s_style/style__
           - __lazy-wildcards/subject/style-art-type/1970s_style/style__
           - __lazy-wildcards/subject/style-art-type/1960s_style/style__
+      # https://civitai.com/models/444061/westerncomicmix-lora-extract-or-lora
+      # https://civitai.com/models/151774/westerncomicmix-by-mrmonster-or-model
+      western_comic_style:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-art-type/western_comic_style/style-art-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/style-art-type/western_comic_style/style__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-art-type/western_comic_style/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/style-art-type/western_comic_style/expressions__}|}{,{1-$$__lazy-wildcards/subject/style-art-type/western_comic_style/action__}|}{0.3::,{1-3$$__lazy-wildcards/subject/style-art-type/western_comic_style/env-bg__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-art-type/western_comic_style/env__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-art-type/western_comic_style/style-theme__}|}
+        style-art-main:
+          - western_comic_style,western_comic,comic style
+        costume-elem:
+          - hyperrealistic_muscles,muscular_characters
+          - superhero
+          - alien_characters
+          - masked_hero
+          - cape_flowing
+        expressions:
+          - intense_expressions
+          - villainous_grin
+        action:
+          - dynamic_pose
+          - heroic_pose
+        env-bg:
+          - cityscape
+          - underground_base
+          - futuristic_buildings
+          - dystopian_world
+          - alien_planet
+          - abandoned_ruins
+        env:
+          - explosions
+          - energy_beams
+        style:
+          - bold_lineart
+          - cel_shading
+          - bright_colors
+          - high_contrast
+          - dramatic_lighting
+          - action_lines
+        style-theme:
+          - crime_noir
+          - sci-fi_setting
+          - fantasy_theme
+          - post-apocalyptic
+          - robotic_designs
+          - dual_identity
+          - battle_damage
     style-artist-name:
       comic:
         prompts:
@@ -2063,8 +2117,8 @@ lazy-wildcards:
       Kazushi_Hagiwara:
         prompts:
           - >-
-            __lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/style-main__{,{1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/costume-elem__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/action-pose__}|}{0.3::,{1-2$$__lazy-wildcards/dataset/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/style__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/style-art__}|}
-        style-main:
+            __lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/style-artist__{,{1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/costume-elem__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/action-pose__}|}{0.3::,{1-2$$__lazy-wildcards/dataset/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/style__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/style-art__}|}
+        style-artist:
           - |-
             hagiwara_kazushi,Kazushi_Hagiwara,bastard!!
         costume-elem:
@@ -2102,12 +2156,13 @@ lazy-wildcards:
           - __lazy-wildcards/subject/style-art-type/1980s_style/style__
           - retro artstyle
       # https://civitai.com/models/277846/nana-ai-yazawa-style
+      # https://civitai.com/models/240828/ai-yazawa-nana-style?modelVersionId=271719
       NANA_Ai_Yazawa:
         prompts:
           - >-
-            __lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/style-main__{0.4::,{1-$$__lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/style-art__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/action__}|}
-        style-main:
-          - nana_\(series\),Ai Yazawa,yazawa_ai_\(style\),punk
+            __lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/style-artist__{0.4::,{1-$$__lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/style-art__}|}{0.3::,{1-$$__lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/action__}|}
+        style-artist:
+          - nana_\(series\),Ai Yazawa,yazawa_ai_\(style\),punk,nana
         style-art:
           - manga
           - drawing lines
@@ -2125,6 +2180,76 @@ lazy-wildcards:
           - claw ring
         action:
           - smoking
+      # https://civitai.com/models/239299/dorohedoro-style?modelVersionId=269900
+      q_hayashida:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/q_hayashida/style-artist__{,{1-$$__lazy-wildcards/subject/style-artist/q_hayashida/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/style-artist/q_hayashida/env-bg__}|}{,{1-$$__lazy-wildcards/subject/style-artist/q_hayashida/env__}|}{,{1-$$__lazy-wildcards/subject/style-artist/q_hayashida/style__}|}
+        style-artist:
+          - __lazy-wildcards/utils/fn/style-inspired(v=dorohedoro)__,__lazy-wildcards/utils/fn/style-inspired(v=q_hayashida)__
+        costume-elem:
+          - gas_mask
+          - mask
+          - tattoos
+          - scars
+          - tactical_gear
+          - prosthetic_limbs
+          - monster_design
+          - body_horror
+          - long loose hair
+          - bangs
+          - red eyes
+          - jacket
+          - goth makeup
+          - collared shirt
+          - backpack
+          - crown
+          - spike
+          - weapon
+          - belt
+          - __lazy-wildcards/subject/costume/biomachine_body_horror/prompts__
+        env-bg:
+          - industrial_ruins
+          - abandoned_building
+          - alleyways
+        env:
+          - gritty_urban_environment
+          - laboratory_equipment
+          - __lazy-wildcards/subject/env-elem/circle-magic/prompts__
+          - __lazy-wildcards/subject/costume-elem/blood/prompts__
+          - __lazy-wildcards/subject/moment/weather-smoke/prompts__
+        style:
+          - urban_fantasy
+          - dark_fantasy
+          - antihero
+          - post_apocalyptic
+          - dim_lighting
+          - punk_fashion
+          - gore
+          - surrealism
+          - black_humor
+          - violent_confrontation
+          - existential_dread
+          - __lazy-wildcards/subject/style-artist/zdzislaw_beksinski/prompts__
+      # https://www.pixiv.net/users/27869492/artworks
+      # https://x.com/SabamisoB
+      # https://civitai.com/models/404415/sabamisotarooostyle?modelVersionId=450921
+      sabamisotarooo:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/sabamisotarooo/style-artist__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/style-artist/sabamisotarooo/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/style-artist/sabamisotarooo/style__}|}
+        style-artist:
+          - __lazy-wildcards/utils/fn/style-inspired(v=sabamisotarooo)__,saba_styl3
+        costume-elem:
+          - lips
+          - full lips
+          - blush
+          - unique character design,unique character concept
+          - __lazy-wildcards/subject/costume/armor/prompts__
+        style:
+          - illustration
+          - traditional media
+          - fantasy
       Mixtec_Codex:
         prompts:
           - >-
@@ -2496,6 +2621,8 @@ lazy-wildcards:
           - character_illustration,game cg
           - concept_art
           - official art
+          # https://civitai.com/models/861160/league-of-legends-splashart-style
+          - LoL Splash Art illustrations,LoL SplashArt illustrations,lol_5plash
         costume:
           - official alternate costume
           - sleeveless,chinese clothes,china dress
@@ -5062,6 +5189,30 @@ lazy-wildcards:
           - illuminati
           - sacred
           - surreal art
+      red_sake_cup:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/red_sake_cup/env-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem/red_sake_cup/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/env-elem/red_sake_cup/action__}|}{,{1-$$__lazy-wildcards/subject/env-elem/red_sake_cup/style__}|}
+        env-main:
+          - red sake cup,sakazuki,traditional japanese sake cup
+        costume-weapon:
+          - holding sakazuki,holding sake cup
+        env:
+          - ceramic_cup
+          - lacquerware
+          - decorative_cup
+          - traditional_japanese_item
+          - traditional_japanese_tableware
+          - sake_bottle
+          - ceremonial_setting
+          - calligraphy
+          - cherry_blossoms
+        action:
+          - drinking
+        style:
+          - floral_patterns
+          - gold_accents
+          - red_and_black_theme
       road:
         prompts:
           - >-
@@ -6081,6 +6232,54 @@ lazy-wildcards:
           - Soap film interference
           - Veined
           - lattice,Fine mesh
+      cum_tray:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/cum_tray/env-main__{0.3:::{1.2|1.3|1.4}|}),{2-$$__lazy-wildcards/subject/env-elem/cum_tray/costume-elem__}
+        env-main:
+          - cum tray,cum bowl,cumtray
+        costume-elem:
+          - __lazy-wildcards/subject/costume-elem/cum/prompts__
+          - all four
+          - collar
+          - mature female
+      sex_toy:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/sex_toy/env-main__{,{1-$$__lazy-wildcards/subject/env-elem/sex_toy/env__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem/sex_toy/env2__}|}
+        env-main:
+          - sex toy
+        env:
+          - vibrator,hitachi_magic_wand
+          - dildo
+          - egg vibrator,tenga egg
+          - butt plug
+          - remote control vibrator
+          - butt-shaped sex toys
+          - tenga
+          - tissue box
+        env2:
+          - __lazy-wildcards/subject/costume-elem/condom/prompts__
+          - vibrator under clothes
+          - vaginal object insertion
+          - anal object insertion
+          - object insertion
+          - anal beads
+          - __lazy-wildcards/subject/env-elem/sex_toy_gag/prompts__
+          - frogtie
+          - wooden horse
+          - vibrating butt plugs
+      sex_toy_gag:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/sex_toy_gag/env-main__{,{1-$$__lazy-wildcards/subject/env-elem/sex_toy_gag/env__}|}
+        env-main:
+          - gag
+        env:
+          - ball gag
+          - gagged
+          - gag harness
+          - wiffle gag
       skull:
         prompts:
           - >-
@@ -8321,6 +8520,47 @@ lazy-wildcards:
           - silhouette
           - __lazy-wildcards/utils/scenery-no-humans__
           - modern_and_traditional_contrast
+      # 日本の住宅の玄関 Modern Genkan in Japanese Houses
+      # https://civitai.com/models/47379/modern-genkan-in-japanese-houses
+      genkan:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-architectural/genkan/env-bg-main__{0.75::,__lazy-wildcards/subject/env-bg-architectural/genkan/env-bg__|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg-architectural/genkan/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-architectural/genkan/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-bg-architectural/genkan/costume-weapon__}|}
+        env-bg-main:
+          - genkan,entrance,door,scenery
+        env-bg:
+          # 集合住宅の玄関（家の中から）Entrance of an apartment building (from inside the house)
+          - JMG2,indoors,interior
+          # 集合住宅の玄関（家の外から）Entrance to an apartment building (from outside the house)
+          - JMG3,hallway,indoors,interior
+          # 一軒家の玄関（家の中から）Entrance of a house (from inside)
+          - JMG1,hallway,indoors,interior
+          # 一軒家の玄関（家の外から）Entrance of a house (from outside)
+          - JMG0,outdoors,exterior
+        env:
+          - shoe rack
+          - wooden floor
+          - tiles,tile floor
+          - open door
+          - slippers
+          - towel
+          - window,light,ceiling light
+          - sky,cloud,day,blue sky
+          - tree,plant
+          - building
+          - shadow,wall
+          - house
+          - stairs
+          - cat
+          - basket,clothes hanger
+          - animal
+          - jacket
+        costume-elem:
+          - shoes removed
+          - shoes,footwear
+        costume-weapon:
+          - holding bag
+          - bag
     style-architectural:
       elven:
         prompts:
@@ -8434,6 +8674,10 @@ lazy-wildcards:
           - mini skirt
           - dress
     costume-anything:
+      model-cof:
+        prompts:
+          - __cof-basemodel/gender-female__
+          - __cf-*/prompt-costume__
       nsfw-Bo:
         prompts:
           - __Bo/clothings/nsfw/female-attire__
@@ -8579,7 +8823,19 @@ lazy-wildcards:
       blood:
         prompts:
           - >-
-            {1-$$surrounded by blood|blood splatter|blood stain|blood on ground|pool of blood|bleeding|bleeding|blood drip|raining_blood|blood drop|blood spray}
+            {1-$$__lazy-wildcards/subject/costume-elem/blood/env__}
+        env:
+          - surrounded by blood
+          - blood splatter
+          - blood stain
+          - blood on ground
+          - pool of blood
+          - bleeding
+          - blood drip
+          - raining_blood
+          - blood drop
+          - blood spray
+          - blood stains
       see-through-clothes:
         prompts:
           - >-
@@ -8620,30 +8876,33 @@ lazy-wildcards:
         prompts:
           - >-
             chain,shackles,bound {1-$$,bound $$legs|wrists|together|arms|ankles}{,{1-$$rope around neck|rope|shibari|shibari over clothes}|}
+      # https://civitai.com/models/171106/condom-packet-strip?modelVersionId=192238
       condom:
         prompts:
           - >-
-            condom{,{1-$$__lazy-wildcards/subject/costume-elem/condom/env-condom__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/condom/env-condom-box__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/condom/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/condom/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/condom/style__}|}
-        costume-weapon:
-          - holding condom
-        costume-elem:
-          - condom left inside
-          - condom in mouth
+            (condom{,{1-$$__lazy-wildcards/subject/costume-elem/condom/env-condom__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/condom/env-condom-box__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem/condom/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/condom/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/condom/env__}|}
         env-condom:
           - used condom
           - condom belt
         env-condom-box:
           - condom box
-          - condom packet strip
+          - condom packet strip,condomstrip
           - condom wrapper
-        style:
+        costume-elem:
+          - condom left inside
+          - condom in mouth
+        env:
           - pointless condom
           - colored condom
           - multiple condoms
+        costume-weapon:
+          - holding condom
+        action:
+          - drinking_from_condom,cumdrip
       cum:
         prompts:
           - >-
-            cum{,__lazy-wildcards/subject/costume-elem/cum/expressions__|}{,__lazy-wildcards/subject/costume-elem/cum/costume-elem2__|}{,__lazy-wildcards/subject/costume-elem/cum/costume-elem__|}{,__lazy-wildcards/subject/costume-elem/cum/action__|}{,__lazy-wildcards/subject/costume-elem/cum/style__|}{,__lazy-wildcards/subject/costume-elem/cum/style-cum-overflow__|}{,__lazy-wildcards/subject/costume-elem/condom/prompts__|}
+            (cum{,__lazy-wildcards/subject/costume-elem/cum/costume-elem2__|}{,__lazy-wildcards/subject/costume-elem/cum/costume-elem__|}{,{1-$$__lazy-wildcards/subject/costume-elem/cum/env-cum__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/cum/env-cum-overflow__}|}{0.3:::{1.2|1.3|1.4}|}){,__lazy-wildcards/subject/costume-elem/cum/action__|}{,__lazy-wildcards/subject/costume-elem/cum/expressions__|}
         costume-elem:
           - out of pussy,cum in pussy
           - >-
@@ -8655,13 +8914,13 @@ lazy-wildcards:
           - cum in throat
           - vomiting_cum,vic,vomit,vomithing
           - cum in mouth,saliva
-        style:
+        env-cum:
           - cum bubble
           - off-color semen
           - cum stain
           - cumdrip
           - cum string
-        style-cum-overflow:
+        env-cum-overflow:
           - cum_pool
           - projectile cum
           - cum overflow
@@ -8673,7 +8932,7 @@ lazy-wildcards:
         action:
           - after ejaculation
         expressions:
-          - fucked silly
+          - __lazy-wildcards/subject/costume-elem-expressions/fucked_silly/prompts__
       saliva:
         prompts:
           - >-
@@ -8880,6 +9139,10 @@ lazy-wildcards:
             ({1-$$__lazy-wildcards/subject/costume-headwear/blindfold-angel/costume-headwear__}{0.3:::{1.2|1.3|1.4}|})
         costume-headwear:
           - angel_mask,seraphim blindfold,seraph blindfold,blindfold
+      # https://civitai.com/models/1084685/fox-mask?modelVersionId=1221062
+      mask-fox:
+        prompts:
+          - fox mask
     costume:
       mecha-musume:
         prompts:
@@ -9011,6 +9274,7 @@ lazy-wildcards:
           - blood from eyes
           - clothes lift
           - wrist cutting
+          - __lazy-wildcards/subject/costume-elem/wings-angel/prompts__
         costume-ethnicity:
           - black sclera
           - fangs
@@ -11128,6 +11392,29 @@ lazy-wildcards:
           - cone hair bun
         costume-elem:
           - hairpods
+    costume-ethnicity-horns:
+      horns:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-ethnicity-horns/horns/costume-ethnicity__}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-horns/horns/costume-elem__}|}
+        costume-ethnicity:
+          - horns
+          - broken horn
+          - single horn
+          - fake horns
+        costume-elem:
+          - __lazy-wildcards/utils/color-base__ horns
+          - curled horns
+          - skin-covered horns
+      horns-antlers:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/costume-ethnicity-horns/horns-antlers/costume-ethnicity__}{0.3:::{1.2|1.3|1.4}|})
+        costume-ethnicity:
+          - antlers
+          - broken antler
+          - single antler
+          - fake antlers
     costume-ethnicity-race:
       indian:
         prompts:
@@ -11813,10 +12100,11 @@ lazy-wildcards:
           - light shaft through trees
           - orange and black palette
           - animal markings
+      # https://civitai.com/models/88053/loha-seraphim-concept
       angel:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/costume-ethnicity-race/angel/costume-ethnicity__}
+            {1-$$__lazy-wildcards/subject/costume-ethnicity-race/angel/costume-ethnicity__}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/angel/costume-elem__}|}
         costume-ethnicity:
           - angel
           - seraph angel,seraphim angel
@@ -11830,6 +12118,7 @@ lazy-wildcards:
           - __lazy-wildcards/subject/costume-headwear/blindfold-angel/prompts__
           - halo
           - head wings
+          - feathers
     costume-weapon:
       smoking_pipe:
         prompts:
@@ -12822,8 +13111,10 @@ lazy-wildcards:
         - __cf-*/prompt-costume__
         - __Bo/chars/char-*/female/bocloths__
         - __Bo/clothings/*/female-attire__
+        - __lazy-wildcards/*/*/*/prompts-costume__
       costume-ethnicity:
         - __cf-*/ethnicity__
+        - __cof-*/ethnicity__
         - __lazy-wildcards/subject/ethnicity-*/*/prompts__
         - __lazy-wildcards/subject/costume-ethnicity-*/*/prompts__
         - __lazy-wildcards/*/*/*/costume-ethnicity*__
@@ -12866,6 +13157,7 @@ lazy-wildcards:
           - drill hair
           - twin drill hair
           - Wavy Side Bangs hair
+          - diagonal bangs
           - hair pulled back,Folded tied hair
           - curly frizzy flowy hair
           - >-
@@ -12883,6 +13175,10 @@ lazy-wildcards:
           - >-
             Shaggy Mullet Hair Style,shaggyMullet,shaggyMullet hair,(disheveled,messy hair,thinned hair)
           - rolled lob hairstyle,elegant_finish
+          - long sidelocks
+          - low-tied sidelocks
+          - sidelocks
+          - french braid
   dataset:
     char-view:
       - upper body
@@ -16755,6 +17051,23 @@ lazy-wildcards:
           - cold_expression
           - serious
           - ruthless
+    SuperRobotWars:
+      aqua_centolm:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/SuperRobotWars/aqua_centolm/main-trigger-words__,{1-$$__lazy-wildcards/cosplay-char/SuperRobotWars/aqua_centolm/costume-ethnicity__}{,{1-$$__lazy-wildcards/cosplay-char/SuperRobotWars/aqua_centolm/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/SuperRobotWars/aqua_centolm/costume-elem__}|}
+        main-trigger-words:
+          - aqua_centolm,aqua_centolm_\(cosplay\),AquaCentrum,super robot wars
+        costume-ethnicity:
+          - floating hair,green eyes,purple hair,hairband,short hair,wavy hair
+        costume:
+          - high heels,navel,shoes,bridal gauntlets,red jacket,navel cutout,clothing cutout
+        costume-elem:
+          - red cropped jacket
+          - revealing clothes
+          - detached collar
+          - curvy
+          - impossible clothes
     dr._slump:
       norimaki_arale:
         prompts:
@@ -17876,3 +18189,4 @@ mix-lazy-auto:
     - indian,ornate_lighting,Ornate lighting,hanging_lanterns,brass_lamps,intricate_chandeliers
     - indian,temple_influences,Temple influences,sacred_symbols,religious_statues,spiritual_art
     - indian,natural_materials,Natural materials,stone_flooring,wooden_beams,clay_pots
+
