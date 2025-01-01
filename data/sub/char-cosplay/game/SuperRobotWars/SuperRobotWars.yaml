@@ -1,0 +1,24 @@
+lazy-wildcards:
+  cosplay-char:
+    SuperRobotWars:
+      # https://civitai.com/models/1065963/aqua-centrum-srw-mx?modelVersionId=1196386
+      aqua_centolm:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/SuperRobotWars/aqua_centolm/main-trigger-words__
+            , {1-$$__lazy-wildcards/cosplay-char/SuperRobotWars/aqua_centolm/costume-ethnicity__}
+            {, {1-$$__lazy-wildcards/cosplay-char/SuperRobotWars/aqua_centolm/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/SuperRobotWars/aqua_centolm/costume-elem__}|}
+        main-trigger-words:
+          - aqua_centolm, aqua_centolm_\(cosplay\), AquaCentrum, super robot wars
+        costume-ethnicity:
+          - floating hair, green eyes, purple hair, hairband, short hair, wavy hair
+        costume:
+          - high heels, navel, shoes, bridal gauntlets, red jacket, navel cutout, clothing cutout
+        costume-elem:
+          - red cropped jacket
+          - revealing clothes
+          - detached collar
+          - curvy
+          - impossible clothes
+

@@ -242,16 +242,25 @@ lazy-wildcards:
           - game character
       # https://civitai.com/models/88900/gmic-iconpixel-style?modelVersionId=94602
       # https://civitai.com/models/1010793/pixeldreamlora?modelVersionId=1133034
+      # https://civitai.com/models/1034297/pixelmonster
       pixel-game-icon:
         prompts:
           - >-
             (__lazy-wildcards/subject/style-art-type/pixel-game-icon/style-art-main__{0.3:::{1.2|1.3|1.4}|})
             {, {1-$$__lazy-wildcards/subject/style-art-type/pixel-game-icon/style__}|}
         style-art-main:
-          - Game Icon Institute, pixel art
+          - Game Icon Institute, pixel art, xiangsu, xiang su, pixel, pixelart, pixel art
         style:
           - 2d Pixel Art
           - sprite style
+          - 16-bit, 16bit
+          - 8bit, 8-bit
+      pixel-dos-game:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-art-type/pixel-dos-game/style-art-main__{0.3:::{1.2|1.3|1.4}|})
+        style-art-main:
+          - __lazy-wildcards/subject/style-art-type/pixel-game-icon/style-art-main__, 8bit, 8-bit, 1990s, ega_graphics, VESA
       murals:
         prompts:
           - >-
@@ -449,4 +458,56 @@ lazy-wildcards:
           - __lazy-wildcards/subject/style-art-type/1980s_style/style__
           - __lazy-wildcards/subject/style-art-type/1970s_style/style__
           - __lazy-wildcards/subject/style-art-type/1960s_style/style__
+      # https://civitai.com/models/444061/westerncomicmix-lora-extract-or-lora
+      # https://civitai.com/models/151774/westerncomicmix-by-mrmonster-or-model
+      western_comic_style:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-art-type/western_comic_style/style-art-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-art-type/western_comic_style/style__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/style-art-type/western_comic_style/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-art-type/western_comic_style/expressions__}|}
+            {, {1-$$__lazy-wildcards/subject/style-art-type/western_comic_style/action__}|}
+            {0.3::, {1-3$$__lazy-wildcards/subject/style-art-type/western_comic_style/env-bg__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/style-art-type/western_comic_style/env__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/style-art-type/western_comic_style/style-theme__}|}
+        style-art-main:
+          - western_comic_style, western_comic, comic style
+        costume-elem:
+          - hyperrealistic_muscles, muscular_characters
+          - superhero
+          - alien_characters
+          - masked_hero
+          - cape_flowing
+        expressions:
+          - intense_expressions
+          - villainous_grin
+        action:
+          - dynamic_pose
+          - heroic_pose
+        env-bg:
+          - cityscape
+          - underground_base
+          - futuristic_buildings
+          - dystopian_world
+          - alien_planet
+          - abandoned_ruins
+        env:
+          - explosions
+          - energy_beams
+        style:
+          - bold_lineart
+          - cel_shading
+          - bright_colors
+          - high_contrast
+          - dramatic_lighting
+          - action_lines
+        style-theme:
+          - crime_noir
+          - sci-fi_setting
+          - fantasy_theme
+          - post-apocalyptic
+          - robotic_designs
+          - dual_identity
+          - battle_damage
 

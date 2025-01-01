@@ -1,0 +1,57 @@
+lazy-wildcards:
+  subject:
+    env-elem:
+      # https://civitai.com/models/192393/cum-tray-cum-bowl?modelVersionId=216128
+      cum_tray:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/cum_tray/env-main__{0.3:::{1.2|1.3|1.4}|})
+            , {2-$$__lazy-wildcards/subject/env-elem/cum_tray/costume-elem__}
+        env-main:
+          - cum tray, cum bowl, cumtray
+        costume-elem:
+          - __lazy-wildcards/subject/costume-elem/cum/prompts__
+          - all four
+          - collar
+          - mature female
+      sex_toy:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/sex_toy/env-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/sex_toy/env__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/sex_toy/env2__}|}
+        env-main:
+          - sex toy
+        env:
+          - vibrator, hitachi_magic_wand
+          - dildo
+          - egg vibrator, tenga egg
+          - butt plug
+          - remote control vibrator
+          - butt-shaped sex toys
+          - tenga
+          - tissue box
+        env2:
+          - __lazy-wildcards/subject/costume-elem/condom/prompts__
+          - vibrator under clothes
+          - vaginal object insertion
+          - anal object insertion
+          - object insertion
+          - anal beads
+          - __lazy-wildcards/subject/env-elem/sex_toy_gag/prompts__
+          - frogtie
+          - wooden horse
+          - vibrating butt plugs
+      sex_toy_gag:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/sex_toy_gag/env-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/sex_toy_gag/env__}|}
+        env-main:
+          - gag
+        env:
+          - ball gag
+          - gagged
+          - gag harness
+          - wiffle gag
+

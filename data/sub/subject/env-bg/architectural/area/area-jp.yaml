@@ -175,4 +175,49 @@ lazy-wildcards:
           - silhouette
           - __lazy-wildcards/utils/scenery-no-humans__
           - modern_and_traditional_contrast
+      # 日本の住宅の玄関 Modern Genkan in Japanese Houses
+      # https://civitai.com/models/47379/modern-genkan-in-japanese-houses
+      genkan:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-architectural/genkan/env-bg-main__
+            {0.75::, __lazy-wildcards/subject/env-bg-architectural/genkan/env-bg__|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/genkan/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/genkan/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/genkan/costume-weapon__}|}
+        env-bg-main:
+          - genkan, entrance, door, scenery
+        env-bg:
+          # 集合住宅の玄関（家の中から）Entrance of an apartment building (from inside the house)
+          - JMG2, indoors, interior
+          # 集合住宅の玄関（家の外から）Entrance to an apartment building (from outside the house)
+          - JMG3, hallway, indoors, interior
+          # 一軒家の玄関（家の中から）Entrance of a house (from inside)
+          - JMG1, hallway, indoors, interior
+          # 一軒家の玄関（家の外から）Entrance of a house (from outside)
+          - JMG0, outdoors, exterior
+        env:
+          - shoe rack
+          - wooden floor
+          - tiles, tile floor
+          - open door
+          - slippers
+          - towel
+          - window, light, ceiling light
+          - sky, cloud, day, blue sky
+          - tree, plant
+          - building
+          - shadow, wall
+          - house
+          - stairs
+          - cat
+          - basket, clothes hanger
+          - animal
+          - jacket
+        costume-elem:
+          - shoes removed
+          - shoes, footwear
+        costume-weapon:
+          - holding bag
+          - bag
 

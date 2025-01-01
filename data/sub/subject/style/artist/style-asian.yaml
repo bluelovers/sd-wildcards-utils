@@ -291,13 +291,13 @@ lazy-wildcards:
       Kazushi_Hagiwara:
         prompts:
           - >-
-            __lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/style-main__
+            __lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/style-artist__
             {, {1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/costume-elem__}|}
             {0.3::, {1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/action-pose__}|}
             {0.3::, {1-2$$__lazy-wildcards/dataset/costume-weapon__}|}
             {, {1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/style__}|}
             {0.3::, {1-$$__lazy-wildcards/subject/style-artist/Kazushi_Hagiwara/style-art__}|}
-        style-main:
+        style-artist:
           - hagiwara_kazushi, Kazushi_Hagiwara, bastard!!
         costume-elem:
           - long hair
@@ -334,15 +334,16 @@ lazy-wildcards:
           - __lazy-wildcards/subject/style-art-type/1980s_style/style__
           - retro artstyle
       # https://civitai.com/models/277846/nana-ai-yazawa-style
+      # https://civitai.com/models/240828/ai-yazawa-nana-style?modelVersionId=271719
       NANA_Ai_Yazawa:
         prompts:
           - >-
-            __lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/style-main__
+            __lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/style-artist__
             {0.4::, {1-$$__lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/style-art__}|}
             {0.3::, {1-$$__lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/costume-elem__}|}
             {, {1-$$__lazy-wildcards/subject/style-artist/NANA_Ai_Yazawa/action__}|}
-        style-main:
-          - nana_\(series\), Ai Yazawa, yazawa_ai_\(style\), punk
+        style-artist:
+          - nana_\(series\), Ai Yazawa, yazawa_ai_\(style\), punk, nana
         style-art:
           - manga
           - drawing lines
@@ -360,3 +361,80 @@ lazy-wildcards:
           - claw ring
         action:
           - smoking
+      # https://civitai.com/models/239299/dorohedoro-style?modelVersionId=269900
+      q_hayashida:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/q_hayashida/style-artist__
+            {, {1-$$__lazy-wildcards/subject/style-artist/q_hayashida/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/q_hayashida/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/q_hayashida/env__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/q_hayashida/style__}|}
+        style-artist:
+          - __lazy-wildcards/utils/fn/style-inspired(v=dorohedoro)__, __lazy-wildcards/utils/fn/style-inspired(v=q_hayashida)__
+        costume-elem:
+          - gas_mask
+          - mask
+          - tattoos
+          - scars
+          - tactical_gear
+          - prosthetic_limbs
+          - monster_design
+          - body_horror
+          - long loose hair
+          - bangs
+          - red eyes
+          - jacket
+          - goth makeup
+          - collared shirt
+          - backpack
+          - crown
+          - spike
+          - weapon
+          - belt
+          - __lazy-wildcards/subject/costume/biomachine_body_horror/prompts__
+        env-bg:
+          - industrial_ruins
+          - abandoned_building
+          - alleyways
+        env:
+          - gritty_urban_environment
+          - laboratory_equipment
+          - __lazy-wildcards/subject/env-elem/circle-magic/prompts__
+          - __lazy-wildcards/subject/costume-elem/blood/prompts__
+          - __lazy-wildcards/subject/moment/weather-smoke/prompts__
+        style:
+          - urban_fantasy
+          - dark_fantasy
+          - antihero
+          - post_apocalyptic
+          - dim_lighting
+          - punk_fashion
+          - gore
+          - surrealism
+          - black_humor
+          - violent_confrontation
+          - existential_dread
+          - __lazy-wildcards/subject/style-artist/zdzislaw_beksinski/prompts__
+      # https://www.pixiv.net/users/27869492/artworks
+      # https://x.com/SabamisoB
+      # https://civitai.com/models/404415/sabamisotarooostyle?modelVersionId=450921
+      sabamisotarooo:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/sabamisotarooo/style-artist__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-artist/sabamisotarooo/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/sabamisotarooo/style__}|}
+        style-artist:
+          - __lazy-wildcards/utils/fn/style-inspired(v=sabamisotarooo)__, saba_styl3
+        costume-elem:
+          - lips
+          - full lips
+          - blush
+          - unique character design, unique character concept
+          - __lazy-wildcards/subject/costume/armor/prompts__
+        style:
+          - illustration
+          - traditional media
+          - fantasy
+

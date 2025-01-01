@@ -1,6 +1,10 @@
 lazy-wildcards:
   subject:
     costume-anything:
+      model-cof:
+        prompts:
+          - __cof-basemodel/gender-female__
+          - __cf-*/prompt-costume__
       nsfw-Bo:
         prompts:
           - __Bo/clothings/nsfw/female-attire__

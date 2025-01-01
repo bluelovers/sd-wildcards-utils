@@ -728,10 +728,12 @@ lazy-wildcards:
           - light shaft through trees
           - orange and black palette
           - animal markings
+      # https://civitai.com/models/88053/loha-seraphim-concept
       angel:
         prompts:
           - >-
             {1-$$__lazy-wildcards/subject/costume-ethnicity-race/angel/costume-ethnicity__}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/angel/costume-elem__}|}
         costume-ethnicity:
           - angel
           - seraph angel, seraphim angel
@@ -745,4 +747,5 @@ lazy-wildcards:
           - __lazy-wildcards/subject/costume-headwear/blindfold-angel/prompts__
           - halo
           - head wings
+          - feathers
 

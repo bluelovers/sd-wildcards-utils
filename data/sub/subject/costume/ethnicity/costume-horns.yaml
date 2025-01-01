@@ -1,0 +1,27 @@
+lazy-wildcards:
+  subject:
+    costume-ethnicity-horns:
+      horns:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-ethnicity-horns/horns/costume-ethnicity__}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-horns/horns/costume-elem__}|}
+        costume-ethnicity:
+          - horns
+          - broken horn
+          - single horn
+          - fake horns
+        costume-elem:
+          - __lazy-wildcards/utils/color-base__ horns
+          - curled horns
+          - skin-covered horns
+      horns-antlers:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/costume-ethnicity-horns/horns-antlers/costume-ethnicity__}{0.3:::{1.2|1.3|1.4}|})
+        costume-ethnicity:
+          - antlers
+          - broken antler
+          - single antler
+          - fake antlers
+

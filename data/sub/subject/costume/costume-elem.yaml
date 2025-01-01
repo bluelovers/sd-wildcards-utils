@@ -50,7 +50,19 @@ lazy-wildcards:
       blood:
         prompts:
           - >-
-            {1-$$surrounded by blood|blood splatter|blood stain|blood on ground|pool of blood|bleeding|bleeding|blood drip|raining_blood|blood drop|blood spray}
+            {1-$$__lazy-wildcards/subject/costume-elem/blood/env__}
+        env:
+          - surrounded by blood
+          - blood splatter
+          - blood stain
+          - blood on ground
+          - pool of blood
+          - bleeding
+          - blood drip
+          - raining_blood
+          - blood drop
+          - blood spray
+          - blood stains
       see-through-clothes:
         prompts:
           - >-
@@ -94,42 +106,44 @@ lazy-wildcards:
           - >-
             chain, shackles, bound {1-$$, bound $$legs|wrists|together|arms|ankles}
             {,{1-$$rope around neck|rope|shibari|shibari over clothes}|}
+      # https://civitai.com/models/171106/condom-packet-strip?modelVersionId=192238
       condom:
         prompts:
           - >-
-            condom
-            {,{1-$$__lazy-wildcards/subject/costume-elem/condom/env-condom__}|}
-            {,{1-$$__lazy-wildcards/subject/costume-elem/condom/env-condom-box__}|}
-            {,{1-$$__lazy-wildcards/subject/costume-elem/condom/costume-elem__}|}
-            {,{1-$$__lazy-wildcards/subject/costume-elem/condom/costume-weapon__}|}
-            {,{1-$$__lazy-wildcards/subject/costume-elem/condom/style__}|}
-        costume-weapon:
-          - holding condom
-        costume-elem:
-          - condom left inside
-          - condom in mouth
+            (condom
+            {, {1-$$__lazy-wildcards/subject/costume-elem/condom/env-condom__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem/condom/env-condom-box__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-elem/condom/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem/condom/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem/condom/env__}|}
         env-condom:
           - used condom
           - condom belt
         env-condom-box:
           - condom box
-          - condom packet strip
+          - condom packet strip, condomstrip
           - condom wrapper
-        style:
+        costume-elem:
+          - condom left inside
+          - condom in mouth
+        env:
           - pointless condom
           - colored condom
           - multiple condoms
+        costume-weapon:
+          - holding condom
+        action:
+          - drinking_from_condom, cumdrip
       cum:
         prompts:
           - >-
-            cum
-            {,__lazy-wildcards/subject/costume-elem/cum/expressions__|}
-            {,__lazy-wildcards/subject/costume-elem/cum/costume-elem2__|}
-            {,__lazy-wildcards/subject/costume-elem/cum/costume-elem__|}
-            {,__lazy-wildcards/subject/costume-elem/cum/action__|}
-            {,__lazy-wildcards/subject/costume-elem/cum/style__|}
-            {,__lazy-wildcards/subject/costume-elem/cum/style-cum-overflow__|}
-            {,__lazy-wildcards/subject/costume-elem/condom/prompts__|}
+            (cum
+            {, __lazy-wildcards/subject/costume-elem/cum/costume-elem2__|}
+            {, __lazy-wildcards/subject/costume-elem/cum/costume-elem__|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem/cum/env-cum__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem/cum/env-cum-overflow__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, __lazy-wildcards/subject/costume-elem/cum/action__|}
+            {, __lazy-wildcards/subject/costume-elem/cum/expressions__|}
         costume-elem:
           - out of pussy, cum in pussy
           - >-
@@ -141,13 +155,13 @@ lazy-wildcards:
           - cum in throat
           - vomiting_cum, vic, vomit, vomithing
           - cum in mouth, saliva
-        style:
+        env-cum:
           - cum bubble
           - off-color semen
           - cum stain
           - cumdrip
           - cum string
-        style-cum-overflow:
+        env-cum-overflow:
           - cum_pool
           - projectile cum
           - cum overflow
@@ -159,7 +173,7 @@ lazy-wildcards:
         action:
           - after ejaculation
         expressions:
-          - fucked silly
+          - __lazy-wildcards/subject/costume-elem-expressions/fucked_silly/prompts__
       saliva:
         prompts:
           - >-

@@ -1,0 +1,32 @@
+lazy-wildcards:
+  subject:
+    env-elem:
+      # https://civitai.com/models/192295/red-sake-cup-sakazuki-sfw-and-nsfw?modelVersionId=216003
+      red_sake_cup:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/red_sake_cup/env-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/red_sake_cup/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/red_sake_cup/action__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/red_sake_cup/style__}|}
+        env-main:
+          - red sake cup, sakazuki, traditional japanese sake cup
+        costume-weapon:
+          - holding sakazuki, holding sake cup
+        env:
+          - ceramic_cup
+          - lacquerware
+          - decorative_cup
+          - traditional_japanese_item
+          - traditional_japanese_tableware
+          - sake_bottle
+          - ceremonial_setting
+          - calligraphy
+          - cherry_blossoms
+        action:
+          - drinking
+        style:
+          - floral_patterns
+          - gold_accents
+          - red_and_black_theme
+
