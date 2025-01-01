@@ -32,7 +32,7 @@ export function _validSeq(key: IVisitorFnKey | null, node: YAMLSeq, ...args: any
 		// @ts-ignore
 		const paths = handleVisitPathsFull(key, node, ...args);
 
-		throw new SyntaxError(`Invalid SYNTAX. paths: [${paths}], indexKey: ${key} key: ${key}, node: ${node}, index: ${index}, node: ${node.items[index]}`)
+		throw new SyntaxError(`Invalid SYNTAX. paths: [${paths}], itemIndex: ${index}, itemValue: ${node.items[index]}, nodeKey: ${key}, node: ${node}`)
 	}
 }
 
