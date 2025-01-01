@@ -8,6 +8,7 @@ import { copy, outputFile } from 'fs-extra';
 import { consoleLogger } from 'debug-color2/logger';
 // @ts-ignore
 import { globSync } from 'fs';
+import { _ReadAndupdateFile } from '../lib/util';
 
 function globAbsolute(pattern: string | string[], opts?: {
 	cwd?: string;
@@ -33,7 +34,7 @@ export default Bluebird.map([
 	}),
 ], (file: any) => {
 	consoleLogger.debug(file);
-	return readFile(file)
+	return _ReadAndupdateFile(file)
 		.then(data => parseWildcardsYaml(data, {
 			disableUnsafeQuote: true,
 			allowMultiRoot: true,
