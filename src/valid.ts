@@ -5,9 +5,11 @@ import {
 	IOptionsSharedWildcardsYaml,
 	IOptionsVisitorMap,
 	IRecordWildcards, IVisitorFnKey,
+	IVisitPathsNode,
 	IWildcardsYAMLDocument, IWildcardsYAMLPair,
 	IWildcardsYAMLScalar,
 } from './types';
+import { getNodeType } from './util';
 
 // @ts-ignore
 export function _validMap(key: IVisitorFnKey | null, node: YAMLMap, ...args: any[])
@@ -24,15 +26,19 @@ export function _validMap(key: IVisitorFnKey | null, node: YAMLMap, ...args: any
 }
 
 // @ts-ignore
-export function _validSeq(key: IVisitorFnKey | null, node: YAMLSeq, ...args: any[]): asserts node is YAMLSeq<Scalar | IWildcardsYAMLScalar>
+export function _validSeq(key: IVisitorFnKey | null, nodeSeq: YAMLSeq, ...args: any[]): asserts nodeSeq is YAMLSeq<Scalar | IWildcardsYAMLScalar>
 {
-	const index = node.items.findIndex(node => !isScalar(node));
-	if (index !== -1)
+	for (const index in nodeSeq.items)
 	{
-		// @ts-ignore
-		const paths = handleVisitPathsFull(key, node, ...args);
+		const entry = nodeSeq.items[index] as IVisitPathsNode;
 
-		throw new SyntaxError(`Invalid SYNTAX. paths: [${paths}], itemIndex: ${index}, itemValue: ${node.items[index]}, nodeKey: ${key}, node: ${node}`)
+		if (!isScalar(entry))
+		{
+			// @ts-ignore
+			const paths = handleVisitPathsFull(key, nodeSeq, ...args);
+
+			throw new SyntaxError(`Invalid SYNTAX. entry type should be 'Scalar', but got '${getNodeType(entry)}'. paths: [${paths}], entryIndex: ${index}, entry: ${entry}, nodeKey: ${key}, node: ${nodeSeq}`)
+		}
 	}
 }
 

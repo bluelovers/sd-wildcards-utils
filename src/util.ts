@@ -208,19 +208,24 @@ export function wildcardsPathToPaths(path: string)
 export function getNodeTypeSymbol(node: IVisitPathsNode): IYamlNodeTypeSymbol
 {
 	// @ts-ignore
-	return node[SYMBOL_YAML_NODE_TYPE]
+	return node?.[SYMBOL_YAML_NODE_TYPE]
 }
 
-export function getNodeType(node: IVisitPathsNode)
+export function _getNodeTypeCore(sym: IYamlNodeTypeSymbol)
 {
 	try
 	{
-		return Symbol.keyFor(getNodeTypeSymbol(node))
+		return Symbol.keyFor(sym)
 	}
 	catch (e)
 	{
 
 	}
+}
+
+export function getNodeType(node: IVisitPathsNode)
+{
+	return _getNodeTypeCore(getNodeTypeSymbol(node))
 }
 
 export function isSameNodeType(a: IVisitPathsNode, b: IVisitPathsNode)
