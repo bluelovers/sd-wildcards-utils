@@ -170,6 +170,7 @@ export function findWildcardsYAMLPathsAll(node: Node | Document)
 
 const RE_UNSAFE_QUOTE = /['"]/;
 const RE_UNSAFE_VALUE = /^\s*-|[{$~!@}\n|:?#'"]/;
+const RE_UNSAFE_PLAIN = /-/
 
 export function _visitNormalizeScalar(key: IVisitorFnKey, node: IWildcardsYAMLScalar, runtime: {
 	checkUnsafeQuote: boolean,
@@ -205,6 +206,10 @@ export function _visitNormalizeScalar(key: IVisitorFnKey, node: IWildcardsYAMLSc
 			{
 				node.type = 'BLOCK_LITERAL'
 			}
+		}
+		else if (node.type === 'PLAIN' && RE_UNSAFE_PLAIN.test(value)) 
+		{
+			node.type = 'QUOTE_DOUBLE'
 		}
 
 		let res = _checkValue(value);
