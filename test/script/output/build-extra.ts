@@ -27,14 +27,13 @@ export default Bluebird.map([
 	// join(__ROOT_DATA, 'others/Extra/char.yaml'),
 	// join(__ROOT_DATA, 'others/Extra/env-bg-anything.yaml'),
 	...globAbsolute([
-		'others/lazy-wildcards/**/*.yaml',
-		'others/lazy-model-yaml/**/*.yaml',
+		'others/lazy-*/**/*.yaml',
 	], {
 		cwd: __ROOT_DATA,
 	}),
 ], (file: any) => {
 	consoleLogger.debug(file);
-	return _ReadAndupdateFile(file)
+	return (file.includes('lazy-wildcards.yaml') ? readFile : _ReadAndupdateFile)(file)
 		.then(data => parseWildcardsYaml(data, {
 			disableUnsafeQuote: true,
 			allowMultiRoot: true,
