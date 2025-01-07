@@ -1,4 +1,4 @@
-import { join } from 'path';
+import { join } from 'upath2';
 import { __ROOT_DATA, __ROOT_OUTPUT_WILDCARDS, __ROOT_TEST } from '../__root';
 import { checkAllSelfLinkWildcardsExists } from '../../src/check';
 import { IWildcardsYAMLDocument, mergeWildcardsYAMLDocumentRoots, parseWildcardsYaml } from '../../src/index';
@@ -8,6 +8,7 @@ import Bluebird from 'bluebird';
 import { readFile } from 'node:fs/promises';
 import { consoleLogger } from 'debug-color2/logger';
 import { globSync } from 'fs';
+import { globAbsolute } from './lib/util';
 
 export default (async () => {
 
@@ -20,7 +21,7 @@ export default (async () => {
 
 			join(__ROOT_DATA, 'cf', 'bundle', 'corn-flakes-aio-bundle-sex.yaml'),
 
-			...globSync([
+		...globAbsolute([
 				// 'CharaCreatorWildcards/*.yaml',
 				// 'Vision/*.yaml',
 				// 'navi_atlas.yaml',
@@ -30,8 +31,6 @@ export default (async () => {
 				'beloved/**/*.yaml',
 			], {
 				cwd: join(__ROOT_DATA, 'others'),
-			}).map(v => {
-				return join(__ROOT_DATA, 'others', v)
 			}),
 			
 		], (file: any) =>

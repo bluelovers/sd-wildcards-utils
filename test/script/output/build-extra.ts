@@ -1,26 +1,13 @@
 // @ts-ignore
 import Bluebird from 'bluebird';
-import { join, resolve } from 'path';
+import { join } from 'upath2';
 import { __ROOT_DATA, __ROOT_OUTPUT_WILDCARDS, __ROOT_TEST } from '../../__root';
 import { readFile } from 'node:fs/promises';
 import parseWildcardsYaml, { defaultOptionsStringifyMinify, IWildcardsYAMLDocument, mergeFindSingleRoots, stringifyWildcardsYamlData } from '../../../src';
 import { copy, outputFile } from 'fs-extra';
 import { consoleLogger } from 'debug-color2/logger';
 // @ts-ignore
-import { globSync } from 'fs';
-import { _ReadAndupdateFile } from '../lib/util';
-
-function globAbsolute(pattern: string | string[], opts?: {
-	cwd?: string;
-})
-{
-	const cwd = opts?.cwd ?? process.cwd();
-
-	return globSync(pattern, {
-		...opts,
-		cwd,
-	}).map(v => resolve(cwd, v))
-}
+import { _ReadAndupdateFile, globAbsolute } from '../lib/util';
 
 export default Bluebird.map([
 	join(__ROOT_OUTPUT_WILDCARDS, 'lazy-wildcards.yaml'),

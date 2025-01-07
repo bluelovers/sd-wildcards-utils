@@ -4,7 +4,7 @@
 import escapeSplit from 'escape-split';
 // @ts-ignore
 import { globSync, readFileSync } from 'fs';
-import { join } from 'path';
+import { join, normalize } from 'upath2';
 import { __ROOT_DATA, __ROOT_OUTPUT_WILDCARDS } from '../../__root';
 import {
 	defaultCheckerIgnoreCase, defaultOptionsStringifyMinify, IOptionsFind, matchDynamicPromptsWildcards,
@@ -63,7 +63,7 @@ export default (async () =>
 				cwd: __ROOT_DATA,
 			}), (file: string) =>
 			{
-				consoleLogger.gray.debug(file);
+				consoleLogger.gray.debug(normalize(file));
 
 				let path = join(__ROOT_DATA, file);
 				let buf = readFileSync(path);
