@@ -1,5 +1,5 @@
 import { join } from 'path';
-import { __ROOT_DATA, __ROOT_OUTPUT_WILDCARDS } from '../__root';
+import { __ROOT_DATA, __ROOT_OUTPUT_WILDCARDS, __ROOT_TEST } from '../__root';
 import { checkAllSelfLinkWildcardsExists } from '../../src/check';
 import { IWildcardsYAMLDocument, mergeWildcardsYAMLDocumentRoots, parseWildcardsYaml } from '../../src/index';
 import { AggregateErrorExtra } from 'lazy-aggregate-error';
@@ -14,15 +14,20 @@ export default (async () => {
 	consoleLogger.log(`Verification...`);
 
 	const obj = await Bluebird.map([
-			join(__ROOT_OUTPUT_WILDCARDS, 'lazy-wildcards.yaml'),
+			// join(__ROOT_OUTPUT_WILDCARDS, 'lazy-wildcards.yaml'),
+			join(__ROOT_TEST, 'output', 'lazy-wildcards.yaml'),
 			//join(__ROOT_DATA, 'lazy-wildcards.yaml'),
 
 			join(__ROOT_DATA, 'cf', 'bundle', 'corn-flakes-aio-bundle-sex.yaml'),
 
 			...globSync([
-				'CharaCreatorWildcards/*.yaml',
-				'Vision/*.yaml',
-				'navi_atlas.yaml',
+				// 'CharaCreatorWildcards/*.yaml',
+				// 'Vision/*.yaml',
+				// 'navi_atlas.yaml',
+				// 'lazy-*/**/*.yaml',
+				// 'lazy-*/**/*.yaml',
+				'tg_love/**/*.yaml',
+				'beloved/**/*.yaml',
 			], {
 				cwd: join(__ROOT_DATA, 'others'),
 			}).map(v => {
