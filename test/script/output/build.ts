@@ -1,7 +1,7 @@
 import { readFile } from 'node:fs/promises';
 // @ts-ignore
 import Bluebird from 'bluebird';
-import { join } from 'path';
+import { join } from 'upath2';
 import { __ROOT_DATA, __ROOT_OUTPUT_WILDCARDS } from '../../__root';
 import {
 	defaultOptionsStringifyMinify, IWildcardsYAMLDocument,
