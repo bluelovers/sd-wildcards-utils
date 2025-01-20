@@ -32,7 +32,7 @@ lazy-wildcards:
       PoorlyDressedPolicewoman:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/main__
+            __lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-main__
             {,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/expressions__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-hand__}|}
@@ -42,10 +42,10 @@ lazy-wildcards:
             {0.2::,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/costume-ethnicity__}|}
             {0.2::,__lazy-wildcards/subject/action-sfw/sitting-*/prompts__|}
             {0.2::,{1-$$__lazy-wildcards/cosplay-char/CheLA77/PoorlyDressedPolicewoman/env__}|}
-        main:
+        costume-main:
           - PoorlyDressedPolicewoman, brautiful pol1ceg1rls in a police uniform, policewoman
         expressions:
-          - smug, grinning smile
+          - __lazy-wildcards/subject/costume-elem-expressions/doyagao_smug/prompts__
         costume-ethnicity:
           - short hair, blonde hair, large breasts, orange eyes
           - long hair

@@ -57,7 +57,7 @@ lazy-wildcards:
         costume-breasts-action:
           - breasts_squeezed_together
           - breasts_on_glass
-          - breast squish
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/breast_squish/prompts__
           - covering_breasts
           - flashing breasts
           - bouncing_breasts
@@ -74,6 +74,7 @@ lazy-wildcards:
           - __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-peek2/prompts__
           - no bra
           - __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-visible-through-clothes/prompts__
+      # https://civitai.com/models/1106664/underboobies?modelVersionId=1244528
       breasts-out:
         prompts:
           - >-
@@ -110,7 +111,8 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-downblouse/action__}|}
             {, {1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-downblouse/style__}|}
         costume-breasts:
-          - downblouse
+          - >-
+            {extended |}downblouse
         action:
           - leaning forward
         style:
@@ -175,4 +177,11 @@ lazy-wildcards:
       no_nipples:
         prompts:
           - nonipples, Nipless
+      breast_squish:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/breast_squish/costume-breasts__}{0.3:::{1.2|1.3|1.4}|})
+        costume-breasts:
+          - breast squish
+          - breast press
 

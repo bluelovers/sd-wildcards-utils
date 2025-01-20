@@ -61,4 +61,43 @@ lazy-wildcards:
           - cold_expression
           - serious
           - ruthless
+      # https://civitai.com/models/174799/shadow-alice-hiiragi-persona-5-strikers?modelVersionId=196256
+      p5_shadow_alice_hiiragi:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/ShinMegamiTensei/p5_shadow_alice_hiiragi/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/ShinMegamiTensei/p5_shadow_alice_hiiragi/costume-ethnicity__
+            {, __lazy-wildcards/cosplay-char/ShinMegamiTensei/p5_shadow_alice_hiiragi/costume__}|}
+            {, __lazy-wildcards/cosplay-char/ShinMegamiTensei/p5_shadow_alice_hiiragi/costume-elem__}|}
+            {, __lazy-wildcards/cosplay-char/ShinMegamiTensei/p5_shadow_alice_hiiragi/costume-weapon__}|}
+            {, __lazy-wildcards/cosplay-char/ShinMegamiTensei/p5_shadow_alice_hiiragi/env-creatures__}|}
+        main-trigger-words:
+          - Shadow Alice, hiiragi_alice, shadow_alice_\(persona_5_scramble\)
+        costume-ethnicity:
+          - >-
+            giant eyeballs on head
+            , jeweled crown, purple crown, arched crown
+            , heart on cheek, facepaint, facial mark, lipstick mark on face
+            , blue hair, pink hair, multicolored hair, streaked hair
+            , blunt bangs, bob cut
+            , orange eyes
+            , pink lips
+        costume:
+          - >-
+            corset, catsuit
+            , black gloves, elbow gloves
+            , garter straps
+            , pink skirt, purple shirt, striped skirt
+            , striped thighhighs
+        costume-elem:
+          - dominatrix
+          - polka dot panties
+          - striped skirt
+          - bare shoulders
+          - multicolored headwear
+          - multicolored clothes
+        costume-weapon:
+          - holding leash
+        env-creatures:
+          - shadow \(persona\)
 

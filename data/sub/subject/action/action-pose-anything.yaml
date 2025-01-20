@@ -7,6 +7,9 @@ lazy-wildcards:
             {1-5$$__lazy-wildcards/*/*/*/action*__}
       pose-anything:
         prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/action-pose-anything/pose-anything/action__}
+        action:
           - meditative pose
           - covering mouth, hand over own mouth
           - wakeupyawn, yawning, covering mouth
@@ -31,6 +34,9 @@ lazy-wildcards:
           - (lightning from arms, lightning on arms, holding lightning), ( lightning glare on palm, lightning glare from palm:1.6), (lightning bolt symbol on palm)
       pose-bottom-sitting:
         prompts:
+          - >-
+            {1-2$$__lazy-wildcards/subject/action-pose-anything/pose-bottom-sitting/action__}
+        action:
           - (yokozuwari)
           - (cross-legged sitting, sitting with legs crossed)
           - >-
@@ -39,18 +45,27 @@ lazy-wildcards:
       pose-bottom-nsfw-open-legs:
         prompts:
           - >-
+            ({1-$$__lazy-wildcards/subject/action-pose-anything/pose-bottom-nsfw-open-legs/action__})
+            {, {1-$$__lazy-wildcards/subject/action-pose-anything/pose-bottom-nsfw-open-legs/costume-elem__}|}
+        action:
+          - >-
             {1-$$spread legs|open legs}
           - >-
-            {1-$$squatting|crouching|squatting cowgirl position}
-          - (straddle)
+            {1-$$squatting pose|crouching|squatting cowgirl position}
+          - straddle
+        costume-elem:
+          - couch
       pose-nsfw:
         prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/action-pose-anything/pose-nsfw/action__}
+        action:
           - (one breast out, one breast slip, one_breast_out_of_clothes), unaligned_breasts, showing breast
           - (downblouse, tank top, breasts_out, leaning forward, bent over)
           - lifted by self, dress lift, from below
           - lewd, sexy, erotic, alluring, ewitching, charming, mesmerizing, enchanting, voluptuous, sexy posing, Sex Position, hentai
           - hand on own chest, grabbing herself breasts, grabbing own breasts, hands on own breasts, breast press, hand on tit
-          - __lazy-wildcards/subject/action-nsfw-others/pose-bottom-open-legs/prompts__
+          - __lazy-wildcards/subject/action-pose-anything/pose-bottom-nsfw-open-legs/prompts__
           - clothes lift, lifted by self, underboob
           - bath, bathing, steam
           - female masturbation

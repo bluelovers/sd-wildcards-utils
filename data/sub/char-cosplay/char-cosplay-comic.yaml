@@ -501,4 +501,56 @@ lazy-wildcards:
         expressions:
           - \n/
           - ";d"
+    mato_seihei_no_slave:
+      # https://civitai.com/models/19465/yamashiroren-or-mato-seihei-no-slave?modelVersionId=88046
+      # https://civitai.com/models/259719/ren-yamashiro-or-mato-seihei-no-slave
+      # https://civitai.com/models/451253/yamashiro-ren-mato-seihei-no-slave
+      yamashiro_ren:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/mato_seihei_no_slave/yamashiro_ren/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/mato_seihei_no_slave/yamashiro_ren/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/mato_seihei_no_slave/yamashiro_ren/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/mato_seihei_no_slave/yamashiro_ren/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/mato_seihei_no_slave/yamashiro_ren/action__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/mato_seihei_no_slave/yamashiro_ren/env__}|}
+        main-trigger-words:
+          - yamashiro768, yamashiroren, Ren43Yamashiro, yamashiro_ren \(mato_seihei_no_slave\), mato_seihei_no_slave
+        costume-ethnicity:
+          - purple eyes, black hair, purple eyes, long hair, (hair ornament, red ribbon, hair ribbon, blunt bangs, hime cut:1.2)
+        costume:
+          - red cape, long sleeves, blue footwear, purple footwear, high heels, __lazy-wildcards/cosplay-char/mato_seihei_no_slave/anti-demon_corps_uniform/prompts__
+        costume-elem:
+          - leash collar, big slave collar
+          - red cape
+          - red trim
+        env:
+          - throne
+        action:
+          - __lazy-wildcards/subject/action-nsfw-others/paw_pose_spread_legs/prompts__
+          - sitting, crossed legs
+      # https://civitai.com/models/259716/fubuki-azuma-or-mato-seihei-no-slave
+      # https://danbooru.donmai.us/posts?tags=azuma_fubuki&z=1
+      azuma_fubuki:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/mato_seihei_no_slave/azuma_fubuki/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/mato_seihei_no_slave/azuma_fubuki/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/mato_seihei_no_slave/azuma_fubuki/costume__}|}
+        main-trigger-words:
+          - azuma_fubuki, AzumaFubuki, azuma_fubuki_\(mato_seihei_no_slave\), mato_seihei_no_slave
+        costume-ethnicity:
+          - (long hair, hair over one eye, one eye covered, hair ribbon, half up half down braid:1.2), dark blue hair, aqua hair
+        costume:
+          - cleavage cutout, __lazy-wildcards/cosplay-char/mato_seihei_no_slave/anti-demon_corps_uniform/prompts__
+      anti-demon_corps_uniform:
+        prompts:
+          - >-
+            military uniform, anti-demon_corps_uniform
+            , epaulettes, white gloves
+            , pelvic curtain
+            , thigh boots
+            , studded
+            , black pantyhose
+            , belt
 

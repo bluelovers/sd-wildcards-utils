@@ -41,7 +41,8 @@ lazy-wildcards:
     costume-ethnicity:
       - __lazy-wildcards/utils-dataset/costume/costume-ethnicity__
     costume-elem:
-      - __lazy-wildcards/utils-dataset/costume/costume-elem__
+      - >-
+        {1-4$$__lazy-wildcards/utils-dataset/costume/costume-elem__}
     costume-weapon:
       - __cf-*/weapon__
       - __lazy-wildcards/*/*/*/costume-weapon*__

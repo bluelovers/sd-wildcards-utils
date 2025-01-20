@@ -179,7 +179,7 @@ lazy-wildcards:
           - >-
             open {1-$$, open $$clothes|shirt|coat}
         costume-weapon:
-          - holding smoking pipe, kiseru
+          - __lazy-wildcards/subject/costume-weapon/smoking_pipe/prompts__
         action:
           - hand up
         env:
@@ -239,7 +239,7 @@ lazy-wildcards:
           - empty eyes
           - scowl
         action-pose:
-          - spread legs
+          - __lazy-wildcards/subject/action-pose-anything/pose-bottom-nsfw-open-legs/prompts__
           - arms behind head
           - arm up
     # https://danbooru.donmai.us/posts?tags=saber_marionette_j&z=5

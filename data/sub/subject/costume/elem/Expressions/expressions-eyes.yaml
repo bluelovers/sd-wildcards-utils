@@ -1,0 +1,31 @@
+lazy-wildcards:
+  subject:
+    costume-elem-expressions:
+      # https://civitai.com/models/155547/v-shaped-eyebrowsdoyagao-smug-v
+      v-shaped_eyebrows:
+        prompts:
+          - "v-shaped eyebrows"
+      # https://civitai.com/models/330548/scornful-eyesjitome-type-18-type-18?modelVersionId=370357
+      # 輕蔑、不耐煩的眼神（呈尖狀，半開的眼睛）
+      eyes-scornful:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/eyes-scornful/expressions-main__{0.3:::{1.2|1.3|1.4}|})
+        expressions-main:
+          - scornful eyes, jitome
+      # https://civitai.com/models/155553/worried-eyes?modelVersionId=345646
+      # 困り顔の眼
+      eyes-worried:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/eyes-worried/expressions-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/eyes-worried/expressions__}|}
+        expressions-main:
+          - worried eyes
+        expressions:
+          - worry
+          - upset
+          - confused
+          - thinking
+          - expressionless
+

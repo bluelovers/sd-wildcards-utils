@@ -69,4 +69,14 @@ lazy-wildcards:
           - hand_focus
           - lens_focus
           - close-up
+      sitting_wariza:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/action-pose/sitting_wariza/action__}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/action-pose/sitting_wariza/action-pose__}|}
+        action:
+          - wariza, sitting, w-sitting
+        action-pose:
+          - hand between legs
+          - between legs
 

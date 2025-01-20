@@ -220,4 +220,40 @@ lazy-wildcards:
         costume-weapon:
           - holding bag
           - bag
+      # https://civitai.com/models/184380/kitchens-in-japanese-housing-complexes-sd15
+      kitchens_jp:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-architectural/kitchens_jp/env-bg-main__)
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/kitchens_jp/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/kitchens_jp/env-bg__}|}
+        env-bg-main:
+          - JPkitchen, japanese kitchen, indoors, interior, scenery
+        env-bg:
+          - compact_kitchen
+          - food_preparation_area
+          - apartment_interior
+        env:
+          - table, chair, stool
+          - sink, stainless_steel_sink
+          - plant
+          - window
+          - refrigerator
+          - frying pan, spatula
+          - gas_stove
+          - electric_cooktop
+          - range_hood
+          - bottle, shelf, kitchen_cabinet
+          - door
+          - basket
+          - plate, cup
+          - wooden floor
+          - curtains
+          - tile_wall
+          - wooden_cabinets
+          - microwave
+          - small_appliances
+          - hanging_kitchen_tools
+          - rice_cooker
+          - kitchen_cloth
 

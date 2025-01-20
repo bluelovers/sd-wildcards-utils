@@ -1,0 +1,56 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      # https://civitai.com/models/1072957/ethereal-gothic-sd1-sdxl-pony-flux?modelVersionId=1204459
+      ethereal_gothic:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/ethereal_gothic/style-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/ethereal_gothic/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/ethereal_gothic/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/ethereal_gothic/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/ethereal_gothic/style__}|}
+        style-main:
+          - ArsMJStyle, Etherial Gothic, Gothic Dark Fantasy Aesthetics, __lazy-wildcards/utils/fn/style-inspired(v=gothic)__
+        env-bg:
+          - gothic cathedrals
+          - gothic architecture
+          - gothic spires
+          - gothic ruined cathedral
+          - haunted_forest
+        env:
+          - gothic stained glass
+          - gothic_cross
+          - mystical_runes
+          - occult_symbols
+          - ancient_tomes
+          - __lazy-wildcards/subject/moment/moon/prompts__
+          - __lazy-wildcards/subject/moment/weather-mist/prompts__
+          - illuminated_windows
+          - shattered_stained_glass
+          - gnarled_trees
+          - ravens_on_branches
+          - ornate_carvings, stonework
+          - crystal on top of a rock
+          - giant robot
+        costume-elem:
+          - flowing_robes
+          - pale_skin
+          - dark_makeup
+          - flowing_black_gown
+          - dressed in richly detailed garments
+        costume-weapon:
+          - playing a harp
+        style:
+          - dark_elegance
+          - dramatic_lighting
+          - moody_atmosphere
+          - dark_color_palette
+          - crimson_highlights
+          - gold_accents
+          - mystical_aura
+          - ghostly_glows
+          - stone_tones, neutral tones of stone
+          - verdigris_effect
+          - black and gold
+

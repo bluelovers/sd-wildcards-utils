@@ -1,0 +1,23 @@
+lazy-wildcards:
+  subject:
+    costume-elem:
+      # https://civitai.com/models/260177/bone-dress-by-edg?modelVersionId=293461
+      skull-clothes:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem/skull-clothes/costume-main__
+            {, {1-$$__lazy-wildcards/subject/costume-elem/skull-clothes/costume-elem__}|}
+        costume-main:
+          - skull, skeleton, bones, TranslucentVisibility, edgBones, wearing edgBones, skeletal
+        costume-elem:
+          - >-
+            skull {1-$$, skull $$bra|necklace|hair ornament|shield|helmet|mask|body|dress|clothes}
+          - >-
+            skeleton bones {1-$$, skeleton bones $$bra|necklace|hair ornament|shield|helmet|mask|body|dress|clothes|arms|legs}
+          - >-
+            skeletal bones {1-$$, skeletal bones $$bra|necklace|hair ornament|shield|helmet|mask|body|dress|clothes|arms|legs}
+          - half skeleton mask
+          - bones carving skin
+          - exo-bones mecha
+          - half skeleton body
+

@@ -4,14 +4,13 @@ lazy-wildcards:
       Ancient-Egypt:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/main__,
-            inspired by ({1-$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/style-theme__}:1.2)
-            {,{1-2$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/costume__}|}
-            {,{1-3$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/env-bg__}|}
-            {{1-4$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/costume-weapon__},|}
-            {,{1-3$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/env__}|}
-            {,{1-$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/style__}|}
-        main:
+            __lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/main-trigger-words__
+            , inspired by ({1-$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/style-theme__}:1.2)
+            {, __lazy-wildcards/subject/costume/ancient-egyptian/prompts__|}
+            {, {1-3$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/env-bg__}|}
+            {, {1-3$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/style__}|}
+        main-trigger-words:
           - Building_Egyptian, egyptpunkai, egypt, egyptianworld
         style-theme:
           - Ancient Egypt theme
@@ -25,39 +24,6 @@ lazy-wildcards:
           - Ethnofuturism
           - Cultural_Fusion
           - lost civilization, mystery lost technology theme
-        costume:
-          - Pharaoh, regal_attire, Egyptian_royalty, royal headdress
-          - Anubis, jackal_headgear
-          - Scarab, sacred_insect
-          - Egyptian_armor
-          - ceremonial attire
-          - Sphinx, lion's body, human head
-          - god of mummification
-          - falcon head
-          - god of the sun
-          - Mummy
-          - preserved bodies
-          - linen wrappings
-          - amulets
-          - Cleopatra, queen of Egypt
-          - Bastet, cat goddess
-          - goddess of fertility
-          - Tutankhamun
-          - boy king
-          - golden mask
-        costume-weapon:
-          - Ankh, ancient_cross
-          - >-
-            scepter|was_scepter
-          - khopes, curved sword
-          - scimitar, curved sword
-          - incense_burner
-          - canopic_jar, store and preserve the viscera
-          - maat_feather
-          - ceremonial_knife
-          - staff_of_osiris
-          - shabti, Small figurines placed in tombs
-          - small tools
         env:
           - >-
             ancient egyptian {1-$$, ancient egyptian $$flag|symbol|hieroglyphic|technology|artifacts|design|hieroglyphic symbol|art}

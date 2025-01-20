@@ -1,0 +1,21 @@
+lazy-wildcards:
+  subject:
+    costume-elem-expressions:
+      open-or-closed-mouth:
+        prompts:
+          - open mouth
+          - __lazy-wildcards/subject/costume-elem-expressions/mouth-closed/prompts__
+      # https://civitai.com/models/144735/large-closed-mouth-type-2-type-2?modelVersionId=160897
+      # https://civitai.com/models/144727/large-closed-mouth-type-1-type-1?modelVersionId=160890
+      mouth-closed:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-expressions/mouth-closed/expressions-main__
+            {0.3::, {1-$$__lazy-wildcards/subject/costume-elem-expressions/mouth-closed/expressions__}|}
+        expressions-main:
+          - closed mouth
+          - large closed mouth
+        expressions:
+          - straight line shaped mouth
+          - large U-shaped mouth
+

@@ -39,10 +39,16 @@ lazy-wildcards:
           - __lazy-wildcards/subject/moment/weather-*/prompts__
           - dynamic weather
           - __lazy-wildcards/subject/moment/magic-tempests/prompts__
+      # https://civitai.com/models/97677/cloudtunnel
+      # https://civitai.com/models/162513/cloud-platform
+      # https://civitai.com/models/206091/joscheks-mostly-realistic-clouds
       weather-clouds:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/moment/weather-clouds/env-moment__}
+            __lazy-wildcards/subject/moment/weather-clouds/env-moment-main__
+            , {1-$$__lazy-wildcards/subject/moment/weather-clouds/env-moment__}
+        env-moment-main:
+          - cloudtunnel, cloudAI, cloud, clouds
         env-moment:
           - floating cloud
           - cloudy
@@ -148,8 +154,16 @@ lazy-wildcards:
       weather-mist:
         prompts:
           - >-
-            {1-$$foggy|fog|mist, misty|steam|__lazy-wildcards/subject/moment/weather-smoke/prompts__|thick mist|dense_fog}
-            {, {1-$$__lazy-wildcards/subject/moment/weather-rain/style-env__}|}
+            {1-$$__lazy-wildcards/subject/moment/weather-mist/env-moment__}
+            {0.3::, {1-$$__lazy-wildcards/subject/moment/weather-rain/style-env__}|}
+        env-moment:
+          - foggy, foggy_scener
+          - fog
+          - mist, misty
+          - steam
+          - __lazy-wildcards/subject/moment/weather-smoke/prompts__
+          - thick mist
+          - dense_fog
       weather-smoke:
         prompts:
           - >-
@@ -262,15 +276,18 @@ lazy-wildcards:
       moon:
         prompts:
           - >-
+            {(__lazy-wildcards/subject/moment/moon/env-moon__{0.3:::{1.2|1.3|1.4}|}),|}
             {1-$$__lazy-wildcards/subject/moment/moon/env__}
-        env:
+        env-moon:
           - >-
             {cold |}full moon
-          - moonlight
-          - midnight
           - shattered_moon
           - half_moon
           - crescent moon, crescent
+        env:
+          - moon
+          - moonlight
+          - midnight
       age:
         prompts:
           - medieval
@@ -284,4 +301,15 @@ lazy-wildcards:
           - summer
           - autumn
           - winter
+      weather-fire:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/moment/weather-fire/env-moment__}{0.3:::{1.2|1.3|1.4}|})
+        env-moment:
+          - wildfire
+          - fire
+          - burning
+          - breathing fire
+          - explosion
+          - fiery tail
 

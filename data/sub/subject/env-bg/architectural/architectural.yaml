@@ -180,65 +180,6 @@ lazy-wildcards:
         env-bg-view:
           - indoors, interior
           - outdoors
-      bridge:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/env-bg-architectural/bridge/main__
-            {,{1-3$$__lazy-wildcards/subject/env-bg-architectural/bridge/env-bridge-main*__}|}{0.3:::{1.2|1.3|1.4}|})
-            {0.3::,{1-3$$__lazy-wildcards/subject/env-bg-architectural/bridge/env-bridge-style1__}|}
-            {0.3::,{1-3$$__lazy-wildcards/subject/env-bg-architectural/bridge/env-bridge-style2__}|}
-        main:
-          - bridge
-        env-bridge-main1:
-          - >-
-            {1-$$suspension bridge|cable bridge|cable-stayed bridge}
-          - arch_bridge
-          - >-
-            {1-$$beam_bridge|girder_bridge}
-          - truss_bridge
-          - drawbridge
-          - bascule_bridge
-          - modern_bridge
-          - pedestrian_bridge, footbridge
-          - railway_bridge, train_bridge
-          - covered_bridge
-          - living root bridge
-          - nature_bridge
-          - chinese_arch_bridge, oriental_bridge
-          - torii_bridge
-          - tower bridge
-          - >-
-            {1-$$japanese_arch_bridge|japanese_bridge}
-          - >-
-            {1-$$korean_bridge|korean_stone_bridge|traditional_arch_bridge|hanok_bridge}
-          - >-
-            {1-$$aqueduct|water_bridge}
-          - >-
-            {1-$$floating_bridge|levitating_bridge}
-        env-bridge-main2:
-          - bifrost, Rainbow_bridge
-          - bone_bridge
-          - crystal bridge
-          - >-
-            {1-$$lava_bridge|molten_bridge}
-        env-bridge-style1:
-          - steel_bridge
-          - stone_bridge
-          - wooden_bridge
-          - vine_bridge
-        env-bridge-style2:
-          - magical_bridge, mythical_bridge
-          - creepy bridge
-          - shining_bridge
-          - organic_bridge
-          - fire_bridge
-          - energy_bridge, laser_bridge
-          - shadow_bridge
-          - cloud bridge
-          - broken Bridge, damaged Bridge
-          - ancient_bridge
-          - >-
-            {1-$$ice_bridge|frost_bridge|frozen_bridge}
       # https://civitai.com/models/825976/style-of-treehouse-433?modelVersionId=923694
       treehouse:
         prompts:
@@ -339,4 +280,40 @@ lazy-wildcards:
           - wooden chair
           - sign
           - cactus
+      # https://civitai.com/posts/11338481
+      # https://civitai.com/posts/11704442
+      posts-11338481-old-house:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-architectural/posts-11338481-old-house/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/posts-11338481-old-house/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/posts-11338481-old-house/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/posts-11338481-old-house/style__}|}
+        env-bg-main:
+          - charming old house, a teal blue wooden door with intricate panel details
+        env-bg:
+          - traditional tiled roof
+          - weathered white walls
+        env:
+          - framed by blooming pink bougainvillea flowers cascading from above
+          - a vintage scooter leans casually against the wall
+          - casting a soft shadow in the sunlight
+          - soft pastel tones contrasting with the textured walls
+          - a sleek black cat, its fur glossy and catching soft reflections of sunlight
+          - cascading flowers
+          - traditional house
+          - teal blue wooden door
+          - pink bougainvillea flowers
+          - vintage scooter
+        style:
+          - serene scene
+          - viewed from a medium front-facing perspective
+          - vibrant and natural touch
+          - the overall composition is asymmetrical
+          - creating gentle shadows that highlight the architectural details and textures
+          - warm sunlight
+          - tranquil atmosphere
+          - pastel tones
+          - asymmetrical composition
+          - rustic charm
 

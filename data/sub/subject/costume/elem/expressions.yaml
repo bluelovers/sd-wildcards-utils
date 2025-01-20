@@ -1,5 +1,6 @@
 lazy-wildcards:
   subject:
+    # https://civitai.com/user/JujoHotaru/models
     costume-elem-expressions:
       yandere_trance:
         prompts:
@@ -184,4 +185,67 @@ lazy-wildcards:
           - arms behind back
           - standing
           - double w
+      confused:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/confused/expressions-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/confused/expressions__}|}
+        expressions-main:
+          - confused
+        expressions:
+          - __lazy-wildcards/subject/costume-elem-expressions/v-shaped_eyebrows/prompts__
+      # https://civitai.com/models/136914
+      blush:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/blush/expressions-trigger-words__
+            {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/blush/expressions-main__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/blush/expressions__}|}
+        expressions-trigger-words:
+          - blush, embarrassed, yudedako
+        expressions-main:
+          - full-face blush
+          - ear blush
+          - humiliation, shame
+        expressions:
+          - panicing
+      # https://civitai.com/models/469309?modelVersionId=522175
+      # https://civitai.com/models/469941
+      doyagao_smug:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/doyagao_smug/expressions-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/doyagao_smug/expressions__}|}
+        expressions-main:
+          - doyagao, smug, proudly face, yaeba
+        expressions:
+          - v-shaped eyebrows
+          - grinning smile
+          - smug smile
+          - evil smug face
+          - happy smile
+          - naughty face
+          - >-
+            {open mouth|closed mouth}
+      # https://civitai.com/models/136940/paled-face?modelVersionId=151092
+      shaded_face:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/shaded_face/expressions-trigger-words__
+            {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/shaded_face/expressions-main__}|}{0.3:::{1.2|1.3|1.4}|})
+            {0.3::, {1-$$__lazy-wildcards/subject/costume-elem-expressions/shaded_face/expressions__}|}
+        expressions-trigger-words:
+          - shaded face
+        expressions-main:
+          - turn pale
+          - partially shaded face
+          - paled face
+        expressions:
+          - scared
+          - trembling
+          - gloom \(expression\)
+          - emphasis lines
+          - surprised
+          - fear
+          - strong anger
 

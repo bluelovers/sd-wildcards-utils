@@ -207,4 +207,32 @@ lazy-wildcards:
         style:
           - cell shading
           - anime-inspired
+      # https://civitai.com/models/181433/artstyle-jackson-pollock?modelVersionId=203625
+      Jackson_Pollock:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/Jackson_Pollock/style-artist__
+            {, {__lazy-wildcards/subject/style-artist/Jackson_Pollock/style-main__}|}
+            {, {__lazy-wildcards/subject/style-artist/Jackson_Pollock/style__}|}
+        style-artist:
+          - Jackson Pollock, p0ll0ck
+        style-main:
+          - __lazy-wildcards/subject/style-elem/dripping-colors/prompts__
+          - abstract_expressionism
+          - splattered_paint
+        style:
+          - action_painting
+          - nonrepresentational_art
+          - dynamic_composition
+          - layered_paint_texture
+          - chaotic_lines
+          - bold_color_palette
+          - raw_emotion
+          - expressive_art
+          - unpredictable_pattern
+          - intense_visual_effect
+          - paint_stains_everywhere
+          - industrial_paint
+          - creative_chaos
+          - colorful explosion
 

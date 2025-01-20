@@ -1,0 +1,46 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      # https://civitai.com/models/230964/middle-eastern-market-rug-stall
+      # https://civitai.com/models/169967/game-scenario-middle-east-region
+      middle_eastern_market:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/middle_eastern_market/env-bg-main__)
+            {, {1-$$__lazy-wildcards/subject/env-bg/middle_eastern_market/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/middle_eastern_market/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/middle_eastern_market/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/middle_eastern_market/env-creatures__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/middle_eastern_market/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/middle_eastern_market/style__}|}
+        env-bg-main:
+          - middle_eastern_market, middle eastern bazaar, souq, MiddleEastRugMarket, CXMIX, Middle East region, arabesque, arabian building, middle eastern style
+        env-bg:
+          - crowded_street
+          - colorful_stalls
+          - fruit_stand
+          - handicrafts_market
+          - arabesque_architecture, Architecture of Saudi Arabia
+          - stone_buildings
+          - narrow_alleyway
+          - street_vendor
+          - rug and fabric stall
+        env:
+          - hanging_fabric
+          - spice_display
+          - arched_doorways
+          - cloth_shade
+          - hanging_lanterns, arabian lanterns
+          - brick_pavement
+          - carrying_goods
+          - gold_jewelry_display
+        env-creatures:
+          - camel
+          - shoppers
+        costume-elem:
+          - arabian traditional attire, middle eastern traditional attire
+        style:
+          - mosaic_design
+          - bartering_scene
+          - arabesque patterns, arabian patterns, middle eastern patterns
+

@@ -41,7 +41,7 @@ lazy-wildcards:
             - shameful face
             - breathing
             - trembling
-            - spread legs
+            - __lazy-wildcards/subject/action-pose-anything/pose-bottom-nsfw-open-legs/prompts__
             - surprised eyes
             - open mouth
             - wavy mouth
@@ -94,6 +94,7 @@ lazy-wildcards:
           - open clothes
           - heart
           - clothes pull
+          - camisole pull
           - cleavage
       grab:
         prompts:
@@ -108,17 +109,6 @@ lazy-wildcards:
           - head grab
           - chin grab
           - neck grab
-      pose-bottom-open-legs:
-        prompts:
-          - >-
-            {1-$$__lazy-wildcards/subject/action-nsfw-others/pose-bottom-open-legs/action-pose__}
-        action-pose:
-          - >-
-            {1-$$ position, $$spread legs|open legs} position
-          - >-
-            {1-$$squatting|crouching|squatting cowgirl position}
-          - (straddle)
-          - crouching
       bound:
         prompts:
           - >-
@@ -150,4 +140,20 @@ lazy-wildcards:
           - public masturbation
           - bowlegged pose
           - autoarousal
+      # https://civitai.com/images/5656117
+      paw_pose_spread_legs:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/action-nsfw-others/paw_pose_spread_legs/action__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/action-nsfw-others/paw_pose_spread_legs/expressions__}|}
+        action:
+          - >-
+            both hands paw pose, clenched fist
+            , spread legs, squatting pose
+        expressions:
+          - __lazy-wildcards/subject/costume-elem-expressions/blush/prompts__
+          - angry face
+          - annoyed
+          - frowning
+          - tears, cry
 

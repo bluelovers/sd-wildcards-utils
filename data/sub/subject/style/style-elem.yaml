@@ -125,4 +125,34 @@ lazy-wildcards:
           - skull
         env-vehicle:
           - sport car
+      dripping-colors:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-elem/dripping-colors/style-main2__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-elem/dripping-colors/style-main__}|}
+            {, {1-$$__lazy-wildcards/subject/style-elem/dripping-colors/style__}|}
+        style-main2:
+          - drip painting
+        style-main:
+          - psychedelic dripping colors
+          - splashes of color, color splashes, paint splash
+          - colorful paint explosion pattern
+          - beautiful detailed colorful splash art
+          - paint splatter
+          - expressive drips
+        style:
+          - psychedelic vibrant colors
+          - cgsociety saturated colors
+          - bold psychedelic colors
+          - flat color
+          - colors mashing
+          - colorful color here and there, multicolor paint, multicolor, colorful
+          - random patterns
+          - liquid splash
+          - fluid, wet
+          - dripping
+          - waxy
+          - smooth
+          - water splashing
+          - fussion of abstract and fluid art
 

@@ -47,10 +47,15 @@ lazy-wildcards:
       untied-panties:
         prompts:
           - (untied panties, falling panties:1.4)
+      # https://civitai.com/models/252138/glam-and-gore?modelVersionId=284488
       blood:
         prompts:
           - >-
             {1-$$__lazy-wildcards/subject/costume-elem/blood/env__}
+            , __lazy-wildcards/subject/costume-elem/blood/env-main__
+            {, {1-$$__lazy-wildcards/subject/costume-elem/blood/costume-elem__}|}
+        env-main:
+          - blood, gore, GL4MGL0R3
         env:
           - surrounded by blood
           - blood splatter
@@ -58,11 +63,17 @@ lazy-wildcards:
           - blood on ground
           - pool of blood
           - bleeding
-          - blood drip
+          - blood drip, blood dripping
           - raining_blood
           - blood drop
           - blood spray
           - blood stains
+          - glitter blood
+          - bleeding
+          - bloodyface, blood on face
+        costume-elem:
+          - bloody clothing
+          - makeup
       see-through-clothes:
         prompts:
           - >-
@@ -134,22 +145,40 @@ lazy-wildcards:
           - holding condom
         action:
           - drinking_from_condom, cumdrip
+      # https://civitai.com/models/367967/bukkake-excessive-cum-illustrious-pony-sd15?modelVersionId=411184
+      cum_excessive:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/cum_excessive/costume-elem__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-elem/cum_excessive/env-cum-overflow__}|}
+        costume-elem:
+          - bk, bukkake, cum overflow, excessive cum
+        env-cum-overflow:
+          - cum_pool
+          - projectile cum
+          - cum overflow, excessive cum
+          - cum plugged
+          - cum inflation
+          - cum leak, cum leaking
+          - bukkake
+          - cum everywhere
       cum:
         prompts:
           - >-
             (cum
             {, __lazy-wildcards/subject/costume-elem/cum/costume-elem2__|}
             {, __lazy-wildcards/subject/costume-elem/cum/costume-elem__|}
-            {, {1-$$__lazy-wildcards/subject/costume-elem/cum/env-cum__}|}
-            {, {1-$$__lazy-wildcards/subject/costume-elem/cum/env-cum-overflow__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-elem/cum/env-cum__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, __lazy-wildcards/subject/costume-elem/cum_excessive/prompts__|}
             {, __lazy-wildcards/subject/costume-elem/cum/action__|}
             {, __lazy-wildcards/subject/costume-elem/cum/expressions__|}
+            {0.2::, {1-$$__lazy-wildcards/subject/costume-elem/cum/env__}|}
         costume-elem:
           - out of pussy, cum in pussy
           - >-
-            cum on {1-$$, cum on $$hands|hair|breasts|clothes|gloves|body|tongue|legs|stomach|panties|shoe|lips}
+            cum on {1-$$, cum on $$hands|hair|breasts|clothes|gloves|body|tongue|legs|stomach|panties|shoe|lips|arms|eyewear|back}
           - >-
-            cum in {1-$$, cum in $$ass|pussy}
+            cum in {1-$$, cum in $$ass|pussy|cleavage}
           - cum inside
         costume-elem2:
           - cum in throat
@@ -161,17 +190,11 @@ lazy-wildcards:
           - cum stain
           - cumdrip
           - cum string
-        env-cum-overflow:
-          - cum_pool
-          - projectile cum
-          - cum overflow
-          - excessive cum
-          - cum plugged
-          - cum inflation
-          - cum leak, cum leaking
-          - bukkake
+        env:
+          - __lazy-wildcards/utils/color-base__ cum
         action:
           - after ejaculation
+          - __lazy-wildcards/subject/action-pose/sitting_wariza/prompts__
         expressions:
           - __lazy-wildcards/subject/costume-elem-expressions/fucked_silly/prompts__
       saliva:
@@ -224,6 +247,7 @@ lazy-wildcards:
         costume-elem:
           - sweatdrop
           - sweaty armpits
+          - sweat soaked
       sleeves:
         prompts:
           - >-
@@ -269,12 +293,12 @@ lazy-wildcards:
       soap_bubbles:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume-elem/soap_bubbles/costume__
+            (__lazy-wildcards/subject/costume-elem/soap_bubbles/costume__{0.3:::{1.2|1.3|1.4}|})
             {, {1-$$__lazy-wildcards/subject/costume-elem/soap_bubbles/costume-elem__}|}
             {, {1-$$__lazy-wildcards/subject/costume-elem/soap_bubbles/action__}|}
             {, {1-$$__lazy-wildcards/subject/costume-elem/soap_bubbles/env-bg__}|}
         costume:
-          - soap bubbles, soapy, foam, soap bubbles, bubblebra, s04py, ruanyi0156, soapy skin, soap censor
+          - soap bubbles, soapy, foam, soap bubbles, bubblebra, s04py, ruanyi0156, soapy skin, soap censor, wetft
         costume-elem:
           - wet
           - nude, naked
@@ -291,4 +315,18 @@ lazy-wildcards:
           - soap bottle
           - soap
           - bar soap
+      # https://civitai.com/models/269663?modelVersionId=304002
+      # https://civitai.com/models/269663?modelVersionId=333473
+      cloud:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/cloud/costume-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-elem/cloud/costume__}|}
+        costume-main:
+          - edgCloud, edgTCloud, wearing edgCloud, wearing edgTCloud, __lazy-wildcards/subject/moment/weather-clouds/env-moment-main__
+        costume:
+          - >-
+            wearing a {1-$$ made of clouds, wearing a $$bra|necklace|hair ornament|shield|helmet|mask|pantyhose|thighhighs|shirt|pants|dress|skirt|sleeves|bodysuit|cape|shorts|jeans|leotard|legwear|camisole|clothes} made of clouds
+          - >-
+            wearing a {1-$$ made of thunder clouds, wearing a $$bra|necklace|hair ornament|shield|helmet|mask|pantyhose|thighhighs|shirt|pants|dress|skirt|sleeves|bodysuit|cape|shorts|jeans|leotard|legwear|camisole|clothes} made of thunder clouds
 

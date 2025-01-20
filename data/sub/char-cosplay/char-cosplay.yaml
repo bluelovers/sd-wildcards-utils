@@ -28,7 +28,7 @@ lazy-wildcards:
           - underwear
           - bare shoulders
           - happy sex
-          - spread legs
+          - __lazy-wildcards/subject/action-pose-anything/pose-bottom-nsfw-open-legs/prompts__
           - arms behind head
           - >-
             {1-$$curvaceous|curvy figure|hourglass figure}
@@ -39,7 +39,7 @@ lazy-wildcards:
             {1-$$drooling|saliva}
           - self_lick, Sticking out tongue
           - playful_expression
-          - smug
+          - __lazy-wildcards/subject/costume-elem-expressions/doyagao_smug/prompts__
           - open mouth
           - very long hair
           - purple choker
@@ -67,8 +67,8 @@ lazy-wildcards:
         main:
           - re-l_mayer, ErgoProxy_ReLMayer, ergo proxy
         costume-ethnicity:
-          - __lazy-wildcards/cosplay-char/ErgoProxy/Re-L_Mayer/ethnicity-makeup__, black hair
-        ethnicity-makeup:
+          - __lazy-wildcards/cosplay-char/ErgoProxy/Re-L_Mayer/costume-ethnicity-makeup__, black hair
+        costume-ethnicity-makeup:
           - >-
             makeup,
             blue eyes,
@@ -101,7 +101,7 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/cosplay-char/Neon_Genesis_Evangelion/Ayanami_Rei/main__,
             __lazy-wildcards/cosplay-char/Neon_Genesis_Evangelion/Ayanami_Rei/costume-ethnicity__,
-            __lazy-wildcards/cosplay-char/Neon_Genesis_Evangelion/Ayanami_Rei/ethnicity-hair__,
+            __lazy-wildcards/cosplay-char/Neon_Genesis_Evangelion/Ayanami_Rei/costume-ethnicity-hair__,
             {0.3::__lazy-wildcards/cosplay-char/Neon_Genesis_Evangelion/Ayanami_Rei/costume/*__,|}
             {{1-$$__lazy-wildcards/cosplay-char/Neon_Genesis_Evangelion/Ayanami_Rei/style__},|}
             {1-$$__lazy-wildcards/cosplay-char/Neon_Genesis_Evangelion/Ayanami_Rei/env__}
@@ -109,7 +109,7 @@ lazy-wildcards:
           - ppayanamirei, Ayanami Rei, rei ayanami, ayanami rei \(cosplay\), Neon Genesis Evangelion
         costume-ethnicity:
           - blue hair, red eyes
-        ethnicity-hair:
+        costume-ethnicity-hair:
           - short hair
           - very long hair, long hair
         costume:
@@ -133,132 +133,6 @@ lazy-wildcards:
           - evangelion \(mecha\)
           - grey pupils
           - science fiction
-    Nier:
-      # https://civitai.com/models/538982/2b-2p-semi-realistic?modelVersionId=599181
-      # https://danbooru.donmai.us/posts?tags=2b_%28nier%3Aautomata%29&z=2
-      2b:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/Nier/2b/main__,
-            __lazy-wildcards/cosplay-char/Nier/2b/costume-ethnicity__,
-            {__lazy-wildcards/cosplay-char/Nier/2b/costume-types/type-*__,|}
-            __lazy-wildcards/cosplay-char/Nier/2b/costume-eyes/*__,
-            {1-$$__lazy-wildcards/cosplay-char/Nier/2b/env__}
-        main:
-          - nier:automata, nier \(series\), nier, 2bnierdef, 2b, 2b \(nier:automata\)
-        costume-ethnicity:
-          - __lazy-wildcards/cosplay-char/Nier/2b/ethnicity-types/*__, hair over one eye
-        ethnicity-types:
-          2b:
-            - 2b, pale skin, white hair, 2b_\(nier:automata\), 2b_\(nier:automata\)_\(cosplay\)
-          2p-w:
-            - 2pdark, dark skin, black hair, 2p_\(nier:automata\), 2p_\(nier:automata\)_\(cosplay\)
-          2p-b:
-            - 2ppale, pale skin, black hair, 2p_\(nier:automata\), 2p_\(nier:automata\)_\(cosplay\)
-        costume-types:
-          type-2p-dress:
-            - white dress, cleavage cutout, black gloves, white footwear, 2p dress, 2p footwear, 2p gloves
-          type-2p-leotard:
-            - black leotard, cleavage cutout, black gloves, white footwear, 2p leotard, 2p footwear, 2p gloves, highleg leotard
-          type-2b-dress:
-            - black dress, cleavage cutout, white gloves, black footwear, 2b dress, 2b footwear, 2b gloves
-          type-2b-leotard:
-            - white leotard, cleavage cutout, white gloves, black footwear, 2b leotard, 2b footwear, 2b gloves, highleg leotard
-          type-kaine:
-            - kaine lingerie, kaine bandages, kaine gloves, kaine shoes
-          type-bride:
-            - Nier.2b\(Bride\), thighhighs, frills, sheer sleeves, sheer dress, sheer bridal veil, lace dress, wedding dress, bridal lingerie
-        costume-eyes:
-          eyes:
-            - blue-gray eyes, no blindfold
-          blindfold:
-            - white blindfold, 2p blindfold, covered eyes
-            - black blindfold, 2b blindfold, covered eyes
-        env:
-          - white hairband
-          - black hairband
-          - short hair
-          - (mole under mouth)
-          - parted lips
-          - feather-trimmed sleeves
-          - pod \(nier:automata\) \(cosplay\)
-          - thighhighs under boots
-          - blindfold lift
-          - cleavage cutout
-          - clothing cutout
-          - juliet sleeves
-          - sword
-          - back cutout
-          - ass
-          - puffy sleeves
-          - see-through
-          - garter straps
-          - hair flowers
-          - bridal veil
-          - underwear
-          - hemming of a skirt
-          - turtleneck
-          - Inverted Bob Haircut
-          - white rose
-          - wedding ring
-          - pod \(nier:automata\)
-      # https://civitai.com/models/140784/operator-6o-and-21o-nierautomata-lora
-      operator:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/Nier/operator/main__,
-            __lazy-wildcards/cosplay-char/Nier/operator/costume__,
-            {__lazy-wildcards/cosplay-char/Nier/operator/ethnicity-types/type-*__,|}
-            {1-$$__lazy-wildcards/cosplay-char/Nier/operator/costume-elem__},
-            {1-$$__lazy-wildcards/cosplay-char/Nier/operator/style__},
-            {1-$$__lazy-wildcards/cosplay-char/Nier/operator/env__}
-        main:
-          - nier \(series\), nier:automata
-        costume:
-          - mouth veil, bodysuit, bodystocking, black gloves, thigh boots
-        ethnicity-types:
-          type-op6o:
-            - op6o, twin braids, bangs, hairband, operator 6o, operator 6o \(cosplay\)
-          type-op21o:
-            - op21o, short hair, hairband, operator 21o, operator 21o \(cosplay\)
-        costume-elem:
-          - bodystocking
-          - detached sleeves
-          - dress
-          - veil
-          - black hairband
-          - closed eyes
-          - green eyes
-          - red eyes
-          - >-
-            {1-$$high heels|high heel boots}
-          - >-
-            {1-$$fishnets|fishnet legwear}
-          - heavy breathing
-          - makeup
-          - >-
-            {1-$$navel|covered navel}
-          - puffy sleeves
-          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
-          - hand on own hip
-          - knee boots
-          - large breasts
-          - blue eyes
-          - kneeling
-        style:
-          - mind control
-          - see-through
-        env:
-          - __lazy-wildcards/subject/env-elem-punk/holographic/prompts__
-          - recording
-          - >-
-            {1-$$chair|invisible chair}
-      # https://civitai.com/models/149752/louise-nier-replicant
-      # https://nier.fandom.com/wiki/Louise
-      louise:
-        prompts:
-          - long hair,black hair, ribbon, brown eyes, hair bow, boots, sleeveless, black gloves, sailor collar, white dress, white footwear, white bow, single glove, sailor dress
-          - black hair, yellow eyes, __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__,blunt bangs,makeup, glowing, lipstick, glowing eyes, science fiction
     vocaloid:
       hatsune_miku:
         prompts:
@@ -282,8 +156,7 @@ lazy-wildcards:
           - hair between eyes
         costume-elem:
           - headphones
-          - >-
-            {1-$$holding fan|hand fan|folding fan}
+          - __lazy-wildcards/subject/costume-weapon/hand_fan/prompts__
           - holding
           - toeless footwear
           - dress
@@ -524,9 +397,9 @@ lazy-wildcards:
           - claymore \(series\)
         costume-ethnicity:
           - blonde hair
-          - __lazy-wildcards/cosplay-char/claymore/base/ethnicity-eyes__
+          - __lazy-wildcards/cosplay-char/claymore/base/costume-ethnicity-eyes__
           - pale skin
-        ethnicity-eyes:
+        costume-ethnicity-eyes:
           - grey eyes
           - yellow eyes
           - brown eyes
@@ -903,7 +776,7 @@ lazy-wildcards:
       djinn-paimon:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/Magi/djinn-paimon/main__
+            __lazy-wildcards/cosplay-char/Magi/djinn-paimon/main-trigger-words__
             ,({5-$$__lazy-wildcards/cosplay-char/Magi/djinn-paimon/costume-ethnicity__})
             {,{1-$$__lazy-wildcards/cosplay-char/Magi/djinn-paimon/costume__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/Magi/djinn-paimon/costume-weapon__}|}
@@ -912,7 +785,7 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/cosplay-char/Magi/djinn-paimon/env-bg__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/Magi/djinn-paimon/expressions__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/Magi/djinn-paimon/style__}|}
-        main:
+        main-trigger-words:
           - >-
             paimon_magi, Paimon_aiwaifu, paimon_\(magi\), paimon_\(magi\)_\(cosplay\), magi the labyrinth of magic, djinn
         costume-ethnicity:
@@ -1178,7 +1051,7 @@ lazy-wildcards:
           - shirt tucked in, taut clothes, white shirt
         costume-eyes:
           - closed eyes
-          - smug smile
+          - __lazy-wildcards/subject/costume-elem-expressions/doyagao_smug/prompts__
           - wide smile
           - blushed
           - black tears
@@ -1917,7 +1790,7 @@ lazy-wildcards:
           - glowing
           - leaf
           - reflection
-          - __lazy-wildcards/subject/env-bg-architectural/bridge/prompts__
+          - __lazy-wildcards/subject/env-elem/bridge/prompts__
           - cave
           - chair
       # https://civitai.com/models/84282/nepheli-elden-ring-15ponyxl?modelVersionId=267723
@@ -2548,7 +2421,7 @@ lazy-wildcards:
           - barefoot
           - hair ornament, flower
         costume-weapon:
-          - hand fan
+          - __lazy-wildcards/subject/costume-weapon/hand_fan/prompts__
     # 《Tenchi Muyo! War on Geminar》（日文标题: 異世界の聖騎士物語）
     Tenchi_Muyo:
       # https://civitai.com/models/724786/doll-or-tenchi-muyo-war-on-geminar?modelVersionId=810464

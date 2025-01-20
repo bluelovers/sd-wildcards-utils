@@ -51,8 +51,8 @@ lazy-wildcards:
           - >-
             cereza, bayonetta, mole under mouth
         costume-ethnicity:
-          - blue eyes, __lazy-wildcards/cosplay-char/bayonetta/bayonetta/ethnicity-types/*__
-        ethnicity-types:
+          - blue eyes, __lazy-wildcards/cosplay-char/bayonetta/bayonetta/costume-ethnicity-types/*__
+        costume-ethnicity-types:
           long-hair:
             - bayonetta1, very long hair, long hair, hair ribbon, ponytail
           bayonetta2:
@@ -249,4 +249,151 @@ lazy-wildcards:
           - Grakk_AoV, Grakk, Arena_of_Valor
         costume:
           - glowing, horns, pauldrons, shoulder armor, collarbone, cleavage, breasts, armor, chain, gauntlets, navel, loincloth, pelvic curtain, shackles, spikes, helmet, leg, thighs, cuffs, barefoot
+    lunar_the_silver_star:
+      # https://civitai.com/models/410274/dark-goddess-althena-lunar-silver-star-story?modelVersionId=457325
+      dark_goddess_althena:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/lunar_the_silver_star/dark_goddess_althena/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/lunar_the_silver_star/dark_goddess_althena/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/lunar_the_silver_star/dark_goddess_althena/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/lunar_the_silver_star/dark_goddess_althena/expressions__}|}
+        main-trigger-words:
+          - althena \(lunar the silver star\)
+        costume-ethnicity:
+          - red eyes, long hair, blue hair
+        costume:
+          - purple bikini, white straps, white cape, black tiara, black gloves, purple gauntlets, black stockings, purple boots, navel
+        expressions:
+          - seductive smirk
+    Nier:
+      # https://civitai.com/models/538982/2b-2p-semi-realistic?modelVersionId=599181
+      # https://danbooru.donmai.us/posts?tags=2b_%28nier%3Aautomata%29&z=2
+      2b:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/Nier/2b/main__
+            , __lazy-wildcards/cosplay-char/Nier/2b/costume-ethnicity__
+            {, __lazy-wildcards/cosplay-char/Nier/2b/costume-types/type-*__|}
+            , __lazy-wildcards/cosplay-char/Nier/2b/costume-eyes/*__
+            {, {1-$$__lazy-wildcards/cosplay-char/Nier/2b/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/Nier/2b/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/Nier/2b/env__}|}
+        main:
+          - nier:automata, nier \(series\), nier, 2bnierdef, 2b, 2b \(nier:automata\)
+        costume-ethnicity:
+          - __lazy-wildcards/cosplay-char/Nier/2b/costume-ethnicity-types/*__, hair over one eye
+        costume-ethnicity-types:
+          2b:
+            - 2b, pale skin, white hair, 2b_\(nier:automata\), 2b_\(nier:automata\)_\(cosplay\)
+          2p-w:
+            - 2pdark, dark skin, black hair, 2p_\(nier:automata\), 2p_\(nier:automata\)_\(cosplay\)
+          2p-b:
+            - 2ppale, pale skin, black hair, 2p_\(nier:automata\), 2p_\(nier:automata\)_\(cosplay\)
+        costume-types:
+          type-2p-dress:
+            - white dress, cleavage cutout, black gloves, white footwear, 2p dress, 2p footwear, 2p gloves
+          type-2p-leotard:
+            - black leotard, cleavage cutout, black gloves, white footwear, 2p leotard, 2p footwear, 2p gloves, highleg leotard
+          type-2b-dress:
+            - black dress, cleavage cutout, white gloves, black footwear, 2b dress, 2b footwear, 2b gloves
+          type-2b-leotard:
+            - white leotard, cleavage cutout, white gloves, black footwear, 2b leotard, 2b footwear, 2b gloves, highleg leotard
+          type-kaine:
+            - kaine lingerie, kaine bandages, kaine gloves, kaine shoes
+          type-bride:
+            - Nier.2b\(Bride\), thighhighs, frills, sheer sleeves, sheer dress, sheer bridal veil, lace dress, wedding dress, bridal lingerie
+        costume-eyes:
+          eyes:
+            - blue-gray eyes, no blindfold
+          blindfold:
+            - white blindfold, 2p blindfold, covered eyes
+            - black blindfold, 2b blindfold, covered eyes
+        costume-elem:
+          - white hairband
+          - black hairband
+          - short hair
+          - (mole under mouth)
+          - parted lips
+          - feather-trimmed sleeves
+          - thighhighs under boots
+          - blindfold lift
+          - cleavage cutout
+          - clothing cutout
+          - juliet sleeves
+          - back cutout
+          - ass
+          - puffy sleeves
+          - see-through
+          - garter straps
+          - hair flowers
+          - bridal veil
+          - underwear
+          - hemming of a skirt
+          - turtleneck
+          - Inverted Bob Haircut
+          - white rose
+          - wedding ring
+        costume-weapon:
+          - sword, katana
+          - holding sword
+        env:
+          - pod \(nier:automata\), pod \(nier:automata\) \(cosplay\)
+      # https://civitai.com/models/140784/operator-6o-and-21o-nierautomata-lora
+      operator:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/Nier/operator/main__,
+            __lazy-wildcards/cosplay-char/Nier/operator/costume__,
+            {__lazy-wildcards/cosplay-char/Nier/operator/costume-ethnicity-types/type-*__,|}
+            {1-$$__lazy-wildcards/cosplay-char/Nier/operator/costume-elem__},
+            {1-$$__lazy-wildcards/cosplay-char/Nier/operator/style__},
+            {1-$$__lazy-wildcards/cosplay-char/Nier/operator/env__}
+        main:
+          - nier \(series\), nier:automata
+        costume:
+          - mouth veil, bodysuit, bodystocking, black gloves, thigh boots
+        costume-ethnicity-types:
+          type-op6o:
+            - op6o, twin braids, bangs, hairband, operator 6o, operator 6o \(cosplay\)
+          type-op21o:
+            - op21o, short hair, hairband, operator 21o, operator 21o \(cosplay\)
+        costume-elem:
+          - bodystocking
+          - detached sleeves
+          - dress
+          - veil
+          - black hairband
+          - closed eyes
+          - green eyes
+          - red eyes
+          - >-
+            {1-$$high heels|high heel boots}
+          - >-
+            {1-$$fishnets|fishnet legwear}
+          - heavy breathing
+          - makeup
+          - >-
+            {1-$$navel|covered navel}
+          - puffy sleeves
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - hand on own hip
+          - knee boots
+          - large breasts
+          - blue eyes
+          - kneeling
+        style:
+          - mind control
+          - see-through
+        env:
+          - __lazy-wildcards/subject/env-elem-punk/holographic/prompts__
+          - recording
+          - >-
+            {1-$$chair|invisible chair}
+      # https://civitai.com/models/149752/louise-nier-replicant
+      # https://nier.fandom.com/wiki/Louise
+      louise:
+        prompts:
+          - long hair,black hair, ribbon, brown eyes, hair bow, boots, sleeveless, black gloves, sailor collar, white dress, white footwear, white bow, single glove, sailor dress
+          - black hair, yellow eyes, __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__,blunt bangs,makeup, glowing, lipstick, glowing eyes, science fiction
 

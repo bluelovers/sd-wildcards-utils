@@ -1,0 +1,43 @@
+lazy-wildcards:
+  subject:
+    costume:
+      # https://civitai.com/models/404224/djellaba-by-edg?modelVersionId=450706
+      djellaba:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/djellaba/costume__)
+            {, {1-$$__lazy-wildcards/subject/costume/djellaba/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/djellaba/costume-weapon__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/costume/djellaba/env-bg__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/costume/djellaba/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/djellaba/style__}|}
+        costume:
+          - djellaba, edgellaba, wearing edgellaba, robe
+        costume-elem:
+          - hooded_robe
+          - striped_djellaba
+          - embroidered_djellaba, embroidery
+          - traditional_moroccan_clothing
+          - flowing_robe
+          - belted_djellaba
+          - hood_with_point
+          - >-
+            {hood_up|hood_down}
+          - choker
+        costume-weapon:
+          - holding market_basket
+        env-bg:
+          - moroccan_market
+          - middle_eastern_architecture
+          - mosque_background
+          - courtyard_with_fountain
+          - desert_landscape
+        env:
+          - tiled_wall
+        style:
+          - geometric_pattern
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
+          - sequins
+          - colorful_stripes
+          - neutral_tones
+

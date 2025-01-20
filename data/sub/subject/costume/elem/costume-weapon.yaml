@@ -72,7 +72,7 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/costume-weapon/pillow_hug/env-bg__}|}
             {, {1-$$__lazy-wildcards/subject/costume-weapon/pillow_hug/style-spoken__}|}
         costume-weapon:
-          - pillow hug
+          - pillow hug, hugging pillow
           - holding pillow
         costume-weapon-pillow:
           - yes-pillow
@@ -82,6 +82,8 @@ lazy-wildcards:
           - lying
           - on stomach
           - top-down bottom-up
+          - face in pillow
+          - prone bone
         costume-elem:
           - __lazy-wildcards/subject/costume-elem/pussy_juice/prompts__
           - pajamas
@@ -96,4 +98,39 @@ lazy-wildcards:
           - spoken question mark
           - spoken exclamation mark
           - spoken heart
+      hand_fan:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/costume-weapon/hand_fan/costume-weapon__})
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/hand_fan/costume-weapon-fan__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/hand_fan/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/hand_fan/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/hand_fan/style__}|}
+        costume-weapon:
+          - holding fan
+          - hand fan
+          - folding fan, folding fan design
+        costume-weapon-fan:
+          - paper_fan
+          - iron_fan
+          - traditional_fan
+          - decorative_fan
+          - painted_fan
+          - silk_fan
+          - calligraphy_fan
+          - black_lacquer
+          - bamboo_frame
+          - metal_fan_frame
+          - martial_arts_fan
+          - print_folding_fan
+          - sash
+        costume-elem:
+          - triangular headpiece
+        style:
+          - floral_pattern
+          - dragon_pattern
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
+        action:
+          - fan_dance
+          - folding_fan_attack
 

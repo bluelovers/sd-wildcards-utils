@@ -1,0 +1,22 @@
+lazy-wildcards:
+  subject:
+    costume:
+      # https://civitai.com/models/1110190/lora-for-pirate-woman-sdsdxlponyflux?modelVersionId=1247397
+      pirate-model-1110190:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/pirate-model-1110190/costume__
+            {, {1-$$__lazy-wildcards/subject/costume/pirate-model-1110190/costume__}|}
+        costume:
+          - >-
+            pirate, p1rate
+            , thighhighs
+            , puffy sleeves, short sleeves, puffy short sleeves
+            , black thighhighs
+            , belt
+            , cleavage
+            , bracelet
+            , lips
+        costume-elem:
+          - leotard
+

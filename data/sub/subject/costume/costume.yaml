@@ -391,12 +391,12 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/subject/costume/sfw-civitai/main__
-            , ({1-$$__lazy-wildcards/subject/costume/sfw-civitai/costume-elem__}:1.2)
+            , ({1-$$__lazy-wildcards/subject/costume/sfw-civitai/costume-elem__}{0.3:::{1.2|1.3|1.4|1.6}|:1.2})
             , ({1-$$__lazy-wildcards/subject/costume/sfw-civitai/style__}:1.2)
         main:
           - >-
             (1girl:1.6), solo, solo focus
-            , (fully clothes, fully clothed:1.2)
+            , (fully clothes, fully clothed{0.3:::{1.2|1.3|1.4|1.6}|:1.2})
             , upper body, close-up portrait, face focus
             , sfw, safe_for_work
         costume-elem:
@@ -505,36 +505,6 @@ lazy-wildcards:
           - classroom
           - >-
             {1-$$graduation_ceremony|university_graduation}
-      ancient-egyptian:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/costume/ancient-egyptian/main__,
-            {__lazy-wildcards/subject/costume/ancient-egyptian/costume-makeup__,|}
-            {__lazy-wildcards/subject/costume/ancient-egyptian/costume__,|}
-            {__lazy-wildcards/subject/costume/ancient-egyptian/costume-headwear__,|}
-            {1-$$__lazy-wildcards/subject/costume/ancient-egyptian/costume-elem__}
-          - __cf-ancient-egypt/prompt-costume__
-        main:
-          - ancient egyptian
-        costume:
-          - Egyptian_Robe, long flowing garments, linen fabric, traditional draping
-          - Kalasiris, close-fitting dress, pleated fabric
-          - Shendyt, pleated dress
-        costume-headwear:
-          - Nemes_Headdress, striped headcloth, royal headwear, pharaoh's symbol
-          - Khat_Headdress, nobles, plain headcloth
-          - Pschent, pharaohs, double crown, symbol of united Egypt
-          - Uraeus, rearing cobra, royal emblem, part of headdresses
-        costume-elem:
-          - Egyptian_Sandals, reed materia
-          - Beaded_Collar, wide necklace, intricate beadwork, colorful
-          - Royal_Cuff, wide wristbands, gold, jeweled, royalty
-          - >-
-            Egyptian_Belt, waistbands, functional and decorative, made of {cloth|leather}
-          - Ceremonial_Cape, rituals, ornate design, richly decorated
-          - Egyptian_Jewelry, gold, gemstones
-        costume-makeup:
-          - Kohl_Makeup, black eye paint, defining eyes
       # Nyx Stealth Suit (Operation Lovecraft: Fallen Doll)
       # https://civitai.com/models/632771/costume-nyx-stealth-suit-operation-lovecraft-fallen-doll?modelVersionId=707420
       Nyx-Stealth-Suit:
@@ -907,4 +877,60 @@ lazy-wildcards:
         costume-elem:
           - pastel yellow blue pink
           - pastel {1-3$$, pastel $$__lazy-wildcards/utils/color-base__}
+      # https://civitai.com/models/1108215/lewd-camisole?modelVersionId=1245127
+      # https://civitai.com/models/128308/string-back-camisole
+      # https://civitai.com/models/383393/sheer-lace-shorts-and-camisole
+      # https://civitai.com/models/142002/white-camisole-mini-skirt
+      # https://civitai.com/models/731182/dcp-006-slip-les-levres-de-miss-puffy
+      # https://civitai.com/models/146838/underwear-s13
+      camisole:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/camisole/costume-main__
+            {, {1-$$__lazy-wildcards/subject/costume/camisole/costume__}|}{0.3:::{1.2|1.3|1.4|1.6}|:1.2})
+            {, {1-$$__lazy-wildcards/subject/costume/camisole/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/camisole/style__}|}
+        costume-main:
+          - lewd camisole, camisole, tank top, SBCamisole, dw13\(miniskirt\), sybbd006
+        costume:
+          - sultry silk camisole
+          - sequin tank top
+          - string back camisole
+          - camisole nightdress
+        costume-elem:
+          - cat cutout
+          - o-ring thigh strap
+          - o-ring
+          - partially unzipped
+          - thigh strap
+          - navel
+          - cleavage
+          - strap slip
+          - two side up
+          - long sleeves
+          - off shoulder
+          - open jacket
+          - bare shoulders
+          - collarbone
+          - Lace Shorts
+          - buckles
+          - __lazy-wildcards/utils/color-base__ camisole
+          - bottomless
+          - lace-trimmed
+          - sexy top
+          - crop top
+          - jumpsuit
+          - sleeveless
+          - see-through, sheer
+          - underwear, lingerie
+          - sheer lace camisole
+          - camisole mini skirt
+          - pure silk
+          - side cutouts
+          - side lace-up design
+          - sexy yoga pants
+          - __lazy-wildcards/subject/costume/dudou/prompts__
+        style:
+          - from side
+          - from behind
 

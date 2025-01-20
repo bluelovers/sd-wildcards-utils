@@ -81,4 +81,95 @@ lazy-wildcards:
           - green cannabis leaves
         env:
           - covered in plants
+      # https://civitai.com/posts/11025265
+      # https://civitai.com/posts/11025315
+      broken_tree:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/env-elem/broken_tree/env-tree__}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-3$$__lazy-wildcards/subject/env-elem/broken_tree/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/broken_tree/env__}|}
+            {, __lazy-wildcards/subject/env-elem/broken_tree/action__|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/broken_tree/style__}|}
+        env-tree:
+          - broken tree
+          - broken tree trunk
+          - cut_tree
+          - tree_stump
+          - splintered_tree
+          - fallen_tree
+          - lightning_struck_tree
+          - snapped tree trunk
+        env:
+          - charred_tree
+          - dead_tree
+          - burnt_tree
+          - broken_branches
+          - wildfire_damage
+          - natural_decay
+          - lonely_tree
+          - big_tree
+        env-bg:
+          - forest_clearing
+          - deforested_area
+          - barren_landscape
+          - scorched_earth
+          - storm_aftermath
+          - abandoned_forest
+          - post_apocalyptic_landscape
+        action:
+          - >-
+            {1-2$$sitting|lying|standing|reading|picnic|reclining} on tree{ stump|}
+          - >-
+            leaning against tree{ stump|}
+        style:
+          - wasteland_aesthetic
+      on_grass:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/on_grass/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/on_grass/action__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/on_grass/costume-elem__}|}
+            {, {1-3$$__lazy-wildcards/subject/env-elem/on_grass/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/on_grass/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/on_grass/style__}|}
+        env-bg-main:
+          - on grass
+        action:
+          - >-
+            {1-2$$sitting|lying|standing|reading|picnic|reclining} on grass
+          - >-
+            __lazy-wildcards/subject/env-elem/broken_tree/action__
+          - fingering through clothes
+        costume-elem:
+          - no panties
+          - licking lips, naughty face
+          - bare legs, barefoot
+          - wet legs
+          - navel
+          - navel piercing
+          - pleated skirt
+          - cleavage cutout
+          - topless
+          - bottomless
+          - hair censor
+        env-bg:
+          - green grass field
+          - grassland
+          - grass field
+          - big_tree
+          - shade_under_tree
+          - park_scenery
+          - hills_in_background
+          - lake_in_distance
+        env:
+          - wildflowers
+          - picnic_blanket
+          - picnic_basket
+          - opened book
+          - backpack_on_grass
+          - camera_on_grass
+        style:
+          - voyeurism
+          - (dutch angle:1.2)
 

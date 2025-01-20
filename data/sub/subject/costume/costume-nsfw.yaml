@@ -85,4 +85,25 @@ lazy-wildcards:
           - waist apron
         env:
           - menu
+      # https://civitai.com/models/159560/joscheks-gags-ring-gag-bdsm-series?modelVersionId=332978
+      # https://civitai.com/models/143975/joscheks-gags-ballgag-bdsm-series?modelVersionId=370463
+      sex_toy_gag:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-nsfw/sex_toy_gag/costume-main__
+            {, {1-$$__lazy-wildcards/subject/costume-nsfw/sex_toy_gag/costume-elem__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-nsfw/sex_toy_gag/costume-elem2__}|}
+        costume-main:
+          - gag, ringgag
+        costume-elem:
+          - ball gag
+          - gagged
+          - gag harness
+          - wiffle gag
+          - ring gag
+        costume-elem2:
+          - >-
+            (gagged:1.2)
+            {0.2::, open mouth|}
+          - __lazy-wildcards/utils/color-base__ gag
 

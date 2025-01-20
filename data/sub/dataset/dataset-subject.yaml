@@ -16,17 +16,20 @@ lazy-wildcards:
         - __lazy-wildcards/subject/costume/sfw-civitai/prompts__
         - __lazy-wildcards/cosplay-*/*/*/prompts__
         - __lazy-wildcards/subject/costume-anything*/*/prompts__
-        - __cf-*/prompt-costume__
-        - __Bo/chars/char-*/female/bocloths__
-        - __Bo/clothings/*/female-attire__
+        - __lazy-wildcards/subject/costume-anything*/model-*/prompts__
+        # - __cf-*/prompt-costume__
+        # - __Bo/chars/char-*/female/bocloths__
+        # - __Bo/clothings/*/female-attire__
         - __lazy-wildcards/*/*/*/prompts-costume__
       costume-ethnicity:
-        - __cf-*/ethnicity__
-        - __cof-*/ethnicity__
-        - __lazy-wildcards/subject/ethnicity-*/*/prompts__
-        - __lazy-wildcards/subject/costume-ethnicity-*/*/prompts__
-        - __lazy-wildcards/*/*/*/costume-ethnicity*__
-        - __lazy-wildcards/*/*/*/ethnicity*__
+        - __cf-*/ethnicity*__
+        - __cof-*/ethnicity*__
+        # - __lazy-wildcards/subject/ethnicity-*/*/prompts__
+        - >-
+          {1-4$$__lazy-wildcards/subject/costume-ethnicity*/*/prompts__}
+        - >-
+          {1-4$$__lazy-wildcards/*/*/*/costume-ethnicity*__}
+        # - __lazy-wildcards/*/*/*/ethnicity*__
       costume-elem:
         - >-
           {1-3$$__lazy-wildcards/subject/costume-*/*/prompts__}

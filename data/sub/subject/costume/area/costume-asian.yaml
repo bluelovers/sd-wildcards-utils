@@ -1,18 +1,52 @@
 lazy-wildcards:
   subject:
     costume:
+      # https://civitai.com/models/214318/eastern-fantasy-by-edg
+      mixin-asian-clothes:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/mixin-asian-clothes/main-trigger-words__
+            , {1-2$$__lazy-wildcards/subject/costume/mixin-asian-clothes/costume__}
+            {, {1-$$__lazy-wildcards/subject/costume/mixin-asian-clothes/style__}|}
+        main-trigger-words:
+          - wearing edgEF eastern clothing, edgEF
+        costume:
+          - __lazy-wildcards/subject/costume/japanese-clothes/prompts__
+          - __lazy-wildcards/subject/costume/china-dress/prompts__
+          - __lazy-wildcards/subject/costume/korean-clothes/prompts__
+          - __lazy-wildcards/subject/costume/hanfu_lingerie/prompts__
+          - __lazy-wildcards/subject/costume/miaozu_hmong/prompts__
+          - __lazy-wildcards/subject/costume/kintaro/prompts__
+        style:
+          - Easterness, Eastern fantasy
+      # https://civitai.com/models/154547/change-a-character-courtesan-your-waifu-has-become-a-japanese-courtesan
       japanese-clothes:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume/japanese-clothes/costume-types/*__
-            {,__lazy-wildcards/subject/costume/japanese-clothes/style__|}
-        costume-types:
-          type-oiran:
-            - (oiran, hair ornament, japanese clothes, kimono, geta)
-        style:
+            __lazy-wildcards/subject/costume/japanese-clothes/costume__
+            {, {1-$$__lazy-wildcards/subject/costume/japanese-clothes/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/japanese-clothes/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/japanese-clothes/env__}|}
+        costume:
+          - >-
+            japanese oiran, japanese Courtesan, japanese geisha
+            , hair ornament
+            , japanese clothes, japanese kimono
+            , geta
+            , CourtesanT
+        costume-elem:
           - floral print
           - off shoulder
-          - geta
+          - geta \(footwear\), geta sandals, japanese sandals
+          - side slit
+        costume-weapon:
+          - __lazy-wildcards/subject/costume-weapon/hand_fan/prompts__
+          - __lazy-wildcards/subject/costume-weapon/smoking_pipe/prompts__
+          - __lazy-wildcards/subject/costume-weapon/umbrella/prompts__
+        env:
+          - eastern architecture
+          - falling petals
+          - flowers and vines
       china-dress:
         prompts:
           - >-
@@ -88,10 +122,6 @@ lazy-wildcards:
         env:
           - ribbon
           - red ribbon
-      mixin-asian-clothes:
-        prompts:
-          - >-
-            {2-$$__lazy-wildcards/subject/costume/japanese-clothes/prompts__|__lazy-wildcards/subject/costume/china-dress/prompts__|__lazy-wildcards/subject/costume/korean-clothes/prompts__}
       # https://civitai.com/models/776149/hanfu-lingerie3-or?modelVersionId=868078
       # https://civitai.com/models/775064/hanfu-lingerie2-or
       # https://civitai.com/models/774405/hanfu-lingerie-or
@@ -139,4 +169,152 @@ lazy-wildcards:
           - tribal_fashion, Hmong and Miao cultures
           - blending ancient craftsmanship with bold color palettes
           - miao_drum_dance
+      # https://civitai.com/models/154272/kintaro-outfit?modelVersionId=172861
+      # https://danbooru.donmai.us/posts?tags=kintarou&z=1
+      kintaro:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/kintaro/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/kintaro/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/kintaro/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/kintaro/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/kintaro/env-creatures__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/kintaro/style__}|}
+        costume:
+          - kintaro, kintaro outfit, kintarou, kintarou outfit, kintarou \(cosplay\), emblem, choker, red dudou, halterneck, bare shoulders
+        costume-elem:
+          - red clothing
+          - kanji_print
+          - bare_chest
+          - loincloth
+          - muscular
+          - genderswap \(mtf\)
+          - topknot
+          - back bow
+          - no panties
+          - marukin
+          - hair flaps
+          - blow out hair
+          - bare shoulders
+          - black gloves
+          - paw gloves
+          - razor cut hair
+          - breast press
+          - covering crotch
+          - covering breasts
+          - presenting armpits
+          - bell
+          - jingle bell
+          - neck bell
+          - arm ribbon
+          - blunt bangs
+          - fingerless gloves
+          - hair ornament
+          - claws
+          - lipstick, makeup
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
+        costume-weapon:
+          - axe, battle axe
+          - holding axe
+          - two-handed weapon
+        action:
+          - fighting stance
+          - hands on own breasts, hands on own chest
+          - arched back
+          - knees together feet apart
+          - v arms
+        env-creatures:
+          - bear_companion
+        style:
+          - bravery
+          - childhood_story
+          - japanese_folklore
+      # https://civitai.com/models/38932/zhuang-dresses?modelVersionId=44846
+      # 壮族礼服
+      zhuang_ethnic_costume:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/zhuang_ethnic_costume/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/zhuang_ethnic_costume/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/zhuang_ethnic_costume/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/zhuang_ethnic_costume/style__}|}
+        costume:
+          - zhuang_ethnic_costume, zhuangzunv, Zhuang Dresses
+        costume-elem:
+          - traditional_chinese_clothing
+          - silver_accessories
+          - colorful_skirt
+          - folk_dress
+          - ethnic_headdress
+          - handwoven_fabric
+          - festive_attire
+        env:
+          - rural_setting
+        style:
+          - embroidered_pattern
+          - geometric_patterns
+          - floral_embroidery
+          - south_china_culture
+          - minority_fashion
+          - natural_dyes
+          - cultural_pride
+          - heritage_and_tradition
+          - vibrant_colors
+          - intricate_designs
+      # https://civitai.com/models/270527/dudou-chinese-camisole
+      # https://civitai.com/models/79209?modelVersionId=84007
+      # https://civitai.com/models/1036970/dudou
+      # https://civitai.com/models/101290/dunhuang-apsaras-dudou
+      # https://civitai.com/models/213816/chinese-style-underwear
+      # https://civitai.com/models/244071/dudou
+      # https://civitai.com/models/16815/belly-wrapa-kind-of-chinese-ancient-womens-underwear
+      dudou:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/dudou/costume-main__
+            {, {1-$$__lazy-wildcards/subject/costume/dudou/costume__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/dudou/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/dudou/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/dudou/style__}|}
+        costume-main:
+          - dudou, chinese dudou, chinese edgApron, cococola Dudou, Tassels Dudou
+        costume:
+          - ancient chinese camisole
+          - ancient chinese bra
+          - ancient chinese bandeau
+          - naked dudou
+          - ancient asian underwear, ancient chinese lingerie
+          - ancient chinese mini aprons
+          - dunhuang apsaras dudou
+        costume-elem:
+          - chinese clothes
+          - hanfu
+          - naked
+          - bare shoulders
+          - embroidery
+          - LnF
+          - sleeveless
+          - backless top
+          - cover the chest
+          - underwear, lingerie
+          - see-through, sheer
+          - red dress
+          - floral print, floral pattern
+          - dragon and phoenix pattern
+          - red dudou
+          - __lazy-wildcards/utils/color-base__ dudou
+          - breast curtains
+          - pelvic curtain
+          - silk clothing, silk dudou
+          - traditional_beauty
+          - chinese hair ornaments
+          - sideboob
+        env:
+          - oriental_room
+          - silk_curtains
+          - wooden_furniture
+        style:
+          - chinese_fashion
+          - antique_setting
+          - from side
 
