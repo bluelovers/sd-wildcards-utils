@@ -1,0 +1,46 @@
+lazy-wildcards:
+  cosplay-char-mythology:
+    chinese:
+      # 白素贞 Bai Suzhen | 白蛇传 Legend of the White Snake
+      # https://civitai.com/models/128943/bai-suzhen-or-legend-of-the-white-snake-or-chinese-mythology
+      bai_suzhen:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char-mythology/chinese/bai_suzhen/main-trigger-words__
+            , __lazy-wildcards/cosplay-char-mythology/chinese/bai_suzhen/costume-ethnicity__
+            , {1-2$$__lazy-wildcards/cosplay-char-mythology/chinese/bai_suzhen/costume__}
+            {, {1-$$__lazy-wildcards/cosplay-char-mythology/chinese/bai_suzhen/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char-mythology/chinese/bai_suzhen/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char-mythology/chinese/bai_suzhen/env__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char-mythology/chinese/bai_suzhen/style__}|}
+        main-trigger-words:
+          - bai_suzhen, Baisuzhen, Lady Bai
+        costume-ethnicity:
+          - >-
+            long_hair
+            , classical_updo, traditional_hairstyle, chinese_bun, high_bun
+            , middle_parted_bangs
+        costume:
+          - white hanfu dress, white robes, veil, hair_accessories, hairpin, hair_ornaments
+        costume-weapon:
+          - oil-paper umbrella
+        env:
+          - willow leaf
+          - white snake, snake spirit, serpent form
+          - broken_bridge
+          - flooding_temple
+          - leifeng_pagoda, ancient_tower
+          - west_lake
+          - traditional_pharmacy, apothecary, herbal_shop
+          - chinese_landscape
+        costume-elem:
+          - ethereal_updo, dreamy_hairstyle
+          - classical_beauty
+        style:
+          - ethereal_look
+          - graceful_demeanor
+          - kind_hearted
+          - love_story, romantic_encounter, destined_love
+          - tragic_ending, imprisonment
+          - legend of the white snake, chinese folk religion
+

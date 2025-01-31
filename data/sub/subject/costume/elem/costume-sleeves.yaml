@@ -65,4 +65,48 @@ lazy-wildcards:
         costume-elem:
           - off shoulder
           - bare shoulders
+      # https://civitai.com/models/285562/lantern-sleeves-mock-neck-or-hope-you-like-berets?modelVersionId=321244
+      lantern_sleeves:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem/lantern_sleeves/costume__
+            {0.3::, {1-$$__lazy-wildcards/subject/costume-elem/lantern_sleeves/costume-elem__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/costume-elem/lantern_sleeves/env__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/costume-elem/lantern_sleeves/style__}|}
+        costume:
+          - lantern_sleeves, puff_sleeves
+        costume-elem:
+          - balloon sleeves, billowing long sleeves
+          - mock_neck
+          - high_neckline
+          - stand_up_collar
+          - soft_fabric
+          - silk_material
+          - knit_texture
+          - loose_fit
+          - layering_outfit
+          - accessorized_look
+          - jewelry_details
+          - hat_styling
+          - cleavage cutout
+          - zettai ryouiki
+          - cuffs
+          - frills
+          - ruched satin dress
+        env:
+          - cafe_setting
+          - library_setting
+        style:
+          - vintage_style
+          - elegant_look
+          - stylish_fashion
+          - structured_shape
+          - unique_silhouette
+          - bohemian_fashion
+          - ethnic_pattern
+          - free_spirited_look
+          - literary_vibe
+          - pastel_colors
+          - soft_tone
+          - gentle_palette
 

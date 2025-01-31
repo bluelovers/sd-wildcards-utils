@@ -41,9 +41,12 @@ lazy-wildcards:
               , __lazy-wildcards/utils/fn/pattern-inspired__
               , ${v}
       # https://civitai.com/models/1157464/snk-year?modelVersionId=1301844
+      # https://civitai.com/models/1147532/snakealicious-turn-stuff-into-snakes-or-just-create-a-snake-inferno
+      # https://civitai.com/models/236349/dragon-and-snake
       year_of_the_snake:
         prompts:
           - >-
             __lazy-wildcards/subject/env-elem-creatures/chinese_zodiac/fn/year(v=Snake)__
-            , SNKY01
+            , snakealicious
+            , SNKY01, snekv1
 

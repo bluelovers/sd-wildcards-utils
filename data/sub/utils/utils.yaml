@@ -79,6 +79,7 @@ lazy-wildcards:
           - king \(playing card\)
           - jack \(playing card\)
           - queen \(playing card\)
+          - king of hearts \(playing card\)
         poker-card:
           - ace of hearts
           - ace of spades
@@ -151,7 +152,7 @@ lazy-wildcards:
       style-inspired:
         - >-
           inspired by ${v}, ${v}-inspired
-          , style of ${v}, ${v} style
+          , style of ${v}, ${v} style, ${v} \(style\)
       pattern-inspired:
         - >-
           ${v} print, ${v} pattern, ${v}-shaped, ${v} sign

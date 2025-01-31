@@ -65,4 +65,25 @@ lazy-wildcards:
         env-bg:
           - pool, water
           - beach, palm tree
+      bikini:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/bikini/costume__
+            {, {1-$$__lazy-wildcards/subject/costume/bikini/costume-elem__}|}
+        costume:
+          - bikini
+        costume-elem:
+          - bikini top only
+          - bikini armor
+          - bikini top lift
+          - bikini top
+          - sling bikini top
+          - string bikini
+          - micro bikini
+          - highleg bikini
+          - pulling bikini string
+          - unworn bikini top
+          - bikini bottom only
+          - bikini under clothes
+          - bikini aside
 

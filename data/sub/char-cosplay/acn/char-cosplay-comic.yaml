@@ -646,4 +646,37 @@ lazy-wildcards:
           - zombie_apocalypse
           - viral_outbreak
           - __lazy-wildcards/subject/style-elem/post-apocalypse/prompts__
+    kakegurui:
+      # https://danbooru.donmai.us/posts?tags=jabami_yumeko+&z=5
+      # https://civitai.com/models/230147/yumeko-jabami
+      jabami_yumeko:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/kakegurui/jabami_yumeko/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/kakegurui/jabami_yumeko/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/kakegurui/jabami_yumeko/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/kakegurui/jabami_yumeko/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/kakegurui/jabami_yumeko/env-bg__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/kakegurui/jabami_yumeko/env__}|}
+        main-trigger-words:
+          - jabami yumeko, yumeko jabami, jabami yumeko \(cosplay\), kakegurui
+        costume-ethnicity:
+          - >-
+            hime cut, red eyes, red nails, very long hair
+        costume:
+          - hyakkaou academy school uniform, red suit, collared shirt
+        costume-elem:
+          - open mouth
+          - rolling eyes
+          - thumb ring
+          - red jacket
+          - spider bite \(piercing\)
+          - suit jacket, blazer
+        env-bg:
+          - __lazy-wildcards/subject/env-bg/casino/prompts__
+        env:
+          - poker effect scene
+          - poker chip
+          - >-
+            {1-$$__lazy-wildcards/subject/env-bg/casino/action-types/*__}
 

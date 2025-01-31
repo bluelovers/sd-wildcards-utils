@@ -259,7 +259,7 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/style-artist/rsef_style/env__}|}
             {, {1-$$__lazy-wildcards/subject/style-artist/rsef_style/style__}|}
         style-artist:
-          - rsef style, fevercell style
+          - __lazy-wildcards/utils/fn/style-inspired(v=rsef)__, __lazy-wildcards/utils/fn/style-inspired(v=fevercell)__
         env-bg:
           - abstract_background
           - futuristic_landscape
@@ -633,4 +633,98 @@ lazy-wildcards:
             (__lazy-wildcards/subject/style-artist/kakao/style-artist__{0.3:::{1.2|1.3|1.4}|})
         style-artist:
           - __lazy-wildcards/utils/fn/style-inspired(v=kakao)__
+      # https://civitai.com/models/245875/artist-style-cutesexyrobutts?modelVersionId=277372
+      # https://www.pixiv.net/users/66473220/artworks
+      # https://x.com/cutesexyrobutts
+      cutesexyrobutts:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/cutesexyrobutts/style-artist__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-artist/cutesexyrobutts/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/cutesexyrobutts/style__}|}
+        style-artist:
+          - >-
+            __lazy-wildcards/utils/fn/style-inspired(v=cutesexyrobutts)__
+        costume-elem:
+          - cute
+          - sexy
+          - butts
+          - revealing outfit
+          - tight_suit
+          - futuristic clothing
+          - nightgown lift
+          - highleg panties
+          - thick thighs
+          - muscular female
+          - backboob
+          - huge ass
+          - curvy
+          - wide hips
+          - thong
+          - __lazy-wildcards/subject/costume-nsfw/crotchless/prompts__
+        style:
+          - smooth_lines
+          - rounded_shapes
+          - clean_lineart
+          - big brush, bold brush
+          - girly_colors
+          - pastel_tones
+          - obliques
+      # https://civitai.com/models/240890/artist-stylegishikiuncstyle?modelVersionId=271789
+      gishiki_unc:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/gishiki_unc/style-artist__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-artist/gishiki_unc/costume-elem__}|}
+        style-artist:
+          - >-
+            __lazy-wildcards/utils/fn/style-inspired(v=gishiki_unc)__
+        costume-elem:
+          - studded belt
+          - single thighhigh
+          - chain
+          - spiked ear piercing
+          - t-shirt
+          - print shirt
+          - short sleeves
+          - crop top
+          - navel
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin/skindentation/prompts__
+          - black skirt
+          - plaid skirt
+          - cross earrings
+          - belt collar
+          - spikes
+      # https://civitai.com/models/229944/artist-style-akrambham?modelVersionId=259521
+      AkramBham:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/AkramBham/style-artist__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-artist/AkramBham/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/AkramBham/style__}|}
+        style-artist:
+          - >-
+            __lazy-wildcards/utils/fn/style-inspired(v=AkramBham)__
+        costume-elem:
+          - __lazy-wildcards/subject/costume-elem/bandages/prompts__
+          - bare shoulders
+          - red eyes
+          - hair over one eye
+          - japanese clothes
+          - rope
+          - __lazy-wildcards/subject/costume-tattoo/body-tattoo/prompts__
+        style:
+          - transparent_watercolor
+          - layered_color
+          - see_through_effect
+          - fluid_painting
+          - wash_technique
+          - blended_colors
+          - ink_wash
+          - tonal_variation
+          - calligraphic_brushwork
+          - expressive_strokes
+          - brush_technique
+          - ink_blur
+          - soft_transition
 
