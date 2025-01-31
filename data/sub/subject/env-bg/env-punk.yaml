@@ -12,7 +12,7 @@ lazy-wildcards:
           - >-
             holographic {1-$$, holographic $$touchscreen|interface|avatar|weapon|technology|map|armor|advertisement|painting \(object\)|monitor}
         style:
-          - sci-fi, futuristic settings
+          - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
         env:
           - communication devices
           - display_board
@@ -195,7 +195,7 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/env-elem-punk/dieselpunk/costume-elem__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem-punk/dieselpunk/costume-weapon__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem-punk/dieselpunk/env__}|}
-            {, {1-$$__lazy-wildcards/subject/env-elem-punk/dieselpunk/env-vehicle__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/dieselpunk/env-elem-vehicle__}|}
             {, {1-2$$__lazy-wildcards/subject/env-elem-punk/dieselpunk/env-bg__}|}
         style-main:
           - xuer dieselpunk, dieselpunk theme, Decopunk theme, coalpunk theme, CoalPunkAI
@@ -223,7 +223,7 @@ lazy-wildcards:
           - anti_aircraft_turret
           - diesel_exhaust
           - wet
-        env-vehicle:
+        env-elem-vehicle:
           - Zeppelins, Warplanes, diesel_engine_aircraft, retro_futuristic_flying_machine
           - giant_war_machine, diesel_robot, tank_like_mech, mechanical_giant
         env-bg:
@@ -242,14 +242,14 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/env-elem-punk/Nuclear_Hazard/env__}|}
             {, {1-2$$__lazy-wildcards/subject/env-elem-punk/Nuclear_Hazard/env-bg__}|}
             {0.2::, {1-$$__lazy-wildcards/subject/env-elem-punk/Nuclear_Hazard/env-elem-food__}|}
-            {, {1-$$__lazy-wildcards/subject/env-elem-punk/Nuclear_Hazard/env-creatures__}|}
-            {0.2::, {1-2$$__lazy-wildcards/subject/env-elem-punk/Nuclear_Hazard/env-vehicle__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/Nuclear_Hazard/env-elem-creatures__}|}
+            {0.2::, {1-2$$__lazy-wildcards/subject/env-elem-punk/Nuclear_Hazard/env-elem-vehicle__}|}
             {, {1-2$$__lazy-wildcards/subject/env-elem-punk/Nuclear_Hazard/style__}|}
         style-main:
           - nuclearhazard, nuclear hazard, radiation, nuclearpunk
         costume:
           - hazmat suit, radiation_suit, survivor, post_apocalyptic_suit, gas_mask, survival_gear
-        env-vehicle:
+        env-elem-vehicle:
           - battle car
           - battle tank
         env-symbol:
@@ -260,12 +260,12 @@ lazy-wildcards:
           - nuclear_waste_barrel, toxic_barrel, waste_container, radiation_warning
           - radiation_cloud, toxic_air, fallout_cloud, radioactive_fog
         env-bg:
-          - desolate_city, ruins, post_apocalyptic_setting, destroyed_buildings, wasteland
+          - desolate_city, ruins, destroyed_buildings, wasteland
           - nuclear_facility, apocalyptic_factory, destroyed_powerplant, post_apocalyptic_machine
           - cooling_tower, collapsed_building, nuclear_plant_disaster, ruined_tower
         env-elem-food:
           - drink, glass, hamburger, hotdog
-        env-creatures:
+        env-elem-creatures:
           - cat
           - mutated_creature
           - mutant_animal
@@ -274,6 +274,7 @@ lazy-wildcards:
             {interior|exterior}
           - radioactive_mutation, radiation_exposure
           - post_nuclear_disaster
+          - __lazy-wildcards/subject/style-elem/post-apocalypse/prompts__
       # https://civitai.com/models/871343/greebles-add-details-for-machinery?modelVersionId=975320
       # https://en.wikipedia.org/wiki/Greeble
       # https://home.gamer.com.tw/artwork.php?sn=5004538
@@ -305,7 +306,7 @@ lazy-wildcards:
         style:
           - kitbashing
           - illusion of complexity
-          - sci-fi
+          - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
           - industrial aesthetic
           - nurnies
           - greebly

@@ -1,0 +1,21 @@
+lazy-wildcards:
+  cosplay-char:
+    garo_series:
+      # https://civitai.com/models/721766/emma-guzman-garo
+      emma_guzman:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/garo_series/emma_guzman/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/garo_series/emma_guzman/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/garo_series/emma_guzman/costume-elem__}|}
+        main-trigger-words:
+          - emma_guzman, EmmaGuzman, garo_\(series\)
+        costume-ethnicity:
+          - green eyes, dark green hair, hair intakes, high ponytail, long hair, parted bangs
+        costume-elem:
+          - thigh boots
+          - coat, long sleeves, purple coat
+          - jewelry
+          - short shorts, belt, white shorts
+          - makeup, purple lips
+

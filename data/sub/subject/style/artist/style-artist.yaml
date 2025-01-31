@@ -9,9 +9,9 @@ lazy-wildcards:
             {, {1-3$$__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/env-bg__}|}
             {, {1-5$$__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/env__}|}
             {, {1-$$__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/env-moment__}|}
-            {0.3::, {1-2$$__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/env-creatures__}|}
+            {0.3::, {1-2$$__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/env-elem-creatures__}|}
             {0.3::, {1-$$__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/env-chair__}|}
-            {0.3::, {1-$$__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/env-vehicle__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/env-elem-vehicle__}|}
             {0.3::, {1-$$__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/costume-wings__}|}
             {0.3::, {1-$$__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/costume-weapon__}|}
             {, {1-5$$__lazy-wildcards/subject/style-artist/zdzislaw_beksinski/style__}|}
@@ -45,7 +45,7 @@ lazy-wildcards:
           - tapestry
           - twisting pathways, impossible directions
           - giant mushrooms
-        env-creatures:
+        env-elem-creatures:
           - soldiers
           - ghostly sentinels
           - mechanical creature
@@ -74,7 +74,7 @@ lazy-wildcards:
         env-chair:
           - throne
           - bone throne
-        env-vehicle:
+        env-elem-vehicle:
           - ghost ship
         env-moment:
           - blood-red sky
@@ -88,7 +88,7 @@ lazy-wildcards:
         style:
           - cyberpunk
           - dystopian
-          - post-apocalyptic
+          - __lazy-wildcards/subject/style-elem/post-apocalypse/prompts__
           - dark atmosphere, dark landscape
           - marching
           - barren, desolate, dilapidated
@@ -153,12 +153,12 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/subject/style-artist/Stephanie_Law/style-artist__
             {, {1-$$__lazy-wildcards/subject/style-artist/Stephanie_Law/style-art__}|}
-            {, {1-$$__lazy-wildcards/subject/style-artist/Stephanie_Law/env-creatures__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/Stephanie_Law/env-elem-creatures__}|}
             {, {1-$$__lazy-wildcards/subject/style-artist/Stephanie_Law/env-bg__}|}
             {, {1-$$__lazy-wildcards/subject/style-artist/Stephanie_Law/style__}|}
         style-artist:
           - stephanie_law_style, __lazy-wildcards/utils/fn/style-inspired(v=Stephanie_Law)__
-        env-creatures:
+        env-elem-creatures:
           - fairies
           - spirits
           - dragons
@@ -235,4 +235,9 @@ lazy-wildcards:
           - industrial_paint
           - creative_chaos
           - colorful explosion
+      magic_the_gathering:
+        prompts:
+          - >-
+            magic the gathering art style
+            , __lazy-wildcards/utils/fn/style-inspired(v=magic_the_gathering_art)__
 

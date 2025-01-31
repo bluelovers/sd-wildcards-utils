@@ -2,17 +2,21 @@ lazy-wildcards:
   subject:
     costume:
       # https://civitai.com/models/404224/djellaba-by-edg?modelVersionId=450706
+      # https://civitai.com/models/244578/embroidered-burqa-dress?modelVersionId=275953
       djellaba:
         prompts:
           - >-
-            (__lazy-wildcards/subject/costume/djellaba/costume__)
+            (__lazy-wildcards/subject/costume/djellaba/costume-main__)
+            {, __lazy-wildcards/subject/costume/djellaba/costume__|}
             {, {1-$$__lazy-wildcards/subject/costume/djellaba/costume-elem__}|}
             {, {1-$$__lazy-wildcards/subject/costume/djellaba/costume-weapon__}|}
             {0.3::, {1-$$__lazy-wildcards/subject/costume/djellaba/env-bg__}|}
             {0.3::, {1-$$__lazy-wildcards/subject/costume/djellaba/env__}|}
             {, {1-$$__lazy-wildcards/subject/costume/djellaba/style__}|}
+        costume-main:
+          - BurqaDr3ss, djellaba, edgellaba, wearing edgellaba, robe, Burqa Dress
         costume:
-          - djellaba, edgellaba, wearing edgellaba, robe
+          - afghan_burqa
         costume-elem:
           - hooded_robe
           - striped_djellaba
@@ -20,10 +24,16 @@ lazy-wildcards:
           - traditional_moroccan_clothing
           - flowing_robe
           - belted_djellaba
-          - hood_with_point
+          - hood
           - >-
             {hood_up|hood_down}
           - choker
+          - long sleeves dress, wide sleeves
+          - cape
+          - embroidered veil
+          - mesh face cover
+          - lace detailing
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
         costume-weapon:
           - holding market_basket
         env-bg:
@@ -40,4 +50,5 @@ lazy-wildcards:
           - sequins
           - colorful_stripes
           - neutral_tones
+          - south-asian fashion
 

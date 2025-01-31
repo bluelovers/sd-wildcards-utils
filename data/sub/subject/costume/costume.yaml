@@ -208,7 +208,7 @@ lazy-wildcards:
         main:
           - peacock strapless dress, feathers dress
         costume-elem:
-          - off shoulder
+          - __lazy-wildcards/subject/costume-elem/off-shoulder/prompts__
           - tiara
           - feathers blue dress
           - feathers green dress
@@ -529,7 +529,7 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/subject/costume/santa_bikini/costume__,
             {,{1-$$__lazy-wildcards/subject/costume/santa_bikini/costume-elem__}|}
-            {0.1::,{1-$$__lazy-wildcards/subject/costume/santa_bikini/costume-hair__}|}
+            {0.1::,{1-$$__lazy-wildcards/subject/costume/santa_bikini/costume-ethnicity-hair__}|}
             {,{1-$$__lazy-wildcards/subject/costume/santa_bikini/costume-weapon__}|}
             ,{1-$$__lazy-wildcards/subject/costume/santa_bikini/env__}
             {0.2::,{1-$$__lazy-wildcards/subject/costume/santa_bikini/style__}|}
@@ -558,7 +558,7 @@ lazy-wildcards:
           - large breasts
           - panties
           - ass visible through thighs
-        costume-hair:
+        costume-ethnicity-hair:
           - drill_hair
         costume-weapon:
           - holding sack, holding bag
@@ -577,7 +577,7 @@ lazy-wildcards:
         costume-elem:
           - __lazy-wildcards/dataset/costume-accessories-base__
           - thighhighs
-          - lace trim
+          - __lazy-wildcards/subject/costume-elem-accessories/lace-trim/prompts__
           - revealing clothes
           - dress
           - detached sleeves
@@ -746,7 +746,7 @@ lazy-wildcards:
         costume:
           - >-
             agridnc, MLDncpdxl
-            , bare shoulders, sleeveless croptop, sleeveless crop top, sleeveless
+            , __lazy-wildcards/subject/costume-elem/off-shoulder/prompts__, sleeveless croptop, sleeveless crop top, sleeveless
             , underboob, navel, midriff
             , shawl
             , jewelry, bracelets, earrings
@@ -851,7 +851,7 @@ lazy-wildcards:
           - black net dress
           - fashionable attire
           - sheer_fabric
-          - lace_trim
+          - __lazy-wildcards/subject/costume-elem-accessories/lace-trim/prompts__
           - stiletto_heels
           - ankle_strap_heels
           - matching_accessories
@@ -908,15 +908,14 @@ lazy-wildcards:
           - strap slip
           - two side up
           - long sleeves
-          - off shoulder
+          - __lazy-wildcards/subject/costume-elem/off-shoulder/prompts__
           - open jacket
-          - bare shoulders
           - collarbone
           - Lace Shorts
           - buckles
           - __lazy-wildcards/utils/color-base__ camisole
           - bottomless
-          - lace-trimmed
+          - __lazy-wildcards/subject/costume-elem-accessories/lace-trim/prompts__
           - sexy top
           - crop top
           - jumpsuit
@@ -927,10 +926,30 @@ lazy-wildcards:
           - camisole mini skirt
           - pure silk
           - side cutouts
-          - side lace-up design
           - sexy yoga pants
           - __lazy-wildcards/subject/costume/dudou/prompts__
         style:
           - from side
           - from behind
+      # https://danbooru.donmai.us/posts?tags=oversized_shirt+&z=5
+      # https://civitai.com/models/126634/boyfriend-shirt
+      oversized_shirt:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/oversized_shirt/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/oversized_shirt/costume-elem__}|}
+        costume:
+          - oversized shirt, boyfriend shirt, BFShirt, Long BFShirt, long sleeves
+        costume-elem:
+          - __lazy-wildcards/subject/costume-elem/off-shoulder/prompts__
+          - oversized clothes
+          - see-through shirt
+          - naked shirt
+          - loose shirt, loose clothes
+          - borrowed clothes
+          - white shirt
+          - partially unbuttoned
+          - no pants
+          - bikini under clothes
+          - __lazy-wildcards/subject/costume-elem/sleeves_past/prompts__
 

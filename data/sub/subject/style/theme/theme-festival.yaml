@@ -74,7 +74,7 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/subject/style-theme/ghost_nocturnal/style-main__
-            {, {1-$$__lazy-wildcards/subject/style-theme/ghost_nocturnal/env-creatures__}|}
+            {, {1-$$__lazy-wildcards/subject/style-theme/ghost_nocturnal/env-elem-creatures__}|}
             {, {1-$$__lazy-wildcards/subject/style-theme/ghost_nocturnal/costume-elem__}|}
             {, {1-$$__lazy-wildcards/subject/style-theme/ghost_nocturnal/costume-weapon__}|}
             {, {1-$$__lazy-wildcards/subject/style-theme/ghost_nocturnal/env__}|}
@@ -82,7 +82,7 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/style-theme/ghost_nocturnal/env-bg__}|}
         style-main:
           - hyakki_yakou, ghost nocturnal, youkai, yokai
-        env-creatures:
+        env-elem-creatures:
           - oni, oni horns
           - tengu
           - kappa
@@ -131,4 +131,60 @@ lazy-wildcards:
           - luxurious, glamorous
           - >-
             {1-$$ style, $$asian|korean|japanese} style
+      # https://civitai.com/models/246103/newyear-or
+      # https://civitai.com/models/253491/new-year
+      # https://civitai.com/models/278512/new-year-loraspring-festival-lion-dance-e-commerce-illustration
+      # https://civitai.com/models/250771/happy-new-year
+      # https://civitai.com/models/299392/lunar-new-year-2024-lora
+      # https://tw.blog.voicetube.com/archives/42888/%E4%BD%A0%E7%9F%A5%E9%81%93%E5%8D%81%E4%BA%8C%E7%94%9F%E8%82%96%E8%8B%B1%E6%96%87%E6%80%8E%E9%BA%BC%E8%AC%9B%E5%97%8E%EF%BC%9F/
+      # https://civitai.com/models/1170559/girl-like-snake-year-spring-couplets
+      lunar_new_year:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-theme/lunar_new_year/style-main__{0.3:::{1.2|1.3|1.4}|})
+            {0.3::, __lazy-wildcards/subject/env-elem-creatures/chinese_zodiac/prompts*__|}
+            {, {1-$$__lazy-wildcards/subject/style-theme/lunar_new_year/env__}|}
+            {, {1-$$__lazy-wildcards/subject/style-theme/lunar_new_year/env-elem-food__}|}
+            {, {1-$$__lazy-wildcards/subject/style-theme/lunar_new_year/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/style-theme/lunar_new_year/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-theme/lunar_new_year/style__}|}
+        style-main:
+          - >-
+            chinese_new_year, lunar new year, cndstyle
+            , red_and_gold_theme
+            , spring festival, lunarNewYear2024quiron
+            , chinese festival, new year celebration, happy new year, new year
+            , nengajou
+        env:
+          - red lanterns, paper lantern, red chinese lanterns
+          - dragon_dance
+          - lion_dance
+          - firecrackers
+          - fireworks_display
+          - incense_smoke
+          - red_envelopes
+          - bustling_crowds
+          - festive_decor
+          - chinese_couplets, calligraphy
+          - hanging_decorations
+          - spring couplets
+        env-elem-food:
+          - dumplings
+          - traditional_food
+        env-bg:
+          - new_year_market
+          - temple_festival
+          - east asian architecture
+        costume-elem:
+          - traditional_chinese_clothing
+          - chinese clothes
+          - tang_suit
+          - __lazy-wildcards/subject/costume/china-dress/prompts__
+        style:
+          - family_gathering
+          - traditional_performance
+          - prosperity
+          - copic markers art
+          - chinese new year card
+          - chinese conceptual art
 

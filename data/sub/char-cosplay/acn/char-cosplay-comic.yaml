@@ -69,7 +69,7 @@ lazy-wildcards:
           - bridal gauntlets, detached sleeves
         costume-elem:
           - huge breast, breasts apart
-          - snake print, gold trim
+          - snake print, __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
           - shoulder cutout
           - bracelet
           - shoulder blades
@@ -144,7 +144,7 @@ lazy-wildcards:
           - (__lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__:1.2)
           - horns
           - skull
-          - bare shoulders
+          - __lazy-wildcards/subject/costume-elem/off-shoulder/prompts__
           - flowing hair
           - pink_hagoromo, spiritual_cloak, pink_aura_cloak
         action-pose:
@@ -213,7 +213,7 @@ lazy-wildcards:
           - purple tights
           - spiked armor
           - cyber harpie lady \(cosplay\), cyber_harpie_lady
-          - bare shoulders
+          - __lazy-wildcards/subject/costume-elem/off-shoulder/prompts__
           - collar
           - collarbone
           - open clothes
@@ -267,7 +267,7 @@ lazy-wildcards:
           - v-shaped eyebrows
           - wide sleeves
           - blush
-          - bare shoulders
+          - __lazy-wildcards/subject/costume-elem/off-shoulder/prompts__
           - collarbone
           - pelvic curtain
         costume-weapon:
@@ -297,7 +297,7 @@ lazy-wildcards:
         costume:
           - >-
             blue dress
-            , off shoulder, bare shoulders, detached sleeves
+            , __lazy-wildcards/subject/costume-elem/off-shoulder/prompts__, detached sleeves
             , pink cape
             , pink skirt, showgirl skirt
             , vambraces
@@ -364,7 +364,7 @@ lazy-wildcards:
         costume:
           - black choker
           - halterneck
-          - bare shoulders
+          - __lazy-wildcards/subject/costume-elem/off-shoulder/prompts__
           - black dress
           - sleeveless dress
           - pleated dress
@@ -436,7 +436,7 @@ lazy-wildcards:
         costume-weapon:
           - alcohol, drinking glass, wine, wine glass
         costume-elem:
-          - lace trim
+          - __lazy-wildcards/subject/costume-elem-accessories/lace-trim/prompts__
           - bare legs, barefoot
           - cleavage
           - halterneck
@@ -471,7 +471,7 @@ lazy-wildcards:
           - dark hood, dark hooded cloak, dark cloak
         costume-elem:
           - cleavage
-          - bare shoulders
+          - __lazy-wildcards/subject/costume-elem/off-shoulder/prompts__
           - jewelry
     Hell_Teacher_Jigoku_Sensei_Nube:
       # https://civitai.com/models/1004579/minki-jigoku-sensei-nube-or?modelVersionId=1125928
@@ -553,4 +553,97 @@ lazy-wildcards:
             , studded
             , black pantyhose
             , belt
+    # https://danbooru.donmai.us/posts?tags=mahou_tsukai_kurohime&z=2
+    mahou_tsukai_kurohime:
+      # https://civitai.com/models/790051/kurohime-kurohime
+      kurohime:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/mahou_tsukai_kurohime/kurohime/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/mahou_tsukai_kurohime/kurohime/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/mahou_tsukai_kurohime/kurohime/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/mahou_tsukai_kurohime/kurohime/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/mahou_tsukai_kurohime/kurohime/costume-weapon__}|}
+        main-trigger-words:
+          - kurohime, mahou_tsukai_kurohime
+        costume-ethnicity:
+          - >-
+            very long hair, absurdly long hair
+            , blue eyes
+            , white hair
+            , lipstick
+            , skin tight
+        costume:
+          - gloves, panties, armor, black bodysuit, ninja, lowleg panties
+        costume-elem:
+          - large breasts
+          - choker
+          - cleavage
+          - hair ornament, hairpin
+          - thighhighs
+          - twintails
+          - underboob
+          - legs
+          - feathers
+          - claws
+          - wings
+          - __lazy-wildcards/subject/costume-elem/wings-*/prompts__
+          - pantyhose
+          - gloves, elbow gloves
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - high heels
+          - bodysuit
+          - mole under eye
+        costume-weapon:
+          - gun
+          - __lazy-wildcards/subject/costume-weapon/smoking_pipe/prompts__
+          - rifle
+          - weapon
+    # https://danbooru.donmai.us/posts?tags=highschool_of_the_dead&z=2
+    # https://civitai.com/models/116795/highschool-of-the-dead-style-characters
+    # https://civitai.com/models/98627/highschool-of-the-dead-hentai-protagonist-style
+    highschool_of_the_dead:
+      # 佐藤 ショウジ
+      shoji_sato:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/highschool_of_the_dead/shoji_sato/style-artist__
+            {0.3::, {1-2$$__lazy-wildcards/cosplay-char/highschool_of_the_dead/shoji_sato/main-trigger-words__}|}
+            {0.3::, {1-$$__lazy-wildcards/cosplay-char/highschool_of_the_dead/shoji_sato/env__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/highschool_of_the_dead/shoji_sato/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/highschool_of_the_dead/shoji_sato/style__}|}
+        style-artist:
+          - highschool_of_the_dead, triage_x, Shoji Sato \(artist\), highschoolofthedead
+        main-trigger-words:
+          - miyamoto rei
+          - busujima saeko
+          - takagi saya
+          - komuro takashi
+          - marikawa shizuka
+          - hirano kouta
+          - minami rika
+          - takagi yuriko
+          - koichi shido
+          - maresato alice
+        env:
+          - school_setting
+          - highschool_classroom
+          - school_corridor
+          - __lazy-wildcards/subject/costume-elem/blood/prompts__
+          - abandoned_school
+          - desolate_setting
+          - destroyed_city
+          - apocalyptic_street
+          - urban_ruin
+        costume-elem:
+          - sexualized_characters
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - __lazy-wildcards/subject/costume-elem/sweat/prompts__
+          - thick thighs
+          - school uniform
+          - latex bodysuit
+        style:
+          - zombie_apocalypse
+          - viral_outbreak
+          - __lazy-wildcards/subject/style-elem/post-apocalypse/prompts__
 

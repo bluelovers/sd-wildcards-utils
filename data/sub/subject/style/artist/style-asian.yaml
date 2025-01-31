@@ -356,7 +356,7 @@ lazy-wildcards:
           - nail polish
           - wavy hair
           - makeup, lipstick
-          - bare shoulders
+          - __lazy-wildcards/subject/costume-elem/off-shoulder/prompts__
           - ear piercing
           - claw ring
         action:
@@ -407,7 +407,7 @@ lazy-wildcards:
           - urban_fantasy
           - dark_fantasy
           - antihero
-          - post_apocalyptic
+          - __lazy-wildcards/subject/style-elem/post-apocalypse/prompts__
           - dim_lighting
           - punk_fashion
           - gore
@@ -492,7 +492,7 @@ lazy-wildcards:
           - >-
             (__lazy-wildcards/subject/style-artist/k-suwabe/style-artist__{0.3:::{1.2|1.3|1.4}|})
             {, {1-$$__lazy-wildcards/subject/style-artist/k-suwabe/costume-ethnicity__}|}
-            {, ({1-3$$ and $$__lazy-wildcards/subject/style-artist/k-suwabe/env-creatures__}{0.3:::{1.2|1.3|1.4}|})|}
+            {, ({1-3$$ and $$__lazy-wildcards/subject/style-artist/k-suwabe/env-elem-creatures__}{0.3:::{1.2|1.3|1.4}|})|}
             {, {1-$$__lazy-wildcards/subject/style-artist/k-suwabe/costume-elem__}|}
             {, {1-4$$__lazy-wildcards/subject/style-artist/k-suwabe/costume-weapon__}|}
             {, {1-$$__lazy-wildcards/subject/style-artist/k-suwabe/action-pose__}|}
@@ -503,7 +503,7 @@ lazy-wildcards:
         costume-ethnicity:
           - monster girl
           - humanity
-        env-creatures:
+        env-elem-creatures:
           - dragon
           - bat
           - demon
@@ -569,4 +569,68 @@ lazy-wildcards:
           - cataclysm
           - ominous light
           - evil
+      # https://danbooru.donmai.us/posts?tags=fujimoto_tatsuki_%28style%29+&z=5
+      # https://civitai.com/models/263605/tatsuki-fujimotos-chainsaw-man-part-1-manga-artstyle-or-updated-to-sdxl-illustrious?modelVersionId=297205
+      # https://civitai.com/models/53149/chainsaw-man-anime-style-lora
+      # https://civitai.com/models/39158/chainsawman-ed4-tooboe-animation-style-power
+      fujimoto_tatsuki:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/fujimoto_tatsuki/style-artist__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-artist/fujimoto_tatsuki/env-elem-creatures__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/fujimoto_tatsuki/style__}|}
+        style-artist:
+          - fujimoto_tatsuki_\(style\), __lazy-wildcards/utils/fn/style-inspired(v=fujimoto_tatsuki)__, tatsuki fujimoto, fujichai, csm anime style, chainsaw man painted style
+        env-elem-creatures:
+          - devil
+          - monster
+          - chainsaw man
+        style:
+          - monochrome, greyscale
+          - sketch, sketchy
+          - Japanese manga artist
+      # https://civitai.com/models/18606?modelVersionId=45656
+      # https://civitai.com/models/183064?modelVersionId=238055
+      # https://civitai.com/models/162781/dishwasher1910-style-or-goofy-ai
+      # https://civitai.com/models/255140/dishwasher1910-style
+      dishwasher1910:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/dishwasher1910/style-artist__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-artist/dishwasher1910/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/dishwasher1910/env__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/dishwasher1910/style__}|}
+        style-artist:
+          - __lazy-wildcards/utils/fn/style-inspired(v=dishwasher1910)__
+        costume-elem:
+          - unique_gear
+          - sci_fi_armor
+          - fantasy_outfit
+          - unique_accessories
+        env:
+          - gears
+          - pipes
+          - machinery
+          - mechanical_parts, mechanical_elements
+          - steampunk_ornaments
+          - brass_details
+          - rivets
+        style:
+          - detailed_textures
+          - complex_machinery
+          - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
+          - steampunk_style
+          - organic_forms
+          - cybernetic_design
+          - metallic_shine
+          - metal_texture
+          - reflective_surfaces
+      # https://civitai.com/models/98857/kakao-style-lora
+      # https://civitai.com/models/84026/kakao-artist-style-loralycoris
+      kakao:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/kakao/style-artist__{0.3:::{1.2|1.3|1.4}|})
+        style-artist:
+          - __lazy-wildcards/utils/fn/style-inspired(v=kakao)__
 

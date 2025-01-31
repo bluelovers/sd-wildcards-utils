@@ -248,40 +248,7 @@ lazy-wildcards:
           - sweatdrop
           - sweaty armpits
           - sweat soaked
-      sleeves:
-        prompts:
-          - >-
-            {1-4$$__lazy-wildcards/subject/costume-elem/sleeves/costume-elem__}
-            {, {1-2$$__lazy-wildcards/subject/costume-elem/sleeves/costume-sleeves-size__}|}
-        costume-elem:
-          - wide sleeves
-          - puffy sleeves
-          - frilled sleeves
-          - ribbon-trimmed sleeves
-          - detached sleeves
-          - ribbed sleeves
-          - sheer sleeves
-          - feather-trimmed sleeves
-          - juliet sleeves
-          - flowing sleeves
-          - flipper sleeves
-          - billowing sleeves
-          - draped sleeves
-          - batwing sleeves
-          - bell sleeves
-          - off-the-shoulder sleeves
-          - beaded sleeves
-          - embroidered sleeves
-          - jeweled sleeves
-          - dramatic sleeves
-          - lace sleeves
-          - slashed sleeves
-          - rolled sleeves
-          - tattoo sleeves
-        costume-sleeves-size:
-          - short sleeves
-          - long sleeves
-          - sleeves past wrists
+          - steam, steaming body
       # https://civitai.com/models/299367/soapy-skinsoap-censor
       # https://civitai.com/models/24612/conceptsoap-bubble-censorbubble-bra
       # https://civitai.com/models/594751/ms-real-lite-soapy-foam-lora
@@ -329,4 +296,49 @@ lazy-wildcards:
             wearing a {1-$$ made of clouds, wearing a $$bra|necklace|hair ornament|shield|helmet|mask|pantyhose|thighhighs|shirt|pants|dress|skirt|sleeves|bodysuit|cape|shorts|jeans|leotard|legwear|camisole|clothes} made of clouds
           - >-
             wearing a {1-$$ made of thunder clouds, wearing a $$bra|necklace|hair ornament|shield|helmet|mask|pantyhose|thighhighs|shirt|pants|dress|skirt|sleeves|bodysuit|cape|shorts|jeans|leotard|legwear|camisole|clothes} made of thunder clouds
+      # https://danbooru.donmai.us/posts?tags=tucked_money+&z=5
+      # https://civitai.com/models/83077/tucked-money-concept-lora
+      # https://civitai.com/models/246334/money-thong
+      tucked_money:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/tucked_money/costume-main__{0.3:::{1.2|1.3|1.4}|})
+            {, ({1-$$__lazy-wildcards/subject/costume-elem/tucked_money/costume-elem-money__})|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem/tucked_money/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem/tucked_money/env__}|}
+        costume-main:
+          - tucked_money, tuckedmoney
+        costume-elem-money:
+          - object in clothes
+          - object in thighhighs
+          - money between breasts
+          - object in panties
+          - money in mouth
+          - object in swimsuit
+          - holding money
+          - money in thong
+          - money tucked in skirt
+          - Banknotes floating in the air
+          - banknotes on body
+          - money tucked in underwear
+          - cum on money
+          - money gesture
+        costume-elem:
+          - prostitution
+          - between breasts
+          - thigh strap
+          - cleavage
+          - nsfw
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/squeezing_breasts/prompts__
+          - money-shaped pupils
+        env:
+          - money
+          - banknote
+          - dollar bill
+          - yen
+          - price tag
+          - ok sign
+          - yen sign
+          - dollar sign
+          - spoken money
 

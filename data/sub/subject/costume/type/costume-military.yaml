@@ -138,4 +138,107 @@ lazy-wildcards:
           - metal_embellishments
           - embroidery_detailing
           - satin_texture
+      # https://civitai.com/models/187033/imperial-japanese-army-lora?modelVersionId=210015
+      Imperial_Japanese_Army:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/Imperial_Japanese_Army/costume-main__
+            , {1-2$$__lazy-wildcards/subject/costume/Imperial_Japanese_Army/costume__}
+            {, {1-2$$__lazy-wildcards/subject/costume/Imperial_Japanese_Army/costume-headwear__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/Imperial_Japanese_Army/costume-elem-accessories__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/Imperial_Japanese_Army/costume-elem__}|}
+            {, __lazy-wildcards/subject/costume/Imperial_Japanese_Army/costume-elem-color__|}
+            {, {1-$$__lazy-wildcards/subject/costume/Imperial_Japanese_Army/costume-weapon__}|}
+        costume-main:
+          - Imperial Japanese Army uniform, IJA uniform
+        costume:
+          - IJA Taisho, khaki uniform
+          - IJA Showa
+          - court uniform, black uniform
+          - IJA soldier
+          - IJA officer
+        costume-headwear:
+          - tanker helmet
+          - field cap, garrison cap
+          - field cap with neck flaps
+          - IJA peaked cap
+          - IJA kepi with white and red plume
+          - jap helmet
+          - jap helmet with net
+        costume-elem:
+          - short sleeve
+          - austrian knots sleeve
+          - cloak
+          - open collar
+          - double breasted
+          - double breasted trench coat
+          - headband, hachimaki
+          - Imperial Guard
+          - white gloves
+          - leg wrappings, leg_wrap, infantryman's puttee
+          - long boots
+          - brown shoes
+          - winter fur vest
+          - backpack
+          - short pants
+        costume-elem-color:
+          - oliver green uniform
+          - light green uniform
+          - light yellow uniform
+          - black uniform
+          - khaki uniform
+        costume-elem-accessories:
+          - golden sling,general staff
+          - cap badge
+          - medals
+          - breast badge
+          - armband
+        costume-weapon:
+          - sling
+          - leather belt pouch
+          - katana at waist
+          - holding sword
+          - rifle with bayonet, rifle,bolt_action
+          - holding binocularsredcoat
+      # https://civitai.com/models/155974/red-coatbritish-army-uniform?modelVersionId=175005
+      red_coat_british_army_uniform:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/red_coat_british_army_uniform/costume-main__
+            {, __lazy-wildcards/subject/costume/red_coat_british_army_uniform/costume__|}
+            {, __lazy-wildcards/subject/costume/red_coat_british_army_uniform/costume-headwear__|}
+            {, {1-$$__lazy-wildcards/subject/costume/red_coat_british_army_uniform/costume-elem-accessories__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/red_coat_british_army_uniform/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/red_coat_british_army_uniform/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/red_coat_british_army_uniform/env__}|}
+            {, __lazy-wildcards/subject/costume/red_coat_british_army_uniform/style-age__|}
+        costume-main:
+          - Red coat british army uniform, redcoat
+        costume:
+          - regiment of foot
+          - british army officer
+        costume-headwear:
+          - shako hat
+          - black pith helmet
+          - safari helmet, sun helmet, home service helmet
+          - bicorne
+          - indian turban, indian troop
+          - slouch hat, cowboy hat
+          - ufo helmet
+        costume-elem-accessories:
+          - epaulettes
+          - white hackle, white plume
+        costume-elem:
+          - red_jacket
+          - white pants
+        costume-weapon:
+          - musket
+          - saber
+        env:
+          - horse, cavalry
+        style-age:
+          - 18cera
+          - napoleonera
+          - victorianera
+          - ww1era
 

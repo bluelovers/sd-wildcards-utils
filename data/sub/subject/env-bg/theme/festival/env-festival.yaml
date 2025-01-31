@@ -38,12 +38,13 @@ lazy-wildcards:
       fireworks:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-bg/fireworks/env-bg-main__
+            {1-$$__lazy-wildcards/subject/env-bg/fireworks/env-bg-main__}
             {, {1-$$__lazy-wildcards/subject/env-bg/fireworks/env__}|}
-            {, {1-$$__lazy-wildcards/subject/env-bg/fireworks/env-bg__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/env-bg/fireworks/env-bg__}|}
             {, {1-$$__lazy-wildcards/subject/env-bg/fireworks/style__}|}
         env-bg-main:
           - fireworks, Fireworks_display
+          - firecrackers
         env-bg:
           - Night_sky_fireworks, fireworks_lighting, Illuminated_sky, night_sky_illumination
         env:

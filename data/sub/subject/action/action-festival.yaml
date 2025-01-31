@@ -1,0 +1,30 @@
+lazy-wildcards:
+  subject:
+    action:
+      # https://civitai.com/models/1141763/girl-like-lion-dance?modelVersionId=1284010
+      lion_dance:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/action/lion_dance/action__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/action/lion_dance/costume__}|}
+            {, {1-$$__lazy-wildcards/subject/action/lion_dance/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/action/lion_dance/env__}|}
+        action:
+          - >-
+            ((lion dance))
+            , ((lifting person))
+            , wooden poles, stepping on poles
+            , arms up, leg up
+        costume:
+          - red qipao, sleeveless dress, bare legs
+        costume-elem:
+          - __lazy-wildcards/subject/costume-elem-accessories/fur-trim/prompts__
+        env:
+          - sky
+          - crowd, people, audience
+          - cityscape
+          - temple
+          - east asian architecture
+          - aerial fireworks, night
+          - __lazy-wildcards/subject/style-theme/lunar_new_year/prompts__
+

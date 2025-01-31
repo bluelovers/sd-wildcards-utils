@@ -37,14 +37,27 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/subject/costume-elem-accessories/gold-trim/costume-elem-main__
-            {0.3::, {1-$$__lazy-wildcards/subject/costume-elem-accessories/gold-trim/costume-elem__}|}
+            {0.4::, {1-$$__lazy-wildcards/subject/costume-elem-accessories/gold-trim/costume-elem__}|}
         costume-elem-main:
           - gold trim, gold-trimmed, gold threading
         costume-elem:
-          - gold-stitched
-          - gold-embroidery
-          - gold-decorative
+          - gold stitched
+          - gold embroidery
+          - gold decorative
           - gold lace, gold lace trim, gold lace-trimmed
+          - gold threadwork
+      lace-trim:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-accessories/lace-trim/costume-elem-main__
+            {0.4::, {1-$$__lazy-wildcards/subject/costume-elem-accessories/lace-trim/costume-elem__}|}
+        costume-elem-main:
+          - lace trim, lace-trimmed, lace threading
+        costume-elem:
+          - lace stitched
+          - lace embroidery
+          - lace decorative
+          - side lace-up design
       # https://civitai.com/models/877844/id-card?modelVersionId=982697
       idcard:
         prompts:

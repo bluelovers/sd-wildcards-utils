@@ -78,7 +78,7 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/subject/env-elem/slime/env-main__
-            {0.7::, {1-$$__lazy-wildcards/subject/env-elem/slime/env-creatures__}|}
+            {0.7::, {1-$$__lazy-wildcards/subject/env-elem/slime/env-elem-creatures__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem/slime/env__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem/slime/style__}|}
         env-main:
@@ -94,7 +94,7 @@ lazy-wildcards:
           - __lazy-wildcards/subject/env-elem/skull/prompts__
           - wet, lotion
           - slime thick dripping
-        env-creatures:
+        env-elem-creatures:
           - __lazy-wildcards/subject/costume-ethnicity-race/slime_girl/prompts__
         style:
           - translucent

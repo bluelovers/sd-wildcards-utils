@@ -110,6 +110,7 @@ lazy-wildcards:
           - slouching
       # https://civitai.com/models/53448/looking-disgusted-facial-expression
       # https://danbooru.donmai.us/posts?tags=disgust+&z=5
+      # https://civitai.com/models/1145230/show-me-your-underwear-with-a-disgusted-look-on-your-face?modelVersionId=1288023
       disgusted:
         prompts:
           - >-
@@ -119,7 +120,7 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/disgusted/action__}|}
             {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/disgusted/style__}|}
         expressions-main:
-          - disgusted, disgust, looking disgusted, disgust_face, disgust facial expression
+          - disgusted, disgust, looking disgusted, disgust_face, disgust facial expression, disguststyle
         expressions:
           - >-
             {very |}angry
@@ -209,6 +210,9 @@ lazy-wildcards:
           - humiliation, shame
         expressions:
           - panicing
+          - "@ @"
+          - averting eyes
+          - nervous
       # https://civitai.com/models/469309?modelVersionId=522175
       # https://civitai.com/models/469941
       doyagao_smug:

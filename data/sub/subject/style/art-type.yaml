@@ -271,11 +271,11 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/subject/style-art-type/cave_paintings/style-art-main__
             {,{1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/style__}|}
-            {0.3::,{1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/env-creatures__}|}
+            {0.3::,{1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/env-elem-creatures__}|}
             {,{1-$$__lazy-wildcards/subject/style-art-type/cave_paintings/env-bg__}|}
         style-art-main:
           - (cave paintings, cave art{0.3:::{1.2|1.3|1.4}|}), rock art
-        env-creatures:
+        env-elem-creatures:
           - prehistoric_animal
         env-bg:
           - cave_interior
@@ -352,16 +352,33 @@ lazy-wildcards:
       # https://civitai.com/models/231463/map-draw
       # https://civitai.com/models/18597/map-sketch
       # https://civitai.com/models/180976/battle-maps
+      # https://civitai.com/models/1180611/dnd-tactical-maps?modelVersionId=1328603
+      # https://civitai.com/models/1168479/hezi-3d-vertical-game-scenelesshezi3d?modelVersionId=1314594
       map:
         prompts:
           - >-
-            map, travelmap, BattleMapV1, BattleMap, mapdraw
+            (__lazy-wildcards/subject/style-art-type/map/style-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-art-type/map/style__}|}
+        style-main:
+          - >-
+            map, travelmap, mapdraw, tactical maps
+            , BattleMapV1, BattleMap, HEZI
             , no humans
+            , __lazy-wildcards/utils/scenery-no-humans__
+        style:
+          - from above
+          - elevations
+          - terrain types
+          - environmental features
+          - Dungeons & Dragons roleplaying game style, dungeons_&_dragons game style, dnd game style, d&d game style
+          - obstacles
+          - combat scenarios
       # https://civitai.com/models/516265/map
+      # 衛星地圖
       map-satellite:
         prompts:
           - >-
-            satellite map
+            (satellite map{0.3:::{1.2|1.3|1.4}|})
             , __lazy-wildcards/subject/style-art-type/map/prompts__
       Lego:
         prompts:
@@ -400,7 +417,7 @@ lazy-wildcards:
           - ribbon_hair_accessory
           - floral_dress
           - frilly_dress
-          - lace_trim
+          - __lazy-wildcards/subject/costume-elem-accessories/lace-trim/prompts__
           - pearl_necklace
           - bow_accessory
         expressions:
@@ -504,9 +521,9 @@ lazy-wildcards:
           - action_lines
         style-theme:
           - crime_noir
-          - sci-fi_setting
+          - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
           - fantasy_theme
-          - post-apocalyptic
+          - __lazy-wildcards/subject/style-elem/post-apocalypse/prompts__
           - robotic_designs
           - dual_identity
           - battle_damage

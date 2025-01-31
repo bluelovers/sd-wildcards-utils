@@ -1,0 +1,40 @@
+lazy-wildcards:
+  subject:
+    costume:
+      # https://civitai.com/models/399646/black-opal-dress?modelVersionId=445715
+      opal_dress:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/opal_dress/costume__)
+            {, {1-$$__lazy-wildcards/subject/costume/opal_dress/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/opal_dress/style__}|}
+        costume:
+          - opal dress, 0p4ldr3ss, opal
+        costume-elem:
+          - black dress
+          - iridescent fabric
+          - holographic dress
+          - shimmering satin
+          - gradient fabric
+          - flowy gown
+          - ethereal dress
+          - sheer layers
+          - long sleeves dress, wide sleeves
+          - __lazy-wildcards/subject/costume-elem/off-shoulder/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/lace-trim/prompts__
+          - highslit_dress
+          - asymmetric_hemline
+          - cathedral_train
+        style:
+          - pearlescent texture
+          - opalescent colors
+          - dreamy aesthetic
+      nightgown:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/nightgown/costume__
+        costume:
+          - nightgown
+          - >-
+            {short|long} nightgown
+

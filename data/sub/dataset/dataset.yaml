@@ -65,13 +65,13 @@ lazy-wildcards:
         , {1-2$$__lazy-wildcards/subject/style-artist-name/*/prompts__}{:1.4|:1.2|})
       - >-
         {1-2$$__lazy-wildcards/subject/style-artist/*/prompts__}
-    env-creatures:
+    env-elem-creatures:
       - >-
-        {1-2$$__lazy-wildcards/*/*/*/env-creatures*__}
+        {1-2$$__lazy-wildcards/*/*/*/env-elem-creatures*__}
       - __lazy-wildcards/cosplay-others/*/*/prompts__
       - __Bo/creatures/random__
-    env-vehicle:
-      - __lazy-wildcards/*/*/*/env-vehicle*__
+    env-elem-vehicle:
+      - __lazy-wildcards/*/*/*/env-elem-vehicle*__
       - __Bo/vehicles/random__
     style:
       - >-

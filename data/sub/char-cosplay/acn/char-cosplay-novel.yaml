@@ -73,4 +73,100 @@ lazy-wildcards:
           - topless gear
           - humanization
           - center frills
+    # https://civitai.com/models/112329/mushoku-tensei-character-pack-lora
+    mushoku_tensei:
+      # https://civitai.com/models/1129196/ghislaine-dedoldia-mushoku-tensei?modelVersionId=1269816
+      # https://civitai.com/models/147773/kizuki-mushoku-tensei-ghislaine-dedoldia-nsfw-support
+      # https://civitai.com/models/129552?modelVersionId=180207
+      ghislaine_dedoldia:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/mushoku_tensei/ghislaine_dedoldia/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/mushoku_tensei/ghislaine_dedoldia/costume-ethnicity__
+            {, __lazy-wildcards/cosplay-char/mushoku_tensei/ghislaine_dedoldia/costume__|}
+            {, {1-$$__lazy-wildcards/cosplay-char/mushoku_tensei/ghislaine_dedoldia/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/mushoku_tensei/ghislaine_dedoldia/costume-weapon__}|}
+        main-trigger-words:
+          - ghislaine dedoldia, ghislaine dedoldia \(cosplay\), ghislaine, mushoku_tensei
+        costume-ethnicity:
+          - >-
+            muscular female, muscular, abs
+            , scars, scar on stomach, scar on cheek, scar on face
+            , cat tail, tail ring
+            , (eyepatch, one-eyed, eye patch:1.2)
+            , red eyes
+            , grey hair, hair between eyes
+            , sidelocks, spiked hair, bangs
+            , animal ears, animal ear fluff, wolf ears
+            , dark-skinned female
+        costume:
+          - MainOutfit_GhislaineDedoldia_ownwaifu, white belt, open jacket, fingerless gloves,  black gloves, skindentation, red choker, fur-trimmed jacket, long sleeves
+          - TubeTop_GhislaineDedoldia_ownwaifu, navel, highleg panties, obliques, underboob, black panties, bandeau
+          - NSFW_GhislaineDedoldia_ownwaifu, completely nude
+          - Bikini_GhislaineDedoldia_ownwaifu, swimsuit
+        costume-elem:
+          - fur-trimmed jacket, navel
+          - green pants
+          - open fly
+          - open belt, open pants
+          - bikini top, bikini top only
+          - red choker
+          - red bandeau
+          - highleg panties
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+          - collarbone
+          - __lazy-wildcards/subject/costume-elem/off-shoulder/prompts__
+          - belt
+          - underboob
+          - thick thighs
+          - lips
+        costume-weapon:
+          - weapon over shoulder
+          - sword over shoulder
+    # https://danbooru.donmai.us/posts?tags=gankutsuou&z=2
+    # https://danbooru.donmai.us/posts?tags=the_count_of_monte_cristo&z=5
+    # https://en.wikipedia.org/wiki/The_Count_of_Monte_Cristo
+    the_count_of_monte_cristo_gankutsuou:
+      # https://civitai.com/models/241375/haydee-from-count-of-the-count-of-monte-cristo?modelVersionId=272331
+      haydee:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/the_count_of_monte_cristo_gankutsuou/haydee/main-trigger-words__
+            , {2-$$__lazy-wildcards/cosplay-char/the_count_of_monte_cristo_gankutsuou/haydee/costume-ethnicity__}
+            {, {1-$$__lazy-wildcards/cosplay-char/the_count_of_monte_cristo_gankutsuou/haydee/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/the_count_of_monte_cristo_gankutsuou/haydee/env-bg__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/the_count_of_monte_cristo_gankutsuou/haydee/style__}|}
+        main-trigger-words:
+          - haydee \(the_count_of_monte_cristo\), HaydeeCMT, HaydeeXL, the_count_of_monte_cristo, gankutsuou, exotic_beauty
+        costume-ethnicity:
+          - deep ocean teal hair
+          - long hair
+          - blonde hair
+        costume-elem:
+          - greek_beauty, greek_clothing
+          - noble_features
+          - mediterranean_look
+          - exotic_dress
+          - silk_robe
+          - jeweled_accessories
+          - slave
+          - royal_lineage, princess_identity
+          - cleavage
+          - jewelry, necklace, ring
+          - belly dancer
+        env-bg:
+          - exotic_garden, lush_vegetation, tropical_setting
+          - opulent_mansion, lavish_interior, luxurious_surroundings
+        style:
+          - elegant_demeanor
+          - graceful_presence
+          - refined_manner
+          - gentle_nature
+          - sensitive_heart
+          - tender_emotions
+          - melancholic_mood
+          - reflective_gaze
+          - count_protege
+          - adopted_daughter
+          - peaceful_moment, introspective_scene
 

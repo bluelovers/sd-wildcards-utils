@@ -1,0 +1,73 @@
+lazy-wildcards:
+  cosplay-char:
+    miHoYo:
+      # https://civitai.com/models/96278/raven-natasha-cioara-or-honkai-impact-3rd-or-lora-or-game
+      raven_honkai_impact:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/miHoYo/raven_honkai_impact/main-trigger-words__
+            ,__lazy-wildcards/cosplay-char/miHoYo/raven_honkai_impact/costume-ethnicity__
+            {,{1-2$$__lazy-wildcards/cosplay-char/miHoYo/raven_honkai_impact/costume__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/miHoYo/raven_honkai_impact/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/miHoYo/raven_honkai_impact/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/miHoYo/raven_honkai_impact/env__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/miHoYo/raven_honkai_impact/action__}|}
+        main-trigger-words:
+          - raven_\(honkai_impact\), honkai \(series\), mihoyo
+        costume-ethnicity:
+          - grey hair, short hair, red eyes, mole under mouth
+        costume:
+          - black bodysuit, official bodysuit, cape, hood
+          - grey shirt, black necktie, black skirt, black thighhigs
+          - cleavage cutout, clothing cutout, denim, jeans, jacket, open jacket, tank top
+          - bartender
+        costume-elem:
+          - >-
+            hood{, {1-$$hood down|hood up}|}
+          - armored bodysuit
+          - asymmetrical hair
+          - belt buckle
+          - black belt, loose belt
+          - black cloak, two-sided cloak, cape
+          - black gloves, clawed gauntlets, claws
+          - eyes visible through hair
+          - shiny clothes
+          - taut clothes, taut shirt
+          - two-sided fabric
+          - cleavage
+          - naked hoodie
+          - naked jacket
+          - naked cloak
+          - symbol-shaped pupils, x-shaped pupils
+          - high heels
+          - brown pantyhose
+          - feather trim
+          - __lazy-wildcards/subject/costume-elem-accessories/lace-trim/prompts__
+          - nail polish
+          - bird, crow
+        costume-weapon:
+          - holding shoes, unworn shoes
+          - dagger, knife
+          - holding dagger, holding knife
+        env:
+          - broken screen
+          - flat screen tv, television
+          - calendar \(object\)
+        action:
+          - hands in pockets
+          - hand on own hip
+      # https://civitai.com/models/766995/rita-rossweisse-herrscher-of-ice-honkai-impact-3rd
+      # https://danbooru.donmai.us/posts?tags=rita_rossweisse+&z=5
+      rita_rossweisse:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/miHoYo/rita_rossweisse/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/miHoYo/rita_rossweisse/costume-ethnicity__
+            {0.7::, {1-2$$__lazy-wildcards/cosplay-char/miHoYo/rita_rossweisse/costume__}|}
+        main-trigger-words:
+          - rita rossweisse, rita rossweisse \(herrscher of ice\), RitaHoI, honkai \(series\)
+        costume-ethnicity:
+          - short hair, light brown hair, jewelry, purple eyes, earrings, hair over one eye
+        costume:
+          - white gloves, blue cape, fur trim, black bodysuit, skin tight, latex bodysuit
+

@@ -97,7 +97,7 @@ lazy-wildcards:
           - armlet
           - collarbone
           - choker
-          - bare shoulders
+          - __lazy-wildcards/subject/costume-elem/off-shoulder/prompts__
           - >-
             {1-$$earrings|hoop earrings}
           - navel
@@ -363,5 +363,36 @@ lazy-wildcards:
         costume:
           - egyptian clothes, cleavage, underboob, neck ring, armlet, bracelet
         costume-elem:
-          - off shoulders, collarbone
+          - __lazy-wildcards/subject/costume-elem/off-shoulder/prompts__, collarbone
+    # https://danbooru.donmai.us/posts?tags=nudist_beach_ni_shuugakuryokou_de%21%21&z=5
+    # [師走の翁]ヌーディストビーチに修学旅行で!!
+    nudist_beach_ni_shuugakuryokou_de:
+      # https://danbooru.donmai.us/posts?tags=suomi-sensei&z=2
+      # https://civitai.com/models/671448/suomi-sensei-nudist-beach-ni-shuugakuryokou-de
+      suomi-sensei:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char-hentai/nudist_beach_ni_shuugakuryokou_de/suomi-sensei/main-trigger-words__
+            , __lazy-wildcards/cosplay-char-hentai/nudist_beach_ni_shuugakuryokou_de/suomi-sensei/costume-ethnicity__
+            {, {__lazy-wildcards/cosplay-char-hentai/nudist_beach_ni_shuugakuryokou_de/suomi-sensei/costume-elem__}|}
+            {, {__lazy-wildcards/cosplay-char-hentai/nudist_beach_ni_shuugakuryokou_de/suomi-sensei/action__}|}
+            {, {__lazy-wildcards/cosplay-char-hentai/nudist_beach_ni_shuugakuryokou_de/suomi-sensei/env-bg__}|}
+        main-trigger-words:
+          - suomi-sensei, Suomisensei, nudist_beach_ni_shuugakuryokou_de
+        costume-ethnicity:
+          - blonde hair, blue eyes, long hair, wide hips, visor cap, orange headwear, shiny skin
+        costume-elem:
+          - armpits
+          - __lazy-wildcards/subject/costume-elem-expressions/doyagao_smug/prompts__
+          - navel
+          - nudist, nude, completely nude
+          - teacher
+          - uncensored
+          - wet
+          - nudist, public nudity
+        action:
+          - arms behind head
+        env-bg:
+          - yarimoku beach
+          - nudist beach, nude beach
 

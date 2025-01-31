@@ -1,19 +1,32 @@
 lazy-wildcards:
   subject:
     env-bg:
+      # https://civitai.com/models/1103964/superstructures?modelVersionId=1240149
+      # https://danbooru.donmai.us/posts?tags=megastructure&z=5
+      megastructure:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/env-bg/megastructure/env-bg__}{:{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/megastructure/env__}|}
+        env-bg:
+          - megastructure in background, superstructures, sstrs01
+        env:
+          - colossal constructions
+          - very large artificial object
+          - __lazy-wildcards/utils/scenery-no-humans__
       # https://civitai.com/models/50888?modelVersionId=125891
       # https://civitai.com/models/146250/abara-lora-tsutomu-nihei
       nihei_tsutomu-blame-env:
         prompts:
           - >-
             __lazy-wildcards/subject/env-bg/nihei_tsutomu-blame-env/main-trigger-words__
-            ,__lazy-wildcards/subject/env-bg/nihei_tsutomu-blame-env/env-bg-main__
-            {,{1-$$__lazy-wildcards/subject/env-bg/nihei_tsutomu-blame-env/style__}|}
+            , __lazy-wildcards/subject/env-bg/nihei_tsutomu-blame-env/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/nihei_tsutomu-blame-env/style__}|}
         main-trigger-words:
           - tsutomu nihei, nihei_tsutomu, blame!, blame gakuen!, abara, TNstyle, sidonia_no_kishi, DonMM4ch1n3W0rld
         env-bg-main:
           - >-
-            ({1-$$__lazy-wildcards/subject/env-bg/nihei_tsutomu-blame-env/env-bg__})
+            ({1-$$__lazy-wildcards/subject/env-bg/nihei_tsutomu-blame-env/env-bg__}{:{1.2|1.3|1.4}|})
             {,{1-$$__lazy-wildcards/subject/env-bg/nihei_tsutomu-blame-env/env__}|}
           - >-
             {({1-$$__lazy-wildcards/subject/env-bg/nihei_tsutomu-blame-env/env-bg__}),|}
@@ -21,7 +34,7 @@ lazy-wildcards:
         env-bg:
           - tunnel
           - city ruins
-          - megastructure in background
+          - __lazy-wildcards/subject/env-bg/megastructure/prompts__
           - deep horizon
           - stairs
           - mausoleum
@@ -76,5 +89,6 @@ lazy-wildcards:
       100-Sights-of-Sidonia:
         prompts:
           - >-
-            (シドニア百景, 100-sights-of-sidonia{:{1.2|1.3|1.4}|}), __lazy-wildcards/subject/env-bg/nihei_tsutomu-blame-env/prompts__
+            (シドニア百景, 100-sights-of-sidonia{:{1.2|1.3|1.4}|})
+            , __lazy-wildcards/subject/env-bg/nihei_tsutomu-blame-env/prompts__
 

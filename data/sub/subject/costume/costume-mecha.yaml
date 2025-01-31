@@ -4,14 +4,14 @@ lazy-wildcards:
       mecha-musume:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume/mecha-musume/main__
+            __lazy-wildcards/subject/costume/mecha-musume/costume-main__
             ,({1-$$__lazy-wildcards/subject/costume/mecha-musume/costume-mecha__})
             {,{1-$$__lazy-wildcards/subject/costume/mecha-musume/costume__}|}
             {,{1-$$__lazy-wildcards/subject/costume/mecha-musume/costume-elem__}|}
             {,({1-3$$__lazy-wildcards/subject/costume-tattoo/*/prompts__})|}
             {,{1-$$__lazy-wildcards/subject/costume/mecha-musume/costume-weapon__}|}
             {,{1-$$__lazy-wildcards/subject/costume/mecha-musume/style__}|}
-        main:
+        costume-main:
           - (mecha musume:1.3)
         costume:
           - mech suit armor white ceramic armor
@@ -163,4 +163,69 @@ lazy-wildcards:
       clockwork-cyborg:
         prompts:
           - clockwork cyborg, clockwork body, clockwork arms, clockwork legs, gears in eyes, clockwork face
+      # https://civitai.com/models/1151398
+      # https://civitai.com/models/40867/exoskeleton
+      # https://civitai.com/models/218037/heavy-exoskeleton
+      exoskeleton:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/exoskeleton/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/exoskeleton/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/exoskeleton/style__}|}
+        costume:
+          - >-
+            exoskeleton
+            , powered exoskeleton
+        costume-elem:
+          - robot
+          - mecha
+          - cybernetic suit
+          - futuristic armor
+          - biomechanical suit
+          - industrial exosuit, industrial exoskeleton
+          - combat exoskeleton
+          - cyberpunk exosuit
+          - high-tech wearable
+          - military augmented suit
+          - powered armor
+          - heavy exoskeleton
+          - tool attachment
+          - mechanical claws, industrial_pincers
+          - >-
+            {oversized |}mechanical prosthetics
+          - >-
+            {oversized |}mechanical orthotics
+          - mecha musume
+          - >-
+            {oversized |}mechanical parts
+          - >-
+            {oversized |}mechanical limbs
+          - >-
+            {oversized |}hydraulic limbs
+        style:
+          - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
+          - robotic enhancement
+      # https://civitai.com/models/88867/power-loaderaliens2
+      powerloader:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/powerloader/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/powerloader/costume-elem__}|}
+            , __lazy-wildcards/subject/costume/exoskeleton/prompts__
+            {, {1-$$__lazy-wildcards/subject/costume/powerloader/style__}|}
+        costume:
+          - powerloader, power loader, hydraulic loader
+        costume-elem:
+          - industrial loader
+          - sci-fi loader
+          - rescue loader
+          - cargo loader
+          - exposed_gears
+          - hydraulic_system
+          - hydraulic_legs
+          - servo_powered_joints
+          - open_frame, mechanical_frame
+        style:
+          - disaster_relief, emergency_equipment
+          - rugged_design
 

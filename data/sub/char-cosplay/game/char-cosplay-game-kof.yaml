@@ -1,0 +1,50 @@
+lazy-wildcards:
+  cosplay-char:
+    the_king_of_fighters:
+      # https://civitai.com/models/136258/kolin-or-street-fighter-game-character-or-ownwaifu?modelVersionId=150284
+      kolin:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/the_king_of_fighters/kolin/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/the_king_of_fighters/kolin/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/the_king_of_fighters/kolin/costume__}|}
+            , __lazy-wildcards/cosplay-char/the_king_of_fighters/kolin/costume-headwear__
+            {, {1-$$__lazy-wildcards/cosplay-char/the_king_of_fighters/kolin/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/the_king_of_fighters/kolin/env__}|}
+        main-trigger-words:
+          - kolin, kolin_\(cosplay\), street fighter, kolin_streetfighter_aiwaifu
+        costume-ethnicity:
+          - blonde hair, blue eyes, very long hair, wide hips, wavy hair, big hair
+        costume:
+          - blue footwear, fur-trimmed footwear, blue gloves
+          - blue jacket, fur trim, winter coat, russian clothes
+          - blue bikini
+        costume-headwear:
+          - (ushanka, papakha:1.2), fur hat, black headwear
+        costume-elem:
+          - floating hair
+          - fur trim
+          - black thighhighs
+          - forehead
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - panties
+        env:
+          - standing on the stage
+          - ice crystal
+          - snow
+      # https://civitai.com/models/705847/melike-street-fighter
+      melike:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/the_king_of_fighters/melike/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/the_king_of_fighters/melike/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/the_king_of_fighters/melike/costume-elem__}|}
+        main-trigger-words:
+          - melike \(street fighter\), MelikeSF
+        costume-ethnicity:
+          - very long hair, blue eyes, blonde hair, jewelry, braid, blunt bangs, necklace, twin braids, bracelet, __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+        costume-elem:
+          - side slit, red dress
+          - red headwear
+          - indian clothes
+

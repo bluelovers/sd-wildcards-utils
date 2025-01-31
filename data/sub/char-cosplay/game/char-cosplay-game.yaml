@@ -111,38 +111,6 @@ lazy-wildcards:
           - twilight
           - night
           - moon
-    the_king_of_fighters:
-      # https://civitai.com/models/136258/kolin-or-street-fighter-game-character-or-ownwaifu?modelVersionId=150284
-      kolin:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/the_king_of_fighters/kolin/main-trigger-words__
-            , __lazy-wildcards/cosplay-char/the_king_of_fighters/kolin/costume-ethnicity__
-            {, {1-$$__lazy-wildcards/cosplay-char/the_king_of_fighters/kolin/costume__}|}
-            , __lazy-wildcards/cosplay-char/the_king_of_fighters/kolin/costume-headwear__
-            {, {1-$$__lazy-wildcards/cosplay-char/the_king_of_fighters/kolin/costume-elem__}|}
-            {, {1-$$__lazy-wildcards/cosplay-char/the_king_of_fighters/kolin/env__}|}
-        main-trigger-words:
-          - kolin, kolin_\(cosplay\), street fighter, kolin_streetfighter_aiwaifu
-        costume-ethnicity:
-          - blonde hair, blue eyes, very long hair, wide hips, wavy hair, big hair
-        costume:
-          - blue footwear, fur-trimmed footwear, blue gloves
-          - blue jacket, fur trim, winter coat, russian clothes
-          - blue bikini
-        costume-headwear:
-          - (ushanka, papakha:1.2), fur hat, black headwear
-        costume-elem:
-          - floating hair
-          - fur trim
-          - black thighhighs
-          - forehead
-          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
-          - panties
-        env:
-          - standing on the stage
-          - ice crystal
-          - snow
     arcana_heart:
       mei-fang:
         prompts:
@@ -196,7 +164,7 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/Tank_Girl/Tank_Girl/main-trigger-words__
-            {, {1-2$$__lazy-wildcards/cosplay-char/Tank_Girl/Tank_Girl/costume-hair__}|}
+            {, {1-2$$__lazy-wildcards/cosplay-char/Tank_Girl/Tank_Girl/costume-ethnicity-hair__}|}
             , {1-2$$__lazy-wildcards/cosplay-char/Tank_Girl/Tank_Girl/costume__}
             {, {1-$$__lazy-wildcards/cosplay-char/Tank_Girl/Tank_Girl/costume-headwear__}|}
             {, {1-$$__lazy-wildcards/cosplay-char/Tank_Girl/Tank_Girl/costume-elem__}|}
@@ -204,7 +172,7 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/cosplay-char/Tank_Girl/Tank_Girl/costume-weapon__}|}
         main-trigger-words:
           - TGTankGirl
-        costume-hair:
+        costume-ethnicity-hair:
           - blonde_hair
           - Blue_Hair
           - Pink_Hair
@@ -396,4 +364,19 @@ lazy-wildcards:
         prompts:
           - long hair,black hair, ribbon, brown eyes, hair bow, boots, sleeveless, black gloves, sailor collar, white dress, white footwear, white bow, single glove, sailor dress
           - black hair, yellow eyes, __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__,blunt bangs,makeup, glowing, lipstick, glowing eyes, science fiction
+    # https://zh.wikipedia.org/zh-tw/%E7%A9%BF%E8%B6%8A%E9%A2%86%E5%9F%9F%E8%AE%A1%E5%88%92
+    project_x_zone:
+      # https://civitai.com/models/769693/due-flabellum-project-x-zone
+      due_flabellum:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/project_x_zone/due_flabellum/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/project_x_zone/due_flabellum/costume-ethnicity__
+            {0.7::, __lazy-wildcards/cosplay-char/project_x_zone/due_flabellum/costume__|}
+        main-trigger-words:
+          - DueFlabellum, due flabellum
+        costume-ethnicity:
+          - long hair, blue eyes, hair ornament, jewelry, ponytail, pink hair, earrings, makeup, wavy hair, __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+        costume:
+          - black dress, navel, cleavage, midriff, side slit
 

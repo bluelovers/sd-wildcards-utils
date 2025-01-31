@@ -45,4 +45,22 @@ lazy-wildcards:
           - happy, cool
         env-bg:
           - at home
+      # https://civitai.com/models/1147666/pekomama-hololive?modelVersionId=1290815
+      pekomama:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/vtuber/pekomama/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/vtuber/pekomama/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/vtuber/pekomama/costume-elem__}|}
+        main-trigger-words:
+          - pekomama, pekomama_\(cosplay\), hololive
+        costume-ethnicity:
+          - rabbit girl, long hair, animal ears, blue hair, rabbit ears, braid, animal ear fluff, rabbit tail, tail, usada pekora, red eyes, bangs, mature female, thick eyebrows, bow
+        costume-elem:
+          - detached sleeves, long sleeves
+          - braided ponytail
+          - virtual youtuber
+          - carrot hair ornament
+          - rabbit-shaped pupils
+          - carrot in pocket
 

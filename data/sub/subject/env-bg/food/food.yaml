@@ -161,7 +161,7 @@ lazy-wildcards:
             ({1-$$__lazy-wildcards/subject/env-elem-food/Gingerbread/env-elem-food-main__}{0.3:::{1.2|1.3|1.4}|})
             {, {1-$$__lazy-wildcards/subject/env-elem-food/Gingerbread/env-elem-food__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem-food/Gingerbread/env-bg__}|}
-            {, {1-$$__lazy-wildcards/subject/env-elem-food/Gingerbread/env-creatures__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/Gingerbread/env-elem-creatures__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem-food/Gingerbread/style__}|}
         env-elem-food-main:
           - Gingerbread_man, gingerbread people
@@ -170,7 +170,7 @@ lazy-wildcards:
           - food, cookie
         env-bg:
           - a festive holiday village
-        env-creatures:
+        env-elem-creatures:
           - full of gingerbread people
           - gingerbread creatures
           - gingerbread animals
@@ -179,4 +179,9 @@ lazy-wildcards:
         style:
           - no humans
           - food focus
+      # https://civitai.com/models/228730/sticky-rice-style-sd15-sdxl-and-flux?modelVersionId=275208
+      sticky_rice:
+        prompts:
+          - >-
+            (sticky rice, styr, noc-styr)
 

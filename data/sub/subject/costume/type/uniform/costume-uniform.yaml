@@ -116,7 +116,7 @@ lazy-wildcards:
           - glasses
         main:
           - __lazy-wildcards/subject/costume/maid/utils/maid-color-01(c=blue,c2=white)__
-          - __lazy-wildcards/subject/costume/maid/utils/maid-color-01(c!=__mix-lazy-auto/color-anything__,c2=white)__
+          - __lazy-wildcards/subject/costume/maid/utils/maid-color-01(c=!__mix-lazy-auto/color-anything__,c2=white)__
           - __lazy-wildcards/subject/costume/maid/utils/maid-color-01(c=__mix-lazy-auto/color-anything__,c2=white)__
           - __lazy-wildcards/subject/costume/maid/utils/maid-color-01(c=__mix-lazy-auto/color-anything__,c2=__mix-lazy-auto/color-anything__)__
         utils:

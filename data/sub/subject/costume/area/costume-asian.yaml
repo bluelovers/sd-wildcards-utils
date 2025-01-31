@@ -36,7 +36,7 @@ lazy-wildcards:
             , CourtesanT
         costume-elem:
           - floral print
-          - off shoulder
+          - __lazy-wildcards/subject/costume-elem/off-shoulder/costume-elem__
           - geta \(footwear\), geta sandals, japanese sandals
           - side slit
         costume-weapon:
@@ -50,7 +50,7 @@ lazy-wildcards:
       china-dress:
         prompts:
           - >-
-            (__lazy-wildcards/subject/costume/china-dress/main__)
+            (__lazy-wildcards/subject/costume/china-dress/costume__)
             {,{1-$$__lazy-wildcards/subject/costume/china-dress/costume-elem__}|}
             {,{1-$$__lazy-wildcards/subject/costume/china-dress/costume-sleeves__}|}
             {,{1-$$__lazy-wildcards/subject/costume/china-dress/costume-makeup__}|}
@@ -59,8 +59,8 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/subject/costume/china-dress/prompts__
             {,__lazy-wildcards/subject/costume/china-dress/action__|}
-        main:
-          - (old-shanghaibeauty, old shanghai beauty, china dress, chinese clothes), 舊上海美人
+        costume:
+          - old-shanghaibeauty, old shanghai beauty, china dress, chinese clothes, qipao, 舊上海美人
         costume-elem:
           - pelvic curtain, pelvic curtain dress
           - multiple straps around the waist
@@ -83,7 +83,7 @@ lazy-wildcards:
           - sleeveless dress
           - detached sleeves
           - sleeves past wrists
-          - bare shoulders
+          - __lazy-wildcards/subject/costume-elem/off-shoulder/prompts__
           - short sleeves
           - wide sleeves
           - long sleeves
@@ -152,7 +152,7 @@ lazy-wildcards:
             , silver {1-$$, silver $$jewelry|necklaces|bracelets|earrings}
           - traditional clothing, women's traditional attire
           - silver horns
-          - bare shoulders
+          - __lazy-wildcards/subject/costume-elem/off-shoulder/prompts__
         costume-headwear:
           - (silver_headdress, miao_headpieces, hmong headwear:1.2)
         env-bg:
@@ -178,7 +178,7 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/costume/kintaro/costume-elem__}|}
             {, {1-$$__lazy-wildcards/subject/costume/kintaro/costume-weapon__}|}
             {, {1-$$__lazy-wildcards/subject/costume/kintaro/action__}|}
-            {, {1-$$__lazy-wildcards/subject/costume/kintaro/env-creatures__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/kintaro/env-elem-creatures__}|}
             {, {1-$$__lazy-wildcards/subject/costume/kintaro/style__}|}
         costume:
           - kintaro, kintaro outfit, kintarou, kintarou outfit, kintarou \(cosplay\), emblem, choker, red dudou, halterneck, bare shoulders
@@ -195,7 +195,7 @@ lazy-wildcards:
           - marukin
           - hair flaps
           - blow out hair
-          - bare shoulders
+          - __lazy-wildcards/subject/costume-elem/off-shoulder/prompts__
           - black gloves
           - paw gloves
           - razor cut hair
@@ -223,7 +223,7 @@ lazy-wildcards:
           - arched back
           - knees together feet apart
           - v arms
-        env-creatures:
+        env-elem-creatures:
           - bear_companion
         style:
           - bravery
@@ -290,7 +290,7 @@ lazy-wildcards:
           - chinese clothes
           - hanfu
           - naked
-          - bare shoulders
+          - __lazy-wildcards/subject/costume-elem/off-shoulder/prompts__
           - embroidery
           - LnF
           - sleeveless
@@ -317,4 +317,44 @@ lazy-wildcards:
           - chinese_fashion
           - antique_setting
           - from side
+      # https://civitai.com/models/80451/qingfashion-qing-dynasty-womens-hairstyles-and-clothing?modelVersionId=85306
+      # https://civitai.com/models/21990/qing-period-dresses
+      qing_fashion:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/qing_fashion/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, __lazy-wildcards/subject/costume/qing_fashion/costume__|}
+            {, __lazy-wildcards/subject/costume/qing_fashion/costume-ethnicity-hair__|}
+            {, {1-$$__lazy-wildcards/subject/costume/qing_fashion/costume-elem__}|}
+        costume-main:
+          - >-
+            qingfashion, qing dynasty
+            , qingfashion clothes, qing dynasty clothes
+            , qingchao, qingchao_dress, qingchao_haircut
+            , qingchao_scarf
+            , hair ornament
+            , qingfashion hair, qing dynasty hair
+            , __lazy-wildcards/utils/fn/style-inspired(v=qing_dynasty)__
+        costume:
+          - Imperial Court Dresses
+          - Qipao
+          - Mamian Qun
+          - Qing Period Dresses
+        costume-ethnicity-hair:
+          - >-
+            {1-$$qitou|large qitou|winged qitou|small qitou}
+          - >-
+            {1-$$coiled bun|coiled hair|chaotian_ji|feitian_ji|shuang yuan ji}
+          - >-
+            {1-$$loose hair|side ponytail|wavy hair|low ponytail|xiefa ji}
+        costume-elem:
+          - chinese_hairpins
+          - Embroidered Patterns
+          - Silk Fabrics, Satin Fabrics
+          - Tassels, Wide Sashes
+          - phoenix_crown
+          - dragon_embroidery
+          - long lashes
+          - Chaogua
+          - Xiapei, Cloak
 

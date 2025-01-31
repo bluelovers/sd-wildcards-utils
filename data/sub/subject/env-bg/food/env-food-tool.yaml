@@ -29,4 +29,51 @@ lazy-wildcards:
           - floral_patterns
           - gold_accents
           - red_and_black_theme
+      # https://civitai.com/models/1145701/qing-hua-ci-style?modelVersionId=1288571
+      # https://civitai.com/models/125115/blue-and-white-or-chinese-ornament
+      # https://civitai.com/models/151548/or-blue-and-white-porcelain-universe-or-chinese-style-fantasy
+      qing_hua_ci:
+        prompts:
+          - >
+            (__lazy-wildcards/subject/env-elem/qing_hua_ci/env-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/qing_hua_ci/style__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/qing_hua_ci/env__}|}
+        env-main:
+          - >-
+            __lazy-wildcards/utils/fn/style-inspired(v=qing_hua_ci)__
+            , blue_and_white
+            , cobalt_blue, underglaze_blue
+            , qinghua, qinghua_universe
+            , blue and white porcelain
+            , white_porcelain, pale_white
+            , smooth_surface
+        env:
+          - porcelain_vessel
+          - ceramic_bowl, porcelain_bowl
+          - porcelain_vase
+          - vase_design
+          - narrow_neck_vase
+          - porcelain_teapot
+          - storage_jar
+          - porcelain_tea_cup
+          - porcelain_plate
+          - chinese ornament
+        style:
+          - floral_pattern
+          - lotus_motif
+          - peony_design
+          - animal_motif
+          - dragon_pattern
+          - phoenix_design
+          - geometric_pattern
+          - meander_design
+          - cloud_motif
+          - mooth_curves
+          - elegant_shape
+          - refined_form, refined_glaze
+          - glossy_glaze
+          - shiny_surface
+          - reflective_finish
+          - noble_design, elegant_style
+          - cultural_heritage, historical_artifact, tradition_art
 

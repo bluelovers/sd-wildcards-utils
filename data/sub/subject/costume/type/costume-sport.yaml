@@ -24,7 +24,7 @@ lazy-wildcards:
           - groin
           - highleg
           - side-tie pantie
-          - lace trim
+          - __lazy-wildcards/subject/costume-elem-accessories/lace-trim/prompts__
           - headwear
           - string panties
           - hair_tied_back
@@ -101,4 +101,39 @@ lazy-wildcards:
           - ChiharuAzuma, soccer, football
         costume:
           - sportswear, soccer uniform, sleeveless
+      # https://civitai.com/models/266368/sexy-jersey?modelVersionId=300342
+      sexy_jersey:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/sexy_jersey/costume__
+            {, {1-$$__lazy-wildcards/subject/costume/sexy_jersey/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/sexy_jersey/action-pose__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/sexy_jersey/env-bg__}|}
+        costume:
+          - s3xyj, jersey
+        costume-elem:
+          - long sleeves
+          - oversized clothes
+          - cropped_top
+          - sportswear
+          - sexy_outfit
+          - deep_neckline
+          - low_cut_top
+          - sheer_fabric, transparent_clothing
+          - jersey_numbers
+          - sportswear_detail
+          - team_stripes
+          - sports_logo
+          - side_slits
+          - __lazy-wildcards/subject/costume-elem-accessories/lace-trim/prompts__
+          - knee_high_socks
+          - sports_accessories
+          - tight_shorts
+          - pleated_skirt
+        action-pose:
+          - playful_pose
+          - dynamic_pose
+        env-bg:
+          - sports_background
+          - locker_room
 

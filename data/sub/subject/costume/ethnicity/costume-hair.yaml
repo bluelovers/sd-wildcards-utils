@@ -4,16 +4,87 @@ lazy-wildcards:
       hair-bun:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/costume-ethnicity-hair-style/hair-bun/costume-hair-bun-main__}
-            {,{1-$$__lazy-wildcards/subject/costume-ethnicity-hair-style/hair-bun/costume-hair-bun__}|}
+            {1-$$__lazy-wildcards/subject/costume-ethnicity-hair-style/hair-bun/costume-ethnicity-hair-bun-main__}
+            {,{1-$$__lazy-wildcards/subject/costume-ethnicity-hair-style/hair-bun/costume-ethnicity-hair-bun__}|}
             {,{1-$$__lazy-wildcards/subject/costume-ethnicity-hair-style/hair-bun/costume-elem__}|}
-        costume-hair-bun-main:
+        costume-ethnicity-hair-bun-main:
           - hair bun
           - bun cover
-        costume-hair-bun:
+        costume-ethnicity-hair-bun:
           - double bun
           - single hair bun
           - cone hair bun
         costume-elem:
           - hairpods
+      # 繁複編髮
+      intricate_braids:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-hair-style/intricate_braids/costume-ethnicity-hair-main__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-hair-style/intricate_braids/costume-ethnicity-hair__}|})
+        costume-ethnicity-hair-main:
+          - intricate braids
+        costume-ethnicity-hair:
+          # 環形髮辮 (Crown Braid) | 環狀髮辮：將頭髮編織成冠狀，象徵威嚴與神聖性。
+          - crown braid
+          # 側編髮 (Side Braids) | 側邊長辮：長髮側編，增添貴族感與靈動感。
+          - side braids
+          # 雙層編髮 (Double Braids) | 雙重髮辮：上下層疊交錯，展現繁複華麗的編髮技巧。
+          - double braids
+      # 高聳盤髮
+      high_chignon:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-hair-style/high_chignon/costume-ethnicity-hair-main__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-hair-style/high_chignon/costume-ethnicity-hair__}|})
+        costume-ethnicity-hair-main:
+          - high_chignon
+        costume-ethnicity-hair:
+          - classical bun
+          - ornamented bun
+          - side bangs with chignon
+      wavy_flowing_hair:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-hair-style/wavy_flowing_hair/costume-ethnicity-hair-main__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-hair-style/wavy_flowing_hair/costume-ethnicity-hair__}|})
+        costume-ethnicity-hair-main:
+          - wavy hair, flowing hair
+        costume-ethnicity-hair:
+          - cascading waves hair
+          - half-up waves hair
+          - mermaid curls, mermaid waves hairstyle
+      ribbon_wrapped_hair:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-hair-style/ribbon_wrapped_hair/costume-ethnicity-hair-main__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-hair-style/ribbon_wrapped_hair/costume-ethnicity-hair__}|})
+        costume-ethnicity-hair-main:
+          - ribbon wrapped hair
+        costume-ethnicity-hair:
+          - vine wrapped hair
+          - silk hairband
+          - double ribbon wrap
+      waterfall_braids:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-hair-style/waterfall_braids/costume-ethnicity-hair-main__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-hair-style/waterfall_braids/costume-ethnicity-hair__}|})
+        costume-ethnicity-hair-main:
+          - ribbon wrapped hair
+        costume-ethnicity-hair:
+          - interwoven_braids, interwoven waterfall braid
+          - crystal-adorned braids
+          - floral-braided hair, floral-incorporated braids
+      goddess_crown:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-hair-style/goddess_crown/costume-ethnicity-hair-main__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-hair-style/goddess_crown/costume-ethnicity-hair__}|})
+        costume-ethnicity-hair-main:
+          - goddess crown, divine crown hairstyles
+        costume-ethnicity-hair:
+          - laurel-wreath braids
+          - pearl-adorned hair
+          - celestial crown, celestial star crown
 

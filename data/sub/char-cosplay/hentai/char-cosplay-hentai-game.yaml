@@ -113,4 +113,76 @@ lazy-wildcards:
           - long hair, blonde hair, pink hair, gradient hair, brown hair, hair ornament, __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
         costume:
           - black thighhighs, navel, jewelry, purple eyes, hairband, earrings, detached sleeves, wide sleeves, underboob, tassel, jingle bell, miko, hair bell
+    # https://civitai.com/search/models?baseModel=SD%201.5&sortBy=models_v9&query=Taimanin
+    taimanin:
+      # https://civitai.com/models/78928/taimanin-suit-outfit-lora
+      # https://danbooru.donmai.us/posts?tags=taimanin_suit&z=2
+      # https://civitai.com/models/214433/super-sonico-taimanin-suit-outfit-nitroplus-lora
+      taimanin_suit:
+        prompts:
+          - >-
+            (__lazy-wildcards/cosplay-char-hentai/taimanin/taimanin_suit/costume-main__
+            {0.7::, {1-2$$__lazy-wildcards/cosplay-char-hentai/taimanin/taimanin_suit/costume__}|})
+            {, {1-$$__lazy-wildcards/cosplay-char-hentai/taimanin/taimanin_suit/costume-elem__}|}
+        main-trigger-words:
+          - lilith-soft, taimanin_\(series\)
+        costume-main:
+          - taimanin suit, __lazy-wildcards/subject/costume-ethnicity-body-skin/skindentation/prompts__, __lazy-wildcards/cosplay-char-hentai/taimanin/taimanin_suit/main-trigger-words__
+        costume:
+          - taimanin bodysuit, impossible bodysuit
+          - taimanin leotard, impossible leotard
+          - super sonico taimanin suit outfit, supersonicotaimanin
+        costume-elem:
+          - impossible clothes
+          - ninja
+          - no bra
+          - leotard lift
+          - fishnets
+          - gauntlets
+          - thick thighs
+          - tight clothes
+          - zettai ryouiki
+          - multicolored leotard
+          - star pasties
+          - cleavage
+          - clothing cutout
+          - fishnet thighhighs
+          - garter straps
+          - gloves
+          - showgirl skirt
+      # https://civitai.com/models/634227/shiranui-mizuki-demon-taimanin
+      # https://danbooru.donmai.us/posts?tags=mizuki_shiranui&z=1
+      mizuki_shiranui:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char-hentai/taimanin/mizuki_shiranui/main-trigger-words__
+            , __lazy-wildcards/cosplay-char-hentai/taimanin/mizuki_shiranui/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char-hentai/taimanin/mizuki_shiranui/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char-hentai/taimanin/mizuki_shiranui/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char-hentai/taimanin/mizuki_shiranui/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char-hentai/taimanin/mizuki_shiranui/env__}|}
+        main-trigger-words:
+          - mizuki_shiranui, Shiranui Mizuki \(Demon\), DemShiranui, corruption, mizuki shiranui \(cosplay\), __lazy-wildcards/cosplay-char-hentai/taimanin/taimanin_suit/main-trigger-words__
+        costume-ethnicity:
+          - >-
+            absurdly long hair, brown hair, hair between eyes, braid
+            , blue eyes
+            , horns
+            , colored skin, blue skin
+            , monster girl
+            , blue lips
+            , curvy
+        costume:
+          - bare shoulders, detached sleeves, navel, cleavage
+          - __lazy-wildcards/cosplay-char-hentai/taimanin/taimanin_suit/prompts__
+        costume-elem:
+          - impossible leotard
+          - impossible bodysuit
+          - impossible clothes
+          - ninja
+          - no bra
+        costume-weapon:
+          - polearm
+        env:
+          - slime \(substance\)
 

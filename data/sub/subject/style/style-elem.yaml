@@ -116,14 +116,14 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/subject/style-elem/Frosted_Glass_Geometry/style-main__
             {, {1-$$__lazy-wildcards/subject/style-elem/Frosted_Glass_Geometry/env__}|}
-            {0.2::, {1-$$__lazy-wildcards/subject/style-elem/Frosted_Glass_Geometry/env-vehicle__}|}
+            {0.2::, {1-$$__lazy-wildcards/subject/style-elem/Frosted_Glass_Geometry/env-elem-vehicle__}|}
         style-main:
           - Frosted Glass Geometry, mosha, Frosted Glass, microsoft style
         env:
           - keyboard
           - cellphone, Folder, Office Supplies, Screen
           - skull
-        env-vehicle:
+        env-elem-vehicle:
           - sport car
       dripping-colors:
         prompts:
@@ -155,4 +155,28 @@ lazy-wildcards:
           - smooth
           - water splashing
           - fussion of abstract and fluid art
+      sci-fi:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-elem/sci-fi/style-main__
+            {, {1-$$__lazy-wildcards/subject/style-elem/sci-fi/style__}|}
+        style-main:
+          - sci-fi, sci-fi theme, science fiction
+        style:
+          - sci-fi tech
+          - sci-fi setting
+          - sci-fi futuristic settings
+      # https://danbooru.donmai.us/posts?tags=post-apocalypse&z=5
+      post-apocalypse:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-elem/post-apocalypse/style-main__
+            {, {1-$$__lazy-wildcards/subject/style-elem/post-apocalypse/style__}|}
+            {, {1-$$__lazy-wildcards/subject/style-elem/post-apocalypse/env-bg__}|}
+        style-main:
+          - post-apocalypse, post_apocalyptic, post-apocalypse theme
+        style:
+          - post-apocalypse survival
+        env-bg:
+          - post-apocalypse landscape
 

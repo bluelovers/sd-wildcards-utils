@@ -26,7 +26,7 @@ lazy-wildcards:
           - midriff, navel
           - panties
           - underwear
-          - bare shoulders
+          - __lazy-wildcards/subject/costume-elem/off-shoulder/prompts__
           - happy sex
           - __lazy-wildcards/subject/action-pose-anything/pose-bottom-nsfw-open-legs/prompts__
           - arms behind head
@@ -284,7 +284,7 @@ lazy-wildcards:
           - >-
             {cape|red cape}
           - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
-          - bare shoulders
+          - __lazy-wildcards/subject/costume-elem/off-shoulder/prompts__
           - cross
           - pouch
           - taut clothes
@@ -810,7 +810,7 @@ lazy-wildcards:
           - embarrassed
         costume:
           - (piercing, navel piercing, chain, nipple piercing, nipple rings, linked piercing, lip piercing, belly chain, multiple_piercings, body_jewelry:1.2)
-          - bare shoulders
+          - __lazy-wildcards/subject/costume-elem/off-shoulder/prompts__
           - topless, bare_breasts
           - midriff, bare_belly
         costume-elem:
@@ -1086,7 +1086,7 @@ lazy-wildcards:
           - food
           - fruit
         env-bg:
-          - desk, kitchen
+          - desk, __lazy-wildcards/subject/env-bg-architectural/kitchens_jp/prompts__
           - checkered floor
           - hallway
     alien-predator:
@@ -1095,7 +1095,7 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/cosplay-char/alien-predator/xenomorph/costume-main__
             ,__lazy-wildcards/cosplay-char/alien-predator/xenomorph/costume-ethnicity__
-            {0.3::,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/env-creatures__}|}
+            {0.3::,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/env-elem-creatures__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/costume-elem__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/costume-weapon__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/action__}|}
@@ -1104,7 +1104,7 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/cosplay-char/alien-predator/xenomorph/style__}|}
         costume-main:
           - (xenomorph, xenomorphdna, FemXeno, xenomilf, xeno, xenomorph style, nv_xenodna:1.2), alien \(series\), 1other
-        env-creatures:
+        env-elem-creatures:
           - proto-xenomorph
           - xenomorph queen, alien queen
         costume-ethnicity:
@@ -1196,7 +1196,7 @@ lazy-wildcards:
             __lazy-wildcards/cosplay-char/ShindoL/yoshida_saki/main__
             {,__lazy-wildcards/cosplay-char/ShindoL/yoshida_saki/costume-ethnicity__|}
             {,__lazy-wildcards/cosplay-char/ShindoL/yoshida_saki/costume__|}
-            {,{1-$$__lazy-wildcards/cosplay-char/ShindoL/yoshida_saki/costume-hair__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/ShindoL/yoshida_saki/costume-ethnicity-hair__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/ShindoL/yoshida_saki/costume-weapon__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/ShindoL/yoshida_saki/costume-elem__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/ShindoL/yoshida_saki/costume-headwear__}|}
@@ -1246,7 +1246,7 @@ lazy-wildcards:
           - >-
             open {1-$$, open $$clothes|shirt}
           - sleeves past wrists
-        costume-hair:
+        costume-ethnicity-hair:
           - very long hair
           - hair tie
           - hair strand
@@ -1552,7 +1552,7 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/costume-main__
-            ,__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/costume-hair__
+            ,__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/costume-ethnicity-hair__
             ,{1-$$__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/costume-eyes__}
             ,__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/costume-scar__
             {,__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/costume__|}
@@ -1563,7 +1563,7 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/style__}|}
         costume-main:
           - queen_emeraldas, emeraldas \(cosplay\), ginga tetsudou 999, space pirate
-        costume-hair:
+        costume-ethnicity-hair:
           - long hair, absurdly long hair, blonde_hair
         costume:
           - pirate_outfit, long coat, black and red cape
@@ -1727,7 +1727,7 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/cosplay-char/dark_souls/rosaria/main-trigger-words__
             ,__lazy-wildcards/cosplay-char/dark_souls/rosaria/costume-ethnicity__
-            {,{1-$$__lazy-wildcards/cosplay-char/dark_souls/rosaria/costume-hair__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/dark_souls/rosaria/costume-ethnicity-hair__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/dark_souls/rosaria/costume-elem__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/dark_souls/rosaria/action__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/dark_souls/rosaria/env-bg__}|}
@@ -1735,7 +1735,7 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/cosplay-char/dark_souls/rosaria/style__}|}
         main-trigger-words:
           - Rosaria, rosaria_mother_of_rebirth, dark souls \(series\)
-        costume-hair:
+        costume-ethnicity-hair:
           - cum on hair
           - grey streaked hair
           - fluid on hair
@@ -1948,12 +1948,12 @@ lazy-wildcards:
             __lazy-wildcards/cosplay-char/mad_max/furiosa/main-trigger-words__
             ,__lazy-wildcards/cosplay-char/mad_max/others/main-trigger-words__
             ,__lazy-wildcards/cosplay-char/mad_max/furiosa/costume-ethnicity__
-            {,__lazy-wildcards/cosplay-char/mad_max/furiosa/costume-hair__|}
+            {,__lazy-wildcards/cosplay-char/mad_max/furiosa/costume-ethnicity-hair__|}
             {,__lazy-wildcards/cosplay-char/mad_max/furiosa/costume__|}
             {,{1-$$__lazy-wildcards/cosplay-char/mad_max/furiosa/costume-weapon__}|}
         main-trigger-words:
           - furiosa, imperator furiosa
-        costume-hair:
+        costume-ethnicity-hair:
           - brown hair, red hair, long hair
           - short hair
         costume-ethnicity:
@@ -1975,7 +1975,7 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/mad_max/others/main-trigger-words__
-            ,{1-$$__lazy-wildcards/cosplay-char/mad_max/others/env-vehicle__}
+            ,{1-$$__lazy-wildcards/cosplay-char/mad_max/others/env-elem-vehicle__}
             {,{1-$$__lazy-wildcards/cosplay-char/mad_max/others/costume-headwear__}|}
             {0.3::,{1-$$__lazy-wildcards/cosplay-char/mad_max/others/costume-char__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/mad_max/others/costume-elem__}|}
@@ -1983,7 +1983,7 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/cosplay-char/mad_max/others/env-bg__}|}
         main-trigger-words:
           - mad_max, madmax, post-apocalypse, post_apocalyptic_attire
-        env-vehicle:
+        env-elem-vehicle:
           - boat fitted with wheels, boat with legs, boat with treads, plane with treads, hovering submarine, improvised structure
           - aircraft carrier fitted with mechanical legs
           - tactical vest
@@ -2120,18 +2120,18 @@ lazy-wildcards:
             __lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/main-trigger-words__
             {,__lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/costume-ethnicity__|}
             {,__lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/costume__|}
-            {,__lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/costume-hair__|}
+            {,__lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/costume-ethnicity-hair__|}
             {,{1-$$__lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/costume-elem__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/action__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/env-bg__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/env-vehicle__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/env-elem-vehicle__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/env-elem-food__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/style__}|}
         main-trigger-words:
           - terayama reiko, ReikoTerayama_aiwaifu
         costume-ethnicity:
           - black hair, makeup, lipstick, brown eyes
-        costume-hair:
+        costume-ethnicity-hair:
           - long hair
           - single hair bun, short hair, forehead
         costume:
@@ -2150,7 +2150,7 @@ lazy-wildcards:
         env-elem-food:
           - beer can, beer
           - drink can
-        env-vehicle:
+        env-elem-vehicle:
           - motor vehicle, red motorcycle
         style:
           - tricky glance
@@ -2251,62 +2251,6 @@ lazy-wildcards:
           - dream_world, mythological_dream
         action:
           - long_sleep, deity_sleep, dreaming
-    miHoYo:
-      # https://civitai.com/models/96278/raven-natasha-cioara-or-honkai-impact-3rd-or-lora-or-game
-      raven_honkai_impact:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/miHoYo/raven_honkai_impact/main-trigger-words__
-            ,__lazy-wildcards/cosplay-char/miHoYo/raven_honkai_impact/costume-ethnicity__
-            {,{1-2$$__lazy-wildcards/cosplay-char/miHoYo/raven_honkai_impact/costume__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/miHoYo/raven_honkai_impact/costume-elem__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/miHoYo/raven_honkai_impact/costume-weapon__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/miHoYo/raven_honkai_impact/env__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/miHoYo/raven_honkai_impact/action__}|}
-        main-trigger-words:
-          - raven_\(honkai_impact\), honkai \(series\), mihoyo
-        costume-ethnicity:
-          - grey hair, short hair, red eyes, mole under mouth
-        costume:
-          - black bodysuit, official bodysuit, cape, hood
-          - grey shirt, black necktie, black skirt, black thighhigs
-          - cleavage cutout, clothing cutout, denim, jeans, jacket, open jacket, tank top
-          - bartender
-        costume-elem:
-          - >-
-            hood{, {1-$$hood down|hood up}|}
-          - armored bodysuit
-          - asymmetrical hair
-          - belt buckle
-          - black belt, loose belt
-          - black cloak, two-sided cloak, cape
-          - black gloves, clawed gauntlets, claws
-          - eyes visible through hair
-          - shiny clothes
-          - taut clothes, taut shirt
-          - two-sided fabric
-          - cleavage
-          - naked hoodie
-          - naked jacket
-          - naked cloak
-          - symbol-shaped pupils, x-shaped pupils
-          - high heels
-          - brown pantyhose
-          - feather trim
-          - lace trim
-          - nail polish
-          - bird, crow
-        costume-weapon:
-          - holding shoes, unworn shoes
-          - dagger, knife
-          - holding dagger, holding knife
-        env:
-          - broken screen
-          - flat screen tv, television
-          - calendar \(object\)
-        action:
-          - hands in pockets
-          - hand on own hip
     shin_sekai_yori:
       # https://civitai.com/models/716412/saki-watanabe-shin-sekai-yori?modelVersionId=801155
       # https://civitai.com/models/1069188/saki-watanabe-cap10-shin-sekai-yori?modelVersionId=1200089
@@ -2321,7 +2265,7 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/expressions__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env-bg__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env-creatures__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env-elem-creatures__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/style__}|}
         main-trigger-words:
           - watanabe_saki, Saki Watanabe, Shinsekai, shin_sekai_yori
@@ -2379,7 +2323,7 @@ lazy-wildcards:
           - japanese_village
           - rice_fields
           - traditional_japanese_house
-        env-creatures:
+        env-elem-creatures:
           - squealer
           - kiroumaru
           - queerat
@@ -2399,7 +2343,7 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/expressions__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env-bg__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env-creatures__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/env-elem-creatures__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/shin_sekai_yori/watanabe_saki/style__}|}
         main-trigger-words:
           - akizuki_maria , Maria Akizuki, Shinsekai, shin_sekai_yori
@@ -2432,7 +2376,7 @@ lazy-wildcards:
             __lazy-wildcards/cosplay-char/Tenchi_Muyo/doll_third/main-trigger-words__
             ,{1-$$__lazy-wildcards/cosplay-char/Tenchi_Muyo/doll_third/costume-ethnicity__}
             {,__lazy-wildcards/cosplay-char/Tenchi_Muyo/doll_third/costume__|}
-            {,{1-$$__lazy-wildcards/cosplay-char/Tenchi_Muyo/doll_third/costume-hair__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/Tenchi_Muyo/doll_third/costume-ethnicity-hair__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/Tenchi_Muyo/doll_third/env-bg__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/Tenchi_Muyo/doll_third/style__}|}
         main-trigger-words:
@@ -2442,7 +2386,7 @@ lazy-wildcards:
           - mexiah_form, Tall_figure, tanned_skin, well_endowed, green_eyes, pink_hair
         costume:
           - teacher_uniform, professional_attire
-        costume-hair:
+        costume-ethnicity-hair:
           - left_shoulder_hair
           - gravity_defying_hair, flared_hair, voluminous_hair, side_out_hair, Curled_hair
         env-bg:
@@ -2463,6 +2407,7 @@ lazy-wildcards:
           - military_academy
     Slayers:
       # https://civitai.com/models/714293/naga-the-serpent-or-slayers-or-3-attires?modelVersionId=798811
+      # https://civitai.com/models/838409/gracia-ul-naga-saillune-slayers
       naga_the_serpent:
         prompts:
           - >-
@@ -2473,7 +2418,7 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/cosplay-char/Slayers/naga_the_serpent/action-pose__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/Slayers/naga_the_serpent/style__}|}
         main-trigger-words:
-          - naga_the_serpent, naga the serpent \(cosplay\), Slayers
+          - naga_the_serpent, naga the serpent \(cosplay\), Gracia_Ul_Naga_Saillune, Slayers
         costume-ethnicity:
           - blue eyes, purple hair, long hair, large breasts, antenna hair, bangs, hair intakes, jewelry, lipstick, hair intakes
         costume:
@@ -2487,6 +2432,9 @@ lazy-wildcards:
           - shoulder spikes, spiked pauldrons
           - spiked armor
           - highleg bikini
+          - black_strapless_bra
+          - black_multi-strapped_panties
+          - black_turtleneck_collared_shrug
         action-pose:
           - ojou-sama pose
           - hand on own chest

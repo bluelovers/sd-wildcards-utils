@@ -1,0 +1,28 @@
+lazy-wildcards:
+  subject:
+    env-elem-vehicle:
+      backhoe_loader:
+        prompts:
+          - backhoe_loader
+      # https://danbooru.donmai.us/posts?tags=front-end_loader+&z=5
+      front-end_loader:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem-vehicle/front-end_loader/env-elem-vehicle-main__}
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/front-end_loader/env-elem-vehicle__}|}
+        env-elem-vehicle-main:
+          - front-end loader
+          - skid loader
+        env-elem-vehicle:
+          - kirovets k-700
+          - komatsu wa500-8
+      lowboy_trailer:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-vehicle/lowboy_trailer/env-elem-vehicle-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/lowboy_trailer/env-elem-vehicle__}|}
+        env-elem-vehicle-main:
+          - lowboy trailer
+        env-elem-vehicle:
+          - maz-537
+

@@ -2,6 +2,8 @@ lazy-wildcards:
   subject:
     costume-ethnicity-race:
       # https://civitai.com/models/19620/lora-anthro-cobras
+      # https://civitai.com/models/1161386/hezi-happy-year-of-the-snake-year-of-the-snake-illustrationlesshezigreater?modelVersionId=1306377
+      # https://civitai.com/models/607492/jay-snake-girl
       snake-anthro_cobra:
         prompts:
           - >-
@@ -243,7 +245,7 @@ lazy-wildcards:
         style:
           - cute
           - eerie
-          - post-apocalyptic
+          - __lazy-wildcards/subject/style-elem/post-apocalypse/prompts__
           - cyberware
           - decay
         env:
@@ -328,7 +330,7 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/subject/costume-ethnicity-race/rabbit_girl/costume-ethnicity-main__
             {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/rabbit_girl/costume-ethnicity__}|}
-            {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/rabbit_girl/costume-hair__}|}
+            {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/rabbit_girl/costume-ethnicity-hair__}|}
             {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/rabbit_girl/costume-elem__}|}
             {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/rabbit_girl/action__}|}
             {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/rabbit_girl/env__}|}
@@ -341,7 +343,7 @@ lazy-wildcards:
         costume-ethnicity:
           - red eyes, colored sclera
           - white fur
-        costume-hair:
+        costume-ethnicity-hair:
           - crossed bangs
           - lone nape hair
           - white hair
@@ -377,10 +379,10 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-elem__}|}
             ,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-eyes__}
             {,{1-3$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume__}|}
-            {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-hair__}|}
+            {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-ethnicity-hair__}|}
             {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-weapon__}|}
             {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/env-bg__}|}
-            {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/env-creatures__}|}
+            {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/env-elem-creatures__}|}
             {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/env__}|}
             {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/style__}|}
         costume-ethnicity-main:
@@ -420,7 +422,7 @@ lazy-wildcards:
           - warrior
           - chief
           - temple guard
-        costume-hair:
+        costume-ethnicity-hair:
           - mohawk, punk_hair, colored_mohawk, spiked_hair
         costume-weapon:
           - spear, polearm
@@ -430,7 +432,7 @@ lazy-wildcards:
         env:
           - saddle
           - __lazy-wildcards/subject/env-elem/skull/prompts__
-        env-creatures:
+        env-elem-creatures:
           - Suchosaurus, Deinosuchus, crocodiles
           - dinosaurs
         env-bg:
@@ -496,7 +498,7 @@ lazy-wildcards:
           - sexy_costume
           - sheer_fabric
           - (semi_transparent, see-through:1.2)
-          - lace
+          - __lazy-wildcards/subject/costume-elem-accessories/lace-trim/prompts__
           - form_fitting
           - short_dress
           - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
@@ -645,12 +647,12 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/subject/costume-ethnicity-race/slime_girl/costume-ethnicity-main__
-            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/slime_girl/env-creatures__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/slime_girl/env-elem-creatures__}|}
             {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/slime_girl/costume-ethnicity__}|}
             {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/slime_girl/costume-elem__}|}
         costume-ethnicity-main:
           - slime girl, __lazy-wildcards/subject/env-elem/slime/env-main__
-        env-creatures:
+        env-elem-creatures:
           - slime \(creature\)
           - slime shapeshifter
           - metal slime
