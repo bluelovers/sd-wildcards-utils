@@ -1,0 +1,48 @@
+lazy-wildcards:
+  subject:
+    costume:
+      thigh_boots:
+        prompts:
+          - thigh boots, thighboots
+      # https://civitai.com/models/245278/zaralike-cowboythighboots-zara?modelVersionId=276734
+      zara_cowboy_thigh_boots:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/zara_cowboy_thigh_boots/costume__
+            {, {1-$$__lazy-wildcards/subject/costume/zara_cowboy_thigh_boots/costume__}|}
+        costume:
+          - >-
+            zaracbb, cowboy thigh boots
+            , leather boots, leather thigh boots
+            , zara fashion
+            , __lazy-wildcards/subject/costume/thigh_boots/prompts__
+        costume-elem:
+          - beautiful korean fashion model
+          - bob cut
+          - eyewear on head, sunglasses
+          - handbag, bag
+          - jewelry, earrings
+          - hat
+          - jacket
+      # https://civitai.com/models/46343/bonding-thighboots?modelVersionId=50956
+      thigh_boots-bonding:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/thigh_boots-bonding/costume__
+        costume:
+          - >-
+            hihelz
+            , bonding thigh boots
+            , __lazy-wildcards/subject/costume/thigh_boots/prompts__
+      # 喇叭褲
+      # https://civitai.com/models/177554/flare-leggings?modelVersionId=199315
+      flare_trousers:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/flare_trousers/costume__
+            {, {1-$$__lazy-wildcards/subject/costume/flare_trousers/costume-elem__}|}
+        costume:
+          - flare trousers, flared leggings, flare leggings
+        costume-elem:
+          - bell bottoms
+

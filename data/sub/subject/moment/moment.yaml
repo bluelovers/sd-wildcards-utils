@@ -57,7 +57,23 @@ lazy-wildcards:
       weather-snow:
         prompts:
           - >-
-            ({1-$$winter, Wintery|snow|very cold|snow fall, Winter snowfall|snowy view|snowflake, drifting snowflakes|pure winter|snowylandscape, snowy landscape|Snowy setting}:1.2)
+            ({1-$$__lazy-wildcards/subject/moment/weather-snow/env-moment__}:1.2)
+        env-moment:
+          - winter, Wintery
+          - snow
+          - very cold
+          - snow fall, Winter snowfall
+          - snowy view
+          - snowflake, drifting snowflakes
+          - pure winter
+          - snowylandscape, snowy landscape
+          - snowy environment
+          - frozen environment, frozen landscape
+          - Snowy setting
+          - falling snow, falling snowflakes
+          - surrounded by snowflakes
+          - surrounded by frozen
+          - surrounded by snowy
       weather-lightning:
         prompts:
           - >-
@@ -191,12 +207,12 @@ lazy-wildcards:
       weather-natural-disaster-water:
         prompts:
           - >-
-            __lazy-wildcards/subject/moment/weather-natural-disaster-water/main__
+            __lazy-wildcards/subject/moment/weather-natural-disaster-water/env-moment-main__
             {,{1-3$$__lazy-wildcards/subject/moment/weather-natural-disaster-water/env-bg__}|}
             {,{1-3$$__lazy-wildcards/subject/moment/weather-natural-disaster-water/env__}|}
             {,{1-2$$__lazy-wildcards/subject/moment/weather-natural-disaster-water/env-moment__}|}
             ,{1-4$$__lazy-wildcards/subject/moment/weather-natural-disaster-water/style__}
-        main:
+        env-moment-main:
           - natural disaster, scenery, water
         env-moment:
           - Storm, tempesta
@@ -223,11 +239,16 @@ lazy-wildcards:
           - fish
           - wooden plank
           - box
+          - submerged bodies of water
+          - submerged plants
+          - submerged vegetation
+          - submerged creatures
+          - submerged artifacts
         env-bg:
           - Waterlogged_Land
           - Flood_Plains
           - Overflowing_Rivers
-          - Submerged_Buildings
+          - submerged buildings
           - Flooded_Streets
           - tokyo \(city\)
           - truss

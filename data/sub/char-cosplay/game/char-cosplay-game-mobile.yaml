@@ -318,4 +318,27 @@ lazy-wildcards:
           - hat, dress, cleavage, bare_shoulders, horns, off_shoulder, white_dress
         costume-elem:
           - drunk
+      # https://danbooru.donmai.us/posts/8780182?q=behemoth_%28nikke%29+
+      # https://civitai.com/models/1200014/behemoth-nikke-sd-15?modelVersionId=1351236
+      behemoth:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/NIKKE/behemoth/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/Path-to-Nowhere/Mantis/costume-elem__}|}
+        main-trigger-words:
+          - behemoth, behemoth_\(nikke\), goddess of victory nikke
+        costume-ethnicity:
+          - black horns, black hair, black nails, ear piercing, long hair, red eyes, sharp teeth, black lips, liquid clothes, black liquid, blunt bangs, midriff
+        costume:
+          - black bodysuit, navel
+          - black bikini, black corset, red bow, red bowtie, cross-laced clothes , cross-laced corset, white skirt, frilled skirt, microskirt, garter straps
+          - black dress
+        costume-elem:
+          - pubic tattoo
+          - black gloves, wrist cuffs
+          - black thighhighs
+          - cleavage
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin/skindentation/prompts__
 

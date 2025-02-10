@@ -1,0 +1,60 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      temple:
+        prompts:
+          - __lazy-wildcards/subject/env-bg/temple/main-types/*__
+        main-types:
+          Meditation-Chamber:
+            - temple, Meditation Chamber, Serene space with a tranquil reflecting pool, lush greenery creating a peaceful atmosphere, soft sunlight filtering through stained glass windows, and cushions arranged for quiet contemplation
+          others:
+            - borobudur temple
+      # https://civitai.com/models/351276/jjs-taiwanese-temple?modelVersionId=1354389
+      # https://civitai.com/models/48048/chenghuang
+      # https://civitai.com/models/239071/jjs-chinese-buddhist-temple?modelVersionId=269599
+      temple-taiwanese:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/temple-taiwanese/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/temple-taiwanese/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/temple-taiwanese/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/temple-taiwanese/style__}|}
+        env-bg-main:
+          - taiwanese temple, traditional architecture, chinese temple, ArchiZHS, Chenghuang
+        env-bg:
+          - temple roofs, swallowtail roof, upturned eaves, curved roof, temple roof
+          - main hall, temple sanctuary
+          - courtyard area
+          - surrounding area
+          - temple rituals
+          - san chuan hall
+          - temple courtyard, open space
+          - inner garden
+          - night temple
+          - chinese buddhist temple
+        env:
+          - statue, deities
+          - dragon pillars
+          - jiannian mosaic ornamentation, temple decoration, jian nian
+          - glazed tiles
+          - san chuan gate, temple entrance
+          - altar
+          - incense burner
+          - bagua windows
+          - bell and drum towers
+          - red lanterns
+          - wooden structure
+          - intricate carving
+          - wood carving
+          - stone sculpture
+        style:
+          - temple festivals
+          - god processions
+          - wangchuan festival
+          - wishing for luck turtles
+          - zhong kui dance
+          - vibrant colors
+          - illuminated building, spiritual atmosphere
+          - temple red, auspicious color, vibrant hue
+          - gold foil decor, golden decoration, royal symbol, sacred color
+

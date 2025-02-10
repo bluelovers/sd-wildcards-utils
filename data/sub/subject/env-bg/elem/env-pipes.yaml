@@ -1,0 +1,36 @@
+lazy-wildcards:
+  subject:
+    env-elem-pipes:
+      industrial-pipes:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem-pipes/industrial-pipes/env-main__}
+            {, {1-$$__lazy-wildcards/subject/env-elem-pipes/industrial-pipes/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-pipes/industrial-pipes/costume-weapon__}|}
+        env-main:
+          - cables, tubes
+          - industrial pipes
+          - wire
+          - drainpipe
+        env:
+          - cables everywhere, scattered cables
+          - hanging cables
+          - metal chains
+          - industrial wires
+          - dangling chains
+          - corroded pipes
+          - visible pipes
+          - metal pipeline, metal pipes
+        costume-weapon:
+          - holding cable
+      tubes-connected:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem-pipes/tubes-connected/costume-elem__}
+        costume-elem:
+          - blood vessels connected to tubes
+          - mechanical vertebra attaching to back
+          - mechanical cervial attaching to neck
+          - wires and cables attaching to neck
+          - wires and cables on head
+

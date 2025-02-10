@@ -1,5 +1,6 @@
 lazy-wildcards:
   cosplay-char:
+    # https://civitai.com/user/Fenchurch/models
     ShinMegamiTensei:
       # https://civitai.com/models/613904/danu-shin-megami-tensei?modelVersionId=686262
       demons-danu:
@@ -116,5 +117,44 @@ lazy-wildcards:
           - >-
             SMTCleo
             , femme cleopatra \(megami_tensei\)
-            , egyptian, snakes, midriff
+            , egyptian
+            , snakes
+            , midriff
+            , blonde hair, yellow eyes
+            , __lazy-wildcards/subject/env-elem-creatures/year_of_the_snake/prompts__
+      # https://civitai.com/models/84610/divine-angel-shin-megami-tensei
+      # https://civitai.com/models/237115/catzo-body-harnesses?modelVersionId=267337
+      divine_angel:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/ShinMegamiTensei/divine_angel/main-trigger-words__
+            {, __lazy-wildcards/cosplay-char/ShinMegamiTensei/divine_angel/costume-ethnicity__|}
+            , (__lazy-wildcards/cosplay-char/ShinMegamiTensei/divine_angel/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/divine_angel/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/divine_angel/action__}|}
+        main-trigger-words:
+          - angel_\(megami_tensei\), SMTAngel, shin megami tensei, wh1te
+        costume-ethnicity:
+          - blonde hair, long hair
+        costume:
+          - >-
+            blindfold, covered eyes
+            , white wings
+            , studded collar, white chain, chain leash
+            , o-ring, garter belt
+            , harness, bondage harness, body harness
+            , breasts, naked, crotchless
+        costume-elem:
+          - bat wings
+          - angle wings
+          - feathered wings
+          - skull
+          - bondage outfit
+          - armpits
+          - eye print
+          - leash
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin/skindentation/prompts__
+        action:
+          - arm behind head
+          - arm up
 

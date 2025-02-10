@@ -107,19 +107,19 @@ lazy-wildcards:
       maid:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume/maid/main__
-            {0.3::, {1-$$__lazy-wildcards/subject/costume/maid/style__}|}
-        style:
+            __lazy-wildcards/subject/costume/maid/costume__
+            {, {1-$$__lazy-wildcards/subject/costume/maid/costume-elem__}|}
+        costume-elem:
           - cleavage
           - puffed sleeves
           - ornate apron
           - glasses
-        main:
-          - __lazy-wildcards/subject/costume/maid/utils/maid-color-01(c=blue,c2=white)__
-          - __lazy-wildcards/subject/costume/maid/utils/maid-color-01(c=!__mix-lazy-auto/color-anything__,c2=white)__
-          - __lazy-wildcards/subject/costume/maid/utils/maid-color-01(c=__mix-lazy-auto/color-anything__,c2=white)__
-          - __lazy-wildcards/subject/costume/maid/utils/maid-color-01(c=__mix-lazy-auto/color-anything__,c2=__mix-lazy-auto/color-anything__)__
-        utils:
+        costume:
+          - __lazy-wildcards/subject/costume/maid/fn/maid-color-01(c=blue,c2=white)__
+          - __lazy-wildcards/subject/costume/maid/fn/maid-color-01(c=!__mix-lazy-auto/color-anything__,c2=white)__
+          - __lazy-wildcards/subject/costume/maid/fn/maid-color-01(c=__mix-lazy-auto/color-anything__,c2=white)__
+          - __lazy-wildcards/subject/costume/maid/fn/maid-color-01(c=__mix-lazy-auto/color-anything__,c2=__mix-lazy-auto/color-anything__)__
+        fn:
           maid-color-01:
             - >-
               maid headdress,
@@ -130,4 +130,12 @@ lazy-wildcards:
               ${c2:white} apron, frilled apron,
               ${c:blue} skirt, frilled skirt,
               ${c:blue} boots
+      # https://civitai.com/models/482572/china-maidxlponyillsd?modelVersionId=542806
+      maid-china:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/maid-china/costume__
+            , __lazy-wildcards/subject/costume/maid/prompts__
+        costume:
+          - jyojifuku, china maid, apron, frills, double bun
 

@@ -46,7 +46,15 @@ lazy-wildcards:
       year_of_the_snake:
         prompts:
           - >-
+            __lazy-wildcards/subject/env-elem-creatures/year_of_the_snake/env-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-creatures/year_of_the_snake/env__}|}
+        env-main:
+          - >-
             __lazy-wildcards/subject/env-elem-creatures/chinese_zodiac/fn/year(v=Snake)__
             , snakealicious
             , SNKY01, snekv1
+        env:
+          - surrounded by snake
+          - white snake
+          - gold snake
 

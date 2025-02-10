@@ -233,7 +233,7 @@ lazy-wildcards:
           - m0ss_dr3ss ,elaborate long dress made of moss
         env:
           - >-
-            ({1-$$moss slime vines|moss vines|mossy_surface})
+            ({1-$$moss slime vines|moss vines|mossy surface})
           - >-
             slime_\(substance\), sticky slime
           - twigs
@@ -259,10 +259,12 @@ lazy-wildcards:
       railing:
         prompts:
           - >-
-            railing
+            __lazy-wildcards/subject/env-elem/railing/env__
             {,{1-2$$__lazy-wildcards/subject/env-elem/railing/env-railing__}|}
             {,{1-$$__lazy-wildcards/subject/env-elem/railing/action__}|}
             {,{1-$$__lazy-wildcards/subject/env-elem/railing/style__}|}
+        env:
+          - railing
         env-railing:
           - wrought_iron_railing
           - glass_railing
@@ -368,28 +370,6 @@ lazy-wildcards:
           - rooftop
         action-pose:
           - against fence
-      industrial-pipes:
-        prompts:
-          - >-
-            {1-$$__lazy-wildcards/subject/env-elem/industrial-pipes/env-main__}
-            {, {1-$$__lazy-wildcards/subject/env-elem/industrial-pipes/env__}|}
-            {, {1-$$__lazy-wildcards/subject/env-elem/industrial-pipes/costume-weapon__}|}
-        env-main:
-          - cables, tubes
-          - industrial pipes
-          - wire
-          - drainpipe
-        env:
-          - cables everywhere, scattered cables
-          - hanging cables
-          - metal chains
-          - industrial wires
-          - dangling chains
-          - corroded pipes
-          - visible pipes
-          - metal pipeline, metal pipes
-        costume-weapon:
-          - holding cable
       # https://civitai.com/models/923032/tree-figure?modelVersionId=1033185
       tree_figure:
         prompts:

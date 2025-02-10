@@ -186,6 +186,7 @@ lazy-wildcards:
           - depressive_aura
           - __lazy-wildcards/utils/color-base__ lighting
       # https://civitai.com/models/329635/xuer-dieselpunk?modelVersionId=369373
+      # https://civitai.com/models/69318/reel-dieselpunk?modelVersionId=73990
       dieselpunk:
         prompts:
           - >-
@@ -209,6 +210,7 @@ lazy-wildcards:
           - plump thighs
           - arm tattoo
           - crop top
+          - military
         costume-headwear:
           - vintage_goggles
           - leather_helmet
@@ -223,6 +225,8 @@ lazy-wildcards:
           - anti_aircraft_turret
           - diesel_exhaust
           - wet
+          - ground vehicle
+          - atmospheric volumetric fog
         env-elem-vehicle:
           - Zeppelins, Warplanes, diesel_engine_aircraft, retro_futuristic_flying_machine
           - giant_war_machine, diesel_robot, tank_like_mech, mechanical_giant
@@ -296,7 +300,7 @@ lazy-wildcards:
           - numerous small components
           - futuristic mechanics
           - visible bolts
-          - __lazy-wildcards/subject/env-elem/industrial-pipes/prompts__
+          - __lazy-wildcards/subject/env-elem-pipes/industrial-pipes/prompts__
           - visible gears
           - mecha_parts
           - pistons
@@ -333,7 +337,7 @@ lazy-wildcards:
           - GasLampFantasyAI, gaslamp
         env:
           - __lazy-wildcards/subject/env-elem-punk/dieselpunk/prompts__
-          - __lazy-wildcards/subject/env-elem/industrial-pipes/prompts__
+          - __lazy-wildcards/subject/env-elem-pipes/industrial-pipes/prompts__
           - __lazy-wildcards/subject/env-elem/gaslamp/prompts__
           - alchemy_apparatus
           - mystical_fog

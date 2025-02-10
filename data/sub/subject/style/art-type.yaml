@@ -243,6 +243,7 @@ lazy-wildcards:
       # https://civitai.com/models/88900/gmic-iconpixel-style?modelVersionId=94602
       # https://civitai.com/models/1010793/pixeldreamlora?modelVersionId=1133034
       # https://civitai.com/models/1034297/pixelmonster
+      # https://civitai.com/models/44960/mpixel
       pixel-game-icon:
         prompts:
           - >-
@@ -527,4 +528,39 @@ lazy-wildcards:
           - robotic_designs
           - dual_identity
           - battle_damage
+      # https://civitai.com/images/2019470?postId=496541
+      graffiti-style:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-art-type/graffiti-style/style-art-main__
+            {, {1-$$__lazy-wildcards/subject/style-art-type/graffiti-style/style-art-type__}|}{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+            {, {1-$$__lazy-wildcards/subject/style-art-type/graffiti-style/style__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/style-art-type/graffiti-style/env__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/style-art-type/graffiti-style/costume-elem__}|}
+        style-art-main:
+          - graffiti-style, inspired by graffiti-style, graffiti-style-inspired
+        style-art-type:
+          - bold graffiti-style patterns
+          - graffiti letters wild style
+        style:
+          - __lazy-wildcards/subject/style-elem/street-art-playful/prompts__
+          - >-
+            {urban |}graffiti-filled
+          - pornography graffiti
+          - vibrant colors
+          - dynamic and energetic look
+          - graffiti wall art
+          - abandoned
+          - graffiti-style background
+        env:
+          - >-
+            {urban |}graffiti-filled alley
+          - >-
+            {urban |}graffiti-filled wall
+          - >-
+            {urban |}graffiti-filled street
+          - wall graffiti landscape
+          - graffiti on old buildings
+        costume-elem:
+          - graffiti-style clothes
 

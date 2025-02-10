@@ -59,4 +59,52 @@ lazy-wildcards:
             {1-$$swamp ruins|ancient structures}
           - enchanted_swamp
           - __lazy-wildcards/subject/env-bg/swamp-*/prompts__
+      # https://civitai.com/models/90534/submerged-ruins?modelVersionId=98546
+      # https://civitai.com/models/19206/submergedwater
+      submerged:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/submerged/env-main-trigger-words__
+            {, {1-$$__lazy-wildcards/subject/env-elem/submerged/env-bg-main__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/submerged/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/submerged/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/submerged/style__}|}
+        env-main-trigger-words:
+          - submerged, submerged displays, water, submerged water
+        env-bg-main:
+          - partially submerged
+        env-bg:
+          - submerged buildings
+          - submerged structures
+          - submerged ruins
+          - rooftop
+          - submerged skyscraper, submerged tower
+          - submerged cityscape
+          - deep submersion, deep submerged
+          - submerged dungeon
+          - submerged world
+        env:
+          - submerged items
+          - submerged vehicles
+          - submerged machinery
+          - ocean
+          - mountainous horizon
+          - __lazy-wildcards/subject/moment/weather-natural-disaster-water/prompts__
+          - __lazy-wildcards/subject/env-elem/moss/prompts__
+          - decay
+          - rubble
+          - debris
+          - __lazy-wildcards/subject/env-elem/railing/prompts__
+          - river
+          - lake
+          - reflection
+          - __lazy-wildcards/subject/env-elem/bridge/prompts__
+          - tree
+          - fish
+        style:
+          - facing away
+          - from behind
+          - horizon
+          - __lazy-wildcards/utils/scenery-no-humans__
+          - __lazy-wildcards/subject/style-elem/post-apocalypse/prompts__
 

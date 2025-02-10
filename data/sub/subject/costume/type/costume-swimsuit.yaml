@@ -86,4 +86,19 @@ lazy-wildcards:
           - bikini bottom only
           - bikini under clothes
           - bikini aside
+      # https://civitai.com/images/56238283
+      minishorts_denim_shorts:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/minishorts_denim_shorts/costume__
+            {, {1-$$__lazy-wildcards/subject/costume/minishorts_denim_shorts/costume-elem__}|}
+        costume:
+          - minishorts, denim shorts
+        costume-elem:
+          - choker, jacket
+          - black choker, black jacket
+          - bikini
+          - halterneck
+          - side-tie bikini bottom, string bikini
+          - sandals
 

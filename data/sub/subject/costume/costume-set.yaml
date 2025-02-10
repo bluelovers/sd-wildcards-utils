@@ -1,0 +1,17 @@
+lazy-wildcards:
+  subject:
+    costume:
+      coat_sweater_denim_pants:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/coat_sweater_denim_pants/costume__
+            {, {1-$$__lazy-wildcards/subject/costume/coat_sweater_denim_pants/costume-elem__}|}
+        costume:
+          - >-
+            coat, open coat
+            , long sleeves
+            , denim pants
+            , high boots
+        costume-elem:
+          - sweater
+

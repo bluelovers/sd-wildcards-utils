@@ -1,0 +1,27 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      # https://civitai.com/models/298602/jjs-food-stand-design?modelVersionId=1369597
+      # https://civitai.com/models/429762/large-food-stalls
+      # https://civitai.com/models/83984/omatsuri
+      food_stand:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/food_stand/env-bg-main__)
+            {, {1-$$__lazy-wildcards/subject/env-bg/food_stand/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/food_stand/env__}|}
+        env-bg-main:
+          - omatsuri, food stand, food stalls
+        env-bg:
+          - large food stand, large food stalls
+          - food shops
+        env:
+          - english text
+          - japanese text
+          - chinese text
+          - plant
+          - table
+          - road
+          - food logo
+          - vehicle
+

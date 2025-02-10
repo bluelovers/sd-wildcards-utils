@@ -57,11 +57,11 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/subject/env-elem/stairs/env-main__
-            {0.7::,({1-3$$__lazy-wildcards/subject/env-elem/stairs/env-stairs__})|}
-            {,{1-2$$__lazy-wildcards/subject/env-elem/stairs/env-stairs-style__}|}
-            {,{1-$$__lazy-wildcards/subject/env-elem/stairs/action__}|}
-            {,{1-$$__lazy-wildcards/subject/env-elem/stairs/env__}|}
-            {0.2::,{1-$$__lazy-wildcards/subject/env-elem/stairs/style__}|}
+            {0.7::, ({1-3$$__lazy-wildcards/subject/env-elem/stairs/env-stairs__})|}
+            {, {1-2$$__lazy-wildcards/subject/env-elem/stairs/env-stairs-style__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/stairs/action__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/stairs/env__}|}
+            {0.2::, {1-$$__lazy-wildcards/subject/env-elem/stairs/style__}|}
         env-main:
           - stairs
         env-stairs:
@@ -98,12 +98,12 @@ lazy-wildcards:
       bridge:
         prompts:
           - >-
-            (__lazy-wildcards/subject/env-elem/bridge/main__
+            (__lazy-wildcards/subject/env-elem/bridge/env-main__
             {, {1-3$$__lazy-wildcards/subject/env-elem/bridge/env-bridge-main*__}|}{0.3:::{1.2|1.3|1.4}|})
             {0.3::, {1-3$$__lazy-wildcards/subject/env-elem/bridge/env-bridge-style1__}|}
             {0.3::, {1-3$$__lazy-wildcards/subject/env-elem/bridge/env-bridge-style2__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem/bridge/env__}|}
-        main:
+        env-main:
           - bridge
         env-bridge-main1:
           - >-

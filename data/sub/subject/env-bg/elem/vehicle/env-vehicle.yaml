@@ -1,6 +1,12 @@
 lazy-wildcards:
   subject:
     env-elem-vehicle:
+      other:
+        prompts:
+          - >-
+            {1-2$$__lazy-wildcards/subject/env-elem-vehicle/other/env-elem-vehicle__}
+        env-elem-vehicle:
+          - personal-flying-space-vehicle
       backhoe_loader:
         prompts:
           - backhoe_loader

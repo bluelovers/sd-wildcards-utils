@@ -74,15 +74,21 @@ lazy-wildcards:
           - __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-peek2/prompts__
           - no bra
           - __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-visible-through-clothes/prompts__
+      # https://civitai.com/models/281318/breast-squeeze
       squeezing_breasts:
         prompts:
           - >-
-            ({1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/squeezing_breasts/costume-breasts__}{0.3:::{1.2|1.3|1.4}|})
+            (__lazy-wildcards/subject/costume-ethnicity-breasts/squeezing_breasts/costume-breasts-main-trigger-words__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/squeezing_breasts/costume-breasts__}|}{0.3:::{1.2|1.3|1.4}|})
+            {0.3::, {1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/squeezing_breasts/action__}|}
+        costume-breasts-main-trigger-words:
+          - squeezing breasts, breasts squeezed, breast squeeze
         costume-breasts:
-          - squeezing breasts, breasts squeezed
           - >-
             squeezing {other|own|their} breasts
           - squeezing breasts together, breasts squeezed together
+        action:
+          - lactation fountain, grab one breast with both hands
       # https://civitai.com/models/1106664/underboobies?modelVersionId=1244528
       breasts-out:
         prompts:
@@ -90,12 +96,35 @@ lazy-wildcards:
             ({1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-out/costume-breasts-out__}{0.3:::{1.2|1.3|1.4}|})
         costume-breasts-out:
           - underboob
-          - >-
-            {one |}breasts out{ of clothes|}{, breasts_outside|}
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-out-base/prompts__
           - exposed breasts
           - sideboob
           - >-
             {extended |}downblouse
+      # https://civitai.com/models/218577/one-breast-out?modelVersionId=264933
+      # https://civitai.com/models/91190/conceptoppai-challengestealth-one-breast-out
+      # https://civitai.com/models/307453/one-breast-out-2-mb
+      # https://civitai.com/models/11394/one-breast-exposed-concept-lora
+      # https://civitai.com/models/120550/concept-katamune-oppai-chanllenge
+      # https://civitai.com/models/11868/oneboob-when-one-is-enough
+      breasts-out-base:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-out-base/main-trigger-words__
+            , ({1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-out-base/costume-breasts-out__}{0.3:::{1.2|1.3|1.4}|})
+            {0.3::, {1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-out-base/costume-elem__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-out-base/style__}|}
+        main-trigger-words:
+          - katamune, oneboob
+        costume-breasts-out:
+          - >-
+            one breasts out{ of clothes|}, one breasts exposed, exposed one breasts
+          - >-
+            breasts out{ of clothes|}, breasts expanded, exposed breasts
+        costume-elem:
+          - clothes lift
+        style:
+          - pov across table
       # https://civitai.com/models/128638/taretiti-sagging-breasts?modelVersionId=140868
       breasts-shapes-sagging:
         prompts:
@@ -199,6 +228,7 @@ lazy-wildcards:
       # https://civitai.com/models/223266/covering-breastsnipples-fingers?modelVersionId=251883
       # https://civitai.com/models/223317
       # https://civitai.com/models/223266/covering-breastsnipples-fingers?modelVersionId=251883
+      # https://civitai.com/models/267526/covering-nipples?modelVersionId=301652
       covering_breasts:
         prompts:
           - >-
@@ -219,6 +249,7 @@ lazy-wildcards:
           - hand on own chest, hand on own breasts
           - __lazy-wildcards/subject/costume-ethnicity-breasts/breast_squish/prompts__
           - covering crotch
+          - covering nipples
         action-pose:
           - crossed arms
           - two hands, covering by hands

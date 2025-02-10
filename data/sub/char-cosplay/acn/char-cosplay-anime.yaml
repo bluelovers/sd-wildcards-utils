@@ -242,6 +242,21 @@ lazy-wildcards:
           - __lazy-wildcards/subject/action-pose-anything/pose-bottom-nsfw-open-legs/prompts__
           - arms behind head
           - arm up
+      # https://civitai.com/models/1166808/repost-code-geass?modelVersionId=1312680
+      # https://pixai.art/model/1722803656616484537?lang=ja
+      npc-officer-1166808:
+        prompts:
+          - >-
+            (__lazy-wildcards/cosplay-char/code_geass/npc-officer-1166808/costume-headwear__{0.3:::{1.2|1.3|1.4}|})
+            {0.8::, __lazy-wildcards/cosplay-char/code_geass/npc-officer-1166808/costume__|}
+            {, __lazy-wildcards/cosplay-char/code_geass/npc-officer-1166808/costume-ethnicity__|}
+        costume-ethnicity:
+          - blonde hair, long hair, straight hair, center parted bangs, purple eyes
+        costume-headwear:
+          - black garrison cap, Side cap
+        costume:
+          - >-
+            black collared military uniform, black pencil skirt, pantyhose, black military boots
     # https://danbooru.donmai.us/posts?tags=saber_marionette_j&z=5
     # https://danbooru.donmai.us/posts?tags=saber_marionette_r&z=5
     saber_marionette_j:

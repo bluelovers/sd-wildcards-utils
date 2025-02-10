@@ -2,20 +2,21 @@ lazy-wildcards:
   subject:
     costume-elem:
       # https://civitai.com/models/260177/bone-dress-by-edg?modelVersionId=293461
+      # https://civitai.com/models/250346/wearing-bones?modelVersionId=282494
       skull-clothes:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume-elem/skull-clothes/costume-main__
+            (__lazy-wildcards/subject/costume-elem/skull-clothes/costume-main__{0.3:::{1.2|1.3|1.4}|})
             {, {1-$$__lazy-wildcards/subject/costume-elem/skull-clothes/costume-elem__}|}
         costume-main:
-          - skull, skeleton, bones, TranslucentVisibility, edgBones, wearing edgBones, skeletal
+          - skull, skeleton, bones, TranslucentVisibility, edgBones, wearing edgBones, skeletal, b0n3w3ar, wearing bones
         costume-elem:
           - >-
-            skull {1-$$, skull $$bra|necklace|hair ornament|shield|helmet|mask|body|dress|clothes}
+            skull {1-$$, skull $$bra|necklace|hair ornament|shield|helmet|mask|body|dress|clothes|armor|suit}
           - >-
-            skeleton bones {1-$$, skeleton bones $$bra|necklace|hair ornament|shield|helmet|mask|body|dress|clothes|arms|legs}
+            skeleton bones {1-$$, skeleton bones $$bra|necklace|hair ornament|shield|helmet|mask|body|dress|clothes|arms|legs|armor|suit}
           - >-
-            skeletal bones {1-$$, skeletal bones $$bra|necklace|hair ornament|shield|helmet|mask|body|dress|clothes|arms|legs}
+            skeletal bones {1-$$, skeletal bones $$bra|necklace|hair ornament|shield|helmet|mask|body|dress|clothes|arms|legs|armor|suit}
           - half skeleton mask
           - bones carving skin
           - exo-bones mecha

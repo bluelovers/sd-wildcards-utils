@@ -105,4 +105,12 @@ lazy-wildcards:
           - princess neckline
           - mini skirt
           - dress
+      bow-color:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-accessories/bow-color/costume-elem__
+        costume-elem:
+          - __lazy-wildcards/utils/color-base__ bow
+          - >-
+            {2-3$$ bow, $$__lazy-wildcards/utils/color-base__} bow, multicolored bow
 

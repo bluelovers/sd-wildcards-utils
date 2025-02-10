@@ -57,4 +57,31 @@ lazy-wildcards:
             {1-$$__lazy-wildcards/subject/env-bg-architectural/ice_brick_house/env__}
         env-elem-creatures:
           - ethereal_snow_creatures
+      snowy_street:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-architectural/snowy_street/env-main-trigger-words__
+            , {1-$$__lazy-wildcards/subject/env-bg-architectural/snowy_street/env-bg-main__}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/snowy_street/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/snowy_street/env__}|}
+        env-main-trigger-words:
+          - snowing, snowy weather, frozen
+        env-bg-main:
+          - snowy street view, snowy environment
+          - frozen streets, frozen environment
+        env-bg:
+          - metropolis
+          - japanese city, tokyo
+          - outdoors
+        env:
+          - __lazy-wildcards/subject/moment/weather-snow/prompts__
+          - white sky
+          - sunset
+          - surrounded by snowflakes
+          - surrounded by frozen
+          - surrounded by snowy
+          - beach
+          - clouds
+          - mountain
+          - buildings
 

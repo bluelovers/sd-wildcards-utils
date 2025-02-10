@@ -316,4 +316,41 @@ lazy-wildcards:
           - pastel tones
           - asymmetrical composition
           - rustic charm
+      # https://civitai.com/models/525460
+      second_floor_entrance:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-architectural/second_floor_entrance/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            , __lazy-wildcards/subject/env-bg-architectural/second_floor_entrance/env-bg__
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/second_floor_entrance/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/second_floor_entrance/style-view__}|}
+        env-bg-main:
+          - >-
+            second floor entrance
+            , a door or set of doors leading to the second level
+            , stairs
+        env-bg:
+          - >-
+            entrance, door, scenery
+            , front steps
+            , ramp, slope
+            , pathway
+            , building
+            , house
+            , outdoors, exterior
+            , second level
+            , __lazy-wildcards/utils/scenery__
+        env:
+          - handrail wall
+          - tree
+          - road
+          - turf, bush
+          - lamppost
+          - roadside
+          - __lazy-wildcards/subject/env-elem/stairs/prompts__
+          - victorian house
+        style-view:
+          - overlooking, overhead view, aerial view, from above, horizon
+          - >-
+            going {down|up}stairs
 

@@ -45,7 +45,8 @@ lazy-wildcards:
           - hangar
           - sidonia \(ship\)
         env:
-          - __lazy-wildcards/subject/env-elem/industrial-pipes/prompts__
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem-pipes/*/prompts__}
           - toha heavy industries
           - wire
           - __lazy-wildcards/subject/env-elem/bridge/prompts__

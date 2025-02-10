@@ -179,4 +179,34 @@ lazy-wildcards:
           - post-apocalypse survival
         env-bg:
           - post-apocalypse landscape
+      # https://civitai.com/models/1177274/bigbrush-painting-artstyle-sd15?modelVersionId=1324723
+      big_brush:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-elem/big_brush/style-main__
+            {, {1-$$__lazy-wildcards/subject/style-elem/big_brush/style__}|}
+        style-main:
+          - BigBrush Painting Art Style, bold_brushstrokes
+        style:
+          - dynamic_movement, expressive_art
+          - hand_painted_texture, rough_brushwork
+          - organic_feel
+          - layered_brushstrokes
+          - textured_surface
+          - depth_effect
+          - bold_lighting
+          - gradient_effect
+          - bold_colors
+          - color_flow
+          - watercolor
+          - oil painting
+      street-art-playful:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-elem/street-art-playful/style-art-main__
+            {, {1-$$__lazy-wildcards/subject/style-elem/street-art-playful/style__}|}
+        style-art-main:
+          - playful street art inspiration
+        style:
+          - urban creativity
 

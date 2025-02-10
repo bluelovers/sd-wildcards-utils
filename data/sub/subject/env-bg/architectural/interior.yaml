@@ -775,4 +775,42 @@ lazy-wildcards:
           - light bokeh
           - >-
             {indoors, from outside looking in|outdoors, from inside looking out}
+      # 拍貼機
+      # https://civitai.com/models/1206104/girl-like-purikura-inside?modelVersionId=1358279
+      # https://danbooru.donmai.us/posts?tags=purikura+&z=5
+      purikura_booth_interior:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-interior/purikura_booth_interior/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/purikura_booth_interior/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/purikura_booth_interior/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/purikura_booth_interior/action__}|}
+        env-bg-main:
+          - purikura booth interior, photo booth, purikura, purikura inside, at inside of purikura
+        env:
+          - private box
+          - phone
+          - small_booth
+          - curtains
+          - charm \(object\)
+          - camera
+          - virtual_backgrounds
+          - kawaii_decor, cute_design, playful_atmosphere
+        costume-elem:
+          - cleavage
+          - off shoulder
+          - school bag
+        action:
+          - hand on another's chest, grabbing another's breast
+          - hug from behind, grabbing from behind
+          - sex from behind
+          - leaning forward, bent over
+          - head down
+          - hands up
+          - kiss
+          - sitting on person, booth seating
+          - peace sign, v sign, v, from above
+          - holding stylus
+          - couple, yuri
+          - heart, heart hands duo, heart hands
 
