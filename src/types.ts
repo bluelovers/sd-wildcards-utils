@@ -202,3 +202,12 @@ export interface IOptionsCheckAllSelfLinkWildcardsExists extends Pick<IOptionsFi
 export type IParseWildcardsYamlInputSource = string | Uint8Array
 
 export type IYamlNodeTypeSymbol = typeof SYMBOL_YAML_NODE_TYPE_ALIAS | typeof SYMBOL_YAML_NODE_TYPE_DOC | typeof SYMBOL_YAML_NODE_TYPE_MAP | typeof SYMBOL_YAML_NODE_TYPE_PAIR | typeof SYMBOL_YAML_NODE_TYPE_SCALAR | typeof SYMBOL_YAML_NODE_TYPE_SEQ
+
+export interface ICheckErrorResult
+{
+	value: string,
+	match?: string,
+	index?: number,
+	near?: string,
+	error: string,
+}
