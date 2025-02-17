@@ -132,7 +132,7 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/style-elem/dripping-colors/style-main__}|}
             {, {1-$$__lazy-wildcards/subject/style-elem/dripping-colors/style__}|}
         style-main2:
-          - drip painting
+          - __lazy-wildcards/utils/fn/style-inspired(v=drip_painting)__
         style-main:
           - psychedelic dripping colors
           - splashes of color, color splashes, paint splash
@@ -161,11 +161,12 @@ lazy-wildcards:
             __lazy-wildcards/subject/style-elem/sci-fi/style-main__
             {, {1-$$__lazy-wildcards/subject/style-elem/sci-fi/style__}|}
         style-main:
-          - sci-fi, sci-fi theme, science fiction
+          - sci-fi, sci-fi theme, scifi, science fiction, __lazy-wildcards/utils/fn/style-inspired(v=sci-fi)__
         style:
           - sci-fi tech
           - sci-fi setting
           - sci-fi futuristic settings
+          - retro scifi, retro sci-fi
       # https://danbooru.donmai.us/posts?tags=post-apocalypse&z=5
       post-apocalypse:
         prompts:
@@ -174,7 +175,7 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/style-elem/post-apocalypse/style__}|}
             {, {1-$$__lazy-wildcards/subject/style-elem/post-apocalypse/env-bg__}|}
         style-main:
-          - post-apocalypse, post_apocalyptic, post-apocalypse theme
+          - post-apocalypse, post_apocalyptic, post-apocalypse theme, __lazy-wildcards/utils/fn/style-inspired(v=post-apocalypse)__
         style:
           - post-apocalypse survival
         env-bg:
@@ -209,4 +210,9 @@ lazy-wildcards:
           - playful street art inspiration
         style:
           - urban creativity
+      pvc_figure:
+        prompts:
+          - >-
+            pvc, figure
+            , __lazy-wildcards/utils/fn/style-inspired(v=pvc)__
 

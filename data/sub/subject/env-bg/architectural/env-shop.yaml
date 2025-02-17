@@ -24,4 +24,35 @@ lazy-wildcards:
           - road
           - food logo
           - vehicle
+      # https://civitai.com/models/203415/mcdonalds-japan-indoors-sd15
+      mcdonalds-indoors:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/mcdonalds-indoors/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/mcdonalds-indoors/env__}|}
+            , __lazy-wildcards/cosplay-char/mcdonalds/shared/prompts-shared-002__
+        env-bg-main:
+          - makudo, indoors, poster \(object\), table
+        env:
+          - ceiling, ceiling light
+          - window
+      # https://civitai.com/models/203163/mcdonalds-japan-storefront-sd15
+      mcdonalds-storefront:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/mcdonalds-storefront/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/mcdonalds-storefront/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/mcdonalds-storefront/env__}|}
+            , __lazy-wildcards/cosplay-char/mcdonalds/shared/prompts-shared-002__
+        env-bg-main:
+          - >-
+            makudo, storefront, scenery, poster \(object\), outdoors
+        env-bg:
+          - roadsidemakudo, sky, cloud, mcdonald's building, power lines, utility pole
+        env:
+          - bicycle
+          - ground vehicle
+          - shop, food
+          - tile floor
+          - tiles
 

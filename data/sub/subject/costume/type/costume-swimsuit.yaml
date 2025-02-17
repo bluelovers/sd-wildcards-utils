@@ -101,4 +101,25 @@ lazy-wildcards:
           - halterneck
           - side-tie bikini bottom, string bikini
           - sandals
+      # https://zh.wikipedia.org/zh-tw/%E8%83%B8%E7%BD%A9%E6%AC%BE%E5%BC%8F%E5%88%97%E8%A1%A8
+      # https://civitai.com/models/780914/shelf-brasdxlpony?modelVersionId=889297
+      shelf_bra:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/shelf_bra/costume__
+            {, {1-$$__lazy-wildcards/subject/costume/shelf_bra/costume-breasts-bra__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/shelf_bra/costume-elem__}|}
+        costume:
+          - shelf bra, breasts
+        costume-breasts-bra:
+          - balconet
+          - balconette
+          - demi-cup
+          - half-bra
+          - cupless bra
+          - open-cup
+          - half-bra
+          - quarter-cup bra
+        costume-elem:
+          - topless
 

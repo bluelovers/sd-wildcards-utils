@@ -11,7 +11,7 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/subject/env-bg/battlestar_galactica_interiors/costume-weapon__}|}
             {,{1-$$__lazy-wildcards/subject/env-bg/battlestar_galactica_interiors/style__}|}
         env-bg-main:
-          - battlestar_galactica, battlestar galactica interiors, indoors, interior, science fiction
+          - battlestar_galactica, battlestar galactica interiors, indoors, interior, __lazy-wildcards/subject/style-elem/sci-fi/prompts__
         env:
           - table, desk
           - machinery
@@ -39,7 +39,7 @@ lazy-wildcards:
           - gun
         style:
           - flying
-          - no humans
+          - __lazy-wildcards/utils/scenery-no-humans__
       rocket_launch_site:
         prompts:
           - >-

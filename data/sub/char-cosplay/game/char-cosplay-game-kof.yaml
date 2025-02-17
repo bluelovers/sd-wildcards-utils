@@ -47,4 +47,43 @@ lazy-wildcards:
           - side slit, red dress
           - red headwear
           - indian clothes
+      # https://civitai.com/models/23066/mature-the-king-of-fighters-lora
+      # https://civitai.com/models/1235236/mature-kof?modelVersionId=1392052
+      # https://danbooru.donmai.us/posts?tags=mature_%28kof%29&z=5
+      mature:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/the_king_of_fighters/mature/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/the_king_of_fighters/mature/costume-ethnicity__
+            {0.8::, __lazy-wildcards/cosplay-char/the_king_of_fighters/mature/costume__|}
+            {, {1-$$__lazy-wildcards/cosplay-char/the_king_of_fighters/mature/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/the_king_of_fighters/mature/action__}|}
+        main-trigger-words:
+          - mature \(kof\), kofmature, maturems
+        costume-ethnicity:
+          - >-
+            blonde hair, single hair bun, hair over one eye, parted bangs
+            , blue eyes
+            , earrings, jewelry
+            , lipstick
+            , black choker
+            , cleavage
+        costume:
+          - brown pantyhose, choker, skirt, shorts, long sleeves, black pants, vestthigh strap
+        costume-elem:
+          - eyepatch
+          - light blush
+          - pink nails
+          - v-shaped eyebrows
+          - puckered lips
+          - hair down
+          - long fingernails, sharp fingernails , nail polish
+          - formal clothes
+          - pant suit
+          - full body
+        action:
+          - arm under breasts
+          - hand on own hip
+          - slashing
+          - leaning forward
 

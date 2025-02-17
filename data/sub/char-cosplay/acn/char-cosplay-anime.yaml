@@ -376,4 +376,30 @@ lazy-wildcards:
           - holding potion
           - holding broom
           - holding juice box, drinking straw
+    # https://www.google.com/search?q=MIDNIGHT+PANTHER&sourceid=chrome&ie=UTF-8
+    # 微光中的親密獵人
+    midnight_panther:
+      # https://civitai.com/models/359134/illustrious-sonya-midnight-panther?modelVersionId=401400
+      sonya:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/midnight_panther/sonya/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/midnight_panther/sonya/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/midnight_panther/sonya/costume-elem__}|}
+            {0.3::, {1-$$__lazy-wildcards/cosplay-char/midnight_panther/sonya/style-art__}|}
+        main-trigger-words:
+          - sonya, sonya \(midnight panther\), Sonya\(MIDNIGHTPANTHER\)
+        costume-ethnicity:
+          - >-
+            very long hair, blue hair, bangs, sidelocks
+            , red eyes, purple eyes
+        costume-elem:
+          - sweater
+          - long sleeves
+          - underwear
+          - panties
+          - shirt
+          - dress shirt
+        style-art:
+          - __lazy-wildcards/subject/style-art-type/1990s_style/prompts__
 

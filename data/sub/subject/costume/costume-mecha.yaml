@@ -1,26 +1,33 @@
 lazy-wildcards:
   subject:
     costume:
+      # https://civitai.com/models/92813/robot-girl-medabots-frea-general-mecha-musume
+      # https://civitai.com/models/95195?modelVersionId=101603
+      # https://civitai.com/models/98395/medabots-lora
+      # https://civitai.com/models/92775/general-robotics-lora-pack-01-oldcheck-description
+      # https://civitai.com/models/88148/general-robotics-lora-02
       mecha-musume:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume/mecha-musume/costume-main__
-            ,({1-$$__lazy-wildcards/subject/costume/mecha-musume/costume-mecha__})
-            {,{1-$$__lazy-wildcards/subject/costume/mecha-musume/costume__}|}
-            {,{1-$$__lazy-wildcards/subject/costume/mecha-musume/costume-elem__}|}
-            {,({1-3$$__lazy-wildcards/subject/costume-tattoo/*/prompts__})|}
-            {,{1-$$__lazy-wildcards/subject/costume/mecha-musume/costume-weapon__}|}
-            {,{1-$$__lazy-wildcards/subject/costume/mecha-musume/style__}|}
+            (__lazy-wildcards/subject/costume/mecha-musume/costume-main__{0.3:::{1.2|1.3|1.4}|:1.3})
+            {, ({1-$$__lazy-wildcards/subject/costume/mecha-musume/costume-mecha__})|}
+            {, {1-$$__lazy-wildcards/subject/costume/mecha-musume/costume-elem__}|}
+            {0.3::, {1-3$$__lazy-wildcards/subject/costume-tattoo/*/prompts__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/costume/mecha-musume/costume-weapon__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/costume/mecha-musume/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/mecha-musume/style__}|}
         costume-main:
-          - (mecha musume:1.3)
-        costume:
-          - mech suit armor white ceramic armor
+          - >-
+            mecha musume, mechanization
+            , MB_robot, robotics, AB_robot
+            , __lazy-wildcards/cosplay-others/Medabots/shared/main-trigger-words__
         costume-mecha:
           - headgear
           - mechanical wings
           - mechanical legs
           - __lazy-wildcards/subject/costume/mechanical_parts/prompts__
           - glossy carbon fiber
+          - mechanical horns
           - industrial frame with shiny gold metal inlay
           - >-
             {1-$$thrusters|propeller}
@@ -28,24 +35,46 @@ lazy-wildcards:
             {__mix-lazy-auto/color-anything__ |}mechanical arms
         costume-elem:
           - cleavage
+          - robot
+          - robot girl
+          - frea
+          - humanoid robot
+          - android
+          - mecha
+          - mobile suit
+          - no mouth
+          - robot joints
+          - legs parted
+          - mech suit armor white ceramic armor
+          - __lazy-wildcards/cosplay-others/Medabots/shared/prompts__
         costume-weapon:
           - cannon
+        env:
+          - __lazy-wildcards/subject/env-elem-pipes/*/prompts__
         style:
           - fantasy
           - cyberpunk
           - cyberpunk neon
           - Steampunk
-          - science fiction
+          - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
+          - __lazy-wildcards/subject/style-elem/pvc_figure/prompts__
+      # https://civitai.com/models/64471/real-mechanical-parts?modelVersionId=352237
       mechanical_parts:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume/mechanical_parts/costume-elem-main__
+            (__lazy-wildcards/subject/costume/mechanical_parts/costume-elem-main__)
             {, {1-$$__lazy-wildcards/subject/costume/mechanical_parts/costume-elem__}|}
         costume-elem-main:
           - reelmech, mechanical parts
         costume-elem:
           - joints
           - mecha
+          - robot
+          - mechanical halo
+          - star halo
+          - intricate mechanical bodysuit
+          - mecha corset
+          - full armor
       # https://civitai.com/models/24260
       # https://civitai.com/models/76693?modelVersionId=697939
       # https://civitai.com/models/142146/carnage-style-blood-and-gore-nsfw-nsfanywhere
@@ -188,7 +217,14 @@ lazy-wildcards:
             {1-$$__lazy-wildcards/subject/env-elem-pipes/*/prompts__}
       clockwork-cyborg:
         prompts:
-          - clockwork cyborg, clockwork body, clockwork arms, clockwork legs, gears in eyes, clockwork face
+          - >-
+            (__lazy-wildcards/subject/costume/clockwork-cyborg/costume__{0.3:::{1.2|1.3|1.4}|})
+            , {1-$$__lazy-wildcards/subject/costume/clockwork-cyborg/costume-elem__}
+        costume:
+          - clockwork cyborg
+        costume-elem:
+          - >-
+            {1-$$clockwork body|clockwork arms|clockwork legs|gears in eyes|clockwork face}
       # https://civitai.com/models/1151398
       # https://civitai.com/models/40867/exoskeleton
       # https://civitai.com/models/218037/heavy-exoskeleton

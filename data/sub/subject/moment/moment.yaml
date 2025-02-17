@@ -263,7 +263,7 @@ lazy-wildcards:
           - abandoned
           - dilapidated
           - rust
-          - no humans
+          - __lazy-wildcards/utils/scenery-no-humans__
           - reflection
           - __lazy-wildcards/subject/moment/weather-rain/style-env__
       time:
@@ -333,4 +333,78 @@ lazy-wildcards:
           - breathing fire
           - explosion
           - fiery tail
+      # https://civitai.com/models/560913/avalanche
+      weather-snow_avalanche:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/moment/weather-snow_avalanche/env-moment-main__
+            {, {1-$$__lazy-wildcards/subject/moment/weather-snow_avalanche/env-moment__}|}{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+            {, {1-$$__lazy-wildcards/subject/moment/weather-snow_avalanche/env-bg*__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/moment/weather-snow_avalanche/env__}|}
+            {, {1-$$__lazy-wildcards/subject/moment/weather-snow_avalanche/style__}|}
+        env-moment-main:
+          - snow avalanche, avalanche
+        env-moment:
+          - avalanche wave
+          - snow collapse
+          - powder snow avalanche
+          - wet snow avalanche, wet snow fall
+          - snowslide
+          - alpine avalanche
+          - air adventures
+          - slab avalanche
+        env-bg-reaL:
+          - the alps
+          - rocky mountain
+        env-bg:
+          - snowy landscape
+          - snow-covered mountains
+          - silent snowy forest
+          - mountain range
+          - deadly alpine meadows
+        env:
+          - snowfall
+          - snowdrift
+          - snowpack
+          - cloud
+          - winter
+          - blue sky
+          - cloudy sky
+          - tree
+          - road
+          - coniferous trees
+          - frosty woods
+        style:
+          - massive
+          - blue theme
+          - deadly
+          - __lazy-wildcards/utils/scenery-no-humans__
+      # https://civitai.com/models/597133/forest-fire
+      weather-forest_fire:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/moment/weather-forest_fire/env-moment-main__
+            {, {1-$$__lazy-wildcards/subject/moment/weather-forest_fire/env-moment__}|}{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+            {, {1-$$__lazy-wildcards/subject/moment/weather-forest_fire/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/moment/weather-forest_fire/env__}|}
+        env-moment-main:
+          - >-
+            forest fire, burning forest, fiery forest
+            , burnt wood
+            , fire, flames, burning, fiery
+        env-moment:
+          - firestorm
+          - raging forest fire
+          - flame wall
+        env-bg:
+          - scorched trees, scorched earth, charcoal trees
+          - dark smoke clouds
+          - charred landscape
+          - blazing horizon
+          - post-apocalypse forest
+        env:
+          - glowing embers
+          - ashen sky
+          - smoke plume
+          - burnt remnants
 

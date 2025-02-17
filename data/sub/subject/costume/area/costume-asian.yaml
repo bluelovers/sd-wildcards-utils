@@ -47,14 +47,16 @@ lazy-wildcards:
           - eastern architecture
           - falling petals
           - flowers and vines
+      # https://civitai.com/models/115160/elegant-mature-clothing-s2
       china-dress:
         prompts:
           - >-
             (__lazy-wildcards/subject/costume/china-dress/costume__)
-            {,{1-$$__lazy-wildcards/subject/costume/china-dress/costume-elem__}|}
-            {,{1-$$__lazy-wildcards/subject/costume/china-dress/costume-sleeves__}|}
-            {,{1-$$__lazy-wildcards/subject/costume/china-dress/costume-makeup__}|}
-            {,{1-$$__lazy-wildcards/subject/costume/china-dress/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/china-dress/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/china-dress/costume-elem-sleeves__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/china-dress/costume-elem-makeup__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/china-dress/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/china-dress/env__}|}
         prompts-extra:
           - >-
             __lazy-wildcards/subject/costume/china-dress/prompts__
@@ -79,7 +81,7 @@ lazy-wildcards:
           - breast curtains
           - no panties
           - spiked bracelet
-        costume-sleeves:
+        costume-elem-sleeves:
           - sleeveless dress
           - detached sleeves
           - sleeves past wrists
@@ -87,7 +89,7 @@ lazy-wildcards:
           - short sleeves
           - wide sleeves
           - long sleeves
-        costume-makeup:
+        costume-elem-makeup:
           - mole under eye
           - red lips
           - __lazy-wildcards/dataset/costume-accessories-base__

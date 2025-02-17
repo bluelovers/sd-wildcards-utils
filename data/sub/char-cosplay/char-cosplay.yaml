@@ -132,7 +132,7 @@ lazy-wildcards:
           - entry plug
           - evangelion \(mecha\)
           - grey pupils
-          - science fiction
+          - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
     vocaloid:
       hatsune_miku:
         prompts:
@@ -452,129 +452,6 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/claymore/base/utils/name-hair-long(name=galatea)__
-    # https://civitai.com/models/137944/blame
-    # https://civitai.com/models/50888?modelVersionId=125891
-    blame:
-      # https://civitai.com/models/204845/cibo-from-blame
-      blame-cibo:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/blame/blame-cibo/main__,
-            {{1-$$__lazy-wildcards/cosplay-char/blame/blame-cibo/main-trigger-words__},|}
-            {{1-$$__lazy-wildcards/cosplay-char/blame/blame-cibo/costume-ethnicity__},|}
-            {{1-$$__lazy-wildcards/cosplay-char/blame/blame-cibo/costume__},|}
-            {{1-$$__lazy-wildcards/cosplay-char/blame/blame-cibo/costume-weapon__},|}
-            {1-$$__lazy-wildcards/cosplay-char/blame/blame-cibo/costume-elem__},
-            {1-$$__lazy-wildcards/cosplay-char/blame/blame-cibo/env__}
-            {,{1-$$__lazy-wildcards/cosplay-char/blame/blame-cibo/style__}|}
-        main:
-          - cibo, tsutomu nihei, nihei_tsutomu, blame!, blame gakuen!, cyberpunk, cyborg, science fiction, noise \(manga\)
-        main-trigger-words:
-          - ova
-          - movie
-        costume-ethnicity:
-          - long hair, white hair, blue eyes, blunt bangs
-          - long legs, tall female
-        costume:
-          - body horror, bone, core, facial mark, forehead mark, energy ball, skeleton, spine
-          - bodysuit
-          - school uniform
-        costume-weapon:
-          - graviton beam emitter
-        costume-elem:
-          - emblem
-          - glowing
-          - humanoid robot
-          - __lazy-wildcards/cosplay-char/blame/blame-safeguard/prompts__
-          - joints, robot joints
-          - mechanical arms
-          - mechanical legs
-          - arm cannon
-          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
-          - thighhighs
-          - thigh gap
-          - long sleeves
-          - facial mark
-        env:
-          - exterminator \(blame!\)
-          - __lazy-wildcards/subject/env-bg/nihei_tsutomu-blame-env/prompts__
-        style:
-          - fleeing, running
-      blame-safeguard:
-        prompts:
-          - >-
-            safeguard \(blame!\), safeguard \(puppet\)
-            , joints, robot joints
-            , facial mark, safeguard sign on forehead
-      # https://danbooru.donmai.us/posts?tags=abara&z=2
-      # https://civitai.com/models/656658/kudoudenji-abara?modelVersionId=734689
-      # https://civitai.com/models/656803/digimortal-digimortal?modelVersionId=734859
-      abara-kudou_denji:
-        prompts:
-          - >-
-            KudouDenji, kudou_denji, abara,
-            digimortal, digimortal_\(manga\),
-            Etherow2, ningyou_no_kuni, Aposimz,
-            power armor
-            , tsutomu nihei, nihei_tsutomu
-      # https://civitai.com/models/662751/titania?modelVersionId=741677
-      Aposimz-Titania:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/blame/Aposimz-Titania/main-trigger-words__
-            ,__lazy-wildcards/cosplay-char/blame/Aposimz-Titania/costume-ethnicity__
-            ,__lazy-wildcards/cosplay-char/blame/Aposimz-Titania/costume__
-            {,{1-$$__lazy-wildcards/cosplay-char/blame/Aposimz-Titania/costume-elem__}|}
-        main-trigger-words:
-          - Titania, titania \(ningyou no kuni\), ningyou_no_kuni, Aposimz, tsutomu nihei, nihei_tsutomu
-        costume-ethnicity:
-          - white hair, very long hair, blunt bangs, hair band, twintails, ponytailponytail
-        costume:
-          - elbow gloves, black gloves, dress, frills, armor, black thighhighs, high heels, detached sleeves
-        costume-elem:
-          - hair ribbon
-          - pink eyes
-          - doll joints
-          - android
-          - torn
-      # https://civitai.com/models/662588/aposimz-keisha
-      Aposimz-Keisha:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/blame/Aposimz-Keisha/main-trigger-words__
-            {,__lazy-wildcards/cosplay-char/blame/Aposimz-Keisha/costume-ethnicity__|}
-            ,__lazy-wildcards/cosplay-char/blame/Aposimz-Keisha/costume__
-            {,{1-$$__lazy-wildcards/cosplay-char/blame/Aposimz-Keisha/costume-elem__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/blame/Aposimz-Keisha/costume-weapon__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/blame/Aposimz-Keisha/env__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/blame/Aposimz-Keisha/env-bg__}|}
-        main-trigger-words:
-          - keisha, keisha \(ningyou no kuni\), ningyou_no_kuni, Aposimz, tsutomu nihei, nihei_tsutomu
-        costume-ethnicity:
-          - orange hair, short hair
-        costume:
-          - Khaki coat, Khaki hood
-          - Khaki cape
-          - Khaki tight
-          - Khaki bodysuit, skirt
-          - Khaki boots
-          - Khaki pants
-        costume-elem:
-          - hair ribbon
-          - pink eyes
-          - doll joints
-          - android
-          - torn
-          - gas mask
-          - eyepatch
-          - bag, backpack
-        costume-weapon:
-          - pickaxe
-          - rifle, gun
-        env:
-          - tube, cable
-        env-bg:
-          - tunnel
     # https://danbooru.donmai.us/posts?tags=kyoushoku_soukou_guyver+&z=5
     # https://rule34.xxx/index.php?page=post&s=list&tags=guyver
     # https://rule34.xxx/index.php?page=post&s=list&tags=valcuria
@@ -1141,8 +1018,8 @@ lazy-wildcards:
           - injury
           - hissing, puffing up
           - horror \(theme\)
-          - science fiction
-          - no humans
+          - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
+          - __lazy-wildcards/utils/scenery-no-humans__
           - glowing
           - see-through
           - dark theme
@@ -1391,7 +1268,7 @@ lazy-wildcards:
         costume-weapon:
           - guitar, holding instrument
         style:
-          - science fiction
+          - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
       # https://civitai.com/models/55593?modelVersionId=137657
       Jenius-mylene_jenius:
         prompts:
@@ -1414,7 +1291,7 @@ lazy-wildcards:
         style:
           - listen_to_my_song
           - fire bomber
-          - science fiction
+          - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
       myung_fang_lone:
         prompts:
           - >-
@@ -1512,7 +1389,7 @@ lazy-wildcards:
         style:
           - listen_to_my_song
           - fire bomber
-          - science fiction
+          - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
     devilman:
       siren:
         prompts:
@@ -1602,7 +1479,7 @@ lazy-wildcards:
           - space
           - planet, moon
         style:
-          - science fiction
+          - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
           - retro artstyle
           - matsumoto leiji \(style\)
     The_Small_Giant_Microman:
@@ -1669,8 +1546,8 @@ lazy-wildcards:
           - beam saber
           - beam attack, energy beam
         style:
-          - science fiction
-          - no humans
+          - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
+          - __lazy-wildcards/utils/scenery-no-humans__
           - machinery
           - flying, booster effect
     senjou_no_valkyria:
@@ -1888,7 +1765,7 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/cosplay-char/fallout/char/env__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/fallout/char/style__}|}
         main-trigger-words:
-          - (science fiction, fallout theme, fallout:1.2)
+          - (fallout theme, fallout:1.2), __lazy-wildcards/subject/style-elem/sci-fi/prompts__
         costume-ethnicity:
           - ghoul
         costume:

@@ -1,0 +1,256 @@
+lazy-wildcards:
+  cosplay-char:
+    # https://danbooru.donmai.us/posts?tags=mcdonald%27s&z=2
+    mcdonalds:
+      shared:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/mcdonalds/shared/main-trigger-words__
+            {0.3::, __lazy-wildcards/cosplay-char/mcdonalds/shared/costume-uniform*__|}
+            {0.3::, {1-$$__lazy-wildcards/cosplay-char/mcdonalds/shared/costume-headwear__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/mcdonalds/shared/costume-elem__}|}
+            {0.3::, {1-$$__lazy-wildcards/cosplay-char/mcdonalds/shared/env-bg__}|}
+            __lazy-wildcards/cosplay-char/mcdonalds/shared/prompts-shared-001__
+        prompts-shared-001:
+          - >-
+            {, {1-$$__lazy-wildcards/cosplay-char/mcdonalds/shared/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/mcdonalds/shared/env-elem-food__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/mcdonalds/shared/env__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/mcdonalds/shared/action__}|}
+            {0.3::, __lazy-wildcards/cosplay-char/mcdonalds/hamster/prompts__|}
+            {, {1-$$__lazy-wildcards/cosplay-char/mcdonalds/shared/style__}|}
+        prompts-shared-002:
+          - >-
+            __lazy-wildcards/cosplay-char/mcdonalds/shared/main-trigger-words__
+            __lazy-wildcards/cosplay-char/mcdonalds/shared/prompts-shared-001__
+        main-trigger-words:
+          - >-
+            mcdonald's
+            , Mi-Japan McDonald's
+            , __lazy-wildcards/utils/fn/style-inspired(v=McDonalds)__
+            , mcdonald's logo, m logo
+            , __lazy-wildcards/subject/style-artist/mcdonalds-urachan1629/style-artist__
+            , makudo
+        costume-trigger-words-uniform:
+            - >-
+              mcdonald's uniform
+              , McDonaldsUniform
+              , fast food uniform, employee uniform
+              , badge
+        costume-trigger-words-headwear:
+          - mcdonald's hat, visor cap
+        costume-trigger-words-headset:
+          - headphones, headset, microphone
+        costume-trigger-words-shirt:
+          - >-
+            collared shirt
+            , shirt tucked in
+            , short sleeves
+        costume-uniform-001:
+          - >-
+            __lazy-wildcards/cosplay-char/mcdonalds/shared/costume-trigger-words-uniform__
+            , {0.8::__lazy-wildcards/cosplay-char/mcdonalds/shared/fn/jacket(mc3=yellow)__|sleeveless shirt}
+            , __lazy-wildcards/cosplay-char/mcdonalds/shared/costume-uniform-white-shorts__
+        costume-uniform-black:
+          - >-
+            __lazy-wildcards/cosplay-char/mcdonalds/shared/fn/uniform_and_hat(mc0=black)__
+            , black shirt, black pants
+        costume-uniform-red:
+          - >-
+            __lazy-wildcards/cosplay-char/mcdonalds/shared/fn/uniform_and_hat(mc0=red)__
+            , red shirt, black pants
+        costume-uniform-white:
+          - >-
+            __lazy-wildcards/cosplay-char/mcdonalds/shared/fn/uniform_and_hat(mc0=black)__
+            , __lazy-wildcards/cosplay-char/mcdonalds/shared/costume-trigger-words-shirt__
+            , black miniskirt, black pencil skirt
+            , thighs
+        costume-uniform-white-shorts:
+          - >-
+            __lazy-wildcards/cosplay-char/mcdonalds/shared/fn/uniform_and_hat(mc0=red)__
+            , black necktie
+            , __lazy-wildcards/cosplay-char/mcdonalds/shared/costume-trigger-words-shirt__
+            , black shorts, short shorts
+            , thighs
+            , white socks, sneakers
+        costume-elem:
+          - >-
+            {1-$$__lazy-wildcards/cosplay-char/mcdonalds/shared/costume-trigger-words-*__}
+          - black necktie
+          - parted lips
+          - button badge
+          - breast padding
+          - short-sleeved jacket
+          - vertical-striped clothes
+          - >-
+            __lazy-wildcards/cosplay-char/mcdonalds/shared/fn/jacket(mc3=yellow)__
+          - red panties
+          - black panties
+          - red tank top
+          - shirt tucked in
+          - miniskirt, pencil skirt
+          - wing collar
+          - food on face
+          - wristband, bracelet
+          - sneakers
+          - tie clip
+          - earrings
+          - white socks
+          - detached collar
+          - navel
+          - open clothes
+          - open shirt
+          - __lazy-wildcards/subject/costume-elem-expressions/mouth-open/prompts__
+          - see-through clothes
+          - bikini
+          - clothes lift
+          - eyelashes
+          - bottomless
+        costume-headwear:
+          - >-
+            __lazy-wildcards/cosplay-char/mcdonalds/shared/fn/hat(mc1=!{yellow|black|red})__
+        costume-weapon:
+          - holding food
+          - holding burger
+          - holding box
+          - tray
+          - holding tray
+          - holding cup
+        env-elem-food:
+          - hamburger, burger
+          - cheese
+          - french fries
+          - tomato slice
+          - mcdonald's box, mcdonald's paper bag
+          - chicken nuggets
+          - disposable cup
+          - happy meal
+          - fast food
+          - bread
+          - drink
+          - food wrapper
+          - ketchup
+          - potato
+          - drinking glass
+          - lettuce
+        env-bg:
+          - __lazy-wildcards/subject/env-bg/mcdonalds*/prompts__
+        env:
+          - laptop
+          - tiles, tile floor
+          - chair, table
+          - poster \(object\)
+          - cash register, cashier
+        action:
+          - elbow rest, elbows on table
+          - w arms
+          - eating, food in mouth
+          - sitting
+          - drinking straw
+          - looking at food
+          - on chair
+          - tucking hair
+          - bubble tea challenge
+          - lifting own clothes
+        style:
+          - >-
+            red and yellow {and black }theme
+          - from below
+        fn:
+          hat:
+            - >-
+              __lazy-wildcards/cosplay-char/mcdonalds/shared/costume-trigger-words-headwear__
+              , ${mc1:red} mcdonald's hat, mcdonald's hat \(${mc1:red}\)
+              , ${mc1:red} visor cap
+              {, ${mc1:red} headwear, ${mc1:red} hat, ${mc1:red} cap, ${mc1:red} visor|}
+          uniform:
+            - >-
+              __lazy-wildcards/cosplay-char/mcdonalds/shared/costume-trigger-words-uniform__
+              , ${mc2:red} mcdonald's uniform, mcdonald's uniform \(${mc2:red}\)
+          jacket:
+            - >-
+              open jacket, open happi, happi coat
+              , ${mc3:yellow} jacket
+              , ${mc3:yellow} happi
+              , short-sleeved jacket
+          uniform_and_hat:
+            - >-
+              __lazy-wildcards/cosplay-char/mcdonalds/shared/fn/hat(mc1=${mc0:red})__
+              , __lazy-wildcards/cosplay-char/mcdonalds/shared/fn/uniform(mc2=${mc0:red})__
+      # https://civitai.com/models/191703/mcdonalds-profile-photo
+      profile_photo:
+        prompts:
+          - >-
+            (__lazy-wildcards/cosplay-char/mcdonalds/profile_photo/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/mcdonalds/shared/costume-headwear__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+            , __lazy-wildcards/cosplay-char/mcdonalds/shared/prompts__
+        main-trigger-words:
+          - mcdonald's profile photo, face focus, portrait, upper body
+      # https://civitai.com/models/87751/mcdonalds-uniform-black-or-outfit-lora
+      mc-uniform:
+        prompts:
+          - >-
+            (__lazy-wildcards/cosplay-char/mcdonalds/shared/costume-uniform*__{0.3:::{1.2|1.3|1.4}|:1.3})
+            , __lazy-wildcards/cosplay-char/mcdonalds/shared/main-trigger-words__
+      # https://danbooru.donmai.us/posts?tags=imadake_dabuchi_tabemi&z=1
+      # https://danbooru.donmai.us/posts/8360922?q=mcdonald%27s
+      # https://civitai.com/models/899478/double-cheese-mi-japan-mcdonalds?modelVersionId=1006440
+      double_cheese:
+        prompts:
+          - >-
+            (__lazy-wildcards/cosplay-char/mcdonalds/double_cheese/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/mcdonalds/double_cheese/costume-ethnicity__:1.3)
+            {0.8::, __lazy-wildcards/cosplay-char/mcdonalds/double_cheese/costume__|}
+            , __lazy-wildcards/cosplay-char/mcdonalds/shared/prompts__
+        main-trigger-words:
+          - imadake_dabuchi_tabemi, double cheese \(mcdonald's\),  imadake dabuchi tabemi \(cosplay\)
+        costume-ethnicity:
+          - >-
+            ahoge
+            , long hair, brown hair, short twintails, blunt bangs
+            , black eyes
+            , __lazy-wildcards/cosplay-char/mcdonalds/shared/costume-trigger-words-headset__
+        costume:
+          - >-
+            __lazy-wildcards/cosplay-char/mcdonalds/shared/fn/hat(mc1=red)__
+            , __lazy-wildcards/cosplay-char/mcdonalds/shared/costume-uniform-001__
+        costume-elem:
+          - bandaid, bandaid on knee, bandaid on leg
+          - sleeveless shirt
+      # https://danbooru.donmai.us/posts?tags=imadake_dabuchi_tabesuke&z=2
+      hamster:
+        prompts:
+          - hamster, imadake dabuchi tabesuke
+      # https://danbooru.donmai.us/posts?tags=mother_%28yoru_mac%29&z=2
+      # https://civitai.com/models/289002/mcmama
+      # https://civitai.com/models/157892/mcdonalds-mom-meme-lora
+      # https://civitai.com/models/153222/yoru-mac-or-mom-from-the-japanese-mcdonalds-commercial
+      # https://civitai.com/models/314255/cosplayyoru-mac-mcdonalds-mom-bikini-ver-or-mcdonalds-ad-meme
+      # https://civitai.com/models/152538/yoru-mac-mother-mcdonalds
+      # https://civitai.com/models/153277/nsfw-yoru-mac-mcdonalds
+      mc-mama:
+        prompts:
+          - >-
+            (__lazy-wildcards/cosplay-char/mcdonalds/mc-mama/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/mcdonalds/mc-mama/costume-ethnicity__:1.3)
+            {0.8::, __lazy-wildcards/cosplay-char/mcdonalds/mc-mama/costume__|}
+            , __lazy-wildcards/cosplay-char/mcdonalds/shared/prompts__
+        main-trigger-words:
+          - >-
+            mother \(yoru_mac\)
+            , mcdonald mama, mcdonalds_mom
+            , mcmom, mcmommyv1, McGingerMom
+            , yoru mac
+        costume-ethnicity:
+          - >-
+            parted bangs, blunt ends
+            , bob cut
+            , orange hair, short hair
+            , bright pupils, green eyes
+            , married
+            , breasts
+            , wide hips
+        costume:
+          - brown sweater, jeans long sleeves
+          - bikini, red bikini, red micro bikini, side-tie bikini bottom, string bikini
+
