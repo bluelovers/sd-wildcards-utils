@@ -169,7 +169,7 @@ export function findWildcardsYAMLPathsAll(node: Node | Document)
 }
 
 const RE_UNSAFE_QUOTE = /['"]/;
-const RE_UNSAFE_VALUE = /^\s*-|[{$~!@}\n|:?#'"]/;
+const RE_UNSAFE_VALUE = /^\s*-|[{$~!@}\n|:?#'"%]/;
 const RE_UNSAFE_PLAIN = /-/
 
 export function _visitNormalizeScalar(key: IVisitorFnKey, node: IWildcardsYAMLScalar, runtime: {
