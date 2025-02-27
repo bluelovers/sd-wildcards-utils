@@ -1,0 +1,16 @@
+lazy-wildcards:
+  subject:
+    style-elem:
+      pvc_figure:
+        prompts:
+          - >-
+            pvc, figure
+            , __lazy-wildcards/utils/fn/style-inspired(v=pvc)__
+      # https://civitai.com/models/20163/genshin-sticker-chibi-style?modelVersionId=23951
+      # https://civitai.com/models/182276/chibi-style-or-stylemix?modelVersionId=204557
+      chibi:
+        prompts:
+          - >-
+            __lazy-wildcards/utils/fn/style-inspired(v=chibi)__
+            , AGGA_ST019
+

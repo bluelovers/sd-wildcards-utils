@@ -1,0 +1,71 @@
+lazy-wildcards:
+  subject:
+    # lower-body
+    costume-elem-lower-body:
+      # https://civitai.com/models/233072/tripp-pants-requested?modelVersionId=263015
+      tripp_pants:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-lower-body/tripp_pants/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-elem-lower-body/tripp_pants/costume-elem__}|}
+            {0.3::, {1-2$$__lazy-wildcards/subject/costume-elem-lower-body/tripp_pants/costume-elem-color__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/costume-elem-lower-body/tripp_pants/costume-elem-upper__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem-lower-body/tripp_pants/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem-lower-body/tripp_pants/style__}|}
+        costume:
+          - tripp pants, tripp nyc pants, tripppants, chain, pants, strappy pants, zipper details, pocket
+        costume-elem:
+          - black footwear
+          - platform footwear
+          - metal chain
+          - belt straps, studded_belt
+          - chain_necklace
+          - fingerless_gloves
+          - baggy pants
+          - wide leg pants
+          - zipped cuffs
+          - bondage pants
+          - loose_fit, unconventional_cut
+          - >-
+            {1-$$multiple_pockets|zipper_pocket|button_pocket}
+          - metal hardware
+          - strap details, adjustable straps, decorative straps
+          - rivet details, metal studs
+          - silver_hardware, metallic_details
+          - denim, jeans
+          - dyed_hair
+          - unconventional_hair
+          - industrial pants
+          - plaid, plaid pants
+        costume-elem-color:
+          - white and black pants
+          - black pants
+          - pink and green pants
+          - orange and purple pants
+          - blue and yellow pants
+          - black and yellow pants
+          - black and pink pants
+        costume-elem-upper:
+          - band_tee
+          - graphic_tee
+          - leather_jacket
+        env-bg:
+          - concert_scene, music_festival
+          - nightclub_scene, dance_floor, party_atmosphere
+          - subculture_meetup
+        style:
+          - industrial goth, industrial gothic
+          - visual kei
+          - gothic fashion
+          - cyberpunk fashion, cyber goth
+          - nu-metal fashio
+          - mall goth
+          - alternative fashion
+          - punk style
+          - rock aesthetic
+          - red_accents
+          - bold_color
+          - punk_energy
+          - utilitarian_vibe
+          - dark_aesthetic, gothic_tone
+

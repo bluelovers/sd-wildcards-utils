@@ -25,6 +25,7 @@ lazy-wildcards:
           - food logo
           - vehicle
       # https://civitai.com/models/203415/mcdonalds-japan-indoors-sd15
+      # https://civitai.com/models/250074/mcdate-with-2d-waifu-concept-mcdonalds-date
       mcdonalds-indoors:
         prompts:
           - >-
@@ -32,11 +33,12 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/env-bg/mcdonalds-indoors/env__}|}
             , __lazy-wildcards/cosplay-char/mcdonalds/shared/prompts-shared-002__
         env-bg-main:
-          - makudo, indoors, poster \(object\), table
+          - McDate_with_2D_Waifu, makudo, indoors, poster \(object\), table
         env:
           - ceiling, ceiling light
           - window
       # https://civitai.com/models/203163/mcdonalds-japan-storefront-sd15
+      # https://civitai.com/models/299063/mcdonald-sannomiya-nishiguchi-sd15
       mcdonalds-storefront:
         prompts:
           - >-
@@ -46,13 +48,34 @@ lazy-wildcards:
             , __lazy-wildcards/cosplay-char/mcdonalds/shared/prompts-shared-002__
         env-bg-main:
           - >-
-            makudo, storefront, scenery, poster \(object\), outdoors
+            sannomiyanishiguchi, makudo
+            , storefront, scenery, poster \(object\)
         env-bg:
           - roadsidemakudo, sky, cloud, mcdonald's building, power lines, utility pole
+          - night sky
+          - >-
+            {indoors|outdoors}
         env:
           - bicycle
           - ground vehicle
           - shop, food
           - tile floor
           - tiles
+          - lamppost
+      # https://danbooru.donmai.us/posts?tags=drive-thru&z=1
+      # https://civitai.com/models/70488/drive-thru-window-operator-lora
+      drive-thru:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/drive-thru/env-bg-main__
+            {0.8::, {1-$$__lazy-wildcards/subject/env-bg/drive-thru/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/drive-thru/costume-elem__}|}
+            {, {0.3::__lazy-wildcards/cosplay-char/mcdonalds/shared/prompts-shared-002__|__lazy-wildcards/cosplay-char/mcdonalds/shared/prompts-shared-001__}|}
+        env-bg-main:
+          - drive-thru, drive-thru window
+        env-bg:
+          - inside the drive-thru window
+        costume-elem:
+          - __lazy-wildcards/cosplay-char/mcdonalds/shared/costume-uniform-apron__
+          - Drive-Thru Window Operator
 

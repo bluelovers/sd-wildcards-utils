@@ -823,4 +823,28 @@ lazy-wildcards:
         costume-elem:
           - cross hair ornament
           - cross earrings
+    # 《只想告訴你》（日語：君に届け／きみにとどけ）
+    # https://zh.wikipedia.org/zh-tw/FLCL
+    # https://danbooru.donmai.us/posts?tags=kimi_ni_todoke
+    kimi_ni_todoke:
+      # https://civitai.com/models/226686/sawako-kuronuma-oror-kimi-ni-todoke?modelVersionId=256071
+      # https://danbooru.donmai.us/posts?tags=kuronuma_sawako
+      kuronuma_sawako:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/kimi_ni_todoke/kuronuma_sawako/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/kimi_ni_todoke/kuronuma_sawako/costume-ethnicity__
+            {, {1-2$$__lazy-wildcards/cosplay-char/kimi_ni_todoke/kuronuma_sawako/costume__}|}
+            {0.3::, (__lazy-wildcards/cosplay-char/kimi_ni_todoke/kuronuma_sawako/main-trigger-words2__)|}
+        main-trigger-words:
+          - sawako, kuronuma_sawako
+        costume-ethnicity:
+          - black hair, long hair, blunt bangs, black eyes, hime cut
+        costume:
+          - school uniform, blazer, white shirt, red bowtie, collared shirt, long sleeves
+          - skirt, long sleeves
+          - black coat, belt, long sleeves
+          - White kimono, japanese clothes, long sleeves
+        main-trigger-words2:
+          - chibi sawako, chibi
 

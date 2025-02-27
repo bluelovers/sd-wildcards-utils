@@ -240,4 +240,32 @@ lazy-wildcards:
           - >-
             magic the gathering art style
             , __lazy-wildcards/utils/fn/style-inspired(v=magic_the_gathering_art)__
+      # 聖魔大戰 (ビックリマン)
+      # https://civitai.com/models/69021/b1kkur1-man-lora?modelVersionId=73707
+      bikkuri-man:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/bikkuri-man/style-artist__
+            {0.75::, {1-$$__lazy-wildcards/subject/style-artist/bikkuri-man/style-main__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-artist/bikkuri-man/costume-ethnicity__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/style-artist/bikkuri-man/costume__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/bikkuri-man/style__}|}
+        style-artist:
+          - Bikkuriman, b1kkur1-man, __lazy-wildcards/utils/fn/style-inspired(v=bikkuri-man)__
+        style-main:
+          - __lazy-wildcards/subject/style-elem/chibi/prompts__
+          - parody
+        costume-ethnicity:
+          - head
+          - tenshi
+          - akuma
+          - omamori
+        costume:
+          - super_zeus, old_wise_man, white_beard, holy_aura
+          - black_zeus, evil_god, dark_armor, electric_power
+          - head_rococo, golden_armor, heroic_warrior, shining_sword
+        style:
+          - bikkuriman stickers
+          - holographic stickers
+          - retro japanese
 
