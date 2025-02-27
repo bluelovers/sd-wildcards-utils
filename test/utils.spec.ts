@@ -128,6 +128,11 @@ describe(`_checkValue`, () => {
 			' _lazy-wildcards/subject/env-elem/stairs/prompts__ ',
 			' __lazy-wildcards/subject/env-elem__/stairs/prompts__ ',
 			' {_lazy-wildcards/subject/env-elem/stairs/prompts__} ',
+			`(cum
+{, __1/subject/costume-elem/cum/costume-elem2__|}
+{, __2/subject/costume-elem/cum/costume-elem__|
+{, __3/subject/costume-elem/cum-base/prompts__{0.3:::{1.2|1.3|1.4}|}|})
+`
 		])(`%j`, (input) => {
 
 			let actual = _checkValue(input);
