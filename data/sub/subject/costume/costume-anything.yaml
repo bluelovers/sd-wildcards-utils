@@ -27,7 +27,8 @@ lazy-wildcards:
           - (naked, nude, hood, long cloak:1.3)
       nsfw-nude:
         prompts:
-          - __lazy-wildcards/subject/costume-anything/nsfw-nude/costume__
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-anything/nsfw-nude/costume__}
         costume:
           - nude, topless, breasts out, breasts slip, cleavage, see-through cleavage, see-through, breasts focus, unaligned_breasts
           - naked, bare, nude, completely nude, no bra, nobar, cleavage

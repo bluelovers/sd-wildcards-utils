@@ -1,12 +1,16 @@
 lazy-wildcards:
   subject:
     env-bg:
+      # https://civitai.com/models/374782/jjs-architecture-temple-ruin?modelVersionId=1480366
       ruins-stone:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/env-bg/ruins-stone/env-bg__}
+            __lazy-wildcards/subject/env-bg/ruins-stone/env-bg-main__
+            , {1-$$__lazy-wildcards/subject/env-bg/ruins-stone/env-bg__}
             {, {1-$$__lazy-wildcards/subject/env-bg/ruins-stone/env__}|}
             {, {1-$$__lazy-wildcards/subject/env-bg/ruins-stone/style__}|}
+        env-bg-main:
+          - temple ruin
         env-bg:
           - ancient_stone_temple, stone shrine
           - sacred_altar, stone_altar
@@ -24,7 +28,7 @@ lazy-wildcards:
           - stone architecture, stone building
           - desert_ruins
         style:
-          - overgrown, mossy
+          - __lazy-wildcards/subject/env-elem/moss/prompts__
           - hieroglyphic_carvings
           - ancient jungle, rainforest_ambiance, jungle_ruins
 

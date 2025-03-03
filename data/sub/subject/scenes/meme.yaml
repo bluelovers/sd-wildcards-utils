@@ -117,6 +117,8 @@ lazy-wildcards:
         env-on:
           - on bed, bedroom
           - on floor, floor
+      # https://civitai.com/models/148147/meme-iced-latte-with-breast-milk-meme-concept-or-ownwaifu
+      # https://civitai.com/models/78887/breast-milk-latte-meme-or-goofy-ai
       iced_latte_with_breast_milk:
         prompts:
           - >-
@@ -126,11 +128,13 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/scenes-meme/iced_latte_with_breast_milk/costume-elem__}|}
             {, {1-$$__lazy-wildcards/subject/scenes-meme/iced_latte_with_breast_milk/env__}|}
         main-trigger-words:
-          - meme_iced_latte_with_breast_milk_ownwaifu, meme, iced_latte_with_breast_milk_\(meme\)
+          - >-
+            meme_iced_latte_with_breast_milk_ownwaifu, iced_latte_with_breast_milk_\(meme\)
+            , breast milk latte meme
         costume:
           - barista, green_apron, (naked_apron, cleavage, sideboob, collarbone:1.2), apron, breasts, starbucks, logo_parody
         costume-weapon:
-          - cafe, cup, coffee, holding, holding_cup, disposable_cup
+          - cafe, cup, coffee, holding, holding_cup, disposable_cup, iced latte, breast milk
         costume-elem:
           - __lazy-wildcards/subject/costume-ethnicity-body/curvy_female/prompts__
           - __lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/prompts__
@@ -138,4 +142,106 @@ lazy-wildcards:
         env:
           - suggestive_fluid
           - sparkle
+      # https://civitai.com/models/73761/bubble-tea-challenge-or-meme
+      # https://civitai.com/models/15601
+      bubble_tea_challenge:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/scenes-meme/bubble_tea_challenge/env-elem-food__{0.3:::{1.2|1.3|1.4}|})
+            , {1-$$__lazy-wildcards/subject/scenes-meme/bubble_tea_challenge/action__}
+        env-elem-food:
+          - >-
+            bubble tea challenge
+            , with a cup of bubble tea on her boobs
+            , bubble tea
+            , drinking straw
+            , boobatea, bubble tea style
+        action:
+          - crossed arms
+          - lips on the straw, drinking through the straw
+      # https://civitai.com/models/191610/tsumasaky-frieren-mimic-meme
+      frieren_stuck_in_a_mimic:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/scenes-meme/frieren_stuck_in_a_mimic/main-trigger-words__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+            , __lazy-wildcards/subject/env-elem-creatures/mimic/prompts__
+            {0.3::, {1-$$__lazy-wildcards/subject/scenes-meme/frieren_stuck_in_a_mimic/env__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/scenes-meme/frieren_stuck_in_a_mimic/action__}|}
+            {, {1-$$__lazy-wildcards/subject/scenes-meme/frieren_stuck_in_a_mimic/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/scenes-meme/frieren_stuck_in_a_mimic/style__}|}
+        main-trigger-words:
+          - >-
+            frieren_stuck_in_a_mimic_\(meme\)
+            , from behind, ass focus
+            , stuck in a mimic
+        env:
+          - christmas present
+        action:
+          - cum in ass, after anal
+        costume-elem:
+          - skirt
+          - footwear
+          - socks
+          - thighhighs
+          - lower body
+          - sharp teeth
+          - lace-trimmed panties
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - clothes lift
+          - panties under pantyhose
+        style:
+          - struggling
+      # https://danbooru.donmai.us/posts?tags=oh%3F_you%27re_approaching_me%3F_%28meme%29&z=1
+      # https://danbooru.donmai.us/posts?tags=menacing_%28jojo%29&z=2
+      # https://civitai.com/models/92943/jojo-walk-complete-meme
+      jojo_pose_walking:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/scenes-meme/jojo_pose_walking/action__
+            {, {1-$$__lazy-wildcards/subject/scenes-meme/jojo_pose_walking/env__}|}
+            {, {1-$$__lazy-wildcards/subject/scenes-meme/jojo_pose_walking/style__}|}
+        action:
+          - >-
+            oh?_you're_approaching_me?_\(meme\)
+            , menacing \(jojo\)
+            , walking, jojo pose
+            , parody, meme
+            , walking to, walking from
+        env:
+          - aura
+        style:
+          - from below
+          - dutch angle
+          - sound effects
+      # https://danbooru.donmai.us/posts?tags=distracted_boyfriend_%28meme%29+&z=5
+      # https://civitai.com/models/143824/distracted-boyfriend-meme-or-concept-lora
+      distracted_boyfriend:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/scenes-meme/distracted_boyfriend/main-trigger-words__
+        main-trigger-words:
+          - >-
+            distracted_boyfriend_\(meme\)
+            , IncrsDistractedBoyfriendMeme
+      # https://civitai.com/models/52577/she-wants-to-order-or-conceptmeme
+      # https://rule34.xxx/index.php?page=post&s=list&tags=he_wants_to_order&pid=546&__cf_chl_tk=k_slobvP12E8C_lRCSAMXqQuj_fmiSh.vOFC7D.WGZw-1682637125-0-gaNycGzNDlA
+      # https://danbooru.donmai.us/posts?tags=he_wants_to_order_%28meme%29+&z=5
+      # https://civitai.com/models/119269/car-doggy-pose-concept
+      he_wants_to_order:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/scenes-meme/he_wants_to_order/main-trigger-words__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+            {, {1-$$__lazy-wildcards/subject/scenes-meme/he_wants_to_order/style__}|}
+        main-trigger-words:
+          - >-
+            he_wants_to_order_\(meme\)
+            , she wants to order
+            , ass focus
+            , car interior, car seat, vehicle interior
+            , meme
+            , Car Doggy Pose
+            , CarDoggy, passpose, drivepose
+        style:
+          - foreshortening
+          - three quarter view
 

@@ -402,4 +402,48 @@ lazy-wildcards:
           - dress shirt
         style-art:
           - __lazy-wildcards/subject/style-art-type/1990s_style/prompts__
+    digimon:
+      # https://civitai.com/models/22861
+      # https://danbooru.donmai.us/posts?tags=cho-hakkaimon&z=5
+      cho-hakkaimon:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/digimon/cho-hakkaimon/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/digimon/cho-hakkaimon/costume__
+            {, __lazy-wildcards/cosplay-char/digimon/cho-hakkaimon/costume-ethnicity__|}
+            {, {1-$$__lazy-wildcards/cosplay-char/digimon/cho-hakkaimon/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/digimon/cho-hakkaimon/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/digimon/cho-hakkaimon/env-elem-food__}|}
+        main-trigger-words:
+          - >-
+            cho-hakkaimon
+            , digimon, digimon \(creature\)
+        costume:
+          - >-
+            animal costume, pig costume
+            , pink armor
+            , bare shoulders
+            , button eyes
+            , seams, spikes
+            , arm wrap
+        costume-ethnicity:
+          - >-
+            green hair, orange eyes
+        costume-elem:
+          - armlet, armband
+          - facial mark
+          - rope
+          - garter straps
+          - o-ring
+          - armored boots
+          - blue one-piece swimsuit, school swimsuit
+          - covered navel
+          - gauntlets
+          - over shoulder
+          - sidelocks
+        costume-weapon:
+          - rake
+          - weapon over shoulder
+        env-elem-food:
+          - donut, huge weapon
 

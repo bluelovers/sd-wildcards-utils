@@ -225,12 +225,14 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/subject/env-elem/moss/env-main__
-            {,__lazy-wildcards/subject/env-elem/moss/costume__|}
-            {,{1-$$__lazy-wildcards/subject/env-elem/moss/env__}|}
+            {, __lazy-wildcards/subject/env-elem/moss/costume__|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/moss/env__}|}
         env-main:
-          - made of moss, moss-covered
+          - >-
+            made of moss, moss-covered, mossy
+            , m0ss_dr3ss
         costume:
-          - m0ss_dr3ss ,elaborate long dress made of moss
+          - elaborate long dress made of moss
         env:
           - >-
             ({1-$$moss slime vines|moss vines|mossy surface})
@@ -238,6 +240,9 @@ lazy-wildcards:
             slime_\(substance\), sticky slime
           - twigs
           - overgrown
+          - overgrown moss
+          - overgrown with thick vines
+          - overgrown scenery
       GreenRockWorld:
         prompts:
           - >-

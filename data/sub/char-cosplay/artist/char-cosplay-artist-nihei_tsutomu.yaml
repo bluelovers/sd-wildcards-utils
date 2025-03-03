@@ -1,0 +1,152 @@
+lazy-wildcards:
+  cosplay-char:
+    # https://danbooru.donmai.us/posts?tags=sidonia_no_kishi&z=5
+    knights_of_sidonia:
+      # https://danbooru.donmai.us/posts?tags=shiraui_tsumugi&z=2
+      # https://civitai.com/models/9147/knights-of-sidonia-shiraui-tsumugi?modelVersionId=10821
+      shiraui_tsumugi:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/knights_of_sidonia/shiraui_tsumugi/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/knights_of_sidonia/shiraui_tsumugi/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/knights_of_sidonia/shiraui_tsumugi/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/knights_of_sidonia/shiraui_tsumugi/env__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/knights_of_sidonia/shiraui_tsumugi/style__}|}
+        main-trigger-words:
+          - >-
+            shiraui_tsumugi, shiraui tsumugi \(cosplay\), knights of sidonia, sidonia no kishi
+        costume-ethnicity:
+          - digitigrade, monster girl, white hair, long hair, spikes, gauna
+        costume-elem:
+          - arm at side
+          - tentacles
+          - tail
+          - yellow eyes
+        env:
+          - electricity
+        style:
+          - science fiction
+    # https://civitai.com/models/137944/blame
+    # https://civitai.com/models/50888?modelVersionId=125891
+    blame:
+      # https://civitai.com/models/204845/cibo-from-blame
+      blame-cibo:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/blame/blame-cibo/main__,
+            {{1-$$__lazy-wildcards/cosplay-char/blame/blame-cibo/main-trigger-words__},|}
+            {{1-$$__lazy-wildcards/cosplay-char/blame/blame-cibo/costume-ethnicity__},|}
+            {{1-$$__lazy-wildcards/cosplay-char/blame/blame-cibo/costume__},|}
+            {{1-$$__lazy-wildcards/cosplay-char/blame/blame-cibo/costume-weapon__},|}
+            {1-$$__lazy-wildcards/cosplay-char/blame/blame-cibo/costume-elem__},
+            {1-$$__lazy-wildcards/cosplay-char/blame/blame-cibo/env__}
+            {,{1-$$__lazy-wildcards/cosplay-char/blame/blame-cibo/style__}|}
+        main:
+          - cibo, tsutomu nihei, nihei_tsutomu, blame!, blame gakuen!, cyberpunk, cyborg, __lazy-wildcards/subject/style-elem/sci-fi/prompts__, noise \(manga\)
+        main-trigger-words:
+          - ova
+          - movie
+        costume-ethnicity:
+          - long hair, white hair, blue eyes, blunt bangs
+          - long legs, tall female
+        costume:
+          - body horror, bone, core, facial mark, forehead mark, energy ball, skeleton, spine
+          - bodysuit
+          - school uniform
+        costume-weapon:
+          - graviton beam emitter
+        costume-elem:
+          - emblem
+          - glowing
+          - humanoid robot
+          - __lazy-wildcards/cosplay-char/blame/blame-safeguard/prompts__
+          - joints, robot joints
+          - mechanical arms
+          - mechanical legs
+          - arm cannon
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - thighhighs
+          - thigh gap
+          - long sleeves
+          - facial mark
+        env:
+          - exterminator \(blame!\)
+          - __lazy-wildcards/subject/env-bg/nihei_tsutomu-blame-env/prompts__
+        style:
+          - fleeing, running
+      blame-safeguard:
+        prompts:
+          - >-
+            safeguard \(blame!\), safeguard \(puppet\)
+            , joints, robot joints
+            , facial mark, safeguard sign on forehead
+      # https://danbooru.donmai.us/posts?tags=abara&z=2
+      # https://civitai.com/models/656658/kudoudenji-abara?modelVersionId=734689
+      # https://civitai.com/models/656803/digimortal-digimortal?modelVersionId=734859
+      abara-kudou_denji:
+        prompts:
+          - >-
+            KudouDenji, kudou_denji, abara,
+            digimortal, digimortal_\(manga\),
+            Etherow2, ningyou_no_kuni, Aposimz,
+            power armor
+            , tsutomu nihei, nihei_tsutomu
+      # https://civitai.com/models/662751/titania?modelVersionId=741677
+      Aposimz-Titania:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/blame/Aposimz-Titania/main-trigger-words__
+            ,__lazy-wildcards/cosplay-char/blame/Aposimz-Titania/costume-ethnicity__
+            ,__lazy-wildcards/cosplay-char/blame/Aposimz-Titania/costume__
+            {,{1-$$__lazy-wildcards/cosplay-char/blame/Aposimz-Titania/costume-elem__}|}
+        main-trigger-words:
+          - Titania, titania \(ningyou no kuni\), ningyou_no_kuni, Aposimz, tsutomu nihei, nihei_tsutomu
+        costume-ethnicity:
+          - white hair, very long hair, blunt bangs, hair band, twintails, ponytailponytail
+        costume:
+          - elbow gloves, black gloves, dress, frills, armor, black thighhighs, high heels, detached sleeves
+        costume-elem:
+          - hair ribbon
+          - pink eyes
+          - doll joints
+          - android
+          - torn
+      # https://civitai.com/models/662588/aposimz-keisha
+      Aposimz-Keisha:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/blame/Aposimz-Keisha/main-trigger-words__
+            {,__lazy-wildcards/cosplay-char/blame/Aposimz-Keisha/costume-ethnicity__|}
+            ,__lazy-wildcards/cosplay-char/blame/Aposimz-Keisha/costume__
+            {,{1-$$__lazy-wildcards/cosplay-char/blame/Aposimz-Keisha/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/blame/Aposimz-Keisha/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/blame/Aposimz-Keisha/env__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/blame/Aposimz-Keisha/env-bg__}|}
+        main-trigger-words:
+          - keisha, keisha \(ningyou no kuni\), ningyou_no_kuni, Aposimz, tsutomu nihei, nihei_tsutomu
+        costume-ethnicity:
+          - orange hair, short hair
+        costume:
+          - Khaki coat, Khaki hood
+          - Khaki cape
+          - Khaki tight
+          - Khaki bodysuit, skirt
+          - Khaki boots
+          - Khaki pants
+        costume-elem:
+          - hair ribbon
+          - pink eyes
+          - doll joints
+          - android
+          - torn
+          - gas mask
+          - eyepatch
+          - bag, backpack
+        costume-weapon:
+          - pickaxe
+          - rifle, gun
+        env:
+          - tube, cable
+        env-bg:
+          - tunnel
+

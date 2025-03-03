@@ -268,4 +268,12 @@ lazy-wildcards:
           - bikkuriman stickers
           - holographic stickers
           - retro japanese
+      # https://danbooru.donmai.us/posts?tags=kim_hyung_tae&z=5
+      # https://civitai.com/models/126379/kim-hyung-tae-artist-style?modelVersionId=138146
+      kim_hyung_tae:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/kim_hyung_tae/style-artist__
+        style-artist:
+          - kim_hyung_tae, __lazy-wildcards/utils/fn/style-inspired(v=kim_hyung_tae)__, kim_hyung_tae_\(style\)
 

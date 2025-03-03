@@ -57,4 +57,20 @@ lazy-wildcards:
           - surrounded by snake
           - white snake
           - gold snake
+      # https://civitai.com/models/46114/mimic-monster-creator-tentacle-monster
+      # https://civitai.com/models/189321/rpgmimic
+      mimic:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-creatures/mimic/env-elem-creatures__
+            {, {1-$$__lazy-wildcards/subject/env-elem-creatures/mimic/env-bg__}|}
+        env-elem-creatures:
+          - >-
+            mimic, treasure chest, mimic chest
+            , mimicmeme, mimico
+            , mimic creatures
+        env-bg:
+          - dungeon
+          - brick wall
+          - stone floor
 

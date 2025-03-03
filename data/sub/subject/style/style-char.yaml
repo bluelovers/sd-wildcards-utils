@@ -8,9 +8,41 @@ lazy-wildcards:
             , __lazy-wildcards/utils/fn/style-inspired(v=pvc)__
       # https://civitai.com/models/20163/genshin-sticker-chibi-style?modelVersionId=23951
       # https://civitai.com/models/182276/chibi-style-or-stylemix?modelVersionId=204557
+      # https://civitai.com/models/67462
+      # https://civitai.com/models/69493/try-other-q-versionstest
+      # https://civitai.com/models/35830?modelVersionId=95855
+      # https://civitai.com/models/99662/doodlechibi-or-chibi?modelVersionId=106656
+      # https://civitai.com/models/217449/cute-and-chibi-art-style-nozohitomiz?modelVersionId=245069
+      # https://civitai.com/models/500907/chibipf-anime?modelVersionId=556783
+      # https://civitai.com/models/615736/style-artist-or-totatokeke-sdpony?modelVersionId=688316
       chibi:
         prompts:
           - >-
+            __lazy-wildcards/subject/style-elem/chibi/main-trigger-words__
+            {, {1-$$__lazy-wildcards/subject/style-elem/chibi/style__}|}
+        main-trigger-words:
+          - >-
             __lazy-wildcards/utils/fn/style-inspired(v=chibi)__
-            , AGGA_ST019
+            , AGGA_ST019, Arknights Chibi, nozochibi, ChibiPF, totochibif
+            , min
+        style:
+          - full body
+          - single person
+          - plump
+          - model sheet, chara-sheet
+          - blush stickers
+      # https://civitai.com/models/297627/nobunyagas-ambition?modelVersionId=334358
+      Nobunyagas_Ambition:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-elem/Nobunyagas_Ambition/main-trigger-words__
+            {, {1-$$__lazy-wildcards/subject/style-elem/Nobunyagas_Ambition/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-elem/Nobunyagas_Ambition/style__}|}
+            , __lazy-wildcards/subject/style-elem/chibi/prompts__
+        main-trigger-words:
+          - Nobunyaga's Ambition, nobunyaga, animalization, cat
+        costume-elem:
+          - samurai
+        style:
+          - fighting stance
 

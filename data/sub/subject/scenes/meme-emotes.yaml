@@ -1,0 +1,77 @@
+lazy-wildcards:
+  subject:
+    scenes-meme-emotes:
+      # https://civitai.com/models/69977/gyate-gyate-chibi-laugh?modelVersionId=74646
+      chibi-gyate-gyate-laugh:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/scenes-meme-emotes/chibi-gyate-gyate-laugh/prompts-shared__
+            , __lazy-wildcards/subject/scenes-meme-emotes/chibi-gyate-gyate-laugh/expressions__
+        prompts-shared:
+          - >-
+            __lazy-wildcards/subject/scenes-meme-emotes/chibi-gyate-gyate-laugh/style-main__
+            {0.75::, {1-$$__lazy-wildcards/subject/scenes-meme-emotes/chibi-gyate-gyate-laugh/style__}|}
+        expressions:
+          - laughing
+        style-main:
+          - chibi, emotes, solo, close up, twitch emotes
+        style:
+          - white background
+      # https://civitai.com/models/71876/chibi-tiemie?modelVersionId=76616
+      chibi-tiemie:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/scenes-meme-emotes/chibi-gyate-gyate-laugh/prompts-shared__
+            , __lazy-wildcards/subject/scenes-meme-emotes/chibi-tiemie/main-trigger-words__
+        main-trigger-words:
+          - tiemie
+      # https://civitai.com/models/91490/twitch-emotes-for-all?modelVersionId=97529
+      chibi-twitch:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/scenes-meme-emotes/chibi-gyate-gyate-laugh/prompts-shared__
+            , __lazy-wildcards/subject/scenes-meme-emotes/chibi-twitch/main-trigger-words__
+        main-trigger-words:
+          - holding
+          - heart
+          - licking screen
+          - holding handgun
+          - from above
+          - from below
+          - from above, parody crying face
+          - embarassed with hands on cheek
+          - sweatdrop
+          - smug face
+          - eating
+      # https://civitai.com/models/174605/chibi-huh-face-or-twitch-emote?modelVersionId=196009
+      chibi-huh:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/scenes-meme-emotes/chibi-gyate-gyate-laugh/prompts-shared__
+            , __lazy-wildcards/subject/scenes-meme-emotes/chibi-twitch/main-trigger-words__
+            {, {1-$$__lazy-wildcards/subject/scenes-meme-emotes/chibi-huh/expressions__}|}
+        main-trigger-words:
+          - huh face
+        expressions:
+          - disgusted face
+          - nervous face
+      # https://civitai.com/models/173831/sadly-anime-face-or-twitch-emotes?modelVersionId=195181
+      twitch-sadly-face:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/scenes-meme-emotes/chibi-gyate-gyate-laugh/prompts-shared__
+            , __lazy-wildcards/subject/scenes-meme-emotes/twitch-sadly-face/main-trigger-words__
+        main-trigger-words:
+          - sadly face, from above
+      # https://civitai.com/models/171922/parody-close-up?modelVersionId=196882
+      parody_close_up:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/scenes-meme-emotes/chibi-gyate-gyate-laugh/prompts-shared__
+            , __lazy-wildcards/subject/scenes-meme-emotes/parody_close_up/main-trigger-words__
+            {, {1-$$__lazy-wildcards/subject/scenes-meme-emotes/parody_close_up/style__}|}
+        main-trigger-words:
+          - parody close up, eye focus
+        style:
+          - fisheye effect
+

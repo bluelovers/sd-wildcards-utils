@@ -184,4 +184,39 @@ lazy-wildcards:
         prompts:
           - >-
             (sticky rice, styr, noc-styr)
+      # https://civitai.com/models/114493/leco-monster-meat?modelVersionId=123769
+      monster_meat:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-food/monster_meat/env-elem-food-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/monster_meat/env-elem-food__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/monster_meat/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/monster_meat/style__}|}
+            , __lazy-wildcards/subject/style-elem/food/prompts__
+        env-elem-food-main:
+          - monster meat, meat
+        env-elem-food:
+          - warm food
+          - food on table
+          - exotic food
+          - vegetable
+          - meat on dish
+          - colored meat
+          - multi colored food
+          - boned meat
+          - raw meat
+          - character-themed food
+          - sauce
+        env:
+          - tentacles
+          - eyeball \(object\)
+          - insect
+        style:
+          - purple
+          - multi colored
+          - blue
+          - yellow
+          - black
+          - dripping
+          - glowing
 

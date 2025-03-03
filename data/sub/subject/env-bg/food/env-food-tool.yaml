@@ -76,4 +76,30 @@ lazy-wildcards:
           - reflective_finish
           - noble_design, elegant_style
           - cultural_heritage, historical_artifact, tradition_art
+      beaker_laboratory_equipment:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/beaker_laboratory_equipment/env-main__}
+            {, {1-$$__lazy-wildcards/subject/env-elem/beaker_laboratory_equipment/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/beaker_laboratory_equipment/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/beaker_laboratory_equipment/style__}|}
+        env-main:
+          - beaker
+          - flask
+          - test tube
+          - vial
+          - pipette
+        env:
+          - chemicals
+          - low form beaker
+          - high form beaker
+          - glass beaker
+          - plastic beaker
+          - PTFE beaker
+          - laboratory equipment
+          - thermometer
+        env-bg:
+          - laboratory
+        style:
+          - science
 

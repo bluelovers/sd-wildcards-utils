@@ -1203,6 +1203,7 @@ lazy-wildcards:
           - outstretched hand
         style:
           - hexagon
+    # https://civitai.com/tag/macross
     macross:
       # 林明美
       # https://civitai.com/models/206354/lynn-minmay-macross-lora
@@ -1292,6 +1293,46 @@ lazy-wildcards:
           - listen_to_my_song
           - fire bomber
           - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
+      # https://danbooru.donmai.us/posts?tags=millia_jenius+&z=5
+      # https://civitai.com/models/125562/milia-fallyna-jenius-lora?modelVersionId=137165
+      # https://civitai.com/models/303549/milia-fallyna-jenius-locon-version-macross-7?modelVersionId=340784
+      Jenius-millia_jenius:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/macross/Jenius-millia_jenius/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/macross/Jenius-millia_jenius/costume-ethnicity__
+            , __lazy-wildcards/cosplay-char/macross/Jenius-millia_jenius/costume-ethnicity-hair__
+            {, {1-2$$__lazy-wildcards/cosplay-char/macross/Jenius-millia_jenius/costume__}|}
+            {, {1-2$$__lazy-wildcards/cosplay-char/macross/Jenius-millia_jenius/costume-headwear__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/macross/Jenius-millia_jenius/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/macross/Jenius-millia_jenius/env-bg__}|}
+        main-trigger-words:
+          - >-
+            millia_jenius
+            , millia jenius7, MiliaFallyna
+            , macross, macross_7
+        costume-ethnicity:
+          - >-
+            hair between eyes, green hair
+            , pointy ears
+            , makeup, green eyes
+            , meltrandi, zentradi
+        costume-ethnicity-hair:
+          - long hair
+          - short hair
+        costume:
+          - White_pilot_suit_Chest_harness
+          - Blue_naval_uniform_White_gloves_Double-breasted_insignia_Blue_pencil_skirt
+          - Blue_shirt_Red_cape_Red_elbow_gloves_blue_plaid_skirt_miniskirt_Belt_Buckle
+          - military uniform, captain uniform
+          - purple jacket
+          - pilot suit, spacesuit
+        costume-headwear:
+          - UNspacy_captain_peaked_cap, military hat, captain hat
+        costume-elem:
+          - mature female
+        env-bg:
+          - hangar
       myung_fang_lone:
         prompts:
           - >-

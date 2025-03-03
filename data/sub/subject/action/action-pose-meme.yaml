@@ -1,0 +1,25 @@
+lazy-wildcards:
+  subject:
+    action-pose:
+      # https://civitai.com/models/202119/wryyyyyyyyyy-pose-meme-or-pose-lora
+      why_bended_knees:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/action-pose/why_bended_knees/action__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/action-pose/why_bended_knees/expressions__}|}
+            {, {1-$$__lazy-wildcards/subject/action-pose/why_bended_knees/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/action-pose/why_bended_knees/style__}|}
+        action:
+          - IncrsWryyyyy, wryyyyyyyyyyyyyyyyyyyy, (bended knees:0.75)
+        expressions:
+          - fucked up expression
+          - screaming
+          - smirk, open mouth
+          - crying with eyes open
+        costume-elem:
+          - topless
+          - muscular
+          - glowing eyes
+        style:
+          - solo
+

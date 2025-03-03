@@ -172,6 +172,7 @@ lazy-wildcards:
           - >-
             {1-$$__lazy-wildcards/subject/moment/weather-mist/env-moment__}
             {0.3::, {1-$$__lazy-wildcards/subject/moment/weather-rain/style-env__}|}
+            {, {1-$$__lazy-wildcards/subject/moment/weather-mist/env__}|}
         env-moment:
           - foggy, foggy_scener
           - fog
@@ -180,6 +181,8 @@ lazy-wildcards:
           - __lazy-wildcards/subject/moment/weather-smoke/prompts__
           - thick mist
           - dense_fog
+        env:
+          - beautiful mist
       weather-smoke:
         prompts:
           - >-

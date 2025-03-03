@@ -63,4 +63,105 @@ lazy-wildcards:
       newspaper-style-old:
         prompts:
           - (old newspaper style, npzw:1.2), (newspaper title, newspaper text:1.1), sepia, monochrome, greyscale, old paper style
+      # https://en.wikipedia.org/wiki/Rider%E2%80%93Waite_Tarot
+      # https://danbooru.donmai.us/posts?tags=tarot_card&z=5
+      # https://danbooru.donmai.us/posts?tags=minor_arcana_%28tarot%29&z=2
+      # https://danbooru.donmai.us/posts?tags=tarot_%28medium%29&z=2
+      # https://civitai.com/models/11177/anime-tarot-card-art-style-lora
+      # https://civitai.com/models/86205
+      # https://civitai.com/models/63655/tarot-cards-rider-waite
+      tarot_card:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-book/tarot_card/style-art-main__
+            {, {1-3$$__lazy-wildcards/subject/style-book/tarot_card/env-card-tarot*__}|, {1-3$$__lazy-wildcards/subject/style-book/tarot_card/env-card-tarot__}|}{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+            {, {1-$$__lazy-wildcards/subject/style-book/tarot_card/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-book/tarot_card/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/style-book/tarot_card/env__}|}
+            {, {1-$$__lazy-wildcards/subject/style-book/tarot_card/style__}|}
+        style-art-main:
+          - >-
+            __lazy-wildcards/utils/fn/style-inspired(v=tarot_card)__
+            , rider-waite tarot
+            , tarot, tarot cards, tarot \(card\), tarot \(medium\)
+            , card, card \(medium\)
+            , Major Arcana, minor arcana \(tarot\)
+            , horridtarot, 1jj tarot
+            , tarot card background
+            , tarot symbols
+            , tarot card patterns
+        env-card-tarot:
+          - the fool \(tarot\)
+          - the magician \(tarot\)
+          - the high priestess \(tarot\)
+          - the empress \(tarot\)
+          - the emperor \(tarot\)
+          - the hierophant \(tarot\)
+          - the lovers \(tarot\)
+          - the chariot \(tarot\)
+          - strength \(tarot\)
+          - the hermit \(tarot\)
+          - wheel of fortune \(tarot\)
+          - justice \(tarot\)
+          - death \(tarot\)
+          - temperance \(tarot\)
+          - the devil \(tarot\)
+          - the tower \(tarot\)
+          - the star \(tarot\)
+          - the moon \(tarot\)
+          - the sun \(tarot\)
+          - judgement \(tarot\)
+          - the world \(tarot\)
+          - the hanged man \(tarot\)
+        env-card-tarot-plus:
+          - ace of cups \(tarot\)
+          - ace of coins \(tarot\)
+          - ace of swords \(tarot\)
+        env:
+          - >-
+            {1-$$roman numeral|english text}
+          - >-
+            {1-$$border|white border|tarot card border}
+          - >-
+            {1-$$garden|garden of eden}
+          - throne
+          - columns
+          - pillow throne
+          - stone throne
+          - chariot, riding chariot
+          - lion
+          - lantern
+          - spoked wheel
+          - symbols
+          - winged animals
+          - eagle
+          - hanging from tree
+          - hanging by ankle
+          - chained
+          - >-
+            {1-$$stars|many stars|big star}
+          - large sun with face
+          - cross
+          - circle
+        costume-elem:
+          - robes
+          - crown
+          - religious robes
+          - triple crown
+          - angel
+          - dress
+          - old man
+        costume-weapon:
+          - scepter
+          - candle, holding candle
+          - staff, holding staffs
+          - holding cups, pond of water
+          - holding jars
+          - trumpet, playing trumpet
+        style:
+          - illustration
+          - painting
+          - art nouveau
+          - art by alphonse mucha
+          - mystical tarot card
 

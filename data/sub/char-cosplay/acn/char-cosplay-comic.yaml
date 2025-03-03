@@ -1,128 +1,5 @@
 lazy-wildcards:
   cosplay-char:
-    # https://civitai.com/models/137944/blame
-    # https://civitai.com/models/50888?modelVersionId=125891
-    blame:
-      # https://civitai.com/models/204845/cibo-from-blame
-      blame-cibo:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/blame/blame-cibo/main__,
-            {{1-$$__lazy-wildcards/cosplay-char/blame/blame-cibo/main-trigger-words__},|}
-            {{1-$$__lazy-wildcards/cosplay-char/blame/blame-cibo/costume-ethnicity__},|}
-            {{1-$$__lazy-wildcards/cosplay-char/blame/blame-cibo/costume__},|}
-            {{1-$$__lazy-wildcards/cosplay-char/blame/blame-cibo/costume-weapon__},|}
-            {1-$$__lazy-wildcards/cosplay-char/blame/blame-cibo/costume-elem__},
-            {1-$$__lazy-wildcards/cosplay-char/blame/blame-cibo/env__}
-            {,{1-$$__lazy-wildcards/cosplay-char/blame/blame-cibo/style__}|}
-        main:
-          - cibo, tsutomu nihei, nihei_tsutomu, blame!, blame gakuen!, cyberpunk, cyborg, __lazy-wildcards/subject/style-elem/sci-fi/prompts__, noise \(manga\)
-        main-trigger-words:
-          - ova
-          - movie
-        costume-ethnicity:
-          - long hair, white hair, blue eyes, blunt bangs
-          - long legs, tall female
-        costume:
-          - body horror, bone, core, facial mark, forehead mark, energy ball, skeleton, spine
-          - bodysuit
-          - school uniform
-        costume-weapon:
-          - graviton beam emitter
-        costume-elem:
-          - emblem
-          - glowing
-          - humanoid robot
-          - __lazy-wildcards/cosplay-char/blame/blame-safeguard/prompts__
-          - joints, robot joints
-          - mechanical arms
-          - mechanical legs
-          - arm cannon
-          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
-          - thighhighs
-          - thigh gap
-          - long sleeves
-          - facial mark
-        env:
-          - exterminator \(blame!\)
-          - __lazy-wildcards/subject/env-bg/nihei_tsutomu-blame-env/prompts__
-        style:
-          - fleeing, running
-      blame-safeguard:
-        prompts:
-          - >-
-            safeguard \(blame!\), safeguard \(puppet\)
-            , joints, robot joints
-            , facial mark, safeguard sign on forehead
-      # https://danbooru.donmai.us/posts?tags=abara&z=2
-      # https://civitai.com/models/656658/kudoudenji-abara?modelVersionId=734689
-      # https://civitai.com/models/656803/digimortal-digimortal?modelVersionId=734859
-      abara-kudou_denji:
-        prompts:
-          - >-
-            KudouDenji, kudou_denji, abara,
-            digimortal, digimortal_\(manga\),
-            Etherow2, ningyou_no_kuni, Aposimz,
-            power armor
-            , tsutomu nihei, nihei_tsutomu
-      # https://civitai.com/models/662751/titania?modelVersionId=741677
-      Aposimz-Titania:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/blame/Aposimz-Titania/main-trigger-words__
-            ,__lazy-wildcards/cosplay-char/blame/Aposimz-Titania/costume-ethnicity__
-            ,__lazy-wildcards/cosplay-char/blame/Aposimz-Titania/costume__
-            {,{1-$$__lazy-wildcards/cosplay-char/blame/Aposimz-Titania/costume-elem__}|}
-        main-trigger-words:
-          - Titania, titania \(ningyou no kuni\), ningyou_no_kuni, Aposimz, tsutomu nihei, nihei_tsutomu
-        costume-ethnicity:
-          - white hair, very long hair, blunt bangs, hair band, twintails, ponytailponytail
-        costume:
-          - elbow gloves, black gloves, dress, frills, armor, black thighhighs, high heels, detached sleeves
-        costume-elem:
-          - hair ribbon
-          - pink eyes
-          - doll joints
-          - android
-          - torn
-      # https://civitai.com/models/662588/aposimz-keisha
-      Aposimz-Keisha:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/blame/Aposimz-Keisha/main-trigger-words__
-            {,__lazy-wildcards/cosplay-char/blame/Aposimz-Keisha/costume-ethnicity__|}
-            ,__lazy-wildcards/cosplay-char/blame/Aposimz-Keisha/costume__
-            {,{1-$$__lazy-wildcards/cosplay-char/blame/Aposimz-Keisha/costume-elem__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/blame/Aposimz-Keisha/costume-weapon__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/blame/Aposimz-Keisha/env__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/blame/Aposimz-Keisha/env-bg__}|}
-        main-trigger-words:
-          - keisha, keisha \(ningyou no kuni\), ningyou_no_kuni, Aposimz, tsutomu nihei, nihei_tsutomu
-        costume-ethnicity:
-          - orange hair, short hair
-        costume:
-          - Khaki coat, Khaki hood
-          - Khaki cape
-          - Khaki tight
-          - Khaki bodysuit, skirt
-          - Khaki boots
-          - Khaki pants
-        costume-elem:
-          - hair ribbon
-          - pink eyes
-          - doll joints
-          - android
-          - torn
-          - gas mask
-          - eyepatch
-          - bag, backpack
-        costume-weapon:
-          - pickaxe
-          - rifle, gun
-        env:
-          - tube, cable
-        env-bg:
-          - tunnel
     one-punch_man:
       # https://civitai.com/models/130782/mosquito-girl-anime-character-or-one-punch-man-or-ownwaifu?modelVersionId=143568
       mosquito_musume:
@@ -847,4 +724,51 @@ lazy-wildcards:
           - White kimono, japanese clothes, long sleeves
         main-trigger-words2:
           - chibi sawako, chibi
+    jujutsu_kaisen:
+      # https://civitai.com/models/895975/telannasjujutsukaisenoutfitaovmodellora
+      # https://danbooru.donmai.us/posts?tags=jujutsu_kaisen+&z=5
+      # https://danbooru.donmai.us/posts?tags=jujutsu_tech_uniform&z=2
+      jujutsu_tech_uniform:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/jujutsu_kaisen/jujutsu_tech_uniform/costume__
+            {, {1-$$__lazy-wildcards/cosplay-char/jujutsu_kaisen/jujutsu_tech_uniform/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/jujutsu_kaisen/jujutsu_tech_uniform/costume-weapon__}|}
+        costume:
+          - >-
+            jujutsu_tech_uniform
+            , Tel'annas_JJK
+            , japanese clothes
+            , navy blue clothes
+            , hakama
+            , cropped jacket
+            , white shirt
+            , gloves, fingerless gloves, single glove
+            , belt, ((sheath))
+            , skirt, hakama skirt
+            , navy blue skirt
+            , boots, black footwear
+            , high collar
+        costume-elem:
+          - >-
+            {short sleeves|long sleeves}
+          - nail polish, red nails
+          - miniskirt
+          - navy blue jacket
+          - pantyhose
+          - sidelocks
+          - ponytail
+          - bob cut
+          - blunt bangs
+          - pleated skirt
+          - upper teeth only
+          - swept bangs
+          - school uniform
+          - facial mark
+          - raised eyebrows
+          - choppy bangs
+        costume-weapon:
+          - holding weapon
+          - holding hammer
+          - claw hammer
 
