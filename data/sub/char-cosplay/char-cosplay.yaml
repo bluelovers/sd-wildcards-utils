@@ -1431,6 +1431,22 @@ lazy-wildcards:
           - listen_to_my_song
           - fire bomber
           - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
+      # https://civitai.com/models/310831/rex-locon-version-macross-7
+      rex:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/macross/rex/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/macross/rex/costume-ethnicity__
+            {, {1-2$$__lazy-wildcards/cosplay-char/macross/rex/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/macross/rex/costume-elem__}|}
+        main-trigger-words:
+          - rex, rex_\(macross_7\), Macross7Rex, macross, macross_7
+        costume-ethnicity:
+          - blonde hair, blue eyes, long hair, very long hair
+        costume:
+          - Blue_bikesuit_White_shoulder_pads, blue bikesuit, knee-pads, white shoulder-pads
+        costume-elem:
+          - blue gloves
     devilman:
       siren:
         prompts:

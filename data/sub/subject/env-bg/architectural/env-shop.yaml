@@ -78,4 +78,59 @@ lazy-wildcards:
         costume-elem:
           - __lazy-wildcards/cosplay-char/mcdonalds/shared/costume-uniform-apron__
           - Drive-Thru Window Operator
+      # https://civitai.com/models/298697?modelVersionId=1255337
+      coffee_shop:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/coffee_shop/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/coffee_shop/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/coffee_shop/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/coffee_shop/env-elem-food__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/coffee_shop/style__}|}
+        env-bg-main:
+          - coffee shop, coffee shop interior, interior, indoors
+        env-bg:
+          - independent cafe
+          - specialty coffee
+          - street coffee stall
+          - bookstore cafe
+          - cat cafe
+          - coffee and desserts
+          - romantic night cafe
+          - japanese kissaten
+          - industrial coffee shop
+          - vintage coffee shop
+        env:
+          - window
+          - chair
+          - counter
+          - rug
+          - flower
+          - plants, lush greenery
+          - patio seating
+          - wooden bench parasol
+          - washi paper lantern
+          - low table tatami seating
+          - metal pendant lights
+          - steel frames oncrete floor
+          - exposed brick walls
+          - industrial decor
+          - handwritten menu
+          - old books
+          - warm wooden interior
+          - vintage pendant lights
+          - large windows natural light
+          - marble table, high chairs
+        env-elem-food:
+          - wagashi matcha
+        style:
+          - ceiling light, photography, architecture photography
+          - striking structures
+          - clean lines
+          - geometric shapes
+          - dramatic angles
+          - showcasing design elements
+          - artsy and hipster
+          - quiet and focus friendly
+          - cozy ambience
 

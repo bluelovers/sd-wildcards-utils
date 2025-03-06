@@ -57,7 +57,14 @@ lazy-wildcards:
           - >-
             ({1-$$__lazy-wildcards/subject/costume-headwear/blindfold-angel/costume-headwear__}{0.3:::{1.2|1.3|1.4}|})
         costume-headwear:
-          - angel_mask, seraphim blindfold, seraph blindfold, blindfold
+          - angel mask, seraphim blindfold, seraph blindfold, blindfold
+      # https://civitai.com/models/231292?modelVersionId=293920
+      biblically_accurate_angel_mask:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/costume-headwear/biblically_accurate_angel_mask/costume-headwear__}{0.3:::{1.2|1.3|1.4}|})
+        costume-headwear:
+          - angel mask, b1bl1c4l mask, many wings, many eyes, biblically accurate angel mask, baa mask, extra eyes, wings, head wings, covered eyes
       # https://civitai.com/models/1084685/fox-mask?modelVersionId=1221062
       mask-fox:
         prompts:

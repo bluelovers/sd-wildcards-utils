@@ -105,9 +105,9 @@ lazy-wildcards:
             __lazy-wildcards/subject/env-bg/casino/style__
             , {1-$$__lazy-wildcards/subject/env-bg/casino/main-types/*__}
             , {1-$$__lazy-wildcards/subject/env-bg/casino/env__}
-            , {1-$$__lazy-wildcards/subject/env-bg/casino/action-types/*__}
+            {, {1-$$__lazy-wildcards/subject/env-bg/casino/action-types/*__}|}
         style:
-          - casino, gambling, set in Gambling Den
+          - __lazy-wildcards/utils/fn/style-inspired(v=casino)__, gambling, set in Gambling Den
         env:
           - chip
           - dice
@@ -116,7 +116,8 @@ lazy-wildcards:
           - bills
           - betting ticket
           - cheating \(competitive\)
-          - house_of_cards
+          - house of cards
+          - roulette wheel
         main-types:
           roulette:
             - roulette, roulette table
