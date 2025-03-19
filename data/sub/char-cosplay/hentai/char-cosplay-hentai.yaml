@@ -395,4 +395,27 @@ lazy-wildcards:
         env-bg:
           - yarimoku beach
           - nudist beach, nude beach
+    # https://civitai.com/models/74518/miriya-hentai-elf-hime-nina-noobai-illustrious-epsilon-v-pred-ponyxl-sd15?modelVersionId=79241
+    elf_hime_nina:
+      miriya:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char-hentai/elf_hime_nina/miriya/main-trigger-words__
+            , __lazy-wildcards/cosplay-char-hentai/elf_hime_nina/miriya/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char-hentai/elf_hime_nina/miriya/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char-hentai/elf_hime_nina/miriya/costume-elem__}|}
+        main-trigger-words:
+          - miriya, miriya_\(elf_hime_nina\), elf_hime_nina
+        costume-ethnicity:
+          - dark elf, pointy ears, white hair, grey hair, long hair, hair over one eye, blue eyes, headpiece, earrings, voluptuous, thighs, __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+        costume:
+          - grey shrug, black slingshot swimsuit, black bra, black panties, pink single thighhigh, garter belt
+          - helterneck, micro bikini, collar, clothed shoulders, high-heeled shoes
+        costume-elem:
+          - covered nipples
+          - garter belt
+          - high-heeled shoes
+          - helterneck
+          - bikini
+          - clothed shoulders
 

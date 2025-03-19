@@ -5,10 +5,29 @@ lazy-wildcards:
       Malaysia_Non-Muslim_School_Uniform:
         prompts:
           - (blue_pinafore, white shirt, white skirt), Malaysia Non-Muslim School Uniform
+      # https://civitai.com/models/142306
       school_uniform:
         prompts:
           - >-
+            __lazy-wildcards/subject/costume/school_uniform/costume-main__
+            {, {1-$$__lazy-wildcards/subject/costume/school_uniform/costume__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/school_uniform/costume-elem__}|}
+        costume-main:
+          - >-
+            schooluniform, school uniform
+            , xiaofu, qingquxiaofu
+        costume:
+          - sailor uniform, serafuku
+          - >-
             {__lazy-wildcards/subject/moment/season/main__ |}school uniform
+          - collared shirt, pleated skirt
+        costume-elem:
+          - crop top
+          - pleated skirt
+          - miniskirt
+          - breasts out
+          - topless
+          - partially undressed
       # https://civitai.com/search/models?sortBy=models_v9&query=graduation
       # https://civitai.com/models/105618/tw-girls-in-sexy-graduation-gown
       # https://civitai.com/models/444871/graduation-picture

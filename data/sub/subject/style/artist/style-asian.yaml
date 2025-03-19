@@ -791,4 +791,20 @@ lazy-wildcards:
           - traditional media
         style:
           - science fiction
+      # https://civitai.com/models/1362051/tsutomunihei?modelVersionId=1538732
+      nihei_tsutomu:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/nihei_tsutomu/style-artist__
+            {, {1-$$__lazy-wildcards/subject/style-artist/nihei_tsutomu/style__}|}
+        style-artist:
+          - >-
+            nihei tsutomu, tsutomu nihei
+            , __lazy-wildcards/utils/fn/style-inspired(v=nihei_tsutomu)__
+            , blame!, blame gakuen!, abara, TNstyle, sidonia_no_kishi, DonMM4ch1n3W0rld
+            , tnihei
+        style:
+          - industrial style
+          - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
+          - dystopia, destroyed
 

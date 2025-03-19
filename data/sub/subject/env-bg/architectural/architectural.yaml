@@ -181,16 +181,20 @@ lazy-wildcards:
           - indoors, interior
           - outdoors
       # https://civitai.com/models/825976/style-of-treehouse-433?modelVersionId=923694
+      # https://civitai.com/models/763249/jjs-tree-house?modelVersionId=1501544
       treehouse:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-bg-architectural/treehouse/env-bg-main__
+            (__lazy-wildcards/subject/env-bg-architectural/treehouse/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
             {, {1-2$$__lazy-wildcards/subject/env-bg-architectural/treehouse/env-bg-treehouse__}|}
             {, {1-$$__lazy-wildcards/subject/env-bg-architectural/treehouse/env__}|}
             {, {1-$$__lazy-wildcards/subject/env-bg-architectural/treehouse/env-bg__}|}
             {, {1-$$__lazy-wildcards/subject/env-bg-architectural/treehouse/style__}|}
         env-bg-main:
-          - (treehouse, style of treehouse:1.2), tree
+          - >-
+            __lazy-wildcards/utils/fn/style-inspired(v=treehouse)__
+            , __lazy-wildcards/utils/fn/style-inspired(v=tree_house)__
+            , tree, wood
         env-bg-treehouse:
           - Rustic Treehouse, rustic_architecture
           - modern_treehouse, geometric_architecture, eco_friendly_design, modern_integration
@@ -224,6 +228,7 @@ lazy-wildcards:
           - __lazy-wildcards/subject/env-elem/lamp/prompts__
           - plant roots
           - tire, tire swing
+          - leaf
         style:
           - outdoor_exploration
           - natural integration
@@ -353,4 +358,121 @@ lazy-wildcards:
           - overlooking, overhead view, aerial view, from above, horizon
           - >-
             going {down|up}stairs
+      # https://civitai.com/models/480438/girl-hate-shack-under-bridge?modelVersionId=534308
+      shack_under_bridge:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-architectural/shack_under_bridge/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/shack_under_bridge/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/shack_under_bridge/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/shack_under_bridge/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/shack_under_bridge/action__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/shack_under_bridge/style__}|}
+        env-bg-main:
+          - underpass, under bridge, shack under bridge, tent
+        env-bg:
+          - cardboard houses under bridges, cardboard house, tarp shelter, makeshift hut, corrugated box
+          - highway underpass slum, urban poverty, forgotten district
+          - makeshift camps, riverside shack, floating cardboard homes
+          - railway underpass, derelict shelter, forgotten people
+          - concrete jungle, neon glow shadows, urban survivors
+          - post apocalypse shelter, survivalist camp, dystopian shack
+        env:
+          - concrete
+          - concrete pillars, underpass shadow, urban decay
+          - scattered newspapers, tattered blankets, trash littered ground
+          - barrel fire, night camp
+          - worn out furniture, abandoned mattress, wooden crates
+          - damp ground, stagnant puddles
+          - moss growth
+          - graffiti walls, street tags, urban anarchy
+          - abandoned belongings, torn backpack, worn shoes
+          - hanging clothes, exposed wiring, makeshift laundry
+          - stray cats
+          - scavenging dogs
+          - urban wildlife
+          - riverside, steep slope
+          - dirty
+          - tent
+          - weed
+          - cushion
+          - blanket
+        costume-elem:
+          - homeless people
+          - over size clothes
+          - messy hair
+          - knee up
+          - empty eyes, no pupil
+          - layered ragged clothes, oversized coat, fingerless gloves
+          - hooded wanderer, makeshift headscarf, tattered hat
+          - barefoot, worn out shoes, torn socks
+          - dirt stained clothes, survivalist aesthetic, urban nomad
+          - patchwork attire, dystopian fashion, scavenger outfit
+        action:
+          - sleeping
+          - sitting on sofa
+        style:
+          - poor, tired
+          - low light environment, blue tone shadows, underpass gloom
+          - melancholic mood, isolation aura, urban loneliness
+          - urban neglect, dystopian ruin, forgotten society
+          - neon glow reflection, flickering headlights, light and shadow
+      # https://civitai.com/models/763376/jjs-cliff-house?modelVersionId=1501640
+      cliff_house:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-architectural/cliff_house/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-3$$__lazy-wildcards/subject/env-bg-architectural/cliff_house/env-bg__}|}
+            {, __lazy-wildcards/subject/env-bg/cliff/prompts__|}
+        env-bg-main:
+          - cliff house
+        env-bg:
+          - rock hewn building, monastery on cliff, ancient cliff dwellings, cave_dwelling, stone_masonry_house, troglodyte_home
+          - modern glass house, cantilevered architecture, futuristic cliff home
+          - cliffside cabin, wooden mountain hut, precarious shelter
+          - suspension bridge, narrow mountain path, dangerous walkway
+          - cliffside balcony, ocean view terrace, scenic overlook
+          - secret mountain home, hidden refuge, isolated sanctuary
+          - minimalist glass house, modernist architecture, open concept design
+          - medieval fortress, gothic monastery, cliffside castle
+          - japanese mountain inn, wooden cliff house, ryokan on cliff
+          - cyberpunk tower, floating mountain city, sci fi cliff base
+      # https://civitai.com/models/764791/jjs-cave-house?modelVersionId=1501704
+      cave_house:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-architectural/cave_house/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {{1-$$__lazy-wildcards/subject/env-bg-architectural/cave_house/env-bg__}|0.3::__lazy-wildcards/subject/env-bg-architectural/cave_house/env-bg-real__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/cave_house/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/cave_house/style__}|}
+        env-bg-main:
+          - cave house
+        env-bg:
+          - natural cave house, rocky interior, earth sheltered
+          - carved stone house, rock cut home, hollowed cliff
+          - arched cave door, rocky gateway, shadowy entrance
+          - stone walls, rugged texture, uneven surface
+          - vaulted ceiling, cavernous room, natural architecture
+          - rock cut window, natural light shafts, stone frame
+          - traditional cave home
+          - futuristic cave base, neon lights, underground bunker
+          - abandoned cave, survivalist shelter, dust-covered
+          - ancient carvings, towering pillars, underground kingdom
+        env-bg-real:
+          - Cappadocia, fairy chimneys, rock cut dwellings
+          - Matera, stone city, ancient cave houses
+          - Yaodong, Loess plateau
+          - Sacromonte, whitewashed caves, Andalusian architecture
+          - New Mexico, desert cave house, Pueblo style
+        env:
+          - torchlight illumination
+          - glowing lanterns
+          - wooden supports, rustic beams, reinforced cave
+          - mossy rocks, ivy climbing walls, overgrown cave
+          - subterranean stream, small waterfall, glowing pools
+          - survivalist dwellings, rugged existence
+          - __lazy-wildcards/subject/env-elem/stairs/prompts__
+          - holographic displays, metallic structures
+        style:
+          - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
 

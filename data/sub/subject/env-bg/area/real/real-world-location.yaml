@@ -168,4 +168,51 @@ lazy-wildcards:
           - polar_bear
           - penguins
           - seals
+      # Matera（马泰拉）— 意大利的石窟之城
+      matera:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-real-world-location/matera/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg-real-world-location/matera/env-bg__}|}{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg-real-world-location/matera/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-real-world-location/matera/style__}|}
+        env-bg-main:
+          - matera
+        env-bg:
+          - sassi di matera
+          - cave dwellings, carved stone houses, cave houses, rock cut homes, whitewashed walls, small windows, wooden shutters
+          - rock churches, byzantine chapel, frescoed walls, cave cathedral, religious artifacts
+          - narrow stone streets, cobblestone path, winding alley, steep stairways, historic atmosphere
+          - candlelit interiors, warm glow, rustic candles, mystical atmosphere, hidden chambers
+        env:
+          - basilicata, italy
+          - limestone cliffs
+          - ancient city
+          - karst landscap, eroded rock, rugged terrain, limestone gorge, rocky hills
+          - gravina canyon, deep canyon, winding river, dramatic cliffs, historic bridges
+          - white & beige limestone walls, earthy tones, sunlit stones
+          - warm mediterranean sunlight
+        style:
+          - soft lighting, ancient texture
+      # Monemvasia（莫奈姆瓦夏 | Μονεμβασιά）— 希腊中世纪城堡小镇
+      monemvasia:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-real-world-location/monemvasia/env-bg-main__{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg-real-world-location/monemvasia/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-real-world-location/monemvasia/env__}|}
+        env-bg-main:
+          - monemvasia
+        env-bg:
+          - seaside fortress town, medieval fortress, stone walls, coastal cliff, ocean view
+          - isolated rock island,  rocky island, high cliffs, narrow passage, steep slope
+          - ancient gate and bridge, stone gate, stone bridge, fortified walls
+          - stone houses, medieval houses, stone buildings, red tiled roofs, rustic windows
+          - cliffside castle, cliffside ruins, ancient castle, fortified tower, weathered stone
+          - deep blue sea, ocean horizon, coastal breeze, tranquil setting
+          - ancient ruins, crumbling walls, abandoned city
+        env:
+          - laconia, greece
+          - narrow cobblestone streets, cobblestone path, narrow alley, winding street, lantern lit
+          - sunset glow, golden tones, warm lighting, historic charm
 

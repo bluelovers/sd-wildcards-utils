@@ -1,0 +1,80 @@
+lazy-wildcards:
+  subject:
+    costume:
+      # https://civitai.com/models/25266/korean-student-hanbok-korean-clothes
+      korean-hanbok-student:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/korean-hanbok-student/costume__
+            , __lazy-wildcards/subject/costume/korean-hanbok-student/costume-main__
+            {, {1-$$__lazy-wildcards/subject/costume/korean-hanbok-student/costume-elem__}|}
+        costume:
+          - bandana, korean student hanbok, korean traditional student
+        costume-main:
+          - hanbok, korean hanbok, korean traditional clothes
+        costume-elem:
+          - scholar_outfit
+          - >-
+            {navy_blue|dark_green|off_white|beige} hanbok
+          - square_hat, gat, traditional_headwear
+          - linen_fabric
+      # https://civitai.com/models/25263/korean-warrior-hanbok-korean-clothes
+      korean-hanbok-warrior:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/korean-hanbok-warrior/costume__
+            , __lazy-wildcards/subject/costume/korean-hanbok-student/costume-main__
+            {, {1-$$__lazy-wildcards/subject/costume/korean-hanbok-warrior/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/korean-hanbok-warrior/costume-weapon__}|}
+        costume:
+          - korean warrior hanbok, korean traditional warrior, hat
+        costume-elem:
+          - armor hanbok
+          - silk_robes
+          - reinforced_fabric
+          - wide sleeves
+          - lowing_robes
+          - metal_helmet
+          - protective_headgear
+          - warrior_band
+        costume-weapon:
+          - holding sword
+          - sheathed blade
+          - bow_and_arrows
+      # https://civitai.com/models/25257/kings-eunuch-hanbok-korean-clothes
+      korean-hanbok-king:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/korean-hanbok-king/costume__
+            , __lazy-wildcards/subject/costume/korean-hanbok-student/costume-main__
+            {, {1-$$__lazy-wildcards/subject/costume/korean-hanbok-king/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/korean-hanbok-king/costume-weapon__}|}
+        costume:
+          - korean king's eunuch hanbok
+        costume-elem:
+          - gold_embroidery
+          - detailed_patterns
+          - luxury_textiles
+          - scarlet_robes
+          - navy_blue_fabric
+          - ceremonial_clothing
+          - black eunuch hat, formal headpiece, korean traditional cap
+        costume-weapon:
+          - Holding a Bamboo Tablet
+      # https://civitai.com/models/25265/korean-public-official-hanbok-korean-clothes
+      korean-hanbok-public-official:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/korean-hanbok-public-official/costume__
+            , __lazy-wildcards/subject/costume/korean-hanbok-student/costume-main__
+        costume:
+          - Korean Public Official Hanbok
+      # https://civitai.com/models/25255/king-hanbok-gonryongpo-korea-clothes
+      korean-hanbok-king-gonryongpo:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/korean-hanbok-king-gonryongpo/costume__
+            , __lazy-wildcards/subject/costume/korean-hanbok-student/costume-main__
+        costume:
+          - Korean King Hanbok Gonryongpo
+

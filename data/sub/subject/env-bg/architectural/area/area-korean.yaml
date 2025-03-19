@@ -1,0 +1,39 @@
+lazy-wildcards:
+  subject:
+    env-bg-architectural:
+      # 韓屋
+      # https://zh.wikipedia.org/zh-tw/%E9%9F%93%E5%B1%8B
+      # https://civitai.com/models/333432/hanok-in-korean-traditional-houses
+      korean-hanok:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-architectural/korean-hanok/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/korean-hanok/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/korean-hanok/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/korean-hanok/style__}|}
+        env-bg-main:
+          - hanok, korean hanok, korean traditional houses
+        env-bg:
+          - hanok village, traditional korean street, heritage site
+          - palace hanok, royal residence, grand architecture
+          - secluded house, misty forest, wooden bridge
+          - house by the river, lotus pond, peaceful scene
+        env:
+          - wooden house
+          - wooden pillars
+          - exposed beams
+          - curved roof
+          - gray tiles
+          - sloped roof
+          - paper windows, translucent screens, shoji style
+          - heated floor, low furniture, tatami mat
+          - stone walls
+          - small garden
+          - enclosed courtyard
+          - traditional doors, ornate carvings, sliding door
+          - warm glow, paper lanterns, candlelight inside
+        style:
+          - earthy colors, beige and brown, warm lighting
+          - peaceful vibes, quiet evening, rustic aesthetic
+          - ornate details, historic setting, timeless beauty
+

@@ -1,0 +1,33 @@
+lazy-wildcards:
+  subject:
+    costume:
+      # https://civitai.com/models/236578/korean-style-fashion-trench-coat
+      korean_style_fashion_trench_coat:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/korean_style_fashion_trench_coat/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/korean_style_fashion_trench_coat/costume-elem__}|}
+        costume:
+          - korean style fashion trench coat, long trench coat
+        costume-elem:
+          - double breasted trench
+          - wide lapel, structured collar
+          - belted waist, tied belt
+          - drop shoulder, oversized silhouette
+          - beige coat
+          - camel coat
+          - khaki tone coat
+          - flowy fabric, soft textile
+          - cuffed sleeves, strap detail
+          - silky lining, contrast inner lining
+          - storm flap, functional design
+          - layered look
+          - high waist fashion
+          - sleek leather trench
+          - black coat
+          - tailored fit
+          - oversized fit
+          - hoodie layering
+          - blue coat
+          - waist belt
+

@@ -1,0 +1,37 @@
+lazy-wildcards:
+  subject:
+    env-elem:
+      # https://civitai.com/models/1333832?modelVersionId=1506129
+      wood_and_acrylic_hybrid:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/wood_and_acrylic_hybrid/env-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/wood_and_acrylic_hybrid/env-elem-texture__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/wood_and_acrylic_hybrid/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/wood_and_acrylic_hybrid/style__}|}
+        env-main:
+          - wood and acrylic hybrid texture, wood and acrylic mixed texture, Mu, mixed materials, hybrid structure
+        env-elem-texture:
+          - wood frame, acrylic panel
+          - transparent acrylic, wooden supports
+          - led acrylic
+          - laser cut acrylic
+          - wood carving, curved wood
+          - encased wood
+          - floating acrylic
+          - layered wood acrylic
+        env:
+          - glowing structure
+          - futuristic furniture
+          - multiple square-shaped cubes
+        style:
+          - illuminated design
+          - minimalist design
+          - light diffusion
+          - layered design, suspended elements
+          - organic shapes, smooth contours
+          - intricate cutout, negative space design, modern craftsmanship
+          - gradient effects, aesthetic blend
+          - industrial nature fusion
+          - rustic modernism
+

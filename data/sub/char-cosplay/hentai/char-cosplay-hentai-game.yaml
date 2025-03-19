@@ -185,4 +185,32 @@ lazy-wildcards:
           - polearm
         env:
           - slime \(substance\)
+      # https://danbooru.donmai.us/posts?tags=ragnark_sinmara_%28taimanin_rpgx%29+&z=5
+      # https://civitai.com/models/614378/ragnarok-sinmara-taimanin-rpgx-lora-sd-15?modelVersionId=686794
+      ragnark_sinmara:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char-hentai/taimanin/ragnark_sinmara/main-trigger-words__
+            , __lazy-wildcards/cosplay-char-hentai/taimanin/ragnark_sinmara/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char-hentai/taimanin/ragnark_sinmara/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char-hentai/taimanin/ragnark_sinmara/costume-elem__}|}
+        main-trigger-words:
+          - >-
+            ragnark_sinmara, ragnark_sinmara_(taimanin_rpgx)
+            , sinmara
+        costume-ethnicity:
+          - horns, blonde hair, ponytail, pointy ears
+        costume:
+          - fur collar, black dress, bodystocking, purple leotard, detached sleeves, feather cape, feather trim, purple gloves, thigh boots
+        costume-elem:
+          - feather cape
+          - high heel sandals
+          - bikini top aside
+          - ice crystal
+          - thong bikini
+          - slingshot swimsuit
+          - highleg bikini
+          - toenail polish
+          - breast curtains
+          - bridal gauntlets
 

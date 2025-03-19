@@ -169,6 +169,7 @@ lazy-wildcards:
           - hexagonal wax cells background
       # https://civitai.com/models/856886/jiangshi-costume-lora-sd15?modelVersionId=958727
       # https://danbooru.donmai.us/posts?tags=jiangshi&z=5
+      # https://civitai.com/models/1325066/yulinglong-zombie-naraka?modelVersionId=1496001
       zombie-jiangshi-chinese-taoist-robes:
         prompts:
           - >-
@@ -181,7 +182,7 @@ lazy-wildcards:
             , __lazy-wildcards/subject/env-elem/yin_yang/prompts__
         costume-ethnicity:
           - >-
-            (Jiangshi:1.4), chinese clothes, china dress, taoist robes, celestial being uniform, jiangshi costume
+            (Jiangshi:1.4), chinese clothes, china dress, taoist robes, celestial being uniform, jiangshi costume, yulinglong, zombie, jiangshiniang
         costume-wings:
           - (mechanical wings)
           - (giant wings:1.1)
@@ -209,6 +210,8 @@ lazy-wildcards:
           - qingdai guanmao
           - heart-shaped pupils
           - platform footwear
+          - jewelry, necklace
+          - see-through
         action-pose:
           - hands up, outstretched arms
           - zombie pose
@@ -442,10 +445,11 @@ lazy-wildcards:
         style:
           - tribal
       # 白羊宮，牡羊座
+      # https://civitai.com/models/1342100/aries?modelVersionId=1515610
       aries:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume-ethnicity-race/aries/main__,
+            __lazy-wildcards/subject/costume-ethnicity-race/aries/main-trigger-words__,
             {1-$$__lazy-wildcards/subject/costume-ethnicity-race/aries/costume__}
             {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/aries/style__}|}
             {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/aries/env__}|}
@@ -457,8 +461,8 @@ lazy-wildcards:
           - sheep girl
           - sheep ears
           - year of the goat
-        main:
-          - Ariespunk, ARSPUNK, sheep horns, sheep tail, wavy hair, Pointy ears, barefoot
+        main-trigger-words:
+          - Ariespunk, ARSPUNK, sheep horns, sheep tail, wavy hair, Pointy ears, barefoot, arspnk
         costume:
           - bandage, dress, navel, gloves
           - sheep costume
@@ -750,4 +754,57 @@ lazy-wildcards:
           - halo
           - head wings
           - feathers
+      doll_joints:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/doll_joints/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/doll_joints/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/doll_joints/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/doll_joints/env__}|}
+        costume-ethnicity:
+          - doll joints, joints, marionette, Ball-Jointed Joints, ball jointed doll
+        costume-elem:
+          - puppet strings
+          - cracked skin
+          - key, key necklace
+          - braided hair rings
+          - stomach
+          - visible joints
+          - posable doll
+          - articulated limbs
+          - visible screws, hinge structure
+          - resin doll, plastic joints, glossy surface
+          - glass eyes
+          - elastic strung doll
+          - tension based joints
+          - visible wire
+          - elaborate doll clothes
+          - victorian doll
+          - gothic doll
+          - damaged doll
+          - dystopian toy
+          - fairy doll
+          - steampunk doll
+          - cybernetic doll
+          - cracked face
+          - missing parts
+          - forgotten toy
+          - stitched limbs
+          - porcelain doll
+        action:
+          - flexible pose
+        env:
+          - winding key
+          - stuffed toy
+      doll_joints-mechanical:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-race/doll_joints-mechanical/costume-ethnicity__)
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/doll_joints-mechanical/costume-elem__}|}
+            , __lazy-wildcards/subject/costume-ethnicity-race/doll_joints/prompts__
+        costume-ethnicity:
+          - mechanical joints
+        costume-elem:
+          - survivalist mecha
+          - exposed gears
 

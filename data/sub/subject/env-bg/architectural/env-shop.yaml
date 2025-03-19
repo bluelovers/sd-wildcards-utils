@@ -133,4 +133,56 @@ lazy-wildcards:
           - artsy and hipster
           - quiet and focus friendly
           - cozy ambience
+      # https://civitai.com/models/128228?modelVersionId=140369
+      taproom:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/taproom/env-bg-main__)
+            {, {1-$$__lazy-wildcards/subject/env-bg/taproom/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/taproom/env__}|}
+            {0.7::, {1-$$__lazy-wildcards/subject/env-bg/taproom/env-elem-food__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/taproom/costume__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/taproom/style__}|}
+        env-bg-main:
+          - taproom, bar
+        env-bg:
+          - brewery
+          - beer bar
+          - beer garden
+          - Twinkling Twilight Taproom
+          - floating taproom, cosmic bar
+          - mystical forest bar, glowing tavern
+          - sky island bar, aerial taproom
+          - water reflection bar, luminescent pools
+          - hidden taproom, reclusive lounge
+          - retrowave tech bar
+        env:
+          - starry ceiling, glass roof, cosmic ambience
+          - soft lighting, brass candlesticks, enchanted lanterns
+          - dark wood bar, vintage furniture, mahogany counter
+          - golden astrolabe, mystical symbols, celestial decoration
+          - glowing mushrooms, ivy wall, bioluminescent plants
+          - open air seating, night sky view, galaxy panorama
+          - shimmering bar, reflective floor, cosmic bar surface
+        env-elem-food:
+          - floating bottles
+          - glowing goblets, luminescent drinks
+          - shimmering cocktail, glowing liquor, magic brew
+          - cocktail glass, cocktail
+        costume:
+          - dark suit, celestial cape, midnight tie
+          - starry dress, ethereal robe, luminescent gown
+          - mystic bartender outfit, runic apron
+          - steampunk goggles, brass corset, vintage gloves
+          - hooded traveler, enigmatic cape, mystical pendant
+          - bartender
+        style:
+          - twilight glow
+          - ethereal lighting
+          - neon mood
+          - mystical fog, hazy lighting, dreamlike mist
+          - mystical atmosphere, arcane aura, dreamlike setting
+          - twilight glow, foggy ambience, ethereal mist
+          - soft jazz music, enchanted melody, celestial sounds
+          - floating stardust, luminescent particles, glowing specks
 

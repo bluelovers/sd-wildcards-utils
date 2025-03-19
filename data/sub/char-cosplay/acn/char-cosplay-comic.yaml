@@ -771,4 +771,36 @@ lazy-wildcards:
           - holding weapon
           - holding hammer
           - claw hammer
+    binbougami_ga:
+      # https://danbooru.donmai.us/posts?tags=momiji_%28binbougami_ga%21%29&z=2
+      # https://civitai.com/models/407928/momiji-binboda-binbougami-ga-lora?modelVersionId=454746
+      # https://civitai.com/models/211691/momiji-binboda-good-luck-girl
+      momiji:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/binbougami_ga/momiji/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/binbougami_ga/momiji/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/binbougami_ga/momiji/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/binbougami_ga/momiji/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/binbougami_ga/momiji/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/binbougami_ga/momiji/env__}|}
+        main-trigger-words:
+          - >-
+            momiji \(binbougami_ga\), momiji binboda
+            , momijibinboda
+        costume-ethnicity:
+          - >-
+            hair over one eye, twintails
+            , bandages, (single gauntlet:1.5)
+            , triangular headpiece
+        costume:
+          - plaid shirt, yellow shirt, short sleeves, suspenders, red dress
+          - black serafuku, black shirt, long sleeves, black skirt
+        costume-elem:
+          - bare shoulders
+          - barefoot
+        costume-weapon:
+          - holding syringe
+        env:
+          - bath of blood, bathtub, claw foot bathtub
 

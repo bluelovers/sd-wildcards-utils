@@ -48,4 +48,76 @@ lazy-wildcards:
           - gorgeous and bold
           - vibrant_colors
           - intricate_designs
+      # https://civitai.com/models/1329994/kgirl9xv1?modelVersionId=1501686
+      # https://civitai.com/models/99156/korean-girls-faces
+      # https://civitai.com/models/35649/korean-celebrity-kclikeness
+      # https://civitai.com/models/180138/pornmaster-4-korean-porn-models-issue-4
+      # https://civitai.com/models/109128/yeon-hwa-korean-sexy-model
+      korean_girls:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/korean_girls/costume-ethnicity-race__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/korean_girls/costume-ethnicity__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/korean_girls/costume__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/korean_girls/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/korean_girls/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/korean_girls/style__}|}
+        costume-ethnicity-race:
+          - >-
+            korean girl, korean woman
+            , korean beauty, korean model, korean actress, kpop idol, korean celebrity
+            , korean mixed
+            , kgirl, kgirl9xv1, kr-pny, koreanbabe04
+            , asian girls
+        costume-ethnicity:
+          - korean haircut, korean hair style
+          - >-
+            korean {long|short} hair
+          - korean makeup
+          - dewy natural skin
+          - soft pink eyeshadow
+          - soft straight brows
+          - gradient lipstick
+          - flawless glow skin
+          - glowing face
+          - soft smokey eyes
+          - glitter eyeshadow
+          - bold lip color
+          - matte fair skin
+          - subtle shimmer makeup
+          - rosy cheeks
+          - rosy lips
+          - warm brown eyeshadow
+          - sharp winged eyeliner
+          - velvet red lips
+          - high ponytail, low bun
+        costume:
+          - preppy knit sweater
+          - pleated skirt, plaid skirt
+          - oversized blazer
+          - korean outfit, korean clothes
+          - sporty sweatshirt, mini skirt
+          - white socks, loafers
+          - cropped top, high-waisted jeans
+          - soft knit top, long skirt
+          - korean style fashion trench coat
+          - korean traditional clothes
+        costume-elem:
+          - minimalist gold jewelry
+          - trendy square bag
+          - korean nail art
+          - one shoulder bag
+        env-bg:
+          - korean street
+          - korean city background
+          - korean town background
+          - korean village background
+          - korean countryside background
+          - korean background
+          - korean train station background
+        style:
+          - korean style fashion
+          - chic and sophisticated
+          - urban korean fashion
+          - korean cosmetics
 

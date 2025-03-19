@@ -38,20 +38,24 @@ lazy-wildcards:
           - tassel, longevity lock
     # https://zh.wikipedia.org/zh-tw/%E9%AD%94%E5%85%B5%E9%A9%9A%E5%A4%A9%E9%8C%84
     bayonetta:
+      # https://civitai.com/models/56821/bayonetta?modelVersionId=61239
       bayonetta:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/bayonetta/bayonetta/main__,
-            __lazy-wildcards/cosplay-char/bayonetta/bayonetta/costume-ethnicity__,
-            __lazy-wildcards/cosplay-char/bayonetta/bayonetta/costume__,
-            {{1-$$__lazy-wildcards/cosplay-char/bayonetta/bayonetta/costume-elem__},|}
-            {1-$$__lazy-wildcards/cosplay-char/bayonetta/bayonetta/env__}
-            {,{0-$$__lazy-wildcards/cosplay-char/bayonetta/bayonetta/env-bg__}|}
-        main:
+            __lazy-wildcards/cosplay-char/bayonetta/bayonetta/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/bayonetta/bayonetta/costume-ethnicity__
+            , __lazy-wildcards/cosplay-char/bayonetta/bayonetta/costume__
+            {, {1-$$__lazy-wildcards/cosplay-char/bayonetta/bayonetta/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/bayonetta/bayonetta/env__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/bayonetta/bayonetta/env-bg__}|}
+        main-trigger-words:
           - >-
-            cereza, bayonetta, mole under mouth
+            cereza, bayonetta
         costume-ethnicity:
-          - blue eyes, __lazy-wildcards/cosplay-char/bayonetta/bayonetta/costume-ethnicity-types/*__
+          - >-
+            blue eyes
+            , mole under mouth
+            , __lazy-wildcards/cosplay-char/bayonetta/bayonetta/costume-ethnicity-types/*__
         costume-ethnicity-types:
           long-hair:
             - bayonetta1, very long hair, long hair, hair ribbon, ponytail
@@ -311,13 +315,13 @@ lazy-wildcards:
       operator:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/Nier/operator/main__,
-            __lazy-wildcards/cosplay-char/Nier/operator/costume__,
-            {__lazy-wildcards/cosplay-char/Nier/operator/costume-ethnicity-types/type-*__,|}
-            {1-$$__lazy-wildcards/cosplay-char/Nier/operator/costume-elem__},
-            {1-$$__lazy-wildcards/cosplay-char/Nier/operator/style__},
-            {1-$$__lazy-wildcards/cosplay-char/Nier/operator/env__}
-        main:
+            __lazy-wildcards/cosplay-char/Nier/operator/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/Nier/operator/costume__
+            , __lazy-wildcards/cosplay-char/Nier/operator/costume-ethnicity-types/type-*__
+            {, {1-$$__lazy-wildcards/cosplay-char/Nier/operator/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/Nier/operator/env__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/Nier/operator/style__}|}
+        main-trigger-words:
           - nier \(series\), nier:automata
         costume:
           - mouth veil, bodysuit, bodystocking, black gloves, thigh boots
@@ -379,4 +383,98 @@ lazy-wildcards:
           - long hair, blue eyes, hair ornament, jewelry, ponytail, pink hair, earrings, makeup, wavy hair, __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
         costume:
           - black dress, navel, cleavage, midriff, side slit
+    magical_drop:
+      # https://danbooru.donmai.us/posts?tags=world_%28magical_drop%29&z=1
+      # https://civitai.com/models/288485/world-magical-drop-lora?modelVersionId=324419
+      world:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/magical_drop/world/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/magical_drop/world/costume-ethnicity__
+            {, __lazy-wildcards/cosplay-char/magical_drop/world/costume-ethnicity-hair__|}
+            {, __lazy-wildcards/cosplay-char/magical_drop/world/costume__|}
+            {, {1-$$__lazy-wildcards/cosplay-char/magical_drop/world/costume-elem__}|}
+        main-trigger-words:
+          - world_\(magical_drop\), world_\(magical_drop\)_\(cosplay\), mdWorld
+        costume-ethnicity:
+          - third eye, magenta hair, midriff, purple eyes
+        costume-ethnicity-hair:
+          - long hair
+          - short hair
+        costume:
+          - green sash, convenient censoring, bare shoulders, naked ribbon, ribbon as bra, stomach
+        costume-elem:
+          - long messy hair
+          - green sash, convenient censoring, bare shoulders, naked ribbon, ribbon as bra
+          - body blush
+          - extra eyes
+          - __lazy-wildcards/subject/costume-ethnicity-eyes/third-eye/prompts__
+          - eyelashes
+          - floating hair
+          - levitation
+          - see-through silhouette
+    unicorn_overlord:
+      # https://danbooru.donmai.us/posts?tags=berengaria_%28unicorn_overlord%29&z=2
+      # https://civitai.com/models/572086/berengaria-unicorn-overlord-lora?modelVersionId=637686
+      berengaria:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/unicorn_overlord/berengaria/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/unicorn_overlord/berengaria/costume-ethnicity__
+            {, __lazy-wildcards/cosplay-char/unicorn_overlord/berengaria/costume__}
+            {, {1-$$__lazy-wildcards/cosplay-char/unicorn_overlord/berengaria/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/unicorn_overlord/berengaria/costume-weapon__}|}
+        main-trigger-words:
+          - >-
+            berengaria, berengaria \(unicorn overlord\)
+        costume-ethnicity:
+          - short hair, red eyes, hair over one eye, one eye covered
+        costume:
+          - maroon bodysuit, long sleeves, armor, gauntlets, toned
+        costume-elem:
+          - torn bodysuit
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - red bodysuit, red bodystocking
+          - toned female
+          - breastplate, boobplate
+          - crotch plate
+          - shoulder plates, spiked pauldrons
+          - spiked armor, spiked couter
+          - bandaged arm
+          - covered navel
+          - scar across eye
+          - bikini armor
+          - __lazy-wildcards/subject/costume-elem/blood/prompts__
+          - bead necklace, beads
+          - covered abs
+          - high heels
+          - knee armor
+          - makeup
+          - swept bangs
+          - wavy hair
+          - armlet, spiked armlet
+          - dominatrix, garter belt
+        costume-weapon:
+          - holding shield
+          - axe
+          - holding axe
+          - battle axe
+          - holding whip, whip
+    grandia:
+      # https://danbooru.donmai.us/posts?tags=millenia_%28grandia%29&z=1
+      # https://civitai.com/models/71698/millenia-grandia-ii-lora?modelVersionId=496791
+      millenia:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/grandia/millenia/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/grandia/millenia/costume-ethnicity__
+            {, __lazy-wildcards/cosplay-char/grandia/millenia/costume__}
+        main-trigger-words:
+          - millenia, millenia \(grandia\), millenia \(grandia\) \(cosplay\)
+        costume-ethnicity:
+          - >-
+            ponytail, horns, big hair
+        costume:
+          - >-
+            earrings, puffy sleeves, red sleeves, cleavage cutout, corset, skirt, see-through, loincloth, red thighhighs, high heel boots
 

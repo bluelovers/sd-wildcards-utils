@@ -1,0 +1,44 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      cliff:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/cliff/env-bg-main__
+            {, {{1-3$$__lazy-wildcards/subject/env-bg/cliff/env-bg__}|0.2::__lazy-wildcards/subject/env-bg/cliff/env-bg-real__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/cliff/env__}|}
+        env-bg-main:
+          - cliff
+        env-bg:
+          - steep cliff, rocky wall, vertical rock
+          - cliffside, precipice, overhanging rock
+          - sheer cliff, vertical drop, abyss
+          - eroded cliff, rugged surface, wind carved
+          - sea cliff, ocean view, crashing waves
+          - cliff cave, hidden cavern, rocky outcrop
+          - canyon wall, towering cliff, desert plateau
+          - waterfall cliff, cascading water, misty rocks
+          - cliffside foliage, hanging plants, hardy trees
+          - rock pillar, natural monument, towering peak
+          - cliffside view, steep drop, breathtaking scenery
+          - misty mountain, foggy cliffs, ethereal landscape
+          - waterfall view, cascading falls, nature majesty
+          - stormy skies, high winds, snow capped cliffs
+        env-bg-real:
+          - Cliffs of Moher, Irish coast, green highlands
+          - Preikestolen, fjord view, dramatic drop
+          - Grand Canyon, desert cliff, layered rock
+          - Komodo Cliff, tropical sea, rugged coastline
+          - Faroe Cliffs, North Atlantic, misty shores
+        env:
+          - floating rock
+          - cracked landscape
+          - floating cliff
+          - plant, tree
+          - water, waterfall
+          - cloud
+          - stone, rock
+          - dramatic sunset
+          - stormy horizon
+          - golden light effects
+

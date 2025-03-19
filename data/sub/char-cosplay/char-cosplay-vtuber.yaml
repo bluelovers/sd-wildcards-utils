@@ -63,4 +63,32 @@ lazy-wildcards:
           - carrot hair ornament
           - rabbit-shaped pupils
           - carrot in pocket
+      # https://danbooru.donmai.us/posts?tags=jowol&z=5
+      # https://civitai.com/models/1362378/jowol-the-porcelain-doll?modelVersionId=1539842
+      jowol:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/vtuber/jowol/main-trigger-words__
+            , (__lazy-wildcards/cosplay-char/vtuber/jowol/costume-ethnicity__{0.3:::{1.2|1.3|1.4}|:1.2})
+            {, {1-$$__lazy-wildcards/cosplay-char/vtuber/jowol/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/vtuber/jowol/expressions__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/vtuber/jowol/action__}|}
+        main-trigger-words:
+          - jowol, jowol \(vtuber\), jowol the porcelain doll, virtual youtuber, PorcelainMaid
+        costume-ethnicity:
+          - pink hair, doll joints, cracked skin, bags under eyes, eyeliner, eyelashes, eyeshadow, narrow waist, curvy, wide hips, thick thighs
+        costume-elem:
+          - __lazy-wildcards/subject/costume-ethnicity-race/doll_joints/prompts__
+          - ashamed
+          - sagging breasts
+          - lingerie, underwear, negligee
+          - see-through clothes
+        expressions:
+          - __lazy-wildcards/subject/costume-elem-expressions/doyagao_smug/prompts__
+          - slouching
+        action:
+          - lotus position
+          - v arms
+          - knees to chest, hand on own chest
+          - hand in own hair
 
