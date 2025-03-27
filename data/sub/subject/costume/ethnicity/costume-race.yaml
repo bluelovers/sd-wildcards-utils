@@ -170,6 +170,7 @@ lazy-wildcards:
       # https://civitai.com/models/856886/jiangshi-costume-lora-sd15?modelVersionId=958727
       # https://danbooru.donmai.us/posts?tags=jiangshi&z=5
       # https://civitai.com/models/1325066/yulinglong-zombie-naraka?modelVersionId=1496001
+      # https://civitai.com/models/160784/jiangshi-chinese-zombie-costume?modelVersionId=180930
       zombie-jiangshi-chinese-taoist-robes:
         prompts:
           - >-
@@ -182,7 +183,7 @@ lazy-wildcards:
             , __lazy-wildcards/subject/env-elem/yin_yang/prompts__
         costume-ethnicity:
           - >-
-            (Jiangshi:1.4), chinese clothes, china dress, taoist robes, celestial being uniform, jiangshi costume, yulinglong, zombie, jiangshiniang
+            (Jiangshi:1.4), chinese clothes, china dress, taoist robes, celestial being uniform, jiangshi costume, yulinglong, zombie, jiangshiniang, jiangshigirl costume
         costume-wings:
           - (mechanical wings)
           - (giant wings:1.1)
@@ -192,12 +193,14 @@ lazy-wildcards:
           - upturned eyes
           - open mouth
           - tongue out
+          - ":3"
+          - ":o"
         costume-elem:
           - wet body, see-through
           - pale skin
           - purple skin
           - (forehead mark:1.2)
-          - claws, sharp fingernails, long fingernails
+          - claws, sharp fingernails, long fingernails, nail polish
           - (mecha body:1.1), detail mecha body
           - veil
           - __lazy-wildcards/subject/costume/ofuda-maebari/prompts__
@@ -212,9 +215,28 @@ lazy-wildcards:
           - platform footwear
           - jewelry, necklace
           - see-through
+          - blood-red eyes
+          - fangs, razor-sharpteeth
+          - cleavage
+          - heterochromia
+          - talisman
+          - ankle bell
+          - black hat
+          - black dress
+          - cleavage cutout, clothing cutout
+          - eyeshadow
+          - open clothes
+          - dragon print
+          - bags under eyes
+          - ringed eyes
+          - sphere earrings
+          - covered navel
+          - __lazy-wildcards/subject/costume-elem-expressions/shaded_face/prompts__
         action-pose:
           - hands up, outstretched arms
           - zombie pose
+          - outstretched arms
+          - knees together feet apart
         style:
           - death
       zombie-decaying:
@@ -240,6 +262,7 @@ lazy-wildcards:
           - stitches
           - cyberpunk prosthesis
           - bones
+          - zombie costume
         costume-weapon:
           - holding a teddy bear
         action:

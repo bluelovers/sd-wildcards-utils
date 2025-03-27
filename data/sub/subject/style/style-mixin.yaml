@@ -1,0 +1,38 @@
+lazy-wildcards:
+  subject:
+    style-elem:
+      # https://civitai.com/models/808457/smoke-x-sketch-lora?modelVersionId=904026
+      smoke_sketch:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-elem/smoke_sketch/style-art-main__
+            {, {1-$$__lazy-wildcards/subject/style-elem/smoke_sketch/style__}|}
+            {, {1-$$__lazy-wildcards/subject/style-elem/smoke_sketch/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-elem/smoke_sketch/env__}|}
+        style-art-main:
+          - >-
+            smoke sketch style
+            , __lazy-wildcards/utils/fn/style-inspired(v=smoke_sketch)__
+            , smoke
+        style:
+          - >-
+            a drawing of {1-2$$ and $$__lazy-wildcards/utils/color-base__} smoke
+        costume-elem:
+          - >-
+            {vibrant |}smoke coming out of hair
+          - >-
+            {vibrant |}smoke coming out of body
+          - smoking
+          - exhaling_smoke
+          - mysterious_figure, backlit_fog, glowing_eyes
+        env:
+          - __lazy-wildcards/subject/moment/weather-smoke/prompts__
+          - burning_buildings, dark_clouds, disaster_scene
+          - neon_lights, backlit_smoke, cyberpunk_mood
+          - purple_hues, hazy_glow, surreal_ambience
+          - smoke_rings, playful_exhale, ghostly_effect
+          - smoke_transformation, ethereal_shapes, surrealism
+          - >-
+            {1-2$$ and $$__lazy-wildcards/utils/color-base__} smoke background
+          - glowing smoke
+
