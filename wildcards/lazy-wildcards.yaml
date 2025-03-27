@@ -1588,6 +1588,34 @@
           - playful street art inspiration
         style:
           - urban creativity
+      smoke_sketch:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-elem/smoke_sketch/style-art-main__{,{1-$$__lazy-wildcards/subject/style-elem/smoke_sketch/style__}|}{,{1-$$__lazy-wildcards/subject/style-elem/smoke_sketch/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/style-elem/smoke_sketch/env__}|}
+        "style-art-main":
+          - >-
+            smoke sketch style,__lazy-wildcards/utils/fn/style-inspired(v=smoke_sketch)__,smoke
+        style:
+          - >-
+            a drawing of {1-2$$ and $$__lazy-wildcards/utils/color-base__} smoke
+        "costume-elem":
+          - >-
+            {vibrant |}smoke coming out of hair
+          - >-
+            {vibrant |}smoke coming out of body
+          - smoking
+          - exhaling_smoke
+          - mysterious_figure,backlit_fog,glowing_eyes
+        env:
+          - "__lazy-wildcards/subject/moment/weather-smoke/prompts__"
+          - burning_buildings,dark_clouds,disaster_scene
+          - neon_lights,backlit_smoke,cyberpunk_mood
+          - purple_hues,hazy_glow,surreal_ambience
+          - smoke_rings,playful_exhale,ghostly_effect
+          - smoke_transformation,ethereal_shapes,surrealism
+          - >-
+            {1-2$$ and $$__lazy-wildcards/utils/color-base__} smoke background
+          - glowing smoke
       sympattern:
         prompts:
           - >-
@@ -3793,6 +3821,8 @@
           - factory smoke
           - pollution smoke
           - potion fumes
+          - science_experiment,fantasy_effect,theatrical_mist
+          - smoke_rings
       "weather-natural-disaster-water":
         prompts:
           - >-
@@ -4999,7 +5029,7 @@
           - underground facility
         "env-gravestones":
           - >-
-            {1-$$tombstones|stones|gravestones}
+            {1-$$tombstone,tombstones|stones|gravestones}
           - >-
             moss-covered {1-$$,moss-covered $$tombstones|stones|gravestones}
           - stone_tablet
@@ -12008,7 +12038,7 @@
           - >-
             (__lazy-wildcards/subject/costume/ofuda-maebari/env-main__),({1-$$__lazy-wildcards/subject/costume/ofuda-maebari/prompts-costume__}:1.2){,{1-$$__lazy-wildcards/subject/costume/ofuda-maebari/env__}|},{1-$$__lazy-wildcards/subject/costume/ofuda-maebari/style__}
         "env-main":
-          - ofuda,paper_talismans
+          - ofuda,paper_talismans,huangfu paper
         "prompts-costume":
           - "__lazy-wildcards/subject/costume/ofuda-maebari/costume-types/ofuda__"
           - "__lazy-wildcards/subject/costume/ofuda-maebari/costume-types/pussy-maebari__"
@@ -12041,7 +12071,7 @@
           "ofuda-clothes":
             - ofuda on clothes
           "ofuda-head":
-            - ofuda on head
+            - ofuda on head,huangfu paper on head
           "ofuda-bra":
             - >-
               {1-$$ofuda bra|ofuda on nipples|covered erect nipples},covered nipples
@@ -15250,13 +15280,14 @@
       # https://civitai.com/models/856886/jiangshi-costume-lora-sd15?modelVersionId=958727
       # https://danbooru.donmai.us/posts?tags=jiangshi&z=5
       # https://civitai.com/models/1325066/yulinglong-zombie-naraka?modelVersionId=1496001
+      # https://civitai.com/models/160784/jiangshi-chinese-zombie-costume?modelVersionId=180930
       "zombie-jiangshi-chinese-taoist-robes":
         prompts:
           - >-
             __lazy-wildcards/subject/costume-ethnicity-race/zombie-jiangshi-chinese-taoist-robes/costume-ethnicity__{0.3::,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-jiangshi-chinese-taoist-robes/costume-wings__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-jiangshi-chinese-taoist-robes/expressions__}|},{1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-jiangshi-chinese-taoist-robes/costume-elem__}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-jiangshi-chinese-taoist-robes/action-pose__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-jiangshi-chinese-taoist-robes/style__}|},__lazy-wildcards/subject/env-elem/yin_yang/prompts__
         "costume-ethnicity":
           - >-
-            (Jiangshi:1.4),chinese clothes,china dress,taoist robes,celestial being uniform,jiangshi costume,yulinglong,zombie,jiangshiniang
+            (Jiangshi:1.4),chinese clothes,china dress,taoist robes,celestial being uniform,jiangshi costume,yulinglong,zombie,jiangshiniang,jiangshigirl costume
         "costume-wings":
           - (mechanical wings)
           - |-
@@ -15267,13 +15298,17 @@
           - upturned eyes
           - open mouth
           - tongue out
+          - |-
+            :3
+          - |-
+            :o
         "costume-elem":
           - "wet body,see-through"
           - pale skin
           - purple skin
           - |-
             (forehead mark:1.2)
-          - claws,sharp fingernails,long fingernails
+          - claws,sharp fingernails,long fingernails,nail polish
           - |-
             (mecha body:1.1),detail mecha body
           - veil
@@ -15289,9 +15324,28 @@
           - platform footwear
           - jewelry,necklace
           - "see-through"
+          - "blood-red eyes"
+          - "fangs,razor-sharpteeth"
+          - cleavage
+          - heterochromia
+          - talisman
+          - ankle bell
+          - black hat
+          - black dress
+          - cleavage cutout,clothing cutout
+          - eyeshadow
+          - open clothes
+          - dragon print
+          - bags under eyes
+          - ringed eyes
+          - sphere earrings
+          - covered navel
+          - "__lazy-wildcards/subject/costume-elem-expressions/shaded_face/prompts__"
         "action-pose":
           - hands up,outstretched arms
           - zombie pose
+          - outstretched arms
+          - knees together feet apart
         style:
           - death
       "zombie-decaying":
@@ -15310,6 +15364,7 @@
           - stitches
           - cyberpunk prosthesis
           - bones
+          - zombie costume
         "costume-weapon":
           - holding a teddy bear
         action:
