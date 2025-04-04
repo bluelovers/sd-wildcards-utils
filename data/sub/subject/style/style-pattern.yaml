@@ -81,4 +81,38 @@ lazy-wildcards:
             {1-$$ and $$binary code|digital art}, only zero and one
         style:
           - __lazy-wildcards/subject/style-elem/digital_rain/prompts__
+      # https://civitai.com/models/808296/10print-x-algorithm-lora?modelVersionId=903838
+      10print_algorithm:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-elem/10print_algorithm/style-main__{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-$$__lazy-wildcards/subject/style-elem/10print_algorithm/style__}|}
+        style-main:
+          - 10print algorithm, 10print design, 10print chr, __lazy-wildcards/utils/fn/style-inspired(v=10print)__, geometric shapes
+        style:
+          - __lazy-wildcards/subject/style-elem/sympattern/prompts__
+          - curves
+          - maze pattern
+          - zigzag pattern
+          - wavy pattern
+          - spiral pattern
+          - line pattern
+          - dot pattern
+          - grid pattern
+          - wave pattern
+          - with a square in the middle
+          - with a circle in the middle
+          - with a triangle in the middle
+          - with a star in the middle
+          - with a heart in the middle
+          - with a diamond in the middle
+          - with a cross in the middle
+          - with a spiral in the middle
+          - with a zigzag in the middle
+          - with a wave in the middle
+          - with a dot in the middle
+          - with a line in the middle
+          - with a grid in the middle
+          - >-
+            {1-2$$ and $$__lazy-wildcards/utils/color-base__}
 

@@ -220,47 +220,6 @@ lazy-wildcards:
         prompts:
           - >-
             ba gua, tai chi, yin yang
-      # https://civitai.com/models/293128/moss-is-boss-gown-5
-      moss:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-elem/moss/env-main__
-            {, __lazy-wildcards/subject/env-elem/moss/costume__|}
-            {, {1-$$__lazy-wildcards/subject/env-elem/moss/env__}|}
-        env-main:
-          - >-
-            made of moss, moss-covered, mossy
-            , m0ss_dr3ss
-        costume:
-          - elaborate long dress made of moss
-        env:
-          - >-
-            ({1-$$moss slime vines|moss vines|mossy surface})
-          - >-
-            slime_\(substance\), sticky slime
-          - twigs
-          - overgrown
-          - overgrown moss
-          - overgrown with thick vines
-          - overgrown scenery
-      GreenRockWorld:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/env-elem/GreenRockWorld/main__{0.3:::{1.2|1.3|1.4}|})
-            {,{1-$$__lazy-wildcards/subject/env-elem/GreenRockWorld/costume-elem__}|}
-            {,{1-$$__lazy-wildcards/subject/env-elem/GreenRockWorld/env__}|}
-            {,{1-$$__lazy-wildcards/subject/env-elem/GreenRockWorld/style__}|}
-        main:
-          - GreenRockWorld, green_rocks
-        costume-elem:
-          - stone clothes
-        env:
-          - __lazy-wildcards/subject/env-elem/moss/prompts__
-          - rocky_terrain
-        style:
-          - fantasy_landscape
-          - emerald_glow
-          - nature_spirits
       railing:
         prompts:
           - >-

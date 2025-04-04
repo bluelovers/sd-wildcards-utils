@@ -107,18 +107,50 @@ lazy-wildcards:
       maid:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume/maid/costume__
+            __lazy-wildcards/subject/costume/maid/costume-main__
+            {, {1-3$$__lazy-wildcards/subject/costume/maid/costume__}|}
             {, {1-$$__lazy-wildcards/subject/costume/maid/costume-elem__}|}
-        costume-elem:
-          - cleavage
-          - puffed sleeves
-          - ornate apron
-          - glasses
+            {, {1-$$__lazy-wildcards/subject/costume/maid/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/maid/env-bg__}|}
+        costume-main:
+          - maid, maid uniform, maid outfit, maid costume
         costume:
           - __lazy-wildcards/subject/costume/maid/fn/maid-color-01(c=blue,c2=white)__
           - __lazy-wildcards/subject/costume/maid/fn/maid-color-01(c=!__mix-lazy-auto/color-anything__,c2=white)__
           - __lazy-wildcards/subject/costume/maid/fn/maid-color-01(c=__mix-lazy-auto/color-anything__,c2=white)__
           - __lazy-wildcards/subject/costume/maid/fn/maid-color-01(c=__mix-lazy-auto/color-anything__,c2=__mix-lazy-auto/color-anything__)__
+          - British Victorian Maid, victorian maid, long dress, high collar, frilly apron, black dress, white apron, lace headdress
+          - French Maid, short dress, frilly apron, lace trim, thighhighs, garter belt, fishnet stockings, cleavage
+          - Japanese Maid, kawaii maid, frilly dress, puff sleeves, lace headdress, short skirt
+          - gothic maid, black dress, frilly apron, garter, lace trim, red accents, lolita fashion
+          - battle maid, armed maid, armor, plated skirt
+          - mecha maid, robotic maid, futuristic outfit, glowing eyes
+          - __cf-maid/prompt-costume__
+        costume-elem:
+          - cleavage
+          - puffed sleeves
+          - ornate apron
+          - glasses
+          - maid headdress
+          - high collar, modest dress
+          - kemonomimi maid
+          - combat pose
+          - mixed maids
+          - qi_maid
+          - framed cleavage
+          - maid apron
+          - fox maid
+          - wolf maid
+          - cat maid, cat ears
+          - animal ears, tail
+          - vampire maid, fangs
+          - clothing cutout
+          - __cf-maid/beauty-adj__ maid
+        action:
+          - holding plate
+          - __cf-maid/accessory__
+        env-bg:
+          - __cf-maid/location__
         fn:
           maid-color-01:
             - >-

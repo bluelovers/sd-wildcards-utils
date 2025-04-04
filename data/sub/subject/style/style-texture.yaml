@@ -88,4 +88,35 @@ lazy-wildcards:
           - research facility room interior
           - street passage with structures
           - over clear white background
+      # https://civitai.com/models/84528
+      nebula:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-elem-texture/nebula/style-main__
+            {, {1-$$__lazy-wildcards/subject/style-elem-texture/nebula/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-elem-texture/nebula/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/style-elem-texture/nebula/style__}|}
+        style-main:
+          - nebula texture, nebula style, nebula pattern, __lazy-wildcards/subject/env-bg/nebula/env-bg-main__, __lazy-wildcards/utils/fn/style-inspired(v=nebula)__
+        costume-elem:
+          - nebula clothes, nebula outfit, nebula costume
+          - nebula skin
+          - nebula hair
+          - nebula eyes
+          - nebula makeup
+          - nebula accessories,nebula jewelry
+          - nebula tattoos
+          - nebula armor
+          - nebula wings
+          - nebula limbs
+        env-bg:
+          - __lazy-wildcards/subject/env-bg/nebula/prompts__
+          - nebula building
+        style:
+          - colorful texture
+          - cosmic texture
+          - starry texture
+          - space texture
+          - galaxy texture
+          - nebula magic
 

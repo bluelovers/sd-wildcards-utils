@@ -204,17 +204,44 @@ lazy-wildcards:
             (__lazy-wildcards/subject/costume-elem-expressions/blush/expressions-trigger-words__
             {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/blush/expressions-main__}|}{0.3:::{1.2|1.3|1.4}|})
             {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/blush/expressions__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/blush/action__}|}
         expressions-trigger-words:
           - blush, embarrassed, yudedako
         expressions-main:
           - full-face blush
           - ear blush
           - humiliation, shame
+          - blushing cheeks, rosy cheeks
         expressions:
           - panicing
           - "@ @"
           - averting eyes
           - nervous
+          - steam from head
+          - awkward situation
+        action:
+          - covering face
+          - teased
+      shocked_face:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/shocked_face/expressions-trigger-words__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/shocked_face/expressions__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/shocked_face/action__}|}
+        expressions-trigger-words:
+          - shockedface, shocked face
+          - dumbfounded
+          - flustered, surprised
+        expressions:
+          - open mouth
+          - wide eyes, constricted pupils, wide-eyed
+          - shock lines, mouth agape
+          - sweatdrop
+          - __lazy-wildcards/subject/costume-elem-expressions/blush/prompts__
+        action:
+          - confession
+          - changing clothes
+          - accidental fall
       # https://civitai.com/models/469309?modelVersionId=522175
       # https://civitai.com/models/469941
       doyagao_smug:

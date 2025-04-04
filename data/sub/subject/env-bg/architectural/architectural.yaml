@@ -124,62 +124,6 @@ lazy-wildcards:
           - cherry blossoms
           - >-
             {1-$$bust \(sculpture\)|sculpture}
-      # https://civitai.com/models/626234/traditional-multi-storey-wooden-chinese-restaurant?modelVersionId=700091
-      restaurant-traditional-multi-storey-wooden:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-bg-architectural/restaurant-traditional-multi-storey-wooden/main__
-            ,__lazy-wildcards/subject/env-bg-architectural/restaurant-traditional-multi-storey-wooden/style-main__
-            {,{1-3$$__lazy-wildcards/subject/env-bg-architectural/restaurant-traditional-multi-storey-wooden/env-bg__}|}
-            {,{1-$$__lazy-wildcards/subject/env-bg-architectural/restaurant-traditional-multi-storey-wooden/env__}|}
-            {,{1-$$__lazy-wildcards/subject/env-bg-architectural/restaurant-traditional-multi-storey-wooden/style__}|}
-            {,{1-$$__lazy-wildcards/subject/env-bg-architectural/restaurant-traditional-multi-storey-wooden/env-bg-view__}|}
-        main:
-          - Traditional Multi Storey Wooden Restaurant
-        style:
-          - Martial_Arts_World
-          - social hubs
-          - decorative elements
-          - light rays
-          - landscape
-          - Traditional_Woodwork
-          - >-
-            {medium_shot|wide_shot}
-        style-main:
-          - ancient Chinese styles, traditional Chinese styles
-          - ancient Korean styles, traditional Korean styles
-        env:
-          - Wooden_Interior
-          - Ornate_Carvings, intricate and decorative wood carvings
-          - Paper_Lanterns
-          - Tatami_Floors
-          - Sliding_Doors
-          - Traditional_Furniture
-          - Decorative_Screens
-          - Wooden stairs
-          - table
-          - chair
-          - red Wooden
-          - Wooden fence
-          - Wooden_Beams
-          - Calligraphy_Decor
-          - Exposed_Rafters
-          - Hanging_Scrolls
-          - Lattice_Windows
-          - Bamboo_Decor
-          - Low_Furniture
-          - cushions
-          - __lazy-wildcards/subject/moment/weather-mist/prompts__
-        env-bg:
-          - ancient Traditional_Wooden_Building
-          - ancient Multi_Storey_Building
-          - ancient Chinese_Inn
-          - ancient Korean_Inn
-          - ancient Courtyard
-          - ancient chinese style loft
-        env-bg-view:
-          - indoors, interior
-          - outdoors
       # https://civitai.com/models/825976/style-of-treehouse-433?modelVersionId=923694
       # https://civitai.com/models/763249/jjs-tree-house?modelVersionId=1501544
       treehouse:
@@ -475,4 +419,50 @@ lazy-wildcards:
           - holographic displays, metallic structures
         style:
           - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
+      # https://civitai.com/models/767619/jjs-bamboo-house
+      bamboo_house:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-architectural/bamboo_house/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-3$$__lazy-wildcards/subject/env-bg-architectural/bamboo_house/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/bamboo_house/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/bamboo_house/style__}|}
+        env-bg-main:
+          - bamboo house
+        env-bg:
+          - bamboo hut, rustic bamboo house, tropical bamboo dwelling
+          - traditional bamboo architecture, woven bamboo walls, thatched roof
+          - modern bamboo house, eco-friendly design, sustainable living
+          - bamboo treehouse, elevated structure, jungle canopy
+          - bamboo pavilion, open-air structure, garden retreat
+          - bamboo cottage, cozy interior, natural materials
+          - bamboo farm house, rural setting, agricultural landscape
+          - stilts house, open-air structure, lightweight building
+          - tropical forest
+          - rice field
+          - jungle surroundings
+          - eco architecture, glass bamboo mix, nature-integrated house
+          - southeast asian village
+        env:
+          - wooden beams
+          - thatched roof
+          - wooden door
+          - wooden window
+          - wooden fence
+          - bamboo fence
+          - bamboo door
+          - bamboo window
+          - woven wall
+          - thatched roof
+          - bamboo material
+          - bamboo furniture
+          - hammock, woven mat
+          - moonlight, bamboo shadows, night forest
+          - rainy weather, raindrops on leaves
+          - misty morning, soft light
+          - sunlight filtering through leaves
+        style:
+          - modern tropical design
+          - meditating
+          - organic structure
 

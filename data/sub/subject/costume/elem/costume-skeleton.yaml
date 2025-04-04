@@ -21,4 +21,16 @@ lazy-wildcards:
           - bones carving skin
           - exo-bones mecha
           - half skeleton body
+      # https://civitai.com/models/1389717/steampunk-x-skull-mask-lora?modelVersionId=1570590
+      skull_mask:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem/skull_mask/costume-headwear__
+            {, {1-$$__lazy-wildcards/subject/costume-elem/skull_mask/costume-elem__}|}
+        costume-headwear:
+          - skull mask
+        costume-elem:
+          - sculpted mask and intricate fashion details
+          - steampunk skull mask
+          - skull helmet
 

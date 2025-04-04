@@ -172,4 +172,133 @@ lazy-wildcards:
         style:
           - voyeurism
           - (dutch angle:1.2)
+      # https://civitai.com/models/293128/moss-is-boss-gown-5
+      moss:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/moss/env-main__
+            {, __lazy-wildcards/subject/env-elem/moss/costume__|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/moss/env__}|}
+        env-main:
+          - >-
+            made of moss, moss-covered, mossy
+            , m0ss_dr3ss
+        costume:
+          - elaborate long dress made of moss
+        env:
+          - >-
+            ({1-$$moss slime vines|moss vines|mossy surface})
+          - >-
+            slime_\(substance\), sticky slime
+          - twigs
+          - overgrown
+          - overgrown moss
+          - overgrown with thick vines
+          - overgrown scenery
+          - mossy vines
+          - hanging moss
+      GreenRockWorld:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/GreenRockWorld/main__{0.3:::{1.2|1.3|1.4}|})
+            {,{1-$$__lazy-wildcards/subject/env-elem/GreenRockWorld/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/subject/env-elem/GreenRockWorld/env__}|}
+            {,{1-$$__lazy-wildcards/subject/env-elem/GreenRockWorld/style__}|}
+        main:
+          - GreenRockWorld, green_rocks
+        costume-elem:
+          - stone clothes
+        env:
+          - __lazy-wildcards/subject/env-elem/moss/prompts__
+          - rocky_terrain
+        style:
+          - fantasy_landscape
+          - emerald_glow
+          - nature_spirits
+      # https://civitai.com/models/98276/canevineele
+      # https://civitai.com/models/317223/naked-leaves
+      # https://civitai.com/models/287804/forest-child
+      vines:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/vines/env-main-trigger-words__
+            {, {1-$$__lazy-wildcards/subject/env-elem/vines/env-main__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/vines/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/vines/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/vines/env__}|}
+            {, {1-3$$__lazy-wildcards/subject/env-elem/vines/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/vines/style__}|}
+        env-main-trigger-words:
+          - vine, vines, vine_xsele, ruanyi0273, ruanyi0162
+        env-main:
+          - ivy
+          - >-
+            {1-$$rose vines|thorned roses}
+          - >-
+            {1-$$thorns|thorny vines, thorn vines|bramble}
+        costume-elem:
+          - vine dress
+          - vine skirt
+          - vine top
+          - vines on body
+          - rose dress
+          - vine-themed clothing
+          - vines in hair
+          - leaf hair accessories
+          - plant mage, druid
+          - forest witch
+          - flower crown
+          - leafy bracelet
+          - hair adorned with vines and leaves
+          - vine-wrapped bracelet
+          - >-
+            {vine|bark|fern} anklet
+          - __lazy-wildcards/subject/action-nsfw-others/naked/prompts__
+          - barefoot
+          - hair ornament
+        costume-weapon:
+          - vine whip
+          - vine staff
+          - thorned staff
+          - vine sword
+          - thorny dagger
+        env:
+          - __lazy-wildcards/subject/env-elem/moss/prompts__
+          - overgrown with thick vines
+          - overgrown scenery
+          - overgrown with vines
+          - green vines with flowers
+          - hanging vines
+          - creeping vines
+          - ivy-covered
+          - wall ivy
+          - climbing roses
+          - vine wrapping
+          - nature motif
+          - restrained by vines, bondage vines
+          - muted foliage
+          - red roses, white rose vines
+          - gothic vines, cursed thorns
+          - floral overgrowth
+          - enchanted growth, sentient plants
+          - flower
+          - leaf
+          - plant
+        env-bg:
+          - fantasy andscape
+          - overgrown ruins
+          - vines on ruins
+          - plant-covered architecture
+          - forest cabin, vines on house, nature reclaiming
+          - magical altar, vines on stones, arcane plant growth
+          - rose arch, vine-covered archway
+          - garden vines
+          - fairy forest
+          - stone wall
+        style:
+          - dark green palette
+          - entwined nature
+          - nature reclaiming civilization
+          - floral bondage, thorny elegance
+          - vines in interior design
 

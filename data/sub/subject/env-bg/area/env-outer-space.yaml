@@ -69,4 +69,25 @@ lazy-wildcards:
           - during a corona eclipse, during a C0r0n4 eclipse
           - rising high in the sky above
           - surrounded by bright solar corona
+      # https://civitai.com/models/12883/nebulae
+      # https://civitai.com/models/1003677/cosmic-nebula
+      # https://civitai.com/models/426615/a-rotating-nebula-background-style-tangbohu-70
+      nebula:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/nebula/env-bg-main__
+            {0.7::, {1-$$__lazy-wildcards/subject/env-bg/nebula/env-bg__}|}
+        env-bg-main:
+          - nebula, nebulae, martius nebula
+        env-bg:
+          - starry background
+          - cosmic background
+          - nebula background
+          - sparkle background
+          - galaxy background
+          - rotating nebula background
+          - nebula sea
+          - nebula sky
+          - >-
+            {1-2$$__cof-location/place/nebula__}
 

@@ -42,6 +42,7 @@ lazy-wildcards:
       # https://civitai.com/models/97677/cloudtunnel
       # https://civitai.com/models/162513/cloud-platform
       # https://civitai.com/models/206091/joscheks-mostly-realistic-clouds
+      # https://civitai.com/models/93407/cloudfantsy?modelVersionId=99593
       weather-clouds:
         prompts:
           - >-
@@ -54,6 +55,23 @@ lazy-wildcards:
           - cloudy
           - Sea of clouds
           - dark clouds
+          # 高积云
+          - alt clouds, altocumulus clouds
+          # 糙率云
+          - asp clouds, asperatus clouds
+          # 翻腾的积云
+          - billow clouds, billowing cumulus clouds
+          # 卷云
+          - cir clouds, cirrus clouds
+          # 风暴积雨云
+          - cumu clouds, cumulus clouds
+          # 透镜状云
+          - lent clouds, lenticular clouds
+          # 乳房云
+          - mam clouds, mammatus clouds
+          # 风暴层云
+          - nimbo clouds, nimbostratus clouds
+          - fluffy clouds
       weather-snow:
         prompts:
           - >-

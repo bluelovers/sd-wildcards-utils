@@ -185,4 +185,169 @@ lazy-wildcards:
           - twilight glow, foggy ambience, ethereal mist
           - soft jazz music, enchanted melody, celestial sounds
           - floating stardust, luminescent particles, glowing specks
+      # https://civitai.com/models/626234/traditional-multi-storey-wooden-chinese-restaurant?modelVersionId=700091
+      restaurant-traditional-multi-storey-wooden:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/restaurant-traditional-multi-storey-wooden/main__
+            ,__lazy-wildcards/subject/env-bg/restaurant-traditional-multi-storey-wooden/style-main__
+            {,{1-3$$__lazy-wildcards/subject/env-bg/restaurant-traditional-multi-storey-wooden/env-bg__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg/restaurant-traditional-multi-storey-wooden/env__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg/restaurant-traditional-multi-storey-wooden/style__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg/restaurant-traditional-multi-storey-wooden/env-bg-view__}|}
+        main:
+          - Traditional Multi Storey Wooden Restaurant
+        style:
+          - Martial_Arts_World
+          - social hubs
+          - decorative elements
+          - light rays
+          - landscape
+          - Traditional_Woodwork
+          - >-
+            {medium_shot|wide_shot}
+        style-main:
+          - ancient Chinese styles, traditional Chinese styles
+          - ancient Korean styles, traditional Korean styles
+        env:
+          - Wooden_Interior
+          - Ornate_Carvings, intricate and decorative wood carvings
+          - Paper_Lanterns
+          - Tatami_Floors
+          - Sliding_Doors
+          - Traditional_Furniture
+          - Decorative_Screens
+          - Wooden stairs
+          - table
+          - chair
+          - red Wooden
+          - Wooden fence
+          - Wooden_Beams
+          - Calligraphy_Decor
+          - Exposed_Rafters
+          - Hanging_Scrolls
+          - Lattice_Windows
+          - Bamboo_Decor
+          - Low_Furniture
+          - cushions
+          - __lazy-wildcards/subject/moment/weather-mist/prompts__
+        env-bg:
+          - ancient Traditional_Wooden_Building
+          - ancient Multi_Storey_Building
+          - ancient Chinese_Inn
+          - ancient Korean_Inn
+          - ancient Courtyard
+          - ancient chinese style loft
+        env-bg-view:
+          - indoors, interior
+          - outdoors
+      # https://civitai.com/models/324570?modelVersionId=1531553
+      restaurant-base:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/restaurant-base/env-bg__
+            {, {1-$$__lazy-wildcards/subject/env-bg/restaurant-base/env__}|}
+        env-bg:
+          - restaurant, fast food restaurant
+        env:
+          - table
+          - chair
+          - counter
+          - window
+          - wall
+          - ceiling
+          - floor
+          - door
+          - light
+          - signboard
+          - menu board
+          - food display
+          - food counter
+          - food shelf
+          - food table
+          - food cart
+          - tray
+          - plate
+          - bowl
+          - glass
+          - cup
+          - bottle
+      restaurant-chinese:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/restaurant-chinese/env-bg__
+            {, {1-$$__lazy-wildcards/subject/env-bg/restaurant-chinese/env__}|}
+            , __lazy-wildcards/subject/env-bg/restaurant-base/prompts__
+        env-bg:
+          - chinese restaurant
+        env:
+          - round table
+          - lazy susan
+          - chinese lanterns
+          - chinese calligraphy
+          - wooden interior
+          - porcelain teapot
+        style:
+          - red and gold decor
+          - dim lighting
+      restaurant-old-style:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/restaurant-old-style/env-bg__
+            {, {1-$$__lazy-wildcards/subject/env-bg/restaurant-old-style/env__}|}
+            , __lazy-wildcards/subject/env-bg/restaurant-base/prompts__
+        env-bg:
+          - old-style restaurant, traditional restaurant, retro restaurant, old style diner
+        env:
+          - wooden floor
+          - tiled floor
+          - handwritten menu
+          - ceiling fan
+          - vintage decor
+          - analog cash register
+      # https://civitai.com/models/637810/jjs-interior-space-barber-shop?modelVersionId=1598848
+      # https://civitai.com/models/357694/jjs-interior-space-hair-salon?modelVersionId=1598910
+      hair_salon:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/hair_salon/env-bg-main__)
+            {, {1-$$__lazy-wildcards/subject/env-bg/hair_salon/costume__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/hair_salon/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/hair_salon/action__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/hair_salon/env__}|}
+        env-bg-main:
+          - hair salon, barber shop, barbershop
+        costume:
+          - hairdresser
+          - female hairstylist
+          - stylist with apron
+        costume-weapon:
+          - straight razor
+          - hair dryer
+          - scissors
+        action:
+          - hairdressing, haircut in progress
+          - mustache grooming
+          - beauty salon
+        env:
+          - barber pole
+          - hair salon chair, barber chair
+          - hair salon mirror
+          - hair salon counter
+          - hair salon station
+          - vintage interior
+          - leather chair
+          - checkered floor
+          - brick wall
+          - modern interior
+          - styling chair
+          - hair wash station
+          - mirrored wall
+          - poster on wall
+          - shampoo, hair products
+          - boarded door
+          - boarded windows
+          - broken chair
+          - broken glass
+          - cabinet
 

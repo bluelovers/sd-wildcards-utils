@@ -1,6 +1,7 @@
 lazy-wildcards:
   subject:
     env-bg-interior:
+      # https://civitai.com/models/308186/jjs-metro-station?modelVersionId=1598970
       station:
         prompts:
           - >-
@@ -9,7 +10,7 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/subject/env-bg-interior/station/env-bg__}|}
         env-bg-main:
           # 地下鐵 / 捷運
-          - Subway, Metro
+          - Subway, Metro, Metro Station
         env:
           - window
         env-bg:

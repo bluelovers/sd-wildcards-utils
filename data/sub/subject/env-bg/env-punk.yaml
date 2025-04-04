@@ -301,12 +301,13 @@ lazy-wildcards:
           - futuristic mechanics
           - visible bolts
           - __lazy-wildcards/subject/env-elem-pipes/industrial-pipes/prompts__
-          - visible gears
-          - mecha_parts
+          - visible gears, exposed gears
+          - mecha parts, mechanical parts
           - pistons
           - servos
           - hydraulics
           - external mechanisms
+          - mechanical innards
         style:
           - kitbashing
           - illusion of complexity
@@ -345,7 +346,7 @@ lazy-wildcards:
           - dark_alley
           - occult_symbols
           - gothic_mansion
-          - __lazy-wildcards/subject/env-elem-punk/cog_gears/prompts__
+          - __lazy-wildcards/subject/env-elem-punk/gears/prompts__
           - brass_mechanics
           - steam-powered_gadgets
           - steam_smoke
@@ -356,22 +357,47 @@ lazy-wildcards:
           - belt
         style:
           - mechanical_aesthetics
-      cog_gears:
+      gears:
         prompts:
           - >-
-            CogpunkAI, {1-$$__lazy-wildcards/subject/env-elem-punk/cog_gears/env-main__}
-            {, {1-$$__lazy-wildcards/subject/env-elem-punk/cog_gears/env__}|}
+            (__lazy-wildcards/subject/env-elem-punk/gears/env-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/gears/env-gears__}|}:{1.2|1.3|1.4})
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/gears/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/gears/style__}|}
         env-main:
-          - >-
-            {exposed |}gears
-          - >-
-            {exposed |}cog, cogwheels
+          - CogpunkAI, gears, gearing, cogs, cogwheel
+        env-gears:
+          # 链轮
+          - sprockets
+          # 小齒輪
+          - pinions
+          - gearwheels
+          # 直齒輪
+          - spur gear
+          # 斜齒輪
+          - helical gear
+          # 錐齒輪
+          - bevel gear
+          # 蝸輪
+          - worm gear
+          - gear train
+          - gear assembly
+          # 行星齒輪
+          - planetary gear, epicyclic gearing
+          # 齒輪比
+          - gear ratio
+          # 齒輪箱
+          - gearbox
+          - rack
           - pinion
           - sprocket
           - rack
-          - intricate_gearworks
+          - intricate gearworks
           - clockwork
+          - giant gears
         env:
+          - visible cog, exposed cog, exposed cogwheels
+          - visible gears, exposed gears
           - machinery
           - handcrafted_machines
           - grungy_environment
@@ -380,4 +406,112 @@ lazy-wildcards:
           - mechanical_aesthetics
           - rustic_metals
           - mechanical_innards
+        style:
+          - steampunk aesthetic
+          - retrofuturism
+          - dieselpunk aesthetic
+          - clockpunk aesthetic
+          - mechanical aesthetics
+          - industrial design, industrial aesthetics
+      # https://civitai.com/models/94033/yuan-or-gearuniverse?modelVersionId=100314
+      gears_universe:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-punk/gears_universe/main-trigger-words__
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/gears_universe/env-main__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, __lazy-wildcards/subject/env-elem-punk/gears/prompts__|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/gears_universe/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/gears_universe/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/gears_universe/costume-weapon__}|}
+            {, {1-3$$__lazy-wildcards/subject/env-elem-punk/gears_universe/env-bg__}|}
+        main-trigger-words:
+          - >-
+            gears universe, gears theme, gears world
+            , __lazy-wildcards/utils/fn/style-inspired(v=gears)__
+        env-main:
+          - crystal gears
+          - cyberpunk gears
+          - embro gears
+          - metal gears
+          - nebula gears
+          - neon gears
+          - shine gears
+          - sky gears
+          - stone gears
+          - surreal gears
+          - water gears
+          - wooden gears
+        env:
+          - ornate clockwork, clock hands
+          - pocket watch
+          - gear-based magic circles, runic gears
+          - clock
+          - __lazy-wildcards/subject/env-elem-pipes/industrial-pipes/prompts__
+        costume-elem:
+          - gear-patterned armor, mechanical plating
+          - cybernetic limbs, mechanical arms, clockwork prosthetics
+          - goggles, aviator cap, pilot mask
+          - cyborg creatures, bio-mechanical beings
+          - leather apron, brass toolbelt
+          - clockwork android, cybernetic humanoid
+          - mechanical exosuit
+          - steam-powered armor
+        costume-weapon:
+          - engraved metal weapons
+          - clockwork guns
+          - clockwork swords
+          - clockwork crossbows
+          - gear-driven sword
+          - steam rifle
+        env-bg:
+          - brass architecture, iron framework
+          - smoggy streets, gas lanterns, cobblestone roads
+          - massive gear-driven city, steam-powered structures
+          - airships, floating cities, sky docks
+          - clockwork castle, gear-driven fortress
+          - gear-based celestial bodies, planetary gears
+          - gear-driven city, industrial skyline, steam-powered metropolis
+          - elevated railways, suspended trains, steam locomotives
+          - towering clock towers, watchmaker's workshop
+          - mechanical altar, cog engravings, brass temple
+          - antique brass architecture, metallic sanctuaries
+          - clockwork deity statues, gear-powered idols
+          - gear-powered stargate, mechanical portal
+          - whirling gear nebula, cosmic clockwork
+          - massive astrolabe, cosmic gear system
+      # https://civitai.com/models/638152/jjs-mars-colony
+      mars_colony:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-punk/mars_colony/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/mars_colony/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/mars_colony/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/mars_colony/env-elem-vehicle__}|}
+        env-bg-main:
+          - >-
+            martian colony, mars colony, futuristic colony
+            , solar power, solar panels
+            , martian
+        env-bg:
+          - martian cityscape
+          - martian settlement
+          - alien desert
+          - transparent dome, glass enclosure, geodesic dome
+          - modular habitat, sci-fi architecture
+          - __lazy-wildcards/subject/env-bg-architectural/agricultural_zone/prompts__
+          - __cof-location/place/planet-surface__
+        env:
+          - red planet
+          - martian landscape
+          - martian surface, martian terrain, rock, sand, dust
+          - martian environment
+          - semi-transparent, glass wall, protective barrier, sealed environment
+          - outspace
+          - wind power, Wind turbine
+        env-elem-vehicle:
+          - mars rover
+          - space vehicle
+          - ground vehicle
+          - rocket
+          - space ship
 

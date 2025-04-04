@@ -28,10 +28,11 @@ lazy-wildcards:
       nsfw-nude:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/costume-anything/nsfw-nude/costume__}
+            __lazy-wildcards/subject/action-nsfw-others/naked/costume__
+            {, {1-$$__lazy-wildcards/subject/costume-anything/nsfw-nude/costume__}|}
         costume:
-          - nude, topless, breasts out, breasts slip, cleavage, see-through cleavage, see-through, breasts focus, unaligned_breasts
-          - naked, bare, nude, completely nude, no bra, nobar, cleavage
+          - topless, breasts out, breasts slip, cleavage, see-through cleavage, see-through, breasts focus, unaligned_breasts
+          - bare, completely nude, no bra, nobar, cleavage
           - Open Jacket, Open Clothes, Bare Chest, Exposed Chest, no bra, nobar
           - no bra, nobar
       costume-mixin:

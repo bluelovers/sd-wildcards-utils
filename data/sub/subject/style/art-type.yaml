@@ -19,14 +19,15 @@ lazy-wildcards:
             __lazy-wildcards/subject/style-art-type/sketch-pen-base/prompts__
         style-art-main:
           - (Sketch portrait, portrait)
+      # https://civitai.com/models/593267/line-draw-lora?modelVersionId=662601
       sketch-pen-base:
         prompts:
           - >-
-            __lazy-wildcards/subject/style-art-type/sketch-pen-base/style-art-main__,
-            {__lazy-wildcards/subject/style-art-type/sketch-pen-base/style-color__,|}
-            ({3-$$__lazy-wildcards/subject/style-art-type/sketch-pen-base/style__})
+            __lazy-wildcards/subject/style-art-type/sketch-pen-base/style-art-main__
+            {, __lazy-wildcards/subject/style-art-type/sketch-pen-base/style-color__|}
+            {(, {3-$$__lazy-wildcards/subject/style-art-type/sketch-pen-base/style__})|}
         style-art-main:
-          - (XCYP) Sketch, (Sketch:1.4), (Pen Drawing:2)
+          - (XCYP) Sketch, (Sketch:1.4), (Pen Drawing:2), line drawing style
         style-color:
           - >-
             (Black and White Pen Drawing:2)
@@ -42,6 +43,41 @@ lazy-wildcards:
           - Strong Contrast
           - pencil sketch
           - charcoal sketch
+          - with clean, precise lines capturing the essence of the subject
+      # https://civitai.com/models/808366/industrial-design-x-marker-rendering?modelVersionId=903915
+      # https://civitai.com/models/808393/industrial-design-x-sketch-lora?modelVersionId=903946
+      blueprint-drawings:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-art-type/blueprint-drawings/style-art-main__{0.3:::{1.2|1.3|1.4|1.6}|})
+            {0.2::, {1-$$__lazy-wildcards/subject/style-art-type/blueprint-drawings/env__}|}
+            {, {1-$$__lazy-wildcards/subject/style-art-type/blueprint-drawings/style__}|}
+        style-art-main:
+          - >-
+            industrial design sketch, illustrating industrial design sketching style, rough industrial design sketch
+            , marker rendering, copic marker rendering
+            , dynamic lines
+            , technical drawing
+            , blueprint
+            , techdraw, davincisketch, UFO_Alchemy
+        env:
+          - multimedia speakers
+          - scooter
+          - architecture house
+          - night lamp
+          - futuristic car
+          - computer mouse
+          - Xbox controller
+          - CCTV camera
+          - ukulele
+          - furniture chair
+        style:
+          - rendered with energetic, sweeping pen strokes
+          - emphasize motion and innovation
+          - bold, angular lines
+          - hand-drawn sketch
+          - fluid lines
+          - Capture the essence of a prototype with loose
       # https://civitai.com/models/15927
       # https://civitai.com/models/144283/or-mecha-drawings-in-ancient-chinese-style
       # https://civitai.com/models/210933/technical-drawing?modelVersionId=237582
@@ -54,7 +90,7 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/style__}|}
             {, {1-2$$__lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/style-art-type__}|}
         style-art-main:
-          - (blueprint:1.3), architectural drawing, techdraw, davincisketch, UFO_Alchemy
+          - (blueprint:1.3), architectural drawing, __lazy-wildcards/subject/style-art-type/blueprint-drawings/style-art-main__
         env-architectural:
           - old moscow town conceptual style architecture
           - conceptual style
@@ -529,6 +565,7 @@ lazy-wildcards:
           - dual_identity
           - battle_damage
       # https://civitai.com/images/2019470?postId=496541
+      # https://civitai.com/models/597855/art-nouveau-graffiti-lora?modelVersionId=667997
       graffiti-style:
         prompts:
           - >-
@@ -538,10 +575,11 @@ lazy-wildcards:
             {0.3::, {1-$$__lazy-wildcards/subject/style-art-type/graffiti-style/env__}|}
             {0.3::, {1-$$__lazy-wildcards/subject/style-art-type/graffiti-style/costume-elem__}|}
         style-art-main:
-          - graffiti-style, inspired by graffiti-style, graffiti-style-inspired
+          - graffiti-style-inspired, __lazy-wildcards/utils/fn/style-inspired(v=graffiti-style)__
         style-art-type:
           - bold graffiti-style patterns
           - graffiti letters wild style
+          - Art Nouveau Graffiti style
         style:
           - __lazy-wildcards/subject/style-elem/street-art-playful/prompts__
           - >-
@@ -561,6 +599,7 @@ lazy-wildcards:
             {urban |}graffiti-filled street
           - wall graffiti landscape
           - graffiti on old buildings
+          - graffiti background
         costume-elem:
           - graffiti-style clothes
 

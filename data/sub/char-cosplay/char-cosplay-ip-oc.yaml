@@ -303,4 +303,35 @@ lazy-wildcards:
           - McDonald's Cashier, Fast Food Cashier
         env:
           - cash register, cashier
+    civitai:
+      # https://civitai.com/models/1412708/civchan-uwu
+      # https://civitai.com/models/1421726/civchansd15
+      # https://civitai.com/models/1421727?modelVersionId=1606971
+      # https://civitai.com/models/1422753/civchan
+      CivChan:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/civitai/CivChan/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/civitai/CivChan/costume-ethnicity__
+            {0.7::, __lazy-wildcards/cosplay-char/civitai/CivChan/costume__|}
+            {, {1-$$__lazy-wildcards/cosplay-char/civitai/CivChan/expressions__}|}
+        main-trigger-words:
+          - >-
+            CivChan
+        costume-ethnicity:
+          - purple eyes, pink hair, bangs
+        costume:
+          - maid, maid headdress, puffy sleeves, black ribbon
+        expressions:
+          - clenched teeth
+          - seductive smile
+          - pout
+          - __lazy-wildcards/subject/costume-elem-expressions/blush/prompts__
+          - __lazy-wildcards/subject/costume-elem-expressions/shocked_face/prompts__
+          - __lazy-wildcards/subject/costume-elem-expressions/disgusted/prompts__
+          - __lazy-wildcards/subject/costume-elem-expressions/confused/prompts__
+          - crazy eyes
+          - __lazy-wildcards/subject/costume-elem-expressions/yandere_trance/prompts__
+          - wavy mouth
+          - uWu
 

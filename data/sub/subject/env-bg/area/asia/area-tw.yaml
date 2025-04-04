@@ -2,6 +2,7 @@ lazy-wildcards:
   subject:
     env-bg:
       # https://civitai.com/models/154913/taipei-downtow-taiwan?modelVersionId=173687
+      # https://civitai.com/models/916905/jjs-taipei-street-view
       tw-taipei-downtown:
         prompts:
           - >-
@@ -11,7 +12,7 @@ lazy-wildcards:
             {0.2::,{1-$$__lazy-wildcards/subject/env-bg/tw-taipei-downtown/env-text__}|}
             {,__lazy-wildcards/utils/scenery-no-humans__|}
         env-bg-main:
-          - (taipei downtown, taiwan:1.2), real world location, scenery, building, architecture, landscape
+          - (taipei downtown, taiwan:1.2), real world location, scenery, building, architecture, landscape, Taipei Street View
         env-bg-real:
           - __lazy-wildcards/subject/env-bg-real-world-location/tw-taipei_101/prompts__
           - presidential office building

@@ -88,4 +88,36 @@ lazy-wildcards:
           - Traditional_tattooing
           - Tebori_technique
           - hand_poked_tattoo
+      # https://civitai.com/models/103639/vinetattoo?modelVersionId=111015
+      tattoo-vine:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-tattoo/tattoo-vine/costume-main__
+            {, {1-$$__lazy-wildcards/subject/costume-tattoo/tattoo-vine/costume-tattoo__}|}{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+            {0.2::, {1-$$__lazy-wildcards/subject/costume-tattoo/tattoo-vine/env__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/costume-tattoo/tattoo-vine/style__}|}
+        costume-main:
+          - vine tattoo
+        costume-tattoo:
+          - vine tattoo on arm
+          - vine tattoo on leg
+          - vine tattoo on back
+          - vine tattoo on neck
+          - vine tattoo on shoulder
+          - vine tattoo on chest
+          - vine tattoo on face, face tattoo
+          - vine tattoo on stomach
+          - vine tattoo on wrist
+          - vine tattoo on breasts
+          - vine tattoo on body, full body tattoo
+          - vine body paint
+        env:
+          - __lazy-wildcards/subject/env-elem/vines/prompts__
+        style:
+          - vine patterns
+          - vine designs
+          - vine motifs
+          - vine textures
+          - vine illustrations
+          - vine art
 
