@@ -312,16 +312,22 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/civitai/CivChan/main-trigger-words__
-            , __lazy-wildcards/cosplay-char/civitai/CivChan/costume-ethnicity__
+            , (__lazy-wildcards/cosplay-char/civitai/CivChan/costume-ethnicity__:1.3)
             {0.7::, __lazy-wildcards/cosplay-char/civitai/CivChan/costume__|}
             {, {1-$$__lazy-wildcards/cosplay-char/civitai/CivChan/expressions__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/civitai/CivChan/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/civitai/CivChan/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/civitai/CivChan/action__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/civitai/CivChan/env-bg__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/civitai/CivChan/env__}|}
         main-trigger-words:
           - >-
             CivChan
         costume-ethnicity:
           - purple eyes, pink hair, bangs
         costume:
-          - maid, maid headdress, puffy sleeves, black ribbon
+          - maid, maid uniform, maid headdress, puffy sleeves, black ribbon
+          - black frilly bikini
         expressions:
           - clenched teeth
           - seductive smile
@@ -334,4 +340,22 @@ lazy-wildcards:
           - __lazy-wildcards/subject/costume-elem-expressions/yandere_trance/prompts__
           - wavy mouth
           - uWu
+          - wide eyes
+          - scary, demented
+          - smiling sweetly
+        costume-elem:
+          - cleavage
+          - wearing a crown with blue gems
+          - maid outfit thigh highs
+        costume-weapon:
+          - holding a huge cute pink cat plushie
+          - holding a wooden baseball bat over her shoulder
+        action:
+          - swimming in a pool of gold coins
+          - sitting on a royal throne
+        env-bg:
+          - office
+          - server room, servers with blue lights
+        env:
+          - with piles of gold coins and cash money
 
