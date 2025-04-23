@@ -16794,9 +16794,7 @@
       human_motorcycle:
         prompts:
           - >-
-            (__lazy-wildcards/subject/costume-ethnicity-race/human_motorcycle/costume-ethnicity-race__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
-        "costume-ethnicity-race":
-          - hum4n_m0t0rcycle,motorcycle,human motorcycle,object transformation
+            (hum4n_m0t0rcycle,object transformation{0.3:::{1.2|1.3|1.4|1.6}|:1.3}),motorcycle,human motorcycle,human bike,living bike
     costume-weapon:
       smoking_pipe:
         prompts:
