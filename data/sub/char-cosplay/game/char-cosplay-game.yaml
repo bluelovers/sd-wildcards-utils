@@ -477,4 +477,29 @@ lazy-wildcards:
         costume:
           - >-
             earrings, puffy sleeves, red sleeves, cleavage cutout, corset, skirt, see-through, loincloth, red thighhighs, high heel boots
+    fire_emblem:
+      # https://civitai.com/models/259741/loki-fire-emblem-heroes-lora-or-3-outfits?modelVersionId=292931
+      loki:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/fire_emblem/loki/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/fire_emblem/loki/costume-ethnicity__
+            {, {1-2$$__lazy-wildcards/cosplay-char/fire_emblem/loki/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/fire_emblem/loki/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/fire_emblem/loki/expressions__}|}
+        main-trigger-words:
+          - loki, loki \(fire emblem\), loki \(fire emblem\) \(cosplay\), loki \(trickster god\) \(fire emblem\)
+        costume-ethnicity:
+          - purple eyes, headdress, purple hair
+        costume:
+          - defLoki, purple dress, cleavage, feather trim, belt
+          - sprLoki, fake rabbit ears, purple hat, choker, leotard, black gloves, thigh boots, purple skirt
+          - sumLoki, straw hat, bikini, criss-cross halter, halterneck, armlet
+        costume-elem:
+          - feather trim
+          - breasts out
+          - cleavage
+          - mature female
+        expressions:
+          - biting own lip
 

@@ -214,19 +214,36 @@ lazy-wildcards:
           - beach
           - heian
           - on the blanket
-    Brown-Dust:
+    # https://danbooru.donmai.us/posts?tags=brown_dust_%28series%29+&z=5
+    # https://civitai.com/search/models?sortBy=models_v9&query=Browndust
+    brown_dust:
+      # https://civitai.com/models/58507/brown-dustbrave-nine-style-lora
+      # https://civitai.com/models/344066/brown-dust-brave-nine-style-xl
+      shared:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/brown_dust/shared/main-trigger-words__
+        main-trigger-words:
+          - >-
+            brown dust 2, brown dust, brown dust \(series\)
+            , browndust, browndust2, Brave Nine
+            , BrownDustAI
       # https://civitai.com/models/611537/eclipse-nightmare-bunny-brown-dust-2
+      # https://civitai.com/models/779157/browndust2-eclipse-cartoon25d
       Eclipse:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/main__
-            ,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/costume-ethnicity__}
-            {,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/costume-types/*__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/costume-elem__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/action__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/Brown-Dust/Eclipse/env__}|}
-        main:
-          - EclipseNightmareBunny, eclipse_(brown_dust_2), brown_dust_2, brown_dust
+            __lazy-wildcards/cosplay-char/brown_dust/Eclipse/main-trigger-words__
+            ,{1-$$__lazy-wildcards/cosplay-char/brown_dust/Eclipse/costume-ethnicity__}
+            {,{1-$$__lazy-wildcards/cosplay-char/brown_dust/Eclipse/costume-types/*__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/brown_dust/Eclipse/costume-elem__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/brown_dust/Eclipse/action__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/brown_dust/Eclipse/env__}|}
+            , __lazy-wildcards/cosplay-char/brown_dust/shared/prompts__
+        main-trigger-words:
+          - >-
+            EclipseNightmareBunny, Browndust2_Eclipse
+            , eclipse_\(brown_dust_2\)
         costume-ethnicity:
           - very long hair, ponytail, purple hair, blue eyes, hair over one eye
           - huge breasts
@@ -341,4 +358,44 @@ lazy-wildcards:
           - black thighhighs
           - cleavage
           - __lazy-wildcards/subject/costume-ethnicity-body-skin/skindentation/prompts__
+      # https://civitai.com/models/90973/maiden-nikke-lora-or-2-outfits
+      maiden:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/NIKKE/maiden/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/NIKKE/maiden/costume-ethnicity__
+            {, {1-2$$__lazy-wildcards/cosplay-char/NIKKE/maiden/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/NIKKE/maiden/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/NIKKE/maiden/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/NIKKE/maiden/env__}|}
+        main-trigger-words:
+          - maiden, maiden_\(nikke\), goddess of victory nikke
+        costume-ethnicity:
+          - >-
+            hair flower, hair ornament
+            , rose
+            , black hair, very long hair
+            , mouth mask
+            , red eyes
+        costume:
+          - maidendef, black coat, black jacket, long sleeves, cleavage, belt, black thighhighs, black garter straps, knee boots, black gloves, fingerless gloves, spikes
+          - maidennurse, surgical mask
+          - >-
+            maiden \(ice rose\) \(nikke\)
+            , ice flower
+            , see-through bodystocking
+            , blue tabard
+            , hat, mitre
+            , cross earrings
+            , white gloves
+        costume-elem:
+          - between breasts
+          - black garter straps
+          - black gloves
+          - black pantyhose
+        costume-weapon:
+          - holding mace
+        env:
+          - red rose
+          - ice rose
 

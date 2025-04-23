@@ -834,4 +834,44 @@ lazy-wildcards:
         costume-elem:
           - survivalist mecha
           - exposed gears
+      plant_girl:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-race/plant_girl/costume-ethnicity-race__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+        costume-ethnicity-race:
+          - plant girl
+      # https://civitai.com/models/22578/chao-flower
+      plant_girl_flower:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-race/plant_girl_flower/costume-ethnicity-race__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant_girl_flower/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant_girl_flower/env__}|}
+        costume-ethnicity-race:
+          - flower monster girl, flower girl, __lazy-wildcards/subject/costume-ethnicity-race/plant_girl/costume-ethnicity-race__
+        costume-elem:
+          - flower crown
+          - flower dress
+          - flower hair ornament
+          - flower hair
+          - flower accessories
+          - flower skirt
+          - flower shoes
+          - flower gloves
+          - flower headband
+          - flower wings
+          - flower limbs
+        env:
+          - flower
+          - flower petals
+          - chao flower
+          - >-
+            {vivid |}__lazy-wildcards/utils/color-base__ flower
+      # https://civitai.com/models/1484425/human-motorcycle-living-bike-ponyilsdsdxl?modelVersionId=1679471
+      human_motorcycle:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-race/human_motorcycle/costume-ethnicity-race__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+        costume-ethnicity-race:
+          - hum4n_m0t0rcycle, motorcycle, human motorcycle, object transformation
 

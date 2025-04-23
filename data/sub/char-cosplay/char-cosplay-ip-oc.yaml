@@ -358,4 +358,28 @@ lazy-wildcards:
           - server room, servers with blue lights
         env:
           - with piles of gold coins and cash money
+    oc:
+      # https://civitai.com/models/1498908/rhaenyra-elgris-fantasy-oc-v2?modelVersionId=1696752
+      rhaenyra_elgris:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/civitai/oc/rhaenyra_elgris/costume-ethnicity__
+            {, __lazy-wildcards/cosplay-char/civitai/oc/rhaenyra_elgris/costume__|}
+        costume-ethnicity:
+          - >-
+            skindentation
+            , yellow eyes
+            , thick thighs
+            , shiny skin
+            , narrow waist, wide hips
+            
+            , pointy ears, dragon horns
+            , facial mark
+            , symmetrical face markings
+            , sharp teeth
+            , body markings
+            , claws, dragon girl
+            , __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+        costume:
+          - revealing clothing, armored gloves, armored bodysuit, dark bodysuit, full body body suit, center opening, black fur around her neck, thigh cutout, cleavage, pauldrons, shoulder armor
 

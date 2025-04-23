@@ -96,4 +96,33 @@ lazy-wildcards:
           - Insect
           - __lazy-wildcards/subject/env-elem/spider-webs/prompts__
           - flower
+      # https://civitai.com/models/1494603/spaceman-lora?modelVersionId=1690790
+      spaceman:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/spaceman/costume__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+            {, {1-$$__lazy-wildcards/subject/costume/spaceman/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/spaceman/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/spaceman/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/spaceman/style__}|}
+        costume:
+          - spaceman
+        costume-elem:
+          - spaceman monk, spacemonk
+          - >-
+            {vivid |}__lazy-wildcards/utils/color-base__ space suit
+          - steampunk spacesuit
+          - The helmet is domed, polished, with retro-futuristic engravings and glowing lenses
+        env-bg:
+          - a circle in the background
+          - circular structure, evoking both planetary symbolism and industrial design
+        env:
+          - intricate brass
+          - pressure gauges and mechanical joints exposed
+          - glowing valves hissing with steam
+          - intricate engravings, tubing, gears
+          - arcane symbols
+        style:
+          - steampunk
+          - cosmic industrial backdrop
 

@@ -2,6 +2,7 @@ lazy-wildcards:
   subject:
     costume:
       # https://civitai.com/models/432127/sexy-attire-or-camel-by-camel-by-edg?modelVersionId=481418
+      # https://civitai.com/models/342571/stygian-armor?modelVersionId=1677962
       ancient-egyptian:
         prompts:
           - >-
@@ -14,9 +15,17 @@ lazy-wildcards:
             {, {1-2$$__lazy-wildcards/subject/costume/ancient-egyptian/costume-headwear__}|}
             {, {1-3$$__lazy-wildcards/subject/costume/ancient-egyptian/costume-weapon__}|}
             {, {1-$$__lazy-wildcards/subject/costume/ancient-egyptian/costume-elem__}|}
-          - __cf-ancient-egypt/prompt-costume__
+          - >-
+            (__lazy-wildcards/subject/costume/ancient-egyptian/costume-main__)
+            , __cf-ancient-egypt/prompt-costume__
         costume-main:
-          - ancient egyptian, wearing edgCBC_\(egyptian clothes\), edgCBC, jewelry, stygar, egyptpunkai, egypt, egyptianworld
+          - >-
+            ancient egyptian
+            , wearing edgCBC_\(egyptian clothes\), edgCBC
+            , jewelry
+            , stygar, stygian armor
+            , stygia
+            , egyptpunkai, egypt, egyptianworld
         costume:
           - Egyptian_Robe, long flowing garments, linen fabric, traditional draping
           - Kalasiris, close-fitting dress, pleated fabric

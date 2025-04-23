@@ -771,6 +771,68 @@ lazy-wildcards:
           - holding weapon
           - holding hammer
           - claw hammer
+      # https://civitai.com/models/309056/shoko-ieiri-jujutsu-kaisen-15ponyillustrious?modelVersionId=346822
+      ieiri_shoko:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/jujutsu_kaisen/ieiri_shoko/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/jujutsu_kaisen/ieiri_shoko/costume-ethnicity-main__
+            , __lazy-wildcards/cosplay-char/jujutsu_kaisen/ieiri_shoko/costume-ethnicity__
+            {, __lazy-wildcards/cosplay-char/jujutsu_kaisen/ieiri_shoko/costume__|}
+            {, {1-$$__lazy-wildcards/cosplay-char/jujutsu_kaisen/ieiri_shoko/costume-elem__}|}
+        main-trigger-words:
+          - ieiri shoko, shoko ieiri
+        costume-ethnicity-main:
+          - aShoko, long hair
+          - bShoko, short hair
+        costume-ethnicity:
+          - brown hair, brown eyes, eyebags, purple eyeshadow
+        costume:
+          - blue turtleneck, labcoat, white coat
+          - __lazy-wildcards/cosplay-char/jujutsu_kaisen/jujutsu_tech_uniform/prompts__
+          - jujutsu tech uniform
+        costume-elem:
+          - pantyhose
+      # https://danbooru.donmai.us/posts?page=1&tags=nanako_%28jujutsu_kaisen%29+
+      # https://civitai.com/models/319725/nanako-hasaba-jujutsu-kaisen?modelVersionId=358512
+      nanako:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/jujutsu_kaisen/nanako/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/jujutsu_kaisen/nanako/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/jujutsu_kaisen/nanako/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/jujutsu_kaisen/nanako/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/jujutsu_kaisen/nanako/action__}|}
+        main-trigger-words:
+          - nanako hasaba, nanako_\(jujutsu_kaisen\)
+        costume-ethnicity:
+          - >-
+            drill hair, drill sidelocks, twin drills
+            , single hair bun
+            , gyaru
+            , lipstick, makeup
+            , pink nails
+            , thighs
+            , brown eyes
+            , blonde brown hair
+        costume:
+          - >-
+            blue neckerchief
+            , black sailor collar
+            , black skirt, microskirt, blue pleated skirt
+          - >-
+            , yellow cardigan, open cardigan, open clothes
+            , long sleeves, sleeves past wrists
+        costume-elem:
+          - >-
+            ribbed socks
+        action:
+          - hand in pocket
+          - holding phone
+          - looking at phone
+          - cellphone, smartphone
+          - mouth hold
+          - sitting
     binbougami_ga:
       # https://danbooru.donmai.us/posts?tags=momiji_%28binbougami_ga%21%29&z=2
       # https://civitai.com/models/407928/momiji-binboda-binbougami-ga-lora?modelVersionId=454746

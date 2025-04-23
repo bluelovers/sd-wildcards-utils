@@ -350,4 +350,60 @@ lazy-wildcards:
           - broken chair
           - broken glass
           - cabinet
+      flower_shop:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/flower_shop/env-bg-main__)
+            {, {1-$$__lazy-wildcards/subject/env-bg/flower_shop/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/flower_shop/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/flower_shop/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/flower_shop/style__}|}
+        env-bg-main:
+          - >-
+            flower shop, florist
+            , fleuri designs, flower shop decor
+            , flower shop arrangement
+        env-bg:
+          - >-
+            flower shop {interior|exterior}
+          - flower shop display stand
+          - flower shop window
+          - flower shop entrance
+          - glass storefront
+        env:
+          - flower shop counter
+          - vintage cash register
+          - flower shop sign
+          - handwritten signboard
+          - bouquets
+          - potted plants
+          - hanging plants
+          - floral wreath
+          - flower basket
+          - flower wrapping paper
+          - wooden shelves
+          - petals on floor
+          - flower name tags
+          - flower cart
+          - flower shelf
+          - flower table
+          - roses
+          - lilies
+          - sunflowers
+          - tulips
+          - hydrangea
+          - peonies
+          - baby's breath
+          - flower delivery bike
+          - open window with curtains
+        costume-elem:
+          - cute shopkeeper girl
+          - flower fairy
+        style:
+          - warm lighting
+          - greenhouse style
+          - aroma particles
+          - sunlight filtering through leaves
+          - vintage decor
+          - pastel color palette
 

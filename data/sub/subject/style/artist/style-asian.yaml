@@ -795,7 +795,7 @@ lazy-wildcards:
       nihei_tsutomu:
         prompts:
           - >-
-            __lazy-wildcards/subject/style-artist/nihei_tsutomu/style-artist__
+            (__lazy-wildcards/subject/style-artist/nihei_tsutomu/style-artist__{0.3:::{1.2|1.3|1.4}|})
             {, {1-$$__lazy-wildcards/subject/style-artist/nihei_tsutomu/style__}|}
         style-artist:
           - >-
@@ -807,4 +807,13 @@ lazy-wildcards:
           - industrial style
           - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
           - dystopia, destroyed
+      # 焦茶
+      # https://www.pixiv.net/users/12845810/artworks
+      # https://civitai.com/models/129768?modelVersionId=143424
+      cogecha:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/cogecha/style-artist__{0.3:::{1.2|1.3|1.4}|})
+        style-artist:
+          - __lazy-wildcards/utils/fn/style-inspired(v=cogecha)__
 
