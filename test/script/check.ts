@@ -29,6 +29,8 @@ export default (async () => {
 				// 'lazy-*/**/*.yaml',
 				'tg_love/**/*.yaml',
 				'beloved/**/*.yaml',
+				'PurityGuard/*.yaml',
+				'NightfallJumper/*.yaml',
 			], {
 				cwd: join(__ROOT_DATA, 'others'),
 			}),
@@ -58,6 +60,8 @@ export default (async () => {
 			'chara_creator/**',
 			'Vision/**',
 			'navi_atlas/**',
+			'PurityGuard/**',
+			'NightfallJumper/**',
 		],
 		allowWildcardsAtEndMatchRecord: true,
 	})
