@@ -136,4 +136,30 @@ lazy-wildcards:
         env-bg:
           - sports_background
           - locker_room
+      dolphin_shorts:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/dolphin_shorts/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/dolphin_shorts/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/dolphin_shorts/costume-weapon__}|}
+        costume:
+          - dolphin shorts
+        costume-elem:
+          - sleeveless shirt
+          - baseball  cap
+          - kneehighs
+          - casual
+          - short shorts
+          - socks
+          - white socks
+          - white hat
+          - socks
+          - __lazy-wildcards/subject/costume/camisole/prompts__
+          - sports bra
+          - midriff
+        costume-weapon:
+          - bottle
+          - holding bottle
+          - handbag
+          - water bottle
 

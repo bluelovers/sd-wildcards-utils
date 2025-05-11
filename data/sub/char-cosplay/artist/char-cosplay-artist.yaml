@@ -87,4 +87,65 @@ lazy-wildcards:
             pink panties, leopard print panties{, panties under pantyhose|}
         env:
           - work desk
+    oda_non:
+      # https://civitai.com/models/1502955/art-teacher-oda-non?modelVersionId=1700253
+      art_teacher:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/oda_non/art_teacher/costume__
+            {0.8::, __lazy-wildcards/cosplay-char/oda_non/art_teacher/costume-ethnicity__}
+        costume-ethnicity:
+          - >-
+            medium hair, black hair, black eyes
+        costume:
+          - >-
+            ArtTeacher, Art Teacher
+            , blue skirt, grey shirt
+            , black thighhighs
+            , black gloves
+            , collarbone
+            , short sleeves
+            , bra strap
+            , garter straps
+            , high-waist skirt
+            , cleavage
+      # https://civitai.com/models/393750/policewoman-akiko-oda-non
+      policewoman_akiko:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/oda_non/policewoman_akiko/costume__
+            {0.7::, {1-$$__lazy-wildcards/cosplay-char/oda_non/policewoman_akiko/costume-ethnicity__}|}
+        costume-ethnicity:
+          - >-
+            long hair, purple eyes
+          - brown hair
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+        costume:
+          - >-
+            PolicewomanAkiko
+            , miniskirt
+            , shirt
+            , black thighhighs
+            , long sleeves
+            , police hat
+            , earrings
+            , necktie
+            , belt
+            , hair over one eye
+            , fishnets
+            , pencil skirt
+            , purple skirt
+            , fishnet thighhighs
+      # https://civitai.com/models/393760/shiho-kujo-oda-non
+      shiho_kujo:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/oda_non/shiho_kujo/costume__
+            {, {1-$$__lazy-wildcards/cosplay-char/oda_non/shiho_kujo/costume-ethnicity__}|}
+        costume-ethnicity:
+          - >-
+            long hair, brown hair, brown eyes
+        costume:
+          - >-
+            ShihoKujo, black thighhighs, sweater dress, bare shoulders, earrings, garter straps, brown sweater
 

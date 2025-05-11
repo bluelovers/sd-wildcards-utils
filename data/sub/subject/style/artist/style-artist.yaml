@@ -276,4 +276,42 @@ lazy-wildcards:
             __lazy-wildcards/subject/style-artist/kim_hyung_tae/style-artist__
         style-artist:
           - kim_hyung_tae, __lazy-wildcards/utils/fn/style-inspired(v=kim_hyung_tae)__, kim_hyung_tae_\(style\)
+      # 尚·巴蒂斯特·西梅翁·夏丹
+      # https://zh.wikipedia.org/zh-tw/%E8%AE%A9%C2%B7%E5%B7%B4%E8%92%82%E6%96%AF%E7%89%B9%C2%B7%E8%A5%BF%E6%A2%85%E7%BF%81%C2%B7%E5%A4%8F%E5%B0%94%E4%B8%B9
+      # https://civitai.com/models/135951/fake-books-art-chardin-style?modelVersionId=149945
+      jean_simeon_chardin:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/jean_simeon_chardin/style-artist__)
+            {, {1-$$__lazy-wildcards/subject/style-artist/jean_simeon_chardin/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/jean_simeon_chardin/env__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/jean_simeon_chardin/style__}|}
+        style-artist:
+          - __lazy-wildcards/utils/fn/style-inspired(v=jean_simeon_chardin)__, chardin, jean baptiste simeon chardin
+        costume-elem:
+          - maid
+          - apron
+          - historical clothing
+          - headscarf
+        env:
+          - fruit
+          - pottery
+          - kitchenware
+          - utensils
+          - fish
+          - dead animal
+        style:
+          - classical composition
+          - oil painting
+          - chiaroscuro
+          - natural lighting
+          - muted colors
+          - earth tones
+          - still life
+          - domestic life
+          - 18th century aesthetic
+          - calm
+          - serene
+          - subtle reflection
+          - classic painting
 

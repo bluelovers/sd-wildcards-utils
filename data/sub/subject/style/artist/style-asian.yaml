@@ -10,9 +10,13 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/style-artist/akira/env-bg__}|}
             {, {1-$$__lazy-wildcards/subject/style-artist/akira/style__}|}
         style-main:
-          - style akirafilm, akira_\(manga\), akira style
+          - >-
+            style akirafilm, akira_\(manga\)
+            , __lazy-wildcards/utils/fn/style-inspired(v=akira)__
+            , __lazy-wildcards/utils/fn/style-inspired(v=style_akirafilm)__
         env:
           - escaping gas and steam
+          - __lazy-wildcards/subject/moment/weather-smoke/prompts__
         env-bg:
           - gigantic industrial cryogenic containment facility
           - large factory machine
@@ -816,4 +820,88 @@ lazy-wildcards:
             (__lazy-wildcards/subject/style-artist/cogecha/style-artist__{0.3:::{1.2|1.3|1.4}|})
         style-artist:
           - __lazy-wildcards/utils/fn/style-inspired(v=cogecha)__
+      # みちきんぐ (Michiking)
+      # https://x.com/mitibmg20
+      # https://www.pixiv.net/users/2361345/artworks
+      # https://civitai.com/models/1394660/michiking-style?modelVersionId=1592563
+      # https://civitai.com/models/18614/michikingstyle
+      # https://civitai.com/models/104937/michiking-style-hentai-artist-monochrome-comic-and-color
+      michiking:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/michiking/style-artist__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+        style-artist:
+          - __lazy-wildcards/utils/fn/style-inspired(v=michiking)__
+      # https://civitai.com/models/66654/red-riverstyle-characters?modelVersionId=71304
+      # https://zh.wikipedia.org/zh-tw/%E7%AF%A0%E5%8E%9F%E5%8D%83%E7%B9%AA
+      red_river_chie_shinohara:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/red_river_chie_shinohara/style-artist__
+            {, {1-$$__lazy-wildcards/subject/style-artist/red_river_chie_shinohara/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/red_river_chie_shinohara/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/red_river_chie_shinohara/style__}|}
+        style-artist:
+          - >-
+            red river, red river \(manga\), anatolia story
+            , redriver
+            , chie shinohara \(artist\)
+            , __lazy-wildcards/utils/fn/style-inspired(v=chie_shinohara)__
+        costume:
+          - ancient mesopotamian clothes, royal attire
+        costume-elem:
+          - jewelry, earrings, gem, gold jewelry, brooch
+          - sheer dress
+          - necklace
+          - bracelet
+          - armlet
+          - headband
+          - dress
+          - ring
+          - choker
+          - barefoot
+          - midriff
+          - anklet, circlet
+          - makeup
+          - lipstick
+          - sleeveless
+          - arabian clothes
+          - long wavy hair
+          - ancient prince
+          - armored warrior
+          - neck ring
+          - underbust
+          - collarbone
+        env-bg:
+          - desert landscape
+          - stone palace
+          - giant temple
+          - ancient battlefield
+          - ziggurat
+          - massive stone wall
+          - ancient city
+        style:
+          - traditional media
+          - __lazy-wildcards/subject/style-art-type/1980s_style/style__
+          - __lazy-wildcards/subject/style-art-type/1990s_style/style__
+          - golden palette
+          - soft palace lighting
+          - isekai, historical fantasy
+          - forbidden love
+          - prince and commoner
+          - emotional reunion
+      # https://x.com/siu0207
+      # https://www.pixiv.net/users/9459043/artworks
+      # https://civitai.com/models/319134/siu-or-artist-style
+      # https://civitai.com/models/12274/style-siu-siu0207
+      siu0207:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/siu0207/style-artist__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-artist/siu0207/costume-elem__}|}
+        style-artist:
+          - __lazy-wildcards/utils/fn/style-inspired(v=siu0207)__
+        costume-elem:
+          - mature female
+          - thick thighs
 

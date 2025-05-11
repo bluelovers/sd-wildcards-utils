@@ -1,0 +1,26 @@
+lazy-wildcards:
+  subject:
+    costume-elem-lower-body:
+      # https://civitai.com/models/402323/0465-short-shorts?modelVersionId=448598
+      # https://civitai.com/models/148528/extreme-micro-denim-shorts-with-open-fly
+      # https://civitai.com/models/295434/micro-shorts-or-goofy-ai
+      micro_shorts:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-lower-body/micro_shorts/costume__{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-$$__lazy-wildcards/subject/costume-elem-lower-body/micro_shorts/costume-elem__}|}
+        costume:
+          - ruanyi0465, micro shorts, microshorts
+        costume-elem:
+          - open shorts
+          - navel
+          - micro shorts with open fly
+          - open fly, unbuttoned
+          - nsfw
+          - bikini top only
+          - extreme micro denim shorts
+          - no panties
+          - crop top overhang
+          - underboob
+          - camisole
+

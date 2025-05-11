@@ -5,7 +5,10 @@ lazy-wildcards:
       religious-tattoo:
         prompts:
           - >-
-            {1-2$$__lazy-wildcards/subject/costume-tattoo/religious-tattoo/costume-tattoo__}
+            (__lazy-wildcards/subject/costume-tattoo/religious-tattoo/costume-tattoo-main__{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-2$$__lazy-wildcards/subject/costume-tattoo/religious-tattoo/costume-tattoo__}|}
+        costume-tattoo-main:
+          - religious-inspired tattoo, religious tattoo
         costume-tattoo:
           - cross_tattoo, Christian_symbolism
           - buddha_tattoo, Buddhist_symbolism
@@ -49,21 +52,23 @@ lazy-wildcards:
           - flower tattoo
       # https://civitai.com/models/372610/irezumi-world-world-morph-lora-flux-or-sdxl-or-sd-15?modelVersionId=416199
       # https://civitai.com/models/170447/irezumi-yakuzas-tattoos-concept-or-ownwaifu?modelVersionId=191518
+      # https://civitai.com/models/345528/nude-ukiyo-e?modelVersionId=386720
       Japanese-tattoo-Irezumi:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume-tattoo/Japanese-tattoo-Irezumi/costume-main__
+            __lazy-wildcards/subject/costume-tattoo/Japanese-tattoo-Irezumi/costume-tattoo-main__
             {,{1-$$__lazy-wildcards/subject/costume-tattoo/Japanese-tattoo-Irezumi/costume-tattoo__}|}
             {,{1-$$__lazy-wildcards/subject/costume-tattoo/Japanese-tattoo-Irezumi/env__}|}
             {,{1-$$__lazy-wildcards/subject/costume-tattoo/Japanese-tattoo-Irezumi/style__}|}
-        costume-main:
-          - EPIrezumiWorld, Irezumi, Wabori, Harimono, japanese tattoo, japanese style tattoo, traditional japanese tattoo, yakuza, yakuza tattoo, CONCEPT_irezumi_YakuzaTattoo_ownwaifu
+        costume-tattoo-main:
+          - EPIrezumiWorld, Irezumi, Wabori, Harimono, japanese tattoo, japanese style tattoo, traditional japanese tattoo, yakuza, yakuza tattoo, CONCEPT_irezumi_YakuzaTattoo_ownwaifu, irezumi-inspired tattoo
         costume-tattoo:
           - full_body_tattoo
           - bodysuit_tattoo
           - oriental_tattoo
           - gangster
           - japanese_gangster
+          - hannya mask tattoo, hannya-inspired tattoo
         env:
           - cherry blossoms patterns
           - japanese_flora patterns
@@ -92,12 +97,12 @@ lazy-wildcards:
       tattoo-vine:
         prompts:
           - >-
-            (__lazy-wildcards/subject/costume-tattoo/tattoo-vine/costume-main__
+            (__lazy-wildcards/subject/costume-tattoo/tattoo-vine/costume-tattoo-main__
             {, {1-$$__lazy-wildcards/subject/costume-tattoo/tattoo-vine/costume-tattoo__}|}{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
             {0.2::, {1-$$__lazy-wildcards/subject/costume-tattoo/tattoo-vine/env__}|}
             {0.3::, {1-$$__lazy-wildcards/subject/costume-tattoo/tattoo-vine/style__}|}
-        costume-main:
-          - vine tattoo
+        costume-tattoo-main:
+          - vine tattoo, vine-inspired tattoo
         costume-tattoo:
           - vine tattoo on arm
           - vine tattoo on leg
@@ -120,4 +125,20 @@ lazy-wildcards:
           - vine textures
           - vine illustrations
           - vine art
+      anime-style_tattoos:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-tattoo/anime-style_tattoos/costume-tattoo-main__
+            {, {1-$$__lazy-wildcards/subject/costume-tattoo/anime-style_tattoos/costume-tattoo__}|}{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-$$__lazy-wildcards/subject/costume-tattoo/anime-style_tattoos/style__}|}
+        costume-tattoo-main:
+          - anime-style tattoos, anime-inspired tattoo
+        costume-tattoo:
+          - stylized tattoo
+          - anime character tattoo, character themed tattoo
+          - otaku tattoo
+          - fanart tattoo
+          - colored tattoo
+        style:
+          - japanese ink style
 

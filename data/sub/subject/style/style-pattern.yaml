@@ -115,4 +115,33 @@ lazy-wildcards:
           - with a grid in the middle
           - >-
             {1-2$$ and $$__lazy-wildcards/utils/color-base__}
+      cloisonne_enamel:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-elem/cloisonne_enamel/style-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-elem/cloisonne_enamel/style__}|}
+            {, {1-$$__lazy-wildcards/subject/style-elem/cloisonne_enamel/costume-elem__}|}
+        style-main:
+          - cloisonne enamel, cloisonne, metallic, thick outlines
+        style:
+          - floral_pattern
+          - oriental_pattern
+          - segmented_design
+          - gold_outline
+          - vibrant_colors
+          - decorative_object
+          - blue and gold
+          - red and green
+          - traditional chinese colors
+          - ornate
+          - glossy
+          - reflective_surface
+        costume-elem:
+          - ornate_kimono
+          - patterned_clothing
+          - hair_ornament
+          - brooch
+          - jewelry
+          - chinese_dress
+          - imperial_design
 

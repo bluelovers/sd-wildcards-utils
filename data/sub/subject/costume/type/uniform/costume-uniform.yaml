@@ -101,9 +101,93 @@ lazy-wildcards:
           - inverted_cross, cross of saint peter
         env-bg:
           - haunted_monastery
-      office-lady:
+      office_lady:
         prompts:
-          - office lady, zhiyezhuang, formal, collared shirt, vest, pencil skirt, pantyhose
+          - >-
+            __lazy-wildcards/subject/costume/office_lady/costume__
+            {, {1-$$__lazy-wildcards/subject/costume/office_lady/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/office_lady/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/office_lady/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/office_lady/env__}|}
+        costume:
+          - >-
+            collared shirt, pencil skirt
+            , office lady, zhiyezhuang, formal, pantyhose
+            , uniform
+        costume-elem:
+          - long sleeves
+          - breast pocket
+          - receptionist
+          - high heels
+          - id card
+          - office lady
+          - glasses
+          - secretary
+          - bowtie
+          - bank uniform
+          - cool girl
+          - ribbon tie
+          - businesswoman
+          - skirt lift
+          - visible garters
+          - bun hair
+          - ponytail
+          - neat hair
+          - scarf
+          - neck ribbon
+          - vest
+          - hairband
+          - office suit
+          - public servant outfit
+        action:
+          - typing on keyboard
+          - leaning forward
+          - sitting
+          - leg cross
+          - adjusting clothes
+          - proper posture
+          - scolding
+          - relaxed
+          - giving object
+          - bow
+        costume-weapon:
+          - holding pen
+          - holding document
+          - holding phone
+          - holding clipboard
+          - holding briefcase
+          - holding laptop
+          - coffee cup
+          - watch
+        env:
+          - bank
+          - office
+          - counter
+          - desk
+          - front desk, reception desk
+          - document
+          - time card
+      # https://civitai.com/models/505203/a-simple-office-lady-suit
+      office_lady-vest:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/office_lady-vest/costume__
+            , __lazy-wildcards/subject/costume/office_lady/prompts__
+        costume:
+          - vest
+      # https://civitai.com/models/142462/yor-office-suit
+      # https://civitai.com/models/831961/costumeyor-forger-office-lady-request
+      office_lady-vest-e-sun_bank:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/office_lady-vest-e-sun_bank/costume__{0.3:::{1.2|1.3|1.4|1.6}|:1.2})
+            , __lazy-wildcards/subject/costume/office_lady-vest/prompts__
+        costume:
+          - >-
+            teal vest, teal pencil skirt
+            , white shirt
+            , long sleeves
+            , E.SUN Bank Female Uniform
       maid:
         prompts:
           - >-

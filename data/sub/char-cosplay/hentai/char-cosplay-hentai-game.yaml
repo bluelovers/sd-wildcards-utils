@@ -213,4 +213,45 @@ lazy-wildcards:
           - toenail polish
           - breast curtains
           - bridal gauntlets
+      # https://civitai.com/models/291035/ingrid-taimanin-series-lora?modelVersionId=327171
+      # https://civitai.com/models/420683/ingrid-or-makai-kishi-ingrid-or-or-15-attires-or-kofi-commissioned-or-ownwaifu
+      ingrid:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char-hentai/taimanin/ingrid/main-trigger-words__
+            , __lazy-wildcards/cosplay-char-hentai/taimanin/ingrid/costume-ethnicity__
+            {, {1-2$$__lazy-wildcards/cosplay-char-hentai/taimanin/ingrid/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char-hentai/taimanin/ingrid/costume-elem__}|}
+        main-trigger-words:
+          - ingrid, ingrid \(taimanin murasaki\), ingrid \(taimanin murasaki\)  \(cosplay\), taimanin \(series\)
+        costume-ethnicity:
+          - >-
+            red hair, pink hair
+            , purple lipstick, yellow eyes
+            , curtained hair, hair intakes
+            , mole under mouth
+            , makeup
+            , __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+        costume:
+          - black crop top, white and black dress, underboob, center opening, elbow gloves, thigh boots, black panties
+          - black jacket, suit jacket, cleavage, long sleeves, black skirt
+          - BodySuit_MakaiKishi_Ingrid_ownwaifu
+          - Misc_MakaiKishi_Ingrid_ownwaifu
+          - NSFW_MakaiKishi_Ingrid_ownwaifu
+          - Suit_MakaiKishi_Ingrid_ownwaifu
+          - AnimalPrintedBikini_MakaiKishi_Ingrid_ownwaifu
+          - bdsm_MakaiKishi_Ingrid_ownwaifu
+          - Kimono_MakaiKishi_Ingrid_ownwaifu
+          - LaceTrim_MakaiKishi_Ingrid_ownwaifu
+          - Maid_MakaiKishi_Ingrid_ownwaifu
+          - PlayBoyBunny_MakaiKishi_Ingrid_ownwaifu
+          - Teacher_MakaiKishi_Ingrid_ownwaifu
+          - Turtleneck_MakaiKishi_Ingrid_ownwaifu
+          - WeddingDress_MakaiKishi_Ingrid_ownwaifu
+          - WhiteBikini_MakaiKishi_Ingrid_ownwaifu
+        costume-elem:
+          - bare shoulders
+          - underboob
+          - red cape
+          - g-string
 

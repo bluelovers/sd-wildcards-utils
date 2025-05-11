@@ -88,4 +88,21 @@ lazy-wildcards:
         env:
           - soap bubbles
           - wet
+      # https://civitai.com/models/287814/bookshelf-pov
+      # https://civitai.com/models/1395666/through-the-bookshelf
+      bookshelf_pov:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/scenes-pov/bookshelf_pov/style-pov__
+            {, {1-$$__lazy-wildcards/subject/scenes-pov/bookshelf_pov/style__}|}
+            {, {1-$$__lazy-wildcards/subject/scenes-pov/bookshelf_pov/env__}|}
+        style-pov:
+          - bookshelf pov, bp1
+        style:
+          - through the bookshelf
+          - across the book shelf
+        env:
+          - bookshelf
+          - books
+          - library
 

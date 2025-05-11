@@ -91,39 +91,6 @@ lazy-wildcards:
           - rust
           - __lazy-wildcards/subject/moment/weather-mist/prompts__
       # https://civitai.com/models/654250/school-gate-sd15?modelVersionId=731955
-      school_gate:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-bg-architectural/school_gate/env-bg-main__
-            {,{1-$$__lazy-wildcards/subject/env-bg-architectural/school_gate/costume-weapon__}|}
-            {,{1-$$__lazy-wildcards/subject/env-bg-architectural/school_gate/env__}|}
-        env-bg-main:
-          - school gate, scenery, outdoors, fence, building
-        costume-weapon:
-          - holding diploma
-          - school briefcase, school bag
-          - holding bag
-          - holding flower
-        env:
-          - tree
-          - real world location
-          - grass
-          - school sign, school emblem
-          - entrance arch
-          - school fence
-          - bicycle_parking_area
-          - small guard booth
-          - school_entrance_path, school_gateway
-          - school_bus_stop
-          - benches
-          - flower_beds, plants
-          - flag_poles
-          - notice_board, bulletin
-          - wall clock, analog clock
-          - hallway
-          - cherry blossoms
-          - >-
-            {1-$$bust \(sculpture\)|sculpture}
       # https://civitai.com/models/825976/style-of-treehouse-433?modelVersionId=923694
       # https://civitai.com/models/763249/jjs-tree-house?modelVersionId=1501544
       treehouse:
@@ -465,4 +432,91 @@ lazy-wildcards:
           - modern tropical design
           - meditating
           - organic structure
+      # https://civitai.com/models/247284/0060-abandoned-hospital?modelVersionId=279002
+      hospital:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-architectural/hospital/env-bg-main__
+            {, {1-3$$__lazy-wildcards/subject/env-bg-architectural/hospital/env-bg__}|}
+        env-bg-main:
+          - hospital, byoutou
+        env-bg:
+          - __cof-location/place/hospital__
+          - __lazy-wildcards/subject/env-bg-architectural/hospital_ward/prompts__
+          - __lazy-wildcards/subject/env-bg-architectural/hospital_interior/prompts__
+          - __lazy-wildcards/subject/env-bg-architectural/hospital_building/prompts__
+          - ambulance_interior
+          - emergency_room
+          - hospital_corridor, hallways
+          - waiting_room
+          - pharmacy, medications
+          - nurse_station
+          - ambulance_bay, outdoor, ambulances
+          - hospital_cafeteria, dining area
+          - hospital morgue, funeral home
+          - hospital lobby
+      # https://civitai.com/models/362678?modelVersionId=1557175
+      hospital_ward:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-architectural/hospital_ward/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-3$$__lazy-wildcards/subject/env-bg-architectural/hospital_ward/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/hospital_ward/env__}|}
+            , __lazy-wildcards/subject/env-bg-architectural/hospital/env-bg-main__
+        env-bg-main:
+          - >-
+            hospital room, hospital ward, hospital bedroom
+        env-bg:
+          - hospital bed, white bed, white bed sheet
+          - __cof-location/place/hospital-bedroom__
+        env:
+          - fabric sofa
+          - table
+          - flower
+          - curtain, window
+          - ceiling light
+      # https://civitai.com/models/366916?modelVersionId=1557194
+      hospital_interior:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-architectural/hospital_interior/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subjcㄏect/env-bg-architectural/hospital_interior/env__}|}
+            , __lazy-wildcards/subject/env-bg-architectural/hospital/env-bg-main__
+        env-bg-main:
+          - hospital interior
+        env:
+          - fabric sofa
+          - table
+          - flower
+          - curtain, window
+          - ceiling light
+      # https://civitai.com/models/366919?modelVersionId=1557162
+      hospital_building:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-architectural/hospital_building/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            , __lazy-wildcards/subject/env-bg-architectural/hospital/env-bg-main__
+        env-bg-main:
+          - hospital building, hospital exterior, hospital outdoor
+      # https://civitai.com/models/364177?modelVersionId=1538849
+      curvy_architecture:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-architectural/curvy_architecture/env-bg-main__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/curvy_architecture/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/curvy_architecture/style__}|}
+        env-bg-main:
+          - curvy architecture
+        env-bg:
+          - cityscape
+          - skyscraper
+          - striking structures
+        style:
+          - dramatic angles
+          - capturing architectural details
+          - showcasing design elements
+          - creating depth, architectural storytelling
+          - capturing iconic landmarks
+          - immersive experience
+          - architecture photography
 

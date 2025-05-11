@@ -91,4 +91,49 @@ lazy-wildcards:
           - v arms
           - knees to chest, hand on own chest
           - hand in own hair
+      # https://civitai.com/models/122580/trickywi-vtuber-commission
+      trickywi:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/vtuber/trickywi/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/vtuber/trickywi/costume-ethnicity__
+            {0.7::, __lazy-wildcards/cosplay-char/vtuber/trickywi/costume__|}
+            {, {1-$$__lazy-wildcards/cosplay-char/vtuber/trickywi/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/vtuber/trickywi/env__}|}
+        main-trigger-words:
+          - trickywi, trickywi_\(vtuber\), trickywi_\(cosplay\)
+        costume-ethnicity:
+          - >-
+            long hair, animal ears, tail, pink hair, wings, horns
+            , hair over one eye
+            , demon wings, dragon wings, bat wings , low wings
+            , yellow eyes, colored sclera
+            , __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+        costume:
+          - navel, cleavage, bare shoulders, jewelry, collarbone, choker, bracelet, bandages, bandaid, sarashi, bandaid on leg, naked bandage
+        costume-elem:
+          - navel piercing
+          - ancient egyptian clothes
+          - colored inner hair
+          - facial mark
+          - heart facial mark
+          - multicolored hair
+          - red eyes
+          - black nails, sharp fingernails
+          - forked tongue
+          - head wings
+          - mummy costume
+          - bracelet
+          - horn ornament, horn ring
+          - multiple horns
+          - purple gemstone
+          - purple nails
+          - white garter belt
+          - black bridal gauntlets
+          - gold boots
+          - slit pupils
+          - thighlet
+        env:
+          - gold chain
+          - venus symbol
 

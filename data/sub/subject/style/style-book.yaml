@@ -164,4 +164,37 @@ lazy-wildcards:
           - art nouveau
           - art by alphonse mucha
           - mystical tarot card
+      illustrated_guidebook_style:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-book/illustrated_guidebook_style/style-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-book/illustrated_guidebook_style/style__}|}
+        style-main:
+          - encyclopedic illustration style, illustrated guidebook style, 	illustrated guide
+        style:
+          - diagram, reference_sheet
+          - paper_texture
+          - handwritten_text, text_annotation
+          - muted_colors
+          - aged_paper
+          - scientific_illustration
+          - worn_page
+      # https://civitai.com/models/134768/fake-books-horror-space-scorn-mothership?modelVersionId=148460
+      scorn:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-book/scorn/style-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-book/scorn/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-book/scorn/style__}|}
+            , __lazy-wildcards/subject/style-book/illustrated_guidebook_style/prompts__
+        style-main:
+          - scorn, scorn magazine, horror \(theme\), book style
+        costume-elem:
+          - monster
+          - alien
+        style:
+          - blod in paper
+          - dust in paper
+          - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
+          - horror space
 

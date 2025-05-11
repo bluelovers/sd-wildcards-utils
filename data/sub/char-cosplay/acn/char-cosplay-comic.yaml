@@ -865,4 +865,97 @@ lazy-wildcards:
           - holding syringe
         env:
           - bath of blood, bathtub, claw foot bathtub
+    dr_stone:
+      # https://civitai.com/models/442344/minami-hokutozai-dr-stone-lora?modelVersionId=492680
+      hokutouzai_minami:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/dr_stone/hokutouzai_minami/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/dr_stone/hokutouzai_minami/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/dr_stone/hokutouzai_minami/costume__}|}
+        main-trigger-words:
+          - hokutouzai minami, minami hokutozai, dr._stone
+        costume-ethnicity:
+          - >-
+            fake horns, hairband, black headband
+            , blonde hair, long hair, very long hair
+            , brown eyes
+            , cleavage
+        costume:
+          - bare shoulders, purple dress, underbust, strapless
+      # https://civitai.com/models/442343/amaryllis-dr-stone-lora?modelVersionId=492673
+      amaryllis:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/dr_stone/amaryllis/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/dr_stone/amaryllis/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/dr_stone/amaryllis/costume__}|}
+        main-trigger-words:
+          - >-
+            amaryllis, amaryllis \(dr._stone\)
+            , dsamaryllis
+            , dr._stone
+        costume-ethnicity:
+          - >-
+            dreadlocks, dreadlock hair
+            , thick hair, medium hair
+            , gem, jade neck ornament
+            , feather ornament
+        costume:
+          - >-
+            headdress, detached collar, strapless dress, long dress, cleavage
+    one_piece:
+      # https://civitai.com/models/1560183/one-piece-boa-hancockn10?modelVersionId=1765507
+      # https://civitai.com/models/1559634/one-piece-boa-hancock10
+      boa_hancock:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/one_piece/boa_hancock/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/one_piece/boa_hancock/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/one_piece/boa_hancock/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/one_piece/boa_hancock/expressions__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/one_piece/boa_hancock/action__}|}
+        main-trigger-words:
+          - >-
+            boa hancock, boa hancock \(one_piece\)
+            , boa hancock \(cosplay\)
+        costume-ethnicity:
+          - >-
+            absurdly long hair, black hair
+            , sidelocks, parted bangs
+            , purple eyes
+            , eyelashes
+            , earrings, snake earrings
+            , cleavage
+            , wide hips
+        costume-elem:
+          - snake tattoo
+          - jewelry
+          - cape, epaulettes
+          - crop top
+          - long sleeves
+          - navel
+          - fur shawl
+          - necklace
+          - dress
+          - fangs
+          - purple dress
+          - sleeveless
+          - highleg panties
+          - linea alba, stomach
+          - multi-strapped bra
+          - o-ring
+          - o-ring bottom
+          - o-ring panties
+          - thigh gap
+          - underwear
+          - bare shoulders
+          - nail polish
+        expressions:
+          - closed mouth
+          - light smile
+          - upper teeth only
+          - parted lips
+        action:
+          - heart hands
 

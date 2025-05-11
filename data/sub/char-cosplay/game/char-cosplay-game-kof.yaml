@@ -86,4 +86,27 @@ lazy-wildcards:
           - hand on own hip
           - slashing
           - leaning forward
+    street_fighter:
+      # https://danbooru.donmai.us/posts?tags=chun-li&z=5
+      # https://civitai.com/models/441388/0438-chunli-costume-15-and-pony?modelVersionId=491623
+      # https://civitai.com/models/452934/0541-chunli-alternate-costume15-and-pony?modelVersionId=504375
+      chun-li:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/street_fighter/chun-li/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/street_fighter/chun-li/costume-ethnicity__
+            {, {1-2$$__lazy-wildcards/cosplay-char/street_fighter/chun-li/costume__}|}
+        main-trigger-words:
+          - >-
+            chun-li, chunli
+            , ruanyi0438
+            , ruanyi0541
+            , street fighter
+        costume-ethnicity:
+          - double bun
+        costume:
+          - blue bodysuit, blue shoes, blue gloves
+          - white bodysuit, white shoes, white gloves
+          - thighhighs, detached sleeves, lace-trimmed legwear, breast curtains, corset, spiked bracelet, tassel, thong,chun-li, chinese clothes, spikes
+          - blue bodysuit, chinese clothes, spiked bracelet, sneakers, crop top
 

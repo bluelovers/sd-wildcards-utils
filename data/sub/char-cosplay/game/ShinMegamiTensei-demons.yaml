@@ -158,4 +158,56 @@ lazy-wildcards:
         action:
           - arm behind head
           - arm up
+      # https://danbooru.donmai.us/posts?tags=konohana_sakuya_%28megami_tensei%29&z=5
+      # https://civitai.com/models/1422685/konohana-sakuya-shin-megami-tensei?modelVersionId=1608037
+      konohana_sakuya:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/ShinMegamiTensei/konohana_sakuya/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/ShinMegamiTensei/konohana_sakuya/costume-ethnicity__
+            {0.8::, __lazy-wildcards/cosplay-char/ShinMegamiTensei/konohana_sakuya/costume__|}
+            {, {1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/konohana_sakuya/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/konohana_sakuya/env__}|}
+        main-trigger-words:
+          - >-
+            konohana sakuya, konohana sakuya \(megami tensei\)
+            , KonohanaSakuyaSMT
+        costume-ethnicity:
+          - very long hair, hair ornament, green hair, hair flower, monster girl, pale skin, pink flower, shawl, pink eyes, pink lips, facial mark
+        costume:
+          - dress, bare shoulders, green pantyhose, sleeveless, floral print
+        costume-weapon:
+          - holding branch
+          - holding sakura branch
+          - holding sakura flower
+        env:
+          - cherry blossoms
+      # https://danbooru.donmai.us/posts?tags=agrat_bat_mahlat_%28megami_tensei%29&z=1
+      # https://civitai.com/models/1390302/agrat-bat-mahlat-oror-shin-megami-tensei-v-vengeance-oror-sd15?modelVersionId=1571317
+      agrat_bat_mahlat:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/ShinMegamiTensei/agrat_bat_mahlat/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/ShinMegamiTensei/agrat_bat_mahlat/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/agrat_bat_mahlat/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/agrat_bat_mahlat/costume-weapon__}|}
+        main-trigger-words:
+          - >-
+            agrat bat mahlat, agrat bat mahlat \(megami_tensei\)
+            , agrat
+        costume-ethnicity:
+          - >-
+            red eyes, white hair, curly hair
+            , white skin, doll joints
+            , eyelashes
+            , pointy ears
+        costume-elem:
+          - hair tubes
+          - black dress
+          - black hat, witch hat
+          - black wings
+          - detached sleeves
+        costume-weapon:
+          - holding umbrella
+          - umbrella
 

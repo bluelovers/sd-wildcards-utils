@@ -137,4 +137,27 @@ lazy-wildcards:
           - >-
             {1-$$graduation ceremony|university graduation|commencement}
           - commencement speech
+      # https://civitai.com/models/441711/0533-sportswearpdxlsd15?modelVersionId=491973
+      school_sportswear:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/school_sportswear/costume-main__
+            {0.7::, {1-$$__lazy-wildcards/subject/costume/school_sportswear/costume__}|})
+            {, {1-$$__lazy-wildcards/subject/costume/school_sportswear/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/school_sportswear/env-bg__}|}
+        costume-main:
+          - >-
+            school sportswear, school sports uniform, school sports outfit
+            , ruanyi0533
+            , pants, collared shirt, short sleeves, striped, sneakers, shirt
+        costume:
+          - blue pants
+          - white shirt
+        costume-elem:
+          - middle parted ponytail
+          - hair bang
+          - backpack
+        env-bg:
+          - school, schoolyard
+          - classroom, school desk
 

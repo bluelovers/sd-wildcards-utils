@@ -25,4 +25,108 @@ lazy-wildcards:
         style-art:
           - chibi
           - toriyama_akira_\(style\)
+    dragon_ball:
+      # https://civitai.com/models/625503/dr-gero?modelVersionId=699270
+      # https://danbooru.donmai.us/posts?tags=dr._gero_%28dragon_ball%29&z=2
+      dr-gero:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/dragon_ball/dr-gero/main__
+            ,({1-$$__lazy-wildcards/cosplay-char/dragon_ball/dr-gero/costume-ethnicity__})
+            ,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/dr-gero/costume-elem__}
+            {,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/dr-gero/action__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/dr-gero/env__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/dr-gero/expressions__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/dr-gero/style__}|}
+        main:
+          - (dr gero, dr._gero_\(dragon_ball\), red_ribbon_army), dragon_ball, Android_20
+        costume-ethnicity:
+          - white mustache, white facial hair, old man
+          - white hair, grey hair
+          - blue eyes
+        costume-elem:
+          - red ribbon hat, black hat
+          - brain visible
+          - wristband
+          - brown pants
+          - __lazy-wildcards/dataset/costume-accessories-base__
+          - orange colored shirt
+          - android
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - orange bandana
+          - long sleeves
+          - Old_Scientist
+          - Lab_Coat
+          - Mechanical_Parts
+        env:
+          - severed head
+        style:
+          - (toriyama akira \(style\))
+          - Cybernetic_Augmentations
+          - mechanical enhancements
+          - Villain
+        action:
+          - arms crossed
+        expressions:
+          - furrowed brow
+          - __lazy-wildcards/subject/costume-elem/sweat/prompts__
+      # https://civitai.com/models/629661/guru?modelVersionId=703949
+      guru:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/dragon_ball/guru/main__
+            ,(__lazy-wildcards/cosplay-char/dragon_ball/guru/costume-ethnicity__)
+            {,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/guru/costume__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/guru/env__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/guru/action__}|}
+        main:
+          - guru, old, dragon_ball
+        costume-ethnicity:
+          - antennae, green skin, namekian, pointy ears
+        costume:
+          - regular outfit
+        action:
+          - sitting
+        env:
+          - dragon ball \(object\), star \(symbol\)
+      # https://danbooru.donmai.us/posts?tags=cell_%28dragon_ball%29+&z=5
+      cell-perfect:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/dragon_ball/cell-perfect/main__
+            {,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/cell-perfect/main-ethnicity__}|}
+            ,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/cell-perfect/costume-ethnicity__}
+            {,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/cell-perfect/costume-wings__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/cell-perfect/costume-tail__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/cell-perfect/env__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/cell-perfect/expressions__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/dragon_ball/cell-perfect/style__}|}
+        main:
+          - cell_\(dragon_ball\), perfect cell, dragon_ball, cell_\(dragon_ball\)_\(cosplay\)
+        main-ethnicity:
+          - cell max, alternate form
+          - cell junior
+        costume-ethnicity:
+          - pointy ears, colored skin, joints
+          - >-
+            {green skin|blue skin}
+        costume-wings:
+          - insect wings, black wings
+        expressions:
+          - evil smile
+        costume-tail:
+          - tail vore
+        style:
+          - fusion
+          - (toriyama akira \(style\))
+        env:
+          - dust cloud
+          - electricity
+      # https://civitai.com/models/139111/saiyan-scouter-armor-or-concept?modelVersionId=356294
+      saiyan_scouter:
+        prompts:
+          - >-
+            (Saiyan Scouter, Saiyan_Scouter{,__lazy-wildcards/cosplay-char/dragon_ball/saiyan_scouter/costume-headwear__|}, scouter:1.2), tinted eyewear, dragon ball
+        costume-headwear:
+          - __lazy-wildcards/utils/color-base__-tinted eyewear
 

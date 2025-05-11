@@ -1,0 +1,42 @@
+lazy-wildcards:
+  subject:
+    costume-elem-lower-body:
+      # https://civitai.com/models/1378023/frilled-panties-layered-panties-lora
+      # https://civitai.com/models/540812/frilled-bottoms-panties-bikini-booty-shorts-sd-15
+      frilled_panties:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-lower-body/frilled_panties/costume-elem-lower-body__
+            {, {1-$$__lazy-wildcards/subject/costume-elem-lower-body/frilled_panties/costume-elem-panties__}|}{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-$$__lazy-wildcards/subject/costume-elem-lower-body/frilled_panties/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem-lower-body/frilled_panties/action__}|}
+        costume-elem-lower-body:
+          - frilled panties, frilly panties
+        costume-elem-panties:
+          - layered panties
+          - ribbon panties
+          - bow panties
+          - see-through pantie
+          - bloomers
+          - visible panties
+          - frilled panties focus
+          - panties peek
+          - printed panties
+          - >-
+            {1-$$ and $$white|black|pink|multicolor} frilled panties
+          - booty shorts
+        costume-elem:
+          - black lingerie
+          - garter straps
+          - skirt lift
+          - pantyshot
+          - gothic lingerie
+          - pajama
+          - animal ears
+          - magical girl
+          - frilled
+          - ruffles
+        action:
+          - changing clothes
+          - shy pose
+

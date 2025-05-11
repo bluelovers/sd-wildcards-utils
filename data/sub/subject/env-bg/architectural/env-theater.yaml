@@ -1,0 +1,165 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      movie_theater:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/movie_theater/env-bg-main__
+            {, {{1-$$__lazy-wildcards/subject/env-bg/movie_theater/env-bg-types/theater_auditorium__}|{1-3$$__lazy-wildcards/subject/env-bg/movie_theater/env-bg-types/others__}|__lazy-wildcards/subject/env-bg/movie_theater/env-bg-types/cf__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/movie_theater/env-chair__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/movie_theater/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/movie_theater/env-elem-food__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/movie_theater/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/movie_theater/style__}|}
+        env-bg-main:
+          - movie theater, cinema, theater, movie house
+        env-elem-food:
+          - popcorn
+          - food
+          - chicken
+          - drinking straw
+          - eating
+          - snacks
+          - drinks
+          - refreshments
+          - soda
+          - candy
+          - cup
+        costume-weapon:
+          - holding bucket
+          - holding food
+        env:
+          - >-
+            heterochromatic eyewear, 3d glasses
+          - movie tickets
+          - movie_poster_display
+          - soundproof_walls
+          - surround_sound_system
+        env-chair:
+          - cushioned seats
+          - recliners
+          - luxurious seating
+          - theater seating
+        style:
+          - (dim lighting:1.4), dark lighting
+          - cinematic lighting
+        env-bg-types:
+          theater_auditorium:
+            - theater_auditorium, large screen for an audience, theater seating, couch
+            - VIP_lounge, luxurious seating, private viewing areas, enhanced services
+          others:
+            - projection_room, projector, projector_beam
+            - concession_stand, sold
+            - lobby, entrance area
+            - >-
+              box_office, ticket sales {1-$$, ticket sales $$counter|booth}
+            - arcade_area, arcade games, entertainment machines
+            - emergency_exit
+            - hallways
+          cf:
+            - __cof-location/place/movie-theater__
+      theater_exterior:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/theater_exterior/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/theater_exterior/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/theater_exterior/env__}|}
+        env-bg-main:
+          - theater exterior, theater
+        env-bg:
+          - classical architecture
+          - box office
+        env:
+          - marquee sign
+          - neon lights
+      # https://civitai.com/models/582306?modelVersionId=1531569
+      # https://civitai.com/models/89753
+      theater_interior:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/theater_interior/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/theater_interior/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/theater_interior/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/theater_interior/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/theater_interior/style__}|}
+        env-bg-main:
+          - theater interior, theater
+        env-bg:
+          - opera house
+          - auditorium
+          - balcony seats
+          - on stage
+          - central stage
+          - makeup room
+          - behind the scenes
+          - vintage theater
+          - black box theatre
+        env:
+          - velvet curtains
+          - red carpet
+          - chandelier
+          - stage lighting
+          - orchestra pit
+          - crowded seats
+          - ceiling light
+          - sleek
+        costume-elem:
+          - play costume
+          - ball gown
+          - tuxedo
+          - masquerade mask
+          - period costume
+          - feathered headdress
+        style:
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
+          - theatrical performance
+          - dramatic lighting
+          - art deco interior
+          - quiet anticipation
+          - modern, ultramodern
+          - __lazy-wildcards/utils/scenery-no-humans__
+          - side view
+          - view to stage
+          - view to seat
+      # 國會、議會、立法院、眾議院／參議院
+      congress:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/congress/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/congress/env-bg__}|}
+        env-bg-main:
+          - congress exterior, parliament exterior, legislative assembly exterior, house of representatives exterior, senate exterior, kokkai exterior
+        env-bg:
+          - neoclassical architecture
+          - dome building
+      congress_chamber:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/congress_chamber/env-bg__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/congress_chamber/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/congress_chamber/style__}|}
+        env-bg:
+          - congress chamber, parliament chamber, legislative chamber, legislative interior, kokkai interior
+        env:
+          - flags, national flag
+          - microphones
+          - voting board, voting panel
+          - seating arrangement
+          - electronic_display
+          - emblem_background
+          - wood interior
+          - neoclassical architecture
+          - podium
+          - speaker's podium
+          - modern interior
+          - indoor lighting
+          - legislative session
+        style:
+          - red and gold
+          - gray and blue
+          - dystopian government
+          - futuristic council
+          - fantasy council chamber
+          - magic politics
+          - idol government
+

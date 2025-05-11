@@ -39,6 +39,7 @@ lazy-wildcards:
           - __lazy-wildcards/subject/costume-elem/off-shoulder/costume-elem__
           - geta \(footwear\), geta sandals, japanese sandals
           - side slit
+          - __cf-geisha/prompt-costume__
         costume-weapon:
           - __lazy-wildcards/subject/costume-weapon/hand_fan/prompts__
           - __lazy-wildcards/subject/costume-weapon/smoking_pipe/prompts__
@@ -47,6 +48,7 @@ lazy-wildcards:
           - eastern architecture
           - falling petals
           - flowers and vines
+          - __cf-geisha/location__
       # https://civitai.com/models/115160/elegant-mature-clothing-s2
       china-dress:
         prompts:
@@ -105,6 +107,24 @@ lazy-wildcards:
         env:
           - instrument
           - flower
+      # 唐裝
+      tangzhuang:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/tangzhuang/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/tangzhuang/costume-elem__}|}
+        costume:
+          - tangzhuang, tang suit, chinese clothes
+        costume-elem:
+          - traditional chinese clothing
+          - embroidered patterns
+          - silk fabrics
+          - wide sashes
+          - dragon embroidery
+          - red tangzhuang
+          - black tangzhuang
+          - blue tangzhuang
+          - white tangzhuang
       korean-clothes:
         prompts:
           - >-

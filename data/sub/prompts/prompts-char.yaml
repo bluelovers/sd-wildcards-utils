@@ -1,0 +1,35 @@
+lazy-wildcards:
+  prompts:
+    hair:
+      - >-
+        __lazy-wildcards/char/hair-length__
+        {, __lazy-wildcards/dataset/char-haircuts__|}
+        {, __lazy-wildcards/char/hair-style-multi__|}
+        {, __lazy-wildcards/subject/costume-elem-accessories/hair_ornament/prompts__|}
+      - >-
+        {1-$$__lazy-wildcards/char/hair-length__|__lazy-wildcards/dataset/char-haircuts__|__lazy-wildcards/char/hair-style-multi__|__lazy-wildcards/subject/costume-elem-accessories/hair_ornament/prompts__}
+    hair-with-color:
+      - >-
+        __lazy-wildcards/char/haircolor__
+        , __lazy-wildcards/prompts/hair__
+    hair-all:
+      - >-
+        {3::__lazy-wildcards/prompts/hair__|3::__lazy-wildcards/prompts/hair-with-color__|0.1::__lazy-wildcards/char/hair-bald__}
+      - __lazy-wildcards/prompts/hair__
+      - __lazy-wildcards/prompts/hair-with-color__
+    eyes:
+      - (__lazy-wildcards/char/eyecolor__)
+      - >-
+        ({1-2$$__lazy-wildcards/char/eyecolor__})
+        {0.3::,__lazy-wildcards/char/eyeliner-color__|}
+        {0.3::,__lazy-wildcards/char/eyeshadow-color__|}
+        {0.3::,__lazy-wildcards/char/eyelashes__|}
+        {0.3::,__lazy-wildcards/char/eyelashes-color__|}
+        {0.3::,{0-3$$__lazy-wildcards/char/eyes-expressions__}|}
+        {0.3::,{0-3$$__lazy-wildcards/char/eyes-style__}|}
+    mouth:
+      - >-
+        {0.1::(__lazy-wildcards/char/mouth__:1.4),|}
+        {0.1::({1-3$$__lazy-wildcards/char/mouth-style__}),|}
+        __lazy-wildcards/char/lips-color__
+

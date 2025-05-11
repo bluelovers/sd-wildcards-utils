@@ -88,4 +88,56 @@ lazy-wildcards:
         costume-weapon:
           - holding lantern
           - holding torch
+      # https://civitai.com/models/1564360/macross-variable-fighters?modelVersionId=1770226
+      macross_variable_fighters:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-vehicle/macross_variable_fighters/env-elem-vehicle-main__{0.3:::{1.2|1.3|1.4}|})
+            {0.3::, {1-2$$__lazy-wildcards/subject/env-elem-vehicle/macross_variable_fighters/env-elem-vehicle__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/macross_variable_fighters/env__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/env-elem-vehicle/macross_variable_fighters/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/macross_variable_fighters/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/macross_variable_fighters/style__}|}
+        env-elem-vehicle-main:
+          - macross variable fighters, variable fighters, military vehicle, macross
+        env-elem-vehicle:
+          - vf-0 phoenix
+          - vf-1 valkyrie
+          - vf-1 super
+          - vf-1 strike
+          - vf-25 messiah
+          - vf-31 kairos
+          - vf-19 advancer
+          - vf-22s
+          - vf-11 thunderbolt
+          - vf-x raven
+          - vf-xv phantom
+          - v-fin
+        env:
+          - canopy \(aircraft\)
+          - transforming_mecha
+          - jet_fighter
+          - fighter_aircraft
+          - humanoid_mecha
+          - mechanical_detail
+          - damaged_mecha
+          - contrails
+          - personalized_mecha
+          - emblem_decal
+          - missile
+          - thrusters
+        costume-elem:
+          - singing_girl
+          - military_idol
+        env-bg:
+          - in the sky
+          - in the clouds
+          - aircraft_carrier_deck
+          - hangar_scene
+          - maintenance_scene
+          - space_background
+        style:
+          - military_design
+          - mecha_paint_scheme
+          - space_battle
 

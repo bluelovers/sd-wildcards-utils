@@ -1,0 +1,94 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      school:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/school/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-2$$__lazy-wildcards/subject/env-bg/school/env-bg__}|}
+        env-bg-main:
+          - school
+        env-bg:
+          - __cof-location/place/school__
+          - __lazy-wildcards/subject/env-bg/school_infirmary/prompts__
+          - __lazy-wildcards/subject/env-bg/school_gate/prompts__
+          - school building
+          - rural school
+      # https://civitai.com/models/698323/jjs-place-abandoned-school?modelVersionId=1615076
+      # https://civitai.com/models/247248/0056-abandoned-school-pony-and-15?modelVersionId=559114
+      school-abandoned:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/school-abandoned/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/school-abandoned/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/school-abandoned/env__}|}
+        env-bg-main:
+          - abandoned school, ruanyi0056
+        env-bg:
+          - __lazy-wildcards/subject/env-bg/school/prompts__
+        env:
+          - broken glass
+          - broken tile
+          - broken window
+          - broken wall
+          - broken door
+          - broken furniture
+          - broken wall clock
+          - broken chair
+          - broken desk
+          - broken blackboard
+          - broken light
+      school_gate:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/school_gate/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/school_gate/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/school_gate/env__}|}
+        env-bg-main:
+          - school gate, scenery, outdoors, fence, building
+        costume-weapon:
+          - holding diploma
+          - school briefcase, school bag
+          - holding bag
+          - holding flower
+        env:
+          - tree
+          - real world location
+          - grass
+          - school sign, school emblem
+          - entrance arch
+          - school fence
+          - bicycle_parking_area
+          - small guard booth
+          - school_entrance_path, school_gateway
+          - school_bus_stop
+          - benches
+          - flower_beds, plants
+          - flag_poles
+          - notice_board, bulletin
+          - wall clock, analog clock
+          - hallway
+          - cherry blossoms
+          - >-
+            {1-$$bust \(sculpture\)|sculpture}
+      school_infirmary:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/school_infirmary/env-bg-main__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+            {0.3::, {1-$$__lazy-wildcards/subject/env-bg/school_infirmary/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/school_infirmary/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/school_infirmary/costume-elem__}|}
+        env-bg-main:
+          - school infirmary, infirmary
+        env-bg:
+          - __cof-location/place/school-infirmary__
+        env:
+          - curtains, privacy_curtains
+          - hospital_bed, metal_frame_bed
+          - medicine_cabinet, bandages
+          - stethoscope
+          - clipboard
+        costume-elem:
+          - school nurse, lab_coat
+          - gentle_expression
+

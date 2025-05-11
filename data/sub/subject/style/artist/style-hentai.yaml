@@ -1,0 +1,59 @@
+lazy-wildcards:
+  subject:
+    style-artist:
+      # 姉☆孕みっくす
+      # https://www.themoviedb.org/tv/43619-ane-haramix/translations?language=zh-CN
+      # https://civitai.com/models/120838/ane-haramix-hentai-protagonist-style
+      ane_haramix:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/ane_haramix/style-main__{0.3:::{1.2|1.3|1.4}|})
+        style-main:
+          - ane haramix, aneharamix
+      # https://civitai.com/models/139896/nights-of-horror-1954-style-old-western-erotic-comic?modelVersionId=154986
+      nights_of_horror_1954:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/nights_of_horror_1954/style-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-artist/nights_of_horror_1954/style-art__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/nights_of_horror_1954/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/nights_of_horror_1954/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/nights_of_horror_1954/env__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/nights_of_horror_1954/style__}|}
+        style-main:
+          - nights of horror, nightsofhorror
+        style-art:
+          - comic style, retro art, vintage art
+          - Old Western Erotic Comic
+        costume-elem:
+          - corset
+          - off_shoulder
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - riding_boots
+          - leather_gloves
+          - bondage
+          - garter_belt
+          - lingerie
+          - thick thighs
+          - makeup
+          - cameltoe
+          - wide hips
+          - seductive
+        costume-weapon:
+          - whip
+        env:
+          - western_building
+          - gothic_architecture
+          - chains
+          - dungeon
+          - gallows
+          - full_moon
+        style:
+          - chiaroscuro
+          - hatching
+          - dominance
+          - dirty_scan, grain
+          - noir
+          - 1950s style
+          - forbidden text
+

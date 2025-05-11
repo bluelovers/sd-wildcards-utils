@@ -406,4 +406,33 @@ lazy-wildcards:
           - sunlight filtering through leaves
           - vintage decor
           - pastel color palette
+      # https://civitai.com/models/399936/jjs-place-night-market?modelVersionId=1631302
+      night_market:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/night_market/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/night_market/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/night_market/env__}|}
+        env-bg-main:
+          - night market, night bazaar
+        env-bg:
+          - taiwanese night market
+          - vietnam street market
+        env:
+          - table, chair
+          - neon, sign
+          - street lamp
+          - food
+          - gate
+          - tent
+          - carnival games, ring toss, balloon shooting
+          - claw machine
+          - street smoke, food steam
+          - wet pavement
+          - street food stalls
+          - skewered food
+          - takoyaki stand
+          - food vendor
+          - festive lights
+          - asian festival
 

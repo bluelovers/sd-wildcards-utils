@@ -310,18 +310,7 @@ lazy-wildcards:
           - >-
             table{, {information counter|service counter|cashiers counter|reception counter|nurse counter}|}
         env-bg:
-          - hospital
-          - hospital_room, hospital bed, white bed, white bed sheet
-          - ambulance_interior
-          - emergency_room
-          - hospital_corridor, hallways
-          - waiting_room
-          - pharmacy, medications
-          - nurse_station
-          - ambulance_bay, outdoor, ambulances
-          - hospital_cafeteria, dining area
-          - hospital morgue, funeral home
-          - hospital lobby
+          - __lazy-wildcards/subject/env-bg-architectural/hospital/prompts__
         action:
           - denki_anma
           - crotch kick

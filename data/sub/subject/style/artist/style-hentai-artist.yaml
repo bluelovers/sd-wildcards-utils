@@ -1,0 +1,70 @@
+lazy-wildcards:
+  subject:
+    style-artist:
+      # 新堂エル 変身
+      # https://danbooru.donmai.us/posts?tags=shindol&z=5
+      # https://danbooru.donmai.us/artists/11637
+      # https://civitai.com/models/123417/shindol-tsf-monogatari-hentai-protagonist-style?modelVersionId=134554
+      ShindoL:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/ShindoL/style-artist__{0.3:::{1.2|1.3|1.4}|})
+        style-artist:
+          - >-
+            __lazy-wildcards/utils/fn/style-inspired(v=ShindoL)__
+            , tsfmonogatari, shindol_style
+            , emergence \(shindol\)
+            , tsf monogatari
+            , Shindo L
+      # 織田non
+      # https://www.pixiv.net/en/users/8146
+      # https://x.com/odanondesu
+      # https://danbooru.donmai.us/posts?tags=oda_non&z=5
+      # https://danbooru.donmai.us/posts?tags=oda_non_%28style%29+&z=5
+      # https://civitai.com/models/175435/oda-non-artstyle-lora
+      oda_non:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/oda_non/style-artist__{0.3:::{1.2|1.3|1.4}|})
+            {, __lazy-wildcards/subject/style-artist/oda_non/costume-elem__}
+            {, __lazy-wildcards/subject/style-artist/oda_non/env__}
+        style-artist:
+          - >-
+            __lazy-wildcards/utils/fn/style-inspired(v=oda_non)__
+            , oda non \(artist\)
+            , oda non \(style\)
+            , odanon
+        costume-elem:
+          - sports bra
+          - scar on nose
+          - dimples of venus
+          - lace-trimmed legwear
+          - lace-trimmed bra
+          - mature female
+          - bare back
+          - lips
+          - housewife
+          - slave
+          - shelf bra
+          - bikini armor
+          - crosier
+          - backless dress
+          - backless outfit
+          - crossed bangs
+          - scrunchie
+          - sideboob
+          - side slit
+          - bracelet
+          - sleeveless
+          - ribbed shirt
+          - sweater
+          - see-through clothes
+        env:
+          - doorbell
+          - vending cart
+          - apartment
+          - pizza delivery
+          - webcam
+          - play button
+          - dollar bill
+

@@ -169,4 +169,65 @@ lazy-wildcards:
           - count_protege
           - adopted_daughter
           - peaceful_moment, introspective_scene
+    # kore wa zombie desu ka?
+    # 這樣算是殭屍嗎？
+    korezom:
+      # https://danbooru.donmai.us/posts?tags=seraphim_%28korezom%29+&z=5
+      # https://civitai.com/models/297105/seraphim-kore-wa-zombie-desu-ka-lora?modelVersionId=333807
+      seraphim:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/korezom/seraphim/main-trigger-words__
+            , (__lazy-wildcards/cosplay-char/korezom/seraphim/costume-ethnicity__:1.2)
+            {, {1-$$__lazy-wildcards/cosplay-char/korezom/seraphim/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/korezom/seraphim/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/korezom/seraphim/action__}|}
+        main-trigger-words:
+          - >-
+            seraphim, seraphim \(korezom\)
+            , kzSeraphim
+            , korezom
+        costume-ethnicity:
+          - >-
+            ponytail, wide ponytail, long hair
+            , black hair, green eyes
+        costume:
+          - maid headdress, maid uniform, apron, black dress
+          - ninja
+        costume-elem:
+          - camisole, large breasts
+          - midriff, navel
+          - belt, jeans, denim shorts
+          - bare shoulders
+          - black panties, side-tie panties
+          - cleavage
+          - covered nipples
+          - armlet
+          - black thighhighs
+          - hair ribbon
+          - dress shirt
+          - suspender over shirt, (loose white unbuttoned shirt:1.2)
+        action:
+          - arms behind head
+          - furrowed brow
+          - skirt hold
+    # 鄉下大叔成為劍聖～只是區區鄉下劍術師傅，成大器的弟子們卻不肯放過我～
+    katainaka_no_ossan_kensei_ni_naru:
+      # https://civitai.com/models/1438410/surena-lysandra-oror-from-old-country-bumpkin-to-master-swordsman-oror-sd15?modelVersionId=1625977
+      surena_lysandra:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/katainaka_no_ossan_kensei_ni_naru/surena_lysandra/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/katainaka_no_ossan_kensei_ni_naru/surena_lysandra/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/katainaka_no_ossan_kensei_ni_naru/surena_lysandra/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/katainaka_no_ossan_kensei_ni_naru/surena_lysandra/costume-elem__}|}
+        main-trigger-words:
+          - surena lysandra, surena
+        costume-ethnicity:
+          - red eyes, orange eyes, multicolored hair, red hair, orange hair, ponytail, abs
+        costume:
+          - cleavage, armor, red jacket, gauntlets, belt pouch, thighhighs, boots, black scarf
+        costume-elem:
+          - navel
+          - black bandeau, black ribbon
 

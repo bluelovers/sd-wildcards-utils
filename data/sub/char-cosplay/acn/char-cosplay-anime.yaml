@@ -257,6 +257,59 @@ lazy-wildcards:
         costume:
           - >-
             black collared military uniform, black pencil skirt, pantyhose, black military boots
+      # https://civitai.com/models/156845/cc-code-geass-commission-illustrious-update?modelVersionId=176072
+      # https://civitai.com/models/161185
+      # https://civitai.com/models/6358
+      cc:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/code_geass/cc/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/code_geass/cc/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/code_geass/cc/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/code_geass/cc/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/code_geass/cc/env-elem-food__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/code_geass/cc/expressions__}|}
+        main-trigger-words:
+          - c.c, c.c. \(cosplay\), cc, code geass
+        costume-ethnicity:
+          - green hair, long hair, very long hair, yellow eyes
+        costume-elem:
+          - bikini
+          - high heels
+          - legs apart
+          - black bow
+          - collarbone
+          - mini hat, hat bow
+          - puffy sleeves
+          - choker
+          - animal ears, cat ears
+          - bell, jingle bell, neck bell
+          - cat cutout
+          - cat lingerie
+          - cat tail
+          - cleavage cutout
+          - cleavage
+          - hair over shoulder
+          - side-tie panties
+          - underwear only
+          - detached sleeves
+          - facial mark
+          - floating hair
+          - frilled sleeves
+          - veil
+          - white dress
+          - wide sleeves
+          - white straitjacket, black belt
+        costume-weapon:
+          - holding swim ring
+          - swim ring
+          - hugging object
+        env-elem-food:
+          - pizza slice
+          - pizza
+          - holding food
+        expressions:
+          - __lazy-wildcards/subject/costume-elem-expressions/doyagao_smug/prompts__
     # https://danbooru.donmai.us/posts?tags=saber_marionette_j&z=5
     # https://danbooru.donmai.us/posts?tags=saber_marionette_r&z=5
     saber_marionette_j:
@@ -446,4 +499,171 @@ lazy-wildcards:
           - weapon over shoulder
         env-elem-food:
           - donut, huge weapon
+    # https://danbooru.donmai.us/posts?tags=ranma_1%2F2&z=2
+    ranma:
+      # https://civitai.com/models/846215/ranmachan-2024?modelVersionId=946715
+      # https://civitai.com/models/106916/ranma-chan-fanart-locon-version-ranma-12
+      ranma-chan:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/ranma/ranma-chan/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/ranma/ranma-chan/costume-ethnicity__
+            {, {1-2$$__lazy-wildcards/cosplay-char/ranma/ranma-chan/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/ranma/ranma-chan/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/ranma/ranma-chan/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/ranma/ranma-chan/expressions__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/ranma/ranma-chan/action__}|}
+        main-trigger-words:
+          - >-
+            ranma-chan, ranma-chan \(cosplay\)
+            , RanmaChan, Ranma Chan
+            , ranma 1/2
+        costume-ethnicity:
+          - braided ponytail, single braid, red hair, red eyes, red bow
+        costume:
+          - RanmaRedShirt, black pants, __lazy-wildcards/subject/costume/tangzhuang/prompts__
+          - RanmaLeotard, leotards, athletic leotard, highleg leotard
+          - RanmaUnderwear, boxers, tanktop, tank top
+          - RanmaJungleDress
+          - ovadress
+          - sailor collar, skirt, neckerchief
+        costume-elem:
+          - traditional chinese clothing, chinese clothes
+          - off shoulder
+          - wet, wet clothes
+          - cleavage cutout, clothing cutout
+          - tight clothes, tight pants
+          - cropped shirt, midriff, navel
+          - stomach
+          - strap slip
+          - teeth
+          - v-shaped eyebrows
+          - apron
+          - hair ornament
+        expressions:
+          - ":/"
+          - anger vein
+          - "^ ^"
+          - closed mouth
+          - light blush
+        action:
+          - bent over
+          - hands on own knees
+          - outstretched arms, spread arms
+          - hand in own hair
+          - hand up
+          - leaning forward
+          - fighting stance
+          - hand on own hip
+          - hand on own leg
+        costume-weapon:
+          - holding hula hoop
+          - holding juggling club
+    neon_genesis_evangelion:
+      Ayanami_Rei:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/neon_genesis_evangelion/Ayanami_Rei/main__,
+            __lazy-wildcards/cosplay-char/neon_genesis_evangelion/Ayanami_Rei/costume-ethnicity__,
+            __lazy-wildcards/cosplay-char/neon_genesis_evangelion/Ayanami_Rei/costume-ethnicity-hair__,
+            {0.3::__lazy-wildcards/cosplay-char/neon_genesis_evangelion/Ayanami_Rei/costume/*__,|}
+            {{1-$$__lazy-wildcards/cosplay-char/neon_genesis_evangelion/Ayanami_Rei/style__},|}
+            {1-$$__lazy-wildcards/cosplay-char/neon_genesis_evangelion/Ayanami_Rei/env__}
+        main:
+          - ppayanamirei, Ayanami Rei, rei ayanami, ayanami rei \(cosplay\), Neon Genesis Evangelion, evangelion
+        costume-ethnicity:
+          - blue hair, red eyes
+        costume-ethnicity-hair:
+          - short hair
+          - very long hair, long hair
+        costume:
+          plugsuit:
+            - white bodysuit, __lazy-wildcards/cosplay-char/neon_genesis_evangelion/plugsuit/prompts__
+          school-uniform:
+            - tokyo-3 middle school uniform
+          nurse:
+            - __lazy-wildcards/subject/costume/nurse/prompts__
+        style:
+          - expressionless
+          - lonely
+        env:
+          - eva 00
+          - interface headset \(evangelion\)
+          - lance of longinus \(evangelion\)
+          - bident
+          - nerv
+          - cockpit
+          - entry plug
+          - evangelion \(mecha\)
+          - grey pupils
+          - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
+      # https://danbooru.donmai.us/posts?tags=plugsuit_%28evangelion%29&z=1
+      plugsuit:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/neon_genesis_evangelion/plugsuit/costume__
+            {, {1-$$__lazy-wildcards/cosplay-char/neon_genesis_evangelion/plugsuit/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/neon_genesis_evangelion/plugsuit/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/neon_genesis_evangelion/plugsuit/env__}|}
+        costume:
+          - plugsuit \(evangelion\), bodysuit, EVA suit
+        costume-elem:
+          - interface headset \(evangelion\), hair ornament
+          - test plugsuit \(evangelion\)
+          - EVA gloves
+          - EVA boots
+          - multicolored bodysuit
+        costume-weapon:
+          - lance of longinus \(evangelion\)
+          - double blade \(evangelion\)
+          - heavy spear \(evangelion\)
+          - holding sword
+          - holding weapon
+        env:
+          - entry plug
+          - evangelion \(mecha\)
+          - nerv
+          - cockpit
+    golden_boy:
+      # https://civitai.com/models/94159/terayama-reiko-anime-golden-boy-ponyxl-sd15?modelVersionId=100443
+      terayama_reiko:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/main-trigger-words__
+            {, __lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/costume-ethnicity__|}
+            {, __lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/costume-ethnicity-hair__|}
+            {0.7::, __lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/costume__|}
+            {, {1-$$__lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/action__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/env-bg__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/env-elem-vehicle__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/env-elem-food__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/golden_boy/terayama_reiko/style__}|}
+        main-trigger-words:
+          - terayama reiko, ReikoTerayama_aiwaifu
+        costume-ethnicity:
+          - black hair, makeup, lipstick, brown eyes
+        costume-ethnicity-hair:
+          - long hair
+          - single hair bun, short hair, forehead
+        costume:
+          - red bikesuit, red biker clothes
+          - kimono, yellow kimono, hair ornament, intricate kimono, tabi
+        costume-elem:
+          - __lazy-wildcards/subject/costume-elem/unzipping/prompts__
+          - motorcycle helmet
+          - unworn helmet
+        action:
+          - standing near motorcycle
+        env-bg:
+          - highway background
+          - mountains and sky background
+          - east asian architecture
+        env-elem-food:
+          - beer can, beer
+          - drink can
+        env-elem-vehicle:
+          - motor vehicle, red motorcycle
+        style:
+          - tricky glance
 

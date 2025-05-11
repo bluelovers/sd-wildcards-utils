@@ -36,25 +36,38 @@ lazy-wildcards:
       bookstore:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/env-elem/bookstore/env-bg__}
+            {1-$$__lazy-wildcards/subject/env-elem/bookstore/env-bg-main__}
+            {, {1-$$__lazy-wildcards/subject/env-elem/bookstore/env-bg__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem/bookstore/env-book__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem/bookstore/env__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem/bookstore/style__}|}
+        env-bg-main:
+          - bookstore
+          - bookstore_interior
+        env-bg:
+          - Classic Bookstore
+          - Indie Bookstore
+          - Secondhand Bookstore
+          - Manga Bookstore
         env-book:
           - bestseller_shelf
           - reading_area, reading_nook
           - books_on_display
+          - antique books
+          - dusty_books, stacked_piles
+          - colorful_covers, anime_posters
         env:
           - cash_register
           - rows of shelves
-        env-bg:
-          - bookstore
-          - bookstore_interior
+          - wooden shelves
+          - handwritten notes
         style:
           - quiet_ambiance
           - cozy_ambiance
           - friendly_ambiance
           - literary
+          - dim_lighting
+          - nostalgic_vibe
       # https://civitai.com/models/347450/books-world
       books_world:
         prompts:
@@ -91,4 +104,24 @@ lazy-wildcards:
           - quiet_ambiance
           - cozy_ambiance
           - friendly_ambiance
+      # https://civitai.com/models/1420092/book-nooks?modelVersionId=1605148
+      book_nook:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/book_nook/env-main__{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/book_nook/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/book_nook/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/book_nook/style__}|}
+        env-main:
+          - book nook, bookshelf diorama, booknook
+        env-bg:
+          - on book shelf
+        env:
+          - miniature room
+          - cobblestone street, european architecture, vintage building
+          - rainy alley, looking out window, quiet place
+          - book hallway to city alley
+        style:
+          - fantasy setting
+          - portal to another world
 

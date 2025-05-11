@@ -502,4 +502,96 @@ lazy-wildcards:
           - mature female
         expressions:
           - biting own lip
+      # https://civitai.com/models/259833/safy-fire-emblem-thracia-776-lora?modelVersionId=293023
+      safy:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/fire_emblem/safy/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/fire_emblem/safy/costume-ethnicity__
+            {, __lazy-wildcards/cosplay-char/fire_emblem/safy/costume__}
+        main-trigger-words:
+          - safy, safy \(fire emblem\), safy \(fire emblem\) \(cosplay\)
+        costume-ethnicity:
+          - green hair
+        costume:
+          - hood, white cloak, green dress, long sleeves, long dress
+    # https://danbooru.donmai.us/posts?tags=dragon_quest&z=2
+    dragon_quest:
+      # https://civitai.com/models/542537/sage-dragon-quest-iii-lora?modelVersionId=603230
+      sage:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/dragon_quest/sage/main-trigger-words__
+            {, __lazy-wildcards/cosplay-char/dragon_quest/sage/costume-ethnicity__|}
+            , __lazy-wildcards/cosplay-char/dragon_quest/sage/costume__
+        main-trigger-words:
+          - >-
+            sage \(dragon quest\), sage \(dragon quest\) \(cosplay\)
+            , sage \(dq3\), sage \(dq3\) \(cosplay\)
+            , dq3sage
+        costume-ethnicity:
+          - aqua hair, red eyes, long hair
+        costume:
+          - circlet, blue cape, cleavage, white dress, strapless, belt, elbow gloves, yellow gloves, yellow boots
+    # https://danbooru.donmai.us/posts?tags=dead_or_alive&z=2
+    dead_or_alive:
+      # https://civitai.com/models/323885/nyotengu-dead-or-alive-lora?modelVersionId=363100
+      nyotengu:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/dead_or_alive/nyotengu/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/dead_or_alive/nyotengu/costume-ethnicity__
+            {, __lazy-wildcards/cosplay-char/dead_or_alive/nyotengu/costume__}
+            {, {1-$$__lazy-wildcards/cosplay-char/dead_or_alive/nyotengu/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/dead_or_alive/nyotengu/costume-weapon__}|}
+        main-trigger-words:
+          - nyotengu, nyotengu \(dead or alive\), nyotengu \(dead or alive\) \(cosplay\), nyotengu \(cosplay\), doaNyotengu
+        costume-ethnicity:
+          - >-
+            hair ornament, hair tubes
+            , twin topknots, blunt bangs
+            , black hair
+            , black wings, feathered wings
+            , collarbone
+            , mole under mouth
+            , purple eyes
+        costume:
+          - black kimono, cleavage, bare shoulders, sash, detached sleeves, wide sleeves
+        costume-elem:
+          - tokin hat
+          - parted lips
+          - seductive smile
+        costume-weapon:
+          - leaf fan, hand fan
+          - holding fan
+    pokemon:
+      # https://civitai.com/models/139894/team-rocket-cosplay-pokemon-or-sexy-outfit?modelVersionId=154984
+      team_rocket_uniform:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/pokemon/team_rocket_uniform/costume-main__
+            , __lazy-wildcards/cosplay-char/pokemon/team_rocket_uniform/costume__
+            {, {1-$$__lazy-wildcards/cosplay-char/pokemon/team_rocket_uniform/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/pokemon/team_rocket_uniform/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/pokemon/team_rocket_uniform/expressions__}|}
+        costume-main:
+          - team rocket uniform, someshittysketches, single letter
+        costume:
+          - black pants, black skirt, white boots
+          - white pants, white skirt, black boots
+        costume-weapon:
+          - holding pokeball, holding poke ball
+          - pokeball, poke ball, poke ball \(basic\)
+        costume-elem:
+          - thick thighs
+          - backwards hat
+          - long sleeves
+          - thigh boots
+          - elbow gloves
+          - wide hips
+          - miniskirt
+          - latex bodysuit
+        expressions:
+          - grin
+          - smile
 

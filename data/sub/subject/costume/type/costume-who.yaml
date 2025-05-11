@@ -1,0 +1,57 @@
+lazy-wildcards:
+  subject:
+    costume:
+      shopkeeper_girl:
+        prompts:
+          - >-
+            shopkeeper girl
+      desert_priestess:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/desert_priestess/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/desert_priestess/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/desert_priestess/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/desert_priestess/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/desert_priestess/env-elem-creatures__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/desert_priestess/style__}|}
+        costume:
+          - >-
+            desert priestess, desert priestess outfit
+        costume-elem:
+          - flowing robe, embroidered clothing
+          - veil
+          - golden jewelry
+          - braided hair, ornate braid
+          - golden hair ornament
+          - armlet, anklet, forehead jewelry, dangling earrings
+          - barefoot
+          - leather sandals
+        action:
+          - praying pose
+          - ritual dance
+          - distant gaze
+        env:
+          - desert dunes
+          - wind-eroded rocks
+          - oasi
+          - ancient temple
+          - lost city
+          - stone ruins
+          - sandstorm
+          - blazing sun
+          - sunset desert
+          - ancient ritual
+          - sun-drenched landscape
+        env-elem-creatures:
+          - camel
+          - desert fox
+          - vulture
+        style:
+          - mystical aura
+          - solitude in vastness
+          - sacred power
+          - desert tones
+          - sun-bleached hues
+          - gold and turquoise accents
+          - earthy neutrals
+
