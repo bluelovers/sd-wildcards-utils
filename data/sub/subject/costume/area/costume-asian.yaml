@@ -20,16 +20,17 @@ lazy-wildcards:
         style:
           - Easterness, Eastern fantasy
       # https://civitai.com/models/154547/change-a-character-courtesan-your-waifu-has-become-a-japanese-courtesan
+      # https://civitai.com/models/488050/oiranxlsdpony?modelVersionId=542756
       japanese-clothes:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume/japanese-clothes/costume__
+            (__lazy-wildcards/subject/costume/japanese-clothes/costume__{0.3:::{1.2|1.3|1.4}|})
             {, {1-$$__lazy-wildcards/subject/costume/japanese-clothes/costume-elem__}|}
             {, {1-$$__lazy-wildcards/subject/costume/japanese-clothes/costume-weapon__}|}
             {, {1-$$__lazy-wildcards/subject/costume/japanese-clothes/env__}|}
         costume:
           - >-
-            japanese oiran, japanese Courtesan, japanese geisha
+            oiran, japanese oiran, japanese Courtesan, japanese geisha
             , hair ornament
             , japanese clothes, japanese kimono
             , geta
@@ -40,6 +41,7 @@ lazy-wildcards:
           - geta \(footwear\), geta sandals, japanese sandals
           - side slit
           - __cf-geisha/prompt-costume__
+          - off shoulder
         costume-weapon:
           - __lazy-wildcards/subject/costume-weapon/hand_fan/prompts__
           - __lazy-wildcards/subject/costume-weapon/smoking_pipe/prompts__

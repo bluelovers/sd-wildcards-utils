@@ -1,0 +1,125 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      neon_graffiti_wall:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/neon_graffiti_wall/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/neon_graffiti_wall/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/neon_graffiti_wall/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/neon_graffiti_wall/style__}|}
+        env-bg-main:
+          - neon graffiti wall
+        env-bg:
+          - metal wall
+          - concrete wall
+          - glass wall
+          - brick wall
+          - wooden wall
+          - back alley
+          - nightclub
+          - cyberpunk city
+          - wet street
+        env:
+          - cyber symbol
+          - nighttime scene
+          - silhouette
+          - glowing graffiti, luminous mural
+        style:
+          - augmented reality
+          - hologram overlay
+          - fractal graffiti
+          - neon lighting, neon colors
+          - vandalism
+      # https://civitai.com/models/1599404/city-worlds-walls?modelVersionId=1809917
+      city_walls-advertising:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/city_walls-advertising/env-bg-main-trigger-words__
+            , __lazy-wildcards/subject/env-bg/city_walls-advertising/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/city_walls-advertising/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/city_walls-advertising/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/city_walls-advertising/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/city_walls-advertising/style__}|}
+        env-bg-main-trigger-words:
+          - wabkg, city walls
+        env-bg-main:
+          - advertising walls
+          - poster walls
+          - mural walls
+          - led panels walls, led walls, led panels
+          - cutout board, cutout board wall
+          - holographic walls, holographic advertising
+        env-bg:
+          - cityscape
+          - concrete wall
+          - brick wall
+          - skyscraper facade
+          - commercial building wall
+          - city office building exterior wall
+          - glass wall
+          - city at night
+          - urban ruin, ruined wall
+        env:
+          - led display
+          - billboard
+          - mural
+          - graffiti
+          - tv_screen
+          - neon lights
+          - propaganda_poster
+          - reflected light
+          - newspaper clipping
+          - water stain
+          - rusted metal
+          - torn poster
+          - glass surface
+          - city fog, light beam, soft glow
+          - wet surface
+        costume-elem:
+          - urban girl, street girl
+          - idol advertisement
+          - futuristic outfit
+          - virtual idol
+          - headphones
+        style:
+          - high contrast
+          - vibrant colors, bright colors
+          - poster aesthetic
+          - street style
+          - cyberpunk city
+          - cinematic lighting
+          - fish eye
+          - low angle
+          - tilted building perspective
+          - urban commercial
+          - grunge
+          - peeling paint
+      glass_wall:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/glass_wall/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/glass_wall/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/glass_wall/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/glass_wall/style__}|}
+        env-bg-main:
+          - glass wall
+        env-bg:
+          - glass building wall
+          - glass office wall
+          - glass balcony wall
+          - glass partition wall
+          - glass curtain wall
+          - glass facade
+        env:
+          - modern architecture
+          - cityscape
+          - urban environment
+          - skyscraper view
+          - panoramic view
+          - __lazy-wildcards/subject/env-elem/floor-to-ceiling_window/prompts__
+        style:
+          - sleek design
+          - minimalist aesthetic
+          - transparency effect
+

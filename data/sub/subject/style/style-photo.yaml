@@ -1,6 +1,8 @@
 lazy-wildcards:
   subject:
     style-elem:
+      # https://civitai.com/models/937649/manga-style-food
+      # https://civitai.com/models/190341/food-real-photos?modelVersionId=213754
       food:
         prompts:
           - >-
@@ -8,22 +10,26 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/style-elem/food/style__}|}
             {, {1-$$__lazy-wildcards/subject/style-elem/food/env-elem-food__}|}
             {0.2::, {1-$$__lazy-wildcards/subject/style-elem/food/env-elem-food-flavor__}|}
+            {, {1-$$__lazy-wildcards/subject/style-elem/food/style-view__}|}
         style-main:
           - food focus, Yummy, foodphoto, foodshot, Food Photography, fodm4st3r style, HEZI, anime food, food platters, foodporn, food porn, foodstyle
         style:
-          - plating_art, fine_dining, food_arrangement, elegant_plating
-          - macro_food, food_close_up, detailed_texture, high_resolution
-          - rustic_food, farm_to_table, natural_presentation, vintage_plates
+          - plating art, fine dining, food arrangement, elegant plating
+          - macro food, detailed texture, high resolution
+          - rustic food, farm to table, natural presentation, vintage plates
         env-elem-food:
-          - glistening_sauce, sauce_drip
-          - food_gloss, appetizing_texture, food_shine
-          - colorful_vegetables, vibrant_food, fresh_ingredients, healthy_food
-          - steam_rising, hot_food, freshly_cooked, appetizing_steam, still life
+          - glistening sauce, sauce drip
+          - food gloss, appetizing texture, food shine
+          - colorful vegetables, vibrant food, fresh ingredients, healthy food
+          - steam rising, hot food, freshly cooked, appetizing steam, still life
         env-elem-food-flavor:
-          - juicy_meat, grilled_texture, tender_appearance, meat_gloss
-          - melting_cheese, cheese_pull, creamy_texture, savory_food
-          - dessert_drizzle, syrup_drip, sweet_sauce, dessert_topping
-          - glossy_glaze, dessert_glaze, caramelized_top
+          - juicy meat, grilled texture, tender appearance, meat gloss
+          - melting cheese, cheese pull, creamy texture, savory food
+          - dessert drizzle, syrup drip, sweet sauce, dessert topping
+          - glossy glaze, dessert glaze, caramelized top
+        style-view:
+          - eye angle view
+          - food close up
       # https://civitai.com/models/789313/80s-fantasy-movie-sd15-sdxl-pony-flux?modelVersionId=1286569
       80s_Movie_Still:
         prompts:

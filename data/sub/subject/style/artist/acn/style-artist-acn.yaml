@@ -1,0 +1,44 @@
+lazy-wildcards:
+  subject:
+    style-artist:
+      # https://civitai.com/models/55416/neon-genesis-evangelion-1990s-anime-style-lora
+      evangelion_anime_style:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/evangelion_anime_style/style-artist__{0.3:::{1.2|1.3|1.4}|})
+            {, __lazy-wildcards/subject/style-art-type/anime_style/prompts__|}
+        style-artist:
+          - evangelion anime style, __lazy-wildcards/utils/fn/style-inspired(v=evangelion_anime)__
+      # https://civitai.com/models/61240/nier-automata-anime-style-lora
+      nier_anime_style:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/nier_anime_style/style-artist__{0.3:::{1.2|1.3|1.4}|})
+            {, __lazy-wildcards/subject/style-art-type/anime_style/prompts__|}
+        style-artist:
+          - nier anime style, __lazy-wildcards/utils/fn/style-inspired(v=nier_anime)__
+      # https://civitai.com/models/34086/omamori-himari-tv-anime-style
+      omamori_himari:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/omamori_himari/style-artist__{0.3:::{1.2|1.3|1.4}|})
+            {, __lazy-wildcards/subject/style-art-type/anime_style/prompts__|}
+        style-artist:
+          - __lazy-wildcards/utils/fn/style-inspired(v=omamori_himari)__
+      # https://civitai.com/models/158634/made-in-abyss-or-anime-style-or
+      made_in_abyss:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/made_in_abyss/style-artist__{0.3:::{1.2|1.3|1.4}|})
+            {, __lazy-wildcards/subject/style-art-type/anime_style/prompts__|}
+        style-artist:
+          - __lazy-wildcards/utils/fn/style-inspired(v=made_in_abyss)__, __lazy-wildcards/utils/fn/style-inspired(v=akihito_tsukushi)__
+      # https://civitai.com/models/75363/kakumeiki-valvrave-suzuki-ryuuya-style
+      kakumeiki_valvrave:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/kakumeiki_valvrave/style-artist__{0.3:::{1.2|1.3|1.4}|})
+            {, __lazy-wildcards/subject/style-art-type/anime_style/prompts__|}
+        style-artist:
+          - __lazy-wildcards/utils/fn/style-inspired(v=kakumeiki_valvrave)__, __lazy-wildcards/utils/fn/style-inspired(v=suzuki_ryuuya)__
+

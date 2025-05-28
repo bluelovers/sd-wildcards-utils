@@ -904,4 +904,16 @@ lazy-wildcards:
         costume-elem:
           - mature female
           - thick thighs
+      # https://modbooru.com/mods?query=hirosin
+      # https://civitai.com/models/202181/hirosin-skyrimse-mod-artstyle
+      hirosin:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/hirosin/style-artist__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-artist/hirosin/costume-elem__}|}
+        style-artist:
+          - __lazy-wildcards/utils/fn/style-inspired(v=hirosin)__
+        costume-elem:
+          - cute
+          - shiny skin, highlighted skin
 

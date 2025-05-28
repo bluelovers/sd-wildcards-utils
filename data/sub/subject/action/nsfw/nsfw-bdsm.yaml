@@ -82,7 +82,7 @@ lazy-wildcards:
       pov-bondage-chair:
         prompts:
           - >-
-            (__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/main__:1.2),
+            (__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/action__:1.2),
             ({{1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/action-sex__}|no sex}:1.4)
             {, {1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/costume-exposed__}|}
             {, {1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/costume-weapon__}|}
@@ -90,7 +90,7 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/style__}|}
             {, {1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/env__}|}
             {0.3::, {1-$$__lazy-wildcards/subject/action-nsfw-bdsm/pov-bondage-chair/env-bg__}|}
-        main:
+        action:
           - >-
             Pov Bondage Chair, legs up, nsfw, bondage
         action-sex:
@@ -129,4 +129,42 @@ lazy-wildcards:
         env-bg:
           - white brick wall
           - __mix-lazy-auto/color-anything__ brick wall
+      # https://civitai.com/models/111966/bdsm-tied-wrists-or-2
+      tied_wrists:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/action-nsfw-bdsm/tied_wrists/action-main__
+            {, {1-$$__lazy-wildcards/subject/action-nsfw-bdsm/tied_wrists/action__}|}
+            , {1-$$__lazy-wildcards/subject/action-nsfw-bdsm/tied_wrists/env__}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/action-nsfw-bdsm/tied_wrists/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/action-nsfw-bdsm/tied_wrists/expressions__}|}
+            {, {1-$$__lazy-wildcards/subject/action-nsfw-bdsm/tied_wrists/style-pov__}|}
+        action-main:
+          - tied wrists
+        action:
+          - bound wrists
+          - restrained, bound
+          - arms up
+          - standing
+          - sitting
+          - kneeling
+          - leaning
+        costume-elem:
+          - __lazy-wildcards/subject/costume-nsfw/sex_toy_gag/prompts__
+          - bandaged hand
+          - bondage
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+        expressions:
+          - __lazy-wildcards/subject/costume-elem-expressions/blush/prompts__
+        env:
+          - >-
+            {1-$$rope|chain}
+          - floating
+        style-pov:
+          - close-up
+          - upper body
+          - full body
+          - from above
+          - form below
+          - bdsm
 

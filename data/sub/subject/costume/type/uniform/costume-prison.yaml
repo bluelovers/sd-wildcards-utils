@@ -1,0 +1,55 @@
+lazy-wildcards:
+  subject:
+    costume:
+      # https://civitai.com/models/98304/costumecosplaytorn-prison-clothes-of-pamiat-merkuria-caged-minx-azur-lane
+      # https://civitai.com/models/266389/realistic-prison-transport-belt
+      # https://civitai.com/models/338917/realistic-prison-waist-chain-and-blue-box-handcuffs
+      prisoner:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/prisoner/costume-main__
+            {, {1-$$__lazy-wildcards/subject/costume/prisoner/costume__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/prisoner/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/prisoner/action__}|}
+        costume-main:
+          - prisoner, jail uniform, prison clothes, prison uniform, inmate, detainee, convict
+        costume:
+          - orange prison uniform, jumpsuit
+          - striped prison uniform, black and white stripes, striped
+          - sexy prison uniform, prison girl
+          - fantasy_prisoner, magic_restraints
+        costume-elem:
+          - prison number tag, chest tag
+          - handcuffs
+          - blue box handcuffs
+          - shackles, foot_shackles
+          - chains
+          - cleavage
+          - bare shoulders
+          - mini jumpsuit
+          - escaped prisoner
+          - dirty clothes
+          - striped headwear
+          - prison transport belt
+          - prison waist chain
+          - navel
+          - midriff
+          - bondage, restrained
+          - collar
+          - blindfold
+          - tattoo
+          - glowing_cuffs
+          - neural_interface
+          - sci-fi_restraints
+          - virtual_clothing
+          - fishnets
+          - garter_belt
+          - high_heels
+          - lather_cuffs
+        action:
+          - kneeling
+          - outstretched arms
+          - holding cell
+          - seductive pose
+          - __lazy-wildcards/subject/action-nsfw-bdsm/tied_wrists/prompts__
+

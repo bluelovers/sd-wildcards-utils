@@ -407,4 +407,19 @@ lazy-wildcards:
           - helterneck
           - bikini
           - clothed shoulders
+    prison_battleship:
+      # https://civitai.com/models/355226/naomi-evans-prison-battleship-lora
+      # https://civitai.com/models/263380/naomi-evans-prison-battleship
+      naomi_evans:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char-hentai/prison_battleship/naomi_evans/main-trigger-words__
+            , __lazy-wildcards/cosplay-char-hentai/prison_battleship/naomi_evans/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char-hentai/prison_battleship/naomi_evans/costume__}|}
+        main-trigger-words:
+          - naomi evans, pbNaomi
+        costume-ethnicity:
+          - black hair, cute red eyes, narrow waist
+        costume:
+          - blue and white uniform, long sleeves, tight white skirt, black thighhighs, thighs
 

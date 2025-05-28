@@ -39,4 +39,50 @@ lazy-wildcards:
         action:
           - changing clothes
           - shy pose
+      # 丁字褲
+      thong:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-lower-body/thong/costume-elem-lower-body__
+            {, {1-$$__lazy-wildcards/subject/costume-elem-lower-body/thong/costume-elem-panties__}|}{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-$$__lazy-wildcards/subject/costume-elem-lower-body/thong/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem-lower-body/thong/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem-lower-body/thong/style__}|}
+        costume-elem-lower-body:
+          - thong
+        costume-elem-panties:
+          - t-back thong
+          - g-string thong
+          - string panties
+          - highleg panties
+          - v-panties
+          - thong under shorts
+          - thong visible, panties visible
+        costume-elem:
+          - see-through panties
+          - lace panties
+          - bow panties
+          - decorative underwear
+          - micro bikini
+          - brazilian_bikini
+          - partially removed panties
+          - __lazy-wildcards/subject/costume-elem-lower-body/thong/fn/color-panties(c=!__lazy-wildcards/utils/color-base__,v=thong)__
+          - sheer underwear
+          - thong_bunny_girl
+          - maid_thong
+          - demon_girl_thong
+          - skirt lift
+        action:
+          - lying
+          - side laying
+          - panties pull
+        style:
+          - from behind
+          - ass focus
+          - low angle
+          - accidental exposure
+        fn:
+          color-panties:
+            - >-
+              ${c:black} panties, ${c:black} ${v:thong}
 

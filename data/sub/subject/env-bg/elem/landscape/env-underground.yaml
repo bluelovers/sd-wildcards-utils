@@ -1,0 +1,55 @@
+lazy-wildcards:
+  subject:
+    env-elem:
+      underground_river:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/underground_river/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/underground_river/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/underground_river/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/underground_river/costume-weapon__}|}
+        env-bg-main:
+          - underground river, water reflection
+        env-bg:
+          - subterranean river
+          - cave river
+        env:
+          - __lazy-wildcards/subject/env-elem/stalactite_cave/prompts__
+          - __lazy-wildcards/subject/moment/weather-smoke/prompts__
+          - __lazy-wildcards/subject/moment/weather-mist/prompts__
+          - rock wall
+          - __lazy-wildcards/subject/env-elem/moss/prompts__
+          - overgrown
+          # - __lazy-wildcards/subject/env-bg/ruins-stone/prompts__
+          - __lazy-wildcards/subject/env-elem/bridge/prompts__
+        costume-weapon:
+          - torch
+      stalactite_cave:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/stalactite_cave/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/stalactite_cave/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/stalactite_cave/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/stalactite_cave/style__}|}
+        env-bg-main:
+          - stalactite cave, stalactite
+        env-bg:
+          - limestone cave
+          - dripstone cave
+        env:
+          - stalagmite
+          - rock formation
+          - dripping water
+          - glowing crystals
+          - water reflection
+          - underground path
+          - collapsed rocks
+          - mirror surface
+        style:
+          - gray
+          - blue lighting
+          - dark green
+          - cyan, glow
+          - backlighting
+          - atmospheric perspective
+

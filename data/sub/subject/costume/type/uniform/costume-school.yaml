@@ -160,4 +160,109 @@ lazy-wildcards:
         env-bg:
           - school, schoolyard
           - classroom, school desk
+      # https://civitai.com/search/models?sortBy=models_v9&query=sukeban
+      # https://civitai.com/models/246578/sukeban-smgsmg-blue-archive-lora
+      # https://civitai.com/models/1175587/sukeban-delinquent-girl-outfit-pony
+      # https://civitai.com/models/541003/sukeban-delinquent-girl-outfit-illustrious
+      # https://civitai.com/models/269584/sukeban-mg-blue-archive
+      # https://civitai.com/models/794257/sukebanbosozokudelinquent-girl-pose-and-clothes
+      sukeban:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/sukeban/costume__
+            {0.8::, {1-$$__lazy-wildcards/subject/costume/sukeban/costume-elem-top__}|}{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-2$$__lazy-wildcards/subject/costume/sukeban/costume-elem-style__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/sukeban/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/sukeban/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/sukeban/expressions__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/sukeban/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/sukeban/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/sukeban/style__}|}
+        costume:
+          - >-
+            sukeban, delinquent girl
+            , sukeban outfit, delinquent girl outfit
+            , long sleeves
+            , midriff
+            , very long pleated skirt, very long skirt, long skirt
+            , smgsukeban, Suk3ban, gbnan, sukebanmg
+        costume-elem-style:
+          - __lazy-wildcards/subject/costume/sukeban/fn/serafuku(c=dark blue)__
+          - __lazy-wildcards/subject/costume/sukeban/fn/serafuku(c=blue)__
+          - __lazy-wildcards/subject/costume/sukeban/fn/serafuku(c=red)__
+          - __lazy-wildcards/subject/costume/sukeban/fn/serafuku(c=white)__
+          - __lazy-wildcards/subject/costume/sukeban/fn/serafuku(c=black)__
+          - __lazy-wildcards/subject/costume/sukeban/fn/serafuku(c=dark)__
+          - __lazy-wildcards/subject/costume/sukeban/fn/serafuku(c=!__lazy-wildcards/utils/color-base__)__
+          - __lazy-wildcards/subject/costume/sukeban/fn/serafuku(c=black gold)__
+          - __lazy-wildcards/subject/costume/sukeban/fn/serafuku(c=navy blue)__
+        costume-elem-top:
+          - serafuku
+          - wrapped breasts, sarashi
+        costume-elem:
+          - halo
+          - mouth mask
+          - fingerless gloves
+          - ponytail
+          - navel
+          - blood
+          - loafers, platform shoes
+          - white eyepatch
+          - face mask
+          - tattoos
+          - leather jacket
+          - jacket
+          - abs
+          - unzipped
+          - crop top
+          - black hoodie
+          - mature female
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - narrow waist
+          - glasses
+          - jewelry
+          - earrings
+          - necklace
+          - delinquent girl, school delinquent
+          - blonde hair
+          - forehead
+          - bosozoku
+          - long coat
+          - baggy pants
+          - high heels
+          - bandolier
+          - eyepatch
+          - chain accessory
+          - japanese embroidery
+          - school uniform skirt
+        costume-weapon:
+          - bokken, wooden sword
+          - baseball bat
+          - brass knuckles
+          - holding baseball bat
+          - crow bar
+          - spiked bat
+          - metal bat
+        expressions:
+          - snarl
+          - __lazy-wildcards/subject/costume-elem-expressions/smirk/prompts__
+        action:
+          - squatting
+          - hand on hip
+          - rude gesture
+        env-bg:
+          - school rooftop
+          - school hallway
+          - school stairs
+          - back alley
+          - japanese street
+          - student council room
+        style:
+          - showa style
+          - yankee style
+          - gap moe
+        fn:
+          serafuku:
+            - >-
+              ${c:blue} serafuku, ${c:blue} skirt
 

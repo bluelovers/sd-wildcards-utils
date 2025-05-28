@@ -3,6 +3,9 @@ lazy-wildcards:
     env-elem-food:
       others:
         prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-food/others/env-elem-food__
+        env-elem-food:
           - fried calamari
           - meat on bone
           - poultry leg
@@ -13,6 +16,23 @@ lazy-wildcards:
           name-cuisine:
             - >-
               ${name} food, ${name} cuisine
+      # https://civitai.com/models/190341/food-real-photos?modelversionid=213754
+      plate_of_food:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-food/plate_of_food/env-elem-food-main__ {1-2$$ and $$__lazy-wildcards/subject/env-elem-food/plate_of_food/env-elem-food__}{0.3:::{1.2|1.3|1.4}|})
+        env-elem-food-main:
+          - a delicious plate of
+          - a wooden cutting board of
+          - a iron skewer with
+        env-elem-food:
+          - fish, salmon
+          - cooked meat
+          - chips
+          - cold cuts, slices of raw ham and slices of salami
+          - pieces of roasted lamb
+          - pastry
+          - mexican tacos
       shaved-ice-animal-shaped:
         prompts:
           - >-
@@ -27,7 +47,7 @@ lazy-wildcards:
             fruit, ice cream,
             animal focus, food focus,
             dessert, in food,
-            food art, ANKG,
+            food art, ankg,
             {1-$$cup|bowl|dessert_bow}
         main-shaped:
           - bear, polar bear
@@ -43,7 +63,7 @@ lazy-wildcards:
           - solid circle eyes
           - pudding
           - solid circle eyes
-          - Matcha
+          - matcha
           - sweet_syrup
           - condensed_milk
           - colorful_toppings
@@ -71,7 +91,7 @@ lazy-wildcards:
           - chopped scallions
           - chili peppers, spicy_dish
           - drizzled with savory sauce
-          - Sichuan_cuisine
+          - sichuan_cuisine
           - minced_meat
           - appetizer
           - street_food
@@ -124,7 +144,7 @@ lazy-wildcards:
           - grilled_dish
           - tomato_sauce
           - yogurt_topping
-      # https://civitai.com/models/249905/tableside-kitchen-gourmands-society?modelVersionId=282020
+      # https://civitai.com/models/249905/tableside-kitchen-gourmands-society?modelversionid=282020
       tamago_kake_gohan:
         prompts:
           - >-
@@ -134,15 +154,15 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/env-elem-food/tamago_kake_gohan/env__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem-food/tamago_kake_gohan/style__}|}
         env-elem-food-main:
-          - Tamago kake gohan, japanese_food, rice_bowl, raw_egg, TKGS, rice
+          - tamago kake gohan, japanese_food, rice_bowl, raw_egg, tkgs, rice
         env-elem-food-egg:
-          - __mix-lazy-auto/color-anything__ TKGS, __mix-lazy-auto/color-anything__ raw_egg
-          - iridescent TKGS, iridescent raw_egg, rainbow_color
+          - __mix-lazy-auto/color-anything__ tkgs, __mix-lazy-auto/color-anything__ raw_egg
+          - iridescent tkgs, iridescent raw_egg, rainbow_color
         env-elem-food:
-          - Egg over rice
-          - Japanese-style egg and rice
-          - Rice topped with egg
-          - Oyakodon
+          - egg over rice
+          - japanese-style egg and rice
+          - rice topped with egg
+          - oyakodon
           - soy_sauce
           - japanese_breakfast
           - comfort_food
@@ -155,17 +175,17 @@ lazy-wildcards:
           - still life
       # https://civitai.com/models/221021
       # https://civitai.com/models/220976/gingerbread-house
-      Gingerbread:
+      gingerbread:
         prompts:
           - >-
-            ({1-$$__lazy-wildcards/subject/env-elem-food/Gingerbread/env-elem-food-main__}{0.3:::{1.2|1.3|1.4}|})
-            {, {1-$$__lazy-wildcards/subject/env-elem-food/Gingerbread/env-elem-food__}|}
-            {, {1-$$__lazy-wildcards/subject/env-elem-food/Gingerbread/env-bg__}|}
-            {, {1-$$__lazy-wildcards/subject/env-elem-food/Gingerbread/env-elem-creatures__}|}
-            {, {1-$$__lazy-wildcards/subject/env-elem-food/Gingerbread/style__}|}
+            ({1-$$__lazy-wildcards/subject/env-elem-food/gingerbread/env-elem-food-main__}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/gingerbread/env-elem-food__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/gingerbread/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/gingerbread/env-elem-creatures__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/gingerbread/style__}|}
         env-elem-food-main:
-          - Gingerbread_man, gingerbread people
-          - Gingerbread_House
+          - gingerbread_man, gingerbread people
+          - gingerbread_house
         env-elem-food:
           - food, cookie
         env-bg:
@@ -179,12 +199,12 @@ lazy-wildcards:
         style:
           - no humans
           - food focus
-      # https://civitai.com/models/228730/sticky-rice-style-sd15-sdxl-and-flux?modelVersionId=275208
+      # https://civitai.com/models/228730/sticky-rice-style-sd15-sdxl-and-flux?modelversionid=275208
       sticky_rice:
         prompts:
           - >-
             (sticky rice, styr, noc-styr)
-      # https://civitai.com/models/114493/leco-monster-meat?modelVersionId=123769
+      # https://civitai.com/models/114493/leco-monster-meat?modelversionid=123769
       monster_meat:
         prompts:
           - >-
@@ -219,4 +239,39 @@ lazy-wildcards:
           - black
           - dripping
           - glowing
+      cooked_meat:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-food/cooked_meat/env-elem-food-main__
+            {, {1-5$$__lazy-wildcards/subject/env-elem-food/cooked_meat/env-elem-food*__}|}{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/cooked_meat/env__}|}
+        env-elem-food-main:
+          - food, cooked meat
+        env-elem-food1:
+          - roasted meat
+          - grilled meat
+          - braised meat
+          - stewed meat
+          - fried meat
+        env-elem-food2:
+          - steak
+          - roast chicken
+          - hamburger steak
+          - chashu
+          - braised pork
+        env-elem-food3:
+          - delicious
+          - dinner
+          - meal
+          - bento
+          - japanese food
+          - gourmet food
+          - european food
+          - fantasy food
+        env:
+          - kitchen
+          - restaurant
+          - tableware
+          - plate
+          - steam, greasy shine
 

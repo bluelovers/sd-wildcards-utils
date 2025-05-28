@@ -29,6 +29,9 @@ lazy-wildcards:
         {1-2$$__lazy-wildcards/subject/env-elem-food*/*/prompts__}
       - >-
         {1-6$$__lazy-wildcards/*/*/*/env-elem-food*__}
+      - >-
+        {1-2$$__lazy-wildcards/subject/env-elem-food*/*/prompts__}
+        , {1-6$$__lazy-wildcards/*/*/*/env-elem-food*__}
       - __cornf-meal/prompt-object__
       - __cornf-meal/drink__
     food-all-multi:
@@ -40,12 +43,15 @@ lazy-wildcards:
       - __lazy-wildcards/utils-dataset/costume/prompts-with-color__
     costume-ethnicity:
       - __lazy-wildcards/utils-dataset/costume/costume-ethnicity__
+      - >-
+        {1-2$$__lazy-wildcards/utils-dataset/costume/costume-ethnicity__}
     costume-elem:
       - >-
         {1-4$$__lazy-wildcards/utils-dataset/costume/costume-elem__}
     costume-weapon:
       - __cf-*/weapon__
-      - __lazy-wildcards/*/*/*/costume-weapon*__
+      - >-
+        {1-4$$__lazy-wildcards/*/*/*/costume-weapon*__}
       - __lazy-wildcards/subject/costume-weapon*/*/prompts__
     costume-accessories-base:
       - >-

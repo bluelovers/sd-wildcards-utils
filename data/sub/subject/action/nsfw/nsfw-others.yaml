@@ -209,4 +209,33 @@ lazy-wildcards:
           - annoyed
           - frowning
           - tears, cry
+      # https://civitai.com/search/models?baseModel=SD%201.5&sortBy=models_v9&query=straddling
+      # https://civitai.com/models/124203/pov-straddling-or-lora
+      spread_legs-straddling:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/action-nsfw-others/spread_legs-straddling/action-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/action-nsfw-others/spread_legs-straddling/action__}|}
+            {, {1-$$__lazy-wildcards/subject/action-nsfw-others/spread_legs-straddling/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/action-nsfw-others/spread_legs-straddling/style__}|}
+        action-main:
+          - straddling
+        action:
+          - spread legs
+          - >-
+            {frontal|reverse} straddle
+          - squatting
+          - >-
+            {arched back|bent over}
+          - hip up
+          - on_top, riding_position, sex_position
+          - dominant_pose
+          - cowgirl_position
+          - kneeling
+        costume-elem:
+          - thighs
+        style:
+          - >-
+            pov, pov straddling
+          - side view
 

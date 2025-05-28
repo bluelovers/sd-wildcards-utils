@@ -183,6 +183,10 @@ lazy-wildcards:
       # https://danbooru.donmai.us/posts?tags=harpie_lady
       # https://danbooru.donmai.us/posts?tags=harpie_lady_%28normal_monster%29
       # https://civitai.com/models/611599/harpy-lady-yugioh?modelVersionId=683689
+      # https://civitai.com/models/125351/harpie-lady-1-yu-gi-oh
+      # https://civitai.com/models/945752/yu-gi-oh-harpie-lady-onetwothreecyber-slash-harpie-lady-1-2-3sc-illuxl
+      # https://civitai.com/models/1193837/harpie-lady-or-yugioh-illustrious
+      # https://civitai.com/models/111899/harpie-queen-yu-gi-oh
       harpie-lady:
         prompts:
           - >-
@@ -194,7 +198,7 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/costume-weapon__}|}
             {,{1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/harpie-lady/env__}|}
         main:
-          - HL, harpie_lady_1, harpie_lady, harpie_lady_\(normal_monster\), yu-gi-oh!, yu-gi-oh! duel monsters, harpie lady \(normal monster\) \(cosplay\), harpy
+          - HL, harpie_lady_1, harpie_lady, harpie_lady_\(normal_monster\), yu-gi-oh!, yu-gi-oh! duel monsters, harpie lady \(normal monster\) \(cosplay\), harpy, HarpieLady1YGO, zzHarpyLady, HarpieQueenYGO
         costume-ethnicity:
           - >-
             {1-$$winged arms|feathered arms}
@@ -958,4 +962,156 @@ lazy-wildcards:
           - parted lips
         action:
           - heart hands
+    isekai_ojisan:
+      # https://danbooru.donmai.us/posts?tags=sui_%28isekai_ojisan%29&z=2
+      # https://civitai.com/models/16332/sui-isekai-ojisan
+      # https://civitai.com/models/182051/sui-isekai-ojisan
+      # https://civitai.com/models/78234/tsundere-elf-sui-isekai-ojisan
+      sui:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/isekai_ojisan/sui/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/isekai_ojisan/sui/costume-ethnicity__
+            {, {1-2$$__lazy-wildcards/cosplay-char/isekai_ojisan/sui/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/isekai_ojisan/sui/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/isekai_ojisan/sui/env__}|}
+        main-trigger-words:
+          - sui, sui \(isekai ojisan\)
+        costume-ethnicity:
+          - >-
+            long pointy ears
+            , forehead jewel, red gemstone
+            , green eyes, colored eyelashes
+            , blonde hair
+            , long hair
+            , elf
+        costume:
+          - >-
+            sui \(xiannv\), suidress
+            , long dress
+            , green dress, off-shoulder dress
+            , bare shoulders
+          - >-
+            sui \(changfu\), suidefault, regular dress
+            , yellow dress
+            , yellow sleeveless dress
+            , black long sleeves
+          - sui \(hefu\), kimono
+        costume-elem:
+          - torn thighhighs
+          - ring, ornate ring, wedding ring
+          - long sleeves
+          - black sweater, turtleneck sweater
+          - pink nails
+          - bare shoulders
+          - french braid
+          - see-through clothes
+          - thigh gap
+          - stomach
+          - thighs
+          - flower trim, flower-trim, flower-trimmed
+        env:
+          - wanted poster
+      # https://civitai.com/models/180814/mabel-isekai-ojisan
+      # https://civitai.com/models/79232/mabel-rayveil-isekai-ojisan
+      # https://civitai.com/models/21048/mabel-isekai-ojisan
+      mabel:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/isekai_ojisan/mabel/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/isekai_ojisan/mabel/costume-ethnicity__
+            {, {1-2$$__lazy-wildcards/cosplay-char/isekai_ojisan/mabel/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/isekai_ojisan/mabel/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/isekai_ojisan/mabel/action__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/isekai_ojisan/mabel/env__}|}
+        main-trigger-words:
+          - mabel, mabel \(isekai ojisan\), IsekaiOjisan-Mabel
+        costume-ethnicity:
+          - blue long hair, hair flower, blue eyes, blue flower hair accessories
+        costume:
+          - mabeldefault, blue dress, puffy sleeves, long sleeves, short shorts
+        costume-elem:
+          - pajamas
+          - brown hooded cloak, brown animal hood, brown cat hood
+          - hood cloak
+          - blue clothes
+          - black shorts
+          - bare leg
+        action:
+          - squat down
+        env:
+          - crystals
+          - crystal throne
+          - huge ice
+          - __lazy-wildcards/subject/moment/weather-frozen/prompts__
+    # https://danbooru.donmai.us/posts?tags=chainsaw_man+&z=5
+    chainsaw_man:
+      # https://civitai.com/models/254374/falling-devil-or-chainsaw-man
+      # https://civitai.com/models/39249
+      falling_devil:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-main__
+            ,__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-ethnicity__
+            {,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-eyes__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-nude__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-elem__}|}
+            {,{1-3$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-weapon__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/expressions__}|}
+            {0.2::,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/env-bg__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/env__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/env-elem-food__}|}
+            {,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/style__}|}
+        costume-main:
+          - falling_devil_\(chainsaw_man\), fallingdevil, falldevil, falling_devil_\(chainsaw_man\)_\(cosplay\), chainsaw_man
+        costume-ethnicity:
+          - (extra arms, disembodied head, severed head:1.2), blood on face, blood from mouth, nosebleed, (blood drip, blood from eyes:1.2), long arms, blood
+        costume:
+          - white chef hat, flat top chef hat
+          - black apron, waist apron
+          - elbow gloves
+          - buttons
+          - chef
+          - shirt tucked in, taut clothes, white shirt
+        costume-eyes:
+          - closed eyes
+          - __lazy-wildcards/subject/costume-elem-expressions/doyagao_smug/prompts__
+          - wide smile
+          - blushed
+          - black tears
+        costume-nude:
+          - nude, navel, collarbone, bare arms, breasts
+          - open clothes
+        costume-elem:
+          - black underwear
+          - black blood
+          - arms behind back
+          - __lazy-wildcards/subject/costume-elem/sweat/prompts__
+          - medium breasts
+          - cleavage
+        costume-weapon:
+          - holding head
+          - holding broom
+          - holding menu, holding notepad, holding pencil
+          - holding food
+          - holding fruit
+          - holding plate
+        expressions:
+          - (fingersmile, finger to mouth:1.2)
+          - furrowed brow
+          - open mouth
+        style:
+          - alluring
+          - floating
+        env:
+          - table
+          - floating object
+        env-elem-food:
+          - food
+          - fruit
+        env-bg:
+          - desk, __lazy-wildcards/subject/env-bg-architectural/kitchens_jp/prompts__
+          - checkered floor
+          - hallway
 

@@ -86,12 +86,53 @@ lazy-wildcards:
           - pure winter
           - snowylandscape, snowy landscape
           - snowy environment
-          - frozen environment, frozen landscape
           - Snowy setting
           - falling snow, falling snowflakes
           - surrounded by snowflakes
-          - surrounded by frozen
           - surrounded by snowy
+          - __lazy-wildcards/subject/moment/weather-frozen/prompts__
+      weather-frozen:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/moment/weather-frozen/env-moment-main__
+            {, {1-$$__lazy-wildcards/subject/moment/weather-frozen/env-moment__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-2$$__lazy-wildcards/subject/moment/weather-frozen/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/moment/weather-frozen/env__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/moment/weather-frozen/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/moment/weather-frozen/style__}|}
+        env-moment-main:
+          - frozen, ice, cold
+        env-moment:
+          - surrounded by frozen
+          - frozen environment
+          - frozen landscape
+        env-bg:
+          - __cof-location/place/frozen-wasteland__
+          - frozen streets
+          - snow forest
+          - frosted trees
+          - frozen lake
+          - ice cave
+          - frozen ruins
+          - frozen city
+          - ice temple
+        env:
+          - frozen creatures
+          - cracked ice
+          - snow covered
+          - magic ice
+          - translucent ice
+          - crystal
+          - frozen border
+        costume-elem:
+          - ice princess
+          - frost witch
+          - winter clothes
+          - polar explorer
+          - frozen person
+          - trapped in ice
+        style:
+          - crystal texture
       weather-lightning:
         prompts:
           - >-

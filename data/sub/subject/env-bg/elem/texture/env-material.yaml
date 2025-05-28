@@ -34,4 +34,36 @@ lazy-wildcards:
           - gradient effects, aesthetic blend
           - industrial nature fusion
           - rustic modernism
+      # https://civitai.com/models/1609393/creamy-wood-style?modelVersionId=1821291
+      creamy_wood_texture:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/creamy_wood_texture/env-elem-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/creamy_wood_texture/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/creamy_wood_texture/style__}|}
+        env-elem-main:
+          - creamy wood texture, creamy wood, Log style
+        env:
+          - pale wood texture
+          - light wood finish
+          - soft-tone wood
+          - light grain wood
+          - blonde wood
+          - light wood
+          - wooden furniture
+          - tray
+          - wooden table
+          - wooden chair
+          - wooden box
+          - living room
+          - bedroom
+        style:
+          - cream color
+          - light brown
+          - wood texture
+          - matte
+          - scandinavian style
+          - japanese interior
+          - minimalism
+          - scandinavian interior
 

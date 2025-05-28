@@ -1,0 +1,51 @@
+lazy-wildcards:
+  subject:
+    costume:
+      # https://danbooru.donmai.us/posts?tags=foodpanda&z=1
+      # https://civitai.com/models/144914/clothingfood-delivery-girl
+      foodpanda:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/foodpanda/costume__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+            {, {1-$$__lazy-wildcards/subject/costume/foodpanda/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/foodpanda/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/foodpanda/env-elem-vehicle__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/foodpanda/action__}|}
+        costume:
+          - >-
+            foodpandav1, foodpanda, foodpanda clothes
+            , clothes writing
+            , pink shirt
+            , pink and grey shirt
+            , short sleeves, t-shirt
+            , delivery
+        costume-elem:
+          - tied shirt
+          - high-waist shorts
+          - navel, stomach
+          - cropped shirt
+          - insulated delivery bag
+          - handbag
+          - pink helmet, motorcycle helmet
+          - pink helmet, bicycle helmet
+          - sneakers
+          - stuffed animal
+          - stuffed shark
+          - stuffed toy
+          - white shorts
+          - shoes
+          - bottomless
+          - backpack
+          - bag
+          - midriff
+          - visor cap
+          - wrist straps
+          - wristband
+        costume-weapon:
+          - smartphone, phone, cellphone
+        env-elem-vehicle:
+          - motor vehicle, scooter
+        action:
+          - carrying over shoulder
+          - holding box
+

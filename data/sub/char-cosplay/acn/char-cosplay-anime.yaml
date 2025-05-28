@@ -666,4 +666,26 @@ lazy-wildcards:
           - motor vehicle, red motorcycle
         style:
           - tricky glance
+    # https://danbooru.donmai.us/posts?tags=kidou_senkan_nadesico&z=5
+    kidou_senkan_nadesico:
+      # https://civitai.com/models/45551/erina-kinjo-won-martian-successor-nadesico
+      erina_kinjou_won:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/kidou_senkan_nadesico/erina_kinjou_won/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/kidou_senkan_nadesico/erina_kinjou_won/costume-ethnicity__
+            {0.7::, __lazy-wildcards/cosplay-char/kidou_senkan_nadesico/erina_kinjou_won/costume__|}
+            {, {1-$$__lazy-wildcards/cosplay-char/kidou_senkan_nadesico/erina_kinjou_won/costume-elem__}|}
+        main-trigger-words:
+          - >-
+            erina_kinjou_won
+            , erinakinjowon
+            , kidou_senkan_nadesico, martian_successor_nadesico
+        costume-ethnicity:
+          - lips, lipstick, makeup
+        costume:
+          - Erina_red_skirt_suit
+          - nergal_military_uniform_black_pencil_skirt_grey_thighhighs, uniform
+        costume-elem:
+          - grey pantyhose
 

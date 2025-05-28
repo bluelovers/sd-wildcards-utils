@@ -358,6 +358,53 @@ lazy-wildcards:
           - server room, servers with blue lights
         env:
           - with piles of gold coins and cash money
+      # https://civitai.com/user/Eureka_vi
+      # https://civitai.com/images/35165977
+      user-Eureka_vi:
+        prompts:
+          - >-
+            (__lazy-wildcards/cosplay-char/civitai/user-Eureka_vi/costume-ethnicity__
+            , {1-$$__lazy-wildcards/cosplay-char/civitai/user-Eureka_vi/costume-headwear__}
+            {0.8::, {1-$$__lazy-wildcards/cosplay-char/civitai/user-Eureka_vi/expressions__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/cosplay-char/civitai/user-Eureka_vi/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/civitai/user-Eureka_vi/action__}|}
+        costume-ethnicity:
+          - >-
+            very long hair, blunt bangs, braid, light blue hair, white eyes, glasses, earrings
+            , __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+        costume-headwear:
+          - round eyewear
+          - heart-shaped eyewear
+          - eyewear on head
+        expressions:
+          - blush, smug
+          - grin
+          - happy
+          - spoken heart
+          - half-closed eyes
+          - tsurime
+        costume-elem:
+          - head tilt
+          - black bikini
+          - o-ring
+          - bridal garter
+          - choker
+          - lowleg
+          - skindentation
+          - white leotard
+          - frills
+          - fishnet thighhighs
+          - bare shoulders
+          - elbow gloves
+          - high heels
+          - strappy heels
+          - sandals
+          - bow
+          - maid, maid headdress, apron
+        action:
+          - hands up
+          - hand on own thigh
+          - waving
     oc:
       # https://civitai.com/models/1498908/rhaenyra-elgris-fantasy-oc-v2?modelVersionId=1696752
       rhaenyra_elgris:

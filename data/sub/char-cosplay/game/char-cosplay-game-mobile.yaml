@@ -398,4 +398,37 @@ lazy-wildcards:
         env:
           - red rose
           - ice rose
+    # https://danbooru.donmai.us/posts?tags=snowbreak%3A_containment_zone+&z=5
+    snowbreak:
+      # https://civitai.com/models/435511/vulture-snowbreak-containment-zone
+      vulture:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/snowbreak/vulture/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/snowbreak/vulture/costume-ethnicity__
+            {, {1-2$$__lazy-wildcards/cosplay-char/snowbreak/vulture/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/snowbreak/vulture/costume-elem__}|}
+        main-trigger-words:
+          - vulture, vulture_\(snowbreak\), snowbreak containment zone
+        costume-ethnicity:
+          - high ponytail, orange eyes
+        costume:
+          - bodystocking, black and golden bodysuit
+          - tank top
+          - school uniform
+          - school swimsuit
+          - sweater
+          - gym uniform
+          - formal
+          - chinese clothes
+          - japanese clothes
+          - nightgown
+          - casual
+        costume-elem:
+          - black gloves
+          - shoulder armor
+          - apron
+          - topless
+          - bottomless
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
 

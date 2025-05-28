@@ -254,4 +254,21 @@ lazy-wildcards:
           - underboob
           - red cape
           - g-string
+    # http://herencia.nexton-net.jp/product/prison_queendom/character.html
+    prison_queen:
+      # https://www.animecharactersdatabase.com/characters.php?id=79790
+      # https://civitai.com/models/1227807/leila-prison-queen
+      leila:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char-hentai/prison_queen/leila/main-trigger-words__
+            , __lazy-wildcards/cosplay-char-hentai/prison_queen/leila/costume-ethnicity__
+            {, {1-2$$__lazy-wildcards/cosplay-char-hentai/prison_queen/leila/costume__}|}
+        main-trigger-words:
+          - LeilaPr1son, leila \(prison queen\)
+        costume-ethnicity:
+          - >-
+            short hair, yellow eyes, purple hair, __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+        costume:
+          - miniskirt, black skirt, black uniform, military uniform, dark-skinned female, peaked cap, pencil skirt, military hat, red necktie, belt, black skirt, black thighhighs, white gloves, long sleeves, jacket
 

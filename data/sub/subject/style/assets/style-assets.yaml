@@ -1,0 +1,45 @@
+lazy-wildcards:
+  subject:
+    style-art-type:
+      # https://github.com/meolunr/MBEStyle
+      # https://www.zcool.com.cn/article/ZMTE3Njk0OA==.html?
+      # https://www.google.com/search?q=mbestyle&rlz=1C1GCEU_zh-TWTW1161TW1161&sourceid=chrome&ie=UTF-8
+      # https://civitai.com/models/45778/mbe-style
+      icon-mbestyle:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-art-type/icon-mbestyle/style-art-main__
+            {, {1-$$__lazy-wildcards/subject/style-art-type/icon-mbestyle/env-bg__}|}{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+            {, {1-$$__lazy-wildcards/subject/style-art-type/icon-mbestyle/style-pattern__}|}
+            {, {1-$$__lazy-wildcards/subject/style-art-type/icon-mbestyle/style__}|}
+        style-art-main:
+          - __lazy-wildcards/utils/fn/style-inspired(v=mbestyle)__, minimalist bold elegant, iconography
+        env-bg:
+          - white background
+        style-pattern:
+          - dot
+          - confetti
+          - star
+          - zigzag
+          - circle outline
+          - plus sign
+          - wave line
+          - radiating lines
+          - rough lines
+        style:
+          - black outlines
+          - bottom line
+          - thick outline
+          - offset coloring
+          - flat color, flat illustration
+          - pastel color
+          - vector art
+          - chibi
+          - user interface icon
+          - colorful, vibrant color
+          - social media ui
+          - sticker
+          - mascot
+          - cartoon
+          - anime
+

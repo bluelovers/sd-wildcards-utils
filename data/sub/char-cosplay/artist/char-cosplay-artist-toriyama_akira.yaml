@@ -129,4 +129,92 @@ lazy-wildcards:
             (Saiyan Scouter, Saiyan_Scouter{,__lazy-wildcards/cosplay-char/dragon_ball/saiyan_scouter/costume-headwear__|}, scouter:1.2), tinted eyewear, dragon ball
         costume-headwear:
           - __lazy-wildcards/utils/color-base__-tinted eyewear
+    # https://danbooru.donmai.us/posts?tags=dragon_quest&z=2
+    dragon_quest:
+      # https://civitai.com/models/542537/sage-dragon-quest-iii-lora?modelVersionId=603230
+      sage:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/dragon_quest/sage/main-trigger-words__
+            {, __lazy-wildcards/cosplay-char/dragon_quest/sage/costume-ethnicity__|}
+            , __lazy-wildcards/cosplay-char/dragon_quest/sage/costume__
+        main-trigger-words:
+          - >-
+            sage \(dragon quest\), sage \(dragon quest\) \(cosplay\)
+            , sage \(dq3\), sage \(dq3\) \(cosplay\)
+            , dq3sage
+        costume-ethnicity:
+          - aqua hair, red eyes, long hair
+        costume:
+          - circlet, blue cape, cleavage, white dress, strapless, belt, elbow gloves, yellow gloves, yellow boots
+      # https://danbooru.donmai.us/posts?tags=heroine_%28dq3%29&z=5
+      # https://omniversal-battlefield.fandom.com/wiki/Erdrick_(Arus_%26_Irin)
+      # https://civitai.com/models/791335/irin-erdrick-heroineonna-yusha-fanart-dora-version-dragon
+      # https://civitai.com/models/30253/heroine-dragon-quest-iii
+      heroine_dq3:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/dragon_quest/heroine_dq3/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/dragon_quest/heroine_dq3/costume-ethnicity__
+            , __lazy-wildcards/cosplay-char/dragon_quest/heroine_dq3/costume-headwear__
+            {, {1-2$$__lazy-wildcards/cosplay-char/dragon_quest/heroine_dq3/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/dragon_quest/heroine_dq3/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/dragon_quest/heroine_dq3/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/dragon_quest/heroine_dq3/action__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/dragon_quest/heroine_dq3/env-bg__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/dragon_quest/heroine_dq3/env__}|}
+        main-trigger-words:
+          - >-
+            heroine \(dq3\), roto \(dq3\)
+            , Irin Erdrick
+            , dragon quest, dragon quest iii
+        costume-ethnicity:
+          - >-
+            Irin_Erdrick_spiked_hair
+            , parted hair, spiked hair, short hair
+            , blue eyes
+            , earrings, sphere earrings
+        costume-headwear:
+          - golden headband, gold circlet, blue gemstone
+        costume:
+          - blue_strapless_microdress_thighs_zettai_ryouiki, blue tunic, belt, strapless
+          - one-piece swimsuit, revealing swimsuit \(dq\)
+        costume-elem:
+          - cape, purple cape
+          - female hero
+          - knee boots
+          - fantasy girl
+          - adventurer
+          - loto emblem, roto's emblem
+          - bare shoulders
+          - collarbone
+          - jewelry
+          - stomach cutout
+          - elbow gloves, brown gloves
+          - brown boots, knee boots
+          - thighhighs
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - tomboy
+          - yellow jumpsuit
+          - shoulder belt
+          - cleavage
+          - blue dress
+        costume-weapon:
+          - sword, holding sword
+          - shield
+          - __lazy-wildcards/subject/costume-weapon/sword-sheath/prompts__
+        action:
+          - adventure pose
+          - head tilt
+          - hand on own hip
+        env-bg:
+          - fantasy castle
+          - medieval town
+          - desert ruins
+          - floating island
+          - dungeon
+          - magic tower
+          - fantasy battlefield
+        env:
+          - campfire
 

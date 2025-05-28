@@ -230,4 +230,74 @@ lazy-wildcards:
         costume-elem:
           - navel
           - black bandeau, black ribbon
+    # https://civitai.com/models/159656/katarina-claes-or-my-next-life-as-a-villainess-all-routes-lead-to-doom?modelVersionId=179566
+    otome_game_no_hametsu_flag:
+      katarina_claes:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/otome_game_no_hametsu_flag/katarina_claes/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/otome_game_no_hametsu_flag/katarina_claes/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/otome_game_no_hametsu_flag/katarina_claes/costume-elem__}|}
+        main-trigger-words:
+          - katarina claes, katarina claes \(cosplay\)
+        costume-ethnicity:
+          - long hair, asymmetrical bangs
+        costume-elem:
+          - jewelry, earrings
+          - hair bow, hair ornament
+          - brooch
+          - blue dress
+          - ascot
+          - short sleeves
+          - white gloves
+          - bracelet
+    # kage_no_jitsuryokusha_ni_naritakute!
+    # https://danbooru.donmai.us/posts?page=5&tags=kage_no_jitsuryokusha_ni_naritakute%21
+    the_eminence_in_shadow:
+      # https://danbooru.donmai.us/posts?tags=lambda_%28kage_no_jitsuryokusha_ni_naritakute%21%29&z=1
+      # https://civitai.com/models/134284/lambda-the-eminence-in-shadow
+      lambda:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/the_eminence_in_shadow/lambda/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/the_eminence_in_shadow/lambda/costume-ethnicity__
+            {, __lazy-wildcards/cosplay-char/the_eminence_in_shadow/lambda/costume-headwear__|}
+            {, {1-$$__lazy-wildcards/cosplay-char/the_eminence_in_shadow/lambda/expressions__}|}
+            {, {1-2$$__lazy-wildcards/cosplay-char/the_eminence_in_shadow/lambda/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/the_eminence_in_shadow/lambda/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/the_eminence_in_shadow/lambda/costume-weapon__}|}
+        main-trigger-words:
+          - lambda, lambda \(kage_no_jitsuryokusha_ni_naritakute!\)
+        costume-ethnicity:
+          - >-
+            orange eyes
+            , dark elf, pointy ears
+            , grey hair, high ponytail, very long hair
+            , __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+        costume-headwear:
+          - military hat, peaked cap, black hat
+        expressions:
+          - closed mouth
+          - one eye closed
+          - clenched teeth
+          - ":>="
+        costume:
+          - gold and black coat, jewelry, gold and black uniform, thigh boots
+          - __lazy-wildcards/subject/costume/china-dress/prompts__, black dress
+          - waist apron, wing collar, frilled apron
+        costume-elem:
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
+          - black belt
+          - black clothes
+          - black coat
+          - black dress
+          - black pants
+          - black gloves
+          - lack bra
+          - cleavage
+          - clothing cutout
+          - collared shirt
+        costume-weapon:
+          - holding whip
+          - holding plate
 

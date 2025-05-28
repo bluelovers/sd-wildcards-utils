@@ -97,6 +97,8 @@ lazy-wildcards:
           - __lazy-wildcards/subject/env-elem/spider-webs/prompts__
           - flower
       # https://civitai.com/models/1494603/spaceman-lora?modelVersionId=1690790
+      # https://civitai.com/models/25236/clothes-spacesuit
+      # https://civitai.com/models/583134/spacesuit
       spaceman:
         prompts:
           - >-
@@ -106,7 +108,7 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/costume/spaceman/env__}|}
             {, {1-$$__lazy-wildcards/subject/costume/spaceman/style__}|}
         costume:
-          - spaceman
+          - spaceman, spacesuit
         costume-elem:
           - spaceman monk, spacemonk
           - >-

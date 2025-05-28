@@ -18,6 +18,7 @@ lazy-wildcards:
           - display_board
           - heads-up display
       # https://civitai.com/models/43944/solarpunkai-konyconi
+      # https://civitai.com/models/1555358/space-worlds-lost
       solarpunk:
         prompts:
           - >-
@@ -29,7 +30,7 @@ lazy-wildcards:
             {, {1-4$$__lazy-wildcards/subject/env-elem-punk/solarpunk/style__}|}
             {, __lazy-wildcards/utils/scenery-no-humans__|}
         style-trigger-words:
-          - solarpunkai, green-powered, slrpnk
+          - solarpunkai, green-powered, slrpnk, swlu1
         style-main:
           - solarpunk
           - naturepunk

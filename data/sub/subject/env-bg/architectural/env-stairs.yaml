@@ -1,0 +1,109 @@
+lazy-wildcards:
+  subject:
+    env-elem:
+      stairs:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/stairs/env-main__
+            {0.7::, ({1-3$$__lazy-wildcards/subject/env-elem/stairs/env-stairs__})|}
+            {, {1-2$$__lazy-wildcards/subject/env-elem/stairs/env-stairs-style__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/stairs/action__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/stairs/env__}|}
+            {0.2::, {1-$$__lazy-wildcards/subject/env-elem/stairs/style__}|}
+        env-main:
+          - stairs
+        env-stairs:
+          - spiral stairs
+          - grand stairs
+          - carpeted stairs
+          - floating stairs
+          - curved stairs
+        env-stairs-style:
+          - wooden stairs
+          - stone stairs
+          - rock stairs
+          - metal stairs
+          - tree stairs
+          - perforated metal stairs
+          - glass stairs
+          - ancient_stone_steps
+        env:
+          - stairwell
+          - __lazy-wildcards/subject/env-elem/railing/prompts__
+          - staircase_layout
+          - ladder
+        action:
+          - sitting
+        style:
+          - classical Style
+          - minimalist style
+          - open_concept
+          - country style
+          - luxury style
+          - industrial style
+          - victorian style
+          - spiraling upwards
+      # https://danbooru.donmai.us/posts?tags=attic&z=2
+      # https://civitai.com/search/models?sortBy=models_v9&query=attic%20ladder
+      attic_ladder:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/attic_ladder/env-elem-ladder-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/attic_ladder/env-elem-ladder__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/attic_ladder/env__}|}
+        env-elem-ladder-main:
+          - attic ladder, attic access ladder, interior
+        env-elem-ladder:
+          - ladder
+          - folding ceiling ladder, folding ladder
+          - drop-down staircase, drop-down ceiling ladder
+          - trapdoor
+        env:
+          - wooden ladder
+          - metal ladder
+          - wooden floor
+          - ceiling
+      attic:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/attic/env-bg__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/attic/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/attic/style__}|}
+        env-bg:
+          - attic, attic room, 4ttic, slanted roof, interior
+        env:
+          - hidden room, secret room
+          - trapdoor
+          - wooden floor
+          - ceiling
+          - tablet
+          - portable stove
+          - bulletin board
+          - window
+          - cupboard
+          - grandfather clock
+          - running bond
+          - chest of drawers
+          - hanging light
+          - __lazy-wildcards/subject/env-elem/attic_ladder/prompts__
+          - dirty
+          - messy
+          - old furniture
+          - wooden beams
+          - beam of light
+          - beam
+          - bed
+          - bed sheet
+          - laundry basket
+          - pillow
+          - teapot
+          - stool
+          - towel
+        style:
+          - dim lighting
+          - mystery setting
+          - dollhouse view
+          - cozy
+          - spooky
+          - eery
+
