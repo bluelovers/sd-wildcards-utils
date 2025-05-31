@@ -254,4 +254,48 @@ lazy-wildcards:
             , __lazy-wildcards/subject/costume/maid/prompts__
         costume:
           - jyojifuku, china maid, apron, frills, double bun
+      blazer_dress:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/blazer_dress/costume-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-2$$__lazy-wildcards/subject/costume/blazer_dress/costume__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/blazer_dress/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/blazer_dress/costume-weapon__}|}
+        costume-main:
+          - blazer dress, blazer
+        costume:
+          - office lady
+          - fashion model, fashionable
+          - school uniform
+        costume-elem:
+          - lapel
+          - double breasted
+          - mini dress
+          - thigh slit
+          - form fitting
+          - waist belt
+          - wool clothing
+          - suit material
+          - high heels
+          - tights
+          - cleavage
+          - tight clothes
+          - unbuttoned
+          - inner shirt visible
+          - jacket over shoulder
+          - beret
+          - ankle boots
+          - wool clothing
+          - suit material
+        costume-weapon:
+          - holding briefcase
+          - handbag
+      # https://civitai.com/models/251948/plaid-blazer-dress?modelVersionId=284278
+      plaid_blazer_dress:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/plaid_blazer_dress/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, __lazy-wildcards/subject/costume/blazer_dress/prompts__|}
+        costume:
+          - plaid blazer dress, checked blazer dress, w00lj4ck3t
 
