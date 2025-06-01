@@ -122,4 +122,27 @@ lazy-wildcards:
           - sleek design
           - minimalist aesthetic
           - transparency effect
+      # https://civitai.com/models/253127/screen-showroom
+      screen_showroom:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/screen_showroom/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/screen_showroom/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/screen_showroom/env__}|}
+        env-bg-main:
+          - screen showroom, screen display showroom, monitor showroom, tv showroom
+        env-bg:
+          - multi-screen wall, multi-monitor display wall, video wall, large multi-screen wall, multi-monitor wall, multi-tv wall
+          - multi-monitor stack, multi-tv stack
+          - multi-display pyramid, multi-tv pyramid
+        env:
+          - screen, tv, monitor, display
+          - holographic interface
+          - futuristic showroom
+          - cluttered space
+          - big storage room full monitors
+          - colorful screen wall
+          - different computer code in screen
+          - different anime in screen
+          - displays test tubes
 

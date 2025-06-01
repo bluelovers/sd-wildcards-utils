@@ -217,4 +217,28 @@ lazy-wildcards:
           - fantasy battlefield
         env:
           - campfire
+      # https://danbooru.donmai.us/posts?tags=hyunkel+&z=5
+      # https://civitai.com/models/781092/hyunckel-armor
+      hyunckel_armor:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/dragon_quest/hyunckel_armor/costume__
+            {, {1-$$__lazy-wildcards/cosplay-char/dragon_quest/hyunckel_armor/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/dragon_quest/hyunckel_armor/costume-weapon__}|}
+        costume:
+          - >-
+            hyunkel armor, hyunckel armor, hyunckel \(armor\)
+            , shoulder armor, pauldrons, shoulder spikes
+            , breastplate
+            , dragon quest dai no daibouken
+        costume-elem:
+          - black bodysuit
+          - fingerless gloves, vambraces, gauntlets
+          - headpiece
+          - full armor
+          - helmet
+          - spikes
+        costume-weapon:
+          - holding polearm
+          - polearm
 

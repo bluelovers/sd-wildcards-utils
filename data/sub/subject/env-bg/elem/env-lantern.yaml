@@ -54,4 +54,71 @@ lazy-wildcards:
             {1-$$__lazy-wildcards/subject/env-elem/gaslamp/env__}
         env:
           - gaslamp, gas_lamp
+      campfire:
+        prompts:
+          - >-
+            ({1-2$$__lazy-wildcards/subject/env-elem/campfire/env-main__}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/campfire/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/campfire/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/campfire/action__}|}
+        env-main:
+          - campfire, campfire light
+          - bonfire, bonfire light
+          - firepit
+          - outdoor fireplace
+        env:
+          - fire
+          - outdoor firelight
+          - __lazy-wildcards/subject/moment/weather-smoke/prompts__
+          - night
+          - glow
+          - camping
+          - fire ritual
+          - druid ceremony
+          - tent
+          - torchlight
+        costume-elem:
+          - cloak
+          - hooded cloak
+        action:
+          - sitting by campfire
+      # https://civitai.com/models/311678/girl-like-colorful-sky-lantern-sky-lantern?modelVersionId=349801
+      sky_lantern:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/sky_lantern/env-elem-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/sky_lantern/env-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/sky_lantern/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/sky_lantern/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/sky_lantern/action__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/sky_lantern/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/sky_lantern/style__}|}
+        env-elem-main:
+          - sky lantern, floating lantern, paper lantern
+        env-elem:
+          - firework lantern
+          - sky lantern with chinese word
+        env-bg:
+          - railway
+          - low house
+        env:
+          - floating in the sky
+          - glowing in the night sky
+          - night
+          - river
+          - bridge
+          - greenery
+        action:
+          - releasing sky lantern
+          - hands close to fire
+          - raise head
+          - arms up
+          - looking at the sky
+        costume-elem:
+          - suspender skirt
+          - tourists
+        style:
+          - festive lighting
+          - cultural lighting
+          - traditional lighting
 

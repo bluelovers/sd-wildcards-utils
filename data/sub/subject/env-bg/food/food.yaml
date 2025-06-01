@@ -274,4 +274,103 @@ lazy-wildcards:
           - tableware
           - plate
           - steam, greasy shine
+      # https://civitai.com/models/270774
+      # https://civitai.com/models/269126
+      # https://civitai.com/models/265703?modelVersionId=299600
+      egg-cracked:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/env-elem-food/egg-cracked/env-elem-main__}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/egg-cracked/env-elem__}|}{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+        env-elem-main:
+          - cracked egg
+          - hatching egg, hatching, egg hatching
+          - hatched egg, hatched, imprinting
+          - broken egg
+        env-elem:
+          - egg shell, eggshell
+          - __lazy-wildcards/subject/env-elem-food/egg-empty_shell/env-elem-food__
+          - giant egg shell, giant eggshell
+          - giant egg
+          - >-
+            holding a {giant |}cracked egg
+          - >-
+            holding a {giant |}hatched egg
+          - >-
+            into giant egg
+          - incubation, holding a {giant |}egg
+      egg-empty_shell:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-food/egg-empty_shell/env-elem-food__{0.3:::{1.2|1.3|1.4}|})
+        env-elem-food:
+          - empty egg shell, empty eggshell
+          - giant empty egg shell, giant empty eggshell
+      # 皮蛋
+      egg-century:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-food/egg-century/env-elem-food-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/egg-century/env-elem-food__}|}{0.3:::{1.2|1.3|1.4}|})
+        env-elem-food-main:
+          - century egg, preserved egg
+        env-elem-food:
+          - hundred-year egg
+          - salted duck egg
+          - black preserved egg
+      egg_nest:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-food/egg_nest/env-elem-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/egg_nest/env-elem__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/egg_nest/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/egg_nest/action__}|}
+        env-elem-main:
+          - egg nest
+        env-elem:
+          - bird nest
+          - dragon nest
+          - nest with eggs
+          - fantasy egg nest
+          - glowing egg
+          - colorful egg
+          - empty nest
+          - hay
+          - leaf bed
+          - branches
+        env:
+          - nest in tree
+          - nest in cave
+          - nest in grass
+          - nest in water
+          - nest in sky
+          - nest in clouds
+          - moss
+          - natural environment
+          - organic structure
+        action:
+          - sitting by nest
+          - laying eggs
+          - hatching eggs
+          - holding egg
+      # https://civitai.com/models/386966/xenomorph-egg
+      egg-xenomorph:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-food/egg-xenomorph/env-elem-main__{0.3:::{1.2|1.3|1.4}|})
+        env-elem-main:
+          - xenomorph egg
+      # 生蛋拌飯
+      # https://civitai.com/models/340501/tkg-sd15
+      egg-tamagokake_gohan:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-food/egg-tamagokake_gohan/env-elem-food__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/egg-tamagokake_gohan/env__}|}
+        env-elem-food:
+          - tkg, tamagokake gohan, rice, bowl
+        env:
+          - wooden table
+          - rice bowl
+          - wooden bowl
 

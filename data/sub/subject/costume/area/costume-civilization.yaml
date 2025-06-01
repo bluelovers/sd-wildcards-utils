@@ -80,4 +80,77 @@ lazy-wildcards:
           - falcon head
         costume-makeup:
           - Kohl_Makeup, black eye paint, defining eyes
+      # 重裝步兵
+      # https://en.wikipedia.org/wiki/Hoplite
+      # https://danbooru.donmai.us/posts?tags=hoplite&z=5
+      # https://civitai.com/models/269744/hoplite
+      greek-hoplite:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/greek-hoplite/costume__
+            {0.7::, __lazy-wildcards/subject/costume/greek-hoplite/costume-headwear__|}
+            {, {1-$$__lazy-wildcards/subject/costume/greek-hoplite/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/greek-hoplite/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/greek-hoplite/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/greek-hoplite/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/greek-hoplite/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/greek-hoplite/style__}|}
+        costume:
+          - >-
+            hoplite, hoplite armor
+            , h0pl1t3
+        costume-headwear:
+          - >-
+            helmet
+            , corinthian helmet, greek helmet
+            , hoplite helmet
+            , plume
+        costume-elem:
+          - ancient greek warrior
+          - ancient greek armor
+          - citizen-soldiers
+          - greaves
+          - muscular
+          - bronze armor
+          - goddess warrior
+          - linothorax
+          - baldric
+          - muscle cuirass
+          - spartan
+          - shoulder armor
+          - thick thighs
+        costume-weapon:
+          - xiphos, short sword, xiphos \(sword\)
+          - kopis, curved sword
+          - spear, dory, dory \(spear\)
+          - aspis, round shield
+          - falcata
+          - planted shield
+        action:
+          - battle ready pose
+          - heroic pose
+          - tapping shoulder
+        env:
+          - phalanx, military formation
+          - marching soldiers
+          - shield wall
+          - marble column
+          - desert wind
+          - ancient flag
+          - bronze lighting
+        env-bg:
+          - ancient greek battlefield, ancient battle
+          - ancient greek city-states
+          - ancient ruins, greek ruins
+          - ancient sparta
+        style:
+          - greek mythology
+          - epic composition
+          - dramatic lighting
+          - metallic gold
+          - scarlet
+          - marble white
+          - earth tones
+          - harsh lighting
+          - ancient fantasy
 

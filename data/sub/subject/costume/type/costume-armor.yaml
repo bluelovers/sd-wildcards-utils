@@ -1,6 +1,7 @@
 lazy-wildcards:
   subject:
     costume:
+      # https://civitai.com/models/118839/armorfusion
       armor:
         prompts:
           - >-
@@ -25,4 +26,100 @@ lazy-wildcards:
           - spiked collar
           - spiked bracelet
           - shoulder spikes, spiked pauldrons
+      # https://civitai.com/models/398853/samurai-armor
+      # https://civitai.com/models/561501/samurai-armor-elden-ring
+      # https://civitai.com/models/83476/samurai-armor-japan-traditional-dress-series
+      samurai_armor:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/samurai_armor/costume__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+            {, {1-$$__lazy-wildcards/subject/costume/samurai_armor/costume-elem__}|}
+        costume:
+          - samurai armor, samurai
+        costume-elem:
+          - samurai helmet
+          - kabuto
+          - do, cuirass
+          - sode, shoulder guards
+          - kusazuri, tassets
+          - kote, armored sleeves
+          - haidate, thigh guards
+          - suneate, shin guards
+          - armored sandals
+          - armored boots
+      # https://civitai.com/models/146517/armored-leotard
+      armored_leotard:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/armored_leotard/costume__{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-$$__lazy-wildcards/subject/costume/armored_leotard/costume-elem__}|}
+        costume:
+          - armored leotard
+        costume-elem:
+          - shoulder pauldrons
+          - breastplate
+          - highleg leotard
+      chinese_armor:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/chinese_armor/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/chinese_armor/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/chinese_armor/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/chinese_armor/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/chinese_armor/style__}|}
+        # https://civitai.com/models/308072/qige-mingmountain-pattern-armor
+        # https://civitai.com/models/463303/fresh-ideasming-dynasty-armor
+        costume:
+          - ancient chinese armor, traditional chinese armor
+        costume-elem:
+          - ancient chinese military armor
+          - ancient chinese gluttonous armor
+          - ancient chinese helmet
+          - ancient chinese cuirass
+          - ancient chinese shoulder guards
+          - ancient chinese greaves
+          - ancient chinese shoulder armor
+          - ancient chinese hair accessories
+          - ancient chinese cape
+          - ancient chinese warhorse
+          - ancient chinese belt
+          - ancient chinese boots
+          - ancient chinese cloak
+          - lamellar armor
+          - scale armor
+          - armor plating
+          - long sleeves
+          - high boots
+          - armor dress
+          - traditional embroidery
+          - warlord
+        costume-weapon:
+          - ancient chinese sword, jian
+          - ancient chinese spear, qiang
+          - ancient chinese halberd, ge
+          - ancient chinese bow, gong
+          - ancient chinese shield, targe
+          - long handled battle axe, ancient chinese battle axe
+        env-bg:
+          - ancient chinese fortress
+          - ancient chinese imperial palace
+          - ancient chinese military parade
+          - ancient chinese battleground
+        style:
+          - dark red
+          - navy blue
+          - metallic
+          - ornate
+          - sunset lighting
+          - ancient china, ancient chinese
+          - chinese fantasy
+      # https://civitai.com/models/308072/qige-mingmountain-pattern-armor
+      # https://civitai.com/models/463303/fresh-ideasming-dynasty-armor
+      chinese_armor-ming:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/chinese_armor-ming/costume__{0.3:::{1.2|1.3|1.4}|})
+            , __lazy-wildcards/subject/costume/chinese_armor/prompts__
+        costume:
+          - ming dynasty armor, mountain pattern armor
 

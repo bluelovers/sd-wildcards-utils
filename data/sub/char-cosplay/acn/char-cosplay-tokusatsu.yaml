@@ -18,4 +18,20 @@ lazy-wildcards:
           - jewelry
           - short shorts, belt, white shorts
           - makeup, purple lips
+    # 國王戰隊帝王者
+    # https://zh.wikipedia.org/zh-tw/%E5%9C%8B%E7%8E%8B%E6%88%B0%E9%9A%8A%E5%B8%9D%E7%8E%8B%E8%80%85
+    kingohger:
+      # https://civitai.com/models/1586809/nephila-kingohger?modelVersionId=1795648
+      nephila:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/kingohger/nephila/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/kingohger/nephila/costume-ethnicity__
+            {0.8::, __lazy-wildcards/cosplay-char/kingohger/nephila/costume__|}
+        main-trigger-words:
+          - NephilaKingohger
+        costume-ethnicity:
+          - pink hair, purple hair, mask, colored skin, helmet, monster girl, extra eyes, arthropod girl, alien, faceless, no face
+        costume:
+          - long sleeves, black dress
 

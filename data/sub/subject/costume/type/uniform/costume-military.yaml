@@ -241,4 +241,75 @@ lazy-wildcards:
           - napoleonera
           - victorianera
           - ww1era
+      # https://civitai.com/models/324049/military-trench-coat
+      military_trench_coat:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/military_trench_coat/costume-main__
+            {, {1-$$__lazy-wildcards/subject/costume/military_trench_coat/costume__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/military_trench_coat/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/military_trench_coat/expressions__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/military_trench_coat/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/military_trench_coat/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/military_trench_coat/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/military_trench_coat/style__}|}
+            {, __lazy-wildcards/subject/costume/military_trench_coat/style-age__|}
+        costume-main:
+          - military trench coat, long coat, t4ctr3nch, junfa
+        costume:
+          - officer overcoat
+          - double-breasted greatcoat
+        costume-elem:
+          - double breasted
+          - epaulettes, military epaulettes
+          - high collar, military collar
+          - gold buttons
+          - brass buttons
+          - capelet, military cloak
+          - military officer
+          - military uniform
+          - military boots
+          - leather gloves
+          - coat open, open clothes
+          - scarf
+          - raincoat
+          - military cape
+          - belt
+          - high heels
+          - bare legs, thighs
+          - wind blown coat
+          - coat flapping
+          - japanese military coat
+          - military-style dress
+          - __lazy-wildcards/utils/color-base__ coat
+        expressions:
+          - serious expression
+        action:
+          - commanding pose
+          - bare legs under coat
+          - legs visible under trench coat
+          - coat with nothing underneath
+          - dynamic pose
+          - teasing pose
+          - crossed legs
+          - military pose
+        costume-weapon:
+          - rifle
+        env:
+          - war room, command scene
+          - military checkpoint
+          - trench background
+          - military background
+          - military barracks
+        style:
+          - military fashion
+          - olive drab
+          - wind blown
+          - low angle
+          - military-style
+          - japanese-style
+        style-age:
+          - taishou, taisho, taisho period, japanese taishou
+          - showa period, japanese showa
+          - meiji period, japanese meiji
 

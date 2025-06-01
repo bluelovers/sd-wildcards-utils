@@ -675,14 +675,19 @@ lazy-wildcards:
           - fortress
           - gloomy forest
           - stone altar
+          - nordic ruins
         env:
           - foggy landscape
-          - fire, campfire, bonfire
+          - __lazy-wildcards/subject/env-elem/campfire/prompts__
           - dragon, dragons
           - potion, alchemy
           - stone circle
           - stone pillar
           - stone archway
+          - ancient scroll
+          - runestone
+          - dragon language
+          - __lazy-wildcards/subject/env-elem/circle-magic/prompts__
         style:
           - medieval fantasy
           - magic, magical
@@ -696,7 +701,7 @@ lazy-wildcards:
             (__lazy-wildcards/cosplay-char/skyrim/nocturnal_dress/costume-main__
             {, __lazy-wildcards/cosplay-char/skyrim/nocturnal_dress/costume__|})
             {, {1-$$__lazy-wildcards/cosplay-char/skyrim/nocturnal_dress/costume-elem__}|}
-            , __lazy-wildcards/cosplay-char/skyrim/style/prompts__
+            {, __lazy-wildcards/cosplay-char/skyrim/style/prompts__|}
         costume-main:
           - >-
             nocturnal dress, sk_noc_dress
@@ -710,4 +715,140 @@ lazy-wildcards:
           - no bra
           - thighs
           - wide sleeves
+      silverlight_armor:
+        prompts:
+          - >-
+            (__lazy-wildcards/cosplay-char/skyrim/silverlight_armor/costume-main__
+            {, {1-$$__lazy-wildcards/cosplay-char/skyrim/silverlight_armor/costume__}|})
+            {, __lazy-wildcards/cosplay-char/skyrim/style/prompts__|}
+        costume-main:
+          - silverlight armor
+        costume:
+          - sk_sl_bra, silverlight bra
+          - sk_sl_pauldrons, silverlight pauldrons
+          - sk_sl_bracers, silverlight bracers
+          - sk_sl_gloves, silverlight gloves
+          - sk_sl_belt, silverlight belt
+          - sk_sl_panty, silverlight panty
+          - sk_sl_thigh, silverlight thigh
+          - sk_sl_boots, silverlight boots
+    guilty_gear:
+      # https://danbooru.donmai.us/posts?tags=baiken&z=5
+      # https://civitai.com/models/157281/baiken-guilty-gear-strive
+      # https://civitai.com/models/139520/baiken-guilty-gear
+      baiken:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/guilty_gear/baiken/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/guilty_gear/baiken/costume-ethnicity__
+            {, {1-2$$__lazy-wildcards/cosplay-char/guilty_gear/baiken/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/guilty_gear/baiken/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/guilty_gear/baiken/costume-weapon__}|}
+        main-trigger-words:
+          - baiken, guilty_gear, baiken \(guilty gear\), baiken \(guilty gear\) \(cosplay\), jelobaiken
+        costume-ethnicity:
+          - (amputee, eyepatch, one-eyed:1.4), big hair, ponytail, long hair, pink hair, pink eyes
+        costume:
+          - black jacket, black kimono, open clothes, japanese clothes, sash, bkn outfit
+          - playboy bunny, strapless, pantyhose
+          - maid, maid headdress, maid apron, frills
+          - nun, habit, sideboob
+          - casual, pullover, skirt
+        costume-elem:
+          - __lazy-wildcards/subject/costume/japanese-traditional-underwear/prompts__
+          - breasts
+          - facial tattoo
+          - forehead mark
+          - facial mark
+          - scar, scar across eye
+          - clenched teeth
+          - no bra
+          - open kimono
+          - stomach
+          - sandals
+          - samurai
+          - torn sleeve
+          - towel around neck
+          - off shoulder
+          - hair spread out
+          - hair flowing over
+        costume-weapon:
+          - katana, bkn katana
+          - holding katana
+          - sake bottle
+      # https://civitai.com/models/56574/testament-or-guilty-gear
+      testament:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/guilty_gear/testament/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/guilty_gear/testament/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/guilty_gear/testament/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/guilty_gear/testament/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/guilty_gear/testament/env__}|}
+        main-trigger-words:
+          - testament, guilty_gear, testament \(guilty gear\), testament \(guilty gear\) \(cosplay\)
+        costume-ethnicity:
+          - androgynous, black hair, red eyes
+        costume-elem:
+          - top hat
+          - formal, white ascot , bare shoulders, midriff, navel
+          - fingerless gloves
+          - studded collar
+          - asymmetrical sleeves, asymmetrical gloves
+          - thick thighs
+        costume-weapon:
+          - scythe, bkn scythe
+          - holding scythe
+        env:
+          - skull
+    monster_hunter:
+      # https://civitai.com/models/166067/yukumo-armor-set-monster-hunter
+      yukumo_armor:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/monster_hunter/yukumo_armor/costume__
+        costume:
+          - yukumo \(armor\), yukumo armor, YukumoArmorMH, japanese clothes, bare shoulders, sleveeless, gloves, kusasuri, japanese armor, baggy pants, tabi, hat, fingerless gloves, hat feather, belt, dress
+    lost_ark:
+      # https://danbooru.donmai.us/posts/5489682?q=lost_ark+
+      # https://civitai.com/models/425243?modelVersionId=521490
+      esteemed_eclipse_armor:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/lost_ark/esteemed_eclipse_armor/costume__
+            {, {1-$$__lazy-wildcards/cosplay-char/lost_ark/esteemed_eclipse_armor/costume-elem__}|}
+        costume:
+          - esteemed eclipse armor, LAesteemedeclipse
+        costume-elem:
+          - cleavage, cleavage cutout, sideboob
+          - high heels, high heel boots
+          - jewelry, earrings, gem
+          - hair ornament
+          - long hair, wavy hair
+          - cape
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
+          - thick thighs
+          - white dress
+          - wings
+      # https://civitai.com/models/425243?modelVersionId=473809
+      cold_fury_armor:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/lost_ark/cold_fury_armor/costume__
+            {, {1-$$__lazy-wildcards/cosplay-char/lost_ark/cold_fury_armor/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/lost_ark/cold_fury_armor/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/lost_ark/cold_fury_armor/env-bg__}|}
+        costume:
+          - >-
+            cold fury armor, LAColdFury
+            , garter strap, gold armor, gold boots, high heel boots
+        costume-elem:
+          - blue cape, cape blown by wind
+          - hair over shoulder, hair blown by wind
+        costume-weapon:
+          - scattered weapons on ground
+          - holding great sword
+        env-bg:
+          - throne room, large window, curtains, banners
+          - wide angle shot of a castle, metal gate, sakura petals falling
 

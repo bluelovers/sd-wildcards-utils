@@ -515,4 +515,53 @@ lazy-wildcards:
           - ground vehicle
           - rocket
           - space ship
+      # https://civitai.com/models/1586922/biopunk?modelVersionId=1795782
+      biopunk:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-punk/biopunk/style-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-3$$__lazy-wildcards/subject/env-elem-punk/biopunk/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/biopunk/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/biopunk/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/biopunk/style__}|}
+        style-main:
+          - >-
+            __lazy-wildcards/utils/fn/style-inspired(v=biopunk)__
+            , biotechnology, biological, bio-cyberpunk
+            , bp01, BioPunkAI, hnsrdlf style
+            , bio mecha, abo
+        env-bg:
+          - biopunk cityscape, biological mutated cityscape
+          - biopunk environment, biopunk landscape
+          - biopunk architecture, organic building
+          - biopunk structures
+          - gene lab
+          - biofactory
+          - contaminated lab
+          - underground facility
+        env:
+          - biological machine
+          - flesh wall
+          - biological tube
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem-pipes/*/prompts__}
+        costume-elem:
+          - bio suit, bio armor, bio-modified suit
+          - bio-enhanced clothing
+          - organic armor
+          - bio-mechanical implants
+          - organic accessories
+          - living armor
+          - goggles
+          - tattooed skin
+        style:
+          - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
+          - grunge texture
+          - mutated, bio modification, mutation
+          - contaminated
+          - gritty
+          - sickly color
+          - green light
+          - medical glow
+          - organic texture
 
