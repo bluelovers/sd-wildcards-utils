@@ -12,9 +12,9 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/env-bg/christmas/env-bg__}|}
             {, {1-$$__lazy-wildcards/subject/env-bg/christmas/costume-elem__}|}
         style-main:
-          - XmasTech, christmas, x-mas, Xmas, ChristmasQuiron style, Christmas decorations, ChristmasWintery, Christmas theme, merry christmas
+          - xmastech, christmas, x-mas, xmas, christmasquiron style, christmas decorations, christmaswintery, christmas theme, merry christmas
         costume-elem:
-          - Santa_Claus, festive_santa_hat
+          - santa_claus, festive_santa_hat
           - red_and_white_costume
         env:
           - sack
@@ -24,15 +24,15 @@ lazy-wildcards:
           - holly, christmas holly
           - snowman
           - star \(symbol\)
-          - Mistletoe
-          - Poinsettia
-          - Wreath
-          - Garland
+          - mistletoe
+          - poinsettia
+          - wreath
+          - garland
           - angel tree topper
-          - Christmas stocking
-          - Pine cone
+          - christmas stocking
+          - pine cone
           - __lazy-wildcards/subject/env-elem-food/gingerbread/prompts__
-          - Christmas_lights, Colorful_string_lights
+          - christmas_lights, colorful_string_lights
         env-bg:
           - __lazy-wildcards/subject/moment/weather-snow/prompts__
       fireworks:
@@ -43,14 +43,48 @@ lazy-wildcards:
             {0.3::, {1-$$__lazy-wildcards/subject/env-bg/fireworks/env-bg__}|}
             {, {1-$$__lazy-wildcards/subject/env-bg/fireworks/style__}|}
         env-bg-main:
-          - fireworks, Fireworks_display
+          - fireworks, fireworks_display
           - firecrackers
         env-bg:
-          - Night_sky_fireworks, fireworks_lighting, Illuminated_sky, night_sky_illumination
+          - night_sky_fireworks, fireworks_lighting, illuminated_sky, night_sky_illumination
         env:
           - colorful_explosion, vibrant_show
-          - Pyrotechnics_show
-          - dynamic_firework_patterns, Artistic_firework_patterns
+          - pyrotechnics_show
+          - dynamic_firework_patterns, artistic_firework_patterns
         style:
-          - celebratory_show, Festive_atmosphere
+          - celebratory_show, festive_atmosphere
+      # https://civitai.com/models/502144/againdragonboatfestival
+      dragon_boat_festival:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/dragon_boat_festival/style-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/dragon_boat_festival/env-main__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/dragon_boat_festival/env__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/env-bg/dragon_boat_festival/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/dragon_boat_festival/style__}|}
+        style-main:
+          - >-
+            dragon boat festival
+            , duanwu festival
+            , tuen ng festival
+            , double fifth festival
+            , dragonboatfestival, againdragonboatfestival
+            , __lazy-wildcards/subject/env-elem-food/zongzi/env-elem-food-main__
+        env-main:
+          - dragon boat
+          - __lazy-wildcards/subject/env-elem-food/zongzi/prompts__
+          - __lazy-wildcards/subject/env-elem/zongye/prompts__
+        env:
+          - river, lake, waterway
+          - festive banners, colorful flags
+          - traditional music, drum beats
+          - __lazy-wildcards/subject/moment/weather-sun/prompts__
+          - zongzi background
+          - zongzi mountain background, bamboo leaves mountain background
+        costume-elem:
+          - __lazy-wildcards/subject/costume/zongye_underwear/prompts__
+        style:
+          - green theme
+          - traditional festive theme
+          - bamboo leaves theme
 

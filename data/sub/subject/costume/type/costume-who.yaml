@@ -54,4 +54,33 @@ lazy-wildcards:
           - sun-bleached hues
           - gold and turquoise accents
           - earthy neutrals
+      # https://civitai.com/models/46696/dancer-lingerie?modelVersionId=51306
+      # https://civitai.com/models/20103/harem-dancer?modelVersionId=23879
+      harem_dancer:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/harem_dancer/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/harem_dancer/costume-elem__}|}
+        costume:
+          - harem dancer, harem outfit, see-through dancer lingerie, dancer costume, dancer, see-through sheer
+        costume-elem:
+          - belly dancer, belly dance, belly dancing
+          - sheer fabric, sheer veil, sheer clothing
+          - jeweled bra, jeweled belt, jeweled accessories
+          - flowing skirt, flowing pants
+          - ornate jewelry, gold jewelry
+          - barefoot
+          - exotic makeup, bold eyeliner
+          - detached sleeves
+          - revealing clothes
+          - bridal gauntlets
+          - mouth veil, face veil
+          - underboob
+          - navel
+          - high heels, high heels sandals
+          - side slit
+          - slave outfit
+        env:
+          - harem, palace, royal court
+          - starry night
 

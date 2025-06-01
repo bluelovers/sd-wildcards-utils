@@ -52,4 +52,33 @@ lazy-wildcards:
       Rou_Geng_Tang:
         prompts:
           - Rou Geng Tang
+      # https://civitai.com/models/93282/v1
+      # https://civitai.com/models/1607908/dragon-boat-festivalcute-zongzi
+      # https://civitai.com/models/487102/festival-hanging-zongzi-approved
+      # https://civitai.com/models/95076/csqzongzi-000008
+      # https://civitai.com/models/127480/zongzi-a-traditional-chinese-food
+      zongzi:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-food/zongzi/env-elem-food-main__{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/zongzi/env-elem-food__}|}
+        env-elem-food-main:
+          - rice zongzi, sticky rice dumpling, zong zi, zonzu
+        env-elem-food:
+          - bamboo leaves
+          - glutinous rice
+          - red beans
+          - mung beans
+          - salted egg yolk
+          - pork filling
+          - sweet filling
+          - rice dumpling
+          - rice ball
+          - hanging zongzi
+          - wrapped in bamboo leaves
+          - >-
+            a {panda|fox|cat|mouse|christmas_tree|bunny|dragon}-shaped sticky rice dumpling
+          - >-
+            {zonzanaked|zonzacloing|zonza}
+          - __lazy-wildcards/subject/env-elem/zongye/prompts__
 

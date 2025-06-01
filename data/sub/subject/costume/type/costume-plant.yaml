@@ -1,0 +1,54 @@
+lazy-wildcards:
+  subject:
+    costume:
+      leaf_clothing:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/leaf_clothing/costume-main__
+            {, {1-2$$__lazy-wildcards/subject/costume/leaf_clothing/costume__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/leaf_clothing/costume-elem__}|}
+        costume-main:
+          - leaf clothing, leaf outfit
+        costume:
+          - leaf leotard
+          - leaf dress
+          - leaf bra
+          - leaf skirt
+          - leaf top
+          - leaf shirt
+          - leaf bikini
+        costume-elem:
+          - leaf shorts
+          - leaf hat
+          - leaf gloves
+          - vines
+          - leaf boots
+          - leaf heels
+          - leaf sandals
+          - leaf hair ornament
+          - leaf jewelry, leaf accessories
+          - leaf print
+      # https://civitai.com/models/96688/zongyeunderwear
+      zongye_underwear:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/zongye_underwear/costume-main__
+            {, {1-2$$__lazy-wildcards/subject/costume/zongye_underwear/costume__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/zongye_underwear/costume-elem__}|}
+        costume-main:
+          - zongye underwear, zongye outfit, zongyeunderwear
+        costume:
+          - zongye bra
+          - zongye bikini
+          - criss-cross halter
+          - string,zongye leaves skirt
+          - zongye cover nipples
+          - zongye breast curtains
+        costume-elem:
+          - zongye top
+          - zongye shirt
+          - zongye dress
+          - zongye skirt
+          - __lazy-wildcards/subject/costume/leaf_clothing/prompts__
+          - __lazy-wildcards/subject/env-elem/zongye/prompts__
+

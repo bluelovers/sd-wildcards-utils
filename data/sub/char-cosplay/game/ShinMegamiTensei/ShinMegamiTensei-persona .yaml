@@ -1,0 +1,28 @@
+lazy-wildcards:
+  cosplay-char:
+    ShinMegamiTensei:
+      # https://danbooru.donmai.us/posts?tags=tougou_hifumi+&z=5
+      # https://megamitensei.fandom.com/wiki/Hifumi_Togo
+      # 東郷 一二三
+      # https://civitai.com/models/148071/hifumi-tougou-persona
+      tougou_hifumi:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/ShinMegamiTensei/tougou_hifumi/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/ShinMegamiTensei/tougou_hifumi/costume-ethnicity__
+            {0.8::, __lazy-wildcards/cosplay-char/ShinMegamiTensei/tougou_hifumi/costume__|}
+            {, {1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/tougou_hifumi/costume-elem__}|}
+        main-trigger-words:
+          - tougou hifumi, hifumi tougou
+        costume-ethnicity:
+          - green eyes, black hair, long hair, bangs, blunt bangs, hair ornament
+        costume:
+          - (blue blazer, black bow, black bowtie:1.4), blazer, blue jacket, kneehighs, skirt, black skirt, kosei high school uniform, long sleeves
+        costume-elem:
+          - loafers, shoes, socks
+          - eyelashes
+          - collared shirt
+          - narrowed eyes
+          - sidelocks
+          - striped bow, striped bowtie, black and white bow, black and white bowtie
+

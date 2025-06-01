@@ -23,4 +23,41 @@ lazy-wildcards:
           - crop top overhang
           - underboob
           - camisole
+      ruffle_skirt:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-lower-body/ruffle_skirt/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-elem-lower-body/ruffle_skirt/costume-elem__}|}
+        costume:
+          - >-
+            __lazy-wildcards/subject/costume-elem-lower-body/ruffle_skirt/fn/ruffle(v=skirt)__
+            , ruffl3bl4z3r
+        costume-elem:
+          - long sleeves, jacket
+          - __lazy-wildcards/subject/costume-elem-lower-body/ruffle_skirt/fn/frill(v=skirt)__
+          - __lazy-wildcards/subject/costume-elem-lower-body/ruffle_skirt/fn/frill(v=sleeves)__
+        fn:
+          # 荷葉邊（Frill）：通常是較柔和的波浪狀裝飾，布料一邊打褶或摺疊，營造出輕盈、優雅的感覺。常見於領口、袖口或裙擺，適合細緻點綴。
+          frill:
+            - >-
+              frill ${v:skirt}, frilled ${v:skirt}, frilly ${v:skirt}
+          # 褶襇（Ruffle）：布料被更緊密地打褶或收縮，製造出更豐富、蓬鬆的立體感，通常用來強調層次與動感，像是裙子、裝飾細節或服飾邊緣。
+          ruffle:
+            - >-
+              ruffle ${v:skirt}, ruffled ${v:skirt}
+      # https://civitai.com/models/324005/ruffle-skirt-and-blazer
+      ruffle_skirt-long:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-lower-body/ruffle_skirt-long/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-elem-lower-body/ruffle_skirt/costume-elem__}|}
+        costume:
+          - __lazy-wildcards/subject/costume-elem-lower-body/ruffle_skirt/costume__, long skirt, long ruffle skirt
+      ruffle_skirt-short:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-lower-body/ruffle_skirt-short/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-elem-lower-body/ruffle_skirt/costume-elem__}|}
+        costume:
+          - __lazy-wildcards/subject/costume-elem-lower-body/ruffle_skirt/costume__, short skirt, short ruffle skirt
 

@@ -314,4 +314,24 @@ lazy-wildcards:
           - mistletoe leaves
           - mistletoe berries
           - holly mistletoe
+      # 粽葉
+      zongye:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/zongye/env-elem-zongye-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/zongye/env-elem-zongye__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/zongye/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/zongye/style__}|}
+        env-elem-zongye-main:
+          - zongye, bamboo leaf, bamboo leaves, generic zongye, rice dumpling leaf
+        env-elem-zongye:
+          - ma bamboo leaf, wide_leaf
+          - green bamboo leaf, phyllostachys makinoi, delicate leaf, small leaf
+          - shell ginger leaf, alpinia zerumbet, tropical leaf, shiny leaf
+        env:
+          - bamboo leaves on water
+          - bamboo leaves on ground
+          - bamboo leaves on grass
+        style:
+          - leaf motif
 

@@ -627,4 +627,87 @@ lazy-wildcards:
         env-bg:
           - __lazy-wildcards/subject/env-bg-interior/doorway/prompts__
           - desk, on desk
+    # https://danbooru.donmai.us/posts?page=2&tags=the_elder_scrolls_v%3A_skyrim
+    skyrim:
+      style:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/skyrim/style/main-trigger-words__
+            {, {1-$$__lazy-wildcards/cosplay-char/skyrim/style/costume-ethnicity__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/skyrim/style/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/skyrim/style/costume-weapon__}|}
+            {, {1-3$$__lazy-wildcards/cosplay-char/skyrim/style/env-bg__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/skyrim/style/env__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/skyrim/style/style__}|}
+        main-trigger-words:
+          - the_elder_scrolls_v skyrim, skyrim
+        costume-ethnicity:
+          - nordic female
+          - dragonborn
+        costume-elem:
+          - fur armor
+          - cape
+          - cloak
+          - archer
+          - fantasy race
+          - bard
+          - navel
+        costume-weapon:
+          - two-handed sword
+          - staff
+          - shield, shields
+          - bow, bows
+          - arrow, arrows
+        env-bg:
+          - snowy, snow, snowing
+          - winter, winter landscape
+          - forest, pine trees, pine tree
+          - mountains, mountain range
+          - castle, castle ruins
+          - stone wall, stone walls
+          - ruins, ancient ruins
+          - village, village scene
+          - medieval architecture
+          - nordic architecture
+          - snowy mountain
+          - snowfield
+          - tavern
+          - fortress
+          - gloomy forest
+          - stone altar
+        env:
+          - foggy landscape
+          - fire, campfire, bonfire
+          - dragon, dragons
+          - potion, alchemy
+          - stone circle
+          - stone pillar
+          - stone archway
+        style:
+          - medieval fantasy
+          - magic, magical
+          - exploration
+      # https://www.nexusmods.com/skyrim/mods/89557
+      # https://danbooru.donmai.us/posts/6218209?q=the_elder_scrolls_v%3A_skyrim
+      # https://civitai.com/models/1594084/skyrim-nocturnal-dress?modelVersionId=1803931
+      nocturnal_dress:
+        prompts:
+          - >-
+            (__lazy-wildcards/cosplay-char/skyrim/nocturnal_dress/costume-main__
+            {, __lazy-wildcards/cosplay-char/skyrim/nocturnal_dress/costume__|})
+            {, {1-$$__lazy-wildcards/cosplay-char/skyrim/nocturnal_dress/costume-elem__}|}
+            , __lazy-wildcards/cosplay-char/skyrim/style/prompts__
+        costume-main:
+          - >-
+            nocturnal dress, sk_noc_dress
+        costume:
+          - sk_noc_heels
+          - feet
+        costume-elem:
+          - cleavage, cleavage cutout, sideboob
+          - black dress
+          - collarbone
+          - no bra
+          - thighs
+          - wide sleeves
 

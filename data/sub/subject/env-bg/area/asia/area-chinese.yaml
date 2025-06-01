@@ -1,0 +1,42 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      # https://civitai.com/models/390454/againguofengstyle?modelVersionId=435648
+      chinese_landscape:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/chinese_landscape/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/chinese_landscape/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/chinese_landscape/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/chinese_landscape/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/chinese_landscape/style__}|}
+        env-bg-main:
+          - >-
+            chinese landscape, traditional chinese landscape
+            , guofeng
+        env-bg:
+          - mountain landscape
+          - rivers
+          - bamboo forest
+          - pagoda
+          - lotus pond
+          - cherry blossom trees
+          - chinese architecture
+          - pine tree
+        env:
+          - __lazy-wildcards/subject/moment/weather-mist/prompts__
+          - nature background
+          - __lazy-wildcards/subject/env-elem/bridge/prompts__
+          - flowing river
+          - waterfall
+        costume-elem:
+          - traditional clothes
+        style:
+          - serene atmosphere
+          - traditional chinese art style
+          - ink wash, ink painting
+          - ancient china
+          - muted colors
+          - chinese aesthetic
+          - __lazy-wildcards/utils/scenery-no-humans__
+

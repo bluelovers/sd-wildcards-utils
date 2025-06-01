@@ -498,11 +498,6 @@ lazy-wildcards:
           - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
           - curtains
           - pubic tattoo
-      # https://civitai.com/models/284907/classical-frilled-nurse-uniform
-      nurse_old_style:
-        prompts:
-          - >-
-            (Classical Frilled Nurse Uniform, nurse_old_style_01:1.2), apron, nurse cap, short sleeves, striped dress, puffy sleeves, vertical stripes, nurse, white apron, puffy short sleeves, pantyhose
       # https://civitai.com/models/664810/hula-girl?modelVersionId=744005
       hula_girl:
         prompts:
@@ -897,4 +892,38 @@ lazy-wildcards:
         style:
           - glass shatter effect
           - __lazy-wildcards/utils/fn/style-inspired(v=shredded)__, __lazy-wildcards/utils/fn/style-inspired(v=shattered)__
+      # https://www.shakker.ai/zh-TW/modelinfo/4b46031fa46d4fe3bed4199693a8044b?versionUuid=fa0f675e7f5548dbbd6a0af8165f19db
+      bioluminescent_dress:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/bioluminescent_dress/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/bioluminescent_dress/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/bioluminescent_dress/style__}|}
+        costume:
+          - bioluminescent dress, glowing dress
+        costume-elem:
+          - light-emitting fabric
+          - luminous accessories
+          - bioluminescent clothes
+          - luminescent dress
+        style:
+          - futuristic fashion
+          - fantasy-inspired design
+          - magical aesthetics
+          - sci-fi elements
+          - radiant colors
+          - ethereal glow
+          - glowing patterns
+          - shimmering effects
+          - iridescent details
+          - neon accents
+          - electric blue
+          - stellar violet
+          - neon green
+          - luminescent white
+          - quatic theme
+          - rainbow gradient
+          - cosmic theme
+          - celestial theme
+          - holographic elements
 

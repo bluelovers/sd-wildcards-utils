@@ -333,7 +333,7 @@ lazy-wildcards:
       time:
         prompts:
           - >-
-            {1-$$sunlight|sunset|cool sun|scorching sun|bright sun|dappled sunlight|light rays}
+            __lazy-wildcards/subject/moment/weather-sun/prompts__
           - dawn
           - twilight
           - >-
@@ -343,6 +343,27 @@ lazy-wildcards:
           - Dusk
           - __cof-location/timeofday/all__
           - dynamic moment
+      weather-sun:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/moment/weather-sun/env-moment__}
+            {, {1-$$__lazy-wildcards/subject/moment/weather-sun/env__}|}
+        env-moment:
+          - sun
+          - sunlight
+          - sunny
+          - bright sun
+          - scorching sun
+          - dappled sunlight
+          - light rays
+          - cool sun
+          - sunset
+        env:
+          - sunny landscape
+          - sunny day
+          - sunny sky
+          - blue sky
+          - clear sky
       weather-star:
         prompts:
           - >-
