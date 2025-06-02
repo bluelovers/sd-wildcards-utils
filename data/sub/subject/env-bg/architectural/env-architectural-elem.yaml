@@ -29,4 +29,120 @@ lazy-wildcards:
           - natural light
           - separated by glass
           - silhouette
+      road:
+        prompts:
+          - >-
+            ({1-2$$__lazy-wildcards/subject/env-elem/road/env-road__})
+            {0.4::, {1-$$__lazy-wildcards/subject/env-elem/road/env__}|}
+        env-road:
+          - rock road
+          - stone road
+          - wooden road
+          - brick road
+          - cement floor
+          - asphalt road
+          - gravel road
+          - dirt path, dirt road, muddy path
+          - marble floor
+          - tile floor
+          - grated walkway
+          - steel road
+          - perforated metal floor
+          - glass floor
+          - bamboo floor
+          - rubber path
+          - stone_paved_path
+        env:
+          - dirty
+          - cobblestone
+          - old street
+          - historic road
+          - wooden planks
+          - pedestrian area
+          - sidewalk
+          - mosaic pavement
+          - decorative floor
+          - decorative tile
+          - industrial walkway
+          - transparent material
+          - high-tech floor
+          - metal grate
+          - eco-friendly materials
+          - floating walkway
+          - __lazy-wildcards/subject/env-elem/traffic-barrier/prompts__
+          - under bridge
+          - lamppost
+      traffic-barrier:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/env-elem/traffic-barrier/env__})
+        env:
+          - traffic barrier
+          - traffic barrel
+          - jersey barrier
+          - guard rail
+      bridge:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/bridge/env-main__
+            {, {1-3$$__lazy-wildcards/subject/env-elem/bridge/env-bridge-main*__}|}{0.3:::{1.2|1.3|1.4}|})
+            {0.3::, {1-3$$__lazy-wildcards/subject/env-elem/bridge/env-bridge-style1__}|}
+            {0.3::, {1-3$$__lazy-wildcards/subject/env-elem/bridge/env-bridge-style2__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/bridge/env__}|}
+        env-main:
+          - bridge
+        env-bridge-main1:
+          - >-
+            {1-$$suspension bridge|cable bridge|cable-stayed bridge}
+          - arch_bridge
+          - >-
+            {1-$$beam_bridge|girder_bridge}
+          - truss_bridge
+          - drawbridge
+          - bascule_bridge
+          - modern_bridge
+          - pedestrian_bridge, footbridge
+          - railway_bridge, train_bridge
+          - covered_bridge
+          - living root bridge
+          - nature_bridge
+          - chinese_arch_bridge, oriental_bridge
+          - torii_bridge
+          - tower bridge
+          - >-
+            {1-$$japanese_arch_bridge|japanese_bridge}
+          - >-
+            {1-$$korean_bridge|korean_stone_bridge|traditional_arch_bridge|hanok_bridge}
+          - >-
+            {1-$$aqueduct|water_bridge}
+          - >-
+            {1-$$floating_bridge|levitating_bridge}
+          - overpass
+        env-bridge-main2:
+          - bifrost, Rainbow_bridge
+          - bone_bridge
+          - crystal bridge
+          - >-
+            {1-$$lava_bridge|molten_bridge}
+        env-bridge-style1:
+          - steel_bridge
+          - stone_bridge
+          - wooden_bridge
+          - vine_bridge
+        env-bridge-style2:
+          - magical_bridge, mythical_bridge
+          - creepy bridge
+          - shining_bridge
+          - organic_bridge
+          - fire_bridge
+          - energy_bridge, laser_bridge
+          - shadow_bridge
+          - cloud bridge
+          - broken Bridge, damaged Bridge
+          - ancient_bridge
+          - >-
+            {1-$$ice_bridge|frost_bridge|frozen_bridge}
+        env:
+          - under bridge
+
 
