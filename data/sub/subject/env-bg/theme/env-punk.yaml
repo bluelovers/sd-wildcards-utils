@@ -189,6 +189,7 @@ lazy-wildcards:
           - __lazy-wildcards/utils/color-base__ lighting
       # https://civitai.com/models/329635/xuer-dieselpunk?modelVersionId=369373
       # https://civitai.com/models/69318/reel-dieselpunk?modelVersionId=73990
+      # https://civitai.com/models/1282751/dieselpunk-age?modelVersionId=1447241
       dieselpunk:
         prompts:
           - >-
@@ -200,8 +201,11 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/env-elem-punk/dieselpunk/env__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem-punk/dieselpunk/env-elem-vehicle__}|}
             {, {1-2$$__lazy-wildcards/subject/env-elem-punk/dieselpunk/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/dieselpunk/style__}|}
         style-main:
-          - xuer dieselpunk, dieselpunk theme, Decopunk theme, coalpunk theme, CoalPunkAI
+          - >-
+            xuer dieselpunk, dieselpunk theme, Decopunk theme, coalpunk theme, CoalPunkAI, dieselpunk age
+            , __lazy-wildcards/utils/fn/style-inspired(v=dieselpunk)__
         costume:
           - Armored Soldiers
           - Mechanical Armor
@@ -238,6 +242,9 @@ lazy-wildcards:
           - retro_military_base, concrete_bunker, barbed_wire_fence
           - Smog-Filled Streets, smog_filled_street, industrial_street_lamp
           - brick_buildings
+        style:
+          - 1950s style
+          - retro science fiction
       # https://civitai.com/models/535810/nuclear-hazard-style-lora-fluxsdxlpony?modelVersionId=595622
       Nuclear_Hazard:
         prompts:
@@ -319,18 +326,27 @@ lazy-wildcards:
           - greebly
           - greeble-heavy designs
       # https://civitai.com/models/87257/steampunkbundle-konyconi?modelVersionId=92855
+      # https://civitai.com/models/20830/steampunkai-10mb-lora-extraction
+      # https://civitai.com/models/59338/steampunk-redone-konyconi
+      # https://civitai.com/models/96103/steampunkmachinery
+      # https://civitai.com/models/154687/steampunkvictorian-agestyle
+      # https://civitai.com/search/models?baseModel=SD%201.5&sortBy=models_v9&query=steampunk
+      # https://civitai.com/models/572303/steampunk
       steampunk-bundle:
         prompts:
           - >-
             __lazy-wildcards/subject/env-elem-punk/steampunk-bundle/style-main__
-            {0.8::, {1-$$__lazy-wildcards/subject/env-elem-punk/steampunk-bundle/style-trigger-words__}|}
+            {0.75::, {1-$$__lazy-wildcards/subject/env-elem-punk/steampunk-bundle/style-trigger-words__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem-punk/steampunk-bundle/env__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem-punk/steampunk-bundle/costume-elem__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem-punk/steampunk-bundle/style__}|}
         style-main:
-          - __lazy-wildcards/utils/fn/style-inspired(v=steampunk)__
+          - >-
+            __lazy-wildcards/utils/fn/style-inspired(v=steampunk)__
+            , __lazy-wildcards/utils/fn/made-of(v=steampunk)__
+            , SteampunkAI, steampunk theme
+            , SteampunkCh
         style-trigger-words:
-          - SteampunkAI, steampunk theme
           - CogpunkAI, cogpunk theme, cog
           - AetherpunkAI, Aetherpunk theme, Arcanepunk theme
           - Victorianpunkai, victorian_era
@@ -352,6 +368,7 @@ lazy-wildcards:
           - brass_mechanics
           - steam-powered_gadgets
           - steam_smoke
+          - victorian london
         costume-elem:
           - __lazy-wildcards/subject/costume-elem/Jetpack/prompts__
           - vintage_leather
@@ -359,6 +376,7 @@ lazy-wildcards:
           - belt
         style:
           - mechanical_aesthetics
+          - victorian aesthetics
       gears:
         prompts:
           - >-
@@ -517,6 +535,7 @@ lazy-wildcards:
           - rocket
           - space ship
       # https://civitai.com/models/1586922/biopunk?modelVersionId=1795782
+      # https://civitai.com/models/91807?modelVersionId=97868
       biopunk:
         prompts:
           - >-
@@ -528,41 +547,210 @@ lazy-wildcards:
         style-main:
           - >-
             __lazy-wildcards/utils/fn/style-inspired(v=biopunk)__
-            , biotechnology, biological, bio-cyberpunk
+            , __lazy-wildcards/utils/fn/style-inspired(v=biotechnology)__
+            , __lazy-wildcards/utils/fn/style-inspired(v=biological)__
             , bp01, BioPunkAI, hnsrdlf style
             , bio mecha, abo
         env-bg:
-          - biopunk cityscape, biological mutated cityscape
-          - biopunk environment, biopunk landscape
-          - biopunk architecture, organic building
-          - biopunk structures
-          - gene lab
-          - biofactory
-          - contaminated lab
-          - underground facility
+          - __lazy-wildcards/subject/env-elem-punk/biopunk/fn/biopunk(v=cityscape)__
+          - __lazy-wildcards/subject/env-elem-punk/biopunk/fn/biopunk(v=environment)__, __lazy-wildcards/subject/env-elem-punk/biopunk/fn/biopunk(v=landscape)__
+          - __lazy-wildcards/subject/env-elem-punk/biopunk/fn/biopunk(v=building)__
+          - __lazy-wildcards/subject/env-elem-punk/biopunk/fn/biopunk(v=structures)__
+          - __lazy-wildcards/subject/env-elem-punk/biopunk/fn/biopunk(v=gene lab)__
+          - __lazy-wildcards/subject/env-elem-punk/biopunk/fn/biopunk(v=factory)__
+          - __lazy-wildcards/subject/env-elem-punk/biopunk/fn/biopunk(v=contaminated lab)__
+          - __lazy-wildcards/subject/env-elem-punk/biopunk/fn/biopunk(v=underground facility)__
+          - __lazy-wildcards/subject/env-elem-punk/biopunk/fn/biopunk(v=background)__
         env:
           - biological machine
-          - flesh wall
-          - biological tube
+          - __lazy-wildcards/subject/env-elem-punk/biopunk/fn/biopunk(v=flesh wall)__
           - >-
-            {1-$$__lazy-wildcards/subject/env-elem-pipes/*/prompts__}
+            biological tube, {1-$$__lazy-wildcards/subject/env-elem-pipes/*/prompts__}
+          - __lazy-wildcards/subject/env-elem-punk/biopunk/fn/biopunk(v=vehicle)__
         costume-elem:
-          - bio suit, bio armor, bio-modified suit
-          - bio-enhanced clothing
-          - organic armor
-          - bio-mechanical implants
+          - __lazy-wildcards/subject/env-elem-punk/biopunk/fn/biopunk(v=suit)__
+          - __lazy-wildcards/subject/env-elem-punk/biopunk/fn/biopunk(v=armor)__
+          - __lazy-wildcards/subject/env-elem-punk/biopunk/fn/biopunk(v=clothing)__
+          - __lazy-wildcards/subject/env-elem-punk/biopunk/fn/biopunk(v=outfit)__
+          - __lazy-wildcards/subject/env-elem-punk/biopunk/fn/biopunk(v=implants)__
           - organic accessories
           - living armor
           - goggles
           - tattooed skin
+          - __lazy-wildcards/subject/env-elem-punk/biopunk/fn/biopunk(v=body)__
+          - bioboosted armor
         style:
           - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
           - grunge texture
-          - mutated, bio modification, mutation
+          - __lazy-wildcards/subject/env-elem-punk/biopunk/fn/biopunk2(v=mutated)__, __lazy-wildcards/subject/env-elem-punk/biopunk/fn/biopunk2(v=modification)__, __lazy-wildcards/subject/env-elem-punk/biopunk/fn/biopunk2(v=mutation)__
           - contaminated
           - gritty
           - sickly color
           - green light
           - medical glow
           - organic texture
+          - __lazy-wildcards/subject/env-elem-punk/biopunk/fn/biopunk(v=cyberpunk)__
+          - glowing bioluminescent
+          - see-through, transparent
+        fn:
+          biopunk:
+            - >-
+              biopunk ${v:environment}, biotechnology ${v:environment}, biological ${v:environment}
+              , organic ${v:environment}
+              , bioboosted ${v:environment}, bio-boosted ${v:environment}
+              {0.3::, {isopod|octopus|insect|arthropod|spider|moth}-like ${v:environment}|}
+              , biological mutated ${v:environment}
+          biopunk2:
+            - >-
+              biopunk ${v:environment}, biotechnology ${v:environment}, biological ${v:environment}
+              , organic ${v:environment}
+              , bioboosted ${v:environment}, bio-boosted ${v:environment}
+              {0.3::, {isopod|octopus|insect|arthropod|spider|moth}-like ${v:environment}|}
+          bio-base:
+            - >-
+              biopunk ${v:environment}, biotechnology ${v:environment}, biological ${v:environment}
+              , organic ${v:environment}
+              , bioboosted ${v:environment}, bio-boosted ${v:environment}
+          bio-mutated:
+            - >-
+              biological mutated ${v:environment}
+          bio-like:
+            - >-
+              {isopod|octopus|insect|arthropod|spider|moth}-like ${v:environment}
+      # https://civitai.com/images/80202909
+      pc_80s:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-punk/pc_80s/env-elem-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/pc_80s/env-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/pc_80s/style__}|}
+        env-elem-main:
+          - early 1980s old computer console
+        env-elem:
+          - vintage computer
+          - retro console
+          - crt monitor
+          - control panel
+          - data terminal
+          - cathode ray tube monitor
+          - deep monitor
+        style:
+          - old technology
+          - worn texture
+          - retro futurism, analog interface, futuristic oldtech
+          - 1980's technology
+      # https://civitai.com/models/470609/stasis-tank
+      # https://civitai.com/models/177230/clone-tube
+      # https://civitai.com/models/115842/containment-tube
+      # https://civitai.com/models/193158/designing-waifu-in-clone-tube
+      # https://civitai.com/models/478699/baiyousouculture-tankstasis-tank
+      stasis_tank:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-punk/stasis_tank/env-elem-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/stasis_tank/env-elem__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/stasis_tank/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/stasis_tank/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/stasis_tank/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/stasis_tank/style__}|}
+        env-elem-main:
+          - in container, baiyousou
+        env-elem:
+          - stasis tank
+          - test tube tank
+          - bio pod
+          - incubation chamber
+          - suspended animation tank
+          - cryogenic chamber
+          - clone-tube
+          - containment tube, culture tank
+        env-bg:
+          - inside-stasis, in stasis tank
+          - futuristic laboratory
+          - containment room
+          - tank room
+          - metallic background
+        env:
+          - tube
+          - cable
+          - transparent tank
+          - glass container
+          - sci fi equipment
+          - glowing liquid
+          - wired machine
+          - airtight tube
+          - bubble
+        costume-elem:
+          - suspended in tank, floating in liquid
+          - nude in tank
+          - oxygen mask
+          - tubes on body
+        style:
+          - cyber aesthetic
+          - hazy atmosphere
+      # https://civitai.com/models/314674/trashpunkstyle-sd?modelVersionId=352989
+      trashpunk:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-punk/trashpunk/style-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-3$$__lazy-wildcards/subject/env-elem-punk/trashpunk/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/trashpunk/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/trashpunk/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/trashpunk/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/trashpunk/env-elem-vehicle__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/trashpunk/style__}|}
+        style-main:
+          - >-
+            __lazy-wildcards/utils/fn/style-inspired(v=trashpunk)__
+            , scavenger aesthetics, post-industrial scrapyard fashion
+            , TrashPunkStyle
+        env-bg:
+          - junkyard, junkyard city
+          - industrial wasteland
+          - shantytown, shanty
+          - metal shack
+          - collapsed building
+          - wasteland market, junk shop
+          - duststorm
+          - camp in ruins
+          - makeshift lab, scavenger workbench
+          - urban decay
+        env:
+          - cables
+          - trash
+          - rusty metal
+          - barrel fire
+          - rusty fence
+          - __lazy-wildcards/subject/env-elem-pipes/industrial-pipes/prompts__
+        costume-elem:
+          - scrap armor
+          - post-apocalyptic clothing
+          - scavenger outfit
+          - wasteland cyborg
+          - nomad
+          - scrapper engineer
+          - shoulder armor
+          - goggles on head
+          - cybernetic limb
+          - tool belt
+          - dirty clothes
+          - mechanical backpack
+          - dirt stained goggles
+        costume-weapon:
+          - improvised weapon
+          - makeshift equipment
+        env-elem-vehicle:
+          - post-apocalyptic vehicle
+        style:
+          - post-apocalypse
+          - cyberpunk
+          - dieselpunk
+          - wasteland aesthetics
+          - patchwork
+          - dirt stained
+          - rust color
+          - sunlight through dust
+          - gritty aesthetic
+          - wasteland gang
+          - recycled tech
 

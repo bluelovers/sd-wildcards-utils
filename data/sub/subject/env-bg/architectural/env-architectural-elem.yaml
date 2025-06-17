@@ -118,6 +118,7 @@ lazy-wildcards:
           - >-
             {1-$$floating_bridge|levitating_bridge}
           - overpass
+          - aerial walkway, skybridge
         env-bridge-main2:
           - bifrost, Rainbow_bridge
           - bone_bridge
@@ -144,5 +145,33 @@ lazy-wildcards:
             {1-$$ice_bridge|frost_bridge|frozen_bridge}
         env:
           - under bridge
-
+      # 中空街道跨樓建築、懸空連體建築
+      # https://civitai.com/images/56838083
+      skybridge_building:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/env-elem/skybridge_building/env-bg-main__}
+            {, {1-$$__lazy-wildcards/subject/env-elem/skybridge_building/env-bg__}|}{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/skybridge_building/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/skybridge_building/style__}|}
+        env-bg-main:
+          - skybridge building
+          - elevated arch building
+        env-bg:
+          - urban ruins, abandoned city, post-apocalyptic city
+          - arch building
+          - skybridge
+          - overgrown building, vines on building
+          - __lazy-wildcards/subject/env-bg/megastructure/env-bg__
+        env:
+          - gap between buildings
+          - sunlight through ruins
+          - nature reclaiming
+          - city in decay
+          - rusty surfaces
+          - market under bridge
+          - abandoned street
+        style:
+          - nostalgic color palette
+          - dystopian
 

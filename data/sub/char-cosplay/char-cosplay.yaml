@@ -420,17 +420,20 @@ lazy-wildcards:
     # https://rule34.xxx/index.php?page=post&s=list&tags=zoanoid
     guyver:
       # https://civitai.com/models/120063/guyvercha
+      # https://civitai.com/models/884353/the-guyver
+      # https://civitai.com/models/417499/guyver-ova-1989-1992-style-locon-for-pony
+      # https://civitai.com/models/1474645/guyver-guyver-illustrious-ad
       guyver:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/guyver/guyver/main__,
-            __lazy-wildcards/cosplay-char/guyver/guyver/main-types/*__,
-            {1-$$__lazy-wildcards/cosplay-char/guyver/guyver/costume-elem__}
-            {,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/costume-weapon__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/style__}|}
-            {,{1-$$__lazy-wildcards/cosplay-char/guyver/guyver/env__}|}
+            __lazy-wildcards/cosplay-char/guyver/guyver/main__
+            {, __lazy-wildcards/cosplay-char/guyver/guyver/main-types/*__|}
+            {, {1-$$__lazy-wildcards/cosplay-char/guyver/guyver/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/guyver/guyver/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/guyver/guyver/style__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/guyver/guyver/env__}|}
         main:
-          - guyver, kyoushoku soukou guyver, bio armor, biosuit, Bio Booster Armor Guyver, GZZVZR
+          - guyver, kyoushoku soukou guyver, bio armor, biosuit, Bio Booster Armor Guyver, GZZVZR, the guyver of biological armor, bioboosted armor
         main-types:
           g00:
             - g00, guyver_0, dark biosuit
@@ -1681,7 +1684,7 @@ lazy-wildcards:
           - __lazy-wildcards/subject/env-bg/desert/prompts__
           - __lazy-wildcards/subject/env-elem/skull/prompts__
           - chain
-          - __lazy-wildcards/subject/moment/weather-mist/prompts__
+          - __lazy-wildcards/subject/env-moment/weather-mist/prompts__
         env-bg:
           - __lazy-wildcards/subject/env-bg/SavageVerse/prompts__
           - Gastown
@@ -1940,7 +1943,7 @@ lazy-wildcards:
           - lush_nature, verdant_plants
           - wooden_bridge
           - distant_mountains
-          - __lazy-wildcards/subject/moment/weather-mist/prompts__
+          - __lazy-wildcards/subject/env-moment/weather-mist/prompts__
           - river, boat
         env-bg:
           - cage, in cage

@@ -32,8 +32,7 @@ lazy-wildcards:
       - >-
         {1-2$$__lazy-wildcards/subject/env-elem-food*/*/prompts__}
         , {1-6$$__lazy-wildcards/*/*/*/env-elem-food*__}
-      - __cornf-meal/prompt-object__
-      - __cornf-meal/drink__
+      - __lazy-wildcards/subject/env-elem-food/model-*/prompts__
     food-all-multi:
       - >-
         {1-2$$__lazy-wildcards/dataset/food-all__}
@@ -73,9 +72,13 @@ lazy-wildcards:
         {1-2$$__lazy-wildcards/subject/style-artist/*/prompts__}
     env-elem-creatures:
       - >-
-        {1-2$$__lazy-wildcards/*/*/*/env-elem-creatures*__}
-      - __lazy-wildcards/cosplay-others/*/*/prompts__
+        {1-3$$__lazy-wildcards/*/*/*/env-elem-creatures*__}
+      - __lazy-wildcards/cosplay-others*/*/*/prompts__
+      - __lazy-wildcards/cosplay-others-creatures*/*/*/prompts__
+      - >-
+        {1-2$$__lazy-wildcards/cosplay-others*/*/*/prompts__}
       - __Bo/creatures/random__
+      - __crea-*/prompt-creature__
     env-elem-vehicle:
       - __lazy-wildcards/*/*/*/env-elem-vehicle*__
       - __Bo/vehicles/random__

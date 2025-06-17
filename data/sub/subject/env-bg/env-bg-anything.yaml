@@ -3,6 +3,11 @@ lazy-wildcards:
     env-bg-anything:
       model-cof:
         prompts:
+          - >-
+            {1-3$$__lazy-wildcards/subject/env-bg-anything/model-cof/main__}
+          - >-
+            __lazy-wildcards/subject/env-bg-anything/model-cof/main__
+        main:
           - photo of __cof-location/place/*__, __cof-location/weather__ weather, during __cof-location/season__, __cof-location/timeofday/all__
           - __cf-*/location__
           - __cof-location/place/*__
@@ -32,9 +37,9 @@ lazy-wildcards:
           - __lazy-wildcards/subject/scenes*/*/prompts*__
           - >-
             {1-3$$__lazy-wildcards/subject/style-elem*/*/prompts*__}
-          - __lazy-wildcards/subject/moment/random/prompts__
+          - __lazy-wildcards/subject/env-moment/random/prompts__
           - >-
-            {1-3$$__lazy-wildcards/subject/moment/*/prompts__}
+            {1-3$$__lazy-wildcards/subject/env-moment/*/prompts__}
       unorganized:
         prompts:
           - __lazy-wildcards/subject/env-bg-anything/unorganized/env-bg__

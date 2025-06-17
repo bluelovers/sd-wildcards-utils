@@ -1,0 +1,71 @@
+lazy-wildcards:
+  cosplay-others-creatures:
+    real-like:
+      cat:
+        prompts:
+          - >-
+            (__lazy-wildcards/cosplay-others-creatures/real-like/cat/env-elem-creatures-main__
+            {, {1-2$$__lazy-wildcards/cosplay-others-creatures/real-like/cat/env-elem-creatures-cat-breed__}|}
+            {, {1-3$$__lazy-wildcards/cosplay-others-creatures/real-like/cat/env-elem-creatures-cat-colors__}|}
+            {, {1-2$$__lazy-wildcards/cosplay-others-creatures/real-like/cat/env-elem-creatures-cat-life_stages__}|}
+            {, {1-2$$__lazy-wildcards/cosplay-others-creatures/real-like/cat/env-elem-creatures-cat-body__}|})
+            {, {1-$$__lazy-wildcards/cosplay-others-creatures/real-like/cat/env-elem-creatures__}|}
+            {, {1-$$__lazy-wildcards/cosplay-others-creatures/real-like/cat/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-others-creatures/real-like/cat/env__}|}
+            {, {1-$$__lazy-wildcards/cosplay-others-creatures/real-like/cat/style__}|}
+        env-elem-creatures-main:
+          - cat, feline
+        env-elem-creatures-cat-breed:
+          # 波斯貓
+          - persian cat
+          # 曼赤肯
+          - munchkin cat
+          # 蘇格蘭摺耳
+          - scottish fold
+          # 暹羅貓
+          - siamese cat
+          # 美國短毛貓
+          - american shorthair
+          # 緬因貓
+          - maine coon
+          # 斯芬克斯貓
+          - sphynx cat
+          # 日本短尾貓
+          - japanese bobtail
+        env-elem-creatures-cat-colors:
+          - white cat
+          - black cat
+          - tabby cat
+          - orange cat
+          - gray cat
+          - bicolor cat
+          - calico cat
+          - snowshoe cat
+          - point coloration
+          - cream colored fur
+        env-elem-creatures-cat-life_stages:
+          - >-
+            {1-$$kitten|newborn}
+          - small cat
+          - adult cat
+          - old cat
+        env-elem-creatures-cat-body:
+          - tiny cat
+          - medium cat
+          - large cat
+          - giant cat
+        env-elem-creatures:
+          - pet
+          - fantasy cat
+        costume-elem:
+          - cat ears, nekomimi
+          - fluffy
+          - cat girl
+          - odd eyes
+        env:
+          - living room
+          - sunlight
+          - indoors
+        style:
+          - animal focus, cat focus
+

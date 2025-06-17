@@ -46,4 +46,55 @@ lazy-wildcards:
           - clear_cubes
         action-drink:
           - pov, pov hands, holding, holding bottle
+      wine-base:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem-food-drink/wine-base/env-elem-food__}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food-drink/wine-base/env-elem-food-tool__}|}
+        env-elem-food:
+          - red wine
+          - white wine
+          - cocktail, colorful drink, colorful wine
+        env-elem-food-tool:
+          - wine glass
+          - martini glass
+          - garnished drink
+          - swirling wine
+      wine-sake:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-food-drink/wine-sake/env-elem-food__
+            {, {1-$$__lazy-wildcards/subject/env-elem-food-drink/wine-sake/env-elem-food-tool__}|}
+        env-elem-food:
+          - sake, sake in ochoko
+        env-elem-food-tool:
+          - ochoko
+          - tokkuri
+          - japanese tableware
+          - sake bottle
+          - __lazy-wildcards/subject/env-elem-food-tool/red_sake_cup/prompts__
+      wine-glass:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem-food-drink/wine-glass/env-elem-food-tool__}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food-drink/wine-glass/env__}|}
+        env-elem-food-tool:
+          - whiskey glass
+          - glass of liquor
+          - bottle of liquor
+          - glass bottle
+          - labelled bottle
+        env:
+          - on the rocks, on the ice
+      wine-can:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem-food-drink/wine-can/env-elem-food-tool-main__}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food-drink/wine-can/env-elem-food-tool__}|}
+        env-elem-food-tool-main:
+          - aluminum can, canned beer
+        env-elem-food-tool:
+          - canned drink
+          - chu-hi
+          - canned wine, canned liquor
 

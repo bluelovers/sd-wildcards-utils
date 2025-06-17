@@ -1,0 +1,32 @@
+lazy-wildcards:
+  subject:
+    env-elem-food:
+      model-cof:
+        prompts:
+          - >-
+            {0.7::__cornf-meal/prompt-object__|0.3::__cornf-meal/prompt-full__}
+          - >-
+            ({1-3$$__lazy-wildcards/subject/env-elem-food/model-cof/env-elem-food__})
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/model-cof/style__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/model-cof/env__}|}
+            {, __lazy-wildcards/subject/env-elem-food/model-cof/env-bg__|}
+        env-elem-food:
+          - __cornf-meal/main__
+          - >-
+            {1-3$$__cornf-meal/main__}
+          - >-
+            {1-3$$__cornf-meal/side__}
+          - >-
+            {1-3$$__cornf-meal/dessert__}
+          - >-
+            {1-3$$__cornf-meal/drink__}
+        style:
+          - >-
+            {1-3$$__cornf-meal/taste-adj__}
+          - __cornf-meal/color__
+        env:
+          - __cornf-meal/accessory__
+          - __cornf-meal/setting-adj__
+        env-bg:
+          - __cornf-meal/location__
+

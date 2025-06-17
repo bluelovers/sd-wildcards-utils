@@ -31,4 +31,34 @@ lazy-wildcards:
           - __lazy-wildcards/subject/env-elem/moss/prompts__
           - hieroglyphic_carvings
           - ancient jungle, rainforest_ambiance, jungle_ruins
+      # 巨石建築、巨石結構、巨石遺跡
+      megalithic_architecture:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/megalithic_architecture/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/megalithic_architecture/env-bg__}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/megalithic_architecture/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/megalithic_architecture/style__}|}
+        env-bg-main:
+          - megalithic architecture
+        env-bg:
+          - stonehenge, megalithic stone circle
+          - dolmen, megalithic
+        env:
+          - ancient ruins
+          - standing stones
+          - sacred ruins
+          - mossy rocks
+          - primitive architecture
+          - foggy ruins, misty background
+          - night sky
+          - overgrown ruins
+          - mossy stone
+          - twilight
+          - ritual site
+          - giant ruins
+        style:
+          - low saturation
+          - ambient light
+          - celestial alignment
 

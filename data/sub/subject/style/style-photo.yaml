@@ -3,12 +3,13 @@ lazy-wildcards:
     style-elem:
       # https://civitai.com/models/937649/manga-style-food
       # https://civitai.com/models/190341/food-real-photos?modelVersionId=213754
+      # https://civitai.com/models/127450/food-elegant-style?modelVersionId=139441
       food:
         prompts:
           - >-
-            (__lazy-wildcards/subject/style-elem/food/style-main__{0.3:::{1.2|1.3|1.4}|})
-            {, {1-$$__lazy-wildcards/subject/style-elem/food/style__}|}
-            {, {1-$$__lazy-wildcards/subject/style-elem/food/env-elem-food__}|}
+            (__lazy-wildcards/subject/style-elem/food/style-main__{0.3:::{1.2|1.3|1.4|1.6}|})
+            {0.2::, {1-$$__lazy-wildcards/subject/style-elem/food/style__}|}
+            {0.2::, {1-$$__lazy-wildcards/subject/style-elem/food/env-elem-food__}|}
             {0.2::, {1-$$__lazy-wildcards/subject/style-elem/food/env-elem-food-flavor__}|}
             {, {1-$$__lazy-wildcards/subject/style-elem/food/style-view__}|}
         style-main:
@@ -22,6 +23,8 @@ lazy-wildcards:
           - food gloss, appetizing texture, food shine
           - colorful vegetables, vibrant food, fresh ingredients, healthy food
           - steam rising, hot food, freshly cooked, appetizing steam, still life
+          - giant food
+          - fantasy food
         env-elem-food-flavor:
           - juicy meat, grilled texture, tender appearance, meat gloss
           - melting cheese, cheese pull, creamy texture, savory food
@@ -30,6 +33,11 @@ lazy-wildcards:
         style-view:
           - eye angle view
           - food close up
+          - blurry, depth of field
+          - macro photography
+          - still life
+          - cozy atmosphere
+          - photorealistic
       # https://civitai.com/models/789313/80s-fantasy-movie-sd15-sdxl-pony-flux?modelVersionId=1286569
       80s_Movie_Still:
         prompts:

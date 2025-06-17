@@ -8,7 +8,7 @@ lazy-wildcards:
             __lazy-wildcards/subject/env-bg/city-traffic/fn/road-in__,
             __lazy-wildcards/subject/env-bg/city-traffic/main__,
             {5-$$__lazy-wildcards/subject/env-bg/city-traffic/env__}
-            {, __lazy-wildcards/subject/moment/random/prompts__|}
+            {, __lazy-wildcards/subject/env-moment/random/prompts__|}
         main:
           - cityscape, building
         style:
@@ -75,7 +75,7 @@ lazy-wildcards:
           - rainy_highway, wet_road
         env:
           - cityscape_view
-          - __lazy-wildcards/subject/moment/weather-mist/prompts__
+          - __lazy-wildcards/subject/env-moment/weather-mist/prompts__
           - sunset_view
           - ocean_view
           - heat_wave

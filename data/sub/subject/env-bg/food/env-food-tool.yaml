@@ -1,14 +1,14 @@
 lazy-wildcards:
   subject:
-    env-elem:
+    env-elem-food-tool:
       # https://civitai.com/models/192295/red-sake-cup-sakazuki-sfw-and-nsfw?modelVersionId=216003
       red_sake_cup:
         prompts:
           - >-
-            (__lazy-wildcards/subject/env-elem/red_sake_cup/env-main__{0.3:::{1.2|1.3|1.4}|})
-            {, {1-$$__lazy-wildcards/subject/env-elem/red_sake_cup/costume-weapon__}|}
-            {, {1-$$__lazy-wildcards/subject/env-elem/red_sake_cup/action__}|}
-            {, {1-$$__lazy-wildcards/subject/env-elem/red_sake_cup/style__}|}
+            (__lazy-wildcards/subject/env-elem-food-tool/red_sake_cup/env-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-food-tool/red_sake_cup/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food-tool/red_sake_cup/action__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food-tool/red_sake_cup/style__}|}
         env-main:
           - red sake cup, sakazuki, traditional japanese sake cup
         costume-weapon:
@@ -29,22 +29,23 @@ lazy-wildcards:
           - floral_patterns
           - gold_accents
           - red_and_black_theme
+      # 青花瓷
       # https://civitai.com/models/1145701/qing-hua-ci-style?modelVersionId=1288571
       # https://civitai.com/models/125115/blue-and-white-or-chinese-ornament
       # https://civitai.com/models/151548/or-blue-and-white-porcelain-universe-or-chinese-style-fantasy
       qing_hua_ci:
         prompts:
           - >
-            (__lazy-wildcards/subject/env-elem/qing_hua_ci/env-main__{0.3:::{1.2|1.3|1.4}|})
-            {, {1-$$__lazy-wildcards/subject/env-elem/qing_hua_ci/style__}|}
-            {, {1-$$__lazy-wildcards/subject/env-elem/qing_hua_ci/env__}|}
+            (__lazy-wildcards/subject/env-elem-food-tool/qing_hua_ci/env-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-food-tool/qing_hua_ci/style__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food-tool/qing_hua_ci/env__}|}
         env-main:
           - >-
             __lazy-wildcards/utils/fn/style-inspired(v=qing_hua_ci)__
             , blue_and_white
             , cobalt_blue, underglaze_blue
             , qinghua, qinghua_universe
-            , blue and white porcelain
+            , blue and white porcelain, blue white porcelain
             , white_porcelain, pale_white
             , smooth_surface
         env:
@@ -79,10 +80,10 @@ lazy-wildcards:
       beaker_laboratory_equipment:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/env-elem/beaker_laboratory_equipment/env-main__}
-            {, {1-$$__lazy-wildcards/subject/env-elem/beaker_laboratory_equipment/env__}|}
-            {, {1-$$__lazy-wildcards/subject/env-elem/beaker_laboratory_equipment/env-bg__}|}
-            {, {1-$$__lazy-wildcards/subject/env-elem/beaker_laboratory_equipment/style__}|}
+            {1-$$__lazy-wildcards/subject/env-elem-food-tool/beaker_laboratory_equipment/env-main__}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food-tool/beaker_laboratory_equipment/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food-tool/beaker_laboratory_equipment/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food-tool/beaker_laboratory_equipment/style__}|}
         env-main:
           - beaker
           - flask
@@ -106,4 +107,42 @@ lazy-wildcards:
       coffee_cups:
         prompts:
           - coffee cups, paper cups
+      bowls-various:
+        prompts:
+          - >-
+            {1-2$$__lazy-wildcards/subject/env-elem-food-tool/bowls-various/env-elem-main__}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food-tool/bowls-various/env-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food-tool/bowls-various/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food-tool/bowls-various/style__}|}
+        env-elem-main:
+          - bowl
+          - various bowl
+          - ceramic bowl, porcelain bowl
+          - lacquer bowl, lacquerware bowl
+          - clay bowl
+          - metal bowl
+          - wooden bowl
+        env-elem:
+          - decorative bowl
+          - painted bowl
+          - __lazy-wildcards/subject/env-elem-food-tool/qing_hua_ci/prompts__
+          - colorful bowl
+          - vintage ceramics
+          - shiny ceramics
+          - fantasy bowl
+          - see-through bowl
+        env:
+          - offering food
+          - japanese tableware
+          - chinese table setting
+          - eating utensils
+          - dining table
+          - colorful dishware
+        style:
+          - glossy texture
+          - natural texture
+          - karakusa pattern
+          - geometric pattern
+          - flower pattern
+          - ethnic pattern
 

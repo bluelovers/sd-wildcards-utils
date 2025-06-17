@@ -1,44 +1,44 @@
 lazy-wildcards:
   subject:
-    moment:
+    env-moment:
       random:
         prompts:
           - >-
-            {1-3$$__lazy-wildcards/subject/moment/weather/prompts__}
-            {,__lazy-wildcards/subject/moment/time/prompts__|}
-            {,__lazy-wildcards/subject/moment/moon/prompts__|}
-            {,__lazy-wildcards/subject/moment/season/prompts__|}
-            {0.1::,__lazy-wildcards/subject/moment/age/prompts__|}
+            {1-3$$__lazy-wildcards/subject/env-moment/weather/prompts__}
+            {,__lazy-wildcards/subject/env-moment/time/prompts__|}
+            {,__lazy-wildcards/subject/env-moment/moon/prompts__|}
+            {,__lazy-wildcards/subject/env-moment/season/prompts__|}
+            {0.1::,__lazy-wildcards/subject/env-moment/age/prompts__|}
           - >-
-            __lazy-wildcards/subject/moment/time/prompts__
-            {,{1-3$$__lazy-wildcards/subject/moment/weather/prompts__}|}
-            {,__lazy-wildcards/subject/moment/moon/prompts__|}
-            {,__lazy-wildcards/subject/moment/season/prompts__|}
-            {0.1::,__lazy-wildcards/subject/moment/age/prompts__|}
+            __lazy-wildcards/subject/env-moment/time/prompts__
+            {,{1-3$$__lazy-wildcards/subject/env-moment/weather/prompts__}|}
+            {,__lazy-wildcards/subject/env-moment/moon/prompts__|}
+            {,__lazy-wildcards/subject/env-moment/season/prompts__|}
+            {0.1::,__lazy-wildcards/subject/env-moment/age/prompts__|}
           - >-
-            __lazy-wildcards/subject/moment/moon/prompts__
-            {,{1-3$$__lazy-wildcards/subject/moment/weather/prompts__}|}
-            {,__lazy-wildcards/subject/moment/time/prompts__|}
-            {,__lazy-wildcards/subject/moment/season/prompts__|}
-            {0.1::,__lazy-wildcards/subject/moment/age/prompts__|}
+            __lazy-wildcards/subject/env-moment/moon/prompts__
+            {,{1-3$$__lazy-wildcards/subject/env-moment/weather/prompts__}|}
+            {,__lazy-wildcards/subject/env-moment/time/prompts__|}
+            {,__lazy-wildcards/subject/env-moment/season/prompts__|}
+            {0.1::,__lazy-wildcards/subject/env-moment/age/prompts__|}
           - >-
-            __lazy-wildcards/subject/moment/season/prompts__
-            {,{1-3$$__lazy-wildcards/subject/moment/weather/prompts__}|}
-            {,__lazy-wildcards/subject/moment/time/prompts__|}
-            {,__lazy-wildcards/subject/moment/moon/prompts__|}
-            {0.1::,__lazy-wildcards/subject/moment/age/prompts__|}
+            __lazy-wildcards/subject/env-moment/season/prompts__
+            {,{1-3$$__lazy-wildcards/subject/env-moment/weather/prompts__}|}
+            {,__lazy-wildcards/subject/env-moment/time/prompts__|}
+            {,__lazy-wildcards/subject/env-moment/moon/prompts__|}
+            {0.1::,__lazy-wildcards/subject/env-moment/age/prompts__|}
       weather:
         prompts:
-          - __lazy-wildcards/subject/moment/weather-rain/prompts__
-          - __lazy-wildcards/subject/moment/weather-mist/prompts__
-          - __lazy-wildcards/subject/moment/weather-clouds/prompts__
-          - __lazy-wildcards/subject/moment/weather-snow/prompts__
-          - __lazy-wildcards/subject/moment/weather-lightning/prompts__
-          - __lazy-wildcards/subject/moment/weather-raging-storm/prompts__
-          - __lazy-wildcards/subject/moment/weather-star/prompts__
-          - __lazy-wildcards/subject/moment/weather-*/prompts__
+          - __lazy-wildcards/subject/env-moment/weather-rain/prompts__
+          - __lazy-wildcards/subject/env-moment/weather-mist/prompts__
+          - __lazy-wildcards/subject/env-moment/weather-clouds/prompts__
+          - __lazy-wildcards/subject/env-moment/weather-snow/prompts__
+          - __lazy-wildcards/subject/env-moment/weather-lightning/prompts__
+          - __lazy-wildcards/subject/env-moment/weather-raging-storm/prompts__
+          - __lazy-wildcards/subject/env-moment/weather-star/prompts__
+          - __lazy-wildcards/subject/env-moment/weather-*/prompts__
           - dynamic weather
-          - __lazy-wildcards/subject/moment/magic-tempests/prompts__
+          - __lazy-wildcards/subject/env-moment/magic-tempests/prompts__
       # https://civitai.com/models/97677/cloudtunnel
       # https://civitai.com/models/162513/cloud-platform
       # https://civitai.com/models/206091/joscheks-mostly-realistic-clouds
@@ -46,8 +46,8 @@ lazy-wildcards:
       weather-clouds:
         prompts:
           - >-
-            __lazy-wildcards/subject/moment/weather-clouds/env-moment-main__
-            , {1-$$__lazy-wildcards/subject/moment/weather-clouds/env-moment__}
+            __lazy-wildcards/subject/env-moment/weather-clouds/env-moment-main__
+            , {1-$$__lazy-wildcards/subject/env-moment/weather-clouds/env-moment__}
         env-moment-main:
           - cloudtunnel, cloudAI, cloud, clouds
         env-moment:
@@ -75,7 +75,7 @@ lazy-wildcards:
       weather-snow:
         prompts:
           - >-
-            ({1-$$__lazy-wildcards/subject/moment/weather-snow/env-moment__}:1.2)
+            ({1-$$__lazy-wildcards/subject/env-moment/weather-snow/env-moment__}:1.2)
         env-moment:
           - winter, Wintery
           - snow
@@ -90,16 +90,16 @@ lazy-wildcards:
           - falling snow, falling snowflakes
           - surrounded by snowflakes
           - surrounded by snowy
-          - __lazy-wildcards/subject/moment/weather-frozen/prompts__
+          - __lazy-wildcards/subject/env-moment/weather-frozen/prompts__
       weather-frozen:
         prompts:
           - >-
-            (__lazy-wildcards/subject/moment/weather-frozen/env-moment-main__
-            {, {1-$$__lazy-wildcards/subject/moment/weather-frozen/env-moment__}|}{0.3:::{1.2|1.3|1.4}|})
-            {, {1-2$$__lazy-wildcards/subject/moment/weather-frozen/env-bg__}|}
-            {, {1-$$__lazy-wildcards/subject/moment/weather-frozen/env__}|}
-            {0.3::, {1-$$__lazy-wildcards/subject/moment/weather-frozen/costume-elem__}|}
-            {, {1-$$__lazy-wildcards/subject/moment/weather-frozen/style__}|}
+            (__lazy-wildcards/subject/env-moment/weather-frozen/env-moment-main__
+            {, {1-$$__lazy-wildcards/subject/env-moment/weather-frozen/env-moment__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-2$$__lazy-wildcards/subject/env-moment/weather-frozen/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-moment/weather-frozen/env__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/env-moment/weather-frozen/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-moment/weather-frozen/style__}|}
         env-moment-main:
           - frozen, ice, cold
         env-moment:
@@ -136,7 +136,7 @@ lazy-wildcards:
       weather-lightning:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/moment/weather-lightning/env-moment__}
+            {1-$$__lazy-wildcards/subject/env-moment/weather-lightning/env-moment__}
         env-moment:
           - lightning
           - lightning bolt
@@ -144,16 +144,16 @@ lazy-wildcards:
       weather-storm-supercell:
         prompts:
           - >-
-            {1-2$$__lazy-wildcards/subject/moment/weather-storm-supercell/env-moment__}
+            {1-2$$__lazy-wildcards/subject/env-moment/weather-storm-supercell/env-moment__}
         env-moment:
           - supercell
       # https://civitai.com/models/330933/tempest-magic-grimoire
       magic-tempests:
         prompts:
           - >-
-            __lazy-wildcards/subject/moment/magic-tempests/style-main__
-            {, {1-$$__lazy-wildcards/subject/moment/magic-tempests/style__}|}
-            {0.3::, __lazy-wildcards/subject/moment/weather-raging-storm/prompts__|}
+            __lazy-wildcards/subject/env-moment/magic-tempests/style-main__
+            {, {1-$$__lazy-wildcards/subject/env-moment/magic-tempests/style__}|}
+            {0.3::, __lazy-wildcards/subject/env-moment/weather-raging-storm/prompts__|}
         style-main:
           - tempestmagic
         style:
@@ -165,12 +165,12 @@ lazy-wildcards:
       weather-raging-storm:
         prompts:
           - >-
-            {1-3$$__lazy-wildcards/subject/moment/weather-raging-storm/env-moment__}
-            {, __lazy-wildcards/subject/moment/weather-lightning/prompts__|}
-            {, {1-3$$__lazy-wildcards/subject/moment/weather-raging-storm/env-bg__}|}
-            {0.3::, {1-$$__lazy-wildcards/subject/moment/weather-raging-storm/action__}|}
-            {, {1-$$__lazy-wildcards/subject/moment/weather-raging-storm/env__}|}
-            {, {1-$$__lazy-wildcards/subject/moment/weather-raging-storm/style__}|}
+            {1-3$$__lazy-wildcards/subject/env-moment/weather-raging-storm/env-moment__}
+            {, __lazy-wildcards/subject/env-moment/weather-lightning/prompts__|}
+            {, {1-3$$__lazy-wildcards/subject/env-moment/weather-raging-storm/env-bg__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/env-moment/weather-raging-storm/action__}|}
+            {, {1-$$__lazy-wildcards/subject/env-moment/weather-raging-storm/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-moment/weather-raging-storm/style__}|}
         env-moment:
           - raging storm, ragingstorm
           - typhoon
@@ -205,12 +205,12 @@ lazy-wildcards:
       weather-rain:
         prompts:
           - >-
-            __lazy-wildcards/subject/moment/weather-rain/env-moment__
-            {0.3::, {1-$$__lazy-wildcards/subject/moment/weather-rain/costume-elem__}|}
-            {0.3::, {1-$$__lazy-wildcards/subject/moment/weather-rain/env__}|}
-            {0.3::, {1-$$__lazy-wildcards/subject/moment/weather-rain/env-bg__}|}
-            {0.3::, {1-$$__lazy-wildcards/subject/moment/weather-rain/style__}|}
-            {, {1-$$__lazy-wildcards/subject/moment/weather-rain/style-env__}|}
+            __lazy-wildcards/subject/env-moment/weather-rain/env-moment__
+            {0.3::, {1-$$__lazy-wildcards/subject/env-moment/weather-rain/costume-elem__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/env-moment/weather-rain/env__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/env-moment/weather-rain/env-bg__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/env-moment/weather-rain/style__}|}
+            {, {1-$$__lazy-wildcards/subject/env-moment/weather-rain/style-env__}|}
         env-moment:
           - ((raining, t1hal, Under The Rain, rain, RainWorld)), reflection
         costume-elem:
@@ -229,15 +229,15 @@ lazy-wildcards:
       weather-mist:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/moment/weather-mist/env-moment__}
-            {0.3::, {1-$$__lazy-wildcards/subject/moment/weather-rain/style-env__}|}
-            {, {1-$$__lazy-wildcards/subject/moment/weather-mist/env__}|}
+            {1-$$__lazy-wildcards/subject/env-moment/weather-mist/env-moment__}
+            {0.3::, {1-$$__lazy-wildcards/subject/env-moment/weather-rain/style-env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-moment/weather-mist/env__}|}
         env-moment:
           - foggy, foggy_scener
           - fog, haze
           - mist, misty
           - steam
-          - __lazy-wildcards/subject/moment/weather-smoke/prompts__
+          - __lazy-wildcards/subject/env-moment/weather-smoke/prompts__
           - thick mist
           - dense_fog
         env:
@@ -245,8 +245,8 @@ lazy-wildcards:
       weather-smoke:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/moment/weather-smoke/env-main__}
-            {, {1-$$__lazy-wildcards/subject/moment/weather-smoke/env__}|}
+            {1-$$__lazy-wildcards/subject/env-moment/weather-smoke/env-main__}
+            {, {1-$$__lazy-wildcards/subject/env-moment/weather-smoke/env__}|}
         env-main:
           - smoke
           - wisps of smoke
@@ -271,11 +271,11 @@ lazy-wildcards:
       weather-natural-disaster-water:
         prompts:
           - >-
-            __lazy-wildcards/subject/moment/weather-natural-disaster-water/env-moment-main__
-            {,{1-3$$__lazy-wildcards/subject/moment/weather-natural-disaster-water/env-bg__}|}
-            {,{1-3$$__lazy-wildcards/subject/moment/weather-natural-disaster-water/env__}|}
-            {,{1-2$$__lazy-wildcards/subject/moment/weather-natural-disaster-water/env-moment__}|}
-            ,{1-4$$__lazy-wildcards/subject/moment/weather-natural-disaster-water/style__}
+            __lazy-wildcards/subject/env-moment/weather-natural-disaster-water/env-moment-main__
+            {,{1-3$$__lazy-wildcards/subject/env-moment/weather-natural-disaster-water/env-bg__}|}
+            {,{1-3$$__lazy-wildcards/subject/env-moment/weather-natural-disaster-water/env__}|}
+            {,{1-2$$__lazy-wildcards/subject/env-moment/weather-natural-disaster-water/env-moment__}|}
+            ,{1-4$$__lazy-wildcards/subject/env-moment/weather-natural-disaster-water/style__}
         env-moment-main:
           - natural disaster, scenery, water
         env-moment:
@@ -329,16 +329,16 @@ lazy-wildcards:
           - rust
           - __lazy-wildcards/utils/scenery-no-humans__
           - reflection
-          - __lazy-wildcards/subject/moment/weather-rain/style-env__
+          - __lazy-wildcards/subject/env-moment/weather-rain/style-env__
       time:
         prompts:
           - >-
-            __lazy-wildcards/subject/moment/weather-sun/prompts__
+            __lazy-wildcards/subject/env-moment/weather-sun/prompts__
           - dawn
           - twilight
           - >-
             night{, neon lights|}
-            {, __lazy-wildcards/subject/moment/moon/prompts__|}
+            {, __lazy-wildcards/subject/env-moment/moon/prompts__|}
           - day
           - Dusk
           - __cof-location/timeofday/all__
@@ -346,8 +346,8 @@ lazy-wildcards:
       weather-sun:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/moment/weather-sun/env-moment__}
-            {, {1-$$__lazy-wildcards/subject/moment/weather-sun/env__}|}
+            {1-$$__lazy-wildcards/subject/env-moment/weather-sun/env-moment__}
+            {, {1-$$__lazy-wildcards/subject/env-moment/weather-sun/env__}|}
         env-moment:
           - sun
           - sunlight
@@ -367,8 +367,8 @@ lazy-wildcards:
       weather-star:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/moment/weather-star/env-bg__}
-            {, {1-$$__lazy-wildcards/subject/moment/weather-star/env__}|}
+            {1-$$__lazy-wildcards/subject/env-moment/weather-star/env-bg__}
+            {, {1-$$__lazy-wildcards/subject/env-moment/weather-star/env__}|}
         env-bg:
           - star \(sky\)
           - starry sky
@@ -382,8 +382,8 @@ lazy-wildcards:
       moon:
         prompts:
           - >-
-            {(__lazy-wildcards/subject/moment/moon/env-moon__{0.3:::{1.2|1.3|1.4}|}),|}
-            {1-$$__lazy-wildcards/subject/moment/moon/env__}
+            {(__lazy-wildcards/subject/env-moment/moon/env-moon__{0.3:::{1.2|1.3|1.4}|}),|}
+            {1-$$__lazy-wildcards/subject/env-moment/moon/env__}
         env-moon:
           - >-
             {cold |}full moon
@@ -401,7 +401,7 @@ lazy-wildcards:
         prompts:
           - __cof-location/season__
           - >-
-            {1-2$$__lazy-wildcards/subject/moment/season/main__}
+            {1-2$$__lazy-wildcards/subject/env-moment/season/main__}
         main:
           - spring
           - summer
@@ -410,7 +410,7 @@ lazy-wildcards:
       weather-fire:
         prompts:
           - >-
-            ({1-$$__lazy-wildcards/subject/moment/weather-fire/env-moment__}{0.3:::{1.2|1.3|1.4}|})
+            ({1-$$__lazy-wildcards/subject/env-moment/weather-fire/env-moment__}{0.3:::{1.2|1.3|1.4}|})
         env-moment:
           - wildfire
           - fire
@@ -423,11 +423,11 @@ lazy-wildcards:
       weather-snow_avalanche:
         prompts:
           - >-
-            (__lazy-wildcards/subject/moment/weather-snow_avalanche/env-moment-main__
-            {, {1-$$__lazy-wildcards/subject/moment/weather-snow_avalanche/env-moment__}|}{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
-            {, {1-$$__lazy-wildcards/subject/moment/weather-snow_avalanche/env-bg*__}|}
-            {0.3::, {1-$$__lazy-wildcards/subject/moment/weather-snow_avalanche/env__}|}
-            {, {1-$$__lazy-wildcards/subject/moment/weather-snow_avalanche/style__}|}
+            (__lazy-wildcards/subject/env-moment/weather-snow_avalanche/env-moment-main__
+            {, {1-$$__lazy-wildcards/subject/env-moment/weather-snow_avalanche/env-moment__}|}{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+            {, {1-$$__lazy-wildcards/subject/env-moment/weather-snow_avalanche/env-bg*__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/env-moment/weather-snow_avalanche/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-moment/weather-snow_avalanche/style__}|}
         env-moment-main:
           - snow avalanche, avalanche
         env-moment:
@@ -469,10 +469,10 @@ lazy-wildcards:
       weather-forest_fire:
         prompts:
           - >-
-            (__lazy-wildcards/subject/moment/weather-forest_fire/env-moment-main__
-            {, {1-$$__lazy-wildcards/subject/moment/weather-forest_fire/env-moment__}|}{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
-            {, {1-$$__lazy-wildcards/subject/moment/weather-forest_fire/env-bg__}|}
-            {, {1-$$__lazy-wildcards/subject/moment/weather-forest_fire/env__}|}
+            (__lazy-wildcards/subject/env-moment/weather-forest_fire/env-moment-main__
+            {, {1-$$__lazy-wildcards/subject/env-moment/weather-forest_fire/env-moment__}|}{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+            {, {1-$$__lazy-wildcards/subject/env-moment/weather-forest_fire/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-moment/weather-forest_fire/env__}|}
         env-moment-main:
           - >-
             forest fire, burning forest, fiery forest
@@ -493,4 +493,32 @@ lazy-wildcards:
           - ashen sky
           - smoke plume
           - burnt remnants
+      weather-overcast:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-moment/weather-overcast/env-moment-main__
+            {, {1-$$__lazy-wildcards/subject/env-moment/weather-overcast/env-moment__}|}{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+            {, {1-$$__lazy-wildcards/subject/env-moment/weather-overcast/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-moment/weather-overcast/style*__}|}
+        env-moment-main:
+          - >-
+            overcast
+        env-moment:
+          - cloudy, cloudy sky, dark clouds, gray sky
+          - sunless
+          - light rain, drizzle
+        env:
+          - wet ground, puddle
+          - wind
+          - wet building
+          - __lazy-wildcards/subject/env-moment/weather-mist/prompts__
+          - __lazy-wildcards/subject/env-moment/weather-clouds/prompts__
+        style:
+          - gloomy
+          - low contrast, low saturation
+          - ambient light
+        style-color:
+          - gray blue, blue tint
+          - lead white
+          - desaturated navy
 

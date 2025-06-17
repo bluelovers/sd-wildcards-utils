@@ -61,11 +61,12 @@ lazy-wildcards:
             - Niagara_Falls
             - Olympic_National_Park
             - Multnomah_Falls
-          tw-taiwan:
-            - Taipei_101
+          # tw-taiwan:
+          #   - Taipei_101
           jp:
             - tokyo_tower
             - golden_pavilion, kyoto, japan
+            - kabukicho, shinjuku, tokyo
           italy:
             - leaning_tower_of_pisa
           england_london:
@@ -151,7 +152,7 @@ lazy-wildcards:
           - iceberg
           - glacial_crevasse, perilous_crevasse
           - aurora_borealis
-          - __lazy-wildcards/subject/moment/weather-snow/prompts__
+          - __lazy-wildcards/subject/env-moment/weather-snow/prompts__
           - cold_ocean
           - __lazy-wildcards/subject/env-bg-architectural/ice_brick_house/prompts__
         env:

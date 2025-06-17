@@ -141,4 +141,40 @@ lazy-wildcards:
           - military_design
           - mecha_paint_scheme
           - space_battle
+      # https://danbooru.donmai.us/posts?tags=train&z=5
+      train:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-vehicle/train/env-elem-vehicle-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/train/env-elem-vehicle__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/train/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/train/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/train/costume-elem__}|}
+        env-elem-vehicle-main:
+          - train
+        env-elem-vehicle:
+          - steampunk train, steampunk aesthetic
+          - multiple unit train
+          - locomotive
+          - steam locomotive
+          - high-speed train
+          - diesel locomotive
+          - freight train
+          - shinkansen
+          - electric locomotive, electric train
+        env-bg:
+          - on train
+          - train station
+          - train station platform
+          - subway
+          - __lazy-wildcards/subject/env-bg-vehicle/railway/prompts__
+          - __lazy-wildcards/subject/env-bg-vehicle/railroad_crossing/prompts__
+        env:
+          # 導盲磚
+          - tactile paving
+          - windshield, side-view mirror
+        costume-elem:
+          - train conductor
+          - train driver
+          - wing collar
 

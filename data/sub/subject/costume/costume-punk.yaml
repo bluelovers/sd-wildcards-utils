@@ -127,4 +127,34 @@ lazy-wildcards:
         style:
           - steampunk
           - cosmic industrial backdrop
+      post-apocalyptic_explorer:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/post-apocalyptic_explorer/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/post-apocalyptic_explorer/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/post-apocalyptic_explorer/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/post-apocalyptic_explorer/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/post-apocalyptic_explorer/style__}|}
+        costume:
+          - post-apocalyptic explorer, post-apocalyptic adventurer, hooded, backpack
+        costume-elem:
+          - >-
+            rugged clothing, tactical vest, combat boots
+          - >-
+            weathered leather jacket, cargo pants, fingerless gloves
+          - >-
+            gas mask, protective goggles, bandana
+          - >-
+            scavenger accessories, makeshift armor
+          - survival gear, survival tools, utility belt
+        env-bg:
+          - desolate wasteland
+          - abandoned cityscape
+          - post-apocalyptic ruins
+        env:
+          - harsh environment
+        style:
+          - gritty realism
+          - dystopian aesthetic
+          - survivalist atmosphere
 

@@ -1,0 +1,41 @@
+lazy-wildcards:
+  subject:
+    costume:
+      # https://civitai.com/models/138917/latex-tech-world-morph?modelVersionId=153554
+      latex_tech_inflatable:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/latex_tech_inflatable/costume-main__{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-$$__lazy-wildcards/subject/costume/latex_tech_inflatable/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/latex_tech_inflatable/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/latex_tech_inflatable/style__}|}
+        costume-main:
+          - >-
+            LatexTech
+            , __lazy-wildcards/utils/fn/style-inspired(v=latex)__
+            , __lazy-wildcards/utils/fn/made-of(v=latex)__
+            , glossy
+        costume-elem:
+          - __lazy-wildcards/utils/fn/made-of-inspired(v=zippers)__
+          - __lazy-wildcards/utils/fn/made-of-inspired(v=inflatable)__
+          - creamy smooth skin, glossy skin
+          - iridescent clothing
+          - inflatable clothing
+          - tight suit
+          - rubber suit
+          - futuristic clothing, techwear
+          - shiny fabric
+          - __lazy-wildcards/subject/costume-elem/see-through-clothes/prompts__
+          - sealed suit
+          - fetish wear
+          - bondage suit
+          - __lazy-wildcards/utils/color-base__ latex
+          - latex armor
+          - high gloss, futuristic fetish, tight shiny suit
+        env:
+          - inflatable tents
+          - inflatable tentacles of octopus
+        style:
+          - scifi
+          - colored glow
+

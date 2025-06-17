@@ -120,6 +120,7 @@ lazy-wildcards:
       # https://civitai.com/models/186378/torii-red?modelVersionId=209262
       # https://civitai.com/models/186411/multiple-torii-senbon-torii-multiple-red-torii-along-a-path
       # https://civitai.com/models/186401/stone-torii?modelVersionId=209296
+      # https://civitai.com/models/1639783/japanese-torii-gate-torii-gate-sando?modelVersionId=1856080
       torii:
         prompts:
           - >-
@@ -135,7 +136,8 @@ lazy-wildcards:
           - torii_bridge
           - the Fushimi Inari Shrine
           - Multiple Torii, senbon Torii, multiple torii along a path, row_of_torii, thousand_torii_path
-          - seaside_torii
+          - seaside torii, lake
+          - torii gate
         env-torii-style:
           - red torii, vermilion_torii
           - stone torii
@@ -169,6 +171,7 @@ lazy-wildcards:
           - mountain_shrine_path
           - mystical_pathway
           - mossy_stepping_stones
+          - shrine path
         style:
           - scary, horror
           - from below

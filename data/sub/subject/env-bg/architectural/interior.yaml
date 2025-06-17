@@ -78,7 +78,7 @@ lazy-wildcards:
         env:
           - >-
             {1-$$cylinder|cylinder in the middle}
-          - __lazy-wildcards/subject/moment/weather-mist/prompts__
+          - __lazy-wildcards/subject/env-moment/weather-mist/prompts__
           - reflection
           - the wooden booth
           - >-
@@ -236,7 +236,7 @@ lazy-wildcards:
             __lazy-wildcards/subject/env-bg-interior/hotel-business-bedroom/main__,
             {1-$$__lazy-wildcards/subject/env-bg-interior/hotel-business-bedroom/main-trigger-words__},
             {1-$$__lazy-wildcards/subject/env-bg-interior/hotel-business-bedroom/env__}
-            {,__lazy-wildcards/subject/moment/random/prompts__|}
+            {,__lazy-wildcards/subject/env-moment/random/prompts__|}
             {,{1-$$__lazy-wildcards/subject/env-bg-interior/hotel-business-bedroom/style__}|}
             {0.3::,{1-$$__lazy-wildcards/subject/env-bg-interior/hotel-business-bedroom/env-bed__}|}
         main:

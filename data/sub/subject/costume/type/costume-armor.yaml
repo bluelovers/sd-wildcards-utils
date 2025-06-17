@@ -62,7 +62,7 @@ lazy-wildcards:
       chinese_armor:
         prompts:
           - >-
-            (__lazy-wildcards/subject/costume/chinese_armor/costume__{0.3:::{1.2|1.3|1.4}|})
+            (__lazy-wildcards/subject/costume/chinese_armor/costume__{0.3:::{1.2|1.3|1.4|1.6}|})
             {, {1-$$__lazy-wildcards/subject/costume/chinese_armor/costume-elem__}|}
             {, {1-$$__lazy-wildcards/subject/costume/chinese_armor/costume-weapon__}|}
             {, {1-$$__lazy-wildcards/subject/costume/chinese_armor/env-bg__}|}
@@ -81,7 +81,6 @@ lazy-wildcards:
           - ancient chinese shoulder armor
           - ancient chinese hair accessories
           - ancient chinese cape
-          - ancient chinese warhorse
           - ancient chinese belt
           - ancient chinese boots
           - ancient chinese cloak
@@ -100,6 +99,9 @@ lazy-wildcards:
           - ancient chinese bow, gong
           - ancient chinese shield, targe
           - long handled battle axe, ancient chinese battle axe
+          - ancient chinese mace, chui
+          - ancient chinese whip, zhang
+          - ancient chinese weapon
         env-bg:
           - ancient chinese fortress
           - ancient chinese imperial palace
@@ -118,7 +120,7 @@ lazy-wildcards:
       chinese_armor-ming:
         prompts:
           - >-
-            (__lazy-wildcards/subject/costume/chinese_armor-ming/costume__{0.3:::{1.2|1.3|1.4}|})
+            (__lazy-wildcards/subject/costume/chinese_armor-ming/costume__{0.3:::{1.2|1.3|1.4|1.6}|})
             , __lazy-wildcards/subject/costume/chinese_armor/prompts__
         costume:
           - ming dynasty armor, mountain pattern armor

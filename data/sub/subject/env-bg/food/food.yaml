@@ -144,35 +144,6 @@ lazy-wildcards:
           - grilled_dish
           - tomato_sauce
           - yogurt_topping
-      # https://civitai.com/models/249905/tableside-kitchen-gourmands-society?modelversionid=282020
-      tamago_kake_gohan:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-elem-food/tamago_kake_gohan/env-elem-food__
-            {, __lazy-wildcards/subject/env-elem-food/tamago_kake_gohan/env-elem-food-egg__|}
-            {, {1-$$__lazy-wildcards/subject/env-elem-food/tamago_kake_gohan/env-elem-food__}|}
-            {, {1-$$__lazy-wildcards/subject/env-elem-food/tamago_kake_gohan/env__}|}
-            {, {1-$$__lazy-wildcards/subject/env-elem-food/tamago_kake_gohan/style__}|}
-        env-elem-food-main:
-          - tamago kake gohan, japanese_food, rice_bowl, raw_egg, tkgs, rice
-        env-elem-food-egg:
-          - __mix-lazy-auto/color-anything__ tkgs, __mix-lazy-auto/color-anything__ raw_egg
-          - iridescent tkgs, iridescent raw_egg, rainbow_color
-        env-elem-food:
-          - egg over rice
-          - japanese-style egg and rice
-          - rice topped with egg
-          - oyakodon
-          - soy_sauce
-          - japanese_breakfast
-          - comfort_food
-          - egg_yolk_shine
-        env:
-          - wooden_table
-        style:
-          - minimalist_presentation
-          - gradient
-          - still life
       # https://civitai.com/models/221021
       # https://civitai.com/models/220976/gingerbread-house
       gingerbread:
@@ -362,15 +333,153 @@ lazy-wildcards:
           - xenomorph egg
       # 生蛋拌飯
       # https://civitai.com/models/340501/tkg-sd15
+      # https://civitai.com/models/249905/tableside-kitchen-gourmands-society?modelversionid=282020
       egg-tamagokake_gohan:
         prompts:
           - >-
-            (__lazy-wildcards/subject/env-elem-food/egg-tamagokake_gohan/env-elem-food__{0.3:::{1.2|1.3|1.4}|})
+            (__lazy-wildcards/subject/env-elem-food/egg-tamagokake_gohan/env-elem-food-main__{0.3:::{1.2|1.3|1.4}|})
+            {0.3::, {1-$$__lazy-wildcards/subject/env-elem-food/egg-tamagokake_gohan/env-elem-food-egg-colors__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/env-elem-food/egg-tamagokake_gohan/env-elem-food__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem-food/egg-tamagokake_gohan/env__}|}
+        env-elem-food-main:
+          - >-
+            tamagokake gohan, tamago kake gohan
+            , tkg, tkgs
+            , rice bowl, rice, bowl
+            , raw yolk in middle of rice
+            , japanese raw egg on rice
+            , japanese-style egg rice
+        env-elem-food-egg-colors:
+          - __mix-lazy-auto/color-anything__ tkgs, __mix-lazy-auto/color-anything__ raw_egg
+          - iridescent tkgs, iridescent raw egg, rainbow color
         env-elem-food:
-          - tkg, tamagokake gohan, rice, bowl
+          - egg over rice
+          - rice topped with egg
+          - oyakodon
+          - soy sauce
+          - japanese breakfast
+          - comfort food
+          - egg yolk shine
         env:
           - wooden table
           - rice bowl
           - wooden bowl
+          - raw yolk
+      # https://tw.englisher.info/2020/12/13/eggs-vocabulary/
+      egg:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/env-elem-food/egg/env-elem-food__}{0.3:::{1.2|1.3|1.4}|})
+        env-elem-food:
+          - egg
+          - egg \(food\)
+          # 一盒蛋
+          - carton of eggs
+          # 蛋黃
+          - >-
+            {raw |}yolk
+          # 蛋白
+          - egg white
+          - fried egg
+          # 水煮蛋
+          - hard boiled egg
+          # 蛋殼
+          - egg shell
+          # 炒蛋
+          - scrambled eggs
+      # https://civitai.com/models/67096/sushi-style
+      # https://civitai.com/models/231325/foodcarvingsd15
+      # https://civitai.com/models/265824/comeuppance-of-sushi
+      # https://civitai.com/models/337941/sushi-style-sdxl-sushify-anything
+      # https://civitai.com/models/137718/sushixl
+      # https://civitai.com/models/1353784/sushi-mermaid
+      # https://civitai.com/models/265282/sushi-style-sdxl
+      sushi:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-food/sushi/env-elem-food-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/sushi/env-elem-food-sushi-type__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/sushi/env-elem-food-sushi__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/sushi/env-elem-food__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/sushi/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/sushi/action__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/sushi/env__}|}
+        env-elem-food-main:
+          - >-
+            sushi
+            , SushiStyle, Sushi-carving-style, sushimermaidill
+            , __lazy-wildcards/utils/fn/made-of-inspired(v=sushi)__
+        env-elem-food-sushi-type:
+          # 握壽司
+          - nigiri, nigiri sushi
+          # 軍艦壽司
+          - gunkan
+          # 捲壽司
+          - maki sushi
+          # 手卷壽司
+          - temaki sushi
+          # 壽司拼盤
+          - sushi platter
+        env-elem-food-sushi:
+          # 鮭魚壽司
+          - salmon sushi
+          # 鮪魚壽司
+          - tuna sushi
+          # 蝦壽司
+          - shrimp sushi
+          # 鰻魚壽司
+          - unagi sushi
+          # 玉子壽司
+          - tamago sushi
+          # 鮭魚卵壽司
+          - ikura sushi
+          # 花枝
+          - squid sushi
+          # 章魚
+          - octopus sushi
+        env-elem-food:
+          - japanese food
+          - seafood
+          # 山葵
+          - wasabi
+          # 醬油
+          - soy sauce
+          - bento box, sushi bento
+          - white rice, shari
+          - black seaweed
+          - neta
+          - sashimi
+          - giant sushi
+        costume-elem:
+          - sushi chef
+          - kimono
+          - japanese maid
+          # 壽司擬人化
+          - sushi personification
+        action:
+          - eating sushi
+          - serving food
+        env:
+          - sushi restaurant
+          - sushi counter, seating
+          - __lazy-wildcards/subject/env-bg/japanese_izakaya/prompts__
+          - wooden tray, natural wood
+          - black tray
+          - red tray
+          - white tray
+      # https://civitai.com/models/231325/foodcarvingsd15
+      carving-style:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-food/carving-style/env-elem-food-carving-main__
+            , {1-$$__lazy-wildcards/subject/env-elem-food/carving-style/env-elem-food-carving__}{0.3:::{1.2|1.3|1.4|1.6}|:1.2})
+        env-elem-food-carving-main:
+          - food-carving-style, __lazy-wildcards/utils/fn/made-of-inspired(v=food-carving-style)__, personification
+        env-elem-food-carving:
+          # 可頌麵包
+          - croissant-carving-style, __lazy-wildcards/utils/fn/made-of-inspired(v=croissant-carving-style)__
+          # 水果
+          - fruit-carving-style, __lazy-wildcards/utils/fn/made-of-inspired(v=fruit-carving-style)__
+          # 壽司/生魚片
+          - Sushi-carving-style, __lazy-wildcards/utils/fn/made-of-inspired(v=sushi-carving-style)__
 
