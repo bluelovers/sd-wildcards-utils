@@ -281,13 +281,14 @@ lazy-wildcards:
       # https://civitai.com/models/1034297/pixelmonster
       # https://civitai.com/models/44960/mpixel
       # https://civitai.com/models/165876/2d-pixel-toolkit-2d?modelVersionId=186677
+      # https://civitai.com/models/195730/aziibpixelmix?modelVersionId=220049
       pixel-game-icon:
         prompts:
           - >-
             (__lazy-wildcards/subject/style-art-type/pixel-game-icon/style-art-main__{0.3:::{1.2|1.3|1.4}|})
             {, {1-$$__lazy-wildcards/subject/style-art-type/pixel-game-icon/style__}|}
         style-art-main:
-          - Game Icon Institute, pixel art, xiangsu, xiang su, pixel, pixelart, pixel art
+          - Game Icon Institute, pixel art, xiangsu, xiang su, pixel, pixelart, pixel art, pixel world
         style:
           - 2d Pixel Art
           - sprite style

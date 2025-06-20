@@ -519,4 +519,32 @@ lazy-wildcards:
           - capturing iconic landmarks
           - immersive experience
           - architecture photography
+      # https://civitai.com/models/248551/old-village?modelVersionId=280446
+      old_rural_buildings:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-architectural/old_rural_buildings/env-bg-main__{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/old_rural_buildings/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/old_rural_buildings/env__}|}
+        env-bg-main:
+          - >-
+            mud wall, stone foundation, pebble pavement
+            , pebble and mud pavement, building, structural
+        env-bg:
+          - old building
+          - traditional house
+          - rural area
+          - thatched house
+          - earthen building
+          - mountain village
+          - chinese village
+          - japanese rural house
+          - ethnic house
+          - old rural buildings
+        env:
+          - thatched roof, plant fiber roof
+          - wood and bamboo structural
+          - countryside
+          - natural material
+          - weathered surface
 

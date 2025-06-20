@@ -86,8 +86,8 @@ lazy-wildcards:
       sky_lantern:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-elem/sky_lantern/env-elem-main__
-            {, {1-$$__lazy-wildcards/subject/env-elem/sky_lantern/env-elem__}|}
+            (__lazy-wildcards/subject/env-elem/sky_lantern/env-elem-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/sky_lantern/env-elem__}|}{0.3:::{1.2|1.3|1.4}|})
             {, {1-$$__lazy-wildcards/subject/env-elem/sky_lantern/env-bg__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem/sky_lantern/env__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem/sky_lantern/action__}|}
@@ -98,6 +98,10 @@ lazy-wildcards:
         env-elem:
           - firework lantern
           - sky lantern with chinese word
+          - colorful sky lantern, a sky lantern in colorful
+          - >-
+            ${c=!__lazy-wildcards/utils/color-base__}
+            __lazy-wildcards/subject/env-elem/sky_lantern/fn/sky_lantern__
         env-bg:
           - railway
           - low house
@@ -121,4 +125,8 @@ lazy-wildcards:
           - festive lighting
           - cultural lighting
           - traditional lighting
+        fn:
+          sky_lantern:
+            - >-
+              ${c}-colored sky lantern, a sky lantern in ${c}
 
