@@ -6,14 +6,14 @@ lazy-wildcards:
       indian:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume-ethnicity-race/indian/costume-ethnicity-race__
+            (__lazy-wildcards/subject/costume-ethnicity-race/indian/costume-ethnicity-race__{0.3:::{1.2|1.3|1.4}|})
             {0.3::, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/indian/costume__}|}
             {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/indian/costume-elem__}|}
             {0.3::, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/indian/action__}|}
             {0.3::, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/indian/env__}|}
             {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/indian/style__}|}
         costume-ethnicity-race:
-          - Indian Girl, Indian Beauty, orna, Indian Model, Indian Actress
+          - __lazy-wildcards/subject/costume-ethnicity-race/korean_girls/fn/doll-likeness(v=indian)__
         costume:
           - saree
           - lehenga choli
@@ -56,7 +56,7 @@ lazy-wildcards:
       korean_girls:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume-ethnicity-race/korean_girls/costume-ethnicity-race__
+            (__lazy-wildcards/subject/costume-ethnicity-race/korean_girls/costume-ethnicity-race__{0.3:::{1.2|1.3|1.4}|})
             {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/korean_girls/costume-ethnicity__}|}
             {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/korean_girls/costume__}|}
             {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/korean_girls/costume-elem__}|}
@@ -64,9 +64,8 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/korean_girls/style__}|}
         costume-ethnicity-race:
           - >-
-            korean girl, korean woman
-            , korean beauty, korean model, korean actress, kpop idol, korean celebrity
-            , korean mixed
+            __lazy-wildcards/subject/costume-ethnicity-race/korean_girls/fn/doll-likeness(v=korean)__
+            , kpop idol
             , kgirl, kgirl9xv1, kr-pny, koreanbabe04
             , asian girls
         costume-ethnicity:
@@ -120,4 +119,19 @@ lazy-wildcards:
           - chic and sophisticated
           - urban korean fashion
           - korean cosmetics
+        fn:
+          doll-likeness:
+            - >-
+              ${v} girl, ${v} woman
+              , ${v} beauty, ${v} model, ${v} actress, ${v} celebrity
+              , ${v} mixed
+      # https://civitai.com/models/344770/vietnamese-girl
+      # https://civitai.com/models/92642/vietnamese-girl-ntc-v10
+      # https://civitai.com/models/43618/cutevietnamesegirl
+      # https://civitai.com/models/214859/nguyen-the-vietnamese-by-noerman
+      vietnamese_girl:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-race/korean_girls/fn/doll-likeness(v=vietnamese)__
+            , MunTran, Nguyen, Vyvan3, jichoi, miucoser{0.3:::{1.2|1.3|1.4}|})
 

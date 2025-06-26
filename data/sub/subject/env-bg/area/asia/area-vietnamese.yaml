@@ -1,0 +1,33 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      # 下龍灣
+      vn-ha_long_bay:
+        prompts:
+          - ha long bay
+      vn-hoi_an_ancient_town:
+        prompts:
+          - hoi an ancient town
+      vn-vietnam:
+        prompts:
+          - >-
+            ({{1-$${1-2$$__lazy-wildcards/subject/env-bg/vn-vietnam/env-bg__}|{1-$$__lazy-wildcards/subject/env-bg/vn-vietnam/env__}|{1-$$__lazy-wildcards/subject/env-bg/vn-vietnam/env-elem-vehicle__}},|}
+            in __lazy-wildcards/subject/env-bg/vn-vietnam/env-bg-main__)
+        env-bg-main:
+          - vietnam, viet nam
+        env-bg:
+          - limestone karst
+          - terraced fields
+          - cave lake
+          - tropical forest
+          - rice field
+          - coastal cliff
+          - vietnam street
+          - riverbank
+          - lotus lake
+        env:
+          - morning mist
+          - sunrise over mountains
+        env-elem-vehicle:
+          - fishing boat
+
