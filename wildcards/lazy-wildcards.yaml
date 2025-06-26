@@ -5723,7 +5723,9 @@
           - churchyard
           - >-
             {underground |}crypt
-          - mausoleum
+          # 陵墓
+          - >-
+            {1-$$mausoleum|divine spirit mausoleum|chinese mausoleum|asian mausoleum}
           - megalithic_tomb
           - floating_island_graveyard
           - burial_mounds
@@ -6870,6 +6872,10 @@
           - muted colors
           - chinese aesthetic
           - "__lazy-wildcards/utils/scenery-no-humans__"
+      # 皇城
+      imperial_city:
+        prompts:
+          - imperial city
       "Japanese-Festival-Bon-Odori":
         prompts:
           - >-
@@ -7098,6 +7104,33 @@
           - hanging signboard
         style:
           - vanishing point
+      "vn-ha_long_bay":
+        prompts:
+          - ha long bay
+      "vn-hoi_an_ancient_town":
+        prompts:
+          - hoi an ancient town
+      "vn-vietnam":
+        prompts:
+          - >-
+            ({{1-$${1-2$$__lazy-wildcards/subject/env-bg/vn-vietnam/env-bg__}|{1-$$__lazy-wildcards/subject/env-bg/vn-vietnam/env__}|{1-$$__lazy-wildcards/subject/env-bg/vn-vietnam/env-elem-vehicle__}},|}in __lazy-wildcards/subject/env-bg/vn-vietnam/env-bg-main__)
+        "env-bg-main":
+          - vietnam,viet nam
+        "env-bg":
+          - limestone karst
+          - terraced fields
+          - cave lake
+          - tropical forest
+          - rice field
+          - coastal cliff
+          - vietnam street
+          - riverbank
+          - lotus lake
+        env:
+          - morning mist
+          - sunrise over mountains
+        "env-elem-vehicle":
+          - fishing boat
       prison_cell:
         prompts:
           - >-
@@ -10315,6 +10348,9 @@
           - glossy reflection
           - dripping paint
           - fussion of abstract and fluid art
+      riverbank:
+        prompts:
+          - riverbank
       "gold-gemstone":
         prompts:
           - >-
@@ -13738,6 +13774,9 @@
           - countryside
           - natural material
           - weathered surface
+      colonial_architecture:
+        prompts:
+          - colonial architecture
       ice_brick_house:
         prompts:
           - >-
@@ -18115,7 +18154,7 @@
           - >-
             (__lazy-wildcards/subject/costume/dudou/costume-main__{,{1-$$__lazy-wildcards/subject/costume/dudou/costume__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume/dudou/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume/dudou/env__}|}{,{1-$$__lazy-wildcards/subject/costume/dudou/style__}|}
         "costume-main":
-          - dudou,chinese dudou,chinese edgApron,cococola Dudou,Tassels Dudou
+          - dudou,chinese dudou,ancient chinese dudou,chinese edgApron,cococola Dudou,Tassels Dudou
         costume:
           - ancient chinese camisole
           - ancient chinese bra
@@ -18252,6 +18291,76 @@
             __lazy-wildcards/subject/costume/korean-hanbok-king-gonryongpo/costume__,__lazy-wildcards/subject/costume/korean-hanbok-student/costume-main__
         costume:
           - Korean King Hanbok Gonryongpo
+      "vn-ao_dai":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/vn-ao_dai/costume__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume/vn-ao_dai/costume-elem__}|},{1-$$__lazy-wildcards/subject/costume/vn-ao_dai/action__}|}
+        costume:
+          - >-
+            __lazy-wildcards/utils/fn/inspired(v=ao_dai)__,aodai,aodaicuoi,futureaodai,aodaimong,dr3ss,wearing dress,wearing aodai,ao dai viet nam,pattern ao dai,vietnamese long dress
+        "costume-elem":
+          - vietnamese dress,vietnamese clothes
+          - vietnam
+          - conical hat,rice hat,non la
+          - high heels
+          - >-
+            see-through,sheer ${c=see-through},__lazy-wildcards/subject/costume/vn-ao_dai/fn/colored-aodai__
+          - aodai cyber,futuristic aodai,futuristic ao dai
+          - silk clothes,silk fabric
+          - school uniform
+          - bridal dress
+          - >-
+            ${c=!{1-2$$ and $$__lazy-wildcards/utils/color-base__}} __lazy-wildcards/subject/costume/vn-ao_dai/fn/colored-aodai__
+          - pants
+          - necklace
+          - floral print dress,floral pattern dress
+          - phoenix print dress,phoenix pattern dress
+          - dragon print dress,dragon pattern dress
+          - bare thigh,thigh
+        action:
+          - holding a cloth
+        fn:
+          "colored-aodai":
+            - >-
+              ${c} aodai,${c} ao dai,${c} aodaimong,${c} dress
+      # https://civitai.com/models/30692/ao-yem-vietnamese-dress-2
+      # https://civitai.com/models/18356/ao-yem-vietnamese-dress
+      "vn-ao_yem":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/vn-ao_yem/costume__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume/vn-ao_yem/costume-elem__}|}
+        costume:
+          - >-
+            ao yem,aoyem,wearing aoyem,vietnamese halter top,backless
+        "costume-elem":
+          - >-
+            ${c=!{1-2$$ and $$__lazy-wildcards/utils/color-base__}} __lazy-wildcards/subject/costume/vn-ao_yem/fn/colored__
+          - vietnamese halter top,backless
+          - flowing skirt
+          - silk clothes,silk fabric
+        fn:
+          colored:
+            - >-
+              ${c} aoyem,${c} ao yem
+      # https://civitai.com/models/91094/vietnamesetuthan-four-piece-dress
+      "vn-tu_than":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/vn-tu_than/costume__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume/vn-tu_than/costume-elem__}|}
+        costume:
+          - >-
+            tu_than,wearing tu_than
+        "costume-elem":
+          - >-
+            ${c=!{1-2$$ and $$__lazy-wildcards/utils/color-base__}} __lazy-wildcards/subject/costume/vn-tu_than/fn/colored__
+          - ritual costume
+          - "__lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__"
+          - headpiece
+          - flowing robes
+        fn:
+          colored:
+            - >-
+              ${c} tu_than
     costume-headwear:
       others:
         prompts:
@@ -19292,9 +19401,9 @@
       indian:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume-ethnicity-race/indian/costume-ethnicity-race__{0.3::,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/indian/costume__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/indian/costume-elem__}|}{0.3::,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/indian/action__}|}{0.3::,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/indian/env__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/indian/style__}|}
+            (__lazy-wildcards/subject/costume-ethnicity-race/indian/costume-ethnicity-race__{0.3:::{1.2|1.3|1.4}|}){0.3::,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/indian/costume__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/indian/costume-elem__}|}{0.3::,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/indian/action__}|}{0.3::,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/indian/env__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/indian/style__}|}
         "costume-ethnicity-race":
-          - Indian Girl,Indian Beauty,orna,Indian Model,Indian Actress
+          - "__lazy-wildcards/subject/costume-ethnicity-race/korean_girls/fn/doll-likeness(v=indian)__"
         costume:
           - saree
           - lehenga choli
@@ -19337,10 +19446,10 @@
       korean_girls:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume-ethnicity-race/korean_girls/costume-ethnicity-race__{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/korean_girls/costume-ethnicity__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/korean_girls/costume__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/korean_girls/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/korean_girls/env-bg__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/korean_girls/style__}|}
+            (__lazy-wildcards/subject/costume-ethnicity-race/korean_girls/costume-ethnicity-race__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/korean_girls/costume-ethnicity__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/korean_girls/costume__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/korean_girls/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/korean_girls/env-bg__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/korean_girls/style__}|}
         "costume-ethnicity-race":
           - >-
-            korean girl,korean woman,korean beauty,korean model,korean actress,kpop idol,korean celebrity,korean mixed,kgirl,kgirl9xv1,kr-pny,koreanbabe04,asian girls
+            __lazy-wildcards/subject/costume-ethnicity-race/korean_girls/fn/doll-likeness(v=korean)__,kpop idol,kgirl,kgirl9xv1,kr-pny,koreanbabe04,asian girls
         "costume-ethnicity":
           - korean haircut,korean hair style
           - >-
@@ -19392,6 +19501,18 @@
           - chic and sophisticated
           - urban korean fashion
           - korean cosmetics
+        fn:
+          "doll-likeness":
+            - >-
+              ${v} girl,${v} woman,${v} beauty,${v} model,${v} actress,${v} celebrity,${v} mixed
+      # https://civitai.com/models/344770/vietnamese-girl
+      # https://civitai.com/models/92642/vietnamese-girl-ntc-v10
+      # https://civitai.com/models/43618/cutevietnamesegirl
+      # https://civitai.com/models/214859/nguyen-the-vietnamese-by-noerman
+      vietnamese_girl:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-race/korean_girls/fn/doll-likeness(v=vietnamese)__,MunTran,Nguyen,Vyvan3,jichoi,miucoser{0.3:::{1.2|1.3|1.4}|})
       "snake-anthro_cobra":
         prompts:
           - >-
@@ -20268,28 +20389,28 @@
           - hand fan
           - folding fan,folding fan design
         "costume-weapon-fan":
-          - paper_fan
-          - iron_fan
-          - traditional_fan
-          - decorative_fan
-          - painted_fan
-          - silk_fan
-          - calligraphy_fan
-          - black_lacquer
-          - bamboo_frame
-          - metal_fan_frame
-          - martial_arts_fan
-          - print_folding_fan
+          - paper fan
+          - iron fan
+          - traditional fan
+          - decorative fan
+          - painted fan
+          - silk fan
+          - calligraphy fan
+          - black lacquer
+          - bamboo frame
+          - metal fan frame
+          - martial arts fan
+          - print folding fan
           - sash
         "costume-elem":
           - triangular headpiece
         style:
-          - floral_pattern
-          - dragon_pattern
+          - floral pattern
+          - dragon pattern
           - "__lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__"
         action:
-          - fan_dance
-          - folding_fan_attack
+          - fan dance
+          - folding fan attack
     costume-elem-expressions:
       yandere_trance:
         prompts:
