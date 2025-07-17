@@ -41,7 +41,13 @@ export default Bluebird.map([
 		preserveTimestamps: true,
 	})
 		.then(() => consoleLogger.info('Copied lazy-wildcards.yaml to stable-diffusion-webui'))
-			.catch(e => consoleLogger.error(String(e)))
+			.catch(e => {
+				consoleLogger.error(String(e), e)
+				consoleLogger.dir(e)
+			})
 		;
-}).catch(e => consoleLogger.error(String(e)));
+}).catch(e => {
+	consoleLogger.error(String(e), e)
+	consoleLogger.dir(e)
+});
 
