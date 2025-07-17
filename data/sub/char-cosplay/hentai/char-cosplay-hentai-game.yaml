@@ -271,4 +271,25 @@ lazy-wildcards:
             short hair, yellow eyes, purple hair, __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
         costume:
           - miniskirt, black skirt, black uniform, military uniform, dark-skinned female, peaked cap, pencil skirt, military hat, red necktie, belt, black skirt, black thighhighs, white gloves, long sleeves, jacket
+    # 殻ノ少女
+    # https://danbooru.donmai.us/posts?tags=kara_no_shoujo&z=2
+    kara_no_shoujo:
+      # https://civitai.com/models/31187/kara-no-shoujo-kuchiki-touko
+      kuchiki_touko:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char-hentai/kara_no_shoujo/kuchiki_touko/main-trigger-words__
+            , __lazy-wildcards/cosplay-char-hentai/kara_no_shoujo/kuchiki_touko/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char-hentai/kara_no_shoujo/kuchiki_touko/costume__}|}
+            {0.7::, ({1-$$__lazy-wildcards/cosplay-char-hentai/kara_no_shoujo/kuchiki_touko/env-bg__}{0.3:::{1.2|1.3|1.4|1.6}|})|}
+        main-trigger-words:
+          - >-
+            kuchiki touko, touko
+            , kara no shoujo, kara no shojo
+        costume-ethnicity:
+          - black eyes, black hair, long hair
+        costume:
+          - skirt, school uniform, kneehighs
+        env-bg:
+          - cracked shell, eggshell, cracked egg, egg, blood
 

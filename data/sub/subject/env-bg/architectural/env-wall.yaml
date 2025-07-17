@@ -42,14 +42,15 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/env-bg/city_walls-advertising/costume-elem__}|}
             {, {1-$$__lazy-wildcards/subject/env-bg/city_walls-advertising/style__}|}
         env-bg-main-trigger-words:
-          - wabkg, city walls
+          - wabkg, city walls, signage
         env-bg-main:
           - advertising walls
           - poster walls
           - mural walls
           - led panels walls, led walls, led panels
           - cutout board, cutout board wall
-          - holographic walls, holographic advertising
+          - holographic walls, holographic advertising, holographic poster, see-through holographic, virtual holographic
+          - 3d signage walls, 3d advertising walls, 3d signage, digital signage
         env-bg:
           - cityscape
           - concrete wall
@@ -60,6 +61,9 @@ lazy-wildcards:
           - glass wall
           - city at night
           - urban ruin, ruined wall
+          - corner of the building
+          - edge of the building
+          - see-through walls
         env:
           - led display
           - billboard
@@ -76,12 +80,14 @@ lazy-wildcards:
           - glass surface
           - city fog, light beam, soft glow
           - wet surface
+          - real world location
         costume-elem:
           - urban girl, street girl
           - idol advertisement
           - futuristic outfit
           - virtual idol
           - headphones
+          - holographic girl, see-through girl
         style:
           - high contrast
           - vibrant colors, bright colors
@@ -145,4 +151,67 @@ lazy-wildcards:
           - different computer code in screen
           - different anime in screen
           - displays test tubes
+      wall-texture:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/wall-texture/env-bg-main__
+            {, {1-3$$__lazy-wildcards/subject/env-bg/wall-texture/env-bg-wall__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-5$$__lazy-wildcards/subject/env-bg/wall-texture/env-bg-wall-elem__}|}
+        env-bg-main:
+          - wall
+        env-bg-wall:
+          - concrete wall
+          - brick wall
+          - wooden wall
+          - metal wall
+          - plaster wall
+          - stone wall
+          - __lazy-wildcards/subject/env-bg/glass_wall/env-bg-main__
+          - marble wall
+          - mud wall, clay wall
+          - bamboo wall
+          - __lazy-wildcards/subject/env-bg/japanese_paper_wall/env-bg-main__
+          - flower wall
+          - >-
+            {1-$$ice wall|frozen wall}
+          - crystal wall
+        env-bg-wall-elem:
+          - wall with windows
+          - wall with door
+          - wall with mural
+          - wallpaper wall, painted wall, paper wall
+          - wall with posters
+          - graffiti wall
+          - tiled wall
+          - rusted wall
+          - hexagon wall
+          - blast wall
+          - acoustic panel wall, soundproof wall
+          - holographic wall
+          - __lazy-wildcards/subject/style-elem/sci-fi/fn/prefix(v=wall)__
+          - __lazy-wildcards/subject/style-elem/broken/fn/prefix-extra(v=wall)__
+          - overgrown wall
+          - plant wall
+          - >-
+            {1-$$burning wall|fire wall|burned wall|fire damaged wall}
+      japanese_paper_wall:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/japanese_paper_wall/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/japanese_paper_wall/env-bg-wall__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/japanese_paper_wall/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/japanese_paper_wall/style__}|}
+        env-bg-main:
+          - japanese paper wall, shoji wall, fusuma wall
+        env-bg-wall:
+          - traditional japanese paper wall
+          - shoji screen wall
+          - fusuma sliding door wall
+          - paper texture wall
+        env:
+          - tatami, tatami mat
+          - japanese house, traditional japanese room
+          - paper lantern
+        style:
+          - sunlight filtering through
 

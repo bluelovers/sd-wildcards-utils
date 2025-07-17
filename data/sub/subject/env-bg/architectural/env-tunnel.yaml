@@ -79,4 +79,28 @@ lazy-wildcards:
           - glowwave
           - glowing neon
           - silhouette
+      tunnel-corridor:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/tunnel-corridor/env-bg-main__
+            {, ({1-$$__lazy-wildcards/subject/env-bg/tunnel-corridor/env-bg__})|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/tunnel-corridor/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/tunnel-corridor/style__}|}
+        env-bg-main:
+          - tunnel corridor
+        env-bg:
+          - subway tunnel
+          - underground tunnel
+          - __lazy-wildcards/subject/style-elem/sci-fi/fn/prefix(v=tunnel)__
+        env:
+          - dimly lit corridor
+          - metallic walls
+          - glowing lights
+          - high-tech elements
+          - urban decay
+        style:
+          - cyberpunk
+          - dystopian
+          - futuristic architecture
+          - neon lights
 

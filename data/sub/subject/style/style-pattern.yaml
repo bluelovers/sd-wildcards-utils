@@ -144,4 +144,45 @@ lazy-wildcards:
           - jewelry
           - chinese_dress
           - imperial_design
+      background-pattern:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-elem/background-pattern/prompts-bg__{0.3:::{1.2|1.3|1.4|1.6}|})
+        prompts-bg:
+          - >-
+            {1-$$__lazy-wildcards/subject/style-elem/background-pattern/env-bg__}
+          - >-
+            {1-3$$__lazy-wildcards/subject/style-elem/background-pattern/env-bg__}
+          - >-
+            __lazy-wildcards/subject/style-elem/background-pattern/env-bg__
+        env-bg:
+          - >-
+            __lazy-wildcards/subject/style-elem/background-pattern/fn/bg(v=zentangle)__
+          - >-
+            __lazy-wildcards/subject/style-elem/background-pattern/fn/bg(v=fractal)__
+          - >-
+            __lazy-wildcards/subject/style-elem/background-pattern/fn/bg(v=geometric)__
+          - >-
+            __lazy-wildcards/subject/style-elem/background-pattern/fn/bg(v=psychedelic)__
+          - >-
+            __lazy-wildcards/subject/style-elem/background-pattern/fn/bg(v=fluid)__
+          - >-
+            __lazy-wildcards/subject/style-elem/background-pattern/fn/bg(v=dripping)__
+          - >-
+            __lazy-wildcards/subject/style-elem/background-pattern/fn/bg(v=mosaic)__
+          - >-
+            __lazy-wildcards/subject/style-elem/background-pattern/fn/bg(v=bokeh)__
+          - >-
+            __lazy-wildcards/subject/style-elem/background-pattern/fn/bg(v=fusion)__
+          - >-
+            __lazy-wildcards/subject/style-elem/background-pattern/fn/bg(v=calligraphy ink)__
+          - >-
+            abstract {__lazy-wildcards/subject/style-elem/background-pattern/fn/colored__ |}background
+        fn:
+          bg:
+            - >-
+              {abstract |}{__lazy-wildcards/subject/style-elem/background-pattern/fn/colored__ |}${v} background
+          colored:
+            - >-
+              {colored|multicolored}
 

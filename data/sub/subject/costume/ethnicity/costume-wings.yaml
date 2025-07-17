@@ -2,19 +2,25 @@ lazy-wildcards:
   subject:
     costume-elem:
       # https://civitai.com/models/328517/seraphim-blindfold?modelVersionId=368149
+      # https://civitai.com/models/140973/beautiful-rainbow-angel
       wings-angel:
         prompts:
           - >-
-            ({1-$$__lazy-wildcards/subject/costume-elem/wings-angel/costume-wings__}
+            (__lazy-wildcards/subject/costume-elem/wings-angel/costume-ethnicity__
+            , {1-$$__lazy-wildcards/subject/costume-elem/wings-angel/costume-wings__}
             {, {1-$$__lazy-wildcards/subject/costume-elem/wings-elem/prompts__}|}{0.3:::{1.2|1.3|1.4}|})
             {, {1-$$__lazy-wildcards/subject/costume-elem/wings-angel/costume-elem__}|}
             {, {1-$$__lazy-wildcards/subject/costume-elem/wings-angel/env__}|}
-        costume-elem:
-          - white wings
-          - feathered wings
+        costume-ethnicity:
+          - angel
         costume-wings:
           - angel wings
           - seraph wings
+        costume-elem:
+          - white wings
+          - feathered wings
+          - rainbow wings
+          - golden wings
         env:
           - gold
           - jewels

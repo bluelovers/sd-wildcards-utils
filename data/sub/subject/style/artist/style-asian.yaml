@@ -608,7 +608,7 @@ lazy-wildcards:
           - __lazy-wildcards/utils/fn/style-inspired(v=dishwasher1910)__
         costume-elem:
           - unique_gear
-          - sci_fi_armor
+          - __lazy-wildcards/subject/style-elem/sci-fi/fn/prefix(v=armor)__
           - fantasy_outfit
           - unique_accessories
         env:
@@ -932,4 +932,20 @@ lazy-wildcards:
           - navel
           - underboob
           - clothes lift
+      # Hisona（ひそな）
+      # https://www.pixiv.net/users/173260/artworks
+      # https://civitai.com/models/271862/hisona-artstyle?modelVersionId=306421
+      hisona:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/hisona/style-artist__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-artist/hisona/style__}|}
+        style-artist:
+          - __lazy-wildcards/utils/fn/style-inspired(v=hisona)__
+        style:
+          - touhou
+          - delicate line art
+          - soft lighting
+          - warm colors
+          - light shading
 

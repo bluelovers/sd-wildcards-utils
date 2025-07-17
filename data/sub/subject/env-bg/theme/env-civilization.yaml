@@ -12,11 +12,13 @@ lazy-wildcards:
             {, {1-3$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/env__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/style__}|}
         main-trigger-words:
-          - Building_Egyptian, egyptpunkai, egypt, egyptianworld, Egyptian_Icons
+          - >-
+            Building_Egyptian, egyptpunkai, egypt, egyptianworld, Egyptian_Icons
+            , __lazy-wildcards/utils/fn/style-inspired(v=egyptian)__
         style-theme:
-          - Ancient Egypt theme
+          - Ancient Egypt theme, __lazy-wildcards/utils/fn/style-inspired(v=ancient_egypt)__
           - Ancient Egypt civilization theme
-          - ancient egyptian theme
+          - ancient egyptian theme, __lazy-wildcards/utils/fn/style-inspired(v=ancient_egyptian)__
         style:
           - ancient_technology
           - royal beauty
@@ -63,10 +65,16 @@ lazy-wildcards:
           - sea waves
           - Camel Journey
           - Frame
+      Ancient-Egypt2:
+        prompts:
+          - >-
+            ((Ancient Egypt theme, ancient egyptian theme)), ancient egyptian symbol, ancient egyptian hieroglyphic
+            , __lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/main-trigger-words__
       Ancient-Egypt-Punk:
         prompts:
           - >-
             scifi, inspired by {1-$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt-Punk/style-theme__}
+            , __lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt/main-trigger-words__
             {,{1-2$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt-Punk/costume__}|}
             {,{1-2$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt-Punk/env-bg__}|}
             {,{1-2$$__lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt-Punk/env__}|}

@@ -235,7 +235,7 @@ lazy-wildcards:
           # https://www.deviantart.com/dishwasher1910/art/Grimm-773345213
           # https://civitai.com/models/542202/ruby-rose-grimm-rwby
           type-grimm:
-            - GrimmRu13y, black thighhighs, single horn, demon horns, fur trim, fur-trimmed cape
+            - GrimmRu13y, black thighhighs, single horn, demon horns, __lazy-wildcards/subject/costume-elem-accessories/gold-trim/fn/color-trim-object2-extra(c=fur,v=cape)__
           # https://www.deviantart.com/dishwasher1910/art/RWBY-3-0-741045666
           # https://civitai.com/models/542089/ruby-rose-rwby-30
           type-30:
@@ -1269,7 +1269,7 @@ lazy-wildcards:
         costume-weapon:
           - handgun, pistol
           - gravity_saber, sword, rapier
-          - sci-fi weapon
+          - __lazy-wildcards/subject/style-elem/sci-fi/fn/prefix(v=weapon)__
           - holding sword
         env-symbol:
           - skull_and_crossbones, jolly_roger, pirate symbol, pirate emblem, skull print

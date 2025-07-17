@@ -59,4 +59,30 @@ lazy-wildcards:
           - LQDGOD gold tree
         style:
           - summoning energy
+      gemstone:
+        prompts:
+          - >-
+            ({1-5$$__lazy-wildcards/subject/env-elem/gemstone/env-elem-*__}
+            {0.3:::{1.2|1.3|1.4}|})
+        env-elem-main:
+          - crystal
+          - gemstone, gem
+          - jewel
+        env-elem-gem:
+          - quartz \(gemstone\)
+          - amethyst \(gemstone\), purple gemstone
+          - citrine \(gemstone\)
+          - smoky quartz \(gemstone\)
+          - rose quartz \(gemstone\)
+          - rutilated quartz \(gemstone\)
+          - rock crystal \(gemstone\)
+          - diamond \(gemstone\)
+          - emerald \(gemstone\), green gemstone
+          - ruby \(gemstone\), red gemstone
+          - sapphire \(gemstone\), blue gemstone
+          - aquamarine \(gemstone\)
+          - opal \(gemstone\)
+          - tourmaline \(gemstone\)
+          - jade \(gemstone\)
+          - __lazy-wildcards/utils/color-base__ gemstone
 

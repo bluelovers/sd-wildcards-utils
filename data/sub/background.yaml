@@ -2,7 +2,7 @@ lazy-wildcards:
   background:
     color-style:
       - >-
-        ({1-3$$ background, $$multicolored|gradient|solid color|neon color|fluorescent|psychedelic color|fluid color|color splash|color fusion|EPtiedyeworld, tie-dye color|colour sequence|rainbow|colored geometric|color bokeh|color stripes|colored confetti|colored marble|colored smoke|colored digital glitch|{abstract |}colored fractal|abstract colored|dripping colors|bold color|colored mosaic} background{0.3:::{1.2|1.3|1.4}|})
+        ({1-3$$ background, $$multicolored|gradient|solid color|neon color|fluorescent|psychedelic color|fluid color|color splash|color fusion|EPtiedyeworld, tie-dye color|colour sequence|rainbow|colored geometric|color bokeh|color stripes|colored confetti|colored marble|colored smoke|colored digital glitch|{abstract |}colored fractal|abstract colored|dripping colors|bold color|colored mosaic|{abstract |}{colored |}zentangle} background{0.3:::{1.2|1.3|1.4}|})
     color-theme:
       - __mix-lazy-auto/color-anything__ background
     color-transparent:
@@ -20,4 +20,7 @@ lazy-wildcards:
       - >-
         neon {2-3$$ background, neon $$__lazy-wildcards/utils/color-base__} background
         ,__lazy-wildcards/background/color-style__
+      - >-
+        {a colorful background|{2-3$$ background, $$__mix-lazy-auto/color-anything__} background|pure {2-3$$ background, pure $$__lazy-wildcards/utils/color-base__} background|neon {2-3$$ background, neon $$__lazy-wildcards/utils/color-base__} background}
+        , __lazy-wildcards/subject/style-elem/background-pattern/prompts__
 

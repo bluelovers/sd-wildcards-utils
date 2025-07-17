@@ -47,12 +47,22 @@ lazy-wildcards:
       untied-panties:
         prompts:
           - (untied panties, falling panties:1.4)
+      see-through:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem/see-through/costume-main__
+            {, {1-$$__lazy-wildcards/subject/costume-elem/see-through/costume-elem__}|}
+        costume-main:
+          - see-through
+        costume-elem:
+          - sheer fabric
+          - see-through gossamer
       see-through-clothes:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/costume-elem/see-through-clothes/costume-elem__}
+            __lazy-wildcards/subject/costume-elem/see-through/prompts__
+            {, {1-$$__lazy-wildcards/subject/costume-elem/see-through-clothes/costume-elem__}|}
         costume-elem:
-          - see-through
           - >-
             wringing {1-$$, wringing $$clothes|shirt}
           - >-
@@ -149,4 +159,10 @@ lazy-wildcards:
           - yen sign
           - dollar sign
           - spoken money
+      impossible_clothes:
+        costume-main:
+          - impossible clothes
+        costume:
+          - impossible bodysuit
+          - impossible leotard
 

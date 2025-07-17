@@ -151,18 +151,20 @@ lazy-wildcards:
       # __lazy-wildcards/utils/fn/style-inspired(v=lego)__
       style-inspired:
         - >-
-          ${v}
-          , inspired by ${v}, ${v}-inspired, ${v} aesthetic, ${v} theme
-          , style of ${v}, ${v} style, ${v} \(style\)
+          __lazy-wildcards/utils/fn/inspired__
+          , __lazy-wildcards/utils/fn/style-of__
+      style-of:
+        - >-
+          style of ${v}, ${v} style, ${v} \(style\)
           , the art of ${v}
       inspired:
         - >-
           ${v}
           , inspired by ${v}, ${v}-inspired, ${v} aesthetic, ${v} theme
+          , ${v} fashion
       made-of-inspired:
         - >-
-          ${v}
-          , inspired by ${v}, ${v}-inspired, ${v} aesthetic, ${v} theme
+          __lazy-wildcards/utils/fn/inspired__
           , made out of ${v}, made of ${v}
       made-of:
         - >-
@@ -171,8 +173,7 @@ lazy-wildcards:
       pattern-inspired:
         - >-
           ${v} print, ${v} pattern, ${v}-shaped, ${v} sign
-          ${v}
-          , , inspired by ${v}, ${v}-inspired, ${v} aesthetic, ${v} theme
+          , __lazy-wildcards/utils/fn/inspired__
       pattern:
         - >-
           ${v} print, ${v} pattern, ${v}-shaped, ${v} sign

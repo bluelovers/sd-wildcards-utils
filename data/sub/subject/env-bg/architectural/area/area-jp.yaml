@@ -180,6 +180,7 @@ lazy-wildcards:
           - modern_and_traditional_contrast
       # 日本の住宅の玄関 Modern Genkan in Japanese Houses
       # https://civitai.com/models/47379/modern-genkan-in-japanese-houses
+      # https://civitai.com/models/156148/genkan-entrance?modelVersionId=175233
       genkan:
         prompts:
           - >-
@@ -189,7 +190,11 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/env-bg-architectural/genkan/costume-elem__}|}
             {, {1-$$__lazy-wildcards/subject/env-bg-architectural/genkan/costume-weapon__}|}
         env-bg-main:
-          - genkan, entrance, door, scenery
+          - >-
+            genkan
+            , entrance, door
+            , entrance ground
+            , scenery
         env-bg:
           # 集合住宅の玄関（家の中から）Entrance of an apartment building (from inside the house)
           - JMG2, indoors, interior

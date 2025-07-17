@@ -1,0 +1,104 @@
+lazy-wildcards:
+  subject:
+    costume-elem-upper-body:
+      # https://civitai.com/search/models?baseModel=SD%201.5&sortBy=models_v9&query=Corset
+      # https://civitai.com/models/130637/corset-gothique-by-edg
+      # https://civitai.com/models/249163/corset-gelcoat
+      # https://civitai.com/models/29572/corset-v1
+      # https://civitai.com/models/244303/corset-style
+      # https://civitai.com/models/195802/sexy-corset-collection-by-stable-yogi
+      # https://civitai.com/models/211128/sexy-attire-or-porcelain-corset-or-lingerie-by-edg
+      # https://civitai.com/models/214887/puffy-sleeve-corset-tops
+      # https://civitai.com/models/413029/ruched-top-pearl-studded-corset-or-pearls-gone-wild
+      # https://civitai.com/models/262967/high-empress-corsetfashion-or-more-is-more-and-less-is-a-bore
+      corset:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-upper-body/corset/costume__
+        costume:
+          - corset, c0rs3t, edgCorset, ruanyi012, ruanyi0216, corset-style, War_Glam, edgPorcelain, dr3ss, whitdr3ss, 3mpr3ss
+      # https://civitai.com/models/253262?modelVersionId=331554
+      corset-underbust:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-upper-body/corset-underbust/costume__
+            {, {1-$$__lazy-wildcards/subject/costume-elem-upper-body/corset-underbust/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem-upper-body/corset-underbust/style__}|}
+        costume:
+          - >-
+            underbust corset
+            , cleavage
+            , __lazy-wildcards/subject/costume-elem-upper-body/corset/costume__
+        costume-elem:
+          - bustier, overbust
+          - long sleeves
+          - ornate
+          - cleavage cutout
+          - tricorne
+          - __lazy-wildcards/subject/costume-elem-upper-body/shrug/prompts__
+          - napoleonic military uniform
+          - voluminous petticoat
+          - tight clothes
+          - __lazy-wildcards/subject/costume-elem-accessories/lace-trim/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
+          - ribbon
+          - __lazy-wildcards/subject/costume-elem/sleeves/prompts__
+          - __lazy-wildcards/subject/costume-elem/see-through/prompts__
+          - corset gothique, gothic corset
+          - latex corset
+          - belt
+          - wasp waist
+          - statement sleeves
+          - corset long dress
+          - corset mini dress
+          - armored corset
+          - leather corset dress
+          - leather strapless dress
+          - bare shoulders
+          - high heels
+          - knee boots
+          - gold jewelry
+          - puffy sleeve corset
+          - posture collar
+          - silky satin corset
+          - corset with chains
+          - see-through corset
+          - __mix-lazy-auto/color-anything__ corset
+          - mesh corset
+          - steel boned corset
+        style:
+          - __lazy-wildcards/subject/env-elem-punk/steampunk-bundle/prompts__
+          - __lazy-wildcards/subject/style-theme/age-victorian/prompts__
+          - __lazy-wildcards/subject/style-theme/age-rococo/prompts__
+      shrug:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-upper-body/shrug/costume-main__
+            {, {1-$$__lazy-wildcards/subject/costume-elem-upper-body/shrug/costume-elem__}|}
+        costume-main:
+          - shrug, shrug sleeves
+        costume-elem:
+          - latex shrug \(clothing\)
+          - butterfly shrug sleeves
+          - __lazy-wildcards/subject/costume-elem/sleeves_past/prompts__
+          - shrug wide sleeves
+          - long sleeve shrug
+          - shoulder shrug
+          - sheer shrug
+          - __lazy-wildcards/subject/costume-elem-accessories/lace-trim/prompts__
+          - puffy sleeves
+          - frilled sleeves
+          - __lazy-wildcards/subject/costume-elem/sleeves/prompts__
+          - crochet shrug
+          - __mix-lazy-auto/color-anything__ shrug
+      # https://civitai.com/models/24913/iron-corset
+      corset-armored:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-upper-body/corset-armored/costume__
+        costume:
+          - >-
+            armored corset
+            , __lazy-wildcards/subject/costume-elem-upper-body/corset/costume__
+            , war_glam armor corset
+

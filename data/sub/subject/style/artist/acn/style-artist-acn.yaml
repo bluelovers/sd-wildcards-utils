@@ -107,4 +107,41 @@ lazy-wildcards:
           - baroque lighting
           - rich color
           - dark fantasy
+      # https://civitai.com/models/589847/mha-style?modelVersionId=658608
+      # https://civitai.com/models/5014/my-hero-academia-horikoshi-kouhei-style-lora
+      my_hero_academia:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/my_hero_academia/style-artist__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-artist/my_hero_academia/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/my_hero_academia/expressions__}|}
+        style-artist:
+          - >-
+            __lazy-wildcards/utils/fn/style-inspired(v=my_hero_academia)__
+            , __lazy-wildcards/utils/fn/style-inspired(v=horikoshi_kouhei)__
+            , boku no hero academia
+            , mha style
+        costume-elem:
+          - cute
+          - very cute
+          - skinny
+          - long eyelashes
+          - burn scar
+          - spiked hair
+          - audio jack
+          - animal ears
+          - fangs
+          - teeth
+          - long hair
+          - domino mask
+          - muscular
+          - sharp teeth
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin/impossible_clothes/prompts__
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin/skindentation/prompts__
+          - tail through clothes
+          - thick thighs
+        expressions:
+          - smiling, smile
+          - __lazy-wildcards/subject/costume-elem-expressions/blush/prompts__
+          - __lazy-wildcards/subject/costume-elem-expressions/doyagao_smug/prompts__
 

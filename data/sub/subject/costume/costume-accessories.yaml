@@ -49,19 +49,61 @@ lazy-wildcards:
         fn:
           color-trim:
             - >-
-              ${c:gold} trim, ${c:gold}-trimmed, ${c:gold} threading
+              ${c:gold} trim, ${c:gold}-trim, ${c:gold}-trimmed, ${c:gold} threading
+          color-trim-extra:
+            - >-
+              __lazy-wildcards/subject/costume-elem-accessories/gold-trim/fn/color-trim__
+              {, ${c:gold} stitched|}
+              {, ${c:gold} embroidery|}
+              {, ${c:gold} decorative|}
+              {, ${c:gold} threadwork, ${c:gold} threaded|}
+              {, ${c:gold} accessory|}
+          color-trim-object:
+            - >-
+              ${c:gold} trim ${v}, ${c:gold}-trim ${v}, ${c:gold}-trimmed ${v}, ${c:gold} threading ${v}
+          color-trim-object-extra:
+            - >-
+              __lazy-wildcards/subject/costume-elem-accessories/gold-trim/fn/color-trim-object__
+              {, ${c:gold} stitched ${v}|}
+              {, ${c:gold} embroidery ${v}|}
+              {, ${c:gold} decorative ${v}|}
+              {, ${c:gold} threadwork ${v}, ${c:gold} threaded ${v}|}
+              {, ${c:gold} accessory ${v}|}
+          color-trim-object2:
+            - >-
+              __lazy-wildcards/subject/costume-elem-accessories/gold-trim/fn/color-trim-object__
+              , __lazy-wildcards/subject/costume-elem-accessories/gold-trim/fn/color-trim__
+          color-trim-object2-extra:
+            - >-
+              __lazy-wildcards/subject/costume-elem-accessories/gold-trim/fn/color-trim-object-extra__
+              , __lazy-wildcards/subject/costume-elem-accessories/gold-trim/fn/color-trim__
       lace-trim:
         prompts:
           - >-
             __lazy-wildcards/subject/costume-elem-accessories/lace-trim/costume-elem-main__
             {0.4::, {1-$$__lazy-wildcards/subject/costume-elem-accessories/lace-trim/costume-elem__}|}
         costume-elem-main:
-          - lace trim, lace-trimmed, lace threading
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/fn/color-trim-extra(c=lace)__
         costume-elem:
-          - lace stitched
-          - lace embroidery
-          - lace decorative
           - side lace-up design
+      ribbon-trim:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-accessories/ribbon-trim/costume-elem-main__
+        costume-elem-main:
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/fn/color-trim-extra(c=ribbon)__
+      fringe-trim:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-accessories/fringe-trim/costume-elem-main__
+        costume-elem-main:
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/fn/color-trim-extra(c=fringe)__
+      feather-trim:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-accessories/feather-trim/costume-elem-main__
+        costume-elem-main:
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/fn/color-trim-extra(c=feather)__
       # https://civitai.com/models/877844/id-card?modelVersionId=982697
       idcard:
         prompts:
@@ -99,7 +141,7 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/costume-elem-accessories/fur-trim/costume-elem-fur__}|}{0.3:::{1.2|1.3|1.4}|})
             {, {1-$$__lazy-wildcards/subject/costume-elem-accessories/fur-trim/costume-elem__}|}
         costume-elem-main:
-          - fur trim, dswntr, fur-trimmed
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/fn/color-trim-extra(c=fur)__, dswntr
         costume-elem-fur:
           - fur hem
           - fur collar

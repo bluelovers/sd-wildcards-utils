@@ -1114,4 +1114,31 @@ lazy-wildcards:
           - desk, __lazy-wildcards/subject/env-bg-architectural/kitchens_jp/prompts__
           - checkered floor
           - hallway
+    made_in_abyss:
+      # https://civitai.com/models/139732/lora-faputa-15?modelVersionId=154790
+      faputa:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/made_in_abyss/faputa/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/made_in_abyss/faputa/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/made_in_abyss/faputa/costume-elem__}|}
+        main-trigger-words:
+          - >-
+            faputa
+        costume-ethnicity:
+          - >-
+            faputail, fapuclaws, fapuhooves
+            , 4arms, extra arms
+            , furry
+            , cute
+            , yellow eyes
+        costume-elem:
+          - fapuknees
+          - fapugoggles, fapugoggles around neck
+          - bare chest
+          - fapu_gv_form
+          - fapu_r_form
+          - fapu_c_eyes, cracked eyes
+          - collarbone
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
 

@@ -335,8 +335,8 @@ lazy-wildcards:
       steampunk-bundle:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-elem-punk/steampunk-bundle/style-main__
-            {0.75::, {1-$$__lazy-wildcards/subject/env-elem-punk/steampunk-bundle/style-trigger-words__}|}
+            (__lazy-wildcards/subject/env-elem-punk/steampunk-bundle/style-main__
+            {0.75::, {1-$$__lazy-wildcards/subject/env-elem-punk/steampunk-bundle/style-trigger-words__}|})
             {, {1-$$__lazy-wildcards/subject/env-elem-punk/steampunk-bundle/env__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem-punk/steampunk-bundle/costume-elem__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem-punk/steampunk-bundle/style__}|}
@@ -349,7 +349,7 @@ lazy-wildcards:
         style-trigger-words:
           - CogpunkAI, cogpunk theme, cog
           - AetherpunkAI, Aetherpunk theme, Arcanepunk theme
-          - Victorianpunkai, victorian_era
+          - __lazy-wildcards/subject/style-theme/age-victorian/style-main__
           - ManyPipesAI
           - ManyGaugesAI, Gauges
           - CoalPunkAI, coalpunk theme, dieselpunk theme, Decopunk theme
@@ -377,6 +377,8 @@ lazy-wildcards:
         style:
           - mechanical_aesthetics
           - victorian aesthetics
+          - ornate victorian steampunk fashion
+          - ornate rich rococo fashion
       gears:
         prompts:
           - >-
@@ -675,7 +677,7 @@ lazy-wildcards:
           - cable
           - transparent tank
           - glass container
-          - sci fi equipment
+          - __lazy-wildcards/subject/style-elem/sci-fi/fn/prefix(v=equipment)__
           - glowing liquid
           - wired machine
           - airtight tube

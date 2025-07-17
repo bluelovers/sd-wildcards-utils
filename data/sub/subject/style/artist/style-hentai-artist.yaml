@@ -86,4 +86,14 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/utils/fn/style-inspired(v=honjou_raita)__
             , honjou_raita \(artist\)
+      # https://civitai.com/models/21914/art-stylesadakage-style
+      # https://www.pixiv.net/users/821219/artworks
+      sadakage:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/sadakage/style-artist__{0.3:::{1.2|1.3|1.4}|})
+        style-artist:
+          - >-
+            __lazy-wildcards/utils/fn/style-inspired(v=sadakage)__
+            , sadakage \(artist\)
 

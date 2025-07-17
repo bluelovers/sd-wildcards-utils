@@ -77,7 +77,7 @@ lazy-wildcards:
           - metallic texture
           - reflective texture
           - shiny texture
-          - scifi fashion
+          - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
         env:
           - intricate box shapes artifact
           - futuristic and complex computer with keyboard
@@ -119,4 +119,11 @@ lazy-wildcards:
           - space texture
           - galaxy texture
           - nebula magic
+      rainbow:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-elem-texture/rainbow/style-main__
+            , __lazy-wildcards/subject/env-moment/weather-rainbow/prompts__
+        style-main:
+          - rainbow texture, rainbow pattern, __lazy-wildcards/utils/fn/style-inspired(v=rainbow)__
 

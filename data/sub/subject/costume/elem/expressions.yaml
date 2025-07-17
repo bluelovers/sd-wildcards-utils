@@ -256,6 +256,7 @@ lazy-wildcards:
         expressions:
           - v-shaped eyebrows
           - grinning smile
+          - grin
           - smug smile
           - evil smug face
           - happy smile
@@ -292,4 +293,40 @@ lazy-wildcards:
           - smirk
         expressions:
           - seductive smirk
+      smile-sad:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/smile-sad/expressions__{0.3:::{1.2|1.3|1.4}|})
+        expressions:
+          - sad smile, sad
+      crying:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/crying/expressions-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/crying/expressions__}|}
+        expressions-main:
+          - crying
+        expressions:
+          - closed mouth
+          - red eyes
+          - crying with eyes open
+          - sad
+          - __lazy-wildcards/subject/costume-elem-expressions/tears/prompts__
+      tears:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/tears/expressions-main__
+            {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/tears/expressions__}|}{0.3:::{1.2|1.3|1.4}|})
+        expressions-main:
+          - tears
+        expressions:
+          - streaming tears
+          - teardrop
+          - wiping tears
+          - tearing up
+          - blood from eyes, blood tears
+          - happy tears
+          - sad tears
+          - single tear
+          - flying teardrops
 

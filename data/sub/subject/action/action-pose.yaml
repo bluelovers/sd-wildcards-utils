@@ -79,4 +79,41 @@ lazy-wildcards:
         action-pose:
           - hand between legs
           - between legs
+      # https://danbooru.donmai.us/posts?tags=ok_sign_over_eye&z=2
+      # https://civitai.com/models/73068/pose-ok-sign-over-eye
+      sign-ok_sign_over_eye:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/action-pose/sign-ok_sign_over_eye/action-pose-main__}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/action-pose/sign-ok_sign_over_eye/action-pose__}|}
+            {, {1-$$__lazy-wildcards/subject/action-pose/sign-ok_sign_over_eye/expressions__}|}
+            {, {1-$$__lazy-wildcards/subject/action-pose/sign-ok_sign_over_eye/costume-elem__}|}
+        action-pose-main:
+          - ok sign over eye
+        action-pose:
+          - double ok sign
+          - hand glasses
+          - hand over eye
+          - hand up
+          - ok sign
+          - arm behind back
+        expressions:
+          - one eye closed
+          - uneven eyes
+          - open mouth
+          - ":p"
+          - tongue out
+        costume-elem:
+          - bandaid on hand
+          - bandaid
+          - eyepatch, medical eyepatch
+          - hair between eyes
+          - teeth
+          - upper teeth only
+          - eyes visible through eyewear
+          - bright pupils
+          - parted lips
+          - __lazy-wildcards/subject/costume-ethnicity-eyes/multicolored_eyes/prompts__
+          - __lazy-wildcards/subject/costume-ethnicity-eyes/colored_eyes/prompts__
+          - __lazy-wildcards/subject/costume-ethnicity-eyes/lens_eye/prompts__
 

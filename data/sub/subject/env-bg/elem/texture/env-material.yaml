@@ -66,4 +66,59 @@ lazy-wildcards:
           - japanese interior
           - minimalism
           - scandinavian interior
+      # 横梁
+      beam-texture:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/env-elem/beam-texture/env-elem-texture__}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/beam-texture/style__}|}
+        env-elem-texture:
+          - wooden beam
+          - metal beam
+          - steel beam
+          - concrete beam
+          - industrial beam
+          - structural beam
+        style:
+          - industrial style
+          - rustic style
+          - beam texture
+      pillar:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/pillar/env-main__
+            {, {1-3$$__lazy-wildcards/subject/env-elem/pillar/env-elem-texture__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-5$$__lazy-wildcards/subject/env-elem/pillar/env-elem-pillar__}|}
+        env-main:
+          - pillar
+        env-elem-texture:
+          - >-
+            {1-$$stone pillar|rock pillar|limestone pillar|marble pillar}
+          - concrete pillar
+          - wooden pillar
+          - metal pillar, steel pillar
+          - brick pillar
+        env-elem-pillar:
+          - column
+          - decorative pillar
+          - architectural pillar
+          - support pillar
+          - __lazy-wildcards/subject/style-elem/broken/fn/prefix-extra(v=pillar)__
+          - ionic column
+          - doric column
+          - corinthian column
+          - greek roman column, roman pillar
+          - >-
+            {1-$$ivy column|vines column}
+          - dragon pillar
+          - gothic pillar
+          - ancient column
+          - industrial pillar
+          - cathedral pillar, church pillar
+          - twisted columns
+          - spiral column
+          - tied Column
+          - solomonic column
+          - holographic pillar
+          - rusted pillar
 

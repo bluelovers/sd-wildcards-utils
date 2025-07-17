@@ -52,4 +52,121 @@ lazy-wildcards:
             flower eye patch, flower eyepatch
             , flower over eye
             , flowerovereye
+      colored_eyes:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-eyes/colored_eyes/costume-ethnicity-eyes__{0.3:::{1.2|1.3|1.4|1.6}|})
+        costume-ethnicity-eyes:
+          - __mix-lazy-auto/color-anything__ eyes
+          - __lazy-wildcards/utils/color-base__ eyes
+          - __mix-lazy-auto/color-anything__ pupils
+          - __lazy-wildcards/utils/color-base__ pupils
+      colored_eyeshadow:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-eyes/colored_eyeshadow/costume-ethnicity-eyes__{0.3:::{1.2|1.3|1.4|1.6}|})
+        costume-ethnicity-eyes:
+          - __mix-lazy-auto/color-anything__ eyeshadow
+          - __lazy-wildcards/utils/color-base__ eyeshadow
+      colored_eyelashes:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-eyes/colored_eyelashes/costume-ethnicity-eyes-main__
+            {, __lazy-wildcards/subject/costume-ethnicity-eyes/colored_eyelashes/costume-ethnicity-eyes__|}{0.3:::{1.2|1.3|1.4|1.6}|})
+        costume-ethnicity-eyes-main:
+          - colored eyelashes, eyelashes
+        costume-ethnicity-eyes:
+          - __mix-lazy-auto/color-anything__ eyelashes
+          - __lazy-wildcards/utils/color-base__ eyelashes
+      # https://civitai.com/models/501804/rainbow-eyes
+      # https://civitai.com/models/26451/kaa-eyes-rainbow-eyes-inpaint-lora
+      rainbow_eyes:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-eyes/rainbow_eyes/costume-ethnicity-eyes__{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-eyes/rainbow_eyes/costume-ethnicity-eyes__}|}
+        costume-ethnicity-eyes-main:
+          - rainbow eyes, kaa eyes
+        costume-ethnicity-eyes:
+          - glowing eyes, glowing rainbow eyes
+      multicolored_eyes:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/costume-ethnicity-eyes/multicolored_eyes/costume-ethnicity-eyes-main__}{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-eyes/multicolored_eyes/costume-ethnicity-eyes__}|}
+        costume-ethnicity-eyes-main:
+          - multicolored eyes
+          - heterochromia
+          - two-tone eyes
+          - __lazy-wildcards/subject/costume-ethnicity-eyes/rainbow_eyes/prompts__
+        costume-ethnicity-eyes:
+          - >-
+            {1-2$$ pupils, $$__mix-lazy-auto/color-anything__} pupils
+          - >-
+            {1-2$$ eyes, $$__mix-lazy-auto/color-anything__} eyes
+          - glowing eyes
+      text_in_eyes:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-eyes/text_in_eyes/costume-ethnicity-eyes__{0.3:::{1.2|1.3|1.4|1.6}|})
+        costume-ethnicity-eyes:
+          - text in eyes
+      lens_eye:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-eyes/lens_eye/costume-ethnicity-eyes__{0.3:::{1.2|1.3|1.4|1.6}|})
+        costume-ethnicity-eyes:
+          - lens eye
+      # https://civitai.com/models/92319/eyes-everywhere
+      eyes_everywhere:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-eyes/eyes_everywhere/costume-ethnicity-eyes-main__{0.3:::{1.2|1.3|1.4|1.6}|:1.2})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-eyes/eyes_everywhere/costume-ethnicity-eyes__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-eyes/eyes_everywhere/env__}|}
+        costume-ethnicity-eyes-main:
+          - eyes everywhere, full of eyes, yanjing, eyes
+        costume-ethnicity-eyes:
+          - __lazy-wildcards/subject/costume-ethnicity-eyes/multicolored_eyes/prompts__
+        env:
+          - eyes on anything
+          - eyes on everything
+          - eyes on background
+          - giant eyes
+          - many eyes on the walls
+      bags_under_eyes:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-eyes/bags_under_eyes/costume-ethnicity-eyes__{0.3:::{1.2|1.3|1.4|1.6}|})
+        costume-ethnicity-eyes:
+          - bags under eyes, eye bags
+      # https://civitai.com/models/30034/concept-bags-under-eyesdark-circles
+      dark_circles_under_eyes:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-eyes/dark_circles_under_eyes/costume-ethnicity-eyes-main__
+            , __lazy-wildcards/subject/costume-ethnicity-eyes/bags_under_eyes/costume-ethnicity-eyes__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-eyes/dark_circles_under_eyes/costume-ethnicity-eyes__}|}{0.3:::{1.2|1.3|1.4|1.6}|:1.2})
+            {0.3::, {1-$$__lazy-wildcards/subject/costume-ethnicity-eyes/dark_circles_under_eyes/expressions__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/costume-ethnicity-eyes/dark_circles_under_eyes/costume-elem__}|}
+        costume-ethnicity-eyes-main:
+          - dark circles under eyes
+        costume-ethnicity-eyes:
+          - smokey eyes, smoky eyes
+          - bloodshot eyes
+          - dead eyes
+          - blank eyes
+          - lazy eye
+          - "o o"
+        expressions:
+          - tired
+          - insomniac
+          - blank stare
+          - expressionless
+          - __lazy-wildcards/subject/costume-elem-expressions/smile-sad/prompts__
+          - __lazy-wildcards/subject/costume-elem-expressions/crying/prompts__
+          - __lazy-wildcards/subject/costume-elem-expressions/tears/prompts__
+        costume-elem:
+          - messy makeup
+          - gothic makeup
 

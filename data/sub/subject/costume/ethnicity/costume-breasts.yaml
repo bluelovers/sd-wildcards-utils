@@ -6,30 +6,34 @@ lazy-wildcards:
         prompts:
           - >-
             {1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/costume-breasts-cleavage__}
-            {0.3::,__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-out/prompts__|}
-            {,{1$$__lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/costume-breasts-out-bra__}|}
-            {0.2::,{1-3$$__lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/costume-breasts-shapes__}|}
-            {0.2::,{1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/costume-breasts-style__}|}
-            {0.2::,__lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/costume-breasts-action__|}
-            {0.2::,__lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/costume-breasts-size__|}
-        costume-breasts-style:
-          - jewelry draped between breasts
+            {0.3::, __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-out/prompts__|}
+            {0.3::, __lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/costume-breasts-out-bra__|}
+            {0.2::, {1-3$$__lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/costume-breasts-shapes__}|}
+            {0.2::, {1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/costume-breasts-style__}|}
+            {0.2::, __lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/costume-breasts-action__|}
+            {0.2::, __lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/costume-breasts-size__|}
+            {0.2::, {1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/costume-breasts/costume-breasts-elem__}|}
+        costume-breasts-cleavage:
+          - cleavage
           - >-
-            {1-$$wet breasts|sweat_on_breasts|sweaty breasts}
-          - glistening breasts, shiny breasts
-        costume-breasts-size:
+            {1-$$cleavage cutout|cleavage window}
+          - cleavage overflow
           - >-
-            {1-$$gigantic breasts|hyper breasts}
+            {1-$$cleavage pull|cleavage reach}
+          - cleavage vore
+        costume-breasts-out:
+          - underboob
           - >-
-            {1-$$no_breasts|flat chest|flat chested|flat breasts}
+            {one |}breasts out{ of clothes|}{, breasts_outside|}
+          - exposed breasts
+          - sideboob
           - >-
-            {1-$$small breasts|tiny breasts}
-          - >-
-            medium breasts
-          - huge breasts
-          - big breasts
-          - large breasts
-          - bursting breasts
+            {extended |}downblouse
+        costume-breasts-out-bra:
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-peek/prompts__
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-peek2/prompts__
+          - no bra
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-visible-through-clothes/prompts__
         costume-breasts-shapes:
           - teardrop breasts
           - athletic breasts
@@ -45,34 +49,34 @@ lazy-wildcards:
           - bell shaped breasts
           - deflated breasts
           - __lazy-wildcards/subject/costume-ethnicity-breasts/round_breasts/prompts__
-        costume-breasts-cleavage:
-          - cleavage
+        costume-breasts-style:
+          - jewelry draped between breasts
           - >-
-            {1-$$cleavage_cutout|cleavage_window}
-          - cleavage_overflow
-          - >-
-            {1-$$cleavage_pull|cleavage_reach}
-          - cleavage_vore
+            {1-$$wet breasts|sweat_on_breasts|sweaty breasts}
+          - glistening breasts, shiny breasts
         costume-breasts-action:
           - __lazy-wildcards/subject/costume-ethnicity-breasts/squeezing_breasts/prompts__
-          - breasts_on_glass
+          - breasts on glass
           - __lazy-wildcards/subject/costume-ethnicity-breasts/breast_squish/prompts__
-          - covering_breasts
+          - covering breasts
           - flashing breasts
-          - bouncing_breasts
-        costume-breasts-out:
-          - underboob
+          - bouncing breasts
+        costume-breasts-size:
           - >-
-            {one |}breasts out{ of clothes|}{, breasts_outside|}
-          - exposed breasts
-          - sideboob
+            {1-$$gigantic breasts|hyper breasts}
           - >-
-            {extended |}downblouse
-        costume-breasts-out-bra:
-          - __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-peek/prompts__
-          - __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-peek2/prompts__
-          - no bra
-          - __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-visible-through-clothes/prompts__
+            {1-$$no_breasts|flat chest|flat chested|flat breasts}
+          - >-
+            {1-$$small breasts|tiny breasts}
+          - >-
+            medium breasts
+          - huge breasts
+          - big breasts
+          - large breasts
+          - bursting breasts
+        costume-breasts-elem:
+          - underbust
+          - overbust
       # https://civitai.com/models/61099/fluxpony-perfect-full-round-breasts-and-slim-waist?modelVersionId=242686
       round_breasts:
         prompts:
@@ -290,4 +294,16 @@ lazy-wildcards:
       breast_curtains:
         prompts:
           - breast curtains
+      # https://civitai.com/models/20545/torpedo-tits?modelVersionId=194492
+      tits-rocket:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-breasts/tits-rocket/costume-breasts__{0.3:::{1.2|1.3|1.4}|})
+        costume-breasts:
+          - >-
+            ${v1=!{{very |}small |}}__lazy-wildcards/subject/costume-ethnicity-breasts/tits-rocket/fn/rocket_tits__
+        fn:
+          rocket_tits:
+            - >-
+              ${v1:}rocket tits, ${v1:}torpedo tits
 
