@@ -26,6 +26,8 @@ export default (async () =>
 	// 	.catch(e => consoleLogger.error(String(e)))
 	// ;
 
+	await lazyImport(await import('./output/ci-copy-to-runtime'));
+	
 	await lazyImport(await import('./check'));
 	await lazyImport(await import('./output/build-zip'));
 
