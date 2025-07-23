@@ -926,4 +926,24 @@ lazy-wildcards:
           - cosmic theme
           - celestial theme
           - holographic elements
+      # https://civitai.com/models/1766810/cosplayancient-style-red-gauze-sexy-costume-cosplay-sexy-costume?modelVersionId=1999510
+      ancient-style-red-gauze-sexy-costume:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/ancient-style-red-gauze-sexy-costume/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/ancient-style-red-gauze-sexy-costume/costume-elem__}|}
+        costume:
+          - ancient style {red |}gauze sexy costume
+          - ancient style __lazy-wildcards/utils/color-base__ gauze sexy costume
+        costume-elem:
+          - (see-through clothes, see-through gauze:1.2)
+          - bottomless
+          - __lazy-wildcards/subject/costume/dudou/prompts__
+          - barefoot
+          - bare shoulders
+          - cleavage
+          - hair ornament, jewelry
+          - nail polish
+          - panties
+          - underwear
 

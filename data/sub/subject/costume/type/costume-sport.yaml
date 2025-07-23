@@ -162,4 +162,72 @@ lazy-wildcards:
           - holding bottle
           - handbag
           - water bottle
+      # https://civitai.com/images/12197754?postId=2693228
+      # https://civitai.com/models/423091/dynamic-wildcard-cheerleader-unleashed
+      # https://civitai.com/search/models?sortBy=models_v9&query=cheerleader
+      cheerleader:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/cheerleader/costume-main__{0.3:::{1.2|1.3|1.4}|})
+            {0.3::, __lazy-wildcards/subject/costume/cheerleader/costume__|}
+            {, {1-$$__lazy-wildcards/subject/costume/cheerleader/costume-elem__}|}
+            {0.7::, ({1-$$__lazy-wildcards/subject/costume/cheerleader/costume-weapon__}{0.3:::{1.2|1.3|1.4}|})|}
+            {, {1-$$__lazy-wildcards/subject/costume/cheerleader/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/cheerleader/expressions__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/cheerleader/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/cheerleader/style__}|}
+        costume-main:
+          - >-
+            cheerleader
+            , cheerleading outfit, cheerleader uniform
+            , HaruCheerUniform
+            , l4k3r5gys
+            , CLOTHING_UA_CheerleaderUniform_ownwaifu
+        costume:
+          - __cf-cheerleader/prompt-costume__
+          - __cf-cheerleader/prompt-full__
+        costume-elem:
+          - midriff
+          - pleated skirt
+          - sportswear
+          - twin tails
+          - athletic girl
+          - battle cheerleader
+          - cyber cheerleader
+          - muscular
+          - crop top
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/bouncing_breasts/prompts__
+          - panties
+          - miniskirt
+          - sleeveless
+          - bikini
+          - cheerleader dress
+          - cheerleader top
+          - cheerleader dress with logo
+          - knee boots
+          - cleavage
+        costume-weapon:
+          - holding pom poms
+          - pom pom \(cheerleading\)
+          - pom poms
+          - glowing pom poms
+          - magic pom poms
+        action:
+          - high kicks
+          - jumping
+          - cheering
+          - Cheering_UA_CheerleaderUniform_ownwaifu
+        expressions:
+          - smiling
+        env-bg:
+          - stadium
+          - school theme
+          - __cf-cheerleader/location__
+        style:
+          - shiny
+          - action shot, dynamic pose
+          - group shot
+          - asymmetrical design
+          - pantyshot, from below
+          - motion lines, motion blur
 

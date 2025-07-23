@@ -60,7 +60,7 @@ lazy-wildcards:
           - __lazy-wildcards/subject/costume-ethnicity-breasts/breast_squish/prompts__
           - covering breasts
           - flashing breasts
-          - bouncing breasts
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/bouncing_breasts/prompts__
         costume-breasts-size:
           - >-
             {1-$$gigantic breasts|hyper breasts}
@@ -306,4 +306,14 @@ lazy-wildcards:
           rocket_tits:
             - >-
               ${v1:}rocket tits, ${v1:}torpedo tits
+      # https://civitai.com/models/27832/bouncing-breasts-concept?modelVersionId=145714
+      bouncing_breasts:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-breasts/bouncing_breasts/costume-breasts__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/bouncing_breasts/style__}|}
+        costume-breasts:
+          - bouncing breasts, unaligned breasts
+        style:
+          - motion lines, motion blur
 

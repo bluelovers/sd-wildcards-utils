@@ -22,4 +22,32 @@ lazy-wildcards:
             - czc_sitting, solo, full body
         env-bg:
           - (simple background, pure white background:1.2), stool, wooden floor
+      # https://civitai.com/models/148235/barbie-mugshot-meme-or-barbie-movie-or-ownwaifu
+      profile-mugshot-barbie_mugshot:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/scenes-meme/profile-mugshot-barbie_mugshot/style-view-main__
+            , __lazy-wildcards/subject/scenes-meme/profile-mugshot-barbie_mugshot/costume-weapon__
+            , __lazy-wildcards/subject/scenes-meme/profile-mugshot-barbie_mugshot/env-bg__{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-$$__lazy-wildcards/subject/scenes-meme/profile-mugshot-barbie_mugshot/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/scenes-meme/profile-mugshot-barbie_mugshot/style__}|}
+        style-view-main:
+          - >-
+            mugshot
+            , barbie mugshot \(meme\)
+            , concept_barbie_mugshot_ownwaifu
+            , upper body
+            , solo
+        costume-weapon:
+          - >-
+            holding nameplate, holding sign, holding card
+            , nameplate, letterboxed
+            , english text, character name
+        env-bg:
+          - height mark, height chart, mugshot background
+        costume-elem:
+          - handcuffs
+          - prison clothes
+        style:
+          - drop shadow
 

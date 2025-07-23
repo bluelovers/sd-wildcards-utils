@@ -263,4 +263,31 @@ lazy-wildcards:
         costume-elem:
           - striped panties
           - striped clothes
+    five_star_stories:
+      # https://civitai.com/models/337386/ffs-mh-five-star-stories-mortar-headd?modelVersionId=377796
+      mortar_headd:
+        prompts:
+          - >-
+            (__lazy-wildcards/cosplay-others/five_star_stories/mortar_headd/main-trigger-words__{0.3:::{1.2|1.3|1.4|1.6}|:1.2})
+            , __lazy-wildcards/cosplay-char/five_star_stories/style/prompts__
+            {, {1-$$__lazy-wildcards/cosplay-others/five_star_stories/mortar_headd/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-others/five_star_stories/mortar_headd/costume-weapon__}|}
+            {0.7::, {1-$$__lazy-wildcards/cosplay-others/five_star_stories/mortar_headd/style__}|}
+        main-trigger-words:
+          - mortar headd, mh, gothicmade \(mecha\)
+        costume-elem:
+          - mashin
+          - robot
+          - single horn
+          - mechanization
+          - high heels
+          - horns
+        costume-weapon:
+          - cannon
+          - blade
+          - energy gun
+          - polearm
+          - shield
+        style:
+          - no humans
 

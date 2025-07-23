@@ -60,4 +60,35 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/costume-elem-lower-body/ruffle_skirt/costume-elem__}|}
         costume:
           - __lazy-wildcards/subject/costume-elem-lower-body/ruffle_skirt/costume__, short skirt, short ruffle skirt
+      pantyhose:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-lower-body/pantyhose/costume-elem-pantyhose-main__
+            {, {1-$$__lazy-wildcards/subject/costume-elem-lower-body/pantyhose/costume-elem-pantyhose__}|}
+            {, __lazy-wildcards/subject/costume-elem-lower-body/pantyhose/costume-elem-pantyhose-colors__|}
+            {, {1-2$$__lazy-wildcards/subject/costume-elem-lower-body/pantyhose/costume-elem-pantyhose-pattern__}|}
+        costume-elem-pantyhose-main:
+          - pantyhose
+        costume-elem-pantyhose:
+          - pantyhose under shorts
+          - panties under pantyhose
+          - torn pantyhose
+          - thighband pantyhose
+          - lace_legwear pantyhose
+          - see-through_legwear pantyhose
+          - mismatched_legwear pantyhose
+          - asymmetrical_legwear pantyhose
+        costume-elem-pantyhose-colors:
+          - black pantyhose
+          - __mix-lazy-auto/color-anything__ pantyhose
+          - >-
+            {1-2$$ pantyhose, $$__mix-lazy-auto/color-anything__} pantyhose
+          - multicolored pantyhose
+          - rainbow pantyhose
+        costume-elem-pantyhose-pattern:
+          - striped pantyhose
+          - vertical-striped pantyhose
+          - print pantyhose
+          - fishnet pantyhose
+          - argyle_legwear pantyhose
 

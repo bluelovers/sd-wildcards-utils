@@ -55,7 +55,40 @@ lazy-wildcards:
         costume-weapon:
           - holding condom
         action:
-          - drinking_from_condom, cumdrip
+          - __lazy-wildcards/subject/costume-elem/condom-drinking/prompts__
+      # https://civitai.com/models/143185/drinking-from-condom-cumdrip
+      condom-drinking:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/condom-drinking/env-cum__{0.3:::{1.2|1.3|1.4}|}|})
+        env-cum:
+          - drinking from condom, cumdrip, used condom
+      # https://danbooru.donmai.us/wiki_pages/gokkun
+      cum-drinking:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/cum-drinking/env-cum-main__{0.3:::{1.2|1.3|1.4}|}|})
+            {, {1-$$__lazy-wildcards/subject/costume-elem/cum-drinking/env-cum__}|}
+        env-cum-main:
+          - gokkun, cum drinking
+        env-cum:
+          - bukkake
+          - cum in container
+          - __lazy-wildcards/subject/costume-elem/cum-mouth/prompts-no-weight__
+          - __lazy-wildcards/subject/costume-elem/condom-drinking/env-cum__
+          - cum on food
+          - oral invitation
+      cum-mouth:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/cum-mouth/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}|})
+        prompts-no-weight:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-elem/cum-mouth/env-cum__}
+        env-cum:
+          - cum in mouth
+          - cum on tongue
+          - cum in throat
       # https://civitai.com/models/367967/bukkake-excessive-cum-illustrious-pony-sd15?modelVersionId=411184
       cum_excessive:
         prompts:
@@ -80,12 +113,35 @@ lazy-wildcards:
             {0.2::, {1-$$__lazy-wildcards/subject/costume-elem/cum-base/env__}|}
         env-cum:
           - cum bubble
-          - off-color semen
           - cum stain
-          - cumdrip
+          - __lazy-wildcards/subject/costume-elem/cum-cumdrip/prompts-no-weight__
           - cum string
         env:
-          - __lazy-wildcards/utils/color-base__ cum
+          - __lazy-wildcards/subject/costume-elem/cum-colored/prompts__
+      cum-colored:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/cum-colored/env-cum__{0.3:::{1.2|1.3|1.4}|}|})
+        env-cum:
+          - >-
+            colored cum
+            {, __lazy-wildcards/utils/color-base__ cum|}
+          - off-color semen
+          - milky white cum
+      cum-cumdrip:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/cum-cumdrip/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-elem/cum-cumdrip/env-cum-main__
+            {0.3::, {1-$$__lazy-wildcards/subject/costume-elem/cum-cumdrip/env-cum__}|}
+        env-cum-main:
+          - cumdrip
+        env-cum:
+          - cumdrip onto panties
+          - cumdrip through panties
+      # https://danbooru.donmai.us/wiki_pages/cum?z=2
       cum:
         prompts:
           - >-
@@ -97,11 +153,11 @@ lazy-wildcards:
             {, __lazy-wildcards/subject/costume-elem/cum/action__|}
             {, __lazy-wildcards/subject/costume-elem/cum/expressions__|}
         costume-elem:
-          - out of pussy, cum in pussy
+          - out of pussy, cum in pussy, cum on pussy
           - >-
-            cum on {1-$$, cum on $$hands|hair|breasts|clothes|gloves|body|tongue|legs|stomach|panties|shoe|lips|arms|eyewear|back}
+            cum on {1-$$, cum on $$hands|hair|breasts|clothes|gloves|body|legs|stomach|panties|shoe|lips|arms|eyewear|back|fingers|crotch|stomach|horns|wings}
           - >-
-            cum in {1-$$, cum in $$ass|pussy|cleavage}
+            cum in {1-$$, cum in $$ass|pussy|cleavage|mouth|ear|throat|nipple|urethra}
           - cum inside
         costume-elem2:
           - cum in throat
