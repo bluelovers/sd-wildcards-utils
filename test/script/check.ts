@@ -62,6 +62,7 @@ export default (async () => {
 			'navi_atlas/**',
 			'PurityGuard/**',
 			'NightfallJumper/**',
+			'user-*/**',
 		],
 		allowWildcardsAtEndMatchRecord: true,
 	})
