@@ -431,4 +431,36 @@ lazy-wildcards:
           - topless
           - bottomless
           - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
+    metal_revolution:
+      xophi-ix:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/metal_revolution/xophi-ix/main-trigger-words__
+            , (__lazy-wildcards/cosplay-char/metal_revolution/xophi-ix/costume-ethnicity__)
+            {, {1-$$__lazy-wildcards/cosplay-char/metal_revolution/xophi-ix/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/metal_revolution/xophi-ix/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/metal_revolution/xophi-ix/action__}|}
+        main-trigger-words:
+          - xophi-ix, metal revolution
+        costume-ethnicity:
+          - >-
+            female android police, cybernetic limbs, mecha musume
+            , long hair, green hair
+            , metallic sheen, shiny clothes
+        costume-elem:
+          - police hat
+          - >-
+            police uniform, text on clothes
+            , skintight suit, armored leotard
+            , white and blue suit
+          - faceplate helmet
+          - armored heels, futuristic shoes
+          - chest armor, breastplate
+        costume-weapon:
+          - holding gun, holding pistol
+          - holding baton
+          - holding sword
+          - holding shield
+        action:
+          - salute, standing pose
 

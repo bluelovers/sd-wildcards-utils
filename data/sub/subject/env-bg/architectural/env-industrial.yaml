@@ -1,0 +1,22 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      oil_refinery:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/env-bg/oil_refinery/env-bg__}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/oil_refinery/env__}|}
+        env-bg:
+          - oil refinery
+          - oil platform, oil rig
+        env:
+          - oil plant
+      coastal_machinery_facility:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/env-bg/coastal_machinery_facility/env-bg__}{0.3:::{1.2|1.3|1.4}|})
+        env-bg:
+          - >-
+            coastal machinery facility, coastal machine facility
+            , coastal industrial area
+

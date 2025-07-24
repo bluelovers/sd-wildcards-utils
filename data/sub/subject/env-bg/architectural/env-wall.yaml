@@ -214,4 +214,10 @@ lazy-wildcards:
           - paper lantern
         style:
           - sunlight filtering through
+      warning_tape:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/warning_tape/env__{0.3:::{1.2|1.3|1.4}|})
+        env:
+          - caution tape, warning tape, warning sign
 
