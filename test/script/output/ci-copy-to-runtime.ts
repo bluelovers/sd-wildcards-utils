@@ -28,9 +28,10 @@ export default (async () => {
 			cwd: __SRC_DIR,
 		}), async (file: string) => {
 
-			const src_file = join(__OUT_DIR, file);
+			const src_file = join(__SRC_DIR, file);
+			const out_file = join(__OUT_DIR, file);
 
-			if (!await exists(src_file))
+			if (!await exists(out_file))
 			{
 				let skip = (extname(file) === '.txt' && await exists(src_file + '.yaml')) || await exists(src_file + '.disable');
 
@@ -41,9 +42,9 @@ export default (async () => {
 				else
 				{
 					consoleLogger.yellow.debug(`copy`, file);
-					return copy(src_file, join(__OUT_DIR, file), {
+					return copy(src_file, out_file, {
 						preserveTimestamps: true,
-						dereference: true,
+						// dereference: true,
 					})
 				}
 			}
