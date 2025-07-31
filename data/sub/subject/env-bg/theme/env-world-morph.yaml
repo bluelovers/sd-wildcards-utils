@@ -60,4 +60,76 @@ lazy-wildcards:
           - scifi
           - futuristic
           - fantasy
+      # https://civitai.com/models/117515/hive-interiordesign-or
+      hive-design:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/hive-design/style-main__{0.3:::{1.2|1.3|1.4|1.6}|})
+            , __lazy-wildcards/subject/env-elem-food/honey/env-elem-food-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/hive-design/env-bg-main__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/hive-design/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/hive-design/env-elem__}|}
+            {, {1-2$$__lazy-wildcards/subject/env-bg/hive-design/style-interior__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/hive-design/style__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/hive-design/env__}|}
+        style-main:
+          - >-
+            hive design, hive-like structure
+            , xs-hive-design
+            , hexagonal wax cells
+            , __lazy-wildcards/utils/fn/pattern(v=hexagonal)__
+            , hexagon
+            , organic structure
+        env-bg-main:
+          - bee hive structure, bee nest structure, beehive structure, __lazy-wildcards/utils/fn/inspired(v=hive)__, hive background
+          - honeycomb structure, __lazy-wildcards/utils/fn/inspired(v=honeycomb)__, honeycomb background
+          - hexagonal background, hexagon background
+        costume-elem:
+          - __lazy-wildcards/subject/costume-ethnicity-race/bee_girl/prompts__
+          - bee-like costume, bee-like-themed costume
+          - honeycomb-like costume, honeycomb-themed costume
+          - hexagonal-like costume, hexagonal-themed costume
+          - bee costume, bee-themed costume
+        env-elem:
+          - hexagonal tiles
+          - __lazy-wildcards/subject/env-elem-food/honey/prompts__
+          - honeycomb lighting, hexagonal lamps
+          - hexagonal structure
+          - __lazy-wildcards/subject/env-elem-creatures/bee-like/prompts__
+        style-interior:
+          - modern style
+          - futuristic style
+          - eco style, nature-inspired
+          - cyberpunk style
+          - steampunk style, antique_vibes
+          - fantasy style
+          - industrial style
+        style:
+          - geometric design
+          - biomimicry
+          - neutral colors
+          - metallic finishes
+          - yellow theme, golden color
+          - orange and black theme
+          - translucent
+          - transparent
+          - see-through
+          - ancient
+          - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
+        env:
+          - open space
+          - geometric furniture
+          - seamless walls
+          - moss wall
+          - wooden hexagons
+          - glass panels
+          - bronze hexagons
+          - gear decor
+          - metal frame
+          - vacuum tubes
+          - glowing crystals
+          - vine decor
+          - natural structure, organic architecture
+          - golden liquid
+          - yellow flower
 

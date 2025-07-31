@@ -1,0 +1,97 @@
+lazy-wildcards:
+  subject:
+    costume:
+      airline-uniform:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/airline-uniform/costume-main__{0.3:::{1.2|1.3|1.4}|})
+            {0.7::__lazy-wildcards/subject/costume/airline-uniform/prompts-no-main__|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume/airline-uniform/costume-main__
+            {0.7::__lazy-wildcards/subject/costume/airline-uniform/prompts-no-main__|}
+        prompts-no-main:
+          - >-
+            {, {1-$$__lazy-wildcards/subject/costume/airline-uniform/costume-headwear__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/airline-uniform/costume-elem__}|}
+            {, {1-3$$__lazy-wildcards/subject/costume/airline-uniform/action__}|}
+        costume-main:
+          - airline stewardess, flight attendant, travel attendant
+        costume-headwear:
+          - garrison cap
+          - headset
+          - beret
+          - pillbox hat, tunis blue pillbox hat
+        costume-elem:
+          - 1960s airline uniform, 1960s flight attendant uniform
+          - airline uniform
+          - flight attendant hat
+          - pencil skirt
+          - skirt suit
+          - pantyhose
+          - business suit
+          - id card, badge
+          - hair behind ear
+          - necktie, scarf
+          - ribbon choker
+          - high heels
+          - formal attire
+          - seductive
+          - tight uniform
+          - smoky eyes
+          - updo hairstyle
+          - cleavage
+          - white gloves
+        action:
+          - standing pose
+          - sitting
+          - walking
+          - stewardess pose, attendant pose
+          - saluting
+          - pointing, presenting hand
+          - kneeling pose
+          - bowing
+          - seductive pose
+      # 1960 年代泛美航空（Pan Am）空服員制服
+      airline-1960s-pan-am:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/airline-1960s-pan-am/costume-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/airline-1960s-pan-am/costume__}|}
+            {0.75::, {1-$$__lazy-wildcards/subject/costume/airline-1960s-pan-am/costume-headwear__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/airline-1960s-pan-am/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/airline-1960s-pan-am/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/airline-1960s-pan-am/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/airline-1960s-pan-am/style__}|}
+            {0.7::__lazy-wildcards/subject/costume/airline-uniform/prompts-no-main__|}
+        costume-main:
+          - >-
+            1960s pan am uniform
+            , pan-am uniform
+            , pan am stewardess uniforms
+            , pan am flight attendant uniforms
+        costume:
+          - superjet blue stewardess uniforms
+          - tunis blue stewardess uniforms
+          - teal blue stewardess uniforms
+          - turquoise stewardess uniforms
+        costume-headwear:
+          - beret
+          - pillbox hat, tunis blue pillbox hat
+        costume-elem:
+          - retro uniform
+          - tunis blue blazer
+          - pencil skirt
+          - white gloves
+          - retro hairstyle
+          - necktie, scarf
+        costume-weapon:
+          - handbag, mini handbag
+          - carry on bag
+          - travel bag
+        env-bg:
+          - __lazy-wildcards/subject/env-elem-vehicle/airplane-*/prompts__
+        style:
+          - 60s fashion, retro style
+          - vintage look
+

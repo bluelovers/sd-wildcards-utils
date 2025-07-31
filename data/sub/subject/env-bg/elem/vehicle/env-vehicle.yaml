@@ -178,4 +178,123 @@ lazy-wildcards:
           - train conductor
           - train driver
           - wing collar
+      container_ship:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-vehicle/container_ship/env-elem-vehicle-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/container_ship/env-elem-vehicle__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/container_ship/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/container_ship/env__}|}
+        env-elem-vehicle-main:
+          - >-
+            container ship, container vessel
+            , cargo ship, cargo vessel
+            , container carrier
+        env-elem-vehicle:
+          - bulk carrier
+          - oil tanker
+          - freighter
+          - ship deck
+          - shipping port
+          - dock crane, container crane
+        env-bg:
+          - at sea
+          - in the harbor
+          - port area
+        env:
+          - __lazy-wildcards/subject/env-bg/shipping_containers/prompts__
+          - cranes
+      airplane-interior:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-vehicle/airplane-interior/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-3$$__lazy-wildcards/subject/env-elem-vehicle/airplane-interior/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/airplane-interior/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/airplane-interior/style__}|}
+        env-bg-main:
+          - airplane interior
+        env-bg:
+          - airplane window
+          - bunk bed
+          - narrow corridor
+          - crew galley
+          - crew rest area
+          - __lazy-wildcards/subject/env-elem-vehicle/airplane-cockpit/prompts__
+          - airline seat
+          - toilet stall
+        env:
+          # 亂流
+          - turbulence
+          - night flight
+          - monochrome interior
+          - locker
+          - food cart, serving cart
+        style:
+          - passenger view
+          - emergency
+          - soft lighting
+          - metallic
+          - airplane window view
+      airplane-cockpit:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-vehicle/airplane-cockpit/env-bg__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/airplane-cockpit/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/airplane-cockpit/costume-elem__}|}
+        env-bg:
+          - airplane interior, airplane cockpit, cockpit, cockpit interior
+        env:
+          - control panel
+          - instrumentation
+          - yoke, stick
+        costume-elem:
+          - pilot uniform
+          - aviator sunglasses
+          - headset
+          - gloves
+      airplane-airport:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-vehicle/airplane-airport/env-bg-main__
+            {, {1-3$$__lazy-wildcards/subject/env-elem-vehicle/airplane-airport/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/airplane-airport/env-elem-vehicle__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/airplane-airport/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/airplane-airport/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/airplane-airport/env__}|}
+        env-bg-main:
+          - airport
+        env-bg:
+          - airplane
+          # 登機橋
+          - boarding gate, boarding bridge, boarding stairs
+          # 停機坪
+          - tarmac
+          - airport control tower
+          - jet bridge
+          - airplane runway
+          - ticket booth, barrier pole, check-in counter
+          - metal detector
+          - information board, flight schedule board
+          - baggage claim
+          - airport lounge
+          - airport terminal
+        env-elem-vehicle:
+          - commercial airplane
+          - airport ground vehicle
+          - airliner
+          - passenger plane
+          - jet airliner
+          - aircraft
+        costume-elem:
+          - traveler
+        costume-weapon:
+          - rolling luggage, rolling suitcase
+          - boarding pass, passport
+          - luggage, suitcase
+          - holding a bag
+        env:
+          - cabin crew
+          - aviation
+          - corridor
+          - glass wall
 

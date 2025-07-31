@@ -83,4 +83,50 @@ lazy-wildcards:
         env:
           - harem, palace, royal court
           - starry night
+      priest-catholic-roman:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/priest-catholic-roman/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/priest-catholic-roman/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/priest-catholic-roman/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/priest-catholic-roman/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/priest-catholic-roman/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/priest-catholic-roman/style__}|}
+        costume:
+          - priest, cassock, soutane, roman catholic priest
+        costume-elem:
+          - priest outfit
+          - cross necklace
+          - religious symbols
+          - flowing robe
+          - golden accents
+          - south korean roman catholic priest
+          - black robe
+          - clerical collar
+          - mitre
+          - long sleeves
+          - capelet
+        costume-weapon:
+          - holding bible, holding book
+          - bible \(object\)
+          - holding rosary
+          - holding cross
+          - holding wand
+          - polearm, spear
+          - rosary
+        action:
+          - praying pose
+          - kneeling
+          - preaching
+          - blessing gesture
+        env:
+          - __lazy-wildcards/subject/env-bg/church/prompts__
+          - __lazy-wildcards/subject/env-elem/cross/prompts__
+        style:
+          - solemn atmosphere
+          - spiritual aura
+          - divine light
+          - sacred symbols
+          - ethereal glow
+          - serious
 

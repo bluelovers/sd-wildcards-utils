@@ -12,6 +12,7 @@ lazy-wildcards:
             __lazy-wildcards/subject/costume-weapon/umbrella/env-umbrella__
             {, {1-$$__lazy-wildcards/subject/costume-weapon/umbrella/costume-weapon__}}
             {, {1-$$__lazy-wildcards/subject/costume-weapon/umbrella/style-umbrella__}}
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/umbrella/env__}}
         env-umbrella:
           - umbrella
           - Oil-paper umbrellas, Japanese Wagasa
@@ -24,12 +25,19 @@ lazy-wildcards:
           - leaf umbrella
         style-umbrella:
           - closed umbrella
+          - folding umbrella
           - __mix-lazy-auto/color-anything__ umbrella
           - shared umbrella
           - transparent umbrella, see-through umbrella
+          - wet umbrella
+          - __lazy-wildcards/subject/costume-weapon/broken_umbrella/prompts__
         costume-weapon:
-          - holding umbrella, with an umbrella
+          - holding umbrella, with an umbrella, carrying umbrella
           - umbrella over shoulder
+          - umbrella on back
+        env:
+          - umbrella stand, umbrella bucket
+          - school entrance
       umbrella_others:
         prompts:
           - >-
@@ -44,6 +52,14 @@ lazy-wildcards:
           - Cantilever Umbrella
           - Personal Sun Shade Umbrella
           - Sun Umbrella
+      # https://civitai.com/models/701071/illustandxlandpony-broken-umbrella-inverted-umbrella?modelVersionId=2060342
+      broken_umbrella:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/costume-weapon/broken_umbrella/costume-weapon__})
+        costume-weapon:
+          - broken umbrella
+          - inverted umbrella
       # 鞘
       sword-sheath:
         prompts:

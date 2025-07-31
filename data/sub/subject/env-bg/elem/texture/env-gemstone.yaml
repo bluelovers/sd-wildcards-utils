@@ -62,8 +62,7 @@ lazy-wildcards:
       gemstone:
         prompts:
           - >-
-            ({1-5$$__lazy-wildcards/subject/env-elem/gemstone/env-elem-*__}
-            {0.3:::{1.2|1.3|1.4}|})
+            ({1-5$$__lazy-wildcards/subject/env-elem/gemstone/env-elem-*__}{0.3:::{1.2|1.3|1.4}|})
         env-elem-main:
           - crystal
           - gemstone, gem
@@ -85,4 +84,33 @@ lazy-wildcards:
           - tourmaline \(gemstone\)
           - jade \(gemstone\)
           - __lazy-wildcards/utils/color-base__ gemstone
+          - __lazy-wildcards/utils/color-base__ crystal
+          - __lazy-wildcards/utils/color-base__ jewel
+          - __lazy-wildcards/utils/color-base__ diamond
+          - red spinel \(gemstone\)
+          - fire opal \(gemstone\)
+          - citrine \(gemstone\)
+      # https://civitai.com/models/1804811/everything-is-a-colorful-gem?modelVersionId=2042478
+      # https://civitai.com/models/272524?modelVersionId=307182
+      gemstone-everything:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/gemstone-everything/env-elem__{0.3:::{1.2|1.3|1.4}|})
+            {0.7::, __lazy-wildcards/subject/env-elem/gemstone/prompts__|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/gemstone-everything/style__}|}
+        env-elem:
+          - >-
+            __lazy-wildcards/utils/fn/style-inspired(v=gemstone)__
+            , __lazy-wildcards/utils/fn/style-inspired(v=crystal)__
+            , __lazy-wildcards/utils/fn/made-of(v=gemstone)__
+            , __lazy-wildcards/utils/fn/made-of(v=crystal)__
+            , colorful gemstone style
+            , gemtech, nv_gemtech
+        style:
+          - internal reflections
+          - inner details
+          - transparent
+          - __lazy-wildcards/utils/fn/pattern(v=gemstone)__
+          - __lazy-wildcards/utils/fn/pattern(v=crystal)__
+          - shiny, glowing
 

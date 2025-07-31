@@ -14,9 +14,69 @@ lazy-wildcards:
       coastal_machinery_facility:
         prompts:
           - >-
-            ({1-$$__lazy-wildcards/subject/env-bg/coastal_machinery_facility/env-bg__}{0.3:::{1.2|1.3|1.4}|})
+            (__lazy-wildcards/subject/env-bg/coastal_machinery_facility/env-bg__{0.3:::{1.2|1.3|1.4}|})
         env-bg:
           - >-
             coastal machinery facility, coastal machine facility
             , coastal industrial area
+      shipping_containers:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/shipping_containers/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/shipping_containers/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
+        env-bg-main:
+          - intermodal container
+        env-bg:
+          - shipping containers
+          - cargo containers
+          - container yard
+      shipping_container_building:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/shipping_container_building/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/shipping_container_building/env-bg-container__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/shipping_container_building/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/shipping_container_building/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/shipping_container_building/style__}|}
+        env-bg-main:
+          - tin shack, container architecture, container house
+        env-bg-container:
+          - prefab metal structure, prefab building
+          - shipping container building, shipping container house
+          - container shack
+          - __lazy-wildcards/subject/env-bg/corrugated_metal/prompts-no-weight__
+          - container market
+        env-bg:
+          - warehouse
+          - urban decay
+          - urban ruin
+          - modern architecture
+          - trailer park
+          - industrial area
+        env:
+          - rust, dirty
+          - graffiti
+        style:
+          - industrial style
+          - minimalist design
+          - urban design
+          - post apocalyptic
+      # 波紋鐵 鐵皮
+      corrugated_metal:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/corrugated_metal/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-bg/corrugated_metal/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/corrugated_metal/env-bg__}|}
+        env-bg-main:
+          - corrugated metal
+        env-bg:
+          - corrugated metal wall
+          - corrugated metal roof
+          - corrugated metal shed
+          - corrugated metal fence
+          - corrugated metal building
+          - corrugated metal structure
 

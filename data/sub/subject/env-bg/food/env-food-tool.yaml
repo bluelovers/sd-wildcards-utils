@@ -145,4 +145,31 @@ lazy-wildcards:
           - geometric pattern
           - flower pattern
           - ethnic pattern
+      food_takeout:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/env-elem-food-tool/food_takeout/env-elem-food-tool-main__}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-food-tool/food_takeout/env-elem-food-tool__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/env-elem-food-tool/food_takeout/env-elem-food__}|}
+        env-elem-food-tool-main:
+          - food in bag
+          - food in box
+          - food in basket, basket
+          - drink pouch
+        env-elem-food-tool:
+          - plastic bag
+          - bento, bento box
+          # 雜貨/食材
+          - groceries
+          - carrying bag
+          - transparent bag
+          - takeout box, food box
+          - boxed lunch, boxed food
+          - picnic
+          - carrying basket
+          - paper bag, fast food bag
+        env-elem-food:
+          - takeout food
+          - fast food
+          - drink
 

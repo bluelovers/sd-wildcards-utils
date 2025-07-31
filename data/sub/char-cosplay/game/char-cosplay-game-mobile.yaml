@@ -432,12 +432,13 @@ lazy-wildcards:
           - bottomless
           - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
     metal_revolution:
+      # https://civitai.com/models/1803719/xophi-ix-metal-revolution?modelVersionId=2041244
       xophi-ix:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/metal_revolution/xophi-ix/main-trigger-words__
-            , (__lazy-wildcards/cosplay-char/metal_revolution/xophi-ix/costume-ethnicity__)
-            {, {1-$$__lazy-wildcards/cosplay-char/metal_revolution/xophi-ix/costume-elem__}|}
+            , (__lazy-wildcards/cosplay-char/metal_revolution/xophi-ix/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/metal_revolution/xophi-ix/costume-elem__}|}{0.3:::{1.2|1.3|1.4}|})
             {, {1-$$__lazy-wildcards/cosplay-char/metal_revolution/xophi-ix/costume-weapon__}|}
             {, {1-$$__lazy-wildcards/cosplay-char/metal_revolution/xophi-ix/action__}|}
         main-trigger-words:

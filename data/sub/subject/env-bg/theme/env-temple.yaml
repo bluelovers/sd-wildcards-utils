@@ -62,4 +62,46 @@ lazy-wildcards:
           - illuminated building, spiritual atmosphere
           - temple red, auspicious color, vibrant hue
           - gold foil decor, golden decoration, royal symbol, sacred color
+      # 教堂
+      church:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/church/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/church/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/church/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/church/style__}|}
+        env-bg-main:
+          - >-
+            church
+            , religious architecture
+            , religious setting
+        env-bg:
+          # 小聖堂
+          - chapel
+          - basilica
+          - cathedral
+          - monastery
+          - temple
+          - shrine
+          - bell tower, church bell
+          - >-
+            {church interior|(church exterior, exterior, outdoor{0.3:::{1.2|1.3|1.4|1.6}|:1.3})}
+        env:
+          - candle
+          - altar
+          - pews
+          - stained glass
+          - gothic architecture
+          - baroque architecture
+          - neoclassical architecture
+          - modern architecture
+          - steeple
+          - __lazy-wildcards/subject/env-elem/cross/prompts__
+        style:
+          - religious
+          - spiritual
+          - sacred
+          - historical
+          - cultural
+          - architectural
 

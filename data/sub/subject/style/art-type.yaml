@@ -282,13 +282,14 @@ lazy-wildcards:
       # https://civitai.com/models/44960/mpixel
       # https://civitai.com/models/165876/2d-pixel-toolkit-2d?modelVersionId=186677
       # https://civitai.com/models/195730/aziibpixelmix?modelVersionId=220049
+      # https://civitai.com/models/629354/pixel-art-styles?modelVersionId=1969406
       pixel-game-icon:
         prompts:
           - >-
-            (__lazy-wildcards/subject/style-art-type/pixel-game-icon/style-art-main__{0.3:::{1.2|1.3|1.4}|})
+            (__lazy-wildcards/subject/style-art-type/pixel-game-icon/style-art-main__{0.3:::{1.2|1.3|1.4|1.6}|})
             {, {1-$$__lazy-wildcards/subject/style-art-type/pixel-game-icon/style__}|}
         style-art-main:
-          - Game Icon Institute, pixel art, xiangsu, xiang su, pixel, pixelart, pixel art, pixel world
+          - Game Icon Institute, pixel art, xiangsu, xiang su, pixel, pixelart, pixel art, pixel world, ArsMJStyle, __lazy-wildcards/utils/fn/inspired(v=pixel_art)__
         style:
           - 2d Pixel Art
           - sprite style
@@ -663,4 +664,20 @@ lazy-wildcards:
           - lineart, monochrome
         style:
           - manga-like
+      # https://civitai.com/models/1802106/game-design-of-western-cartoon-characters?modelVersionId=2039412
+      chibi-3d:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-art-type/chibi-3d/style-art-main__:{1.2|1.3|1.4|1.6})
+            {, {1-$$__lazy-wildcards/subject/style-art-type/chibi-3d/style__}|}
+            {, {1-$$__lazy-wildcards/subject/style-art-type/chibi-3d/costume-elem__}|}
+        style-art-main:
+          - __lazy-wildcards/utils/fn/style-inspired(v=3d_chibi)__, 3d
+        costume-elem:
+          - cute
+          - big head
+          - small body
+          - large eyes
+        style:
+          - exaggerated proportions
 

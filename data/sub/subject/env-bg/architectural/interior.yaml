@@ -533,44 +533,14 @@ lazy-wildcards:
           - boho style
           - industrial style
           - sunken
-      # https://civitai.com/models/117515/hive-interiordesign-or
-      hive-design:
+      hive-design-interior:
         prompts:
           - >-
-            (__lazy-wildcards/subject/env-bg-interior/hive-design/style-main__{0.3:::{1.2|1.3|1.4}|})
-            {, {1-2$$__lazy-wildcards/subject/env-bg-interior/hive-design/style-interior__}|}
-            {, {1-$$__lazy-wildcards/subject/env-bg-interior/hive-design/style__}|}
-            {, {1-$$__lazy-wildcards/subject/env-bg-interior/hive-design/env__}|}
+            (__lazy-wildcards/subject/env-bg-interior/hive-design-interior/style-main__{0.3:::{1.2|1.3|1.4|1.6}|})
+            , __lazy-wildcards/subject/env-bg/hive-design/style-main__
         style-main:
-          - hive design, hive-like structure, xs-hive-design, hive-inspired, hive interior design, hexagonal_pattern
-        style-interior:
-          - modern style
-          - futuristic style
-          - eco style, nature-inspired
-          - cyberpunk style
-          - steampunk style, antique_vibes
-          - fantasy style
-          - industrial style
-        style:
-          - geometric_design
-          - biomimicry
-          - neutral_colors
-          - metallic_finishes
-        env:
-          - honeycomb_lighting, hexagonal_lamps
-          - open_space
-          - geometric_furniture
-          - seamless_walls
-          - moss_wall
-          - wooden_hexagons
-          - glass_panels
-          - bronze_hexagons
-          - gear_decor
-          - metal_frame
-          - vacuum_tubes
-          - glowing_crystals
-          - vine_decor
-          - hexagonal_architecture
+          - >-
+            hive interior design, interior
       # https://civitai.com/models/922180/warehouse?modelVersionId=1032238
       warehouse:
         prompts:

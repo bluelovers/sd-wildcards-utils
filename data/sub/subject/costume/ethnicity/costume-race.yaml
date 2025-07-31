@@ -110,10 +110,11 @@ lazy-wildcards:
           - flower censor
         env-bg:
           - forest
+      # https://civitai.com/models/424055/honey-bee-monster-girl-encyclopedia
       bee_girl:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume-ethnicity-race/bee_girl/main__
+            __lazy-wildcards/subject/costume-ethnicity-race/bee_girl/costume-ethnicity-race__
             {,__lazy-wildcards/subject/costume-ethnicity-race/bee_girl/costume-ethnicity__|}
             {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/bee_girl/costume-weapon__}|}
             {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/bee_girl/costume__}|}
@@ -122,8 +123,13 @@ lazy-wildcards:
             {,({1-$$__lazy-wildcards/subject/costume-ethnicity-race/bee_girl/env-bg__}:1.3)|}
             {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/bee_girl/env__}|}
             {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/bee_girl/style__}|}
-        main:
-          - (bee girl:1.3), Anthro_Bee, Wasp Girl
+        costume-ethnicity-race:
+          - >-
+            (bee girl:1.3)
+            , Anthro_Bee
+            , honey bee girl
+            , Wasp Girl
+            , HoneyBeeMGE, hbeein, beegirlz
         costume:
           - abdomen tail
           - antennae
@@ -133,6 +139,7 @@ lazy-wildcards:
           - wasp abdomen
           - >-
             bee {1-$$, bee $$exoskeletons|antennae|abdomen tail}
+          - __lazy-wildcards/subject/costume-elem-accessories/fur-trim/prompts__
         costume-mecha:
           - >-
             mechanical {1-$$, mechanical $$parts|bee}

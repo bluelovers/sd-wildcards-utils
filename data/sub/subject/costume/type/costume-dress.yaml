@@ -65,4 +65,38 @@ lazy-wildcards:
           - dreamy_style
           - naturalistic_design
           - sorganic_form, organic_look
+      # https://civitai.com/models/1809961/holy-grail-dress?modelVersionId=2048272
+      underbust_dress:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/underbust_dress/main-trigger-words__
+            , {1-$$__lazy-wildcards/subject/costume/underbust_dress/costume-main__}
+            {, {1-$$__lazy-wildcards/subject/costume/underbust_dress/costume__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/underbust_dress/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/underbust_dress/style__}|}
+        main-trigger-words:
+          - cleavage, bustier dress
+        costume-main:
+          - underbust dress
+          - overbust dress
+          - holy grail dress
+        costume:
+          - one piece dress
+          - 	tight dress
+          - micro bikini top
+          - high slit dress
+          - __lazy-wildcards/subject/costume/camisole/prompts__
+          - corset dress
+          - __lazy-wildcards/subject/costume/shelf_bra/prompts__
+        costume-elem:
+          - underboob
+          - breast lift
+          - 	erotic clothes, revealing outfit
+          - latex dress
+          - leather dress
+          - glossy dress, shiny dress
+          - metallic dress
+          - half cup
+        style:
+          - nsfw, ecchi
 

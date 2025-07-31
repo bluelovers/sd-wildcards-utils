@@ -1,0 +1,71 @@
+lazy-wildcards:
+  subject:
+    env-elem:
+      cross:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/cross/env-elem-main__
+            {, {1-3$$__lazy-wildcards/subject/env-elem/cross/env-elem__}|}{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-2$$__lazy-wildcards/subject/env-elem/cross/env-elem-texture__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/cross/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/cross/env__}|}
+        env-elem-main:
+          - cross, religious cross
+        env-elem:
+          - latin cross
+          - religious crucifixes, crucifix
+          - greek cross
+          - orthodox cross, russian cross, three bar cross
+          - diagonal cross, saltire, x shaped cross
+          - jerusalem cross, cross with four smaller crosses
+          - maltese cross
+        env-elem-texture:
+          - wooden cross
+          - stone cross
+          - metal cross
+          - gold cross, golden
+          - silver cross
+          - jeweled cross, gem cross, cross with jewels
+        costume-elem:
+          - cross necklace
+          - cross earrings
+        env:
+          - sacred emblems
+          - rosary
+          - decorative cross
+          - ruby
+          - sapphire
+          - emerald
+          - crystals
+          - cross flag
+      # 神秘學
+      occult:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/occult/style-main__}
+            {0.2::, __lazy-wildcards/subject/env-elem/occult/costume__|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/occult/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/occult/style__}|}
+        style-main:
+          - occult practices
+          - occult rituals
+          - occult symbols
+          - occult
+        costume:
+          - __lazy-wildcards/subject/costume/Nun/prompts__
+        env:
+          - __lazy-wildcards/subject/env-elem-punk/conspiracytech/prompts__
+          - ritualistic objects
+          - __lazy-wildcards/subject/env-elem/circle-magic/prompts__
+          - reflective materials
+        style:
+          - sacred geometry
+          - occult and ritualistic aesthetics
+          - pentagramle
+          - circular pattern of stars
+          - star of david
+          - occultism
+          - illuminati
+          - sacred
+          - surreal art
+

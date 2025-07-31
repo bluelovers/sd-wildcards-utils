@@ -73,4 +73,31 @@ lazy-wildcards:
           - dungeon
           - brick wall
           - stone floor
+      bee:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem-creatures/bee/env-elem-creatures-main__}
+            {0.3::, {1-$$__lazy-wildcards/subject/env-elem-creatures/bee/env-elem-creatures-others__}|}
+        env-elem-creatures-main:
+          - bumble bee, bumblebee
+          - bee
+          - queen bee
+          - worker bee
+          - soldier bee
+        env-elem-creatures-others:
+          - huge bee in background
+          - mechanical bee
+      bee-like:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-creatures/bee/prompts__
+            {0.3::, {1-$$__lazy-wildcards/subject/env-elem-creatures/bee-like/env-elem-creatures-others__}|}
+        env-elem-creatures-others:
+          - bee-like creatures
+          - bee-like insect
+          - bee-like monster
+          - bee-like humanoid
+          - bee-like alien
+          - bee-like robot
+          - huge bee in background
 

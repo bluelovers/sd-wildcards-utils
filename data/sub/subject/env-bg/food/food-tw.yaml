@@ -87,4 +87,24 @@ lazy-wildcards:
           - pink sticky rice dumpling
           - blue sticky rice dumpling
           - colorful sticky rice dumpling
+      # https://civitai.com/models/1800524/wheelcake-stall-imagawayaki?modelVersionId=2040943
+      wheelcake:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-food/wheelcake/env-elem-food-main__
+            {0.7::, __lazy-wildcards/subject/env-elem-food/wheelcake/env-bg__|}{0.3:::{1.2|1.3|1.4}|})
+            {0.7::, {1-$$__lazy-wildcards/subject/env-elem-food/wheelcake/env-elem-food__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/wheelcake/action__}|}
+        env-elem-food-main:
+          - wheelcake, imagawayaki
+        env-elem-food:
+          - cream, pouring, holding milk pot
+          - paper bag
+          - cheese pull
+          - golden brown cake
+          - __lazy-wildcards/subject/env-elem-food-tool/food_takeout/prompts__
+        action:
+          - eating
+        env-bg:
+          - wheelcake stall, food stand
 
