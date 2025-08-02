@@ -187,4 +187,22 @@ lazy-wildcards:
           - __lazy-wildcards/subject/style-elem/sci-fi/fn/suffix(v=rococo)__
           - rococo palette
           - fantasy rococo
+      japanese-style:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-theme/japanese-style/style-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-theme/japanese-style/style__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/style-theme/japanese-style/style-main__
+            {, {1-$$__lazy-wildcards/subject/style-theme/japanese-style/style__}|}
+        style-main:
+          - >-
+            __lazy-wildcards/utils/fn/style-inspired(v=japanese)__
+        style:
+          - traditional japanese style
+          - ancient japanese style
+          # https://civitai.com/models/5214/japanese-style-ti
+          - Style-Japan
+          - japanese scene
 

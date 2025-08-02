@@ -21,6 +21,10 @@ lazy-wildcards:
           - rectangular eyewear
         action:
           - adjusting eyewear
+      # 單眼鏡
+      eyewear-monocle:
+        prompts:
+          - monocle
       headwear-religious:
         prompts:
           - >-
@@ -84,4 +88,56 @@ lazy-wildcards:
             ({1-$$__lazy-wildcards/subject/costume-headwear/vr_headset/costume-headwear__}{0.3:::{1.2|1.3|1.4|1.6}|:1.2})
         costume-headwear:
           - vr headset, virtual reality headset, head-mounted display, vr visor
+      veil-headwear:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-headwear/veil-headwear/costume-headwear-main__
+            , {1-3$$__lazy-wildcards/subject/costume-headwear/veil-headwear/costume-headwear__}
+            {, {1-5$$__lazy-wildcards/subject/costume-headwear/veil-headwear/costume-elem-veil__}|}{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-5$$__lazy-wildcards/subject/costume-headwear/veil-headwear/style__}|}
+        costume-headwear-main:
+          - >-
+            veil
+            , __lazy-wildcards/utils/fn/made-of(v=veil-style)__
+        costume-headwear:
+          - veiled headwear, veil-style headwear
+          - veil over eyes, veiled eye mask
+          - mouth veil
+          - veiled face covering
+          - head veil
+          - bridal veil
+          - veiled helmet mask
+          - veiled faceplate
+          - veil-style headpiece, veiled headpiece
+          - veiled crown
+        costume-elem-veil:
+          - lace veil
+          - sheer veil
+          - embroidered veil
+          - decorative veil
+          - fantasy veil
+          - ceremonial mask veil
+          - ethnic veil
+          - see-through veil
+          - __lazy-wildcards/utils/color-base__ veil
+          - religious veil
+          - cyber veil
+          - jewelry veil
+          - chain veil
+          - metallic veil
+          - egyptian veil
+        style:
+          - elegant style
+          - romantic style
+          - bridal style
+          - gothic style
+          - bohemian style
+          - traditional style
+          - cultural style
+          - vintage style
+          - ornate style
+          - minimalist style
+          - modern style
+          - steampunk style
+          - egyptian style
 

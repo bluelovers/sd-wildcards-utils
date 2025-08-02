@@ -149,4 +149,108 @@ lazy-wildcards:
         action:
           - fan dance
           - folding fan attack
+      japanese_weapon:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-weapon/japanese_weapon/costume-weapon__
+            , ({1-5$$__lazy-wildcards/subject/costume-weapon/japanese_weapon/costume-weapon-*__}{0.3:::{1.2|1.3|1.4}|})
+        costume-weapon:
+          - japanese weapon, traditional japanese weapon
+        costume-weapon-blade:
+          - katana, bkn katana
+          # 脇差，短
+          - wakizashi
+          # 短刀
+          - tanto
+          # 野太刀／大太刀
+          - nodachi, odachi
+          # 太刀
+          - tachi
+          # 小太刀
+          - kodachi
+          # 長巻
+          - nagamaki
+          - japanese dagger
+          - drawing katana
+          - holding katana
+          - katana at waist
+        costume-weapon-polearm:
+          # 薙刀
+          - naginata
+          # 槍
+          - yari
+          # 大鐮刀式薙刀
+          - bisento
+          - japanese polearm
+        costume-weapon-ranged:
+          # 弓
+          - yumi
+          # 大弓
+          - daiyumi
+          # 短弓
+          - tantou
+          # 手裏劍
+          - shuriken
+          # 苦無
+          - kunai
+          # 投擲小刀
+          - throwing knife
+        costume-weapon-impact:
+          - club
+          - spiked two-handed war club
+          - tetsubo
+          - studded two-handed war club
+          - bo staff
+        costume-weapon-unorganized:
+          # 三叉鉤
+          - sai
+          # 鎖鐮
+          - kusarigama, a traditional japanese weapon consisting of a sickle attached to a chain
+          - chain
+        costume-weapon-state:
+          - holding weapon
+          - huge weapon
+          - arm mounted weapon
+      suitcase:
+        prompts:
+          - >-
+            ({1-2$$__lazy-wildcards/subject/costume-weapon/suitcase/costume-weapon__}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/suitcase/costume-weapon-elem__}|}
+            {, {1-2$$__lazy-wildcards/subject/costume-weapon/suitcase/action__}|}
+            {, {1-2$$__lazy-wildcards/subject/costume-weapon/suitcase/env-bg__}|}
+        costume-weapon:
+          - __lazy-wildcards/subject/costume-weapon/suitcase/fn/bag(v=suitcase)__
+          - __lazy-wildcards/subject/costume-weapon/suitcase/fn/bag(v=briefcase)__
+          - __lazy-wildcards/subject/costume-weapon/suitcase/fn/bag(v=luggage)__
+          - __lazy-wildcards/subject/costume-weapon/suitcase/fn/bag(v=duffel bag)__
+          - __lazy-wildcards/subject/costume-weapon/suitcase/fn/cart(v=luggage cart)__
+        costume-weapon-elem:
+          - travel suitcase
+          - small suitcase
+          - leather suitcase
+          - shoulder bag
+        action:
+          - walking
+        env-bg:
+          - airport
+          - train station
+          - platform
+          - station entrance
+          - hotel
+          - lobby
+        fn:
+          bag:
+            - >-
+              ${v}
+              {, {open|closed} ${v}|}
+              {, {pulling|dragging|sitting on|on|holding|carrying} ${v}|}
+              {, {1-$$colorful|__lazy-wildcards/utils/color-base__|metallic} ${v}|}
+          cart:
+            - >-
+              ${v}
+              {, {pulling|dragging|sitting on|on|pushing} ${v}|}
+    map:
+      costume-weapon:
+        - map \(object\)
+        - holding map
 

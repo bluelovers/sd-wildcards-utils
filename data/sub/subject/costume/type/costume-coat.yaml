@@ -30,4 +30,27 @@ lazy-wildcards:
           - hoodie layering
           - blue coat
           - waist belt
+      # 机能披风服饰
+      # https://civitai.com/models/82571/functional-cape-or
+      tactical_cloak:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/tactical_cloak/costume-main__
+            {, {1-$$__lazy-wildcards/subject/costume/tactical_cloak/costume__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/tactical_cloak/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/tactical_cloak/style__}|}
+        costume-main:
+          - tactical cloak, tactical cape, functional cape
+        costume:
+          - tactical hooded cloak
+          - hooded cloak
+          - windbreaker
+        costume-elem:
+          - functional tailoring
+          - high colla
+        style:
+          - __lazy-wildcards/utils/fn/inspired(v=tactical)__
+          - urban tactical
+          - modern tactical
+          - functional sense
 

@@ -24,12 +24,17 @@ lazy-wildcards:
           - >-
             (__lazy-wildcards/subject/env-bg/shipping_containers/env-bg-main__
             {, {1-$$__lazy-wildcards/subject/env-bg/shipping_containers/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/shipping_containers/env__}|}
         env-bg-main:
           - intermodal container
         env-bg:
           - shipping containers
           - cargo containers
           - container yard
+        env:
+          - stacked containers
+          - container storage area
+          - rusted containers
       shipping_container_building:
         prompts:
           - >-
@@ -62,6 +67,7 @@ lazy-wildcards:
           - urban design
           - post apocalyptic
       # 波紋鐵 鐵皮
+      # https://civitai.com/models/18397/taiwan-metal-steel-building-likeness
       corrugated_metal:
         prompts:
           - >-
@@ -70,6 +76,7 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/subject/env-bg/corrugated_metal/env-bg-main__
             {, {1-$$__lazy-wildcards/subject/env-bg/corrugated_metal/env-bg__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/env-bg/corrugated_metal/env__}|}
         env-bg-main:
           - corrugated metal
         env-bg:
@@ -79,4 +86,23 @@ lazy-wildcards:
           - corrugated metal fence
           - corrugated metal building
           - corrugated metal structure
+          - corrugated galvanized iron sheet
+        env:
+          - >-
+            {1-2$$__lazy-wildcards/utils/color-base__} corrugated metal
+          - colorful corrugated metal
+          - silver gray corrugated metal
+          - navy blue corrugated metal
+          - light green corrugated metal
+          - dark gray corrugated metal
+          - rusted corrugated metal
+          - weathered corrugated metal
+      # https://civitai.com/models/18397/taiwan-metal-steel-building-likeness
+      corrugated_metal_building:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/corrugated_metal_building/env-bg__
+            , __lazy-wildcards/subject/env-bg/corrugated_metal/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        env-bg:
+          - corrugated metal building, metal steel building
 

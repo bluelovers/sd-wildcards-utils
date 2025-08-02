@@ -381,4 +381,66 @@ lazy-wildcards:
           - long lashes
           - Chaogua
           - Xiapei, Cloak
+      # 官將首
+      # https://civitai.com/models/105960?modelVersionId=113788
+      # https://civitai.com/models/152762/ba-jia-jiang-taiwanese-hell-police-in-the-world-of-dead
+      guan_jiang_shou:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/guan_jiang_shou/costume-ethnicity__
+            , __lazy-wildcards/subject/costume/guan_jiang_shou/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/guan_jiang_shou/expressions__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/guan_jiang_shou/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/guan_jiang_shou/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/guan_jiang_shou/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/guan_jiang_shou/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/guan_jiang_shou/env__}|}
+        costume-ethnicity:
+          - >-
+            guan jiang shou
+            , guanhelmet, GuanJianShou
+            , Ba Jia Jiang
+            , twgod
+            , face paint, face markings
+            , traditional makeup
+            , war paint
+            , mouth paint
+            , demonic features
+        costume:
+          - >-
+            pauldrons, headgear
+            , gem, jewelry
+        expressions:
+          - grim expression
+          - angry
+          - fierce look, intense stare
+          - snarl, menacing
+        costume-elem:
+          - taiwanese temple armor
+          - sash, talisman, ornament
+          - barefoot
+          - straw sandals
+        costume-weapon:
+          - dao sword
+          - weapon
+          - holding brush, writing
+          - polearm, chain, daoist artifact
+          - holding huoqian and handcuffs
+          - huoqian and handcuffs
+          - trident, holding trident
+        action:
+          - authoritative pose
+          - jumping, possessed, ritual dance
+        env-bg:
+          - taiwanese temple, parade
+          - taiwanese festival, fireworks, smoke
+          - chinese architecture, temple gate
+          - daoshi, daoist temple
+          - chinese temple roof
+          - temple interior
+          - street procession, ritual march
+        env:
+          - red lantern, lantern glow
+          - deity statue
+          - engraving, dragon motif
 

@@ -60,4 +60,30 @@ lazy-wildcards:
           # 河堤、海堤，河岸
           - >-
             {riverbank|sandbank, sand}
+      # 潮汐道路 / 潮間道路
+      causeway:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/causeway/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/causeway/env-bg-real__}|}{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/causeway/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/causeway/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/causeway/action__}|}
+        env-bg-main:
+          - causeway, tidal road
+        env-bg-real:
+          - mont saint-michel causeway
+        env-bg:
+          - tidal causeway
+          - low tide, appearing road during low tide
+          - causeway road
+          - causeway bridge
+          - stone path submerged in water
+        env:
+          - wet ground
+          - shallow water
+          - mudflat
+          - water trail
+        action:
+          - walking on water
 

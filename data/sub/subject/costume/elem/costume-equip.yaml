@@ -12,4 +12,12 @@ lazy-wildcards:
           - Personal flying device
         action:
           - flying
+      holstered:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/costume-elem/holstered/costume-elem__})
+        costume-elem:
+          - holstered
+          - thigh holster
+          - belt
 

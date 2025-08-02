@@ -433,11 +433,14 @@ lazy-wildcards:
           - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
     metal_revolution:
       # https://civitai.com/models/1803719/xophi-ix-metal-revolution?modelVersionId=2041244
+      # https://civitai.com/posts/20222001
+      # https://civitai.com/models/1818450/xophi-ix-v2
       xophi-ix:
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/metal_revolution/xophi-ix/main-trigger-words__
             , (__lazy-wildcards/cosplay-char/metal_revolution/xophi-ix/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/metal_revolution/xophi-ix/costume-headwear__}|}
             {, {1-$$__lazy-wildcards/cosplay-char/metal_revolution/xophi-ix/costume-elem__}|}{0.3:::{1.2|1.3|1.4}|})
             {, {1-$$__lazy-wildcards/cosplay-char/metal_revolution/xophi-ix/costume-weapon__}|}
             {, {1-$$__lazy-wildcards/cosplay-char/metal_revolution/xophi-ix/action__}|}
@@ -446,17 +449,26 @@ lazy-wildcards:
         costume-ethnicity:
           - >-
             female android police, cybernetic limbs, mecha musume
-            , long hair, green hair
+            , long hair, long green hair, long cyan hair
             , metallic sheen, shiny clothes
+            , mecha joints
+            , __lazy-wildcards/subject/costume-ethnicity-body-skin/artificial_skin/prompts__
+            , shiny metallic finishes
+        costume-headwear:
+          - police hat, metallic police cap
+          - faceplate helmet
         costume-elem:
-          - police hat
           - >-
             police uniform, text on clothes
             , skintight suit, armored leotard
             , white and blue suit
-          - faceplate helmet
           - armored heels, futuristic shoes
           - chest armor, breastplate
+          - athletic body
+          - hair over one eye
+          - pronounced hips
+          - chest plate
+          - metallic face with \(no human features\)
         costume-weapon:
           - holding gun, holding pistol
           - holding baton
@@ -464,4 +476,6 @@ lazy-wildcards:
           - holding shield
         action:
           - salute, standing pose
+          - squeezing her own butt with her hands
+          - side lying
 

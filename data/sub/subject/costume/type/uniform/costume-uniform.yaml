@@ -18,6 +18,51 @@ lazy-wildcards:
             {1-$$walkie-talkie|holding walkie-talkie}
           - handcuffs
           - law_enforcement_tool
+      # https://civitai.com/models/437156/0524-navy-tactical-uniform
+      # https://civitai.com/models/333806/tactical-uniform-1
+      # https://civitai.com/models/351167/tactical-uniform-2
+      # https://civitai.com/models/342410/tactical-uniform-3
+      # https://civitai.com/models/342383/tactical-uniform-4
+      # https://civitai.com/models/340380/tactical-uniform-5
+      # https://civitai.com/models/257994/tactigals-or-tactical-girls
+      police-riot:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/police-riot/costume-main__
+            {, {1-$$__lazy-wildcards/subject/costume/police-riot/costume__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/police-riot/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/police-riot/costume-weapon__}|}
+        costume-main:
+          - >-
+            s.w.a.t, riot police
+            , ruanyi0524
+        costume:
+          - national police agency \(taiwan\)
+          - military police
+        costume-elem:
+          - tactical clothes
+          - face shield
+          - bulletproof vest
+          - combat helmet
+          - holstered
+          - __lazy-wildcards/subject/costume-elem/holstered/prompts__
+          - backpack
+          - gas mask, respirator
+          - helmet
+          - gloves
+        costume-weapon:
+          - riot shield, transparent riot shield
+          - baton
+          - tear gas
+          - rubber bullet gun
+          - t65k2 assault rifle
+          - sig mcx
+          - shield wall
+          - action camera
+          - m4 carbine
+          - walther p99
+          - assault rifle
+          - benelli m4
       Nun:
         prompts:
           - >-
@@ -201,8 +246,12 @@ lazy-wildcards:
         costume:
           - __lazy-wildcards/subject/costume/maid/fn/maid-color-01(c=blue,c2=white)__
           - __lazy-wildcards/subject/costume/maid/fn/maid-color-01(c=!__mix-lazy-auto/color-anything__,c2=white)__
-          - __lazy-wildcards/subject/costume/maid/fn/maid-color-01(c=__mix-lazy-auto/color-anything__,c2=white)__
-          - __lazy-wildcards/subject/costume/maid/fn/maid-color-01(c=__mix-lazy-auto/color-anything__,c2=__mix-lazy-auto/color-anything__)__
+          - >-
+            ${c=!__mix-lazy-auto/color-anything__}
+            __lazy-wildcards/subject/costume/maid/fn/maid-color-01(c2=white)__
+          - >-
+            ${c=!__mix-lazy-auto/color-anything__}${c2=!__mix-lazy-auto/color-anything__}
+            __lazy-wildcards/subject/costume/maid/fn/maid-color-01__
           - British Victorian Maid, victorian maid, long dress, high collar, frilly apron, black dress, white apron, lace headdress
           - French Maid, short dress, frilly apron, lace trim, thighhighs, garter belt, fishnet stockings, cleavage
           - Japanese Maid, kawaii maid, frilly dress, puff sleeves, lace headdress, short skirt

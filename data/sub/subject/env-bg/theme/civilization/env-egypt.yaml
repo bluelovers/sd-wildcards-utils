@@ -1,0 +1,53 @@
+lazy-wildcards:
+  subject:
+    env-elem-civilization:
+      gods_of_egypt_2016:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-civilization/gods_of_egypt_2016/style-main__
+            , __lazy-wildcards/subject/env-elem-civilization/Ancient-Egypt2/prompts__
+            {, {1-3$$__lazy-wildcards/subject/env-elem-civilization/gods_of_egypt_2016/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/gods_of_egypt_2016/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/gods_of_egypt_2016/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/gods_of_egypt_2016/env-elem-vehicle__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/gods_of_egypt_2016/style__}|}
+        style-main:
+          - >-
+            ancient gods, ancient egyptian god, ancient egyptian gods civilization
+            , egyptian mythology, techno-fantasy
+            , gold civilization
+        env-bg:
+          - desert landscape
+          - ancient egyptian architecture, fantasy cityscape
+          - pyramids, sphinx
+          - golden temples, golden architecture
+          - floating city
+          - massive structure
+          - orbiting sun barge, light bridge, floating ship
+          - underworld, portal
+          - golden battlefield
+          - orbiting city
+        costume-elem:
+          - divine armor, techno armor
+          - transforming armor
+          - fantasy armor
+          - golden armor
+          - ancient egyptian clothes
+          - bare shoulders
+          - egyptian headpiece
+          - floating gods
+          - ancient egyptian goddess
+        env:
+          - magical machinery
+          - energy beam
+        env-elem-vehicle:
+          - flying ship
+        style:
+          - divine war, divine being
+          - ancient technology
+          - god rays
+          - ambient glow
+          - magic glow
+          - dramatic lighting
+          - judgment
+

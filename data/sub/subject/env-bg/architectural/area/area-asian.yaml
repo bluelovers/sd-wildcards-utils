@@ -1,0 +1,93 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      # 台灣檳榔攤
+      # https://civitai.com/models/243085/retroneonbetelnutgirl?modelVersionId=287373
+      taiwanese_betel_nut_stand:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/taiwanese_betel_nut_stand/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/taiwanese_betel_nut_stand/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/taiwanese_betel_nut_stand/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/taiwanese_betel_nut_stand/expressions__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/taiwanese_betel_nut_stand/action__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/taiwanese_betel_nut_stand/env-elem-food__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/taiwanese_betel_nut_stand/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/taiwanese_betel_nut_stand/style__}|}
+        env-bg-main:
+          - >-
+            taiwanese betel nut stand, taiwanese betel nut shop
+            , glass
+            , BetelNutGirl
+        env-bg:
+          - __lazy-wildcards/subject/env-bg/corrugated_metal/prompts__
+          - glass wall, glass booth
+          - __lazy-wildcards/subject/env-bg/shipping_container_building/prompts__
+          - stall, counter, convenience display
+        costume-elem:
+          - heavy makeup, lipstick, long eyelashes
+          - bikini top
+          - miniskirt
+          - see-through shirt
+          - revealing outfit
+        expressions:
+          - service smile
+        action:
+          - sitting
+          - seductive pose
+        env-elem-food:
+          - betel nut
+        env:
+          - metal roof
+          - neon lights, neon sign, retro signage
+          - signboard, handwritten sign, price list
+          - night, urban night
+          - roadside
+          - wet pavement, neon reflection, after rain
+          - suburban, overhead wires, quiet street
+          - scooter, motorbike, street life
+          - signboard, lightbox, poster
+        style:
+          - teal and pink
+          - neon backlight, colored lighting
+          - retro, vintage signage
+          - old school aesthetic
+          - reflection, through glass, interior focus
+      # 明治時期日本的西化建築
+      japanese_western_fusion_meiji_style:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/japanese_western_fusion_meiji_style/style-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/japanese_western_fusion_meiji_style/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/japanese_western_fusion_meiji_style/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/japanese_western_fusion_meiji_style/style__}|}
+        style-main:
+          - japanese western fusion, meiji style, building with european and japanese elements
+        env-bg:
+          - brick building
+          - clock tower
+          - building with red bricks and arched corridors
+          - arched corridors
+          - stone building, brick wall
+          - wooden western house
+          - balcony
+          - brick street
+          - garden, wooden porch, fence
+          - european architecture
+        env:
+          - pediment, decorative facade
+          - arched windows
+          - steeple, dome
+          - wooden window
+          - tiled roof, gabled roof
+          - historical cityscape
+          - stone stairs
+          - government building
+          - red brick, gray stone, natural color palette
+          - dark wood, wood texture
+          - western facade
+          - tram rails
+          - arcade
+        style:
+          - retro, historical, early modern era
+

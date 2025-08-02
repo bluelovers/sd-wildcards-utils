@@ -153,4 +153,98 @@ lazy-wildcards:
           - >-
             (__lazy-wildcards/subject/costume-ethnicity-race/korean_girls/fn/doll-likeness(v=vietnamese)__
             , MunTran, Nguyen, Vyvan3, jichoi, miucoser{0.3:::{1.2|1.3|1.4}|})
+      # 斯拉夫 烏克蘭 俄羅斯
+      slavic:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-race/slavic/costume-ethnicity-race-main__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/slavic/costume-ethnicity-race__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/slavic/costume-ethnicity__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/slavic/costume-headwear__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/slavic/costume-elem__}|}
+        costume-ethnicity-race-main:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/korean_girls/fn/doll-likeness(v=slavic)__
+        costume-ethnicity-race:
+          - __lazy-wildcards/subject/costume-ethnicity-race/korean_girls/fn/doll-likeness(v=ukrainian)__
+          - __lazy-wildcards/subject/costume-ethnicity-race/korean_girls/fn/doll-likeness(v=russian)__
+        costume-ethnicity:
+          - high cheekbones, sharp nose, pale skin
+        costume-headwear:
+          - kokoshnik
+          - ushanka
+        costume-elem:
+          - smoky eyes, heavy makeup, eye shadow
+          - lipstick
+          - blush
+          - ukrainian clothes
+          - russian clothes
+          - flower crown
+          - embroidery
+          - folk costume
+          - ribbon
+          - eastern european
+          - leather jacket
+          - high boots
+          - tight dress
+          - flower ornament
+          - folk dress
+          - military coat
+          - __lazy-wildcards/subject/costume-elem-accessories/fur-trim/prompts__
+          - combat boots
+      # 台灣原住民
+      # https://civitai.com/models/150043/taiwan-aborigines
+      taiwan_aborigines:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-race/taiwan_aborigines/costume-ethnicity-race-main__
+            {, {1-2$$__lazy-wildcards/subject/costume-ethnicity-race/taiwan_aborigines/costume-ethnicity-race__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/taiwan_aborigines/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/taiwan_aborigines/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/taiwan_aborigines/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/taiwan_aborigines/style__}|}
+        costume-ethnicity-race-main:
+          - >-
+            taiwan aborigines, indigenous peoples of taiwan, taiwanese tribal
+            , TaiwanAborigines
+            , __lazy-wildcards/subject/costume-ethnicity-race/korean_girls/fn/doll-likeness(v=taiwan_aborigines)__
+        costume-ethnicity-race:
+          # 阿美族
+          - amis \(indigenous taiwanese\)
+          # 泰雅族
+          - atayal \(indigenous taiwanese\)
+          # 排灣族
+          - paiwan \(indigenous taiwanese\)
+          # 魯凱族
+          - rukai \(indigenous taiwanese\)
+          # 布農族
+          - bunun \(indigenous taiwanese\)
+          # 鄒族
+          - tsou \(indigenous taiwanese\)
+          # 卑南族
+          - puyuma \(indigenous taiwanese\)
+        costume-elem:
+          - traditional tribal clothing
+          - tribal tattoo
+          - facial tattoo
+          - feather accessory
+          - feather headband
+          - headband
+          - traditional tribal skirt
+          - handmade jewelry
+          - aboriginal  archer
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+        env-bg:
+          - mountain village
+          - forest background
+          - river scenery
+          - traditional tribal house
+        env:
+          - bonfire
+          - tribal ritual
+          - cultural festival
+        style:
+          - black and white pattern
+          - red and black pattern
+          - ethnic pattern
 

@@ -288,10 +288,8 @@ lazy-wildcards:
         costume-elem:
           - traveler
         costume-weapon:
-          - rolling luggage, rolling suitcase
           - boarding pass, passport
-          - luggage, suitcase
-          - holding a bag
+          - __lazy-wildcards/subject/costume-weapon/suitcase/prompts__
         env:
           - cabin crew
           - aviation

@@ -99,6 +99,7 @@ lazy-wildcards:
       # https://civitai.com/models/1494603/spaceman-lora?modelVersionId=1690790
       # https://civitai.com/models/25236/clothes-spacesuit
       # https://civitai.com/models/583134/spacesuit
+      # https://civitai.com/models/1778358/baroque-space-opera?modelVersionId=2012661
       spaceman:
         prompts:
           - >-
@@ -108,13 +109,17 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/costume/spaceman/env__}|}
             {, {1-$$__lazy-wildcards/subject/costume/spaceman/style__}|}
         costume:
-          - spaceman, spacesuit
+          - spaceman, spacesuit, space helmet
         costume-elem:
           - spaceman monk, spacemonk
           - >-
             {vivid |}__lazy-wildcards/utils/color-base__ space suit
           - steampunk spacesuit
           - The helmet is domed, polished, with retro-futuristic engravings and glowing lenses
+          - gas mask
+          - mirrored visor
+          - breathing mask
+          - sci-fi helmet
         env-bg:
           - a circle in the background
           - circular structure, evoking both planetary symbolism and industrial design
@@ -127,6 +132,9 @@ lazy-wildcards:
         style:
           - steampunk
           - cosmic industrial backdrop
+          - baroque space opera
+          - sci-fi baroque couture pulp
+          - metallic, transparent, reflective, glossy
       post-apocalyptic_explorer:
         prompts:
           - >-

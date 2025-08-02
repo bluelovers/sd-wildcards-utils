@@ -135,14 +135,21 @@ lazy-wildcards:
           - japanese culture
       # https://civitai.com/images/2767529
       # https://civitai.com/models/155402/sarena-style-mix?modelVersionId=174315
+      # https://civitai.com/models/148341/ancient-japanese-village-microlyco-half-wilderness-half-countryside-sd15
+      # https://civitai.com/models/201597/hitozato-japanese-architecture-style-of-human-village-from-touhou
       japanese_village:
         prompts:
           - >-
             (__lazy-wildcards/subject/env-bg/japanese_village/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
             {, {1-$$__lazy-wildcards/subject/env-bg/japanese_village/env-bg__}|}
             {, {1-$$__lazy-wildcards/subject/env-bg/japanese_village/env__}|}
+            {, __lazy-wildcards/subject/style-theme/japanese-style/prompts-no-weight__|}
         env-bg-main:
-          - japanese village
+          - >-
+            japanese village, ancient japanese village
+            , japanese countryside
+            , inaka
+            , hitozato
         env-bg:
           - town
           - side walk
@@ -150,6 +157,8 @@ lazy-wildcards:
           - building
           - house
           - high ground
+          - half-wilderness, half-countryside
+          - paddy field
         env:
           - sakura tree, under tree
           - fruit stall
@@ -165,4 +174,99 @@ lazy-wildcards:
           - stairs
           - stone lantern
           - stone wall
+          - mountain
+          - river
+      # https://www.japan-guide.com/e/e2296.html
+      # https://civitai.com/models/655767/japanese-castlehimeji-castle
+      japanese_castle:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/japanese_castle/env-bg-main__
+            {, __lazy-wildcards/subject/env-bg/japanese_castle/env-bg-real__|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/japanese_castle/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/japanese_castle/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/japanese_castle/style__}|}
+            {, __lazy-wildcards/subject/style-theme/japanese-style/prompts-no-weight__|}
+        env-bg-main:
+          - >-
+            japanese castle
+            , fortresses constructed primarily of wood and stone
+        env-bg-real:
+          - himeji castle
+          - matsumoto castle
+          - matsuyama castle
+          - matsue castle
+          - hikone castle
+          - matsuyama castle
+          - hirosaki castle
+          - inuyama castle
+          - kochi castle
+          - maruoka castle
+          - uwajima castle
+          - marugame castle
+          - takeda castle ruins
+        env-bg:
+          - stone walls
+          - stone steps, terraced hill
+          - wooden structures, tiled roofs
+          - moat, waterway, bridge, drawbridge
+          - pagoda, tenshukaku, castle tower
+          - pagoda, guard towers, yagura
+          - retaining wall, mountain
+          - castle gate
+          - elevated platform
+          - palace, goten, traditional japanese architecture
+        env:
+          - cherry blossom trees
+          - garden
+          - lanterns
+          - torii gate
+          - man made structure, stone foundation
+          - __lazy-wildcards/subject/env-bg/japanese_forest/prompts__
+          - wooden bridge
+          - stone bridge
+        style:
+          - traditional japanese style
+          - historical architecture
+          - serene atmosphere
+          - reflection
+      japanese_castle_interior:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/japanese_castle_interior/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-2$$__lazy-wildcards/subject/env-bg/japanese_castle_interior/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/japanese_castle_interior/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/japanese_castle_interior/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/japanese_castle_interior/costume-weapon__}|}
+            {, __lazy-wildcards/subject/style-theme/japanese-style/prompts-no-weight__|}
+        env-bg-main:
+          - >-
+            japanese castle interior, traditional japanese castle interior
+            , japanese interior
+        env-bg:
+          - traditional japanese room
+          - __lazy-wildcards/subject/env-bg/washitsu/prompts__
+          - japanese corridor
+          - japanese kitchen
+          - weapon rack
+        env:
+          - wooden floor
+          - lantern, candlelight
+          - floor pillow
+          - paper wall
+          - wall map
+          - scroll
+          - wooden stairs
+          - hidden passage
+          - narrow hallway
+          - sliding door
+          - rice barrel, traditional pot
+          - wooden shelf
+        costume-elem:
+          - samurai, samurai armor
+        costume-weapon:
+          - __lazy-wildcards/subject/costume-weapon/japanese_weapon/prompts__
+      japanese_forest:
+        prompts:
+          - japanese forest, aokigahara, jukai
 
