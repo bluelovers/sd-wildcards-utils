@@ -172,7 +172,7 @@ export function _validKey<T extends string>(key: T | unknown): asserts key is T
 
 export function _checkValue(value: string): ICheckErrorResult
 {
-	let m = /(?:^|[\s{},])_(?=[^_]|$)|(?<!_)_(?:[\s{},]|$)|\/_+|_+\/(?!\()/.exec(value)
+	let m = /(?:^|[\s{},])_(?=[^_]|$)|(?<!_)_(?:[\s{},]|$)|\/_+|_+\/(?!\()|\([\w_]+\s*=(?:!|\s*[{}])/.exec(value)
 
 	if (m)
 	{
