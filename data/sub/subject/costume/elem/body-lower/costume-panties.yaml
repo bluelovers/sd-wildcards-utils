@@ -66,7 +66,9 @@ lazy-wildcards:
           - micro bikini
           - brazilian_bikini
           - partially removed panties
-          - __lazy-wildcards/subject/costume-elem-lower-body/thong/fn/color-panties(c=!__lazy-wildcards/utils/color-base__,v=thong)__
+          - >-
+            ${c=!__lazy-wildcards/utils/color-base__}
+            __lazy-wildcards/subject/costume-elem-lower-body/thong/fn/color-panties(v=thong)__
           - sheer underwear
           - thong_bunny_girl
           - maid_thong

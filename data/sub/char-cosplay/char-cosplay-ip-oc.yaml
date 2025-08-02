@@ -112,7 +112,8 @@ lazy-wildcards:
           - __lazy-wildcards/cosplay-char/mcdonalds/cashier/costume-elem__
         costume-headwear:
           - >-
-            __lazy-wildcards/cosplay-char/mcdonalds/shared/fn/hat(mc1=!{yellow|black|red})__
+            ${mc1=!{yellow|black|red}}
+            __lazy-wildcards/cosplay-char/mcdonalds/shared/fn/hat__
         costume-weapon:
           - holding food
           - holding burger

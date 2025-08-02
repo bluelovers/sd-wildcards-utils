@@ -32,7 +32,8 @@ lazy-wildcards:
           - zodiac_lantern
         style-year:
           - >-
-            __lazy-wildcards/subject/env-elem-creatures/chinese_zodiac/fn/year(v=!__lazy-wildcards/subject/env-elem-creatures/chinese_zodiac/env-elem-creatures__)__
+            ${v=!__lazy-wildcards/subject/env-elem-creatures/chinese_zodiac/env-elem-creatures__}
+            __lazy-wildcards/subject/env-elem-creatures/chinese_zodiac/fn/year__
         fn:
           # ${v=!__lazy-wildcards/subject/env-elem-creatures/chinese_zodiac/env-elem-creatures__}
           year:

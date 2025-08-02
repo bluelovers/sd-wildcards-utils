@@ -193,7 +193,9 @@ lazy-wildcards:
           - __lazy-wildcards/subject/costume/sukeban/fn/serafuku(c=white)__
           - __lazy-wildcards/subject/costume/sukeban/fn/serafuku(c=black)__
           - __lazy-wildcards/subject/costume/sukeban/fn/serafuku(c=dark)__
-          - __lazy-wildcards/subject/costume/sukeban/fn/serafuku(c=!__lazy-wildcards/utils/color-base__)__
+          - >-
+            ${c=!__lazy-wildcards/utils/color-base__}
+            __lazy-wildcards/subject/costume/sukeban/fn/serafuku__
           - __lazy-wildcards/subject/costume/sukeban/fn/serafuku(c=black gold)__
           - __lazy-wildcards/subject/costume/sukeban/fn/serafuku(c=navy blue)__
         costume-elem-top:
