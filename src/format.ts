@@ -1,4 +1,7 @@
 import { IOptionsSharedWildcardsYaml } from './types';
+import { Extractor } from '@bluelovers/extract-brackets';
+
+let ExtractParents: Extractor;
 
 export function stripZeroStr(value: string)
 {
@@ -41,9 +44,62 @@ export function trimPromptsDynamic(value: string)
 {
 	if (value.includes('='))
 	{
-		value = value
-			.replace(/\s*(\$\{[\w_]+=[^{}]*\})\s*/g, '$1')
+		ExtractParents ??= new Extractor('{', '}');
+
+		const ebs = ExtractParents.extract(value);
+		let i = 0;
+		let _do: boolean;
+
+		// console.dir(ebs);
+
+		let arr = ebs
+			.reduce((a, eb) => {
+
+				let s: string = typeof eb.nest[0] === 'string' && eb.nest[0] as any;
+				let input = eb.str;
+
+				let pre = value.slice(i, eb.index[0]);
+
+				if (_do) 
+				{
+					pre = pre.replace(/^[\s\r\n]+/g, '');
+				}
+
+				// console.log(_do, pre);
+
+				_do = s?.includes('=');
+
+				if (_do)
+				{
+					input = input.replace(/^\s*([\w_]+)\s*=\s*/, '$1=');
+				}
+
+				a.push(pre);
+
+				a.push('{' + input.trim() + '}');
+
+				i = eb.index[0] + eb.str.length + 2;
+
+				return a
+			}, [] as string[])
 			;
+
+			let pre = value.slice(i)
+
+			if (_do)
+			{
+				pre = pre.replace(/[\s\r\n]+$|^[\s\r\n]+/g, '');
+			}
+
+		arr.push(pre);
+
+		// console.dir(arr);
+
+		value = arr.join('');
+
+		// value = value
+		// 	.replace(/\s*(\$\{[\w_]+=[^{}]*\})\s*/g, '$1')
+		// 	;
 	}
 	return value
 }
