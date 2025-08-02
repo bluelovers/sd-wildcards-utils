@@ -34,9 +34,11 @@ export function normalizeWildcardsYamlString(value: string)
 	return value
 }
 
+/**
+ * trim Dynamic Prompts Variables
+ */
 export function trimPromptsDynamic(value: string)
 {
-
 	if (value.includes('='))
 	{
 		value = value
@@ -62,6 +64,7 @@ export function formatPrompts(value: string, opts?: IOptionsSharedWildcardsYaml)
 			.replace(/(?<=,\|})\s+/gm, '')
 			.replace(/\s+(?=\{(?:\s*\d+(?:\.\d+)?::)?,)/gm, '')
 		;
+		value = trimPromptsDynamic(value);
 	}
 
 	return value
