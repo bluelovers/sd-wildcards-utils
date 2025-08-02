@@ -6,6 +6,7 @@
 import { isWildcardsName, matchDynamicPromptsWildcards } from '../src/util';
 import parseWildcardsYaml, { getOptionsFromDocument } from '../src/index';
 import { _checkValue } from '../src/valid';
+import { trimPromptsDynamic } from '../src/format';
 
 beforeAll(async () =>
 {
@@ -13,7 +14,7 @@ beforeAll(async () =>
 });
 
 test(`doc.options`, () => {
-	let doc = parseWildcardsYaml(null, {
+	let doc = parseWildcardsYaml(null as any, {
 		allowEmptyDocument: true,
 	});
 
@@ -143,4 +144,18 @@ describe(`_checkValue`, () => {
 
 	})
 
-})
+});
+
+describe(`utils`, () => {
+
+	test.each([
+		`$\{c=!__lazy-wildcards/utils/color-base__\}
+            __lazy-wildcards/subject/env-elem/sky_lantern/fn/sky_lantern__`
+	])(`%j`, (input) => {
+
+		let actual = trimPromptsDynamic(input);
+
+		expect(actual).toMatchSnapshot();
+	})
+
+});
