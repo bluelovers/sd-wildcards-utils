@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`_checkValue invalid " __lazy-wildcards/subject/__env-elem/stairs/prompts__ " 1`] = `
 {
@@ -74,6 +74,36 @@ exports[`_checkValue invalid "(cum\\n{, __1/subject/costume-elem/cum/costume-ele
 {, __2/subject/costume-elem/cum/costume-elem__|
 {, __3/subject/costume-elem/cum-base/prompts__{0.3:::{1.2|1.3|1.4}|}|})
 ",
+}
+`;
+
+exports[`_checkValue invalid "__costume-ethnicity-breasts/tits-rocket/fn/rocket_tits(v=!xxx)__" 1`] = `
+{
+  "error": "Invalid Syntax [UNSAFE_SYNTAX] "(v=!" in value near "/fn/rocket_tits(v=!xxx)__"",
+  "index": 54,
+  "match": "(v=!",
+  "near": "/fn/rocket_tits(v=!xxx)__",
+  "value": "__costume-ethnicity-breasts/tits-rocket/fn/rocket_tits(v=!xxx)__",
+}
+`;
+
+exports[`_checkValue invalid "__costume-ethnicity-breasts/tits-rocket/fn/rocket_tits(v=\${x})__" 1`] = `
+{
+  "error": "Invalid Syntax [UNSAFE_SYNTAX] "(v=$" in value near "/fn/rocket_tits(v=\${x})__"",
+  "index": 54,
+  "match": "(v=$",
+  "near": "/fn/rocket_tits(v=\${x})__",
+  "value": "__costume-ethnicity-breasts/tits-rocket/fn/rocket_tits(v=\${x})__",
+}
+`;
+
+exports[`_checkValue invalid "__costume-ethnicity-breasts/tits-rocket/fn/rocket_tits(v={x})__" 1`] = `
+{
+  "error": "Invalid Syntax [UNSAFE_SYNTAX] "(v={" in value near "/fn/rocket_tits(v={x})__"",
+  "index": 54,
+  "match": "(v={",
+  "near": "/fn/rocket_tits(v={x})__",
+  "value": "__costume-ethnicity-breasts/tits-rocket/fn/rocket_tits(v={x})__",
 }
 `;
 
@@ -531,3 +561,9 @@ exports[`matchDynamicPromptsWildcards "__season_clothes__" 1`] = `
   "variables": undefined,
 }
 `;
+
+exports[`utils "\${c=!__lazy-wildcards/utils/color-base__} \\n__lazy-wildcards/subject/env-elem/sky_lantern/fn/sky_lantern__" 1`] = `"\${c=!__lazy-wildcards/utils/color-base__}__lazy-wildcards/subject/env-elem/sky_lantern/fn/sky_lantern__"`;
+
+exports[`utils "\${person_description = { blond| redhead | brunette}, {green|blue|brown|hazel} eyes, {tall|average|short}}\\nA \${person_description} man and a \${person_description} woman" 1`] = `"\${person_description={ blond| redhead | brunette}, {green|blue|brown|hazel} eyes, {tall|average|short}}A \${person_description} man and a \${person_description} woman"`;
+
+exports[`utils "\${v1=!{{very |}small |}} \\n __lazy-wildcards/subject/costume-ethnicity-breasts/tits-rocket/fn/rocket_tits__" 1`] = `"\${v1=!{{very |}small |}}__lazy-wildcards/subject/costume-ethnicity-breasts/tits-rocket/fn/rocket_tits__"`;
