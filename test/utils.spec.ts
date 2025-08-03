@@ -149,8 +149,10 @@ describe(`_checkValue`, () => {
 describe(`utils`, () => {
 
 	test.each([
-		`$\{c=!__lazy-wildcards/utils/color-base__\}
-            __lazy-wildcards/subject/env-elem/sky_lantern/fn/sky_lantern__`
+		`\$\{c=!__lazy-wildcards/utils/color-base__\} \n__lazy-wildcards/subject/env-elem/sky_lantern/fn/sky_lantern__`,
+		`\$\{v1=!\{\{very |\}small |\}\} \n __lazy-wildcards/subject/costume-ethnicity-breasts/tits-rocket/fn/rocket_tits__`,
+		`\$\{person_description = { blond| redhead | brunette}, {green|blue|brown|hazel\} eyes, {tall|average|short}}
+A \$\{person_description\} man and a \$\{person_description\} woman`,
 	])(`%j`, (input) => {
 
 		let actual = trimPromptsDynamic(input);
