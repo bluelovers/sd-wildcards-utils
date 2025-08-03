@@ -4,6 +4,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var yaml = require('yaml');
 var arrayHyperUnique = require('array-hyper-unique');
+var extractBrackets = require('@bluelovers/extract-brackets');
 var lazyAggregateError = require('lazy-aggregate-error');
 var picomatch = require('picomatch');
 
@@ -53,6 +54,7 @@ function getOptionsFromDocument(doc, opts) {
   };
 }
 
+let ExtractParents;
 function stripZeroStr(value) {
   return value.replace(/[\x00\u200b]+/g, '');
 }
@@ -60,7 +62,39 @@ function trimPrompts(value) {
   return value.replace(/\xa0/g, ' ').replace(/^\s+|\s+$/g, '').replace(/^\s+|\s+$/gm, '').replace(/\n\s*\n/g, '\n').replace(/\s+/gm, ' ').replace(/[ ,.]+(?=,|$)/gm, '').replace(/,\s*(?=,|$)/g, '');
 }
 function normalizeWildcardsYamlString(value) {
-  value = stripZeroStr(value).replace(/\xa0/g, ' ').replace(/[,.]+(?=,)/gm, '').replace(/[ .]+$/gm, '').replace(/\{\s+(\d+(?:\.\d+)?(?:-(?:\d+(?:\.\d+)?)?\$\$|::))/gm, '{$1').replace(/\|\s(\d+(?:\.\d+)?::)/gm, '|$1').replace(/^[ \t]+-[ \t]*$/gm, '').replace(/^([ \t]+-)[ \t][ ,.]+/gm, '$1 ').replace(/^([ \t]+-[^\n]+),+$/gm, '$1');
+  value = stripZeroStr(value).replace(/\xa0/g, ' ').replace(/[,.]+(?=,)/gm, '').replace(/[ .]+$/gm, '').replace(/\{\s+(\d+(?:\.\d+)?(?:-(?:\d+(?:\.\d+)?)?\$\$|::))/gm, '{$1').replace(/\|\s(\d+(?:\.\d+)?::)/gm, '|$1').replace(/^[ \t]+-[ \t]*$/gm, '').replace(/^([ \t]+-)[ \t]{1,}(?:[ ,.]+|(?=[^ \t]))/gm, '$1 ').replace(/^([ \t]+-[^\n]+),+$/gm, '$1');
+  return value;
+}
+function trimPromptsDynamic(value) {
+  if (value.includes('=')) {
+    var _ExtractParents;
+    (_ExtractParents = ExtractParents) !== null && _ExtractParents !== void 0 ? _ExtractParents : ExtractParents = new extractBrackets.Extractor('{', '}');
+    const ebs = ExtractParents.extract(value);
+    let i = 0;
+    let _do;
+    let arr = ebs.reduce((a, eb) => {
+      let s = typeof eb.nest[0] === 'string' && eb.nest[0];
+      let input = eb.str;
+      let pre = value.slice(i, eb.index[0]);
+      if (_do) {
+        pre = pre.replace(/^[\s\r\n]+/g, '');
+      }
+      _do = s === null || s === void 0 ? void 0 : s.includes('=');
+      if (_do) {
+        input = input.replace(/^\s*([\w_]+)\s*=\s*/, '$1=');
+      }
+      a.push(pre);
+      a.push('{' + input.trim() + '}');
+      i = eb.index[0] + eb.str.length + 2;
+      return a;
+    }, []);
+    let pre = value.slice(i);
+    if (_do) {
+      pre = pre.replace(/[\s\r\n]+$|^[\s\r\n]+/g, '');
+    }
+    arr.push(pre);
+    value = arr.join('');
+  }
   return value;
 }
 function formatPrompts(value, opts) {
@@ -71,6 +105,7 @@ function formatPrompts(value, opts) {
   value = normalizeWildcardsYamlString(value);
   if (opts.minifyPrompts) {
     value = value.replace(/(,)\s+/gm, '$1').replace(/\s+(,)/gm, '$1').replace(/(?<=,\|})\s+/gm, '').replace(/\s+(?=\{(?:\s*\d+(?:\.\d+)?::)?,)/gm, '');
+    value = trimPromptsDynamic(value);
   }
   return value;
 }
@@ -93,241 +128,13 @@ function isWildcardsYAMLMap(doc) {
   return yaml.isMap(doc);
 }
 
-// @ts-ignore
-function _validMap(key, node, ...args) {
-  const idx = node.items.findIndex(pair => !yaml.isPair(pair) || (pair === null || pair === void 0 ? void 0 : pair.value) == null);
-  if (idx !== -1) {
-    // @ts-ignore
-    const paths = handleVisitPathsFull(key, node, ...args);
-    const elem = node.items[idx];
-    throw new SyntaxError(`Invalid SYNTAX. paths: [${paths}], key: ${key}, node: ${node}, elem: ${elem}`);
-  }
-}
-// @ts-ignore
-function _validSeq(key, node, ...args) {
-  const index = node.items.findIndex(node => !yaml.isScalar(node));
-  if (index !== -1) {
-    // @ts-ignore
-    const paths = handleVisitPathsFull(key, node, ...args);
-    throw new SyntaxError(`Invalid SYNTAX. paths: [${paths}], indexKey: ${key} key: ${key}, node: ${node}, index: ${index}, node: ${node.items[index]}`);
-  }
-}
-function _validPair(key, pair, ...args) {
-  const keyNode = pair.key;
-  const notOk = !isSafeKey(typeof keyNode === 'string' ? keyNode : keyNode.value);
-  if (notOk) {
-    // @ts-ignore
-    const paths = handleVisitPathsFull(key, pair, ...args);
-    throw new SyntaxError(`Invalid Key. paths: [${paths}], key: ${key}, keyNodeValue: "${keyNode === null || keyNode === void 0 ? void 0 : keyNode.value}", keyNode: ${keyNode}`);
-  }
-}
-function createDefaultVisitWildcardsYAMLOptions(opts) {
-  var _opts;
-  let defaults = {
-    Map: _validMap,
-    Seq: _validSeq
-  };
-  (_opts = opts) !== null && _opts !== void 0 ? _opts : opts = {};
-  if (!opts.allowUnsafeKey) {
-    defaults.Pair = _validPair;
-  }
-  if (!opts.disableUniqueItemValues) {
-    const fn = defaults.Seq;
-    defaults.Seq = (key, node, ...args) => {
-      // @ts-ignore
-      fn(key, node, ...args);
-      uniqueSeqItems(node.items);
-    };
-  }
-  return defaults;
-}
-function validWildcardsYamlData(data, opts) {
-  var _opts2;
-  (_opts2 = opts) !== null && _opts2 !== void 0 ? _opts2 : opts = {};
-  if (yaml.isDocument(data)) {
-    if (yaml.isNode(data.contents) && !yaml.isMap(data.contents)) {
-      throw TypeError(`The 'contents' property of the provided YAML document must be a YAMLMap. Received: ${data.contents}`);
-    }
-    visitWildcardsYAML(data, createDefaultVisitWildcardsYAMLOptions(opts));
-    data = data.toJSON();
-  }
-  if (typeof data === 'undefined' || data === null) {
-    if (opts.allowEmptyDocument) {
-      return;
-    }
-    throw new TypeError(`The provided JSON contents should not be empty. ${data}`);
-  }
-  let rootKeys = Object.keys(data);
-  if (!rootKeys.length) {
-    throw TypeError(`The provided JSON contents must contain at least one key.`);
-  } else if (rootKeys.length !== 1 && !opts.allowMultiRoot) {
-    throw TypeError(`The provided JSON object cannot have more than one root key. Only one root key is allowed unless explicitly allowed by the 'allowMultiRoot' option.`);
-  }
-}
-function isSafeKey(key) {
-  return typeof key === 'string' && /^[._\w-]+$/.test(key) && !/^[\._-]|[\._-]$/.test(key);
-}
-function _validKey(key) {
-  if (!isSafeKey(key)) {
-    throw new SyntaxError(`Invalid Key. key: ${key}`);
-  }
-}
-function _checkValue(value) {
-  let m = /(?:^|[\s{},])_(?=[^_]|$)|(?<!_)_(?:[\s{},]|$)|\/_+|_+\/(?!\()/.exec(value);
-  if (m) {
-    let near = _nearString(value, m.index, m[0]);
-    let match = m[0];
-    return {
-      value,
-      match,
-      index: m.index,
-      near,
-      error: `Invalid Syntax [UNSAFE_SYNTAX] "${match}" in value near "${near}"`
-    };
-  }
-}
-function _nearString(value, index, match, offset = 15) {
-  let s = Math.max(0, index - offset);
-  let e = index + ((match === null || match === void 0 ? void 0 : match.length) || 0) + offset;
-  return value.slice(s, e);
-}
-
-function visitWildcardsYAML(node, visitorOptions) {
-  return yaml.visit(node, visitorOptions);
-}
-function defaultCheckerIgnoreCase(a, b) {
-  if (typeof a === 'string' && typeof b === 'string') {
-    a = a.toLowerCase();
-    b = b.toLowerCase();
-  }
-  return arrayHyperUnique.defaultChecker(a, b);
-}
-function uniqueSeqItemsChecker(a, b) {
-  if (yaml.isScalar(a) && yaml.isScalar(b)) {
-    return defaultCheckerIgnoreCase(a.value, b.value);
-  }
-  return defaultCheckerIgnoreCase(a, b);
-}
-function uniqueSeqItems(items) {
-  return arrayHyperUnique.array_unique_overwrite(items, {
-    // @ts-ignore
-    checker: uniqueSeqItemsChecker
-  });
-}
-/**
- * This function is used to find a single root node in a YAML structure.
- * It traverses the YAML structure and returns the first node that has only one child.
- * If the node is a Document, it will start from its contents.
- *
- * @param node - The YAML node to start the search from.
- * @param result - An optional object to store the result.
- * @returns - An object containing the paths, key, value, and parent of the found single root node.
- *            If no single root node is found, it returns the input `result` object.
- * @throws - Throws a TypeError if the Document Node is passed as a child node.
- */
-function deepFindSingleRootAt(node, result) {
-  if (yaml.isMap(node) && node.items.length === 1) {
-    var _result$paths;
-    let child = node.items[0];
-    let key = child.key.value;
-    let paths = (_result$paths = result === null || result === void 0 ? void 0 : result.paths) !== null && _result$paths !== void 0 ? _result$paths : [];
-    paths.push(key);
-    let value = child.value;
-    return deepFindSingleRootAt(value, {
-      paths,
-      key,
-      value,
-      parent: node
-    });
-  } else if (yaml.isDocument(node)) {
-    if (result) {
-      throw new TypeError(`The Document Node should not as Child Node`);
-    }
-    let value = node.contents;
-    return deepFindSingleRootAt(value, {
-      paths: [],
-      key: void 0,
-      value,
-      parent: node
-    });
-  }
-  return result;
-}
-function _handleVisitPathsCore(nodePaths) {
-  return nodePaths.filter(p => yaml.isPair(p));
-}
-function convertPairsToPathsList(nodePaths) {
-  return nodePaths.map(p => p.key.value);
-}
-function handleVisitPaths(nodePaths) {
-  return convertPairsToPathsList(_handleVisitPathsCore(nodePaths));
-}
-function handleVisitPathsFull(key, _node, nodePaths) {
-  const paths = handleVisitPaths(nodePaths);
-  if (typeof key === 'number') {
-    paths.push(key);
-  }
-  return paths;
-}
-/**
- * This function is used to find all paths of sequences in a given YAML structure.
- * It traverses the YAML structure and collects the paths of all sequences (Seq nodes).
- *
- * @param node - The YAML node to start the search from. It can be a Node, Document.
- * @returns - An array of arrays, where each inner array represents a path of sequence nodes.
- *            Each path is represented as an array of paths, where each path is a key or index.
- */
-function findWildcardsYAMLPathsAll(node) {
-  const ls = [];
-  visitWildcardsYAML(node, {
-    Seq(...args) {
-      const paths = handleVisitPathsFull(...args);
-      ls.push(paths);
-    }
-  });
-  return ls;
-}
-const RE_UNSAFE_QUOTE = /['"]/;
-const RE_UNSAFE_VALUE = /^\s*-|[{$~!@}\n|:?#'"]/;
-function _visitNormalizeScalar(key, node, runtime) {
-  let value = node.value;
-  if (typeof value === 'string') {
-    if (runtime.checkUnsafeQuote && RE_UNSAFE_QUOTE.test(value)) {
-      throw new SyntaxError(`Invalid SYNTAX [UNSAFE_QUOTE]. key: ${key}, node: ${node}`);
-    } else if (node.type === 'QUOTE_DOUBLE' || node.type === 'QUOTE_SINGLE' && !value.includes('\\')) {
-      node.type = 'PLAIN';
-    }
-    value = formatPrompts(value, runtime.options);
-    if (!value.length) {
-      throw new SyntaxError(`Invalid SYNTAX [EMPTY_VALUE]. key: ${key}, node: ${node}`);
-    } else if (RE_UNSAFE_VALUE.test(value)) {
-      if (node.type === 'PLAIN') {
-        node.type = 'BLOCK_LITERAL';
-      } else if (node.type === 'BLOCK_FOLDED' && /#/.test(value)) {
-        node.type = 'BLOCK_LITERAL';
-      }
-    }
-    let res = _checkValue(value);
-    if (res !== null && res !== void 0 && res.error) {
-      throw new SyntaxError(`${res.error}. key: ${key}, node: ${node}`);
-    }
-    node.value = value;
-  }
-}
-function getTopRootContents(doc) {
-  if (isWildcardsYAMLDocument(doc)) {
-    // @ts-ignore
-    doc = doc.contents;
-  }
-  if (isWildcardsYAMLMap(doc)) {
-    return doc;
-  }
-  throw new TypeError(`Input document is not a YAML Document or a YAML Map. Please provide a valid YAML structure.`);
-}
-function getTopRootNodes(doc) {
-  return getTopRootContents(doc).items;
-}
-
+const SYMBOL_YAML_NODE_TYPE_ALIAS = /*#__PURE__*/Symbol.for('yaml.alias');
+const SYMBOL_YAML_NODE_TYPE_DOC = /*#__PURE__*/Symbol.for('yaml.document');
+const SYMBOL_YAML_NODE_TYPE_MAP = /*#__PURE__*/Symbol.for('yaml.map');
+const SYMBOL_YAML_NODE_TYPE_PAIR = /*#__PURE__*/Symbol.for('yaml.pair');
+const SYMBOL_YAML_NODE_TYPE_SCALAR = /*#__PURE__*/Symbol.for('yaml.scalar');
+const SYMBOL_YAML_NODE_TYPE_SEQ = /*#__PURE__*/Symbol.for('yaml.seq');
+const SYMBOL_YAML_NODE_TYPE = /*#__PURE__*/Symbol.for('yaml.node.type');
 const RE_DYNAMIC_PROMPTS_WILDCARDS = /(?<!#[^\n]*)__([&~!@])?([*\w\/_\-]+)(\([^\n#]+\))?__/;
 /**
  * for `matchAll`
@@ -481,6 +288,291 @@ function wildcardsPathToPaths(path) {
   }
   return convertWildcardsNameToPaths(path);
 }
+function getNodeTypeSymbol(node) {
+  // @ts-ignore
+  return node === null || node === void 0 ? void 0 : node[SYMBOL_YAML_NODE_TYPE];
+}
+function _getNodeTypeCore(sym) {
+  try {
+    return Symbol.keyFor(sym);
+  } catch (e) {}
+}
+function getNodeType(node) {
+  return _getNodeTypeCore(getNodeTypeSymbol(node));
+}
+function isSameNodeType(a, b) {
+  const s = getNodeTypeSymbol(a);
+  return s && getNodeTypeSymbol(b) === s;
+}
+
+let _extractor;
+function _checkBrackets(value) {
+  var _extractor2;
+  (_extractor2 = _extractor) !== null && _extractor2 !== void 0 ? _extractor2 : _extractor = new extractBrackets.Extractor('{', '}');
+  return _extractor.extractSync(value, e => {
+    if (e) {
+      var _e$self, _result$index;
+      let result = (_e$self = e.self) === null || _e$self === void 0 ? void 0 : _e$self.result;
+      if (!result) {
+        return {
+          value,
+          error: `Invalid Error [UNKNOWN]: ${e}`
+        };
+      }
+      let near = extractBrackets.infoNearExtractionError(value, e.self);
+      return {
+        value,
+        index: (_result$index = result.index) === null || _result$index === void 0 ? void 0 : _result$index[0],
+        near,
+        error: `Invalid Syntax [BRACKET] ${e.message} near "${near}"`
+      };
+    }
+  });
+}
+// @ts-ignore
+function _validMap(key, node, ...args) {
+  const idx = node.items.findIndex(pair => !yaml.isPair(pair) || (pair === null || pair === void 0 ? void 0 : pair.value) == null);
+  if (idx !== -1) {
+    // @ts-ignore
+    const paths = handleVisitPathsFull(key, node, ...args);
+    const elem = node.items[idx];
+    throw new SyntaxError(`Invalid SYNTAX. paths: [${paths}], key: ${key}, node: ${node}, elem: ${elem}`);
+  }
+}
+// @ts-ignore
+function _validSeq(key, nodeSeq, ...args) {
+  for (const index in nodeSeq.items) {
+    const entry = nodeSeq.items[index];
+    if (!yaml.isScalar(entry)) {
+      // @ts-ignore
+      const paths = handleVisitPathsFull(key, nodeSeq, ...args);
+      throw new SyntaxError(`Invalid SYNTAX. entry type should be 'Scalar', but got '${getNodeType(entry)}'. paths: [${paths}], entryIndex: ${index}, entry: ${entry}, nodeKey: ${key}, node: ${nodeSeq}`);
+    }
+  }
+}
+function _validPair(key, pair, ...args) {
+  const keyNode = pair.key;
+  const notOk = !isSafeKey(typeof keyNode === 'string' ? keyNode : keyNode.value);
+  if (notOk) {
+    // @ts-ignore
+    const paths = handleVisitPathsFull(key, pair, ...args);
+    throw new SyntaxError(`Invalid Key. paths: [${paths}], key: ${key}, keyNodeValue: "${keyNode === null || keyNode === void 0 ? void 0 : keyNode.value}", keyNode: ${keyNode}`);
+  }
+}
+function createDefaultVisitWildcardsYAMLOptions(opts) {
+  var _opts;
+  let defaults = {
+    Map: _validMap,
+    Seq: _validSeq
+  };
+  (_opts = opts) !== null && _opts !== void 0 ? _opts : opts = {};
+  if (!opts.allowUnsafeKey) {
+    defaults.Pair = _validPair;
+  }
+  if (!opts.disableUniqueItemValues) {
+    const fn = defaults.Seq;
+    defaults.Seq = (key, node, ...args) => {
+      // @ts-ignore
+      fn(key, node, ...args);
+      uniqueSeqItems(node.items);
+    };
+  }
+  return defaults;
+}
+function validWildcardsYamlData(data, opts) {
+  var _opts2;
+  (_opts2 = opts) !== null && _opts2 !== void 0 ? _opts2 : opts = {};
+  if (yaml.isDocument(data)) {
+    if (yaml.isNode(data.contents) && !yaml.isMap(data.contents)) {
+      throw TypeError(`The 'contents' property of the provided YAML document must be a YAMLMap. Received: ${data.contents}`);
+    }
+    visitWildcardsYAML(data, createDefaultVisitWildcardsYAMLOptions(opts));
+    data = data.toJSON();
+  }
+  if (typeof data === 'undefined' || data === null) {
+    if (opts.allowEmptyDocument) {
+      return;
+    }
+    throw new TypeError(`The provided JSON contents should not be empty. ${data}`);
+  }
+  let rootKeys = Object.keys(data);
+  if (!rootKeys.length) {
+    throw TypeError(`The provided JSON contents must contain at least one key.`);
+  } else if (rootKeys.length !== 1 && !opts.allowMultiRoot) {
+    throw TypeError(`The provided JSON object cannot have more than one root key. Only one root key is allowed unless explicitly allowed by the 'allowMultiRoot' option.`);
+  }
+}
+function isSafeKey(key) {
+  return typeof key === 'string' && /^[._\w-]+$/.test(key) && !/^[\._-]|[\._-]$/.test(key);
+}
+function _validKey(key) {
+  if (!isSafeKey(key)) {
+    throw new SyntaxError(`Invalid Key. key: ${key}`);
+  }
+}
+function _checkValue(value) {
+  let m = /(?:^|[\s{},])_(?=[^_]|$)|(?<!_)_(?:[\s{},]|$)|\/_+|_+\/(?!\()|\([\w_]+\s*=(?:!|\s*[{}$])/.exec(value);
+  if (m) {
+    let near = _nearString(value, m.index, m[0]);
+    let match = m[0];
+    return {
+      value,
+      match,
+      index: m.index,
+      near,
+      error: `Invalid Syntax [UNSAFE_SYNTAX] "${match}" in value near "${near}"`
+    };
+  } else if (/[{}]/.test(value)) {
+    return _checkBrackets(value);
+  }
+}
+function _nearString(value, index, match, offset = 15) {
+  let s = Math.max(0, index - offset);
+  let e = index + ((match === null || match === void 0 ? void 0 : match.length) || 0) + offset;
+  return value.slice(s, e);
+}
+
+function visitWildcardsYAML(node, visitorOptions) {
+  return yaml.visit(node, visitorOptions);
+}
+function defaultCheckerIgnoreCase(a, b) {
+  if (typeof a === 'string' && typeof b === 'string') {
+    a = a.toLowerCase();
+    b = b.toLowerCase();
+  }
+  return arrayHyperUnique.defaultChecker(a, b);
+}
+function uniqueSeqItemsChecker(a, b) {
+  if (yaml.isScalar(a) && yaml.isScalar(b)) {
+    return defaultCheckerIgnoreCase(a.value, b.value);
+  }
+  return defaultCheckerIgnoreCase(a, b);
+}
+function uniqueSeqItems(items) {
+  return arrayHyperUnique.array_unique_overwrite(items, {
+    // @ts-ignore
+    checker: uniqueSeqItemsChecker
+  });
+}
+/**
+ * This function is used to find a single root node in a YAML structure.
+ * It traverses the YAML structure and returns the first node that has only one child.
+ * If the node is a Document, it will start from its contents.
+ *
+ * @param node - The YAML node to start the search from.
+ * @param result - An optional object to store the result.
+ * @returns - An object containing the paths, key, value, and parent of the found single root node.
+ *            If no single root node is found, it returns the input `result` object.
+ * @throws - Throws a TypeError if the Document Node is passed as a child node.
+ */
+function deepFindSingleRootAt(node, result) {
+  if (yaml.isMap(node) && node.items.length === 1) {
+    var _result$paths$slice, _result$paths;
+    let child = node.items[0];
+    let key = child.key.value;
+    let paths = (_result$paths$slice = result === null || result === void 0 || (_result$paths = result.paths) === null || _result$paths === void 0 ? void 0 : _result$paths.slice()) !== null && _result$paths$slice !== void 0 ? _result$paths$slice : [];
+    paths.push(key);
+    let value = child.value;
+    if (yaml.isSeq(value)) {
+      return result;
+    }
+    return deepFindSingleRootAt(value, {
+      paths,
+      key,
+      value,
+      parent: node
+    });
+  } else if (yaml.isDocument(node)) {
+    if (result) {
+      throw new TypeError(`The Document Node should not as Child Node`);
+    }
+    let value = node.contents;
+    return deepFindSingleRootAt(value, {
+      paths: [],
+      key: void 0,
+      value,
+      parent: node
+    });
+  }
+  return result;
+}
+function _handleVisitPathsCore(nodePaths) {
+  return nodePaths.filter(p => yaml.isPair(p));
+}
+function convertPairsToPathsList(nodePaths) {
+  return nodePaths.map(p => p.key.value);
+}
+function handleVisitPaths(nodePaths) {
+  return convertPairsToPathsList(_handleVisitPathsCore(nodePaths));
+}
+function handleVisitPathsFull(key, _node, nodePaths) {
+  const paths = handleVisitPaths(nodePaths);
+  if (typeof key === 'number') {
+    paths.push(key);
+  }
+  return paths;
+}
+/**
+ * This function is used to find all paths of sequences in a given YAML structure.
+ * It traverses the YAML structure and collects the paths of all sequences (Seq nodes).
+ *
+ * @param node - The YAML node to start the search from. It can be a Node, Document.
+ * @returns - An array of arrays, where each inner array represents a path of sequence nodes.
+ *            Each path is represented as an array of paths, where each path is a key or index.
+ */
+function findWildcardsYAMLPathsAll(node) {
+  const ls = [];
+  visitWildcardsYAML(node, {
+    Seq(...args) {
+      const paths = handleVisitPathsFull(...args);
+      ls.push(paths);
+    }
+  });
+  return ls;
+}
+const RE_UNSAFE_QUOTE = /['"]/;
+const RE_UNSAFE_VALUE = /^\s*-|[{$~!@}\n|:?#'"%]/;
+const RE_UNSAFE_PLAIN = /-/;
+function _visitNormalizeScalar(key, node, runtime) {
+  let value = node.value;
+  if (typeof value === 'string') {
+    if (runtime.checkUnsafeQuote && RE_UNSAFE_QUOTE.test(value)) {
+      throw new SyntaxError(`Invalid SYNTAX [UNSAFE_QUOTE]. key: ${key}, node: ${node}`);
+    } else if (node.type === 'QUOTE_DOUBLE' || node.type === 'QUOTE_SINGLE' && !value.includes('\\')) {
+      node.type = 'PLAIN';
+    }
+    value = formatPrompts(value, runtime.options);
+    if (!value.length) {
+      throw new SyntaxError(`Invalid SYNTAX [EMPTY_VALUE]. key: ${key}, node: ${node}`);
+    } else if (RE_UNSAFE_VALUE.test(value)) {
+      if (node.type === 'PLAIN') {
+        node.type = 'BLOCK_LITERAL';
+      } else if (node.type === 'BLOCK_FOLDED' && /#/.test(value)) {
+        node.type = 'BLOCK_LITERAL';
+      }
+    } else if (node.type === 'PLAIN' && RE_UNSAFE_PLAIN.test(value)) {
+      node.type = 'QUOTE_DOUBLE';
+    }
+    let res = _checkValue(value);
+    if (res !== null && res !== void 0 && res.error) {
+      throw new SyntaxError(`${res.error}. key: ${key}, node: ${node}`);
+    }
+    node.value = value;
+  }
+}
+function getTopRootContents(doc) {
+  if (isWildcardsYAMLDocument(doc)) {
+    // @ts-ignore
+    doc = doc.contents;
+  }
+  if (isWildcardsYAMLMap(doc)) {
+    return doc;
+  }
+  throw new TypeError(`Input document is not a YAML Document or a YAML Map. Please provide a valid YAML structure.`);
+}
+function getTopRootNodes(doc) {
+  return getTopRootContents(doc).items;
+}
 
 function mergeWildcardsYAMLDocumentRoots(ls) {
   return ls.reduce(_mergeWildcardsYAMLDocumentRootsCore);
@@ -530,11 +622,12 @@ function mergeFindSingleRoots(doc, list) {
   list = [list].flat();
   for (let node of list) {
     let result = deepFindSingleRootAt(node);
+    let paths = result === null || result === void 0 ? void 0 : result.paths;
     if (result) {
-      let current = doc.getIn(result.paths);
+      let current = doc.getIn(paths);
       if (current) {
         if (!yaml.isMap(current)) {
-          throw new TypeError(`Only YAMLMap can be merged. node: ${current}`);
+          throw new TypeError(`Only YAMLMap can be merged [1]. path: ${paths}, type: ${getNodeType(current)} node: ${current}`);
         }
         result.value.items
         // @ts-ignore
@@ -549,6 +642,13 @@ function mergeFindSingleRoots(doc, list) {
               const errors = [];
               for (const pair of p.value.items) {
                 try {
+                  if (yaml.isSeq(pair.value)) {
+                    let sub2 = sub.get(pair.key);
+                    if (yaml.isSeq(sub2)) {
+                      _mergeSeqCore(sub2, pair.value);
+                      continue;
+                    }
+                  }
                   sub.add(pair, false);
                 } catch (e) {
                   errKeys.push(pair.key.value);
@@ -556,20 +656,24 @@ function mergeFindSingleRoots(doc, list) {
                 }
               }
               if (errors.length) {
-                throw new lazyAggregateError.AggregateErrorExtra(errors, `Failure when merging sub YAMLMap. Paths: ${JSON.stringify(result.paths.concat(key))}. Conflicting keys: ${JSON.stringify(errKeys)}`);
+                throw new lazyAggregateError.AggregateErrorExtra(errors, `Failure when merging sub YAMLMap. Paths: ${JSON.stringify(paths.concat(key))}. Conflicting keys: ${JSON.stringify(errKeys)}`);
               }
             } else {
-              throw new TypeError(`Current does not support deep merge at paths: ${JSON.stringify(result.paths.concat(key))}, a: ${sub}, b: ${p.value}`);
+              if (!isSameNodeType(sub, p.value)) {
+                throw new TypeError(`Only allow merge same node type at paths: ${JSON.stringify(paths.concat(key))}, a: ${getNodeType(sub)}, b: ${getNodeType(p.value)}`);
+              } else {
+                throw new TypeError(`Current does not support deep merge at paths: ${JSON.stringify(paths.concat(key))}, a: ${sub}, b: ${p.value}`);
+              }
             }
           } else {
             current.items.push(p);
           }
         });
       } else {
-        doc.setIn(result.paths, result.value);
+        doc.setIn(paths, result.value);
       }
     } else {
-      throw new TypeError(`Only YAMLMap can be merged. node: ${node}`);
+      throw new TypeError(`Only YAMLMap can be merged [2]. path: ${paths}, node: ${node}`);
     }
   }
   return doc;
@@ -807,8 +911,17 @@ function parseWildcardsYaml(source, opts) {
 exports.RE_DYNAMIC_PROMPTS_WILDCARDS = RE_DYNAMIC_PROMPTS_WILDCARDS;
 exports.RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL = RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL;
 exports.RE_WILDCARDS_NAME = RE_WILDCARDS_NAME;
+exports.SYMBOL_YAML_NODE_TYPE = SYMBOL_YAML_NODE_TYPE;
+exports.SYMBOL_YAML_NODE_TYPE_ALIAS = SYMBOL_YAML_NODE_TYPE_ALIAS;
+exports.SYMBOL_YAML_NODE_TYPE_DOC = SYMBOL_YAML_NODE_TYPE_DOC;
+exports.SYMBOL_YAML_NODE_TYPE_MAP = SYMBOL_YAML_NODE_TYPE_MAP;
+exports.SYMBOL_YAML_NODE_TYPE_PAIR = SYMBOL_YAML_NODE_TYPE_PAIR;
+exports.SYMBOL_YAML_NODE_TYPE_SCALAR = SYMBOL_YAML_NODE_TYPE_SCALAR;
+exports.SYMBOL_YAML_NODE_TYPE_SEQ = SYMBOL_YAML_NODE_TYPE_SEQ;
+exports._checkBrackets = _checkBrackets;
 exports._checkValue = _checkValue;
 exports._findPathCore = _findPathCore;
+exports._getNodeTypeCore = _getNodeTypeCore;
 exports._handleVisitPathsCore = _handleVisitPathsCore;
 exports._matchDynamicPromptsWildcardsCore = _matchDynamicPromptsWildcardsCore;
 exports._mergeSeqCore = _mergeSeqCore;
@@ -835,6 +948,8 @@ exports.findPath = findPath;
 exports.findPathOptionsToGlobOptions = findPathOptionsToGlobOptions;
 exports.findWildcardsYAMLPathsAll = findWildcardsYAMLPathsAll;
 exports.formatPrompts = formatPrompts;
+exports.getNodeType = getNodeType;
+exports.getNodeTypeSymbol = getNodeTypeSymbol;
 exports.getOptionsFromDocument = getOptionsFromDocument;
 exports.getOptionsShared = getOptionsShared;
 exports.getTopRootContents = getTopRootContents;
@@ -843,6 +958,7 @@ exports.handleVisitPaths = handleVisitPaths;
 exports.handleVisitPathsFull = handleVisitPathsFull;
 exports.isDynamicPromptsWildcards = isDynamicPromptsWildcards;
 exports.isSafeKey = isSafeKey;
+exports.isSameNodeType = isSameNodeType;
 exports.isWildcardsName = isWildcardsName;
 exports.isWildcardsPathSyntx = isWildcardsPathSyntx;
 exports.isWildcardsYAMLDocument = isWildcardsYAMLDocument;
@@ -864,6 +980,7 @@ exports.stringifyWildcardsYamlData = stringifyWildcardsYamlData;
 exports.stripBlankLines = stripBlankLines;
 exports.stripZeroStr = stripZeroStr;
 exports.trimPrompts = trimPrompts;
+exports.trimPromptsDynamic = trimPromptsDynamic;
 exports.uniqueSeqItems = uniqueSeqItems;
 exports.uniqueSeqItemsChecker = uniqueSeqItemsChecker;
 exports.validWildcardsYamlData = validWildcardsYamlData;

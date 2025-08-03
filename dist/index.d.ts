@@ -1,6 +1,137 @@
 import { Glob, PicomatchOptions } from 'picomatch';
 import { Alias, CreateNodeOptions, Document as Document$1, DocumentOptions, Node as Node$1, Pair, ParseOptions, ParsedNode, Scalar, SchemaOptions, ToJSOptions, ToStringOptions, YAMLMap, YAMLSeq, visitorFn } from 'yaml';
 
+export declare const SYMBOL_YAML_NODE_TYPE_ALIAS: unique symbol;
+export declare const SYMBOL_YAML_NODE_TYPE_DOC: unique symbol;
+export declare const SYMBOL_YAML_NODE_TYPE_MAP: unique symbol;
+export declare const SYMBOL_YAML_NODE_TYPE_PAIR: unique symbol;
+export declare const SYMBOL_YAML_NODE_TYPE_SCALAR: unique symbol;
+export declare const SYMBOL_YAML_NODE_TYPE_SEQ: unique symbol;
+export declare const SYMBOL_YAML_NODE_TYPE: unique symbol;
+export declare const RE_DYNAMIC_PROMPTS_WILDCARDS: RegExp;
+/**
+ * for `matchAll`
+ *
+ * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll
+ */
+export declare const RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL: RegExp;
+export declare const RE_WILDCARDS_NAME: RegExp;
+/**
+ * Checks if the input string matches the dynamic prompts wildcards pattern.
+ *
+ * @param input - The input string to check.
+ * @returns A boolean indicating whether the input string matches the pattern.
+ *
+ * @remarks
+ * This function uses the `matchDynamicPromptsWildcards` function to perform the check.
+ * It returns `true` if the input string is a full match, and `false` otherwise.
+ *
+ * @example
+ * ```typescript
+ * const input1 = "__season_clothes(season=winter)__";
+ * console.log(isDynamicPromptsWildcards(input1)); // Output: true
+ *
+ * const input2 = "__season_clothes(season=__season_clothes__)__";
+ * console.log(isDynamicPromptsWildcards(input2)); // Output: true
+ *
+ * const input3 = "This is not a wildcards pattern";
+ * console.log(isDynamicPromptsWildcards(input3)); // Output: false
+ * ```
+ */
+export declare function isDynamicPromptsWildcards(input: string): boolean;
+/**
+ * Matches the input string against the dynamic prompts wildcards pattern.
+ *
+ * @see https://github.com/adieyal/sd-dynamic-prompts/blob/main/docs/SYNTAX.md
+ *
+ * @param input - The input string to match.
+ * @returns An object containing the matched groups or `null` if no match is found.
+ *
+ * @remarks
+ * This function uses the `RE_DYNAMIC_PROMPTS_WILDCARDS` regular expression to perform the match.
+ * The returned object contains the following properties:
+ * - `name`: The name extracted from the input string.
+ * - `variables`: The variables extracted from the input string.
+ * - `keyword`: The keyword extracted from the input string.
+ * - `source`: The original matched source string.
+ * - `isFullMatch`: A boolean indicating whether the input string is a full match.
+ *
+ * @example
+ * ```typescript
+ * const input = "\_\_season_clothes(season=winter)\_\_";
+ * const result = matchDynamicPromptsWildcards(input);
+ * console.log(result);
+ * // Output: { name: 'season_clothes', variables: '(season=winter)', keyword: undefined, source: '\__season_clothes(season=winter)\__', isFullMatch: true }
+ * ```
+ *
+ * @example
+ * __season_clothes(season=winter)__
+ * __season_clothes(season=__season_clothes__)__
+ * __season_clothes(season=!__season_clothes__)__
+ *
+ * __season_clothes(season=__@season_clothes__)__
+ * __season_clothes(season=__~season_clothes__)__
+ *
+ * __@season_clothes(season=__season_clothes__)__
+ * __~season_clothes(season=__season_clothes__)__
+ *
+ * __season_clothes(season={summer|autumn|winter|spring})__
+ * __season_clothes(season=!{summer|autumn|winter|spring})__
+ *
+ * __season_clothes(season={@summer|autumn|winter|spring})__
+ * __season_clothes(season={!summer|autumn|winter|spring})__
+ *
+ * __season_clothes(season=)__
+ */
+export declare function matchDynamicPromptsWildcards(input: string): IMatchDynamicPromptsWildcardsEntry;
+export declare function _matchDynamicPromptsWildcardsCore(m: RegExpMatchArray, input?: string): IMatchDynamicPromptsWildcardsEntry;
+/**
+ * Generator function that matches all occurrences of the dynamic prompts wildcards pattern in the input string.
+ */
+export declare function matchDynamicPromptsWildcardsAllGenerator(input: string): Generator<IMatchDynamicPromptsWildcardsEntry, void, unknown>;
+/**
+ * Converts the generator function `matchDynamicPromptsWildcardsAllGenerator` into an array.
+ */
+export declare function matchDynamicPromptsWildcardsAll(input: string, unique?: boolean): IMatchDynamicPromptsWildcardsEntry[];
+/**
+ * Checks if the given name is a valid Wildcards name.
+ *
+ * @param name - The name to check.
+ * @returns A boolean indicating whether the name is valid.
+ *
+ * @remarks
+ * A valid Wildcards name should:
+ * - Only contain alphanumeric characters, hyphens, or underscores.
+ * - Not start or end with an underscore.
+ * - Not contain consecutive underscores.
+ *
+ * @example
+ * ```typescript
+ * const name1 = "season_clothes";
+ * console.log(isWildcardsName(name1)); // Output: true
+ *
+ * const name2 = "_season_clothes";
+ * console.log(isWildcardsName(name2)); // Output: false
+ *
+ * const name3 = "season_clothes_";
+ * console.log(isWildcardsName(name3)); // Output: false
+ *
+ * const name4 = "season__clothes";
+ * console.log(isWildcardsName(name4)); // Output: false
+ *
+ * const name5 = "season-clothes";
+ * console.log(isWildcardsName(name5)); // Output: true
+ * ```
+ */
+export declare function isWildcardsName(name: string): boolean;
+export declare function assertWildcardsName(name: string): void;
+export declare function convertWildcardsNameToPaths(name: string): string[];
+export declare function isWildcardsPathSyntx(path: string): path is `__${string}__`;
+export declare function wildcardsPathToPaths(path: string): string[];
+export declare function getNodeTypeSymbol(node: IVisitPathsNode): IYamlNodeTypeSymbol;
+export declare function _getNodeTypeCore(sym: IYamlNodeTypeSymbol): string;
+export declare function getNodeType(node: IVisitPathsNode): string;
+export declare function isSameNodeType(a: IVisitPathsNode, b: IVisitPathsNode): boolean;
 export type IOmitParsedNodeContents<T extends Node$1 | Document$1, P extends ParsedNode | Document$1.Parsed> = Omit<P, "contents"> & T;
 export type IWildcardsYAMLScalar = IOmitParsedNodeContents<Scalar<string>, Scalar.Parsed>;
 export type IWildcardsYAMLSeq = IOmitParsedNodeContents<YAMLSeq<IWildcardsYAMLScalar>, YAMLSeq.Parsed>;
@@ -123,126 +254,15 @@ export interface IOptionsCheckAllSelfLinkWildcardsExists extends Pick<IOptionsFi
 	ignore?: string[];
 	maxErrors?: number;
 }
-export declare const RE_DYNAMIC_PROMPTS_WILDCARDS: RegExp;
-/**
- * for `matchAll`
- *
- * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll
- */
-export declare const RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL: RegExp;
-export declare const RE_WILDCARDS_NAME: RegExp;
-/**
- * Checks if the input string matches the dynamic prompts wildcards pattern.
- *
- * @param input - The input string to check.
- * @returns A boolean indicating whether the input string matches the pattern.
- *
- * @remarks
- * This function uses the `matchDynamicPromptsWildcards` function to perform the check.
- * It returns `true` if the input string is a full match, and `false` otherwise.
- *
- * @example
- * ```typescript
- * const input1 = "__season_clothes(season=winter)__";
- * console.log(isDynamicPromptsWildcards(input1)); // Output: true
- *
- * const input2 = "__season_clothes(season=__season_clothes__)__";
- * console.log(isDynamicPromptsWildcards(input2)); // Output: true
- *
- * const input3 = "This is not a wildcards pattern";
- * console.log(isDynamicPromptsWildcards(input3)); // Output: false
- * ```
- */
-export declare function isDynamicPromptsWildcards(input: string): boolean;
-/**
- * Matches the input string against the dynamic prompts wildcards pattern.
- *
- * @see https://github.com/adieyal/sd-dynamic-prompts/blob/main/docs/SYNTAX.md
- *
- * @param input - The input string to match.
- * @returns An object containing the matched groups or `null` if no match is found.
- *
- * @remarks
- * This function uses the `RE_DYNAMIC_PROMPTS_WILDCARDS` regular expression to perform the match.
- * The returned object contains the following properties:
- * - `name`: The name extracted from the input string.
- * - `variables`: The variables extracted from the input string.
- * - `keyword`: The keyword extracted from the input string.
- * - `source`: The original matched source string.
- * - `isFullMatch`: A boolean indicating whether the input string is a full match.
- *
- * @example
- * ```typescript
- * const input = "\_\_season_clothes(season=winter)\_\_";
- * const result = matchDynamicPromptsWildcards(input);
- * console.log(result);
- * // Output: { name: 'season_clothes', variables: '(season=winter)', keyword: undefined, source: '\__season_clothes(season=winter)\__', isFullMatch: true }
- * ```
- *
- * @example
- * __season_clothes(season=winter)__
- * __season_clothes(season=__season_clothes__)__
- * __season_clothes(season=!__season_clothes__)__
- *
- * __season_clothes(season=__@season_clothes__)__
- * __season_clothes(season=__~season_clothes__)__
- *
- * __@season_clothes(season=__season_clothes__)__
- * __~season_clothes(season=__season_clothes__)__
- *
- * __season_clothes(season={summer|autumn|winter|spring})__
- * __season_clothes(season=!{summer|autumn|winter|spring})__
- *
- * __season_clothes(season={@summer|autumn|winter|spring})__
- * __season_clothes(season={!summer|autumn|winter|spring})__
- *
- * __season_clothes(season=)__
- */
-export declare function matchDynamicPromptsWildcards(input: string): IMatchDynamicPromptsWildcardsEntry;
-export declare function _matchDynamicPromptsWildcardsCore(m: RegExpMatchArray, input?: string): IMatchDynamicPromptsWildcardsEntry;
-/**
- * Generator function that matches all occurrences of the dynamic prompts wildcards pattern in the input string.
- */
-export declare function matchDynamicPromptsWildcardsAllGenerator(input: string): Generator<IMatchDynamicPromptsWildcardsEntry, void, unknown>;
-/**
- * Converts the generator function `matchDynamicPromptsWildcardsAllGenerator` into an array.
- */
-export declare function matchDynamicPromptsWildcardsAll(input: string, unique?: boolean): IMatchDynamicPromptsWildcardsEntry[];
-/**
- * Checks if the given name is a valid Wildcards name.
- *
- * @param name - The name to check.
- * @returns A boolean indicating whether the name is valid.
- *
- * @remarks
- * A valid Wildcards name should:
- * - Only contain alphanumeric characters, hyphens, or underscores.
- * - Not start or end with an underscore.
- * - Not contain consecutive underscores.
- *
- * @example
- * ```typescript
- * const name1 = "season_clothes";
- * console.log(isWildcardsName(name1)); // Output: true
- *
- * const name2 = "_season_clothes";
- * console.log(isWildcardsName(name2)); // Output: false
- *
- * const name3 = "season_clothes_";
- * console.log(isWildcardsName(name3)); // Output: false
- *
- * const name4 = "season__clothes";
- * console.log(isWildcardsName(name4)); // Output: false
- *
- * const name5 = "season-clothes";
- * console.log(isWildcardsName(name5)); // Output: true
- * ```
- */
-export declare function isWildcardsName(name: string): boolean;
-export declare function assertWildcardsName(name: string): void;
-export declare function convertWildcardsNameToPaths(name: string): string[];
-export declare function isWildcardsPathSyntx(path: string): path is `__${string}__`;
-export declare function wildcardsPathToPaths(path: string): string[];
+export type IParseWildcardsYamlInputSource = string | Uint8Array;
+export type IYamlNodeTypeSymbol = typeof SYMBOL_YAML_NODE_TYPE_ALIAS | typeof SYMBOL_YAML_NODE_TYPE_DOC | typeof SYMBOL_YAML_NODE_TYPE_MAP | typeof SYMBOL_YAML_NODE_TYPE_PAIR | typeof SYMBOL_YAML_NODE_TYPE_SCALAR | typeof SYMBOL_YAML_NODE_TYPE_SEQ;
+export interface ICheckErrorResult {
+	value: string;
+	match?: string;
+	index?: number;
+	near?: string;
+	error: string;
+}
 export declare function getOptionsShared<T extends IOptionsSharedWildcardsYaml>(opts?: T): Pick<T, keyof IOptionsSharedWildcardsYaml>;
 export declare function defaultOptionsStringifyMinify(): {
 	readonly lineWidth: 0;
@@ -294,20 +314,15 @@ export declare function _visitNormalizeScalar(key: IVisitorFnKey, node: IWildcar
 }): void;
 export declare function getTopRootContents<T extends IWildcardsYAMLDocument | Document$1 | IWildcardsYAMLMapRoot | YAMLMap>(doc: T): T & IWildcardsYAMLMapRoot<IWildcardsYAMLScalar, IWildcardsYAMLPairValue>;
 export declare function getTopRootNodes<T extends IWildcardsYAMLDocument | Document$1 | IWildcardsYAMLMapRoot | YAMLMap>(doc: T): import("yaml").Pair<IWildcardsYAMLScalar, IWildcardsYAMLPairValue>[] | (import("yaml").Pair<unknown, unknown>[] & import("yaml").Pair<IWildcardsYAMLScalar, IWildcardsYAMLPairValue>[]);
+export declare function _checkBrackets(value: string): ICheckErrorResult;
 export declare function _validMap(key: IVisitorFnKey | null, node: YAMLMap, ...args: any[]): void;
-export declare function _validSeq(key: IVisitorFnKey | null, node: YAMLSeq, ...args: any[]): asserts node is YAMLSeq<Scalar | IWildcardsYAMLScalar>;
+export declare function _validSeq(key: IVisitorFnKey | null, nodeSeq: YAMLSeq, ...args: any[]): asserts nodeSeq is YAMLSeq<Scalar | IWildcardsYAMLScalar>;
 export declare function _validPair(key: IVisitorFnKey, pair: IWildcardsYAMLPair | Pair, ...args: any[]): void;
 export declare function createDefaultVisitWildcardsYAMLOptions(opts?: IOptionsParseDocument): IOptionsVisitorMap;
 export declare function validWildcardsYamlData<T extends IRecordWildcards | IWildcardsYAMLDocument | Document$1>(data: T | unknown, opts?: IOptionsSharedWildcardsYaml): asserts data is T;
 export declare function isSafeKey<T extends string>(key: T | unknown): key is T;
 export declare function _validKey<T extends string>(key: T | unknown): asserts key is T;
-export declare function _checkValue(value: string): {
-	value: string;
-	match: string;
-	index: number;
-	near: string;
-	error: string;
-};
+export declare function _checkValue(value: string): ICheckErrorResult;
 export declare function _nearString(value: string, index: number, match: string, offset?: number): string;
 export declare function mergeWildcardsYAMLDocumentRoots<T extends Pick<Document$1<YAMLMap>, "contents">>(ls: [
 	T,
@@ -346,6 +361,10 @@ export declare function _findPathCore(data: IRecordWildcards, paths: string[], f
 export declare function stripZeroStr(value: string): string;
 export declare function trimPrompts(value: string): string;
 export declare function normalizeWildcardsYamlString(value: string): string;
+/**
+ * trim Dynamic Prompts Variables
+ */
+export declare function trimPromptsDynamic(value: string): string;
 export declare function formatPrompts(value: string, opts?: IOptionsSharedWildcardsYaml): string;
 export declare function stripBlankLines(value: string, appendEOF?: boolean): string;
 /**
@@ -429,7 +448,7 @@ export declare function stringifyWildcardsYamlData<T extends IRecordWildcards | 
  * Then, it validates the parsed data using the `validWildcardsYamlData` function.
  * Finally, it returns the parsed data.
  */
-export declare function parseWildcardsYaml<Contents extends YAMLMap = IWildcardsYAMLMapRoot, Strict extends boolean = true>(source: string | Uint8Array, opts?: IOptionsParseDocument): Contents extends ParsedNode ? IWildcardsYAMLDocumentParsed<Contents, Strict> : IWildcardsYAMLDocument<Contents, Strict>;
+export declare function parseWildcardsYaml<Contents extends YAMLMap = IWildcardsYAMLMapRoot, Strict extends boolean = true>(source: IParseWildcardsYamlInputSource, opts?: IOptionsParseDocument): Contents extends ParsedNode ? IWildcardsYAMLDocumentParsed<Contents, Strict> : IWildcardsYAMLDocument<Contents, Strict>;
 
 export {
 	parseWildcardsYaml as default,
