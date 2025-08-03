@@ -133,7 +133,12 @@ describe(`_checkValue`, () => {
 {, __1/subject/costume-elem/cum/costume-elem2__|}
 {, __2/subject/costume-elem/cum/costume-elem__|
 {, __3/subject/costume-elem/cum-base/prompts__{0.3:::{1.2|1.3|1.4}|}|})
-`
+`,
+
+			`__costume-ethnicity-breasts/tits-rocket/fn/rocket_tits(v=!xxx)__`,
+			`__costume-ethnicity-breasts/tits-rocket/fn/rocket_tits(v={x})__`,
+			`__costume-ethnicity-breasts/tits-rocket/fn/rocket_tits(v=\${x})__`,
+
 		])(`%j`, (input) => {
 
 			let actual = _checkValue(input);
