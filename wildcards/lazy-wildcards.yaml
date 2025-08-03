@@ -24800,7 +24800,7 @@
               open jacket,open happi,happi coat,${mc3:yellow} jacket,${mc3:yellow} happi,short-sleeved jacket
           uniform_and_hat:
             - >-
-              __lazy-wildcards/cosplay-char/mcdonalds/shared/fn/hat(mc1=${mc0:red})__,__lazy-wildcards/cosplay-char/mcdonalds/shared/fn/uniform(mc2=${mc0:red})__
+              ${mc1=${mc0:red}}${mc2=${mc0:red}}__lazy-wildcards/cosplay-char/mcdonalds/shared/fn/hat__,__lazy-wildcards/cosplay-char/mcdonalds/shared/fn/uniform__
       # https://civitai.com/models/191703/mcdonalds-profile-photo
       profile_photo:
         prompts:
