@@ -248,7 +248,16 @@ lazy-wildcards:
       # https://civitai.com/models/104726
       no_nipples:
         prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-breasts/no_nipples/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-breasts/no_nipples/costume-breasts__
+            {0.3::, {1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/no_nipples/costume-breasts-elem__}|}
+        costume-breasts:
           - nonipples, Nipless
+        costume-breasts-elem:
+          - no nipples
       breast_squish:
         prompts:
           - >-

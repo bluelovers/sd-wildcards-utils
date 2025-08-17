@@ -1,0 +1,23 @@
+lazy-wildcards:
+  cosplay-char:
+    kaiju_series:
+      # 波川女史 / X星人（怪獣大戦争）
+      # https://zh.wikipedia.org/wiki/%E6%80%AA%E7%8D%B8%E5%A4%A7%E6%88%B0%E7%88%AD
+      # https://wikizilla.org/wiki/Namikawa
+      # https://civitai.com/models/157457/x?modelVersionId=176838
+      namikawa_alien_x:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/kaiju_series/namikawa_alien_x/main-trigger-words__
+            , (__lazy-wildcards/cosplay-char/kaiju_series/namikawa_alien_x/costume-ethnicity__)
+            {, {1-$$__lazy-wildcards/cosplay-char/kaiju_series/namikawa_alien_x/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/kaiju_series/namikawa_alien_x/costume-weapon__}|}
+        main-trigger-words:
+          - alienX, Xilien
+        costume-ethnicity:
+          - black hair, bob cut, makeup, lipstick
+        costume-elem:
+          - bodysuit
+        costume-weapon:
+          - gun
+

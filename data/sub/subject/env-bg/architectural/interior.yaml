@@ -104,6 +104,53 @@ lazy-wildcards:
           - wall
           - bridge
           - (wooden bridge:1.2)
+      # https://civitai.com/search/models?baseModel=SD%201.5&sortBy=models_v9&query=bedroom
+      # https://civitai.com/models/14796/bedroomai?modelVersionId=17478
+      bedroom:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-interior/bedroom/env-bg-main__
+            {, {1-3$$__lazy-wildcards/subject/env-bg-interior/bedroom/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/bedroom/action__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/bedroom/env__}|}
+        env-bg-main:
+          - >-
+            bedroom, indoors, interior
+            , bedroomai
+        env-bg:
+          - cyberpunk style bedroom
+          - retro style bedroom
+          - baroque style bedroom
+          - minimalist style bedroom
+          - modern style bedroom
+          - industrial style bedroom
+          # 北歐風
+          - scandinavian style bedroom
+          - futuristic style bedroom
+          - cute bedroom
+          - cottagecore bedroom
+          - bohemian style bedroom
+          - __cof-location/place/bedroom__
+          - __cof-location/place/emo-bedroom__
+        action:
+          - lying in bed
+          - waking up
+          - reading in bed
+          - crying in bed
+          - on bed
+        env:
+          - sofa
+          - rock wall
+          - white bed
+          - __lazy-wildcards/subject/env-elem/bed/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/lace-trim/prompts__
+          - wood floor
+          - potted plant
+          - exposed brick
+          - metal frame
+          - luxury interior
+          - __lazy-wildcards/subject/env-elem/lamp/prompts__
       bathroom:
         prompts:
           - >-
@@ -265,7 +312,7 @@ lazy-wildcards:
           - book
           - desk
           - television
-          - air conditioner
+          - __lazy-wildcards/subject/env-elem/air_conditioner/prompts__
           - blinds
           - phone
           - >-

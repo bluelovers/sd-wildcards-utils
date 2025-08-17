@@ -44,10 +44,14 @@ lazy-wildcards:
           - >
             ({1-$$__lazy-wildcards/subject/costume-elem/sleeves_past/costume-main__}, long sleeves)
             {0.3::, {1-$$__lazy-wildcards/subject/costume-elem/sleeves_past/costume-elem__}|}
+        prompts-no-weight:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-elem/sleeves_past/costume-main__}, long sleeves
+            {0.3::, {1-$$__lazy-wildcards/subject/costume-elem/sleeves_past/costume-elem__}|}
         costume-main:
           - sleeves past wrists
           - sleeves past fingers
-          - oversized sleeves
+          - oversized sleeves, very long sleeves
         costume-elem:
           - sleeves pushed up
           - sleeves past ankle

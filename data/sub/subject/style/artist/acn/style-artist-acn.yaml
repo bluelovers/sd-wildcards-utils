@@ -10,13 +10,22 @@ lazy-wildcards:
         style-artist:
           - evangelion anime style, __lazy-wildcards/utils/fn/style-inspired(v=evangelion_anime)__
       # https://civitai.com/models/61240/nier-automata-anime-style-lora
+      # https://civitai.com/models/123038/nier-character-style
+      # https://civitai.com/models/145291?modelVersionId=161614
+      # https://civitai.com/models/5558/akihiko-yoshida-bravely-default-ff-tactics-nier-style-lora
       nier_anime_style:
         prompts:
           - >-
             (__lazy-wildcards/subject/style-artist/nier_anime_style/style-artist__{0.3:::{1.2|1.3|1.4}|})
             {, __lazy-wildcards/subject/style-art-type/anime_style/prompts__|}
         style-artist:
-          - nier anime style, __lazy-wildcards/utils/fn/style-inspired(v=nier_anime)__
+          - >-
+            nier anime style
+            , yoshida akihiko
+            , __lazy-wildcards/utils/fn/style-inspired(v=nier)__
+            , __lazy-wildcards/utils/fn/art(v=nier)__
+            , __lazy-wildcards/utils/fn/style-of(yoshida_akihiko)__
+            , __lazy-wildcards/utils/fn/art(yoshida_akihiko)__
       # https://civitai.com/models/34086/omamori-himari-tv-anime-style
       omamori_himari:
         prompts:

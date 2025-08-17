@@ -1,0 +1,62 @@
+lazy-wildcards:
+  subject:
+    env-bg-park:
+      # https://civitai.com/models/258512/girl-like-mini-car-driving-cabrio
+      # https://civitai.com/models/249125/girl-like-ferris-wheel
+      # https://civitai.com/models/443883/girl-like-riding-carousel
+      # https://civitai.com/models/1386339/roller-coaster
+      # https://civitai.com/models/1821282/abandoned-amusement-park
+      # https://civitai.com/models/905603/halloween-themed-amusement-park
+      # https://civitai.com/models/1252189/amuesment-park-pony
+      amusement_park:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-park/amusement_park/env-bg-main__
+            , __lazy-wildcards/subject/env-bg-park/amusement_park/env-bg-main-trigger-words__
+            {, {1-3$$__lazy-wildcards/subject/env-bg-park/amusement_park/env-bg__}|}
+            {, {1-3$$__lazy-wildcards/subject/env-bg-park/amusement_park/env-bg-style__}|}{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg-park/amusement_park/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-park/amusement_park/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-park/amusement_park/style__}|}
+        env-bg-main:
+          - amusement park
+          - theme park
+        env-bg-main-trigger-words:
+          - p4rk
+        env-bg:
+          - ferris wheel
+          - roller coaster
+          - carousel, merry go round
+          - circus tent
+          - carnival
+          - parade
+          - game booth
+          - shooting gallery
+          - haunted house
+          - bumper cars
+          - log flume
+          - cable car
+          - castle
+        env-bg-style:
+          - haunted amusement park
+          - futuristic theme park
+          - fantasy amusement park
+          - abandoned amusement park, abandoned amusement p4rk
+          - halloween-themed amusement park
+        costume-elem:
+          - clown
+          - mascot costume
+        env:
+          - __lazy-wildcards/subject/env-bg/fireworks/prompts__
+          - neon lights
+          - bunting
+          - balloons
+          - confetti
+          - night sky
+          - sunlight
+          - sparkling
+        style:
+          - festival
+          - colorful
+          - music
+

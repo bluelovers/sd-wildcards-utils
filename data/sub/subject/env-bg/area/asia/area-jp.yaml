@@ -76,6 +76,7 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/env-bg/Japanese-food-stores-red-bench/env__}|}
             {, {1-$$__lazy-wildcards/subject/env-bg/Japanese-food-stores-red-bench/action-pose__}|}
             {, {1-$$__lazy-wildcards/subject/env-bg/Japanese-food-stores-red-bench/style__}|}
+            {, __lazy-wildcards/subject/style-theme/japanese-style/prompts-no-weight__|}
         env-bg-main:
           - jpstore, red bench, traditional japanese storefront
         env:
@@ -107,6 +108,7 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/env-bg/washitsu/env-bg__}|}
             {, {1-$$__lazy-wildcards/subject/env-bg/washitsu/env__}|}
             {, {1-$$__lazy-wildcards/subject/env-bg/washitsu/style__}|}
+            {, __lazy-wildcards/subject/style-theme/japanese-style/prompts-no-weight__|}
         env-bg-main:
           - washitsu, washitsus, tatami, shouji, shoji
         env-bg:
@@ -137,12 +139,14 @@ lazy-wildcards:
       # https://civitai.com/models/155402/sarena-style-mix?modelVersionId=174315
       # https://civitai.com/models/148341/ancient-japanese-village-microlyco-half-wilderness-half-countryside-sd15
       # https://civitai.com/models/201597/hitozato-japanese-architecture-style-of-human-village-from-touhou
+      # https://civitai.com/models/520560/japanese-traditional-townscape
       japanese_village:
         prompts:
           - >-
             (__lazy-wildcards/subject/env-bg/japanese_village/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
             {, {1-$$__lazy-wildcards/subject/env-bg/japanese_village/env-bg__}|}
             {, {1-$$__lazy-wildcards/subject/env-bg/japanese_village/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/japanese_village/style__}|}
             {, __lazy-wildcards/subject/style-theme/japanese-style/prompts-no-weight__|}
         env-bg-main:
           - >-
@@ -151,11 +155,11 @@ lazy-wildcards:
             , inaka
             , hitozato
         env-bg:
-          - town
+          - traditional japanese town, japanese traditional townscape
           - side walk
-          - market
-          - building
-          - house
+          - traditional japanese market
+          - traditional japanese building
+          - traditional japanese house
           - high ground
           - half-wilderness, half-countryside
           - paddy field
@@ -176,6 +180,10 @@ lazy-wildcards:
           - stone wall
           - mountain
           - river
+          - willow tree
+          - dirt road
+        style:
+          - japanese edo period
       # https://www.japan-guide.com/e/e2296.html
       # https://civitai.com/models/655767/japanese-castlehimeji-castle
       japanese_castle:
@@ -269,4 +277,19 @@ lazy-wildcards:
       japanese_forest:
         prompts:
           - japanese forest, aokigahara, jukai
+      # https://civitai.com/models/175457/onbashira-japanese-ceremonial-pillars
+      japanese_ceremonial_pillars:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/japanese_ceremonial_pillars/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/japanese_ceremonial_pillars/env__}|}
+        env-bg-main:
+          - >-
+            japanese ceremonial pillars
+            , onbashira, hashira, shinbashira
+            , shide, shimenawa
+        env:
+          - torii pillars
+          - shinbashira
+          - human pillars, hitobashira
 

@@ -561,6 +561,62 @@ lazy-wildcards:
           - blue_accents
           - silver_accents
           - Halloween
+      # https://civitai.com/models/187216/japanese-ghost-costume
+      ghost_costume-jp:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-race/ghost_costume-jp/costume-ethnicity-race-main__
+            , __lazy-wildcards/subject/costume-ethnicity-race/ghost_costume-jp/costume-headwear__
+            , __lazy-wildcards/subject/costume-ethnicity-race/ghost_costume-jp/costume__)
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/ghost_costume-jp/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/ghost_costume-jp/expressions__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/ghost_costume-jp/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/ghost_costume-jp/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/ghost_costume-jp/style__}|}
+        costume-ethnicity-race-main:
+          - gh0st, youkai, ghost girl
+        costume-headwear:
+          - triangular headpiece, triangle headscarf, spirit talisman
+        costume:
+          - >-
+            ghost costume, white kimono
+            , japanese ghost costume
+            , long sleeves, white sleeves
+        costume-elem:
+          - off shoulder
+          - pale skin
+          - __lazy-wildcards/subject/costume-ethnicity-hair-style/messy_hair/prompts-no-weight__
+          - barefoot
+          - long hair, very long hair
+          - hair over face
+          - hair over one eye
+          - ghost tail
+          - ghost hair ornament
+          - black sash, obi
+          - right-over-left kimono
+          - short kimono
+          - __lazy-wildcards/subject/costume-ethnicity-eyes/dark_circles_under_eyes/prompts__
+          - cleavage
+          - sleeve garter
+          - __lazy-wildcards/subject/costume-elem/sleeves_past/prompts-no-weight__
+        expressions:
+          - blank stare
+          - creepy smile
+          - ghostly expression
+        action:
+          - ghost pose
+        env-bg:
+          - __lazy-wildcards/subject/env-bg/graveyard/prompts__
+          - abandoned school
+        env:
+          - __lazy-wildcards/subject/env-moment/weather-mist/prompts__
+          - will o wisps, ghost fire
+          - blue flames, blue fire
+          - white flames, white fire
+        style:
+          - blue lighting, blue tint
+          - dim light
+          - through screen
       # https://civitai.com/models/254264/sphinx-girl
       sphinx:
         prompts:
@@ -844,9 +900,34 @@ lazy-wildcards:
       plant_girl:
         prompts:
           - >-
-            (__lazy-wildcards/subject/costume-ethnicity-race/plant_girl/costume-ethnicity-race__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
-        costume-ethnicity-race:
+            (__lazy-wildcards/subject/costume-ethnicity-race/plant_girl/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/plant_girl/costume-ethnicity-race__
+            {0.2::, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant_girl/costume-ethnicity-race__}|}
+            {0.35::, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant_girl/costume-ethnicity__}|}
+            {0.35::, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant_girl/costume-elem__}|}
+        costume-ethnicity-race-main:
           - plant girl
+        costume-ethnicity-race:
+          - alraune
+        costume-ethnicity:
+          - plant hair
+          - plant roots
+          - pointy ears
+          - plant ears
+          - leaf tail
+          - plant tail
+          - leaf wings
+        costume-elem:
+          - leaf clothing
+          - leaf bra
+          - leaf skirt
+          - no nose
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/no_nipples/prompts-no-weight__
+          - forked tail
+          - colored skin
+          - flower hair ornament
       # https://civitai.com/models/22578/chao-flower
       plant_girl_flower:
         prompts:
@@ -855,7 +936,7 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant_girl_flower/costume-elem__}|}
             {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant_girl_flower/env__}|}
         costume-ethnicity-race:
-          - flower monster girl, flower girl, __lazy-wildcards/subject/costume-ethnicity-race/plant_girl/costume-ethnicity-race__
+          - flower monster girl, flower girl, __lazy-wildcards/subject/costume-ethnicity-race/plant_girl/prompts-no-weight__
         costume-elem:
           - flower crown
           - flower dress
@@ -874,6 +955,84 @@ lazy-wildcards:
           - chao flower
           - >-
             {vivid |}__lazy-wildcards/utils/color-base__ flower
+        fn:
+          costume:
+            - >-
+              ${v} {1-$$crown|dress|hair ornament|accessories|skirt|shoes|gloves}
+          ethnicity:
+            - >-
+              ${v} {1-$$hair|limbs|wings}
+      plant_girl_tree:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-race/plant_girl_tree/costume-ethnicity-race__
+            , {1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant_girl_tree/costume-ethnicity__}{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant_girl_tree/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant_girl_tree/costume-weapon__}|}
+            {, __lazy-wildcards/subject/costume-ethnicity-race/plant_girl/prompts-no-weight__|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant_girl_tree/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant_girl_tree/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant_girl_tree/style__}|}
+        costume-ethnicity-race:
+          - >-
+            dryad
+            , wooden girl, tree girl, tree spirit
+            , living tree
+            , tree bark, bark skin
+        costume-ethnicity:
+          - tree horns
+          - leaf hair
+          - wooden hair, tree hair
+          - wooden body
+          - wooden limbs, tree limbs
+          - wooden skin, tree skin
+          - wooden wings, tree wings
+          - tree head, tree branch head
+          - wooden tail, tree tail
+          - oak tree spirit
+          - tree nymph
+          - flower hair
+        costume-elem:
+          - vine dress
+          - vine accessories
+          - glowing eyes
+          - bioluminescence
+          - vine wrapping
+          - flower hair
+          - navel
+          - hair slicked back
+          - bird on hand
+          - extra arms
+          - giantess
+          - wooden clothing, tree clothing
+          - bark clothing, tree bark clothing
+        costume-weapon:
+          - holding whip
+          - whip
+          - wooden staff, tree staff
+          - vine whip
+          - wooden sword, tree sword
+          - wooden club
+          - wooden shield, tree shield
+          - tree branches whip
+        env:
+          - vines
+          - ancient tree
+          - sunlight filtering through trees
+          - tree shade
+          - under tree
+          - tree branches
+          - wooden roots, tree roots
+        env-bg:
+          - forest
+          - sacred grove
+        style:
+          - nature spirit
+          - mystical aura
+          - brown color scheme
+          - green color scheme
+          - solemn
+          - wooden texture
       # https://civitai.com/models/1484425/human-motorcycle-living-bike-ponyilsdsdxl?modelVersionId=1679471
       human_motorcycle:
         prompts:

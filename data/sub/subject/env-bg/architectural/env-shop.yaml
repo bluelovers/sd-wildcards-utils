@@ -407,17 +407,27 @@ lazy-wildcards:
           - vintage decor
           - pastel color palette
       # https://civitai.com/models/399936/jjs-place-night-market?modelVersionId=1631302
+      # https://civitai.com/models/1860923/taiwan-night-market-street-realistic?modelVersionId=2106169
+      # https://civitai.com/models/246700/shijing-night-market
+      # https://civitai.com/models/246710
+      # https://civitai.com/models/318322/taiwans-night-markets
+      # https://civitai.com/models/99007/cooking-and-shopping-in-asian-night-market
       night_market:
         prompts:
           - >-
-            (__lazy-wildcards/subject/env-bg/night_market/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
-            {, {1-$$__lazy-wildcards/subject/env-bg/night_market/env-bg__}|}
+            (__lazy-wildcards/subject/env-bg/night_market/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/night_market/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
             {, {1-$$__lazy-wildcards/subject/env-bg/night_market/env__}|}
         env-bg-main:
-          - night market, night bazaar
+          - >-
+            night market, night bazaar
+            , taiwannightmarketstreet
+            , ruanyi050, ruanyi051
         env-bg:
-          - taiwanese night market
+          - taiwanese night market, taiwans night markets, taipei
           - vietnam street market
+          - asian night market
+          - morning market
         env:
           - table, chair
           - neon, sign
@@ -435,6 +445,14 @@ lazy-wildcards:
           - food vendor
           - festive lights
           - asian festival
+          - brick road
+          - utility pole
+          - old building
+          - messy cityscape
+          - shop
+          - sky
+          - city lights, neon lights
+          - greasy floors
       # 居酒屋
       # https://civitai.com/models/47386/izakaya-murayakuba
       japanese_izakaya:

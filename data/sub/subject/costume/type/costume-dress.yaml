@@ -98,4 +98,27 @@ lazy-wildcards:
           - half cup
         style:
           - nsfw, ecchi
+      # https://civitai.com/models/1822710/or075?modelVersionId=2062622
+      strapless_dress:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/strapless_dress/costume-main__
+            {, {1-$$__lazy-wildcards/subject/costume/strapless_dress/costume__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/strapless_dress/costume-elem__}|}
+        costume-main:
+          - strapless dress
+        costume:
+          - off-shoulder dress
+          - strapless gown
+          - strapless evening dress
+          - strapless cocktail dress
+          - strapless formal dresses
+          - (see-through dress:1.4)
+          - __lazy-wildcards/utils/color-base__-strapless dress
+          - strapless hand pleated silk gown
+        costume-elem:
+          - thigh socks
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/lace-trim/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/fur-trim/prompts__
 

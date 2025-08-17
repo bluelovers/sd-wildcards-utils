@@ -36,22 +36,33 @@ lazy-wildcards:
           - modern chair
           - >-
             {1-$$__lazy-wildcards/subject/env-elem/rattan-chair/style__}
+      # 藤製椅
+      # 🖐Wicker 是一種古老的編織技術，以前主要使用自然的材質，例如：柳樹、燈心草、竹子、棕梠科的樹，等等，會把植物弄濕以便於編織，現代也會有人用人造纖維來做，因此 wicker furniture 指的是用此種技術編織出來的家具。
+      # 🌲Rattan 是指一種棕梠科的省藤亞科中有爬藤的棕梠樹，所以 rattan furniture指的是用 rattan編製的家具
+      # Rattan 的材質較硬，做出來的東西用途較多樣性，較耐用，但自然材質所做的 rattan furniture 放在戶外會因為日曬，時間久了會退色，因此比較適合放在室內。
+      # Wicker 的材質比較沒那麼硬，壽命較短，但因為能被上各種不同的顏色，放在室外比較不會有退色的問題。
+      # https://www.facebook.com/EnglishRealmTutor/posts/%E4%B8%AD%E6%96%87%E6%89%80%E8%AC%9B%E7%9A%84%E8%97%A4%E6%A4%85%E8%8B%B1%E6%96%87%E6%9C%89wicker-chair-%E5%92%8C-rattan-chair%E5%85%A9%E7%A8%AE%E6%9C%89%E4%BA%9B%E4%BA%BA%E4%BB%A5%E7%82%BA%E9%82%A3%E4%BA%9B%E9%83%BD%E4%B8%80%E6%A8%A3%E6%98%AF%E8%97%A4%E6%A4%85%E5%85%B6%E5%AF%A6-wicker-%E8%88%87-rattan-%E6%8C%87%E6%98%AF%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8B%E7%89%A9%E9%82%A3%E6%88%91/453816298616530/
       # https://civitai.com/models/377816/rattan-chair
       rattan-chair:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-elem/rattan-chair/env-chair__
+            (__lazy-wildcards/subject/env-elem/rattan-chair/env-chair__
+            {, {1-$$__lazy-wildcards/subject/env-elem/rattan-chair/env__}|}{0.3:::{1.2|1.3|1.4}|})
             {, {1-$$__lazy-wildcards/subject/env-elem/chair/action-pose__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem/rattan-chair/style__}|}
         env-chair:
-          - >-
-            {0.3::__mix-lazy-auto/color-anything__ |}{1-$$ chair, $$rattan|wicker} chair
+          - rattan chair, wicker chair
+        env:
+          # 孔雀椅
+          - peacock chair
+          - rattan furniture
+          - wicker furniture
+          - __mix-lazy-auto/color-anything__ chair
         style:
           - discarded
-          - peacock chair
-          - rattan_furniture
-          - >-
-            {1-$$ style, $$rattan|wicker} style
+          - __lazy-wildcards/utils/fn/made-of-inspired(v=rattan)__
+          - __lazy-wildcards/utils/fn/made-of-inspired(v=wicker)__
+      # 棺材
       coffin:
         prompts:
           - >-
@@ -76,4 +87,119 @@ lazy-wildcards:
       drying_rack:
         prompts:
           - drying rack
+      bed:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/bed/env-bg-main__
+            {, {1-2$$__lazy-wildcards/subject/env-elem/bed/env-bg__}|}
+            {, __lazy-wildcards/subject/env-elem/bed/env-bg-bed-size__|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/bed/env__}|}
+        env-bg-main:
+          - bed
+        env-bg:
+          # 雙層床
+          - bunk bed
+          # 天篷床
+          - canopy bed
+          - princess bed
+          - futon, tatami, folded bedding on tatami
+          - floating bed
+          - round bed
+          - tent bed
+          - folding bed, sofa bed
+        env-bg-bed-size:
+          - single bed
+          - double bed
+          - king size bed
+          - queen size bed
+        env:
+          # 床架
+          - bed frame
+          # 床墊
+          - mattress
+          # 彈簧床墊
+          - box spring
+          - curtains, lace fabric
+          - sci-fi bed
+          - wooden bed
+          - __lazy-wildcards/utils/color-base__ bed
+          - __lazy-wildcards/subject/env-elem/bed-sheet/prompts__
+          - pillow
+          - __lazy-wildcards/utils/color-base__ pillow
+      bed-sheet:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/bed-sheet/env-elem-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/bed-sheet/env-elem__}|}{0.3:::{1.2|1.3|1.4}|})
+        env-elem-main:
+          - bed sheet, sheet
+        env-elem:
+          - comforter
+          - duvet
+          - quilt
+          - top sheet
+          - flat sheet
+          - fitted sheet
+          - __lazy-wildcards/utils/color-base__ sheet
+          - see-through sheet
+          - lace sheet
+          - silk sheet
+          - satin sheet
+      # 吊床
+      bed-hammock:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/bed-hammock/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/bed-hammock/env-main__}
+            {, {1-$$__lazy-wildcards/subject/env-elem/bed-hammock/env__}|}
+        env-main:
+          - hammock
+          - indoor hammock
+          - jungle hammock, nylon fabric
+          - hammock with stand
+          - rope swing hammock
+          - hammock tent
+        env:
+          - tied rope
+          - __lazy-wildcards/utils/color-base__ hammock
+          - see-through hammock
+          - handmade wood hammock
+          - tufted hammock
+          - luxury boho hammock
+      # 吊椅型吊床 / 繩網椅
+      chair-hammock:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/chair-hammock/env-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/chair-hammock/env__}|}
+            , __lazy-wildcards/subject/env-elem/bed-hammock/prompts-no-weight__
+        env-main:
+          - hammock chair, macrame swing chair
+        env:
+          - hanging furniture
+          - rope woven chair
+      air_conditioner:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/air_conditioner/env-elem-main__
+            {, {1-2$$__lazy-wildcards/subject/env-elem/air_conditioner/env-elem__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/air_conditioner/env__}|}
+        env-elem-main:
+          - air conditioner
+        env-elem:
+          - wall-mounted air conditioner
+          - window air conditioner
+          - portable air conditioner
+          - split system air conditioner
+          - ducted air conditioning
+          - ceiling-mounted air conditioner
+          - central air conditioning
+          - air conditioning unit
+        env:
+          - air vent
+          - ceiling vent
+          - fan
+          - electric wires
 

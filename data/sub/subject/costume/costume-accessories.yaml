@@ -4,16 +4,65 @@ lazy-wildcards:
       earrings:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/costume-elem-accessories/earrings/costume-elem__}
-        costume-elem:
-          - earrings
+            __lazy-wildcards/subject/costume-elem-accessories/earrings/costume-elem-earrings-main__
+            {, {1-$$__lazy-wildcards/subject/costume-elem-accessories/earrings/action__}|}
+            {, {1-3$$__lazy-wildcards/subject/costume-elem-accessories/earrings/costume-elem-earrings-1*__}|}
+            {, {1-3$$__lazy-wildcards/subject/costume-elem-accessories/earrings/costume-elem-earrings-2*__}|}
+        costume-elem-earrings-main:
+          - earrings, ear ornament
+        action:
+          - adjusting earrings
+          - removing earrings
+        costume-elem-earrings-101:
+          - floating earrings
+          - hoop earrings
+          - stud earrings
+          - dangling earrings
+          - chandelier earrings
+          - earclip
+          - clip-on earrings
+          - ear cuff
+        costume-elem-earrings-102:
           - large earrings
           - ear chain
           - ear piercing
           - multiple earrings
+          - single earring
+          - long earlobes
+        costume-elem-earrings-201:
+          - wooden earring
+          - bone earring
+          - ceramic earring
+        costume-elem-earrings-202:
+          - bell earrings
+          - cherry earrings
+          - crescent earrings
+          - cross earrings
           - crystal earrings
-          - stud earrings
+          - diamond earrings
+          - flower earrings
+          - food-themed earrings
+          - heart earrings
+          - jack-o-lantern earrings
+          - magatama earrings
+          - orange-shaped earrings
+          - pearl earrings
+          - pill earrings
+          - pineapple earrings
+          - planet earrings
+          - pom pom earrings
+          - potara earrings
+          - shell earrings
+          - skull earrings
+          - snowflake earrings
+          - spade earrings
+          - sphere earrings
+          - star earrings
+          - strawberry earrings
           - tassel earrings
+          - teardrop earrings
+          - tooth earrings
+          - yin yang earrings
       necklace:
         prompts:
           - >-
@@ -42,33 +91,30 @@ lazy-wildcards:
           - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/fn/color-trim(c=gold)__
         costume-elem:
           - gold stitched
-          - gold embroidery
+          - gold embroidery, gold embellishments
           - gold decorative
           - gold lace, gold lace trim, gold lace-trimmed
-          - gold threadwork
+          - gold threadwork, gold threaded
+          - gold accessory
+          - gold accents
         fn:
           color-trim:
             - >-
               ${c:gold} trim, ${c:gold}-trim, ${c:gold}-trimmed, ${c:gold} threading
+          color-extra:
+            - >-
+              {${c:gold} stitched|${c:gold} embroidery, ${c:gold} embellishments|${c:gold} decorative|${c:gold} threadwork, ${c:gold} threaded|${c:gold} accessory|${c:gold} accents}
           color-trim-extra:
             - >-
               __lazy-wildcards/subject/costume-elem-accessories/gold-trim/fn/color-trim__
-              {, ${c:gold} stitched|}
-              {, ${c:gold} embroidery|}
-              {, ${c:gold} decorative|}
-              {, ${c:gold} threadwork, ${c:gold} threaded|}
-              {, ${c:gold} accessory|}
+              {, __lazy-wildcards/subject/costume-elem-accessories/gold-trim/fn/color-extra__|}
           color-trim-object:
             - >-
               ${c:gold} trim ${v}, ${c:gold}-trim ${v}, ${c:gold}-trimmed ${v}, ${c:gold} threading ${v}
           color-trim-object-extra:
             - >-
               __lazy-wildcards/subject/costume-elem-accessories/gold-trim/fn/color-trim-object__
-              {, ${c:gold} stitched ${v}|}
-              {, ${c:gold} embroidery ${v}|}
-              {, ${c:gold} decorative ${v}|}
-              {, ${c:gold} threadwork ${v}, ${c:gold} threaded ${v}|}
-              {, ${c:gold} accessory ${v}|}
+              {, __lazy-wildcards/subject/costume-elem-accessories/gold-trim/fn/color-extra__|}
           color-trim-object2:
             - >-
               __lazy-wildcards/subject/costume-elem-accessories/gold-trim/fn/color-trim-object__

@@ -91,4 +91,23 @@ lazy-wildcards:
           - print pantyhose
           - fishnet pantyhose
           - argyle_legwear pantyhose
+      # 灯籠褲
+      # https://civitai.com/models/576402/bloomerssdxlillpony?modelVersionId=682571
+      bloomers:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-lower-body/bloomers/costume-main__
+            {, {1-$$__lazy-wildcards/subject/costume-elem-lower-body/bloomers/costume-elem__}|}
+        costume-main:
+          - bloomers, puffy shorts
+        costume-elem:
+          - silk bloomers
+          - bloomer costume
+          - pantaloons
+          - frilly bloomers
+          - open side bloomers, side slit bloomers
+          - lace bloomers
+          - see-through bloomers
+          - latex bloomers
+          - linen bloomers with natural texture
 

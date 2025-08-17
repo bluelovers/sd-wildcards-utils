@@ -1,5 +1,6 @@
 lazy-wildcards:
   subject:
+    # https://civitai.com/search/models?baseModel=SD%201.5&sortBy=models_v9&query=doll-likeness
     costume-ethnicity-race:
       # https://civitai.com/models/299307/indian-beuty
       # https://civitai.com/models/193934/indianbridallook
@@ -141,9 +142,10 @@ lazy-wildcards:
           doll-likeness:
             - >-
               ${v} girl, ${v} woman
-              , ${v} beauty, ${v} model, ${v} actress, ${v} celebrity
+              , ${v} beauty, ${v} model, ${v} actress, ${v} celebrity, ${v} idol
               , ${v} mixed
               , ${v} makeup style
+              , ${v} fashion style
       # https://civitai.com/models/344770/vietnamese-girl
       # https://civitai.com/models/92642/vietnamese-girl-ntc-v10
       # https://civitai.com/models/43618/cutevietnamesegirl
@@ -154,6 +156,7 @@ lazy-wildcards:
             (__lazy-wildcards/subject/costume-ethnicity-race/korean_girls/fn/doll-likeness(v=vietnamese)__
             , MunTran, Nguyen, Vyvan3, jichoi, miucoser{0.3:::{1.2|1.3|1.4}|})
       # 斯拉夫 烏克蘭 俄羅斯
+      # https://civitai.com/models/13068/russian-doll-likeness
       slavic:
         prompts:
           - >-
@@ -194,15 +197,15 @@ lazy-wildcards:
           - combat boots
       # 台灣原住民
       # https://civitai.com/models/150043/taiwan-aborigines
-      taiwan_aborigines:
+      tw-taiwan_aborigines:
         prompts:
           - >-
-            (__lazy-wildcards/subject/costume-ethnicity-race/taiwan_aborigines/costume-ethnicity-race-main__
-            {, {1-2$$__lazy-wildcards/subject/costume-ethnicity-race/taiwan_aborigines/costume-ethnicity-race__}|}{0.3:::{1.2|1.3|1.4}|})
-            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/taiwan_aborigines/costume-elem__}|}
-            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/taiwan_aborigines/env-bg__}|}
-            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/taiwan_aborigines/env__}|}
-            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/taiwan_aborigines/style__}|}
+            (__lazy-wildcards/subject/costume-ethnicity-race/tw-taiwan_aborigines/costume-ethnicity-race-main__
+            {, {1-2$$__lazy-wildcards/subject/costume-ethnicity-race/tw-taiwan_aborigines/costume-ethnicity-race__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/tw-taiwan_aborigines/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/tw-taiwan_aborigines/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/tw-taiwan_aborigines/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/tw-taiwan_aborigines/style__}|}
         costume-ethnicity-race-main:
           - >-
             taiwan aborigines, indigenous peoples of taiwan, taiwanese tribal
@@ -247,4 +250,36 @@ lazy-wildcards:
           - black and white pattern
           - red and black pattern
           - ethnic pattern
+      # https://civitai.com/models/7716/taiwan-doll-likeness
+      tw-taiwanese:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-race/tw-taiwanese/costume-ethnicity-race__{0.3:::{1.2|1.3|1.4}|})
+        costume-ethnicity-race:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/korean_girls/fn/doll-likeness(v=taiwanese)__
+      # https://civitai.com/search/models?baseModel=SD%201.5&sortBy=models_v9&query=japanese
+      # https://civitai.com/models/19044/japanese-doll-likeness
+      # https://civitai.com/models/28811/japanesedolllikeness-v15
+      # https://civitai.com/models/18507/japanese-coser-mix
+      # https://civitai.com/models/23248/japaneseactressmix-v5
+      # https://civitai.com/models/41528/japanese-girl
+      # https://civitai.com/models/764058/japaneseidol01
+      # https://civitai.com/models/1613011/japanese-beauty-ultra-realistic-lora
+      # https://civitai.com/models/72878/average-face-of-japanese-female-announcer-lora
+      # https://civitai.com/models/70142/average-face-of-japanese-milfs
+      # https://civitai.com/models/108371/nagi-nemoto-japanese-idol
+      # https://civitai.com/models/262205/15japanese-cute-girl
+      # https://civitai.com/models/304150/olaverage-face-of-japanese-women-working-in-an-office
+      # https://civitai.com/models/69156/average-face-of-japanese-idols
+      # https://civitai.com/models/301331/average-face-of-a-kawaii-japanese-girl
+      # https://civitai.com/models/72878/average-face-of-japanese-female-announcer-lora
+      jp-japanese:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-race/jp-japanese/costume-ethnicity-race__{0.3:::{1.2|1.3|1.4}|})
+        costume-ethnicity-race:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/korean_girls/fn/doll-likeness(v=japanese)__
+            , japanesebeauty
 

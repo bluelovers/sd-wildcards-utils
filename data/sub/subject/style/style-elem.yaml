@@ -7,11 +7,15 @@ lazy-wildcards:
       cyberpunk:
         prompts:
           - >-
-            ({1-$$__lazy-wildcards/subject/style-elem/cyberpunk/main__}:1.2)
-        main:
+            ({1-$$__lazy-wildcards/subject/style-elem/cyberpunk/style-main__}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-elem/cyberpunk/style__}|}
+            {, __lazy-wildcards/subject/style-elem/sci-fi/prompts__|}
+        style-main:
           - ancient japanese cyberpunk
           - ancient chinese cyberpunk
           - ancient egyptian cyberpunk
+        style:
+          - cybernetic
       elem:
         prompts:
           - >-

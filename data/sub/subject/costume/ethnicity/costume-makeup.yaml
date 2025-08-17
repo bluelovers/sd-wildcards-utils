@@ -1,0 +1,197 @@
+lazy-wildcards:
+  subject:
+    costume-ethnicity-makeup:
+      # https://gyaru.fandom.com/
+      # https://civitai.com/models/82265/japanese-gal-average-face
+      # https://civitai.com/models/216846/japanese-gal
+      # https://civitai.com/models/38832/anime-gal-or-gyaru
+      # https://civitai.com/search/models?baseModel=SD%201.5&sortBy=models_v9&query=gyaru
+      # https://civitai.com/models/112182/gyarueraselecoleco
+      # https://en.wikipedia.org/wiki/Kogal
+      # https://danbooru.donmai.us/wiki_pages/gyaru
+      jp-japanese_gyaru:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-makeup/jp-japanese_gyaru/costume-ethnicity-makeup-main__
+            {, {1-2$$__lazy-wildcards/subject/costume-ethnicity-makeup/jp-japanese_gyaru/costume-ethnicity-makeup__}|}{0.3:::{1.2|1.3|1.4}|})
+            , {2-$$__lazy-wildcards/subject/costume-ethnicity-makeup/jp-japanese_gyaru/costume-ethnicity__}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-makeup/jp-japanese_gyaru/expressions__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-makeup/jp-japanese_gyaru/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-makeup/jp-japanese_gyaru/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-makeup/jp-japanese_gyaru/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-makeup/jp-japanese_gyaru/style__}|}
+            {, __lazy-wildcards/subject/costume-ethnicity-race/jp-japanese/costume-ethnicity-race__|}
+        costume-ethnicity-makeup-main:
+          - >-
+            japanese gyaru, japanese gal, gyaru, gal
+            , kogal
+            , gyaru makeup
+            , __lazy-wildcards/utils/fn/inspired(v=gyaru)__
+            , __lazy-wildcards/subject/costume-ethnicity-race/korean_girls/fn/doll-likeness(v=gyaru)__
+            , gyarumond
+            , gyaru girl
+            , cleavage
+        costume-ethnicity-makeup:
+          - kuro gyaru, black gyaru, ganguro
+          - shiro gyaru, white gyaru
+          - hime gyaru
+          - onee gyaru, mature female
+          - manba gyaru, yamanba gyaru
+          - amesuku gyaru
+          - amekaji gyaru, american casual fashion
+          - agejo gyaru, overly feminine, big hair
+        costume-ethnicity:
+          - bleached hair
+          - colored eyelashes
+          - tanlines
+          - heavy makeup
+          - very pale skin
+          - platinum blonde hair
+          - hime cut
+          - voluminous hair
+          - long eyelashes
+          - lip gloss
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+        expressions:
+          # https://civitai.com/models/240511/gyaru-grin-concept
+          - gyaru grin, smiley face, grin
+        action:
+          - gyaru v
+          - double gyaru v, gyaru v with both hands
+          - gyaru w
+          - finger to tongue, saliva
+          - finger heart
+          - sassy pose
+          - taking a selfie
+        costume-elem:
+          - shiny clothes
+          - frilly dress
+          - tiara
+          - bows
+          - tight dress
+          - heels
+          - sunglasses
+          - false eyelashes
+          - mini skirt
+          - tied shirt, tied open shirts
+          - open clothes
+          - bikini
+          - leopard print
+          - gyaru outfit
+          - shirt
+          - jewelry
+          - school uniform
+          - collarbone
+          - pleated skirt
+          - collared shirt
+          - bracelet
+          - midriff
+          - american streetwear
+          - graphic tees, print shirt
+          - denim
+          - baseball caps
+          - beanies
+          - belts
+          - plastic jewelry
+          - bangles
+          - __lazy-wildcards/subject/costume-ethnicity-eyes/eyelashes/prompts__
+          - hostesses
+          - __lazy-wildcards/utils/fn/inspired(v=lingerie)__
+          - __lazy-wildcards/subject/costume-elem-accessories/earrings/prompts__
+          - tattoo sticker
+          - wristband
+          - platform footwear
+        env:
+          - cellphone
+        style:
+          - elegant
+          - pastel colors
+          - y2k fashion, y2k \(fashion\)
+          - star \(symbol\)
+      # https://civitai.com/search/models?baseModel=SD%201.5&sortBy=models_v9&query=visual%20kei
+      # https://civitai.com/models/90418/visual-kei-realism-lora
+      # https://civitai.com/models/1642377/visual-kei-fashion-style
+      # https://civitai.com/models/88778/niji-visual-kei-japanese-fashionmusic-inspired-lora
+      # https://civitai.com/models/1657318/alternative-kei
+      jp-visual_kei:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-makeup/jp-visual_kei/costume-ethnicity-makeup-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-makeup/jp-visual_kei/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-makeup/jp-visual_kei/style__}|}
+        costume-ethnicity-makeup-main:
+          - >-
+            visual kei, visual-kei, visual-kei style
+            , visual kei makeup
+            , __lazy-wildcards/utils/fn/inspired(v=visual_kei)__
+            , __lazy-wildcards/subject/costume-ethnicity-race/korean_girls/fn/doll-likeness(v=visual_kei)__
+            , heavy makeup
+            , eye shadow
+            , punk
+            , choker
+            , Vkei_Realism
+            , Niji Kei, 4LTK31 Style
+        costume-elem:
+          - crossdressing
+          - androgynous fashion
+          - oversized clothing
+          - layered clothing
+          - dramatic makeup
+          - unique hairstyles
+          - accessories
+          - statement pieces
+          - dyed hair
+          - spiky hair
+          - silver hair
+          - multicolored hair
+          - goth makeup
+          - lipstick
+          - visual kei outfit
+          - cross necklace
+          - leather belt, choker
+          - military uniform
+          - bandages
+          - __lazy-wildcards/subject/costume-elem-accessories/earrings/prompts__
+          - insane
+          - __lazy-wildcards/subject/costume-elem-accessories-neckwear/choker/prompts-no-weight__
+          - __lazy-wildcards/subject/costume-ethnicity-makeup/heavy_makeup/prompts__
+        style:
+          - vintage elements
+          - bold patterns
+          - gothic fashion
+          - rock star vibes
+      heavy_makeup:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-makeup/heavy_makeup/costume-ethnicity-makeup-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-makeup/heavy_makeup/costume-ethnicity-makeup__}|}
+        costume-ethnicity-makeup-main:
+          - heavy makeup
+        costume-ethnicity-makeup:
+          - __lazy-wildcards/subject/costume-ethnicity-eyes/dark_circles_under_eyes/prompts__
+          - smoky eyes
+          - false eyelashes
+          - thick eyeliner
+          - winged eyeliner
+          - red lipstick
+          - dark lipstick
+          - lip gloss
+          - contouring
+          - highlight makeup
+          - glitter makeup
+      # https://civitai.com/models/1869642/tribal-female-face-tattoos?modelVersionId=2116196
+      facepaint:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-makeup/facepaint/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-ethnicity-makeup/facepaint/costume-ethnicity-makeup-main__}
+        costume-ethnicity-makeup-main:
+          - facepaint
+          - tribal makeup
+          - halloween makeup
+          - tribal face tattoo
+          - geometric face tattoo
+          - floral face tattoo
+

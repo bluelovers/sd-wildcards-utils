@@ -1,6 +1,89 @@
 lazy-wildcards:
   subject:
     env-bg:
+      ruins-common:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-bg/ruins-common/style-main__}
+            {, {1-$$__lazy-wildcards/subject/env-bg/ruins-common/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/ruins-common/style__}|}
+        style-main:
+          - ruins, abandoned ruins
+        env:
+          - debris
+          - overgrown
+          - dilapidated
+          - crumbling
+          - vegetation
+          - __lazy-wildcards/subject/env-elem/moss/prompts__
+          - messy
+        style:
+          - dark
+          - eerie
+          - __lazy-wildcards/utils/scenery-no-humans__
+      ruins-city-common:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-bg/ruins-city-common/style__},
+            {1-$$__lazy-wildcards/subject/env-bg/ruins-city-common/env__},
+            __lazy-wildcards/subject/env-bg/ruins-common/prompts__
+        prompts-style:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-bg/ruins-city-common/style__},
+            {0-$$__lazy-wildcards/subject/env-bg/ruins-common/style__}
+        style:
+          - urban exploration
+          - dirty
+          - garbage
+        env:
+          - graffiti
+          - peeling paint
+          - broken windows
+          - garbage
+      ruins-city-street:
+        prompts:
+          - >-
+            {2-$$__lazy-wildcards/subject/env-bg/ruins-city-street/main__},
+            __lazy-wildcards/subject/env-bg/ruins-city-common/prompts__,
+            {1-$$__lazy-wildcards/subject/env-bg/ruins-city-street/env__}
+        main:
+          - city, cityscape
+          - building
+          - outdoors
+        env:
+          - __lazy-wildcards/subject/env-elem/air_conditioner/prompts__
+          - bicycle
+          - box
+          - brick wall
+          - bucket
+          - cardboard box
+          - door
+          - graffiti
+          - house
+          - lamppost
+          - motor vehicle
+          - poster \(object\)
+          - power lines
+          - puddle
+          - road
+          - scenery
+          - stairs
+          - street
+          - trash bag
+          - trash can
+          - wall
+          - window
+          - soda can
+          - plastic bag
+          - plant
+          - paper bag
+          - lamppost
+          - food
+          - fence
+          - cup
+          - bucket
+          - bottle
+          - __lazy-wildcards/subject/env-elem/road/prompts__
       # https://civitai.com/models/374782/jjs-architecture-temple-ruin?modelVersionId=1480366
       ruins-stone:
         prompts:
@@ -180,4 +263,94 @@ lazy-wildcards:
           - melancholic mood, isolation aura, urban loneliness
           - urban neglect, dystopian ruin, forgotten society
           - neon glow reflection, flickering headlights, light and shadow
+      # https://civitai.com/models/621635/abaddoned-dungeon?modelVersionId=694943
+      ruins-dungeon:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/ruins-dungeon/main__
+            {,{1-$$__lazy-wildcards/subject/env-bg/ruins-dungeon/env-bg__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg/ruins-dungeon/env__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg/ruins-dungeon/style__}|}
+        main:
+          - abaddoned dungeon interior, abaddoned labyrinth
+        style:
+          - eerie atmosphere
+          - disrepair
+          - sense of natural reclaiming
+          - Mysterious_Glow
+          - faint
+          - otherworldly light sources
+          - eerie ambiance
+          - sense of emptiness
+        env:
+          - broken stone
+          - cracks
+          - __lazy-wildcards/subject/env-elem/moss/prompts__
+          - >-
+            {1-$$Dust|layers of dust}
+          - __lazy-wildcards/subject/env-elem/spider-webs/prompts__
+          - >-
+            {1-$$Rusted_Equipment|corroded metal|old chains|abandoned tools}
+          - >-
+            {1-$$Broken_Furniture|collapsed tables|discarded chairs}
+          - shattered wood
+          - >-
+            {1-$$Ancient_Runes|carved symbols|mystical inscriptions|arcane writings}
+          - >-
+            {overgrown |}vegetation
+          - >-
+            {overgrown |}creeping plants
+        env-bg:
+          - old and dilapidated structures
+          - Crumbled_Walls
+      swamp-mushrooms-structure:
+        prompts:
+          - a (wet swamp:1.2) with (glowing mushrooms:1.3) and a (futuristic structure) in the background, landscape
+      ruins-sunken:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/ruins-sunken/env-bg-main__
+            {,{1-$$__lazy-wildcards/subject/env-bg/ruins-sunken/env__}|}
+            {,{1-$$__lazy-wildcards/subject/env-bg/ruins-sunken/style__}|}
+        env-bg-main:
+          - sunken ruins
+        env:
+          - tentacles
+          - chains
+          - slime \(substance\)
+          - __lazy-wildcards/subject/env-elem/spider-webs/prompts__
+          - fireflies
+        style:
+          - dreamy magical atmosphere
+          - painting burst
+          - (fractal art:1.3)
+          - (zentangle:1.2)
+          - (geometric:1.2)
+      # https://civitai.com/models/397692/fantasy-jungle?modelVersionId=986468
+      ruins-jungle:
+        prompts:
+          - ruins in a fantasy jungle, FanJu
+      ruins-city:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/ruins-city/main__
+            {0.2::, __lazy-wildcards/subject/env-bg/ruins-city/city__}
+        main:
+          - >-
+            long-shot ruins, building, window frame, cracked window, wall corner, upturned, abandoned, metal, industrial, fence, moody, cracked mud, urban, __lazy-wildcards/subject/env-bg/ruins-city/area__
+        area:
+          - suburbs
+          - canalside
+        city:
+          - london
+      ruins-temple:
+        env-bg-main:
+          - temple ruins
+        env-bg:
+          - japanese temple ruins
+        env:
+          - __lazy-wildcards/subject/env-moment/weather-mist/prompts__
+          - night
+        style:
+          - dramatic lighting
 
