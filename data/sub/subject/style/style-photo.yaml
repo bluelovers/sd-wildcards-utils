@@ -48,4 +48,63 @@ lazy-wildcards:
         prompts:
           - >-
             ArsMovieStill, movie still from a 60s psychedelic movie
+      # Draw a prospective model of the character in the picture, commercialized as a 1/7 scale full body figure. Please make this image into a real-life figure photo. Place the figurine version of the photo I provided on a round black plastic pedestal. I would like the PVC material to be clearly visible. The background should be a computer desk
+      # https://civitai.com/search/models?baseModel=SD%201.5&sortBy=models_v9&query=pvc
+      # https://civitai.com/models/237468/pvc-figurerizer-lora-edition
+      # https://civitai.com/models/150122/pvc-chiwu
+      # https://civitai.com/models/34331/pvc-l
+      photo-pvc:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-elem/photo-pvc/style-main__
+            {, {1-2$$__lazy-wildcards/subject/style-elem/photo-pvc/env-elem-figure__}|}{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+            {, {1-3$$__lazy-wildcards/subject/style-elem/photo-pvc/env-bg-base__}|}
+            {, {1-2$$__lazy-wildcards/subject/style-elem/photo-pvc/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/style-elem/photo-pvc/env__}|}
+            {0.7::, {1-2$$__lazy-wildcards/subject/style-elem/photo-pvc/style-view__}|}
+            {, {1-$$__lazy-wildcards/subject/style-elem/photo-pvc/style__}|}
+        style-main:
+          - >-
+            pvc figure, pvc figure material, pvc material texture, pvc figure texture
+            , __lazy-wildcards/utils/fn/style-inspired(v=pvc)__
+            , __lazy-wildcards/utils/fn/made-of(v=pvc)__
+            , pvcstatuesQuiron
+        env-elem-figure:
+          - collectible figure
+          - character figure
+          - anime figure
+          - plastic figure
+        env-bg-base:
+          - a round black plastic pedestal
+          - clear round base
+          - black square base
+          - decorated base
+          - character logo base
+          - diorama base
+          - rocky base
+          - water base
+          - grass base
+          - reflective base
+        env-bg:
+          - outdoor photography background
+          - a computer desk background
+          - wooden desk background
+        env:
+          - clear effect parts
+          - action figure stand
+          - transparent stand
+        style-view:
+          - full body
+          - close-up
+        style:
+          - plastic material
+          - abs material
+          - metallic paint
+          - pearl finish texture
+          - matte finish texture
+          - studio photography, studio lighting
+          - mirror surface
+          - product photography
+          - dramatic lighting
+          - spotlight
 

@@ -282,4 +282,14 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/subject/costume-ethnicity-race/korean_girls/fn/doll-likeness(v=japanese)__
             , japanesebeauty
+      # https://civitai.com/models/1871647/asian-cuti-photorealistic-character-lora?modelVersionId=2118425
+      # https://civitai.com/models/754068/virtual-asian-female-character-16?modelVersionId=843209
+      asian:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-race/asian/costume-ethnicity-race__{0.3:::{1.2|1.3|1.4}|})
+        costume-ethnicity-race:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/korean_girls/fn/doll-likeness(v=asian)__
+            , d43fgh, Yummy
 

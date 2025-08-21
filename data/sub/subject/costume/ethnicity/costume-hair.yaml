@@ -1,5 +1,6 @@
 lazy-wildcards:
   subject:
+    # https://danbooru.donmai.us/wiki_pages/tag_group%3Ahair_styles
     costume-ethnicity-hair-style:
       hair-bun:
         prompts:
@@ -16,21 +17,6 @@ lazy-wildcards:
           - cone hair bun
         costume-elem:
           - hairpods
-      # 繁複編髮
-      intricate_braids:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-ethnicity-hair-style/intricate_braids/costume-ethnicity-hair-main__
-            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-hair-style/intricate_braids/costume-ethnicity-hair__}|})
-        costume-ethnicity-hair-main:
-          - intricate braids
-        costume-ethnicity-hair:
-          # 環形髮辮 (Crown Braid) | 環狀髮辮：將頭髮編織成冠狀，象徵威嚴與神聖性。
-          - crown braid
-          # 側編髮 (Side Braids) | 側邊長辮：長髮側編，增添貴族感與靈動感。
-          - side braids
-          # 雙層編髮 (Double Braids) | 雙重髮辮：上下層疊交錯，展現繁複華麗的編髮技巧。
-          - double braids
       # 高聳盤髮
       high_chignon:
         prompts:
@@ -65,17 +51,6 @@ lazy-wildcards:
           - vine wrapped hair
           - silk hairband
           - double ribbon wrap
-      waterfall_braids:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-ethnicity-hair-style/waterfall_braids/costume-ethnicity-hair-main__
-            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-hair-style/waterfall_braids/costume-ethnicity-hair__}|})
-        costume-ethnicity-hair-main:
-          - ribbon wrapped hair
-        costume-ethnicity-hair:
-          - interwoven_braids, interwoven waterfall braid
-          - crystal-adorned braids
-          - floral-braided hair, floral-incorporated braids
       goddess_crown:
         prompts:
           - >-
@@ -148,4 +123,28 @@ lazy-wildcards:
           - unkempt hair
           - flipped hair
           - hair floating, gravity-defying hair
+          - shaggy hair
+      # Wolf Cut (ウルフカット / 狼尾剪髮)
+      # 「Wolf Cut」的核心特色就是 層次感 + 蓬鬆感 + 自然凌亂
+      # https://civitai.com/models/533351?modelVersionId=603701
+      wolf_cut:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-hair-style/wolf_cut/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-hair-style/wolf_cut/costume-ethnicity-hair-main__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-hair-style/wolf_cut/costume-ethnicity-hair__}|}
+        costume-ethnicity-hair-main:
+          - wolf cut hairstyle, wolfCut, layered hair, shaggy hair
+        costume-ethnicity-hair:
+          - shaggy wolf cut
+          - messy wolf cut
+          - curtain bangs
+          - wispy bangs
+          - messy bangs
+          - flipped hair
+          - pointy hair ends
+          - asymmetrical bangs
+          - parted bangs
 

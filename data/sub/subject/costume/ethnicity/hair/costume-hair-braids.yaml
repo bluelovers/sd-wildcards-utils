@@ -1,0 +1,66 @@
+lazy-wildcards:
+  subject:
+    costume-ethnicity-hair-style:
+      # 繁複編髮
+      intricate_braids:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-hair-style/intricate_braids/costume-ethnicity-hair-main__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-hair-style/intricate_braids/costume-ethnicity-hair__}|}{0.3:::{1.2|1.3|1.4}|})
+        costume-ethnicity-hair-main:
+          - intricate braids
+        costume-ethnicity-hair:
+          # 環形髮辮 (Crown Braid) | 環狀髮辮：將頭髮編織成冠狀，象徵威嚴與神聖性。
+          - crown braid
+          # 側編髮 (Side Braids) | 側邊長辮：長髮側編，增添貴族感與靈動感。
+          - side braids
+          # 雙層編髮 (Double Braids) | 雙重髮辮：上下層疊交錯，展現繁複華麗的編髮技巧。
+          - double braids
+      waterfall_braids:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-hair-style/waterfall_braids/costume-ethnicity-hair-main__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-hair-style/waterfall_braids/costume-ethnicity-hair__}|}{0.3:::{1.2|1.3|1.4}|})
+        costume-ethnicity-hair-main:
+          - ribbon wrapped hair
+        costume-ethnicity-hair:
+          - interwoven_braids, interwoven waterfall braid
+          - crystal-adorned braids
+          - floral-braided hair, floral-incorporated braids
+      # 非洲辮子
+      african_braids:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-hair-style/african_braids/costume-ethnicity-hair-main__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-hair-style/african_braids/costume-ethnicity-hair__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-hair-style/african_braids/costume-ethnicity-hair-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-hair-style/african_braids/style__}|}
+        costume-ethnicity-hair-main:
+          - african braids
+        costume-ethnicity-hair:
+          - box braids
+          - cornrows
+          - goddess braids
+          # 鎖狀髮
+          - dreadlocks
+          # 玉米辮 / 貼頭辮
+          - cornrows
+          # 頭皮編髮
+          - scalp braids
+        costume-ethnicity-hair-elem:
+          - long braids
+          # 髮珠
+          - hair beads
+          # 彩色髮繩
+          - colorful hair ties, colored hair ties
+          - thick hair
+          - updo
+          - hair bun
+          # 緊密編髮
+          - tight braids
+          - geometric hairstyle
+        style:
+          - african culture
+          - hip hop style
+          - reggae style
+

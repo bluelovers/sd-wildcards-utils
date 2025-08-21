@@ -319,6 +319,7 @@ lazy-wildcards:
             , __lazy-wildcards/cosplay-char/Nier/10h/costume-ethnicity__
             {0.8::, {1-2$$__lazy-wildcards/cosplay-char/Nier/10h/costume__}|}
             {, {1-$$__lazy-wildcards/cosplay-char/Nier/10h/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/Nier/10h/action__}|}
         main-trigger-words:
           - 10h, 10h \(nier:automata\), 10h \(nier reincarnation\)
         costume-ethnicity:
@@ -326,11 +327,27 @@ lazy-wildcards:
         costume:
           - dress, black dress, long dress, black gloves, thighhighs, black thighhighs, long sleeves, boots, thigh boots, garter straps, pelvic curtain, high heels, high heel boots
         costume-elem:
-          - asymmetrical bangs, parted bangs, wispy bangs
-          - detached sleeves
-          - clothing cutout, cleavage cutout
+          - detached sleeves, puffy sleeves, puffy long sleeves, bare shoulders
+          - clothing cutout
+          - cleavage cutout
+          - shoulder cutout
           - collarbone
           - red lips
+          - side cutout
+          - above-cleavage cutout
+          - __lazy-wildcards/subject/costume-ethnicity-hair-style/wolf_cut/prompts-no-weight__
+          - pelvic curtain, curtains
+          - side cutout
+          - feather-trimmed sleeves
+          - two-sided cape
+          - thighhighs under boots
+          - highleg leotard
+          - highleg
+          - turtleneck
+        action:
+          - holding behind back
+          - holding sword behind back
+          - holding weapon behind back
       # https://civitai.com/models/502777/frenliese-nier-reincarnation
       frenliese:
         prompts:
