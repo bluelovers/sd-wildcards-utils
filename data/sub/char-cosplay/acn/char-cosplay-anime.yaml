@@ -16,7 +16,7 @@ lazy-wildcards:
           - open_mouth
           - bodysuit
           - clothing cutout
-          - ear piercing
+          - __lazy-wildcards/subject/costume-elem-accessories/piercing-face-ear/prompts-no-weight__
         env:
           - golf ball
     cyberpunk2077:
@@ -119,7 +119,7 @@ lazy-wildcards:
         costume-elem:
           - curvy, narrow waist
           - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
-          - revealing clothes
+          - __lazy-wildcards/subject/costume-nsfw/revealing_clothes/prompts__
           - sleeveless shirt
         env:
           - sunset
@@ -715,38 +715,4 @@ lazy-wildcards:
           - holding sword, tetsusaiga
           - tokijin \(sword\)
           - bakusaiga \(sword\)
-    # 灵笼
-    ling_cage_incarnation:
-      # 荷光者
-      # https://civitai.com/models/240982
-      bringer_of_the_light:
-        prompts:
-          - >-
-            __lazy-wildcards/cosplay-char/ling_cage_incarnation/bringer_of_the_light/main-trigger-words__
-            , (__lazy-wildcards/cosplay-char/ling_cage_incarnation/bringer_of_the_light/costume-ethnicity__{0.3:::{1.2|1.3|1.4}|})
-            {, {1-$$__lazy-wildcards/cosplay-char/ling_cage_incarnation/bringer_of_the_light/costume-elem__}|}
-            {, {1-$$__lazy-wildcards/cosplay-char/ling_cage_incarnation/bringer_of_the_light/costume-weapon__}|}
-            {, {1-$$__lazy-wildcards/cosplay-char/ling_cage_incarnation/bringer_of_the_light/env__}|}
-            {, {1-$$__lazy-wildcards/cosplay-char/ling_cage_incarnation/bringer_of_the_light/style__}|}
-        main-trigger-words:
-          - ruanyi010
-        costume-ethnicity:
-          - head-mounted display, cover eyes
-        costume-elem:
-          - armor
-          - military uniform, ritual clothing, belt, thigh strap
-          - long coat, coat tails
-          - boots
-          - bodysuit
-          - cape
-          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
-        costume-weapon:
-          - gun, holster
-        env:
-          - cables
-        style:
-          - glowing lines
-          - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
-          - __lazy-wildcards/subject/style-elem/cyberpunk/prompts__
-          - symbolism
 

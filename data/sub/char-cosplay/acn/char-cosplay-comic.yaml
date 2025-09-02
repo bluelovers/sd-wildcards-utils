@@ -341,6 +341,24 @@ lazy-wildcards:
           - nsfw_highpriestessofprophecy_ownwaifu, navel
         costume-elem:
           - elbow gloves, white gloves, bare shoulders, detached sleeves, cape
+      # https://danbooru.donmai.us/posts?tags=shadow_tamer+&z=5
+      # https://civitai.com/models/911881/shadow-game-or-yu-gi-oh-or-2-attires?modelVersionId=1020491
+      shadow_tamer:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/yu-gi-oh/shadow_tamer/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/yu-gi-oh/shadow_tamer/costume-ethnicity__
+            {0.7::, {1-2$$__lazy-wildcards/cosplay-char/yu-gi-oh/shadow_tamer/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/yu-gi-oh/shadow_tamer/costume-elem__}|}
+        main-trigger-words:
+          - shadow tamer
+        costume-ethnicity:
+          - blue hair, blunt bangs, facial mark, long hair, red eyes, straight hair, jewelry, bangs
+        costume:
+          - Main_ShadowTamer_ownwaifu, armor, cleavage cutout, elbow gloves, elbow spikes, gold trim, high collar, navel cutout, necklace, pelvic curtain, red gloves, red thighhighs, taut clothes, white dress, cleavage, navel, midriff, spikes, spiked bracelet, clothing cutout, loincloth, detached sleeves
+          - NSFW_ShadowTamer_ownwaifu, nude
+        costume-elem:
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
     sousou_no_frieren:
       # https://civitai.com/models/421109/ubel-sousou-no-frieren
       # https://danbooru.donmai.us/posts?tags=ubel_%28sousou_no_frieren%29&z=2
@@ -385,7 +403,7 @@ lazy-wildcards:
           - armband
           - collarbone
           - o-ring, o-ring choker
-          - ear piercing
+          - __lazy-wildcards/subject/costume-elem-accessories/piercing-face-ear/prompts-no-weight__
           - arm strap
           - sidelocks
           - __lazy-wildcards/subject/costume-elem/sweat/prompts__
@@ -496,7 +514,7 @@ lazy-wildcards:
           - bikini armor, elbow gloves, black bikini, side-tie bikini bottom, thighhighs, claws
         costume-elem:
           - oversized forearms
-          - revealing clothes
+          - __lazy-wildcards/subject/costume-nsfw/revealing_clothes/prompts__
           - oversized limbs
           - single gauntlet
           - bikini top lift
@@ -1185,4 +1203,74 @@ lazy-wildcards:
           - sleek design
           - cyber fashion
           - retro artstyle
+    gantz:
+      # https://civitai.com/models/107523/costumegantz-suit-breast-curtains-ver
+      # https://civitai.com/models/249082/gantz
+      # https://civitai.com/models/375617/0411-gantz
+      # https://civitai.com/models/367705/reika-shimohira-gantz
+      gantz_suit:
+        prompts:
+          - >-
+            (__lazy-wildcards/cosplay-char/gantz/gantz_suit/costume-main__
+            {, {1-$$__lazy-wildcards/cosplay-char/gantz/gantz_suit/costume__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/cosplay-char/gantz/gantz_suit/costume-elem__}|}
+            {, {1-3$$__lazy-wildcards/cosplay-char/gantz/gantz_suit/costume-weapon__}|}
+        costume-main:
+          - >-
+            gantz suit, gantz
+            , latex, breasts, thighhighs
+            , glowing clothes, glowing
+            , outfit-gantz
+            , ruanyi, ruanyi0411
+        costume:
+          - latex breast curtains
+          - latex bodysuit
+        costume-elem:
+          - latex shrug \(clothing\)
+          - latex panties
+          - __lazy-wildcards/subject/costume-elem/curtain/prompts__
+          - black bodysuit
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin/skindentation/prompts__
+          - shiny clothes
+          - bare back
+          - bare legs
+          - sideboob
+          - stomach
+          - __lazy-wildcards/subject/costume-elem/holstered/prompts-no-weight__
+          - ass visible through thighs
+          - one-piece thong
+          - highleg
+          - __lazy-wildcards/subject/costume-elem-accessories/neon-trim/prompts__
+          - __lazy-wildcards/subject/costume-nsfw/revealing_clothes/prompts__
+          - impossible clothes
+          - latex underwear
+          - latex leotard
+          - gloves
+          - glowing buttons, neon buttons
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - __lazy-wildcards/subject/costume-elem/open_slit/prompts-no-weight__
+          - __lazy-wildcards/subject/costume/coat_leotard/costume-main__
+        costume-weapon:
+          - gantz sword
+          - z-gun
+          - x-gun
+          - x-rifle
+          - gun
+          - energy gun
+      # https://danbooru.donmai.us/posts?tags=gantz_advanced_suit&z=2
+      # https://civitai.com/models/87449/gantz-advanced-suithard-suit
+      gantz_suit-advanced:
+        prompts:
+          - >-
+            (__lazy-wildcards/cosplay-char/gantz/gantz_suit-advanced/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/cosplay-char/gantz/gantz_suit-advanced/costume__}|}
+            , __lazy-wildcards/cosplay-char/gantz/gantz_suit/prompts__
+        costume:
+          - >-
+            gantz advanced suit
+            , gantz-advancedsuit
+        costume-elem:
+          - frilled hair tubes
+          - helmet
+          - gauntlets
 

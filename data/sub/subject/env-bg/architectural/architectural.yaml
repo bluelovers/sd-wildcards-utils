@@ -491,4 +491,59 @@ lazy-wildcards:
       colonial_architecture:
         prompts:
           - colonial architecture
+      authoritarian_interior:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-architectural/authoritarian_interior/env-bg-main__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+            {0.7::, __lazy-wildcards/subject/env-bg-architectural/authoritarian_architecture/prompts__|}
+        env-bg-main:
+          - authoritarian interior, interior
+      # https://civitai.com/models/303804/authoritarian-architecture-ad
+      # https://civitai.com/models/1258739/authoritarian-interior-architecture-illustrious-ad
+      authoritarian_architecture:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-architectural/authoritarian_architecture/env-bg-main__
+            {, {1-3$$__lazy-wildcards/subject/env-bg-architectural/authoritarian_architecture/env-bg__}|}{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/authoritarian_architecture/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/authoritarian_architecture/style__}|}
+        env-bg-main:
+          - authoritarian architecture
+        env-bg:
+          - totalitarian architecture
+          - monumental building, giant monument, monumental architecture
+          - massive structure, megastructure
+          - stalinist architecture
+          - nazi architecture
+          - wide plaza
+          - monumental columns
+          - triumphal arches
+          - ocean arcology
+        env:
+          - stone building
+          - concrete giant
+          - propaganda architecture
+          - brutalist architecture
+          - neoclassical architecture
+          - stone monument
+          - militaristic architecture
+          - grand facades
+          - utopian cityscape
+          - utopian architecture
+          - dystopian cityscape
+          - dystopian architecture
+          - __lazy-wildcards/subject/env-bg/megastructure/prompts__
+        style:
+          - grand scale, colossal scale
+          - symmetry
+          - gloomy
+          - awe inspiring
+          - intimidating presence
+          - authoritarian control
+          - dystopian utopia
+          - dramatic lighting
+          - high contrast
+          - monumental atmosphere
+          - oppressive architecture
+          - __lazy-wildcards/utils/scenery-no-humans__
 

@@ -201,8 +201,14 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/env-bg/japanese_paper_wall/env-bg-wall__}|}
             {, {1-$$__lazy-wildcards/subject/env-bg/japanese_paper_wall/env__}|}
             {, {1-$$__lazy-wildcards/subject/env-bg/japanese_paper_wall/style__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-bg/japanese_paper_wall/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/japanese_paper_wall/env-bg-wall__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/japanese_paper_wall/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/japanese_paper_wall/style__}|}
         env-bg-main:
-          - japanese paper wall, shoji wall, fusuma wall
+          - japanese paper wall, shoji wall, fusuma wall, shoji
         env-bg-wall:
           - traditional japanese paper wall
           - shoji screen wall

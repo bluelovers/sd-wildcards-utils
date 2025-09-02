@@ -4,16 +4,16 @@ lazy-wildcards:
       slave-girl:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume/slave-girl/main__,
+            __lazy-wildcards/subject/costume/slave-girl/costume-main__,
             {1-$$__lazy-wildcards/subject/costume/slave-girl/costume__},
-            ({1-$$__lazy-wildcards/subject/costume/slave-girl/style__}),
-            {1-$$__lazy-wildcards/subject/costume/slave-girl/style-torn__},
+            ({1-$$__lazy-wildcards/subject/costume/slave-girl/costume-elem__}),
+            {1-$$__lazy-wildcards/subject/costume/slave-girl/costume-elem-torn__},
             {({1-$$__lazy-wildcards/subject/costume/slave-girl/costume-ethnicity__}:1.2),|}
             {1-$$__lazy-wildcards/subject/costume/slave-girl/env__}
             {0.1::, {1-$$__lazy-wildcards/subject/costume/slave-girl/env-bg__}|}
             {0.2::, __lazy-wildcards/subject/env-moment/age/prompts__|}
-        main:
-          - slave, slavegirl
+        costume-main:
+          - slave girl, slave, slavegirl
         costume:
           - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
           - slave outfit
@@ -30,10 +30,8 @@ lazy-wildcards:
           - marking
           - symbol
           - slave tattoo
-        style:
-          - ragged
-          - tattered
-          - torn
+        costume-elem:
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
           - holding leash
           - humble
           - messy hair
@@ -63,7 +61,7 @@ lazy-wildcards:
           - captured
           - restraint
           - chains
-        style-torn:
+        costume-elem-torn:
           - torn pants
           - torn bottomwear
           - torn shorts
@@ -172,7 +170,7 @@ lazy-wildcards:
           - stacked ofuda
           - glowing ofuda
           - consuming ofuda
-          - revealing clothes
+          - __lazy-wildcards/subject/costume-nsfw/revealing_clothes/prompts__
           - wet maebari
           - censored
           - convenient censoring
@@ -182,7 +180,7 @@ lazy-wildcards:
           - gigantic breasts
           - saggy breasts
           - shrug \(clothing\)
-          - qing guanmao
+          - __lazy-wildcards/subject/costume/qing_guanmao/prompts__
           - zombie pose
           - long fingernails
           - black sclera
@@ -490,7 +488,7 @@ lazy-wildcards:
           - __lazy-wildcards/dataset/costume-accessories-base__
           - thighhighs
           - __lazy-wildcards/subject/costume-elem-accessories/lace-trim/prompts__
-          - revealing clothes
+          - __lazy-wildcards/subject/costume-nsfw/revealing_clothes/prompts__
           - dress
           - detached sleeves
           - white thighhighs

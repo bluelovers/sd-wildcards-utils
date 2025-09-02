@@ -310,22 +310,30 @@ lazy-wildcards:
           - seamless_edge
           - horizon_blend
           - relaxing_environment
+      # https://danbooru.donmai.us/wiki_pages/fence
       fence:
         prompts:
           - >-
-            {1-2$$__lazy-wildcards/subject/env-elem/fence/env__}
-            {, {1-$$__lazy-wildcards/subject/env-elem/fence/env-bg__}|}
+            __lazy-wildcards/subject/env-elem/fence/env-main__
+            {0.75::, {1-2$$__lazy-wildcards/subject/env-elem/fence/env__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/env-elem/fence/env-bg__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem/fence/action-pose__}|}
-        env:
+        env-main:
           - fence
+        env:
           - chain-link fence, chain_link_fence
           - wooden fence
           - bamboo fence
-          - wire_fence
-          - barbed_wire
-          - safety_fence
+          - wire fence
+          - barbed wire
+          - safety fence
           - >-
-            {steel|iron} mesh, wire mesh, metal mesh, metal_fence
+            {steel|iron} mesh, wire mesh, metal mesh, metal fence
+          - picket fence
+          - post and rail fence
+          - stanchion
+          - rope barrier
+          - rope fence
         env-bg:
           - rooftop
         action-pose:

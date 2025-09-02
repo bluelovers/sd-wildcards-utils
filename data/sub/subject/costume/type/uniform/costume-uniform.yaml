@@ -63,28 +63,32 @@ lazy-wildcards:
           - walther p99
           - assault rifle
           - benelli m4
-      Nun:
+      # https://civitai.com/models/100518/costumecosplaynun-oufit-with-breast-curtains-houshou-marine-style
+      nun:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/costume/Nun/main__}
-            {,{1-$$__lazy-wildcards/subject/costume/Nun/costume__}|}
-            {,{1-$$__lazy-wildcards/subject/costume/Nun/costume-ethnicity__}|}
-            ,{1-$$__lazy-wildcards/subject/costume/Nun/style__}
-            ,{1-$$__lazy-wildcards/subject/costume/Nun/env__}
-            {,{1-$$__lazy-wildcards/subject/costume/Nun/env-bg__}|}
-        main:
-          - nun
+            (__lazy-wildcards/subject/costume/nun/costume-main__
+            {, {1-$$__lazy-wildcards/subject/costume/nun/costume__}|})
+            {, {1-$$__lazy-wildcards/subject/costume/nun/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/nun/costume-ethnicity__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/nun/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/nun/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/nun/style__}|}
+        costume-main:
+          - nun, nun habit
         costume-ethnicity:
-          - pale_skin
+          - pale skin
         costume:
           - >-
-            {1-$$religious_attire|religious_uniform}
+            {1-$$religious attire|religious uniform}
           - >-
             {1-$$veils|nun veils}
           - hidden_face
-          - traditional_nun_attire
-          - modest_clothing
-          - rosary, prayer_beads
+          - traditional nun attire
+          - modest clothing
+          - rosary, prayer beads
+        costume-elem:
+          - __lazy-wildcards/subject/costume-elem/curtain/prompts__
         style:
           - mystical_rituals
           - hidden_knowledge
@@ -115,22 +119,28 @@ lazy-wildcards:
           - church_interior
           - bell_tower
       # https://civitai.com/models/579225?modelVersionId=671994
-      Nun-Dark:
+      nun-dark:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/costume/Nun-Dark/main__}
-            {,{1-$$__lazy-wildcards/subject/costume/Nun-Dark/costume__}|}
-            ,{1-$$__lazy-wildcards/subject/costume/Nun-Dark/style__}
-            ,{1-$$__lazy-wildcards/subject/costume/Nun-Dark/env__}
-            {,{1-$$__lazy-wildcards/subject/costume/Nun-Dark/env-bg__}|}
-            ,{1-$$__lazy-wildcards/subject/costume/Nun/prompts__}
-        main:
+            {1-$$__lazy-wildcards/subject/costume/nun-dark/costume-main__}
+            {, {1-$$__lazy-wildcards/subject/costume/nun-dark/costume__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/nun-dark/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/nun-dark/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/nun-dark/style__}|}
+            , {1-$$__lazy-wildcards/subject/costume/nun/prompts__}
+        costume-main:
           - dark nun
         costume:
           - >-
-            {1-$$dark_clothing|dark_religious_attire}
-          - gothic_nun, gothic_attire
-          - demonic_nun, demonic_possession
+            {1-$$dark clothing|dark religious attire}
+          - gothic nun, gothic attire
+          - demonic nun, demonic possession
+        env:
+          - >-
+            {1-$$spectral_figures|ghostly_presence|ghostly_aura}
+          - inverted_cross, cross of saint peter
+        env-bg:
+          - haunted_monastery
         style:
           - gothic_aesthetic
           - >-
@@ -140,12 +150,6 @@ lazy-wildcards:
           - haunted_appearance
           - chilling_appearance
           - shadows_and_darkness
-        env:
-          - >-
-            {1-$$spectral_figures|ghostly_presence|ghostly_aura}
-          - inverted_cross, cross of saint peter
-        env-bg:
-          - haunted_monastery
       office_lady:
         prompts:
           - >-

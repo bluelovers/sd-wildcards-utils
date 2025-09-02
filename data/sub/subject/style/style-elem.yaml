@@ -251,16 +251,29 @@ lazy-wildcards:
           - decayed
           - abandoned
           - weathered
-          - rusted
+          - __lazy-wildcards/subject/style-elem/rusted/prompts-no-weight__
         fn:
           prefix:
             - >-
               broken ${v}, cracked ${v}, damaged ${v}
           prefix-plus:
             - >-
-              {1-$$shattered ${v}|dilapidated ${v}|ruined ${v}|decayed ${v}|abandoned ${v}|weathered ${v}|rusted ${v}}
+              {1-$$shattered ${v}|dilapidated ${v}|ruined ${v}|decayed ${v}|abandoned ${v}|weathered ${v}|__lazy-wildcards/subject/style-elem/rusted/fn/prefix__}
           prefix-extra:
             - >-
               __lazy-wildcards/subject/style-elem/broken/fn/prefix__
               {, __lazy-wildcards/subject/style-elem/broken/fn/prefix-plus__|}
+      rusted:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-elem/rusted/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/style-elem/rusted/env__
+        env:
+          - rust, rusty, rustic, rusted
+        fn:
+          prefix:
+            - >-
+              rust ${v}, rusty ${v}, rustic ${v}, rusted ${v}
 

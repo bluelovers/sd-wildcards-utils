@@ -284,6 +284,7 @@ lazy-wildcards:
             , japanesebeauty
       # https://civitai.com/models/1871647/asian-cuti-photorealistic-character-lora?modelVersionId=2118425
       # https://civitai.com/models/754068/virtual-asian-female-character-16?modelVersionId=843209
+      # https://civitai.com/models/1895128/webio-women-or-realistic-women-lora-sfw-nsfw-photo-real-aesthetic-photography-style?modelVersionId=2145221
       asian:
         prompts:
           - >-
@@ -292,4 +293,15 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/subject/costume-ethnicity-race/korean_girls/fn/doll-likeness(v=asian)__
             , d43fgh, Yummy
+      # https://civitai.com/models/101437/thailand-beautiful-girl
+      # https://civitai.com/models/221194/thai-girl-posture
+      # https://civitai.com/models/16420/tokyosnacksthai
+      # https://civitai.com/models/93975/thaidolllikeness-v10
+      thai:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-race/thai/costume-ethnicity-race__{0.3:::{1.2|1.3|1.4}|})
+        costume-ethnicity-race:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/korean_girls/fn/doll-likeness(v=thai)__
 

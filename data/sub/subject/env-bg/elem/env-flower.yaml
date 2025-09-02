@@ -147,7 +147,7 @@ lazy-wildcards:
           - bare legs, barefoot
           - wet legs
           - navel
-          - navel piercing
+          - __lazy-wildcards/subject/costume-elem-accessories/piercing/prompts__
           - pleated skirt
           - cleavage cutout
           - topless
@@ -334,4 +334,18 @@ lazy-wildcards:
           - bamboo leaves on grass
         style:
           - leaf motif
+      # 灌木叢
+      # https://danbooru.donmai.us/wiki_pages/bush
+      # https://danbooru.donmai.us/wiki_pages/hydrangea
+      bush:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/bush/env__}
+        env:
+          - bush
+          - hedge
+          - rose bush
+          - hydrangea
+          - winter daphne
+          - allium \(flower\)
 

@@ -1,0 +1,114 @@
+lazy-wildcards:
+  subject:
+    env-elem-gate:
+      # 車庫門
+      garage_door:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-gate/garage_door/env-elem__
+        env-elem:
+          - garage door
+      # 鐵捲門
+      roller_shutter:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-gate/roller_shutter/env-elem__
+        env-elem:
+          - roller shutter
+      # 捲動門
+      rolling_door:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem-gate/rolling_door/env-elem__}
+        env-elem:
+          - rolling door
+          # 強調門是從上方開啟
+          - overhead door
+      # 推拉門
+      sliding_door:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-gate/sliding_door/env-elem__
+        env-elem:
+          - sliding door
+      security_gate:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem-gate/security_gate/env-elem__}
+        env-elem:
+          - security gate
+          - barrier gate
+          - swing gates
+      park_gate:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-gate/park_gate/env-elem__
+        env-elem:
+          - park gate
+      parking_gate:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-gate/parking_gate/env-elem__
+        env-elem:
+          - parking gate
+      metal_gate:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-gate/metal_gate/env-elem__
+            {, {1-$$__lazy-wildcards/subject/env-elem-gate/metal_gate/env__}|}
+        env-elem:
+          - __lazy-wildcards/subject/env-elem-gate/texture_gate/fn/both(v=metal)__
+          - __lazy-wildcards/subject/env-elem-gate/texture_gate/fn/both(v=iron)__
+          - __lazy-wildcards/subject/env-elem-gate/texture_gate/fn/both(v=steel)__
+        env:
+          - >-
+            __lazy-wildcards/subject/style-elem/rusted/fn/prefix(v=gate)__
+      chinese-style_gate:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-gate/chinese-style_gate/env-elem__
+        env-elem:
+          - oriental chinese-style gate
+          - oriental-style gate
+          - oriental gate
+          - chinese-style gate
+        env:
+          - __lazy-wildcards/subject/env-elem-gate/texture_gate/prompts__
+      texture_gate:
+        prompts:
+          - >-
+            {1-2$$__lazy-wildcards/subject/env-elem-gate/texture_gate/env-elem__}
+        env-elem:
+          - __lazy-wildcards/subject/env-elem-gate/texture_gate/fn/both(v=stone)__
+          - __lazy-wildcards/subject/env-elem-gate/texture_gate/fn/both(v=wooden)__
+          - __lazy-wildcards/subject/env-elem-gate/metal_gate/prompts__
+          - __lazy-wildcards/subject/env-bg/japanese_paper_wall/prompts-no-weight__
+          - __lazy-wildcards/subject/env-elem-gate/texture_gate/fn/both(v=bamboo)__
+          - __lazy-wildcards/subject/env-elem-gate/texture_gate/fn/both(v=leaf)__
+          - __lazy-wildcards/subject/env-elem-gate/texture_gate/fn/both(v=golden)__
+        fn:
+          gate:
+            - >-
+              ${v} gate
+          door:
+            - >-
+              ${v} door
+          both:
+            - >-
+              {1-$$ ${v} door|${v} gate}
+      # https://danbooru.donmai.us/wiki_pages/moon_gate
+      moon_gate:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-gate/moon_gate/env-elem__
+        env-elem:
+          - moon gate
+      # 收費閘門
+      fare_gates:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem-gate/fare_gates/env-elem__}
+        env-elem:
+          - fare gates
+          - turnstile
+

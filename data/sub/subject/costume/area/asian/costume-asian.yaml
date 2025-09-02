@@ -66,9 +66,11 @@ lazy-wildcards:
             __lazy-wildcards/subject/costume/china-dress/prompts__
             {,__lazy-wildcards/subject/costume/china-dress/action__|}
         costume:
-          - old-shanghaibeauty, old shanghai beauty, china dress, chinese clothes, qipao, 舊上海美人
+          - >-
+            cheongsam, china dress, chinese dress
+            , chinese clothes
+            , old-shanghaibeauty, old shanghai beauty, qipao, 舊上海美人
         costume-elem:
-          - pelvic curtain, pelvic curtain dress
           - multiple straps around the waist
           - floral print
           - thighhighs
@@ -78,13 +80,20 @@ lazy-wildcards:
           - cleavage
           - cleavage cutout
           - garter belt
-          - >-
-            {1-$$pelvic curtain|pelvic curtain lift}
           - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
           - side slit
-          - breast curtains
+          - __lazy-wildcards/subject/costume-elem/curtain-pelvic/prompts-no-weight__, pelvic curtain dress
+          - __lazy-wildcards/subject/costume-elem/curtain-breast/prompts-no-weight__
           - no panties
           - spiked bracelet
+          - __lazy-wildcards/subject/costume/china-dress/fn/costume(v=modernized)__
+          - __lazy-wildcards/subject/costume/china-dress/fn/costume(v=see-through)__
+          - __lazy-wildcards/subject/costume-elem/fabric-elem/prompts-no-weight__
+          - __lazy-wildcards/subject/costume/china-dress/fn/costume(v=high slit)__
+          - __lazy-wildcards/subject/costume/china-dress/fn/costume(v=cutout)__
+          - sexy dress
+          - __lazy-wildcards/subject/costume-elem/open_slit/prompts-no-weight__
+          - __lazy-wildcards/subject/costume/china-dress/fn/costume(v=side slit)__
         costume-elem-sleeves:
           - sleeveless dress
           - detached sleeves
@@ -109,6 +118,20 @@ lazy-wildcards:
         env:
           - instrument
           - flower
+        fn:
+          costume:
+            - >-
+              ${v} cheongsam, ${v} china dress, ${v} chinese dress, ${v} qipao
+      # https://civitai.com/models/1808770/cosplayred-side-transparent-cheongsam-cosplay-sexy-uniform?modelVersionId=2046925
+      china-dress-side:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/china-dress-side/costume__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+            , __lazy-wildcards/subject/costume/china-dress/prompts__
+        costume:
+          - >-
+            sideboob
+            , __lazy-wildcards/subject/costume-elem/open_slit/prompts-no-weight__
       # 唐裝
       tangzhuang:
         prompts:
@@ -381,6 +404,19 @@ lazy-wildcards:
           - long lashes
           - Chaogua
           - Xiapei, Cloak
+      # https://en.wikipedia.org/wiki/Qing_official_headwear
+      # https://www.wikiwand.com/en/articles/Qing_official_headwear
+      qing_guanmao:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/qing_guanmao/costume-headwear__
+        costume-headwear:
+          - >-
+            qing guanmao
+            , qing official headwear
+            , qingdai guanmao
+            , guanmao
+            , nuanmao
       # 官將首
       # https://civitai.com/models/105960?modelVersionId=113788
       # https://civitai.com/models/152762/ba-jia-jiang-taiwanese-hell-police-in-the-world-of-dead

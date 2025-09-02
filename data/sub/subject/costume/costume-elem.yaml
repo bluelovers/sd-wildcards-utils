@@ -187,4 +187,25 @@ lazy-wildcards:
           - shimmery legwear
         env-bg:
           - shimmery background
+      open_slit:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/open_slit/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|})
+        prompts-no-weight:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-elem/open_slit/costume-elem__}
+        costume-elem:
+          - side slit
+          - front slit
+          - back slit
+          - cross-laced slit
+          - side cutout
+          - high-waist sideboob
+          - low-cut armhole
+          - hip vent
+          - sideless outfit, sideless
+          - high slit
+          - thigh cutout
+          - ass cutout
+          - leg cutout
 

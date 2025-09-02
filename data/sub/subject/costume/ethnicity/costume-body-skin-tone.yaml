@@ -13,13 +13,26 @@ lazy-wildcards:
           - __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned-black/costume-ethnicity__, cinematic dark black skin tone
         costume-ethnicity:
           - dark_skin, tan_skin, tanned skin, dark skin, dark-skinned, black-skinned
+        fn:
+          tone:
+            - >-
+              ${c} skin tone, ${c} skin
+              , ${c}-skinned
+              , ${c} colored skin
       white-skinned-ice-cold:
         prompts:
           - cinematic white ice cold skin tone, pale_skin
+      # https://civitai.com/models/245059/grey-skin?modelVersionId=276458
       grey-skinned:
         prompts:
-          - __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/white-skinned-ice-cold/prompts__, grey skin
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned-black/fn/tone(c=grey)__
+            , __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/white-skinned-ice-cold/prompts__
       neutral-skinned:
         prompts:
           - cinematic normal neutral skin tone
+      # https://civitai.com/models/115465/lecopurpleskinslider
+      purple-skinned:
+        prompts:
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned-black/fn/tone(c=purple)__
 

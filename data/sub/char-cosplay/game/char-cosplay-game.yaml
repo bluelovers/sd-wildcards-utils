@@ -681,6 +681,64 @@ lazy-wildcards:
         expressions:
           - grin
           - smile
+      # https://danbooru.donmai.us/posts?tags=jessie_%28pokemon%29&z=1
+      # https://civitai.com/models/674004/jessie-or-pokemon-or-15-attires
+      # https://civitai.com/models/144899/jessie-pokemon
+      # https://civitai.com/models/20648/jessie-pokemon-or-goofy-ai
+      jessie:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/pokemon/jessie/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/pokemon/jessie/costume-ethnicity__
+            {, {1-2$$__lazy-wildcards/cosplay-char/pokemon/jessie/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/pokemon/jessie/costume-elem__}|}
+        main-trigger-words:
+          - >-
+            jessie
+            , jessie pokemon, jessie \(pokemon\), jessie \(cosplay\)
+        costume-ethnicity:
+          - >-
+            hair slicked back
+            , long hair, very long hair, big hair
+            , red hair
+            , blue eyes
+            , eyelashes
+            , earrings, sphere earrings
+            , lipstick
+        costume:
+          - __lazy-wildcards/cosplay-char/pokemon/team_rocket_uniform/prompts__
+          - WhiteCostume_Jessie_ownwaifu, black gloves, team rocket uniform, elbow gloves, crop top, midriff, white skirt, navel, thigh boots, miniskirt, white jacket, cropped jacket, zettai ryouiki, black thighhighs, turtleneck, white shirt, short sleeves
+          - WhiteCostume_HairDown_Jessie_ownwaifu, hair down, black gloves, team rocket uniform, elbow gloves, crop top, midriff, white skirt, navel, thigh boots, miniskirt, white jacket, cropped jacket, zettai ryouiki, black thighhighs, turtleneck, white shirt, short sleeves
+          - SkirtSuit_HairDown_Jessie_ownwaifu, hair down, bow, bowtie, vest, miniskirt, pencil skirt, short sleeves, white shirt, black bowtie, black skirt, shirt
+          - PurpleDress_Jessie_ownwaifu, cleavage, dress, feather boa, jewelry, necklace, money, ring
+          - Ponytail_Jessie_ownwaifu, orange dress, short sleeves, flower, puffy sleeves
+          - PinkMaidCostume_Jessie_ownwaifu, apron, maid, dress, waitress
+          - NSFW_Jessie_ownwaifu
+          - MixSwimSuit_Jessie_ownwaifu, swimsuit, cleavage, navel, bikini
+          - MistyCostume_Jessie_ownwaifu, suspenders, crop top, midriff, navel, underboob, green shorts, short shorts, suspender shorts, bare legs, denim shorts
+          - GoldBikini_Jessie_ownwaifu, bikini armor, choker, cleavage, gold bikini, navel, swimsuit, armlet, pelvic curtain, bracelet
+          - Dominatrix_Jessie_ownwaifu, black thighhighs, bandaids on nipples, dominatrix, garter belt, navel, underwear, black gloves, elbow gloves, maebari, pasties, choker, heart, panties, thick thighs, cleavage, fishnet thighhighs, fishnets, garter straps, legs, lingerie
+          - BlackDress_Jessie_ownwaifu, black dress, cleavage, bracelet, feather boa, formal, necklace, side slit, sleeveless
+          - BlackCostume_Jessie_ownwaifu, team rocket uniform, crop top, black gloves, elbow gloves, navel, skirt, midriff, thigh boots, miniskirt, cropped jacket, gloves, jacket, zettai ryouiki, black thighhighs
+          - BlackBikini_Jessie_ownwaifu, cleavage, jewelry, navel, swimsuit, team rocket, black bikini, strapless bikini, midriff
+          - BaseBallCostume_Jessie_ownwaifu, hat, baseball uniform, white pants, sportswear, baseball cap, baseball mitt, team rocket, belt, black headwear, gloves, shirt, belt buckle, clothes writing, layered sleeves, long sleeves, layered sleeves, long sleeves
+        costume-elem:
+          - __lazy-wildcards/subject/action-nsfw-others/clothes_lift/prompts__
+          - jacket
+          - belt skirt
+          - crop top, midriff
+          - high heels
+          - platform heels
+          - skin tight
+          - thighhighs
+          - underboob
+          - undershirt
+          - underwear
+          - hair between eyes
+          - hair down
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - black choker
+          - stomach
     dragons_crown:
       # https://civitai.com/models/26899/sorceress-dragons-crown?modelVersionId=32196
       # https://civitai.com/models/1523095/sorceress-dragons-crown?modelVersionId=1723283

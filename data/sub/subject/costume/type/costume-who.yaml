@@ -56,6 +56,7 @@ lazy-wildcards:
           - earthy neutrals
       # https://civitai.com/models/46696/dancer-lingerie?modelVersionId=51306
       # https://civitai.com/models/20103/harem-dancer?modelVersionId=23879
+      # https://civitai.com/models/315846/outfit-breast-curtain-dancer
       harem_dancer:
         prompts:
           - >-
@@ -72,14 +73,15 @@ lazy-wildcards:
           - barefoot
           - exotic makeup, bold eyeliner
           - detached sleeves
-          - revealing clothes
+          - __lazy-wildcards/subject/costume-nsfw/revealing_clothes/prompts__
           - bridal gauntlets
           - mouth veil, face veil
           - underboob
           - navel
           - high heels, high heels sandals
-          - side slit
+          - __lazy-wildcards/subject/costume-elem/open_slit/prompts-no-weight__
           - slave outfit
+          - __lazy-wildcards/subject/costume-elem/curtain/prompts__
         env:
           - harem, palace, royal court
           - starry night

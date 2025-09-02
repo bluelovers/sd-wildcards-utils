@@ -1,0 +1,240 @@
+lazy-wildcards:
+  subject:
+    costume:
+      # https://civitai.com/models/450073/thai-dress
+      # https://civitai.com/models/220718/thaidress
+      thai_dress:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/thai_dress/costume-main__
+            {, {1-$$__lazy-wildcards/subject/costume/thai_dress/costume__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/thai_dress/costume-elem__}|}
+            {, {1-3$$__lazy-wildcards/subject/costume/thai_dress/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/thai_dress/style__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume/thai_dress/costume-main__
+            {, {1-$$__lazy-wildcards/subject/costume/thai_dress/costume__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/thai_dress/costume-elem__}|}
+            {, {1-3$$__lazy-wildcards/subject/costume/thai_dress/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/thai_dress/style__}|}
+        costume-main:
+          - thai dress, thaidress
+        costume:
+          - traditional thai clothing
+          - ceremonial dress
+          - strapless thai traditional dress
+        costume-elem:
+          - thai royal attire
+          - jewelry
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
+          - crown
+          - necklace
+          - bracelet
+          - long skirt
+          - single shoulder
+          - thai traditional skirt
+        env-bg:
+          - thai temple background
+          - flower garland
+          - thai temple courtyard
+          - thai royal palace interior
+          - buddha statue background
+          - thai rural background
+          - bamboo interior
+          - wooden floor
+          - massage room
+        style:
+          - ornate
+          - dramatic lighting
+          - royal gold
+      # 意為「泰服」，是泰國的傳統服飾總稱。不同場合、階級、時代有不同的款式，常用於正式場合、典禮、舞蹈或婚禮。
+      # https://civitai.com/models/26611/chut-thai
+      thai_dress-chut_thai:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/thai_dress-chut_thai/costume__{0.3:::{1.2|1.3|1.4}|})
+            , __lazy-wildcards/subject/costume/thai_dress/prompts-no-weight__
+        costume:
+          - chut thai
+      # 是一種女性常見的泰式上衣形式，為長布披搭於胸口或肩膀，展現優雅與典雅的女性氣質。
+      # https://civitai.com/models/15111?modelVersionId=17804
+      thai_dress-sabai:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/thai_dress-sabai/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/thai_dress-sabai/costume-elem__}|}
+            , __lazy-wildcards/subject/costume/thai_dress/prompts-no-weight__
+        costume:
+          - sabai, sabai dress, thai sabai, thai tradition shawl
+        costume-elem:
+          - single shoulder, single shoulder dress
+      # https://civitai.com/models/257161/thai-sarong
+      # https://civitai.com/models/224478/thai-dress-sarong
+      thai_sarong:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/thai_sarong/costume__{0.3:::{1.2|1.3|1.4}|})
+        costume:
+          - thai sarong
+      # https://civitai.com/models/20594/thai-krachao-top-round-necked-sleeveless-collar-top
+      thai_krachao_top:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/thai_krachao_top/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/thai_krachao_top/costume-elem__}|}
+        costume:
+          - >-
+            thai krachao top, krachao top
+            , sleeveless, round collar
+            , round-necked sleeveless
+            , kcdress outfits
+            , traditional thai clothing
+        costume-elem:
+          - casual traditional wear
+          - phasin
+          - cotton fabric
+          - silk clothing
+          - ethnic dress
+          - festival costume
+      # https://civitai.com/models/15060/thai-massage-dress
+      thai_massage_dress:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/thai_massage_dress/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/thai_massage_dress/costume-elem__}|}
+        costume:
+          - >-
+            thai massage dress, thai massage uniform
+        costume-elem:
+          - spa uniform
+          - cotton clothing
+          - loose fit
+          - v neck top
+          - drawstring pants
+          - ethnic pattern trim
+          - thai traditional clothing
+          - tied hair
+      # https://civitai.com/models/21957/thai-slavecommoners-clothes
+      thai_slave_clothes:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/thai_slave_clothes/costume__
+            {, {1-$$__lazy-wildcards/subject/costume/thai_slave_clothes/costume-elem-main__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/thai_slave_clothes/costume-elem__}|}
+        costume:
+          - >-
+            thai slave clothes, thai slave strapless shirt
+        costume-elem-main:
+          - thai slave pants
+          - pha sin
+          - pha chong kraben
+        costume-elem:
+          - chest wrap
+          - __lazy-wildcards/subject/costume/thai_sarong/costume__
+          - barefoot
+          - simple clothing
+          - poor clothing
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - __lazy-wildcards/subject/costume/slave-girl/costume-main__
+      # https://civitai.com/models/234043/thai-teacher-uniform
+      thai_teacher:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/thai_teacher/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/thai_teacher/costume-elem__}|}
+        costume:
+          - >-
+            thai teacher uniform, belt
+        costume-elem:
+          - pencil skirt
+          - epaulettes, insignia
+          - khaki uniform
+          - pleated skirt
+          - long pants
+          - short sleeves
+          - long sleeves
+      # https://civitai.com/models/36682/thai-nurse
+      # https://civitai.com/models/239182/thai-nurse-uniform
+      thai_nurse:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/thai_nurse/costume__
+            {, {1-$$__lazy-wildcards/subject/costume/thai_nurse/costume-elem__}|}{0.3:::{1.2|1.3|1.4}|})
+        costume:
+          - >-
+            thai nurse uniform, thai nurse, nurse
+        costume-elem:
+          - nurse cap
+          - skirt
+          - pencil skirt
+      # https://civitai.com/models/22560?modelVersionId=113431
+      # https://civitai.com/models/12657/thai-university-uniform
+      # https://civitai.com/models/169325/thai-junior-high-school-girl-uniform-government-school-style
+      # https://civitai.com/models/187630/thai-school-girl-v12
+      # https://civitai.com/models/242960/thai-university-uniform
+      # https://civitai.com/models/554149/thai-high-school-uniform-semi-r18
+      thai_school:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/thai_school/costume-main__
+            {, __lazy-wildcards/subject/costume/thai_school/costume__|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/thai_school/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/thai_school/expressions__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/thai_school/env__}|}
+        costume-main:
+          - >-
+            thai school girl, thai school uniform
+            , mathayom uniform, mahalaiuniform
+        costume:
+          - thai high school uniform
+          - thai university uniform
+          - thai junior high school uniform
+        costume-elem:
+          - white shirt short sleeves
+          - black pleated long skirt
+          - mathayom shoes
+          - navy blue pleated skirt
+          - ribbon worn below
+          - necktie worn below
+          - bowtie worn below
+          - black pencil skirt
+          - black pleated skirt
+        expressions:
+          - seductive, sexy facial expression
+        env:
+          - government school
+          - thai school
+      # https://civitai.com/models/19782/thai-elephant-harem-pants
+      thai_harem_pants:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/thai_harem_pants/costume-main__
+            {, {1-$$__lazy-wildcards/subject/costume/thai_harem_pants/costume__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/thai_harem_pants/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/thai_harem_pants/style__}|}
+        costume-main:
+          - >-
+            thai harem pants, kangkengchang pants, kangkengchang, thai pants
+        costume:
+          - thai elephant harem pants
+          - kangkengchang pants with elephant pattern
+        costume-elem:
+          - >-
+            ${c=!__lazy-wildcards/utils/color-base__}
+            __lazy-wildcards/subject/costume/thai_harem_pants/fn/pants__
+          - ethnic pants
+          - patterned pants
+          - casual wear
+          - loose pants
+        style:
+          - boho fashion, thai boho fashion
+          - thai lifestyle
+          - elephant print
+          - tourist fashion
+          - thai fashion
+        fn:
+          pants:
+            - >-
+              ${c} thai harem pants, ${c} kangkengchang pants, ${c} kangkengchang
+

@@ -478,4 +478,41 @@ lazy-wildcards:
           - salute, standing pose
           - squeezing her own butt with her hands
           - side lying
+    tower_of_fantasy:
+      # https://civitai.com/models/140690/lyra-tower-of-fantasy?modelVersionId=155936
+      lyra:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/tower_of_fantasy/lyra/main-trigger-words__
+            , (__lazy-wildcards/cosplay-char/tower_of_fantasy/lyra/costume-ethnicity__
+            , __lazy-wildcards/cosplay-char/tower_of_fantasy/lyra/costume-headwear__)
+            {, {1-$$__lazy-wildcards/cosplay-char/tower_of_fantasy/lyra/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/tower_of_fantasy/lyra/action__}|}
+        main-trigger-words:
+          - >-
+            lyraf, lyra \(tower of fantasy\)
+        costume-ethnicity:
+          - >-
+            red eyes
+            , red hair
+            , multicolored hair, gradient hair
+            , sidelocks
+            , short hair, medium hair
+        costume-headwear:
+          - hat, hood, hood up
+        costume-elem:
+          - black gloves
+          - hair between eyes
+          - black bodysuit
+          - jewelry, necklace
+          - thigh pouch
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin/skindentation/prompts__
+          - mechanical arms
+          - bikini
+          - micro bikini
+          - navel
+        action:
+          - own hands clasped
+          - own hands together
+          - hand up
 

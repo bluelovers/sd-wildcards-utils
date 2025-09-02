@@ -176,4 +176,28 @@ lazy-wildcards:
         style:
           - nostalgic color palette
           - dystopian
+      alleyways:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/env-elem/alleyways/env-bg-main__}{0.3:::{1.2|1.3|1.4}|})
+            {0.3::, __lazy-wildcards/subject/env-elem/alleyways/env-bg__|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/alleyways/env__}|}
+        prompts-no-weight:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/alleyways/env-bg-main__}
+            {0.3::, __lazy-wildcards/subject/env-elem/alleyways/env-bg__|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/alleyways/env__}|}
+        env-bg-main:
+          - alleyways
+          - narrow alleyways
+          - passageway
+          - concealed passages
+        env-bg:
+          - >-
+            {__cof-location/place/alley__|__cof-location/place/alleys__}
+          - __lazy-wildcards/subject/env-bg-architectural/alley/prompts__
+        env:
+          - hidden alleys
+          - secret routes
+          - labyrinthine paths
 

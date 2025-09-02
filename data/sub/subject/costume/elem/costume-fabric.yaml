@@ -1,0 +1,140 @@
+lazy-wildcards:
+  subject:
+    costume-elem:
+      # https://civitai.com/models/125210/concept-curtain-mouth-veil
+      curtain:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-elem/curtain-*/prompts__}
+        prompts-no-weight:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-elem/curtain-*/prompts-no-weight__}
+      # 骨盆簾
+      curtain-pelvic:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/costume-elem/curtain-pelvic/costume-elem-main__}{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-$$__lazy-wildcards/subject/costume-elem/curtain-pelvic/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem/curtain-pelvic/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem/curtain-pelvic/style__}|}
+        prompts-no-weight:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-elem/curtain-pelvic/costume-elem-main__}
+            {, {1-$$__lazy-wildcards/subject/costume-elem/curtain-pelvic/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem/curtain-pelvic/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem/curtain-pelvic/style__}|}
+        costume-elem-main:
+          - pelvic curtain
+          - pelvic curtain aside
+        costume-elem:
+          - draped cloth
+          - loose fabric drape
+          - bare thighs
+          - panties visible
+          - __lazy-wildcards/subject/costume-elem/fabric-elem/prompts-no-weight__
+          - underbutt
+          - see-through loincloth
+        action:
+          - pelvic curtain lift
+          - hand on fabric
+        style:
+          - seductive
+          - mystical
+          - playful
+          - provocative
+          - peek
+          - teasing
+          - revealing
+          - erotic
+      curtain-breast:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/costume-elem/curtain-breast/costume-elem-main__}{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-$$__lazy-wildcards/subject/costume-elem/curtain-breast/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem/curtain-breast/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem/curtain-pelvic/style__}|}
+        prompts-no-weight:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-elem/curtain-breast/costume-elem-main__}
+            {, {1-$$__lazy-wildcards/subject/costume-elem/curtain-breast/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem/curtain-breast/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem/curtain-pelvic/style__}|}
+        costume-elem-main:
+          - breast curtains, breast curtain
+        costume-elem:
+          - stole
+          - __lazy-wildcards/subject/costume-nsfw/revealing_clothes/prompts__
+          - hair over breasts
+          - __lazy-wildcards/subject/costume-elem/fabric-elem/prompts-no-weight__
+          - draped cloth
+          - breast focus
+          - cleavage
+          - exotic costume
+          - ornamental
+          - curtain-like drapes
+          - breast curtains aside
+          - loose strips of fabric draped over the breasts
+          - ribbon between breasts
+          - ornamental weight
+          - underboob
+          - underbust
+          - sideboob
+          - backboob
+          - see-through breast curtain
+          - breasts apart
+          - no bra
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/bouncing_breasts/prompts__
+        action:
+          - breast curtain lift
+      fabric-sheer:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/fabric-sheer/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-elem/fabric-sheer/costume-elem__}
+        costume-elem:
+          - sheer fabric
+          - see-through fabric
+          - chiffon
+          - silk
+          - satin
+          - transparent fabric
+          - translucent fabric
+      fabric-elem:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/fabric-elem/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-elem/fabric-elem/costume-elem__}
+        costume-elem:
+          - __lazy-wildcards/subject/costume-elem/fabric-elem/prompts-no-weight__
+          - lace
+          - velvet
+      cape-mantle:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/cape-mantle/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-elem/cape-mantle/costume-elem-main__
+            {, {1-$$__lazy-wildcards/subject/costume-elem/cape-mantle/costume-elem__}|}
+        costume-elem-main:
+          - cape, mantle
+        costume-elem:
+          - >-
+            mantle {open|closed}
+          - mantle wrap
+          - mantle coffin
+      cape-vampire:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/cape-vampire/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-elem/cape-vampire/costume-elem-main__
+            {, __lazy-wildcards/subject/costume-elem/cape-mantle/prompts-no-weight__|}
+        costume-elem-main:
+          - vampirecape, vampire cape
+

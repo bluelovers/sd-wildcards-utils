@@ -24,8 +24,7 @@ lazy-wildcards:
           - ear cuff
         costume-elem-earrings-102:
           - large earrings
-          - ear chain
-          - ear piercing
+          - __lazy-wildcards/subject/costume-elem-accessories/piercing-face-ear/prompts-no-weight__
           - multiple earrings
           - single earring
           - long earlobes
@@ -150,6 +149,12 @@ lazy-wildcards:
             __lazy-wildcards/subject/costume-elem-accessories/feather-trim/costume-elem-main__
         costume-elem-main:
           - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/fn/color-trim-extra(c=feather)__
+      neon-trim:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-accessories/neon-trim/costume-elem-main__
+        costume-elem-main:
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/fn/color-trim-extra(c=neon)__
       # https://civitai.com/models/877844/id-card?modelVersionId=982697
       idcard:
         prompts:
@@ -206,4 +211,104 @@ lazy-wildcards:
           - __lazy-wildcards/utils/color-base__ bow
           - >-
             {2-3$$ bow, $$__lazy-wildcards/utils/color-base__} bow, multicolored bow
+      piercing:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-accessories/piercing-face/costume-elem-main__
+            {0.8::, __lazy-wildcards/subject/costume-elem-accessories/piercing/prompts-no-weight__|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem-accessories/piercing-face/action__}|}
+        prompts-no-weight:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-elem-accessories/piercing-*/prompts-no-weight__}
+      # https://civitai.com/models/101431/concept-tongue-piercing
+      piercing-face:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-accessories/piercing-face/costume-elem-main__
+            , __lazy-wildcards/subject/costume-elem-accessories/piercing-face/prompts-no-weight__
+            {, {1-$$__lazy-wildcards/subject/costume-elem-accessories/piercing-face/action__}|}
+        prompts-no-weight:
+          - >-
+            {1-3$$__lazy-wildcards/subject/costume-elem-accessories/piercing-face/costume-elem__}
+        costume-elem-main:
+          - piercing
+        costume-elem:
+          - >-
+            {1-2$$__cof-basemodel/piercing__}
+          - __lazy-wildcards/subject/costume-elem-accessories/piercing-face-ear/prompts-no-weight__
+          - cheek piercing
+          - chin piercing
+          - >-
+            {1-$$eyebrow piercing|anti-eyebrow piercing}
+          - eyelid piercing
+          - neck piercing
+          - >-
+            {1-$$nose piercing|bridge piercing|nose ring}
+          - face piercing, facial piercing
+          - tail piercing
+          - __lazy-wildcards/subject/costume-elem-accessories/piercing-face-mouth/prompts-no-weight__
+        action:
+          - piercing \(action\)
+          - wearing a piercing
+      piercing-face-mouth:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-accessories/piercing-face/costume-elem-main__
+            , __lazy-wildcards/subject/costume-elem-accessories/piercing-face-mouth/prompts-no-weight__
+            {, {1-$$__lazy-wildcards/subject/costume-elem-accessories/piercing-face/action__}|}
+        prompts-no-weight:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-elem-accessories/piercing-face-mouth/costume-elem__}
+        costume-elem:
+          - mouth piercing
+          - tongue piercing
+          - __lazy-wildcards/subject/costume-elem-accessories/piercing-face-mouth-lip/prompts-no-weight__
+      piercing-face-mouth-lip:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-accessories/piercing-face/costume-elem-main__
+            , __lazy-wildcards/subject/costume-elem-accessories/piercing-face-mouth-lip/prompts-no-weight__
+            {, {1-$$__lazy-wildcards/subject/costume-elem-accessories/piercing-face/action__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-elem-accessories/piercing-face-mouth-lip/costume-elem-main__
+            , {1-$$__lazy-wildcards/subject/costume-elem-accessories/piercing-face-mouth-lip/costume-elem__}
+        costume-elem-main:
+          - monpier2023
+        costume-elem:
+          - lip piercing
+          - labret piercing
+          - monroe Piercing, upper lip piercing
+      piercing-face-ear:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-accessories/piercing-face/costume-elem-main__
+            , __lazy-wildcards/subject/costume-elem-accessories/piercing-face-ear/prompts-no-weight__
+            {, {1-$$__lazy-wildcards/subject/costume-elem-accessories/piercing-face/action__}|}
+        prompts-no-weight:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-elem-accessories/piercing-face-ear/costume-elem__}
+        costume-elem:
+          - >-
+            {1-$$ear piercing|ear piercings}
+          - industrial piercing
+          - ear chain
+          - spiked ear piercing
+      # https://civitai.com/models/109950/body-piercing-corset-piercing
+      # https://civitai.com/models/116530/corset-piercing
+      piercing-body:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-accessories/piercing-face/costume-elem-main__
+            , __lazy-wildcards/subject/costume-elem-accessories/piercing-body/prompts-no-weight__
+            {, {1-$$__lazy-wildcards/subject/costume-elem-accessories/piercing-face/action__}|}
+        prompts-no-weight:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-elem-accessories/piercing-body/costume-elem__}
+        costume-elem:
+          - back piercing
+          - corset piercing
+          - collarbone piercing
+          - navel piercing, navel
+          - tail piercing
 

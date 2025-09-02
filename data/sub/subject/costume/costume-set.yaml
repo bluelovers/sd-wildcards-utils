@@ -14,4 +14,18 @@ lazy-wildcards:
             , high boots
         costume-elem:
           - sweater
+      coat_leotard:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/coat_leotard/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume/coat_leotard/costume-main__
+            , {1-$$__lazy-wildcards/subject/costume/coat_leotard/costume__}
+        costume-main:
+          - coat, oversized coat
+        costume:
+          - underwear
+          - leotard
+          - bodysuit
 

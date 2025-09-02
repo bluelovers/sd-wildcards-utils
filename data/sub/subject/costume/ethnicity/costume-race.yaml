@@ -33,7 +33,7 @@ lazy-wildcards:
           - plunging neckline, cleavage
           - very long hair
           - pelvic curtain
-          - revealing clothes
+          - __lazy-wildcards/subject/costume-nsfw/revealing_clothes/prompts__
           - eyeshadow
           - snake_hair_ornament
           - >-
@@ -178,19 +178,41 @@ lazy-wildcards:
       # https://danbooru.donmai.us/posts?tags=jiangshi&z=5
       # https://civitai.com/models/1325066/yulinglong-zombie-naraka?modelVersionId=1496001
       # https://civitai.com/models/160784/jiangshi-chinese-zombie-costume?modelVersionId=180930
+      # https://civitai.com/models/97687/remakehawh-jah-jiangshi-costume-the-festive-undead-azur-lane
+      # https://civitai.com/models/27647/costumeerotic-jiangshi-china-zombie-costume
       zombie-jiangshi-chinese-taoist-robes:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume-ethnicity-race/zombie-jiangshi-chinese-taoist-robes/costume-ethnicity__
+            (__lazy-wildcards/subject/costume-ethnicity-race/zombie-jiangshi-chinese-taoist-robes/costume-ethnicity__{0.3:::{1.2|1.3|1.4|1.6}|:1.4})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-jiangshi-chinese-taoist-robes/costume-ethnicity__}|}
             {0.3::, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-jiangshi-chinese-taoist-robes/costume-wings__}|}
             {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-jiangshi-chinese-taoist-robes/expressions__}|}
-            , {1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-jiangshi-chinese-taoist-robes/costume-elem__}
+            {0.8::, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-jiangshi-chinese-taoist-robes/costume-headwear__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-jiangshi-chinese-taoist-robes/costume-elem__}|}
             {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-jiangshi-chinese-taoist-robes/action-pose__}|}
             {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/zombie-jiangshi-chinese-taoist-robes/style__}|}
-            , __lazy-wildcards/subject/env-elem/yin_yang/prompts__
-        costume-ethnicity:
+            {, __lazy-wildcards/subject/env-elem/yin_yang/prompts__|}
+        costume-ethnicity-main:
           - >-
-            (Jiangshi:1.4), chinese clothes, china dress, taoist robes, celestial being uniform, jiangshi costume, yulinglong, zombie, jiangshiniang, jiangshigirl costume
+            jiangshi
+            , jiangshi costume
+            , jiangshiniang, jiangshigirl costume
+            , erotic jiangshi, JiangshiT
+            , chinese clothes, china dress
+            , taoist robes
+            , celestial being uniform
+            , yulinglong
+            , zombie, china zombie
+            , eyeshadow
+        costume-ethnicity:
+          - pale skin
+          - purple skin
+          - red eyes, blood-red eyes
+          - fangs, razor-sharpteeth
+          - __lazy-wildcards/subject/costume-ethnicity-eyes/dark_circles_under_eyes/prompts__
+          - colored sclera
+          - black sclera
+          - claws, sharp fingernails, long fingernails, nail polish
         costume-wings:
           - (mechanical wings)
           - (giant wings:1.1)
@@ -202,28 +224,22 @@ lazy-wildcards:
           - tongue out
           - ":3"
           - ":o"
+        costume-headwear:
+          - __lazy-wildcards/subject/costume/qing_guanmao/prompts__
         costume-elem:
           - wet body, see-through
-          - pale skin
-          - purple skin
           - (forehead mark:1.2)
-          - claws, sharp fingernails, long fingernails, nail polish
           - (mecha body:1.1), detail mecha body
           - veil
           - __lazy-wildcards/subject/costume/ofuda-maebari/prompts__
           - side-tie panties, string panties
-          - pelvic curtain
           - bottomless
-          - breast curtains
-          - sleeves past wrists
+          - __lazy-wildcards/subject/costume-elem/sleeves_past/prompts__
           - sharp toenails
-          - qingdai guanmao
           - heart-shaped pupils
           - platform footwear
           - jewelry, necklace
           - see-through
-          - blood-red eyes
-          - fangs, razor-sharpteeth
           - cleavage
           - heterochromia
           - talisman
@@ -231,18 +247,20 @@ lazy-wildcards:
           - black hat
           - black dress
           - cleavage cutout, clothing cutout
-          - eyeshadow
           - open clothes
           - dragon print
-          - bags under eyes
           - ringed eyes
           - sphere earrings
           - covered navel
           - __lazy-wildcards/subject/costume-elem-expressions/shaded_face/prompts__
           - ghost
           - __lazy-wildcards/subject/costume-elem/sleeves_past/prompts__
-          - bouncing breasts
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/bouncing_breasts/prompts__
           - clothes lift
+          - __lazy-wildcards/subject/costume-elem/curtain/prompts__
+          - __lazy-wildcards/subject/costume-tattoo/body-tattoo/prompts__
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - __lazy-wildcards/subject/costume-elem/open_slit/prompts__
         action-pose:
           - hands up, outstretched arms
           - zombie pose
@@ -1038,4 +1056,55 @@ lazy-wildcards:
         prompts:
           - >-
             (hum4n_m0t0rcycle, object transformation{0.3:::{1.2|1.3|1.4|1.6}|:1.3}), motorcycle, human motorcycle, human bike, living bike
+      # https://civitai.com/models/1905277/werebat-bat-monster-girl-concept-illustrious
+      # https://civitai.com/models/177802/costumebat-lingerie-bat-wing-shaped-bra
+      # https://civitai.com/models/25316/monmusu-queen-vampire
+      bat_girl:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-race/bat_girl/costume-ethnicity-race__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/bat_girl/costume-ethnicity__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/bat_girl/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/bat_girl/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/bat_girl/style__}|}
+        costume-ethnicity-race:
+          - >-
+            bat girl
+            , bat ears, bat ear fluff, animal ear fluff
+            , bat wings
+            , werebat
+            , humanization
+            , sharp teeth
+            , bat monster girl
+            . mgq_queenvampire
+        costume-ethnicity:
+          - bat tail
+          - white fur
+          - bat feet
+          - bat teeth
+          - vampire
+          - pointy ears
+          - vampire fangs
+        costume-elem:
+          - monster girl
+          - mini wings
+          - narrowed eyes, raised eyebrows, short eyebrows, thick eyebrows
+          - chest sarashi
+          - single hair streak
+          - hair streak
+          - grey hair
+          - hair ornament
+          - upper teeth only
+          - bat lingerie
+          - cleavage
+          - underboob
+          - __lazy-wildcards/subject/costume-elem/cape-vampire/prompts-no-weight__
+        env:
+          - too many bats
+          - bat \(animal\)
+          - blood
+        style:
+          - >-
+            ${v=bat}
+            __lazy-wildcards/utils/fn/pattern__
 

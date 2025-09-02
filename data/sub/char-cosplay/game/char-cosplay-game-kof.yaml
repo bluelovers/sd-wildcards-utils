@@ -109,4 +109,31 @@ lazy-wildcards:
           - white bodysuit, white shoes, white gloves
           - thighhighs, detached sleeves, lace-trimmed legwear, breast curtains, corset, spiked bracelet, tassel, thong,chun-li, chinese clothes, spikes
           - blue bodysuit, chinese clothes, spiked bracelet, sneakers, crop top
+    tekken:
+      # https://civitai.com/models/71743/eliza-tekken?modelVersionId=76474
+      eliza:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/tekken/eliza/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/tekken/eliza/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/tekken/eliza/costume-elem__}|}
+        main-trigger-words:
+          - eliza, eliza \(tekken\)
+        costume-ethnicity:
+          - >-
+            red horns, demon horns, demon girl
+            , blunt bangs, long hair, twintails, two-tone hair
+            , neck tattoo, chest tattoo
+            , slit pupils
+            , yellow eyes
+            , red eyeliner
+        costume-elem:
+          - bracelet, jewelry
+          - thigh gap
+          - detached sleeves, puffy sleeves
+          - bare shoulders
+          - cleavage
+          - claws
+          - footwear flower, red rose
+          - grey thighhighs
 

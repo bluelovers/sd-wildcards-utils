@@ -15,7 +15,10 @@ lazy-wildcards:
       holstered:
         prompts:
           - >-
-            ({1-$$__lazy-wildcards/subject/costume-elem/holstered/costume-elem__})
+            (__lazy-wildcards/subject/costume-elem/holstered/prompts-no-weight__)
+        prompts-no-weight:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-elem/holstered/costume-elem__}
         costume-elem:
           - holstered
           - thigh holster
