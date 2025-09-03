@@ -17,10 +17,11 @@ export function trimPrompts(value: string)
 		.replace(/^\s+|\s+$/gm, '')
 		.replace(/\n\s*\n/g, '\n')
 		.replace(/\s{2,}/gm, ' ')
-		.replace(/[ ,.]+(?=,|$)/gm, '')
-		.replace(/,\s*(?=,|$)/g, '')
+		// .replace(/[ ,.]+(?=,|$)/gm, '')
+		// .replace(/,\s*(?=,|$)/g, '')
 		.replace(/,\s{2,}/gm, ', ')
 		.replace(/\s+,/gm, ',')
+		.replace(/,+\s*$/g, '')
 		;
 }
 
@@ -36,7 +37,7 @@ export function normalizeWildcardsYamlString(value: string)
 		.replace(/\|\s(\d+(?:\.\d+)?::)/gm, '|$1')
 		.replace(/^[ \t]+-[ \t]*$/gm, '')
 		.replace(/^([ \t]+-)[ \t]{1,}(?:[ ,.]+|(?=[^ \t]))/gm, '$1 ')
-		.replace(/^([ \t]+-[^\n]+),+$/gm, '$1')
+		// .replace(/^([ \t]+-[^\n]+),+$/gm, '$1')
 	;
 	return value
 }
