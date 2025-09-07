@@ -202,4 +202,36 @@ lazy-wildcards:
           - ceiling vent
           - fan
           - electric wires
+      fireplace-fireplace:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/fireplace-fireplace/env__}
+        env:
+          - fireplace
+          - outdoor fireplace
+          - stove
+          - wood-burning stove
+      fireplace-brazier:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/fireplace-brazier/env-elem-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/fireplace-brazier/env-elem-subtype__}|}
+            {0.3::, {1-2$$__lazy-wildcards/subject/env-elem/fireplace-brazier/env-elem-texture__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/fireplace-brazier/env__}|}
+        env-elem-main:
+          - brazier
+        env-elem-subtype:
+          - round brazier
+          - portable brazier
+          - ornate brazier
+          - rusted brazier
+        env-elem-texture:
+          - stone brazier
+          - bronze brazier
+        env:
+          - firewood
+          - smoke
+          - heat
+          - sparks
+          - __lazy-wildcards/subject/env-moment/weather-fire/prompts__
 

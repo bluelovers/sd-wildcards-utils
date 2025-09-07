@@ -59,10 +59,10 @@ function stripZeroStr(value) {
   return value.replace(/[\x00\u200b]+/g, '');
 }
 function trimPrompts(value) {
-  return value.replace(/\xa0/g, ' ').replace(/^\s+|\s+$/g, '').replace(/^\s+|\s+$/gm, '').replace(/\n\s*\n/g, '\n').replace(/\s+/gm, ' ').replace(/[ ,.]+(?=,|$)/gm, '').replace(/,\s*(?=,|$)/g, '');
+  return value.replace(/\xa0/g, ' ').replace(/^\s+|\s+$/g, '').replace(/^\s+|\s+$/gm, '').replace(/\n\s*\n/g, '\n').replace(/\s{2,}/gm, ' ').replace(/,\s{2,}/gm, ', ').replace(/\s+,/gm, ',').replace(/,+\s*$/g, '');
 }
 function normalizeWildcardsYamlString(value) {
-  value = stripZeroStr(value).replace(/\xa0/g, ' ').replace(/[,.]+(?=,)/gm, '').replace(/[ .]+$/gm, '').replace(/\{\s+(\d+(?:\.\d+)?(?:-(?:\d+(?:\.\d+)?)?\$\$|::))/gm, '{$1').replace(/\|\s(\d+(?:\.\d+)?::)/gm, '|$1').replace(/^[ \t]+-[ \t]*$/gm, '').replace(/^([ \t]+-)[ \t]{1,}(?:[ ,.]+|(?=[^ \t]))/gm, '$1 ').replace(/^([ \t]+-[^\n]+),+$/gm, '$1');
+  value = stripZeroStr(value).replace(/\xa0/g, ' ').replace(/[,.]+(?=,)/gm, '').replace(/[ .]+$/gm, '').replace(/(\w) +(?=,)/gm, '$1').replace(/(,) {2,}(?=\S)/gm, '$1 ').replace(/\{\s+(\d+(?:\.\d+)?(?:-(?:\d+(?:\.\d+)?)?\$\$|::))/gm, '{$1').replace(/\|\s(\d+(?:\.\d+)?::)/gm, '|$1').replace(/^[ \t]+-[ \t]*$/gm, '').replace(/^([ \t]+-)[ \t]{1,}(?:[ ,.]+|(?=[^ \t]))/gm, '$1 ');
   return value;
 }
 function trimPromptsDynamic(value) {

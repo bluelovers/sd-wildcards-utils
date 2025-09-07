@@ -948,4 +948,28 @@ lazy-wildcards:
           - soft lighting
           - warm colors
           - light shading
+      # 松本零士
+      # https://danbooru.donmai.us/posts?tags=matsumoto_leiji_%28style%29+&z=5
+      # https://civitai.com/models/1739940/leiji-matsumoto-style-interstella-5555-maetel-harlock-galaxy-railways?modelVersionId=1969137
+      # https://civitai.com/models/1739940/leiji-matsumoto-style-interstella-5555-maetel-harlock-galaxy-railways?modelVersionId=1969137
+      matsumoto_leiji:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/matsumoto_leiji/style-artist__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-artist/matsumoto_leiji/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/matsumoto_leiji/style__}|}
+        style-artist:
+          - >-
+            __lazy-wildcards/utils/fn/style-inspired(v=matsumoto_leiji)__
+            , matsumoto style
+        costume-elem:
+          - long lashes
+          - grey hair
+          - open jacket
+          - blonde hair
+          - hair ornament
+          - very long hair
+        style:
+          - __lazy-wildcards/subject/style-art-type/1970s_style/prompts__
+          - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
 

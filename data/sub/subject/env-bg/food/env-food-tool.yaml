@@ -172,4 +172,13 @@ lazy-wildcards:
           - takeout food
           - fast food
           - drink
+      fireplace-grill:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem-food-tool/fireplace-grill/env__}
+        env:
+          - grill
+          - barbecue
+          - outdoor cooking
+          - charcoal grill
 

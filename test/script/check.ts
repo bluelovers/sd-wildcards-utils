@@ -31,6 +31,7 @@ export default (async () => {
 				'beloved/**/*.yaml',
 				'PurityGuard/*.yaml',
 				'NightfallJumper/*.yaml',
+				// 'user-eroticvibes/*.yaml',
 			], {
 				cwd: join(__ROOT_DATA, 'others'),
 			}),
@@ -63,6 +64,8 @@ export default (async () => {
 			'PurityGuard/**',
 			'NightfallJumper/**',
 			'user-*/**',
+			// https://github.com/bluelovers/sd-webui-pnginfo-injection/commit/c46251031cf1b57a3cccc7d69f3780315cdd453a
+			'c*fy/**',
 		],
 		allowWildcardsAtEndMatchRecord: true,
 	})
