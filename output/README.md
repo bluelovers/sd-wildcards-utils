@@ -110,6 +110,8 @@ We appreciate the contributions of these amazing creators who made wildcards:
   https://civitai.com/user/tg_love
 - civitai user: belovedArtist
   https://civitai.com/models/1068767/otokonokofemboytrap-sex-wildcard
+- civitai user: EroticVibes
+  https://civitai.com/user/EroticVibes/models
 
 
 # Node.js
