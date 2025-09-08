@@ -101,4 +101,22 @@ lazy-wildcards:
           - bee-like alien
           - bee-like robot
           - huge bee in background
+      butterfly:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-creatures/butterfly/env-elem-creatures-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-creatures/butterfly/env-elem-creatures__}|}
+        env-elem-creatures-main:
+          - butterfly
+        env-elem-creatures:
+          - colorful butterfly
+          - giant butterfly
+          - butterfly with intricate patterns
+          - >-
+            {1-3$$ butterfly, $$__lazy-wildcards/utils/color-base__} butterfly
+          - butterfly on hand
+          - butterfly on head
+          - biomechanical butterfly
+          - glowing butterfly
+          - luminous butterfly
 
