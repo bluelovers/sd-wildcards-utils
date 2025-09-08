@@ -2,7 +2,8 @@ import { array_unique_overwrite } from 'array-hyper-unique';
 import {
 	IMatchDynamicPromptsWildcardsEntry,
 	IVisitPathsNode,
-	IYamlNodeTypeSymbol
+	IYamlNodeTypeSymbol,
+	IOptionsMatchDynamicPromptsWildcards,
 } from './types';
 
 export const SYMBOL_YAML_NODE_TYPE_ALIAS = Symbol.for('yaml.alias');
@@ -13,16 +14,20 @@ export const SYMBOL_YAML_NODE_TYPE_SCALAR = Symbol.for('yaml.scalar');
 export const SYMBOL_YAML_NODE_TYPE_SEQ = Symbol.for('yaml.seq');
 export const SYMBOL_YAML_NODE_TYPE = Symbol.for('yaml.node.type');
 
-export const RE_DYNAMIC_PROMPTS_WILDCARDS = /(?<!#[^\n]*)__([&~!@])?([*\w\/_\-]+)(\([^\n#]+\))?__/
+// export const RE_DYNAMIC_PROMPTS_WILDCARDS = /(?<!#[^\n]*)__([&~!@])?([*\w\/_\-]+)(\([^\n#]+\))?__/;
+export const RE_DYNAMIC_PROMPTS_WILDCARDS = /(?<!#[^\n]*)__([&~!@])?([\w*](?:[*\w\/_\-]+?))(\([^\n#]+\))?__/;
+export const RE_DYNAMIC_PROMPTS_WILDCARDS_UNSAFE = /(?<!#[^\n]*)__([&~!@])?([\w*](?:[*\w\/_\-\s]+?))(\([^\n#]+\))?__/;
 
 /**
  * for `matchAll`
  *
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll
  */
-export const RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL = new RegExp(RE_DYNAMIC_PROMPTS_WILDCARDS, RE_DYNAMIC_PROMPTS_WILDCARDS.flags + 'g')
+export const RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL = new RegExp(RE_DYNAMIC_PROMPTS_WILDCARDS, RE_DYNAMIC_PROMPTS_WILDCARDS.flags + 'g');
+export const RE_DYNAMIC_PROMPTS_WILDCARDS_UNSAFE_GLOBAL = new RegExp(RE_DYNAMIC_PROMPTS_WILDCARDS_UNSAFE, RE_DYNAMIC_PROMPTS_WILDCARDS_UNSAFE.flags + 'g');
 
 export const RE_WILDCARDS_NAME = /^[\w\-_\/]+$/
+export const RE_WILDCARDS_NAME_STAR = /^[\w\-_\/*]+$/
 
 /**
  * Checks if the input string matches the dynamic prompts wildcards pattern.
@@ -95,9 +100,9 @@ export function isDynamicPromptsWildcards(input: string): boolean
  *
  * __season_clothes(season=)__
  */
-export function matchDynamicPromptsWildcards(input: string)
+export function matchDynamicPromptsWildcards(input: string, opts?: IOptionsMatchDynamicPromptsWildcards)
 {
-	const m = input.match(RE_DYNAMIC_PROMPTS_WILDCARDS);
+	const m = input.match(opts?.unsafe ? RE_DYNAMIC_PROMPTS_WILDCARDS_UNSAFE : RE_DYNAMIC_PROMPTS_WILDCARDS);
 	return _matchDynamicPromptsWildcardsCore(m, input);
 }
 
@@ -122,9 +127,9 @@ export function _matchDynamicPromptsWildcardsCore(m: RegExpMatchArray,
 /**
  * Generator function that matches all occurrences of the dynamic prompts wildcards pattern in the input string.
  */
-export function* matchDynamicPromptsWildcardsAllGenerator(input: string)
+export function* matchDynamicPromptsWildcardsAllGenerator(input: string, opts?: IOptionsMatchDynamicPromptsWildcards)
 {
-	const ls = input.matchAll(RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL);
+	const ls = input.matchAll(opts?.unsafe ? RE_DYNAMIC_PROMPTS_WILDCARDS_UNSAFE_GLOBAL : RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL);
 
 	for (let m of ls)
 	{
@@ -135,11 +140,11 @@ export function* matchDynamicPromptsWildcardsAllGenerator(input: string)
 /**
  * Converts the generator function `matchDynamicPromptsWildcardsAllGenerator` into an array.
  */
-export function matchDynamicPromptsWildcardsAll(input: string, unique?: boolean)
+export function matchDynamicPromptsWildcardsAll(input: string, opts?: IOptionsMatchDynamicPromptsWildcards)
 {
-	const arr = [...matchDynamicPromptsWildcardsAllGenerator(input)] as IMatchDynamicPromptsWildcardsEntry[];
+	const arr = [...matchDynamicPromptsWildcardsAllGenerator(input, opts)] as IMatchDynamicPromptsWildcardsEntry[];
 
-	return unique ? array_unique_overwrite(arr) : arr
+	return opts?.unique ? array_unique_overwrite(arr) : arr
 }
 
 /**
@@ -174,14 +179,37 @@ export function matchDynamicPromptsWildcardsAll(input: string, unique?: boolean)
  */
 export function isWildcardsName(name: string): boolean
 {
-	return RE_WILDCARDS_NAME.test(name) && !/__|[_\/]$|^[_\/]|\/\//.test(name)
+	return RE_WILDCARDS_NAME.test(name) && !_isBadWildcardsNameCore(name)
+}
+
+export function isBadWildcardsName(name: string): boolean
+{
+	return !RE_WILDCARDS_NAME.test(name) || _isBadWildcardsNameCore(name)
+}
+
+export function isBadWildcardsPath(name: string): boolean
+{
+	return !RE_WILDCARDS_NAME_STAR.test(name) || _isBadWildcardsNameCore(name)
+}
+
+export function _isBadWildcardsNameCore(name: string)
+{
+	return /^[\s_\/\\-]|[\s_\/\\-]$|[\s_\/\\-]\/|\/[\s_\/\\-]|\/\/|[\s_\/\\-]{2,}/.test(name)
 }
 
 export function assertWildcardsName(name: string)
 {
-	if (isWildcardsName(name))
+	if (isBadWildcardsName(name))
 	{
 		throw new SyntaxError(`Invalid Wildcards Name Syntax: ${name}`)
+	}
+}
+
+export function assertWildcardsPath(name: string)
+{
+	if (isBadWildcardsPath(name))
+	{
+		throw new SyntaxError(`Invalid Paths Syntax [UNSAFE_SYNTAX] "${name}"`)
 	}
 }
 

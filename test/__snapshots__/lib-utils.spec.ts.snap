@@ -254,6 +254,46 @@ exports[`matchDynamicPromptsWildcards "__~season_clothes(season=winter)__" 1`] =
 }
 `;
 
+exports[`matchDynamicPromptsWildcards "__lazy-wildcards/subject/env-elem-creatures/butterfly/ env-elem-creatures-main__ __person/regular/haircolor-unconv(k=)__ __lazy-wildcards/subject/env-elem-creatures/butterfly/ env-elem-creatures-*__" 1`] = `
+[
+  {
+    "isFullMatch": false,
+    "isStarWildcards": false,
+    "keyword": undefined,
+    "name": "lazy-wildcards/subject/env-elem-creatures/butterfly/ env-elem-creatures-main",
+    "source": "__lazy-wildcards/subject/env-elem-creatures/butterfly/ env-elem-creatures-main__",
+    "variables": undefined,
+  },
+  {
+    "isFullMatch": false,
+    "isStarWildcards": false,
+    "keyword": undefined,
+    "name": "person/regular/haircolor-unconv",
+    "source": "__person/regular/haircolor-unconv(k=)__",
+    "variables": "(k=)",
+  },
+  {
+    "isFullMatch": false,
+    "isStarWildcards": true,
+    "keyword": undefined,
+    "name": "lazy-wildcards/subject/env-elem-creatures/butterfly/ env-elem-creatures-*",
+    "source": "__lazy-wildcards/subject/env-elem-creatures/butterfly/ env-elem-creatures-*__",
+    "variables": undefined,
+  },
+]
+`;
+
+exports[`matchDynamicPromptsWildcards "__lazy-wildcards/subject/env-elem-creatures/butterfly/ env-elem-creatures-main__" 1`] = `
+{
+  "isFullMatch": true,
+  "isStarWildcards": false,
+  "keyword": undefined,
+  "name": "lazy-wildcards/subject/env-elem-creatures/butterfly/ env-elem-creatures-main",
+  "source": "__lazy-wildcards/subject/env-elem-creatures/butterfly/ env-elem-creatures-main__",
+  "variables": undefined,
+}
+`;
+
 exports[`matchDynamicPromptsWildcards "__scope/season_clothes(season=!__scope/season_clothes__)__" 1`] = `
 {
   "isFullMatch": true,

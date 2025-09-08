@@ -3,7 +3,7 @@
 /// <reference types="node" />
 /// <reference types="expect" />
 
-import { isWildcardsName, matchDynamicPromptsWildcards } from '../src/util';
+import { isWildcardsName, matchDynamicPromptsWildcards, matchDynamicPromptsWildcardsAll } from '../src/util';
 import parseWildcardsYaml, { getOptionsFromDocument } from '../src/index';
 import { _checkValue } from '../src/valid';
 import { trimPromptsDynamic } from '../src/format';
@@ -99,6 +99,40 @@ describe(`matchDynamicPromptsWildcards`, () =>
 		expect(actual).toMatchSnapshot();
 
 		expect(isWildcardsName(actual.name)).toBeTruthy();
+
+	});
+
+	test.each([
+		'__lazy-wildcards/subject/env-elem-creatures/butterfly/ env-elem-creatures-main__',
+	])(`%j`, (input) =>
+	{
+
+		let actual = matchDynamicPromptsWildcards(input, {
+			unsafe: true,
+		});
+
+		expect(actual).toHaveProperty('name');
+		expect(actual).toMatchSnapshot();
+
+		actual = matchDynamicPromptsWildcards(input, {
+			unsafe: false,
+		});
+
+		expect(actual).toBeFalsy();
+
+	});
+
+	test.each([
+		'__lazy-wildcards/subject/env-elem-creatures/butterfly/ env-elem-creatures-main__ __person/regular/haircolor-unconv(k=)__ __lazy-wildcards/subject/env-elem-creatures/butterfly/ env-elem-creatures-*__',
+	])(`%j`, (input) =>
+	{
+
+		let actual = matchDynamicPromptsWildcardsAll(input, {
+			unsafe: true,
+		});
+
+		expect(actual).toHaveLength(3);
+		expect(actual).toMatchSnapshot();
 
 	});
 

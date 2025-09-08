@@ -16,7 +16,7 @@ beforeAll(async () =>
 
 });
 
-describe(basename(__filename, extname(__filename)), () =>
+describe(`merge`, () =>
 {
 
 	test.skip(`dummy`, () => {});

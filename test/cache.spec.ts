@@ -105,7 +105,7 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 
 		if (!file.startsWith('output'))
 		{
-			let actual = matchDynamicPromptsWildcardsAll(obj.toString(), true);
+			let actual = matchDynamicPromptsWildcardsAll(obj.toString(), { unique: true });
 
 			outPath = join(
 				__ROOT,
