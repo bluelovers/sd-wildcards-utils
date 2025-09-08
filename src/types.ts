@@ -157,6 +157,18 @@ export interface ICachesFindPath
 	globOpts: PicomatchOptions
 }
 
+export interface IOptionsMatchDynamicPromptsWildcards
+{
+	/**
+	 * for matchDynamicPromptsWildcardsAll
+	 */
+	unique?: boolean;
+	/**
+	 * By allowing incorrect `wildcards` to be matched, it's possible to detect and identify syntax errors
+	 */
+	unsafe?: boolean;
+}
+
 /**
  * Interface representing a single match of the dynamic prompts wildcards pattern.
  */
@@ -197,6 +209,13 @@ export interface IOptionsCheckAllSelfLinkWildcardsExists extends Pick<IOptionsFi
 {
 	ignore?: string[]
 	maxErrors?: number,
+
+	optsMatch?: IOptionsMatchDynamicPromptsWildcards,
+
+	/**
+	 * return `hasExists`, `hasExistsWildcards`
+	 */
+	report?: boolean,
 }
 
 export type IParseWildcardsYamlInputSource = string | Uint8Array

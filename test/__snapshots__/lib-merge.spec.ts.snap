@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`merge.spec mergeFindSingleRoots 1`] = `
+exports[`merge mergeFindSingleRoots 1`] = `
 {
   "root": {
     "root2": {
@@ -31,7 +31,7 @@ exports[`merge.spec mergeFindSingleRoots 1`] = `
 }
 `;
 
-exports[`merge.spec mergeFindSingleRoots 2`] = `
+exports[`merge mergeFindSingleRoots 2`] = `
 "root:
   root2:
     sub1:
@@ -51,7 +51,7 @@ exports[`merge.spec mergeFindSingleRoots 2`] = `
 "
 `;
 
-exports[`merge.spec mergeFindSingleRoots: Single Seq 1`] = `
+exports[`merge mergeFindSingleRoots: Single Seq 1`] = `
 {
   "root": {
     "root2": {
@@ -74,7 +74,7 @@ exports[`merge.spec mergeFindSingleRoots: Single Seq 1`] = `
 }
 `;
 
-exports[`merge.spec mergeFindSingleRoots: Single Seq 2`] = `
+exports[`merge mergeFindSingleRoots: Single Seq 2`] = `
 "root:
   root2:
     sub1:
@@ -89,7 +89,7 @@ exports[`merge.spec mergeFindSingleRoots: Single Seq 2`] = `
 "
 `;
 
-exports[`merge.spec mergeFindSingleRoots: Single Seq 3`] = `
+exports[`merge mergeFindSingleRoots: Single Seq 3`] = `
 {
   "root": {
     "root2": {
@@ -113,7 +113,7 @@ exports[`merge.spec mergeFindSingleRoots: Single Seq 3`] = `
 }
 `;
 
-exports[`merge.spec mergeFindSingleRoots: Single Seq 4`] = `
+exports[`merge mergeFindSingleRoots: Single Seq 4`] = `
 "root:
   root2:
     sub1:
@@ -129,7 +129,7 @@ exports[`merge.spec mergeFindSingleRoots: Single Seq 4`] = `
 "
 `;
 
-exports[`merge.spec mergeFindSingleRoots: deep merge: level 2 1`] = `
+exports[`merge mergeFindSingleRoots: deep merge: level 2 1`] = `
 {
   "root": {
     "root2": {
@@ -154,7 +154,7 @@ exports[`merge.spec mergeFindSingleRoots: deep merge: level 2 1`] = `
 }
 `;
 
-exports[`merge.spec mergeFindSingleRoots: deep merge: level 2 2`] = `
+exports[`merge mergeFindSingleRoots: deep merge: level 2 2`] = `
 "root:
   root2:
     sub1:
@@ -171,7 +171,7 @@ exports[`merge.spec mergeFindSingleRoots: deep merge: level 2 2`] = `
 "
 `;
 
-exports[`merge.spec mergeFindSingleRoots: multi merge 1`] = `
+exports[`merge mergeFindSingleRoots: multi merge 1`] = `
 {
   "root": {
     "root2": {
@@ -204,7 +204,7 @@ exports[`merge.spec mergeFindSingleRoots: multi merge 1`] = `
 }
 `;
 
-exports[`merge.spec mergeFindSingleRoots: multi merge 2`] = `
+exports[`merge mergeFindSingleRoots: multi merge 2`] = `
 "root:
   root2:
     sub1:
@@ -226,4 +226,4 @@ exports[`merge.spec mergeFindSingleRoots: multi merge 2`] = `
 "
 `;
 
-exports[`merge.spec mergeFindSingleRoots: throw 1`] = `"Only allow merge same node type at paths: ["root","root2","sub2"], a: yaml.map, b: yaml.seq"`;
+exports[`merge mergeFindSingleRoots: throw 1`] = `"Only allow merge same node type at paths: ["root","root2","sub2"], a: yaml.map, b: yaml.seq"`;

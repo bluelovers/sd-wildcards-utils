@@ -5,6 +5,7 @@ import {
 	IOptionsCheckAllSelfLinkWildcardsExists,
 } from './types';
 import {
+	assertWildcardsPath,
 	parseWildcardsYaml,
 } from './index';
 import {
@@ -46,7 +47,11 @@ export function checkAllSelfLinkWildcardsExists(obj: IRecordWildcards | Node | D
 	const str = obj.toString();
 	const json = obj.toJSON();
 
-	let entries = matchDynamicPromptsWildcardsAll(str, true);
+ let entries = matchDynamicPromptsWildcardsAll(str, {
+	 unsafe: true,
+	 ...chkOpts.optsMatch,
+	 unique: true,
+ });
 
 	let isMatchIgnore: Matcher = () => false;
 
@@ -55,7 +60,8 @@ export function checkAllSelfLinkWildcardsExists(obj: IRecordWildcards | Node | D
 		isMatchIgnore = picomatch(chkOpts.ignore);
 	}
 
-	const hasExists: string[] = [];
+	const listHasExists: string[] = [];
+	const listHasExistsWildcards: string[] = [];
 	const ignoreList: string[] = [];
 
 	const errors: Error[] = [];
@@ -75,11 +81,23 @@ export function checkAllSelfLinkWildcardsExists(obj: IRecordWildcards | Node | D
 
 		try
 		{
+			assertWildcardsPath(entry.name);
+
 			list = findPath(json, paths, {
 				onlyFirstMatchAll: true,
 				throwWhenNotFound: true,
 				allowWildcardsAtEndMatchRecord: chkOpts.allowWildcardsAtEndMatchRecord,
-			})
+			});
+
+			if (chkOpts.report)
+			{
+				listHasExists.push(...list.map(v => v.key.join('/')));
+
+				if (entry.name.includes('*'))
+				{
+					listHasExistsWildcards.push(entry.name);
+				}
+			}
 		}
 		catch (e)
 		{
@@ -99,7 +117,8 @@ export function checkAllSelfLinkWildcardsExists(obj: IRecordWildcards | Node | D
 
 	return {
 		obj,
-		hasExists,
+		listHasExists,
+		listHasExistsWildcards,
 		ignoreList,
 		errors,
 	}
