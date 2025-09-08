@@ -676,7 +676,7 @@
           - Smooth Lines
           - Clean
           - Perfect Composition
-          - High Contrast
+          - high contrast
           - Strong Contrast
           - pencil sketch
           - charcoal sketch
@@ -1215,7 +1215,10 @@
       anime_style:
         prompts:
           - >-
-            (__lazy-wildcards/subject/style-art-type/anime_style/style-art-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/style-art-type/anime_style/style__}|}
+            (__lazy-wildcards/subject/style-art-type/anime_style/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/style-art-type/anime_style/style-art-main__{,{1-$$__lazy-wildcards/subject/style-art-type/anime_style/style__}|}
         "style-art-main":
           - >-
             anime screenshot style,anime screencap style,anime waifu style,__lazy-wildcards/utils/fn/style-inspired(v=anime)__,anime art style
@@ -1844,6 +1847,19 @@
           prefix:
             - >-
               rust ${v},rusty ${v},rustic ${v},rusted ${v}
+      "color-palette-neon":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-elem/color-palette-neon/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/style-elem/color-palette-neon/style-main__{,{1-$$__lazy-wildcards/subject/style-elem/color-palette-neon/style__}|}
+        "style-main":
+          - neon palette
+        style:
+          - neon lights
+          - "__lazy-wildcards/subject/costume-elem-accessories/neon-trim/prompts__"
+          - saturated colors
       smoke_sketch:
         prompts:
           - >-
@@ -14213,6 +14229,23 @@
           - "bee-like alien"
           - "bee-like robot"
           - huge bee in background
+      butterfly:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-creatures/butterfly/env-elem-creatures-main__{,{1-$$__lazy-wildcards/subject/env-elem-creatures/butterfly/env-elem-creatures__}|}
+        "env-elem-creatures-main":
+          - butterfly
+        "env-elem-creatures":
+          - colorful butterfly
+          - giant butterfly
+          - butterfly with intricate patterns
+          - >-
+            {1-3$$ butterfly,$$__lazy-wildcards/utils/color-base__} butterfly
+          - butterfly on hand
+          - butterfly on head
+          - biomechanical butterfly
+          - glowing butterfly
+          - luminous butterfly
     env-elem-pipes:
       "industrial-pipes":
         prompts:
@@ -19158,7 +19191,7 @@
           - thick thighs
           - "__lazy-wildcards/subject/costume-ethnicity-body-skin/oily_skin/prompts__"
           - "__lazy-wildcards/subject/costume-ethnicity-body-skin/glossy_skin/prompts__"
-          - "__lazy-wildcards/subject/costume-ethnicity-body-skin/tanlines/prompts__"
+          - "__lazy-wildcards/subject/costume-tattoo/tattoo-tanlines-underwear/prompts-no-weight__"
           - partially visible vulva
           - covered nipples
           - micro bikini
@@ -21865,33 +21898,122 @@
       "body-tattoo":
         prompts:
           - >-
-            __lazy-wildcards/subject/costume-tattoo/body-tattoo/main-trigger-words__,{1-$$__lazy-wildcards/subject/costume-tattoo/body-tattoo/costume-tattoo__}{,__lazy-wildcards/subject/costume-tattoo/pattern-tattoo/prompts__|}
+            __lazy-wildcards/subject/costume-tattoo/body-tattoo/main-trigger-words__,{1-3$$__lazy-wildcards/subject/costume-tattoo/body-tattoo/costume-tattoo__}{,__lazy-wildcards/subject/costume-tattoo/pattern-tattoo/prompts__|}
         "main-trigger-words":
           - DarkTatExStarz
         "costume-tattoo":
           - tattoo
-          - full body tattoo
+          - "full body tattoo,full-body tattoo"
+          - upper body tattoo
           - >-
             {1-$$breast tattoo|chest tattoo}
           - >-
             {1-$$arm tattoo|hand tattoo}
           - shoulder tattoo
           - facial tattoo
-          - pubic tattoo
+          - "__lazy-wildcards/subject/costume-tattoo/tattoo-pubic/prompts-no-weight__"
           - leg tattoo
           - neck tattoo
           - stomach tattoo
           - back tattoo
           - hair tattoo
+          # https://danbooru.donmai.us/wiki_pages/tramp_stamp
+          - tramp stamp
+          - "__lazy-wildcards/subject/costume-tattoo/tattoo-hand/prompts-no-weight__"
+          - "__lazy-wildcards/subject/costume-tattoo/tattoo-breast/prompts-no-weight__"
+      "tattoo-hand":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-tattoo/tattoo-hand/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|})
+        "prompts-no-weight":
+          - >-
+            {1-3$$__lazy-wildcards/subject/costume-tattoo/tattoo-hand/costume-tattoo__}
+        "costume-tattoo":
+          - hand tattoo
+          - finger tattoo
+          - knuckle tattoo
+          - palm tattoo
+          - wrist tattoo
+          - back of hand tattoo
+          - henna hand tattoo
+          - arm tattoo
+      "tattoo-breast":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-tattoo/tattoo-breast/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|})
+        "prompts-no-weight":
+          - >-
+            {1-3$$__lazy-wildcards/subject/costume-tattoo/tattoo-breast/costume-tattoo__}
+        "costume-tattoo":
+          - breast tattoo
+          - chest tattoo
+          - cleavage tattoo
+          - sternum tattoo
+          - underboob tattoo
+          - sideboob tattoo
+          - ribcage tattoo,rib tattoo
+      "tattoo-tanlines":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-tattoo/tattoo-tanlines/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|})
+        "prompts-no-weight":
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-tattoo/tattoo-tanlines/costume-tattoo__}
+        "costume-tattoo":
+          - tanlines
+          - suntanned
+          - "tan tattoo,tattoo-like tanlines"
+          - presenting tanlines
+      "tattoo-tanlines-underwear":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-tattoo/tattoo-tanlines-underwear/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|})
+        "prompts-no-weight":
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-tattoo/tattoo-tanlines-underwear/costume-tattoo__}
+        "costume-tattoo":
+          - bikini tan
+          - double tanline
+          - |-
+            farmer's tan
+          - "one-piece tan"
+          - slingshot tan
+          - shirt tan
+          - shorts tan
+          - revealing tanlines
+      "tattoo-tanlines-shibari":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-tattoo/tattoo-tanlines-shibari/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|})
+        "prompts-no-weight":
+          - >-
+            {1-2$$__lazy-wildcards/subject/costume-tattoo/tattoo-tanlines-shibari/costume-tattoo__}
+        "costume-tattoo":
+          - shibari tan
+          - rope tan
+          - bondage tan
+          - intricate rope tanlines
+      "tattoo-style":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-tattoo/tattoo-style/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|})
+        "prompts-no-weight":
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-tattoo/tattoo-style/costume-tattoo__}
+        "costume-tattoo":
+          - luminous tattoo
+          - glowing tattoo
+          - neon tattoo
+          - biomechanical tattoo
       "pattern-tattoo":
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/costume-tattoo/pattern-tattoo/costume-tattoo__}
+            {1-3$$__lazy-wildcards/subject/costume-tattoo/pattern-tattoo/costume-tattoo__}
         "costume-tattoo":
           - number tattoo
           - heart tattoo
           - barcode tattoo
-          - flower tattoo
+          - flower tattoo,floral tattoo
       # https://civitai.com/models/372610/irezumi-world-world-morph-lora-flux-or-sdxl-or-sd-15?modelVersionId=416199
       # https://civitai.com/models/170447/irezumi-yakuzas-tattoos-concept-or-ownwaifu?modelVersionId=191518
       # https://civitai.com/models/345528/nude-ukiyo-e?modelVersionId=386720
@@ -21974,6 +22096,22 @@
           - colored tattoo
         style:
           - japanese ink style
+      # 淫紋
+      # https://danbooru.donmai.us/wiki_pages/pubic_tattoo
+      "tattoo-pubic":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-tattoo/tattoo-pubic/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-tattoo/tattoo-pubic/costume-tattoo-main__{,{1-$$__lazy-wildcards/subject/costume-tattoo/tattoo-pubic/costume-tattoo__}|}
+        "costume-tattoo-main":
+          - pubic tattoo,inmon
+        "costume-tattoo":
+          - crotch tattoo
+          - stomach tattoo
+          - "non-pubic inmon"
+          - womb tattoo
     costume-elem-accessories-neckwear:
       choker:
         prompts:
@@ -22096,13 +22234,6 @@
         prompts:
           - >-
             perfect glossy body,perfect glossy skin,perfect glistening skin,perfect glocy skin
-      tanlines:
-        prompts:
-          - >-
-            ({1-$$__lazy-wildcards/subject/costume-ethnicity-body-skin/tanlines/costume-ethnicity__}{0.3:::{1.2|1.3|1.4}|})
-        "costume-ethnicity":
-          - tanlines
-          - suntanned
       # https://danbooru.donmai.us/wiki_pages/skindentation
       # https://civitai.com/models/16230/skin-tight-loha
       skindentation:
@@ -26334,6 +26465,8 @@
           - an intricate leatherbound tome sitting on an ornate oak desk,the book is open and the pages contain the entire universe in very high realistic detail,it is very bright and vivid and we can see stars,nebulae and galaxies
           - >-
             (inspired by biopunk,biopunk-inspired,style of biopunk,biopunk style,biopunk \(style\),the art of biopunk,inspired by biotechnology,biotechnology-inspired,style of biotechnology,biotechnology style,biotechnology \(style\),the art of biotechnology,inspired by biological,biological-inspired,style of biological,biological style,biological \(style\),the art of biological,bp01,BioPunkAI,hnsrdlf style,bio mecha,abo),biopunk cityscape,biotechnology cityscape,biological cityscape,biological mutated cityscape,organic cityscape,spider-like cityscape,underground facility,biopunk environment,biotechnology environment,biological environment,biological mutated environment,organic environment,biopunk landscape,biotechnology landscape,biological landscape,biological mutated landscape,organic landscape,((Ancient Egypt theme,ancient egyptian theme)),ancient egyptian symbol,ancient egyptian hieroglyphic,<lora:Biopunk2025:0>,(1girl:1.3),1other,tied wrists,leaning against tree
+          - >-
+            (glowing tattoo,luminous tattoo,neon tattoo,biomechanical tattoo),(1girl:1.3),1other,ofuda on clothes,anthro_cobra,furrycobra snake,snake_humanoid,snake girl,(colored sclera,snake body,sharp_teeth,scaled skin,slit_pupils,reptilian_eyes,snake eyes,forked tongue,serpent-like head,serpent-like hood,snake hood,snake_tail,elongated_tail,large eyes),very long hair,eyeshadow,snake_hair_ornament,poison,cobra \(animal\),gem,leaf wings,prosthetic parts,prosthetic limbs,prosthetic arms,prosthetic wings,prosthetic tattoo,prosthetic tentacles,prosthetic claws,prosthetic antennae,prosthetic girl,prosthetic ears,prosthetic hair,prosthetic exoskeletons,prosthetic eyes,prosthetic horns,long hair,very long hair,very long hair,blue eyes,blonde hair,jewelry,braid,blunt bangs,necklace,twin braids,bracelet,dark_skin,tan_skin,tanned skin,dark skin,dark-skinned,black-skinned,bronze skin,bronzed skin,cinematic Bronze tan tanning skin tone,spanish,tan skin,light green eyes,(intricate braids),((extended downblouse),breasts,close-up)
       "bg-color-prompts3":
         prompts:
           - >-
@@ -29848,7 +29981,7 @@
       louise:
         prompts:
           - long hair,black hair,ribbon,brown eyes,hair bow,boots,sleeveless,black gloves,sailor collar,white dress,white footwear,white bow,single glove,sailor dress
-          - "black hair,yellow eyes,__lazy-wildcards/subject/ costume-ethnicity-body-skin-tone/dark-skinned/prompts__,blunt bangs,makeup,glowing,lipstick,glowing eyes,__lazy-wildcards/subject/style-elem/sci-fi/prompts__"
+          - "black hair,yellow eyes,__lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__,blunt bangs,makeup,glowing,lipstick,glowing eyes,__lazy-wildcards/subject/style-elem/sci-fi/prompts__"
       # https://nier.fandom.com/wiki/Sarafa
       # https://civitai.com/models/1849507/sarafa-nier-reincarnation?modelVersionId=2093053
       sarafa:
