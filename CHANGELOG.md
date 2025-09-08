@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.22](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.3.21...sd-wildcards-utils@1.3.22) (2025-09-08)
+
+
+### BREAKING CHANGES
+
+* enhance wildcards matching and path validation
+
+
+
+### ✨　Features
+
+* enhance wildcards matching and path validation ([a725368](https://github.com/bluelovers/sd-wildcards-utils/commit/a725368dff26daa653520afe9dfb9cd34abb8800))
+* **tattoo:** add new tattoo types and reorganize tanlines ([897f19b](https://github.com/bluelovers/sd-wildcards-utils/commit/897f19b726fafe2bbd3b08afcf52cac544420201))
+
+
+### 🛠　Build System
+
+* update snapshots [skip ci] ([a1fc911](https://github.com/bluelovers/sd-wildcards-utils/commit/a1fc9110b692f2a26452ac5ab33d85d7bab5e2a1))
+* update build [skip ci] ([343b805](https://github.com/bluelovers/sd-wildcards-utils/commit/343b805e7253a588483d73b1894aedbb0565f227))
+
+
+### 🔖　Miscellaneous
+
+* . ([1c86076](https://github.com/bluelovers/sd-wildcards-utils/commit/1c860760471942e3acfa556aa73f216a90361eb1))
+* . ([2181112](https://github.com/bluelovers/sd-wildcards-utils/commit/2181112c6e39c5503eb752471053839fbe41f4fa))
+
+
+
 ## [1.3.21](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.3.12...sd-wildcards-utils@1.3.21) (2025-09-07)
 
 
