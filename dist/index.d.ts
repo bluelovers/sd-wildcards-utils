@@ -9,13 +9,16 @@ export declare const SYMBOL_YAML_NODE_TYPE_SCALAR: unique symbol;
 export declare const SYMBOL_YAML_NODE_TYPE_SEQ: unique symbol;
 export declare const SYMBOL_YAML_NODE_TYPE: unique symbol;
 export declare const RE_DYNAMIC_PROMPTS_WILDCARDS: RegExp;
+export declare const RE_DYNAMIC_PROMPTS_WILDCARDS_UNSAFE: RegExp;
 /**
  * for `matchAll`
  *
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll
  */
 export declare const RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL: RegExp;
+export declare const RE_DYNAMIC_PROMPTS_WILDCARDS_UNSAFE_GLOBAL: RegExp;
 export declare const RE_WILDCARDS_NAME: RegExp;
+export declare const RE_WILDCARDS_NAME_STAR: RegExp;
 /**
  * Checks if the input string matches the dynamic prompts wildcards pattern.
  *
@@ -83,16 +86,16 @@ export declare function isDynamicPromptsWildcards(input: string): boolean;
  *
  * __season_clothes(season=)__
  */
-export declare function matchDynamicPromptsWildcards(input: string): IMatchDynamicPromptsWildcardsEntry;
+export declare function matchDynamicPromptsWildcards(input: string, opts?: IOptionsMatchDynamicPromptsWildcards): IMatchDynamicPromptsWildcardsEntry;
 export declare function _matchDynamicPromptsWildcardsCore(m: RegExpMatchArray, input?: string): IMatchDynamicPromptsWildcardsEntry;
 /**
  * Generator function that matches all occurrences of the dynamic prompts wildcards pattern in the input string.
  */
-export declare function matchDynamicPromptsWildcardsAllGenerator(input: string): Generator<IMatchDynamicPromptsWildcardsEntry, void, unknown>;
+export declare function matchDynamicPromptsWildcardsAllGenerator(input: string, opts?: IOptionsMatchDynamicPromptsWildcards): Generator<IMatchDynamicPromptsWildcardsEntry, void, unknown>;
 /**
  * Converts the generator function `matchDynamicPromptsWildcardsAllGenerator` into an array.
  */
-export declare function matchDynamicPromptsWildcardsAll(input: string, unique?: boolean): IMatchDynamicPromptsWildcardsEntry[];
+export declare function matchDynamicPromptsWildcardsAll(input: string, opts?: IOptionsMatchDynamicPromptsWildcards): IMatchDynamicPromptsWildcardsEntry[];
 /**
  * Checks if the given name is a valid Wildcards name.
  *
@@ -124,7 +127,11 @@ export declare function matchDynamicPromptsWildcardsAll(input: string, unique?: 
  * ```
  */
 export declare function isWildcardsName(name: string): boolean;
+export declare function isBadWildcardsName(name: string): boolean;
+export declare function isBadWildcardsPath(name: string): boolean;
+export declare function _isBadWildcardsNameCore(name: string): boolean;
 export declare function assertWildcardsName(name: string): void;
+export declare function assertWildcardsPath(name: string): void;
 export declare function convertWildcardsNameToPaths(name: string): string[];
 export declare function isWildcardsPathSyntx(path: string): path is `__${string}__`;
 export declare function wildcardsPathToPaths(path: string): string[];
@@ -221,6 +228,16 @@ export interface ICachesFindPath {
 	data?: IWildcardsYAMLDocument | IWildcardsYAMLDocumentParsed;
 	globOpts: PicomatchOptions;
 }
+export interface IOptionsMatchDynamicPromptsWildcards {
+	/**
+	 * for matchDynamicPromptsWildcardsAll
+	 */
+	unique?: boolean;
+	/**
+	 * By allowing incorrect `wildcards` to be matched, it's possible to detect and identify syntax errors
+	 */
+	unsafe?: boolean;
+}
 /**
  * Interface representing a single match of the dynamic prompts wildcards pattern.
  */
@@ -253,6 +270,11 @@ export interface IMatchDynamicPromptsWildcardsEntry {
 export interface IOptionsCheckAllSelfLinkWildcardsExists extends Pick<IOptionsFind, "allowWildcardsAtEndMatchRecord"> {
 	ignore?: string[];
 	maxErrors?: number;
+	optsMatch?: IOptionsMatchDynamicPromptsWildcards;
+	/**
+	 * return `hasExists`, `hasExistsWildcards`
+	 */
+	report?: boolean;
 }
 export type IParseWildcardsYamlInputSource = string | Uint8Array;
 export type IYamlNodeTypeSymbol = typeof SYMBOL_YAML_NODE_TYPE_ALIAS | typeof SYMBOL_YAML_NODE_TYPE_DOC | typeof SYMBOL_YAML_NODE_TYPE_MAP | typeof SYMBOL_YAML_NODE_TYPE_PAIR | typeof SYMBOL_YAML_NODE_TYPE_SCALAR | typeof SYMBOL_YAML_NODE_TYPE_SEQ;
@@ -385,7 +407,8 @@ export declare function stripBlankLines(value: string, appendEOF?: boolean): str
  */
 export declare function checkAllSelfLinkWildcardsExists(obj: IRecordWildcards | Node$1 | Document$1 | string | Uint8Array, chkOpts?: IOptionsCheckAllSelfLinkWildcardsExists): {
 	obj: Document$1<Node$1, true> | Node$1<unknown>;
-	hasExists: string[];
+	listHasExists: string[];
+	listHasExistsWildcards: string[];
 	ignoreList: string[];
 	errors: Error[];
 };

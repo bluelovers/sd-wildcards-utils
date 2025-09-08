@@ -91,10 +91,10 @@ function isWildcardsYAMLMap(t) {
   return e.isMap(t);
 }
 
-const s = /*#__PURE__*/ Symbol.for("yaml.alias"), a = /*#__PURE__*/ Symbol.for("yaml.document"), l = /*#__PURE__*/ Symbol.for("yaml.map"), c = /*#__PURE__*/ Symbol.for("yaml.pair"), d = /*#__PURE__*/ Symbol.for("yaml.scalar"), u = /*#__PURE__*/ Symbol.for("yaml.seq"), p = /*#__PURE__*/ Symbol.for("yaml.node.type"), m = /(?<!#[^\n]*)__([&~!@])?([*\w\/_\-]+)(\([^\n#]+\))?__/, f = /*#__PURE__*/ new RegExp(m, m.flags + "g"), h = /^[\w\-_\/]+$/;
+const s = /*#__PURE__*/ Symbol.for("yaml.alias"), a = /*#__PURE__*/ Symbol.for("yaml.document"), l = /*#__PURE__*/ Symbol.for("yaml.map"), c = /*#__PURE__*/ Symbol.for("yaml.pair"), d = /*#__PURE__*/ Symbol.for("yaml.scalar"), u = /*#__PURE__*/ Symbol.for("yaml.seq"), p = /*#__PURE__*/ Symbol.for("yaml.node.type"), m = /(?<!#[^\n]*)__([&~!@])?([\w*](?:[*\w\/_\-]+?))(\([^\n#]+\))?__/, h = /(?<!#[^\n]*)__([&~!@])?([\w*](?:[*\w\/_\-\s]+?))(\([^\n#]+\))?__/, f = /*#__PURE__*/ new RegExp(m, m.flags + "g"), y = /*#__PURE__*/ new RegExp(h, h.flags + "g"), g = /^[\w\-_\/]+$/, S = /^[\w\-_\/*]+$/;
 
-function matchDynamicPromptsWildcards(e) {
-  return _matchDynamicPromptsWildcardsCore(e.match(m), e);
+function matchDynamicPromptsWildcards(e, t) {
+  return _matchDynamicPromptsWildcardsCore(e.match(null != t && t.unsafe ? h : m), e);
 }
 
 function _matchDynamicPromptsWildcardsCore(e, t) {
@@ -110,18 +110,30 @@ function _matchDynamicPromptsWildcardsCore(e, t) {
   };
 }
 
-function* matchDynamicPromptsWildcardsAllGenerator(e) {
-  const t = e.matchAll(f);
-  for (let r of t) yield _matchDynamicPromptsWildcardsCore(r, e);
+function* matchDynamicPromptsWildcardsAllGenerator(e, t) {
+  const r = e.matchAll(null != t && t.unsafe ? y : f);
+  for (let t of r) yield _matchDynamicPromptsWildcardsCore(t, e);
 }
 
 function matchDynamicPromptsWildcardsAll(e, r) {
-  const o = [ ...matchDynamicPromptsWildcardsAllGenerator(e) ];
-  return r ? t.array_unique_overwrite(o) : o;
+  const o = [ ...matchDynamicPromptsWildcardsAllGenerator(e, r) ];
+  return null != r && r.unique ? t.array_unique_overwrite(o) : o;
 }
 
-function isWildcardsName(e) {
-  return h.test(e) && !/__|[_\/]$|^[_\/]|\/\//.test(e);
+function isBadWildcardsName(e) {
+  return !g.test(e) || _isBadWildcardsNameCore(e);
+}
+
+function isBadWildcardsPath(e) {
+  return !S.test(e) || _isBadWildcardsNameCore(e);
+}
+
+function _isBadWildcardsNameCore(e) {
+  return /^[\s_\/\\-]|[\s_\/\\-]$|[\s_\/\\-]\/|\/[\s_\/\\-]|\/\/|[\s_\/\\-]{2,}/.test(e);
+}
+
+function assertWildcardsPath(e) {
+  if (isBadWildcardsPath(e)) throw new SyntaxError(`Invalid Paths Syntax [UNSAFE_SYNTAX] "${e}"`);
 }
 
 function convertWildcardsNameToPaths(e) {
@@ -151,11 +163,11 @@ function isSameNodeType(e, t) {
   return r && getNodeTypeSymbol(t) === r;
 }
 
-let y;
+let _;
 
 function _checkBrackets(e) {
   var t;
-  return null !== (t = y) && void 0 !== t || (y = new r.Extractor("{", "}")), y.extractSync(e, (t => {
+  return null !== (t = _) && void 0 !== t || (_ = new r.Extractor("{", "}")), _.extractSync(e, (t => {
     if (t) {
       var o, n;
       let i = null === (o = t.self) || void 0 === o ? void 0 : o.result;
@@ -317,15 +329,15 @@ function handleVisitPathsFull(e, t, r) {
   return "number" == typeof e && o.push(e), o;
 }
 
-const g = /['"]/, S = /^\s*-|[{$~!@}\n|:?#'"%]/, _ = /-/;
+const P = /['"]/, v = /^\s*-|[{$~!@}\n|:?#'"%]/, x = /-/;
 
 function _visitNormalizeScalar(e, t, r) {
   let o = t.value;
   if ("string" == typeof o) {
-    if (r.checkUnsafeQuote && g.test(o)) throw new SyntaxError(`Invalid SYNTAX [UNSAFE_QUOTE]. key: ${e}, node: ${t}`);
+    if (r.checkUnsafeQuote && P.test(o)) throw new SyntaxError(`Invalid SYNTAX [UNSAFE_QUOTE]. key: ${e}, node: ${t}`);
     if (("QUOTE_DOUBLE" === t.type || "QUOTE_SINGLE" === t.type && !o.includes("\\")) && (t.type = "PLAIN"), 
     o = formatPrompts(o, r.options), !o.length) throw new SyntaxError(`Invalid SYNTAX [EMPTY_VALUE]. key: ${e}, node: ${t}`);
-    S.test(o) ? ("PLAIN" === t.type || "BLOCK_FOLDED" === t.type && /#/.test(o)) && (t.type = "BLOCK_LITERAL") : "PLAIN" === t.type && _.test(o) && (t.type = "QUOTE_DOUBLE");
+    v.test(o) ? ("PLAIN" === t.type || "BLOCK_FOLDED" === t.type && /#/.test(o)) && (t.type = "BLOCK_LITERAL") : "PLAIN" === t.type && x.test(o) && (t.type = "QUOTE_DOUBLE");
     let n = _checkValue(o);
     if (null != n && n.error) throw new SyntaxError(`${n.error}. key: ${e}, node: ${t}`);
     t.value = o;
@@ -430,44 +442,50 @@ function parseWildcardsYaml(t, r) {
 }
 
 exports.RE_DYNAMIC_PROMPTS_WILDCARDS = m, exports.RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL = f, 
-exports.RE_WILDCARDS_NAME = h, exports.SYMBOL_YAML_NODE_TYPE = p, exports.SYMBOL_YAML_NODE_TYPE_ALIAS = s, 
-exports.SYMBOL_YAML_NODE_TYPE_DOC = a, exports.SYMBOL_YAML_NODE_TYPE_MAP = l, exports.SYMBOL_YAML_NODE_TYPE_PAIR = c, 
-exports.SYMBOL_YAML_NODE_TYPE_SCALAR = d, exports.SYMBOL_YAML_NODE_TYPE_SEQ = u, 
-exports._checkBrackets = _checkBrackets, exports._checkValue = _checkValue, exports._findPathCore = _findPathCore, 
-exports._getNodeTypeCore = _getNodeTypeCore, exports._handleVisitPathsCore = _handleVisitPathsCore, 
+exports.RE_DYNAMIC_PROMPTS_WILDCARDS_UNSAFE = h, exports.RE_DYNAMIC_PROMPTS_WILDCARDS_UNSAFE_GLOBAL = y, 
+exports.RE_WILDCARDS_NAME = g, exports.RE_WILDCARDS_NAME_STAR = S, exports.SYMBOL_YAML_NODE_TYPE = p, 
+exports.SYMBOL_YAML_NODE_TYPE_ALIAS = s, exports.SYMBOL_YAML_NODE_TYPE_DOC = a, 
+exports.SYMBOL_YAML_NODE_TYPE_MAP = l, exports.SYMBOL_YAML_NODE_TYPE_PAIR = c, exports.SYMBOL_YAML_NODE_TYPE_SCALAR = d, 
+exports.SYMBOL_YAML_NODE_TYPE_SEQ = u, exports._checkBrackets = _checkBrackets, 
+exports._checkValue = _checkValue, exports._findPathCore = _findPathCore, exports._getNodeTypeCore = _getNodeTypeCore, 
+exports._handleVisitPathsCore = _handleVisitPathsCore, exports._isBadWildcardsNameCore = _isBadWildcardsNameCore, 
 exports._matchDynamicPromptsWildcardsCore = _matchDynamicPromptsWildcardsCore, exports._mergeSeqCore = _mergeSeqCore, 
 exports._mergeWildcardsYAMLDocumentRootsCore = _mergeWildcardsYAMLDocumentRootsCore, 
 exports._nearString = _nearString, exports._toJSON = _toJSON, exports._validKey = function _validKey(e) {
   if (!isSafeKey(e)) throw new SyntaxError(`Invalid Key. key: ${e}`);
 }, exports._validMap = _validMap, exports._validPair = _validPair, exports._validSeq = _validSeq, 
 exports._visitNormalizeScalar = _visitNormalizeScalar, exports.assertWildcardsName = function assertWildcardsName(e) {
-  if (isWildcardsName(e)) throw new SyntaxError(`Invalid Wildcards Name Syntax: ${e}`);
-}, exports.checkAllSelfLinkWildcardsExists = function checkAllSelfLinkWildcardsExists(t, r) {
+  if (isBadWildcardsName(e)) throw new SyntaxError(`Invalid Wildcards Name Syntax: ${e}`);
+}, exports.assertWildcardsPath = assertWildcardsPath, exports.checkAllSelfLinkWildcardsExists = function checkAllSelfLinkWildcardsExists(t, r) {
   var o, i;
   null !== (o = r) && void 0 !== o || (r = {});
   const s = r.maxErrors > 0 ? r.maxErrors : 10;
   e.isDocument(t) || e.isNode(t) || (t = parseWildcardsYaml(t));
   const a = t.toString(), l = t.toJSON();
-  let c = matchDynamicPromptsWildcardsAll(a, !0), isMatchIgnore = () => !1;
+  let c = matchDynamicPromptsWildcardsAll(a, {
+    unsafe: !0,
+    ...r.optsMatch,
+    unique: !0
+  }), isMatchIgnore = () => !1;
   null !== (i = r.ignore) && void 0 !== i && i.length && (isMatchIgnore = n(r.ignore));
-  const d = [], u = [];
+  const d = [], u = [], p = [], m = [];
   for (const e of c) {
     if (isMatchIgnore(e.name)) {
-      d.push(e.name);
+      p.push(e.name);
       continue;
     }
     const t = convertWildcardsNameToPaths(e.name);
     let o = [];
     try {
-      o = findPath(l, t, {
+      assertWildcardsPath(e.name), o = findPath(l, t, {
         onlyFirstMatchAll: !0,
         throwWhenNotFound: !0,
         allowWildcardsAtEndMatchRecord: r.allowWildcardsAtEndMatchRecord
-      });
+      }), r.report && (d.push(...o.map((e => e.key.join("/")))), e.name.includes("*") && u.push(e.name));
     } catch (e) {
-      if (u.push(e), u.length >= s) {
-        let e = new RangeError(`Max Errors. errors.length ${u.length} >= ${s}`);
-        u.unshift(e);
+      if (m.push(e), m.length >= s) {
+        let e = new RangeError(`Max Errors. errors.length ${m.length} >= ${s}`);
+        m.unshift(e);
         break;
       }
       continue;
@@ -475,9 +493,10 @@ exports._visitNormalizeScalar = _visitNormalizeScalar, exports.assertWildcardsNa
   }
   return {
     obj: t,
-    hasExists: [],
-    ignoreList: d,
-    errors: u
+    listHasExists: d,
+    listHasExistsWildcards: u,
+    ignoreList: p,
+    errors: m
   };
 }, exports.convertPairsToPathsList = convertPairsToPathsList, exports.convertWildcardsNameToPaths = convertWildcardsNameToPaths, 
 exports.createDefaultVisitWildcardsYAMLOptions = createDefaultVisitWildcardsYAMLOptions, 
@@ -502,10 +521,12 @@ exports.getOptionsFromDocument = getOptionsFromDocument, exports.getOptionsShare
 exports.getTopRootContents = getTopRootContents, exports.getTopRootNodes = function getTopRootNodes(e) {
   return getTopRootContents(e).items;
 }, exports.handleVisitPaths = handleVisitPaths, exports.handleVisitPathsFull = handleVisitPathsFull, 
+exports.isBadWildcardsName = isBadWildcardsName, exports.isBadWildcardsPath = isBadWildcardsPath, 
 exports.isDynamicPromptsWildcards = function isDynamicPromptsWildcards(e) {
   return matchDynamicPromptsWildcards(e).isFullMatch;
-}, exports.isSafeKey = isSafeKey, exports.isSameNodeType = isSameNodeType, exports.isWildcardsName = isWildcardsName, 
-exports.isWildcardsPathSyntx = isWildcardsPathSyntx, exports.isWildcardsYAMLDocument = isWildcardsYAMLDocument, 
+}, exports.isSafeKey = isSafeKey, exports.isSameNodeType = isSameNodeType, exports.isWildcardsName = function isWildcardsName(e) {
+  return g.test(e) && !_isBadWildcardsNameCore(e);
+}, exports.isWildcardsPathSyntx = isWildcardsPathSyntx, exports.isWildcardsYAMLDocument = isWildcardsYAMLDocument, 
 exports.isWildcardsYAMLDocumentAndContentsIsMap = function isWildcardsYAMLDocumentAndContentsIsMap(t) {
   return e.isDocument(t) && e.isMap(t.contents);
 }, exports.isWildcardsYAMLMap = isWildcardsYAMLMap, exports.matchDynamicPromptsWildcards = matchDynamicPromptsWildcards, 
