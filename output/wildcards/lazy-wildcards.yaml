@@ -2151,31 +2151,6 @@
           - product photography
           - dramatic lighting
           - spotlight
-      "lighting-cinematic":
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/style-elem/lighting-cinematic/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
-        "prompts-no-weight":
-          - >-
-            __lazy-wildcards/subject/style-elem/lighting-cinematic/style-main__{,{1-$$__lazy-wildcards/subject/style-elem/lighting-cinematic/style__}|}
-        "style-main":
-          - cinematic lighting
-        style:
-          - volumetric lighting
-          - "__lazy-wildcards/subject/style-elem/high_contrast/prompts-no-weight__"
-      high_contrast:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/style-elem/high_contrast/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
-        "prompts-no-weight":
-          - >-
-            __lazy-wildcards/subject/style-elem/high_contrast/style-main__{,{1-$$__lazy-wildcards/subject/style-elem/high_contrast/style__}|}
-        "style-main":
-          - chiaroscuro,high contrast
-        style:
-          - dramatic lighting
-          - stark shadows
-          - sunbeam
     style-elem-texture:
       "iron-skin":
         prompts:
@@ -16780,20 +16755,6 @@
           - thigh cutout
           - ass cutout
           - leg cutout
-      mature_female:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem/mature_female/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
-        "prompts-no-weight":
-          - >-
-            __lazy-wildcards/subject/costume-elem/mature_female/costume-elem-main__{,{1-$$__lazy-wildcards/subject/costume-elem/mature_female/costume-elem__}|}
-        "costume-elem-main":
-          - >-
-            mature female,mature woman,milf,milfication
-        "costume-elem":
-          - housewife
-          - milf body
-          - "__lazy-wildcards/subject/costume-ethnicity-race/korean_girls/fn/doll-likeness(v=milf)__"
       "wings-angel":
         prompts:
           - >-
