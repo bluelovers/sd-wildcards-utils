@@ -715,4 +715,35 @@ lazy-wildcards:
           - holding sword, tetsusaiga
           - tokijin \(sword\)
           - bakusaiga \(sword\)
+    ssss:
+      # https://civitai.com/models/282503/mujina-ssss-dynazenon
+      # https://civitai.com/models/227829/mujina-or-ssssdynazenon
+      # https://civitai.com/models/41353/mujina-ssssdynazenon
+      # https://civitai.com/models/41502/mujina-ssssdynazenon
+      mujina:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/ssss/mujina/main-trigger-words__
+            {0.7::, __lazy-wildcards/cosplay-char/ssss/mujina/costume-ethnicity__|}
+            , (__lazy-wildcards/cosplay-char/ssss/mujina/costume__)
+            {, {1-$$__lazy-wildcards/cosplay-char/ssss/mujina/costume-elem__}|}
+        main-trigger-words:
+          - mujina, ssss.dynazenon, gridman universe
+        costume-ethnicity:
+          - >-
+            light brown hair, light pink hair
+            , bangs
+            , blue eyes
+        costume:
+          - >-
+            open jacket, white jacket, military jacket, open coat
+            , long sleeves
+            , purple corset, underbust
+            , epaulettes
+            , necktie, short necktie, purple necktie
+            , purple shorts
+            , thighs, thick thighs
+        costume-elem:
+          - purple bikini, see-through strap bra, large halter
+          - white gloves
 

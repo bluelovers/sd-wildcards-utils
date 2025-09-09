@@ -1,0 +1,21 @@
+lazy-wildcards:
+  subject:
+    costume-elem:
+      # https://danbooru.donmai.us/wiki_pages/mature_female
+      mature_female:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/mature_female/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-elem/mature_female/costume-elem-main__
+            {, {1-$$__lazy-wildcards/subject/costume-elem/mature_female/costume-elem__}|}
+        costume-elem-main:
+          - >-
+            mature female, mature woman, milf
+            , milfication
+        costume-elem:
+          - housewife
+          - milf body
+          - __lazy-wildcards/subject/costume-ethnicity-race/korean_girls/fn/doll-likeness(v=milf)__
+

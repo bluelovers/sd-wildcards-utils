@@ -36,16 +36,25 @@ lazy-wildcards:
           - transparent
           - inner details
       # https://civitai.com/models/98615
+      # https://civitai.com/models/1937733/gold-dream?modelVersionId=2193141
+      # https://civitai.com/models/135737/golden-tech-world-morph
+      # https://civitai.com/models/62677/realistic-gold-carving-art-style
+      # https://civitai.com/models/88969/gold-drip-flat-vector-illustrated
+      # https://civitai.com/models/499565/goldstainlesssteelworld
       gold-dripping:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-elem/gold-dripping/env-main__
+            (__lazy-wildcards/subject/env-elem/gold-dripping/env-main__)
             {0.3::, {1-$$__lazy-wildcards/subject/env-elem/gold-dripping/env-bg__}|}
             {0.3::, {1-$$__lazy-wildcards/subject/env-elem/gold-dripping/costume__}|}
             {0.3::, {1-$$__lazy-wildcards/subject/env-elem/gold-dripping/env__}|}
             {0.3::, {1-$$__lazy-wildcards/subject/env-elem/gold-dripping/style__}|}
         env-main:
-          - gold LQDGOD concept, (dripping, liquid:1.2) in the style of LQDGOD
+          - >-
+            __lazy-wildcards/utils/fn/style-inspired(v=gold)__
+            , golden
+            , gold LQDGOD concept, (dripping, liquid:1.2) in the style of LQDGOD
+            , GDv1, gold dream, goldentech, goldcarvingcd, glddrp, GoldStainlessSteelWorld
         env-bg:
           - in front of LQDGOD gold storm sea
           - inside a glass made of LQDGOD gold
@@ -59,6 +68,7 @@ lazy-wildcards:
           - LQDGOD gold tree
         style:
           - summoning energy
+          - reflective
       gemstone:
         prompts:
           - >-

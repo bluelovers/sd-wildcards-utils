@@ -696,4 +696,28 @@ lazy-wildcards:
           - large eyes
         style:
           - exaggerated proportions
+      # https://civitai.com/models/176915/atnr-style?modelVersionId=198606
+      painting-thick:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-art-type/painting-thick/style-art-main__{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-$$__lazy-wildcards/subject/style-art-type/painting-thick/style-art__}|}
+            {, {1-$$__lazy-wildcards/subject/style-art-type/painting-thick/style__}|}
+        style-art-main:
+          - >-
+            thick painting, impasto
+            , __lazy-wildcards/utils/fn/style-inspired(v=thick_paint)__
+            , atnr
+        style-art:
+          - oil painting
+          - digital painting
+        style:
+          - visible brush strokes
+          - painterly texture
+          - color blending
+          - __lazy-wildcards/subject/style-elem/lighting-dramatic/prompts-no-weight__
+          - soft shading
+          - bold colors
+          - vivid colors
+          - chromatic aberration
 

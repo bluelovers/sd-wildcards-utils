@@ -86,4 +86,42 @@ lazy-wildcards:
           - water trail
         action:
           - walking on water
+      # https://civitai.com/models/510861/cococola-wax-on-body-or
+      # https://civitai.com/models/353874/wax-world
+      wax:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/wax/env-elem-main__{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/wax/env-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/wax/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/wax/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/wax/style__}|}
+        env-elem-main:
+          - wax, waxy, WaxWorld, __lazy-wildcards/utils/fn/style-inspired(v=waxy)__
+        env-elem:
+          - melting wax
+          - dripping wax, dripping
+          - glossy wax
+          - melted wax, puddle wax, wax puddle
+          - candle wax
+          - sealing wax, wax seal
+          - wax figure
+          - white wax
+          - red wax
+        costume-elem:
+          - wax on body
+          - dripping wax on body
+          - wax on face
+          - wax on hair
+          - wax on arms
+          - wax on breasts
+        env:
+          - altar, ritual
+          - sacred flame
+        style:
+          - smooth
+          - translucent
+          - shiny surface
+          - soft lighting
+          - waxy texture
 
