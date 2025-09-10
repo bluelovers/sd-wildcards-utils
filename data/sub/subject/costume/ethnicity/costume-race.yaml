@@ -782,6 +782,65 @@ lazy-wildcards:
           - luminescent translucent body
           - transparent body
           - dripping
+      # https://civitai.com/search/models?baseModel=SD%201.5&sortBy=models_v9&query=Symbiote
+      #
+      # https://civitai.com/models/142832/absorbed-by-venom
+      # https://civitai.com/models/39002/change-a-character-symbiote-taking-over-your-waifu
+      # https://civitai.com/models/137251/svshe-venom-or-symbiote-lorav3
+      # https://civitai.com/models/156457/svgmshe-venomorgwenomlorav21
+      # https://civitai.com/models/120781/svshe-venom-or-symbiote-lorav2
+      slime-venom:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-race/slime-venom/costume-ethnicity-main__{0.3:::{1.2|1.3|1.4}|:1.2})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/slime-venom/costume-ethnicity__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/slime-venom/costume-elem__}|}
+        costume-ethnicity-main:
+          - >-
+            venom, she-venom, symbiote, venom \(marvel\)
+            , venom \(marvel\) \(cosplay\)
+            , scream_mj
+            , svsy, svgm, svsym, tover
+            , venom absorbing
+        costume-ethnicity:
+          - very long tongue
+          - no eyes
+          - tentacles, venom tentacles, svtt, svten
+          - >-
+            {mask, wmask|nomask}
+          - sharp teeth
+          - >-
+            venom torn {clothes, svtc|bodysuit, svtb}, __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__, svtnl, svtnc
+          - venom bodysuit, svbs
+        costume-elem:
+          - spidersona
+          - skin tight
+          - slime \(substance\), thick oily symbiote substance
+          - covered eyes
+          - venom hood
+          - venom spider web, svspw
+          - glossy skin
+          - voluptous
+          - dripping skin
+          - covered abs, muscular
+          - living clothes
+          - skin fangs
+          - slime hair
+      # https://civitai.com/models/192741/scream-symbiote-mary-jane-mj-spider-man-2
+      slime-venom-scream:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-race/slime-venom-scream/costume-ethnicity__{0.3:::{1.2|1.3|1.4}|:1.2})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/slime-venom-scream/costume-elem__}|}
+            , __lazy-wildcards/subject/costume-ethnicity-race/slime-venom/prompts__
+        costume-ethnicity:
+          - >-
+            scream \(marvel\), red and yellow symbiote
+            , very long hair
+        costume-elem:
+          - multicolored bodysuit, two-tone bodysuit
+          - multicolored hair, two-tone hair
+          - multicolored skin, two-tone skin
       # https://civitai.com/models/1069590/tiger-woman?modelVersionId=1200546
       tiger_girl:
         prompts:

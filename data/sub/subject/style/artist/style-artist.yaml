@@ -353,4 +353,47 @@ lazy-wildcards:
           - candlelight
           - flower petals
           - antique furniture
+      # https://x.com/ironlily_art
+      # https://civitai.com/models/118598/ironlily-girls?modelVersionId=128678
+      ironlily:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/ironlily/style-artist__{0.3:::{1.2|1.3|:1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-artist/ironlily/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/ironlily/style__}|}
+        style-artist:
+          - >-
+            __lazy-wildcards/utils/fn/style-inspired(v=ironlily)__
+            , vanishlily
+            , 1r0nl1ly
+        costume-elem:
+          - armored girl
+          - plate armor
+          - slash clothing
+          - landsknecht armor
+          - historic clothing
+          - white cloth
+          - graceful warrior
+          - knight girl
+          - fabric folds
+          - sturdy cloth
+          - cleric armor
+          - pious warrior
+          - boots
+          - gauntlets
+          - large shield
+          - chest dress
+        style:
+          - soft lighting
+          - soft shading
+          - fantasy
+          - emotional expression
+          - ambient lighting
+          - pastel colors
+          - painterly
+          - red accents
+          - battle ready
+          - metal shine
+          - polished steel
+          - cleric
 

@@ -353,4 +353,86 @@ lazy-wildcards:
           - night
         style:
           - dramatic lighting
+      mine-place:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/mine-place/prompts-base__
+        prompts-base:
+          - >-
+            __lazy-wildcards/subject/env-bg/mine-place/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/mine-place/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/mine-place/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/mine-place/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/mine-place/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/mine-place/env-elem-vehicle__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/mine-place/style__}|}
+        env-bg-main:
+          - mine \(place\)
+        env-bg:
+          - mining area
+          - mining site
+        costume-weapon:
+          - pickaxe
+          - shovel
+          - holding pickaxe
+        costume-elem:
+          - miner, miner outfit
+          - mining helmet
+          - headlamp
+          - work gloves
+          - work boots
+          - dirty clothes
+          - backpack
+          - bag
+        env:
+          - dynamite
+          - minecart tracks
+          - on railroad tracks
+          - rail tracks
+          - dusty
+          - timber support
+          - wooden beams
+          - wooden frame
+          - brick
+        # https://civitai.com/models/216624/unstopable-trolley
+        env-elem-vehicle:
+          - mining cart
+          - mine wheelbarrow
+          - box-shaped minecart
+        style:
+          - dark atmosphere
+          - warm light
+          - stone texture
+          - industrial
+      mine-tunnel:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/mine-tunnel/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/mine-tunnel/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/mine-tunnel/env__}|}
+            {, __lazy-wildcards/subject/env-bg/mine-place/prompts-base__|}
+        env-bg-main:
+          - mineshaft, mine shaft
+        env-bg:
+          - abandoned mineshaft
+          - mine tunnel
+          - brick tunnel
+          - underground mine
+        env:
+          - carbide lamp
+          - oil lamp
+      mine-open:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/mine-open/env-bg__{0.3:::{1.2|1.3|1.4}|})
+            , __lazy-wildcards/subject/env-bg/mine-place/prompts-base__
+        env-bg:
+          - open pit mine, open-pit mining, quarry
+      mine-entrance:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/mine-entrance/env-bg__{0.3:::{1.2|1.3|1.4}|})
+            {, __lazy-wildcards/subject/env-bg/mine-place/prompts-base__|}
+        env-bg:
+          - mine entrance, mine shaft entrance, mineshaft entrance
 

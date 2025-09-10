@@ -1,0 +1,47 @@
+lazy-wildcards:
+  subject:
+    env-elem:
+      # https://civitai.com/posts/11025265
+      # https://civitai.com/posts/11025315
+      broken_tree:
+        prompts:
+          - >-
+            ({1-4$$__lazy-wildcards/subject/env-elem/broken_tree/env-tree__}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-3$$__lazy-wildcards/subject/env-elem/broken_tree/env-bg__}|}
+            {, {1-4$$__lazy-wildcards/subject/env-elem/broken_tree/env__}|}
+            {, __lazy-wildcards/subject/env-elem/broken_tree/action__|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/broken_tree/style__}|}
+        env-tree:
+          - broken tree
+          - broken tree trunk
+          - cut tree
+          - tree stump
+          - splintered tree
+          - fallen tree
+          - lightning struck tree
+          - snapped tree trunk
+        env-bg:
+          - forest clearing
+          - deforested area
+          - barren landscape
+          - scorched earth
+          - storm aftermath
+          - abandoned forest
+          - __lazy-wildcards/subject/style-elem/post-apocalypse/prompts__
+        env:
+          - charred tree
+          - dead tree
+          - burnt tree
+          - broken branches
+          - wildfire damage
+          - natural decay
+          - lonely tree
+          - big tree
+        action:
+          - >-
+            {1-2$$sitting|lying|standing|reading|picnic|reclining} on tree{ stump|}
+          - >-
+            leaning against tree{ stump|}
+        style:
+          - wasteland aesthetic
+
