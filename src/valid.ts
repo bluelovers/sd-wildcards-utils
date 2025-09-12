@@ -157,9 +157,14 @@ export function validWildcardsYamlData<T extends IRecordWildcards | IWildcardsYA
 	}
 }
 
+/**
+ * Determines whether a given key is a "safe" key based on specific criteria.
+ *
+ * only allow: [a-zA-Z0-9_./-]
+ */
 export function isSafeKey<T extends string>(key: T | unknown): key is T
 {
-	return typeof key === 'string' && /^[._\w-]+$/.test(key) && !/^[\._-]|[\._-]$/.test(key)
+	return typeof key === 'string' && /^[\w\/._-]+$/.test(key) && !/^[^0-9a-z]|[^0-9a-z]$|__|\.\.|--|\/\/|[._-]\/|\/[._-]|[._-]{2,}/i.test(key)
 }
 
 export function _validKey<T extends string>(key: T | unknown): asserts key is T
@@ -193,7 +198,7 @@ export function _checkValue(value: string): ICheckErrorResult
 	}
 }
 
-export function _nearString(value: string, index: number, match: string, offset: number = 15) 
+export function _nearString(value: string, index: number, match: string, offset: number = 15)
 {
 	let s = Math.max(0, index - offset);
 	let e = index + (match?.length || 0) + offset;
