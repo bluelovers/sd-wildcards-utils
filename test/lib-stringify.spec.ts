@@ -39,10 +39,29 @@ describe(`stringifyWildcardsYamlData`, () =>
 			allowMultiRoot: true,
 		});
 
-		let output = stringifyWildcardsYamlData(yaml);
+		let output: string;
+
+		output = yaml.toString();
 
 		expect(output).toMatchFile(join(
 			outPath,
+			'raw',
+			file,
+		));
+
+		output = yaml.toString(defaultOptionsStringifyMinify());
+
+		expect(output).toMatchFile(join(
+			outPath,
+			'raw-min',
+			file,
+		));
+
+		output = stringifyWildcardsYamlData(yaml)
+
+		expect(output).toMatchFile(join(
+			outPath,
+			'base',
 			file,
 		));
 
@@ -50,7 +69,8 @@ describe(`stringifyWildcardsYamlData`, () =>
 
 		expect(output).toMatchFile(join(
 			outPath,
-			file + '.min.yaml',
+			'base-min',
+			file,
 		));
 
 	})
