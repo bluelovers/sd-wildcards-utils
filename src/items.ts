@@ -14,7 +14,8 @@ import {
 } from './types';
 import { formatPrompts } from './format';
 import { isWildcardsYAMLDocument, isWildcardsYAMLMap } from './is';
-import { _checkValue } from './valid';
+import { _checkValue, isUnsafePlainString } from './valid';
+import { RE_UNSAFE_QUOTE, RE_UNSAFE_VALUE } from './const';
 
 export function visitWildcardsYAML(node: Node | Document | null, visitorOptions: IOptionsVisitor)
 {
@@ -168,10 +169,6 @@ export function findWildcardsYAMLPathsAll(node: Node | Document)
 	return ls;
 }
 
-const RE_UNSAFE_QUOTE = /['"]/;
-const RE_UNSAFE_VALUE = /^\s*-|[{$~!@}\n|:?#'"%]/;
-const RE_UNSAFE_PLAIN = /-/
-
 export function _visitNormalizeScalar(key: IVisitorFnKey, node: IWildcardsYAMLScalar, runtime: {
 	checkUnsafeQuote: boolean,
 	options: IOptionsParseDocument,
@@ -185,7 +182,7 @@ export function _visitNormalizeScalar(key: IVisitorFnKey, node: IWildcardsYAMLSc
 		{
 			throw new SyntaxError(`Invalid SYNTAX [UNSAFE_QUOTE]. key: ${key}, node: ${node}`)
 		}
-		else if (node.type === 'QUOTE_DOUBLE' || node.type === 'QUOTE_SINGLE' && !value.includes('\\'))
+		else if (node.type === 'QUOTE_DOUBLE' || node.type === 'QUOTE_SINGLE' && !isUnsafePlainString(value, key))
 		{
 			node.type = 'PLAIN';
 		}
@@ -207,7 +204,7 @@ export function _visitNormalizeScalar(key: IVisitorFnKey, node: IWildcardsYAMLSc
 				node.type = 'BLOCK_LITERAL'
 			}
 		}
-		else if (node.type === 'PLAIN' && RE_UNSAFE_PLAIN.test(value)) 
+		else if (node.type === 'PLAIN' && isUnsafePlainString(value, key))
 		{
 			node.type = 'QUOTE_DOUBLE'
 		}

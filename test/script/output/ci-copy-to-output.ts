@@ -1,6 +1,6 @@
 /// <reference path="../../../global.node.v22.d.ts" preserve="true"/>
 
-import { __ROOT, __ROOT_OUTPUT } from '../../__root';
+import { __ROOT, __ROOT_OUTPUT, __ROOT_OUTPUT_SNAPSHOTS_FILE, __ROOT_TEST_FIXTURES } from '../../__root';
 // @ts-ignore
 import Bluebird from 'bluebird';
 // @ts-ignore
@@ -12,7 +12,7 @@ import { consoleLogger } from 'debug-color2/logger';
 
 export default (async () => {
 
-	await copy(join(__ROOT, './test/__file_snapshots__/entryAll'), join(__ROOT_OUTPUT, '__file_snapshots__/entryAll'), {
+	await copy(join(__ROOT_TEST_FIXTURES, 'entryAll'), join(__ROOT_OUTPUT_SNAPSHOTS_FILE, 'entryAll'), {
 		preserveTimestamps: true,
 		dereference: true,
 	});

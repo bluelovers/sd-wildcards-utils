@@ -7,7 +7,7 @@
 import { basename, dirname, extname, join } from 'path';
 // @ts-ignore
 import { globSync, readFileSync } from 'fs';
-import { __ROOT, __ROOT_DATA } from './__root';
+import { __ROOT, __ROOT_DATA, __ROOT_TEST_FIXTURES } from './__root';
 import {
 	parseWildcardsYaml,
 	matchDynamicPromptsWildcardsAll,
@@ -36,9 +36,7 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 		'entryAll',
 	].forEach(name => {
 		let outPath = join(
-			__ROOT,
-			'test',
-			'__file_snapshots__',
+			__ROOT_TEST_FIXTURES,
 			name,
 		);
 
@@ -108,9 +106,7 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 			let actual = matchDynamicPromptsWildcardsAll(obj.toString(), { unique: true });
 
 			outPath = join(
-				__ROOT,
-				'test',
-				'__file_snapshots__',
+				__ROOT_TEST_FIXTURES,
 				'matchDynamicPromptsWildcardsAll',
 				//file
 			);
@@ -124,9 +120,7 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 		}
 
 		outPath = join(
-			__ROOT,
-			'test',
-			'__file_snapshots__',
+			__ROOT_TEST_FIXTURES,
 			'findWildcardsYAMLPathsAll',
 			//file
 		);
@@ -147,9 +141,7 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 			if (list.length)
 			{
 				outPath = join(
-					__ROOT,
-					'test',
-					'__file_snapshots__',
+					__ROOT_TEST_FIXTURES,
 					'entryAll',
 					//file
 				);

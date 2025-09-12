@@ -12,6 +12,7 @@ import {
 } from './types';
 import { getNodeType } from './util';
 import { Extractor, IExtractionResult, infoNearExtractionError } from '@bluelovers/extract-brackets';
+import { RE_UNSAFE_PLAIN } from './const';
 
 let _extractor: Extractor;
 
@@ -164,7 +165,7 @@ export function validWildcardsYamlData<T extends IRecordWildcards | IWildcardsYA
  */
 export function isSafeKey<T extends string>(key: T | unknown): key is T
 {
-	return typeof key === 'string' && /^[\w\/._-]+$/.test(key) && !/^[^0-9a-z]|[^0-9a-z]$|__|\.\.|--|\/\/|[._-]\/|\/[._-]|[._-]{2,}/i.test(key)
+	return typeof key === 'string' && /^[\w\/._-]+$/.test(key) && !/^[^0-9a-z]|[^0-9a-z]$|__|\.\.|--|\/\/|[._-]\/|\/[._-]|[_-]{2,}|[.-]{2,}/i.test(key)
 }
 
 export function _validKey<T extends string>(key: T | unknown): asserts key is T
@@ -204,4 +205,18 @@ export function _nearString(value: string, index: number, match: string, offset:
 	let e = index + (match?.length || 0) + offset;
 
 	return value.slice(s, e)
+}
+
+export function isUnsafePlainString(value: string, key?: IVisitorFnKey)
+{
+	let check = RE_UNSAFE_PLAIN.test(value);
+
+	if (!check && key === 'key')
+	{
+		check = /\W/.test(value) || !isSafeKey(value);
+	}
+
+	// console.log(check, key, value);
+
+	return check
 }
