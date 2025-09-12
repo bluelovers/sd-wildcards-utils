@@ -65,7 +65,7 @@ export default (async () => {
 			'NightfallJumper/**',
 			'user-*/**',
 			// https://github.com/bluelovers/sd-webui-pnginfo-injection/commit/c46251031cf1b57a3cccc7d69f3780315cdd453a
-			'c*fy/**',
+			'c*fy*/**',
 		],
 		allowWildcardsAtEndMatchRecord: true,
 	})
