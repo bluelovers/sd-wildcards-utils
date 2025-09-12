@@ -43,7 +43,7 @@ describe(`stringifyWildcardsYamlData`, () =>
 
 		expect(output).toMatchFile(join(
 			outPath,
-			file + '.yaml',
+			file,
 		));
 
 		output = stringifyWildcardsYamlData(yaml, defaultOptionsStringifyMinify());
