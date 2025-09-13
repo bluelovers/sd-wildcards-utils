@@ -56,7 +56,7 @@ export function _checkBrackets(value: string)
 export function _checkBrackets2(value: string)
 {
 	_extractor2 ??= new Extractor('__', '__', [
-		['(', ')'],
+//		['(', ')'],
 	]);
 	return _checkBracketsCore(value, _extractor2);
 }
