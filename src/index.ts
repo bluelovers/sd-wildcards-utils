@@ -47,9 +47,9 @@ export function normalizeDocument<T extends Document>(doc: T, opts?: IOptionsPar
 	let visitorOptions: IOptionsVisitor = {
 		...defaults,
 
-		Scalar(key, node)
+		Scalar(key, node, parentNodes)
 		{
-			return _visitNormalizeScalar(key, node, {
+			return _visitNormalizeScalar(key, node, parentNodes, {
 				checkUnsafeQuote,
 				options,
 			})
