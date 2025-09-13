@@ -6,7 +6,7 @@
 import { relative } from 'upath2';
 import { _checkSettings } from './script/lib/settings';
 import { readFileSync } from 'fs-extra';
-import parseWildcardsYaml, { checkAllSelfLinkWildcardsExists } from '../src/index';
+import parseWildcardsYaml, { checkAllSelfLinkWildcardsExists, stringifyWildcardsYamlData } from '../src/index';
 import { __ROOT } from './__root';
 import { expectToHavePropertyWithEmptyArray } from './script/lib/util-jest';
 
@@ -37,6 +37,8 @@ describe(`ci-check-each`, () =>
 				let actual = checkAllSelfLinkWildcardsExists(yaml, _CHECK_FILES_IGNORE_OPTS);
 
 				expectToHavePropertyWithEmptyArray(actual, 'errors');
+
+				stringifyWildcardsYamlData(yaml);
 
 			});
 
