@@ -1,5 +1,6 @@
 import { checkAllSelfLinkWildcardsExists } from "../src/check";
 import { isSafeKey, parseWildcardsYaml, stringifyWildcardsYamlData } from '../src/index';
+import { expectToHavePropertyWithEmptyArray } from './script/lib/util-jest';
 
 beforeAll(async () =>
 {
@@ -246,15 +247,3 @@ function _checkAllSelfLinkWildcardsExists(source: string)
 
 }
 
-/**
- * Checks if an object has a property that is an empty array.
- * Used as a Jest matcher function to verify that an object has a property with an empty array value.
- * Throws an error if the property contains any elements.
- *
- * @param actual - The object to check
- * @param propertyPath - The property path to check, as a string or array
- */
-function expectToHavePropertyWithEmptyArray<T extends any>(actual: T, propertyPath: string | readonly any[])
-{
-	expect(actual).not.toHaveProperty(propertyPath, expect.arrayContaining([expect.anything()]))
-}
