@@ -1,3 +1,4 @@
+import { Extractor, IExtractionError } from '@bluelovers/extract-brackets';
 import { Glob, PicomatchOptions } from 'picomatch';
 import { Alias, CreateNodeOptions, Document as Document$1, DocumentOptions, Node as Node$1, Pair, ParseOptions, ParsedNode, Scalar, SchemaOptions, ToJSOptions, ToStringOptions, YAMLMap, YAMLSeq, visitorFn } from 'yaml';
 
@@ -133,6 +134,7 @@ export declare function _isBadWildcardsNameCore(name: string): boolean;
 export declare function assertWildcardsName(name: string): void;
 export declare function assertWildcardsPath(name: string): void;
 export declare function convertWildcardsNameToPaths(name: string): string[];
+export declare function convertWildcardsPathsToName(paths: IVisitPathsListReadonly): string;
 export declare function isWildcardsPathSyntx(path: string): path is `__${string}__`;
 export declare function wildcardsPathToPaths(path: string): string[];
 export declare function getNodeTypeSymbol(node: IVisitPathsNode): IYamlNodeTypeSymbol;
@@ -156,6 +158,14 @@ export interface IOptionsSharedWildcardsYaml {
 	minifyPrompts?: boolean;
 	allowEmptyDocument?: boolean;
 	allowUnsafeKey?: boolean;
+	/**
+	 * Expands keys in a YAML document that contain forward slashes ('/') into nested YAML maps.
+	 *
+	 * Keys with forward slashes are split into segments, and each segment becomes a nested level in the map.
+	 * The original flat key is removed and replaced with the expanded structure.
+	 */
+	expandForwardSlashKeys?: boolean;
+	allowScalarValueIsEmptySpace?: boolean;
 }
 export type IOptionsStringify = DocumentOptions & SchemaOptions & ParseOptions & CreateNodeOptions & ToStringOptions & IOptionsSharedWildcardsYaml;
 export type IOptionsParseDocument = ParseOptions & DocumentOptions & SchemaOptions & IOptionsSharedWildcardsYaml & {
@@ -330,22 +340,32 @@ export declare function handleVisitPathsFull<T>(key: IVisitorFnKey | null, _node
  *            Each path is represented as an array of paths, where each path is a key or index.
  */
 export declare function findWildcardsYAMLPathsAll(node: Node$1 | Document$1): IVisitPathsList[];
-export declare function _visitNormalizeScalar(key: IVisitorFnKey, node: IWildcardsYAMLScalar, runtime: {
+export declare function _visitNormalizeScalar(key: IVisitorFnKey, node: IWildcardsYAMLScalar, parentNodes: IVisitPathsNodeList, runtime: {
 	checkUnsafeQuote: boolean;
 	options: IOptionsParseDocument;
 }): void;
 export declare function getTopRootContents<T extends IWildcardsYAMLDocument | Document$1 | IWildcardsYAMLMapRoot | YAMLMap>(doc: T): T & IWildcardsYAMLMapRoot<IWildcardsYAMLScalar, IWildcardsYAMLPairValue>;
 export declare function getTopRootNodes<T extends IWildcardsYAMLDocument | Document$1 | IWildcardsYAMLMapRoot | YAMLMap>(doc: T): import("yaml").Pair<IWildcardsYAMLScalar, IWildcardsYAMLPairValue>[] | (import("yaml").Pair<unknown, unknown>[] & import("yaml").Pair<IWildcardsYAMLScalar, IWildcardsYAMLPairValue>[]);
-export declare function _checkBrackets(value: string): ICheckErrorResult;
 export declare function _validMap(key: IVisitorFnKey | null, node: YAMLMap, ...args: any[]): void;
 export declare function _validSeq(key: IVisitorFnKey | null, nodeSeq: YAMLSeq, ...args: any[]): asserts nodeSeq is YAMLSeq<Scalar | IWildcardsYAMLScalar>;
 export declare function _validPair(key: IVisitorFnKey, pair: IWildcardsYAMLPair | Pair, ...args: any[]): void;
 export declare function createDefaultVisitWildcardsYAMLOptions(opts?: IOptionsParseDocument): IOptionsVisitorMap;
 export declare function validWildcardsYamlData<T extends IRecordWildcards | IWildcardsYAMLDocument | Document$1>(data: T | unknown, opts?: IOptionsSharedWildcardsYaml): asserts data is T;
+/**
+ * Determines whether a given key is a "safe" key based on specific criteria.
+ *
+ * only allow: [a-zA-Z0-9_./-]
+ */
 export declare function isSafeKey<T extends string>(key: T | unknown): key is T;
 export declare function _validKey<T extends string>(key: T | unknown): asserts key is T;
-export declare function _checkValue(value: string): ICheckErrorResult;
 export declare function _nearString(value: string, index: number, match: string, offset?: number): string;
+export declare function isUnsafePlainString(value: string, key?: IVisitorFnKey): boolean;
+export declare function _handleExtractorError(value: string): (e: IExtractionError) => ICheckErrorResult;
+export declare function _handleExtractorErrorCore(value: string, e: IExtractionError): ICheckErrorResult;
+export declare function _checkBracketsCore(value: string, _extractor: Extractor): ICheckErrorResult;
+export declare function _checkBrackets(value: string): ICheckErrorResult;
+export declare function _checkBrackets2(value: string): ICheckErrorResult;
+export declare function _checkValue(value: string): ICheckErrorResult;
 export declare function mergeWildcardsYAMLDocumentRoots<T extends Pick<Document$1<YAMLMap>, "contents">>(ls: [
 	T,
 	...any[]
@@ -380,6 +400,8 @@ export declare function pathsToDotPath(paths: IVisitPathsListReadonly): string;
 export declare function findPath(data: IRecordWildcards | Document$1 | IWildcardsYAMLDocument, paths: string[], findOpts?: IOptionsFind, prefix?: string[], list?: IFindPathEntry[]): IFindPathEntry[];
 export declare function findPathOptionsToGlobOptions(findOpts?: IOptionsFind): PicomatchOptions;
 export declare function _findPathCore(data: IRecordWildcards, paths: string[], findOpts: IOptionsFind, prefix: string[], list: IFindPathEntry[], _cache: ICachesFindPath): IFindPathEntry[];
+export declare function findUpParentNodes(nodeList: IVisitPathsNodeList): IWildcardsYAMLPair[];
+export declare function findUpParentNodesNames(nodeList: IVisitPathsNodeList): string[];
 export declare function stripZeroStr(value: string): string;
 export declare function trimPrompts(value: string): string;
 export declare function normalizeWildcardsYamlString(value: string): string;
