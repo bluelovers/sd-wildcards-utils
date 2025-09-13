@@ -57,7 +57,7 @@
     "test": "yarn run test:jest:snapshot",
     "test:jest:snapshot:cache": "yarn run test:jest -- -u test/cache.spec.ts",
     "test:jest": "jest --passWithNoTests",
-    "test:jest:lib": "yarn run test:jest -- test/lib-*",
+    "test:jest:lib": "yarn run test:jest -- -u test/lib-*",
     "test:jest:clearCache": "jest --clearCache",
     "test:jest:coverage": "yarn run test:jest -- --coverage",
     "test:jest:snapshot": "yarn run test:jest -- -u",
