@@ -25,6 +25,7 @@ export * from './util';
 export * from './options';
 export * from './items';
 export * from './valid';
+export * from './valid-prompts';
 export * from './merge';
 export * from './find';
 export * from './format';
@@ -156,3 +157,4 @@ export function parseWildcardsYaml<Contents extends YAMLMap = IWildcardsYAMLMapR
 }
 
 export default parseWildcardsYaml
+
