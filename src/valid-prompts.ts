@@ -45,13 +45,19 @@ export function _checkBracketsCore(value: string, _extractor: Extractor)
 
 export function _checkBrackets(value: string)
 {
-	_extractor ??= new Extractor('{', '}');
+	_extractor ??= new Extractor('{', '}', [
+//		['__', '__'],
+//		['{', '}'],
+//		['(', ')'],
+	]);
 	return _checkBracketsCore(value, _extractor);
 }
 
 export function _checkBrackets2(value: string)
 {
-	_extractor2 ??= new Extractor('__', '__');
+	_extractor2 ??= new Extractor('__', '__', [
+		['(', ')'],
+	]);
 	return _checkBracketsCore(value, _extractor2);
 }
 

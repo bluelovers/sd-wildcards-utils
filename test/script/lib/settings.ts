@@ -39,6 +39,12 @@ export function _checkSettings()
 		'user-*/**',
 		// https://github.com/bluelovers/sd-webui-pnginfo-injection/commit/c46251031cf1b57a3cccc7d69f3780315cdd453a
 		//'c*fy*/**',
+
+		'cof-basemodel/**',
+		'beloved-otokonoko-sex/**',
+		//'mid2000s/**',
+
+		'styles-drawing/**',
 	] satisfies string[];
 
 	const _CHECK_FILES_IGNORE_FULL = [
@@ -92,6 +98,8 @@ export function _checkSettings()
 			allowMultiRoot: true,
 			allowUnsafeKey: true,
 			expandForwardSlashKeys: true,
+
+			allowScalarValueIsEmptySpace: true,
 		} satisfies IOptionsParseDocument,
 
 		_CHECK_FILES_IGNORE_OPTS: {

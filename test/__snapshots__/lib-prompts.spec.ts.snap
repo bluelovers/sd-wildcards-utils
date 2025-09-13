@@ -62,13 +62,7 @@ exports[`_checkValue invalid " {_lazy-wildcards/subject/env-elem/stairs/prompts_
 
 exports[`_checkValue invalid "(cum\\n{, __1/subject/costume-elem/cum/costume-elem2__|}\\n{, __2/subject/costume-elem/cum/costume-elem__|\\n{, __3/subject/costume-elem/cum-base/prompts__{0.3:::{1.2|1.3|1.4}|}|})\\n" 1`] = `
 {
-  "error": "Invalid Syntax [BRACKET] Unable to parse. Unclosed Bracket detected near "tume-elem2__|}
-{, __2/subject/costume-elem/cum/costume-elem__|
-{, __3/subject/costume-elem/cum-"",
-  "index": 55,
-  "near": "tume-elem2__|}
-{, __2/subject/costume-elem/cum/costume-elem__|
-{, __3/subject/costume-elem/cum-",
+  "error": "Invalid Error [UNKNOWN]: TypeError: this.result.simple.push is not a function",
   "value": "(cum
 {, __1/subject/costume-elem/cum/costume-elem2__|}
 {, __2/subject/costume-elem/cum/costume-elem__|
