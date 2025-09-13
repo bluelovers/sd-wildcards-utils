@@ -9,41 +9,23 @@ import { readFile } from 'node:fs/promises';
 import { consoleLogger } from 'debug-color2/logger';
 import { globSync } from 'fs';
 import { globAbsolute } from './lib/util';
+import { _checkSettings } from './lib/settings';
+
+const {
+	_CHECK_FILES_MAIN,
+	_CHECK_FILES_OPTS,
+	_CHECK_FILES_IGNORE_OPTS,
+	_CHECK_FILES_IGNORE_FULL,
+} = _checkSettings();
 
 export default (async () => {
 
 	consoleLogger.log(`Verification...`);
 
-	const obj = await Bluebird.map([
-			// join(__ROOT_OUTPUT_WILDCARDS, 'lazy-wildcards.yaml'),
-			join(__ROOT_TEST, 'output', 'lazy-wildcards.yaml'),
-			//join(__ROOT_DATA, 'lazy-wildcards.yaml'),
-
-			join(__ROOT_DATA, 'cf', 'bundle', 'corn-flakes-aio-bundle-sex.yaml'),
-
-		...globAbsolute([
-				// 'CharaCreatorWildcards/*.yaml',
-				// 'Vision/*.yaml',
-				// 'navi_atlas.yaml',
-				// 'lazy-*/**/*.yaml',
-				// 'lazy-*/**/*.yaml',
-				'tg_love/**/*.yaml',
-				'beloved/**/*.yaml',
-				'PurityGuard/*.yaml',
-				'NightfallJumper/*.yaml',
-				// 'user-eroticvibes/*.yaml',
-			], {
-				cwd: join(__ROOT_DATA, 'others'),
-			}),
-			
-		], (file: any) =>
+	const obj = await Bluebird.map(_CHECK_FILES_MAIN, (file: any) =>
 		{
 			return readFile(file)
-				.then(data => parseWildcardsYaml(data, {
-					disableUnsafeQuote: true,
-					allowMultiRoot: true,
-					allowUnsafeKey: true,
-				})) as any as IWildcardsYAMLDocument[]
+				.then(data => parseWildcardsYaml(data, _CHECK_FILES_OPTS)) as any as IWildcardsYAMLDocument[]
 		})
 		.then((ls: any) =>
 		{
@@ -52,22 +34,8 @@ export default (async () => {
 	;
 
 	let ret = checkAllSelfLinkWildcardsExists(obj as any, {
-		ignore: [
-			//'cf-*/**',
-			//'crea-*/**',
-			'Bo/**',
-			'person/**',
-			'halloween/**',
-			'chara_creator/**',
-			'Vision/**',
-			'navi_atlas/**',
-			'PurityGuard/**',
-			'NightfallJumper/**',
-			'user-*/**',
-			// https://github.com/bluelovers/sd-webui-pnginfo-injection/commit/c46251031cf1b57a3cccc7d69f3780315cdd453a
-			'c*fy*/**',
-		],
-		allowWildcardsAtEndMatchRecord: true,
+		..._CHECK_FILES_IGNORE_OPTS,
+		ignore: _CHECK_FILES_IGNORE_FULL,
 	})
 
 	if (ret.errors.length)
