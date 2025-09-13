@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 
-var e = require("yaml"), t = require("array-hyper-unique"), r = require("@bluelovers/extract-brackets"), o = require("lazy-aggregate-error"), n = require("picomatch");
+var e = require("yaml"), t = require("array-hyper-unique"), r = require("@bluelovers/extract-brackets"), n = require("picomatch"), o = require("lazy-aggregate-error");
 
 function getOptionsShared(e) {
   var t;
@@ -12,7 +12,8 @@ function getOptionsShared(e) {
     allowMultiRoot: e.allowMultiRoot,
     disableUniqueItemValues: e.disableUniqueItemValues,
     minifyPrompts: e.minifyPrompts,
-    disableUnsafeQuote: e.disableUnsafeQuote
+    disableUnsafeQuote: e.disableUnsafeQuote,
+    expandForwardSlashKeys: e.expandForwardSlashKeys
   };
 }
 
@@ -31,6 +32,7 @@ function defaultOptionsParseDocument(e) {
   var t;
   return null !== (t = e) && void 0 !== t || (e = {}), {
     prettyErrors: !0,
+    expandForwardSlashKeys: !0,
     ...e,
     toStringDefaults: defaultOptionsStringify({
       ...getOptionsShared(e),
@@ -46,7 +48,7 @@ function getOptionsFromDocument(e, t) {
   };
 }
 
-let i;
+let a;
 
 function stripZeroStr(e) {
   return e.replace(/[\x00\u200b]+/g, "");
@@ -63,15 +65,15 @@ function normalizeWildcardsYamlString(e) {
 function trimPromptsDynamic(e) {
   if (e.includes("=")) {
     var t;
-    null !== (t = i) && void 0 !== t || (i = new r.Extractor("{", "}"));
-    const o = i.extract(e);
-    let n, s = 0, a = o.reduce(((t, r) => {
-      let o = "string" == typeof r.nest[0] && r.nest[0], i = r.str, a = e.slice(s, r.index[0]);
-      return n && (a = a.replace(/^[\s\r\n]+/g, "")), n = null == o ? void 0 : o.includes("="), 
-      n && (i = i.replace(/^\s*([\w_]+)\s*=\s*/, "$1=")), t.push(a), t.push("{" + i.trim() + "}"), 
-      s = r.index[0] + r.str.length + 2, t;
-    }), []), l = e.slice(s);
-    n && (l = l.replace(/[\s\r\n]+$|^[\s\r\n]+/g, "")), a.push(l), e = a.join("");
+    null !== (t = a) && void 0 !== t || (a = new r.Extractor("{", "}"));
+    const n = a.extract(e);
+    let o, i = 0, s = n.reduce(((t, r) => {
+      let n = "string" == typeof r.nest[0] && r.nest[0], a = r.str, s = e.slice(i, r.index[0]);
+      return o && (s = s.replace(/^[\s\r\n]+/g, "")), o = null == n ? void 0 : n.includes("="), 
+      o && (a = a.replace(/^\s*([\w_]+)\s*=\s*/, "$1=")), t.push(s), t.push("{" + a.trim() + "}"), 
+      i = r.index[0] + r.str.length + 2, t;
+    }), []), l = e.slice(i);
+    o && (l = l.replace(/[\s\r\n]+$|^[\s\r\n]+/g, "")), s.push(l), e = s.join("");
   }
   return e;
 }
@@ -91,41 +93,41 @@ function isWildcardsYAMLMap(t) {
   return e.isMap(t);
 }
 
-const s = /*#__PURE__*/ Symbol.for("yaml.alias"), a = /*#__PURE__*/ Symbol.for("yaml.document"), l = /*#__PURE__*/ Symbol.for("yaml.map"), c = /*#__PURE__*/ Symbol.for("yaml.pair"), d = /*#__PURE__*/ Symbol.for("yaml.scalar"), u = /*#__PURE__*/ Symbol.for("yaml.seq"), p = /*#__PURE__*/ Symbol.for("yaml.node.type"), m = /(?<!#[^\n]*)__([&~!@])?([\w*](?:[*\w\/_\-]+?))(\([^\n#]+\))?__/, h = /(?<!#[^\n]*)__([&~!@])?([\w*](?:[*\w\/_\-\s]+?))(\([^\n#]+\))?__/, f = /*#__PURE__*/ new RegExp(m, m.flags + "g"), y = /*#__PURE__*/ new RegExp(h, h.flags + "g"), g = /^[\w\-_\/]+$/, S = /^[\w\-_\/*]+$/;
+const i = /*#__PURE__*/ Symbol.for("yaml.alias"), s = /*#__PURE__*/ Symbol.for("yaml.document"), l = /*#__PURE__*/ Symbol.for("yaml.map"), c = /*#__PURE__*/ Symbol.for("yaml.pair"), d = /*#__PURE__*/ Symbol.for("yaml.scalar"), u = /*#__PURE__*/ Symbol.for("yaml.seq"), p = /*#__PURE__*/ Symbol.for("yaml.node.type"), m = /(?<!#[^\n]*)__([&~!@])?([\w*](?:[*\w\/_\-]+?))(\([^\n#]+\))?__/, f = /(?<!#[^\n]*)__([&~!@])?([\w*](?:[*\w\/_\-\s]+?))(\([^\n#]+\))?__/, h = /*#__PURE__*/ new RegExp(m, m.flags + "g"), y = /*#__PURE__*/ new RegExp(f, f.flags + "g"), S = /^[\w\-_\/]+$/, g = /^[\w\-_\/*]+$/;
 
 function matchDynamicPromptsWildcards(e, t) {
-  return _matchDynamicPromptsWildcardsCore(e.match(null != t && t.unsafe ? h : m), e);
+  return _matchDynamicPromptsWildcardsCore(e.match(null != t && t.unsafe ? f : m), e);
 }
 
 function _matchDynamicPromptsWildcardsCore(e, t) {
   if (!e) return null;
-  let [r, o, n, i] = e;
+  let [r, n, o, a] = e;
   return {
-    name: n,
-    variables: i,
-    keyword: o,
+    name: o,
+    variables: a,
+    keyword: n,
     source: r,
     isFullMatch: r === (null != t ? t : e.input),
-    isStarWildcards: n.includes("*")
+    isStarWildcards: o.includes("*")
   };
 }
 
 function* matchDynamicPromptsWildcardsAllGenerator(e, t) {
-  const r = e.matchAll(null != t && t.unsafe ? y : f);
+  const r = e.matchAll(null != t && t.unsafe ? y : h);
   for (let t of r) yield _matchDynamicPromptsWildcardsCore(t, e);
 }
 
 function matchDynamicPromptsWildcardsAll(e, r) {
-  const o = [ ...matchDynamicPromptsWildcardsAllGenerator(e, r) ];
-  return null != r && r.unique ? t.array_unique_overwrite(o) : o;
+  const n = [ ...matchDynamicPromptsWildcardsAllGenerator(e, r) ];
+  return null != r && r.unique ? t.array_unique_overwrite(n) : n;
 }
 
 function isBadWildcardsName(e) {
-  return !g.test(e) || _isBadWildcardsNameCore(e);
+  return !S.test(e) || _isBadWildcardsNameCore(e);
 }
 
 function isBadWildcardsPath(e) {
-  return !S.test(e) || _isBadWildcardsNameCore(e);
+  return !g.test(e) || _isBadWildcardsNameCore(e);
 }
 
 function _isBadWildcardsNameCore(e) {
@@ -138,6 +140,10 @@ function assertWildcardsPath(e) {
 
 function convertWildcardsNameToPaths(e) {
   return e.split("/");
+}
+
+function convertWildcardsPathsToName(e) {
+  return e.join("/");
 }
 
 function isWildcardsPathSyntx(e) {
@@ -163,52 +169,31 @@ function isSameNodeType(e, t) {
   return r && getNodeTypeSymbol(t) === r;
 }
 
-let _;
+const _ = /['"]/, v = /^\s*-|[{$~!@}\n|:?#'"%]/, x = /-/;
 
-function _checkBrackets(e) {
-  var t;
-  return null !== (t = _) && void 0 !== t || (_ = new r.Extractor("{", "}")), _.extractSync(e, (t => {
-    if (t) {
-      var o, n;
-      let i = null === (o = t.self) || void 0 === o ? void 0 : o.result;
-      if (!i) return {
-        value: e,
-        error: `Invalid Error [UNKNOWN]: ${t}`
-      };
-      let s = r.infoNearExtractionError(e, t.self);
-      return {
-        value: e,
-        index: null === (n = i.index) || void 0 === n ? void 0 : n[0],
-        near: s,
-        error: `Invalid Syntax [BRACKET] ${t.message} near "${s}"`
-      };
-    }
-  }));
-}
-
-function _validMap(t, r, ...o) {
-  const n = r.items.findIndex((t => !e.isPair(t) || null == (null == t ? void 0 : t.value)));
-  if (-1 !== n) {
-    const e = handleVisitPathsFull(t, r, ...o);
-    throw new SyntaxError(`Invalid SYNTAX. paths: [${e}], key: ${t}, node: ${r}, elem: ${r.items[n]}`);
+function _validMap(t, r, ...n) {
+  const o = r.items.findIndex((t => !e.isPair(t) || null == (null == t ? void 0 : t.value)));
+  if (-1 !== o) {
+    const e = handleVisitPathsFull(t, r, ...n);
+    throw new SyntaxError(`Invalid SYNTAX. paths: [${e}], key: ${t}, node: ${r}, elem: ${r.items[o]}`);
   }
 }
 
-function _validSeq(t, r, ...o) {
-  for (const n in r.items) {
-    const i = r.items[n];
-    if (!e.isScalar(i)) {
-      const e = handleVisitPathsFull(t, r, ...o);
-      throw new SyntaxError(`Invalid SYNTAX. entry type should be 'Scalar', but got '${getNodeType(i)}'. paths: [${e}], entryIndex: ${n}, entry: ${i}, nodeKey: ${t}, node: ${r}`);
+function _validSeq(t, r, ...n) {
+  for (const o in r.items) {
+    const a = r.items[o];
+    if (!e.isScalar(a)) {
+      const e = handleVisitPathsFull(t, r, ...n);
+      throw new SyntaxError(`Invalid SYNTAX. entry type should be 'Scalar', but got '${getNodeType(a)}'. paths: [${e}], entryIndex: ${o}, entry: ${a}, nodeKey: ${t}, node: ${r}`);
     }
   }
 }
 
 function _validPair(e, t, ...r) {
-  const o = t.key;
-  if (!isSafeKey("string" == typeof o ? o : o.value)) {
-    const n = handleVisitPathsFull(e, t, ...r);
-    throw new SyntaxError(`Invalid Key. paths: [${n}], key: ${e}, keyNodeValue: "${null == o ? void 0 : o.value}", keyNode: ${o}`);
+  const n = t.key;
+  if (!isSafeKey("string" == typeof n ? n : n.value)) {
+    const o = handleVisitPathsFull(e, t, ...r);
+    throw new SyntaxError(`Invalid Key. paths: [${o}], key: ${e}, keyNodeValue: "${null == n ? void 0 : n.value}", keyNode: ${n}`);
   }
 }
 
@@ -221,16 +206,16 @@ function createDefaultVisitWildcardsYAMLOptions(e) {
   if (null !== (t = e) && void 0 !== t || (e = {}), e.allowUnsafeKey || (r.Pair = _validPair), 
   !e.disableUniqueItemValues) {
     const e = r.Seq;
-    r.Seq = (t, r, ...o) => {
-      e(t, r, ...o), uniqueSeqItems(r.items);
+    r.Seq = (t, r, ...n) => {
+      e(t, r, ...n), uniqueSeqItems(r.items);
     };
   }
   return r;
 }
 
 function validWildcardsYamlData(t, r) {
-  var o;
-  if (null !== (o = r) && void 0 !== o || (r = {}), e.isDocument(t)) {
+  var n;
+  if (null !== (n = r) && void 0 !== n || (r = {}), e.isDocument(t)) {
     if (e.isNode(t.contents) && !e.isMap(t.contents)) throw TypeError(`The 'contents' property of the provided YAML document must be a YAMLMap. Received: ${t.contents}`);
     visitWildcardsYAML(t, createDefaultVisitWildcardsYAMLOptions(r)), t = t.toJSON();
   }
@@ -238,33 +223,144 @@ function validWildcardsYamlData(t, r) {
     if (r.allowEmptyDocument) return;
     throw new TypeError(`The provided JSON contents should not be empty. ${t}`);
   }
-  let n = Object.keys(t);
-  if (!n.length) throw TypeError("The provided JSON contents must contain at least one key.");
-  if (1 !== n.length && !r.allowMultiRoot) throw TypeError("The provided JSON object cannot have more than one root key. Only one root key is allowed unless explicitly allowed by the 'allowMultiRoot' option.");
+  let o = Object.keys(t);
+  if (!o.length) throw TypeError("The provided JSON contents must contain at least one key.");
+  if (1 !== o.length && !r.allowMultiRoot) throw TypeError("The provided JSON object cannot have more than one root key. Only one root key is allowed unless explicitly allowed by the 'allowMultiRoot' option.");
 }
 
 function isSafeKey(e) {
-  return "string" == typeof e && /^[._\w-]+$/.test(e) && !/^[\._-]|[\._-]$/.test(e);
+  return "string" == typeof e && /^[\w\/._-]+$/.test(e) && !/^[^0-9a-z]|[^0-9a-z]$|__|\.\.|--|\/\/|[._-]\/|\/[._-]|[_-]{2,}|[.-]{2,}/i.test(e);
+}
+
+function _nearString(e, t, r, n = 15) {
+  let o = Math.max(0, t - n);
+  return e.slice(o, t + ((null == r ? void 0 : r.length) || 0) + n);
+}
+
+function isUnsafePlainString(e, t) {
+  let r = x.test(e);
+  return r || "key" !== t || (r = /\W/.test(e) || !isSafeKey(e)), r;
+}
+
+let P, W;
+
+function _handleExtractorErrorCore(e, t) {
+  if (t) {
+    var n, o;
+    let a = null === (n = t.self) || void 0 === n ? void 0 : n.result;
+    if (!a) return {
+      value: e,
+      error: `Invalid Error [UNKNOWN]: ${t}`
+    };
+    let i = r.infoNearExtractionError(e, t.self);
+    return {
+      value: e,
+      index: null === (o = a.index) || void 0 === o ? void 0 : o[0],
+      near: i,
+      error: `Invalid Syntax [BRACKET] ${t.message} near "${i}"`
+    };
+  }
+}
+
+function _checkBracketsCore(e, t) {
+  return t.extractSync(e, (t => _handleExtractorErrorCore(e, t)));
+}
+
+function _checkBrackets(e) {
+  var t;
+  return null !== (t = P) && void 0 !== t || (P = new r.Extractor("{", "}", [])), 
+  _checkBracketsCore(e, P);
+}
+
+function _checkBrackets2(e) {
+  var t;
+  return null !== (t = W) && void 0 !== t || (W = new r.Extractor("__", "__", [])), 
+  _checkBracketsCore(e, W);
 }
 
 function _checkValue(e) {
   let t = /(?:^|[\s{},])_(?=[^_]|$)|(?<!_)_(?:[\s{},]|$)|\/_+|_+\/(?!\()|\([\w_]+\s*=(?:!|\s*[{}$])/.exec(e);
   if (t) {
-    let r = _nearString(e, t.index, t[0]), o = t[0];
+    let r = _nearString(e, t.index, t[0]), n = t[0];
     return {
       value: e,
-      match: o,
+      match: n,
       index: t.index,
       near: r,
-      error: `Invalid Syntax [UNSAFE_SYNTAX] "${o}" in value near "${r}"`
+      error: `Invalid Syntax [UNSAFE_SYNTAX] "${n}" in value near "${r}"`
     };
   }
-  if (/[{}]/.test(e)) return _checkBrackets(e);
+  var r;
+  if (/[{}]|__/.test(e)) return null !== (r = _checkBrackets(e)) && void 0 !== r ? r : _checkBrackets2(e);
 }
 
-function _nearString(e, t, r, o = 15) {
-  let n = Math.max(0, t - o);
-  return e.slice(n, t + ((null == r ? void 0 : r.length) || 0) + o);
+function pathsToWildcardsPath(e, t) {
+  let r = convertWildcardsPathsToName(e);
+  return t && (r = `__${r}__`), r;
+}
+
+function findPath(t, r, n, o = [], a = []) {
+  var i, s, l;
+  null !== (i = n) && void 0 !== i || (n = {}), null !== (s = o) && void 0 !== s || (o = []), 
+  null !== (l = a) && void 0 !== l || (a = []);
+  let c = {
+    paths: r.slice(),
+    findOpts: n,
+    prefix: o,
+    globOpts: findPathOptionsToGlobOptions(n)
+  };
+  return e.isDocument(t) && (c.data = t, t = t.toJSON()), _findPathCore(t, r.slice(), n, o, a, c);
+}
+
+function findPathOptionsToGlobOptions(e) {
+  return {
+    ...null == e ? void 0 : e.globOpts,
+    ignore: null == e ? void 0 : e.ignore
+  };
+}
+
+function _findPathCore(e, t, r, o, a, i) {
+  const s = (t = t.slice()).shift(), l = t.length > 0;
+  for (const c in e) {
+    if (r.onlyFirstMatchAll && a.length) break;
+    const d = o.slice().concat(c), u = o.slice().concat(s), p = n.isMatch(pathsToWildcardsPath(d), pathsToWildcardsPath(u), i.globOpts);
+    if (p) {
+      const n = e[c], o = !Array.isArray(n);
+      if (l) {
+        if (o && "string" != typeof n) {
+          _findPathCore(n, t, r, d, a, i);
+          continue;
+        }
+      } else {
+        if (!o) {
+          a.push({
+            key: d,
+            value: n
+          });
+          continue;
+        }
+        if (!l && i.findOpts.allowWildcardsAtEndMatchRecord && s.includes("*") && "object" == typeof n && n) {
+          a.push({
+            key: d,
+            value: n
+          });
+          continue;
+        }
+      }
+      if (!s.includes("*") || o && !l) throw new TypeError(`Invalid Type. paths: [${d}], isMatch: ${p}, deep: ${l}, deep paths: [${t}], notArray: ${o}, match: [${u}], value: ${n}, _cache : ${JSON.stringify(i)}`);
+    }
+  }
+  if (0 === o.length && r.throwWhenNotFound && !a.length) throw new RangeError(`Invalid Paths. paths: [${[ s, ...t ]}], _cache : ${JSON.stringify(i)}`);
+  return a;
+}
+
+function findUpParentNodesNames(t) {
+  let r = [];
+  for (let n = t.length - 1; n >= 0; n--) {
+    const o = t[n];
+    e.isSeq(o) || e.isPair(o) && r.unshift(o.key.value);
+  }
+  return r;
 }
 
 function visitWildcardsYAML(t, r) {
@@ -288,13 +384,13 @@ function uniqueSeqItems(e) {
 
 function deepFindSingleRootAt(t, r) {
   if (e.isMap(t) && 1 === t.items.length) {
-    var o, n;
-    let i = t.items[0], s = i.key.value, a = null !== (o = null == r || null === (n = r.paths) || void 0 === n ? void 0 : n.slice()) && void 0 !== o ? o : [];
-    a.push(s);
-    let l = i.value;
+    var n, o;
+    let a = t.items[0], i = a.key.value, s = null !== (n = null == r || null === (o = r.paths) || void 0 === o ? void 0 : o.slice()) && void 0 !== n ? n : [];
+    s.push(i);
+    let l = a.value;
     return e.isSeq(l) ? r : deepFindSingleRootAt(l, {
-      paths: a,
-      key: s,
+      paths: s,
+      key: i,
       value: l,
       parent: t
     });
@@ -325,21 +421,27 @@ function handleVisitPaths(e) {
 }
 
 function handleVisitPathsFull(e, t, r) {
-  const o = handleVisitPaths(r);
-  return "number" == typeof e && o.push(e), o;
+  const n = handleVisitPaths(r);
+  return "number" == typeof e && n.push(e), n;
 }
 
-const P = /['"]/, v = /^\s*-|[{$~!@}\n|:?#'"%]/, x = /-/;
-
-function _visitNormalizeScalar(e, t, r) {
+function _visitNormalizeScalar(e, t, r, n) {
   let o = t.value;
+  const a = o;
   if ("string" == typeof o) {
-    if (r.checkUnsafeQuote && P.test(o)) throw new SyntaxError(`Invalid SYNTAX [UNSAFE_QUOTE]. key: ${e}, node: ${t}`);
-    if (("QUOTE_DOUBLE" === t.type || "QUOTE_SINGLE" === t.type && !o.includes("\\")) && (t.type = "PLAIN"), 
-    o = formatPrompts(o, r.options), !o.length) throw new SyntaxError(`Invalid SYNTAX [EMPTY_VALUE]. key: ${e}, node: ${t}`);
-    v.test(o) ? ("PLAIN" === t.type || "BLOCK_FOLDED" === t.type && /#/.test(o)) && (t.type = "BLOCK_LITERAL") : "PLAIN" === t.type && x.test(o) && (t.type = "QUOTE_DOUBLE");
-    let n = _checkValue(o);
-    if (null != n && n.error) throw new SyntaxError(`${n.error}. key: ${e}, node: ${t}`);
+    if (n.checkUnsafeQuote && _.test(o)) throw new SyntaxError(`Invalid SYNTAX [UNSAFE_QUOTE]. key: ${e}, node: ${t}`);
+    if (("QUOTE_DOUBLE" === t.type || "QUOTE_SINGLE" === t.type && !isUnsafePlainString(o, e)) && (t.type = "PLAIN"), 
+    o = formatPrompts(o, n.options), !(o.length || " " === a && n.options.allowScalarValueIsEmptySpace)) {
+      let n, o = "";
+      if (null != r && r.length && (n = r[r.length - 1]) && "number" == typeof e) {
+        let i, s = n.items[e - 1], l = n.items[e + 1];
+        i = findUpParentNodesNames(r), o += `, "${a}" in value near "${_nearString(r[0].toString(), t.range[0], a)}", prev: "${null == s ? void 0 : s.source}", next: "${null == l ? void 0 : l.source}", parent: [${i}]`;
+      }
+      throw new SyntaxError(`Invalid SYNTAX [EMPTY_VALUE]. key: ${e}, node: "${t}"${o}`);
+    }
+    v.test(o) ? ("PLAIN" === t.type || "BLOCK_FOLDED" === t.type && /#/.test(o)) && (t.type = "BLOCK_LITERAL") : "PLAIN" === t.type && isUnsafePlainString(o, e) && (t.type = "QUOTE_DOUBLE");
+    let i = _checkValue(o);
+    if (null != i && i.error) throw new SyntaxError(`${i.error}. key: ${e}, node: ${t}`);
     t.value = o;
   }
 }
@@ -361,113 +463,90 @@ function _mergeSeqCore(e, t) {
   return e.items.push(...t.items), e;
 }
 
-function pathsToWildcardsPath(e, t) {
-  let r = e.join("/");
-  return t && (r = `__${r}__`), r;
-}
-
-function findPath(t, r, o, n = [], i = []) {
-  var s, a, l;
-  null !== (s = o) && void 0 !== s || (o = {}), null !== (a = n) && void 0 !== a || (n = []), 
-  null !== (l = i) && void 0 !== l || (i = []);
-  let c = {
-    paths: r.slice(),
-    findOpts: o,
-    prefix: n,
-    globOpts: findPathOptionsToGlobOptions(o)
-  };
-  return e.isDocument(t) && (c.data = t, t = t.toJSON()), _findPathCore(t, r.slice(), o, n, i, c);
-}
-
-function findPathOptionsToGlobOptions(e) {
-  return {
-    ...null == e ? void 0 : e.globOpts,
-    ignore: null == e ? void 0 : e.ignore
-  };
-}
-
-function _findPathCore(e, t, r, o, i, s) {
-  const a = (t = t.slice()).shift(), l = t.length > 0;
-  for (const c in e) {
-    if (r.onlyFirstMatchAll && i.length) break;
-    const d = o.slice().concat(c), u = o.slice().concat(a), p = n.isMatch(pathsToWildcardsPath(d), pathsToWildcardsPath(u), s.globOpts);
-    if (p) {
-      const o = e[c], n = !Array.isArray(o);
-      if (l) {
-        if (n && "string" != typeof o) {
-          _findPathCore(o, t, r, d, i, s);
-          continue;
-        }
-      } else {
-        if (!n) {
-          i.push({
-            key: d,
-            value: o
-          });
-          continue;
-        }
-        if (!l && s.findOpts.allowWildcardsAtEndMatchRecord && a.includes("*") && "object" == typeof o && o) {
-          i.push({
-            key: d,
-            value: o
-          });
-          continue;
-        }
-      }
-      if (!a.includes("*") || n && !l) throw new TypeError(`Invalid Type. paths: [${d}], isMatch: ${p}, deep: ${l}, deep paths: [${t}], notArray: ${n}, match: [${u}], value: ${o}, _cache : ${JSON.stringify(s)}`);
-    }
-  }
-  if (0 === o.length && r.throwWhenNotFound && !i.length) throw new RangeError(`Invalid Paths. paths: [${[ a, ...t ]}], _cache : ${JSON.stringify(s)}`);
-  return i;
-}
-
 function normalizeDocument(e, t) {
   let r = getOptionsFromDocument(e, t);
-  const o = createDefaultVisitWildcardsYAMLOptions(r);
-  let n = !r.disableUnsafeQuote;
+  const n = createDefaultVisitWildcardsYAMLOptions(r);
+  let o = !r.disableUnsafeQuote;
   visitWildcardsYAML(e, {
-    ...o,
-    Scalar: (e, t) => _visitNormalizeScalar(e, t, {
-      checkUnsafeQuote: n,
+    ...n,
+    Scalar: (e, t, n) => _visitNormalizeScalar(e, t, n, {
+      checkUnsafeQuote: o,
       options: r
     })
   });
 }
 
 function parseWildcardsYaml(t, r) {
-  var o;
-  (r = defaultOptionsParseDocument(r)).allowEmptyDocument && (null !== (o = t) && void 0 !== o || (t = ""));
-  let n = e.parseDocument(t.toString(), r);
-  return validWildcardsYamlData(n, r), n;
+  var n;
+  (r = defaultOptionsParseDocument(r)).allowEmptyDocument && (null !== (n = t) && void 0 !== n || (t = ""));
+  let o = e.parseDocument(t.toString(), r);
+  return r.expandForwardSlashKeys && function _expandForwardSlashKeys(t) {
+    const r = t.contents;
+    if (!e.isMap(r)) return t;
+    const n = [ ...r.items ];
+    for (const t of n) {
+      var o;
+      if (!e.isPair(t)) continue;
+      const n = t.key;
+      if (!e.isScalar(n)) continue;
+      const a = String(null !== (o = n.value) && void 0 !== o ? o : "");
+      if (!a.includes("/")) continue;
+      const i = convertWildcardsNameToPaths(a).filter((e => e.length));
+      if (!i.length) continue;
+      const s = r.items.indexOf(t);
+      -1 !== s && r.items.splice(s, 1);
+      let l = r;
+      for (let t = 0; t < i.length - 1; t++) {
+        const r = i[t];
+        let n = l.items.find((t => (e.isScalar(t.key) ? String(t.key.value) : String(t.key)) === r));
+        if (n) if (e.isMap(n.value)) l = n.value; else {
+          const t = new e.YAMLMap;
+          n.value = t, l = t;
+        } else {
+          const t = new e.YAMLMap;
+          l.set(r, t), l = t;
+        }
+      }
+      const c = i[i.length - 1];
+      let d = l.items.find((t => (e.isScalar(t.key) ? String(t.key.value) : String(t.key)) === c));
+      d ? d.value && t.value && d.value instanceof e.YAMLSeq && t.value instanceof e.YAMLSeq && d.value.items.push(...t.value.items) : l.add({
+        key: c,
+        value: t.value
+      });
+    }
+  }(o), validWildcardsYamlData(o, r), o;
 }
 
-exports.RE_DYNAMIC_PROMPTS_WILDCARDS = m, exports.RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL = f, 
-exports.RE_DYNAMIC_PROMPTS_WILDCARDS_UNSAFE = h, exports.RE_DYNAMIC_PROMPTS_WILDCARDS_UNSAFE_GLOBAL = y, 
-exports.RE_WILDCARDS_NAME = g, exports.RE_WILDCARDS_NAME_STAR = S, exports.SYMBOL_YAML_NODE_TYPE = p, 
-exports.SYMBOL_YAML_NODE_TYPE_ALIAS = s, exports.SYMBOL_YAML_NODE_TYPE_DOC = a, 
+exports.RE_DYNAMIC_PROMPTS_WILDCARDS = m, exports.RE_DYNAMIC_PROMPTS_WILDCARDS_GLOBAL = h, 
+exports.RE_DYNAMIC_PROMPTS_WILDCARDS_UNSAFE = f, exports.RE_DYNAMIC_PROMPTS_WILDCARDS_UNSAFE_GLOBAL = y, 
+exports.RE_WILDCARDS_NAME = S, exports.RE_WILDCARDS_NAME_STAR = g, exports.SYMBOL_YAML_NODE_TYPE = p, 
+exports.SYMBOL_YAML_NODE_TYPE_ALIAS = i, exports.SYMBOL_YAML_NODE_TYPE_DOC = s, 
 exports.SYMBOL_YAML_NODE_TYPE_MAP = l, exports.SYMBOL_YAML_NODE_TYPE_PAIR = c, exports.SYMBOL_YAML_NODE_TYPE_SCALAR = d, 
 exports.SYMBOL_YAML_NODE_TYPE_SEQ = u, exports._checkBrackets = _checkBrackets, 
+exports._checkBrackets2 = _checkBrackets2, exports._checkBracketsCore = _checkBracketsCore, 
 exports._checkValue = _checkValue, exports._findPathCore = _findPathCore, exports._getNodeTypeCore = _getNodeTypeCore, 
-exports._handleVisitPathsCore = _handleVisitPathsCore, exports._isBadWildcardsNameCore = _isBadWildcardsNameCore, 
-exports._matchDynamicPromptsWildcardsCore = _matchDynamicPromptsWildcardsCore, exports._mergeSeqCore = _mergeSeqCore, 
-exports._mergeWildcardsYAMLDocumentRootsCore = _mergeWildcardsYAMLDocumentRootsCore, 
+exports._handleExtractorError = function _handleExtractorError(e) {
+  return _handleExtractorErrorCore.bind(null, e);
+}, exports._handleExtractorErrorCore = _handleExtractorErrorCore, exports._handleVisitPathsCore = _handleVisitPathsCore, 
+exports._isBadWildcardsNameCore = _isBadWildcardsNameCore, exports._matchDynamicPromptsWildcardsCore = _matchDynamicPromptsWildcardsCore, 
+exports._mergeSeqCore = _mergeSeqCore, exports._mergeWildcardsYAMLDocumentRootsCore = _mergeWildcardsYAMLDocumentRootsCore, 
 exports._nearString = _nearString, exports._toJSON = _toJSON, exports._validKey = function _validKey(e) {
   if (!isSafeKey(e)) throw new SyntaxError(`Invalid Key. key: ${e}`);
 }, exports._validMap = _validMap, exports._validPair = _validPair, exports._validSeq = _validSeq, 
 exports._visitNormalizeScalar = _visitNormalizeScalar, exports.assertWildcardsName = function assertWildcardsName(e) {
   if (isBadWildcardsName(e)) throw new SyntaxError(`Invalid Wildcards Name Syntax: ${e}`);
 }, exports.assertWildcardsPath = assertWildcardsPath, exports.checkAllSelfLinkWildcardsExists = function checkAllSelfLinkWildcardsExists(t, r) {
-  var o, i;
+  var o, a;
   null !== (o = r) && void 0 !== o || (r = {});
-  const s = r.maxErrors > 0 ? r.maxErrors : 10;
+  const i = r.maxErrors > 0 ? r.maxErrors : 10;
   e.isDocument(t) || e.isNode(t) || (t = parseWildcardsYaml(t));
-  const a = t.toString(), l = t.toJSON();
-  let c = matchDynamicPromptsWildcardsAll(a, {
+  const s = t.toString(), l = t.toJSON();
+  let c = matchDynamicPromptsWildcardsAll(s, {
     unsafe: !0,
     ...r.optsMatch,
     unique: !0
   }), isMatchIgnore = () => !1;
-  null !== (i = r.ignore) && void 0 !== i && i.length && (isMatchIgnore = n(r.ignore));
+  null !== (a = r.ignore) && void 0 !== a && a.length && (isMatchIgnore = n(r.ignore));
   const d = [], u = [], p = [], m = [];
   for (const e of c) {
     if (isMatchIgnore(e.name)) {
@@ -475,16 +554,16 @@ exports._visitNormalizeScalar = _visitNormalizeScalar, exports.assertWildcardsNa
       continue;
     }
     const t = convertWildcardsNameToPaths(e.name);
-    let o = [];
+    let n = [];
     try {
-      assertWildcardsPath(e.name), o = findPath(l, t, {
+      assertWildcardsPath(e.name), n = findPath(l, t, {
         onlyFirstMatchAll: !0,
         throwWhenNotFound: !0,
         allowWildcardsAtEndMatchRecord: r.allowWildcardsAtEndMatchRecord
-      }), r.report && (d.push(...o.map((e => e.key.join("/")))), e.name.includes("*") && u.push(e.name));
+      }), r.report && (d.push(...n.map((e => convertWildcardsPathsToName(e.key)))), e.name.includes("*") && u.push(e.name));
     } catch (e) {
-      if (m.push(e), m.length >= s) {
-        let e = new RangeError(`Max Errors. errors.length ${m.length} >= ${s}`);
+      if (m.push(e), m.length >= i) {
+        let e = new RangeError(`Max Errors. errors.length ${m.length} >= ${i}`);
         m.unshift(e);
         break;
       }
@@ -499,7 +578,7 @@ exports._visitNormalizeScalar = _visitNormalizeScalar, exports.assertWildcardsNa
     errors: m
   };
 }, exports.convertPairsToPathsList = convertPairsToPathsList, exports.convertWildcardsNameToPaths = convertWildcardsNameToPaths, 
-exports.createDefaultVisitWildcardsYAMLOptions = createDefaultVisitWildcardsYAMLOptions, 
+exports.convertWildcardsPathsToName = convertWildcardsPathsToName, exports.createDefaultVisitWildcardsYAMLOptions = createDefaultVisitWildcardsYAMLOptions, 
 exports.deepFindSingleRootAt = deepFindSingleRootAt, exports.default = parseWildcardsYaml, 
 exports.defaultCheckerIgnoreCase = defaultCheckerIgnoreCase, exports.defaultOptionsParseDocument = defaultOptionsParseDocument, 
 exports.defaultOptionsStringify = defaultOptionsStringify, exports.defaultOptionsStringifyMinify = function defaultOptionsStringifyMinify() {
@@ -508,7 +587,14 @@ exports.defaultOptionsStringify = defaultOptionsStringify, exports.defaultOption
     minifyPrompts: !0
   };
 }, exports.findPath = findPath, exports.findPathOptionsToGlobOptions = findPathOptionsToGlobOptions, 
-exports.findWildcardsYAMLPathsAll = function findWildcardsYAMLPathsAll(e) {
+exports.findUpParentNodes = function findUpParentNodes(t) {
+  let r = [];
+  for (let n = t.length - 1; n >= 0; n--) {
+    const o = t[n];
+    e.isSeq(o) || (e.isPair(o) ? r.unshift(o) : e.isDocument(o));
+  }
+  return r;
+}, exports.findUpParentNodesNames = findUpParentNodesNames, exports.findWildcardsYAMLPathsAll = function findWildcardsYAMLPathsAll(e) {
   const t = [];
   return visitWildcardsYAML(e, {
     Seq(...e) {
@@ -524,8 +610,9 @@ exports.getTopRootContents = getTopRootContents, exports.getTopRootNodes = funct
 exports.isBadWildcardsName = isBadWildcardsName, exports.isBadWildcardsPath = isBadWildcardsPath, 
 exports.isDynamicPromptsWildcards = function isDynamicPromptsWildcards(e) {
   return matchDynamicPromptsWildcards(e).isFullMatch;
-}, exports.isSafeKey = isSafeKey, exports.isSameNodeType = isSameNodeType, exports.isWildcardsName = function isWildcardsName(e) {
-  return g.test(e) && !_isBadWildcardsNameCore(e);
+}, exports.isSafeKey = isSafeKey, exports.isSameNodeType = isSameNodeType, exports.isUnsafePlainString = isUnsafePlainString, 
+exports.isWildcardsName = function isWildcardsName(e) {
+  return S.test(e) && !_isBadWildcardsNameCore(e);
 }, exports.isWildcardsPathSyntx = isWildcardsPathSyntx, exports.isWildcardsYAMLDocument = isWildcardsYAMLDocument, 
 exports.isWildcardsYAMLDocumentAndContentsIsMap = function isWildcardsYAMLDocumentAndContentsIsMap(t) {
   return e.isDocument(t) && e.isMap(t.contents);
@@ -535,35 +622,35 @@ exports.mergeFindSingleRoots = function mergeFindSingleRoots(t, r) {
   if (!e.isDocument(t) && !e.isMap(t)) throw TypeError(`The merge target should be a YAMLMap or Document. doc: ${t}`);
   r = [ r ].flat();
   for (let n of r) {
-    let r = deepFindSingleRootAt(n), i = null == r ? void 0 : r.paths;
-    if (!r) throw new TypeError(`Only YAMLMap can be merged [2]. path: ${i}, node: ${n}`);
+    let r = deepFindSingleRootAt(n), a = null == r ? void 0 : r.paths;
+    if (!r) throw new TypeError(`Only YAMLMap can be merged [2]. path: ${a}, node: ${n}`);
     {
-      let n = t.getIn(i);
+      let n = t.getIn(a);
       if (n) {
-        if (!e.isMap(n)) throw new TypeError(`Only YAMLMap can be merged [1]. path: ${i}, type: ${getNodeType(n)} node: ${n}`);
+        if (!e.isMap(n)) throw new TypeError(`Only YAMLMap can be merged [1]. path: ${a}, type: ${getNodeType(n)} node: ${n}`);
         r.value.items.forEach((t => {
-          const r = t.key.value, s = n.get(r);
-          if (s) if (e.isSeq(s) && e.isSeq(t.value)) _mergeSeqCore(s, t.value); else {
-            if (!e.isMap(s) || !e.isMap(t.value)) throw isSameNodeType(s, t.value) ? new TypeError(`Current does not support deep merge at paths: ${JSON.stringify(i.concat(r))}, a: ${s}, b: ${t.value}`) : new TypeError(`Only allow merge same node type at paths: ${JSON.stringify(i.concat(r))}, a: ${getNodeType(s)}, b: ${getNodeType(t.value)}`);
+          const r = t.key.value, i = n.get(r);
+          if (i) if (e.isSeq(i) && e.isSeq(t.value)) _mergeSeqCore(i, t.value); else {
+            if (!e.isMap(i) || !e.isMap(t.value)) throw isSameNodeType(i, t.value) ? new TypeError(`Current does not support deep merge at paths: ${JSON.stringify(a.concat(r))}, a: ${i}, b: ${t.value}`) : new TypeError(`Only allow merge same node type at paths: ${JSON.stringify(a.concat(r))}, a: ${getNodeType(i)}, b: ${getNodeType(t.value)}`);
             {
-              const n = [], a = [];
+              const n = [], s = [];
               for (const r of t.value.items) try {
                 if (e.isSeq(r.value)) {
-                  let t = s.get(r.key);
+                  let t = i.get(r.key);
                   if (e.isSeq(t)) {
                     _mergeSeqCore(t, r.value);
                     continue;
                   }
                 }
-                s.add(r, !1);
+                i.add(r, !1);
               } catch (e) {
-                n.push(r.key.value), a.push(e);
+                n.push(r.key.value), s.push(e);
               }
-              if (a.length) throw new o.AggregateErrorExtra(a, `Failure when merging sub YAMLMap. Paths: ${JSON.stringify(i.concat(r))}. Conflicting keys: ${JSON.stringify(n)}`);
+              if (s.length) throw new o.AggregateErrorExtra(s, `Failure when merging sub YAMLMap. Paths: ${JSON.stringify(a.concat(r))}. Conflicting keys: ${JSON.stringify(n)}`);
             }
           } else n.items.push(t);
         }));
-      } else t.setIn(i, r.value);
+      } else t.setIn(a, r.value);
     }
   }
   return t;
@@ -578,9 +665,9 @@ exports.mergeFindSingleRoots = function mergeFindSingleRoots(t, r) {
 exports.parseWildcardsYaml = parseWildcardsYaml, exports.pathsToDotPath = function pathsToDotPath(e) {
   return e.join(".");
 }, exports.pathsToWildcardsPath = pathsToWildcardsPath, exports.stringifyWildcardsYamlData = function stringifyWildcardsYamlData(t, r) {
-  const o = e.isDocument(t);
-  return o && (r = getOptionsFromDocument(t, r)), r = defaultOptionsStringify(r), 
-  o ? (normalizeDocument(t, r), t.toString(r)) : e.stringify(t, r);
+  const n = e.isDocument(t);
+  return n && (r = getOptionsFromDocument(t, r)), r = defaultOptionsStringify(r), 
+  n ? (normalizeDocument(t, r), t.toString(r)) : e.stringify(t, r);
 }, exports.stripBlankLines = function stripBlankLines(e, t) {
   return e = e.replace(/(\r?\n)[\s\r\n\t\xa0]+(\r?\n)/g, "$1$2").replace(/(\r?\n)(?:\r?\n)(?=[\s\t\xa0])/g, "$1").replace(/[ \xa0\t]+$/gm, ""), 
   t && (e = e.replace(/\s+$/, ""), e += "\n\n"), e;
