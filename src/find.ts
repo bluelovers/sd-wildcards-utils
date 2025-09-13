@@ -6,9 +6,11 @@ import {
 	IOptionsFind,
 	IRecordWildcards,
 	IVisitPathsListReadonly,
+	IVisitPathsNodeList,
 	IWildcardsYAMLDocument,
+	IWildcardsYAMLPair,
 } from './types';
-import { Document, isDocument } from 'yaml';
+import { Document, isDocument, isPair, isSeq } from 'yaml';
 import { PicomatchOptions } from 'picomatch';
 import { convertWildcardsPathsToName } from './util';
 
@@ -133,4 +135,52 @@ export function _findPathCore(data: IRecordWildcards, paths: string[], findOpts:
 	}
 
 	return list; // Return the list of found paths and their corresponding values.
+}
+
+export function findUpParentNodes(nodeList: IVisitPathsNodeList)
+{
+	let _cache: IWildcardsYAMLPair[] = [];
+
+	for (let i = nodeList.length - 1; i >= 0; i--)
+	{
+		const node = nodeList[i];
+
+		if (isSeq(node))
+		{
+			continue;
+		}
+
+		if (isPair(node))
+		{
+			_cache.unshift((node as IWildcardsYAMLPair))
+		}
+		else if (isDocument(node))
+		{
+			//_cache.unshift((node as any))
+		}
+	}
+
+	return _cache;
+}
+
+export function findUpParentNodesNames(nodeList: IVisitPathsNodeList)
+{
+	let _cache: string[] = [];
+
+	for (let i = nodeList.length - 1; i >= 0; i--)
+	{
+		const node = nodeList[i];
+
+		if (isSeq(node))
+		{
+			continue;
+		}
+
+		if (isPair(node))
+		{
+			_cache.unshift((node as IWildcardsYAMLPair).key.value)
+		}
+	}
+
+	return _cache;
 }

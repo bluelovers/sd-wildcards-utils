@@ -11,12 +11,14 @@ import {
 	IWildcardsYAMLMapRoot,
 	IWildcardsYAMLPair,
 	IWildcardsYAMLScalar,
+	IWildcardsYAMLSeq,
 } from './types';
 import { formatPrompts } from './format';
 import { isWildcardsYAMLDocument, isWildcardsYAMLMap } from './is';
-import { isUnsafePlainString } from './valid';
+import { _nearString, isUnsafePlainString } from './valid';
 import { RE_UNSAFE_QUOTE, RE_UNSAFE_VALUE } from './const';
 import { _checkValue } from './valid-prompts';
+import { findUpParentNodesNames } from './find';
 
 export function visitWildcardsYAML(node: Node | Document | null, visitorOptions: IOptionsVisitor)
 {
@@ -170,12 +172,13 @@ export function findWildcardsYAMLPathsAll(node: Node | Document)
 	return ls;
 }
 
-export function _visitNormalizeScalar(key: IVisitorFnKey, node: IWildcardsYAMLScalar, runtime: {
+export function _visitNormalizeScalar(key: IVisitorFnKey, node: IWildcardsYAMLScalar, parentNodes: IVisitPathsNodeList, runtime: {
 	checkUnsafeQuote: boolean,
 	options: IOptionsParseDocument,
 })
 {
 	let value = node.value as string;
+	const valueOld = value;
 
 	if (typeof value === 'string')
 	{
@@ -190,9 +193,32 @@ export function _visitNormalizeScalar(key: IVisitorFnKey, node: IWildcardsYAMLSc
 
 		value = formatPrompts(value, runtime.options);
 
-		if (!value.length)
+		if (!value.length && !(valueOld === ' ' && runtime.options.allowScalarValueIsEmptySpace))
 		{
-			throw new SyntaxError(`Invalid SYNTAX [EMPTY_VALUE]. key: ${key}, node: ${node}`)
+			let msg: string = '';
+			let who: IWildcardsYAMLSeq;
+
+			// tsignore
+			// @ts-ignore
+			if (parentNodes?.length && (who = parentNodes[parentNodes.length - 1]))
+			{
+				if (typeof key === 'number')
+				{
+
+					let parent: any;
+
+					let prev = who.items[key - 1] as IWildcardsYAMLScalar;
+					let next = who.items[key + 1] as IWildcardsYAMLScalar;
+
+					parent = findUpParentNodesNames(parentNodes);
+
+					let near = _nearString(parentNodes[0].toString(), node.range[0], valueOld);
+
+					msg += `, "${valueOld}" in value near "${near}", prev: "${prev?.source}", next: "${next?.source}", parent: [${parent}]`;
+				}
+			}
+
+			throw new SyntaxError(`Invalid SYNTAX [EMPTY_VALUE]. key: ${key}, node: "${node}"${msg}`)
 		}
 		else if (RE_UNSAFE_VALUE.test(value))
 		{

@@ -28,6 +28,15 @@ describe(`_checkValue`, () => {
 		test.each([
 			'2b_\(nier:automata\)_\(cosplay\)',
 			'purple_gray',
+
+			`, penis under another's clothes`,
+
+			`{ penis under another's clothes|}`,
+
+			`{, penis under another's clothes}`,
+
+			`{, penis under another's clothes|}`,
+			`(naizuri{, penis under another's clothes|}:1.3)`,
 		])(`%j`, (input) => {
 
 			let actual = _checkValue(input);

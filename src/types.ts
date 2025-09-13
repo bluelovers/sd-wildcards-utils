@@ -61,6 +61,8 @@ export interface IOptionsSharedWildcardsYaml
 	 * The original flat key is removed and replaced with the expanded structure.
 	 */
 	expandForwardSlashKeys?: boolean,
+
+	allowScalarValueIsEmptySpace?: boolean,
 }
 
 export type IOptionsStringify =
