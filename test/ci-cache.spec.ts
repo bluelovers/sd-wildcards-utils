@@ -4,10 +4,10 @@
 /// <reference types="expect" />
 /// <reference path="../global.node.v22.d.ts" preserve="true"/>
 
-import { basename, dirname, extname, join } from 'path';
+import { basename, dirname, extname, join } from 'upath2';
 // @ts-ignore
 import { globSync, readFileSync } from 'fs';
-import { __ROOT, __ROOT_DATA, __ROOT_TEST_FIXTURES } from './__root';
+import { __ROOT, __ROOT_DATA, __ROOT_TEST_FIXTURES, __ROOT_TEST_SNAPSHOTS_FILE } from './__root';
 import {
 	parseWildcardsYaml,
 	matchDynamicPromptsWildcardsAll,
@@ -36,7 +36,7 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 		'entryAll',
 	].forEach(name => {
 		let outPath = join(
-			__ROOT_TEST_FIXTURES,
+			__ROOT_TEST_SNAPSHOTS_FILE,
 			name,
 		);
 
@@ -106,7 +106,7 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 			let actual = matchDynamicPromptsWildcardsAll(obj.toString(), { unique: true });
 
 			outPath = join(
-				__ROOT_TEST_FIXTURES,
+				__ROOT_TEST_SNAPSHOTS_FILE,
 				'matchDynamicPromptsWildcardsAll',
 				//file
 			);
@@ -120,7 +120,7 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 		}
 
 		outPath = join(
-			__ROOT_TEST_FIXTURES,
+			__ROOT_TEST_SNAPSHOTS_FILE,
 			'findWildcardsYAMLPathsAll',
 			//file
 		);
@@ -141,7 +141,7 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 			if (list.length)
 			{
 				outPath = join(
-					__ROOT_TEST_FIXTURES,
+					__ROOT_TEST_SNAPSHOTS_FILE,
 					'entryAll',
 					//file
 				);
