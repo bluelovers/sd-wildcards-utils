@@ -14,8 +14,9 @@ import {
 } from './types';
 import { formatPrompts } from './format';
 import { isWildcardsYAMLDocument, isWildcardsYAMLMap } from './is';
-import { _checkValue, isUnsafePlainString } from './valid';
+import { isUnsafePlainString } from './valid';
 import { RE_UNSAFE_QUOTE, RE_UNSAFE_VALUE } from './const';
+import { _checkValue } from './valid-prompts';
 
 export function visitWildcardsYAML(node: Node | Document | null, visitorOptions: IOptionsVisitor)
 {

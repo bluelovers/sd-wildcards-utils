@@ -1,49 +1,18 @@
-import { Document, isDocument, isMap, isNode, isScalar, YAMLMap, YAMLSeq, Scalar, isPair, Pair } from 'yaml';
+import { Document, isDocument, isMap, isNode, isPair, isScalar, Pair, Scalar, YAMLMap, YAMLSeq } from 'yaml';
 import { handleVisitPathsFull, uniqueSeqItems, visitWildcardsYAML } from './items';
 import {
-	ICheckErrorResult,
 	IOptionsParseDocument,
 	IOptionsSharedWildcardsYaml,
 	IOptionsVisitorMap,
-	IRecordWildcards, IVisitorFnKey,
+	IRecordWildcards,
+	IVisitorFnKey,
 	IVisitPathsNode,
-	IWildcardsYAMLDocument, IWildcardsYAMLPair,
+	IWildcardsYAMLDocument,
+	IWildcardsYAMLPair,
 	IWildcardsYAMLScalar,
 } from './types';
 import { getNodeType } from './util';
-import { Extractor, IExtractionResult, infoNearExtractionError } from '@bluelovers/extract-brackets';
 import { RE_UNSAFE_PLAIN } from './const';
-
-let _extractor: Extractor;
-
-export function _checkBrackets(value: string)
-{
-	_extractor ??= new Extractor('{', '}');
-
-	return _extractor.extractSync(value, (e) => {
-		if (e)
-		{
-			let result: IExtractionResult = e.self?.result;
-
-			if (!result)
-			{
-				return {
-					value,
-					error: `Invalid Error [UNKNOWN]: ${e}`
-				} satisfies ICheckErrorResult
-			}
-
-			let near = infoNearExtractionError(value, e.self)
-
-			return {
-				value,
-				index: result.index?.[0],
-				near,
-				error: `Invalid Syntax [BRACKET] ${e.message} near "${near}"`
-			} satisfies ICheckErrorResult
-		}
-	}) as ICheckErrorResult
-}
 
 // @ts-ignore
 export function _validMap(key: IVisitorFnKey | null, node: YAMLMap, ...args: any[])
@@ -173,29 +142,6 @@ export function _validKey<T extends string>(key: T | unknown): asserts key is T
 	if (!isSafeKey(key))
 	{
 		throw new SyntaxError(`Invalid Key. key: ${key}`)
-	}
-}
-
-export function _checkValue(value: string): ICheckErrorResult
-{
-	let m = /(?:^|[\s{},])_(?=[^_]|$)|(?<!_)_(?:[\s{},]|$)|\/_+|_+\/(?!\()|\([\w_]+\s*=(?:!|\s*[{}$])/.exec(value)
-
-	if (m)
-	{
-		let near = _nearString(value, m!.index, m![0]);
-		let match = m![0];
-
-		return {
-			value,
-			match,
-			index: m!.index,
-			near,
-			error: `Invalid Syntax [UNSAFE_SYNTAX] "${match}" in value near "${near}"`
-		}
-	}
-	else if (/[{}]/.test(value))
-	{
-		return _checkBrackets(value)
 	}
 }
 
