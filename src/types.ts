@@ -53,6 +53,14 @@ export interface IOptionsSharedWildcardsYaml
 	minifyPrompts?: boolean,
 	allowEmptyDocument?: boolean,
 	allowUnsafeKey?: boolean,
+
+	/**
+	 * Expands keys in a YAML document that contain forward slashes ('/') into nested YAML maps.
+	 *
+	 * Keys with forward slashes are split into segments, and each segment becomes a nested level in the map.
+	 * The original flat key is removed and replaced with the expanded structure.
+	 */
+	expandForwardSlashKeys?: boolean,
 }
 
 export type IOptionsStringify =

@@ -9,7 +9,8 @@ export function getOptionsShared<T extends IOptionsSharedWildcardsYaml>(opts?: T
 		disableUniqueItemValues: opts.disableUniqueItemValues,
 		minifyPrompts: opts.minifyPrompts,
 		disableUnsafeQuote: opts.disableUnsafeQuote,
-	}
+		expandForwardSlashKeys: opts.expandForwardSlashKeys,
+	} satisfies IOptionsSharedWildcardsYaml
 }
 
 export function defaultOptionsStringifyMinify()
@@ -43,6 +44,7 @@ export function defaultOptionsParseDocument(opts?: IOptionsParseDocument): IOpti
 	opts = {
 		//keepSourceTokens: true,
 		prettyErrors: true,
+		expandForwardSlashKeys: true,
 		...opts,
 		toStringDefaults: defaultOptionsStringify({
 			...getOptionsShared(opts),

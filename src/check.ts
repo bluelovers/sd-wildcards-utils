@@ -6,6 +6,7 @@ import {
 } from './types';
 import {
 	assertWildcardsPath,
+	convertWildcardsPathsToName,
 	parseWildcardsYaml,
 } from './index';
 import {
@@ -91,7 +92,7 @@ export function checkAllSelfLinkWildcardsExists(obj: IRecordWildcards | Node | D
 
 			if (chkOpts.report)
 			{
-				listHasExists.push(...list.map(v => v.key.join('/')));
+				listHasExists.push(...list.map(v => convertWildcardsPathsToName(v.key)));
 
 				if (entry.name.includes('*'))
 				{

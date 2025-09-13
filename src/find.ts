@@ -10,10 +10,11 @@ import {
 } from './types';
 import { Document, isDocument } from 'yaml';
 import { PicomatchOptions } from 'picomatch';
+import { convertWildcardsPathsToName } from './util';
 
 export function pathsToWildcardsPath(paths: IVisitPathsListReadonly, full?: boolean)
 {
-	let s = paths.join('/');
+	let s = convertWildcardsPathsToName(paths);
 	if (full)
 	{
 		s = `__${s}__`
