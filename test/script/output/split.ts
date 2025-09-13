@@ -7,7 +7,10 @@ import { globSync, readFileSync } from 'fs';
 import { join, normalize } from 'upath2';
 import { __ROOT_DATA, __ROOT_OUTPUT_WILDCARDS } from '../../__root';
 import {
-	defaultCheckerIgnoreCase, defaultOptionsStringifyMinify, IOptionsFind, matchDynamicPromptsWildcards,
+	defaultCheckerIgnoreCase,
+	defaultOptionsStringifyMinify,
+	IOptionsFind,
+	matchDynamicPromptsWildcards,
 	mergeWildcardsYAMLDocumentJsonBy,
 	parseWildcardsYaml,
 	stringifyWildcardsYamlData,
@@ -19,7 +22,7 @@ import { deepmergeAll } from 'deepmerge-plus';
 // @ts-ignore
 import Bluebird from 'bluebird';
 import { parseDocument, YAMLMap } from 'yaml';
-import { groupSplitConfig } from './split-config';
+import { groupSplitConfig, groupSplitFiles } from './split-config';
 import { findPath, pathsToWildcardsPath } from '../../../src/find';
 import { IFindPathEntry, IRecordWildcards } from '../../../src/types';
 import { consoleLogger } from 'debug-color2/logger';
@@ -52,14 +55,7 @@ export default (async () =>
 
 	let map: Record<string, IFindPathEntry[][]> = {};
 
-	const json = await Bluebird.map(globSync([
-				'cf/costumes/*.yaml',
-				'cf/creatures/*.yaml',
-				'cf/other/*.yaml',
-				'others/**/*.yaml',
-				'*.yaml',
-				'sub/**/*.yaml',
-			], {
+	const json = await Bluebird.map(globSync(groupSplitFiles, {
 				cwd: __ROOT_DATA,
 			}), (file: string) =>
 			{
