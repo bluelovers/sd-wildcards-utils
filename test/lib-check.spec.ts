@@ -222,16 +222,27 @@ function _checkAllSelfLinkWildcardsExists(source: string)
 	 * @fixme actual.errors should be as empty array
 	 * @fixme actual.listHasExists shoulf have length 3
 	 */
-	if (false)
+	if (true)
 	{
 		expectToHavePropertyWithEmptyArray(actual, 'errors');
 
-		expect(actual).toHaveProperty('listHasExists', [
+		expect(actual).toHaveProperty('listHasExists', expect.arrayContaining([
 			"cmfy/eye_color_classic",
 			"cmfy/eye_color_stylized",
 			"cmfy/eye_color_fantasy",
-		])
+		]));
 	}
+
+	 yaml = parseWildcardsYaml(source, {
+		allowMultiRoot: true,
+		 expandForwardSlashKeys: false,
+	});
+
+	actual = checkAllSelfLinkWildcardsExists(yaml, {
+		report: true,
+	});
+
+	expect(actual).toHaveProperty('errors', expect.arrayContaining([expect.anything()]));
 
 }
 

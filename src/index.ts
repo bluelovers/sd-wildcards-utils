@@ -6,7 +6,6 @@ import {
 	defaultOptionsParseDocument,
 	defaultOptionsStringify,
 	getOptionsFromDocument,
-
 } from './options';
 import { _visitNormalizeScalar, visitWildcardsYAML } from './items';
 import { createDefaultVisitWildcardsYAMLOptions, validWildcardsYamlData } from './valid';
@@ -20,6 +19,7 @@ import {
 	IWildcardsYAMLDocumentParsed,
 	IWildcardsYAMLMapRoot,
 } from './types';
+import { _expandForwardSlashKeys } from './parse';
 
 export * from './util';
 export * from './options';
@@ -144,10 +144,15 @@ export function parseWildcardsYaml<Contents extends YAMLMap = IWildcardsYAMLMapR
 
 	let data = parseDocument<Contents, Strict>(source.toString(), opts);
 
-	validWildcardsYamlData(data, opts)
+	// expand keys with forward slashes into nested maps
+	if (opts.expandForwardSlashKeys)
+	{
+		_expandForwardSlashKeys(data as Document);
+	}
 
-	// @ts-ignore
-	return data
+	validWildcardsYamlData(data, opts);
+
+	return data as any
 }
 
 export default parseWildcardsYaml

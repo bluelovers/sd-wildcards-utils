@@ -4,6 +4,7 @@ import {
 	IVisitPathsNode,
 	IYamlNodeTypeSymbol,
 	IOptionsMatchDynamicPromptsWildcards,
+	IVisitPathsListReadonly,
 } from './types';
 
 export const SYMBOL_YAML_NODE_TYPE_ALIAS = Symbol.for('yaml.alias');
@@ -216,6 +217,11 @@ export function assertWildcardsPath(name: string)
 export function convertWildcardsNameToPaths(name: string)
 {
 	return name.split('/');
+}
+
+export function convertWildcardsPathsToName(paths: IVisitPathsListReadonly)
+{
+	return paths.join('/');
 }
 
 export function isWildcardsPathSyntx(path: string): path is `__${string}__`

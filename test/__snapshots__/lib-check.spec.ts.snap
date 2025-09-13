@@ -2,136 +2,138 @@
 
 exports[`checkAllSelfLinkWildcardsExists forward slashes / in keys "cmfy/eye_color_any" 1`] = `
 {
-  "errors": [
-    [RangeError: Invalid Paths. paths: [cmfy,eye_color_classic], _cache : {"paths":["cmfy","eye_color_classic"],"findOpts":{"onlyFirstMatchAll":true,"throwWhenNotFound":true},"prefix":[],"globOpts":{}}],
-    [RangeError: Invalid Paths. paths: [cmfy,eye_color_stylized], _cache : {"paths":["cmfy","eye_color_stylized"],"findOpts":{"onlyFirstMatchAll":true,"throwWhenNotFound":true},"prefix":[],"globOpts":{}}],
-    [RangeError: Invalid Paths. paths: [cmfy,eye_color_fantasy], _cache : {"paths":["cmfy","eye_color_fantasy"],"findOpts":{"onlyFirstMatchAll":true,"throwWhenNotFound":true},"prefix":[],"globOpts":{}}],
-  ],
-  "ignoreList": [],
-  "listHasExists": [],
-  "listHasExistsWildcards": [],
-  "obj": {
-    "cmfy/eye_color_any": [
-      "__cmfy/eye_color_classic__",
-      "__cmfy/eye_color_stylized__",
-      "__cmfy/eye_color_fantasy__",
-    ],
-    "cmfy/eye_color_classic": [
-      1,
-    ],
-    "cmfy/eye_color_fantasy": [
-      3,
-    ],
-    "cmfy/eye_color_stylized": [
-      2,
-    ],
-  },
-}
-`;
-
-exports[`checkAllSelfLinkWildcardsExists forward slashes / in keys "cmfy/eye_color_any" 2`] = `
-""cmfy/eye_color_classic":
-  - 1
-"cmfy/eye_color_stylized":
-  - 2
-"cmfy/eye_color_fantasy":
-  - 3
-
-"cmfy/eye_color_any":
-  - __cmfy/eye_color_classic__
-  - __cmfy/eye_color_stylized__
-  - __cmfy/eye_color_fantasy__
-"
-`;
-
-exports[`checkAllSelfLinkWildcardsExists forward slashes / in keys cmfy/eye_color_any 1`] = `
-{
-  "errors": [
-    [RangeError: Invalid Paths. paths: [cmfy,eye_color_classic], _cache : {"paths":["cmfy","eye_color_classic"],"findOpts":{"onlyFirstMatchAll":true,"throwWhenNotFound":true},"prefix":[],"globOpts":{}}],
-    [RangeError: Invalid Paths. paths: [cmfy,eye_color_stylized], _cache : {"paths":["cmfy","eye_color_stylized"],"findOpts":{"onlyFirstMatchAll":true,"throwWhenNotFound":true},"prefix":[],"globOpts":{}}],
-    [RangeError: Invalid Paths. paths: [cmfy,eye_color_fantasy], _cache : {"paths":["cmfy","eye_color_fantasy"],"findOpts":{"onlyFirstMatchAll":true,"throwWhenNotFound":true},"prefix":[],"globOpts":{}}],
-  ],
-  "ignoreList": [],
-  "listHasExists": [],
-  "listHasExistsWildcards": [],
-  "obj": {
-    "cmfy/eye_color_any": [
-      "__cmfy/eye_color_classic__",
-      "__cmfy/eye_color_stylized__",
-      "__cmfy/eye_color_fantasy__",
-    ],
-    "cmfy/eye_color_classic": [
-      11,
-    ],
-    "cmfy/eye_color_fantasy": [
-      3,
-    ],
-    "cmfy/eye_color_stylized": [
-      2,
-    ],
-  },
-}
-`;
-
-exports[`checkAllSelfLinkWildcardsExists forward slashes / in keys cmfy/eye_color_any 2`] = `
-""cmfy/eye_color_classic":
-  - 11
-"cmfy/eye_color_stylized":
-  - 2
-"cmfy/eye_color_fantasy":
-  - 3
-
-"cmfy/eye_color_any":
-  - __cmfy/eye_color_classic__
-  - __cmfy/eye_color_stylized__
-  - __cmfy/eye_color_fantasy__
-"
-`;
-
-exports[`checkAllSelfLinkWildcardsExists forward slashes / in keys cmfy:eye_color_any 1`] = `
-{
-  "errors": [
-    [RangeError: Invalid Paths. paths: [cmfy,eye_color_classic], _cache : {"paths":["cmfy","eye_color_classic"],"findOpts":{"onlyFirstMatchAll":true,"throwWhenNotFound":true},"prefix":[],"globOpts":{}}],
-    [RangeError: Invalid Paths. paths: [cmfy,eye_color_stylized], _cache : {"paths":["cmfy","eye_color_stylized"],"findOpts":{"onlyFirstMatchAll":true,"throwWhenNotFound":true},"prefix":[],"globOpts":{}}],
-  ],
+  "errors": [],
   "ignoreList": [],
   "listHasExists": [
+    "cmfy/eye_color_classic",
+    "cmfy/eye_color_stylized",
     "cmfy/eye_color_fantasy",
   ],
   "listHasExistsWildcards": [],
   "obj": {
     "cmfy": {
+      "eye_color_any": [
+        "__cmfy/eye_color_classic__",
+        "__cmfy/eye_color_stylized__",
+        "__cmfy/eye_color_fantasy__",
+      ],
+      "eye_color_classic": [
+        1,
+      ],
       "eye_color_fantasy": [
         3,
       ],
+      "eye_color_stylized": [
+        2,
+      ],
     },
-    "cmfy/eye_color_any": [
-      "__cmfy/eye_color_classic__",
-      "__cmfy/eye_color_stylized__",
-      "__cmfy/eye_color_fantasy__",
-    ],
-    "cmfy/eye_color_classic": [
-      1,
-    ],
-    "cmfy/eye_color_stylized": [
-      2,
-    ],
+  },
+}
+`;
+
+exports[`checkAllSelfLinkWildcardsExists forward slashes / in keys "cmfy/eye_color_any" 2`] = `
+"cmfy:
+  eye_color_classic:
+    - 1
+  eye_color_stylized:
+    - 2
+  eye_color_fantasy:
+    - 3
+  eye_color_any:
+    - __cmfy/eye_color_classic__
+    - __cmfy/eye_color_stylized__
+    - __cmfy/eye_color_fantasy__
+"
+`;
+
+exports[`checkAllSelfLinkWildcardsExists forward slashes / in keys cmfy/eye_color_any 1`] = `
+{
+  "errors": [],
+  "ignoreList": [],
+  "listHasExists": [
+    "cmfy/eye_color_classic",
+    "cmfy/eye_color_stylized",
+    "cmfy/eye_color_fantasy",
+  ],
+  "listHasExistsWildcards": [],
+  "obj": {
+    "cmfy": {
+      "eye_color_any": [
+        "__cmfy/eye_color_classic__",
+        "__cmfy/eye_color_stylized__",
+        "__cmfy/eye_color_fantasy__",
+      ],
+      "eye_color_classic": [
+        11,
+      ],
+      "eye_color_fantasy": [
+        3,
+      ],
+      "eye_color_stylized": [
+        2,
+      ],
+    },
+  },
+}
+`;
+
+exports[`checkAllSelfLinkWildcardsExists forward slashes / in keys cmfy/eye_color_any 2`] = `
+"cmfy:
+  eye_color_classic:
+    - 11
+  eye_color_stylized:
+    - 2
+  eye_color_fantasy:
+    - 3
+  eye_color_any:
+    - __cmfy/eye_color_classic__
+    - __cmfy/eye_color_stylized__
+    - __cmfy/eye_color_fantasy__
+"
+`;
+
+exports[`checkAllSelfLinkWildcardsExists forward slashes / in keys cmfy:eye_color_any 1`] = `
+{
+  "errors": [],
+  "ignoreList": [],
+  "listHasExists": [
+    "cmfy/eye_color_classic",
+    "cmfy/eye_color_stylized",
+    "cmfy/eye_color_fantasy",
+  ],
+  "listHasExistsWildcards": [],
+  "obj": {
+    "cmfy": {
+      "eye_color_any": [
+        "__cmfy/eye_color_classic__",
+        "__cmfy/eye_color_stylized__",
+        "__cmfy/eye_color_fantasy__",
+      ],
+      "eye_color_classic": [
+        1,
+      ],
+      "eye_color_fantasy": [
+        3,
+      ],
+      "eye_color_stylized": [
+        2,
+      ],
+    },
   },
 }
 `;
 
 exports[`checkAllSelfLinkWildcardsExists forward slashes / in keys cmfy:eye_color_any 2`] = `
-""cmfy/eye_color_classic":
-  - 1
-"cmfy/eye_color_stylized":
-  - 2
-cmfy:
+"cmfy:
   eye_color_fantasy:
     - 3
-
-"cmfy/eye_color_any":
-  - __cmfy/eye_color_classic__
-  - __cmfy/eye_color_stylized__
-  - __cmfy/eye_color_fantasy__
+  eye_color_classic:
+    - 1
+  eye_color_stylized:
+    - 2
+  eye_color_any:
+    - __cmfy/eye_color_classic__
+    - __cmfy/eye_color_stylized__
+    - __cmfy/eye_color_fantasy__
 "
 `;
