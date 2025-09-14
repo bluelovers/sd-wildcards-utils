@@ -9,9 +9,11 @@ import {
 	IWildcardsYAMLPairValue,
 	IWildcardsYAMLSeq,
 } from './types';
-import { deepFindSingleRootAt } from './items';
+import { deepFindSingleRootAt } from './node-items';
 import { AggregateErrorExtra } from 'lazy-aggregate-error';
 import { getNodeType, isSameNodeType } from './util';
+import { _copyMergeNodeCore, nodeHasComment } from './node';
+import { nodeGetInPair } from './node-find';
 
 export function mergeWildcardsYAMLDocumentRoots<T extends Pick<Document<YAMLMap>, 'contents'>>(ls: [T, ...any[]])
 {
@@ -33,7 +35,9 @@ export function _mergeWildcardsYAMLDocumentRootsCore<T extends Pick<Document<YAM
  * 	deepmerge: deepmergeAll,
  * })
  */
-export function mergeWildcardsYAMLDocumentJsonBy<T extends Document | unknown, R = IRecordWildcards>(ls: T[], opts: IOptionsMergeWilcardsYAMLDocumentJsonBy): R
+export function mergeWildcardsYAMLDocumentJsonBy<T extends Document | unknown, R = IRecordWildcards>(ls: T[],
+	opts: IOptionsMergeWilcardsYAMLDocumentJsonBy,
+): R
 {
 	return opts.deepmerge(ls.map(_toJSON)) as any
 }
@@ -68,7 +72,9 @@ export function mergeSeq<T extends YAMLSeq | IWildcardsYAMLSeq>(a: T, b: NoInfer
  * @throws {TypeError} - If the current node is not a YAMLMap.
  * @throws {TypeError} - If the current node does not support deep merge.
  */
-export function mergeFindSingleRoots<T extends IWildcardsYAMLMapRoot | IWildcardsYAMLDocument>(doc: T, list: NoInfer<T>[] | NoInfer<T>): T
+export function mergeFindSingleRoots<T extends IWildcardsYAMLMapRoot | IWildcardsYAMLDocument>(doc: T,
+	list: NoInfer<T>[] | NoInfer<T>,
+): T
 {
 	if (!isDocument(doc) && !isMap(doc))
 	{
@@ -84,7 +90,10 @@ export function mergeFindSingleRoots<T extends IWildcardsYAMLMapRoot | IWildcard
 
 		if (result)
 		{
-			let current = doc.getIn(paths) as IWildcardsYAMLMapRoot;
+			const currentPair = nodeGetInPair(doc, paths);
+
+			// let current = doc.getIn(paths) as IWildcardsYAMLMapRoot;
+			const current = currentPair?.value as IWildcardsYAMLMapRoot;
 
 			if (current)
 			{
@@ -93,9 +102,17 @@ export function mergeFindSingleRoots<T extends IWildcardsYAMLMapRoot | IWildcard
 					throw new TypeError(`Only YAMLMap can be merged [1]. path: ${paths}, type: ${getNodeType(current)} node: ${current}`)
 				}
 
+				if (nodeHasComment(result.parent))
+				{
+					_copyMergeNodeCore(currentPair.key, result.parent, {
+						merge: true,
+					});
+				}
+
 				result.value.items
 					// @ts-ignore
-					.forEach((p: IWildcardsYAMLPair) => {
+					.forEach((p: IWildcardsYAMLPair) =>
+					{
 						const key = p.key.value;
 						const sub: IWildcardsYAMLPairValue = current.get(key);
 

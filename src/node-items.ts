@@ -14,11 +14,11 @@ import {
 	IWildcardsYAMLSeq,
 } from './types';
 import { formatPrompts } from './format';
-import { isWildcardsYAMLDocument, isWildcardsYAMLMap } from './is';
+import { isWildcardsYAMLDocument, isWildcardsYAMLMap } from './node-is';
 import { _nearString, isUnsafePlainString } from './valid';
 import { RE_UNSAFE_QUOTE, RE_UNSAFE_VALUE } from './const';
 import { _checkValue } from './valid-prompts';
-import { findUpParentNodesNames } from './find';
+import { findUpParentNodesNames } from './node-find';
 import { copyMergeScalar } from './node';
 
 export function visitWildcardsYAML(node: Node | Document | null, visitorOptions: IOptionsVisitor)
@@ -107,6 +107,7 @@ export function deepFindSingleRootAt(node: ParsedNode | Document.Parsed | IWildc
 			key,
 			value,
 			parent: node as IWildcardsYAMLMapRoot,
+			child,
 		} as const satisfies IResultDeepFindSingleRootAt)
 
 	}
@@ -124,6 +125,7 @@ export function deepFindSingleRootAt(node: ParsedNode | Document.Parsed | IWildc
 			key: void 0,
 			value,
 			parent: node as IWildcardsYAMLDocument,
+			child: void 0,
 		} as const satisfies IResultDeepFindSingleRootAt)
 	}
 

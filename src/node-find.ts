@@ -8,11 +8,13 @@ import {
 	IVisitPathsListReadonly,
 	IVisitPathsNodeList,
 	IWildcardsYAMLDocument,
-	IWildcardsYAMLPair,
+	IWildcardsYAMLPair, IYAMLCollectionNode,
 } from './types';
-import { Document, isDocument, isPair, isSeq } from 'yaml';
+import { Document, isDocument, isPair, isSeq, YAMLMap } from 'yaml';
 import { PicomatchOptions } from 'picomatch';
 import { convertWildcardsPathsToName } from './util';
+import { findPair } from 'yaml/util';
+import { nodeGetItems } from './node';
 
 export function pathsToWildcardsPath(paths: IVisitPathsListReadonly, full?: boolean)
 {
@@ -183,4 +185,25 @@ export function findUpParentNodesNames(nodeList: IVisitPathsNodeList)
 	}
 
 	return _cache;
+}
+
+export function _nodeGetInPairCore(node: IYAMLCollectionNode, key: unknown)
+{
+	const items = nodeGetItems(node);
+
+	return items && findPair(items, key) as IWildcardsYAMLPair
+}
+
+export function nodeGetInPair(node: IYAMLCollectionNode, paths: readonly unknown[])
+{
+	if (paths.length === 1)
+	{
+		return _nodeGetInPairCore(node, paths[0])
+	}
+	else if (paths.length > 0)
+	{
+		const parent = node.getIn(paths.slice(0, -1)) as YAMLMap;
+
+		return _nodeGetInPairCore(parent, paths[paths.length - 1])
+	}
 }

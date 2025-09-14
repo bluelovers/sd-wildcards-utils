@@ -6,7 +6,11 @@
 import { join, relative } from 'upath2';
 import { _checkSettings } from './script/lib/settings';
 import { readFileSync, outputFileSync } from 'fs-extra';
-import parseWildcardsYaml, { checkAllSelfLinkWildcardsExists, stringifyWildcardsYamlData } from '../src/index';
+import parseWildcardsYaml, {
+	checkAllSelfLinkWildcardsExists,
+	defaultOptionsStringifyMinify,
+	stringifyWildcardsYamlData,
+} from '../src/index';
 import { __ROOT, __ROOT_TEST_OUTPUT } from './__root';
 import { expectToHavePropertyWithEmptyArray } from './script/lib/util-jest';
 
@@ -39,7 +43,10 @@ describe(`ci-check-each`, () =>
 
 				expectToHavePropertyWithEmptyArray(actual, 'errors');
 
-				let output = stringifyWildcardsYamlData(yaml);
+				let output = stringifyWildcardsYamlData(yaml, {
+					//...defaultOptionsStringifyMinify(),
+					minifyPrompts: false,
+				});
 
 				outputFileSync(join(__ROOT_TEST_OUTPUT, _file), output);
 

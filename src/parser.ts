@@ -1,7 +1,8 @@
 import { IRecordWildcards, IWildcardsYAMLDocument } from './types';
 import { Document, isMap, isScalar, Pair, Scalar, YAMLMap, YAMLSeq } from 'yaml';
 import { convertWildcardsNameToPaths } from './util';
-import { copyMergeScalar, isWildcardsYAMLPair } from './node';
+import { copyMergeScalar } from './node';
+import { isWildcardsYAMLPair } from './node-is';
 
 /**
  * Expands keys in a YAML document that contain forward slashes ('/') into nested YAML maps.
