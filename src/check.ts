@@ -13,10 +13,8 @@ import {
 	convertWildcardsNameToPaths,
 	matchDynamicPromptsWildcardsAll,
 } from './util';
-import {
-	findPath
-} from './node-find';
 import picomatch, { Matcher } from 'picomatch';
+import { findPath } from './prompts/prompts';
 
 /**
  * Checks if all self-link wildcards exist in a given object.

@@ -23,9 +23,9 @@ import { deepmergeAll } from 'deepmerge-plus';
 import Bluebird from 'bluebird';
 import { parseDocument, YAMLMap } from 'yaml';
 import { groupSplitConfig, groupSplitFiles } from './split-config';
-import { findPath, pathsToWildcardsPath } from '../../../src/node-find';
 import { IFindPathEntry, IRecordWildcards } from '../../../src/types';
 import { consoleLogger } from 'debug-color2/logger';
+import { findPath, pathsToWildcardsPath } from '../../../src/prompts/prompts';
 
 const _splitSpecific2 = escapeSplit({ delimiter: '/', escaper: '\\' });
 

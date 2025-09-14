@@ -1,6 +1,6 @@
-import { ICheckErrorResult } from './types';
+import { ICheckErrorResult } from '../types';
 import { Extractor, IExtractionError, IExtractionResult, infoNearExtractionError } from '@bluelovers/extract-brackets';
-import { _nearString } from './valid';
+import { _nearString } from '../valid';
 
 let _extractor: Extractor;
 let _extractor2: Extractor;

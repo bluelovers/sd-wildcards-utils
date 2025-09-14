@@ -1,4 +1,4 @@
-import { IOptionsSharedWildcardsYaml } from './types';
+import { IOptionsSharedWildcardsYaml } from '../types';
 import { Extractor } from '@bluelovers/extract-brackets';
 
 let ExtractParents: Extractor;
@@ -65,7 +65,7 @@ export function trimPromptsDynamic(value: string)
 
 				let pre = value.slice(i, eb.index[0]);
 
-				if (_do) 
+				if (_do)
 				{
 					pre = pre.replace(/^[\s\r\n]+/g, '');
 				}

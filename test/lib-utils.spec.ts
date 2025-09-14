@@ -5,8 +5,8 @@
 
 import { isWildcardsName, matchDynamicPromptsWildcards, matchDynamicPromptsWildcardsAll } from '../src/util';
 import parseWildcardsYaml, { getOptionsFromDocument } from '../src/index';
-import { trimPromptsDynamic } from '../src/format';
-import { _checkValue } from '../src/valid-prompts';
+import { trimPromptsDynamic } from '../src/prompts/format';
+import { _checkValue } from '../src/prompts/valid-prompts';
 
 beforeAll(async () =>
 {
