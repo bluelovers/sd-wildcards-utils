@@ -20,8 +20,7 @@ export function mergeWildcardsYAMLDocumentRoots<T extends Pick<Document<YAMLMap>
 
 export function _mergeWildcardsYAMLDocumentRootsCore<T extends Pick<Document<YAMLMap>, 'contents'>>(a: T, b: any)
 {
-	// @ts-ignore
-	a.contents.items.push(...b.contents.items);
+	(a.contents as YAMLMap).items.push(...b.contents.items);
 
 	return a
 }
