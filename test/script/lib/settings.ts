@@ -41,7 +41,7 @@ export function _checkSettings()
 		//'c*fy*/**',
 
 		'cof-basemodel/**',
-		'beloved-otokonoko-sex/**',
+//		'beloved-otokonoko-sex/**',
 		//'mid2000s/**',
 
 		'styles-drawing/**',

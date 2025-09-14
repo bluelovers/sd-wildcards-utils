@@ -19,7 +19,7 @@ import {
 	IWildcardsYAMLDocumentParsed,
 	IWildcardsYAMLMapRoot,
 } from './types';
-import { _expandForwardSlashKeys } from './parse';
+import { _expandForwardSlashKeys } from './parser';
 
 export * from './util';
 export * from './options';

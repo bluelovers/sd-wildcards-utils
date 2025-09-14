@@ -1,6 +1,7 @@
 import { IRecordWildcards, IWildcardsYAMLDocument } from './types';
-import { Document, isMap, isPair, isScalar, Pair, YAMLMap, YAMLSeq } from 'yaml';
+import { Document, isMap, isScalar, Pair, Scalar, YAMLMap, YAMLSeq } from 'yaml';
 import { convertWildcardsNameToPaths } from './util';
+import { copyMergeScalar, isWildcardsYAMLPair } from './node';
 
 /**
  * Expands keys in a YAML document that contain forward slashes ('/') into nested YAML maps.
@@ -21,10 +22,10 @@ export function _expandForwardSlashKeys<T extends IRecordWildcards | IWildcardsY
 
 	for (const pair of items)
 	{
-		if (!isPair(pair)) continue;
-		const k = pair.key;
-		if (!isScalar(k)) continue;
-		const key = String(k.value ?? '');
+		if (!isWildcardsYAMLPair(pair)) continue;
+		if (!isScalar(pair.key)) continue;
+
+		const key = String(pair.key.value ?? '');
 		if (!key.includes('/')) continue;
 		const segs = convertWildcardsNameToPaths(key).filter(s => s.length);
 		if (!segs.length) continue;
@@ -71,6 +72,7 @@ export function _expandForwardSlashKeys<T extends IRecordWildcards | IWildcardsY
 		}
 
 		const leafKey = segs[segs.length - 1];
+
 		let existing = parent.items.find(p =>
 		{
 			const key = isScalar(p.key) ? String(p.key.value) : String(p.key as any);
@@ -79,7 +81,16 @@ export function _expandForwardSlashKeys<T extends IRecordWildcards | IWildcardsY
 
 		if (!existing)
 		{
-			parent.add({ key: leafKey, value: pair.value } as any);
+			// create a new Pair so we can attach comments onto its key
+			const newPairKey = new Scalar(leafKey);
+
+			copyMergeScalar(newPairKey, pair.key, {
+				merge: true,
+			});
+
+			const newPair = new Pair(newPairKey, pair.value);
+
+			parent.add(newPair as any);
 		}
 		else
 		{
@@ -87,6 +98,13 @@ export function _expandForwardSlashKeys<T extends IRecordWildcards | IWildcardsY
 			if (existing.value && pair.value && existing.value instanceof YAMLSeq && pair.value instanceof YAMLSeq)
 			{
 				(existing.value as YAMLSeq).items.push(...(pair.value as YAMLSeq).items);
+			}
+			// If there was a comment on the original key, and the existing key lacks one, preserve it
+			if (isScalar(existing.key))
+			{
+				copyMergeScalar(existing.key, pair.key, {
+					merge: true,
+				});
 			}
 		}
 	}
