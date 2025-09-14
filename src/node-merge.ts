@@ -12,7 +12,7 @@ import {
 import { deepFindSingleRootAt } from './node-items';
 import { AggregateErrorExtra } from 'lazy-aggregate-error';
 import { getNodeType, isSameNodeType } from './util';
-import { _copyMergeNodeCore, nodeHasComment } from './node';
+import { _copyMergeNodeCore, _copyMergePairCore, nodeHasComment } from './node';
 import { nodeGetInPair } from './node-find';
 
 export function mergeWildcardsYAMLDocumentRoots<T extends Pick<Document<YAMLMap>, 'contents'>>(ls: [T, ...any[]])
@@ -114,16 +114,26 @@ export function mergeFindSingleRoots<T extends IWildcardsYAMLMapRoot | IWildcard
 					.forEach((p: IWildcardsYAMLPair) =>
 					{
 						const key = p.key.value;
-						const sub: IWildcardsYAMLPairValue = current.get(key);
+
+						const subPair = nodeGetInPair(current, [key]);
+						// const sub: IWildcardsYAMLPairValue = current.get(key);
+						const sub: IWildcardsYAMLPairValue = subPair?.value;
 
 						if (sub)
 						{
 							if (isSeq(sub) && isSeq(p.value))
 							{
+								_copyMergePairCore(subPair, p, {
+									merge: true,
+								});
 								_mergeSeqCore(sub, p.value)
 							}
 							else if (isMap(sub) && isMap(p.value))
 							{
+								_copyMergePairCore(subPair, p, {
+									merge: true,
+								});
+
 								const errKeys: string[] = [];
 								const errors: Error[] = []
 								for (const pair of p.value.items)
@@ -132,10 +142,15 @@ export function mergeFindSingleRoots<T extends IWildcardsYAMLMapRoot | IWildcard
 									{
 										if (isSeq(pair.value))
 										{
-											let sub2 = sub.get(pair.key);
+											const sub2Pair = nodeGetInPair(sub, [pair.key]);
+											// let sub2 = sub.get(pair.key);
+											const sub2 = sub2Pair?.value;
 
 											if (isSeq(sub2))
 											{
+												_copyMergePairCore(sub2Pair, pair, {
+													merge: true,
+												});
 												_mergeSeqCore(sub2, pair.value);
 												continue;
 											}

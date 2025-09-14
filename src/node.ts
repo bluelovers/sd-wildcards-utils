@@ -24,14 +24,14 @@ export interface INodeCopyMergeOptions
  */
 export function _nodeCopyMergeCommentCore(node: IYAMLNodeBaseLike, nodeOld: IYAMLNodeBaseLike, key: 'commentBefore' | 'comment', opts: INodeCopyMergeOptions)
 {
-	const oldValue = nodeOld[key];
-	const curValue = node[key];
+	const oldValue = nodeOld[key]?.replace(/[\s\r\n]+$/, '');
+	const curValue = node[key]?.replace(/[\s\r\n]+$/, '');
 
 	if (oldValue !== curValue)
 	{
 		if (opts.merge && curValue?.length)
 		{
-			node[key] = (opts.merge as number) > 1 ? `${oldValue}\n\n${curValue}` : `${curValue}\n\n${oldValue}`
+			node[key] = (opts.merge as number) > 1 ? `${oldValue}\n \n${curValue}` : `${curValue}\n \n${oldValue}`
 		}
 		else if (opts.overwrite || opts.merge && oldValue?.length)
 		{
@@ -53,6 +53,15 @@ export function _copyMergeNodeCore<T extends IYAMLNodeBaseLike, R extends IYAMLN
 {
 	_nodeCopyMergeCommentCore(node, nodeOld, 'commentBefore', opts);
 	_nodeCopyMergeCommentCore(node, nodeOld, 'comment', opts);
+}
+
+export function _copyMergePairCore<T extends IWildcardsYAMLPair>(node: T,
+	nodeFrom: T,
+	opts: INodeCopyMergeOptions
+)
+{
+	nodeHasComment(nodeFrom.key) && _copyMergeNodeCore(node.key, nodeFrom.key, opts);
+	nodeHasComment(nodeFrom.value) && _copyMergeNodeCore(node.value, nodeFrom.value, opts);
 }
 
 export function copyMergeScalar<T extends IWildcardsYAMLScalar | Scalar>(node: T, nodeOld: unknown, opts?: INodeCopyMergeOptions)
