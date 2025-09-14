@@ -1,12 +1,13 @@
-import { __ROOT, __ROOT_DATA } from '../../__root';
+import { __ROOT, __ROOT_DATA, __ROOT_TEST_OUTPUT } from '../../__root';
 import { globAbsolute } from '../lib/util';
 import { globSync } from 'fs';
 // @ts-ignore
 import Bluebird from 'bluebird';
 // @ts-ignore
-import { copy, exists } from 'fs-extra';
+import { copy, exists, readJSON, writeJSON, readFile } from 'fs-extra';
 import { join, extname } from 'upath2';
 import { consoleLogger } from 'debug-color2/logger';
+import { createHash } from 'crypto';
 
 export default (async () => {
 
@@ -19,6 +20,10 @@ export default (async () => {
 
 	if (bool)
 	{
+		const hash_file = join(__ROOT_TEST_OUTPUT, 'hash-sync.json');
+
+		const hashJson: Record<string, string> = await readJSON(hash_file).catch(e => ({}));
+
 		await Bluebird.each(globSync([
 			'Vision/**/*.{yaml,txt}',
 			'user-*/**/*.{yaml,txt}',
@@ -31,9 +36,14 @@ export default (async () => {
 			const src_file = join(__SRC_DIR, file);
 			const out_file = join(__OUT_DIR, file);
 
-			if (!await exists(out_file))
+			const buf = await readFile(src_file);
+
+			// compute a fixed-length hash (sha256) for the file content
+			const hash = createHash('sha256').update(buf).digest('hex');
+
+			if (hashJson[file] !== hash || !await exists(out_file))
 			{
-				let skip = (extname(file) === '.txt' && await exists(src_file + '.yaml')) || await exists(src_file + '.disable');
+				let skip = hashJson[file] === hash || (extname(file) === '.txt' && await exists(src_file + '.yaml')) || await exists(src_file + '.disable');
 
 				if (skip)
 				{
@@ -42,14 +52,18 @@ export default (async () => {
 				else
 				{
 					consoleLogger.yellow.debug(`copy`, file);
-					return copy(src_file, out_file, {
+					await copy(src_file, out_file, {
 						preserveTimestamps: true,
 						// dereference: true,
-					})
+					});
 				}
+
+				hashJson[file] = hash;
 			}
 
-		})
+		});
+
+		await writeJSON(hash_file, hashJson, { spaces: 2 });
 	}
 
 })().catch(e => {

@@ -15,14 +15,14 @@ import {
 	YAMLMap,
 	YAMLSeq,
 } from 'yaml';
-import { Glob,PicomatchOptions } from 'picomatch';
+import { Glob, PicomatchOptions } from 'picomatch';
 import {
 	SYMBOL_YAML_NODE_TYPE_ALIAS,
 	SYMBOL_YAML_NODE_TYPE_DOC,
 	SYMBOL_YAML_NODE_TYPE_MAP,
 	SYMBOL_YAML_NODE_TYPE_PAIR,
 	SYMBOL_YAML_NODE_TYPE_SCALAR,
-	SYMBOL_YAML_NODE_TYPE_SEQ
+	SYMBOL_YAML_NODE_TYPE_SEQ,
 } from './util';
 
 export type IOmitParsedNodeContents<T extends Node | Document, P extends ParsedNode | Document.Parsed> =
@@ -87,7 +87,7 @@ export interface IWildcardsYAMLDocument<Contents extends YAMLMap = IWildcardsYAM
 export type IVisitPathsNode = Document | Node | Pair | IWildcardsYAMLPair
 
 export type IVisitPathsNodeList = readonly
-IVisitPathsNode[];
+	IVisitPathsNode[];
 
 export type IWildcardsYAMLDocumentParsed<Contents extends YAMLMap = IWildcardsYAMLMapRoot, Strict extends boolean = true> =
 	IWildcardsYAMLDocument<Contents, Strict>
@@ -136,17 +136,19 @@ export type IResultDeepFindSingleRootAt = {
 	paths: readonly string[],
 	key: string,
 	value: IWildcardsYAMLSeq | IWildcardsYAMLMapRoot,
-	parent: IWildcardsYAMLMapRoot
+	parent: IWildcardsYAMLMapRoot,
+	child: IWildcardsYAMLPair,
 } | {
 	paths: readonly string[] & {
 		length: 0
 	},
 	key: void,
 	value: IWildcardsYAMLMapRoot,
-	parent: IWildcardsYAMLDocument
+	parent: IWildcardsYAMLDocument,
+	child: void,
 }
 
-export type IVisitPathsList = (string|number)[]
+export type IVisitPathsList = (string | number)[]
 export type IVisitPathsListReadonly = readonly (string | number)[]
 
 export interface IOptionsFind
@@ -230,7 +232,13 @@ export interface IOptionsCheckAllSelfLinkWildcardsExists extends Pick<IOptionsFi
 
 export type IParseWildcardsYamlInputSource = string | Uint8Array
 
-export type IYamlNodeTypeSymbol = typeof SYMBOL_YAML_NODE_TYPE_ALIAS | typeof SYMBOL_YAML_NODE_TYPE_DOC | typeof SYMBOL_YAML_NODE_TYPE_MAP | typeof SYMBOL_YAML_NODE_TYPE_PAIR | typeof SYMBOL_YAML_NODE_TYPE_SCALAR | typeof SYMBOL_YAML_NODE_TYPE_SEQ
+export type IYamlNodeTypeSymbol =
+	typeof SYMBOL_YAML_NODE_TYPE_ALIAS
+	| typeof SYMBOL_YAML_NODE_TYPE_DOC
+	| typeof SYMBOL_YAML_NODE_TYPE_MAP
+	| typeof SYMBOL_YAML_NODE_TYPE_PAIR
+	| typeof SYMBOL_YAML_NODE_TYPE_SCALAR
+	| typeof SYMBOL_YAML_NODE_TYPE_SEQ
 
 export interface ICheckErrorResult
 {
@@ -240,3 +248,93 @@ export interface ICheckErrorResult
 	near?: string,
 	error: string,
 }
+
+export interface IYAMLNodeBaseLike
+{
+	/** A comment on or immediately after this */
+	comment?: string | null;
+	/** A comment before this */
+	commentBefore?: string | null;
+	/**
+	 * The `[start, value-end, node-end]` character offsets for the part of the
+	 * source parsed into this node (undefined if not parsed). The `value-end`
+	 * and `node-end` positions are themselves not included in their respective
+	 * ranges.
+	 */
+	range?: Scalar["range"];
+	/** A blank line before this node and its commentBefore */
+	spaceBefore?: boolean;
+	/** The CST token that was composed into this node.  */
+	srcToken?: Scalar["srcToken"];
+	/** A fully qualified tag, if required */
+	tag?: string;
+}
+
+export interface ICollectionLike extends IYAMLNodeBaseLike
+{
+	/**
+	 * If true, stringify this and all child nodes using flow rather than
+	 * block styles.
+	 */
+	flow?: boolean;
+
+	/** Adds a value to the collection. */
+	add(value: unknown): void;
+
+	/**
+	 * Removes a value from the collection.
+	 * @returns `true` if the item was found and removed.
+	 */
+	delete(key: unknown): boolean;
+
+	/**
+	 * Returns item at `key`, or `undefined` if not found. By default unwraps
+	 * scalar values from their surrounding node; to disable set `keepScalar` to
+	 * `true` (collections are always returned intact).
+	 */
+	get(key: unknown, keepScalar?: boolean): unknown;
+
+	/**
+	 * Checks if the collection includes a value with the key `key`.
+	 */
+	has(key: unknown): boolean;
+
+	/**
+	 * Sets a value in this collection. For `!!set`, `value` needs to be a
+	 * boolean to add/remove the item from the set.
+	 */
+	set(key: unknown, value: unknown): void;
+
+	/**
+	 * Adds a value to the collection. For `!!map` and `!!omap` the value must
+	 * be a Pair instance or a `{ key, value }` object, which may not have a key
+	 * that already exists in the map.
+	 */
+	addIn(path: Iterable<unknown>, value: unknown): void;
+
+	/**
+	 * Removes a value from the collection.
+	 * @returns `true` if the item was found and removed.
+	 */
+	deleteIn(path: Iterable<unknown>): boolean;
+
+	/**
+	 * Returns item at `key`, or `undefined` if not found. By default unwraps
+	 * scalar values from their surrounding node; to disable set `keepScalar` to
+	 * `true` (collections are always returned intact).
+	 */
+	getIn(path: Iterable<unknown>, keepScalar?: boolean): unknown;
+
+	/**
+	 * Checks if the collection includes a value with the key `key`.
+	 */
+	hasIn(path: Iterable<unknown>): boolean;
+
+	/**
+	 * Sets a value in this collection. For `!!set`, `value` needs to be a
+	 * boolean to add/remove the item from the set.
+	 */
+	setIn(path: Iterable<unknown>, value: unknown): void;
+}
+
+export type IYAMLCollectionNode = ICollectionLike | IWildcardsYAMLMapRoot | IWildcardsYAMLSeq;

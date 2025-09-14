@@ -2,19 +2,16 @@
  * Created by user on 2025/9/14.
  */
 
-import { isPair, isScalar, Scalar } from 'yaml';
-import { IWildcardsYAMLPair, IWildcardsYAMLScalar } from './types';
+import { isDocument, isMap, isSeq, Scalar } from 'yaml';
+import {
+	IWildcardsYAMLDocument,
+	IWildcardsYAMLPair,
+	IWildcardsYAMLScalar,
+	IYAMLCollectionNode,
+	IYAMLNodeBaseLike,
+} from './types';
 import { isUnset } from './util';
-
-export function isWildcardsYAMLPair(node: any): node is IWildcardsYAMLPair
-{
-	return isPair(node)
-}
-
-export function isWildcardsYAMLScalar(node: any): node is IWildcardsYAMLScalar
-{
-	return isScalar(node)
-}
+import { isWildcardsYAMLScalar } from './node-is';
 
 export interface INodeCopyMergeOptions
 {
@@ -25,7 +22,7 @@ export interface INodeCopyMergeOptions
 /**
  * Preserve comments from the original key (if any)
  */
-export function _nodeCopyMergeCommentCore(node: IWildcardsYAMLScalar, nodeOld: IWildcardsYAMLScalar, key: 'commentBefore' | 'comment', opts: INodeCopyMergeOptions)
+export function _nodeCopyMergeCommentCore(node: IYAMLNodeBaseLike, nodeOld: IYAMLNodeBaseLike, key: 'commentBefore' | 'comment', opts: INodeCopyMergeOptions)
 {
 	const oldValue = nodeOld[key];
 	const curValue = node[key];
@@ -47,6 +44,17 @@ export function _nodeCopyMergeCommentCore(node: IWildcardsYAMLScalar, nodeOld: I
 	}
 }
 
+export function nodeHasComment(node: IYAMLNodeBaseLike)
+{
+	return node && (node.commentBefore?.length || node.comment?.length);
+}
+
+export function _copyMergeNodeCore<T extends IYAMLNodeBaseLike, R extends IYAMLNodeBaseLike>(node: T, nodeOld: R, opts: INodeCopyMergeOptions)
+{
+	_nodeCopyMergeCommentCore(node, nodeOld, 'commentBefore', opts);
+	_nodeCopyMergeCommentCore(node, nodeOld, 'comment', opts);
+}
+
 export function copyMergeScalar<T extends IWildcardsYAMLScalar | Scalar>(node: T, nodeOld: unknown, opts?: INodeCopyMergeOptions)
 {
 	if (!isWildcardsYAMLScalar(node) || !isWildcardsYAMLScalar(nodeOld))
@@ -56,13 +64,24 @@ export function copyMergeScalar<T extends IWildcardsYAMLScalar | Scalar>(node: T
 
 	opts ??= {};
 
-	_nodeCopyMergeCommentCore(node, nodeOld, 'commentBefore', opts);
-	_nodeCopyMergeCommentCore(node, nodeOld, 'comment', opts);
+	_copyMergeNodeCore(node, nodeOld, opts);
 
-	if (isUnset(node.spaceBefore) || (opts.overwrite || opts.merge))
+	if (!isUnset(nodeOld.spaceBefore) && (isUnset(node.spaceBefore) || (opts.overwrite || opts.merge)))
 	{
 		node.spaceBefore = nodeOld.spaceBefore
 	}
 
 	node.value ??= nodeOld.value
+}
+
+export function nodeGetItems<T extends IWildcardsYAMLPair>(node: IYAMLCollectionNode): T[]
+{
+	if (isDocument(node))
+	{
+		return (node as IWildcardsYAMLDocument).contents?.items as any[]
+	}
+	else if (isSeq(node) || isMap(node))
+	{
+		return node.items as any[]
+	}
 }

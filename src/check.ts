@@ -15,7 +15,7 @@ import {
 } from './util';
 import {
 	findPath
-} from './find';
+} from './node-find';
 import picomatch, { Matcher } from 'picomatch';
 
 /**

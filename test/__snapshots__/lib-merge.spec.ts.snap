@@ -32,20 +32,26 @@ exports[`merge mergeFindSingleRoots 1`] = `
 `;
 
 exports[`merge mergeFindSingleRoots 2`] = `
-"root:
+"# comment source
+root:
+  # comment source
+  # comment root2
   root2:
     sub1:
       - 123
     "sub1-1":
+      # comment source
       - 123
     sub2:
       "sub2-1":
         - 456
+      # comment source
       "sub2-2":
         - 789
     sub4:
       "sub2-1":
         - 456
+      # comment source
       "sub2-2":
         - 789
 "
@@ -75,15 +81,19 @@ exports[`merge mergeFindSingleRoots: Single Seq 1`] = `
 `;
 
 exports[`merge mergeFindSingleRoots: Single Seq 2`] = `
-"root:
+"# comment source
+root:
+  # comment source
   root2:
     sub1:
       - 123
     "sub1-1":
+      # comment source
       - 123
     sub2:
       "sub2-1":
         - 456
+      # comment source
       "sub2-2":
         - 789
 "
@@ -114,16 +124,20 @@ exports[`merge mergeFindSingleRoots: Single Seq 3`] = `
 `;
 
 exports[`merge mergeFindSingleRoots: Single Seq 4`] = `
-"root:
+"# comment source
+root:
+  # comment source
   root2:
     sub1:
       - 123
       - 123456
     "sub1-1":
+      # comment source
       - 123
     sub2:
       "sub2-1":
         - 456
+      # comment source
       "sub2-2":
         - 789
 "
@@ -155,17 +169,21 @@ exports[`merge mergeFindSingleRoots: deep merge: level 2 1`] = `
 `;
 
 exports[`merge mergeFindSingleRoots: deep merge: level 2 2`] = `
-"root:
+"# comment source
+root:
+  # comment source
   root2:
     sub1:
       - 123
       - 123456
     "sub1-1":
+      # comment source
       - 123
     sub2:
       "sub2-1":
         - 456
         - 456789
+      # comment source
       "sub2-2":
         - 789
 "
@@ -205,17 +223,21 @@ exports[`merge mergeFindSingleRoots: multi merge 1`] = `
 `;
 
 exports[`merge mergeFindSingleRoots: multi merge 2`] = `
-"root:
+"# comment source
+root:
+  # comment source
   root2:
     sub1:
       - 123
       - 123456
     "sub1-1":
+      # comment source
       - 123
       - 123456
     sub2:
       "sub2-1":
         - 456
+      # comment source
       "sub2-2":
         - 789
     sub4:
