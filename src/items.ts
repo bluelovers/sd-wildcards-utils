@@ -19,6 +19,7 @@ import { _nearString, isUnsafePlainString } from './valid';
 import { RE_UNSAFE_QUOTE, RE_UNSAFE_VALUE } from './const';
 import { _checkValue } from './valid-prompts';
 import { findUpParentNodesNames } from './find';
+import { copyMergeScalar } from './node';
 
 export function visitWildcardsYAML(node: Node | Document | null, visitorOptions: IOptionsVisitor)
 {
@@ -45,11 +46,28 @@ export function uniqueSeqItemsChecker(a: Node, b: Node)
 	return defaultCheckerIgnoreCase(a, b)
 }
 
+export function uniqueSeqItemsCheckerWithMerge(a: Node, b: Node)
+{
+	if (isScalar(a) && isScalar(b))
+	{
+		const bool = defaultCheckerIgnoreCase(a.value, b.value);
+
+		if (bool)
+		{
+			copyMergeScalar(a, b, {
+				merge: true,
+			});
+		}
+
+		return bool;
+	}
+	return defaultCheckerIgnoreCase(a, b)
+}
+
 export function uniqueSeqItems<T extends Node>(items: (T | unknown)[])
 {
 	return array_unique_overwrite(items, {
-		// @ts-ignore
-		checker: uniqueSeqItemsChecker,
+		checker: uniqueSeqItemsCheckerWithMerge,
 	}) as T[];
 }
 
