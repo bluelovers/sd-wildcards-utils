@@ -27,11 +27,13 @@ root:
   # comment source
   root2:
     sub1:
+      # comment source
       - 123
     sub1-1:
       # comment source
       - 123
     sub2:
+      # comment source
       sub2-1:
         - 456
       # comment source
@@ -47,6 +49,7 @@ root:
   # comment root2
   root2:
     sub1:
+      # comment root2.sub1
       - 123
     sub4:
       sub2-1:
@@ -110,6 +113,7 @@ root:
     sub1:
       - 123456
     sub2:
+      # comment root2.sub2.sub2-1
       sub2-1:
         - 456789
 `
