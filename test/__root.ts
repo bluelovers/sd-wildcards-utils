@@ -8,6 +8,8 @@ export const __ROOT_OUTPUT = join(__ROOT, 'output');
 
 export const __ROOT_TEST = join(__ROOT, 'test');
 
+export const __ROOT_TEST_OUTPUT = join(__ROOT_TEST, 'output');
+
 export const __ROOT_OUTPUT_WILDCARDS = join(__ROOT_OUTPUT, 'wildcards');
 
 export const __ROOT_TEST_FIXTURES = join(__ROOT_TEST, 'fixtures');

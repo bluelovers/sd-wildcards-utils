@@ -268,3 +268,8 @@ export function isSameNodeType(a: IVisitPathsNode, b: IVisitPathsNode)
 
 	return s && getNodeTypeSymbol(b) === s;
 }
+
+export function isUnset(value: unknown): value is undefined | null
+{
+	return typeof value === 'undefined' || value === null;
+}

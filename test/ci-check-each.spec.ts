@@ -3,11 +3,11 @@
 /// <reference types="node" />
 /// <reference types="expect" />
 
-import { relative } from 'upath2';
+import { join, relative } from 'upath2';
 import { _checkSettings } from './script/lib/settings';
-import { readFileSync } from 'fs-extra';
+import { readFileSync, outputFileSync } from 'fs-extra';
 import parseWildcardsYaml, { checkAllSelfLinkWildcardsExists, stringifyWildcardsYamlData } from '../src/index';
-import { __ROOT } from './__root';
+import { __ROOT, __ROOT_TEST_OUTPUT } from './__root';
 import { expectToHavePropertyWithEmptyArray } from './script/lib/util-jest';
 
 const {
@@ -27,8 +27,9 @@ describe(`ci-check-each`, () =>
 	_CHECK_FILES
 		.forEach((file) =>
 		{
+			const _file = relative(__ROOT, file);
 
-			test(`${relative(__ROOT, file)}`, () =>
+			test(`${_file}`, () =>
 			{
 				const source = readFileSync(file);
 
@@ -38,7 +39,9 @@ describe(`ci-check-each`, () =>
 
 				expectToHavePropertyWithEmptyArray(actual, 'errors');
 
-				stringifyWildcardsYamlData(yaml);
+				let output = stringifyWildcardsYamlData(yaml);
+
+				outputFileSync(join(__ROOT_TEST_OUTPUT, _file), output);
 
 			});
 
