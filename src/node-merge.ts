@@ -13,7 +13,11 @@ import { deepFindSingleRootAt } from './node-items';
 import { AggregateErrorExtra } from 'lazy-aggregate-error';
 import { getNodeType, isSameNodeType } from './util';
 import { _copyMergeNodeCore, _copyMergePairCore, nodeHasComment } from './node';
-import { nodeGetInPair } from './node-find';
+import {
+	nodeGetInPair,
+	// @ts-ignore
+	nodeGetInPairAll,
+} from './node-find';
 import { _fixYAMLMapCommentBefore } from './node/fix';
 
 export function mergeWildcardsYAMLDocumentRoots<T extends Pick<Document<YAMLMap>, 'contents'>>(ls: [T, ...any[]])
@@ -23,6 +27,7 @@ export function mergeWildcardsYAMLDocumentRoots<T extends Pick<Document<YAMLMap>
 
 export function _mergeWildcardsYAMLDocumentRootsCore<T extends Pick<Document<YAMLMap>, 'contents'>>(a: T, b: any)
 {
+	_fixYAMLMapCommentBefore(b.contents);
 	(a.contents as YAMLMap).items.push(...b.contents.items);
 
 	return a
@@ -35,6 +40,8 @@ export function _mergeWildcardsYAMLDocumentRootsCore<T extends Pick<Document<YAM
  * mergeWildcardsYAMLDocumentJsonBy(ls, {
  * 	deepmerge: deepmergeAll,
  * })
+ *
+ * @deprecated only use this when u need it
  */
 export function mergeWildcardsYAMLDocumentJsonBy<T extends Document | unknown, R = IRecordWildcards>(ls: T[],
 	opts: IOptionsMergeWilcardsYAMLDocumentJsonBy,
@@ -102,18 +109,6 @@ export function mergeFindSingleRoots<T extends IWildcardsYAMLMapRoot | IWildcard
 				{
 					throw new TypeError(`Only YAMLMap can be merged [1]. path: ${paths}, type: ${getNodeType(current)} node: ${current}`)
 				}
-
-				/*
-				if (paths.includes('ShinMegamiTensei'))
-				{
-					console.dir({
-						doc: nodeGetInPairAll(doc, paths),
-						root: nodeGetInPairAll(root, paths),
-					}, {
-						depth: 4,
-					});
-				}
-				 */
 
 				_fixYAMLMapCommentBefore(result.value as any);
 				_fixYAMLMapCommentBefore(current);

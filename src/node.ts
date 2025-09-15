@@ -37,7 +37,7 @@ export function _nodeCopyMergeCommentCore(node: IYAMLNodeBaseLike, nodeOld: IYAM
 		{
 			node[key] = oldValue
 		}
-		else
+		else if (!isUnset(oldValue))
 		{
 			node[key] ??= oldValue
 		}
