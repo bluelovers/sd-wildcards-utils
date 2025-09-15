@@ -9,8 +9,8 @@ import {
 	IWildcardsYAMLScalar,
 	IYAMLCollectionNode,
 	IYAMLNodeBaseLike,
-} from './types';
-import { isUnset } from './util';
+} from '../types';
+import { isUnset } from '../util';
 import { isWildcardsYAMLScalar } from './node-is';
 
 export interface INodeCopyMergeOptions

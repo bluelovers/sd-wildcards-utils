@@ -8,17 +8,17 @@ import {
 	IWildcardsYAMLPair,
 	IWildcardsYAMLPairValue,
 	IWildcardsYAMLSeq,
-} from './types';
+} from '../types';
 import { deepFindSingleRootAt } from './node-items';
 import { AggregateErrorExtra } from 'lazy-aggregate-error';
-import { getNodeType, isSameNodeType } from './util';
+import { getNodeType, isSameNodeType } from '../util';
 import { _copyMergeNodeCore, _copyMergePairCore, nodeHasComment } from './node';
 import {
 	nodeGetInPair,
 	// @ts-ignore
 	nodeGetInPairAll,
 } from './node-find';
-import { _fixYAMLMapCommentBefore } from './node/fix';
+import { _fixYAMLMapCommentBefore } from './fix';
 
 export function mergeWildcardsYAMLDocumentRoots<T extends Pick<Document<YAMLMap>, 'contents'>>(ls: [T, ...any[]])
 {

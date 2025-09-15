@@ -7,7 +7,7 @@ import {
 	defaultOptionsStringify,
 	getOptionsFromDocument,
 } from './options';
-import { _visitNormalizeScalar, visitWildcardsYAML } from './node-items';
+import { _visitNormalizeScalar, visitWildcardsYAML } from './node/node-items';
 import { createDefaultVisitWildcardsYAMLOptions, validWildcardsYamlData } from './valid';
 import {
 	IOptionsParseDocument,
@@ -23,15 +23,15 @@ import { _expandForwardSlashKeys } from './parser';
 
 export * from './util';
 export * from './options';
-export * from './node-items';
+export * from './node/node-items';
 export * from './valid';
 export * from './prompts/valid-prompts';
-export * from './node-merge';
-export * from './node-find';
+export * from './node/node-merge';
+export * from './node/node-find';
 export * from './prompts/format';
 export * from './prompts/prompts';
 export * from './check';
-export * from './node-is';
+export * from './node/node-is';
 export type * from './types';
 
 /**

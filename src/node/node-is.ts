@@ -5,7 +5,7 @@ import {
 	IWildcardsYAMLPair,
 	IWildcardsYAMLPairValue,
 	IWildcardsYAMLScalar,
-} from './types';
+} from '../types';
 
 export function isWildcardsYAMLDocument<T extends IWildcardsYAMLMapRoot>(node: IWildcardsYAMLDocument<T, true> | Document<T, true>): node is IWildcardsYAMLDocument<T, true>
 export function isWildcardsYAMLDocument<T extends IWildcardsYAMLDocument | Document>(doc: any): doc is IWildcardsYAMLDocument
