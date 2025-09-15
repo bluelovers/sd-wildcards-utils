@@ -12,12 +12,12 @@ import {
 	IWildcardsYAMLPair,
 	IWildcardsYAMLScalar,
 	IWildcardsYAMLSeq,
-} from './types';
-import { formatPrompts } from './prompts/format';
+} from '../types';
+import { formatPrompts } from '../prompts/format';
 import { isWildcardsYAMLDocument, isWildcardsYAMLMap } from './node-is';
-import { _nearString, isUnsafePlainString } from './valid';
-import { RE_UNSAFE_QUOTE, RE_UNSAFE_VALUE } from './const';
-import { _checkValue } from './prompts/valid-prompts';
+import { _nearString, isUnsafePlainString } from '../valid';
+import { RE_UNSAFE_QUOTE, RE_UNSAFE_VALUE } from '../const';
+import { _checkValue } from '../prompts/valid-prompts';
 import { findUpParentNodesNames } from './node-find';
 import { copyMergeScalar } from './node';
 

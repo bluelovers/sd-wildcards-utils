@@ -1,4 +1,4 @@
-import { IVisitPathsNodeList, IWildcardsYAMLPair, IYAMLCollectionNode } from './types';
+import { IVisitPathsNodeList, IWildcardsYAMLPair, IYAMLCollectionNode } from '../types';
 import { isDocument, isPair, isSeq, YAMLMap } from 'yaml';
 import { findPair } from 'yaml/util';
 import { nodeGetItems } from './node';

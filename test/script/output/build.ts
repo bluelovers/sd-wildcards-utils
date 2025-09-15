@@ -11,7 +11,7 @@ import {
 } from '../../../src/index';
 // @ts-ignore
 import { outputFile } from 'fs-extra';
-import { mergeWildcardsYAMLDocumentRoots } from '../../../src/node-merge';
+import { mergeWildcardsYAMLDocumentRoots } from '../../../src/node/node-merge';
 // @ts-ignore
 import { globSync } from 'fs';
 import { consoleLogger } from 'debug-color2/logger';

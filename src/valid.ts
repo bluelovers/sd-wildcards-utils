@@ -1,5 +1,5 @@
 import { Document, isDocument, isMap, isNode, isPair, isScalar, Pair, Scalar, YAMLMap, YAMLSeq } from 'yaml';
-import { handleVisitPathsFull, uniqueSeqItems, visitWildcardsYAML } from './node-items';
+import { handleVisitPathsFull, uniqueSeqItems, visitWildcardsYAML } from './node/node-items';
 import {
 	IOptionsParseDocument,
 	IOptionsSharedWildcardsYaml,
