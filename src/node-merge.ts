@@ -1,4 +1,4 @@
-import { Document, isDocument, isMap, isSeq, YAMLMap, YAMLSeq } from 'yaml';
+import { Document, isDocument, isMap, isScalar, isSeq, Scalar, YAMLMap, YAMLSeq } from 'yaml';
 
 import {
 	IOptionsMergeWilcardsYAMLDocumentJsonBy,
@@ -14,6 +14,7 @@ import { AggregateErrorExtra } from 'lazy-aggregate-error';
 import { getNodeType, isSameNodeType } from './util';
 import { _copyMergeNodeCore, _copyMergePairCore, nodeHasComment } from './node';
 import { nodeGetInPair } from './node-find';
+import { _fixYAMLMapCommentBefore } from './node/fix';
 
 export function mergeWildcardsYAMLDocumentRoots<T extends Pick<Document<YAMLMap>, 'contents'>>(ls: [T, ...any[]])
 {
@@ -83,9 +84,9 @@ export function mergeFindSingleRoots<T extends IWildcardsYAMLMapRoot | IWildcard
 
 	list = [list].flat() as NoInfer<T>[];
 
-	for (let node of list)
+	for (const root of list)
 	{
-		let result = deepFindSingleRootAt(node);
+		let result = deepFindSingleRootAt(root);
 		let paths = result?.paths;
 
 		if (result)
@@ -102,8 +103,28 @@ export function mergeFindSingleRoots<T extends IWildcardsYAMLMapRoot | IWildcard
 					throw new TypeError(`Only YAMLMap can be merged [1]. path: ${paths}, type: ${getNodeType(current)} node: ${current}`)
 				}
 
+				/*
+				if (paths.includes('ShinMegamiTensei'))
+				{
+					console.dir({
+						doc: nodeGetInPairAll(doc, paths),
+						root: nodeGetInPairAll(root, paths),
+					}, {
+						depth: 4,
+					});
+				}
+				 */
+
+				_fixYAMLMapCommentBefore(result.value as any);
+				_fixYAMLMapCommentBefore(current);
+
 				if (nodeHasComment(result.parent))
 				{
+					if (!isScalar(currentPair.key))
+					{
+						currentPair.key = new Scalar(currentPair.key) as any;
+					}
+
 					_copyMergeNodeCore(currentPair.key, result.parent, {
 						merge: true,
 					});
@@ -130,6 +151,8 @@ export function mergeFindSingleRoots<T extends IWildcardsYAMLMapRoot | IWildcard
 							}
 							else if (isMap(sub) && isMap(p.value))
 							{
+								_fixYAMLMapCommentBefore(sub);
+								_fixYAMLMapCommentBefore(p.value);
 								_copyMergePairCore(subPair, p, {
 									merge: true,
 								});
@@ -196,7 +219,7 @@ export function mergeFindSingleRoots<T extends IWildcardsYAMLMapRoot | IWildcard
 		}
 		else
 		{
-			throw new TypeError(`Only YAMLMap can be merged [2]. path: ${paths}, node: ${node}`)
+			throw new TypeError(`Only YAMLMap can be merged [2]. path: ${paths}, node: ${root}`)
 		}
 	}
 

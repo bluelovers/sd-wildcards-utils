@@ -71,3 +71,28 @@ export function nodeGetInPair(node: IYAMLCollectionNode, paths: readonly unknown
 		return _nodeGetInPairCore(parent, paths[paths.length - 1])
 	}
 }
+
+export function nodeGetInPairAll(node: IYAMLCollectionNode, paths: readonly unknown[])
+{
+	let list: IWildcardsYAMLPair[] = [];
+
+	let cur: IYAMLCollectionNode = node;
+
+	for (const key of paths)
+	{
+		let pair = nodeGetInPair(cur, [key]);
+
+		if (pair)
+		{
+			list.push(pair);
+
+			cur = pair.value
+		}
+		else
+		{
+			break;
+		}
+	}
+
+	return list
+}
