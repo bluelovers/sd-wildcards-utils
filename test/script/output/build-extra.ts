@@ -4,7 +4,7 @@ import { join } from 'upath2';
 import { __ROOT_DATA, __ROOT_OUTPUT_WILDCARDS, __ROOT_TEST, __ROOT_TEST_OUTPUT } from '../../__root';
 import { readFile } from 'node:fs/promises';
 import parseWildcardsYaml, { defaultOptionsStringifyMinify, IWildcardsYAMLDocument, mergeFindSingleRoots, stringifyWildcardsYamlData } from '../../../src';
-import { copy, outputFile } from 'fs-extra';
+import { copy, exists, outputFile } from 'fs-extra';
 import { consoleLogger } from 'debug-color2/logger';
 // @ts-ignore
 import { _ReadAndupdateFile, globAbsolute } from '../lib/util';
@@ -35,6 +35,11 @@ export default Bluebird.map([
 	let outFile = join(__ROOT_TEST_OUTPUT, 'lazy-wildcards.yaml');
 
 	await outputFile(outFile, out);
+
+	if (!await exists('S:/.data/wildcards_dy'))
+	{
+		return
+	}
 
 	return copy(outFile, join('S:/.data/wildcards_dy', 'lazy-wildcards.yaml'), {
 		overwrite: true,
