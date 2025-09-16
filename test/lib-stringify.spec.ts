@@ -4,10 +4,11 @@
 /// <reference types="expect" />
 
 import { join } from 'path';
-import { globSync, readFileSync } from 'fs';
+import { readFileSync } from 'fs';
 import { __ROOT_TEST_FIXTURES, __ROOT_TEST_SNAPSHOTS_FILE } from './__root';
 import parseWildcardsYaml, { defaultOptionsStringifyMinify, stringifyWildcardsYamlData } from '../src/index';
 import { toMatchFile } from 'jest-file-snapshot2';
+import { globSync2 } from './script/lib/util';
 
 expect.extend({ toMatchFile });
 
@@ -21,7 +22,7 @@ describe(`stringifyWildcardsYamlData`, () =>
 
 	test.skip(`dummy`, () => {});
 
-	test.each(globSync([
+	test.each(globSync2([
 		`stringify/**.yaml`,
 	], {
 		cwd: __ROOT_TEST_FIXTURES,

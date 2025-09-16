@@ -6,9 +6,8 @@ import Bluebird from 'bluebird';
 // @ts-ignore
 import { copy } from 'fs-extra';
 import { join } from 'path';
-// @ts-ignore
-import { globSync } from 'fs';
 import { consoleLogger } from 'debug-color2/logger';
+import { globSync2 } from '../lib/util';
 
 export default (async () => {
 
@@ -17,7 +16,7 @@ export default (async () => {
 		dereference: true,
 	});
 
-	await Bluebird.each(globSync([
+	await Bluebird.each(globSync2([
 		'.github/workflows/build.yml',
 		'.github/workflows/valid-yaml.yml',
 		'docs/**/*',

@@ -12,8 +12,6 @@ import {
 // @ts-ignore
 import { outputFile } from 'fs-extra';
 import { mergeWildcardsYAMLDocumentRoots } from '../../../src/node/node-merge';
-// @ts-ignore
-import { globSync } from 'fs';
 import { consoleLogger } from 'debug-color2/logger';
 import { _ReadAndupdateFile } from '../lib/util';
 
@@ -34,7 +32,7 @@ export default Bluebird.map([
 		await _ReadAndupdateFile('lazy-wildcards.yaml');
 
 		// @ts-ignore
-		let ls = await Bluebird.map<string[]>(globSync([
+		let ls = await Bluebird.map<string[]>(globSync2([
 			'sub/**/*.{yaml,yml}',
 			//'sub/**/*.yml',
 		], {

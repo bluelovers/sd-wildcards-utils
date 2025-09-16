@@ -2,8 +2,7 @@
 
 // @ts-ignore
 import escapeSplit from 'escape-split';
-// @ts-ignore
-import { globSync, readFileSync } from 'fs';
+import { readFileSync } from 'fs';
 import { join, normalize } from 'upath2';
 import { __ROOT_DATA, __ROOT_OUTPUT_WILDCARDS } from '../../__root';
 import {
@@ -26,6 +25,7 @@ import { groupSplitConfig, groupSplitFiles } from './split-config';
 import { IFindPathEntry, IRecordWildcards } from '../../../src/types';
 import { consoleLogger } from 'debug-color2/logger';
 import { findPath, pathsToWildcardsPath } from '../../../src/prompts/prompts';
+import { globSync2 } from '../lib/util';
 
 const _splitSpecific2 = escapeSplit({ delimiter: '/', escaper: '\\' });
 
@@ -55,7 +55,7 @@ export default (async () =>
 
 	let map: Record<string, IFindPathEntry[][]> = {};
 
-	const json = await Bluebird.map(globSync(groupSplitFiles, {
+	const json = await Bluebird.map(globSync2(groupSplitFiles, {
 				cwd: __ROOT_DATA,
 			}), (file: string) =>
 			{

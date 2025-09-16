@@ -6,7 +6,7 @@
 
 import { basename, dirname, extname, join } from 'upath2';
 // @ts-ignore
-import { globSync, readFileSync } from 'fs';
+import { readFileSync } from 'fs';
 import { __ROOT, __ROOT_DATA, __ROOT_TEST_FIXTURES, __ROOT_TEST_SNAPSHOTS_FILE } from './__root';
 import {
 	parseWildcardsYaml,
@@ -17,6 +17,7 @@ import {
 import { toMatchFile } from 'jest-file-snapshot2';
 import { ensureDir, ensureDirSync, ensureFile, ensureFileSync } from 'fs-extra';
 import picomatch from 'picomatch';
+import { globSync2 } from './script/lib/util';
 
 expect.extend({ toMatchFile });
 
@@ -76,7 +77,7 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 		'__lazy-wildcards/**/fn/**__',
 	]);
 
-	test.each(globSync([
+	test.each(globSync2([
 		'data/cf/costumes/*.yaml',
 		'data/cf/other/*.yaml',
 		'data/cf/creatures/*.yaml',

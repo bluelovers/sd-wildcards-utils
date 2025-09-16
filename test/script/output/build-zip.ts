@@ -6,9 +6,6 @@ import { __ROOT_DATA, __ROOT_OUTPUT, __ROOT_OUTPUT_WILDCARDS } from '../../__roo
 import { readFile, outputFile } from 'fs-extra';
 import crypto from 'crypto';
 import { consoleLogger } from 'debug-color2/logger';
-import { globSync, glob } from 'fs';
-import { dir } from 'console';
-import { normalize } from 'upath2';
 
 export default Bluebird.resolve()
 	.then(async () => {
@@ -34,7 +31,7 @@ export default Bluebird.resolve()
 			'Vision/fake-dummy-wildcards.yaml',
 			'navi_atlas.yaml',
 		], {
-			cwd: join(__ROOT_DATA, 'others'), 
+			cwd: join(__ROOT_DATA, 'others'),
 		}).forEach(v => {
 			zip_add_file(zip, join(__ROOT_DATA, 'others', v), v);
 		});

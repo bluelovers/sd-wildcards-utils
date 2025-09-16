@@ -4,7 +4,6 @@
 /// <reference types="expect" />
 
 import { join, normalize } from 'upath2';
-import { globSync } from 'node:fs';
 import { __ROOT_TEST_FIXTURES, __ROOT_TEST_SNAPSHOTS_FILE } from './__root';
 import { readFileSync } from 'fs-extra';
 import {

@@ -1,6 +1,5 @@
 import { __ROOT, __ROOT_DATA, __ROOT_TEST_OUTPUT } from '../../__root';
-import { globAbsolute } from '../lib/util';
-import { globSync } from 'fs';
+import { globAbsolute, globSync2 } from '../lib/util';
 // @ts-ignore
 import Bluebird from 'bluebird';
 // @ts-ignore
@@ -24,7 +23,7 @@ export default (async () => {
 
 		const hashJson: Record<string, string> = await readJSON(hash_file).catch(e => ({}));
 
-		await Bluebird.each(globSync([
+		await Bluebird.each(globSync2([
 			'Vision/**/*.{yaml,txt}',
 			'user-*/**/*.{yaml,txt}',
 			'!**/_disable/*',
@@ -56,9 +55,9 @@ export default (async () => {
 						preserveTimestamps: true,
 						// dereference: true,
 					});
-				}
 
-				hashJson[file] = hash;
+					hashJson[file] = hash;
+				}
 			}
 
 		});

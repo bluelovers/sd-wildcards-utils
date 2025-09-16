@@ -52,7 +52,7 @@ export function checkAllSelfLinkWildcardsExists(obj: IRecordWildcards | Node | D
 	 unique: true,
  });
 
-	let isMatchIgnore: Matcher = () => false;
+	let isMatchIgnore: Matcher = () => false as any;
 
 	if (chkOpts.ignore?.length)
 	{
