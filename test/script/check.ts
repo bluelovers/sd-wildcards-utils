@@ -7,8 +7,6 @@ import { AggregateErrorExtra } from 'lazy-aggregate-error';
 import Bluebird from 'bluebird';
 import { readFile } from 'node:fs/promises';
 import { consoleLogger } from 'debug-color2/logger';
-import { globSync } from 'fs';
-import { globAbsolute } from './lib/util';
 import { _checkSettings } from './lib/settings';
 
 const {
