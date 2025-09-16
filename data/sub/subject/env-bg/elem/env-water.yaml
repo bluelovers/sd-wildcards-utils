@@ -47,7 +47,10 @@ lazy-wildcards:
       seaside:
         prompts:
           - >-
-            ({1-2$$__lazy-wildcards/subject/env-elem/seaside/env-bg-main__}{0.3:::{1.2|1.3|1.4|1.6}|:1.2})
+            (__lazy-wildcards/subject/env-elem/seaside/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|:1.2})
+        prompts-no-weight:
+          - >-
+            {1-2$$__lazy-wildcards/subject/env-elem/seaside/env-bg-main__}
         env-bg-main:
           - seaside
           # 湖、海或寬闊的河流邊緣的陸地
@@ -124,4 +127,50 @@ lazy-wildcards:
           - shiny surface
           - soft lighting
           - waxy texture
+      # 衝浪板
+      sports-water-surfing-surfboard:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/sports-water-surfing-surfboard/env-elem-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/sports-water-surfing-surfboard/costume-weapon__}|}{0.3:::{1.2|1.3|1.4}|:1.3})
+            {, {1-$$__lazy-wildcards/subject/env-elem/sports-water-surfing-surfboard/action__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/sports-water-surfing-surfboard/costume-elem__}|}
+            {, __lazy-wildcards/subject/env-elem/sports-water-surfing-surfboard/env-elem__|}
+            {, {1-3$$__lazy-wildcards/subject/env-elem/sports-water-surfing-surfboard/env-elem2__}|}
+            {, {1-3$$__lazy-wildcards/subject/env-elem/sports-water-surfing-surfboard/env-bg__}|}
+        env-elem-main:
+          - surfboard
+        action:
+          - __lazy-wildcards/subject/action-sports/sports-water-surfing/prompts__
+        costume-weapon:
+          - holding surfboard
+        costume-elem:
+          - swimsuit
+          - wetsuit
+          - goggles
+          - bikini
+          - board shorts
+          - rash guard
+          - ponytail
+        env-elem:
+          - longboard surfboard
+          - shortboard surfboard
+          - fish tail surfboard
+        env-elem2:
+          - wooden surfboard
+          - fiberglass surfboard
+          - carbon fiber surfboard
+          - crystal surfboard
+          - lava surfboard
+          - glowing surfboard
+          - hydro fins
+          - metallic surfboard
+        env-bg:
+          - beach
+          - __lazy-wildcards/subject/env-elem/seaside/prompts-no-weight__
+          - wave, big wave
+          - sky wave
+          - lava wave
+          - white foam
+          - futuristic water city
 

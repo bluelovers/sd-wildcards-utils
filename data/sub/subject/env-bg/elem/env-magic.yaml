@@ -48,6 +48,7 @@ lazy-wildcards:
           - pentagram symbol
           - __lazy-wildcards/subject/env-elem/circle-pentagram/prompts__
           - arcane symbols
+      # 五角形
       # https://civitai.com/models/917102/pentagramcircleconcept?modelVersionId=1026502
       circle-pentagram:
         prompts:
@@ -100,4 +101,84 @@ lazy-wildcards:
           - mini-hakkero
         style:
           - taoism
+      # https://civitai.com/models/1960970/mana-flow-15-lora?modelVersionId=2219629
+      # https://civitai.com/models/83872/energy-veins-or-2mb-concept-lora
+      # https://civitai.com/models/121552/cursed-energy-jujutsu-kaisen
+      magic-text:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/magic-text/env-main__
+            , __lazy-wildcards/subject/env-elem/magic-text/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-3$$__lazy-wildcards/subject/env-elem/magic-text/main-trigger-words__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/magic-text/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/magic-text/style__}|}
+        prompts-no-weight:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/magic-text-*/prompts-no-weight__}
+        env-main:
+          - >-
+            mana flow, manaflowstyle
+            , GlowingRunesAI, GlowingRunes
+            , EnergyVeins, cursed energy
+        main-trigger-words:
+          - GlowingRunes_red, GlowingRunesAI_red
+          - GlowingRunes_paleblue, GlowingRunesAI_paleblue, BlueEnergyWorld
+          - GlowingRunes_green, GlowingRunesAI_green, GreenEnergyWorld
+          - GlowingRunes_purple, GlowingRunesAI_purple
+          - GlowingRunes_yellow, GlowingRunesAI_yellow, YellowEnergyWorld
+          - GlowingRunes_pink, GlowingRunesAI_pink
+          - GlowingRunes_white, GlowingRunesAI_white, WhiteEnergyWorld
+        env:
+          - glowing lines
+          - glowing markings
+          - __lazy-wildcards/subject/costume-elem-accessories/glowing-trim/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/neon-trim/prompts__
+          - glowing tattoo
+          - energy aura, energy
+          - glowing aura
+        style:
+          - mystical atmosphere
+          - particle effects
+          - aura
+          - rainbow glowing
+      magic-text-runes:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/magic-text-runes/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-elem/magic-text-runes/env-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/magic-text-runes/env__}|}
+        env-main:
+          - runes, magic runes, ancient ruins, ancient script
+        env:
+          - magical glowing runes
+          - runestone
+          - glowing runes
+          - arcane runes
+          - transparent runes
+          - appearing magical text
+          - magical text
+          - runes on ground
+          - ritual runes
+          - religious runes
+      magic-text-symbols:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/magic-text-symbols/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-elem/magic-text-symbols/env-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/magic-text-symbols/env__}|}
+        env-main:
+          - arcane symbols, magical symbols
+        env:
+          - geometric symbols
+          - floating symbols
+          - glowing symbols
+          - transparent symbols
+          - floating magic glyphs
+          - ritual symbols
+          - religious symbols
+          - pentagram symbol
 

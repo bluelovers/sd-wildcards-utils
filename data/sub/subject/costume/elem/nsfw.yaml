@@ -14,4 +14,39 @@ lazy-wildcards:
         costume-elem:
           - pussy juice puddle
           - pussy juice stain
+      naked:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/naked/costume__
+            {, {1-$$__lazy-wildcards/subject/costume-elem/naked/costume-elem__}|}{0.3:::{1.2|1.3|1.4}|})
+        costume:
+          - nude, naked, nudist, nsfw
+        costume-elem:
+          - topless
+          - bottomless
+          - bare
+          - >-
+            {completely nude, completely naked|__lazy-wildcards/subject/costume-elem/naked-partially/prompts-no-weight__}
+      naked-partially:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/naked-partially/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-elem/naked-partially/costume-elem__}|}
+        prompts-no-weight:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-elem/naked-partially/costume-elem-main__}
+        costume-elem-main:
+          - partially nude, partially naked
+          - half-naked, half naked
+        costume-elem:
+          - undressed
+          - off shoulder
+          - wardrobe malfunction
+          - slipping clothes
+          - skin exposure
+        action:
+          - sensual pose
+        style:
+          - teasing
+          - suggestive
 

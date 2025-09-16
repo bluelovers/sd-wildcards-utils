@@ -1,15 +1,15 @@
 lazy-wildcards:
   cosplay-char:
-    Marvel_Comics:
+    marvel_comics:
       # https://civitai.com/models/765456/american-dream-marvel-comics?modelVersionId=856163
       American_Dream:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/Marvel_Comics/American_Dream/main-trigger-words__
-            {, __lazy-wildcards/cosplay-char/Marvel_Comics/American_Dream/costume-ethnicity__|}
-            {, {1-2$$__lazy-wildcards/cosplay-char/Marvel_Comics/American_Dream/costume__}|}
-            , __lazy-wildcards/cosplay-char/Marvel_Comics/American_Dream/costume-headwear__
-            {, {1-$$__lazy-wildcards/cosplay-char/Marvel_Comics/American_Dream/costume-weapon__}|}
+            __lazy-wildcards/cosplay-char/marvel_comics/American_Dream/main-trigger-words__
+            {, __lazy-wildcards/cosplay-char/marvel_comics/American_Dream/costume-ethnicity__|}
+            {, {1-2$$__lazy-wildcards/cosplay-char/marvel_comics/American_Dream/costume__}|}
+            , __lazy-wildcards/cosplay-char/marvel_comics/American_Dream/costume-headwear__
+            {, {1-$$__lazy-wildcards/cosplay-char/marvel_comics/American_Dream/costume-weapon__}|}
         main-trigger-words:
           - AmericanDream
         costume-ethnicity:
@@ -21,4 +21,40 @@ lazy-wildcards:
           - superhero, bodysuit, star \(symbol\), red_fingerless_gloves, white_sleeves, blue_shoulders
         costume-weapon:
           - adshield, shield
+      # 萬磁王
+      # https://marvel.fandom.com/wiki/Magneto
+      # https://marvel.fandom.com/wiki/Magneta_(Earth-982)
+      #
+      # https://danbooru.donmai.us/posts?tags=magneto&z=2
+      #
+      # https://civitai.com/models/1376978/magneta-marvel-comics-earth-982
+      magneto_magneta:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/marvel_comics/magneto_magneta/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/marvel_comics/magneto_magneta/costume-ethnicity__
+            ({0.8::, __lazy-wildcards/cosplay-char/marvel_comics/magneto_magneta/costume-headwear__|}
+            , __lazy-wildcards/cosplay-char/marvel_comics/magneto_magneta/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/cosplay-char/marvel_comics/magneto_magneta/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/marvel_comics/magneto_magneta/costume-elem__}|}
+        main-trigger-words:
+          - >-
+            magneta, magneto
+            , magneto \(cosplay\)
+            , x-men, marvel, marvel earth-982
+        costume-ethnicity:
+          - >-
+            glowing blue eyes, long white hair, red lips, makeup
+        costume-headwear:
+          - MagHelmet, magneto helmet, red helmet
+        costume:
+          - >-
+            red bodysuit, purple armor, purple cape, purple belt, purple boots, purple gloves
+        costume-weapon:
+          - glowing energy balls
+        costume-elem:
+          - genderswap \(mtf\)
+          - muscular, covered abs
+          - narrow waist
+          - wide hips
 

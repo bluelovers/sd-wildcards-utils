@@ -89,7 +89,7 @@ lazy-wildcards:
           - laying on back
           - laying on bed
           - looking at partner
-          - __lazy-wildcards/subject/action-nsfw-others/naked/costume__
+          - __lazy-wildcards/subject/costume-elem/naked/costume__
           - selfie
           - open clothes
           - heart
@@ -175,7 +175,7 @@ lazy-wildcards:
           - __lazy-wildcards/subject/action-nsfw-others/exhibitionism/prompts__
         costume-elem:
           - uterusdrawing, uterus drawing
-          - public nudity, __lazy-wildcards/subject/action-nsfw-others/naked/prompts__
+          - public nudity, __lazy-wildcards/subject/costume-elem/naked/prompts__
         env:
           - on desk, on table
           - school desk
@@ -184,18 +184,6 @@ lazy-wildcards:
           - on chair
           - on sofa
           - on grass
-      naked:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/action-nsfw-others/naked/costume__
-            {, {1-$$__lazy-wildcards/subject/action-nsfw-others/naked/costume-elem__}|}{0.3:::{1.2|1.3|1.4}|})
-        costume:
-          - nude, naked, nudist, nsfw
-        costume-elem:
-          - topless
-          - bare
-          - >-
-            {completely nude, completely naked|partially nude, partially naked}
       # https://civitai.com/images/5656117
       paw_pose_spread_legs:
         prompts:

@@ -1027,4 +1027,25 @@ lazy-wildcards:
             , headless female, headless
         costume:
           - white shirt, neckerchief, pleated skirt, sailor collar
+    # https://danbooru.donmai.us/posts?page=1&tags=yong_jie_wujian
+    # https://civitai.com/user/13878w/models
+    naraka_bladepoint:
+      # https://civitai.com/models/1947200/naraka-bladepoint-ji-canghai-dragons-path-spirit-of-the-martial-soul?modelVersionId=2203830
+      ji_canghai:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/naraka_bladepoint/ji_canghai/main-trigger-words__
+            {, __lazy-wildcards/cosplay-char/naraka_bladepoint/ji_canghai/costume-ethnicity-hair__|}
+            , (__lazy-wildcards/cosplay-char/naraka_bladepoint/ji_canghai/costume__{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-$$__lazy-wildcards/cosplay-char/naraka_bladepoint/ji_canghai/costume-elem__}|}
+        main-trigger-words:
+          - >-
+             ji canghai \(yong jie wujian\)
+            , naraka bladepoint, yong jie wujian
+        costume-ethnicity-hair:
+          - __lazy-wildcards/subject/costume-ethnicity-hair-style/hair-bun/prompts__
+        costume:
+          - (open clothes:1.2), black clothes, black footwear, black pants, chinese clothes, dragon print
+        costume-elem:
+          - __lazy-wildcards/subject/costume-elem/naked-partially/prompts__
 

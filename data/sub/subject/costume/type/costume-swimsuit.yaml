@@ -128,7 +128,7 @@ lazy-wildcards:
             (__lazy-wildcards/subject/costume/vines-naked/costume-elem__:1.2)
             , __lazy-wildcards/subject/env-elem/vines/env-main-trigger-words__
         costume-elem:
-          - __lazy-wildcards/subject/action-nsfw-others/naked/prompts__
+          - __lazy-wildcards/subject/costume-elem/naked/prompts__
       # https://civitai.com/models/130625/leather-breast-wrap-outfit
       leather_breast_wrap:
         prompts:
@@ -274,6 +274,7 @@ lazy-wildcards:
           - from side
           - from behind
       # https://civitai.com/models/989396/jewelry-underwear
+      # https://civitai.com/models/198130/harem-nights?modelVersionId=222894
       jewelry_underwear:
         prompts:
           - >-
@@ -313,4 +314,7 @@ lazy-wildcards:
           - veil
           - earrings
           - high heels
+          - __lazy-wildcards/subject/costume-elem/curtain/prompts-no-weight__
+          - __lazy-wildcards/subject/costume-headwear/veil-headwear/prompts__
+          - half naked
 

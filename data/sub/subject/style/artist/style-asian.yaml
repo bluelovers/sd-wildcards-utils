@@ -972,4 +972,29 @@ lazy-wildcards:
         style:
           - __lazy-wildcards/subject/style-art-type/1970s_style/prompts__
           - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
+      # https://www.pixiv.net/users/717077/artworks
+      # https://civitai.com/models/380093/raptor7-artist-style?modelVersionId=424349
+      raptor7:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/raptor7/style-artist__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-2$$__lazy-wildcards/subject/style-artist/raptor7/costume__}|}
+            {, {1-2$$__lazy-wildcards/subject/style-artist/raptor7/action__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/raptor7/style__}|}
+        style-artist:
+          - __lazy-wildcards/utils/fn/style-inspired(v=raptor7)__
+        costume:
+          - __lazy-wildcards/subject/costume/maid/prompts__
+          - >-
+            moon \(ornament\), earth \(ornament\)
+            , shirt, off-shoulder shirt
+            , navel, cleavage, bare shoulders, jewelry
+          - superhero, spandex bodysuit, skin tight clothes, long cape, gloves, knee boots
+        action:
+          - crossed arms, pouty lips
+          - sitting, crossed legs
+          - kneeling, hands in lap
+          - flying
+        style:
+          - from below
 

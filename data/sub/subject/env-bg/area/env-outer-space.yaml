@@ -1,17 +1,17 @@
 lazy-wildcards:
   subject:
     env-bg:
-      outer_space:
+      space-outer_space:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-bg/outer_space/env-bg-main__
-            {, {1-4$$__lazy-wildcards/subject/env-bg/outer_space/env-bg__}|}
-            {0.4::, {1-4$$__lazy-wildcards/subject/env-bg/outer_space/env-bg-style__}|}
+            __lazy-wildcards/subject/env-bg/space-outer_space/env-bg-main__
+            {, {1-4$$__lazy-wildcards/subject/env-bg/space-outer_space/env-bg__}|}
+            {0.4::, {1-4$$__lazy-wildcards/subject/env-bg/space-outer_space/env-bg-style__}|}
         env-bg-main:
           - outer_space, universe, floating
         env-bg:
           - galaxy
-          - black_hole
+          - __lazy-wildcards/subject/env-bg/space-blackhole/prompts-no-weight__
           - asteroid_belt
           - void
           - nebula
@@ -21,17 +21,17 @@ lazy-wildcards:
           - spaceship
           - asteroid
           - exoplanet
-          - __lazy-wildcards/subject/env-bg/planet/prompts__
-          - __lazy-wildcards/subject/env-bg/sunspot/prompts__
-          - __lazy-wildcards/subject/env-bg/corona/prompts__
+          - __lazy-wildcards/subject/env-bg/space-planet/prompts__
+          - __lazy-wildcards/subject/env-bg/space-sunspot/prompts__
+          - __lazy-wildcards/subject/env-bg/space-corona/prompts__
           - vast empty outer space
         env-bg-style:
           - floating in space
-      planet:
+      space-planet:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-bg/planet/env-bg-main__
-            {, {1-3$$__lazy-wildcards/subject/env-bg/planet/env-bg__}|}
+            __lazy-wildcards/subject/env-bg/space-planet/env-bg-main__
+            {, {1-3$$__lazy-wildcards/subject/env-bg/space-planet/env-bg__}|}
         env-bg-main:
           - planet
         env-bg:
@@ -46,11 +46,11 @@ lazy-wildcards:
           - moon
           - solar system
       # https://civitai.com/models/256688/sunspot-sd15?modelVersionId=289437
-      sunspot:
+      space-sunspot:
         prompts:
           - >-
-            (__lazy-wildcards/subject/env-bg/sunspot/env-bg__)
-            {, {1-3$$__lazy-wildcards/subject/env-bg/sunspot/env__}|}
+            (__lazy-wildcards/subject/env-bg/space-sunspot/env-bg__)
+            {, {1-3$$__lazy-wildcards/subject/env-bg/space-sunspot/env__}|}
         env-bg:
           - sunspot, 5un5p0t sun
         env:
@@ -58,11 +58,11 @@ lazy-wildcards:
           - solar flares
           - distant
       # https://civitai.com/models/256513/corona-sd15?modelVersionId=289231
-      corona:
+      space-corona:
         prompts:
           - >-
-            (__lazy-wildcards/subject/env-bg/corona/env-bg__{0.3:::{1.2|1.3|1.4}|})
-            {0.7::, {1-3$$__lazy-wildcards/subject/env-bg/corona/env__}|}
+            (__lazy-wildcards/subject/env-bg/space-corona/env-bg__{0.3:::{1.2|1.3|1.4}|})
+            {0.7::, {1-3$$__lazy-wildcards/subject/env-bg/space-corona/env__}|}
         env-bg:
           - corona eclipse, C0r0n4 eclipse
         env:
@@ -72,11 +72,11 @@ lazy-wildcards:
       # https://civitai.com/models/12883/nebulae
       # https://civitai.com/models/1003677/cosmic-nebula
       # https://civitai.com/models/426615/a-rotating-nebula-background-style-tangbohu-70
-      nebula:
+      space-nebula:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-bg/nebula/env-bg-main__
-            {0.7::, {1-$$__lazy-wildcards/subject/env-bg/nebula/env-bg__}|}
+            __lazy-wildcards/subject/env-bg/space-nebula/env-bg-main__
+            {0.7::, {1-$$__lazy-wildcards/subject/env-bg/space-nebula/env-bg__}|}
         env-bg-main:
           - nebula, nebulae, martius nebula
         env-bg:
@@ -90,4 +90,20 @@ lazy-wildcards:
           - nebula sky
           - >-
             {1-2$$__cof-location/place/nebula__}
+      # https://civitai.com/models/107231/ultra-blackhole-tech-world-morph
+      space-blackhole:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/space-blackhole/env-bg__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/space-blackhole/style__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-bg/space-blackhole/prompts-no-weight__
+        env-bg:
+          - >-
+            blackhole, black hole
+            , ulblackholetech
+        style:
+          - excessive energy
+          - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
 

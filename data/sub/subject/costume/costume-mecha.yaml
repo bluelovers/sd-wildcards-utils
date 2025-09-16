@@ -292,4 +292,11 @@ lazy-wildcards:
         style:
           - disaster_relief, emergency_equipment
           - rugged_design
+      # https://civitai.com/models/1959010/anamorphic-mech-iris?modelVersionId=2217379
+      anamorphic_mech:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/anamorphic_mech/main-trigger-words__{0.3:::{1.2|1.3|1.4}|})
+        main-trigger-words:
+          - anamorphic mech iris, amirisstyle, mech, reflection, science fiction
 
