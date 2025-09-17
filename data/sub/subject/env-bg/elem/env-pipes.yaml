@@ -36,4 +36,110 @@ lazy-wildcards:
           - mechanical cervial attaching to neck
           - wires and cables attaching to neck
           - wires and cables on head
+      # https://civitai.com/models/66204/spider-web
+      # https://civitai.com/models/202013/sticky-spider-web
+      # https://civitai.com/models/239563/spider-web
+      # https://civitai.com/models/62746/spiderwebbed-spider-web-bondage
+      # https://civitai.com/models/1080402/spider-web-dressbondage-illustrious
+      # https://civitai.com/models/333052/spiderweb
+      # https://civitai.com/models/607066/spiderweb-style-world-morph
+      spider-webs:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-pipes/spider-webs/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|:1.2})
+            {, {1-$$__lazy-wildcards/subject/env-elem-pipes/spider-webs/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-pipes/spider-webs/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-pipes/spider-webs/style__}|}
+        prompts-no-weight:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem-pipes/spider-webs/env-elem-main__}
+            {, {1-$$__lazy-wildcards/subject/env-elem-pipes/spider-webs/env-elem__}|}
+            , __lazy-wildcards/subject/env-elem-pipes/spider-webs/env-elem-main-trigger-words__
+        env-elem-main-trigger-words:
+          - >-
+            spiderwebbed, hud_sp1derch4indrss, spiderweb, allcobwebby, SpiLa
+        env-elem-main:
+          - cobwebs
+          - spider webs
+          - spider silk, silk
+        env-elem:
+          - sticky net, sticky spider web
+          - spider web background
+        env:
+          # 繭
+          - cocoon
+          - silk
+          - fence
+          - __lazy-wildcards/subject/env-elem-pipes/thread-spindle/prompts__
+        costume-elem:
+          - gagged
+          - bound arms
+          - bound legs
+          - suspension
+          - spider web dress
+          - spider web print
+          - spider web tattoo
+        style:
+          - depth of field
+      # 針線球、針線棒
+      #
+      # https://civitai.com/models/153352/world-of-crochet
+      thread-spindle:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-pipes/thread-spindle/main-trigger-words__{0.3:::{1.2|1.3|1.4}|})
+            {__lazy-wildcards/subject/env-elem-pipes/thread-spindle/prompts-extra__|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-elem-pipes/thread-spindle/main-trigger-words__
+            , {1-$$__lazy-wildcards/subject/env-elem-pipes/thread-spindle/costume-weapon__}
+        prompts-extra:
+          - >-
+            {, {1-$$__lazy-wildcards/subject/env-elem-pipes/thread-spindle/action__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-pipes/thread-spindle/env__}|}
+        main-trigger-words:
+          - >-
+            wocrochet
+        costume-weapon:
+          - pin cushion, sewing ball
+          - sewing needle
+          - thread spool
+          - thread spindle
+          - needle holder
+        action:
+          - weaving
+          - traditional weaving
+        env:
+          - handmade accessory, sewing accessory
+          - fabric cushion
+          - wooden tool
+          - metal case
+          - yarn thread
+          - yarn swift
+          - __lazy-wildcards/subject/costume-elem/fabric-sheer/prompts-no-weight__
+      # 復古編織機
+      thread-machine-loom:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-pipes/thread-machine-loom/env-elem-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-pipes/thread-machine-loom/env-elem__}|}{0.3:::{1.2|1.3|1.4}|})
+            {__lazy-wildcards/subject/env-elem-pipes/thread-spindle/prompts-extra__|}
+        env-elem-main:
+          - loom, sewing machine, traditional craft
+        env-elem:
+          - spinning wheel
+          - shuttle \(weaving tool\)
+          - wooden loom
+      # 現代編織機
+      thread-machine-knitting:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-pipes/thread-machine-knitting/env-elem-main__{0.3:::{1.2|1.3|1.4}|})
+            {__lazy-wildcards/subject/env-elem-pipes/thread-spindle/prompts-extra__|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-pipes/thread-machine-knitting/env__}|}
+        env-elem-main:
+          - knitting machine, modern textile
+        env:
+          - industrial machine
+          - metallic tool
 

@@ -274,6 +274,7 @@ lazy-wildcards:
           - potion fumes
           - science_experiment, fantasy_effect, theatrical_mist
           - smoke_rings
+          - dissipating vapours
       weather-natural-disaster-water:
         prompts:
           - >-
@@ -413,10 +414,20 @@ lazy-wildcards:
           - summer
           - autumn
           - winter
+      # https://civitai.com/models/141936/world-of-fire
       weather-fire:
         prompts:
           - >-
-            ({1-$$__lazy-wildcards/subject/env-moment/weather-fire/env-moment__}{0.3:::{1.2|1.3|1.4}|})
+            (__lazy-wildcards/subject/env-moment/weather-fire/env-moment-main__
+            , {1-$$__lazy-wildcards/subject/env-moment/weather-fire/env-moment__}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-moment/weather-fire/env__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-moment/weather-fire/env-moment-main__
+            , {1-$$__lazy-wildcards/subject/env-moment/weather-fire/env-moment__}
+            {, {1-$$__lazy-wildcards/subject/env-moment/weather-fire/env__}|}
+        env-moment-main:
+          - worldoffire
         env-moment:
           - wildfire
           - fire
@@ -428,6 +439,11 @@ lazy-wildcards:
           - sacred fire
           - embers
           - steady flame
+          - flickering flames
+        env:
+          - blazing heat
+          - fire inferno
+          - __lazy-wildcards/subject/env-moment/weather-smoke/prompts__
       # https://civitai.com/models/560913/avalanche
       weather-snow_avalanche:
         prompts:

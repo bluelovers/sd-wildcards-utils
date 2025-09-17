@@ -1,0 +1,93 @@
+lazy-wildcards:
+  subject:
+    env-elem-civilization:
+      farm-storage:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem-civilization/farm-storage/env-bg-main__}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/farm-storage/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/farm-storage/style__}|}
+        env-bg-main:
+          - farm storage
+          # 穀倉
+          - barn
+          - rustic farm warehouse
+          # 穀物塔
+          - rustic silo
+          # 乾草閣樓
+          - hayloft
+        env:
+          - wooden building
+          - rustic farm
+          - barrel
+          - wooden beam
+          - __lazy-wildcards/subject/env-elem-pipes/spider-webs/prompts-no-weight__
+          - broken crate
+          - storage box
+          - wooden box, crate
+          - iron bucket
+          - farm tools
+          - __lazy-wildcards/subject/env-elem-civilization/bag-burlap_sack/prompts__
+          - __lazy-wildcards/subject/env-elem-civilization/farm-hay/prompts-no-weight__
+          - sunset farm
+        style:
+          - dust particles
+          - abandoned
+          - sunlit
+      # 乾草堆
+      farm-hay:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-civilization/farm-hay/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-elem-civilization/farm-hay/env-elem-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/farm-hay/env__}|}
+            {, {1-2$$__lazy-wildcards/subject/env-elem-civilization/farm-hay/action__}|}
+        env-elem-main:
+          - haystack
+        env:
+          # 乾草捆
+          - hay bale
+          - round hay bale
+          - rope tied
+        action:
+          - girl on haystack
+          - laying on haystack
+          - horse eating hay
+          - hiding in hay
+          - sitting on haystack
+      # 馬廄
+      farm-horse_house:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-civilization/farm-horse_house/env-bg__
+        env-bg:
+          - horse stable, horse house
+      # 牛舍
+      farm-cow_house:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-civilization/farm-cow_house/env-bg__
+        env-bg:
+          - cow barn, cow house, cow feeding hay
+      # 麻布袋
+      bag-burlap_sack:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem-civilization/bag-burlap_sack/env__}
+            {, {1-2$$__lazy-wildcards/subject/env-elem-civilization/bag-burlap_sack/action__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/bag-burlap_sack/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/bag-burlap_sack/style__}|}
+        env:
+          - burlap sack
+          - grain sack
+        action:
+          - carrying sack
+          - holding sack
+        env-bg:
+          - farm storage
+        style:
+          - sewn seams
+          - rough texture
+

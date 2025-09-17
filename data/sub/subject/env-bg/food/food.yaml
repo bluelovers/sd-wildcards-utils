@@ -583,4 +583,11 @@ lazy-wildcards:
         env:
           - burlap sack
           - salt bag
+      coffee_bag:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/env-elem-food/coffee_bag/env-elem-food__}{0.3:::{1.2|1.3|1.4}|})
+        env-elem-food:
+          - coffee sack
+          - coffee bag
 
