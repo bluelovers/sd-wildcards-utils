@@ -1,0 +1,22 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      # https://civitai.com/models/147071/jzcg035-game-city
+      # https://civitai.com/models/147042/jzcg013-night-city?modelVersionId=163917
+      # https://civitai.com/models/114604/jzcg005-realistic-city-photography?modelVersionId=123901
+      jzcg035_game_city:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/jzcg035_game_city/main-trigger-words__
+            {, {1-$$__lazy-wildcards/subject/env-bg/jzcg035_game_city/env-bg__}|}
+            , __lazy-wildcards/utils/scenery-no-humans__
+        main-trigger-words:
+          - >-
+            jzcg035, JZCG013, jzcg005, outdoors
+        env-bg:
+          - on the surface of a deserted planet
+          - __lazy-wildcards/subject/env-moment/moon/prompts__
+          - __lazy-wildcards/subject/env-moment/weather-star/prompts__
+          - cityscape
+          - building
+

@@ -460,6 +460,40 @@ lazy-wildcards:
           - capturing iconic landmarks
           - immersive experience
           - architecture photography
+      skyscraper:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-architectural/skyscraper/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/skyscraper/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/skyscraper/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-architectural/skyscraper/style__}|}
+        env-bg-main:
+          - super high-rise skyscraper, super high-rise building
+        env-bg:
+          - skyline
+          - tallest building
+          - twisted skyscraper
+          - towering building
+          - observation deck
+        env:
+          - city skyline
+          - submerged skyscraper
+          - destroyed skyscraper, ruined skyscraper
+          - facade
+          - spire top
+          - futuristic skyscraper
+          - glass facade
+          - steel frame
+          - concrete wall
+          - illuminated windows
+          - neon lights
+          - illuminated skyscraper
+          - cyberpunk skyscraper
+        style:
+          - low angle view
+          - aerial view, drone view
+          - HDRI Panorama View, panoramic view
+          - __lazy-wildcards/utils/scenery-no-humans__
       # https://civitai.com/models/248551/old-village?modelVersionId=280446
       old_rural_buildings:
         prompts:

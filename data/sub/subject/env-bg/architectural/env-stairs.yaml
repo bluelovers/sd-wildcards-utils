@@ -43,6 +43,7 @@ lazy-wildcards:
           - industrial style
           - victorian style
           - spiraling upwards
+      # 閣樓 樓梯
       # https://danbooru.donmai.us/posts?tags=attic&z=2
       # https://civitai.com/search/models?sortBy=models_v9&query=attic%20ladder
       attic_ladder:
@@ -51,6 +52,7 @@ lazy-wildcards:
             (__lazy-wildcards/subject/env-elem/attic_ladder/env-elem-ladder-main__
             {, {1-$$__lazy-wildcards/subject/env-elem/attic_ladder/env-elem-ladder__}|}{0.3:::{1.2|1.3|1.4}|})
             {, {1-$$__lazy-wildcards/subject/env-elem/attic_ladder/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/attic/style__}|}
         env-elem-ladder-main:
           - attic ladder, attic access ladder, interior
         env-elem-ladder:
@@ -63,6 +65,7 @@ lazy-wildcards:
           - metal ladder
           - wooden floor
           - ceiling
+      # 閣樓
       attic:
         prompts:
           - >-
@@ -106,4 +109,190 @@ lazy-wildcards:
           - cozy
           - spooky
           - eery
+      bridge:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/bridge/env-main__
+            {, {1-3$$__lazy-wildcards/subject/env-elem/bridge/env-bridge-main*__}|}{0.3:::{1.2|1.3|1.4}|})
+            {0.3::, {1-3$$__lazy-wildcards/subject/env-elem/bridge/env-bridge-style1__}|}
+            {0.3::, {1-3$$__lazy-wildcards/subject/env-elem/bridge/env-bridge-style2__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/bridge/env__}|}
+        env-main:
+          - bridge
+        env-bridge-main1:
+          - >-
+            {1-$$suspension bridge|cable bridge|cable-stayed bridge}
+          - arch_bridge
+          - >-
+            {1-$$beam_bridge|girder_bridge}
+          - truss_bridge
+          - drawbridge
+          - bascule_bridge
+          - modern_bridge
+          - pedestrian_bridge, footbridge
+          - railway_bridge, train_bridge
+          - covered_bridge
+          - living root bridge
+          - nature_bridge
+          - chinese_arch_bridge, oriental_bridge
+          - torii_bridge
+          - tower bridge
+          - >-
+            {1-$$japanese_arch_bridge|japanese_bridge}
+          - >-
+            {1-$$korean_bridge|korean_stone_bridge|traditional_arch_bridge|hanok_bridge}
+          - >-
+            {1-$$aqueduct|water_bridge}
+          - >-
+            {1-$$floating_bridge|levitating_bridge}
+          - overpass
+          - aerial walkway, skybridge
+          # 吊橋
+          - drawbridge
+        env-bridge-main2:
+          - bifrost, Rainbow_bridge
+          - bone_bridge
+          - crystal bridge
+          - >-
+            {1-$$lava_bridge|molten_bridge}
+        env-bridge-style1:
+          - steel_bridge
+          - stone_bridge
+          - wooden_bridge
+          - vine_bridge
+        env-bridge-style2:
+          - magical_bridge, mythical_bridge
+          - creepy bridge
+          - shining_bridge
+          - organic_bridge
+          - fire_bridge
+          - energy_bridge, laser_bridge
+          - shadow_bridge
+          - cloud bridge
+          - broken Bridge, damaged Bridge
+          - ancient_bridge
+          - >-
+            {1-$$ice_bridge|frost_bridge|frozen_bridge}
+        env:
+          - under bridge
+      # 中空街道跨樓建築、懸空連體建築
+      # https://civitai.com/images/56838083
+      skybridge_building:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/skybridge_building/prompts-no-weight__
+            {, {1-$$__lazy-wildcards/subject/env-elem/skybridge_building/env-bg__}|}{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/skybridge_building/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/skybridge_building/style__}|}
+        prompts-no-weight:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/skybridge_building/env-bg-main__}
+        env-bg-main:
+          - skybridge building
+          - elevated arch building
+        env-bg:
+          - urban ruins, abandoned city, post-apocalyptic city
+          - arch building
+          - skybridge
+          - overgrown building, vines on building
+          - __lazy-wildcards/subject/env-bg/megastructure/env-bg__
+        env:
+          - gap between buildings
+          - sunlight through ruins
+          - nature reclaiming
+          - city in decay
+          - rusty surfaces
+          - market under bridge
+          - abandoned street
+        style:
+          - nostalgic color palette
+          - dystopian
+      alleyways:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/env-elem/alleyways/env-bg-main__}{0.3:::{1.2|1.3|1.4}|})
+            {0.3::, __lazy-wildcards/subject/env-elem/alleyways/env-bg__|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/alleyways/env__}|}
+        prompts-no-weight:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/alleyways/env-bg-main__}
+            {0.3::, __lazy-wildcards/subject/env-elem/alleyways/env-bg__|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/alleyways/env__}|}
+        env-bg-main:
+          - alleyways
+          - narrow alleyways
+          - passageway
+          - concealed passages
+        env-bg:
+          - >-
+            {__cof-location/place/alley__|__cof-location/place/alleys__}
+          - __lazy-wildcards/subject/env-bg-architectural/alley/prompts__
+        env:
+          - hidden alleys
+          - secret routes
+          - labyrinthine paths
+      # 水平自動步道
+      moving_walkway-travelator:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/moving_walkway-travelator/env-elem-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/moving_walkway-travelator/env-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/moving_walkway-travelator/env__}|}
+        env-elem-main:
+          - moving walkway
+        env-elem:
+          - travelator
+        env:
+          - glass railing
+          - metallic surface
+          - airport interior
+      # 手扶梯
+      moving_walkway-escalator:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/moving_walkway-escalator/env-elem-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/moving_walkway-escalator/env-elem__}|}
+            {, {1-2$$__lazy-wildcards/subject/env-elem/moving_walkway-escalator/env-bg__}|}
+        env-elem-main:
+          - escalator
+        env-elem:
+          - moving stairs
+        env-bg:
+          - shopping mall
+          - subway station
+      # 行李輸送帶
+      moving_walkway-conveyor-baggage:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/moving_walkway-conveyor-baggage/env-elem-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/moving_walkway-conveyor-baggage/env-elem__}|}
+             {, {1-$$__lazy-wildcards/subject/env-elem/moving_walkway-conveyor-baggage/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/moving_walkway-conveyor-baggage/env__}|}
+        env-elem-main:
+          - baggage conveyor
+        env-elem:
+          - rubber belt
+          - luggage handling
+        env-bg:
+          - airport baggage claim
+        env:
+          - __lazy-wildcards/subject/costume-weapon/suitcase/prompts-no-weight__
+      # 工廠輸送履帶
+      moving_walkway-conveyor-belt:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/moving_walkway-conveyor-belt/env-elem-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/moving_walkway-conveyor-belt/env-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/moving_walkway-conveyor-belt/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/moving_walkway-conveyor-belt/env-bg__}|}
+        env-elem-main:
+          - conveyor belt
+        env-elem:
+          - rubber belt
+          - assembly line
+        env:
+          - industrial machinery
+          - metal framework
+        env-bg:
+          - factory interior, industrial atmosphere
 
