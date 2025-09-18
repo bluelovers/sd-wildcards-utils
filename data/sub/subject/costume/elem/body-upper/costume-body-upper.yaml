@@ -15,8 +15,11 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/subject/costume-elem-upper-body/corset/costume__
+            {, {1-$$__lazy-wildcards/subject/costume-elem-upper-body/corset/costume-elem__}|}
         costume:
           - corset, c0rs3t, edgCorset, ruanyi012, ruanyi0216, corset-style, War_Glam, edgPorcelain, dr3ss, whitdr3ss, 3mpr3ss
+        costume-elem:
+          - corset belt
       # https://civitai.com/models/253262?modelVersionId=331554
       corset-underbust:
         prompts:

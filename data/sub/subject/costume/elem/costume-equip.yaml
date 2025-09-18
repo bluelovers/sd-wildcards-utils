@@ -12,15 +12,95 @@ lazy-wildcards:
           - Personal flying device
         action:
           - flying
-      holstered:
+      holster:
         prompts:
           - >-
-            (__lazy-wildcards/subject/costume-elem/holstered/prompts-no-weight__)
+            (__lazy-wildcards/subject/costume-elem/holster/prompts-no-weight__)
         prompts-no-weight:
           - >-
-            {1-$$__lazy-wildcards/subject/costume-elem/holstered/costume-elem__}
-        costume-elem:
+            {1-$$__lazy-wildcards/subject/costume-elem/holster/costume-elem-main__}
+            {, {1-$$__lazy-wildcards/subject/costume-elem/holster/costume-elem__}|}
+        costume-elem-main:
           - holstered
+          - __lazy-wildcards/subject/costume-elem/holster-thigh/prompts-no-weight__
+          - gun holster
+          - shoulder holster
+          - dual holster
+          - belt holster
+          - back holster
+          - sword holster
+          - ankle holster
+        costume-elem:
+          - tactical holster
+          - leather holster
+          - crossback straps
+      holster-thigh:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/holster-thigh/prompts-no-weight__)
+            {, __lazy-wildcards/subject/costume-elem/holster/prompts-no-weight__|}
+        prompts-no-weight:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-elem/holster-thigh/costume-elem-main__}
+            {, {1-$$__lazy-wildcards/subject/costume-elem/holster-thigh/costume-elem__}|}
+        costume-elem-main:
           - thigh holster
+        costume-elem:
+          - strap
+          - thigh strap
+          - garter holster
+      belt-base:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem/belt-base/costume-elem-main__
+            {, {1-$$__lazy-wildcards/subject/costume-elem/belt-base/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem/belt-base/costume-elem-texture__}|}
+        costume-elem-main:
           - belt
+        costume-elem:
+          - belt buckle
+          - waist belt
+          - obi belt
+          - chain belt
+          - studded belt
+          - sash belt
+          - __lazy-wildcards/subject/costume-elem/belt-garter/prompts__
+          - __lazy-wildcards/subject/costume-elem/belt-utility/prompts__
+          - __lazy-wildcards/subject/costume-elem/belt-utility-military/prompts__
+        costume-elem-texture:
+          # 橡膠
+          - rubber belt
+          - leather belt
+          - stretch belt
+          - patterned belt
+      belt-utility:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem/belt-utility/costume-elem-main__
+            {, {1-$$__lazy-wildcards/subject/costume-elem/belt-utility/costume-elem__}|}
+        costume-elem-main:
+          - utility belt
+        costume-elem:
+          - holster
+          - pouch
+          - tool belt
+      belt-utility-military:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem/belt-utility-military/costume-elem-main__
+            {, __lazy-wildcards/subject/costume-elem/belt-utility/prompts__|}
+        costume-elem-main:
+          - military belt
+      # 吊襪帶
+      belt-garter:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem/belt-garter/costume-elem-main__
+            {, {1-$$__lazy-wildcards/subject/costume-elem/belt-garter/costume-elem__}|}
+        costume-elem-main:
+          # 吊襪帶
+          - garter belt
+        costume-elem:
+          - thighhighs
+          - stockings
 

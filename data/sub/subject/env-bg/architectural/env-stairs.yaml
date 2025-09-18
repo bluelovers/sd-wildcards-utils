@@ -235,13 +235,10 @@ lazy-wildcards:
       moving_walkway-travelator:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-elem/moving_walkway-travelator/env-elem-main__
-            {, {1-$$__lazy-wildcards/subject/env-elem/moving_walkway-travelator/env-elem__}|}
+            (__lazy-wildcards/subject/env-elem/moving_walkway-travelator/env-elem__{0.3:::{1.2|1.3|1.4}|})
             {, {1-$$__lazy-wildcards/subject/env-elem/moving_walkway-travelator/env__}|}
-        env-elem-main:
-          - moving walkway
         env-elem:
-          - travelator
+          - moving walkway, travelator
         env:
           - glass railing
           - metallic surface
@@ -250,8 +247,8 @@ lazy-wildcards:
       moving_walkway-escalator:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-elem/moving_walkway-escalator/env-elem-main__
-            {, {1-$$__lazy-wildcards/subject/env-elem/moving_walkway-escalator/env-elem__}|}
+            (__lazy-wildcards/subject/env-elem/moving_walkway-escalator/env-elem-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/moving_walkway-escalator/env-elem__}|}{0.3:::{1.2|1.3|1.4}|})
             {, {1-2$$__lazy-wildcards/subject/env-elem/moving_walkway-escalator/env-bg__}|}
         env-elem-main:
           - escalator
@@ -281,8 +278,8 @@ lazy-wildcards:
       moving_walkway-conveyor-belt:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-elem/moving_walkway-conveyor-belt/env-elem-main__
-            {, {1-$$__lazy-wildcards/subject/env-elem/moving_walkway-conveyor-belt/env-elem__}|}
+            (__lazy-wildcards/subject/env-elem/moving_walkway-conveyor-belt/env-elem-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/moving_walkway-conveyor-belt/env-elem__}|}{0.3:::{1.2|1.3|1.4}|})
             {, {1-$$__lazy-wildcards/subject/env-elem/moving_walkway-conveyor-belt/env__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem/moving_walkway-conveyor-belt/env-bg__}|}
         env-elem-main:
