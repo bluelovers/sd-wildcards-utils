@@ -240,6 +240,7 @@ lazy-wildcards:
         prompts:
           - >-
             __lazy-wildcards/subject/costume-weapon/utility-blacksmith-hammer/costume-weapon__
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/utility-blacksmith-hammer/action__}|}
             {, {1-$$__lazy-wildcards/subject/costume-weapon/utility-blacksmith-hammer/env__}|}
         costume-weapon:
           - blacksmith tongs
@@ -247,6 +248,9 @@ lazy-wildcards:
           - blacksmith utility
           - blacksmith hammer
           - holding hammer
+        action:
+          - hammering
+          - lifting hammer
         env:
           - glowing hot
           - anvil
@@ -265,6 +269,7 @@ lazy-wildcards:
           - toolbox
         action:
           - repairing
+          - smithing
         env:
           - mechanical repair tools
           - tool rack

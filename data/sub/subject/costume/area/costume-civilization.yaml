@@ -153,4 +153,15 @@ lazy-wildcards:
           - earth tones
           - harsh lighting
           - ancient fantasy
+      medieval-suit:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume/medieval-suit/costume__}
+            , {1-$$__lazy-wildcards/subject/costume/medieval-suit/costume-headwear__}
+        costume:
+          - kirtle
+          - gown
+        costume-headwear:
+          - wimple
+          - circlet
 

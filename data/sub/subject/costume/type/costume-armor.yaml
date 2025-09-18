@@ -5,11 +5,20 @@ lazy-wildcards:
       armor:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume/armor/costume__
+            __lazy-wildcards/subject/costume/armor/costume-main__
+            {, {1-3$$__lazy-wildcards/subject/costume/armor/costume__}|}
             {, {1-$$__lazy-wildcards/subject/costume/armor/costume-elem__}|}
-        costume:
+        costume-main:
           - armor
+        costume:
+          # 板甲
+          - plate armor
+          # 鎖子甲
+          - chainmail
+          # 鎧甲衣
+          - brigandine
           - bikini armor
+          - medieval armor
         costume-elem:
           - vambraces
           - shoulder armor, pauldrons
@@ -26,6 +35,18 @@ lazy-wildcards:
           - spiked collar
           - spiked bracelet
           - shoulder spikes, spiked pauldrons
+      armor-headwear:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/armor-headwear/costume-headwear-main__
+            {, {1-$$__lazy-wildcards/subject/costume/armor-headwear/costume-headwear__}|})
+        costume-headwear-main:
+          - armor helmet
+        costume-headwear:
+          - great helmet
+          - barbute helmet
+          - sallet helmet
+          - medieval armor helmet
       # https://civitai.com/models/398853/samurai-armor
       # https://civitai.com/models/561501/samurai-armor-elden-ring
       # https://civitai.com/models/83476/samurai-armor-japan-traditional-dress-series
@@ -138,4 +159,10 @@ lazy-wildcards:
           - gauntlet
           - leather vambrace
           - bone vambrace
+      # 十字軍
+      religious-crusader:
+        costume-main:
+          - crusader, crusaderworld
+        costume:
+          - crusader armor
 
