@@ -236,4 +236,36 @@ lazy-wildcards:
         env:
           - flammable symbol
           - fiery background
+      utility-blacksmith-hammer:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-weapon/utility-blacksmith-hammer/costume-weapon__
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/utility-blacksmith-hammer/env__}|}
+        costume-weapon:
+          - blacksmith tongs
+          - holding tongs
+          - blacksmith utility
+          - blacksmith hammer
+          - holding hammer
+        env:
+          - glowing hot
+          - anvil
+          - bellows
+          - forge
+      utility-repair:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-weapon/utility-repair/costume-weapon__
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/utility-repair/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/utility-repair/env__}|}
+        costume-weapon:
+          - wrench
+          - pliers
+          - screwdriver
+          - toolbox
+        action:
+          - repairing
+        env:
+          - mechanical repair tools
+          - tool rack
 

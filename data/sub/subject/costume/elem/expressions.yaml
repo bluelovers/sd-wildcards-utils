@@ -287,12 +287,16 @@ lazy-wildcards:
       smirk:
         prompts:
           - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/smirk/expressions-main__
-            {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/smirk/expressions__}|}{0.3:::{1.2|1.3|1.4}|})
+            (__lazy-wildcards/subject/costume-elem-expressions/smirk/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-elem-expressions/smirk/expressions-main__
+            {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/smirk/expressions__}|}
         expressions-main:
           - smirk
         expressions:
           - seductive smirk
+          - confident smirk
       smile-sad:
         prompts:
           - >-
@@ -329,4 +333,24 @@ lazy-wildcards:
           - sad tears
           - single tear
           - flying teardrops
+      # 自信
+      smirk-confident:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/smirk-confident/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-elem-expressions/smirk-confident/expressions-main__
+            {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/smirk-confident/expressions__}|}
+        expressions-main:
+          - confident
+        expressions:
+          - __lazy-wildcards/subject/costume-elem-expressions/smirk/prompts-no-weight__
+          - confident smile
+          - narrowed eyes
+          - direct gaze
+          - intense stare
+          - proud
+          - cool expression
+          - seductive smile
 

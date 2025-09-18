@@ -1,13 +1,13 @@
 lazy-wildcards:
   subject:
     costume-elem:
-      Jetpack:
+      jetpack:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/costume-elem/Jetpack/costume-elem__}
-            {, {1-$$__lazy-wildcards/subject/costume-elem/Jetpack/action__}|}
+            {1-$$__lazy-wildcards/subject/costume-elem/jetpack/costume-elem__}
+            {, {1-$$__lazy-wildcards/subject/costume-elem/jetpack/action__}|}
         costume-elem:
-          - Jetpack
+          - jetpack
           - Rocket pack
           - Personal flying device
         action:

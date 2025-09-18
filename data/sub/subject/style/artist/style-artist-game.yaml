@@ -1,0 +1,33 @@
+lazy-wildcards:
+  subject:
+    style-artist:
+      # https://danbooru.donmai.us/posts/8618303?q=reverse_bikini_armor
+      #
+      # https://civitai.com/models/217650/box-series-shadow-islandlol-propaganda-poster-texturelesslolgreater
+      # # https://civitai.com/models/861160/league-of-legends-splashart-style
+      league_of_legends:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/league_of_legends/main-trigger-words__
+            {, {1-$$__lazy-wildcards/subject/style-artist/league_of_legends/costuime-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/league_of_legends/style__}|}
+        main-trigger-words:
+          - >-
+            LoL Splash Art illustrations, LoL SplashArt illustrations
+            , lol_5plash
+            , lol_style
+        costuime-elem:
+          - silhouette
+        style:
+          - retro color
+          - bold outline
+          - limited palette
+          - screen print
+          - grainy texture
+          - vintage texture
+          - __lazy-wildcards/subject/style-elem/lighting-cinematic/prompts-no-weight__
+          - __lazy-wildcards/subject/style-elem/high_contrast/prompts-no-weight__
+          - __lazy-wildcards/subject/style-elem/lighting-dramatic/prompts-no-weight__
+          - mystical atmosphere
+          - muted colors
+

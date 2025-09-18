@@ -460,6 +460,7 @@ lazy-wildcards:
           - capturing iconic landmarks
           - immersive experience
           - architecture photography
+      # https://civitai.com/models/127154/jzcg015-super-high-rise-building?modelVersionId=139086
       skyscraper:
         prompts:
           - >-
@@ -471,7 +472,9 @@ lazy-wildcards:
             __lazy-wildcards/subject/env-bg-architectural/skyscraper/env-bg-main__
             {, {1-$$__lazy-wildcards/subject/env-bg-architectural/skyscraper/env-bg__}|}
         env-bg-main:
-          - super high-rise skyscraper, super high-rise building
+          - >-
+            super high-rise skyscraper, super high-rise building
+            , talou01
         env-bg:
           - skyline
           - tallest building

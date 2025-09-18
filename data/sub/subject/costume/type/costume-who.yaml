@@ -131,4 +131,45 @@ lazy-wildcards:
           - sacred symbols
           - ethereal glow
           - serious
+      workwear:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/workwear/costume__
+            {, {1-$$__lazy-wildcards/subject/costume/workwear/costume-elem-lower-body__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/workwear/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/workwear/costume-weapon__}|}
+            {, {1-2$$__lazy-wildcards/subject/costume/workwear/expressions__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/workwear/style__}|}
+        costume:
+          - >-
+            workwear
+            , goggles
+            , open jacket
+            , midriff, navel, cleavage, underboob
+            , __lazy-wildcards/subject/costume-elem/belt-utility/prompts__
+            , blacksmith
+        costume-elem-lower-body:
+          - cargo pants
+          - loose pants
+          - workwear pants
+        costume-elem:
+          - military jacket
+          - pilot suit
+          - bikini top
+          - boots
+          - combat boots
+          - __lazy-wildcards/subject/costume-headwear/goggles/prompts-no-weight__
+          - workwear jacket
+          - utility vest
+          - ribbed gloves
+          - tank top
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/bouncing_breasts/prompts__
+        costume-weapon:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-weapon/utility-*/prompts__}
+        expressions:
+          - __lazy-wildcards/subject/costume-elem-expressions/smirk-confident/prompts-no-weight__
+        style:
+          - utilitarian design
+          - workwear aesthetic
 

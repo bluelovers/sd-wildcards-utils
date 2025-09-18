@@ -139,6 +139,7 @@ lazy-wildcards:
           - heart tattoo
           - barcode tattoo
           - flower tattoo, floral tattoo
+          - cloud tattoo
       # https://civitai.com/models/372610/irezumi-world-world-morph-lora-flux-or-sdxl-or-sd-15?modelVersionId=416199
       # https://civitai.com/models/170447/irezumi-yakuzas-tattoos-concept-or-ownwaifu?modelVersionId=191518
       # https://civitai.com/models/345528/nude-ukiyo-e?modelVersionId=386720
@@ -277,11 +278,11 @@ lazy-wildcards:
           - >-
             {1-$$scar on mouth|scar on chin}
           - scar on tail
-          - __lazy-wildcards/subject/costume-elem-tattoo/scar-skin/prompts__
-          - __lazy-wildcards/subject/costume-elem-tattoo/scar-burn-face/prompts__
+          - __lazy-wildcards/subject/costume-elem-tattoo/scar-skin/prompts-no-weight__
+          - __lazy-wildcards/subject/costume-elem-tattoo/scar-burn-face/prompt-no-weight__
           - battle scarred, battle scar
         costume-elem-tattoo-style1:
-          - burn scar
+          - __lazy-wildcards/subject/costume-elem-tattoo/scar-burn/prompts-no-weight__
           - cross scar
           - lightning scar
           - surgical scar
@@ -291,27 +292,49 @@ lazy-wildcards:
           - injury
           - bruise
           - wound
+      scar-burn:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-tattoo/scar-burn/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            , __lazy-wildcards/subject/costume-elem-tattoo/scar/costume-elem-tattoo-main__
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-elem-tattoo/scar-burn/costume-elem-tattoo-main__
+            {, {1-$$__lazy-wildcards/subject/costume-elem-tattoo/scar-burn/costume-elem-tattoo__}|}
+        costume-elem-tattoo-main:
+          - burn scar
+        costume-elem-tattoo:
+          - rotten scar
       # https://civitai.com/models/153912/burnt-scar-on-face-rotten-face-or-concept-lora
       scar-burn-face:
         prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-tattoo/scar-burn-face/prompt-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            , __lazy-wildcards/subject/costume-elem-tattoo/scar/costume-elem-tattoo-main__
+        prompt-no-weight:
           - >-
             __lazy-wildcards/subject/costume-elem-tattoo/scar-burn-face/costume-elem-tattoo-main__
             {, {1-$$__lazy-wildcards/subject/costume-elem-tattoo/scar-burn-face/costume-elem-tattoo__}|}
             {, {1-$$__lazy-wildcards/subject/costume-elem-tattoo/scar-burn-face/costume-elem__}|}
         costume-elem-tattoo-main:
-          - burn scarred face, burn scar on face, burnt scar on face, __lazy-wildcards/subject/costume-elem-tattoo/scar/costume-elem-tattoo-main__
+          - burn scarred face, burn scar on face, burnt scar on face
         costume-elem-tattoo:
           - rotten face
+          - __lazy-wildcards/subject/costume-elem-tattoo/scar-burn/prompts-no-weight__
         costume-elem:
           - covered eyes
       # https://civitai.com/models/78910/scarred-skin
       scar-skin:
         prompts:
           - >-
+            (__lazy-wildcards/subject/costume-elem-tattoo/scar-skin/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            , __lazy-wildcards/subject/costume-elem-tattoo/scar/costume-elem-tattoo-main__
+        prompts-no-weight:
+          - >-
             __lazy-wildcards/subject/costume-elem-tattoo/scar-skin/costume-elem-tattoo-main__
             {, {1-$$__lazy-wildcards/subject/costume-elem-tattoo/scar-skin/costume-elem-tattoo__}|}
         costume-elem-tattoo-main:
-          - scarred skin, __lazy-wildcards/subject/costume-elem-tattoo/scar/costume-elem-tattoo-main__
+          - scarred skin
         costume-elem-tattoo:
           - scar-inspired tattoo
 

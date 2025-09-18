@@ -319,7 +319,10 @@ lazy-wildcards:
       bouncing_breasts:
         prompts:
           - >-
-            (__lazy-wildcards/subject/costume-ethnicity-breasts/bouncing_breasts/costume-breasts__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+            (__lazy-wildcards/subject/costume-ethnicity-breasts/bouncing_breasts/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-breasts/bouncing_breasts/costume-breasts__
             {, {1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/bouncing_breasts/style__}|}
         costume-breasts:
           - bouncing breasts, unaligned breasts

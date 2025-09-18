@@ -1273,4 +1273,38 @@ lazy-wildcards:
           - frilled hair tubes
           - helmet
           - gauntlets
+    # https://danbooru.donmai.us/posts?tags=sailor_moon+&z=5
+    sailor_moon:
+      # https://civitai.com/models/58164/sailor-moon-outfit-lora
+      # https://civitai.com/models/115691/change-a-character-evil-sailor-scout-your-waifu-has-joined-the-force-of-evil
+      sailor_senshi_uniform:
+        prompts:
+          - >-
+            ({__lazy-wildcards/cosplay-char/sailor_moon/sailor_senshi_uniform/costume-main__,|}
+            __lazy-wildcards/cosplay-char/sailor_moon/sailor_senshi_uniform/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/cosplay-char/sailor_moon/sailor_senshi_uniform/costume-elem__}|}
+            , __lazy-wildcards/subject/style-artist/sailor_moon/style-artist__
+        costume-main:
+          # https://civitai.com/models/194753/sailor-moon-sailor-uranus
+          # https://civitai.com/models/186228/haruka-tenou-sailor-uranus-sailor-moon-commission
+          - sailor uranus, sailor uranus \(cosplay\), ten'ou haruka
+          - sailor moon, sailor moon \(cosplay\)
+        costume:
+          - >-
+            sailor senshi, sailor senshi uniform
+            , choker
+            , sailor collar
+            , miniskirt, pleated skirt
+            , white gloves
+            , sailor leotard
+            , bishoujo senshi sailor moon
+            , sailor moon outfit
+            , EvlSM
+        costume-elem:
+          - bracelet, jewelry, crescent earrings
+          - clothing cutout
+          - clothes lift, leotard pull
+          - long legs
+          - crescent facial mark
+          - makeup, lipstick, mascara, eyeshadow
 

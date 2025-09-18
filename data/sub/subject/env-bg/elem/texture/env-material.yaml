@@ -125,4 +125,37 @@ lazy-wildcards:
           - limestone pillars
           - colossal pillars
           - cathedral-like pillars
+      # https://civitai.com/models/503877
+      # https://civitai.com/models/586285/js-texture-generator
+      # https://civitai.com/models/87414/team-fortress-2-textures
+      texture:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/texture/main-trigger-words__
+            , {1-2$$__lazy-wildcards/subject/env-elem/texture/env-elem-texture__}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/texture/style__}|}
+        main-trigger-words:
+          - >-
+            zzStylizedTexture, JS_TexGenV1
+            , tf2 texture
+            , video game texture
+        env-elem-texture:
+          - black rocks, glowing lava
+          - rock wall, rock, grey rock, plant, wall, vines, green theme, moss
+          - tiles, __lazy-wildcards/utils/color-base__ tile
+          - nature, bark, __lazy-wildcards/utils/color-base__ bark
+          - shingles, __lazy-wildcards/utils/color-base__ shingles, square edge
+          - brick, green brick, slime, green slime
+          - tiles, tile floor, __lazy-wildcards/utils/color-base__ tile, white title, pattern, squares
+          - brown theme, brown rock, rock
+          - __lazy-wildcards/utils/color-base__ theme, crystal
+          - brick, __lazy-wildcards/utils/color-base__ brick
+          - sand, brown theme, orange theme
+          - black rock, __lazy-wildcards/utils/color-base__ glow
+          - box, wood, metal, rivets
+        style:
+          - cracks
+          - debris
+          - __lazy-wildcards/utils/color-base__ theme
+          - stain
 

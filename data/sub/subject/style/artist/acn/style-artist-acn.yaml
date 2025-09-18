@@ -153,4 +153,17 @@ lazy-wildcards:
           - smiling, smile
           - __lazy-wildcards/subject/costume-elem-expressions/blush/prompts__
           - __lazy-wildcards/subject/costume-elem-expressions/doyagao_smug/prompts__
+      # https://civitai.com/models/183858/naoko-takeuchi-art-style-manga-v15
+      # https://civitai.com/models/142469/sailor-moon-art-nouveau-style-lora
+      # https://civitai.com/models/332577/sailor-moon-anime-style-lora
+      sailor_moon:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/sailor_moon/style-artist__{0.3:::{1.2|1.3|1.4}|})
+        style-artist:
+          - >-
+            __lazy-wildcards/utils/fn/style-inspired(v=takeuchi_naoko)__
+            , SMNouveau
+            , Naoko Takeuchi Style
+            , EPTakeuchiNaokoStyle
 
