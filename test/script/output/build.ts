@@ -13,7 +13,7 @@ import {
 import { outputFile } from 'fs-extra';
 import { mergeWildcardsYAMLDocumentRoots } from '../../../src/node/node-merge';
 import { consoleLogger } from 'debug-color2/logger';
-import { _ReadAndupdateFile } from '../lib/util';
+import { _ReadAndupdateFile, globSync2 } from '../lib/util';
 
 export default Bluebird.map([
 	join(__ROOT_DATA, 'lazy-wildcards.yaml'),
