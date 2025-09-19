@@ -843,26 +843,37 @@ lazy-wildcards:
           - multicolored hair, two-tone hair
           - multicolored skin, two-tone skin
       # https://civitai.com/models/1069590/tiger-woman?modelVersionId=1200546
+      # https://civitai.com/models/386675/tiger-world
+      # https://civitai.com/models/62612/tigerstripeai
+      # https://civitai.com/models/150811/tiger-girl
+      # https://civitai.com/models/1069590/tiger-woman
+      # https://civitai.com/models/543190/dream-tiger-govy9807
+      # https://civitai.com/models/173779/ortigerstripebodysuit
       tiger_girl:
         prompts:
           - >-
             (__lazy-wildcards/subject/costume-ethnicity-race/tiger_girl/costume-ethnicity-main__
-            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/tiger_girl/costume-ethnicity__}|}{0.3:::{1.2|1.3|1.4}|})
+            , {1-$$__lazy-wildcards/subject/costume-ethnicity-race/tiger_girl/costume-ethnicity__}{0.3:::{1.2|1.3|1.4}|})
             {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/tiger_girl/costume-elem__}|}
             {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/tiger_girl/action__}|}
             {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/tiger_girl/env__}|}
             {, {1-3$$__lazy-wildcards/subject/costume-ethnicity-race/tiger_girl/env-bg__}|}
             {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/tiger_girl/style__}|}
         costume-ethnicity-main:
-          - tiger_girl, beastfolk, furry
+          - >-
+            tiger_girl, beastfolk, furry
+            , TigerWorld, TigerstripeAI
+            , hwjsy, tigerstripebodysuit
         costume-ethnicity:
           - tiger ears
           - tiger tail, striped tail
           - striped fur
           - tiger print
           - tiger stripes
-          - tiger paws, clawed hands
+          - tiger paws, clawed hands, cat paws
         costume-elem:
+          - >-
+            {orange|white} tiger leotard
           - fur capelet
           - striped hair
           - anthropomorphic character, feral character

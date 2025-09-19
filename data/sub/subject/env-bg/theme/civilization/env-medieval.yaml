@@ -1,0 +1,94 @@
+lazy-wildcards:
+  subject:
+    env-elem-civilization:
+      # https://civitai.com/models/1346216/medieval-worlds-thank-you-special
+      # https://civitai.com/models/1703672/special-edition-medieval-worlds
+      medieval:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-civilization/medieval/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-elem-civilization/medieval/style-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/medieval/style__}|}
+        style-main:
+          - >-
+            __lazy-wildcards/utils/fn/style-inspired(v=medieval)__
+            , mw01out
+        style:
+          - medieval fantasy
+          - >-
+            medieval rustic
+      # https://civitai.com/models/256907/tavern-scenes
+      # https://civitai.com/models/285437/twilight-tavern-photographic-style
+      medieval-tavern:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-civilization/medieval-tavern/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            , {1-$$__lazy-wildcards/subject/env-elem-civilization/medieval-tavern/env__}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/medieval-tavern/costume-elem__}|}
+            {, {1-3$$__lazy-wildcards/subject/env-elem-civilization/medieval-tavern/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/medieval-tavern/style__}|}
+            , __lazy-wildcards/subject/env-elem-civilization/medieval-tavern/style-main__
+        style-main:
+          - >-
+            tavern scenes
+            , __lazy-wildcards/subject/env-elem-civilization/medieval/prompts-no-weight__
+            , __lazy-wildcards/utils/fn/style-inspired(v=rustic)__
+        env-bg-main:
+          - >-
+            medieval tavern, medieval brothel, adventurer guild, adventurer tavern
+        env:
+          - quest board, notice board, wanted poster
+          - wooden round table
+          - wooden mug, beer mug
+          - beer barrel
+          - __lazy-wildcards/subject/env-elem-food-tool/fireplace-grill/prompts__
+          - candles
+        costume-elem:
+          - __lazy-wildcards/subject/costume/tavern_girl/prompts-no-weight__
+          - adventurers
+          - guild receptionist
+        env-bg:
+          - fantasy tavern
+          - medieval interior
+          - fantasy tavern interior
+          - guild hall
+          - twilight tavern
+          - rustic tavern interior
+        style:
+          - forbidden desire
+          - dim lighting
+          - party gathering
+          - seductive atmosphere
+      # https://civitai.com/models/902973/medieval-brothel-bedroom
+      medieval-tavern-bedroom:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-civilization/medieval-tavern-bedroom/env-bg-main__
+            {, {1-3$$__lazy-wildcards/subject/env-elem-civilization/medieval-tavern-bedroom/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/medieval-tavern-bedroom/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/medieval-tavern/style__}|}
+            , __lazy-wildcards/subject/env-elem-civilization/medieval-tavern/style-main__
+        env-bg-main:
+          - >-
+            medieval tavern bedroom, medieval brothel bedroom
+            , medieval bedroom interior, brothel bedroom interior
+            , bed
+        env-bg:
+          - canopy bed
+          - four poster bed
+          - bed curtains
+        env:
+          - wooden floor
+          - wooden wall
+          - candle
+          - night
+          - red curtains
+          - carpet
+          - window
+          - silk sheets
+          - perfume smoke
+          - bedroom scene
+          - rustic bedroom interior
+

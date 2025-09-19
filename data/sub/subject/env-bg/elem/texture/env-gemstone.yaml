@@ -100,6 +100,7 @@ lazy-wildcards:
           - red spinel \(gemstone\)
           - fire opal \(gemstone\)
           - citrine \(gemstone\)
+          - __lazy-wildcards/subject/env-elem/gemstone-agate/env__
       # https://civitai.com/models/1804811/everything-is-a-colorful-gem?modelVersionId=2042478
       # https://civitai.com/models/272524?modelVersionId=307182
       gemstone-everything:
@@ -123,4 +124,17 @@ lazy-wildcards:
           - __lazy-wildcards/utils/fn/pattern(v=gemstone)__
           - __lazy-wildcards/utils/fn/pattern(v=crystal)__
           - shiny, glowing
+      # https://civitai.com/models/392587/agate-world
+      # https://civitai.com/models/127477/yuhua
+      gemstone-agate:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/gemstone-agate/style-main__
+            , __lazy-wildcards/subject/env-elem/gemstone-agate/env__{0.3:::{1.2|1.3|1.4}|})
+        style-main:
+          - >-
+            __lazy-wildcards/utils/fn/made-of-inspired(v=agate)__
+            , AgateWorld, yuhua
+        env:
+          - agate, agate \(gemstone\)
 

@@ -148,4 +148,60 @@ lazy-wildcards:
           - paper lantern
           - Copper Coin
           - long tobacco pipe
+      # 十字軍
+      # https://civitai.com/models/305999/crusader-world
+      # https://civitai.com/models/1880946/crusader-from-xelswordart-darkest-dungeon
+      # https://civitai.com/models/1513551/crusader-armor-or-historical-clothing-pony
+      # https://civitai.com/models/454300/female-crusader-from-diablo-or-pony
+      # https://civitai.com/models/239965/female-crusader-dungeon-fighter-online-lora
+      # https://civitai.com/models/978478/dnf-female-crusader-dungeon-and-fighter
+      # https://civitai.com/models/299760?modelVersionId=336656
+      religious-crusader:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/religious-crusader/costume-main__
+            {, {1-2$$__lazy-wildcards/subject/costume/religious-crusader/costume__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/religious-crusader/costume-elem__}|}
+            {, {1-3$$__lazy-wildcards/subject/costume/religious-crusader/costume-weapon__}|}
+            , __lazy-wildcards/subject/costume/religious-crusader/env__
+        costume-main:
+          - >-
+            crusader
+            , crusaderworld, crusad3r, crusaderknight, ck3styl3, crsadr
+            , dnfCrusader, dnf-female-crusader
+        costume:
+          - crusader armor
+          - crusader clothing
+          - crusader soldier
+          - crusader priest
+          - cleric warrior
+          - robe, dress
+        costume-elem:
+          - surcoat
+          - __lazy-wildcards/subject/costume/armor-headwear/prompts__
+          - __lazy-wildcards/subject/costume/armor/prompts__
+          - cleric hat
+          - hair over one eye
+          - ponytail
+          - __lazy-wildcards/subject/costume-elem/curtain/prompts__
+          - __lazy-wildcards/subject/costume-elem/fabric-sheer/prompts__
+          - thighhighs
+          - high heels
+        costume-weapon:
+          - holding crusader cross
+          - crusader cross \(object\)
+          - holding crusader sword
+          - crusader sword \(object\)
+          - holding crusader shield
+          - crusader shield \(object\), kite shield
+          - holding crusader spear
+          - heater shield
+          - crusader spear \(object\)
+          - rosary
+          - holy book
+          - holding book
+          - mace
+          - war banner
+        env:
+          - crusader symbols, cross pattee、templar cross, red cross
 
