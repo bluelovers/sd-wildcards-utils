@@ -1,0 +1,39 @@
+lazy-wildcards:
+  subject:
+    costume-elem:
+      # https://civitai.com/models/356178/0348-plastic-wrap-2
+      # https://civitai.com/models/256174/plastic-wrap
+      # https://civitai.com/models/192924/bound-in-plastic-film-mummified
+      # https://civitai.com/models/530268/sexy-clothingplastic-wrap
+      # https://civitai.com/models/1968342/see-through-plastics?modelVersionId=2227923
+      plastic_wrap:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/plastic_wrap/costume__
+            {, {1-$$__lazy-wildcards/subject/costume-elem/plastic_wrap/costume-elem__}|}{0.3:::{1.2|1.3|1.4|1.6}|})
+        costume:
+          - >-
+            plastic wrap, ruanyi0348, ruanyi0065, saranwrap, qingqu
+        costume-elem:
+          - see-through plastic wrap
+          - transparent plastic wrap
+          - translucent plastic wrap
+        fn:
+          see-through:
+            - >-
+              {1-$$, see-through ${v} ,|, transparent ${v} ,|, translucent ${v} ,}
+      # https://civitai.com/models/81059/plastic-clothes-or
+      plastic_clothes:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/plastic_clothes/costume__
+            {, {1-$$__lazy-wildcards/subject/costume-elem/plastic_clothes/costume-elem__}|}{0.3:::{1.2|1.3|1.4|1.6}|})
+        costume:
+          - see-through plastic clothes
+        costume-elem:
+          - transparent plastic clothes
+          - translucent plastic clothes
+          - plastic raincoat
+          - translucent material
+          - functional sense
+

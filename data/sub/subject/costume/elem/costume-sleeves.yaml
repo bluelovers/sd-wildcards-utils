@@ -116,4 +116,16 @@ lazy-wildcards:
           - pastel_colors
           - soft_tone
           - gentle_palette
+      # 手臂暖手
+      arm_warmers:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem/arm_warmers/costume-elem-main__
+            {, {1-$$__lazy-wildcards/subject/costume-elem/arm_warmers/costume-elem__}|}
+        costume-elem-main:
+          - arm warmers
+        costume-elem:
+          - print arm warmers
+          - single arm warmer
+          - striped arm warmers
 
