@@ -108,6 +108,7 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 				...defaultOptionsStringifyMinify(),
 				minifyPrompts: false,
 				disableUnsafeQuote: true,
+				allowScalarValueIsEmptySpace: true,
 			});
 
 			let actual = matchDynamicPromptsWildcardsAll(output, { unique: true });
