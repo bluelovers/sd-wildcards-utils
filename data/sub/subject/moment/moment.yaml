@@ -243,16 +243,28 @@ lazy-wildcards:
           - fog, haze
           - mist, misty
           - steam
-          - __lazy-wildcards/subject/env-moment/weather-smoke/prompts__
+          - __lazy-wildcards/subject/env-moment/weather-mist-smoke/prompts__
           - thick mist
-          - dense_fog
+          - dense fog
+          - __lazy-wildcards/subject/env-moment/weather-mist-perfume/prompts__
         env:
           - beautiful mist
-      weather-smoke:
+      weather-mist-perfume:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/env-moment/weather-smoke/env-main__}
-            {, {1-$$__lazy-wildcards/subject/env-moment/weather-smoke/env__}|}
+            __lazy-wildcards/subject/env-moment/weather-mist-perfume/env-moment__
+            {, {1-$$__lazy-wildcards/subject/env-moment/weather-mist-perfume/env__}|}
+        env-moment:
+          - perfume smoke, fragrance
+        env:
+          - aura
+          - incense burner
+          - aromatic bottle, perfume bottle
+      weather-mist-smoke:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-moment/weather-mist-smoke/env-main__}
+            {, {1-$$__lazy-wildcards/subject/env-moment/weather-mist-smoke/env__}|}
         env-main:
           - smoke
           - wisps of smoke
@@ -443,7 +455,7 @@ lazy-wildcards:
         env:
           - blazing heat
           - fire inferno
-          - __lazy-wildcards/subject/env-moment/weather-smoke/prompts__
+          - __lazy-wildcards/subject/env-moment/weather-mist-smoke/prompts__
       # https://civitai.com/models/560913/avalanche
       weather-snow_avalanche:
         prompts:
