@@ -12,7 +12,7 @@ import {
 	parseWildcardsYaml,
 	matchDynamicPromptsWildcardsAll,
 	findWildcardsYAMLPathsAll,
-	pathsToWildcardsPath,
+	pathsToWildcardsPath, stringifyWildcardsYamlData, defaultOptionsStringifyMinify,
 } from '../src/index';
 import { toMatchFile } from 'jest-file-snapshot2';
 import { ensureDir, ensureDirSync, ensureFile, ensureFileSync } from 'fs-extra';
@@ -104,7 +104,13 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 
 		if (!file.startsWith('output'))
 		{
-			let actual = matchDynamicPromptsWildcardsAll(obj.toString(), { unique: true });
+			let output = stringifyWildcardsYamlData(obj, {
+				...defaultOptionsStringifyMinify(),
+				minifyPrompts: false,
+				disableUnsafeQuote: true,
+			});
+
+			let actual = matchDynamicPromptsWildcardsAll(output, { unique: true });
 
 			outPath = join(
 				__ROOT_TEST_SNAPSHOTS_FILE,
