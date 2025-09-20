@@ -181,4 +181,35 @@ lazy-wildcards:
           - barbecue
           - outdoor cooking
           - charcoal grill
+      # https://danbooru.donmai.us/wiki_pages/food_packaging?z=2
+      food-packaging:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-food-tool/food-packaging/env-elem-food-tool-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-food-tool/food-packaging/env-elem-food-tool__}|}
+            {, {1-2$$__lazy-wildcards/subject/env-elem-food-tool/food-packaging/env-elem-food__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food-tool/food-container/env__}|}
+        env-elem-food-tool-main:
+          - food packaging
+        env-elem-food-tool:
+          - wrapped up
+          - styrofoam
+          - shrink wrap
+          - food wrapper
+          - plastic wrap
+        env-elem-food:
+          - a packaged bento box
+          - a thermally sealed bag of food
+          - shrink-wrapped produce on a tray
+          - a basket of various types of packaged foods
+          - various types of generic food packaging
+      food-container:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem-food-tool/food-container/env-elem-food-tool__}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food-tool/food-container/env__}|}
+        env-elem-food-tool:
+          - food container
+        env:
+          - barcode, price tag
 

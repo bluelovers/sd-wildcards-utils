@@ -5,6 +5,8 @@ lazy-wildcards:
       # https://civitai.com/models/190341/food-real-photos?modelVersionId=213754
       # https://civitai.com/models/127450/food-elegant-style?modelVersionId=139441
       # https://civitai.com/models/127146/jzcg010-food?modelVersionId=139080
+      # https://civitai.com/models/182796/gourmet-food
+      # https://civitai.com/models/67467/rfktrs-food-master-hot-foods-edition
       food:
         prompts:
           - >-
@@ -14,7 +16,7 @@ lazy-wildcards:
             {0.2::, {1-$$__lazy-wildcards/subject/style-elem/food/env-elem-food-flavor__}|}
             {, {1-$$__lazy-wildcards/subject/style-elem/food/style-view__}|}
         style-main:
-          - food focus, Yummy, foodphoto, foodshot, Food Photography, fodm4st3r style, HEZI, anime food, food platters, foodporn, food porn, foodstyle, jzcg010
+          - food focus, Yummy, foodphoto, foodshot, Food Photography, fodm4st3r style, HEZI, anime food, food platters, foodporn, food porn, foodstyle, jzcg010, meishi
         style:
           - plating art, fine dining, food arrangement, elegant plating
           - macro food, detailed texture, high resolution

@@ -47,30 +47,6 @@ lazy-wildcards:
       untied-panties:
         prompts:
           - (untied panties, falling panties:1.4)
-      see-through:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/costume-elem/see-through/costume-main__
-            {, {1-$$__lazy-wildcards/subject/costume-elem/see-through/costume-elem__}|}
-        costume-main:
-          - see-through
-        costume-elem:
-          - sheer fabric
-          - see-through gossamer
-      see-through-clothes:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/costume-elem/see-through/prompts__
-            {, {1-$$__lazy-wildcards/subject/costume-elem/see-through-clothes/costume-elem__}|}
-        costume-elem:
-          - >-
-            wringing {1-$$, wringing $$clothes|shirt}
-          - >-
-            sweaty {1-$$, sweaty $$clothes|shirt}
-          - >-
-            wet {1-$$, wet $$clothes|shirt}
-          - >-
-            see-through {1-$$, see-through $$clothes|shirt}
       torn-clothes:
         prompts:
           - >-
