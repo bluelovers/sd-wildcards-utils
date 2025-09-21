@@ -16,7 +16,7 @@ import {
 import { formatPrompts } from '../prompts/format';
 import { isWildcardsYAMLDocument, isWildcardsYAMLMap } from './node-is';
 import { _nearString, isUnsafePlainString } from '../valid';
-import { RE_UNSAFE_QUOTE, RE_UNSAFE_VALUE } from '../const';
+import { RE_UNSAFE_QUOTE, RE_UNSAFE_QUOTE_DOUBLE, RE_UNSAFE_VALUE } from '../const';
 import { _checkValue } from '../prompts/valid-prompts';
 import { findUpParentNodesNames } from './node-find';
 import { copyMergeScalar } from './node';
@@ -202,7 +202,7 @@ export function _visitNormalizeScalar(key: IVisitorFnKey, node: IWildcardsYAMLSc
 
 	if (typeof value === 'string')
 	{
-		if (runtime.checkUnsafeQuote && RE_UNSAFE_QUOTE.test(value))
+		if (runtime.checkUnsafeQuote && (key === 'key' ? RE_UNSAFE_QUOTE : RE_UNSAFE_QUOTE_DOUBLE).test(value))
 		{
 			throw new SyntaxError(`Invalid SYNTAX [UNSAFE_QUOTE]. key: ${key}, node: ${node}`)
 		}
