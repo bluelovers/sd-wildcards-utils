@@ -42,13 +42,13 @@ lazy-wildcards:
           - stormy horizon
           - golden light effects
       # https://civitai.com/models/1159453/desert-oasis
-      oasis:
+      desert-oasis:
         prompts:
           - >-
-            (__lazy-wildcards/subject/env-bg/oasis/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
-            {, {1-2$$__lazy-wildcards/subject/env-bg/oasis/env-bg__}|}
-            {, {1-$$__lazy-wildcards/subject/env-bg/oasis/env__}|}
-            {, {1-$$__lazy-wildcards/subject/env-bg/oasis/action__}|}
+            (__lazy-wildcards/subject/env-bg/desert-oasis/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-2$$__lazy-wildcards/subject/env-bg/desert-oasis/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/desert-oasis/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/desert-oasis/action__}|}
         env-bg-main:
           - oasis
         env-bg:
@@ -82,7 +82,7 @@ lazy-wildcards:
         env-bg-main:
           - desert
         env-bg:
-          - __lazy-wildcards/subject/env-bg/oasis/prompts__
+          - __lazy-wildcards/subject/env-bg/desert-oasis/prompts__
           - __cof-location/place/desert-camp__
           - __cof-location/place/desert__
           - pyramid \(structure\)
@@ -114,7 +114,7 @@ lazy-wildcards:
             , conan the barbarian
             , conan \(series\)
         env-bg:
-          - __lazy-wildcards/subject/env-bg/oasis/prompts__
+          - __lazy-wildcards/subject/env-bg/desert-oasis/prompts__
           - whitewashed houses
           - marketplace stalls
           - camel stables

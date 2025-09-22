@@ -247,8 +247,30 @@ lazy-wildcards:
           - thick mist
           - dense fog
           - __lazy-wildcards/subject/env-moment/weather-mist-perfume/prompts__
+          - __lazy-wildcards/subject/env-moment/weather-mist-hot/prompts__
+          - __lazy-wildcards/subject/env-moment/weather-mist-tea/prompts__
         env:
           - beautiful mist
+      weather-mist-hot:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-moment/weather-mist-hot/env-moment-main__
+            {, {1-$$__lazy-wildcards/subject/env-moment/weather-mist-hot/env-moment__}|}
+        env-moment-main:
+          - heat steam
+        env-moment:
+          - incense smoke
+          - heat haze
+          - hot steam, steam
+          - hot smoke
+      # 茶的蒸汽 / 茶煙
+      weather-mist-tea:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-moment/weather-mist-tea/env-moment__
+        env-moment:
+          - tea steam, steam
+      # 香水煙霧 / 香氣煙霧
       weather-mist-perfume:
         prompts:
           - >-
@@ -259,6 +281,7 @@ lazy-wildcards:
         env:
           - aura
           - incense burner
+          - incense smoke
           - aromatic bottle, perfume bottle
       weather-mist-smoke:
         prompts:

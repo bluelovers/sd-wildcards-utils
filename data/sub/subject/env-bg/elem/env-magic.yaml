@@ -80,6 +80,7 @@ lazy-wildcards:
       # https://danbooru.donmai.us/posts/9695072?q=bagua+
       # https://danbooru.donmai.us/wiki_pages/yin_yang?z=2
       # https://danbooru.donmai.us/wiki_pages/mini-hakkero
+      # https://civitai.com/models/1978435/yin-yang-15-lora?modelVersionId=2239422
       yin_yang:
         prompts:
           - >-
@@ -88,7 +89,7 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/env-elem/yin_yang/env__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem/yin_yang/style__}|}
         env-main:
-          - tai chi
+          - tai chi, yinyangstyle
         env-elem:
           - >-
             ba gua, bagua

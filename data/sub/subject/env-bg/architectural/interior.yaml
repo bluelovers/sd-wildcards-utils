@@ -151,33 +151,6 @@ lazy-wildcards:
           - metal frame
           - luxury interior
           - __lazy-wildcards/subject/env-elem/lamp/prompts__
-      bathroom:
-        prompts:
-          - >-
-            {1-$$ with $$__lazy-wildcards/subject/env-bg-interior/bathroom/env-main__},
-            {1-$$__lazy-wildcards/subject/env-bg-interior/bathroom/env-elem-object__},
-            {1-$$__lazy-wildcards/subject/env-bg-interior/bathroom/env__}
-            {, {1-$$__lazy-wildcards/subject/env-bg-interior/bathroom/env-bg__}|}
-        env-main:
-          - bath
-          - a sink
-          - bathroom
-          - bathtub
-        env-elem-object:
-          - toilet
-          - handrails
-          - faucet
-          - door
-          - mirror
-          - window
-        env:
-          - >-
-            {1-$$soap|soap bottle}
-          - bath stool
-          - sponge
-        env-bg:
-          - >-
-            {1-$$tiles|tile floor|tile wall}
       living_room:
         prompts:
           - >-
@@ -465,7 +438,7 @@ lazy-wildcards:
         env-bg:
           - water, waterfall
           - >-
-            {kitchen|bedroom|__lazy-wildcards/subject/env-bg-interior/bathroom/prompts__|__lazy-wildcards/subject/env-bg-interior/living_room/prompts__}
+            {kitchen|bedroom|__lazy-wildcards/subject/env-bg/bathroom/prompts__|__lazy-wildcards/subject/env-bg-interior/living_room/prompts__}
           - __lazy-wildcards/subject/env-bg-architectural/kitchens_jp/prompts__
         style:
           - >-

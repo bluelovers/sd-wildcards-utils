@@ -4,7 +4,7 @@ lazy-wildcards:
       ruins-common:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/env-bg/ruins-common/style-main__}
+            __lazy-wildcards/subject/env-bg/ruins-common/style-main__
             {, {1-$$__lazy-wildcards/subject/env-bg/ruins-common/env__}|}
             {, {1-$$__lazy-wildcards/subject/env-bg/ruins-common/style__}|}
         style-main:
@@ -435,4 +435,34 @@ lazy-wildcards:
             {, __lazy-wildcards/subject/env-bg/mine-place/prompts-base__|}
         env-bg:
           - mine entrance, mine shaft entrance, mineshaft entrance
+      # https://civitai.com/models/1978295/wasteland?modelVersionId=2239264
+      # https://civitai.com/models/1812751/city-worlds-lost-city?modelVersionId=2239750
+      wasteland:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/wasteland/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/wasteland/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/wasteland/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/wasteland/style__}|}
+        env-bg-main:
+          - wasteland
+        env-bg:
+          - __lazy-wildcards/subject/env-bg/desert/env-bg-main__
+          - __lazy-wildcards/subject/env-bg/ruins-common/style-main__
+          - post-apocalyptic wasteland
+          - crumbling shanty-town made from rusted metal and scavenged ruins
+          - skeletal buildings leaning over a muddy road
+          - colossal rusted circular gate fused into ruined fortress-like structures
+        env:
+          - cracked earth
+          - dusty wasteland sky
+          - storm clouds
+          - dangling metal debris
+          - dusty orange sky with ominous storm clouds
+          
+        style:
+          - post-apocalyptic
+          - dystopian
+          - desolate, bleak, barren
+          - wasteland aesthetic
 

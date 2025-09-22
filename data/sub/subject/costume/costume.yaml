@@ -325,36 +325,6 @@ lazy-wildcards:
             {1-$$throne|iron throne|marble throne}
           - olosseum backdrop
           - house of the dragon
-      sfw-civitai:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/costume/sfw-civitai/main__
-            , ({1-$$__lazy-wildcards/subject/costume/sfw-civitai/costume-elem__}{0.3:::{1.2|1.3|1.4|1.6}|:1.2})
-            , ({1-$$__lazy-wildcards/subject/costume/sfw-civitai/style__}:1.2)
-        main:
-          - >-
-            (1girl:1.6), solo, solo focus
-            , (fully clothes, fully clothed{0.3:::{1.2|1.3|1.4|1.6}|:1.2})
-            , upper body, close-up portrait, face focus
-            , sfw, safe_for_work
-        costume-elem:
-          - Conservative Clothing
-          - conservative_dress
-          - long_sleeves
-          - turtleneck
-          - high_collar
-          - neck_coverage
-          - maxi_skirt
-          - midi_skirt
-        style:
-          - full_coverage, full_body_covering
-          - arm_coverage
-          - formal_appearance
-          - classic_style
-          - flowing_fabric
-          - layering_piece
-          - casual_wear
-          - minimal_exposure
       # Nyx Stealth Suit (Operation Lovecraft: Fallen Doll)
       # https://civitai.com/models/632771/costume-nyx-stealth-suit-operation-lovecraft-fallen-doll?modelVersionId=707420
       Nyx-Stealth-Suit:

@@ -1,0 +1,107 @@
+lazy-wildcards:
+  subject:
+    costume:
+      sfw-civitai:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/sfw-civitai/main__
+            , ({1-$$__lazy-wildcards/subject/costume/sfw-civitai/costume-elem__}{0.3:::{1.2|1.3|1.4|1.6}|:1.2})
+            , ({1-$$__lazy-wildcards/subject/costume/sfw-civitai/style__}:1.2)
+        main:
+          - >-
+            (1girl:1.6), solo, solo focus
+            , (fully clothes, fully clothed{0.3:::{1.2|1.3|1.4|1.6}|:1.2})
+            , upper body, close-up portrait, face focus
+            , sfw, safe_for_work
+        costume-elem:
+          - Conservative Clothing
+          - conservative_dress
+          - long_sleeves
+          - turtleneck
+          - high_collar
+          - neck_coverage
+          - maxi_skirt
+          - midi_skirt
+        style:
+          - full_coverage, full_body_covering
+          - arm_coverage
+          - formal_appearance
+          - classic_style
+          - flowing_fabric
+          - layering_piece
+          - casual_wear
+          - minimal_exposure
+      sfw-civitai-2:
+        prompts:
+          - >-
+            ({1-2$$__lazy-wildcards/subject/costume/sfw-civitai-2/costume-top__}
+            , {1-2$$__lazy-wildcards/subject/costume/sfw-civitai-2/costume-bottom__}{0.3:::{1.2|1.3|1.4|1.6}|:1.2})
+            {, {1-$$__lazy-wildcards/subject/costume/sfw-civitai-2/costume-elem__}|}
+        costume-top:
+          - baggy sweatshirt
+          - baggy t-shirt
+          - belted tunic
+          - motojacket
+          - turtleneck
+          - black button-up shirt
+          - wool coat
+          - shirt
+          - blazer
+          - button-up
+          - blouse
+          - blue polo shirt
+          - light blue vest
+          - business suit
+          - button-up coat
+          - button-up shirt
+          - vest
+          - cowl-neck sweater
+          - crew neck t-shirt
+          - flannel shirt
+          - graphic tee
+          - modest high-neck ballgown
+          - high-neck evening gown
+          - high-neck long dress
+          - high-neck maxi-dress
+          - high-neck wedding dress
+          - hoodie
+          - levi jacket
+          - t-shirt
+          - long sleeve button-up shirt
+          - long sleeve jumpsuit
+          - long sleeve romper
+          - long sleeve sweater
+          - long sweater
+          - loose t-shirt
+          - orange prison jumpsuit
+          - oversized sweater
+          - polo shirt
+          - puffy jacket
+          - sweater-dress
+          - sweatshirt
+          - trench coat
+          - tunic dress
+          - tweed coat
+          - zipped up leather jacket
+          - long overalls
+          - tuxedo
+        costume-bottom:
+          - jeans
+          - sweatpants
+          - leggings
+          - black jeans
+          - slacks
+          - maxi skirt
+          - khaki pants
+          - capri pants
+          - ripped jeans
+          - long pants
+          - khakis
+          - bermuda shorts
+          - long skirt
+          - pants
+        costume-elem:
+          - apron
+          - long sleeves
+          - shawl
+

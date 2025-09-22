@@ -1,0 +1,72 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      bathroom:
+        prompts:
+          - >-
+            {1-$$ with $$__lazy-wildcards/subject/env-bg/bathroom/env-main__},
+            {1-$$__lazy-wildcards/subject/env-bg/bathroom/env-elem-object__},
+            {1-$$__lazy-wildcards/subject/env-bg/bathroom/env__}
+            {, {1-$$__lazy-wildcards/subject/env-bg/bathroom/env-bg__}|}
+        env-main:
+          - bath
+          - a sink
+          - bathroom
+          - bathtub
+        env-elem-object:
+          - toilet
+          - handrails
+          - faucet
+          - door
+          - mirror
+          - window
+        env:
+          - >-
+            {1-$$soap|soap bottle}
+          - bath stool
+          - sponge
+        env-bg:
+          - >-
+            {1-$$tiles|tile floor|tile wall}
+      # 蒸氣房／桑拿
+      # https://civitai.com/models/56108/sauna-with-towel
+      bathroom-sauna:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/bathroom-sauna/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/bathroom-sauna/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/bathroom-sauna/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/bathroom-sauna/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/bathroom-sauna/style__}|}
+        env-bg-main:
+          - sauna, steam room
+        env-bg:
+          - european steam room
+          - roman thermae
+        costume-elem:
+          - body steaming, steaming body
+          - heavy breathing
+          - very sweaty, wet skin, wet hair
+          - blush
+          - spread legs
+          - topless
+          - glossy skin
+          - naked towel
+          - wearing towel
+          - towel on head
+          - impossible towel
+          - holding towel
+          - mouth hold
+        env:
+          - wooden interior
+          - stone walls
+          - bucket of water
+          - __lazy-wildcards/subject/env-moment/weather-mist-hot/prompts__
+          - marble walls
+          - mosaic floor
+          - statue
+          - wet towel
+        style:
+          - blur censor
+          - steam censor
+

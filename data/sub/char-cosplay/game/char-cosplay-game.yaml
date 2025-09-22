@@ -1047,4 +1047,21 @@ lazy-wildcards:
           - (open clothes:1.2), black clothes, black footwear, black pants, chinese clothes, dragon print
         costume-elem:
           - __lazy-wildcards/subject/costume-elem/naked-partially/prompts__
+    sucker_for_love:
+      # https://civitai.com/models/107639/nyanlathotep-or-sucker-for-love-first-date
+      nyanlathotep:
+        prompts:
+          - >-
+            (__lazy-wildcards/cosplay-char/sucker_for_love/nyanlathotep/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/sucker_for_love/nyanlathotep/costume-ethnicity__{0.3:::{1.2|1.3|1.4}|})
+            , __lazy-wildcards/cosplay-char/sucker_for_love/nyanlathotep/costume__
+        main-trigger-words:
+          - nyanlathotep, nyanlathotep \(cosplay\)
+        costume-ethnicity:
+          - >-
+            eye of horus, one-eyed
+            , aqua hair, aqua skin
+            , cat ears, cat tail, tail ornament, tail ring, very long hair
+        costume:
+          - ancient egyptian clothes, white dress, gold shoes, jewelry, necklace, see-through clothes
 
