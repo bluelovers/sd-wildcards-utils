@@ -98,6 +98,7 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 		let obj = parseWildcardsYaml(buf, {
 			allowMultiRoot: true,
 			allowUnsafeKey: true,
+			allowParameterizedTemplatesImmediate: true,
 		});
 
 		let outPath: string;
@@ -109,6 +110,7 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 				minifyPrompts: false,
 				disableUnsafeQuote: true,
 				allowScalarValueIsEmptySpace: true,
+
 			});
 
 			let actual = matchDynamicPromptsWildcardsAll(output, { unique: true });

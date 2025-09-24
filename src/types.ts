@@ -63,6 +63,20 @@ export interface IOptionsSharedWildcardsYaml
 	expandForwardSlashKeys?: boolean,
 
 	allowScalarValueIsEmptySpace?: boolean,
+
+	/**
+	 * by default, the immediate flag `=!` pattern is not allowed to be used in the value of a parameterized template.
+	 *
+	 * `__season_clothes(season={summer|autumn|winter|spring)__`
+	 *
+	 * enable this option to allow it. when you patch the source with https://github.com/bluelovers/dynamicprompts
+	 *
+	 * `__season_clothes(season=!{summer|autumn|winter|spring)__`
+	 *
+	 * @see https://github.com/bluelovers/dynamicprompts
+	 * @see https://github.com/adieyal/sd-dynamic-prompts/blob/main/docs/SYNTAX.md#parameterized-templates
+	 */
+	allowParameterizedTemplatesImmediate?: boolean,
 }
 
 export type IOptionsStringify =

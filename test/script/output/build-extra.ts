@@ -8,6 +8,7 @@ import { copy, exists, outputFile } from 'fs-extra';
 import { consoleLogger } from 'debug-color2/logger';
 // @ts-ignore
 import { _ReadAndupdateFile, globAbsolute } from '../lib/util';
+import { _BUILD_FILES_OPTS } from '../lib/settings';
 
 export default Bluebird.map([
 	join(__ROOT_OUTPUT_WILDCARDS, 'lazy-wildcards.yaml'),
@@ -21,10 +22,7 @@ export default Bluebird.map([
 ], (file: any) => {
 	consoleLogger.debug(file);
 	return (file.includes('lazy-wildcards.yaml') ? readFile : _ReadAndupdateFile)(file)
-		.then(data => parseWildcardsYaml(data, {
-			disableUnsafeQuote: true,
-			allowMultiRoot: true,
-		})) as any as IWildcardsYAMLDocument[]
+		.then(data => parseWildcardsYaml(data, _BUILD_FILES_OPTS)) as any as IWildcardsYAMLDocument[]
 }).then(ls => {
 	// @ts-ignore
 	return mergeFindSingleRoots(ls[0], ls.slice(1))

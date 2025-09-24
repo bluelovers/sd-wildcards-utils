@@ -256,7 +256,7 @@ export function _visitNormalizeScalar(key: IVisitorFnKey, node: IWildcardsYAMLSc
 			node.type = 'QUOTE_DOUBLE'
 		}
 
-		let res = _checkValue(value);
+		let res = _checkValue(value, runtime.options);
 		if (res?.error)
 		{
 			throw new SyntaxError(`${res.error}. key: ${key}, node: ${node}`)
