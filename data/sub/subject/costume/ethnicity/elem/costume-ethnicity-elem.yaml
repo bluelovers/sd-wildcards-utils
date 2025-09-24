@@ -23,6 +23,16 @@ lazy-wildcards:
             __lazy-wildcards/subject/costume-ethnicity-elem/fish-tail-cetacean/costume-ethnicity__
         costume-ethnicity:
           - cetacean tail
+      # https://civitai.com/models/513151/donm-smells-fishy-sd15sdxlpony?modelVersionId=570295
+      fish-scales:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-elem/fish-scales/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-elem/fish-scales/costume-ethnicity__
+        costume-ethnicity:
+          - fish scales, scales, DonMF15hy
       fish-tail:
         prompts:
           - >-
@@ -43,4 +53,33 @@ lazy-wildcards:
           - webbed feet
           - webbed hands
           - flippers, swimfins
+      paw-gloves:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-elem/paw-gloves/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-elem/paw-gloves/costume-elem-main__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-elem/paw-gloves/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-elem/paw-gloves/action__}|}
+        costume-elem-main:
+          - paw gloves, cat-themed paw gloves, cat paws
+        costume-elem:
+          - fur-trimmed gloves
+        action:
+          - paw pose
+          - clawed hands
+      paw-sleeves:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-elem/paw-sleeves/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-elem/paw-sleeves/costume-elem-main__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-elem/paw-sleeves/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-elem/paw-gloves/action__}|}
+        costume-elem-main:
+          - paw sleeves
+        costume-elem:
+          - fur-trimmed sleeves
 

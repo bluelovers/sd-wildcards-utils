@@ -1040,7 +1040,7 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/cosplay-char/naraka_bladepoint/ji_canghai/costume-elem__}|}
         main-trigger-words:
           - >-
-             ji canghai \(yong jie wujian\), naraka bladepoint, yong jie wujian
+            ji canghai \(yong jie wujian\), naraka bladepoint, yong jie wujian
         costume-ethnicity-hair:
           - __lazy-wildcards/subject/costume-ethnicity-hair-style/hair-bun/prompts__
         costume:
@@ -1064,4 +1064,39 @@ lazy-wildcards:
             , cat ears, cat tail, tail ornament, tail ring, very long hair
         costume:
           - ancient egyptian clothes, white dress, gold shoes, jewelry, necklace, see-through clothes
+    # https://danbooru.donmai.us/posts?tags=kyokugen_dasshutsu&z=2
+    # https://zeroescape.fandom.com/wiki/Zero_Escape:_Virtue%27s_Last_Reward
+    zero_escape:
+      # https://danbooru.donmai.us/posts?tags=alice_%28kyokugen_dasshutsu%29&z=1
+      # https://civitai.com/models/27139/alice-lora-zero-escape-virtues-last-reward
+      alice:
+        prompts:
+          - >-
+            (__lazy-wildcards/cosplay-char/zero_escape/alice/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/zero_escape/alice/costume-ethnicity__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/cosplay-char/zero_escape/alice/costume-elem__}|}
+        main-trigger-words:
+          - alice \(kyokugen_dasshutsu\), alice \(kyokugen_dasshutsu\) \(cosplay\), aliceze
+        costume-ethnicity:
+          - >-
+            black hair
+            , nail polish
+            , eyeshadow, eyeliner, makeup, lipstick
+            , bracelet
+            , earrings
+            , groin, navel
+            , cleavage, no bra, underboob
+            , __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+            , ancient egyptian
+        costume-elem:
+          - midriff
+          - skirt
+          - lips
+          - narrow waist
+          - thick thighs
+          - wristwatch
+          - blue nails, black nails
+          - cropped jacket
+          - high heels
+          - lowleg skirt
 

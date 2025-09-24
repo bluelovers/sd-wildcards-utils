@@ -431,16 +431,21 @@ lazy-wildcards:
           - >-
             (satellite map{0.3:::{1.2|1.3|1.4}|})
             , __lazy-wildcards/subject/style-art-type/map/prompts__
+      # https://civitai.com/models/95236?modelVersionId=101634
       Lego:
         prompts:
           - >-
             (__lazy-wildcards/subject/style-art-type/Lego/style-art-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-art-type/Lego/env-bg__}|}
             {, {1-$$__lazy-wildcards/subject/style-art-type/Lego/style__}|}
         style-art-main:
           - >-
             lego, LegoAI, LEGO BrickHeadz, LEGO MiniFig, LEGO Creator, lego world, BJ_Lego bricks
             , __lazy-wildcards/utils/fn/style-inspired(v=lego)__
+            , __lazy-wildcards/utils/fn/made-of(v=lego)__
             , lgo, Lego Style
+        env-bg:
+          - lego background
         style:
           - lego material
           - LEGO_Pixel

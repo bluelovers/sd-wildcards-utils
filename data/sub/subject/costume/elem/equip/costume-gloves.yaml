@@ -26,16 +26,6 @@ lazy-wildcards:
           - finger cots
           - half gloves
           - glove cutout
-      gloves-paw:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/costume-elem/gloves-paw/costume-elem__
-            {, {1-$$__lazy-wildcards/subject/costume-elem/gloves-paw/action__}|}
-        costume-elem:
-          - paw gloves, cat-themed paw gloves, cat paws
-        action:
-          - paw pose
-          - clawed hands
       # 折叠袖口手套
       gloves-fold-over:
         prompts:

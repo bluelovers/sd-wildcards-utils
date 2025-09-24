@@ -25,7 +25,7 @@ lazy-wildcards:
           - throne
           - Recliner
           - stool
-          - __lazy-wildcards/subject/env-elem/rattan-chair/env-chair__
+          - __lazy-wildcards/subject/env-elem/chair-rattan/env-chair__
           - wheelchair
         action-pose:
           - hand on own chin
@@ -35,7 +35,7 @@ lazy-wildcards:
           - discarded
           - modern chair
           - >-
-            {1-$$__lazy-wildcards/subject/env-elem/rattan-chair/style__}
+            {1-$$__lazy-wildcards/subject/env-elem/chair-rattan/style__}
       # 藤製椅
       # 🖐Wicker 是一種古老的編織技術，以前主要使用自然的材質，例如：柳樹、燈心草、竹子、棕梠科的樹，等等，會把植物弄濕以便於編織，現代也會有人用人造纖維來做，因此 wicker furniture 指的是用此種技術編織出來的家具。
       # 🌲Rattan 是指一種棕梠科的省藤亞科中有爬藤的棕梠樹，所以 rattan furniture指的是用 rattan編製的家具
@@ -43,13 +43,13 @@ lazy-wildcards:
       # Wicker 的材質比較沒那麼硬，壽命較短，但因為能被上各種不同的顏色，放在室外比較不會有退色的問題。
       # https://www.facebook.com/EnglishRealmTutor/posts/%E4%B8%AD%E6%96%87%E6%89%80%E8%AC%9B%E7%9A%84%E8%97%A4%E6%A4%85%E8%8B%B1%E6%96%87%E6%9C%89wicker-chair-%E5%92%8C-rattan-chair%E5%85%A9%E7%A8%AE%E6%9C%89%E4%BA%9B%E4%BA%BA%E4%BB%A5%E7%82%BA%E9%82%A3%E4%BA%9B%E9%83%BD%E4%B8%80%E6%A8%A3%E6%98%AF%E8%97%A4%E6%A4%85%E5%85%B6%E5%AF%A6-wicker-%E8%88%87-rattan-%E6%8C%87%E6%98%AF%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8B%E7%89%A9%E9%82%A3%E6%88%91/453816298616530/
       # https://civitai.com/models/377816/rattan-chair
-      rattan-chair:
+      chair-rattan:
         prompts:
           - >-
-            (__lazy-wildcards/subject/env-elem/rattan-chair/env-chair__
-            {, {1-$$__lazy-wildcards/subject/env-elem/rattan-chair/env__}|}{0.3:::{1.2|1.3|1.4}|})
+            (__lazy-wildcards/subject/env-elem/chair-rattan/env-chair__
+            {, {1-$$__lazy-wildcards/subject/env-elem/chair-rattan/env__}|}{0.3:::{1.2|1.3|1.4}|})
             {, {1-$$__lazy-wildcards/subject/env-elem/chair/action-pose__}|}
-            {, {1-$$__lazy-wildcards/subject/env-elem/rattan-chair/style__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/chair-rattan/style__}|}
         env-chair:
           - rattan chair, wicker chair
         env:
@@ -65,6 +65,82 @@ lazy-wildcards:
       chair-plastic:
         prompts:
           - plastic chair
+      # https://civitai.com/models/102487/sitting-on-throne-the-gooder
+      # https://civitai.com/models/85582/better-thrones
+      # https://civitai.com/models/456362/xuer-iron-throne
+      # https://civitai.com/models/554005/jay-white-petals-throne
+      chair-throne:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/chair-throne/env-chair-main__
+            {, {1-3$$__lazy-wildcards/subject/env-elem/chair-throne/env-chair-1__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-3$$__lazy-wildcards/subject/env-elem/chair-throne/env-chair-2__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/chair-throne/costume-elem__}|}
+            {, {1-3$$__lazy-wildcards/subject/env-elem/chair-throne/action__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/chair-throne/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/chair-throne/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/chair-throne/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/chair-throne/style__}|}
+        env-chair-main:
+          - throne
+        env-chair-1:
+          - gold throne
+          - stone throne
+          - tatami throne
+          - dragon throne
+          - bone throne
+          - crystal throne
+          - nature throne, vines, entangled vines
+          - metallic throne, iron throne, xuer Iron Throne
+        env-chair-2:
+          - royal throne
+          - ornate throne
+          - gothic throne
+          - imperial throne, jade
+          - divine throne
+          - floating throne
+          - flaming throne
+          - sword throne, weapon
+          - white petals throne
+        costume-elem:
+          - crown
+          - royal robe
+          - jeweled crown
+          - halo
+        action:
+          - sitting on throne
+          - regal pose
+          - looking down
+          - dominant pose
+          - lying on throne
+          - leaning on throne
+          - reclining on throne
+          - sleeping on throne
+        costume-weapon:
+          - holding scepter
+          - scepter
+        env-bg:
+          - castle hall
+          - palace hall
+        env:
+          - torchlight
+          - velvet cushion
+          - red drapery
+          - lion armrest
+          - samurai crest
+          - skull decoration
+          - glowing rune
+          - blossom flowers
+          - holographic projection
+          - energy core
+          - chandelier
+          - fallen banners
+          - armrest
+        style:
+          - regal, majestic
+          - ornate carving
+          - ominous glow
+          - holy light
       # 棺材
       coffin:
         prompts:

@@ -19,4 +19,69 @@ lazy-wildcards:
           - __lazy-wildcards/subject/env-moment/weather-star/prompts__
           - cityscape
           - building
+      # https://civitai.com/models/162717/donm-knight-order-of-the-rose-sci-fi-sd15
+      # https://civitai.com/models/658473/donm-void-dwellers-sdsdxl?modelVersionId=736774
+      theme-set-donm:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/theme-set-donm/main-trigger-words__
+            {, {1-$$__lazy-wildcards/subject/env-bg/theme-set-donm/env__}|}
+            {, {1-3$$__lazy-wildcards/subject/env-bg/theme-set-donm/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/theme-set-donm/style__}|}
+        main-trigger-words:
+          - >-
+            DonMR0s30rd3r, DonMF1r3y4by55
+        env:
+          - Engine Bay Lights
+          - energy core
+          - pink flowers, rose
+          - sunlit
+          - jewel glow
+          - blue glow
+        env-bg:
+          - fantasy garden
+          - magic academy
+          - alien structure
+          - crystal palace
+          - fantasy cathedral
+          - utopia architecture
+          - crystal tower
+          - futuristic spire
+        style:
+          - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
+      # https://civitai.com/models/543275/donm-shadow-melting-sd15sdxlpony?modelVersionId=604096
+      # https://civitai.com/models/149140/shadowmancer
+      # https://civitai.com/models/272593/shadow-concept
+      # https://civitai.com/models/55325/outflowing-shadows
+      # https://civitai.com/models/33065/solo-leveling-shadows
+      # https://civitai.com/models/144627/world-of-shadows
+      shadow_melting:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/shadow_melting/main-trigger-words__
+            , (__lazy-wildcards/subject/env-bg/shadow_melting/style-main__{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/shadow_melting/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/shadow_melting/style__}|}
+        main-trigger-words:
+          - DonM5h4d0wM317, shad0wmancer, worldofshadows
+        style-main:
+          - shadow melting, dripping shadow, shadow fluid, shadow fusion, swirling shadow
+        env:
+          - black liquid
+          - muddy
+          - metal
+          - oli
+          - __lazy-wildcards/subject/env-elem/liquid/prompts__
+          - __lazy-wildcards/subject/env-moment/weather-mist/prompts__
+          - glow-in-the-dark shadow, glowing shadow
+        style:
+          - melting silhouette
+          - dark aura
+          - ink splatter
+          - surreal
+          - dreamlike
+          - eldritch
+          - bidirectional path tracing
+          - swirling black ink
+          - __lazy-wildcards/utils/fn/made-of-inspired(v=shadow)__
 

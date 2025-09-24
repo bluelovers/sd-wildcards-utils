@@ -185,4 +185,45 @@ lazy-wildcards:
           colored:
             - >-
               {colored|multicolored}
+      # https://civitai.com/posts/453929
+      abstract-dreamscape:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-elem/abstract-dreamscape/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/style-elem/abstract-dreamscape/style-main__
+            {0.7::, {1-$$__lazy-wildcards/subject/style-elem/abstract-dreamscape/action__}|}
+            {0.7::, {1-$$__lazy-wildcards/subject/style-elem/abstract-dreamscape/env-bg__}|}
+            , {5-$$__lazy-wildcards/subject/style-elem/abstract-dreamscape/style__}
+        style-main:
+          - abstract dreamscape, mandala-inspired tangle patterns
+        action:
+          - a mesmerizing dance of lines and shapes
+        env-bg:
+          - mesmerizing cosmic landscape, cosmic mandalas
+        style:
+          - fluidity and movement
+          - hypnotic, meditative
+          - psychedelic, optical illusion
+          - fluid art, fluid shapes
+          - infinite imagination
+          - radial symmetry
+          - intricate lines, flowing lines
+          - geometric pattern
+          - color flow
+          - ethereal
+          - smoky texture
+          - vibrant colors, gradient
+          - soft blend, pastel tone
+          - spiritual art, zen
+          - glowing fractal
+          - circular mandala
+          - visual vortex, spiral pattern
+          - fractal mandala
+          - liquid light
+          - symmetrical mandala
+          - ethereal entangled
+          - celestial colors
+          - journey
 

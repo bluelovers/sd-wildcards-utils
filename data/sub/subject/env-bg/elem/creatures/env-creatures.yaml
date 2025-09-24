@@ -119,4 +119,51 @@ lazy-wildcards:
           - biomechanical butterfly
           - glowing butterfly
           - luminous butterfly
+      # 螢火蟲 蛍 ホタル
+      # https://civitai.com/posts/231688
+      insects-fireflies:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-creatures/insects-fireflies/env-elem-creatures-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-creatures/insects-fireflies/env-elem-creatures__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-creatures/insects-fireflies/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-creatures/insects-fireflies/action__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-creatures/insects-fireflies/env__}|}
+            {, __lazy-wildcards/subject/env-elem-creatures/insects-fireflies/env-moment__|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-creatures/insects-fireflies/style__}|}
+        env-elem-creatures-main:
+          - fireflies, glowing fireflies, glowing sparkles, particle effect
+        env-elem-creatures:
+          - swarm of fireflies
+          - fireflies around
+        env:
+          - forest
+          - grass field
+          - riverbank
+          - floating orbs
+          - countryside
+          - glowing neon green sparkles
+          - glowing golden glow sparkles
+          - pathway
+          - magic dust
+        costume-elem:
+          - yukata
+        action:
+          - reaching out
+          - catching fireflies
+          - sitting by river
+          - watching fireflies
+        env-moment:
+          - night
+          - twilight
+        style:
+          - mystical
+          - bioluminescence
+          - glowing lights
+          - fluttering, flickering
+          - romantic atmosphere
+          - serene
+          - nostalgic
+          - guiding light
+          - soul light
 

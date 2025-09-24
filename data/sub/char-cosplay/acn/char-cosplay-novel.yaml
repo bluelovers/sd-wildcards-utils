@@ -300,4 +300,17 @@ lazy-wildcards:
         costume-weapon:
           - holding whip
           - holding plate
+    re_zero:
+      # https://danbooru.donmai.us/posts?tags=elsa_granhilte&z=2
+      # https://civitai.com/models/136126/elsa-granhiert-cosplay-rezerohttps://civitai.com/models/136126/elsa-granhiert-cosplay-rezero
+      # https://civitai.com/models/13889/elsa-granhiert-rezero
+      elsa_granhilte:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/re_zero/elsa_granhilte/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/re_zero/elsa_granhilte/costume__
+        main-trigger-words:
+          - elsa granhilte, elsa granhilte \(cosplay\), ElsaO, elsagranhiert
+        costume:
+          - cloak, fur-trim, navel, two-sided fabric, black dress, bridal_gauntlets
 

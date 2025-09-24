@@ -1,5 +1,6 @@
 lazy-wildcards:
   cosplay-char:
+    # https://civitai.com/tag/fate
     fate:
       # 源賴光
       # https://civitai.com/models/453729/minamoto-no-raikou-or-fatestaynight-or-15-attires-or-kofi-commissioned?modelVersionId=505140
@@ -121,6 +122,42 @@ lazy-wildcards:
           - zipper pull tab
           - loose belt
           - center opening
+      # https://civitai.com/models/82789/gorgon-or-fate-or-fgo
+      # https://civitai.com/models/101872/medusa-rider-or-fatestay-night-unlimited-blade-works?modelVersionId=109636
+      # https://civitai.com/models/209728/medusa-lily-fate-grand-order?modelVersionId=236233
+      medusa:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/fate/medusa/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/fate/medusa/costume-ethnicity-main__
+            {, __lazy-wildcards/cosplay-char/fate/medusa/costume-ethnicity__|}
+            {, {1-2$$__lazy-wildcards/cosplay-char/fate/medusa/costume__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/fate/medusa/costume-elem__}|}
+        main-trigger-words:
+          - >-
+            medusa \(fate\), medusa \(fate\) \(cosplay\)
+            , gorgon \(fate\), gorgon \(fate\) \(cosplay\)
+            , medusa lily
+            , MedGorg, medusa_ubw
+        costume-ethnicity-main:
+          - very long hair, purple hair, thighs, parted lips, fingernails, parted bangs, (purple blindfold:1.3), purple eyes, sidelocks
+        costume-ethnicity:
+          - monster girl, snake hair, scales, snake
+        costume:
+          - white shirt, black pants
+        costume-elem:
+          - bare shoulders
+          - cleavage
+          - navel
+          - clothing cutout
+          - claws
+          - pelvic curtain
+          - bustier
+          - hip vent clothes
+          - mask
+          - braid, braided ponytail
+          - black gloves
+          - purple collar
     onmyoji:
       suzuka_gozen:
         prompts:

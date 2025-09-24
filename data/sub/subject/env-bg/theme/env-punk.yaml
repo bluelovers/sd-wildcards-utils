@@ -106,7 +106,7 @@ lazy-wildcards:
           - washing machine future
           - computer future
         env:
-          - __lazy-wildcards/subject/env-elem-punk/circuit_board/prompts__
+          - __lazy-wildcards/subject/env-elem-punk/circuit-board/prompts__
         env-bg:
           - cyber city
         style:
@@ -114,27 +114,66 @@ lazy-wildcards:
           - cyberpunk
           - digital_world
           - techno_aesthetics
-      circuit_board:
+      circuit-electronics:
         prompts:
           - >-
-            ({1-$$__lazy-wildcards/subject/env-elem-punk/circuit_board/env__})
-            {,{1-$$__lazy-wildcards/subject/env-elem-punk/circuit_board/style__}|}
+            __lazy-wildcards/subject/env-elem-punk/circuit-electronics/env-elem-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/circuit-electronics/env__}|}
+        env-elem-main:
+          - capacitors, resistors, electronics, electronic component, __lazy-wildcards/utils/fn/made-of(v=electronics)__
         env:
-          - circuit_board
-          - printed_circuit_board
-          - electronic_component
+          - cylindrical capacitor
+          - surface mount capacitor
+          - striped resistor
+          - through hole resistor
+      # 印刷電路板
+      # https://civitai.com/models/58410/circuitboardai-konyconi
+      circuit-board:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-punk/circuit-board/env-elem-main__{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/circuit-board/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/circuit-board/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/circuit-board/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/circuit-board/style__}|}
+        env-elem-main:
+          - >-
+            circuit board, printed circuit board
+            , circuit pattern
+            , __lazy-wildcards/utils/fn/pattern(v=circuit)__
+            , CircuitBoardAI, circuitrytech
+        costume-weapon:
+          - holding circuit board
+        env-bg:
+          - circuit board background, printed circuit board background
+        env:
           - microchip
-          - capacitors
-          - resistors
+          - __lazy-wildcards/subject/env-elem-punk/circuit-electronics/prompts__
           - transistors
-          - solder_points
-          - heat_sinks
+          - solder points, solder joints
+          - heat sinks
           - diodes
-          - power_connectors
+          - power connectors
+          - pcb traces
+          - integrated circuit
+          - black chip, chip markings
+          - micro structure
+          - glowing circuit
+          - circuit wall
+          - holographic projection
+          - exposed circuit
+          - cmos circuitry
+          - cables
+          - copper
+          - tech magic circuit
         style:
-          - circuit_pattern
-          - printed_circuit_lines
-          - techno_aesthetics
+          - nanotechnology, nanotech
+          - printed circuit lines
+          - techno aesthetics
+          - futuristic, futuristic pattern
+          - micro world, nano scale
+          - macro shot, extreme close up
+          - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
       conspiracytech:
         prompts:
           - >-
@@ -755,4 +794,46 @@ lazy-wildcards:
           - gritty aesthetic
           - wasteland gang
           - recycled tech
+      # 等離子科技
+      # https://civitai.com/models/144378/plasma-tech-world-morph
+      plasma_tech:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-punk/plasma_tech/env-elem-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-3$$__lazy-wildcards/subject/env-elem-punk/plasma_tech/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/plasma_tech/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/plasma_tech/style__}|}
+        env-elem-main:
+          - >-
+            plasma tech
+            , plasma filaments, plasma glow
+            , electric arc, energy swirl
+            , plasmatech
+        env-bg:
+          - distorted city
+          - fragmented architecture
+          - shifting landscape
+          - liquid structure
+          - melting buildings
+        env:
+          - glass
+          - energy field
+          - morphing surface, dripping surface
+          - plasma core, glowing orb
+          - dimensional rift, space fracture
+          - neon stream
+          - energy river
+          - plasma rune, energy sigil
+        style:
+          - purple hues
+          - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
+          - distorted reality
+          - apocalyptic
+          - shattered world
+          - electric blue
+          - violet plasma, purple plasma
+          - neon green
+          - black void, deep purple
+          - glowing contrast
+          - pixel distortion
 

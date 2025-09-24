@@ -870,7 +870,9 @@ lazy-wildcards:
           - striped fur
           - tiger print
           - tiger stripes
-          - tiger paws, __lazy-wildcards/subject/costume-elem/gloves-paw/prompts__
+          - >-
+            tiger paws
+            , {1-$$__lazy-wildcards/subject/costume-ethnicity-elem/paw-*/prompts-no-weight__}
         costume-elem:
           - >-
             {orange|white} tiger leotard

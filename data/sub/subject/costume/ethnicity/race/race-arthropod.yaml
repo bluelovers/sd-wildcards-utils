@@ -1,0 +1,49 @@
+lazy-wildcards:
+  subject:
+    costume-ethnicity-race:
+      # https://civitai.com/models/78253/moth-knights-by-edg
+      # https://civitai.com/models/77516/moth-people-loha
+      # https://civitai.com/models/225268/moth-girl-concept
+      # https://civitai.com/models/160001/anthro-moths-lora
+      # https://civitai.com/models/78405/moth-chan-merryweather-lora
+      moth_girl:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-race/moth_girl/costume-ethnicity-race__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/moth_girl/costume-ethnicity__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/moth_girl/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/moth_girl/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/moth_girl/env__}|}
+        costume-ethnicity-race:
+          - >-
+            moth girl
+            , moth antennae, moth wings
+            , moth arthropod limbs
+            , moth woman, mothgirlcpt, edgMothKnight
+            , moth-chan
+            , personification of moth
+        costume-ethnicity:
+          - moth arthropod girl
+          - extra arms, 4 arms
+          - __lazy-wildcards/subject/costume-elem-accessories/fur-trim/prompts__
+          - lepidoptera
+          - insect wings
+          - abdomen tail
+          - compound eyes
+          - neck fur
+          - black sclera
+        costume-elem:
+          - thigh gap
+          - joints
+          - open mouth, teeth
+          - thick eyebrows
+          - monster girl
+          - >-
+            {1-$$fur bra|fur boots|fur shawl|fur sleeves}
+        action:
+          - hand on hip
+          - hand on own breast
+          - holding
+        env:
+          - feathers
+

@@ -1,13 +1,14 @@
 lazy-wildcards:
   subject:
     scenes-showcase:
-      bg-color-prompts:
+      bg-color-char-1girl:
         prompts:
           - >-
             (1girl:1.3), solo focus
-            ,__lazy-wildcards/subject/scenes-showcase/bg-color-prompts/main__
-            ,__lazy-wildcards/dataset/background-color__
-            {,__lazy-wildcards/char/haircolor__|}
+            ,__lazy-wildcards/subject/scenes-showcase/bg-color-char-1girl/main__
+            {, __lazy-wildcards/char/haircolor__|}
+            {, __lazy-wildcards/subject/scenes-showcase/bg-color-char-1girl/action-pose__|}
+            {, __lazy-wildcards/dataset/background-color__|}
         main:
           - wolf snout, (wolf girl), white eyes, wolf teeth, (open_mouth, tongue out, saliva, saliva drip), draped white silk, cloth curtains, (from above, looking_up:1.2), (looking at viewer), abandon area, fireflies, (moss slime vines)
           - macross, long hair, holding creature, guitar, microphone, microphone_stand, instrument, holding_microphone, holding instrument, playing guitar, holding plectrum, plectrum, electric guitar, Metro, carriage, subway, subway interior, window
@@ -42,10 +43,18 @@ lazy-wildcards:
             wide sleeves, red theme, fingernails, (goldfish:1.3), eyelashes, brown eyes, close-up, peeking out, eyeliner, curtains, pale skin, straight hair, red eyeshadow, eyebrows hidden by hair, blending, floral print, bracelet, chinese zodiac, floral print, tassel, chinese clothes, auspicious cloud pattern, one eye covered, two-tone dress, see-through clothes, dynamic pose, dynamic composition, gold_foil
           - >-
             purple eyes, red hair, mature female, large breasts, red nails, nail polish, long hair, ponytail, nun, cross, pelvic curtain, holding weapon, wind lift, bullet, on roof, rooftop, sniper rifle, holding rifle, holding weapon, between legs, between breasts, black stockings, garter straps, kneeling, moon, (houkisei:0.5), (umehara sei:0.5)
-      bg-color-prompts2:
+          - >-
+            (white scaly body), halo, wings, fallen angel, black hair, loose waves, red eyes, (dragon), naked, hermann nitsch, zdzislaw beksinski, dariusz zawadzki, giger
+          - (Mauritanian catholic inquisitor sexy girl:1.25), full body, (large breasts:1.25), armor
+          - clean precise, mech suit armor white ceramic armor, glossy carbon fiber, industrial frame with shiny gold metal inlay
+          - succubus, 2 wings, demon horns, tail
+        action-pose:
+          - hands on hips
+          - __lazy-wildcards/dataset/action__
+      bg-color-with-any:
         prompts:
           - >-
-            __lazy-wildcards/subject/scenes-showcase/bg-color-prompts2/main__
+            __lazy-wildcards/subject/scenes-showcase/bg-color-with-any/main__
             {, __lazy-wildcards/dataset/background-color__|}
         main:
           - |-
@@ -70,27 +79,10 @@ lazy-wildcards:
             1other,
             ofuda on clothes, anthro_cobra, furrycobra snake, snake_humanoid, snake girl, (colored sclera,snake body,sharp_teeth,scaled skin,slit_pupils,reptilian_eyes,snake eyes,forked tongue,serpent-like head,serpent-like hood,snake hood,snake_tail,elongated_tail,large eyes), very long hair, eyeshadow, snake_hair_ornament, poison, cobra \(animal\), gem, leaf wings, prosthetic parts, prosthetic limbs, prosthetic arms, prosthetic wings, prosthetic tattoo, prosthetic tentacles, prosthetic claws, prosthetic antennae, prosthetic girl, prosthetic ears, prosthetic hair, prosthetic exoskeletons, prosthetic eyes, prosthetic horns, long hair, very long hair, very long hair, blue eyes, blonde hair, jewelry, braid, blunt bangs, necklace, twin braids, bracelet, dark_skin, tan_skin, tanned skin, dark skin, dark-skinned, black-skinned, bronze skin, bronzed skin, cinematic Bronze tan tanning skin tone, spanish, tan skin, light green eyes, (intricate braids),
             ((extended downblouse),breasts,close-up)
-      bg-color-prompts3:
-        prompts:
           - >-
-            __lazy-wildcards/subject/scenes-showcase/bg-color-prompts3/env-bg__
-            {, __lazy-wildcards/dataset/background-color__|}
-        env-bg:
+            In an abstract dreamscape, mandala-inspired tangle patterns create a mesmerizing dance of lines and shapes. The artwork exudes a sense of fluidity and movement, drawing the viewer into a hypnotic reverie. As the colors blend and merge, the dreamscape becomes a canvas of infinite imagination. Abstract dreamscape, mandala-inspired tangle patterns, mesmerizing dance, fluidity, movement, hypnotic reverie, infinite imagination
           - desert, (oasis), an enchanted oasis, with glowing plants, magical creatures, and a serene, mystical ambiance, stone well, oasis wildlife, cactus, ancient ruins nearby, barren desert, vast dunes, sand dunes, pyramid \(structure\), arid landscape, desert landscape, a sandy desert, Oasis, greenery in the desert, water sources, hidden desert sanctuary, Bedouin Camp, tents arranged in a circle, camels resting nearby, traditional rugs and lanterns, community gathered around a central fire, a sunlit desert, featuring rocky outcrops, scattered vegetation, and a serene atmosphere, mirage, desert shrine, abandoned train station, Subway, Metro, Metro Station, window, dirty, garbage, graffiti, broken windows, peeling paint, garbage, ruins, abandoned, dark, eerie, messy, overgrown, debris, dilapidated, crumbling, made of moss, moss-covered, mossy, m0ss_dr3ss, vegetation
           - (crescent moon,crescent), moonlight, midnight, moon, thick mist, dense_fog, damp environment, damp atmosphere, see-through, beautiful mist, lightning bolt, lightning glare, inverted lightning, upside-down lightning strikes, (frozen,ice,cold,frozen environment), magic ice, crystal, snow covered, crystal texture, spring
-      char-costume-bg-color:
-        prompts:
-          - >-
-            (1girl:1.3), solo focus
-            ,__lazy-wildcards/subject/scenes-showcase/char-costume-bg-color/costume__
-            {,__lazy-wildcards/subject/scenes-showcase/char-costume-bg-color/action-pose__|}
-            ,__lazy-wildcards/dataset/background-color__
-        costume:
-          - (Mauritanian catholic inquisitor sexy girl:1.25), full body, (large breasts:1.25), armor
-          - clean precise, mech suit armor white ceramic armor, glossy carbon fiber, industrial frame with shiny gold metal inlay
-          - succubus, 2 wings, demon horns, tail
-        action-pose:
-          - hands on hips
       throne-sitting-dark:
         prompts:
           - >-

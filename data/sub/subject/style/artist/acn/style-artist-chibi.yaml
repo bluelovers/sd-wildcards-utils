@@ -1,0 +1,15 @@
+lazy-wildcards:
+  subject:
+    style-artist:
+      # https://x.com/eiken3kyuboy
+      # https://civitai.com/models/119041/eiken3kyuboy-artist-style?modelVersionId=129205
+      chibi-Eiken3kyuboy:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/chibi-Eiken3kyuboy/style-artist__
+        style-artist:
+          - __lazy-wildcards/utils/fn/style-inspired(v=eiken3kyuboy)__, __lazy-wildcards/utils/fn/style-inspired(v=chibi)__
+        style:
+          - mechanical
+          - cute
+

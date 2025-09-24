@@ -148,7 +148,7 @@ lazy-wildcards:
         prompts-no-weight:
           - >-
             __lazy-wildcards/subject/costume-headwear/goggles/costume-headwear-main__
-            {, {1-2$$__lazy-wildcards/subject/costume-headwear/goggles/costume-headwear-main__}|}
+            {, {1-2$$__lazy-wildcards/subject/costume-headwear/goggles/costume-headwear-for__}|}
             {, __lazy-wildcards/subject/costume-headwear/goggles/costume-headwear-on__|}
             {, {1-$$__lazy-wildcards/subject/costume-headwear/goggles/costume-headwear__}|}
         costume-headwear-main:
@@ -168,4 +168,31 @@ lazy-wildcards:
         costume-headwear:
           - steampunk goggles
           - dirt stained goggles
+      airline-stewardess-hat:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-headwear/airline-stewardess-hat/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-headwear/airline-stewardess-hat/costume-elem__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-headwear/airline-stewardess-hat/costume-headwear-main__
+            {, {1-2$$__lazy-wildcards/subject/costume-headwear/airline-stewardess-hat/costume-headwear__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-headwear/airline-stewardess-hat/action__}|}
+        costume-headwear-main:
+          - stewardess hat
+        costume-headwear:
+          # 軍旅帽，或稱船形帽/側帽
+          - garrison cap
+          - headset
+          - beret
+          - pillbox hat
+        costume-elem:
+          - small hat
+          - hair ornament, hair accessory
+          - maid headdress
+          - fascinator
+          - side head
+          - police hat
+        action:
+          - salute, hand on own hip
 

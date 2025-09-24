@@ -160,4 +160,41 @@ lazy-wildcards:
           - gauntlet
           - leather vambrace
           - bone vambrace
+      # https://civitai.com/models/46522/knight-girl-lora
+      # https://civitai.com/models/45008/change-a-character-knight-ify-your-waifu
+      # https://civitai.com/models/278709/female-knight-final-fantasy-tactics
+      # https://civitai.com/models/235788/knight-attire-or-ragnarok-online
+      # https://civitai.com/models/147105/knight-game-character-or-by-ryan-reos-or-ownwaifu
+      # https://civitai.com/models/903111/knight
+      # https://civitai.com/models/66035/death-knight-by-edg
+      # https://civitai.com/models/211502/fantasy-knight-outfit
+      # https://civitai.com/models/228985/lord-knight-attire-or-ragnarok-online
+      # https://civitai.com/models/172251/female-knight-goblin-slayer
+      # https://civitai.com/models/191196/female-knight-goblin-slayer
+      knight-girl:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/knight-girl/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/knight-girl/costume-elem__}|}
+        costume:
+          - >-
+            knight
+            , knightgirl, KnightFFT, ragnarokknight, GAME_Knight_ownwaifu
+            , edgDeathKnight, ragnaroklordkn
+            , 1female_knight
+        costume-elem:
+          - knight armor
+          - knight helmet
+          - knight gauntlets
+          - knight boots
+          - knight cape
+          - knight shield
+          - knight sword
+          - knight dress
+          - knight accessories
+          - knight outfit
+          - __lazy-wildcards/subject/costume/armor/prompts__
+          - coat of arms
+          - __lazy-wildcards/subject/costume-nsfw/revealing_clothes/prompts__
+          - royal knight
 

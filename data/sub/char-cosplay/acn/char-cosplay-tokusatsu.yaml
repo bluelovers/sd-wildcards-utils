@@ -34,4 +34,110 @@ lazy-wildcards:
           - pink hair, purple hair, mask, colored skin, helmet, monster girl, extra eyes, arthropod girl, alien, faceless, no face
         costume:
           - long sleeves, black dress
+    # https://danbooru.donmai.us/posts?tags=kamen_rider&z=1
+    # https://civitai.com/search/models?baseModel=SD%201.5&sortBy=models_v9&query=Rider
+    kamen_rider:
+      # https://civitai.com/models/143610/kamen-rider-zero-two
+      # https://civitai.com/models/141962/kamen-rider-zero-two
+      kamen_rider_zero-two:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/kamen_rider/kamen_rider_zero-two/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/kamen_rider/kamen_rider_zero-two/costume__
+            {, {1-$$__lazy-wildcards/cosplay-char/kamen_rider/kamen_rider_zero-two/costume-elem__}|}
+        main-trigger-words:
+          - >-
+            tokusatsu, ZeroTwo
+        costume:
+          - >-
+            kamen_rider_zero-two, kamen_rider_zero-two \(cosplay\)
+            , horned helmet
+            , antennae, fake horns
+            , black bodysuit, green armor
+            , red gloves
+            , red eyes, glowing eyes
+            , rider belt
+            , armored boots
+        costume-elem:
+          - hiden zero-two driver
+      # https://danbooru.donmai.us/posts?tags=shijima_kiriko&z=1
+      # https://civitai.com/models/197240/kiriko-shijima-kamen-rider-drive?modelVersionId=221819
+      npc-shijima_kiriko:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/kamen_rider/npc-shijima_kiriko/main-trigger-words__
+            {, __lazy-wildcards/cosplay-char/kamen_rider/npc-shijima_kiriko/costume-ethnicity__|}
+            , __lazy-wildcards/cosplay-char/kamen_rider/npc-shijima_kiriko/costume__
+            {, {1-$$__lazy-wildcards/cosplay-char/kamen_rider/npc-shijima_kiriko/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/kamen_rider/npc-shijima_kiriko/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/kamen_rider/npc-shijima_kiriko/action__}|}
+        main-trigger-words:
+          - shijima kiriko, shijima kiriko \(cosplay\), KirikoDrive
+        costume-ethnicity:
+          - bangs, short hair, black hair
+        costume:
+          - >-
+            panties under pantyhose
+            , black footwear
+            , pencil skirt
+            , boots
+            , (blue garrison cap:1.3)
+            , blue skirt
+            , black pantyhose
+            , blue jacket
+            , red necktie
+            , belt
+            , policeweoman, police uniform
+        costume-elem:
+          - miniskirt
+          - police hat
+          - single hair bun
+          - open clothes, cleavage
+        costume-weapon:
+          - handgun, revolver
+          - holding gun
+          - toy car
+        action:
+          - on one knee
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-headwear/airline-stewardess-hat/action__}
+      # https://danbooru.donmai.us/posts?tags=kudo_rinne&z=5
+      # https://civitai.com/models/241773/rinnie-kudo-kamen-rider-gotchard?modelVersionId=272785
+      npc-kudo_rinne:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/kamen_rider/npc-kudo_rinne/main-trigger-words__
+            {, __lazy-wildcards/cosplay-char/kamen_rider/npc-kudo_rinne/costume-ethnicity__|}
+            , __lazy-wildcards/cosplay-char/kamen_rider/npc-kudo_rinne/costume__
+        main-trigger-words:
+          - kudo_rinne, kudo_rinne \(cosplay\), RinnieKudo
+        costume-ethnicity:
+          - long hair, bangs, black hair, blunt bangs, black eyes
+        costume:
+          - alchemist academy school uniform, long sleeves, jewelry, jacket, cape, boots, black shorts, thighs
+      # https://danbooru.donmai.us/posts?tags=naomi_%28kamen_rider_den-o%29&z=2
+      # https://civitai.com/models/284003/naomi-kamen-rider-den-o?modelVersionId=319590
+      npc-naomi:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/kamen_rider/npc-naomi/main-trigger-words__
+            {, __lazy-wildcards/cosplay-char/kamen_rider/npc-naomi/costume-ethnicity__|}
+            , __lazy-wildcards/cosplay-char/kamen_rider/npc-naomi/costume__
+            {, {1-$$__lazy-wildcards/cosplay-char/kamen_rider/npc-naomi/costume-elem__}|}
+        main-trigger-words:
+          - naomi \(kamen_rider_den-o\), naomi \(kamen_rider_den-o\) \(cosplay\), Naomideno
+        costume-ethnicity:
+          - black eyes, black hair, multicolored hair, two-tone hair, short hair, brown hair, streaked hair, single hair streak
+        costume:
+          - >
+            (white garrison cap:1.3)
+            , sleeveless, bare shoulders
+            , detached sleeves
+            , elbow gloves, red gloves
+            , skirt
+            , pantyhose
+            , high heels, red boots
+        costume-elem:
+          - multiple wristwatches
+          - white leotard, black pantyhose
 
