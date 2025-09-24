@@ -10,6 +10,7 @@ export function getOptionsShared<T extends IOptionsSharedWildcardsYaml>(opts?: T
 		minifyPrompts: opts.minifyPrompts,
 		disableUnsafeQuote: opts.disableUnsafeQuote,
 		expandForwardSlashKeys: opts.expandForwardSlashKeys,
+		allowParameterizedTemplatesImmediate: opts.allowParameterizedTemplatesImmediate,
 	} satisfies IOptionsSharedWildcardsYaml
 }
 

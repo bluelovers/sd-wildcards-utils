@@ -1,4 +1,4 @@
-import { ICheckErrorResult } from '../types';
+import { ICheckErrorResult, IOptionsParseDocument } from '../types';
 import { Extractor, IExtractionError, IExtractionResult, infoNearExtractionError } from '@bluelovers/extract-brackets';
 import { _nearString } from '../valid';
 
@@ -61,9 +61,17 @@ export function _checkBrackets2(value: string)
 	return _checkBracketsCore(value, _extractor2);
 }
 
-export function _checkValue(value: string): ICheckErrorResult
+export function _checkValue(value: string, options?: IOptionsParseDocument): ICheckErrorResult
 {
-	let m = /(?:^|[\s{},])_(?=[^_]|$)|(?<!_)_(?:[\s{},]|$)|\/_+|_+\/(?!\()|\([\w_]+\s*=(?:!|\s*[{}$])/.exec(value)
+	// let m = /(?:^|[\s{},])_(?=[^_]|$)|(?<!_)_(?:[\s{},]|$)|\/_+|_+\/(?!\()|\([\w_]+\s*=(?:!|\s*[{}$])/.exec(value)
+	let re = /(?:^|[\s{},])_(?=[^_]|$)|(?<!_)_(?:[\s{},]|$)|\/_+|_+\/(?!\()|\([\w_]+\s*=(?:!|\s*[{}$])/;
+
+	if (options?.allowParameterizedTemplatesImmediate)
+	{
+		re = /(?:^|[\s{},])_(?=[^_]|$)|(?<!_)_(?:[\s{},]|$)|\/_+|_+\/(?!\()/
+	}
+
+	let m = re.exec(value)
 
 	if (m)
 	{

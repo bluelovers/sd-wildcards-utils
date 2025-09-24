@@ -14,15 +14,14 @@ import { outputFile } from 'fs-extra';
 import { mergeWildcardsYAMLDocumentRoots } from '../../../src/node/node-merge';
 import { consoleLogger } from 'debug-color2/logger';
 import { _ReadAndupdateFile, globSync2 } from '../lib/util';
+import { _BUILD_FILES_OPTS } from '../lib/settings';
 
 export default Bluebird.map([
 	join(__ROOT_DATA, 'lazy-wildcards.yaml'),
 	join(__ROOT_OUTPUT_WILDCARDS, 'mix-lazy-auto.yaml'),
 ], (file: any) => {
 	return readFile(file)
-		.then(data => parseWildcardsYaml(data, {
-			disableUnsafeQuote: true,
-		})) as any as IWildcardsYAMLDocument[]
+		.then(data => parseWildcardsYaml(data, _BUILD_FILES_OPTS)) as any as IWildcardsYAMLDocument[]
 })
 	.then((ls: any) => {
 		return mergeWildcardsYAMLDocumentRoots(ls)
@@ -40,9 +39,7 @@ export default Bluebird.map([
 		}), async (file: string) => {
 			let data_new = await _ReadAndupdateFile(file);
 
-			return parseWildcardsYaml(data_new, {
-				disableUnsafeQuote: true,
-			})
+			return parseWildcardsYaml(data_new, _BUILD_FILES_OPTS)
 		})
 
 		return mergeFindSingleRoots(doc, ls)

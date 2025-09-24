@@ -94,12 +94,15 @@ export function _checkSettings()
 		_CHECK_FILES_IGNORE_FULL,
 
 		_CHECK_FILES_OPTS: {
+			..._BUILD_FILES_OPTS,
+			
 			disableUnsafeQuote: true,
 			allowMultiRoot: true,
 			allowUnsafeKey: true,
 			expandForwardSlashKeys: true,
 
 			allowScalarValueIsEmptySpace: true,
+			allowParameterizedTemplatesImmediate: true,
 		} satisfies IOptionsParseDocument,
 
 		_CHECK_FILES_IGNORE_OPTS: {
@@ -108,3 +111,11 @@ export function _checkSettings()
 		} satisfies IOptionsCheckAllSelfLinkWildcardsExists,
 	}
 }
+
+export const _BUILD_FILES_OPTS = {
+
+	disableUnsafeQuote: true,
+	allowMultiRoot: true,
+	allowParameterizedTemplatesImmediate: true,
+
+} satisfies IOptionsParseDocument

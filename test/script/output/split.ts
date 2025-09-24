@@ -67,7 +67,8 @@ export default (async () =>
 				let obj = parseWildcardsYaml(buf, {
 					allowMultiRoot: true,
 					disableUnsafeQuote: true,
-					allowUnsafeKey: /^others[\/\\]/.test(file)
+					allowUnsafeKey: /^others[\/\\]/.test(file),
+					allowParameterizedTemplatesImmediate: true,
 				});
 
 				let json = obj.toJSON();
