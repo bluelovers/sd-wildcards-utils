@@ -16,13 +16,13 @@ lazy-wildcards:
       stance-archery:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/action-sfw/stance-archery/main__}
-            {,{1-$$__lazy-wildcards/subject/action-sfw/stance-archery/action__}|}
-            {,__lazy-wildcards/subject/action-sfw/stance-archery/costume-weapon-bow__|}
-            {,{1-$$__lazy-wildcards/subject/action-sfw/stance-archery/costume-weapon__}|}
-            {,{1-$$__lazy-wildcards/subject/action-sfw/stance-archery/costume__}|}
-            {,{1-$$__lazy-wildcards/subject/action-sfw/stance-archery/style__}|}
-        main:
+            __lazy-wildcards/subject/action-sfw/stance-archery/action-main__
+            {, {1-$$__lazy-wildcards/subject/action-sfw/stance-archery/action__}|}
+            {, __lazy-wildcards/subject/action-sfw/stance-archery/costume-weapon-bow__|}
+            {, {1-$$__lazy-wildcards/subject/action-sfw/stance-archery/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/action-sfw/stance-archery/costume__}|}
+            {, {1-$$__lazy-wildcards/subject/action-sfw/stance-archery/style__}|}
+        action-main:
           - archery, kyuudou, archery stance
         action:
           - >-

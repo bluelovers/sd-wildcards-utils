@@ -96,4 +96,20 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/utils/fn/style-inspired(v=sadakage)__
             , sadakage \(artist\)
+      # https://yande.re/post?tags=mashu_%28003%29
+      # https://danbooru.donmai.us/artists/125629
+      # https://x.com/mashu_003
+      # https://www.pixiv.net/users/15305293/artworks
+      #
+      # https://civitai.com/models/145928/mashu003-style-lora
+      mashu003:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/mashu003/style-artist__{0.3:::{1.2|1.3|1.4}|})
+        style-artist:
+          - >-
+            __lazy-wildcards/utils/fn/style-inspired(v=mashu003)__
+            , mashu003 \(artist\), mashu style
+            , mashutarou \(neko no oyashiro\)
+            , mashu_003 \(artist\)
 

@@ -69,4 +69,145 @@ lazy-wildcards:
         style:
           - blur censor
           - steam censor
+      toilet-seat:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/toilet-seat/env-bg__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/toilet-seat/env__}|}
+            {, __lazy-wildcards/subject/env-bg/toilet-restroom/prompts-style__|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-bg/toilet-seat/env-bg__
+            {, {1-$$__lazy-wildcards/subject/env-bg/toilet-seat/env__}|}
+            {, __lazy-wildcards/subject/env-bg/toilet-restroom/prompts-style__|}
+        env-bg:
+          # 蹲式馬桶
+          - squat toilet, floor embedded
+          - >-
+            {1-2$$toilet seat, western toilet, ceramic toilet|smart toilet|toilet sink combo}
+        env:
+          - __lazy-wildcards/subject/env-bg/toilet-paper/prompts__
+      # 小便斗
+      toilet-urinal:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/toilet-urinal/env-bg-main__
+            {, __lazy-wildcards/subject/env-bg/toilet-urinal/env-bg__|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/toilet-urinal/env__}|}
+            {, __lazy-wildcards/subject/env-bg/toilet-restroom/prompts-style__|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-bg/toilet-urinal/env-bg-main__
+            {, __lazy-wildcards/subject/env-bg/toilet-urinal/env-bg__|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/toilet-urinal/env__}|}
+            {, __lazy-wildcards/subject/env-bg/toilet-restroom/prompts-style__|}
+        env-bg-main:
+          - urinal
+        env-bg:
+          # 掛牆式
+          - wall mounted urinal
+          # 流水槽型連排小便槽
+          - trough urinal
+        env:
+          - metallic urinal
+          - plastic urinal
+          - urinal partitions
+      toilet-paper:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-bg/toilet-paper/env__}
+        env:
+          - toilet paper
+          - toilet paper tube
+      # https://danbooru.donmai.us/wiki_pages/toilet
+      toilet-restroom:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/toilet-restroom/env-bg__
+            {, {1-$$__lazy-wildcards/subject/env-bg/toilet-restroom/env__}|}
+            {, __lazy-wildcards/subject/env-bg/toilet-restroom/prompts-style__|}
+        prompts-style:
+          - >-
+            {{1-3$$__lazy-wildcards/subject/env-bg/toilet-restroom/action__},|}
+            {1-3$$__lazy-wildcards/subject/env-bg/toilet-restroom/style__}
+        env-bg:
+          - restroom
+          # 公共廁所
+          - public restroom
+          # 流動廁所
+          - portable toilet, plastic portable toilet, temporary
+          # 隔間
+          - toilet stall
+        env:
+          - tile floor
+          - tiles
+          - ceramic
+          - __lazy-wildcards/subject/env-bg/toilet-seat/prompts-no-weight__
+          - __lazy-wildcards/subject/env-bg/toilet-urinal/prompts-no-weight__
+          - restroom symbol
+          - toilet brush
+          - __lazy-wildcards/subject/env-bg/toilet-paper/prompts__
+        action:
+          - peeing
+          - panty pull
+          - have to pee
+          - on toilet
+          - have to poop
+          - peeing self, pee
+        style:
+          - modern
+          - futuristic
+          - industrial
+          - medieval
+          - retro
+      toilet-restroom-dirty:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/toilet-restroom-dirty/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-3$$__lazy-wildcards/subject/env-bg/toilet-restroom-dirty/env-bg__}|}
+            {, __lazy-wildcards/subject/env-bg/toilet-restroom/prompts-style__|}
+            , {1-$$__lazy-wildcards/subject/env-bg/toilet-restroom-dirty/env__}
+            , {1-$$__lazy-wildcards/subject/env-bg/toilet-restroom-dirty/style__}
+            {, {1-$$__lazy-wildcards/subject/env-bg/toilet-restroom-dirty/style-adj__}|}
+            {, __lazy-wildcards/subject/env-bg/ruins-city-common/prompts__|}
+        env-bg-main:
+          - >-
+            {{1-$$bathroom|restroom|washroom}, |}toilet, ruanyi0250
+        env-bg:
+          - >-
+            {1-$$tiles|tile floor|tile wall}
+          - handrails
+          - faucet
+          - door
+          - mirror
+          - window
+          - __lazy-wildcards/subject/env-elem-pipes/industrial-pipes/prompts__
+          - __lazy-wildcards/subject/env-bg/toilet-seat/prompts-no-weight__
+        env:
+          - box
+          - >-
+            {1-$$cups|bottles|coffee|beer cans}
+          - toilet paper
+          - trash can
+          - water
+          - condom packaging
+          - newspapers
+          - food
+          - >-
+            {1-$$soap|soap bottle}
+        style:
+          - dirt, filth, dirty, Dirt that cannot be washed away
+          - dirty toilet
+          - yellow urine stains, urine on the floor
+          - graffiti on the wall
+          - dirty tiles
+          - dirty urinal
+        style-adj:
+          - rotten
+          - dirty scenes
+          - horror \(theme\)
+          - crack
+          - dirty
+          - garbage
+          - messy
 

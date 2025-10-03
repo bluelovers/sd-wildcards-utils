@@ -142,7 +142,7 @@ lazy-wildcards:
     scenery:
       - >-
         scenery
-        {, {1-$$outdoors|horizon|landscape|ultra wide angle, very wide shot, wide angle shot|HDRI Panorama View, panoramic view|360 panorama|aerial view, drone view|dollhouse view}|}
+        {, {1-$$outdoors|horizon|landscape|__lazy-wildcards/subject/style-view/view-angle-wide-shot/style-view-main__|HDRI Panorama View, panoramic view|360 panorama|aerial view, drone view|dollhouse view}|}
     scenery-no-humans:
       - >-
         __lazy-wildcards/utils/scenery__

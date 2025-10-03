@@ -620,6 +620,137 @@ lazy-wildcards:
           - green hair
         costume:
           - hood, white cloak, green dress, long sleeves, long dress
+      # https://danbooru.donmai.us/posts?tags=karla_%28fire_emblem%29&z=5
+      # https://civitai.com/models/95505/karla-fire-emblem
+      karla:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/fire_emblem/karla/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/fire_emblem/karla/costume__
+            {, {1-$$__lazy-wildcards/cosplay-char/fire_emblem/karla/expressions__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/fire_emblem/karla/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/fire_emblem/karla/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/fire_emblem/karla/action__}|}
+        main-trigger-words:
+          - karla \(fire emblem\), karla \(fire emblem\) \(cosplay\), karla fe
+        costume:
+          - cleavage, collarbone, white robe, sash, side slit, sleeves past wrists, wide sleeves
+        expressions:
+          - expressionless
+        costume-elem:
+          - high collar
+          - collared shirt
+          - japanese clothes
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - knee boots
+        costume-weapon:
+          - sword, holding sword, katana
+          - __lazy-wildcards/subject/costume-weapon/sword-sheath/prompts__
+        action:
+          - incoming attack
+      # https://danbooru.donmai.us/posts?tags=malice_%28fire_emblem%29&z=2
+      # https://danbooru.donmai.us/posts?tags=malice_%28jehanna%29_%28fire_emblem%29&z=2
+      # https://civitai.com/models/125347/malice-fire-emblem-new-mystery-of-the-emblem-lora
+      malice:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/fire_emblem/malice/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/fire_emblem/malice/costume__
+        main-trigger-words:
+          - malice \(fire emblem\), malice \(fire emblem\) \(cosplay\), feMalice
+        costume:
+          - headband, eyepatch, single shoulder pad, cleavage, vambraces, brown dress, belt, toned body, sandals
+      # https://civitai.com/models/25006/nephenee-fire-emblem-or-character
+      nephenee:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/fire_emblem/nephenee/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/fire_emblem/nephenee/costume__
+            {, {1-$$__lazy-wildcards/cosplay-char/fire_emblem/nephenee/expressions__}|}
+        main-trigger-words:
+          - nephenee \(fire emblem\), nephenee \(fire emblem\) \(cosplay\), nephenee
+        costume:
+          - blue helmet, white shirt, blue skirt, visor \(armor\)
+        expressions:
+          - nervous
+      # https://danbooru.donmai.us/posts?tags=jade_%28fire_emblem%29&z=1
+      # https://civitai.com/models/158858/jade-fire-emblem-2outfits
+      jade:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/fire_emblem/jade/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/fire_emblem/jade/costume__
+            {, {1-$$__lazy-wildcards/cosplay-char/fire_emblem/jade/expressions__}|}
+        main-trigger-words:
+          - jade \(fire emblem\), jade \(fire emblem\) \(cosplay\), def_jade
+        costume:
+          - visor \(armor\), armor, breastplate, gauntlets, shoulder armor, pauldrons, boots, faulds, plate armor, greaves
+        expressions:
+          - straight-on
+          - expressionless
+      # https://civitai.com/models/131817/gwendolyn-fire-emblem
+      gwendolyn:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/fire_emblem/gwendolyn/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/fire_emblem/gwendolyn/costume__
+            {, {1-$$__lazy-wildcards/cosplay-char/fire_emblem/gwendolyn/costume-elem__}|}
+        main-trigger-words:
+          - gwendolyn \(fire emblem\), gwendolyn \(fire emblem\) \(cosplay\), gwendolyn
+        costume:
+          - red headband, orange armor, breastplate, pants, gloves, pauldrons, gauntlets, shoulder armor
+        costume-elem:
+          - bodystocking
+      # https://danbooru.donmai.us/posts?tags=muirne_%28fire_emblem%29&z=1
+      # https://civitai.com/models/333879/muirne-fire-emblem
+      muirne:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/fire_emblem/muirne/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/fire_emblem/muirne/costume__
+        main-trigger-words:
+          - muirne \(fire emblem\), muirne \(fire emblem\) \(cosplay\), muirne
+        costume:
+          - long sleeves, shoes, brown dress, capelet, chapel, shawl, thighs
+      # https://danbooru.donmai.us/posts?tags=leif_%28fire_emblem%29&z=1
+      # https://civitai.com/models/139210/leif-fire-emblem-genealogy-of-the-holy-warthracia-776
+      leif:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/fire_emblem/leif/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/fire_emblem/leif/costume__
+            {, {1-$$__lazy-wildcards/cosplay-char/fire_emblem/leif/costume-weapon__}|}
+        main-trigger-words:
+          - leif \(fire emblem\), leif \(fire emblem\) \(cosplay\), leiffe
+        costume:
+          - armor, pants, boots, cape
+        costume-weapon:
+          - __lazy-wildcards/subject/action-sfw/stance-archery/prompts__
+      # https://danbooru.donmai.us/posts?tags=sonya_%28fire_emblem_gaiden%29&z=5
+      # https://civitai.com/models/80308/resplendent-sonya-fire-emblem-shadows-of-valentia-fire-emblem-heroes
+      sonya:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/fire_emblem/sonya/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/fire_emblem/sonya/costume-ethnicity__
+            , __lazy-wildcards/cosplay-char/fire_emblem/sonya/costume__
+            {, {1-$$__lazy-wildcards/cosplay-char/fire_emblem/sonya/costume-elem__}|}
+        main-trigger-words:
+          - >-
+            sonya \(fire emblem\), sonya \(fire emblem\) \(cosplay\)
+            , sonya \(fire emblem gaiden\), sonya \(fire emblem gaiden\) \(cosplay\)
+            , sonyafe
+        costume-ethnicity:
+          - >-
+            long hair, jewelry, purple eyes, purple hair
+            , tiara
+        costume:
+          - midriff, earrings, circlet, cape, bare shoulders, bridal gauntlets, navel
+        costume-elem:
+          - black gloves
+          - black thighhighs
+          - hair over one eye
+          - thighhighs, thighs
     # https://danbooru.donmai.us/posts?tags=dead_or_alive&z=2
     dead_or_alive:
       # https://civitai.com/models/323885/nyotengu-dead-or-alive-lora?modelVersionId=363100

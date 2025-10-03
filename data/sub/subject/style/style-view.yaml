@@ -1,0 +1,19 @@
+lazy-wildcards:
+  subject:
+    style-view:
+      # https://civitai.com/models/610256/deep-urbanized-city-background-in-style-of-ayuli2424-pony-xl-sd-15-animagine-sdxl?modelVersionId=682167
+      view-angle-wide-shot:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-view/view-angle-wide-shot/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/style-view/view-angle-wide-shot/style-view-main__
+            {, __lazy-wildcards/subject/style-view/view-angle-wide-shot/style-view__|}
+        style-view-main:
+          - ultra wide angle, very wide shot, wide angle shot, deep wide shot, extreme wide shot, a0b
+        style-view:
+          - from above
+          - from below
+          - high up
+

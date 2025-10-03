@@ -479,4 +479,18 @@ lazy-wildcards:
           - red lantern, lantern glow
           - deity statue
           - engraving, dragon motif
+      # https://civitai.com/models/371267/chinese-styleweddingdress-like-clothes
+      wedding_dress-chinese:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/wedding_dress-chinese/costume__{0.3:::{1.2|1.3|1.4}|})
+        costume:
+          - >-
+            chinese wedding dress
+            , chinese-style wedding dress
+            , JIAYI55, JIAYIQS25
+            , chinese clothes
+            , red dress
+            , long dress
+            , hair ornament
 

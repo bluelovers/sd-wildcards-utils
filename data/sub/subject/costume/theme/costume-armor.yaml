@@ -39,7 +39,7 @@ lazy-wildcards:
         prompts:
           - >-
             (__lazy-wildcards/subject/costume/armor-headwear/costume-headwear-main__
-            {, {1-$$__lazy-wildcards/subject/costume/armor-headwear/costume-headwear__}|})
+            {, {1-2$$__lazy-wildcards/subject/costume/armor-headwear/costume-headwear__}|})
         costume-headwear-main:
           - armor helmet
         costume-headwear:
@@ -48,6 +48,8 @@ lazy-wildcards:
           - sallet helmet
           - medieval armor helmet
           - nasal helmet
+          - visor \(armor\)
+          - altyn helmet
       # https://civitai.com/models/398853/samurai-armor
       # https://civitai.com/models/561501/samurai-armor-elden-ring
       # https://civitai.com/models/83476/samurai-armor-japan-traditional-dress-series

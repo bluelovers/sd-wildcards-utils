@@ -195,4 +195,24 @@ lazy-wildcards:
           - police hat
         action:
           - salute, hand on own hip
+      egyptian_headscarf:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-headwear/egyptian_headscarf/costume-headwear-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-headwear/egyptian_headscarf/costume-elem__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-headwear/egyptian_headscarf/costume-headwear-main__
+            {, {1-$$__lazy-wildcards/subject/costume-headwear/egyptian_headscarf/costume-elem__}|}
+        costume-headwear-main:
+          - ancient egyptian headscarf
+        costume-elem:
+          - veil
+          - ornate jewelry, ancient egyptian neck ring, circular neck rings
+          - collar necklace
+          - layered necklace
+          - ancient egyptian eyeliner, heavy eyeliner
+          - blue green eyeshadow
+          - cobra ornament
+          - forehead ornament
 

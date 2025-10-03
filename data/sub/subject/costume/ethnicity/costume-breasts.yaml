@@ -213,6 +213,22 @@ lazy-wildcards:
           - >-
             (Bra Cups Sticking Out:1.2),
             __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-peek/prompts__
+      # https://civitai.com/models/5399/button-gap
+      breasts-bursting:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bursting/costume-breasts-main__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bursting/costume-breasts__}|}{0.3:::{1.2|1.3|1.4}|})
+        costume-breasts-main:
+          - bursting breasts
+        costume-breasts:
+          - button gap
+          - center opening
+          - partially unbuttoned
+          - popped button
+          - unbuttoned shirt
+          - see-through clothes
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-bra-peek*/prompts__
       breasts-bra:
         prompts:
           - >-

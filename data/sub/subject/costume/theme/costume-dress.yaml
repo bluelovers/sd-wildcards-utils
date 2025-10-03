@@ -121,4 +121,43 @@ lazy-wildcards:
           - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
           - __lazy-wildcards/subject/costume-elem-accessories/lace-trim/prompts__
           - __lazy-wildcards/subject/costume-elem-accessories/fur-trim/prompts__
+      # 切爾克斯婚禮服
+      # https://civitai.com/models/372656/circassian-wedding-dress-or-no-the-other-georgia-or-ilxlsd15?modelVersionId=416248
+      circassian_wedding_dress:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/circassian_wedding_dress/costume__
+            , __lazy-wildcards/subject/costume/circassian_wedding_dress/costume-headwear__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/circassian_wedding_dress/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/circassian_wedding_dress/style__}|}
+        costume:
+          - >-
+            circassian wedding dress
+            , high collar
+            , long sleeves
+            , ornamental belt, sash
+            , dr3ss
+            , silk, velvet
+        costume-headwear:
+          - white peaked cap, white hijab
+        costume-elem:
+          - traditional clothing
+          - circassian dress
+          - wedding dress
+          - tight waist
+          - floor length dress, train
+          - cloak
+          - cape
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
+          - __lazy-wildcards/subject/costume-elem-accessories/silver-trim/prompts__
+          - white dress
+          - bridal veil
+          - head ornament
+          - flowing fabric
+          - heavy fabric
+        style:
+          - caucasus culture
+          - simplistic
+          - dignified, pure, noble
+          - ethnographic photo
 

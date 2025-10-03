@@ -46,6 +46,7 @@ lazy-wildcards:
           - with clean, precise lines capturing the essence of the subject
       # https://civitai.com/models/808366/industrial-design-x-marker-rendering?modelVersionId=903915
       # https://civitai.com/models/808393/industrial-design-x-sketch-lora?modelVersionId=903946
+      # https://civitai.com/models/2006153/blueprint-15-lora?modelVersionId=2270691
       blueprint-drawings:
         prompts:
           - >-
@@ -61,6 +62,7 @@ lazy-wildcards:
             , blueprint
             , techdraw, davincisketch, UFO_Alchemy
             , __lazy-wildcards/utils/fn/style-inspired(v=blueprint)__
+            , blueprintstyle
         env:
           - multimedia speakers
           - scooter

@@ -164,4 +164,42 @@ lazy-wildcards:
         costume-headwear:
           - wimple
           - circlet
+      # https://civitai.com/models/92315/arabian-warrior-traditional-dress-series
+      arabian-warrior:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/arabian-warrior/costume-main__
+            {, {1-$$__lazy-wildcards/subject/costume/arabian-warrior/costume-headwear__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/arabian-warrior/costume__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/arabian-warrior/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/arabian-warrior/costume-weapon__}|}
+        costume-main:
+          - >-
+            arabian warrior, arabarmor
+        costume:
+          - desert warrior
+          - middle eastern warrior
+        costume-headwear:
+          - turban
+          - keffiyeh
+          - headscarf
+          - face veil
+        costume-elem:
+          - kaftan
+          - chainmail
+          - leather armor
+          - cloak
+          - bracers
+          - sandals
+        costume-weapon:
+          # 彎刀
+          - scimitar
+          # 彎劍
+          - curved sword
+          - dagger
+          - bow and arrow, short bow
+          - throwing knives
+          - spear
+          - round shield, decorated shield
+          - quiver
 

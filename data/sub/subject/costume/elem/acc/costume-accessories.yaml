@@ -123,6 +123,12 @@ lazy-wildcards:
             - >-
               __lazy-wildcards/subject/costume-elem-accessories/gold-trim/fn/color-trim-object-extra__
               , __lazy-wildcards/subject/costume-elem-accessories/gold-trim/fn/color-trim__
+      silver-trim:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-accessories/silver-trim/costume-elem-main__
+        costume-elem-main:
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/fn/color-trim-extra(c=silver)__
       lace-trim:
         prompts:
           - >-

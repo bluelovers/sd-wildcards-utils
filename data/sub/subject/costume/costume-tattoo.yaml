@@ -452,4 +452,17 @@ lazy-wildcards:
         costume-elem-tattoo:
           - welts
           - bruise
+      # https://civitai.com/models/447060/chinese-tattoo
+      tattoo-writing:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-tattoo/tattoo-writing/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-elem-tattoo/tattoo-writing/costume-elem-main__
+        costume-elem-main:
+          - >-
+            calligraphy-style tattoo
+            , body writing
+            , cn tattoo
 

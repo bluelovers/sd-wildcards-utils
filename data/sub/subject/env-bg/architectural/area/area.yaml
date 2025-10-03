@@ -6,7 +6,8 @@ lazy-wildcards:
       middle_eastern_market:
         prompts:
           - >-
-            (__lazy-wildcards/subject/env-bg/middle_eastern_market/env-bg-main__)
+            (__lazy-wildcards/subject/env-bg/middle_eastern_market/env-bg-main__
+            , __lazy-wildcards/subject/env-bg/middle_eastern_market/env-bg-main-trigger-words__)
             {, {1-$$__lazy-wildcards/subject/env-bg/middle_eastern_market/env-bg__}|}
             {, {1-$$__lazy-wildcards/subject/env-bg/middle_eastern_market/env-bg__}|}
             {, {1-$$__lazy-wildcards/subject/env-bg/middle_eastern_market/env__}|}
@@ -14,7 +15,15 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/env-bg/middle_eastern_market/costume-elem__}|}
             {, {1-$$__lazy-wildcards/subject/env-bg/middle_eastern_market/style__}|}
         env-bg-main:
-          - middle_eastern_market, middle eastern bazaar, souq, MiddleEastRugMarket, CXMIX, Middle East region, arabesque, arabian building, middle eastern style
+          - >-
+            middle eastern market, middle eastern bazaar, middle eastern marketplace
+            , Middle East region
+            , arabian building
+        env-bg-main-trigger-words:
+          - >-
+            souq, MiddleEastRugMarket, CXMIX, arabesque
+            , middle eastern style, middle eastern scenery
+            , arabtown
         env-bg:
           - crowded_street
           - colorful_stalls
@@ -43,4 +52,40 @@ lazy-wildcards:
           - mosaic_design
           - bartering_scene
           - arabesque patterns, arabian patterns, middle eastern patterns
+      # https://civitai.com/models/2004368/arabian-town?modelVersionId=2268693
+      middle_eastern-arabian_town:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/middle_eastern-arabian_town/env-bg-main__
+            , __lazy-wildcards/subject/env-bg/middle_eastern_market/env-bg-main-trigger-words__)
+            {, {1-$$__lazy-wildcards/subject/env-bg/middle_eastern-arabian_town/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/middle_eastern-arabian_town/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/middle_eastern-arabian_town/env__}|}
+        env-bg-main:
+          - >-
+            arabian town, islamic architecture
+        env-bg:
+          - arched doorway
+          - dome, onion dome
+          - minaret
+          - flat roof house, adobe building, sun-dried bricks
+          - narrow alley
+          - __lazy-wildcards/subject/env-bg/middle_eastern_market/prompts__
+          - fountain
+          - mosque
+        costume-elem:
+          - kaftan
+          - jalabiya
+          - hijab
+          - veil
+          - turban
+          - keffiyeh
+        env:
+          - mashrabiya
+          - cobblestone street
+          - desert dust
+          - crescent moon
+          - glowing lantern, lantern light
+          - fantasy desert
+          - arabian nights
 

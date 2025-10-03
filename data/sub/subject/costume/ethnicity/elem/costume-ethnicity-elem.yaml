@@ -82,4 +82,22 @@ lazy-wildcards:
           - paw sleeves
         costume-elem:
           - fur-trimmed sleeves
+      # https://civitai.com/models/19010/tentacles-mouth
+      tentacles-mouth:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-elem/tentacles-mouth/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-elem/tentacles-mouth/costume-ethnicity-elem__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-elem/tentacles-mouth/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-elem/tentacles-mouth/env__}|}
+        costume-ethnicity:
+          - tentacle mouth
+        costume-ethnicity-elem:
+          - tentacle lips
+          - tentacle tongue
+        costume-elem:
+          - many eyes
+          - eye split
+        env:
+          - blood
 
