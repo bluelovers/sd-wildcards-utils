@@ -50,16 +50,31 @@ lazy-wildcards:
           - nasal helmet
           - visor \(armor\)
           - altyn helmet
+          - kabuto \(helmet\)
       # https://civitai.com/models/398853/samurai-armor
       # https://civitai.com/models/561501/samurai-armor-elden-ring
       # https://civitai.com/models/83476/samurai-armor-japan-traditional-dress-series
+      # https://civitai.com/models/149199/samurai-girl-lora
+      # https://civitai.com/models/134901/samuraibot
+      # https://civitai.com/models/69108/samuraipunkai-konyconi
+      # https://civitai.com/models/179486/change-a-character-female-samurai-you-waifu-now-follows-the-bushido-code
+      # https://civitai.com/models/194645/samurai-ab
       samurai_armor:
         prompts:
           - >-
-            (__lazy-wildcards/subject/costume/samurai_armor/costume__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+            (__lazy-wildcards/subject/costume/samurai_armor/costume-main__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+            {, __lazy-wildcards/subject/costume/samurai_armor/costume__|}
             {, {1-$$__lazy-wildcards/subject/costume/samurai_armor/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/samurai_armor/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/samurai_armor/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/samurai_armor/env-bg__}|}
+        costume-main:
+          - >-
+            samurai armor, samurai, samurai girl
+            , SamuraiPunkAI, cybersamurai
         costume:
-          - samurai armor, samurai
+          - __cf-samurai/prompt-costume__
+          - __cf-samurai/prompt-full__
         costume-elem:
           - samurai helmet
           - kabuto
@@ -71,6 +86,21 @@ lazy-wildcards:
           - suneate, shin guards
           - armored sandals
           - armored boots
+          - samurai kimono
+          - ronin outfit, ronin armor
+          - armor on right shoulder
+          - chest sarashi
+          - kabuto \(helmet\)
+        action:
+          - slashing
+          - unsheathing
+          - sitting
+          - seiza
+        costume-weapon:
+          - __cf-samurai/weapon__
+          - __lazy-wildcards/subject/costume-weapon/sword-sheath/prompts__
+        env-bg:
+          - __cf-samurai/location__
       # https://civitai.com/models/146517/armored-leotard
       armored_leotard:
         prompts:
