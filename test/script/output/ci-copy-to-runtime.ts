@@ -26,7 +26,7 @@ export default (async () => {
 		await Bluebird.each(globSync2([
 			'Vision/**/*.{yaml,txt}',
 			'user-*/**/*.{yaml,txt}',
-			'!**/_disable/*',
+			'!**/_disable/**',
 			'!**/_*.{yaml,txt}',
 		], {
 			cwd: __SRC_DIR,
@@ -46,7 +46,7 @@ export default (async () => {
 
 				if (skip)
 				{
-					consoleLogger.gray.debug(`skip`, file);
+					// consoleLogger.gray.debug(`skip`, file);
 				}
 				else
 				{
