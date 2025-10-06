@@ -269,13 +269,29 @@ lazy-wildcards:
             (__lazy-wildcards/subject/style-elem/rusted/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
         prompts-no-weight:
           - >-
-            __lazy-wildcards/subject/style-elem/rusted/env__
-        env:
+            __lazy-wildcards/subject/style-elem/rusted/env-elem__
+            {, {1-$$__lazy-wildcards/subject/style-elem/rusted/env__}|}
+        env-elem:
           - rust, rusty, rustic, rusted
+        env:
+          - rusty brown
+          - weathered
+          - aged metal
+          - oxidized metal
+          - corroded metal
+          - stained
+          - discolored
+          - oil stain
         fn:
           prefix:
             - >-
               rust ${v}, rusty ${v}, rustic ${v}, rusted ${v}
+          prefix2:
+            - >-
+              __lazy-wildcards/subject/style-elem/rusted/fn/prefix__
+              {, weathered ${v}|}
+              {, oxidized ${v}|}
+              {, corroded ${v}|}
       color-palette-neon:
         prompts:
           - >-

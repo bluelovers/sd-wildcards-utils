@@ -1,0 +1,38 @@
+lazy-wildcards:
+  subject:
+    env-elem-chimney:
+      chimney-industrial:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem-chimney/chimney-industrial/env-bg-main__}
+            {, {1-$$__lazy-wildcards/subject/env-elem-chimney/chimney-industrial/env-bg__}|}
+        env-bg-main:
+          - industrial chimney
+          - factory chimney
+          - industrial smokestack
+        env-bg:
+          - industrial ruins
+          - tall chimney
+          - __lazy-wildcards/subject/style-elem/rusted/fn/prefix2(v=chimney)__
+          - concrete chimney
+          - metallic chimney, metal chimney
+          - __lazy-wildcards/subject/env-moment/weather-mist-smoke/prompts__
+          - factory roof
+      chimney-house:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem-chimney/chimney-house/env-bg-main__}
+            {, {1-$$__lazy-wildcards/subject/env-elem-chimney/chimney-house/env-bg__}|}
+        env-bg-main:
+          - house chimney
+          - residential chimney
+          - rooftop chimney
+          - cottage chimney
+        env-bg:
+          - smoke coming out of chimney
+          - chimney smoke
+          - brick chimney
+          - stone chimney
+          - snowy roof
+          - smoke trail
+
