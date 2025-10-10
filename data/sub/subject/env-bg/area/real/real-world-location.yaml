@@ -279,4 +279,31 @@ lazy-wildcards:
           - sunny day, sharp shadow, golden hour
           - whimsical, storybook style, fantasy village- storybook village, whimsical town, european fantasy architecture, fantasy travel location, real-life fairytale village
           - __lazy-wildcards/utils/scenery__
+      # 馬特洪峰 The Matterhorn（瑞士／義大利）阿爾卑斯山脈
+      mountain-matterhorn:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-real-world-location/mountain-matterhorn/env-bg__{0.3:::{1.2|1.3|1.4}|})
+        env-bg:
+          - matterhorn
+      # 乞力馬札羅山 Mount Kilimanjaro（坦桑尼亞）非洲東部
+      mountain-mount_kilimanjaro:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-real-world-location/mountain-mount_kilimanjaro/env-bg__{0.3:::{1.2|1.3|1.4}|})
+        env-bg:
+          - mount kilimanjaro
+      mountain-k2_mont_blanc:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-real-world-location/mountain-k2_mont_blanc/env-bg__{0.3:::{1.2|1.3|1.4}|})
+        env-bg:
+          - k2, mont blanc
+      # 阿瑪達布拉姆峰 位於尼泊爾的山
+      mountain-ama_dablam:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-real-world-location/mountain-ama_dablam/env-bg__{0.3:::{1.2|1.3|1.4}|})
+        env-bg:
+          - ama dablam
 

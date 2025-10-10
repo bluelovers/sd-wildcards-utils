@@ -1,0 +1,88 @@
+lazy-wildcards:
+  subject:
+    costume-elem-accessories:
+      zipper:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-accessories/zipper/costume-elem-main__
+            {, {1-$$__lazy-wildcards/subject/costume-elem-accessories/zipper/costume-elem-zipper__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem-accessories/zipper/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem-accessories/zipper/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem-accessories/zipper/style__}|}
+        costume-elem-main:
+          - zipper, zipper design
+        costume-elem-zipper:
+          - full-length zipper
+          - zipper pull tab
+          - front zipper
+          - breast zipper
+          - oversized zipper
+          - crotch zipper
+          - partially unzipped
+          - unzipped
+        action:
+          - unzipping
+          - unzipping another
+        costume-elem:
+          - center opening
+          - open fly
+          - unfastened
+          - >-
+            zipper {dress|skirt|pants|panties|leotard|bikini|boots}
+          - asymmetrical zipper
+          - zipper on back
+          - zipper on side
+        style:
+          - __lazy-wildcards/utils/fn/made-of-inspired(v=zippers)__
+      # https://danbooru.donmai.us/wiki_pages/buttoned_cuffs?z=2
+      buttons:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-accessories/buttons/costume-elem-main__
+            {, {1-2$$__lazy-wildcards/subject/costume-elem-accessories/buttons/costume-elem-buttons__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem-accessories/buttons/costume-elem__}|}
+        costume-elem-main:
+          - buttons
+        costume-elem-buttons:
+          - button gap
+          - popped button
+          - partially unbuttoned
+          - unbuttoned
+        costume-elem:
+          - large buttons
+          - multicolored buttons
+          - diamond button
+          - double-breasted
+          - buttoned cuffs
+      unzipping:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-accessories/unzipping/costume__
+            {0.1::, {1-$$__lazy-wildcards/subject/costume-elem-accessories/unzipping/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem-accessories/unzipping/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem-accessories/unzipping/costume-elem-zipper__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem-accessories/unzipping/costume-eyes__}|}
+        costume:
+          - >-
+            (unzipping, undressing:1.4), zipper,
+            ({unzipped|partially unzipped}:1.2), half naked
+        costume-eyes:
+          - averting eyes
+          - heart-shaped pupils
+        action:
+          - undressing another
+        costume-elem-zipper:
+          - full-length zipper
+          - zipper pull tab
+          - front zipper
+          - breast zipper
+        costume-elem:
+          - cleavage
+          - open bodysuit
+          - no bra
+          - center opening, chest open
+          - blush
+          - clothing cutout
+          - underboob
+          - sideboob
+

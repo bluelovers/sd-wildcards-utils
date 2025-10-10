@@ -182,4 +182,30 @@ lazy-wildcards:
           - ritual symbols
           - religious symbols
           - pentagram symbol
+          - floating spell sigils
+      magic-aura:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/magic-aura/env-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/magic-aura/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/magic-aura/style__}|}
+        env-main:
+          - magical aura, magic aura
+        env:
+          - energy aura, energy
+          - glowing aura
+          - mystical glow
+          - magical glow
+          - shimmering light
+          - sparkling light
+          - summoning eldritch fire
+          - surrounded by magical aura
+          - emitting magical aura
+        style:
+          - ethereal
+          - radiant
+          - luminescent
+          - vibrant colors
+          - soft glow
+          - particle effects
 

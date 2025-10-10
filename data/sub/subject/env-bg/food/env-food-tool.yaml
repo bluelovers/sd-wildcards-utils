@@ -212,4 +212,44 @@ lazy-wildcards:
           - food container
         env:
           - barcode, price tag
+      # 鐵鍋
+      wok:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-food-tool/wok/env-elem-food-tool-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-food-tool/wok/env-elem-food-tool__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-food-tool/wok/action__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food-tool/wok/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food-tool/wok/style__}|}
+        env-elem-food-tool-main:
+          - wok
+        env-elem-food-tool:
+          - seasoned wok
+        action:
+          - cooking action
+        env:
+          - black iron
+          - carbon steel
+          - flame burst
+          - stainless counter
+          - oil splash
+          - stir fry flames
+          - __lazy-wildcards/subject/env-moment/weather-mist-hot/prompts__
+          - __lazy-wildcards/subject/env-elem-food-tool/stove-gas/prompts-no-weight__
+          - ladle
+        style:
+          - oiled surface
+      # 瓦斯爐
+      stove-gas:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-food-tool/stove-gas/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-elem-food-tool/stove-gas/env-elem-food-tool-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-food-tool/stove-gas/env-elem-food-tool__}|}
+        env-elem-food-tool-main:
+          - gas stove
+        env-elem-food-tool:
+          - stained stove
 

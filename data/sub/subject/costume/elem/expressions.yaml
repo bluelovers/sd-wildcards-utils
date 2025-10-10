@@ -402,4 +402,34 @@ lazy-wildcards:
           - proud
           - cool expression
           - seductive smile
+      # 邪惡笑容
+      grin-sinister:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/grin-sinister/expressions-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/grin-sinister/expressions__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/grin-sinister/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem-expressions/grin-sinister/style__}|}
+        expressions-main:
+          - sinister grin
+        expressions:
+          - evil smile
+          - smirk
+          - upturned mouth
+          - grinning teeth
+          - cunning eyes
+          - menacing eyes
+          - glaring
+          - arched eyebrows
+          - trembling lips
+          - animated grin
+        costume-elem:
+          - sharp teeth
+          - dark lips
+          - shadowed eyes
+          - asymmetric face
+          - sweat drop
+        style:
+          - psychological horror
+          - creepy
 

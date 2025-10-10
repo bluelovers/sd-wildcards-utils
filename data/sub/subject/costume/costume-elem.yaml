@@ -4,45 +4,6 @@ lazy-wildcards:
       religious:
         prompts:
           - cope, ceremonial_cloak
-      button:
-        prompts:
-          - >-
-            buttons
-            {,{1-$$__lazy-wildcards/subject/costume-elem/button/costume-buttons__}|}
-        costume-buttons:
-          - double-breasted
-          - partially unbuttoned
-      unzipping:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/costume-elem/unzipping/costume__
-            {0.1::, {1-$$__lazy-wildcards/subject/costume-elem/unzipping/action__}|}
-            {, {1-$$__lazy-wildcards/subject/costume-elem/unzipping/costume-elem__}|}
-            {, {1-$$__lazy-wildcards/subject/costume-elem/unzipping/costume-elem-zipper__}|}
-            {, {1-$$__lazy-wildcards/subject/costume-elem/unzipping/costume-eyes__}|}
-        costume:
-          - >-
-            (unzipping, undressing:1.4), zipper,
-            ({unzipped|partially unzipped}:1.2), half naked
-        costume-eyes:
-          - averting eyes
-          - heart-shaped pupils
-        action:
-          - undressing another
-        costume-elem-zipper:
-          - full-length zipper
-          - zipper pull tab
-          - front zipper
-          - breast zipper
-        costume-elem:
-          - cleavage
-          - open bodysuit
-          - no bra
-          - center opening, chest open
-          - blush
-          - clothing cutout
-          - underboob
-          - sideboob
       # https://civitai.com/models/149711/untied-panties
       untied-panties:
         prompts:
