@@ -1873,13 +1873,25 @@
             (__lazy-wildcards/subject/style-elem/rusted/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
         "prompts-no-weight":
           - >-
-            __lazy-wildcards/subject/style-elem/rusted/env__
-        env:
+            __lazy-wildcards/subject/style-elem/rusted/env-elem__{,{1-$$__lazy-wildcards/subject/style-elem/rusted/env__}|}
+        "env-elem":
           - rust,rusty,rustic,rusted
+        env:
+          - rusty brown
+          - weathered
+          - aged metal
+          - oxidized metal
+          - corroded metal
+          - stained
+          - discolored
+          - oil stain
         fn:
           prefix:
             - >-
               rust ${v},rusty ${v},rustic ${v},rusted ${v}
+          prefix2:
+            - >-
+              __lazy-wildcards/subject/style-elem/rusted/fn/prefix__{,weathered ${v}|}{,oxidized ${v}|}{,corroded ${v}|}
       "color-palette-neon":
         prompts:
           - >-
@@ -9535,6 +9547,31 @@
           - glowing lantern,lantern light
           - fantasy desert
           - arabian nights
+      # 馬爾地夫島村
+      maldives_island_village:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/maldives_island_village/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg/maldives_island_village/env-bg__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg/maldives_island_village/env__}|}
+        "env-bg-main":
+          - maldives island village
+        "env-bg":
+          - tropical island
+          - stilt house,thatch roof
+          - atoll island
+          - wooden pier,wooden path
+          - gazebo,terrace
+          - overwater bungalow
+        env:
+          - turquoise water,clear water,shallow water
+          - resort
+          - coast
+          - beach
+          - palm tree,coconut tree
+          - reef fish
+          - tropical sky
+          - lantern light
+          - reflection
+          - curtain blowing
     env-elem-punk:
       holographic:
         prompts:
@@ -10536,8 +10573,10 @@
           - pollution smoke
           - potion fumes
           - science_experiment,fantasy_effect,theatrical_mist
-          - smoke_rings
+          - smoke rings
           - dissipating vapours
+          - smoke trail
+          - billowing smoke
       "weather-natural-disaster-water":
         prompts:
           - >-
@@ -12315,6 +12354,9 @@
           - lemon slice
           - butter
           - cake slice
+      kr-tteokbokki:
+
+
       # https://civitai.com/models/21079
       Taiwanese_Food:
         prompts:
@@ -12945,6 +12987,9 @@
         "env-elem-food":
           - coffee sack
           - coffee bag
+      rice_cake:
+        prompts:
+          - rice cake
     env-elem-food-tool:
       # https://civitai.com/models/192295/red-sake-cup-sakazuki-sfw-and-nsfw?modelVersionId=216003
       red_sake_cup:
@@ -13134,6 +13179,41 @@
           - food container
         env:
           - barcode,price tag
+      # 鐵鍋
+      wok:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-food-tool/wok/env-elem-food-tool-main__{,{1-$$__lazy-wildcards/subject/env-elem-food-tool/wok/env-elem-food-tool__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem-food-tool/wok/action__}|}{,{1-$$__lazy-wildcards/subject/env-elem-food-tool/wok/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem-food-tool/wok/style__}|}
+        "env-elem-food-tool-main":
+          - wok
+        "env-elem-food-tool":
+          - seasoned wok
+        action:
+          - cooking action
+        env:
+          - black iron
+          - carbon steel
+          - flame burst
+          - stainless counter
+          - oil splash
+          - stir fry flames
+          - "__lazy-wildcards/subject/env-moment/weather-mist-hot/prompts__"
+          - "__lazy-wildcards/subject/env-elem-food-tool/stove-gas/prompts-no-weight__"
+          - ladle
+        style:
+          - oiled surface
+      # 瓦斯爐
+      "stove-gas":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-food-tool/stove-gas/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/env-elem-food-tool/stove-gas/env-elem-food-tool-main__{,{1-$$__lazy-wildcards/subject/env-elem-food-tool/stove-gas/env-elem-food-tool__}|}
+        "env-elem-food-tool-main":
+          - gas stove
+        "env-elem-food-tool":
+          - stained stove
     env-elem:
       books:
         prompts:
@@ -14261,6 +14341,38 @@
           - heat
           - sparks
           - "__lazy-wildcards/subject/env-moment/weather-fire/prompts__"
+      # 地毯
+      carpet:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/carpet/env-bg-main__{,__lazy-wildcards/subject/env-elem/carpet/env-elem-main__|}{,{1-$$__lazy-wildcards/subject/env-elem/carpet/env-elem__}|}){,{1-$$__lazy-wildcards/subject/env-elem/carpet/action__}|}{,{1-$$__lazy-wildcards/subject/env-elem/carpet/style__}|}
+        "env-bg-main":
+          - carpet
+        "env-elem-main":
+          - wool carpet
+          - silk carpet
+          - woven rug
+          - handmade rug
+        "env-elem":
+          - flying carpet
+          - worn carpet
+          - torn carpet,frayed carpet
+          - magic carpet
+          - checkered carpet
+          - fringe carpet
+          - red carpet
+          - persian rug
+          - doormat
+        action:
+          - barefoot on carpet
+          - sitting on rug
+        style:
+          - arabesque
+          - geometric pattern
+          - floral pattern
+          - mandala
+          - folk style
+          - layered
       mud:
         prompts:
           - >-
@@ -14637,6 +14749,30 @@
           - ritual symbols
           - religious symbols
           - pentagram symbol
+          - floating spell sigils
+      "magic-aura":
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/magic-aura/env-main__{,{1-$$__lazy-wildcards/subject/env-elem/magic-aura/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem/magic-aura/style__}|}
+        "env-main":
+          - magical aura,magic aura
+        env:
+          - energy aura,energy
+          - glowing aura
+          - mystical glow
+          - magical glow
+          - shimmering light
+          - sparkling light
+          - summoning eldritch fire
+          - surrounded by magical aura
+          - emitting magical aura
+        style:
+          - ethereal
+          - radiant
+          - luminescent
+          - vibrant colors
+          - soft glow
+          - particle effects
       # https://civitai.com/models/823600/straddling-tentacle-concept?modelVersionId=920979
       # https://civitai.com/models/735154/tentacle-rub-concept
       # https://civitai.com/models/831774?modelVersionId=949823
@@ -16410,6 +16546,23 @@
           - urban_exploration
           - cyberpunk_aesthetic
           - digital_overlays
+      # 富士山
+      "mountain-jp-mount_fuji":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-real-world-location/mountain-jp-mount_fuji/env-bg-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg-real-world-location/mountain-jp-mount_fuji/env-bg__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/env-bg-real-world-location/mountain-jp-mount_fuji/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg-real-world-location/mountain-jp-mount_fuji/env-bg__}|}
+        "env-bg-main":
+          - mount fuji
+        "env-bg":
+          - cherry blossoms in foreground
+          - misty mountain
+          - forest base
+          - conical mountain
+          - lake reflection
+          - snow capped peak
       "tw-taipei_101":
         prompts:
           - >-
@@ -16454,7 +16607,8 @@
             stone {1-$$,stone $$road|fence}
           - >-
             wooden {1-$$,wooden $$wall|fence|horse|chair}
-      zh-suzhou_classical_gardens:
+      # https://civitai.com/models/24187/chinese-architectural-style-suzhou-gardens-building-suzhouyuanlin-about-architecture
+      "zh-suzhou_classical_gardens":
         prompts:
           - >-
             (__lazy-wildcards/subject/env-bg-real-world-location/zh-suzhou_classical_gardens/env-bg-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg-real-world-location/zh-suzhou_classical_gardens/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-bg-real-world-location/zh-suzhou_classical_gardens/env__}|}{,__lazy-wildcards/utils/scenery-no-humans__|}
@@ -16490,6 +16644,59 @@
           - garden scenery
           - plum blossom
           - pine tree
+      # 黃山 Huangshan（中國） — 奇岩怪石、松樹、雲海、階梯式登山徑與亭臺建築混合的景致
+      "mountain-zh-huangshan":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-real-world-location/mountain-zh-huangshan/env-bg-main__{0.3:::{1.2|1.3|1.4|1.6}|:1.2}){0.3::,{1-$$__lazy-wildcards/subject/env-bg-real-world-location/mountain-zh-huangshan/env-bg__}|}{0.3::,{1-$$__lazy-wildcards/subject/env-bg-real-world-location/mountain-zh-huangshan/env__}|}{0.3::,{1-$$__lazy-wildcards/subject/env-bg-real-world-location/mountain-zh-huangshan/costume-elem__}|}{0.3::,{1-$$__lazy-wildcards/subject/env-bg-real-world-location/mountain-zh-huangshan/style__}|}{,__lazy-wildcards/utils/scenery-no-humans__|}
+        "env-bg-main":
+          - huangshan
+        "env-bg":
+          - stone steps,stone path
+          - pavilion,pavilion among pines
+          - sea of clouds
+          - misty fog
+          - guest greeting pine
+          - cliff pine
+        env:
+          - chinese mountain
+          - cliff
+          - strange rock
+          - isolated peak
+          - deep valley
+          - morning glow
+          - stone bridge
+          - mountain temple
+        "costume-elem":
+          - taoist priest
+          - ancient traveler
+          - straw hat
+          - bamboo basket
+        style:
+          - fairyland
+          - fantasy landscape,dreamlike mountains
+          - evergreen
+          - meditative
+          - serene
+      # 张家界
+      "mountain-zh-zhangjiajie":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-real-world-location/mountain-zh-zhangjiajie/env-bg-main__{0.3:::{1.2|1.3|1.4|1.6}|:1.2}){0.3::,{1-$$__lazy-wildcards/subject/env-bg-real-world-location/mountain-zh-zhangjiajie/env-bg__}|}
+        "env-bg-main":
+          - zhangjiajie
+        "env-bg":
+          - sandstone pillars
+          - floating peaks
+          - floating mountain
+          - misty mountain
+      # 紫禁城
+      "zh-forbidden_city":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-real-world-location/zh-forbidden_city/env-bg-main__{0.3:::{1.2|1.3|1.4|1.6}|:1.2})
+        "env-bg-main":
+          - forbidden city
       "hk-hong_kong":
         prompts:
           - >-
@@ -16743,6 +16950,33 @@
           - sunny day,sharp shadow,golden hour
           - "whimsical,storybook style,fantasy village- storybook village,whimsical town,european fantasy architecture,fantasy travel location,real-life fairytale village"
           - "__lazy-wildcards/utils/scenery__"
+      # 馬特洪峰 The Matterhorn（瑞士／義大利）阿爾卑斯山脈
+      "mountain-matterhorn":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-real-world-location/mountain-matterhorn/env-bg__{0.3:::{1.2|1.3|1.4}|})
+        "env-bg":
+          - matterhorn
+      # 乞力馬札羅山 Mount Kilimanjaro（坦桑尼亞）非洲東部
+      "mountain-mount_kilimanjaro":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-real-world-location/mountain-mount_kilimanjaro/env-bg__{0.3:::{1.2|1.3|1.4}|})
+        "env-bg":
+          - mount kilimanjaro
+      "mountain-k2_mont_blanc":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-real-world-location/mountain-k2_mont_blanc/env-bg__{0.3:::{1.2|1.3|1.4}|})
+        "env-bg":
+          - k2,mont blanc
+      # 阿瑪達布拉姆峰 位於尼泊爾的山
+      "mountain-ama_dablam":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-real-world-location/mountain-ama_dablam/env-bg__{0.3:::{1.2|1.3|1.4}|})
+        "env-bg":
+          - ama dablam
       # 格拉納達市區
       granada_old_town:
         prompts:
@@ -17783,6 +18017,39 @@
       japanese_style:
         prompts:
           - rishifengge,japanese interior style
+    env-elem-chimney:
+      "chimney-industrial":
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem-chimney/chimney-industrial/env-bg-main__}{,{1-$$__lazy-wildcards/subject/env-elem-chimney/chimney-industrial/env-bg__}|}
+        "env-bg-main":
+          - industrial chimney
+          - factory chimney
+          - industrial smokestack
+        "env-bg":
+          - industrial ruins
+          - tall chimney
+          - "__lazy-wildcards/subject/style-elem/rusted/fn/prefix2(v=chimney)__"
+          - concrete chimney
+          - metallic chimney,metal chimney
+          - "__lazy-wildcards/subject/env-moment/weather-mist-smoke/prompts__"
+          - factory roof
+      "chimney-house":
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem-chimney/chimney-house/env-bg-main__}{,{1-$$__lazy-wildcards/subject/env-elem-chimney/chimney-house/env-bg__}|}
+        "env-bg-main":
+          - house chimney
+          - residential chimney
+          - rooftop chimney
+          - cottage chimney
+        "env-bg":
+          - smoke coming out of chimney
+          - chimney smoke
+          - brick chimney
+          - stone chimney
+          - snowy roof
+          - smoke trail
     env-elem-gate:
       # 車庫門
       garage_door:
@@ -18019,39 +18286,6 @@
       religious:
         prompts:
           - cope,ceremonial_cloak
-      button:
-        prompts:
-          - >-
-            buttons{,{1-$$__lazy-wildcards/subject/costume-elem/button/costume-buttons__}|}
-        "costume-buttons":
-          - "double-breasted"
-          - partially unbuttoned
-      unzipping:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/costume-elem/unzipping/costume__{0.1::,{1-$$__lazy-wildcards/subject/costume-elem/unzipping/action__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/unzipping/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/unzipping/costume-elem-zipper__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/unzipping/costume-eyes__}|}
-        costume:
-          - >-
-            (unzipping,undressing:1.4),zipper,({unzipped|partially unzipped}:1.2),half naked
-        "costume-eyes":
-          - averting eyes
-          - "heart-shaped pupils"
-        action:
-          - undressing another
-        "costume-elem-zipper":
-          - "full-length zipper"
-          - zipper pull tab
-          - front zipper
-          - breast zipper
-        "costume-elem":
-          - cleavage
-          - open bodysuit
-          - no bra
-          - center opening,chest open
-          - blush
-          - clothing cutout
-          - underboob
-          - sideboob
       # https://civitai.com/models/149711/untied-panties
       "untied-panties":
         prompts:
@@ -20509,15 +20743,25 @@
           - nasal helmet
           - visor \(armor\)
           - altyn helmet
+          - kabuto \(helmet\)
       # https://civitai.com/models/398853/samurai-armor
       # https://civitai.com/models/561501/samurai-armor-elden-ring
       # https://civitai.com/models/83476/samurai-armor-japan-traditional-dress-series
+      # https://civitai.com/models/149199/samurai-girl-lora
+      # https://civitai.com/models/134901/samuraibot
+      # https://civitai.com/models/69108/samuraipunkai-konyconi
+      # https://civitai.com/models/179486/change-a-character-female-samurai-you-waifu-now-follows-the-bushido-code
+      # https://civitai.com/models/194645/samurai-ab
       samurai_armor:
         prompts:
           - >-
-            (__lazy-wildcards/subject/costume/samurai_armor/costume__{0.3:::{1.2|1.3|1.4|1.6}|:1.3}){,{1-$$__lazy-wildcards/subject/costume/samurai_armor/costume-elem__}|}
+            (__lazy-wildcards/subject/costume/samurai_armor/costume-main__{0.3:::{1.2|1.3|1.4|1.6}|:1.3}){,__lazy-wildcards/subject/costume/samurai_armor/costume__|}{,{1-$$__lazy-wildcards/subject/costume/samurai_armor/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume/samurai_armor/action__}|}{,{1-$$__lazy-wildcards/subject/costume/samurai_armor/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume/samurai_armor/env-bg__}|}
+        "costume-main":
+          - >-
+            samurai armor,samurai,samurai girl,SamuraiPunkAI,cybersamurai
         costume:
-          - samurai armor,samurai
+          - "__cf-samurai/prompt-costume__"
+          - "__cf-samurai/prompt-full__"
         "costume-elem":
           - samurai helmet
           - kabuto
@@ -20529,6 +20773,21 @@
           - suneate,shin guards
           - armored sandals
           - armored boots
+          - samurai kimono
+          - ronin outfit,ronin armor
+          - armor on right shoulder
+          - chest sarashi
+          - kabuto \(helmet\)
+        action:
+          - slashing
+          - unsheathing
+          - sitting
+          - seiza
+        "costume-weapon":
+          - "__cf-samurai/weapon__"
+          - "__lazy-wildcards/subject/costume-weapon/sword-sheath/prompts__"
+        "env-bg":
+          - "__cf-samurai/location__"
       # https://civitai.com/models/146517/armored-leotard
       armored_leotard:
         prompts:
@@ -27644,6 +27903,33 @@
           - proud
           - cool expression
           - seductive smile
+      # 邪惡笑容
+      "grin-sinister":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/grin-sinister/expressions-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/grin-sinister/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/grin-sinister/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/grin-sinister/style__}|}
+        "expressions-main":
+          - sinister grin
+        expressions:
+          - evil smile
+          - smirk
+          - upturned mouth
+          - grinning teeth
+          - cunning eyes
+          - menacing eyes
+          - glaring
+          - arched eyebrows
+          - trembling lips
+          - animated grin
+        "costume-elem":
+          - sharp teeth
+          - dark lips
+          - shadowed eyes
+          - asymmetric face
+          - sweat drop
+        style:
+          - psychological horror
+          - creepy
       # https://civitai.com/models/155547/v-shaped-eyebrowsdoyagao-smug-v
       "v-shaped_eyebrows":
         prompts:
@@ -27742,13 +28028,13 @@
             __lazy-wildcards/subject/costume-weapon/umbrella/env-umbrella__{,{1-$$__lazy-wildcards/subject/costume-weapon/umbrella/costume-weapon__}}{,{1-$$__lazy-wildcards/subject/costume-weapon/umbrella/style-umbrella__}}{,{1-$$__lazy-wildcards/subject/costume-weapon/umbrella/env__}}
         "env-umbrella":
           - umbrella
-          - "Oil-paper umbrellas,Japanese Wagasa"
+          - "oil-paper umbrellas,japanese wagasa"
           - parasol
           - folding umbrella
-          - Bubble Umbrella
-          - Storm Umbrella
-          - Travel Umbrella
-          - Kids Umbrella
+          - bubble umbrella
+          - storm umbrella
+          - travel umbrella
+          - kids umbrella
           - leaf umbrella
         "style-umbrella":
           - closed umbrella
@@ -27771,14 +28057,14 @@
             __lazy-wildcards/subject/costume-weapon/umbrella_others/env-umbrella__{,{1-$$__lazy-wildcards/subject/costume-weapon/umbrella/style-umbrella__}}
         "env-umbrella":
           - beach umbrella
-          - Golf Umbrella
-          - Patio Umbrella
-          - Market Umbrella
-          - Fishing Umbrella
-          - Cantilever Umbrella
-          - Personal Sun Shade Umbrella
-          - Sun Umbrella
-      # https://civitai.com/models/701071/illustandxlandpony-broken-umbrella-inverted-umbrella?modelVersionId=2060342
+          - golf umbrella
+          - patio umbrella
+          - market umbrella
+          - fishing umbrella
+          - cantilever umbrella
+          - personal sun shade umbrella
+          - sun umbrella
+      # https://civitai.com/models/701071/illustandxlandpony-broken-umbrella-inverted-umbrella?modelversionid=2060342
       broken_umbrella:
         prompts:
           - >-
@@ -27802,7 +28088,7 @@
         "costume-weapon-elem":
           - sword on back
           - planted sword
-      # https://civitai.com/models/155846/pillow-hug-holding-pillow-with-speech-bubble-concept-lora?modelVersionId=224397
+      # https://civitai.com/models/155846/pillow-hug-holding-pillow-with-speech-bubble-concept-lora?modelversionid=224397
       pillow_hug:
         prompts:
           - >-
@@ -27982,6 +28268,87 @@
         env:
           - mechanical repair tools
           - tool rack
+      "weapon-oversized":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-weapon/weapon-oversized/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-weapon/weapon-oversized/costume-weapon-main__{,__lazy-wildcards/subject/costume-weapon/weapon-oversized/costume-weapon__|}{,__lazy-wildcards/subject/costume-weapon/weapon-oversized/action__|}
+        "costume-weapon-main":
+          - huge weapon,oversized weapon
+        "costume-weapon":
+          - dragonslayer \(sword\)
+          - guts_cosplayer_holding_giant_dragonslayer_\(meme\)
+          - greatsword
+          - claymore \(sword\)
+          - "__lazy-wildcards/subject/costume-weapon/weapon-two-handed/prompts-no-weight__"
+        action:
+          - holding oversized object
+      "weapon-two-handed":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-weapon/weapon-two-handed/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-weapon/weapon-two-handed/costume-weapon-main__{,__lazy-wildcards/subject/costume-weapon/weapon-two-handed/costume-weapon__|}
+        "costume-weapon-main":
+          - "two-handed weapon,two-handed"
+        "costume-weapon":
+          - "two-handed sword"
+          - "two-handed axe"
+          - "two-handed hammer"
+          - "two-handed spear"
+          - "two-handed scythe"
+          - "two-handed staff"
+          - zweihander
+      # https://danbooru.donmai.us/wiki_pages/dual_wielding
+      "weapon-dual-wielding":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-weapon/weapon-dual-wielding/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-weapon/weapon-dual-wielding/costume-weapon-main__{,__lazy-wildcards/subject/costume-weapon/weapon-dual-wielding/costume-weapon-main2__|}{,{1-$$__lazy-wildcards/subject/costume-weapon/weapon-dual-wielding/costume-weapon__}|}
+        "costume-weapon-main":
+          - dual wielding,dual wield
+        "costume-weapon-main2":
+          - triple wielding
+          - quadruple wielding
+          - multiple wielding
+        "costume-weapon":
+          - asymmetrical dual wielding,different weapons
+          - "close-quarters combat"
+          - between fingers
+      gangsta_hold:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-weapon/gangsta_hold/costume-weapon__{0.3:::{1.2|1.3|1.4|1.6}|})
+        "costume-weapon":
+          - gangsta hold
+      # 吸塵器
+      "vacuum-cleaner":
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-weapon/vacuum-cleaner/costume-weapon-main__{,__lazy-wildcards/subject/costume-weapon/vacuum-cleaner/costume-weapon__|}{,__lazy-wildcards/subject/costume-weapon/vacuum-cleaner/action__|}
+        "costume-weapon-main":
+          - vacuum cleaner
+        "costume-weapon":
+          - canister vacuum
+          - stick vacuum
+          - handheld vacuum,handheld vacuum cleaner
+          - wet dry vacuum
+          - >-
+            upright vacuum cleaner{,{bagless upright vacuum|bagged upright vacuum}|}
+        action:
+          - riding vacuum cleaner
+          - holding vacuum cleaner
+      "vacuum-robotic":
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-weapon/vacuum-robotic/costume-weapon__{,__lazy-wildcards/subject/costume-weapon/vacuum-cleaner/action__|}
+        "costume-weapon":
+          - robotic vacuum cleaner
     costume-elem-upper-body:
       # https://civitai.com/search/models?baseModel=SD%201.5&sortBy=models_v9&query=Corset
       # https://civitai.com/models/130637/corset-gothique-by-edg
@@ -28668,6 +29035,79 @@
           - collarbone piercing
           - navel piercing,navel
           - tail piercing
+      zipper:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-accessories/zipper/costume-elem-main__{,{1-$$__lazy-wildcards/subject/costume-elem-accessories/zipper/costume-elem-zipper__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-accessories/zipper/action__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-accessories/zipper/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-accessories/zipper/style__}|}
+        "costume-elem-main":
+          - zipper,zipper design
+        "costume-elem-zipper":
+          - "full-length zipper"
+          - zipper pull tab
+          - front zipper
+          - breast zipper
+          - oversized zipper
+          - crotch zipper
+          - partially unzipped
+          - unzipped
+        action:
+          - unzipping
+          - unzipping another
+        "costume-elem":
+          - center opening
+          - open fly
+          - unfastened
+          - >-
+            zipper {dress|skirt|pants|panties|leotard|bikini|boots}
+          - asymmetrical zipper
+          - zipper on back
+          - zipper on side
+        style:
+          - "__lazy-wildcards/utils/fn/made-of-inspired(v=zippers)__"
+      # https://danbooru.donmai.us/wiki_pages/buttoned_cuffs?z=2
+      buttons:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-accessories/buttons/costume-elem-main__{,{1-2$$__lazy-wildcards/subject/costume-elem-accessories/buttons/costume-elem-buttons__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-accessories/buttons/costume-elem__}|}
+        "costume-elem-main":
+          - buttons
+        "costume-elem-buttons":
+          - button gap
+          - popped button
+          - partially unbuttoned
+          - unbuttoned
+        "costume-elem":
+          - large buttons
+          - multicolored buttons
+          - diamond button
+          - "double-breasted"
+          - buttoned cuffs
+      unzipping:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-accessories/unzipping/costume__{0.1::,{1-$$__lazy-wildcards/subject/costume-elem-accessories/unzipping/action__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-accessories/unzipping/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-accessories/unzipping/costume-elem-zipper__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-accessories/unzipping/costume-eyes__}|}
+        costume:
+          - >-
+            (unzipping,undressing:1.4),zipper,({unzipped|partially unzipped}:1.2),half naked
+        "costume-eyes":
+          - averting eyes
+          - "heart-shaped pupils"
+        action:
+          - undressing another
+        "costume-elem-zipper":
+          - "full-length zipper"
+          - zipper pull tab
+          - front zipper
+          - breast zipper
+        "costume-elem":
+          - cleavage
+          - open bodysuit
+          - no bra
+          - center opening,chest open
+          - blush
+          - clothing cutout
+          - underboob
+          - sideboob
     action:
       sleeping:
         prompts:
@@ -29825,6 +30265,15 @@
           - "low-tied sidelocks"
           - sidelocks
           - french braid
+      expressions:
+        - >-
+          {1-3$$__lazy-wildcards/char/expressions__}
+        - >-
+          __lazy-wildcards/subject/costume-elem-expressions*/*/prompts__
+        - >-
+          {1-3$$__lazy-wildcards/subject/*/*/expressions*__}
+        - >-
+          {1-3$$__lazy-wildcards/cosplay-*/*/*/expressions*__}
   dataset:
     "char-view":
       - upper body
@@ -29918,6 +30367,10 @@
       - "__lazy-wildcards/subject/action-pose-anything/model-*/prompts__"
       - >-
         {__lazy-wildcards/subject/action*/*/prompts__|__lazy-wildcards/subject/action-pose-anything/model-*/prompts__},{1-2$$__lazy-wildcards/*/*/*/action*__}
+    expressions:
+      - >-
+        {1-3$$__lazy-wildcards/utils-dataset/char/expressions__}
+      - "__lazy-wildcards/subject/costume-elem-expressions*/*/prompts__"
   cosplay-char:
     # https://danbooru.donmai.us/posts?tags=mcdonald%27s&z=2
     mcdonalds:
@@ -35230,7 +35683,7 @@
           - red bikesuit,red biker clothes
           - kimono,yellow kimono,hair ornament,intricate kimono,tabi
         "costume-elem":
-          - "__lazy-wildcards/subject/costume-elem/unzipping/prompts__"
+          - "__lazy-wildcards/subject/costume-elem/unzipping-accessories/prompts__"
           - motorcycle helmet
           - unworn helmet
         action:
@@ -37589,7 +38042,7 @@
           - oxygen_mask
           - school_nurse
           - white nurse
-          - "__lazy-wildcards/subject/costume-elem/button/prompts__"
+          - "__lazy-wildcards/subject/costume-elem-accessories/buttons/prompts__"
           - >-
             {1-$$cleavage|cleavage cutout|breasts out|breast press}
           - >-
