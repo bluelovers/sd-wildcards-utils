@@ -22,6 +22,7 @@ export function _checkSettings()
 			'user-eroticvibes/*.yaml',
 			'corn-flakes-*.yaml',
 			'billions_of_all_in_one.yaml',
+			//'user-navimixu/*.yaml',
 		], {
 			cwd: join(__ROOT_DATA, 'others'),
 		}),
@@ -45,6 +46,8 @@ export function _checkSettings()
 		//'mid2000s/**',
 
 		'styles-drawing/**',
+
+		'illustXL/**',
 	] satisfies string[];
 
 	const _CHECK_FILES_IGNORE_FULL = [
