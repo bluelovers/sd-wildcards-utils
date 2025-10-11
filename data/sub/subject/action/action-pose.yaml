@@ -116,4 +116,49 @@ lazy-wildcards:
           - __lazy-wildcards/subject/costume-ethnicity-eyes/multicolored_eyes/prompts__
           - __lazy-wildcards/subject/costume-ethnicity-eyes/colored_eyes/prompts__
           - __lazy-wildcards/subject/costume-ethnicity-eyes/lens_eye/prompts__
+      head_on_arm:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/action-pose/head_on_arm/action-pose-main__
+            {, {1-2$$__lazy-wildcards/subject/action-pose/head_on_arm/action-pose__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/action-pose/head_on_arm/action__}|}
+            {, {1-3$$__lazy-wildcards/subject/action-pose/head_on_arm/expressions__}|}
+            {, {1-$$__lazy-wildcards/subject/action-pose/head_on_arm/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/action-pose/head_on_arm/env__}|}
+            {, {1-$$__lazy-wildcards/subject/action-pose/head_on_arm/style__}|}
+            {, {1-2$$__lazy-wildcards/subject/action-pose/head_on_arm/style-view__}|}
+        action-pose-main:
+          - head on arm
+        action-pose:
+          - resting pose
+          - leaning pose
+          - elbow on table
+          - sleeping on desk
+          - arm pillow
+        action:
+          - head tilt sideways
+          - arm resting
+          - crossed arms, hands on own shoulders
+        expressions:
+          - gaze down
+          - tired
+          - sleepy
+          - pensive
+          - melancholy
+          - gentle softness
+          - romantic gaze
+          - gentle smile
+          - eye contact
+        costume-elem:
+          - hair drape
+        env:
+          - table items
+        style:
+          - rainy mood
+          - moody tone
+          - soft indoor light
+          - window light
+        style-view:
+          - top down view
+          - side view
 

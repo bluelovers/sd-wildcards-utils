@@ -836,4 +836,24 @@ lazy-wildcards:
           - black void, deep purple
           - glowing contrast
           - pixel distortion
+      lab-table:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-punk/lab-table/env-bg__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-3$$__lazy-wildcards/subject/env-elem-punk/lab-table/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/lab-table/action__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-punk/lab-table/style__}|}
+        env-bg:
+          - lab table, laboratory table
+        env:
+          - erlenmeyer flask
+          - test tube
+          - test tube rack
+          - volumetric flask
+        action:
+          - hand on own chin
+        costume-weapon:
+          - holding flask
+        style:
+          - __lazy-wildcards/subject/scenes-pov/pov_across_table/prompts__
 

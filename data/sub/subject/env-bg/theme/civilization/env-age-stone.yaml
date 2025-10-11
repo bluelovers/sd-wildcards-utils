@@ -1,0 +1,101 @@
+lazy-wildcards:
+  subject:
+    env-elem-civilization:
+      # https://civitai.com/models/323881/stone-age-style-by-dever-sdxl
+      # https://civitai.com/models/1640606/prehistoric-waterfall-illu
+      # https://civitai.com/models/2030170/prehistoric-cave
+      age-stone:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-civilization/age-stone/style-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/age-stone/env-elem__}|}{0.3:::{1.2|1.3|1.4}|})
+            {0.5::, {1-2$$__lazy-wildcards/subject/env-elem-civilization/age-stone/env-bg__}|}
+            {, {1-3$$__lazy-wildcards/subject/env-elem-civilization/age-stone/env-elem-creatures__}|}
+            {, {1-3$$__lazy-wildcards/subject/env-elem-civilization/age-stone/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/age-stone/env-elem-food__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/age-stone/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/age-stone/style__}|}
+        style-main:
+          - >-
+            stone age, prehistoric stone age
+            , prehistoric
+            , stone age world
+            , prehistoric environment
+            , __lazy-wildcards/utils/fn/style-inspired(v=stone-age)__
+            , dvr-stnd, StoneAgeCh, StoneAgeChEro, stone-age h0us3
+            , cretaceous period
+        env-elem:
+          - __lazy-wildcards/utils/fn/made-of(v=stone-age)__
+        env-bg:
+          - ancient wilderness
+          - stone-age village, primitive village
+          - prehistoric waterfall, prehistoric w4t3rf4ll
+          - prehistoric lake, prehistoric l4k3
+          - prehistoric cave, prehistoric c4v3
+        env-elem-creatures:
+          - prehistoric animal
+          - dinosaur
+          - trilobite
+          - mammoth
+          - boar
+        costume-weapon:
+          - holding polearm
+          - spear
+          - stone weapon
+          - stone spear
+          - stone axe
+          - holding axe
+          - wooden spear
+        env-elem-food:
+          - boned meat
+          - chicken leg
+        env:
+          - stone tools, caveman tool
+          - mammoth bones
+          - wooden fence
+          - clam shell
+          - spines
+          - tiger pelt
+          # https://danbooru.donmai.us/posts?tags=tribal_carry+&z=5
+          - tribal carry
+          - bone craft
+        style:
+          - __lazy-wildcards/utils/fn/made-of(v=prehistoric)__
+          - rock formation
+          - cave fashion
+          - cave age
+          - primitive darkness
+          - earth tone palette
+          - stone surface
+          - charcoal shadow
+          - tribal
+      # https://civitai.com/models/1559130/stone-age-house
+      age-stone-building:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-civilization/age-stone-building/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/age-stone-building/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
+            , __lazy-wildcards/subject/env-elem-civilization/age-stone/prompts__
+        env-bg-main:
+          - stone-age h0us3, stone-age house, prehistoric primitive building, stone-age building
+        env-bg:
+          - cave house
+          - stone village, stone hut
+          - bone house
+          - primitive villag
+          - cave-age building
+      age-stone-punk:
+        prompts:
+          - >-
+            {{1-$$__lazy-wildcards/subject/env-elem-civilization/age-stone-punk/costume-elem__},|}
+            {1-$$__lazy-wildcards/subject/env-elem-civilization/age-stone-punk/env__}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/age-stone-punk/style__}|}
+            , __lazy-wildcards/subject/env-elem-civilization/age-stone/prompts__
+        costume-elem:
+          - tribal mage
+        env:
+          - stone mech
+          - bone construct
+        style:
+          - ancient technology
+

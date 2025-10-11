@@ -103,22 +103,40 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/env-elem-civilization/aztec/env__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem-civilization/aztec/style__}|}
         style-main:
-          - aztcar, aztar, AztecWorld, aztec, ancient_mesoamerican, aztec_architecture, aztec_style, sd_mai, Aztec civilization, ancient_civilization, TotempunkAI, mesoamerica
+          - >-
+            aztcar, aztar, AztecWorld, aztec, ancient_mesoamerican, aztec_architecture, aztec_style, sd_mai, Aztec civilization, ancient_civilization, TotempunkAI, mesoamerica
+            , aztaka, aztecs
+            , __lazy-wildcards/utils/fn/style-inspired(v=aztec)__
         env-bg:
-          - stone_temple, step_pyramid
+          - stone temple, step pyramid
           - __cf-aztec/location__
+          - tenochtitlan
+          - lake texcoco
+          - aztec buildings
         env:
-          - stone_carvings
-          - throne
+          - stone carvings
+          - stone throne
+          - multicolored feathers
         costume-elem:
           - aztec_clothing, ceremonial_attire, gold_jewelry, ancient aztec clothes
           - feathered_headdress
           - Cloaks, Tunics
           - __cf-aztec/prompt-costume__
           - aztec priest
+          - aztec gold headdress
+          - gold usekh collar, gold armlet
+          - blue earrings
+          - leaf armlet
+          - gold bracer
+          - gold chain
+          - gold belt
+          - leaf skirt
+          - gold calflet
+          - leaf calflet
+          - __lazy-wildcards/subject/costume-elem/curtain-pelvic/prompts-no-weight__
         style:
           - geometric_patterns, tribal_patterns, mesoamerican_fashion, ancient_symbols, mesoamerican_art
-          - aztec_patterns
+          - __lazy-wildcards/utils/fn/pattern(v=aztec)__
           - sun_symbol
           - animal_motif
       # https://civitai.com/models/71287/tang-fashion-style

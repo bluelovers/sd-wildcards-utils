@@ -1,0 +1,31 @@
+lazy-wildcards:
+  subject:
+    env-elem-food:
+      # 炸魷魚
+      fried-calamari:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-food/fried-calamari/env-elem-food-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/fried-calamari/env-elem-food__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/env-elem-food/fried-calamari/env__}|}
+        env-elem-food-main:
+          - crispy fried calamari, fried calamari
+        env-elem-food:
+          - tartar sauce
+          - chili sauce
+          - lemon wedge, lemon slice
+          - scallions
+          - a side of coleslaw
+          - crispy coating
+        env:
+          - checkered napkin
+          - wooden table
+      fried-chicken:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-food/fried-chicken/env-elem-food-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/fried-calamari/env-elem-food__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/env-elem-food/fried-calamari/env__}|}
+        env-elem-food-main:
+          - crispy fried chicken
+

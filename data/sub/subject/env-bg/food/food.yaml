@@ -33,49 +33,6 @@ lazy-wildcards:
           - pieces of roasted lamb
           - pastry
           - mexican tacos
-      shaved-ice-animal-shaped:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-elem-food/shaved-ice-animal-shaped/main__,
-            {1-$$__lazy-wildcards/subject/env-elem-food/shaved-ice-animal-shaped/main-shaped__},
-            {1-$$__lazy-wildcards/subject/env-elem-food/shaved-ice-animal-shaped/main-elem__},
-            {1-$$__lazy-wildcards/subject/env-elem-food/shaved-ice-animal-shaped/style__},
-            {1-$$__lazy-wildcards/subject/env-elem-food/shaved-ice-animal-shaped/env__}
-        main:
-          - >-
-            animal-shaped shaved ice, shaved ice, animal-shaped,
-            fruit, ice cream,
-            animal focus, food focus,
-            dessert, in food,
-            food art, ankg,
-            {1-$$cup|bowl|dessert_bow}
-        main-shaped:
-          - bear, polar bear
-          - pokemon \(creature\)
-          - >-
-              {1-$$fruit_toppings|decorative_fruit|fresh_fruit|sliced_fruit}
-        style:
-          - still life
-          - summer_dessert
-          - cold_treat
-        main-elem:
-          - cherry
-          - solid circle eyes
-          - pudding
-          - solid circle eyes
-          - matcha
-          - sweet_syrup
-          - condensed_milk
-          - colorful_toppings
-          - ice_syrup
-          - creamy_texture
-        env:
-          - omurice
-          - ketchup
-          - napkin
-          - table
-          - reflection
-          - drinking
       tofu:
         prompts:
           - >-
@@ -569,14 +526,14 @@ lazy-wildcards:
       salt_lake:
         prompts:
           - >-
-            (__lazy-wildcards/subject/env-elem-food/salt_lake/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
-            {, {1-$$__lazy-wildcards/subject/env-elem-food/salt_lake/env-bg__}|}
+            (__lazy-wildcards/subject/env-elem-food/salt_lake/env-elem-food-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/salt_lake/env-elem-food__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem-food/salt_lake/env__}|}
-        env-bg-main:
+        env-elem-food-main:
           - >-
             salt lake, salt flats
             , __lazy-wildcards/subject/env-elem-food/salt/env-elem-food-main__
-        env-bg:
+        env-elem-food:
           - salt mountain
           - salt field
           - salt pans
@@ -593,4 +550,53 @@ lazy-wildcards:
       rice_cake:
         prompts:
           - rice cake
+      # 奶油起司通心粉
+      cheese_macaroni:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-food/cheese_macaroni/env-elem-food-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/cheese_macaroni/env-elem-food__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/cheese_macaroni/env-elem-food-tool__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/cheese_macaroni/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/cheese_macaroni/style__}|}
+        env-elem-food-main:
+          - macaroni and cheese, mac and cheese
+        env-elem-food:
+          - cheese pasta
+          - __lazy-wildcards/subject/env-elem-food/cheese_creamy/prompts__
+        env-elem-food-tool:
+          - ceramic bowl
+          - fabric napkin
+        env:
+          - __lazy-wildcards/subject/env-moment/weather-mist-hot/prompts__
+        style:
+          - comfort food
+          - buttery yellow
+      cheese_creamy:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-food/cheese_creamy/env-elem-food-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/cheese_creamy/env-elem-food__}|}
+        env-elem-food-main:
+          - melted cheese, creamy sauce, cheesy dish
+        env-elem-food:
+          - melting cheese
+          - cheese pull
+          - creamy texture
+      # 堅果
+      nuts_dried_fruits​​​:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-food/nuts_dried_fruits​​​/env-elem-food-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/nuts_dried_fruits​​​/env-elem-food__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/nuts_dried_fruits​​​/env-elem-food-tool__}|}
+        env-elem-food-main:
+          - mixed nuts and dried fruits​​​
+        env-elem-food:
+          - walnut
+          - almond
+          - cashew
+          - pistachio
+        env-elem-food-tool:
+          - __lazy-wildcards/subject/env-elem-food-tool/jar/prompts__
 

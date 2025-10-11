@@ -105,4 +105,14 @@ lazy-wildcards:
           - bookshelf
           - books
           - library
+      # https://civitai.com/images/104159798
+      pov_across_table:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/scenes-pov/pov_across_table/style-pov__
+            {, {1-$$__lazy-wildcards/subject/scenes-pov/pov_across_table/style__}|}
+        style-pov:
+          - pov across table, table
+        style:
+          - fisheye
 

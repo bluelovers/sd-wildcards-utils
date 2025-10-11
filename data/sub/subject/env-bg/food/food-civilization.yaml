@@ -3,4 +3,16 @@ lazy-wildcards:
     env-elem-food:
       # 辣炒年糕
       kr-tteokbokki:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-food/kr-tteokbokki/env-elem-food-main__{0.3:::{1.2|1.3|1.4}|})
+            {0.3::, {1-$$__lazy-wildcards/subject/env-elem-food/kr-tteokbokki/env-elem-food__}|}
+        env-elem-food-main:
+          - tteokbokki
+        env-elem-food:
+          - korean food
+          - spicy food
+          - green onion
+          - red sauce
+          - scallions
 

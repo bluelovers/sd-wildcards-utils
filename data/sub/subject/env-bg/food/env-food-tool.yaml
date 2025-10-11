@@ -252,4 +252,24 @@ lazy-wildcards:
           - gas stove
         env-elem-food-tool:
           - stained stove
+      jar:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-food-tool/jar/env-elem-food-tool-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-food-tool/jar/env-elem-food-tool__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food-tool/jar/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food-tool/jar/style__}|}
+        env-elem-food-tool-main:
+          - transparent glass jar
+        env-elem-food-tool:
+          - >-
+            {round|square} jar
+          - >-
+            {metal|wooden} lid
+        env:
+          - kitchen shelf
+          - wooden counter
+        style:
+          - reflected light on glass surface
+
 

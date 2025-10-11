@@ -1,0 +1,89 @@
+lazy-wildcards:
+  subject:
+    env-elem-food:
+      ice-cream:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-food/ice-cream/env-elem-food-main__
+            {, __lazy-wildcards/subject/env-elem-food/ice-cream/env-elem-food__|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/ice-cream/costume-weapon__}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/ice-cream/env-elem-food-tool__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/ice-cream/style__}|}
+        env-elem-food-main:
+          - ice cream
+        env-elem-food:
+          - ice cream sundae
+          - waffle cone
+        costume-weapon:
+          - holding ice cream
+        env-elem-food-tool:
+          - ice cream cup
+          - ice cream spoon
+          - ice cream scoop
+          - cone holder
+        style:
+          - melting slightly
+      ice-cream-cone:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-food/ice-cream-cone/env-elem-food-main__
+            {, __lazy-wildcards/subject/env-elem-food/ice-cream-cone/env-elem-food__|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/ice-cream-cone/env-elem-food-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/ice-cream-cone/costume-weapon__}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/ice-cream/env-elem-food-tool__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/ice-cream/style__}|}
+        env-elem-food-main:
+          - ice cream cone
+        env-elem-food:
+          - empty ice cream cone
+          - >-
+            {multiple scoops|single scoop|too many scoops}
+        env-elem-food-elem:
+          - ice cream cone spill
+          - ice cream cone on head
+        costume-weapon:
+          - holding ice cream cone
+      shaved-ice-animal-shaped:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-food/shaved-ice-animal-shaped/env-elem-food-main__
+            {, __lazy-wildcards/subject/env-elem-food/shaved-ice-animal-shaped/env-elem-food-elem__|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/shaved-ice-animal-shaped/env-elem-food__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/shaved-ice-animal-shaped/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/shaved-ice-animal-shaped/style__}|}
+        env-elem-food-main:
+          - >-
+            animal-shaped shaved ice, shaved ice, animal-shaped,
+            fruit, ice cream,
+            animal focus, food focus,
+            dessert, in food,
+            food art, ankg,
+            {1-$$cup|bowl|dessert_bow}
+        env-elem-food-elem:
+          - bear, polar bear
+          - pokemon \(creature\)
+          - >-
+            {1-$$fruit_toppings|decorative_fruit|fresh_fruit|sliced_fruit}
+        env-elem-food:
+          - cherry
+          - solid circle eyes
+          - pudding
+          - solid circle eyes
+          - matcha
+          - sweet_syrup
+          - condensed_milk
+          - colorful_toppings
+          - ice_syrup
+          - creamy_texture
+        env:
+          - omurice
+          - ketchup
+          - napkin
+          - table
+          - reflection
+          - drinking
+        style:
+          - still life
+          - summer_dessert
+          - cold_treat
+

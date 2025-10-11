@@ -364,4 +364,20 @@ lazy-wildcards:
             {, __lazy-wildcards/subject/costume-weapon/vacuum-cleaner/action__|}
         costume-weapon:
           - robotic vacuum cleaner
+      letter-love:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-weapon/letter-love/costume-weapon-main__
+            {, __lazy-wildcards/subject/costume-weapon/letter-love/costume-weapon__|}{0.3:::{1.2|1.3|1.4|1.6}|:1.2})
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/letter-love/env-elem-food__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/letter-love/style__}|}
+        costume-weapon-main:
+          - love letter, loveletter, heart
+        costume-weapon:
+          - holding love letter, holding letter
+          - incoming letter
+        env-elem-food:
+          - __lazy-wildcards/subject/env-elem-food/chocolate/prompts__
+        style:
+          - valentine
 

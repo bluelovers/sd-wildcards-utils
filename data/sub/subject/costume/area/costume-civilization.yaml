@@ -1,8 +1,8 @@
 lazy-wildcards:
   subject:
     costume:
-      # https://civitai.com/models/432127/sexy-attire-or-camel-by-camel-by-edg?modelVersionId=481418
-      # https://civitai.com/models/342571/stygian-armor?modelVersionId=1677962
+      # https://civitai.com/models/432127/sexy-attire-or-camel-by-camel-by-edg?modelversionid=481418
+      # https://civitai.com/models/342571/stygian-armor?modelversionid=1677962
       ancient-egyptian:
         prompts:
           - >-
@@ -21,25 +21,25 @@ lazy-wildcards:
         costume-main:
           - >-
             ancient egyptian
-            , wearing edgCBC_\(egyptian clothes\), edgCBC
+            , wearing edgcbc_\(egyptian clothes\), edgcbc
             , jewelry
             , stygar, stygian armor
             , stygia
             , egyptpunkai, egypt, egyptianworld
         costume:
-          - Egyptian_Robe, long flowing garments, linen fabric, traditional draping
-          - Kalasiris, close-fitting dress, pleated fabric
-          - Shendyt, pleated dress
+          - egyptian_robe, long flowing garments, linen fabric, traditional draping
+          - kalasiris, close-fitting dress, pleated fabric
+          - shendyt, pleated dress
           - maebari, bottomless, crotch plate
-          - Pharaoh, regal_attire, Egyptian_royalty, royal headdress
-          - Anubis, jackal_headgear
-          - Scarab, sacred_insect
-          - Egyptian_armor
+          - pharaoh, regal_attire, egyptian_royalty, royal headdress
+          - anubis, jackal_headgear
+          - scarab, sacred_insect
+          - egyptian_armor
           - ceremonial attire
-          - Mummy
+          - mummy
           - linen wrappings
         costume-weapon:
-          - Ankh, ancient_cross
+          - ankh, ancient_cross
           - >-
             scepter|was_scepter
           - khopes, curved sword
@@ -49,39 +49,39 @@ lazy-wildcards:
           - maat_feather
           - ceremonial_knife
           - staff_of_osiris
-          - shabti, Small figurines placed in tombs
+          - shabti, small figurines placed in tombs
           - small tools
         costume-headwear:
-          - Nemes_Headdress, striped headcloth, royal headwear, pharaoh's symbol
-          - Khat_Headdress, nobles, plain headcloth
-          - Pschent, pharaohs, double crown, symbol of united Egypt
-          - Uraeus, rearing cobra, royal emblem, part of headdresses
+          - nemes_headdress, striped headcloth, royal headwear, pharaoh's symbol
+          - khat_headdress, nobles, plain headcloth
+          - pschent, pharaohs, double crown, symbol of united egypt
+          - uraeus, rearing cobra, royal emblem, part of headdresses
         costume-elem:
-          - Egyptian_Sandals, reed materia
-          - Beaded_Collar, wide necklace, intricate beadwork, colorful
-          - Royal_Cuff, wide wristbands, gold, jeweled, royalty
+          - egyptian_sandals, reed materia
+          - beaded_collar, wide necklace, intricate beadwork, colorful
+          - royal_cuff, wide wristbands, gold, jeweled, royalty
           - >-
-            Egyptian_Belt, waistbands, functional and decorative, made of {cloth|leather}
-          - Ceremonial_Cape, rituals, ornate design, richly decorated
-          - Egyptian_Jewelry, gold, gemstones
+            egyptian_belt, waistbands, functional and decorative, made of {cloth|leather}
+          - ceremonial_cape, rituals, ornate design, richly decorated
+          - egyptian_jewelry, gold, gemstones
           - underboob
           - pelvic curtain, navel
           - bangs
           - god of the sun
           - golden mask
-          - Cleopatra, queen of Egypt
-          - Bastet, cat goddess
+          - cleopatra, queen of egypt
+          - bastet, cat goddess
           - goddess of fertility
-          - Tutankhamun
+          - tutankhamun
           - amulets
           - preserved bodies
-          - Sphinx, lion's body, human head
+          - sphinx, lion's body, human head
           - god of mummification
           - falcon head
         costume-makeup:
-          - Kohl_Makeup, black eye paint, defining eyes
+          - kohl_makeup, black eye paint, defining eyes
       # 重裝步兵
-      # https://en.wikipedia.org/wiki/Hoplite
+      # https://en.wikipedia.org/wiki/hoplite
       # https://danbooru.donmai.us/posts?tags=hoplite&z=5
       # https://civitai.com/models/269744/hoplite
       greek-hoplite:
@@ -202,4 +202,103 @@ lazy-wildcards:
           - spear
           - round shield, decorated shield
           - quiver
+      # https://civitai.com/models/114828/character-change-stoneagech-prehistoric-adventures
+      # https://civitai.com/models/1698146/anime-style-prehistoric-dress-ice-age-stone-age
+      cavewoman:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/cavewoman/costume__
+            {, {1-4$$__lazy-wildcards/subject/costume/cavewoman/costume-elem-accessories__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-4$$__lazy-wildcards/subject/costume/cavewoman/costume-ethnicity-hair__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/cavewoman/costume-elem__}|}
+            {, __lazy-wildcards/subject/env-elem-civilization/age-stone/prompts__|}
+        costume:
+          - >-
+            cavewoman, caveman
+            , prehistoric human
+            , stoneagech, stoneagechero
+        costume-elem-accessories:
+          - stone bracelet
+          - stone anklet
+          - beast fang necklace
+          - bone necklace
+          - tooth necklace
+          - claw necklace
+          - primitive jewelry
+          - tribal necklace
+          - beast fang ornament
+          - shaman amulet
+          - bone charm
+        costume-ethnicity-hair:
+          - wild hairstyle
+          - messy hair
+          - curly hair
+        costume-elem:
+          - teeth
+          - barefoot
+          - sleeveless, bare shoulders
+          - fur shirt
+          - fur skirt
+          - primitive clothing
+          - tribal paint
+          - muscular
+          - loincloth
+          - revealing clothes
+          - topless
+          - tribal tattoo
+          - fur wrist cuffs
+          - fur boots
+          - fur-trimmed bikini
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - loose fitting prehistoric cloak with a fur trim
+          - navel
+      # umhlonyane是南非祖魯族的女性成年儀式
+      #
+      # https://www.youtube.com/watch?v=yd5nkg-isxi&embeds_referring_euri=https%3a%2f%2fwww.dcard.tw%2f&source_ve_path=mjm4nte
+      # https://www.youtube.com/watch?v=r8qmxvoswki
+      #
+      # https://civitai.com/models/272442/js-umhlonyane
+      # https://civitai.com/models/65725/zulupunkai-konyconi
+      zulu-umhlonyane:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/zulu-umhlonyane/costume-main__{0.3:::{1.2|1.3|1.4}|})
+            {, __lazy-wildcards/subject/costume/zulu-umhlonyane/costume__|}
+            {, {1-$$__lazy-wildcards/subject/costume/zulu-umhlonyane/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/zulu-umhlonyane/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/zulu-umhlonyane/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/zulu-umhlonyane/style__}|}
+        costume-main:
+          - >-
+            umhlonyane, zulu
+            , tribal outfit
+            , naked breasts
+            , upper body
+            , ethnic jewelry, feather ornament
+            , js_umhlonyane, zulupunkai
+        costume:
+          - zulu healer, sangoma
+          - ritual dancer
+          - shaman, spiritual medium, ancestral priest
+        costume-elem:
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+          - tribal clothing
+          - ritual attire
+          - bone necklace
+        env-bg:
+          - zulu landscape
+          - rolling hills
+          - red earth
+          - south africa
+        env:
+          - umhlonyane, african wormwood, artemisia afra, zulu herb, traditional medicine herb, spiritual herb
+          - savanna vegetation
+          - natural material
+          - tribal drum
+          - herbal jar
+          - smoke ritual
+        style:
+          - earth tone lighting
+          - afrofuturism
+          - __lazy-wildcards/utils/fn/style-inspired(v=zulu)__
 

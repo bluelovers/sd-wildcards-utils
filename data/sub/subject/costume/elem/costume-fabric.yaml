@@ -245,4 +245,15 @@ lazy-wildcards:
           - beach towel
         action:
           - sunbathing
+      torn-clothes:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem/torn-clothes/costume__
+            {0.2::,__lazy-wildcards/subject/costume-elem/torn-clothes/costume-elem__|}
+        costume:
+          - >-
+            {1-$$ragged tunic, ragged clothes|tattered clothing, tattered clothes|torn clothes, torn clothing|ripped clothes|damaged|tearing clothes}
+        costume-elem:
+          - >-
+            torn {1-$$, torn $$pantyhose|thighhighs|shirt|pants|dress|skirt|sleeves, mismatched sleeves|bodysuit|cape|shorts|jeans|leotard|legwear|camisole}
 

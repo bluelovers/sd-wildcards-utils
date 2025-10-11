@@ -13,6 +13,7 @@ lazy-wildcards:
         env-elem-food:
           - waffle
           - cheesecake
+          - fluffy pancakes
         env-elem-food-elem:
           - butter on pancake
           - syrup on pancake
@@ -22,4 +23,49 @@ lazy-wildcards:
           - lemon slice
           - butter
           - cake slice
+      chocolate:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-food/chocolate/env-elem-food-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/chocolate/env-elem-food__}|}
+            {, __lazy-wildcards/subject/env-elem-food/chocolate/style__|}
+        env-elem-food-main:
+          - chocolate
+        env-elem-food:
+          - box of chocolates
+          - heart-shaped chocolate
+          - heart-shaped box
+          - __lazy-wildcards/subject/env-elem-food/chocolate-covered/prompts__
+        style:
+          - valentine, heart
+          - happy valentine
+      chocolate-covered:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-food/chocolate-covered/env-elem-food-main__
+            {, __lazy-wildcards/subject/env-elem-food/chocolate-covered/env-elem-food__|}
+        env-elem-food-main:
+          - chocolate-covered food
+        env-elem-food:
+          - chocolate banana
+          - chocolate strawberry
+          - choco fashion, old-fashioned donut
+          - orangette
+      chocolate-lava-cake:
+        prompts:
+          - >-
+            luxurious chocolate lava cake
+      # 繽紛水果塔
+      fruit_tart:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-food/fruit_tart/env-elem-food-main__
+            {, __lazy-wildcards/subject/env-elem-food/fruit_tart/env-elem-food__|}
+        env-elem-food-main:
+          - colorful fruit tart 
+        env-elem-food:
+          - crisp pastry crust
+          - filled with creamy vanilla custard, custard cream
+          - topped with an assortment of fresh berries, kiwi slices, and a glaze
+          - buttery tart crust
 
