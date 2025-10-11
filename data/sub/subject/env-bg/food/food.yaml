@@ -584,14 +584,14 @@ lazy-wildcards:
           - cheese pull
           - creamy texture
       # 堅果
-      nuts_dried_fruits​​​:
+      nuts_dried_fruits:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-elem-food/nuts_dried_fruits​​​/env-elem-food-main__
-            {, {1-$$__lazy-wildcards/subject/env-elem-food/nuts_dried_fruits​​​/env-elem-food__}|}
-            {, {1-$$__lazy-wildcards/subject/env-elem-food/nuts_dried_fruits​​​/env-elem-food-tool__}|}
+            __lazy-wildcards/subject/env-elem-food/nuts_dried_fruits/env-elem-food-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/nuts_dried_fruits/env-elem-food__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/nuts_dried_fruits/env-elem-food-tool__}|}
         env-elem-food-main:
-          - mixed nuts and dried fruits​​​
+          - mixed nuts and dried fruits
         env-elem-food:
           - walnut
           - almond
