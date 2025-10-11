@@ -13,6 +13,7 @@ import {
 } from './types';
 import { getNodeType } from './util';
 import { RE_UNSAFE_PLAIN } from './const';
+import { existsZeroWidth } from 'zero-width';
 
 // @ts-ignore
 export function _validMap(key: IVisitorFnKey | null, node: YAMLMap, ...args: any[])
@@ -49,14 +50,23 @@ export function _validPair(key: IVisitorFnKey, pair: IWildcardsYAMLPair | Pair, 
 {
 	const keyNode = (pair as IWildcardsYAMLPair).key as IWildcardsYAMLScalar | string;
 
-	const notOk = !isSafeKey(typeof keyNode === 'string' ? keyNode : keyNode.value)
+	const keyNodeValue = typeof keyNode === 'string' ? keyNode : keyNode?.value;
+
+	const notOk = !isSafeKey(keyNodeValue)
 
 	if (notOk)
 	{
 		// @ts-ignore
 		const paths = handleVisitPathsFull(key, pair, ...args);
 
-		throw new SyntaxError(`Invalid Key. paths: [${paths}], key: ${key}, keyNodeValue: "${(keyNode as any)?.value}", keyNode: ${keyNode}`)
+		let extra = '';
+
+		if (existsZeroWidth(keyNodeValue))
+		{
+			extra += ', exists zero-width characters'
+		}
+
+		throw new SyntaxError(`Invalid Key. paths: [${paths}], key: ${key}, keyNodeValue: "${keyNodeValue}", keyNode: ${keyNode}${extra}`)
 	}
 }
 
