@@ -178,24 +178,6 @@ lazy-wildcards:
           - Newsprint
           - Vellum
           - translucent and smooth paper
-      # https://civitai.com/models/461566/isometric?modelVersionId=513667
-      # https://civitai.com/models/107391/playstation-1-old-game-background-maps?modelVersionId=115479
-      # https://civitai.com/models/80713/table-rpg-dandd-maps-isometric-level
-      isometric:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/style-art-type/isometric/style-art-main__{, {1-$$__lazy-wildcards/subject/style-art-type/isometric/style-main__}|}:1.4)
-            {, {1-$$__lazy-wildcards/subject/style-art-type/isometric/env-bg__}|}
-            {, {1-$$__lazy-wildcards/subject/style-art-type/isometric/env-bg__}|}
-        style-art-main:
-          - isometricnive, isometric
-        style-main:
-          - isometric cutaway
-          - isometriciterior, isometric iterior, isometric interior
-        env-bg:
-          - indoors, interior
-        style:
-          - __lazy-wildcards/utils/scenery-no-humans__
       mosaic:
         prompts:
           - >-
