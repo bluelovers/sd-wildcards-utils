@@ -42,4 +42,14 @@ lazy-wildcards:
           - mascot
           - cartoon
           - anime
+      # https://civitai.com/models/328746/game-weapon-equipment-design
+      icon-game-equip:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-art-type/icon-game-equip/costume-weapon__)
+            , __lazy-wildcards/subject/style-art-type/icon-game/prompts-no-weight__
+            , __lazy-wildcards/utils/no-humans__
+        costume-weapon:
+          - game weapon equipment
+          - game equipment
 
