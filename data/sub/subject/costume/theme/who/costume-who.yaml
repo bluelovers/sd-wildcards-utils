@@ -115,4 +115,65 @@ lazy-wildcards:
           - serving drinks
           - holding cup, holding mug
           - holding tray
+      # https://civitai.com/models/2032757/barbarian-queen?modelVersionId=2300614
+      # https://civitai.com/models/19546/barbarian-woman
+      # https://civitai.com/models/93429/barbarian-outfit-female
+      # https://civitai.com/models/147239/change-a-character-barbarian-your-waifu-got-those-muscles-and-got-that-rage
+      barbarian:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/barbarian/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/barbarian/costume-headwear__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/barbarian/costume-ethnicity-hair__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/barbarian/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/barbarian/costume-weapon__}|}
+            {, {1-4$$__lazy-wildcards/subject/costume/cavewoman/costume-elem-accessories__}|}
+            {, {1-2$$__lazy-wildcards/subject/costume/barbarian/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/barbarian/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/barbarian/style__}|}
+        costume:
+          - >-
+            barbarian, barbarian woman, BarbarianT
+            , muscular female
+        costume-headwear:
+          - crown
+          - headpiece
+        costume-ethnicity-hair:
+          - braid
+          - >-
+            {1-4$$__lazy-wildcards/subject/costume/cavewoman/costume-ethnicity-hair__}
+        costume-elem:
+          - barbarian outfit, barbarian costume
+          - fur bikini, fur loincloth
+          - leather straps
+          - arm bracers
+          - boots
+          - necklace with fang pendant
+          - wild hair
+          - muscular physique
+          - battle scars
+          - metal armor
+          - tribal goddess
+          - __lazy-wildcards/subject/costume-elem-tattoo/scar/prompts__
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin/oily_skin/prompts-no-weight__
+        costume-weapon:
+          - __lazy-wildcards/subject/costume-weapon/weapon-two-handed/prompts-no-weight__
+        env-bg:
+          - wilderness
+          - snowfield
+          - mountain range
+          - battlefield
+          - barbarian village
+          - >-
+            {beast bone|stone} throne scene
+        env:
+          - warpaint, tribal symbols, feral motifs
+          - animal pelt
+          - wooden palisade
+          - monolith
+          - totem pole
+        style:
+          - primal power, primitive tribe
+          - epic fantasy
+          - mythological
 

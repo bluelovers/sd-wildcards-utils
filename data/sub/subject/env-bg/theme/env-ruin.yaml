@@ -144,18 +144,19 @@ lazy-wildcards:
           - low saturation
           - ambient light
           - celestial alignment
+      # https://civitai.com/models/53493/constructionyardai-konyconi
       construction_site:
         prompts:
           - >-
-            ({1-$$__lazy-wildcards/subject/env-bg/construction_site/env-bg-main__}
+            (__lazy-wildcards/subject/env-bg/construction_site/env-bg-main__
             {, {1-$$__lazy-wildcards/subject/env-bg/construction_site/env-bg__}|}{0.3:::{1.2|1.3|1.4|1.6}|})
             {, {1-$$__lazy-wildcards/subject/env-bg/construction_site/env__}|}
             {, {1-$$__lazy-wildcards/subject/env-bg/construction_site/env-elem-vehicle__}|}
             {, {1-$$__lazy-wildcards/subject/env-bg/construction_site/costume-elem__}|}
         env-bg-main:
-          - construction site
-          - construction
-          - under construction, unfinished construction
+          - >-
+            construction, construction site, construction yard
+            , constructionyardai
         env-bg:
           - building site
           - scaffolding
@@ -166,6 +167,8 @@ lazy-wildcards:
           - concrete wall
           - construction at night, flashlight
           - construction ruins
+          - under construction, unfinished construction
+          - colossal constructions
         env:
           - industrial setting
           - __lazy-wildcards/subject/env-elem/beam-texture/prompts__
@@ -188,6 +191,7 @@ lazy-wildcards:
           - dusty setting
           - fog
           - __lazy-wildcards/subject/env-bg/corrugated_metal/prompts-no-weight__
+          - __cof-location/place/construction-site__
         env-elem-vehicle:
           - construction vehicle
           - excavator
@@ -203,6 +207,7 @@ lazy-wildcards:
           - safety gear
           - work boots
           - hard hat
+          - __cf-construction-worker/prompt-costume__
       # https://civitai.com/models/480438/girl-hate-shack-under-bridge?modelVersionId=534308
       shack_under_bridge:
         prompts:
@@ -464,4 +469,29 @@ lazy-wildcards:
           - dystopian
           - desolate, bleak, barren
           - wasteland aesthetic
+      # 蒙古包
+      tent-yurt-ger:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/tent-yurt-ger/env-bg-main__)
+            {, {1-$$__lazy-wildcards/subject/env-bg/tent-yurt-ger/env-elem__}|}
+            {, {1-3$$__lazy-wildcards/subject/env-bg/tent-yurt-ger/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/tent-yurt-ger/env__}|}
+        env-bg-main:
+          - yurt, ger
+        env-elem:
+          - traditional tent
+          - round tent
+          - nomad tent
+        env-bg:
+          - grassland
+          - meadow
+          - starry sky
+          - nomad camp
+          - mongolian steppe
+          - yurt village
+        env:
+          - rope
+          - felt
+          - campfire
 

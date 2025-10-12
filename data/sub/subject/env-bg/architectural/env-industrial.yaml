@@ -44,6 +44,13 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/env-bg/shipping_container_building/env-bg__}|}
             {, {1-$$__lazy-wildcards/subject/env-bg/shipping_container_building/env__}|}
             {, {1-$$__lazy-wildcards/subject/env-bg/shipping_container_building/style__}|}
+        prompts-no-weight:
+          - >-
+            (__lazy-wildcards/subject/env-bg/shipping_container_building/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/shipping_container_building/env-bg-container__}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/shipping_container_building/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/shipping_container_building/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/shipping_container_building/style__}|}
         env-bg-main:
           - tin shack, container architecture, container house
         env-bg-container:
@@ -52,6 +59,7 @@ lazy-wildcards:
           - container shack
           - __lazy-wildcards/subject/env-bg/corrugated_metal/prompts-no-weight__
           - container market
+          - stacked shipping container building, stacked shipping container
         env-bg:
           - warehouse
           - urban decay

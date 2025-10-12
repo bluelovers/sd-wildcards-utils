@@ -1,13 +1,17 @@
 lazy-wildcards:
   subject:
     env-elem-pipes:
+      # https://civitai.com/models/85779/manypipesai-konyconi
       industrial-pipes:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/env-elem-pipes/industrial-pipes/env-main__}
+            __lazy-wildcards/subject/env-elem-pipes/industrial-pipes/env-elem-main__
+            , {1-$$__lazy-wildcards/subject/env-elem-pipes/industrial-pipes/env-elem__}
             {, {1-$$__lazy-wildcards/subject/env-elem-pipes/industrial-pipes/env__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem-pipes/industrial-pipes/costume-weapon__}|}
-        env-main:
+        env-elem-main:
+          - ManyPipesAI
+        env-elem:
           - cables, tubes
           - industrial pipes
           - wire, wiring
@@ -67,6 +71,8 @@ lazy-wildcards:
           - sticky net, sticky spider web
           - spider web background
           - fuzzy organic webs
+          - giant spider web
+          - web structure
         env:
           # 繭
           - cocoon

@@ -179,4 +179,102 @@ lazy-wildcards:
           - buddhist_art
           - taoist_influence
           - confucian_philosophy
+      # 哈薩克 中亞草原民族
+      # https://civitai.com/models/76737/kazakpunkai-konyconi
+      kazakh:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-civilization/kazakh/style-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-2$$__lazy-wildcards/subject/env-elem-civilization/kazakh/costume__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/kazakh/costume-headwear__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/kazakh/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/kazakh/costume-weapon__}|}
+            {, {1-3$$__lazy-wildcards/subject/env-elem-civilization/kazakh/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/kazakh/style__}|}
+        style-main:
+          - >-
+            kazakh, kazak, kazakhstan
+            , kazakpunkai
+            , __lazy-wildcards/utils/fn/style-inspired(v=kazakh)__
+        costume:
+          - kazakh clothes
+          - steppe traditional costume
+          - kazakh warrior
+          - kazakh rider
+          - kazakh bride
+        costume-headwear:
+          - fur hat, saukele
+          - feathered headdress
+        costume-elem:
+          - embroidered garments, embroidered belt
+          - fur coat, leather robe
+          - long dress
+          - embroidered vest
+          - silver jewelry
+          - leather boots
+          - traditional dress
+          - vivid embroidery
+        costume-weapon:
+          - bow and arrow
+          - horse riding gear
+          - saber
+        env-bg:
+          - __lazy-wildcards/subject/env-bg/tent-yurt-ger/prompts__
+          - endless steppe
+          - snow-capped mountains
+          - nomad camp
+        style:
+          - nomadic culture
+          - windy atmosphere
+          - heroic atmosphere
+      uygur_uzbek:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-civilization/uygur_uzbek/style-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-2$$__lazy-wildcards/subject/env-elem-civilization/uygur_uzbek/costume__}|}
+        style-main:
+          - >-
+            uygur, uzbek, uzbekistan
+            , __lazy-wildcards/utils/fn/style-inspired(v=uygur)__
+            , __lazy-wildcards/utils/fn/style-inspired(v=uzbek)__
+        costume:
+          - uzbek clothes
+          - uygur clothes
+      # https://civitai.com/models/45012/tikiai-konyconi
+      polynesia-tiki:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-civilization/polynesia-tiki/style-main__
+            , {1-$$__lazy-wildcards/subject/env-elem-civilization/polynesia-tiki/env-elem__}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/polynesia-tiki/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/polynesia-tiki/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-civilization/polynesia-tiki/costume-elem__}|}
+        style-main:
+          - >-
+            tiki culture, polynesia
+            , __lazy-wildcards/utils/fn/style-inspired(v=tiki)__
+            , __lazy-wildcards/utils/fn/pattern(v=tiki)__
+            , tikiai
+        env-elem:
+          - tiki statue
+          - tiki mask
+          - tiki totem
+        env-bg:
+          - tropical island
+        env:
+          - torch
+          - palm tree
+          - bamboo structure
+          - shell
+          - lantern
+          - bamboo fence
+          - __lazy-wildcards/utils/fn/made-of(v=tiki)__
+        costume-elem:
+          - grass skirt
+          - flower necklace, flower wreath, head wreath
+          - barefoot
+          - tribal tattoo
+          - hula dancer
+          - tiki girl
+          - tiki chief
 

@@ -552,4 +552,39 @@ lazy-wildcards:
           - own hands clasped
           - own hands together
           - hand up
+    ragnania:
+      # https://civitai.com/models/22460
+      adikia:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/ragnania/adikia/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/ragnania/adikia/costume-ethnicity__
+            , __lazy-wildcards/cosplay-char/ragnania/adikia/costume__
+            {, __lazy-wildcards/cosplay-char/ragnania/adikia/costume-weapon__|}
+        main-trigger-words:
+          - adikia \(swfz\)
+        costume-ethnicity:
+          - >-
+            white hair, long hair
+            , eyepatch, black blindfold
+            , arm band
+            , botton
+        costume:
+          - >-
+            adikia \(sifu\)
+            , hat
+            , black sweater, high-waist shorts, bare shoulders
+            , boots, thighhigh
+          - >-
+            adikia \(yuanpi\)
+            , beret, peaked cap, black_headwear
+            , black dress, military, white gloves
+            , black footwear, thigh boots
+          - >-
+            adikia \(qingse\)
+            , blue headwear, peaked cap
+            , blue and white dress, military, white gloves
+            , white footwear, white thigh boots
+          costume-weapon:
+            - bow \(weapon\)
 

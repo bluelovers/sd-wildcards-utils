@@ -305,7 +305,7 @@ lazy-wildcards:
           - two-handed weapon, two-handed
         costume-weapon:
           - two-handed sword
-          - two-handed axe
+          - two-handed axe, two-handed battle axe
           - two-handed hammer
           - two-handed spear
           - two-handed scythe
@@ -380,4 +380,24 @@ lazy-wildcards:
           - __lazy-wildcards/subject/env-elem-food/chocolate/prompts__
         style:
           - valentine
+      torch-traditional:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-weapon/torch-traditional/costume-weapon-main__
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/torch-traditional/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/torch-traditional/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/torch-traditional/style__}|}
+        costume-weapon-main:
+          - traditional torch, wooden torch
+        costume-weapon:
+          - rope wrap wooden stick
+          - holding torch
+        env:
+          - orange flame, yellow flame, flame trail
+          - torch sconce
+        style:
+          - ancient exploration
+      torch-welding:
+        prompts:
+          - welding torch
 

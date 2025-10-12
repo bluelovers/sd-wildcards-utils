@@ -4,6 +4,7 @@ lazy-wildcards:
       # https://civitai.com/models/323881/stone-age-style-by-dever-sdxl
       # https://civitai.com/models/1640606/prehistoric-waterfall-illu
       # https://civitai.com/models/2030170/prehistoric-cave
+      # https://civitai.com/models/51539/stonepunkai-konyconi
       age-stone:
         prompts:
           - >-
@@ -24,6 +25,7 @@ lazy-wildcards:
             , __lazy-wildcards/utils/fn/style-inspired(v=stone-age)__
             , dvr-stnd, StoneAgeCh, StoneAgeChEro, stone-age h0us3
             , cretaceous period
+            , stonepunkAI
         env-elem:
           - __lazy-wildcards/utils/fn/made-of(v=stone-age)__
         env-bg:

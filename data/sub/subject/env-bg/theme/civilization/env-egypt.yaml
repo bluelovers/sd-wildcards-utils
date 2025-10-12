@@ -7,6 +7,7 @@ lazy-wildcards:
       # https://civitai.com/models/102413/egyptpunk-bastet
       # https://civitai.com/models/308247/egyptian-temple
       # https://civitai.com/models/112538/cyber-egypt
+      # https://civitai.com/models/43229/oldegyptai-konyconi
       Ancient-Egypt:
         prompts:
           - >-
@@ -22,7 +23,7 @@ lazy-wildcards:
             , __lazy-wildcards/utils/fn/pattern(v=egyptian)__
             , __lazy-wildcards/utils/fn/made-of(v=egyptian)__
             Building_Egyptian, egyptpunkai, egypt, egyptianworld, Egyptian_Icons
-            , egypttech, egypt_style, Cyber_Egypt
+            , egypttech, egypt_style, Cyber_Egypt, OldEgyptAI
         style-theme:
           - Ancient Egypt theme, __lazy-wildcards/utils/fn/style-inspired(v=ancient_egypt)__
           - Ancient Egypt civilization theme

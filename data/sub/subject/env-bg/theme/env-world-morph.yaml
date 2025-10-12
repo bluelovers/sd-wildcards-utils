@@ -136,4 +136,52 @@ lazy-wildcards:
           - natural structure, organic architecture
           - golden liquid
           - yellow flower
+      # https://civitai.com/models/68989/arachnophobiaai-konyconi
+      world-arachne:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/world-arachne/style-main__{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/world-arachne/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/world-arachne/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/world-arachne/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/world-arachne/style__}|}
+        style-main:
+          - >-
+            arachnophobiaAI
+            , __lazy-wildcards/utils/fn/style-inspired(v=arachne)__
+            , ctsp1d3r
+        env-bg:
+          - eldritch arachnid city
+          - arthropod structure
+          - __lazy-wildcards/subject/env-elem-pipes/spider-webs/prompts__
+          - carapace structure
+          - hive structure
+          - silk bridge
+          - spider kingdom
+          - organic arachnid throne, silk throne
+          - spider-like mutated building, arachnid-like mutated building, arachne-like mutated building
+          - arachnid house
+        env:
+          - bio architecture, organic building
+          - ruins
+          - hanging architecture
+          - silk overgrown
+          - multi eyes windows
+          - hollow abdomen hall
+          - arachnid motif
+          - cobweb covered furniture
+          - mutated arachnid statue
+          - __lazy-wildcards/utils/fn/made-of(v=silk)__
+          - __lazy-wildcards/utils/fn/made-of(v=cobweb)__
+          - arachnid lantern, hanging lantern
+          - arachnid furniture
+        costume-elem:
+          - arachne
+          - spider girl
+          - web pattern clothing
+          - steampunk arachne
+          - spider-like mutated, arachnid-like mutated, arachne-like mutated
+        style:
+          - fantasy world
+          - horror theme
 

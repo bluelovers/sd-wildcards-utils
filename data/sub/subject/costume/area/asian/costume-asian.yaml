@@ -132,6 +132,18 @@ lazy-wildcards:
           - >-
             sideboob
             , __lazy-wildcards/subject/costume-elem/open_slit/prompts-no-weight__
+      # https://civitai.com/models/576944/kungfu-frozen-outfit-or-naraka
+      china-dress-fur:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/china-dress-fur/costume__
+            , {1-$$__lazy-wildcards/subject/costume/china-dress-fur/costume-elem__}{0.3:::{1.2|1.3|1.4}|})
+            , __lazy-wildcards/subject/costume/china-dress/costume__
+        costume:
+          - kungfu outfit
+        costume-elem:
+          - fur capelet
+          - fur coat
       # 唐裝
       tangzhuang:
         prompts:

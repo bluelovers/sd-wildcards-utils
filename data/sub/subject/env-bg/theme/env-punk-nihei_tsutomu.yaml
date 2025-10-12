@@ -7,7 +7,7 @@ lazy-wildcards:
       megastructure:
         prompts:
           - >-
-            ({1-$$__lazy-wildcards/subject/env-bg/megastructure/env-bg__}{:{1.2|1.3|1.4}|})
+            ({1-$$__lazy-wildcards/subject/env-bg/megastructure/env-bg__}{0.3::{1.2|1.3|1.4}|})
             {, {1-$$__lazy-wildcards/subject/env-bg/megastructure/env__}|}
             {, {1-$$__lazy-wildcards/subject/env-bg/megastructure/style__}|}
         env-bg:
@@ -99,4 +99,47 @@ lazy-wildcards:
           - >-
             (シドニア百景, 100-sights-of-sidonia{:{1.2|1.3|1.4}|})
             , __lazy-wildcards/subject/env-bg/nihei_tsutomu-blame-env/prompts__
+      # https://civitai.com/models/80544/stackedcityai-konyconi
+      # https://civitai.com/models/236220/hh-archstacked-volumes
+      stacked_buildings:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/stacked_buildings/env-bg-main__{0.3::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/stacked_buildings/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/stacked_buildings/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/stacked_buildings/style__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/stacked_buildings/style-view__}|}
+        env-bg-main:
+          - stacked buildings, StackedCityAI
+        env-bg:
+          - __lazy-wildcards/subject/env-bg/megastructure/env-bg__
+          - slum
+          - kowloon walled city
+          - illegal building
+          - abandoned building
+          - >-
+            stacked house{ tower|}, stacked structure
+          - stacked house tree
+          - balconies
+        env:
+          - dense city, megacity
+          - __lazy-wildcards/subject/env-elem/stairs-escape-fire/prompts-no-weight__
+          - narrow alley
+          - sky bridge
+          - urban labyrinth
+          - electric wires
+          - neon lights
+          - rusted metal
+          - __lazy-wildcards/subject/env-bg/corrugated_metal/prompts-no-weight__
+          - __lazy-wildcards/subject/env-bg/shipping_container_building/prompts-no-weight__
+          - __lazy-wildcards/subject/env-elem/stairs/prompts__
+          - __lazy-wildcards/subject/env-elem/skybridge_building/prompts-no-weight__
+        style:
+          - cyberpunk
+          - dystopian
+          - futuristic environment
+          - urban decay
+          - post apocalyptic
+        style-view:
+          - __lazy-wildcards/utils/scenery-no-humans__
 
