@@ -1320,6 +1320,11 @@ reflect.ownkeys@^1.1.0:
     es-set-tostringtag "^2.0.1"
     globalthis "^1.0.3"
 
+regexp-helper-core@^2.0.8:
+  version "2.0.10"
+  resolved "https://registry.npmjs.org/regexp-helper-core/-/regexp-helper-core-2.0.10.tgz#847ca29a1ffe72c5a38f63ce7f62fde8e10a40c8"
+  integrity sha512-lKiQSYAbQ0j9rro4V2KWB76q/5ElZ3h68+W0+CZzwduanyx0KFmPsnuiF0yIjTfaoL7FVvXUFYU+r7yq6MnsWg==
+
 regexp.prototype.flags@^1.5.2:
   version "1.5.2"
   resolved "https://registry.npmmirror.com/regexp.prototype.flags/-/regexp.prototype.flags-1.5.2.tgz#138f644a3350f981a858c44f6bb1a61ff59be334"
@@ -1638,3 +1643,11 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://registry.npmmirror.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
+
+zero-width@^1.0.29:
+  version "1.0.29"
+  resolved "https://registry.npmjs.org/zero-width/-/zero-width-1.0.29.tgz#c623362f900d2746db92621677a36bfd22d3c93a"
+  integrity sha512-4se1SqssNZcPQ1ZX7ErL9tK6gnKBPR8DX7i4UHNEHI1RFEpKvWCd9RyonuH8Exs8DOGRCTach3zTQs/K8e6xxg==
+  dependencies:
+    regexp-helper-core "^2.0.8"
+    tslib "^2"
