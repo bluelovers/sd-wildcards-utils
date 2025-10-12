@@ -748,4 +748,65 @@ lazy-wildcards:
           - holding stylus
           - couple, yuri
           - heart, heart hands duo, heart hands
+      # https://civitai.com/models/200056/hoarder-room-background-trash-everywhere
+      # https://civitai.com/models/521190/0682-hoarder-room
+      # https://civitai.com/models/59051/messyroom
+      # https://civitai.com/models/211643/messy-bed-sfw-and-nsfw-objects-on-bed
+      room-messy:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-interior/room-messy/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/room-messy/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/room-messy/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/room-messy/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/room-messy/action__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/room-messy/expressions__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/room-messy/style__}|}
+            {, __lazy-wildcards/subject/env-bg-interior/room-messy/style-view__|}
+        env-bg-main:
+          - hoarder room, messy room, indoors, interior
+        env-bg:
+          - cluttered room
+          - untidy room
+          - crime scene
+          - abandoned apartment
+        env:
+          - trash
+          - clutter
+          - garbage, trash everywhere
+          - old bed
+          - messy bed
+          - messy desk
+          - clothes pile
+          - open wardrobe
+          - empty bottles
+          - takeout box
+          - paper trash
+          - cardboard boxes
+          - dust
+          - moldy wall
+          - stains
+          - blocked hallway
+          - door ajar
+          - sex toy, dildo, condom
+        costume-elem:
+          - casual homewear
+          - loose pajamas
+          - messy hair
+          - dark circles
+          - barefoot
+        action:
+          - sitting in trash
+        expressions:
+          - blank stare
+        style:
+          - disorganized
+          - musty air, dusty air
+          - dim light
+          - wide angle
+          - gloomy atmosphere
+          - post apocalypse
+        style-view:
+          - view from doorway
+          - top down view
 
