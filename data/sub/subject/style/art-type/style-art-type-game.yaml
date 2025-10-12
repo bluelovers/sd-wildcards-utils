@@ -65,6 +65,7 @@ lazy-wildcards:
       # https://civitai.com/models/111568/gameiconresearchgfcjloalora
       # https://civitai.com/models/97862/game-icon-research-institute-lora-scene-cutting
       # https://civitai.com/models/87424/game-iconxianxiamap
+      # https://civitai.com/models/372956?modelVersionId=449596
       icon-game:
         prompts:
           - >-
@@ -72,7 +73,7 @@ lazy-wildcards:
         prompts-no-weight:
           - >-
             game icon institute, game icon, gen-icon-material, iconsmi, sksks app icon, game icon institute3d, icon, game icon changjing, c_j
-            , kuang, gufengmap, yxwqsj, hbyxcj
+            , kuang, gufengmap, yxwqsj, hbyxcj, gmic icon \(sence\)
       # https://civitai.com/models/60132/vector-illustration
       vector_art:
         prompts:
@@ -90,17 +91,18 @@ lazy-wildcards:
       # https://civitai.com/models/1180611/dnd-tactical-maps?modelversionid=1328603
       # https://civitai.com/models/1168479/hezi-3d-vertical-game-scenelesshezi3d?modelversionid=1314594
       # https://civitai.com/models/1480331/disco-elysium-style-game-scene?modelversionid=1674412
+      # https://civitai.com/models/151297/game-scenes
       map:
         prompts:
           - >-
             (__lazy-wildcards/subject/style-art-type/map/style-main__{0.3:::{1.2|1.3|1.4}|})
             {, {1-$$__lazy-wildcards/subject/style-art-type/map/style__}|}
+            , __lazy-wildcards/utils/scenery-no-humans2__
         style-main:
           - >-
             map, travelmap, mapdraw, tactical maps
             , battlemapv1, battlemap, hezi
-            , no humans
-            , __lazy-wildcards/utils/scenery-no-humans__
+            , 2d dnd battlemap
         style:
           - from above
           - elevations
@@ -129,7 +131,7 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/style-art-type/isometric/env-bg__}|}
             {, {1-$$__lazy-wildcards/subject/style-art-type/isometric/env-bg__}|}
         style-art-main:
-          - isometricnive, isometric
+          - isometricnive, isometric, game isometric
         style-main:
           - isometric cutaway
           - isometriciterior, isometric iterior, isometric interior
