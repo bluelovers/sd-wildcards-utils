@@ -63,11 +63,12 @@ lazy-wildcards:
           - temple red, auspicious color, vibrant hue
           - gold foil decor, golden decoration, royal symbol, sacred color
       # 教堂
+      # https://civitai.com/models/81065/stavedchurchai-konyconi
       church:
         prompts:
           - >-
             (__lazy-wildcards/subject/env-bg/church/env-bg-main__
-            {, {1-$$__lazy-wildcards/subject/env-bg/church/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-3$$__lazy-wildcards/subject/env-bg/church/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
             {, {1-$$__lazy-wildcards/subject/env-bg/church/env__}|}
             {, {1-$$__lazy-wildcards/subject/env-bg/church/style__}|}
         env-bg-main:
@@ -75,6 +76,7 @@ lazy-wildcards:
             church
             , religious architecture
             , religious setting
+            , StavedChurchAI
         env-bg:
           # 小聖堂
           - chapel
@@ -86,6 +88,7 @@ lazy-wildcards:
           - bell tower, church bell
           - >-
             {church interior|(church exterior, exterior, outdoor{0.3:::{1.2|1.3|1.4|1.6}|:1.3})}
+          - staved church
         env:
           - candle
           - altar

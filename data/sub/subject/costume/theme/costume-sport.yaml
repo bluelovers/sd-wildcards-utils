@@ -230,4 +230,16 @@ lazy-wildcards:
           - asymmetrical design
           - pantyshot, from below
           - motion lines, motion blur
+      sports-top:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/sports-top/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume/sports-top/costume-elem-main__
+            {, {1-$$__lazy-wildcards/subject/costume/sports-top/costume-elem__}|}
+        costume-elem-main:
+          - sports bra
+        costume-elem:
+          - sports vest
 

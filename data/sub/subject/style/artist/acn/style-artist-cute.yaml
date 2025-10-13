@@ -1,0 +1,14 @@
+lazy-wildcards:
+  subject:
+    style-artist:
+      # https://civitai.com/models/173001/valbun-style?modelVersionId=194291
+      cute-valbun:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/cute-valbun/style-artist__
+            , __lazy-wildcards/subject/style-artist/cute-valbun/style__
+        style-artist:
+          - __lazy-wildcards/utils/fn/style-inspired(v=valbun)__
+        style:
+          - cute
+

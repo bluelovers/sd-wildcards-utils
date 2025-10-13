@@ -44,4 +44,55 @@ lazy-wildcards:
             leaning against tree{ stump|}
         style:
           - wasteland aesthetic
+      # https://civitai.com/models/63660/rootsbranchesai-konyconi
+      tree-roots-branches:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/tree-roots-branches/env-elem-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/tree-roots-branches/env-elem__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-2$$__lazy-wildcards/subject/env-elem/tree-roots-branches/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/tree-roots-branches/action__}|}
+            {0.5::, {1-$$__lazy-wildcards/subject/env-elem/tree-roots-branches/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/tree-roots-branches/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/tree-roots-branches/style__}|}
+        env-elem-main:
+          - >-
+            plant roots, roots branches, RootsBranchesAI
+        env-elem:
+          - entangled roots
+          - exposed roots
+          - roots over structure
+          - tree branches
+          - tangled branches
+          - thin twigs
+          - leafy branches
+          - twisting branch
+          - root carpet
+          - serpentine roots
+        costume-elem:
+          - nature-inspired costume
+          - wood nymph costume
+          - forest spirit attire
+          - dryad
+          - traveler
+        action:
+          - standing on roots
+        env-bg:
+          - tree temple, nature shrine
+          - root maze, forest labyrinth
+          - ruins overgrown
+          - ancient ruins
+        env:
+          - nature scenery
+          - tree
+          - wet soil
+          - tree canopy
+          - plant interaction
+          - natural arch
+          - falling leaves
+          - sunlight filtering through trees
+        style:
+          - wind effect
+          - mysterious
+          - serene
 

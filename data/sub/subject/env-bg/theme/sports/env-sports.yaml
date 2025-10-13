@@ -1,0 +1,45 @@
+lazy-wildcards:
+  subject:
+    env-elem:
+      # 保齡球
+      # https://civitai.com/models/1496659/bowling-alley
+      bowling:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/bowling/env-elem-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/bowling/env-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/bowling/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/bowling/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/bowling/action__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/bowling/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/bowling/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/bowling/style__}|}
+        env-elem-main:
+          - bowling, bowling ball, b0wl, indoor
+        env-elem:
+          - bowling pins
+          - pins flying
+        env-bg:
+          - bowling alley
+          - bowling lane
+          - retro bowling alley
+        costume-weapon:
+          - holding ball, holding bowling ball
+          - shoulder bag
+        action:
+          - serving \(sports\)
+          - anime girl throwing things \(meme\)
+          - celebration
+          - preparing to throw
+        costume-elem:
+          - bowling glove, partially fingerless gloves
+          - bowling shoes
+          - __lazy-wildcards/subject/costume/sports-top/prompts-no-weight__
+        env:
+          - wooden floor, glossy floor
+          - scoreboard, screen
+        style:
+          - low angle
+          - vanishing point
+          - light reflections
+

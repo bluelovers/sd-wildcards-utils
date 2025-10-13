@@ -1,0 +1,14 @@
+lazy-wildcards:
+  subject:
+    style-artist:
+      # https://civitai.com/models/1086338/boris-vallejo-retro-fantasy-style
+      oil-boris_vallejo:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/oil-boris_vallejo/style-artist__
+            , __lazy-wildcards/subject/style-artist/oil-boris_vallejo/style-main__
+        style-artist:
+          - __lazy-wildcards/utils/fn/style-inspired(v=boris_vallejo)__
+        style-main:
+          - oil painting \(medium\), traditional media, retro artstyle, retro fantasy
+
