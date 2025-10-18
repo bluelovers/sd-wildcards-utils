@@ -242,4 +242,29 @@ lazy-wildcards:
           - sports bra
         costume-elem:
           - sports vest
+      sports-matador:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/sports-matador/costume__
+            {, {1-$$__lazy-wildcards/subject/costume/sports-matador/costume-headwear__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/sports-matador/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/sports-matador/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/bullring/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/sports-matador/env__}|}
+        costume:
+          - matador, torero outfit, bullfighter outfit
+        costume-headwear:
+          # 鬥牛帽
+          - montera
+        costume-elem:
+          - spanish clothes
+          - red cape
+          - collared shirt
+        costume-weapon:
+          - holding sword
+          - unworn cape
+          - white boots
+          - vest
+        env:
+          - flag
 

@@ -2,11 +2,11 @@ lazy-wildcards:
   subject:
     env-bg-real-world-location:
       # 格拉納達市區
-      granada_old_town:
+      spain-granada_old_town:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-bg-real-world-location/granada_old_town/env-bg-main__
-            {, {1-$$__lazy-wildcards/subject/env-bg-real-world-location/granada_old_town/env__}|}
+            __lazy-wildcards/subject/env-bg-real-world-location/spain-granada_old_town/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg-real-world-location/spain-granada_old_town/env__}|}
         env-bg-main:
           - granada old town
         env:
@@ -27,11 +27,11 @@ lazy-wildcards:
           - pottery
           - tapestry
           - ethnic decor
-      granada_hostal_rodri:
+      spain-granada_hostal_rodri:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-bg-real-world-location/granada_hostal_rodri/env-bg-main__
-            {, {1-$$__lazy-wildcards/subject/env-bg-real-world-location/granada_hostal_rodri/env__}|}
+            __lazy-wildcards/subject/env-bg-real-world-location/spain-granada_hostal_rodri/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg-real-world-location/spain-granada_hostal_rodri/env__}|}
         env-bg-main:
           - hostal rodri, hostal bonita, spanish style building
         env:
@@ -41,13 +41,13 @@ lazy-wildcards:
           - wooden furniture
           - bedroom window
       # 阿爾罕布拉宮
-      granada_alhambra_palace:
+      spain-granada_alhambra_palace:
         prompts:
           - >-
-            (__lazy-wildcards/subject/env-bg-real-world-location/granada_alhambra_palace/env-bg-main__
-            {, {1-$$__lazy-wildcards/subject/env-bg-real-world-location/granada_alhambra_palace/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
-            {, {1-$$__lazy-wildcards/subject/env-bg-real-world-location/granada_alhambra_palace/env__}|}
-            {, {1-$$__lazy-wildcards/subject/env-bg-real-world-location/granada_alhambra_palace/style__}|}
+            (__lazy-wildcards/subject/env-bg-real-world-location/spain-granada_alhambra_palace/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg-real-world-location/spain-granada_alhambra_palace/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg-real-world-location/spain-granada_alhambra_palace/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-real-world-location/spain-granada_alhambra_palace/style__}|}
         env-bg-main:
           - alhambra, alhambra palace, granada
         env-bg:

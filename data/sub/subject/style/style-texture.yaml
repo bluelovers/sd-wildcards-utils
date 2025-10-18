@@ -126,4 +126,54 @@ lazy-wildcards:
             , __lazy-wildcards/subject/env-moment/weather-rainbow/prompts__
         style-main:
           - rainbow texture, rainbow pattern, __lazy-wildcards/utils/fn/style-inspired(v=rainbow)__
+      # 金繼
+      # https://civitai.com/models/153348/kintsugi-lora-or
+      # https://civitai.com/models/101176/kintsugi-statues
+      # https://civitai.com/models/2003154/kintsugi-15-lora
+      # https://civitai.com/models/2006676/kintsugi?modelVersionId=2271284
+      kintsugi:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-elem-texture/kintsugi/style-main__
+            {, {1-$$__lazy-wildcards/subject/style-elem-texture/kintsugi/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-elem-texture/kintsugi/env__}|}
+            {, {1-2$$__lazy-wildcards/subject/style-elem-texture/kintsugi/env-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-elem-texture/kintsugi/style__}|}
+        style-main:
+          - >-
+            kintsukuroi
+            , kintsugi texture
+            , __lazy-wildcards/utils/fn/pattern(v=kintsugi)__
+            , __lazy-wildcards/utils/fn/style-inspired(v=kintsugi)__
+            , gold crack
+            , KintsugiBust, kintsugistyle
+        costume-elem:
+          - kintsugi tattoo
+          - kintsugi fingernail polish
+          - kintsugi skin
+        env:
+          - gold line
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
+          - metallic gold
+          - bold crack
+          - crack
+          - shiny gold
+          - glowing gold
+          - __lazy-wildcards/utils/fn/made-of(v=kintsugi)__
+          - kintsugi statues
+        env-elem:
+          - tea bowl
+          - cup
+          - plate
+          - vase
+          - pot
+          - ceramic
+          - porcelain
+        style:
+          - japanese craft
+          - traditional art
+          - matte surface
+          - glazed surface
+          - zen
+          - diffused light
 

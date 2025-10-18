@@ -42,4 +42,28 @@ lazy-wildcards:
           - low angle
           - vanishing point
           - light reflections
+      # 鬥牛場
+      bullring:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/bullring/env-bg__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/bullring/action__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/bullring/env__}|}
+        env-bg:
+          - bullring, plaza de toros
+        action:
+          - bullfighting
+          - corrida
+          - bullfight
+          - dynamic pose
+          - bull charge
+          - applause
+        env:
+          - red brick
+          - white wall
+          - bleachers
+          - stadium seating
+          - open roof
+          - ceramic tile
+          - decorative tile
 

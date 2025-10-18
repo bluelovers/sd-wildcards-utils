@@ -32,6 +32,7 @@ lazy-wildcards:
         env-bg:
           - altar, ofrenda, ceremonial_altar, memorial_altar
           - decorated_grave, cemetery_decoration, grave_flowers, memorial_grave
+      # https://civitai.com/models/173175/halloween-tech-world-morph?modelVersionId=194481
       halloween:
         prompts:
           - >-
@@ -43,7 +44,7 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/style-theme/halloween/env__}|}
             {, {1-$$__lazy-wildcards/subject/style-theme/halloween/style__}|}
         style-main:
-          - halloween
+          - halloween, halloweentech
         env:
           - jack_o_lantern, jack-o'-lantern
           - ghost_decorations
