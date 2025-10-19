@@ -2426,6 +2426,47 @@
             __lazy-wildcards/subject/style-elem-texture/rainbow/style-main__,__lazy-wildcards/subject/env-moment/weather-rainbow/prompts__
         "style-main":
           - "rainbow texture,rainbow pattern,__lazy-wildcards/utils/fn/style-inspired(v=rainbow)__"
+      # 金繼
+      # https://civitai.com/models/153348/kintsugi-lora-or
+      # https://civitai.com/models/101176/kintsugi-statues
+      # https://civitai.com/models/2003154/kintsugi-15-lora
+      # https://civitai.com/models/2006676/kintsugi?modelVersionId=2271284
+      kintsugi:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-elem-texture/kintsugi/style-main__{,{1-$$__lazy-wildcards/subject/style-elem-texture/kintsugi/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/style-elem-texture/kintsugi/env__}|}{,{1-2$$__lazy-wildcards/subject/style-elem-texture/kintsugi/env-elem__}|}{,{1-$$__lazy-wildcards/subject/style-elem-texture/kintsugi/style__}|}
+        "style-main":
+          - >-
+            kintsukuroi,kintsugi texture,__lazy-wildcards/utils/fn/pattern(v=kintsugi)__,__lazy-wildcards/utils/fn/style-inspired(v=kintsugi)__,gold crack,KintsugiBust,kintsugistyle
+        "costume-elem":
+          - kintsugi tattoo
+          - kintsugi fingernail polish
+          - kintsugi skin
+        env:
+          - gold line
+          - "__lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__"
+          - metallic gold
+          - bold crack
+          - crack
+          - shiny gold
+          - glowing gold
+          - "__lazy-wildcards/utils/fn/made-of(v=kintsugi)__"
+          - kintsugi statues
+        "env-elem":
+          - tea bowl
+          - cup
+          - plate
+          - vase
+          - pot
+          - ceramic
+          - porcelain
+        style:
+          - japanese craft
+          - traditional art
+          - matte surface
+          - glazed surface
+          - zen
+          - diffused light
     style-view:
       view-angle-wide-shot:
         prompts:
@@ -2469,12 +2510,13 @@
         "env-bg":
           - altar,ofrenda,ceremonial_altar,memorial_altar
           - decorated_grave,cemetery_decoration,grave_flowers,memorial_grave
+      # https://civitai.com/models/173175/halloween-tech-world-morph?modelVersionId=194481
       halloween:
         prompts:
           - >-
             __lazy-wildcards/subject/style-theme/halloween/style-main__{,{1-$$__lazy-wildcards/subject/style-theme/halloween/env-bg__}|}{,{1-2$$__lazy-wildcards/subject/style-theme/halloween/costume__}|}{,{1-$$__lazy-wildcards/subject/style-theme/halloween/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/style-theme/halloween/action-pose__}|}{,{1-$$__lazy-wildcards/subject/style-theme/halloween/env__}|}{,{1-$$__lazy-wildcards/subject/style-theme/halloween/style__}|}
         "style-main":
-          - halloween
+          - halloween,halloweentech
         env:
           - |-
             jack_o_lantern,jack-o'-lantern
@@ -10497,6 +10539,8 @@
         style:
           - "__lazy-wildcards/subject/scenes-pov/pov_across_table/prompts__"
     env-elem:
+      # 保齡球
+      # https://civitai.com/models/1496659/bowling-alley
       bowling:
         prompts:
           - >-
@@ -10529,6 +10573,28 @@
           - low angle
           - vanishing point
           - light reflections
+      # 鬥牛場
+      bullring:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/bullring/env-bg__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem/bullring/action__}|}{,{1-$$__lazy-wildcards/subject/env-elem/bullring/env__}|}
+        "env-bg":
+          - bullring,plaza de toros
+        action:
+          - bullfighting
+          - corrida
+          - bullfight
+          - dynamic pose
+          - bull charge
+          - applause
+        env:
+          - red brick
+          - white wall
+          - bleachers
+          - stadium seating
+          - open roof
+          - ceramic tile
+          - decorative tile
       books:
         prompts:
           - >-
@@ -17781,10 +17847,10 @@
           - greece style,mediterranean style
           - landscape photography
       # 格拉納達市區
-      granada_old_town:
+      "spain-granada_old_town":
         prompts:
           - >-
-            __lazy-wildcards/subject/env-bg-real-world-location/granada_old_town/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg-real-world-location/granada_old_town/env__}|}
+            __lazy-wildcards/subject/env-bg-real-world-location/spain-granada_old_town/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg-real-world-location/spain-granada_old_town/env__}|}
         "env-bg-main":
           - granada old town
         env:
@@ -17805,10 +17871,10 @@
           - pottery
           - tapestry
           - ethnic decor
-      granada_hostal_rodri:
+      "spain-granada_hostal_rodri":
         prompts:
           - >-
-            __lazy-wildcards/subject/env-bg-real-world-location/granada_hostal_rodri/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg-real-world-location/granada_hostal_rodri/env__}|}
+            __lazy-wildcards/subject/env-bg-real-world-location/spain-granada_hostal_rodri/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg-real-world-location/spain-granada_hostal_rodri/env__}|}
         "env-bg-main":
           - hostal rodri,hostal bonita,spanish style building
         env:
@@ -17818,10 +17884,10 @@
           - wooden furniture
           - bedroom window
       # 阿爾罕布拉宮
-      granada_alhambra_palace:
+      "spain-granada_alhambra_palace":
         prompts:
           - >-
-            (__lazy-wildcards/subject/env-bg-real-world-location/granada_alhambra_palace/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg-real-world-location/granada_alhambra_palace/env-bg__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg-real-world-location/granada_alhambra_palace/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-real-world-location/granada_alhambra_palace/style__}|}
+            (__lazy-wildcards/subject/env-bg-real-world-location/spain-granada_alhambra_palace/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg-real-world-location/spain-granada_alhambra_palace/env-bg__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg-real-world-location/spain-granada_alhambra_palace/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-real-world-location/spain-granada_alhambra_palace/style__}|}
         "env-bg-main":
           - alhambra,alhambra palace,granada
         "env-bg":
@@ -17845,6 +17911,19 @@
           - arabic pattern
           - geometric pattern
           - symmetrical composition
+      # 奎爾公園
+      "spain-barcelona-park_guell":
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-real-world-location/spain-barcelona-park_guell/env-bg__
+        "env-bg":
+          - park guell,barcelona,spain
+      "spain-madrid_plaza":
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-real-world-location/spain-madrid_plaza/env-bg__
+        "env-bg":
+          - plaza mayor,madrid,madrid plaza,spain
     env-bg-architectural:
       agricultural_zone:
         prompts:
@@ -22287,6 +22366,26 @@
           - sports bra
         "costume-elem":
           - sports vest
+      "sports-matador":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/sports-matador/costume__{,{1-$$__lazy-wildcards/subject/costume/sports-matador/costume-headwear__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume/sports-matador/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume/sports-matador/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/env-elem/bullring/action__}|}{,{1-$$__lazy-wildcards/subject/costume/sports-matador/env__}|}
+        costume:
+          - matador,torero outfit,bullfighter outfit
+        "costume-headwear":
+          # 鬥牛帽
+          - montera
+        "costume-elem":
+          - spanish clothes
+          - red cape
+          - collared shirt
+        "costume-weapon":
+          - holding sword
+          - unworn cape
+          - white boots
+          - vest
+        env:
+          - flag
       # https://civitai.com/models/234197/v-shaped-slingshot-swimsuit-wide-fabric?modelVersionId=264068
       # https://civitai.com/models/234206/v-shaped-slingshot-swimsuit-string-type?modelVersionId=264079
       "v-shaped_slingshot_swimsuit":
