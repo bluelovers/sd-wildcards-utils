@@ -87,11 +87,13 @@ lazy-wildcards:
       # https://civitai.com/models/199836/davinci-sketch?modelVersionId=224860
       # https://civitai.com/models/525611/technical-blueprints?modelVersionId=1949896
       # https://civitai.com/models/27532/xsarchitectural-22mangastyle
+      # https://civitai.com/models/2042966/jjs-archidrawing?modelVersionId=2339277
       blueprint-architectural-drawings:
         prompts:
           - >-
             __lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/style-art-main__
             {0.2::, {1-2$$__lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/env-architectural__}|}
+            {, {1-$$__lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/env__}|}
             {, {1-$$__lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/style__}|}
             {, {1-2$$__lazy-wildcards/subject/style-art-type/blueprint-architectural-drawings/style-art-type__}|}
         style-art-main:
@@ -293,7 +295,10 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/style-art-type/watercolor/style__}|}
             {0.2::, {1-$$__lazy-wildcards/subject/style-art-type/watercolor/style-artist__}|}
         style-art-main:
-          - watercolor style
+          - >-
+            watercolor style
+            , __lazy-wildcards/utils/fn/style-inspired(v=watercolor)__
+            , ArsMJStyle
         style-art:
           - watercolor \(medium\)
           - transparent watercolor
@@ -314,6 +319,7 @@ lazy-wildcards:
           - expressive_watercolor, bold_strokes
           - sharp_watercolor_edges
           - watercolor background
+          - Blue Watercolor Dreamscape
         style-artist:
           - akihiro yamada
           - takada akemi, Akemi Takada

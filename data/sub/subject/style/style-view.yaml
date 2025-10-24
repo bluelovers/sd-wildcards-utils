@@ -16,4 +16,40 @@ lazy-wildcards:
           - from above
           - from below
           - high up
+      # 透視縮短法／透視誇張
+      view-perspective-foreshortening:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-view/view-perspective-foreshortening/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-2$$__lazy-wildcards/subject/style-view/view-perspective-foreshortening/action__}|}
+            {, {2-$$__lazy-wildcards/subject/style-view/view-perspective-foreshortening/style__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/style-view/view-perspective-foreshortening/style-view-main__
+        style-view-main:
+          - foreshortening
+        action:
+          - reaching out
+          - outstretched arm
+          - kick pose
+          - action pose
+          - jump pose
+          - falling pose
+          - flying pose
+          - superhero leap
+        style:
+          - perspective
+          - dynamic angle
+          - dramatic composition
+          - exaggerated perspective
+          - depth illusion
+          - close up
+          - wide angle
+          - low angle
+          - rim light
+          - vanishing point
+          - depth of field
+          - focus blur
+          - breaking frame
+          - upward angle
 

@@ -560,15 +560,20 @@ lazy-wildcards:
           - holding hula hoop
           - holding juggling club
     neon_genesis_evangelion:
+      # https://civitai.com/images/106320861
       ayanami_rei:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/neon_genesis_evangelion/ayanami_rei/main__,
-            __lazy-wildcards/cosplay-char/neon_genesis_evangelion/ayanami_rei/costume-ethnicity__,
-            __lazy-wildcards/cosplay-char/neon_genesis_evangelion/ayanami_rei/costume-ethnicity-hair__,
-            {0.3::__lazy-wildcards/cosplay-char/neon_genesis_evangelion/ayanami_rei/costume/*__,|}
-            {{1-$$__lazy-wildcards/cosplay-char/neon_genesis_evangelion/ayanami_rei/style__},|}
-            {1-$$__lazy-wildcards/cosplay-char/neon_genesis_evangelion/ayanami_rei/env__}
+            (__lazy-wildcards/cosplay-char/neon_genesis_evangelion/ayanami_rei/main__
+            , __lazy-wildcards/cosplay-char/neon_genesis_evangelion/ayanami_rei/costume-ethnicity__
+            , __lazy-wildcards/cosplay-char/neon_genesis_evangelion/ayanami_rei/costume-ethnicity-hair__)
+            {, {1-$$__lazy-wildcards/cosplay-char/neon_genesis_evangelion/ayanami_rei/costume-headwear__}|}
+            {0.3::, __lazy-wildcards/cosplay-char/neon_genesis_evangelion/ayanami_rei/costume/*__|}
+            {, {1-3$$__lazy-wildcards/cosplay-char/neon_genesis_evangelion/plugsuit/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/neon_genesis_evangelion/ayanami_rei/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/neon_genesis_evangelion/ayanami_rei/action__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/neon_genesis_evangelion/ayanami_rei/env__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/neon_genesis_evangelion/ayanami_rei/style__}|}
         main:
           - ppayanamirei, ayanami rei, rei ayanami, ayanami rei \(cosplay\), neon genesis evangelion, evangelion
         costume-ethnicity:
@@ -576,6 +581,9 @@ lazy-wildcards:
         costume-ethnicity-hair:
           - short hair
           - very long hair, long hair
+        costume-headwear:
+          - interface headset \(evangelion\)
+          - head wrapped in bandage, bandaged head
         costume:
           plugsuit:
             - white bodysuit, __lazy-wildcards/cosplay-char/neon_genesis_evangelion/plugsuit/prompts__
@@ -583,19 +591,26 @@ lazy-wildcards:
             - tokyo-3 middle school uniform
           nurse:
             - __lazy-wildcards/subject/costume/nurse/prompts__
-        style:
-          - expressionless
-          - lonely
+        costume-elem:
+          - bandaged arms
+          - bandages, bandaid
+          - barefoot
+        action:
+          - sitting
         env:
           - eva 00
-          - interface headset \(evangelion\)
-          - lance of longinus \(evangelion\)
           - bident
           - nerv
           - cockpit
           - entry plug
           - evangelion \(mecha\)
           - grey pupils
+          - golden star crystal
+          - water
+          - moonlight reflections, huge moon, fullmoon
+        style:
+          - expressionless
+          - lonely
           - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
       # https://danbooru.donmai.us/posts?tags=plugsuit_%28evangelion%29&z=1
       plugsuit:
@@ -603,7 +618,7 @@ lazy-wildcards:
           - >-
             __lazy-wildcards/cosplay-char/neon_genesis_evangelion/plugsuit/costume__
             {, {1-$$__lazy-wildcards/cosplay-char/neon_genesis_evangelion/plugsuit/costume-elem__}|}
-            {, {1-$$__lazy-wildcards/cosplay-char/neon_genesis_evangelion/plugsuit/costume-weapon__}|}
+            {, {1-3$$__lazy-wildcards/cosplay-char/neon_genesis_evangelion/plugsuit/costume-weapon__}|}
             {, {1-$$__lazy-wildcards/cosplay-char/neon_genesis_evangelion/plugsuit/env__}|}
         costume:
           - plugsuit \(evangelion\), bodysuit, eva suit
@@ -614,7 +629,8 @@ lazy-wildcards:
           - eva boots
           - multicolored bodysuit
         costume-weapon:
-          - lance of longinus \(evangelion\)
+          - lance of longinus \(evangelion\), spear of longinus, longinus's spear
+          - longinus's spear floats in the sky
           - double blade \(evangelion\)
           - heavy spear \(evangelion\)
           - holding sword

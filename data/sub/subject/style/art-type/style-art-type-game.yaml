@@ -54,12 +54,23 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/style-art-type/pixel-game-icon/style__}|}
         style-art-main:
           - pixel game portrait, pixel portrait, portrait
+      # https://civitai.com/models/1948977/8bit-15-lora?modelVersionId=2205824
+      # https://civitai.com/models/290771?modelVersionId=356290
+      # https://civitai.com/models/157669/pixel-art
+      # https://civitai.com/models/69572/dos-game-style-truelove
       pixel-dos-game:
         prompts:
           - >-
             (__lazy-wildcards/subject/style-art-type/pixel-dos-game/style-art-main__{0.3:::{1.2|1.3|1.4}|})
+            , __lazy-wildcards/subject/style-art-type/pixel-game-icon/style-art-main__
         style-art-main:
-          - __lazy-wildcards/subject/style-art-type/pixel-game-icon/style-art-main__, 8bit, 8-bit, 1990s, ega_graphics, vesa
+          - >-
+            8bit, 8-bit, 1990s
+            , ega_graphics, vesa
+            , 8bitstyle
+            , dosegagfx style
+            , lowres
+            , dos game style
       # https://civitai.com/models/128154/game-icon-institutecjv1-000016
       # https://civitai.com/models/119849/game-icon-institutechangjing
       # https://civitai.com/models/111568/gameiconresearchgfcjloalora
