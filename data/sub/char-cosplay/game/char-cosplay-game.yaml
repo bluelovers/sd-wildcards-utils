@@ -1230,4 +1230,42 @@ lazy-wildcards:
           - cropped jacket
           - high heels
           - lowleg skirt
+    # https://danbooru.donmai.us/posts?tags=sekaiju_no_meikyuu&z=2
+    sekaiju_no_meikyuu:
+      # https://danbooru.donmai.us/posts?tags=necromancer_4_%28sekaiju%29&z=2
+      # https://civitai.com/models/1971528/necromancer-4-sekaijuu-no-meikyu
+      necromancer_4:
+        prompts:
+          - >-
+            (__lazy-wildcards/cosplay-char/sekaiju_no_meikyuu/necromancer_4/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/sekaiju_no_meikyuu/necromancer_4/costume-ethnicity__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/cosplay-char/sekaiju_no_meikyuu/necromancer_4/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/sekaiju_no_meikyuu/necromancer_4/env__}|}
+        main-trigger-words:
+          - >-
+            necromancer_4 \(sekaiju\), sekaiju_no_meikyuu
+            , N3cromancer4
+        costume-ethnicity:
+          - >-
+            colored skin, purple skin
+            , pointy ears
+            , very long hair
+            , white hair, grey hair
+            , red eyes, pink eyes
+            , scar
+            , (stitched leg
+            , stitched chest:1.2)
+        costume-elem:
+          - black dress
+          - cleavage, strap slip
+          - bare shoulders, off shoulder
+          - strapless leotard
+          - necromancer
+          - shiny skin
+          - stitches, __lazy-wildcards/subject/costume-elem-tattoo/scar-surgical/prompts-no-weight__
+          - stitches, __lazy-wildcards/subject/costume-elem-tattoo/scar-surgical-stitches/prompts-no-weight__
+        env:
+          - coffin
+          - chain
+          - blue fire
 
