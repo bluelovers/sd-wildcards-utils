@@ -57,4 +57,34 @@ lazy-wildcards:
           - muscular, covered abs
           - narrow waist
           - wide hips
+    dc_comics:
+      # https://civitai.com/models/80450?modelVersionId=85523
+      supergirl:
+        prompts:
+          - >-
+            (__lazy-wildcards/cosplay-char/dc_comics/supergirl/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/cosplay-char/dc_comics/supergirl/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/dc_comics/supergirl/action__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/dc_comics/supergirl/env__}|}
+        costume:
+          - >-
+            supergirl, supergirl \(cosplay\)
+            , superman logo
+            , red cape
+            , skirt
+            , wearing supergirl_cosplay_outfit
+        costume-elem:
+          - superhero costume
+          - >-
+            (__lazy-wildcards/cosplay-char/dc_comics/supergirl/fn/style(c=!__lazy-wildcards/utils/color-base__)__:1.3)
+          - crop top
+        action:
+          - hands on own hips
+        env:
+          - kryptonite
+        fn:
+          style:
+            - >-
+              ${c} supergirl costume
+              , wearing ${c} supergirl_cosplay_outfit
 

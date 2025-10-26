@@ -164,6 +164,38 @@ lazy-wildcards:
           - sarashi, topless, cleavage cutout, budget sarashi, chest sarashi, bandages
           - fundoshi, bottomless
           - t-back
+      # https://civitai.com/models/54036/budget-sarashi
+      # https://civitai.com/models/6875/chest-sarashi
+      # https://civitai.com/models/206094/sarashi
+      jp-sarashi:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/jp-sarashi/costume__
+            {, {1-$$__lazy-wildcards/subject/costume-elem/jp-sarashi/costume-elem__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-elem/jp-sarashi/action__}|}
+        costume:
+          - >-
+            sarashi
+        costume-elem:
+          - budget sarashi
+          - chest sarashi
+          - midriff sarashi
+          - undone sarashi
+        action:
+          - sarashi pull
+      # https://civitai.com/models/140163/outfitoffshouldersarashi
+      jp-sarashi-off-shoulder:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/jp-sarashi-off-shoulder/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-elem/jp-sarashi-off-shoulder/costume-elem__}|}
+        costume:
+          - >-
+            sarashi
+            , off-shoulder sarashi
+        costume-elem:
+          - __lazy-wildcards/subject/costume-elem/sleeves-single/prompts-no-weight__
+          - __lazy-wildcards/subject/costume-elem/sleeves-single-clothes/fn/prefix(v=sarashi)__
       bandaged_chest:
         prompts:
           - >-

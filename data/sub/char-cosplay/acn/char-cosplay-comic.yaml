@@ -982,6 +982,30 @@ lazy-wildcards:
           - parted lips
         action:
           - heart hands
+      # https://danbooru.donmai.us/posts?tags=yamato_%28one_piece%29&z=2
+      # https://civitai.com/models/236492/yamato-outfit-or-one-piece
+      yamato:
+        prompts:
+          - >-
+            (__lazy-wildcards/cosplay-char/one_piece/yamato/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/one_piece/yamato/costume-ethnicity__
+            , __lazy-wildcards/cosplay-char/one_piece/yamato/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/cosplay-char/one_piece/yamato/costume-weapon__}|}
+        main-trigger-words:
+          - >-
+            yamato \(one_piece\), yamato cosplay
+        costume-ethnicity:
+          - >-
+            orange horns, multicolored horns, curled horns, yellow horns
+            , hoop earrings
+        costume:
+          - >-
+            sleeveless kimono
+            , hakama pants, hakama
+            , sideboob
+            , shimenawa, sleeveless, rope
+        costume-weapon:
+          - kanabou, traditional japanese spiked club
     isekai_ojisan:
       # https://danbooru.donmai.us/posts?tags=sui_%28isekai_ojisan%29&z=2
       # https://civitai.com/models/16332/sui-isekai-ojisan

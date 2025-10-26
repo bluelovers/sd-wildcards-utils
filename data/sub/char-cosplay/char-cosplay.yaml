@@ -1758,6 +1758,38 @@ lazy-wildcards:
           - cannon
           - treasure chest
           - tempesta
+      # https://civitai.com/models/95733/costumecosplaypungent-plum-outfit-of-glorious-azur-lane
+      # https://civitai.com/models/7537/glorious-azur-lane-pungent-plum
+      glorious_pungent_plum:
+        prompts:
+          - >-
+            (__lazy-wildcards/cosplay-char/azur_lane/glorious_pungent_plum/costume__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/cosplay-char/azur_lane/glorious_pungent_plum/costume-headwear__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char/azur_lane/glorious_pungent_plum/costume-elem__}|}
+        costume:
+          - >-
+            glorious_\(pungent_plum\)_\(azur_lane\)
+            , outfit-glorious
+            , no panties
+            , red ribbon
+            , gloriousplum
+            , stomach
+            , skindentation
+        costume-headwear:
+          - kanzashi
+        costume-elem:
+          - __lazy-wildcards/subject/costume-elem/jp-sarashi/prompts__
+          - hair stick
+          - bun with braided base
+          - updo
+          - red choker
+          - red kimono, revealing clothes, japanese clothes, open kimono
+          - sideboob, underboob
+          - wide sleeves
+          - veiny breasts
+          - partially visible vulva
+          - steaming body
+          - tassel
     ys:
       # Earth Goddess Maia
       # https://isu.fandom.com/wiki/Maia
