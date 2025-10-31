@@ -68,4 +68,17 @@ lazy-wildcards:
           - punk_energy
           - utilitarian_vibe
           - dark_aesthetic, gothic_tone
+      jp-hakama:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-lower-body/jp-hakama/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-elem-lower-body/jp-hakama/costume-elem-main__
+            {, {1-$$__lazy-wildcards/subject/costume-elem-lower-body/jp-hakama/costume-elem__}|}
+        costume-elem-main:
+          - hakama
+        costume-elem:
+          - hakama pants
+          - hakama shorts
 

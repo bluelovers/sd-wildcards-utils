@@ -101,4 +101,42 @@ lazy-wildcards:
           - holding leash
         env-elem-creatures:
           - shadow \(persona\)
+      # https://danbooru.donmai.us/posts?tags=hizuki_akira&z=1
+      # https://civarchive.com/models/147887?modelVersionId=164990
+      dx2_hinata_himika:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/ShinMegamiTensei/dx2_hinata_himika/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/ShinMegamiTensei/dx2_hinata_himika/costume-ethnicity__
+            {0.8::, __lazy-wildcards/cosplay-char/ShinMegamiTensei/dx2_hinata_himika/costume__}|}
+        main-trigger-words:
+          - >-
+            hinata himika
+            , himikasmt
+        costume-ethnicity:
+          - >-
+            black hair, braid, facial mark, hair rings
+        costume:
+          - detached sleeves, hakama, hakama skirt, rope
+      # https://danbooru.donmai.us/posts?tags=hiroko_%28megami_tensei%29&z=2
+      # https://civarchive.com/models/147887?modelVersionId=164990
+      smt2_hiroko:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/ShinMegamiTensei/smt2_hiroko/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/ShinMegamiTensei/smt2_hiroko/costume-ethnicity__
+            {0.8::, __lazy-wildcards/cosplay-char/ShinMegamiTensei/smt2_hiroko/costume__|}
+            {, {1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/smt2_hiroko/costume__}|}
+        main-trigger-words:
+          - >-
+            hiroko
+            , hiroko \(megami_tensei\)
+            , hirokosmtii
+        costume-ethnicity:
+          - >-
+            blonde hair, mole under eye
+        costume:
+          - asymmetrical gloves, scarf, jacket
+        costume-elem:
+          - red eyeliner
 

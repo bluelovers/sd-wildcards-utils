@@ -30,4 +30,14 @@ lazy-wildcards:
           - __lazy-wildcards/subject/style-elem/lighting-dramatic/prompts-no-weight__
           - mystical atmosphere
           - muted colors
+      # https://danbooru.donmai.us/posts?tags=kazuma_kaneko_%28style%29&z=2
+      # https://civarchive.com/models/86074?modelVersionId=91521
+      ShinMegamiTensei:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/ShinMegamiTensei/style-artist__{0.3:::{1.2|1.3|1.4}|})
+        style-artist:
+          - >-
+            __lazy-wildcards/utils/fn/style-inspired(v=kazuma_kaneko)__
+            , shin_megami_tensei
 
