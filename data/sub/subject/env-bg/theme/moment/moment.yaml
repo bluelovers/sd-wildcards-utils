@@ -617,4 +617,19 @@ lazy-wildcards:
           - atmospheric
           - sparkle
           - rainbow light
+      weather-sky-dramatic:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-moment/weather-sky-dramatic/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-moment/weather-sky-dramatic/env-moment-main__
+            {, {1-3$$__lazy-wildcards/subject/env-moment/weather-sky-dramatic/env-moment__}|}
+        env-moment-main:
+          - dramatic sky
+        env-moment:
+          - blue sky
+          - clear sky
+          - colorful sky
+          - vibrant sky
 

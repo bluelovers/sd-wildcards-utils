@@ -44,6 +44,42 @@ lazy-wildcards:
           - wooden_gazebo
           - well_trimmed_lawn
           - vines_on_gazebo
+      # 涼亭／東屋／ガゼボ
+      # https://civitai.com/models/2091019/jjs-gazebo?modelVersionId=2365819
+      garden-gazebo:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/garden-gazebo/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-2$$__lazy-wildcards/subject/env-bg/garden-gazebo/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/garden-gazebo/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/garden-gazebo/style__}|}
+        env-bg-main:
+          - gazebo
+        env-bg:
+          - public park
+          - botanical garden
+          - private estate
+          - country estate
+          - european garden
+          - wedding venue
+        env:
+          - open railing
+          - wooden structure
+          - iron railing
+          - arched design
+          - dome roof
+          - pointed roof
+          - vines
+          - flowers
+          - rose vines
+          - rose petals
+          - broken pillars
+        style:
+          - lattice pattern
+          - hexagon shape
+          - octagon shape
+          - serene
+          - romantic atmosphere
       # 地中海庭院
       garden-mediterranean_courtyard:
         prompts:

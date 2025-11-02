@@ -201,6 +201,7 @@ lazy-wildcards:
           - mosaic background
       # https://civitai.com/models/28531/miniature-world-style?modelVersionId=34223
       # https://civitai.com/models/227021/miniature-models-lora-flux-sdxl-sd15?modelVersionId=256087
+      # https://civitai.com/models/372320/miniature-house-like-thing-smth-smth-that-i-found-cool
       miniature:
         prompts:
           - >-
@@ -209,7 +210,9 @@ lazy-wildcards:
             {,{1-$$__lazy-wildcards/subject/style-art-type/miniature/style__}|}
         style-art-main:
           - >-
-            (mini\(ttp\), miniature, miniature model{0.3:::{1.2|1.3|1.4}|}), pmini style, M1n14tur3, landscape
+            (miniature, miniature model{0.3:::{1.2|1.3|1.4}|})
+            , mini\(ttp\), pmini style, M1n14tur3, wrenchmicroarch
+            , landscape
         env-bg:
           - plate
           - cup

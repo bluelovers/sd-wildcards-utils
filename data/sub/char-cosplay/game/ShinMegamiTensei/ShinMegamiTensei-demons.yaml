@@ -210,4 +210,39 @@ lazy-wildcards:
         costume-weapon:
           - holding umbrella
           - umbrella
+      # https://danbooru.donmai.us/posts?tags=cleopatra_%28megami_tensei%29&z=2
+      # https://civitai.com/models/2037804/cleopatra-from-shin-megami-tensei-v
+      cleopatra:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/ShinMegamiTensei/cleopatra/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/ShinMegamiTensei/cleopatra/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/ShinMegamiTensei/cleopatra/costume-elem__}|}
+        main-trigger-words:
+          - >-
+            cleopatra, cleopatra \(megami_tensei\)
+            , cleopatra_smtv
+        costume-ethnicity:
+          - >-
+            ancient egyptian, eyelashes
+            , gold armlet, usekh collar, uraeus, bracelet
+            , facial mark, forehead mark
+            , headband, long hair, blonde hair, hime cut
+            , makeup, lipstick
+            , nail polish, pink nails, ring
+        costume-elem:
+          - cleavage, cleavage cutout, center opening
+          - jewelry, blue gemstone
+          - parted lips
+          - navel, pelvic curtain
+          - demon \(megami tensei\)
+          - midriff
+          - snake hair ornament
+          - wrist cuffs
+          - ancient egyptian clothes
+          - multiple armlets
+          - revealing clothes
+          - sidelocks
+          - necklace
+          - white revealing linen egyptian dress
 
