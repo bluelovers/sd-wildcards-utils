@@ -1,0 +1,41 @@
+lazy-wildcards:
+  subject:
+    env-elem:
+      kitchen_counter:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/kitchen_counter/env-bg-main__
+            {, __lazy-wildcards/subject/env-elem/kitchen_counter/action__|}
+            {, __lazy-wildcards/subject/env-elem/kitchen_counter/action-pose-legs__|}
+            {, {1-3$$__lazy-wildcards/subject/env-elem/kitchen_counter/action-pose__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/kitchen_counter/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/kitchen_counter/style__}|}
+        env-bg-main:
+          - kitchen counter
+        action:
+          - sitting on kitchen counter
+          - laying on kitchen counter
+          - side lying
+          - lying down
+          - prone position on kitchen counter, prone position
+        action-pose-legs:
+          - dangling legs
+          - crossed legs
+          - legs spread
+          - hugging knees
+          - bent legs
+        action-pose:
+          - leaning back
+          - casual pose
+          - arm pillow
+          - cheek on table
+          - tired pose
+          - stretching arms
+          - kneeling
+          - tiptoes
+          - reaching up
+        env-bg:
+          - kitchen interior
+        style:
+          - feet not in view
+
