@@ -5,6 +5,7 @@ lazy-wildcards:
       # https://civitai.com/models/1640606/prehistoric-waterfall-illu
       # https://civitai.com/models/2030170/prehistoric-cave
       # https://civitai.com/models/51539/stonepunkai-konyconi
+      # https://civitai.com/models/199993?modelVersionId=270205
       age-stone:
         prompts:
           - >-
@@ -26,6 +27,8 @@ lazy-wildcards:
             , dvr-stnd, StoneAgeCh, StoneAgeChEro, stone-age h0us3
             , cretaceous period
             , stonepunkAI
+            , StoneFashion
+            , made of rocks and stone
         env-elem:
           - __lazy-wildcards/utils/fn/made-of(v=stone-age)__
         env-bg:
