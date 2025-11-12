@@ -48,6 +48,10 @@ export function _checkSettings()
 		'styles-drawing/**',
 
 		'illustXL/**',
+
+		'whis-*/**',
+		'whis_*/**',
+		'kawaii-egirl*/**',
 	] satisfies string[];
 
 	const _CHECK_FILES_IGNORE_FULL = [
