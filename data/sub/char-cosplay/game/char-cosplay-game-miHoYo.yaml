@@ -70,4 +70,34 @@ lazy-wildcards:
           - short hair, light brown hair, jewelry, purple eyes, earrings, hair over one eye
         costume:
           - white gloves, blue cape, fur trim, black bodysuit, skin tight, latex bodysuit
+    genshin_impact:
+      # https://civitai.com/models/2099213/nefer?modelVersionId=2375085
+      nefer:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/genshin_impact/nefer/main-trigger-words__
+            , __lazy-wildcards/cosplay-char/genshin_impact/nefer/costume-ethnicity__
+            {, {1-$$__lazy-wildcards/cosplay-char/genshin_impact/nefer/costume-elem__}|}
+        main-trigger-words:
+          - >-
+            nefer \(genshin impact\)
+            , nefer \(genshin impact\) \(cosplay\)
+        costume-ethnicity:
+          - >-
+            eye tattoo
+            , mechanical ears
+            , tiara
+            , horned headwear
+            , bracelet, usekh collar
+            , green hair
+        costume-elem:
+          - cape
+          - green sleeveless leotard, high-waist half-skirt, thigh strap
+          - strappy heels
+          - __lazy-wildcards/subject/costume-elem/curtain/prompts-no-weight__
+          - black elbow gloves
+          - claw ring
+          - sideboob
+          - facial mark
+          - fake claws, finger claws
 
