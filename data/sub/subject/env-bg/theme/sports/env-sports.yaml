@@ -66,4 +66,81 @@ lazy-wildcards:
           - open roof
           - ceramic tile
           - decorative tile
+      # 撞球
+      # https://danbooru.donmai.us/posts?tags=billiards&z=5
+      billiards:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/billiards/env-elem-main__{0.3:::{1.2|1.3|1.4}|})
+            {, __lazy-wildcards/subject/env-elem/billiards/env-elem-main__|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/billiards/env-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/billiards/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/billiards/action-main__}|}
+            {, {1-2$$__lazy-wildcards/subject/env-elem/billiards/action__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/billiards/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/billiards/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/billiards/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/billiards/style__}|}
+        env-elem-main:
+          - billiards
+        env-bg-main:
+          - pool table, billiards table, snooker table
+        env-elem:
+          - billiard chalk
+          - >-
+            billiard ball
+            {, 8-ball|}
+          - green felt
+          - billiards pockets
+          - pool table light
+        costume-weapon:
+          - cue stick
+          - holding cue stick
+          - holding ball
+          - cue stick vertical
+          - using cue as support
+        action-main:
+          - sitting on table
+          - on table
+          - cueing
+          - precision pose
+          - leaning forward
+        action:
+          - teaching
+          - lying on table
+          - on back
+          - on side
+          - legs apart
+          - side lying
+          - horizontal pose
+        costume-elem:
+          - playboy bunny
+          - thigh bow
+          - detached collar
+          - unworn clothes
+          - black pantyhose
+          - detached sleeves
+          - tank top
+          - gloves
+          - necktie
+          - vest
+          - belt
+          - necktie over shoulder
+          - shirt tucked in
+          - __lazy-wildcards/subject/costume-elem/torn-clothes/prompts__
+          - curvy pose
+        env:
+          - dartboard
+          - dart
+          - ceiling light
+          - metallic edge
+          - wooden frame
+        env-bg:
+          - bar \(place\)
+          - pub interior
+        style:
+          - dim lighting
+          - spotlight
+          - glossy reflection
+          - soft shadows
 
