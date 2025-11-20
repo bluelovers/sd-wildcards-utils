@@ -1180,4 +1180,48 @@ lazy-wildcards:
           - >-
             ${v=bat}
             __lazy-wildcards/utils/fn/pattern__
+      spectral:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-race/spectral/costume-ethnicity-race__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/spectral/costume-ethnicity__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/spectral/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/spectral/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/spectral/style__}|}
+        costume-ethnicity-race:
+          - spectral female
+        costume-ethnicity:
+          - undead female knight
+          - ghostly body
+          - skeleton
+          - transparent body
+          - skull face
+        costume-elem:
+          - tattered armor
+          - transparent armor
+          - visible bones
+          - pale skin
+          - glowing eyes
+          - floating hair
+          - decay marks
+          - tattered cape
+          - dark halo
+        env:
+          - ghostly aura
+          - spectral aura, spectral smoke
+          - blue flame
+          - cursed aura
+          - ethereal edges
+          - chains
+          - fog
+          - floating rocks
+          - purple mist
+        style:
+          - spectral green
+          - cold light
+          - dark violet
+          - ice blue
+          - haunted atmosphere
+          - dark fantasy
+          - ominous mood
 
