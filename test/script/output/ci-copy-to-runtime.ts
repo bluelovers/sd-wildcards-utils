@@ -24,6 +24,8 @@ export default (async () => {
 		const hashJson: Record<string, string> = await readJSON(hash_file).catch(e => ({}));
 
 		await Bluebird.each(globSync2([
+			'!**/_disable/**',
+			'!**/_*.{yaml,txt}',
 			'Vision/**/*.{yaml,txt}',
 			'user-*/**/*.{yaml,txt}',
 			'!**/_disable/**',
