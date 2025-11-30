@@ -143,4 +143,34 @@ lazy-wildcards:
         costume-elem:
           - underboob
           - midriff
+      fishnet-top:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-upper-body/fishnet-top/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-elem-upper-body/fishnet-top/costume-main__
+            {, {1-$$__lazy-wildcards/subject/costume-elem-upper-body/fishnet-top/costume__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem-upper-body/fishnet-top/costume-elem__}|}
+        costume-main:
+          - fishnet top
+        costume:
+          - fishnet shirt
+          - fishnet tanktop
+        costume-elem:
+          - breasts apart
+          - open clothes
+          - clothes lift
+          - cleavage
+          - see-through top
+      fishnet-dress:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-upper-body/fishnet-dress/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-elem-upper-body/fishnet-dress/costume__
+            {, {1-$$__lazy-wildcards/subject/costume-elem-upper-body/fishnet-top/costume-elem__}|}
+        costume:
+          - fishnet dress
 

@@ -349,4 +349,85 @@ lazy-wildcards:
           - mandala
           - folk style
           - layered
+      refrigerator:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/refrigerator/env-elem-main__
+            {, {1-2$$__lazy-wildcards/subject/env-elem/refrigerator/env-elem__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/refrigerator/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/refrigerator/env-bg__}|}
+        env-elem-main:
+          - refrigerator, fridge
+        env-elem:
+          - mini fridge
+          - vintage refrigerator
+          - retro refrigerator
+          - industrial refrigerator
+        env:
+          - stainless steel refrigerator
+          - door handle
+        env-bg:
+          - kitchen background
+          - night kitchen background
+      # https://civitai.com/models/298832/girl-like-refrigerator
+      refrigerator-opened:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/refrigerator-opened/env-elem-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-2$$__lazy-wildcards/subject/env-elem/refrigerator-opened/env-elem__}|}
+            {0.3::, {1-2$$__lazy-wildcards/subject/env-elem/refrigerator/env-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/refrigerator-opened/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/refrigerator-opened/env-elem-food__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/refrigerator-opened/style__}|}
+            {0.3::, {1-$$__lazy-wildcards/subject/env-elem/refrigerator/env-bg__}|}
+        env-elem-main:
+          - opened refrigerator, open fridge
+        env-elem:
+          - stocked refrigerator
+          - messy refrigerator
+          - empty refrigerator
+        env:
+          - ice trays
+          - refrigerator light, fridge light
+          - shelves
+          - cold mist
+          - transparent shelves
+          - ice crystals
+        env-elem-food:
+          - beverage bottles
+          - food items
+          - bottles
+          - milk carton
+          - vegetables, fruits
+          - egg tray
+          - butter compartment
+          - leftovers
+          - plastic containers
+        style:
+          - dramatic cold lighting
+          - colorfully neon lights
+      # 外出攜帶式冰箱
+      refrigerator-portable-cooler:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/refrigerator-portable-cooler/env-elem-main__
+            {, {1-2$$__lazy-wildcards/subject/env-elem/refrigerator-portable-cooler/env-elem__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/refrigerator-portable-cooler/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/refrigerator-portable-cooler/env-elem-food__}|}
+        env-elem-main:
+          - portable cooler, cooler box
+        env-elem:
+          - ice chest
+          - picnic cooler
+          - soft-sided cooler
+          - plastic cooler
+          - outdoor icebox
+          - beach cooler
+        env:
+          - ice packs
+          - insulated lining
+          - carrying handle
+        env-elem-food:
+          - ice cubes
+          - soda can
 
