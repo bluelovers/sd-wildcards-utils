@@ -226,4 +226,55 @@ lazy-wildcards:
             (__lazy-wildcards/subject/env-bg/warning_tape/env__{0.3:::{1.2|1.3|1.4}|})
         env:
           - caution tape, warning tape, warning sign
+      # 破碎灰泥牆 崩解的灰泥牆
+      wall-crumbling-stucco:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/wall-crumbling-stucco/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/wall-crumbling-stucco/action__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/wall-crumbling-stucco/env-bg-wall__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/wall-crumbling-stucco/env__}|}
+            {, {1-3$$__lazy-wildcards/subject/env-bg/wall-crumbling-stucco/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/wall-crumbling-stucco/style-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/wall-crumbling-stucco/style__}|}
+        env-bg-main:
+          - crumbling stucco wall
+        env-bg-wall:
+          - brick wall
+          - damaged stucco wall
+          - cracked stucco wall
+        action:
+          - sitting
+          - leaning against wall
+          - sits leaning against wall
+          - relaxed posture
+          - weary
+        env:
+          - vines
+          - creeping vines
+          - wildflowers, colorful flowers, vibrant wildflowers
+          - overgrown
+          - dense foliage bursting through cracks
+        env-bg:
+          - abandoned building
+          - neglected structure
+          - ruined structure
+          - old architecture
+          - devastating post-apocalyptic battle
+        style-elem:
+          - weathered texture, rough texture
+          - rustic appearance
+          - nature reclaiming
+          - post civilization, post-apocalypse
+          - centuries later
+          - forgotten era
+          - urban decay
+        style:
+          - muted colors
+          - soft lighting
+          - overcast light
+          - natural light
+          - stillness
+          - cinematic composition
+          - quiet solitude
 

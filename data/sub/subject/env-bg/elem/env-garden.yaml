@@ -123,4 +123,52 @@ lazy-wildcards:
           - misty_walkway
           - gothic_architecture
           - ethereal_lighting
+      # 噴泉
+      fountain:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/fountain/env-elem-main__
+            {, {1-2$$__lazy-wildcards/subject/env-bg/fountain/env-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/fountain/action__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/fountain/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/fountain/env__}|}
+            {, {1-2$$__lazy-wildcards/subject/env-bg/fountain/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/fountain/style-view__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/fountain/style__}|}
+        env-elem-main:
+          - fountain
+        env-elem:
+          - stone fountain
+          - marble fountain
+          - tiered fountain
+          - ornate fountain
+          - water feature
+          - classical fountain
+        action:
+          - sitting on fountain
+          - legs crossed
+          - contemplative pose
+          - looking down slightly
+        costume-elem:
+          - low cut dress
+          - draped fabric, draped garment
+          - roman legionnaire armor
+          - decorative breastplate
+          - bare thighs
+        env:
+          - stone pavement
+          - columns
+          - engraved metal
+        env-bg:
+          - roman square exterior
+          - roman architecture
+          - roman arches
+        style-view:
+          - low angle view
+          - view from below
+          - three quarter view
+        style:
+          - dramatic lighting, cinematic lighting
+          - asymmetrical design
+          - peaceful authority
 
