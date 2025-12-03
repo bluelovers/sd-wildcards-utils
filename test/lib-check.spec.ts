@@ -234,9 +234,9 @@ function _checkAllSelfLinkWildcardsExists(source: string)
 		]));
 	}
 
-	 yaml = parseWildcardsYaml(source, {
+	yaml = parseWildcardsYaml(source, {
 		allowMultiRoot: true,
-		 expandForwardSlashKeys: false,
+		expandForwardSlashKeys: false,
 	});
 
 	actual = checkAllSelfLinkWildcardsExists(yaml, {
