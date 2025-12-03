@@ -1265,13 +1265,15 @@
       # https://civitai.com/models/195730/aziibpixelmix?modelversionid=220049
       # https://civitai.com/models/629354/pixel-art-styles?modelversionid=1969406
       # https://civitai.com/models/184199/pixel-style-and-gba-fire-emblem-portraits
+      # https://civitai.com/models/1950209/final-fantasy-iv-enemies-ilxl
+      # https://civitai.com/models/1978866?modelVersionId=2239937
       "pixel-game-icon":
         prompts:
           - >-
             (__lazy-wildcards/subject/style-art-type/pixel-game-icon/style-art-main__{0.3:::{1.2|1.3|1.4|1.6}|}){,{1-$$__lazy-wildcards/subject/style-art-type/pixel-game-icon/style__}|}
         "style-art-main":
           - >-
-            game icon institute,pixel art,xiangsu,xiang su,pixel,pixelart,pixel art,pixel world,arsmjstyle,gbaportrait,__lazy-wildcards/utils/fn/inspired(v=pixel_art)__
+            game icon institute,pixel art,xiangsu,xiang su,pixel,pixelart,pixel art,pixel world,arsmjstyle,gbaportrait,MAJTC,ENEFI,__lazy-wildcards/utils/fn/inspired(v=pixel_art)__
         style:
           - 2d pixel art
           - sprite style
@@ -1829,6 +1831,7 @@
           - "__lazy-wildcards/subject/style-elem/sci-fi/fn/prefix(v=theme)__"
           - "__lazy-wildcards/subject/style-elem/sci-fi/fn/prefix(v=elements)__"
           - "__lazy-wildcards/subject/style-elem/sci-fi/fn/prefix(v=fashion)__"
+          - "__lazy-wildcards/subject/style-elem/sci-fi/fn/suffix(v=hard)__"
         fn:
           # __lazy-wildcards/subject/style-elem/sci-fi/fn/prefix(v=settings)__
           prefix:
@@ -3885,7 +3888,7 @@
           - cataclysm
           - ominous light
           - evil
-      # https://danbooru.donmai.us/posts?tags=fujimoto_tatsuki_%28style%29+&z=5
+      # https://danbooru.donmai.us/posts?tags=fujimoto_tatsuki_%28style%29&z=5
       # https://civitai.com/models/263605/tatsuki-fujimotos-chainsaw-man-part-1-manga-artstyle-or-updated-to-sdxl-illustrious?modelVersionId=297205
       # https://civitai.com/models/53149/chainsaw-man-anime-style-lora
       # https://civitai.com/models/39158/chainsawman-ed4-tooboe-animation-style-power
@@ -4055,7 +4058,7 @@
           - >-
             __lazy-wildcards/utils/fn/style-inspired(v=748cm)__,748RURU
       # 美樹本晴彥
-      # https://danbooru.donmai.us/posts?tags=mikimoto_haruhiko+&z=5
+      # https://danbooru.donmai.us/posts?tags=mikimoto_haruhiko&z=5
       # https://en.wikipedia.org/wiki/Haruhiko_Mikimoto
       # https://civitai.com/models/1300956/haruhiko-mikimoto-watercolor-style
       # https://civitai.com/models/87208/haruhiko-mikimoto-macross-artist-style
@@ -4222,7 +4225,7 @@
           - warm colors
           - light shading
       # 松本零士
-      # https://danbooru.donmai.us/posts?tags=matsumoto_leiji_%28style%29+&z=5
+      # https://danbooru.donmai.us/posts?tags=matsumoto_leiji_%28style%29&z=5
       # https://civitai.com/models/1739940/leiji-matsumoto-style-interstella-5555-maetel-harlock-galaxy-railways?modelVersionId=1969137
       # https://civitai.com/models/1739940/leiji-matsumoto-style-interstella-5555-maetel-harlock-galaxy-railways?modelVersionId=1969137
       matsumoto_leiji:
@@ -4290,7 +4293,7 @@
       # https://www.pixiv.net/en/users/8146
       # https://x.com/odanondesu
       # https://danbooru.donmai.us/posts?tags=oda_non&z=5
-      # https://danbooru.donmai.us/posts?tags=oda_non_%28style%29+&z=5
+      # https://danbooru.donmai.us/posts?tags=oda_non_%28style%29&z=5
       # https://civitai.com/models/175435/oda-non-artstyle-lora
       oda_non:
         prompts:
@@ -4884,7 +4887,7 @@
           - from below
           - dutch angle
           - sound effects
-      # https://danbooru.donmai.us/posts?tags=distracted_boyfriend_%28meme%29+&z=5
+      # https://danbooru.donmai.us/posts?tags=distracted_boyfriend_%28meme%29&z=5
       # https://civitai.com/models/143824/distracted-boyfriend-meme-or-concept-lora
       distracted_boyfriend:
         prompts:
@@ -4895,7 +4898,7 @@
             distracted_boyfriend_\(meme\),IncrsDistractedBoyfriendMeme
       # https://civitai.com/models/52577/she-wants-to-order-or-conceptmeme
       # https://rule34.xxx/index.php?page=post&s=list&tags=he_wants_to_order&pid=546&__cf_chl_tk=k_slobvP12E8C_lRCSAMXqQuj_fmiSh.vOFC7D.WGZw-1682637125-0-gaNycGzNDlA
-      # https://danbooru.donmai.us/posts?tags=he_wants_to_order_%28meme%29+&z=5
+      # https://danbooru.donmai.us/posts?tags=he_wants_to_order_%28meme%29&z=5
       # https://civitai.com/models/119269/car-doggy-pose-concept
       he_wants_to_order:
         prompts:
@@ -5642,6 +5645,20 @@
         prompts:
           - >-
             ruanyi0042,__lazy-wildcards/subject/env-bg/ruins-city-street/prompts__,{6-$$__lazy-wildcards/subject/env-bg/ruins-city-street/env__}{,__lazy-wildcards/subject/env-moment/random/prompts__|}
+      # https://civitai.com/images/110915752
+      "street-palm_trees":
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/street-palm_trees/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg/street-palm_trees/env__}|}
+        "env-bg-main":
+          - street with palm trees,palm trees,street
+        env:
+          - urban
+          - clear sky
+          - pastel buildings
+          - retro car
+          - summer,night
+          - neon lights,neon sign
       "dirty-alley":
         prompts:
           - >-
@@ -6250,6 +6267,19 @@
         style:
           - unique_coloration
           - long shot scenic professional photograph
+      "background-blurry":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/background-blurry/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/env-bg/background-blurry/env-bg__{,{1-$$__lazy-wildcards/subject/env-bg/background-blurry/style__}|}
+        "env-bg":
+          - blurry background,out of focus background
+        style:
+          - bokeh
+          - soft focus
+          - depth of field
       # https://civitai.com/models/210581/carcosa-city-xl-sd15-f1d?modelVersionId=268186
       carcosa_city:
         prompts:
@@ -6460,7 +6490,7 @@
           - "mixed-sex bathing"
           - shared bathing
       # https://civitai.com/models/337587?modelVersionId=1652446
-      # https://danbooru.donmai.us/posts?tags=conan_%28series%29+&z=5
+      # https://danbooru.donmai.us/posts?tags=conan_%28series%29&z=5
       "desert-oasis-city":
         prompts:
           - >-
@@ -7743,6 +7773,47 @@
           - misty_walkway
           - gothic_architecture
           - ethereal_lighting
+      # 噴泉
+      fountain:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/fountain/env-elem-main__{0.3:::{1.2|1.3|1.4|1.6}|}){,{1-2$$__lazy-wildcards/subject/env-bg/fountain/env-elem__}|}{,{1-$$__lazy-wildcards/subject/env-bg/fountain/action__}|}{,{1-$$__lazy-wildcards/subject/env-bg/fountain/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-bg/fountain/env__}|}{,{1-2$$__lazy-wildcards/subject/env-bg/fountain/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/fountain/style-view__}|}{,{1-$$__lazy-wildcards/subject/env-bg/fountain/style__}|}
+        "env-elem-main":
+          - fountain
+        "env-elem":
+          - stone fountain
+          - marble fountain
+          - tiered fountain
+          - ornate fountain
+          - water feature
+          - classical fountain
+        action:
+          - sitting on fountain
+          - legs crossed
+          - contemplative pose
+          - looking down slightly
+        "costume-elem":
+          - low cut dress
+          - draped fabric,draped garment
+          - roman legionnaire armor
+          - decorative breastplate
+          - bare thighs
+        env:
+          - stone pavement
+          - columns
+          - engraved metal
+        "env-bg":
+          - roman square exterior
+          - roman architecture
+          - roman arches
+        "style-view":
+          - low angle view
+          - view from below
+          - three quarter view
+        style:
+          - dramatic lighting,cinematic lighting
+          - asymmetrical design
+          - peaceful authority
       # https://civitai.com/models/347130/roman-interior
       Ancient_Roman_Interior_Design:
         prompts:
@@ -8671,6 +8742,36 @@
           - desert
           - broken machinery
           - rust
+      "power_plant-hydropower":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/power_plant-hydropower/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg/power_plant-hydropower/env-bg__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg/power_plant-hydropower/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/power_plant-hydropower/style__}|}
+        "env-bg-main":
+          - >-
+            hydroelectric power plant,hydropower station,hydropower plant,hydroelectric power station
+        "env-bg":
+          - high ceiling
+          - cathedral like interior
+          - water turbine hall
+          - large scale structure
+          - reservoir
+          - empty room
+          - abandoned power plant
+          - industrial interior
+        env:
+          - dam
+          - water turbine
+          - spillway
+          - industrial machinery
+          - industrial architecture
+          - energy facility
+          - mist,atmospheric haze
+          - dystopian facility
+        style:
+          - abandoned feeling
+          - mechanical solemnity
+          - low angle view
+          - "__lazy-wildcards/utils/scenery-no-humans__"
       # https://civitai.com/models/111386/prison-or
       # https://civitai.com/models/370760
       # https://civitai.com/models/380968
@@ -9521,6 +9622,224 @@
           - dystopian
           - futuristic architecture
           - neon lights
+      # 台灣檳榔攤
+      # https://civitai.com/models/243085/retroneonbetelnutgirl?modelVersionId=287373
+      taiwanese_betel_nut_stand:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/taiwanese_betel_nut_stand/env-bg-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg/taiwanese_betel_nut_stand/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/taiwanese_betel_nut_stand/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-bg/taiwanese_betel_nut_stand/expressions__}|}{,{1-$$__lazy-wildcards/subject/env-bg/taiwanese_betel_nut_stand/action__}|}{,{1-$$__lazy-wildcards/subject/env-bg/taiwanese_betel_nut_stand/env-elem-food__}|}{,{1-$$__lazy-wildcards/subject/env-bg/taiwanese_betel_nut_stand/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/taiwanese_betel_nut_stand/style__}|}
+        "env-bg-main":
+          - >-
+            taiwanese betel nut stand,taiwanese betel nut shop,glass,BetelNutGirl
+        "env-bg":
+          - "__lazy-wildcards/subject/env-bg/corrugated_metal/prompts__"
+          - glass wall,glass booth
+          - "__lazy-wildcards/subject/env-bg/shipping_container_building/prompts__"
+          - stall,counter,convenience display
+        "costume-elem":
+          - heavy makeup,lipstick,long eyelashes
+          - bikini top
+          - miniskirt
+          - "see-through shirt"
+          - "__lazy-wildcards/subject/costume-nsfw/revealing_clothes/prompts__"
+        expressions:
+          - service smile
+        action:
+          - sitting
+          - seductive pose
+        "env-elem-food":
+          - betel nut
+        env:
+          - metal roof
+          - neon lights,neon sign,retro signage
+          - signboard,handwritten sign,price list
+          - night,urban night
+          - roadside
+          - wet pavement,neon reflection,after rain
+          - suburban,overhead wires,quiet street
+          - scooter,motorbike,street life
+          - signboard,lightbox,poster
+        style:
+          - teal and pink
+          - neon backlight,colored lighting
+          - retro,vintage signage
+          - old school aesthetic
+          - reflection,through glass,interior focus
+      # 明治時期日本的西化建築
+      japanese_western_fusion_meiji_style:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/japanese_western_fusion_meiji_style/style-main__{,__lazy-wildcards/subject/env-bg/japanese_western_fusion_meiji_style/env-bg-real__|}{0.7::,{1-$$__lazy-wildcards/subject/env-bg/japanese_western_fusion_meiji_style/env-bg__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg/japanese_western_fusion_meiji_style/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/japanese_western_fusion_meiji_style/style__}|}
+        "style-main":
+          - japanese western fusion,meiji style,building with european and japanese elements,stone building
+        "env-bg-real":
+          - taiwan governor general office
+          - tokyo station
+          - national diet building
+          - imperial hotel
+        "env-bg":
+          - brick building
+          - clock tower
+          - building with red bricks and arched corridors
+          - arched corridors
+          - brick wall
+          - wooden western house
+          - balcony
+          - brick street
+          - garden,wooden porch,fence
+          - european architecture
+          - baroque architecture
+        env:
+          - pediment,decorative facade
+          - arched windows
+          - steeple,dome
+          - wooden window
+          - tiled roof,gabled roof
+          - historical cityscape
+          - stone stairs
+          - government building
+          - red brick,gray stone,natural color palette
+          - dark wood,wood texture
+          - western facade
+          - tram rails
+          - arcade
+        style:
+          - retro,historical,early modern era
+      # https://civitai.com/models/230964/middle-eastern-market-rug-stall
+      # https://civitai.com/models/169967/game-scenario-middle-east-region
+      middle_eastern_market:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/middle_eastern_market/env-bg-main__){,{1-$$__lazy-wildcards/subject/env-bg/middle_eastern_market/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/middle_eastern_market/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/middle_eastern_market/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/middle_eastern_market/env-elem-creatures__}|}{,{1-$$__lazy-wildcards/subject/env-bg/middle_eastern_market/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-bg/middle_eastern_market/style__}|},__lazy-wildcards/subject/env-bg/middle_eastern_market/env-bg-main-trigger-words__
+        "env-bg-main":
+          - >-
+            middle eastern market,middle eastern bazaar,middle eastern marketplace,Middle East region,arabian building
+        "env-bg-main-trigger-words":
+          - >-
+            souq,MiddleEastRugMarket,CXMIX,arabesque,middle eastern style,middle eastern scenery,arabtown
+        "env-bg":
+          - crowded_street
+          - colorful_stalls
+          - fruit_stand
+          - handicrafts_market
+          - arabesque_architecture,Architecture of Saudi Arabia
+          - stone_buildings
+          - narrow_alleyway
+          - street_vendor
+          - rug and fabric stall
+        env:
+          - hanging_fabric
+          - spice_display
+          - arched_doorways
+          - cloth_shade
+          - hanging_lanterns,arabian lanterns
+          - brick_pavement
+          - carrying_goods
+          - gold_jewelry_display
+        "env-elem-creatures":
+          - camel
+          - shoppers
+        "costume-elem":
+          - arabian traditional attire,middle eastern traditional attire
+        style:
+          - mosaic_design
+          - bartering_scene
+          - arabesque patterns,arabian patterns,middle eastern patterns
+      # https://civitai.com/models/2004368/arabian-town?modelVersionId=2268693
+      "middle_eastern-arabian_town":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/middle_eastern-arabian_town/env-bg-main__){,{1-$$__lazy-wildcards/subject/env-bg/middle_eastern-arabian_town/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/middle_eastern-arabian_town/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-bg/middle_eastern-arabian_town/env__}|},__lazy-wildcards/subject/env-bg/middle_eastern_market/env-bg-main-trigger-words__
+        "env-bg-main":
+          - >-
+            arabian town,islamic architecture
+        "env-bg":
+          - arched doorway
+          - dome,onion dome
+          - minaret
+          - "flat roof house,adobe building,sun-dried bricks"
+          - narrow alley
+          - "__lazy-wildcards/subject/env-bg/middle_eastern_market/prompts__"
+          - fountain
+          - mosque
+        "costume-elem":
+          - kaftan
+          - jalabiya
+          - hijab
+          - veil
+          - turban
+          - keffiyeh
+        env:
+          - mashrabiya
+          - cobblestone street
+          - desert dust
+          - crescent moon
+          - glowing lantern,lantern light
+          - fantasy desert
+          - arabian nights
+      # 杜拜
+      "middle_eastern-arabian-dubai":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/middle_eastern-arabian-dubai/env-bg-main__{,{1-2$$__lazy-wildcards/subject/env-bg/middle_eastern-arabian-dubai/env-bg-real__}|}){,{1-3$$__lazy-wildcards/subject/env-bg/middle_eastern-arabian-dubai/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/middle_eastern-arabian-dubai/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/middle_eastern-arabian-dubai/style__}|},__lazy-wildcards/subject/env-bg/middle_eastern_market/env-bg-main-trigger-words__
+        "env-bg-main":
+          - >-
+            dubai
+        "env-bg-real":
+          - united arab emirates
+          - burj khalifa,glass tower
+          - dubai marina
+          - dubai islands
+          - dubai old city,dubai old town,old dubai
+        "env-bg":
+          - skyscraper
+          - modern architecture
+          - futuristic skyline
+          - desert cityscape
+          - city lights
+          - artificial island
+          - palm shaped island
+          - resort hotel
+          - marina
+          - middle east market,sandstone building
+          - sunset skyline
+          - neon city
+          - ruined skyscraper
+        env:
+          - water reflection
+          - carved door,arabesque pattern
+          - neon haze
+          - hologram signs
+          - floating palace
+          - sandstorm
+        style:
+          - luxury vibe
+          - futuristic atmosphere
+          - grand scale
+      maldives_island_village:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/maldives_island_village/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg/maldives_island_village/env-bg__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg/maldives_island_village/env__}|}
+        "env-bg-main":
+          - maldives island village
+        "env-bg":
+          - tropical island
+          - stilt house,thatch roof
+          - atoll island
+          - wooden pier,wooden path
+          - gazebo,terrace
+          - overwater bungalow
+        env:
+          - turquoise water,clear water,shallow water
+          - resort
+          - coast
+          - beach
+          - palm tree,coconut tree
+          - reef fish
+          - tropical sky
+          - lantern light
+          - reflection
+          - curtain blowing
       neon_graffiti_wall:
         prompts:
           - >-
@@ -9725,186 +10044,51 @@
             (__lazy-wildcards/subject/env-bg/warning_tape/env__{0.3:::{1.2|1.3|1.4}|})
         env:
           - caution tape,warning tape,warning sign
-      # 台灣檳榔攤
-      # https://civitai.com/models/243085/retroneonbetelnutgirl?modelVersionId=287373
-      taiwanese_betel_nut_stand:
+      # 破碎灰泥牆 崩解的灰泥牆
+      "wall-crumbling-stucco":
         prompts:
           - >-
-            (__lazy-wildcards/subject/env-bg/taiwanese_betel_nut_stand/env-bg-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg/taiwanese_betel_nut_stand/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/taiwanese_betel_nut_stand/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-bg/taiwanese_betel_nut_stand/expressions__}|}{,{1-$$__lazy-wildcards/subject/env-bg/taiwanese_betel_nut_stand/action__}|}{,{1-$$__lazy-wildcards/subject/env-bg/taiwanese_betel_nut_stand/env-elem-food__}|}{,{1-$$__lazy-wildcards/subject/env-bg/taiwanese_betel_nut_stand/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/taiwanese_betel_nut_stand/style__}|}
+            (__lazy-wildcards/subject/env-bg/wall-crumbling-stucco/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg/wall-crumbling-stucco/action__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg/wall-crumbling-stucco/env-bg-wall__}|}{,{1-$$__lazy-wildcards/subject/env-bg/wall-crumbling-stucco/env__}|}{,{1-3$$__lazy-wildcards/subject/env-bg/wall-crumbling-stucco/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/wall-crumbling-stucco/style-elem__}|}{,{1-$$__lazy-wildcards/subject/env-bg/wall-crumbling-stucco/style__}|}
         "env-bg-main":
-          - >-
-            taiwanese betel nut stand,taiwanese betel nut shop,glass,BetelNutGirl
-        "env-bg":
-          - "__lazy-wildcards/subject/env-bg/corrugated_metal/prompts__"
-          - glass wall,glass booth
-          - "__lazy-wildcards/subject/env-bg/shipping_container_building/prompts__"
-          - stall,counter,convenience display
-        "costume-elem":
-          - heavy makeup,lipstick,long eyelashes
-          - bikini top
-          - miniskirt
-          - "see-through shirt"
-          - "__lazy-wildcards/subject/costume-nsfw/revealing_clothes/prompts__"
-        expressions:
-          - service smile
+          - crumbling stucco wall
+        "env-bg-wall":
+          - brick wall
+          - damaged stucco wall
+          - cracked stucco wall
         action:
           - sitting
-          - seductive pose
-        "env-elem-food":
-          - betel nut
+          - leaning against wall
+          - sits leaning against wall
+          - relaxed posture
+          - weary
         env:
-          - metal roof
-          - neon lights,neon sign,retro signage
-          - signboard,handwritten sign,price list
-          - night,urban night
-          - roadside
-          - wet pavement,neon reflection,after rain
-          - suburban,overhead wires,quiet street
-          - scooter,motorbike,street life
-          - signboard,lightbox,poster
+          - vines
+          - creeping vines
+          - wildflowers,colorful flowers,vibrant wildflowers
+          - overgrown
+          - dense foliage bursting through cracks
+        "env-bg":
+          - abandoned building
+          - neglected structure
+          - ruined structure
+          - old architecture
+          - "devastating post-apocalyptic battle"
+        "style-elem":
+          - weathered texture,rough texture
+          - rustic appearance
+          - nature reclaiming
+          - "post civilization,post-apocalypse"
+          - centuries later
+          - forgotten era
+          - urban decay
         style:
-          - teal and pink
-          - neon backlight,colored lighting
-          - retro,vintage signage
-          - old school aesthetic
-          - reflection,through glass,interior focus
-      # 明治時期日本的西化建築
-      japanese_western_fusion_meiji_style:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/env-bg/japanese_western_fusion_meiji_style/style-main__{,__lazy-wildcards/subject/env-bg/japanese_western_fusion_meiji_style/env-bg-real__|}{0.7::,{1-$$__lazy-wildcards/subject/env-bg/japanese_western_fusion_meiji_style/env-bg__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg/japanese_western_fusion_meiji_style/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/japanese_western_fusion_meiji_style/style__}|}
-        "style-main":
-          - japanese western fusion,meiji style,building with european and japanese elements,stone building
-        "env-bg-real":
-          - taiwan governor general office
-          - tokyo station
-          - national diet building
-          - imperial hotel
-        "env-bg":
-          - brick building
-          - clock tower
-          - building with red bricks and arched corridors
-          - arched corridors
-          - brick wall
-          - wooden western house
-          - balcony
-          - brick street
-          - garden,wooden porch,fence
-          - european architecture
-          - baroque architecture
-        env:
-          - pediment,decorative facade
-          - arched windows
-          - steeple,dome
-          - wooden window
-          - tiled roof,gabled roof
-          - historical cityscape
-          - stone stairs
-          - government building
-          - red brick,gray stone,natural color palette
-          - dark wood,wood texture
-          - western facade
-          - tram rails
-          - arcade
-        style:
-          - retro,historical,early modern era
-      # https://civitai.com/models/230964/middle-eastern-market-rug-stall
-      # https://civitai.com/models/169967/game-scenario-middle-east-region
-      middle_eastern_market:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/env-bg/middle_eastern_market/env-bg-main__,__lazy-wildcards/subject/env-bg/middle_eastern_market/env-bg-main-trigger-words__){,{1-$$__lazy-wildcards/subject/env-bg/middle_eastern_market/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/middle_eastern_market/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/middle_eastern_market/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/middle_eastern_market/env-elem-creatures__}|}{,{1-$$__lazy-wildcards/subject/env-bg/middle_eastern_market/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-bg/middle_eastern_market/style__}|}
-        "env-bg-main":
-          - >-
-            middle eastern market,middle eastern bazaar,middle eastern marketplace,Middle East region,arabian building
-        "env-bg-main-trigger-words":
-          - >-
-            souq,MiddleEastRugMarket,CXMIX,arabesque,middle eastern style,middle eastern scenery,arabtown
-        "env-bg":
-          - crowded_street
-          - colorful_stalls
-          - fruit_stand
-          - handicrafts_market
-          - arabesque_architecture,Architecture of Saudi Arabia
-          - stone_buildings
-          - narrow_alleyway
-          - street_vendor
-          - rug and fabric stall
-        env:
-          - hanging_fabric
-          - spice_display
-          - arched_doorways
-          - cloth_shade
-          - hanging_lanterns,arabian lanterns
-          - brick_pavement
-          - carrying_goods
-          - gold_jewelry_display
-        "env-elem-creatures":
-          - camel
-          - shoppers
-        "costume-elem":
-          - arabian traditional attire,middle eastern traditional attire
-        style:
-          - mosaic_design
-          - bartering_scene
-          - arabesque patterns,arabian patterns,middle eastern patterns
-      # https://civitai.com/models/2004368/arabian-town?modelVersionId=2268693
-      "middle_eastern-arabian_town":
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/env-bg/middle_eastern-arabian_town/env-bg-main__,__lazy-wildcards/subject/env-bg/middle_eastern_market/env-bg-main-trigger-words__){,{1-$$__lazy-wildcards/subject/env-bg/middle_eastern-arabian_town/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/middle_eastern-arabian_town/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-bg/middle_eastern-arabian_town/env__}|}
-        "env-bg-main":
-          - >-
-            arabian town,islamic architecture
-        "env-bg":
-          - arched doorway
-          - dome,onion dome
-          - minaret
-          - "flat roof house,adobe building,sun-dried bricks"
-          - narrow alley
-          - "__lazy-wildcards/subject/env-bg/middle_eastern_market/prompts__"
-          - fountain
-          - mosque
-        "costume-elem":
-          - kaftan
-          - jalabiya
-          - hijab
-          - veil
-          - turban
-          - keffiyeh
-        env:
-          - mashrabiya
-          - cobblestone street
-          - desert dust
-          - crescent moon
-          - glowing lantern,lantern light
-          - fantasy desert
-          - arabian nights
-      # 馬爾地夫島村
-      maldives_island_village:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/env-bg/maldives_island_village/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg/maldives_island_village/env-bg__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg/maldives_island_village/env__}|}
-        "env-bg-main":
-          - maldives island village
-        "env-bg":
-          - tropical island
-          - stilt house,thatch roof
-          - atoll island
-          - wooden pier,wooden path
-          - gazebo,terrace
-          - overwater bungalow
-        env:
-          - turquoise water,clear water,shallow water
-          - resort
-          - coast
-          - beach
-          - palm tree,coconut tree
-          - reef fish
-          - tropical sky
-          - lantern light
-          - reflection
-          - curtain blowing
+          - muted colors
+          - soft lighting
+          - overcast light
+          - natural light
+          - stillness
+          - cinematic composition
+          - quiet solitude
     env-elem-punk:
       holographic:
         prompts:
@@ -10712,6 +10896,73 @@
           - open roof
           - ceramic tile
           - decorative tile
+      # 撞球
+      # https://danbooru.donmai.us/posts?tags=billiards&z=5
+      billiards:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/billiards/env-elem-main__{0.3:::{1.2|1.3|1.4}|}){,__lazy-wildcards/subject/env-elem/billiards/env-elem-main__|}{,{1-$$__lazy-wildcards/subject/env-elem/billiards/env-elem__}|}{,{1-$$__lazy-wildcards/subject/env-elem/billiards/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/env-elem/billiards/action-main__}|}{,{1-2$$__lazy-wildcards/subject/env-elem/billiards/action__}|}{,{1-$$__lazy-wildcards/subject/env-elem/billiards/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-elem/billiards/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem/billiards/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-elem/billiards/style__}|}
+        "env-elem-main":
+          - billiards
+        "env-bg-main":
+          - pool table,billiards table,snooker table
+        "env-elem":
+          - billiard chalk
+          - >-
+            billiard ball{,8-ball|}
+          - green felt
+          - billiards pockets
+          - pool table light
+        "costume-weapon":
+          - cue stick
+          - holding cue stick
+          - holding ball
+          - cue stick vertical
+          - using cue as support
+        "action-main":
+          - sitting on table
+          - on table
+          - cueing
+          - precision pose
+          - leaning forward
+        action:
+          - teaching
+          - lying on table
+          - on back
+          - on side
+          - legs apart
+          - side lying
+          - horizontal pose
+        "costume-elem":
+          - playboy bunny
+          - thigh bow
+          - detached collar
+          - unworn clothes
+          - black pantyhose
+          - detached sleeves
+          - tank top
+          - gloves
+          - necktie
+          - vest
+          - belt
+          - necktie over shoulder
+          - shirt tucked in
+          - "__lazy-wildcards/subject/costume-elem/torn-clothes/prompts__"
+          - curvy pose
+        env:
+          - dartboard
+          - dart
+          - ceiling light
+          - metallic edge
+          - wooden frame
+        "env-bg":
+          - bar \(place\)
+          - pub interior
+        style:
+          - dim lighting
+          - spotlight
+          - glossy reflection
+          - soft shadows
       books:
         prompts:
           - >-
@@ -10914,7 +11165,7 @@
         env:
           - gorgeous_manhole_cover
           - decorative_manhole_cover
-      # https://danbooru.donmai.us/posts?tags=chinese_medicine_cabinet+&z=5
+      # https://danbooru.donmai.us/posts?tags=chinese_medicine_cabinet&z=5
       "chinese-medicine":
         prompts:
           - >-
@@ -11601,322 +11852,6 @@
           - hydrangea
           - winter daphne
           - allium \(flower\)
-      chair:
-        prompts:
-          - >-
-            {1-2$$__lazy-wildcards/subject/env-elem/chair/env-chair__}{,{1-$$__lazy-wildcards/subject/env-elem/chair/action-pose__}|}{,{1-$$__lazy-wildcards/subject/env-elem/chair/style__}|}
-        "env-chair":
-          - cushioned seats
-          - recliners
-          - luxurious seating
-          - theater seating
-          - armchair
-          - chair
-          - invisible chair
-          - pilot chair
-          - >-
-            {0.3::__mix-lazy-auto/color-anything__ |}{{1-2$$ and $$leather|velvet|wooden|rattan|wicker|stone|metal} |}{couch|sofa|chair}
-          - couch
-          - sofa
-          - discarded chairs
-          - beach_chair
-          - throne
-          - Recliner
-          - stool
-          - "__lazy-wildcards/subject/env-elem/chair-rattan/env-chair__"
-          - wheelchair
-        "action-pose":
-          - hand on own chin
-          - lying
-          - sitting
-        style:
-          - discarded
-          - modern chair
-          - >-
-            {1-$$__lazy-wildcards/subject/env-elem/chair-rattan/style__}
-      # 藤製椅
-      # 🖐Wicker 是一種古老的編織技術，以前主要使用自然的材質，例如：柳樹、燈心草、竹子、棕梠科的樹，等等，會把植物弄濕以便於編織，現代也會有人用人造纖維來做，因此 wicker furniture 指的是用此種技術編織出來的家具。
-      # 🌲Rattan 是指一種棕梠科的省藤亞科中有爬藤的棕梠樹，所以 rattan furniture指的是用 rattan編製的家具
-      # Rattan 的材質較硬，做出來的東西用途較多樣性，較耐用，但自然材質所做的 rattan furniture 放在戶外會因為日曬，時間久了會退色，因此比較適合放在室內。
-      # Wicker 的材質比較沒那麼硬，壽命較短，但因為能被上各種不同的顏色，放在室外比較不會有退色的問題。
-      # https://www.facebook.com/EnglishRealmTutor/posts/%E4%B8%AD%E6%96%87%E6%89%80%E8%AC%9B%E7%9A%84%E8%97%A4%E6%A4%85%E8%8B%B1%E6%96%87%E6%9C%89wicker-chair-%E5%92%8C-rattan-chair%E5%85%A9%E7%A8%AE%E6%9C%89%E4%BA%9B%E4%BA%BA%E4%BB%A5%E7%82%BA%E9%82%A3%E4%BA%9B%E9%83%BD%E4%B8%80%E6%A8%A3%E6%98%AF%E8%97%A4%E6%A4%85%E5%85%B6%E5%AF%A6-wicker-%E8%88%87-rattan-%E6%8C%87%E6%98%AF%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8B%E7%89%A9%E9%82%A3%E6%88%91/453816298616530/
-      # https://civitai.com/models/377816/rattan-chair
-      "chair-rattan":
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/env-elem/chair-rattan/env-chair__{,{1-$$__lazy-wildcards/subject/env-elem/chair-rattan/env__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem/chair/action-pose__}|}{,{1-$$__lazy-wildcards/subject/env-elem/chair-rattan/style__}|}
-        "env-chair":
-          - rattan chair,wicker chair
-        env:
-          # 孔雀椅
-          - peacock chair
-          - rattan furniture
-          - wicker furniture
-          - "__mix-lazy-auto/color-anything__ chair"
-        style:
-          - discarded
-          - "__lazy-wildcards/utils/fn/made-of-inspired(v=rattan)__"
-          - "__lazy-wildcards/utils/fn/made-of-inspired(v=wicker)__"
-      "chair-plastic":
-        prompts:
-          - plastic chair
-      # https://civitai.com/models/102487/sitting-on-throne-the-gooder
-      # https://civitai.com/models/85582/better-thrones
-      # https://civitai.com/models/456362/xuer-iron-throne
-      # https://civitai.com/models/554005/jay-white-petals-throne
-      "chair-throne":
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/env-elem/chair-throne/env-chair-main__{,{1-3$$__lazy-wildcards/subject/env-elem/chair-throne/env-chair-1__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-3$$__lazy-wildcards/subject/env-elem/chair-throne/env-chair-2__}|}{,{1-$$__lazy-wildcards/subject/env-elem/chair-throne/costume-elem__}|}{,{1-3$$__lazy-wildcards/subject/env-elem/chair-throne/action__}|}{,{1-$$__lazy-wildcards/subject/env-elem/chair-throne/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/env-elem/chair-throne/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-elem/chair-throne/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem/chair-throne/style__}|}
-        "env-chair-main":
-          - throne
-        "env-chair-1":
-          - gold throne
-          - stone throne
-          - tatami throne
-          - dragon throne
-          - bone throne
-          - crystal throne
-          - nature throne,vines,entangled vines
-          - metallic throne,iron throne,xuer Iron Throne
-        "env-chair-2":
-          - royal throne
-          - ornate throne
-          - gothic throne
-          - imperial throne,jade
-          - divine throne
-          - floating throne
-          - flaming throne
-          - sword throne,weapon
-          - white petals throne
-        "costume-elem":
-          - crown
-          - royal robe
-          - jeweled crown
-          - halo
-        action:
-          - sitting on throne
-          - regal pose
-          - looking down
-          - dominant pose
-          - lying on throne
-          - leaning on throne
-          - reclining on throne
-          - sleeping on throne
-        "costume-weapon":
-          - holding scepter
-          - scepter
-        "env-bg":
-          - castle hall
-          - palace hall
-        env:
-          - torchlight
-          - velvet cushion
-          - red drapery
-          - lion armrest
-          - samurai crest
-          - skull decoration
-          - glowing rune
-          - blossom flowers
-          - holographic projection
-          - energy core
-          - chandelier
-          - fallen banners
-          - armrest
-        style:
-          - regal,majestic
-          - ornate carving
-          - ominous glow
-          - holy light
-      # 棺材
-      coffin:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-elem/coffin/env-main__{,{1-$$__lazy-wildcards/subject/env-elem/coffin/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem/coffin/action__}|}{,{1-$$__lazy-wildcards/subject/env-elem/coffin/style__}|}
-        "env-main":
-          - coffin
-        env:
-          - open_coffin
-          - vampire_coffin
-          - ancient_coffin
-        action:
-          - lying inside coffin
-          - lying
-        style:
-          - funeral_scene
-          - gothic_style
-          - burial_ritual
-      # 曬衣架
-      drying_rack:
-        prompts:
-          - drying rack
-      bed:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/env-elem/bed/env-bg-main__{,{1-2$$__lazy-wildcards/subject/env-elem/bed/env-bg__}|}{,__lazy-wildcards/subject/env-elem/bed/env-bg-bed-size__|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem/bed/env__}|}
-        "env-bg-main":
-          - bed
-        "env-bg":
-          # 雙層床
-          - bunk bed
-          # 天篷床
-          - canopy bed
-          - princess bed
-          - futon,tatami,folded bedding on tatami
-          - floating bed
-          - round bed
-          - tent bed
-          - folding bed,sofa bed
-        "env-bg-bed-size":
-          - single bed
-          - double bed
-          - king size bed
-          - queen size bed
-        env:
-          # 床架
-          - bed frame
-          # 床墊
-          - mattress
-          # 彈簧床墊
-          - box spring
-          - curtains,lace fabric
-          - "sci-fi bed"
-          - wooden bed
-          - "__lazy-wildcards/utils/color-base__ bed"
-          - "__lazy-wildcards/subject/env-elem/bed-sheet/prompts__"
-          - pillow
-          - "__lazy-wildcards/utils/color-base__ pillow"
-      "bed-sheet":
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/env-elem/bed-sheet/env-elem-main__{,{1-$$__lazy-wildcards/subject/env-elem/bed-sheet/env-elem__}|}{0.3:::{1.2|1.3|1.4}|})
-        "env-elem-main":
-          - bed sheet,sheet
-        "env-elem":
-          - comforter
-          - duvet
-          - quilt
-          - top sheet
-          - flat sheet
-          - fitted sheet
-          - "__lazy-wildcards/utils/color-base__ sheet"
-          - "see-through sheet"
-          - lace sheet
-          - silk sheet
-          - satin sheet
-      # 吊床
-      "bed-hammock":
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/env-elem/bed-hammock/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
-        "prompts-no-weight":
-          - >-
-            {1-$$__lazy-wildcards/subject/env-elem/bed-hammock/env-main__}{,{1-$$__lazy-wildcards/subject/env-elem/bed-hammock/env__}|}
-        "env-main":
-          - hammock
-          - indoor hammock
-          - jungle hammock,nylon fabric
-          - hammock with stand
-          - rope swing hammock
-          - hammock tent
-        env:
-          - tied rope
-          - "__lazy-wildcards/utils/color-base__ hammock"
-          - "see-through hammock"
-          - handmade wood hammock
-          - tufted hammock
-          - luxury boho hammock
-      # 吊椅型吊床 / 繩網椅
-      "chair-hammock":
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/env-elem/chair-hammock/env-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem/chair-hammock/env__}|},__lazy-wildcards/subject/env-elem/bed-hammock/prompts-no-weight__
-        "env-main":
-          - hammock chair,macrame swing chair
-        env:
-          - hanging furniture
-          - rope woven chair
-      air_conditioner:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/env-elem/air_conditioner/env-elem-main__{,{1-2$$__lazy-wildcards/subject/env-elem/air_conditioner/env-elem__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem/air_conditioner/env__}|}
-        "env-elem-main":
-          - air conditioner
-        "env-elem":
-          - "wall-mounted air conditioner"
-          - window air conditioner
-          - portable air conditioner
-          - split system air conditioner
-          - ducted air conditioning
-          - "ceiling-mounted air conditioner"
-          - central air conditioning
-          - air conditioning unit
-        env:
-          - air vent
-          - ceiling vent
-          - fan
-          - electric wires
-      "fireplace-fireplace":
-        prompts:
-          - >-
-            {1-$$__lazy-wildcards/subject/env-elem/fireplace-fireplace/env__}
-        env:
-          - fireplace
-          - outdoor fireplace
-          - stove
-          - "wood-burning stove"
-      "fireplace-brazier":
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-elem/fireplace-brazier/env-elem-main__{,{1-$$__lazy-wildcards/subject/env-elem/fireplace-brazier/env-elem-subtype__}|}{0.3::,{1-2$$__lazy-wildcards/subject/env-elem/fireplace-brazier/env-elem-texture__}|}{,{1-$$__lazy-wildcards/subject/env-elem/fireplace-brazier/env__}|}
-        "env-elem-main":
-          - brazier
-        "env-elem-subtype":
-          - round brazier
-          - portable brazier
-          - ornate brazier
-          - rusted brazier
-        "env-elem-texture":
-          - stone brazier
-          - bronze brazier
-        env:
-          - firewood
-          - smoke
-          - heat
-          - sparks
-          - "__lazy-wildcards/subject/env-moment/weather-fire/prompts__"
-      # 地毯
-      carpet:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/env-elem/carpet/env-bg-main__{,__lazy-wildcards/subject/env-elem/carpet/env-elem-main__|}{,{1-$$__lazy-wildcards/subject/env-elem/carpet/env-elem__}|}){,{1-$$__lazy-wildcards/subject/env-elem/carpet/action__}|}{,{1-$$__lazy-wildcards/subject/env-elem/carpet/style__}|}
-        "env-bg-main":
-          - carpet
-        "env-elem-main":
-          - wool carpet
-          - silk carpet
-          - woven rug
-          - handmade rug
-        "env-elem":
-          - flying carpet
-          - worn carpet
-          - torn carpet,frayed carpet
-          - magic carpet
-          - checkered carpet
-          - fringe carpet
-          - red carpet
-          - persian rug
-          - doormat
-        action:
-          - barefoot on carpet
-          - sitting on rug
-        style:
-          - arabesque
-          - geometric pattern
-          - floral pattern
-          - mandala
-          - folk style
-          - layered
       mud:
         prompts:
           - >-
@@ -12998,6 +12933,423 @@
           - cyan,glow
           - backlighting
           - atmospheric perspective
+      chair:
+        prompts:
+          - >-
+            {1-2$$__lazy-wildcards/subject/env-elem/chair/env-chair__}{,{1-$$__lazy-wildcards/subject/env-elem/chair/action-pose__}|}{,{1-$$__lazy-wildcards/subject/env-elem/chair/style__}|}
+        "env-chair":
+          - cushioned seats
+          - recliners
+          - luxurious seating
+          - theater seating
+          - armchair
+          - chair
+          - invisible chair
+          - pilot chair
+          - >-
+            {0.3::__mix-lazy-auto/color-anything__ |}{{1-2$$ and $$leather|velvet|wooden|rattan|wicker|stone|metal} |}{couch|sofa|chair}
+          - couch
+          - sofa
+          - discarded chairs
+          - beach_chair
+          - throne
+          - Recliner
+          - stool
+          - "__lazy-wildcards/subject/env-elem/chair-rattan/env-chair__"
+          - wheelchair
+        "action-pose":
+          - hand on own chin
+          - lying
+          - sitting
+        style:
+          - discarded
+          - modern chair
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/chair-rattan/style__}
+      # 藤製椅
+      # 🖐Wicker 是一種古老的編織技術，以前主要使用自然的材質，例如：柳樹、燈心草、竹子、棕梠科的樹，等等，會把植物弄濕以便於編織，現代也會有人用人造纖維來做，因此 wicker furniture 指的是用此種技術編織出來的家具。
+      # 🌲Rattan 是指一種棕梠科的省藤亞科中有爬藤的棕梠樹，所以 rattan furniture指的是用 rattan編製的家具
+      # Rattan 的材質較硬，做出來的東西用途較多樣性，較耐用，但自然材質所做的 rattan furniture 放在戶外會因為日曬，時間久了會退色，因此比較適合放在室內。
+      # Wicker 的材質比較沒那麼硬，壽命較短，但因為能被上各種不同的顏色，放在室外比較不會有退色的問題。
+      # https://www.facebook.com/EnglishRealmTutor/posts/%E4%B8%AD%E6%96%87%E6%89%80%E8%AC%9B%E7%9A%84%E8%97%A4%E6%A4%85%E8%8B%B1%E6%96%87%E6%9C%89wicker-chair-%E5%92%8C-rattan-chair%E5%85%A9%E7%A8%AE%E6%9C%89%E4%BA%9B%E4%BA%BA%E4%BB%A5%E7%82%BA%E9%82%A3%E4%BA%9B%E9%83%BD%E4%B8%80%E6%A8%A3%E6%98%AF%E8%97%A4%E6%A4%85%E5%85%B6%E5%AF%A6-wicker-%E8%88%87-rattan-%E6%8C%87%E6%98%AF%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8B%E7%89%A9%E9%82%A3%E6%88%91/453816298616530/
+      # https://civitai.com/models/377816/rattan-chair
+      "chair-rattan":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/chair-rattan/env-chair__{,{1-$$__lazy-wildcards/subject/env-elem/chair-rattan/env__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem/chair/action-pose__}|}{,{1-$$__lazy-wildcards/subject/env-elem/chair-rattan/style__}|}
+        "env-chair":
+          - rattan chair,wicker chair
+        env:
+          # 孔雀椅
+          - peacock chair
+          - rattan furniture
+          - wicker furniture
+          - "__mix-lazy-auto/color-anything__ chair"
+        style:
+          - discarded
+          - "__lazy-wildcards/utils/fn/made-of-inspired(v=rattan)__"
+          - "__lazy-wildcards/utils/fn/made-of-inspired(v=wicker)__"
+      "chair-plastic":
+        prompts:
+          - plastic chair
+      # https://civitai.com/models/102487/sitting-on-throne-the-gooder
+      # https://civitai.com/models/85582/better-thrones
+      # https://civitai.com/models/456362/xuer-iron-throne
+      # https://civitai.com/models/554005/jay-white-petals-throne
+      "chair-throne":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/chair-throne/env-chair-main__{,{1-3$$__lazy-wildcards/subject/env-elem/chair-throne/env-chair-1__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-3$$__lazy-wildcards/subject/env-elem/chair-throne/env-chair-2__}|}{,{1-$$__lazy-wildcards/subject/env-elem/chair-throne/costume-elem__}|}{,{1-3$$__lazy-wildcards/subject/env-elem/chair-throne/action__}|}{,{1-$$__lazy-wildcards/subject/env-elem/chair-throne/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/env-elem/chair-throne/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-elem/chair-throne/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem/chair-throne/style__}|}
+        "env-chair-main":
+          - throne
+        "env-chair-1":
+          - gold throne
+          - stone throne
+          - tatami throne
+          - dragon throne
+          - bone throne
+          - crystal throne
+          - nature throne,vines,entangled vines
+          - metallic throne,iron throne,xuer Iron Throne
+        "env-chair-2":
+          - royal throne
+          - ornate throne
+          - gothic throne
+          - imperial throne,jade
+          - divine throne
+          - floating throne
+          - flaming throne
+          - sword throne,weapon
+          - white petals throne
+        "costume-elem":
+          - crown
+          - royal robe
+          - jeweled crown
+          - halo
+        action:
+          - sitting on throne
+          - regal pose
+          - looking down
+          - dominant pose
+          - lying on throne
+          - leaning on throne
+          - reclining on throne
+          - sleeping on throne
+        "costume-weapon":
+          - holding scepter
+          - scepter
+        "env-bg":
+          - castle hall
+          - palace hall
+        env:
+          - torchlight
+          - velvet cushion
+          - red drapery
+          - lion armrest
+          - samurai crest
+          - skull decoration
+          - glowing rune
+          - blossom flowers
+          - holographic projection
+          - energy core
+          - chandelier
+          - fallen banners
+          - armrest
+        style:
+          - regal,majestic
+          - ornate carving
+          - ominous glow
+          - holy light
+      # 棺材
+      coffin:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/coffin/env-main__{,{1-$$__lazy-wildcards/subject/env-elem/coffin/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem/coffin/action__}|}{,{1-$$__lazy-wildcards/subject/env-elem/coffin/style__}|}
+        "env-main":
+          - coffin
+        env:
+          - open_coffin
+          - vampire_coffin
+          - ancient_coffin
+        action:
+          - lying inside coffin
+          - lying
+        style:
+          - funeral_scene
+          - gothic_style
+          - burial_ritual
+      # 曬衣架
+      drying_rack:
+        prompts:
+          - drying rack
+      bed:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/bed/env-bg-main__{,{1-2$$__lazy-wildcards/subject/env-elem/bed/env-bg__}|}{,__lazy-wildcards/subject/env-elem/bed/env-bg-bed-size__|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem/bed/env__}|}
+        "env-bg-main":
+          - bed
+        "env-bg":
+          # 雙層床
+          - bunk bed
+          # 天篷床
+          - canopy bed
+          - princess bed
+          - futon,tatami,folded bedding on tatami
+          - floating bed
+          - round bed
+          - tent bed
+          - folding bed,sofa bed
+        "env-bg-bed-size":
+          - single bed
+          - double bed
+          - king size bed
+          - queen size bed
+        env:
+          # 床架
+          - bed frame
+          # 床墊
+          - mattress
+          # 彈簧床墊
+          - box spring
+          - curtains,lace fabric
+          - "sci-fi bed"
+          - wooden bed
+          - "__lazy-wildcards/utils/color-base__ bed"
+          - "__lazy-wildcards/subject/env-elem/bed-sheet/prompts__"
+          - pillow
+          - "__lazy-wildcards/utils/color-base__ pillow"
+      "bed-sheet":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/bed-sheet/env-elem-main__{,{1-$$__lazy-wildcards/subject/env-elem/bed-sheet/env-elem__}|}{0.3:::{1.2|1.3|1.4}|})
+        "env-elem-main":
+          - bed sheet,sheet
+        "env-elem":
+          - comforter
+          - duvet
+          - quilt
+          - top sheet
+          - flat sheet
+          - fitted sheet
+          - "__lazy-wildcards/utils/color-base__ sheet"
+          - "see-through sheet"
+          - lace sheet
+          - silk sheet
+          - satin sheet
+      # 吊床
+      "bed-hammock":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/bed-hammock/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/bed-hammock/env-main__}{,{1-$$__lazy-wildcards/subject/env-elem/bed-hammock/env__}|}
+        "env-main":
+          - hammock
+          - indoor hammock
+          - jungle hammock,nylon fabric
+          - hammock with stand
+          - rope swing hammock
+          - hammock tent
+        env:
+          - tied rope
+          - "__lazy-wildcards/utils/color-base__ hammock"
+          - "see-through hammock"
+          - handmade wood hammock
+          - tufted hammock
+          - luxury boho hammock
+      # 吊椅型吊床 / 繩網椅
+      "chair-hammock":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/chair-hammock/env-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem/chair-hammock/env__}|},__lazy-wildcards/subject/env-elem/bed-hammock/prompts-no-weight__
+        "env-main":
+          - hammock chair,macrame swing chair
+        env:
+          - hanging furniture
+          - rope woven chair
+      air_conditioner:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/air_conditioner/env-elem-main__{,{1-2$$__lazy-wildcards/subject/env-elem/air_conditioner/env-elem__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem/air_conditioner/env__}|}
+        "env-elem-main":
+          - air conditioner
+        "env-elem":
+          - "wall-mounted air conditioner"
+          - window air conditioner
+          - portable air conditioner
+          - split system air conditioner
+          - ducted air conditioning
+          - "ceiling-mounted air conditioner"
+          - central air conditioning
+          - air conditioning unit
+        env:
+          - air vent
+          - ceiling vent
+          - fan
+          - electric wires
+      "fireplace-fireplace":
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem/fireplace-fireplace/env__}
+        env:
+          - fireplace
+          - outdoor fireplace
+          - stove
+          - "wood-burning stove"
+      "fireplace-brazier":
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/fireplace-brazier/env-elem-main__{,{1-$$__lazy-wildcards/subject/env-elem/fireplace-brazier/env-elem-subtype__}|}{0.3::,{1-2$$__lazy-wildcards/subject/env-elem/fireplace-brazier/env-elem-texture__}|}{,{1-$$__lazy-wildcards/subject/env-elem/fireplace-brazier/env__}|}
+        "env-elem-main":
+          - brazier
+        "env-elem-subtype":
+          - round brazier
+          - portable brazier
+          - ornate brazier
+          - rusted brazier
+        "env-elem-texture":
+          - stone brazier
+          - bronze brazier
+        env:
+          - firewood
+          - smoke
+          - heat
+          - sparks
+          - "__lazy-wildcards/subject/env-moment/weather-fire/prompts__"
+      # 地毯
+      carpet:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/carpet/env-bg-main__{,__lazy-wildcards/subject/env-elem/carpet/env-elem-main__|}{,{1-$$__lazy-wildcards/subject/env-elem/carpet/env-elem__}|}){,{1-$$__lazy-wildcards/subject/env-elem/carpet/action__}|}{,{1-$$__lazy-wildcards/subject/env-elem/carpet/style__}|}
+        "env-bg-main":
+          - carpet
+        "env-elem-main":
+          - wool carpet
+          - silk carpet
+          - woven rug
+          - handmade rug
+        "env-elem":
+          - flying carpet
+          - worn carpet
+          - torn carpet,frayed carpet
+          - magic carpet
+          - checkered carpet
+          - fringe carpet
+          - red carpet
+          - persian rug
+          - doormat
+        action:
+          - barefoot on carpet
+          - sitting on rug
+        style:
+          - arabesque
+          - geometric pattern
+          - floral pattern
+          - mandala
+          - folk style
+          - layered
+      refrigerator:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/refrigerator/env-elem-main__{,{1-2$$__lazy-wildcards/subject/env-elem/refrigerator/env-elem__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem/refrigerator/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem/refrigerator/env-bg__}|}
+        "env-elem-main":
+          - refrigerator,fridge
+        "env-elem":
+          - mini fridge
+          - vintage refrigerator
+          - retro refrigerator
+          - industrial refrigerator
+        env:
+          - stainless steel refrigerator
+          - door handle
+        "env-bg":
+          - kitchen background
+          - night kitchen background
+      # https://civitai.com/models/298832/girl-like-refrigerator
+      "refrigerator-opened":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/refrigerator-opened/env-elem-main__{0.3:::{1.2|1.3|1.4}|}){,{1-2$$__lazy-wildcards/subject/env-elem/refrigerator-opened/env-elem__}|}{0.3::,{1-2$$__lazy-wildcards/subject/env-elem/refrigerator/env-elem__}|}{,{1-$$__lazy-wildcards/subject/env-elem/refrigerator-opened/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem/refrigerator-opened/env-elem-food__}|}{,{1-$$__lazy-wildcards/subject/env-elem/refrigerator-opened/style__}|}{0.3::,{1-$$__lazy-wildcards/subject/env-elem/refrigerator/env-bg__}|}
+        "env-elem-main":
+          - opened refrigerator,open fridge
+        "env-elem":
+          - stocked refrigerator
+          - messy refrigerator
+          - empty refrigerator
+        env:
+          - ice trays
+          - refrigerator light,fridge light
+          - shelves
+          - cold mist
+          - transparent shelves
+          - ice crystals
+        "env-elem-food":
+          - beverage bottles
+          - food items
+          - bottles
+          - milk carton
+          - vegetables,fruits
+          - egg tray
+          - butter compartment
+          - leftovers
+          - plastic containers
+        style:
+          - dramatic cold lighting
+          - colorfully neon lights
+      # 外出攜帶式冰箱
+      "refrigerator-portable-cooler":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/refrigerator-portable-cooler/env-elem-main__{,{1-2$$__lazy-wildcards/subject/env-elem/refrigerator-portable-cooler/env-elem__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem/refrigerator-portable-cooler/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem/refrigerator-portable-cooler/env-elem-food__}|}
+        "env-elem-main":
+          - portable cooler,cooler box
+        "env-elem":
+          - ice chest
+          - picnic cooler
+          - "soft-sided cooler"
+          - plastic cooler
+          - outdoor icebox
+          - beach cooler
+        env:
+          - ice packs
+          - insulated lining
+          - carrying handle
+        "env-elem-food":
+          - ice cubes
+          - soda can
+      kitchen_counter:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/kitchen_counter/env-bg-main__{,__lazy-wildcards/subject/env-elem/kitchen_counter/action__|}{,__lazy-wildcards/subject/env-elem/kitchen_counter/action-pose-legs__|}{,{1-3$$__lazy-wildcards/subject/env-elem/kitchen_counter/action-pose__}|}{,{1-$$__lazy-wildcards/subject/env-elem/kitchen_counter/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-elem/kitchen_counter/style__}|}
+        "env-bg-main":
+          - kitchen counter
+        action:
+          - sitting on kitchen counter
+          - laying on kitchen counter
+          - side lying
+          - lying down
+          - prone position on kitchen counter,prone position
+        "action-pose-legs":
+          - dangling legs
+          - crossed legs
+          - legs spread
+          - hugging knees
+          - bent legs
+        "action-pose":
+          - leaning back
+          - casual pose
+          - arm pillow
+          - cheek on table
+          - tired pose
+          - stretching arms
+          - kneeling
+          - tiptoes
+          - reaching up
+        "env-bg":
+          - kitchen interior
+        style:
+          - feet not in view
       # 落地窗
       "floor-to-ceiling_window":
         prompts:
@@ -13592,6 +13944,8 @@
           - "__lazy-wildcards/subject/env-moment/weather-mist-perfume/prompts__"
           - "__lazy-wildcards/subject/env-moment/weather-mist-hot/prompts__"
           - "__lazy-wildcards/subject/env-moment/weather-mist-tea/prompts__"
+          - cold mist
+          - atmospheric haze
         env:
           - beautiful mist
       "weather-mist-hot":
@@ -13941,18 +14295,22 @@
           - clear sky
           - colorful sky
           - vibrant sky
+          - heavenly light
+          - god rays
+          - sun rays
     env-elem-civilization:
       # https://civitai.com/models/323881/stone-age-style-by-dever-sdxl
       # https://civitai.com/models/1640606/prehistoric-waterfall-illu
       # https://civitai.com/models/2030170/prehistoric-cave
       # https://civitai.com/models/51539/stonepunkai-konyconi
+      # https://civitai.com/models/199993?modelVersionId=270205
       "age-stone":
         prompts:
           - >-
             (__lazy-wildcards/subject/env-elem-civilization/age-stone/style-main__{,{1-$$__lazy-wildcards/subject/env-elem-civilization/age-stone/env-elem__}|}{0.3:::{1.2|1.3|1.4}|}){0.5::,{1-2$$__lazy-wildcards/subject/env-elem-civilization/age-stone/env-bg__}|}{,{1-3$$__lazy-wildcards/subject/env-elem-civilization/age-stone/env-elem-creatures__}|}{,{1-3$$__lazy-wildcards/subject/env-elem-civilization/age-stone/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/age-stone/env-elem-food__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/age-stone/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem-civilization/age-stone/style__}|}
         "style-main":
           - >-
-            stone age,prehistoric stone age,prehistoric,stone age world,prehistoric environment,__lazy-wildcards/utils/fn/style-inspired(v=stone-age)__,dvr-stnd,StoneAgeCh,StoneAgeChEro,stone-age h0us3,cretaceous period,stonepunkAI
+            stone age,prehistoric stone age,prehistoric,stone age world,prehistoric environment,__lazy-wildcards/utils/fn/style-inspired(v=stone-age)__,dvr-stnd,StoneAgeCh,StoneAgeChEro,stone-age h0us3,cretaceous period,stonepunkAI,StoneFashion,made of rocks and stone
         "env-elem":
           - "__lazy-wildcards/utils/fn/made-of(v=stone-age)__"
         "env-bg":
@@ -13985,7 +14343,7 @@
           - clam shell
           - spines
           - tiger pelt
-          # https://danbooru.donmai.us/posts?tags=tribal_carry+&z=5
+          # https://danbooru.donmai.us/posts?tags=tribal_carry&z=5
           - tribal carry
           - bone craft
         style:
@@ -15314,7 +15672,7 @@
             {indoors,from outside looking in|outdoors,from inside looking out}
       # 拍貼機
       # https://civitai.com/models/1206104/girl-like-purikura-inside?modelVersionId=1358279
-      # https://danbooru.donmai.us/posts?tags=purikura+&z=5
+      # https://danbooru.donmai.us/posts?tags=purikura&z=5
       purikura_booth_interior:
         prompts:
           - >-
@@ -16854,7 +17212,7 @@
       backhoe_loader:
         prompts:
           - backhoe_loader
-      # https://danbooru.donmai.us/posts?tags=front-end_loader+&z=5
+      # https://danbooru.donmai.us/posts?tags=front-end_loader&z=5
       "front-end_loader":
         prompts:
           - >-
@@ -19361,7 +19719,7 @@
             wearing a {1-$$ made of clouds,wearing a $$bra|necklace|hair ornament|shield|helmet|mask|pantyhose|thighhighs|shirt|pants|dress|skirt|sleeves|bodysuit|cape|shorts|jeans|leotard|legwear|camisole|clothes} made of clouds
           - >-
             wearing a {1-$$ made of thunder clouds,wearing a $$bra|necklace|hair ornament|shield|helmet|mask|pantyhose|thighhighs|shirt|pants|dress|skirt|sleeves|bodysuit|cape|shorts|jeans|leotard|legwear|camisole|clothes} made of thunder clouds
-      # https://danbooru.donmai.us/posts?tags=tucked_money+&z=5
+      # https://danbooru.donmai.us/posts?tags=tucked_money&z=5
       # https://civitai.com/models/83077/tucked-money-concept-lora
       # https://civitai.com/models/246334/money-thong
       tucked_money:
@@ -21375,7 +21733,7 @@
         "costume-elem":
           - shorts,microshorts
           - thong,thigh strap
-      # https://danbooru.donmai.us/posts?tags=camouflage_jacket+&z=5
+      # https://danbooru.donmai.us/posts?tags=camouflage_jacket&z=5
       # 迷彩
       camouflage:
         prompts:
@@ -21688,7 +22046,7 @@
           - pastel yellow blue pink
           - |-
             pastel {1-3$$,pastel $$__lazy-wildcards/utils/color-base__}
-      # https://danbooru.donmai.us/posts?tags=oversized_shirt+&z=5
+      # https://danbooru.donmai.us/posts?tags=oversized_shirt&z=5
       # https://civitai.com/models/126634/boyfriend-shirt
       oversized_shirt:
         prompts:
@@ -25650,6 +26008,57 @@
           - blue green eyeshadow
           - cobra ornament
           - forehead ornament
+      # https://danbooru.donmai.us/wiki_pages/bag_over_head?z=2
+      #
+      # https://civitai.com/models/1695510/bag-over-head-lessillgreater
+      # https://civitai.com/models/922087/paper-bag-over-head
+      # https://civitai.com/models/114624/paper-bag-on-head
+      # https://civitai.com/models/444663/paper-bag-over-head-xl-nsfw
+      # https://civitai.com/models/725878/pbag-paper-bag-on-head
+      paper_bag_over_head:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-headwear/paper_bag_over_head/costume-headwear-main__{0.3:::{1.2|1.3|1.4|1.6}|}),{1-$$__lazy-wildcards/subject/costume-headwear/paper_bag_over_head/costume-headwear-elem__}{,{1-$$__lazy-wildcards/subject/costume-headwear/paper_bag_over_head/costume-headwear__}|}{,{1-$$__lazy-wildcards/subject/costume-headwear/paper_bag_over_head/action__}|}{,{1-$$__lazy-wildcards/subject/costume-headwear/paper_bag_over_head/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-headwear/paper_bag_over_head/env__}|}{,{1-$$__lazy-wildcards/subject/costume-headwear/paper_bag_over_head/style__}|}
+        "costume-headwear-main":
+          - >-
+            paper bag over head,bag over head,p4pb4g,paperbag,pbag
+        "costume-headwear-elem":
+          - hidden face,faceless
+          - eye holes
+          - drawn face
+        "costume-headwear":
+          - brown paper bag over head
+          - wrinkled paper bag over head
+          - torn edges
+          - dirty paper bag over head,stained paper bag over head
+          - paper bag on head
+        action:
+          - head tilt
+          - sitting
+          - head down
+          - slouched posture
+          - knees to chest
+          - curled up
+        "costume-elem":
+          - casual clothing
+        env:
+          - empty room
+          - plain wall
+        style:
+          - emotional masking
+          - loss of identity,identity erased
+          - social commentary
+          - quirky visual motive
+          - surreal
+          - anonymity
+          - studio lighting
+          - melancholic
+          - detached
+          - absurd
+          - low light
+          - psychological horror
+          - cute contrast
+          - ironic
     costume-nsfw:
       # https://civitai.com/models/141250/fanny-packing-meat-shield-onarmor-or-concept?modelVersionId=156583
       # https://danbooru.donmai.us/posts?page=1&tags=meat_armor
@@ -28816,6 +29225,46 @@
         style:
           - >-
             ${v=bat}__lazy-wildcards/utils/fn/pattern__
+      spectral:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-race/spectral/costume-ethnicity-race__{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/spectral/costume-ethnicity__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/spectral/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/spectral/env__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/spectral/style__}|}
+        "costume-ethnicity-race":
+          - spectral female
+        "costume-ethnicity":
+          - undead female knight
+          - ghostly body
+          - skeleton
+          - transparent body
+          - skull face
+        "costume-elem":
+          - tattered armor
+          - transparent armor
+          - visible bones
+          - pale skin
+          - glowing eyes
+          - floating hair
+          - decay marks
+          - tattered cape
+          - dark halo
+        env:
+          - ghostly aura
+          - spectral aura,spectral smoke
+          - blue flame
+          - cursed aura
+          - ethereal edges
+          - chains
+          - fog
+          - floating rocks
+          - purple mist
+        style:
+          - spectral green
+          - cold light
+          - dark violet
+          - ice blue
+          - haunted atmosphere
+          - dark fantasy
+          - ominous mood
       moth_girl:
         prompts:
           - >-
@@ -28940,452 +29389,6 @@
           - eye split
         env:
           - blood
-    costume-elem-expressions:
-      # 恍惚のヤンデレポーズ
-      # https://danbooru.donmai.us/wiki_pages/yandere_trance?z=2
-      # https://civitai.com/search/models?sortBy=models_v9&query=yandere
-      #
-      # https://civitai.com/models/127754/yandere-trance-or-goofy-ai
-      yandere_trance:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/yandere_trance/expressions__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/yandere_trance/action-pose__}|}{0.3:::{1.2|1.3|1.4|1.6}|:1.3}),__lazy-wildcards/subject/costume-elem-expressions/yandere/prompts__
-        expressions:
-          - >-
-            yandere trance
-        "action-pose":
-          - hands on own face
-          - hands on own cheeks
-      # https://civitai.com/models/56918/yandere
-      yandere:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/yandere/expressions-main__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/yandere/expressions__}|}{0.3:::{1.2|1.3|1.4|1.6}|}){,{1-3$$__lazy-wildcards/subject/costume-elem-expressions/yandere/expressions-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/yandere/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/yandere/costume-weapon__}|}{,{1-3$$__lazy-wildcards/subject/costume-elem-expressions/yandere/action__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/yandere/style__}|}
-        "expressions-main":
-          - >-
-            yandere
-        expressions:
-          - creepy smile
-          - yandere eyes,dilated pupils,staring
-          - distorted smile
-          - "heart-shaped pupils"
-          - heavy breathing,visible breath
-          - blush
-        "expressions-elem":
-          - teary eyes
-          - blush while crying
-          - grin
-          - biting lip
-          - tongue out
-          - laughing
-          - rape face
-          - open mouth
-          - "__lazy-wildcards/subject/costume-elem-expressions/shaded_face/prompts__"
-        "costume-elem":
-          - messy hair
-          - blood stained hands
-          - makeup,lipstick
-          - glowing eyes
-        "costume-weapon":
-          - holding knife
-          - licking knife
-        action:
-          - clingy
-          - tilting head
-          - hugging
-          - clutching
-          - scratching
-        style:
-          - obsessive love
-          - jealousy
-          - dark atmosphere
-          - love and madness
-          - sweet but dangerous
-      seductive:
-        prompts:
-          - >-
-            {1-$$seductive smile|seductive|voluptuous}
-      # https://civitai.com/models/631023/tongue-outahegao?modelVersionId=705421
-      # https://civitai.com/models/537390/perfect-ahegao
-      # https://civitai.com/models/114626/hdaahegao-sd15
-      # https://www.pixiv.net/tags/%E3%82%AA%E3%83%9B%E9%A1%94
-      # https://civitai.com/models/196514/mesugao-seductive-pleasure-face?modelVersionId=220946
-      ahegao:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/ahegao/expressions-main__{0.3:::{1.2|1.3|1.4}|}){0.3::,{1-$$__lazy-wildcards/subject/costume-elem-expressions/ahegao/expressions-trigger-words__}|}{0.3::,{1-$$__lazy-wildcards/subject/costume-elem-expressions/ahegao/expressions__}|}{0.3::,{1-$$__lazy-wildcards/subject/costume-elem-expressions/ahegao/costume-elem__}|}{0.3::,{1-$$__lazy-wildcards/subject/costume-elem-expressions/ahegao/style__}|}
-        "expressions-main":
-          - Ahegao,Ohogao,mesugao
-        "expressions-trigger-words":
-          - HDA_Ahegao
-        expressions:
-          - open mouth
-          - wide eyes
-          - crossed eyes
-          - rolling eyes
-          - Tongue Out
-          - blush
-          - asymmetrical_expression
-          - teasing
-          - eyes_up
-          - eyes_rolling_back
-          - eye_roll
-          - "__lazy-wildcards/subject/costume-ethnicity-face/tongue_out_to_the_side/prompts__"
-          - seductive
-          - pleasure face
-          - aroused
-        "costume-elem":
-          - tears
-          - "heart-shaped pupils"
-          - "__lazy-wildcards/subject/costume-elem/saliva/prompts__"
-          - "__lazy-wildcards/subject/costume-elem/sweat/prompts__"
-        style:
-          - "close-up"
-          - motion_lines
-      # https://civitai.com/models/189973/pornmaster-tongue-fetishahegaofucked-sillytongue-outfacialbukkakecum-on-tonguewide-open-mouthmouth-pulloral-cavityuvulasaliva-dripnose-piercinglong-tonguecross-eyed
-      # https://civitai.com/models/24530/fucked-silly-from-behind-or-sex-act-lora-220
-      # https://civitai.com/models/84619/fucked-silly-after-sex-locon
-      # https://civitai.com/models/261335/ohogao-fucked-silly
-      fucked_silly:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/fucked_silly/expressions-main__{0.3:::{1.2|1.3|1.4}|}){0.8::,__lazy-wildcards/subject/costume-elem-expressions/ahegao/prompts__|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/fucked_silly/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/fucked_silly/action__}|}
-        "expressions-main":
-          - fucked silly
-        expressions:
-          - rolling eyes
-          - >-
-            {wide |}open mouth
-          - uvula
-          - drunk
-          - unfocused_eyes
-          - flushed_face
-          - silly_expression
-          - blush
-          - tipsy
-          - exhausted
-          - torogao
-          - Dazed
-          - Climax
-          - Confused
-        "costume-elem":
-          - clenched teeth
-          - "half-closed eyes"
-          - spiral_eyes
-        action:
-          - looking up
-          - oral invitation
-          - after sex
-          - dizzy,woozy
-          - wobbly_pose,swaying_pose
-          - slouching
-      # 厭惡
-      # https://civitai.com/models/53448/looking-disgusted-facial-expression
-      # https://danbooru.donmai.us/posts?tags=disgust+&z=5
-      # https://civitai.com/models/1145230/show-me-your-underwear-with-a-disgusted-look-on-your-face?modelVersionId=1288023
-      disgusted:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/disgusted/expressions-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/disgusted/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/disgusted/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/disgusted/action__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/disgusted/style__}|}
-        "expressions-main":
-          - disgusted,disgust,looking disgusted,disgust_face,disgust facial expression,disguststyle
-        expressions:
-          - >-
-            {very |}angry
-          - disappointed
-          - scowl
-          - grimace
-          - frown
-          - gloom \(expression\)
-          - narrowed eyes
-          - furrowed brow
-          - annoyed
-          - scorn
-          - negative_emotions
-          - averting eyes
-        "costume-elem":
-          - |-
-            (shaded face:1.2)
-          - turn pale
-          - clenched teeth
-          - empty eyes
-          - open mouth
-          - teeth
-          - "half-closed eyes"
-          - wrinkled nose
-        action:
-          - looking down
-          - stepping back
-        style:
-          - from above
-          - from below
-          - dutch angle
-          - foreshortening
-      # https://civitai.com/models/196486/netorare-face-cheating-ntr-face?modelVersionId=220916
-      netorare_face:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/netorare_face/expressions-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/netorare_face/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/netorare_face/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/netorare_face/action__}|}
-        "expressions-main":
-          - netorare face,netorare,ntrgao,ntr face
-        expressions:
-          - false smile
-          - flustered
-          - panicking
-          - rushing
-          - forced smile
-          - blush
-          - "__lazy-wildcards/subject/costume-elem/see-through-clothes/prompts__"
-          - "__lazy-wildcards/subject/costume-elem/sweat/prompts__"
-          - nose blush
-          - trembling
-        "costume-elem":
-          - "half-closed eyes"
-          - empty eyes
-          - purple eyes
-          - stray pubic hair
-          - "heart-shaped pupils"
-          - "symbol-shaped pupils"
-        action:
-          - cheating
-          - standing
-          - arms behind back
-          - double w
-      confused:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/confused/expressions-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/confused/expressions__}|}
-        "expressions-main":
-          - confused
-        expressions:
-          - "__lazy-wildcards/subject/costume-elem-expressions/v-shaped_eyebrows/prompts__"
-          - |-
-            !?
-      # https://civitai.com/models/136914
-      blush:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/blush/expressions-trigger-words__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/blush/expressions-main__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/blush/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/blush/action__}|}
-        "expressions-trigger-words":
-          - blush,embarrassed,yudedako
-        "expressions-main":
-          - "full-face blush"
-          - ear blush
-          - humiliation,shame
-          - blushing cheeks,rosy cheeks
-        expressions:
-          - panicing
-          - |-
-            @ @
-          - averting eyes
-          - nervous
-          - steam from head
-          - awkward situation
-          - coy
-          - shy
-        action:
-          - covering face
-          - teased
-      shocked_face:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/shocked_face/expressions-trigger-words__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/shocked_face/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/shocked_face/action__}|}
-        "expressions-trigger-words":
-          - shockedface,shocked face
-          - dumbfounded
-          - flustered,surprised
-        expressions:
-          - open mouth
-          - "wide eyes,constricted pupils,wide-eyed"
-          - shock lines,mouth agape
-          - sweatdrop
-          - "__lazy-wildcards/subject/costume-elem-expressions/blush/prompts__"
-        action:
-          - confession
-          - changing clothes
-          - accidental fall
-      # https://civitai.com/models/469309?modelVersionId=522175
-      # https://civitai.com/models/469941
-      doyagao_smug:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/doyagao_smug/expressions-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/doyagao_smug/expressions__}|}
-        "expressions-main":
-          - doyagao,smug,proudly face,yaeba
-        expressions:
-          - "v-shaped eyebrows"
-          - grinning smile
-          - grin
-          - smug smile
-          - evil smug face
-          - happy smile
-          - naughty face
-          - >-
-            {open mouth|closed mouth}
-      # https://civitai.com/models/136940/paled-face?modelVersionId=151092
-      # https://civitai.com/models/232245/yandereangrydisappointed-shade
-      shaded_face:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/shaded_face/expressions-trigger-words__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/shaded_face/expressions-main__}|}{0.3:::{1.2|1.3|1.4}|}){0.3::,{1-$$__lazy-wildcards/subject/costume-elem-expressions/shaded_face/expressions__}|}
-        "expressions-trigger-words":
-          - shaded face
-        "expressions-main":
-          - turn pale
-          - partially shaded face
-          - paled face
-        expressions:
-          - scared
-          - trembling
-          - gloom \(expression\)
-          - emphasis lines
-          - surprised
-          - fear
-          - strong anger
-      smirk:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/smirk/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
-        "prompts-no-weight":
-          - >-
-            __lazy-wildcards/subject/costume-elem-expressions/smirk/expressions-main__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/smirk/expressions__}|}
-        "expressions-main":
-          - smirk
-        expressions:
-          - seductive smirk
-          - confident smirk
-      "smile-sad":
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/smile-sad/expressions__{0.3:::{1.2|1.3|1.4}|})
-        expressions:
-          - sad smile,sad
-      crying:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/crying/expressions-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/crying/expressions__}|}
-        "expressions-main":
-          - crying
-        expressions:
-          - closed mouth
-          - red eyes
-          - crying with eyes open
-          - sad
-          - "__lazy-wildcards/subject/costume-elem-expressions/tears/prompts__"
-      tears:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/tears/expressions-main__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/tears/expressions__}|}{0.3:::{1.2|1.3|1.4}|})
-        "expressions-main":
-          - tears
-        expressions:
-          - streaming tears
-          - teardrop
-          - wiping tears
-          - tearing up
-          - blood from eyes,blood tears
-          - happy tears
-          - sad tears
-          - single tear
-          - flying teardrops
-      # 自信
-      "smirk-confident":
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/smirk-confident/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
-        "prompts-no-weight":
-          - >-
-            __lazy-wildcards/subject/costume-elem-expressions/smirk-confident/expressions-main__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/smirk-confident/expressions__}|}
-        "expressions-main":
-          - confident
-        expressions:
-          - "__lazy-wildcards/subject/costume-elem-expressions/smirk/prompts-no-weight__"
-          - confident smile
-          - narrowed eyes
-          - direct gaze
-          - intense stare
-          - proud
-          - cool expression
-          - seductive smile
-      # 邪惡笑容
-      "grin-sinister":
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/grin-sinister/expressions-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/grin-sinister/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/grin-sinister/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/grin-sinister/style__}|}
-        "expressions-main":
-          - sinister grin
-        expressions:
-          - evil smile
-          - smirk
-          - upturned mouth
-          - grinning teeth
-          - cunning eyes
-          - menacing eyes
-          - glaring
-          - arched eyebrows
-          - trembling lips
-          - animated grin
-        "costume-elem":
-          - sharp teeth
-          - dark lips
-          - shadowed eyes
-          - asymmetric face
-        style:
-          - psychological horror
-          - creepy
-      # https://civitai.com/models/155547/v-shaped-eyebrowsdoyagao-smug-v
-      "v-shaped_eyebrows":
-        prompts:
-          - "v-shaped eyebrows"
-      # https://civitai.com/models/330548/scornful-eyesjitome-type-18-type-18?modelVersionId=370357
-      # 輕蔑、不耐煩的眼神（呈尖狀，半開的眼睛）
-      "eyes-scornful":
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/eyes-scornful/expressions-main__{0.3:::{1.2|1.3|1.4}|})
-        "expressions-main":
-          - scornful eyes,jitome
-      # https://civitai.com/models/155553/worried-eyes?modelVersionId=345646
-      # 困り顔の眼
-      "eyes-worried":
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/eyes-worried/expressions-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/eyes-worried/expressions__}|}
-        "expressions-main":
-          - worried eyes
-        expressions:
-          - worry
-          - upset
-          - confused
-          - thinking
-          - expressionless
-      "open-or-closed-mouth":
-        prompts:
-          - "__lazy-wildcards/subject/costume-elem-expressions/mouth-open/prompts__"
-          - "__lazy-wildcards/subject/costume-elem-expressions/mouth-closed/prompts__"
-      # https://civitai.com/models/144735/large-closed-mouth-type-2-type-2?modelVersionId=160897
-      # https://civitai.com/models/144727/large-closed-mouth-type-1-type-1?modelVersionId=160890
-      "mouth-closed":
-        prompts:
-          - >-
-            __lazy-wildcards/subject/costume-elem-expressions/mouth-closed/expressions-main__{0.3::,{1-$$__lazy-wildcards/subject/costume-elem-expressions/mouth-closed/expressions__}|}
-        "expressions-main":
-          - closed mouth
-          - large closed mouth
-        expressions:
-          - straight line shaped mouth
-          - "large U-shaped mouth"
-      "mouth-open":
-        prompts:
-          - >-
-            __lazy-wildcards/subject/costume-elem-expressions/mouth-open/expressions-main__{0.3::,{1-$$__lazy-wildcards/subject/costume-elem-expressions/mouth-open/expressions__}|}
-        "expressions-main":
-          - open mouth
-          - large open mouth
-        expressions:
-          - >-
-            {lower|up} teeth only
-          - teeth
     costume-weapon:
       suitcase:
         prompts:
@@ -29935,6 +29938,33 @@
         "costume-elem":
           - underboob
           - midriff
+      "fishnet-top":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-upper-body/fishnet-top/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-elem-upper-body/fishnet-top/costume-main__{,{1-$$__lazy-wildcards/subject/costume-elem-upper-body/fishnet-top/costume__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-upper-body/fishnet-top/costume-elem__}|}
+        "costume-main":
+          - fishnet top
+        costume:
+          - fishnet shirt
+          - fishnet tanktop
+        "costume-elem":
+          - breasts apart
+          - open clothes
+          - clothes lift
+          - cleavage
+          - "see-through top"
+      "fishnet-dress":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-upper-body/fishnet-dress/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-elem-upper-body/fishnet-dress/costume__{,{1-$$__lazy-wildcards/subject/costume-elem-upper-body/fishnet-top/costume-elem__}|}
+        costume:
+          - fishnet dress
       "breasts-framed":
         prompts:
           - >-
@@ -30591,6 +30621,466 @@
           - clothing cutout
           - underboob
           - sideboob
+    # https://civitai.com/user/JujoHotaru/models
+    costume-elem-expressions:
+      # https://civitai.com/models/155547/v-shaped-eyebrowsdoyagao-smug-v
+      "v-shaped_eyebrows":
+        prompts:
+          - "v-shaped eyebrows"
+      # https://civitai.com/models/330548/scornful-eyesjitome-type-18-type-18?modelVersionId=370357
+      # 輕蔑、不耐煩的眼神（呈尖狀，半開的眼睛）
+      "eyes-scornful":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/eyes-scornful/expressions-main__{0.3:::{1.2|1.3|1.4}|})
+        "expressions-main":
+          - scornful eyes,jitome
+      # https://civitai.com/models/155553/worried-eyes?modelVersionId=345646
+      # 困り顔の眼
+      "eyes-worried":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/eyes-worried/expressions-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/eyes-worried/expressions__}|}
+        "expressions-main":
+          - worried eyes
+        expressions:
+          - worry
+          - upset
+          - confused
+          - thinking
+          - expressionless
+      "open-or-closed-mouth":
+        prompts:
+          - "__lazy-wildcards/subject/costume-elem-expressions/mouth-open/prompts__"
+          - "__lazy-wildcards/subject/costume-elem-expressions/mouth-closed/prompts__"
+      # https://civitai.com/models/144735/large-closed-mouth-type-2-type-2?modelVersionId=160897
+      # https://civitai.com/models/144727/large-closed-mouth-type-1-type-1?modelVersionId=160890
+      "mouth-closed":
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-expressions/mouth-closed/expressions-main__{0.3::,{1-$$__lazy-wildcards/subject/costume-elem-expressions/mouth-closed/expressions__}|}
+        "expressions-main":
+          - closed mouth
+          - large closed mouth
+        expressions:
+          - straight line shaped mouth
+          - "large U-shaped mouth"
+      "mouth-open":
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-expressions/mouth-open/expressions-main__{0.3::,{1-$$__lazy-wildcards/subject/costume-elem-expressions/mouth-open/expressions__}|}
+        "expressions-main":
+          - open mouth
+          - large open mouth
+        expressions:
+          - >-
+            {lower|up} teeth only
+          - teeth
+      # 恍惚のヤンデレポーズ
+      # https://danbooru.donmai.us/wiki_pages/yandere_trance?z=2
+      # https://civitai.com/search/models?sortBy=models_v9&query=yandere
+      #
+      # https://civitai.com/models/127754/yandere-trance-or-goofy-ai
+      yandere_trance:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/yandere_trance/expressions__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/yandere_trance/action-pose__}|}{0.3:::{1.2|1.3|1.4|1.6}|:1.3}),__lazy-wildcards/subject/costume-elem-expressions/yandere/prompts__
+        expressions:
+          - >-
+            yandere trance
+        "action-pose":
+          - hands on own face
+          - hands on own cheeks
+      # https://civitai.com/models/56918/yandere
+      yandere:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/yandere/expressions-main__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/yandere/expressions__}|}{0.3:::{1.2|1.3|1.4|1.6}|}){,{1-3$$__lazy-wildcards/subject/costume-elem-expressions/yandere/expressions-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/yandere/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/yandere/costume-weapon__}|}{,{1-3$$__lazy-wildcards/subject/costume-elem-expressions/yandere/action__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/yandere/style__}|}
+        "expressions-main":
+          - >-
+            yandere
+        expressions:
+          - creepy smile
+          - yandere eyes,dilated pupils,staring
+          - distorted smile
+          - "heart-shaped pupils"
+          - heavy breathing,visible breath
+          - blush
+        "expressions-elem":
+          - teary eyes
+          - blush while crying
+          - grin
+          - biting lip
+          - tongue out
+          - laughing
+          - rape face
+          - open mouth
+          - "__lazy-wildcards/subject/costume-elem-expressions/shaded_face/prompts__"
+        "costume-elem":
+          - messy hair
+          - blood stained hands
+          - makeup,lipstick
+          - glowing eyes
+        "costume-weapon":
+          - holding knife
+          - licking knife
+        action:
+          - clingy
+          - tilting head
+          - hugging
+          - clutching
+          - scratching
+        style:
+          - obsessive love
+          - jealousy
+          - dark atmosphere
+          - love and madness
+          - sweet but dangerous
+      seductive:
+        prompts:
+          - >-
+            {1-$$seductive smile|seductive|voluptuous}
+      # https://civitai.com/models/631023/tongue-outahegao?modelVersionId=705421
+      # https://civitai.com/models/537390/perfect-ahegao
+      # https://civitai.com/models/114626/hdaahegao-sd15
+      # https://www.pixiv.net/tags/%E3%82%AA%E3%83%9B%E9%A1%94
+      # https://civitai.com/models/196514/mesugao-seductive-pleasure-face?modelVersionId=220946
+      ahegao:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/ahegao/expressions-main__{0.3:::{1.2|1.3|1.4}|}){0.3::,{1-$$__lazy-wildcards/subject/costume-elem-expressions/ahegao/expressions-trigger-words__}|}{0.3::,{1-$$__lazy-wildcards/subject/costume-elem-expressions/ahegao/expressions__}|}{0.3::,{1-$$__lazy-wildcards/subject/costume-elem-expressions/ahegao/costume-elem__}|}{0.3::,{1-$$__lazy-wildcards/subject/costume-elem-expressions/ahegao/style__}|}
+        "expressions-main":
+          - Ahegao,Ohogao,mesugao
+        "expressions-trigger-words":
+          - HDA_Ahegao
+        expressions:
+          - open mouth
+          - wide eyes
+          - crossed eyes
+          - rolling eyes
+          - Tongue Out
+          - blush
+          - asymmetrical_expression
+          - teasing
+          - eyes_up
+          - eyes_rolling_back
+          - eye_roll
+          - "__lazy-wildcards/subject/costume-ethnicity-face/tongue_out_to_the_side/prompts__"
+          - seductive
+          - pleasure face
+          - aroused
+        "costume-elem":
+          - tears
+          - "heart-shaped pupils"
+          - "__lazy-wildcards/subject/costume-elem/saliva/prompts__"
+          - "__lazy-wildcards/subject/costume-elem/sweat/prompts__"
+        style:
+          - "close-up"
+          - motion_lines
+      # https://civitai.com/models/189973/pornmaster-tongue-fetishahegaofucked-sillytongue-outfacialbukkakecum-on-tonguewide-open-mouthmouth-pulloral-cavityuvulasaliva-dripnose-piercinglong-tonguecross-eyed
+      # https://civitai.com/models/24530/fucked-silly-from-behind-or-sex-act-lora-220
+      # https://civitai.com/models/84619/fucked-silly-after-sex-locon
+      # https://civitai.com/models/261335/ohogao-fucked-silly
+      fucked_silly:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/fucked_silly/expressions-main__{0.3:::{1.2|1.3|1.4}|}){0.8::,__lazy-wildcards/subject/costume-elem-expressions/ahegao/prompts__|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/fucked_silly/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/fucked_silly/action__}|}
+        "expressions-main":
+          - fucked silly
+        expressions:
+          - rolling eyes
+          - >-
+            {wide |}open mouth
+          - uvula
+          - drunk
+          - unfocused_eyes
+          - flushed_face
+          - silly_expression
+          - blush
+          - tipsy
+          - exhausted
+          - torogao
+          - Dazed
+          - Climax
+          - Confused
+        "costume-elem":
+          - clenched teeth
+          - "half-closed eyes"
+          - spiral_eyes
+        action:
+          - looking up
+          - oral invitation
+          - after sex
+          - dizzy,woozy
+          - wobbly_pose,swaying_pose
+          - slouching
+      # 厭惡
+      # https://civitai.com/models/53448/looking-disgusted-facial-expression
+      # https://danbooru.donmai.us/posts?tags=disgust&z=5
+      # https://civitai.com/models/1145230/show-me-your-underwear-with-a-disgusted-look-on-your-face?modelVersionId=1288023
+      disgusted:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/disgusted/expressions-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/disgusted/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/disgusted/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/disgusted/action__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/disgusted/style__}|}
+        "expressions-main":
+          - disgusted,disgust,looking disgusted,disgust_face,disgust facial expression,disguststyle
+        expressions:
+          - >-
+            {very |}angry
+          - disappointed
+          - scowl
+          - grimace
+          - frown
+          - gloom \(expression\)
+          - narrowed eyes
+          - furrowed brow
+          - annoyed
+          - scorn
+          - negative_emotions
+          - averting eyes
+        "costume-elem":
+          - |-
+            (shaded face:1.2)
+          - turn pale
+          - clenched teeth
+          - empty eyes
+          - open mouth
+          - teeth
+          - "half-closed eyes"
+          - wrinkled nose
+        action:
+          - looking down
+          - stepping back
+        style:
+          - from above
+          - from below
+          - dutch angle
+          - foreshortening
+      # https://civitai.com/models/196486/netorare-face-cheating-ntr-face?modelVersionId=220916
+      netorare_face:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/netorare_face/expressions-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/netorare_face/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/netorare_face/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/netorare_face/action__}|}
+        "expressions-main":
+          - netorare face,netorare,ntrgao,ntr face
+        expressions:
+          - false smile
+          - flustered
+          - panicking
+          - rushing
+          - forced smile
+          - blush
+          - "__lazy-wildcards/subject/costume-elem/see-through-clothes/prompts__"
+          - "__lazy-wildcards/subject/costume-elem/sweat/prompts__"
+          - nose blush
+          - trembling
+        "costume-elem":
+          - "half-closed eyes"
+          - empty eyes
+          - purple eyes
+          - stray pubic hair
+          - "heart-shaped pupils"
+          - "symbol-shaped pupils"
+        action:
+          - cheating
+          - standing
+          - arms behind back
+          - double w
+      confused:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/confused/expressions-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/confused/expressions__}|}
+        "expressions-main":
+          - confused
+        expressions:
+          - "__lazy-wildcards/subject/costume-elem-expressions/v-shaped_eyebrows/prompts__"
+          - |-
+            !?
+      # https://civitai.com/models/136914
+      blush:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/blush/expressions-trigger-words__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/blush/expressions-main__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/blush/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/blush/action__}|}
+        "expressions-trigger-words":
+          - blush,embarrassed,yudedako
+        "expressions-main":
+          - "full-face blush"
+          - ear blush
+          - humiliation,shame
+          - blushing cheeks,rosy cheeks
+        expressions:
+          - panicing
+          - |-
+            @ @
+          - averting eyes
+          - nervous
+          - steam from head
+          - awkward situation
+          - coy
+          - shy
+        action:
+          - covering face
+          - teased
+      shocked_face:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/shocked_face/expressions-trigger-words__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/shocked_face/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/shocked_face/action__}|}
+        "expressions-trigger-words":
+          - shockedface,shocked face
+          - dumbfounded
+          - flustered,surprised
+        expressions:
+          - open mouth
+          - "wide eyes,constricted pupils,wide-eyed"
+          - shock lines,mouth agape
+          - sweatdrop
+          - "__lazy-wildcards/subject/costume-elem-expressions/blush/prompts__"
+        action:
+          - confession
+          - changing clothes
+          - accidental fall
+      # https://civitai.com/models/469309?modelVersionId=522175
+      # https://civitai.com/models/469941
+      doyagao_smug:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/doyagao_smug/expressions-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/doyagao_smug/expressions__}|}
+        "expressions-main":
+          - doyagao,smug,proudly face,yaeba
+        expressions:
+          - "v-shaped eyebrows"
+          - grinning smile
+          - grin
+          - smug smile
+          - evil smug face
+          - happy smile
+          - naughty face
+          - >-
+            {open mouth|closed mouth}
+      # https://civitai.com/models/136940/paled-face?modelVersionId=151092
+      # https://civitai.com/models/232245/yandereangrydisappointed-shade
+      shaded_face:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/shaded_face/expressions-trigger-words__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/shaded_face/expressions-main__}|}{0.3:::{1.2|1.3|1.4}|}){0.3::,{1-$$__lazy-wildcards/subject/costume-elem-expressions/shaded_face/expressions__}|}
+        "expressions-trigger-words":
+          - shaded face
+        "expressions-main":
+          - turn pale
+          - partially shaded face
+          - paled face
+        expressions:
+          - scared
+          - trembling
+          - gloom \(expression\)
+          - emphasis lines
+          - surprised
+          - fear
+          - strong anger
+      smirk:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/smirk/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-elem-expressions/smirk/expressions-main__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/smirk/expressions__}|}
+        "expressions-main":
+          - smirk
+        expressions:
+          - seductive smirk
+          - confident smirk
+      "smile-sad":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/smile-sad/expressions__{0.3:::{1.2|1.3|1.4}|})
+        expressions:
+          - sad smile,sad
+      crying:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/crying/expressions-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/crying/expressions__}|}
+        "expressions-main":
+          - crying
+        expressions:
+          - closed mouth
+          - red eyes
+          - crying with eyes open
+          - sad
+          - "__lazy-wildcards/subject/costume-elem-expressions/tears/prompts__"
+      tears:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/tears/expressions-main__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/tears/expressions__}|}{0.3:::{1.2|1.3|1.4}|})
+        "expressions-main":
+          - tears
+        expressions:
+          - streaming tears
+          - teardrop
+          - wiping tears
+          - tearing up
+          - blood from eyes,blood tears
+          - happy tears
+          - sad tears
+          - single tear
+          - flying teardrops
+      # 自信
+      "smirk-confident":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/smirk-confident/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-elem-expressions/smirk-confident/expressions-main__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/smirk-confident/expressions__}|}
+        "expressions-main":
+          - confident
+        expressions:
+          - "__lazy-wildcards/subject/costume-elem-expressions/smirk/prompts-no-weight__"
+          - confident smile
+          - narrowed eyes
+          - direct gaze
+          - intense stare
+          - proud
+          - cool expression
+          - seductive smile
+      # 邪惡笑容
+      "grin-sinister":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/grin-sinister/expressions-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/grin-sinister/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/grin-sinister/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/grin-sinister/style__}|}
+        "expressions-main":
+          - sinister grin
+        expressions:
+          - evil smile
+          - smirk
+          - upturned mouth
+          - grinning teeth
+          - cunning eyes
+          - menacing eyes
+          - glaring
+          - arched eyebrows
+          - trembling lips
+          - animated grin
+        "costume-elem":
+          - sharp teeth
+          - dark lips
+          - shadowed eyes
+          - asymmetric face
+        style:
+          - psychological horror
+          - creepy
+      # https://civitai.com/images/110595383
+      "serious-blush":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/serious-blush/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-elem-expressions/serious-blush/expressions-main__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/serious-blush/expressions__}|}
+        "expressions-main":
+          - serious expression,blush
+        expressions:
+          - resolute
+          - head tilt
     action:
       sleeping:
         prompts:
@@ -31671,6 +32161,17 @@
             (Mauritanian catholic inquisitor sexy girl:1.25),full body,(large breasts:1.25),armor
           - clean precise,mech suit armor white ceramic armor,glossy carbon fiber,industrial frame with shiny gold metal inlay
           - succubus,2 wings,demon horns,tail
+          - hanfu,blue lips,half updo,white hair,holding fan
+          - aesthetic pleasing,solo,undead knight spectral female
+          - long hair,breasts,looking at viewer,black hair,long sleeves,navel,jewelry,underwear,panties,earrings,choker,pants,midriff,hood,black panties,hoodie,tattoo,black pants,undressing,red background,pants pull,stomach tattoo
+          - "goddess,upper body,long flowing silver hair adorned with stars,glowing golden eyes,star-shaped pupils,serene expression,looking at viewer,wearing a flowing white ethereal dress with gold trim,translucent sleeves,intricate jewelry,floating in the cosmos,dynamic angle,from below,starry sky,galaxy,nebula background,god rays piercing through clouds,glowing particles,magical,cinematic lighting,vibrant,crystalline details,crisp lines"
+          - "breasts,looking at viewer,smile,short hair,large breasts,skirt,black hair,gloves,thighhighs,navel,animal ears,cleavage,jacket,tail,yellow eyes,purple hair,multicolored hair,pantyhose,red hair,boots,black gloves,belt,midriff,black skirt,miniskirt,black footwear,collar,animal ear fluff,fur trim,fox ears,fox tail,thigh boots,fox girl,fishnets,multiple tails,fishnet pantyhose,jacket on shoulders,fur-trimmed jacket,leather,kitsune,leather jacket,red belt,fishnet top"
+          - |-
+            sitting,hay bale,outside,summer,blue sky,cloud,wooden fence,legs apart,happy expression,tired,one eye closed,naked overalls,(large breasts:1.1),natural breasts,(sagging breasts:0.7)
+          - >-
+            breasts,blush,looking at viewer,apron,indoors,bangs,dress,sitting,bow,black hair,on bed,frills,parted lips,twintails,brown eyes,long hair,medium breasts,lamp,low twintails,sleeveless,bare shoulders,sleeveless dress,bed,lips,__lazy-wildcards/subject/env-bg/background-blurry/prompts__
+          - "She sits leaning against a crumbling stucco wall,its texture rough and weathered. The wall is overtaken by nature,with creeping vines,vibrant wildflowers,and dense foliage bursting through cracks. The scene is set centuries after a devastating post-apocalyptic battle"
+          - "mask,intricate hairstyle,multicolored hair,cubism,extreme close-up,V sign,abstract background,vibrant colors,edgy"
         "action-pose":
           - hands on hips
           - "__lazy-wildcards/dataset/action__"
@@ -31694,6 +32195,14 @@
             1girl,relaxed eyes,half closed eyes,shy eyebrows,hair between eyes,long hair,low-tied long hair,pink hair,naked,nude,(parted lips:1.8),(upper teeth:0.8),(looking at viewer:1.5),wearing a man's shirt,white long sleeve shirt,unbuttoned,slightly visible nipples,holding flowers,(purple lilis),flowers over pussy,convenient sensoring,slightly exposed vulva,upper torso shot,including thighs,long athletic legs,knee up,(porcelain skin;1.1),(glossy skin:1.3)
           - "1girl,solo,porcelain skin,white skin,long hair,braided,bows in hair,carousel,merry-go-round,dancing around,night,lights,colourful,strong colours,long skirt,long wide sleeves,puffy shoulders,upper body"
           - sunlight,ground level shot,photograph of old ruins,broken temple laying on ground,stone arches,valley with river,long grass,dramatic sky,no humans
+          - solo,petite woman,sitting on kitchen counter,legs spread,feet not in view,wearing little black dress,long black hair,kitchen
+          - |-
+            illustrator background,outdoor,1980s \(style\),circular ruin,scenery,water,night sky,wide shot,1girl:1.1,open the door,no lineart,color ink \(medium\) background
+          # https://civitai.com/images/110595383
+          - >-
+            1girl,oni girl,(pink hair,gradient hair:1.2),long hair,straight hair,(yellow horns,glowing horns),pink eyes,glowing eyes,no panties,samurai armor,white armor,(serious expression,resolute,head tilt,blush),BREAK dynamic pose,dynamic view,dutch angle,(maroon theme,red theme,dark theme,rosy colors,yellow colors,pink colors),night sky,red moon,dark clouds,spider lilies,clear background structure,clean background,soft lighting,volumetric lighting,soft shading,glowing particles,battle stance,katana,holding sword,unsheathing,ruined holding objective,glowing sword,ultra-detailed eyes,detailed pupils,high gradient eyes,eye reflection,detailed clothes,fine fabric emphasis,soft skin texture,red nails,pale skin,soft pink skin
+          - |-
+            A stylistic film still,Wong Kar-wai "Chungking Express" aesthetic. A melancholic policeman (Tony Leung style) in uniform leans against a cluttered snack bar counter,holding a coffee cup,looking lost in thought. He is relatively sharp and static. The background is dominated by a strong step-printing effect with heavy motion blur,crowds of people walking past are smeared into trails of light and color,creating a dizzying sense of time passing rapidly. High contrast lighting,saturated neon greens,reds,and yellows creating light streaks. Urban isolation atmosphere,chaotic Hong Kong street vibe visible through windows. Film grain,deep shadows
       "throne-sitting-dark":
         prompts:
           - >-
@@ -32789,7 +33298,7 @@
         prompts:
           - >-
             __lazy-wildcards/cosplay-char/claymore/base/utils/name-hair-long(name=galatea)__
-    # https://danbooru.donmai.us/posts?tags=kyoushoku_soukou_guyver+&z=5
+    # https://danbooru.donmai.us/posts?tags=kyoushoku_soukou_guyver&z=5
     # https://rule34.xxx/index.php?page=post&s=list&tags=guyver
     # https://rule34.xxx/index.php?page=post&s=list&tags=valcuria
     # https://rule34.xxx/index.php?page=post&s=list&tags=zoanoid
@@ -33256,7 +33765,7 @@
           - listen_to_my_song
           - fire bomber
           - "__lazy-wildcards/subject/style-elem/sci-fi/prompts__"
-      # https://danbooru.donmai.us/posts?tags=millia_jenius+&z=5
+      # https://danbooru.donmai.us/posts?tags=millia_jenius&z=5
       # https://civitai.com/models/125562/milia-fallyna-jenius-lora?modelVersionId=137165
       # https://civitai.com/models/303549/milia-fallyna-jenius-locon-version-macross-7?modelVersionId=340784
       "Jenius-millia_jenius":
@@ -34137,7 +34646,7 @@
           - queerat
           - Monster Rats
           - naked mole rats
-      # https://danbooru.donmai.us/posts?tags=akizuki_maria+&z=5
+      # https://danbooru.donmai.us/posts?tags=akizuki_maria&z=5
       # https://civitai.com/models/732177/maria-akizuki-shin-sekai-yori?modelVersionId=818762
       akizuki_maria:
         prompts:
@@ -34232,7 +34741,7 @@
           - yawning
         style:
           - "__lazy-wildcards/subject/style-art-type/1990s_style/style__"
-    # https://danbooru.donmai.us/posts?tags=3x3_eyes+&z=5
+    # https://danbooru.donmai.us/posts?tags=3x3_eyes&z=5
     3x3_eyes:
       ayanokouji_pai:
         prompts:
@@ -34448,7 +34957,7 @@
           - hands in pockets
           - hand on own hip
       # https://civitai.com/models/766995/rita-rossweisse-herrscher-of-ice-honkai-impact-3rd
-      # https://danbooru.donmai.us/posts?tags=rita_rossweisse+&z=5
+      # https://danbooru.donmai.us/posts?tags=rita_rossweisse&z=5
       rita_rossweisse:
         prompts:
           - >-
@@ -34459,6 +34968,28 @@
           - short hair,light brown hair,jewelry,purple eyes,earrings,hair over one eye
         costume:
           - white gloves,blue cape,fur trim,black bodysuit,skin tight,latex bodysuit
+    genshin_impact:
+      # https://civitai.com/models/2099213/nefer?modelVersionId=2375085
+      nefer:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char/genshin_impact/nefer/main-trigger-words__,__lazy-wildcards/cosplay-char/genshin_impact/nefer/costume-ethnicity__{,{1-$$__lazy-wildcards/cosplay-char/genshin_impact/nefer/costume-elem__}|}
+        "main-trigger-words":
+          - >-
+            nefer \(genshin impact\),nefer \(genshin impact\) \(cosplay\)
+        "costume-ethnicity":
+          - >-
+            eye tattoo,mechanical ears,tiara,horned headwear,bracelet,usekh collar,green hair
+        "costume-elem":
+          - cape
+          - "green sleeveless leotard,high-waist half-skirt,thigh strap"
+          - strappy heels
+          - "__lazy-wildcards/subject/costume-elem/curtain/prompts-no-weight__"
+          - black elbow gloves
+          - claw ring
+          - sideboob
+          - facial mark
+          - fake claws,finger claws
     # https://civitai.com/tag/fate
     fate:
       # 源賴光
@@ -34694,7 +35225,7 @@
           - beach
           - heian
           - on the blanket
-    # https://danbooru.donmai.us/posts?tags=brown_dust_%28series%29+&z=5
+    # https://danbooru.donmai.us/posts?tags=brown_dust_%28series%29&z=5
     # https://civitai.com/search/models?sortBy=models_v9&query=Browndust
     brown_dust:
       # https://civitai.com/models/58507/brown-dustbrave-nine-style-lora
@@ -34843,7 +35374,7 @@
         env:
           - red rose
           - ice rose
-    # https://danbooru.donmai.us/posts?tags=snowbreak%3A_containment_zone+&z=5
+    # https://danbooru.donmai.us/posts?tags=snowbreak%3A_containment_zone&z=5
     snowbreak:
       # https://civitai.com/models/435511/vulture-snowbreak-containment-zone
       vulture:
@@ -36148,7 +36679,7 @@
           - long hair,hair over eyes,vines,thorns,navel,hair over breasts,lipstick,red hair,flower,black rose,leaf
         style:
           - convenient censoring,hair censor
-      # https://danbooru.donmai.us/posts?tags=lilith_%28megami_tensei%29+&z=5
+      # https://danbooru.donmai.us/posts?tags=lilith_%28megami_tensei%29&z=5
       lilith:
         prompts:
           - >-
@@ -36576,7 +37107,7 @@
           - sitting
         env:
           - dragon ball \(object\),star \(symbol\)
-      # https://danbooru.donmai.us/posts?tags=cell_%28dragon_ball%29+&z=5
+      # https://danbooru.donmai.us/posts?tags=cell_%28dragon_ball%29&z=5
       "cell-perfect":
         prompts:
           - >-
@@ -36681,7 +37212,7 @@
           - fantasy battlefield
         env:
           - campfire
-      # https://danbooru.donmai.us/posts?tags=hyunkel+&z=5
+      # https://danbooru.donmai.us/posts?tags=hyunkel&z=5
       # https://civitai.com/models/781092/hyunckel-armor
       hyunckel_armor:
         prompts:
@@ -37131,7 +37662,7 @@
       # https://civitai.com/models/202928/angela-balzac-expelled-from-paradise
       # https://civitai.com/models/72156/costumedeva-battle-suitangela-balzac-cosplay-cosplay
       # https://civitai.com/models/974634/angela-balzac-rakuen-tsuihou?modelversionid=1091388
-      # https://danbooru.donmai.us/posts?tags=rakuen_tsuihou+&z=5
+      # https://danbooru.donmai.us/posts?tags=rakuen_tsuihou&z=5
       angela_balzac:
         prompts:
           - >-
@@ -37752,7 +38283,7 @@
           - nsfw_highpriestessofprophecy_ownwaifu,navel
         "costume-elem":
           - elbow gloves,white gloves,bare shoulders,detached sleeves,cape
-      # https://danbooru.donmai.us/posts?tags=shadow_tamer+&z=5
+      # https://danbooru.donmai.us/posts?tags=shadow_tamer&z=5
       # https://civitai.com/models/911881/shadow-game-or-yu-gi-oh-or-2-attires?modelVersionId=1020491
       shadow_tamer:
         prompts:
@@ -38032,7 +38563,7 @@
           - viral_outbreak
           - "__lazy-wildcards/subject/style-elem/post-apocalypse/prompts__"
     kakegurui:
-      # https://danbooru.donmai.us/posts?tags=jabami_yumeko+&z=5
+      # https://danbooru.donmai.us/posts?tags=jabami_yumeko&z=5
       # https://civitai.com/models/230147/yumeko-jabami
       jabami_yumeko:
         prompts:
@@ -38061,7 +38592,7 @@
             {1-$$__lazy-wildcards/subject/env-bg/casino/action-types/*__}
     # https://danbooru.donmai.us/posts?tags=fairy_tail&z=2
     fairy_tail:
-      # https://danbooru.donmai.us/posts?tags=brandish_mu+&z=5
+      # https://danbooru.donmai.us/posts?tags=brandish_mu&z=5
       # https://civitai.com/models/144537
       # https://civitai.com/models/239540/brandish-myu-fairy-tail
       brandish_mu:
@@ -38100,7 +38631,7 @@
           - chibi sawako,chibi
     jujutsu_kaisen:
       # https://civitai.com/models/895975/telannasjujutsukaisenoutfitaovmodellora
-      # https://danbooru.donmai.us/posts?tags=jujutsu_kaisen+&z=5
+      # https://danbooru.donmai.us/posts?tags=jujutsu_kaisen&z=5
       # https://danbooru.donmai.us/posts?tags=jujutsu_tech_uniform&z=2
       jujutsu_tech_uniform:
         prompts:
@@ -38349,7 +38880,7 @@
           - crystal throne
           - huge ice
           - "__lazy-wildcards/subject/env-moment/weather-frozen/prompts__"
-    # https://danbooru.donmai.us/posts?tags=chainsaw_man+&z=5
+    # https://danbooru.donmai.us/posts?tags=chainsaw_man&z=5
     chainsaw_man:
       # https://civitai.com/models/254374/falling-devil-or-chainsaw-man
       # https://civitai.com/models/39249
@@ -38528,7 +39059,7 @@
           - frilled hair tubes
           - helmet
           - gauntlets
-    # https://danbooru.donmai.us/posts?tags=sailor_moon+&z=5
+    # https://danbooru.donmai.us/posts?tags=sailor_moon&z=5
     sailor_moon:
       # https://civitai.com/models/58164/sailor-moon-outfit-lora
       # https://civitai.com/models/115691/change-a-character-evil-sailor-scout-your-waifu-has-joined-the-force-of-evil
@@ -38708,7 +39239,7 @@
     # kore wa zombie desu ka?
     # 這樣算是殭屍嗎？
     korezom:
-      # https://danbooru.donmai.us/posts?tags=seraphim_%28korezom%29+&z=5
+      # https://danbooru.donmai.us/posts?tags=seraphim_%28korezom%29&z=5
       # https://civitai.com/models/297105/seraphim-kore-wa-zombie-desu-ka-lora?modelVersionId=333807
       seraphim:
         prompts:
@@ -39427,7 +39958,7 @@
           - polearm
         env:
           - slime \(substance\)
-      # https://danbooru.donmai.us/posts?tags=ragnark_sinmara_%28taimanin_rpgx%29+&z=5
+      # https://danbooru.donmai.us/posts?tags=ragnark_sinmara_%28taimanin_rpgx%29&z=5
       # https://civitai.com/models/614378/ragnarok-sinmara-taimanin-rpgx-lora-sd-15?modelVersionId=686794
       ragnark_sinmara:
         prompts:
