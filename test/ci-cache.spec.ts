@@ -52,6 +52,7 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 		ignore: [
 			'data/cf',
 			'data/others',
+			'data/others/**',
 		],
 	});
 
@@ -78,6 +79,7 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 	]);
 
 	test.each(globSync2([
+		'!data/others/user-whistler_mc/**',
 		'data/cf/costumes/*.yaml',
 		'data/cf/other/*.yaml',
 		'data/cf/creatures/*.yaml',
@@ -86,6 +88,7 @@ describe(`matchDynamicPromptsWildcardsAll`, () =>
 		'data/*.yaml',
 		'data/sub/**/*.yaml',
 		'output/wildcards/**/*.yaml',
+		'!data/others/user-whistler_mc/**'
 	], {
 		cwd: __ROOT,
 	}))(`%s`, (file) =>
