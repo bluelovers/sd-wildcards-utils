@@ -8,4 +8,65 @@ lazy-wildcards:
             __lazy-wildcards/subject/style-elem/models-1201879-neosigma/main-trigger-words__
         main-trigger-words:
           - illustration neosigma2 style
+      # https://civitai.com/models/2150448/pvnk-or-shiiros-styles?modelVersionId=2432252
+      models-shiiro-Pvnk:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-elem/models-shiiro-Pvnk/main-trigger-words__
+            , __lazy-wildcards/subject/style-elem/models-shiiro-Pvnk/style-art-main__
+            {, {1-$$__lazy-wildcards/subject/style-elem/models-shiiro-Pvnk/style__}|}
+        main-trigger-words:
+          - >-
+            pvnk1_illu
+        style-art-main:
+          - watercolor \(medium\), chalk outline
+        style:
+          - chromatic aberration
+          - __lazy-wildcards/subject/env-bg/background-blurry/prompts-no-weight__
+          - absurdres
+          - revealing layer
+          - blending
+          - double exposure
+          - zoom layer
+          - traditional media
+          - watercolor effect
+      # https://civitai.com/models/2148451/fall-or-shiiros-styles
+      models-shiiro-Fall:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-elem/models-shiiro-Fall/main-trigger-words__
+            , __lazy-wildcards/subject/style-elem/models-shiiro-Fall/style-art-main__
+            {, {1-$$__lazy-wildcards/subject/style-elem/models-shiiro-Pvnk/style__}|}
+        main-trigger-words:
+          - >-
+            F4ll_illu
+        style-art-main:
+          - watercolor \(medium\)
+      # https://civitai.com/models/2151947/saki88-or-shiiros-styles
+      models-shiiro-SAKI88:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-elem/models-shiiro-SAKI88/main-trigger-words__
+            {, {1-$$__lazy-wildcards/subject/style-elem/models-shiiro-Pvnk/style__}|}
+        main-trigger-words:
+          - >-
+            Saki88_illu
+      # https://civitai.com/models/2136281/gr4ft-or-shiiros-styles
+      models-shiiro-Gr4ft:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-elem/models-shiiro-Gr4ft/main-trigger-words__
+            {, {1-$$__lazy-wildcards/subject/style-elem/models-shiiro-Pvnk/style__}|}
+        main-trigger-words:
+          - >-
+            Gr4ft_illu
+      # https://civitai.com/models/2131009/4ndi-or-shiiros-styles
+      models-shiiro-4ndi:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-elem/models-shiiro-4ndi/main-trigger-words__
+            {, {1-$$__lazy-wildcards/subject/style-elem/models-shiiro-Pvnk/style__}|}
+        main-trigger-words:
+          - >-
+            4ndi_illu
 

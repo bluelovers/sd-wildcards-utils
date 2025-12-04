@@ -293,6 +293,20 @@ lazy-wildcards:
           - __lazy-wildcards/subject/costume-weapon/weapon-two-handed/prompts-no-weight__
         action:
           - holding oversized object
+      # https://civitai.com/models/384484/great-buster-sword-concept?modelVersionId=429104
+      weapon-oversized-sword:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-weapon/weapon-oversized-sword/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-weapon/weapon-oversized-sword/costume-weapon-main__
+            {, __lazy-wildcards/subject/costume-weapon/weapon-oversized-sword/costume-weapon__|}
+            , __lazy-wildcards/subject/costume-weapon/weapon-oversized/prompts-no-weight__
+        costume-weapon-main:
+          - oversized sword, huge sword, buster-sword
+        costume-weapon:
+          - holding buster-sword, holding oversized sword
       weapon-two-handed:
         prompts:
           - >-
