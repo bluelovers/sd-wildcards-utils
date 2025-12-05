@@ -408,4 +408,31 @@ lazy-wildcards:
           - emergency
           - rescue
           - medical
+      airship-rasta:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-vehicle/airship-rasta/env-elem-vehicle-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/airship-rasta/env-elem-vehicle__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/airship-rasta/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/airship-rasta/style__}|}
+        env-elem-vehicle-main:
+          - traditional rasta airship
+        env-elem-vehicle:
+          - ethnic airship
+          - fantasy vehicle
+        env:
+          - balloon structure
+          - wood texture, cloth wrapping, leather texture
+          - naturally weathered handmade hull with ritual scars and ceremonial carvings
+          - symbolic fire vents
+          - spiritual levitation
+          - floating particles
+          - floating in sky
+        style:
+          - rasta colors
+          - vulgar
+          - ethnic, rasta aesthetic, ethnic design
+          - handcrafted look, asymmetrical design
+          - cultural motif
+          - spiritual symbolism
 

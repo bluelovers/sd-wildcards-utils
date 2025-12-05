@@ -305,4 +305,24 @@ lazy-wildcards:
           - hydrangea
           - winter daphne
           - allium \(flower\)
+      # 花田
+      flower-meadow:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/flower-meadow/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-elem/flower-meadow/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/flower-meadow/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/flower-meadow/env__}|}
+        env-bg-main:
+          - flower meadow
+        env-bg:
+          - field of flowers
+          - blooming meadow
+          - wildflower field
+          - nature panorama background
+        env:
+          - petals
+          - very windy, wind blowing
 

@@ -494,4 +494,47 @@ lazy-wildcards:
           - rope
           - felt
           - campfire
+      ruin-buildings:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/ruin-buildings/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/ruin-buildings/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/ruin-buildings/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/ruin-buildings/style__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/ruin-buildings/style-view__}|}
+        env-bg-main:
+          - ruined buildings, collapsed buildings
+        env-bg:
+          - abandoned power plant
+          - empty streets
+          - collapsed roofs
+          - dimensional rift, magic circle
+        env:
+          - broken walls
+          - shattered windows
+          - overgrown vegetation
+          - cracked asphalt
+          - debris
+          - hanging cables
+          - overcast sky
+          - dangling metal debris
+          - old terminals, CRT monitor
+          - summoning device
+        style:
+          - post-apocalyptic
+          - abandoned atmosphere
+          - ominous atmosphere
+          - evil aura
+          - technology and occult fusion, occult technology
+          - law chaos conflict
+          - muted colors, desaturated colors
+          - aftermath of destruction
+          - asymmetrical design
+          - formation
+          - flat lighting
+          - tight composition
+        style-view:
+          - wide angle view
+          - dramatic perspective
+          - isometric view
 
