@@ -10,10 +10,11 @@ lazy-wildcards:
             __lazy-wildcards/subject/style-elem/lighting-cinematic/style-main__
             {, {1-$$__lazy-wildcards/subject/style-elem/lighting-cinematic/style__}|}
         style-main:
-          - cinematic lighting
+          - cinematic lighting, cinematic
         style:
           - volumetric lighting
           - __lazy-wildcards/subject/style-elem/high_contrast/prompts-no-weight__
+          - dramatic lighting
       high_contrast:
         prompts:
           - >-

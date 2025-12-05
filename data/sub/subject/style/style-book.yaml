@@ -197,4 +197,42 @@ lazy-wildcards:
           - dust in paper
           - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
           - horror space
+      # https://civitai.com/models/2185179?modelVersionId=2460447
+      paper-ledger-old:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-book/paper-ledger-old/env-elem-main__
+            {, {1-$$__lazy-wildcards/subject/style-book/paper-ledger-old/env-elem__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-book/paper-ledger-old/env__}|}
+            {, {1-$$__lazy-wildcards/subject/style-book/paper-ledger-old/style__}|}
+        env-elem-main:
+          - old ledger paper, oldledgerpaperstyle
+        env-elem:
+          - aged paper
+          - vintage ledger, vintage document
+          - antique ledger
+          - thick paper
+          - torn paper
+          - rough edges
+          - yellowed paper
+        env:
+          - historical artifact
+          - handwritten text, calligraphy, english text
+          - ink pen
+          - lined paper
+          - creased paper
+          - paper texture
+          - dusty texture
+          - wax seal mark, stamp impression
+          - damaged paper
+          - brass objects
+          - abandoned records
+          - collage background
+        style:
+          - sepia tone
+          - worn edges
+          - ink bleed
+          - faded ink
+          - steampunk aesthetic
+          - mixed media
 

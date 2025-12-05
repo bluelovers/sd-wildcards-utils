@@ -113,4 +113,27 @@ lazy-wildcards:
           - product photography
           - dramatic lighting
           - spotlight
+      photo-film:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-elem/photo-film/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+            {, {1-$$__lazy-wildcards/subject/style-elem/photo-film/style__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/style-elem/photo-film/style-main__
+            {, {1-$$__lazy-wildcards/subject/style-elem/photo-film/style-elem__}|}
+        style-main:
+          - film imperfections, film photograph
+        style-elem:
+          - analog film
+          - 35mm film
+          - vintage film
+          - film grain, film texture
+        style:
+          - __lazy-wildcards/subject/style-elem/lighting-cinematic/prompts-no-weight__
+          - __lazy-wildcards/subject/env-bg/background-blurry/prompts-no-weight__
+          - chromatic aberration
+          - amazing composition
+          - soft reflections
+          - impressionism
 
