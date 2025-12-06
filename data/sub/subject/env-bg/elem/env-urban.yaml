@@ -1,9 +1,30 @@
 lazy-wildcards:
   subject:
-    env-elem:
-      # 停車收費碼錶
-      parking_meter:
+    env-bg:
+      dirty-street:
         prompts:
           - >-
-            (parking meter{0.3:::{1.2|1.3|1.4}|:1.2})
-
+            ruanyi0042,
+            __lazy-wildcards/subject/env-bg/ruins-city-street/prompts__,
+            {6-$$__lazy-wildcards/subject/env-bg/ruins-city-street/env__}
+            {, __lazy-wildcards/subject/env-moment/random/prompts__|}
+      # https://civitai.com/images/110915752
+      street-palm_trees:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/street-palm_trees/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/street-palm_trees/env__}|}
+        env-bg-main:
+          - street with palm trees, palm trees, street
+        env:
+          - urban
+          - clear sky
+          - pastel buildings
+          - retro car
+          - summer, night
+          - neon lights, neon sign
+      dirty-alley:
+        prompts:
+          - >-
+            ruanyi0046, (alley:1.2),
+            __lazy-wildcards/subject/env-bg/dirty-street/prompts__
