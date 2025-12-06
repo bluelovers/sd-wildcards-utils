@@ -74,6 +74,20 @@ lazy-wildcards:
           - japanese tableware
           - sake bottle
           - __lazy-wildcards/subject/env-elem-food-tool/red_sake_cup/prompts__
+          - sake cup
+          - wooden masu box
+      wine-sake-onsen:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/env-elem-food-drink/wine-sake-onsen/env-elem-food-tool__})
+            {, {1-$$__lazy-wildcards/subject/env-elem-food-drink/wine-sake-onsen/env__}|}
+        env-elem-food-tool:
+          - onsen sake bucket
+          - floating round wooden tray
+        env:
+          - wood grain
+          - __lazy-wildcards/subject/env-elem-food-drink/wine-sake/prompts__
+          - small towel
       wine-glass:
         prompts:
           - >-

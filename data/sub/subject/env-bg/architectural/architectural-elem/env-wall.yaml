@@ -277,4 +277,47 @@ lazy-wildcards:
           - stillness
           - cinematic composition
           - quiet solitude
+      # 浴簾
+      curtain-bathroom:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/curtain-bathroom/env-elem-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/curtain-bathroom/env-elem-main2__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/curtain-bathroom/env-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/curtain-bathroom/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/curtain-bathroom/env__}|}
+        env-elem-main:
+          - bathroom curtain
+        env-elem-main2:
+          - fabric curtain, fabric shower curtain
+          - translucent curtain, transparent shower curtain
+          - slightly opened curtain
+          - closed curtain
+        env-elem:
+          - shower curtain
+          - bathtub curtain
+          - waterproof curtain
+          - patterned curtain
+          - colorful curtain
+          - plastic curtain
+          - decorative curtain
+          - semi transparent curtain
+          - soft folds curtain, vertical folds curtain
+        costume-elem:
+          - figure behind curtain
+          - suggestive silhouette
+        env:
+          - glossy surface
+          - tiled wall
+          - bathroom setting
+          - light diffusion, diffused light
+          - reflection
+          - silhouette
+          - water droplets
+          - condensation, foggy air, steam
+          - shower rod, curtain ring
+          - backlight
+          - soft light
+          - bathroom lighting
+          - __lazy-wildcards/subject/env-moment/weather-mist/prompts__
 

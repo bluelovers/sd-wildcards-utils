@@ -3,7 +3,26 @@ lazy-wildcards:
     costume-ethnicity-body:
       curvy_female:
         prompts:
-          - curvy, narrow waist, curvy figure, curvy female, curvaceous, wide hips
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-body/curvy_female/costume-ethnicity-body__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-body/curvy_female/costume-ethnicity__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-body/curvy_female/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-body/curvy_female/style__}|}
+        costume-ethnicity-body:
+          - curvy, narrow waist, curvy figure, curvy female, curvaceous, wide hips, venus body
+        costume-ethnicity:
+          - slender body
+          - thin waist
+          - long legs
+          - sexy legs
+          - sexy long legs
+          - perfect body
+          - mature female
+        action:
+          - suggestive pose
+        style:
+          - aesthetic eroticism, erotic but aesthetic
+          - best angle
       # 苗条
       slender:
         prompts:

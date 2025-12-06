@@ -352,4 +352,46 @@ lazy-wildcards:
             {, __lazy-wildcards/subject/costume/blazer_dress/prompts__|}
         costume:
           - plaid blazer dress, checked blazer dress, w00lj4ck3t
+      # 螢光背心
+      vest-safety-fluorescent:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/vest-safety-fluorescent/costume-main__
+            {, {1-2$$__lazy-wildcards/subject/costume/vest-safety-fluorescent/costume__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/vest-safety-fluorescent/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/vest-safety-fluorescent/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/vest-safety-fluorescent/action__}|}
+            {, {1-2$$__lazy-wildcards/subject/costume/vest-safety-fluorescent/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/vest-safety-fluorescent/style__}|}
+        costume-main:
+          - safety vest, fluorescent safety vest
+        costume:
+          - high visibility vest
+          - construction worker vest
+          - reflective vest
+          - police
+          - security guard
+        costume-elem:
+          - neon colors
+          - reflective strips
+          - traffic controller
+          - construction flagger
+          - reflective material
+        costume-weapon:
+          - glowing baton
+          - holding baton
+          - traffic baton
+        action:
+          - arm raised
+          - crossing gesture
+          - direction pointing, directing traffic
+        env-bg:
+          - road intersection
+          - construction site
+          - city street at night
+          - rainy road
+        style:
+          - fluorescent yellow green
+          - fluorescent orange
+          - neon effect
 

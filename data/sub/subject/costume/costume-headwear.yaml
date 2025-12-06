@@ -275,4 +275,66 @@ lazy-wildcards:
           - psychological horror
           - cute contrast
           - ironic
+      # https://www.tumblr.com/tanuki-kimono/613908572010627072/women-edo-era-kaburimono-headdress-handy-chart?utm_source=chatgpt.com
+      jp-headwear:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-headwear/jp-headwear/costume-headwear-main__
+            {, {1-2$$__lazy-wildcards/subject/costume-headwear/jp-headwear/costume-headwear-main2__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-headwear/jp-headwear/costume-headwear__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-headwear/jp-headwear/costume__}|}
+            {, {1-2$$__lazy-wildcards/subject/costume-headwear/jp-headwear/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-headwear/jp-headwear/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-headwear/jp-headwear/style__}|}
+        costume-headwear-main:
+          - traditional japanese headwear
+        costume-headwear-main2:
+          # 瀬川帽子 : Made popular in mid-Edo
+          - segawa boshi, segawa headgear
+          # 輪帽子 : cotton cloth covering forehead and tied under the chin
+          - wa boshi, ring headgear
+          # 綿帽子 : cotton cap protecting hair from wind and dust. Nowadays this style is worn by brides
+          - wata boshi, cotton headgear, traditional japanese bridal style
+          # 揚帽子 : Worn by women of the samurai and wealthy class (I know this style under the name ageha bôshi)
+          - ageboshi, ageha boshi, butterfly headgear
+          # 御高袖頭市 : large hood worn during cold weather
+          - okoso zukin, big sleeve hood
+          # 吹き流し : very iki (fashionable) style, in ukiyoe women are often depicted holding up a corner in their mouths
+          - fukinagashi, loose veil headgear
+          # 姉さん被り: tenugui headdress worn by working women (the anesan=“older sister” stresses the humble origin of this style)
+          - anesan kaburi, wrap-around headdress
+          # 被衣 : Remnant of travelling attires used during Heian and Muromachi eras. It remained fashionable in Kyoto until mid Edo
+          - katsugi, kosode veil-cape
+        costume-headwear:
+          - head scarf
+          - cloth hood
+          - covered hair
+        costume:
+          - simple kimono
+          - cotton kimono
+          - plain kimono
+        costume-elem:
+          - obi
+          - traditional japanese peasant woman
+          - traditional japanese town worker
+          - traditional japanese commoner woman
+          - traditional japanese samurai woman
+          - traditional japanese bride
+        env-bg:
+          - traditional japanese village
+          - traditional japanese wooden house
+          - traditional japanese rural scenery
+          - traditional japanese market
+          - traditional japanese ceremony
+        style:
+          - mid edo fashion, edo period
+          - samurai class fashion
+          - ukiyo-e style
+          - heian muromachi fashion
+          - ancient japan
+          - calm expression
+          - humble posture
+          - natural lighting
+          - slight low angle
+          - humble elegance
 

@@ -205,4 +205,56 @@ lazy-wildcards:
           - floral pattern
           - watercolor gradient
           - gentle, dreamy
+      # 歐美電影喪禮中的黑色禮服
+      dress-funeral-black:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/dress-funeral-black/costume-main__
+            {, {1-$$__lazy-wildcards/subject/costume/dress-funeral-black/costume__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/dress-funeral-black/costume-headwear__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/dress-funeral-black/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/dress-funeral-black/expressions__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/dress-funeral-black/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/dress-funeral-black/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/dress-funeral-black/style__}|}
+        costume-main:
+          - black funeral dress
+        costume:
+          - mourning dress
+          - black lace dress
+          - Victorian mourning attire
+          - gothic funeral dress
+        costume-headwear:
+          - black mourning veil
+          - lace veil
+          - black wide brim hat
+        costume-elem:
+          - lace details
+          - long sleeves
+          - high collar
+          - floor-length skirt
+          - corset bodice
+          - somber accessories
+          - three quarter sleeves
+          - black lace
+          - sheer fabric, sheer sleeves
+          - black high heels
+        expressions:
+          - mourning, serious expression
+          - grief, sad eyes
+          - solemn, elegant posture
+          - restraint, restrained emotion
+        costume-weapon:
+          - black clutch, black handbag
+          - umbrella
+          - holding umbrella
+        env-bg:
+          - church funeral
+          - __lazy-wildcards/subject/env-bg/graveyard/prompts__
+          - rainy funeral scene, rain, overcast lighting
+        style:
+          - dark elegance
+          - victorian gothic
+          - melancholic atmosphere
+          - dramatic cinema tone
 

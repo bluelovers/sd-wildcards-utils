@@ -222,4 +222,93 @@ lazy-wildcards:
           - beanie, scarf
           - padded coat
           - gloves
+      # https://civitai.com/models/540480?modelVersionId=1029323
+      # https://civitai.com/models/128310/rei-no-pool
+      # https://civitai.com/models/102930/xsarchi131hotel-pool
+      pool:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/pool/main-trigger-words__
+            , {1-2$$__lazy-wildcards/subject/env-elem/pool/env-bg-main__}
+            {, {1-3$$__lazy-wildcards/subject/env-elem/pool/env-pool__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/pool/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/pool/style__}|}
+        main-trigger-words:
+          - JPPL, swimming pool, rei no pool, shs reinopool, reinopool
+        env-bg-main:
+          - poolside
+          - pool
+        env-pool:
+          - empty pool
+          - pool ladder
+          - >-
+            {Japanese |}Public Pool
+          - rooftop pool, elevated_pool
+          - hotel pool
+          - infinity_pool
+          - luxury_pool
+          - natural_pool, eco_pool
+          - hot_spring, onsen, steam
+          - stone_pool, rocks
+          - kiddie_pool, children_pool
+          - lagoon_pool, sandy_edge, tropical_design, irregular_shape, lagoon_style
+          - plunge_pool, deep_pool
+        env:
+          - window
+          - ceiling
+          - indoors
+          - tile floor
+          - tile wall
+          - ocean_view
+          - clear_water
+          - vegetation
+          - natural_landscape
+          - water_slide
+          - city_view
+          - skyline_view
+          - spa_resort
+          - water_park
+          - cool_water
+        style:
+          - seamless_edge
+          - horizon_blend
+          - relaxing_environment
+      pool-onsen-japanese:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/pool-onsen-japanese/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/pool-onsen-japanese/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/pool-onsen-japanese/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/pool-onsen-japanese/style__}|}
+        env-bg-main:
+          - japanese onsen, onsen, hot steam, water vapor, ambient occlusion
+        env-bg:
+          - hot spring
+          - rock onsen, stone onsen
+          - >-
+            {rotenburo, outdoor onsen|indoor onsen}
+          - snowy onsen
+          - night onsen
+        env:
+          - __lazy-wildcards/subject/env-moment/weather-mist-hot/prompts__
+          - __lazy-wildcards/subject/env-moment/weather-mist-perfume/prompts__
+          - wooden architecture
+          - wooden walls
+          - wooden ceiling
+          - milky white water
+          - small towel
+          - wooden locker
+          - wicker basket
+          - wooden basket
+          - bloom
+          - __lazy-wildcards/subject/env-elem-food-drink/wine-sake-onsen/prompts__
+        style:
+          - traditional japanese style
+          - natural setting, nature harmony
+          - healing
+          - purification
+          - relaxation
+          - ambient light, soft lighting
+          - dutch angle
+          - warm yellow light
 

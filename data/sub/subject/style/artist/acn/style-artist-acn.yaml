@@ -166,4 +166,47 @@ lazy-wildcards:
             , SMNouveau
             , Naoko Takeuchi Style
             , EPTakeuchiNaokoStyle
+      # https://civitai.com/models/90883/code-geass-style-lora
+      code_geass:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-artist/code_geass/style-artist__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/style-artist/code_geass/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/code_geass/expressions__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/code_geass/action__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/code_geass/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/style-artist/code_geass/style__}|}
+        style-artist:
+          - >-
+            __lazy-wildcards/utils/fn/style-inspired(v=code_geass)__
+            , __lazy-wildcards/utils/fn/style-inspired(v=kimura_takahiro)__
+            , codeGeass
+        costume-elem:
+          - elaborate costume
+          - noble woman
+          - long flowing hair
+          - bare shoulders
+          - detached sleeves
+          - cross-laced panties
+          - military uniform
+          - juliet sleeves
+          - high collar
+          - open clothes
+          - white boots
+          - cone hair bun
+          - fake animal ears
+          - highleg leotard
+          - highleg
+          - japanese clothes, kimono, koma-geta
+          - ashford academy school uniform
+        expressions:
+          - confident
+          - expressive face
+        action:
+          - dramatic dynamic pose
+        env-bg:
+          - castle background
+          - futuristic city
+        style:
+          - niploutline
 

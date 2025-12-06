@@ -1,0 +1,44 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      # 賽車場地
+      race-car_racing_court:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/race-car_racing_court/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/race-car_racing_court/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/race-car_racing_court/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/race-car_racing_court/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/race-car_racing_court/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/race-car_racing_court/style__}|}
+        env-bg-main:
+          - car racing court
+        env-bg:
+          - race track
+          - racing environment
+          - pit lane
+          - garage building
+          - control tower
+          - grandstand
+        env:
+          - asphalt
+          - tire marks
+          - track lines
+          - curved track
+          - straight track
+          - safety barrier
+          - metal guardrail
+          - concrete wall
+          - fence
+        costume-elem:
+          - racing queen dress
+        costume-weapon:
+          - umbrella
+          - holding umbrella
+          - opened umbrella
+        style:
+          - gray, black, red, white
+          - speed, competition
+          - tension
+          - powerful atmosphere
+

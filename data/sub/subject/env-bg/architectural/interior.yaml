@@ -810,4 +810,32 @@ lazy-wildcards:
         style-view:
           - view from doorway
           - top down view
+      # 洗衣間
+      laundry_room:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-interior/laundry_room/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/laundry_room/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg-interior/laundry_room/env__}|}
+        env-bg-main:
+          - laundry room, indoor, interior
+        env-bg:
+          - laundromat
+        env:
+          - washing machines, clothes dryer
+          - stacked clothes dryer
+          - domestic setting
+          - utility shelf, clothes hanger
+          - tile floor
+          - laundry basket
+          - plastic basket
+          - woven basket
+          - unworn clothes
+          - pile of unworn clothes
+          - detergent
+          - soap bottle
+          - hair dryer
+          - electrical outlet
+          - clothesline
+          - towel
 
