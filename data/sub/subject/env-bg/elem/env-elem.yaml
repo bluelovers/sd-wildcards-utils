@@ -6,38 +6,38 @@ lazy-wildcards:
       manhole-cover:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-elem/manhole-cover/main__,
-            {1-$$__lazy-wildcards/subject/env-elem/manhole-cover/style-colors__},
-            {{1-$$__lazy-wildcards/subject/env-elem/manhole-cover/style-location__},|}
-            {{1-$$__lazy-wildcards/subject/env-elem/manhole-cover/env__},|}
-            {{1-$$__lazy-wildcards/subject/env-elem/flower/prompts__},|}
-            {1-$$__lazy-wildcards/subject/env-elem/manhole-cover/style__}
-        main:
-          - japanese_manhole, manhole cover
-        style-colors:
-          - colored metal, colorful_designs
+            __lazy-wildcards/subject/env-elem/manhole-cover/env-elem-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/manhole-cover/env-elem-color__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/manhole-cover/style-location__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/manhole-cover/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/flower/prompts__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/manhole-cover/style__}|}
+        env-elem-main:
+          - japanese manhole, manhole cover
+        env-elem-color:
+          - colored metal, colorful designs
           - colorless metal
         style-location:
-          - japanese_manhole_cover
-          - taiwan_manhole_cover
-          - taipei_manhole_cover
-        style:
-          - intricate_designs
-          - city_emblems
-          - cultural_patterns
-          - unique_patterns
-          - city_symbols
-          - local_culture
-          - specific_city_emblems
-          - decorative_designs
-          - capital_city
-          - artistic_patterns
-          - elaborate_artwork
-          - aesthetic_patterns
-          - public_art
+          - japanese manhole cover
+          - taiwan manhole cover
+          - taipei manhole cover
         env:
-          - gorgeous_manhole_cover
-          - decorative_manhole_cover
+          - gorgeous manhole cover
+          - decorative manhole cover
+        style:
+          - intricate designs
+          - city emblems
+          - cultural patterns
+          - unique patterns
+          - city symbols
+          - local culture
+          - specific city emblems
+          - decorative designs
+          - capital city
+          - artistic patterns
+          - elaborate artwork
+          - aesthetic patterns
+          - public art
       # https://danbooru.donmai.us/posts?tags=chinese_medicine_cabinet&z=5
       chinese-medicine:
         prompts:
