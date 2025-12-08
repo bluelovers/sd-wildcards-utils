@@ -17,57 +17,73 @@ lazy-wildcards:
         env:
           - mystical_symbols
           - quill_and_ink
+      # 書架
       bookshelves:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/env-elem/bookshelves/env-book__}
+            __lazy-wildcards/subject/env-elem/bookshelves/env-elem-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/bookshelves/env-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/bookshelves/action__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem/bookshelves/env__}|}
-        env-book:
-          - towering_bookshelves
-          - rows_of_bookshelves
-          - personal_bookshelves
-          - bestseller_shelf
+        env-elem-main:
+          - bookshelves, bookshelf
+        env-elem:
+          - towering bookshelves
+          - rows of bookshelves
+          - personal bookshelves
+          - bestseller shelf
+        action:
+          - browsing books
+          - reading books, reading magazine
         env:
-          - library_ladder
-          - metal_shelves
-          - file_cabinets
-          - organized_files
-          - restricted_area_sign, restricted_access
+          - library ladder
+          - metal shelves
+          - file cabinets
+          - organized files
+          - restricted area sign, restricted access
       bookstore:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/env-elem/bookstore/env-bg-main__}
-            {, {1-$$__lazy-wildcards/subject/env-elem/bookstore/env-bg__}|}
-            {, {1-$$__lazy-wildcards/subject/env-elem/bookstore/env-book__}|}
+            __lazy-wildcards/subject/env-elem/bookstore/env-bg-main__
+            {, {1-2$$__lazy-wildcards/subject/env-elem/bookstore/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/bookshelves/action__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/bookstore/env-elem__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem/bookstore/env__}|}
             {, {1-$$__lazy-wildcards/subject/env-elem/bookstore/style__}|}
         env-bg-main:
           - bookstore
-          - bookstore_interior
+          - bookstore interior
         env-bg:
-          - Classic Bookstore
-          - Indie Bookstore
-          - Secondhand Bookstore
-          - Manga Bookstore
-        env-book:
-          - bestseller_shelf
-          - reading_area, reading_nook
-          - books_on_display
+          - classic bookstore
+          - indie bookstore
+          - secondhand bookstore
+          - manga bookstore, comic shop
+          - convenience store interior
+          - newsstand
+        action:
+          - browsing books
+          - reading books, reading magazine
+        env-elem:
+          - magazine rack
+          - __lazy-wildcards/subject/env-elem/bookshelves/prompts__
+          - reading area, reading nook
+          - books on display
           - antique books
-          - dusty_books, stacked_piles
-          - colorful_covers, anime_posters
+          - dusty books, stacked piles
+          - colorful covers, anime posters
+          - printed media display
         env:
-          - cash_register
+          - cash register
           - rows of shelves
           - wooden shelves
           - handwritten notes
         style:
-          - quiet_ambiance
-          - cozy_ambiance
-          - friendly_ambiance
+          - quiet ambiance
+          - cozy ambiance
+          - friendly ambiance
           - literary
-          - dim_lighting
-          - nostalgic_vibe
+          - dim lighting
+          - nostalgic vibe
       # https://civitai.com/models/347450/books-world
       books_world:
         prompts:

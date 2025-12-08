@@ -28,3 +28,60 @@ lazy-wildcards:
           - >-
             ruanyi0046, (alley:1.2),
             __lazy-wildcards/subject/env-bg/dirty-street/prompts__
+      street-empty:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/street-empty/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-bg/street-empty/env-bg__
+            {, {1-$$__lazy-wildcards/subject/env-bg/street-empty/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/street-empty/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/street-empty/style__}|}
+        env-bg:
+          - empty street, deserted street, quiet street
+        env:
+          - power lines, utility pole
+        costume-elem:
+          - short hoodie, hood down, pantyhose
+        style:
+          - stillness
+          - low light
+          - dark light
+          - wide shot
+      street-empty-night:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/street-empty-night/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-bg/street-empty-night/env-bg__
+            , __lazy-wildcards/subject/env-bg/street-empty/prompts-no-weight__
+        env-bg:
+          - empty street at night, night
+      # https://civitai.com/models/2202087/retro-neon-citycore-lora
+      city-retro-neon:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/city-retro-neon/env-bg__
+            {, {1-$$__lazy-wildcards/subject/env-bg/city-retro-neon/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
+            , __lazy-wildcards/subject/env-elem/signboard-neon-retro/prompts-no-weight__
+            {, {1-$$__lazy-wildcards/subject/env-bg/city-retro-neon/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/city-retro-neon/style__}|}
+        env-bg-main:
+          - >-
+            retro neon urban, retro neon lights
+            , rncstyle, building
+        env-bg:
+          - slums, chaotic
+          - under ground urban
+          - road, street
+        env:
+          - porch
+          - broken lights
+          - torn signs
+        style:
+          - __lazy-wildcards/utils/scenery-no-humans__
+          - __lazy-wildcards/utils/fn/style-inspired(v=retro)__
+          - muted color
+

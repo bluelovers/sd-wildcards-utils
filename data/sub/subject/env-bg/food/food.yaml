@@ -166,13 +166,19 @@ lazy-wildcards:
           - monster meat feast
           - presenting exotic dish
           - chunks of meat
+          - raw meat
+          - __lazy-wildcards/subject/costume-weapon/organ-heart/prompts-no-weight__
+          - __lazy-wildcards/subject/costume-weapon/organ-eyeball/prompts-no-weight__
+          # 肝
+          - liver \(organ\)
+          - organ
         env:
           - tentacles
           - eyeball \(object\)
           - insect
           - __lazy-wildcards/subject/env-elem-food-tool/knife_fork/prompts-no-weight__
           - traditional tableware
-          - eyeball object
+          - cutting board
         style:
           - purple
           - multi colored

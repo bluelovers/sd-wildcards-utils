@@ -129,4 +129,43 @@ lazy-wildcards:
           sky_lantern:
             - >-
               ${c}-colored sky lantern, a sky lantern in ${c}
+      signboard-handwritten:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/signboard-handwritten/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-elem/signboard-handwritten/env-elem__
+            {, {1-$$__lazy-wildcards/subject/env-elem/signboard-handwritten/env__}|}
+        env-elem:
+          - signboard, handwritten sign
+        env:
+          - price list
+      signboard-neon:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/signboard-neon/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-elem/signboard-neon/env-elem__
+        env-elem:
+          - neon signboard, neon signage, neon sign, retro signage
+      # https://civitai.com/models/2202087/retro-neon-citycore-lora
+      signboard-neon-retro:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/signboard-neon-retro/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-elem/signboard-neon-retro/env-elem-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/signboard-neon-retro/env__}|}
+            {, __lazy-wildcards/subject/env-elem/signboard-neon-retro/env-elem__|}
+        env-elem-main:
+          - >-
+            retro neon signboard, retro neon signage, retro neon sign
+            , rncstyle
+        env:
+          - retro lighting
+        env-elem:
+          - orange and white retro neon signs
 

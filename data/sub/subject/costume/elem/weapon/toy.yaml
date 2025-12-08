@@ -25,4 +25,62 @@ lazy-wildcards:
           - hugging stuffed toy
         style:
           - stuffing
+      organ-heart:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-weapon/organ-heart/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-weapon/organ-heart/env-elem__
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/organ-heart/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/organ-heart/env__}|}
+        env-elem:
+          - heart \(organ\)
+        costume-weapon:
+          - holding heart \(organ\)
+        env:
+          - glowing heart \(organ\)
+          - floating heart \(organ\)
+      # https://danbooru.donmai.us/posts?tags=holding_eyeball&z=2
+      organ-eyeball:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-weapon/organ-eyeball/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-weapon/organ-eyeball/env-elem__
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/organ-eyeball/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/organ-eyeball/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/organ-eyeball/env__}|}
+        env-elem:
+          - eyeball \(organ\)
+        costume-weapon:
+          - holding eyeball \(organ\)
+        costume-elem:
+          - blood from eyes
+          - missing eye
+          - gouged eye
+          - eyepatch
+          - unworn eyepatch
+        env:
+          - glowing eyeball \(organ\)
+          - oversized eyeball \(organ\)
+          - floating eyeball \(organ\)
+      # 肝
+      organ-liver:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-weapon/organ-liver/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-weapon/organ-liver/env-elem__
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/organ-liver/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/organ-liver/env__}|}
+        env-elem:
+          - liver \(organ\)
+        costume-weapon:
+          - holding liver \(organ\)
+        env:
+          - glowing liver \(organ\)
+          - floating liver \(organ\)
 
