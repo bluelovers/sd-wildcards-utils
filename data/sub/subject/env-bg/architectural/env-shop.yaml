@@ -514,4 +514,48 @@ lazy-wildcards:
           - yellow lighting
           - nostalgic
           - slice of life
+      # 櫥窗逛街
+      shop-window_shopping:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/shop-window_shopping/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/shop-window_shopping/env-bg__}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/shop-window_shopping/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/shop-window_shopping/style__}|}
+        env-bg-main:
+          - window shopping
+        env-bg:
+          - vintage watch and antique shop
+          - old building, brick wall, stone facade
+          - vintage sign, classic typography
+        env:
+          - reflection
+          - pocket watch
+          - mechanical watch
+          - brass
+          - antique object
+          - vintage decor
+          - evening
+          - __lazy-wildcards/subject/env-bg/shop-wooden-green/prompts__
+        style:
+          - nostalgic city mood, nostalgic atmosphere
+          - craftsmanship
+          - warm light
+          - showcase lighting
+      shop-wooden-green:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/shop-wooden-green/env__
+        env:
+          - >-
+            __lazy-wildcards/subject/env-bg/shop-wooden-green/style-color__ wooden
+        style-color:
+          # 深沉、接近黑綠色，常用於傳統木門與窗框
+          - hunter green
+          # 比獵人綠稍微明亮，帶有自然森林的感覺
+          - forest green
+          # 經典英式深綠色，常見於復古車與店面外牆
+          - british racing green
+          # 帶有灰調的綠色，有時用於較樸素的復古風格
+          - olive green
 
