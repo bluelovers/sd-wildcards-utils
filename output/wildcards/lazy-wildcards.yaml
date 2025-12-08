@@ -7233,6 +7233,35 @@
           - dystopian
           - desolate,bleak,barren
           - wasteland aesthetic
+      # 沙漠帳篷
+      "tent-desert":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/tent-desert/env-elem-main__{,{1-$$__lazy-wildcards/subject/env-bg/tent-desert/env-elem__}|}){,{1-$$__lazy-wildcards/subject/env-bg/tent-desert/env__}|}{,{1-3$$__lazy-wildcards/subject/env-bg/tent-desert/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/tent-desert/style__}|}
+        "env-elem-main":
+          - desert tent
+        "env-elem":
+          - sandy tent
+          - arid tent
+          - fabric tent
+          - tent interior
+        env:
+          - sand color fabric
+          - ropes and stakes
+          - fabric drapery
+          - travel supplies
+        "env-bg":
+          - desert environment
+          - sand dunes
+          - wind swept sand
+          - vast horizon
+          - night desert
+        style:
+          - isolation
+          - survival
+          - exotic atmosphere
+          - nomad lifestyle
+          - warm lighting
       # 蒙古包
       "tent-yurt-ger":
         prompts:
