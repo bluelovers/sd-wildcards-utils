@@ -21,6 +21,9 @@ export const groupSplitConfig = [
 	['color-anything', '__lazy-wildcards/utils/color-base__'],
 	['color-anything', '__mix-lazy-auto/color-anything__'],
 
+	['color-anything', '__lazy-wildcards/subject/*/*/style-color*__'],
+	['color-anything', '__lazy-wildcards/cosplay-*/*/*/style-color*__'],
+
 	['color-anything', '__cf-*/color__'],
 
 	['color-anything', '__Bo/chars/haircolor__'],
