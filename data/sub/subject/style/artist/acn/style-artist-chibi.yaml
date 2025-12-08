@@ -13,4 +13,39 @@ lazy-wildcards:
         style:
           - mechanical
           - cute
+      # https://civitai.com/models/2203795/illustrious-susagane-sd-gundam-style?modelVersionId=2481325
+      chibi-gundam-sd:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/chibi-gundam-sd/style-main__
+            , __lazy-wildcards/subject/style-artist/chibi-gundam-sd/costume-ethnicity__
+            {, {__lazy-wildcards/subject/style-artist/chibi-gundam-sd/costume-elem__}|}
+            {, {__lazy-wildcards/subject/style-artist/chibi-gundam-sd/costume-weapon__}|}
+            {, {__lazy-wildcards/subject/style-artist/chibi-gundam-sd/style__}|}
+            , __lazy-wildcards/subject/style-elem/chibi/prompts__
+        style-main:
+          - >-
+            __lazy-wildcards/utils/fn/style-inspired(v=sd_gundam)__
+            , chibi, no humans
+            , ssgn
+        costume-ethnicity:
+          - gundam face, mecha, mechanical, mechanization
+        costume-elem:
+          - samurai mecha
+          - cute mecha face
+          - metal crest
+          - samurai helmet
+          - metallic armor
+          - heavy armor
+          - japanese mecha
+        costume-weapon:
+          - katana
+          - samurai sword
+          - beam saber
+          - mecha weapon
+          - arm cannon
+        style:
+          - chibi mecha
+          - rough metal texture
+          - official art style
 

@@ -31,6 +31,26 @@ lazy-wildcards:
           - plump
           - model sheet, chara-sheet
           - blush stickers
+          - big head small body
+          - short limbs
+          - cute, cute proportion
+          - chibi only
+      # https://civitai.com/models/1802106/game-design-of-western-cartoon-characters?modelVersionId=2039412
+      chibi-3d:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-elem/chibi-3d/style-art-main__:{1.2|1.3|1.4|1.6})
+            {, {1-$$__lazy-wildcards/subject/style-elem/chibi-3d/style__}|}
+            {, {1-$$__lazy-wildcards/subject/style-elem/chibi-3d/costume-elem__}|}
+        style-art-main:
+          - __lazy-wildcards/utils/fn/style-inspired(v=3d_chibi)__, 3d
+        costume-elem:
+          - cute
+          - big head
+          - small body
+          - large eyes
+        style:
+          - exaggerated proportions
       # https://civitai.com/models/297627/nobunyagas-ambition?modelVersionId=334358
       Nobunyagas_Ambition:
         prompts:
