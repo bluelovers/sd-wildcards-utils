@@ -200,4 +200,19 @@ lazy-wildcards:
           - shy
           - reserved emotion
           - slight blush
+      pose-ojou-sama:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/action-pose/pose-ojou-sama/action-pose-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/action-pose/pose-ojou-sama/action-pose__}|}
+            {, {1-$$__lazy-wildcards/subject/action-pose/pose-ojou-sama/expressions__}|}
+        action-pose-main:
+          - ojou-sama pose
+        action-pose:
+          - hand to own mouth
+          - pinky to mouth
+          - hand over own mouth
+        expressions:
+          - smug
+          - okawaii koto+
 
