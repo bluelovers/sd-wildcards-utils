@@ -38,6 +38,7 @@ lazy-wildcards:
           - broken desk
           - broken blackboard
           - broken light
+      # https://civitai.com/models/654250/school-gate-sd15?modelVersionId=731955
       school_gate:
         prompts:
           - >-
@@ -91,4 +92,56 @@ lazy-wildcards:
         costume-elem:
           - school nurse, lab_coat
           - gentle_expression
+      # 日式貴族女子學校
+      school-girls:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/school-girls/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/school-girls/env-bg-main2__}|}{0.3:::{1.2|1.3|1.4|1.6}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/school-girls/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/school-girls/action__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/school-girls/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/school-girls/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/school-girls/style__}|}
+        env-bg-main:
+          - >-
+            japanese aristocratic girls academy
+            , elite school, academy school
+            , academy of the elite
+        env-bg-main2:
+          - european academy
+          - western style academy
+        costume-elem:
+          - ojou sama
+          - school uniform, academy uniform
+          - long skirt
+          - __lazy-wildcards/subject/costume-elem-accessories/lace-trim/prompts__
+          - ribbon
+          - group of girls
+          - yuri
+          - student council
+          - drill sidelocks
+          - ringlets hairstyle
+          - half gloves
+          - jacket
+          - bowtie
+          - bow
+        action:
+          - refined posture
+          - __lazy-wildcards/subject/action-pose/pose-ojou-sama/prompts__
+        env:
+          - white building
+          - fountain
+          - tea time, teacup, teapot
+        env-bg:
+          - __lazy-wildcards/subject/env-bg/school_gate/prompts__
+          - garden
+          - classical music room
+          - classical library
+        style:
+          - nobility culture
+          - elegant atmosphere
+          - calm mood
+          - soft lighting
+          - upper class society
 
