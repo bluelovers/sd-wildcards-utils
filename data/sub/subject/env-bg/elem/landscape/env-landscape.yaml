@@ -11,23 +11,80 @@ lazy-wildcards:
           - volcanic crater lake
           - volcanic crater
           - crater lake
-          - volcanic_eruption
         env:
-          - volcanic_geology
-          - lake_reflection
-          - rocky_terrain
-          - mineral_deposits
-          - steaming_water, swirling steam
+          - volcanic geology
+          - lake reflection
+          - rocky terrain
+          - mineral deposits
+          - steaming water, swirling steam
           - dark volcanic rock formations
-          - emerald_water
-          - tranquil_landscape
-          - alien_like_environment
-          - pristine_nature
-          - high_altitude_lake
-          - clear_skies
-          - misty_lake
-          - sunrise_over_lake
+          - emerald water
+          - tranquil landscape
+          - alien like environment
+          - pristine nature
+          - high altitude lake
+          - clear skies
+          - misty lake
+          - sunrise over lake
         style:
-          - unique_coloration
+          - unique coloration
           - long shot scenic professional photograph
+      volcanic:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/volcanic/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/volcanic/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/volcanic/env__}|}
+        env-bg-main:
+          - volcano
+        env-bg:
+          - volcanic crater
+          - olcanic rock
+          - __lazy-wildcards/subject/env-bg/volcanic_eruption/prompts__
+          - __lazy-wildcards/subject/env-bg/volcanic_lava/prompts__
+        env:
+          - dark crust
+      # 火山爆發
+      volcanic_eruption:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/volcanic_eruption/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/volcanic_eruption/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/volcanic_eruption/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/volcanic_eruption/style__}|}
+        env-bg-main:
+          - volcanic eruption, volcano
+        env-bg:
+          - volcanic crater
+          - olcanic rock
+        env:
+          - volcanic ash
+          - dangerous environment
+          - __lazy-wildcards/subject/env-moment/weather-mist/prompts__
+          - sparks
+          - natural disaster
+          - __lazy-wildcards/subject/env-bg/volcanic_lava/prompts__
+        style:
+          - apocalyptic
+          - epic scale
+          - low angle
+          - __lazy-wildcards/utils/scenery-no-humans__
+      # 岩漿
+      volcanic_lava:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/volcanic_lava/env-elem__
+            {, {1-$$__lazy-wildcards/subject/env-bg/volcanic_lava/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/volcanic_lava/style__}|}
+        env-elem:
+          - lava flow, molten lava, flowing magma
+        env:
+          - glowing cracks, lava cracks, magma cracks
+          - bubbling lava, bubbling magma
+          - viscous liquid
+          - red orange yellow glowing lava
+          - __lazy-wildcards/subject/env-moment/weather-mist-hot/prompts__
+          - close up lava
+        style:
+          - heat distortion
 
