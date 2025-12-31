@@ -267,4 +267,37 @@ lazy-wildcards:
           - vest
         env:
           - flag
+      # 拳擊
+      sports-boxing:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/sports-boxing/costume__
+            {, {1-$$__lazy-wildcards/subject/costume/sports-boxing/costume-headwear__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/sports-boxing/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/sports-boxing/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/sports-boxing/env__}|}
+            {, __lazy-wildcards/subject/costume/sports-boxing/env-bg__|}
+        costume:
+          - boxer
+        action:
+          - __lazy-wildcards/subject/action-sports/sports-boxing/prompts-no-weight__
+        costume-headwear:
+          - boxing headgear
+        costume-elem:
+          - boxing gloves
+          - boxing shorts
+          - mouth guard
+          - sports bra
+          - __cf-boxer/top__
+          - __cf-boxer/bottom__
+          - __cf-boxer/shoes__
+          - __cf-boxer/beauty-adj__ boxer
+          - __cf-boxer/accessory__
+          - __cf-boxer/prompt-costume__
+          - hand wraps
+        env:
+          - punching bag
+        env-bg:
+          - boxing ring
+          - __cf-boxer/location__
 

@@ -17,4 +17,30 @@ lazy-wildcards:
           - riding big wave
           - action pose
           - air flip
+      # 拳擊
+      sports-boxing:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/action-sports/sports-boxing/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/action-sports/sports-boxing/action-main__
+            {, {1-3$$__lazy-wildcards/subject/action-sports/sports-boxing/action__}|}
+        action-main:
+          - boxing
+        action:
+          - boxing pose, boxing stance
+          - balanced posture
+          - dempsey roll
+          - punching
+          - focus mitts
+          - face punch
+          - catfight
+          - crosscounter
+          - stomach punch
+          - uppercut
+          - kicking
+          - guard up
+          - fist clenched
+          - action readiness
 

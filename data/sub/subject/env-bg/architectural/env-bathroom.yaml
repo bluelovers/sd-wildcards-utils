@@ -210,4 +210,42 @@ lazy-wildcards:
           - dirty
           - garbage
           - messy
+      # https://civitai.com/models/2207899/zit-waterfallshower
+      bathroom-waterfall:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/bathroom-waterfall/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-2$$__lazy-wildcards/subject/env-bg/bathroom-waterfall/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/bathroom-waterfall/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/bathroom-waterfall/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/bathroom-waterfall/style__}|}
+        env-bg-main:
+          - waterfall shower
+        env-bg:
+          - >-
+            {indoor waterfall, interior waterfall|outdoor waterfall, exterior waterfall}
+          - ceiling shower
+          - luxury spa, spa bathroom
+          - concrete bathroom
+          - onsen style
+        costume-elem:
+          - half naked
+          - wet clothes
+          - see-through clothes
+        env:
+          - hidden shower head
+          - stone wall
+          - stone tile
+          - heavy water flow
+          - continuous water stream
+          - wet surface
+          - rock
+          - natural waterfall
+          - natural environments, natural elements
+        style:
+          - light reflection
+          - soft lighting
+          - relaxing atmosphere
+          - low angle
+          - silhouette
 

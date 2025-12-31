@@ -1,0 +1,39 @@
+lazy-wildcards:
+  subject:
+    env-bg:
+      # 印度・香巴拉
+      indian-hindu-shambhala:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/indian-hindu-shambhala/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/indian-hindu-shambhala/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/indian-hindu-shambhala/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/indian-hindu-shambhala/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/indian-hindu-shambhala/style__}|}
+        env-bg-main:
+          - >-
+            shambhala, hindu temple
+            , ancient hindu mythology, ancient indian mythology
+            , intricate carving
+            , mystical atmosphere
+        env-bg:
+          - indian architecture
+          - mythical city, ancient hindu temple city
+          - ancient hindu temple tower
+          - floating city
+        costume-elem:
+          - hindu deity
+        env:
+          - relief sculpture
+          - gold decoration
+          - cloud sea
+          - sacred mountain
+          - holy river
+          - sacred tree, divine tree
+        style:
+          - mandala style
+          - sacred geometry
+          - lotus motif
+          - divine presence
+          - divine light
+
