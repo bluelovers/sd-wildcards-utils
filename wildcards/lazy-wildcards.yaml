@@ -668,11 +668,11 @@
       "sketch-pen-base":
         prompts:
           - >-
-            __lazy-wildcards/subject/style-art-type/sketch-pen-base/style-art-main__{,__lazy-wildcards/subject/style-art-type/sketch-pen-base/style-color__|} {(,{3-$$__lazy-wildcards/subject/style-art-type/sketch-pen-base/style__})|}
+            __lazy-wildcards/subject/style-art-type/sketch-pen-base/style-art-main__{,__lazy-wildcards/subject/style-art-type/sketch-pen-base/style-art-color__|} {(,{3-$$__lazy-wildcards/subject/style-art-type/sketch-pen-base/style__})|}
         "style-art-main":
           - |-
             (XCYP) Sketch,(Sketch:1.4),(Pen Drawing:2),line drawing style
-        "style-color":
+        "style-art-color":
           - >-
             (Black and White Pen Drawing:2){,(Strong Black and White Contrast)|}
         style:
@@ -1159,20 +1159,6 @@
           - lineart,monochrome
         style:
           - "manga-like"
-      # https://civitai.com/models/1802106/game-design-of-western-cartoon-characters?modelVersionId=2039412
-      "chibi-3d":
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/style-art-type/chibi-3d/style-art-main__:{1.2|1.3|1.4|1.6}){,{1-$$__lazy-wildcards/subject/style-art-type/chibi-3d/style__}|}{,{1-$$__lazy-wildcards/subject/style-art-type/chibi-3d/costume-elem__}|}
-        "style-art-main":
-          - "__lazy-wildcards/utils/fn/style-inspired(v=3d_chibi)__,3d"
-        "costume-elem":
-          - cute
-          - big head
-          - small body
-          - large eyes
-        style:
-          - exaggerated proportions
       # https://civitai.com/models/176915/atnr-style?modelVersionId=198606
       "painting-thick":
         prompts:
@@ -1693,6 +1679,24 @@
           - plump
           - "model sheet,chara-sheet"
           - blush stickers
+          - big head small body
+          - short limbs
+          - cute,cute proportion
+          - chibi only
+      # https://civitai.com/models/1802106/game-design-of-western-cartoon-characters?modelVersionId=2039412
+      "chibi-3d":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-elem/chibi-3d/style-art-main__:{1.2|1.3|1.4|1.6}){,{1-$$__lazy-wildcards/subject/style-elem/chibi-3d/style__}|}{,{1-$$__lazy-wildcards/subject/style-elem/chibi-3d/costume-elem__}|}
+        "style-art-main":
+          - "__lazy-wildcards/utils/fn/style-inspired(v=3d_chibi)__,3d"
+        "costume-elem":
+          - cute
+          - big head
+          - small body
+          - large eyes
+        style:
+          - exaggerated proportions
       # https://civitai.com/models/297627/nobunyagas-ambition?modelVersionId=334358
       Nobunyagas_Ambition:
         prompts:
@@ -4777,7 +4781,9 @@
           - futuristic city
         style:
           - niploutline
-      chibi-Eiken3kyuboy:
+      # https://x.com/eiken3kyuboy
+      # https://civitai.com/models/119041/eiken3kyuboy-artist-style?modelVersionId=129205
+      "chibi-Eiken3kyuboy":
         prompts:
           - >-
             __lazy-wildcards/subject/style-artist/chibi-Eiken3kyuboy/style-artist__{,{__lazy-wildcards/subject/style-artist/chibi-Eiken3kyuboy/style__}|}
@@ -4786,6 +4792,34 @@
         style:
           - mechanical
           - cute
+      # https://civitai.com/models/2203795/illustrious-susagane-sd-gundam-style?modelVersionId=2481325
+      "chibi-gundam-sd":
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-artist/chibi-gundam-sd/style-main__,__lazy-wildcards/subject/style-artist/chibi-gundam-sd/costume-ethnicity__{,{__lazy-wildcards/subject/style-artist/chibi-gundam-sd/costume-elem__}|}{,{__lazy-wildcards/subject/style-artist/chibi-gundam-sd/costume-weapon__}|}{,{__lazy-wildcards/subject/style-artist/chibi-gundam-sd/style__}|},__lazy-wildcards/subject/style-elem/chibi/prompts__
+        "style-main":
+          - >-
+            __lazy-wildcards/utils/fn/style-inspired(v=sd_gundam)__,chibi,no humans,ssgn
+        "costume-ethnicity":
+          - gundam face,mecha,mechanical,mechanization
+        "costume-elem":
+          - samurai mecha
+          - cute mecha face
+          - metal crest
+          - samurai helmet
+          - metallic armor
+          - heavy armor
+          - japanese mecha
+        "costume-weapon":
+          - katana
+          - samurai sword
+          - beam saber
+          - mecha weapon
+          - arm cannon
+        style:
+          - chibi mecha
+          - rough metal texture
+          - official art style
       cute-valbun:
         prompts:
           - >-
@@ -6366,33 +6400,6 @@
           - weathered_rock,eroded_surface
           - crystalized_rock
           - cracked_pavement,cracked_ground
-      volcanic_crater_lake:
-        prompts:
-          - >-
-            ({1-$$__lazy-wildcards/subject/env-bg/volcanic_crater_lake/env-bg__}){,{1-$$__lazy-wildcards/subject/env-bg/volcanic_crater_lake/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/volcanic_crater_lake/style__}|}
-        "env-bg":
-          - volcanic crater lake
-          - volcanic crater
-          - crater lake
-          - volcanic_eruption
-        env:
-          - volcanic_geology
-          - lake_reflection
-          - rocky_terrain
-          - mineral_deposits
-          - steaming_water,swirling steam
-          - dark volcanic rock formations
-          - emerald_water
-          - tranquil_landscape
-          - alien_like_environment
-          - pristine_nature
-          - high_altitude_lake
-          - clear_skies
-          - misty_lake
-          - sunrise_over_lake
-        style:
-          - unique_coloration
-          - long shot scenic professional photograph
       "background-blurry":
         prompts:
           - >-
@@ -8066,7 +8073,7 @@
             (__lazy-wildcards/subject/env-bg/city-retro-neon/env-bg__{,{1-$$__lazy-wildcards/subject/env-bg/city-retro-neon/env-bg__}|}{0.3:::{1.2|1.3|1.4}|}),__lazy-wildcards/subject/env-elem/signboard-neon-retro/prompts-no-weight__{,{1-$$__lazy-wildcards/subject/env-bg/city-retro-neon/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/city-retro-neon/style__}|}
         "env-bg-main":
           - >-
-            retro neon urban,retro neon lights,rncstyle,building
+            retro neon urban,retro neon lights,rncstyle,building,nostalgic atmosphere
         "env-bg":
           - slums,chaotic
           - under ground urban
@@ -8079,6 +8086,7 @@
           - "__lazy-wildcards/utils/scenery-no-humans__"
           - "__lazy-wildcards/utils/fn/style-inspired(v=retro)__"
           - muted color
+          - nostalgic city mood,nostalgic atmosphere
       race-car_racing_court:
         prompts:
           - >-
@@ -8113,6 +8121,83 @@
           - speed,competition
           - tension
           - powerful atmosphere
+      volcanic_crater_lake:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/env-bg/volcanic_crater_lake/env-bg__}){,{1-$$__lazy-wildcards/subject/env-bg/volcanic_crater_lake/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/volcanic_crater_lake/style__}|}
+        "env-bg":
+          - volcanic crater lake
+          - volcanic crater
+          - crater lake
+        env:
+          - volcanic geology
+          - lake reflection
+          - rocky terrain
+          - mineral deposits
+          - steaming water,swirling steam
+          - dark volcanic rock formations
+          - emerald water
+          - tranquil landscape
+          - alien like environment
+          - pristine nature
+          - high altitude lake
+          - clear skies
+          - misty lake
+          - sunrise over lake
+        style:
+          - unique coloration
+          - long shot scenic professional photograph
+      volcanic:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/volcanic/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg/volcanic/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/volcanic/env__}|}
+        "env-bg-main":
+          - volcano
+        "env-bg":
+          - volcanic crater
+          - olcanic rock
+          - "__lazy-wildcards/subject/env-bg/volcanic_eruption/prompts__"
+          - "__lazy-wildcards/subject/env-bg/volcanic_lava/prompts__"
+        env:
+          - dark crust
+      # 火山爆發
+      volcanic_eruption:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/volcanic_eruption/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg/volcanic_eruption/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/volcanic_eruption/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/volcanic_eruption/style__}|}
+        "env-bg-main":
+          - volcanic eruption,volcano
+        "env-bg":
+          - volcanic crater
+          - olcanic rock
+        env:
+          - volcanic ash
+          - dangerous environment
+          - "__lazy-wildcards/subject/env-moment/weather-mist/prompts__"
+          - sparks
+          - natural disaster
+          - "__lazy-wildcards/subject/env-bg/volcanic_lava/prompts__"
+        style:
+          - apocalyptic
+          - epic scale
+          - low angle
+          - "__lazy-wildcards/utils/scenery-no-humans__"
+      # 岩漿
+      volcanic_lava:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/volcanic_lava/env-elem__{,{1-$$__lazy-wildcards/subject/env-bg/volcanic_lava/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/volcanic_lava/style__}|}
+        "env-elem":
+          - lava flow,molten lava,flowing magma
+        env:
+          - glowing cracks,lava cracks,magma cracks
+          - bubbling lava,bubbling magma
+          - viscous liquid
+          - red orange yellow glowing lava
+          - "__lazy-wildcards/subject/env-moment/weather-mist-hot/prompts__"
+          - close up lava
+        style:
+          - heat distortion
       # https://civitai.com/models/347130/roman-interior
       Ancient_Roman_Interior_Design:
         prompts:
@@ -8344,6 +8429,33 @@
       imperial_city:
         prompts:
           - imperial city
+      indian-hindu-shambhala:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/indian-hindu-shambhala/env-bg-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg/indian-hindu-shambhala/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/indian-hindu-shambhala/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-bg/indian-hindu-shambhala/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/indian-hindu-shambhala/style__}|}
+        "env-bg-main":
+          - >-
+            shambhala,hindu temple,ancient hindu mythology,ancient indian mythology,intricate carving,mystical atmosphere
+        "env-bg":
+          - indian architecture
+          - mythical city,ancient hindu temple city
+          - ancient hindu temple tower
+          - floating city
+        "costume-elem":
+          - hindu deity
+        env:
+          - relief sculpture
+          - gold decoration
+          - cloud sea
+          - sacred mountain
+          - holy river
+          - sacred tree,divine tree
+        style:
+          - mandala style
+          - sacred geometry
+          - lotus motif
+          - divine presence
+          - divine light
       # 日本盂蘭盆節
       # https://civitai.com/models/615027/japanese-festival?modelVersionId=687529
       "Japanese-Festival-Bon-Odori":
@@ -8891,6 +9003,40 @@
           - dirty
           - garbage
           - messy
+      # https://civitai.com/models/2207899/zit-waterfallshower
+      "bathroom-waterfall":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/bathroom-waterfall/env-bg-main__{0.3:::{1.2|1.3|1.4}|}){,{1-2$$__lazy-wildcards/subject/env-bg/bathroom-waterfall/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/bathroom-waterfall/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-bg/bathroom-waterfall/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/bathroom-waterfall/style__}|}
+        "env-bg-main":
+          - waterfall shower
+        "env-bg":
+          - >-
+            {indoor waterfall,interior waterfall|outdoor waterfall,exterior waterfall}
+          - ceiling shower
+          - luxury spa,spa bathroom
+          - concrete bathroom
+          - onsen style
+        "costume-elem":
+          - half naked
+          - wet clothes
+          - "see-through clothes"
+        env:
+          - hidden shower head
+          - stone wall
+          - stone tile
+          - heavy water flow
+          - continuous water stream
+          - wet surface
+          - rock
+          - natural waterfall
+          - natural environments,natural elements
+        style:
+          - light reflection
+          - soft lighting
+          - relaxing atmosphere
+          - low angle
+          - silhouette
       oil_refinery:
         prompts:
           - >-
@@ -9180,6 +9326,7 @@
           - broken desk
           - broken blackboard
           - broken light
+      # https://civitai.com/models/654250/school-gate-sd15?modelVersionId=731955
       school_gate:
         prompts:
           - >-
@@ -9228,6 +9375,50 @@
         "costume-elem":
           - school nurse,lab_coat
           - gentle_expression
+      # 日式貴族女子學校
+      "school-girls":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/school-girls/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg/school-girls/env-bg-main2__}|}{0.3:::{1.2|1.3|1.4|1.6}|}){,{1-$$__lazy-wildcards/subject/env-bg/school-girls/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-bg/school-girls/action__}|}{,{1-$$__lazy-wildcards/subject/env-bg/school-girls/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/school-girls/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/school-girls/style__}|}
+        "env-bg-main":
+          - >-
+            japanese aristocratic girls academy,elite school,academy school,academy of the elite
+        "env-bg-main2":
+          - european academy
+          - western style academy
+        "costume-elem":
+          - ojou sama
+          - school uniform,academy uniform
+          - long skirt
+          - "__lazy-wildcards/subject/costume-elem-accessories/lace-trim/prompts__"
+          - ribbon
+          - group of girls
+          - yuri
+          - student council
+          - drill sidelocks
+          - ringlets hairstyle
+          - half gloves
+          - jacket
+          - bowtie
+          - bow
+        action:
+          - refined posture
+          - "__lazy-wildcards/subject/action-pose/pose-ojou-sama/prompts__"
+        env:
+          - white building
+          - fountain
+          - tea time,teacup,teapot
+        "env-bg":
+          - "__lazy-wildcards/subject/env-bg/school_gate/prompts__"
+          - garden
+          - classical music room
+          - classical library
+        style:
+          - nobility culture
+          - elegant atmosphere
+          - calm mood
+          - soft lighting
+          - upper class society
       # https://civitai.com/models/298602/jjs-food-stand-design?modelVersionId=1369597
       # https://civitai.com/models/429762/large-food-stalls
       # https://civitai.com/models/83984/omatsuri
@@ -9690,6 +9881,47 @@
           - yellow lighting
           - nostalgic
           - slice of life
+      # 櫥窗逛街
+      "shop-window_shopping":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/shop-window_shopping/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg/shop-window_shopping/env-bg__}|}){,{1-$$__lazy-wildcards/subject/env-bg/shop-window_shopping/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/shop-window_shopping/style__}|}
+        "env-bg-main":
+          - window shopping
+        "env-bg":
+          - vintage watch and antique shop
+          - old building,brick wall,stone facade
+          - vintage sign,classic typography
+        env:
+          - reflection
+          - pocket watch
+          - mechanical watch
+          - brass
+          - antique object
+          - vintage decor
+          - evening
+          - "__lazy-wildcards/subject/env-bg/shop-wooden-green/prompts__"
+        style:
+          - nostalgic city mood,nostalgic atmosphere
+          - craftsmanship
+          - warm light
+          - showcase lighting
+      "shop-wooden-green":
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/shop-wooden-green/env__
+        env:
+          - >-
+            __lazy-wildcards/subject/env-bg/shop-wooden-green/style-color__ wooden
+        "style-color":
+          # 深沉、接近黑綠色，常用於傳統木門與窗框
+          - hunter green
+          # 比獵人綠稍微明亮，帶有自然森林的感覺
+          - forest green
+          # 經典英式深綠色，常見於復古車與店面外牆
+          - british racing green
+          # 帶有灰調的綠色，有時用於較樸素的復古風格
+          - olive green
       movie_theater:
         prompts:
           - >-
@@ -11573,33 +11805,33 @@
       "manhole-cover":
         prompts:
           - >-
-            __lazy-wildcards/subject/env-elem/manhole-cover/main__,{1-$$__lazy-wildcards/subject/env-elem/manhole-cover/style-colors__},{{1-$$__lazy-wildcards/subject/env-elem/manhole-cover/style-location__},|}{{1-$$__lazy-wildcards/subject/env-elem/manhole-cover/env__},|}{{1-$$__lazy-wildcards/subject/env-elem/flower/prompts__},|}{1-$$__lazy-wildcards/subject/env-elem/manhole-cover/style__}
-        main:
-          - japanese_manhole,manhole cover
-        "style-colors":
-          - colored metal,colorful_designs
+            __lazy-wildcards/subject/env-elem/manhole-cover/env-elem-main__{,{1-$$__lazy-wildcards/subject/env-elem/manhole-cover/env-elem-color__}|}{,{1-$$__lazy-wildcards/subject/env-elem/manhole-cover/style-location__}|}{,{1-$$__lazy-wildcards/subject/env-elem/manhole-cover/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem/flower/prompts__}|}{,{1-$$__lazy-wildcards/subject/env-elem/manhole-cover/style__}|}
+        "env-elem-main":
+          - japanese manhole,manhole cover
+        "env-elem-color":
+          - colored metal,colorful designs
           - colorless metal
         "style-location":
-          - japanese_manhole_cover
-          - taiwan_manhole_cover
-          - taipei_manhole_cover
-        style:
-          - intricate_designs
-          - city_emblems
-          - cultural_patterns
-          - unique_patterns
-          - city_symbols
-          - local_culture
-          - specific_city_emblems
-          - decorative_designs
-          - capital_city
-          - artistic_patterns
-          - elaborate_artwork
-          - aesthetic_patterns
-          - public_art
+          - japanese manhole cover
+          - taiwan manhole cover
+          - taipei manhole cover
         env:
-          - gorgeous_manhole_cover
-          - decorative_manhole_cover
+          - gorgeous manhole cover
+          - decorative manhole cover
+        style:
+          - intricate designs
+          - city emblems
+          - cultural patterns
+          - unique patterns
+          - city symbols
+          - local culture
+          - specific city emblems
+          - decorative designs
+          - capital city
+          - artistic patterns
+          - elaborate artwork
+          - aesthetic patterns
+          - public art
       # https://danbooru.donmai.us/posts?tags=chinese_medicine_cabinet&z=5
       "chinese-medicine":
         prompts:
@@ -12258,106 +12490,6 @@
         env:
           - petals
           - very windy,wind blowing
-      mud:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-elem/mud/env-main__{,{1-$$__lazy-wildcards/subject/env-elem/mud/style__}|}{,{1-$$__lazy-wildcards/subject/env-elem/mud/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-elem/mud/env__}|}
-        "env-main":
-          - |-
-            (mud,silt:1.2),dirty,dirt,soil,Loam,clay,wet,mdpt1,mud pit,muddy
-        style:
-          - >-
-            ({1-$$plastered with mud|smeared with mud|splashes mud}:1.2)
-          - ominous_presence
-          - unsettling_noises
-          - spectral_appearance
-          - night
-          - hostile_environment
-          - foreboding_atmosphere
-          - creepy_vibes
-          - hidden_perils
-          - forgotten_civilization
-          - partially submerged
-        env:
-          - >-
-            {1-$$ancient bare tree|bare tree|tree|branch}
-          - "__lazy-wildcards/subject/env-elem/moss/prompts__"
-          - >-
-            {1-$$dirty face|dirty clothes|dirty feet}
-          - grass
-          - overgrown with thick vines
-          - >-
-            {1-$$lush vegetation|dense underbrush|overgrown landmarks}
-          - molten
-          - mysterious waters
-          - shadowy vegetation
-          - "__lazy-wildcards/subject/env-moment/weather-mist/prompts__"
-          - desolate landscape
-          - ghostly figures
-          - moonlit water
-          - nocturnal creatures
-          - dark foliage
-          - unclear waters
-          - dense underbrush
-          - twisted trees
-          - treacherous terrain
-          - mysterious glow
-          - hanging_vines
-        "env-bg":
-          - wetlands,marsh
-          - swamp
-          - lake
-          - dark background
-          - >-
-            {1-$$dark swamp|gloomy marsh|haunted_swamp|murky swamp|forbidding swamp|ominous swamp}
-          - >-
-            {1-$$swamp ruins|ancient structures}
-          - enchanted_swamp
-          - "__lazy-wildcards/subject/env-bg/swamp-*/prompts__"
-      # https://civitai.com/models/90534/submerged-ruins?modelVersionId=98546
-      # https://civitai.com/models/19206/submergedwater
-      submerged:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/env-elem/submerged/env-main-trigger-words__{,{1-$$__lazy-wildcards/subject/env-elem/submerged/env-bg-main__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem/submerged/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-elem/submerged/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem/submerged/style__}|}
-        "env-main-trigger-words":
-          - submerged,submerged displays,water,submerged water
-        "env-bg-main":
-          - partially submerged
-        "env-bg":
-          - submerged buildings
-          - submerged structures
-          - submerged ruins
-          - rooftop
-          - submerged skyscraper,submerged tower
-          - submerged cityscape
-          - deep submersion,deep submerged
-          - submerged dungeon
-          - submerged world
-        env:
-          - submerged items
-          - submerged vehicles
-          - submerged machinery
-          - ocean
-          - mountainous horizon
-          - "__lazy-wildcards/subject/env-moment/weather-natural-disaster-water/prompts__"
-          - "__lazy-wildcards/subject/env-elem/moss/prompts__"
-          - decay
-          - rubble
-          - debris
-          - "__lazy-wildcards/subject/env-elem/railing/prompts__"
-          - river
-          - lake
-          - reflection
-          - "__lazy-wildcards/subject/env-elem/bridge/prompts__"
-          - tree
-          - fish
-        style:
-          - facing away
-          - from behind
-          - horizon
-          - "__lazy-wildcards/utils/scenery-no-humans__"
-          - "__lazy-wildcards/subject/style-elem/post-apocalypse/prompts__"
       lamp:
         prompts:
           - >-
@@ -13411,6 +13543,106 @@
           - debris
           - "__lazy-wildcards/utils/color-base__ theme"
           - stain
+      mud:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/mud/env-main__{,{1-$$__lazy-wildcards/subject/env-elem/mud/style__}|}{,{1-$$__lazy-wildcards/subject/env-elem/mud/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-elem/mud/env__}|}
+        "env-main":
+          - |-
+            (mud,silt:1.2),dirty,dirt,soil,Loam,clay,wet,mdpt1,mud pit,muddy
+        style:
+          - >-
+            ({1-$$plastered with mud|smeared with mud|splashes mud}:1.2)
+          - ominous_presence
+          - unsettling_noises
+          - spectral_appearance
+          - night
+          - hostile_environment
+          - foreboding_atmosphere
+          - creepy_vibes
+          - hidden_perils
+          - forgotten_civilization
+          - partially submerged
+        env:
+          - >-
+            {1-$$ancient bare tree|bare tree|tree|branch}
+          - "__lazy-wildcards/subject/env-elem/moss/prompts__"
+          - >-
+            {1-$$dirty face|dirty clothes|dirty feet}
+          - grass
+          - overgrown with thick vines
+          - >-
+            {1-$$lush vegetation|dense underbrush|overgrown landmarks}
+          - molten
+          - mysterious waters
+          - shadowy vegetation
+          - "__lazy-wildcards/subject/env-moment/weather-mist/prompts__"
+          - desolate landscape
+          - ghostly figures
+          - moonlit water
+          - nocturnal creatures
+          - dark foliage
+          - unclear waters
+          - dense underbrush
+          - twisted trees
+          - treacherous terrain
+          - mysterious glow
+          - hanging_vines
+        "env-bg":
+          - wetlands,marsh
+          - swamp
+          - lake
+          - dark background
+          - >-
+            {1-$$dark swamp|gloomy marsh|haunted_swamp|murky swamp|forbidding swamp|ominous swamp}
+          - >-
+            {1-$$swamp ruins|ancient structures}
+          - enchanted_swamp
+          - "__lazy-wildcards/subject/env-bg/swamp-*/prompts__"
+      # https://civitai.com/models/90534/submerged-ruins?modelVersionId=98546
+      # https://civitai.com/models/19206/submergedwater
+      submerged:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/submerged/env-main-trigger-words__{,{1-$$__lazy-wildcards/subject/env-elem/submerged/env-bg-main__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem/submerged/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-elem/submerged/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem/submerged/style__}|}
+        "env-main-trigger-words":
+          - submerged,submerged displays,water,submerged water
+        "env-bg-main":
+          - partially submerged
+        "env-bg":
+          - submerged buildings
+          - submerged structures
+          - submerged ruins
+          - rooftop
+          - submerged skyscraper,submerged tower
+          - submerged cityscape
+          - deep submersion,deep submerged
+          - submerged dungeon
+          - submerged world
+        env:
+          - submerged items
+          - submerged vehicles
+          - submerged machinery
+          - ocean
+          - mountainous horizon
+          - "__lazy-wildcards/subject/env-moment/weather-natural-disaster-water/prompts__"
+          - "__lazy-wildcards/subject/env-elem/moss/prompts__"
+          - decay
+          - rubble
+          - debris
+          - "__lazy-wildcards/subject/env-elem/railing/prompts__"
+          - river
+          - lake
+          - reflection
+          - "__lazy-wildcards/subject/env-elem/bridge/prompts__"
+          - tree
+          - fish
+        style:
+          - facing away
+          - from behind
+          - horizon
+          - "__lazy-wildcards/utils/scenery-no-humans__"
+          - "__lazy-wildcards/subject/style-elem/post-apocalypse/prompts__"
       underground_river:
         prompts:
           - >-
@@ -14488,6 +14720,8 @@
           - steam rising,rising steam
           - soft steam
           - water vapor
+          - heat distortion
+          - humidity
       # 茶的蒸汽 / 茶煙
       "weather-mist-tea":
         prompts:
@@ -19186,7 +19420,6 @@
           - moss
           - rust
           - "__lazy-wildcards/subject/env-moment/weather-mist/prompts__"
-      # https://civitai.com/models/654250/school-gate-sd15?modelVersionId=731955
       # https://civitai.com/models/825976/style-of-treehouse-433?modelVersionId=923694
       # https://civitai.com/models/763249/jjs-tree-house?modelVersionId=1501544
       treehouse:
@@ -20819,7 +21052,8 @@
           - bandaged arm
           - bandaged shoulder
           - bandaged knee
-          - blood_on_bandages
+          - blood on bandages
+          - hand wraps
       "japanese-traditional-underwear":
         prompts:
           - >-
@@ -23667,6 +23901,34 @@
           - vest
         env:
           - flag
+      # 拳擊
+      "sports-boxing":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/sports-boxing/costume__{,{1-$$__lazy-wildcards/subject/costume/sports-boxing/costume-headwear__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume/sports-boxing/action__}|}{,{1-$$__lazy-wildcards/subject/costume/sports-boxing/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume/sports-boxing/env__}|}{,__lazy-wildcards/subject/costume/sports-boxing/env-bg__|}
+        costume:
+          - boxer
+        action:
+          - "__lazy-wildcards/subject/action-sports/sports-boxing/prompts-no-weight__"
+        "costume-headwear":
+          - boxing headgear
+        "costume-elem":
+          - boxing gloves
+          - boxing shorts
+          - mouth guard
+          - sports bra
+          - "__cf-boxer/top__"
+          - "__cf-boxer/bottom__"
+          - "__cf-boxer/shoes__"
+          - "__cf-boxer/beauty-adj__ boxer"
+          - "__cf-boxer/accessory__"
+          - "__cf-boxer/prompt-costume__"
+          - hand wraps
+        env:
+          - punching bag
+        "env-bg":
+          - boxing ring
+          - "__cf-boxer/location__"
       # https://civitai.com/models/234197/v-shaped-slingshot-swimsuit-wide-fabric?modelVersionId=264068
       # https://civitai.com/models/234206/v-shaped-slingshot-swimsuit-string-type?modelVersionId=264079
       "v-shaped_slingshot_swimsuit":
@@ -32338,6 +32600,19 @@
           - shy
           - reserved emotion
           - slight blush
+      "pose-ojou-sama":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/action-pose/pose-ojou-sama/action-pose-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/action-pose/pose-ojou-sama/action-pose__}|}{,{1-$$__lazy-wildcards/subject/action-pose/pose-ojou-sama/expressions__}|}
+        "action-pose-main":
+          - "ojou-sama pose"
+        "action-pose":
+          - hand to own mouth
+          - pinky to mouth
+          - hand over own mouth
+        expressions:
+          - smug
+          - okawaii koto+
     action-pose-selfie:
       selfie-mirror:
         prompts:
@@ -32470,7 +32745,8 @@
           - collarbone
           - full body
     action-sports:
-      sports-water-surfing:
+      # 衝浪
+      "sports-water-surfing":
         prompts:
           - >-
             (__lazy-wildcards/subject/action-sports/sports-water-surfing/action-main__{,{1-3$$__lazy-wildcards/subject/action-sports/sports-water-surfing/action__}|}{0.3:::{1.2|1.3|1.4}|})
@@ -32484,6 +32760,31 @@
           - riding big wave
           - action pose
           - air flip
+      # 拳擊
+      "sports-boxing":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/action-sports/sports-boxing/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/action-sports/sports-boxing/action-main__{,{1-3$$__lazy-wildcards/subject/action-sports/sports-boxing/action__}|}
+        "action-main":
+          - boxing
+        action:
+          - boxing pose,boxing stance
+          - balanced posture
+          - dempsey roll
+          - punching
+          - focus mitts
+          - face punch
+          - catfight
+          - crosscounter
+          - stomach punch
+          - uppercut
+          - kicking
+          - guard up
+          - fist clenched
+          - action readiness
     action-nsfw-others:
       lift_by_self_with_mouth:
         prompts:
@@ -33131,6 +33432,7 @@
           - She dances seductively while directing traffic by pointing her batons. The camera pans around her
           - heavy painterly texture,soft airbrush shading,muted pastel horror,monster girl,dark pale skin,large horns,curved horns,demon horns,long fingers,sharp nails,veil over eyes,see through veil,long dress,red lips,smile,parted lips,holding heart \(organ\),bloody hands,black robes,collarbone,cleavage,off shoulder,curvy,red trim,long sleeves,standing,from side,from above,dark background,dark,dark lighting,chiaroscuro,looking up at viewer,very awa
           - "yami kawaii aesthetic,gray eyes,bangs,black hair,two-color hair,blue hair (long hair),outdoors,detailed hands,black nails,looking at up,realistic pantyhose (black pantyhose),white short hoodie,hood down,night,empty street,power lines,utility pole,standing"
+          - thighhighs,hair flower,jewelry,flower,hair ornament,blush,gloves,white gloves,large breasts,Croriin,bride,wedding dress,white hair,red eyes,earrings
         "action-pose":
           - hands on hips
           - "__lazy-wildcards/dataset/action__"
@@ -41481,9 +41783,11 @@
           - "chain-link fence"
 "mix-lazy-auto":
   # @example __mix-lazy-auto/color-anything__
-  # "color-anything" (total: 1000 => 229, save 771 ) is merge from
+  # "color-anything" (total: 1007 => 234, save 773 ) is merge from
   #  - __lazy-wildcards/utils/color-base__ (11)
   #  - __mix-lazy-auto/color-anything__ (9)
+  #  - __lazy-wildcards/subject/env-bg/shop-wooden-green/style-color__ (4)
+  #  - __lazy-wildcards/subject/env-moment/weather-overcast/style-color__ (3)
   #  - __cf-daoist-priest/color__ (10)
   #  - __cf-chinese-martial-artist/color__ (10)
   #  - __cf-onmyoji/color__ (9)
@@ -41606,6 +41910,13 @@
     - muted_purple
     - grayish_purple
     - iridescent cobalt
+    - hunter green
+    - forest green
+    - british racing green
+    - olive green
+    - gray blue,blue tint
+    - lead white
+    - desaturated navy
     - dark blue
     - deep green
     - maroon
@@ -41623,7 +41934,6 @@
     - deep blue
     - ivory white
     - crimson red
-    - forest green
     - midnight purple
     - sakura pink
     - deep crimson
@@ -41741,7 +42051,6 @@
     - elegant white
     - champagne
     - pastel lavender
-    - olive green
     - classic white
     - camouflage
     - desert tan
