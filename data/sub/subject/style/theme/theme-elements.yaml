@@ -1,40 +1,71 @@
 lazy-wildcards:
   subject:
     style-theme:
+      elements-fusion:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-theme/elements-fusion/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/style-theme/elements-fusion/style-main__
+            {, {1-$$__lazy-wildcards/subject/style-theme/elements-fusion/style__}|}
+        style-main:
+          - fusion, fusion theme
+        style:
+          - vortex
+          - swirling patterns
+          - fluid
+          - glowing
+          - melting
+          - dissolving
+          - molten melting
+          - dripping form, dripping liquid
+          - soft edges
+          - molten melting
+          - duality fusion
       # https://civitai.com/models/2258853/alchemic-ritual-lora?modelVersionId=2542747
       elements-contrasting-blue_red:
         prompts:
           - >-
-            __lazy-wildcards/subject/style-theme/elements-contrasting-blue_red/style-main__
+            (__lazy-wildcards/subject/style-theme/elements-contrasting-blue_red/style-main__
             , {1-$$__lazy-wildcards/subject/style-theme/elements-contrasting-blue_red/env-elem-01__}
-            , {1-$$__lazy-wildcards/subject/style-theme/elements-contrasting-blue_red/env-elem-02__}
+            , {1-$$__lazy-wildcards/subject/style-theme/elements-contrasting-blue_red/env-elem-02__}{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
             {, {1-$$__lazy-wildcards/subject/style-theme/elements-contrasting-blue_red/env__}|}
+            {, {1-$$__lazy-wildcards/subject/style-theme/elements-contrasting-blue_red/style-elem__}|}
             {, {1-$$__lazy-wildcards/subject/style-theme/elements-contrasting-blue_red/style__}|}
+            {, __lazy-wildcards/subject/style-theme/elements-fusion/prompts-no-weight__|}
         style-main:
-          - duality fusion, contrasting elements, duality theme, elemental fusion, arstyle
+          - duality fusion, contrasting elements, duality theme, elemental fusion, arstyle, water, fire
         env-elem-01:
           - flowing water, water splash
           - ice crystal, freeze effect
           - cyan blue
+          - blue fire
+          - water ball, water orb
         env-elem-02:
           - blazing fire, flame burst
           - molten lava
           - glowing orange
+          - orange water
+          - fire ball, fire orb
         env:
           - steam vapor
           - cracked ice
-        style:
+          - molten ice
+          - freeze lava
+        style-elem:
           - split composition
           - gradient transition
+          - alchemic ritual
+          - dual lighting
+        style:
           - collision point
           - yin yang balance
-          - dual lighting
           - energy collision
           - volumetric light
           - shadow mass
           - geometric pattern
           - organic distortion
-          - alchemic ritual
       # https://civitai.com/models/139657/made-of-earth-ai
       EarthElemental:
         prompts:
