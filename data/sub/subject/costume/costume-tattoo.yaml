@@ -85,9 +85,11 @@ lazy-wildcards:
             (__lazy-wildcards/subject/costume-elem-tattoo/tattoo-tanlines/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|})
         prompts-no-weight:
           - >-
-            {1-$$__lazy-wildcards/subject/costume-elem-tattoo/tattoo-tanlines/costume-elem-tattoo__}
-        costume-elem-tattoo:
+            __lazy-wildcards/subject/costume-elem-tattoo/tattoo-tanlines/costume-elem-tattoo-main__
+            {, {1-$$__lazy-wildcards/subject/costume-elem-tattoo/tattoo-tanlines/costume-elem-tattoo__}|}
+        costume-elem-tattoo-main:
           - tanlines
+        costume-elem-tattoo:
           - suntanned
           - tan tattoo, tattoo-like tanlines
           - presenting tanlines

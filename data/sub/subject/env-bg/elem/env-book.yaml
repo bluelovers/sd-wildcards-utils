@@ -140,4 +140,74 @@ lazy-wildcards:
         style:
           - fantasy setting
           - portal to another world
+      # 貼花／轉印貼紙
+      decal:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/decal/env-elem-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/decal/env-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/decal/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/decal/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/decal/style__}|}
+        env-elem-main:
+          - decal, bcstyle, indstyle, sdstyle, typography
+        env-elem:
+          - package decal
+          - package sticker
+          - packaging label
+          - __lazy-wildcards/subject/env-elem/decal-tag/prompts-no-weight__
+        env:
+          - decal wall
+          - decal floor
+          - decal ground
+          - decal table
+          - decal furniture
+          - decal building
+          - decal vehicle
+          - typography
+          - barcode
+          - qr code
+          - english text
+        costume-elem:
+          - decal clothes, decal outfit, decal costume
+          - decal skin
+          - decal makeup
+          - decal accessories, decal jewelry
+          - decal tattoos
+          - decal armor
+        style:
+          - sticker texture
+          - decal texture
+          - printed texture
+          - object attachment
+          - flat design
+          - vector art
+          - clean outline
+          - matte surface
+          - glossy surface
+          - industrial design
+      # 包裝吊牌貼花
+      decal-tag:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/decal-tag/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/decal-tag/env__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-elem/decal-tag/env-elem-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/decal-tag/env-elem__}|}
+        env-elem-main:
+          - decal tag, package tags decals
+        env-elem:
+          - clothing tag
+          - product tag
+          - brand tag
+          - care instruction tag
+        env:
+          - tag on clothes
+          - tag on product
+          - hanging tag
+          - sewn-in tag
+          - string attachment
+          - kraft paper
 

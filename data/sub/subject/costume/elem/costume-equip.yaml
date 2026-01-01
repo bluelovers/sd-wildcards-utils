@@ -103,4 +103,39 @@ lazy-wildcards:
         costume-elem:
           - thighhighs
           - stockings
+      # 吊帶
+      belt-suspenders:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/belt-suspenders/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            {, __lazy-wildcards/subject/costume-elem/belt-suspenders/costume__|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem/belt-suspenders/costume-elem__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-elem/belt-suspenders/costume-elem-main__
+            {, {1-$$__lazy-wildcards/subject/costume-elem/belt-suspenders/costume-elem-main2__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem/belt-suspenders/action__}|}
+        costume-elem-main:
+          - suspenders
+        costume-elem-main2:
+          - suspenders slip
+          - naked suspenders, nude suspenders
+          - suspenders hanging
+          - suspenders gap
+        action:
+          - adjusting suspenders
+          - pulling suspenders, suspenders pull
+        costume:
+          - suspender skirt
+          - suspender shorts
+          - suspender pants, suit pants
+          - suspender dress
+        costume-elem:
+          - tie
+          # 吊襪帶
+          - suspender belt
+          - topless
+          - cleavage
+          - __lazy-wildcards/subject/costume-elem-tattoo/tattoo-tanlines/prompts-no-weight__
+          - __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned-black/prompts__
 
