@@ -1,0 +1,38 @@
+lazy-wildcards:
+  subject:
+    style-theme:
+      # https://civitai.com/models/2258853/alchemic-ritual-lora?modelVersionId=2542747
+      elements-contrasting-blue_red:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-theme/elements-contrasting-blue_red/style-main__
+            , {1-$$__lazy-wildcards/subject/style-theme/elements-contrasting-blue_red/env-elem-01__}
+            , {1-$$__lazy-wildcards/subject/style-theme/elements-contrasting-blue_red/env-elem-02__}
+            {, {1-$$__lazy-wildcards/subject/style-theme/elements-contrasting-blue_red/env__}|}
+            {, {1-$$__lazy-wildcards/subject/style-theme/elements-contrasting-blue_red/style__}|}
+        style-main:
+          - duality fusion, contrasting elements, duality theme, elemental fusion, arstyle
+        env-elem-01:
+          - flowing water, water splash
+          - ice crystal, freeze effect
+          - cyan blue
+        env-elem-02:
+          - blazing fire, flame burst
+          - molten lava
+          - glowing orange
+        env:
+          - steam vapor
+          - cracked ice
+        style:
+          - split composition
+          - gradient transition
+          - collision point
+          - yin yang balance
+          - dual lighting
+          - energy collision
+          - volumetric light
+          - shadow mass
+          - geometric pattern
+          - organic distortion
+          - alchemic ritual
+
