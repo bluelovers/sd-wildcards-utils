@@ -533,4 +533,47 @@ lazy-wildcards:
           - syringe
         env-bg:
           - chain-link fence
+    # https://www.wnacg.com/search/?q=Croriin&f=_all&s=create_time_DESC&syn=yes
+    # https://civitai.com/models/2214175/croriin-majo-no-okiniiri-isekai-kairakuten-vol-52-doujin-style-illustrious?modelVersionId=2492850
+    croriin:
+      majo_no_okiniiri:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char-hentai/croriin/majo_no_okiniiri/main-trigger-words__
+            , (__lazy-wildcards/cosplay-char-hentai/croriin/majo_no_okiniiri/costume-ethnicity__
+            , __lazy-wildcards/cosplay-char-hentai/croriin/majo_no_okiniiri/costume__
+            {, {1-$$__lazy-wildcards/cosplay-char-hentai/croriin/majo_no_okiniiri/expressions__}|}
+            {, {1-$$__lazy-wildcards/cosplay-char-hentai/croriin/majo_no_okiniiri/action__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/cosplay-char-hentai/croriin/majo_no_okiniiri/costume-elem__}|}
+        main-trigger-words:
+          - cror, isekai kairakuten
+        costume-ethnicity:
+          - >-
+            dark elf
+            , hair over one eye
+            , eyes visible through hair
+            , long pointy ears
+            , yellow eyes, long hair, white hair
+            , shiny skin
+            , __lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+        costume:
+          - >-
+            hair ornament, bracelet
+            , ear piercing, earrings
+            , o-ring, necklace, collar
+            , jewelry, gem, purple gemstone, red gemstone, blue gemstone
+        expressions:
+          - seductive smile
+          - open mouth, teeth, tongue
+          - groin
+          - naughty face
+          - parted lips, blush
+        action:
+          - finger to mouth
+          - hands up
+          - head tilt
+        costume-elem:
+          - long fingernails, nail polish
+          - revealing clothes
+          - gloves
 
