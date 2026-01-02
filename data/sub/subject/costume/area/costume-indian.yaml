@@ -92,4 +92,42 @@ lazy-wildcards:
           - traditional_landscape
           - traditional_marketplace
           - bamboo_architecture
+      # choli 印度短上衣 , lehenga 印度傳統寬裙
+      # https://civitai.com/models/307454/floral-embroidered-lehenga-skirt-with-fitted-blouse-draped-scarf
+      indian-choli-lehenga:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/indian-choli-lehenga/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/indian-choli-lehenga/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/indian-choli-lehenga/env-bg__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume/indian-choli-lehenga/costume__)
+            {, {1-$$__lazy-wildcards/subject/costume/indian-choli-lehenga/costume-elem-main__}|}
+        costume:
+          - lehenga choli, l3h3ng4_1
+        costume-elem-main:
+          - dupatta scarf
+          - sari
+          - odhani
+        costume-elem:
+          - top compact bottom expansive
+          - layered fabric
+          - heavy embroidery
+          - floral pattern
+          - paisley pattern
+          - wide flare
+          - long skirt
+          - gold embroidery
+          - bead decoration
+          - cropped top
+          - tight fit
+          - sleeveless
+          - short sleeves
+          - ornament density
+          - see-through fabric
+        env-bg:
+          - indian palace
+          - indian temple courtyard
+          - indian festival night
 

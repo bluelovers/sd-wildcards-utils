@@ -86,4 +86,116 @@ lazy-wildcards:
           - __lazy-wildcards/utils/fn/style-inspired(v=retro)__
           - muted color
           - nostalgic city mood, nostalgic atmosphere
+      city-traffic:
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-bg/city-traffic/style__},
+            __lazy-wildcards/subject/env-bg/city-traffic/fn/road-in__,
+            __lazy-wildcards/subject/env-bg/city-traffic/main__,
+            {5-$$__lazy-wildcards/subject/env-bg/city-traffic/env__}
+            {, __lazy-wildcards/subject/env-moment/random/prompts__|}
+        main:
+          - cityscape, building
+        style:
+          - city-life-overload
+          - ((pedestrian hell))
+        env:
+          - traffic light, road sign
+          - roadway
+          - crowd
+          - greenery, trees
+          - wind, windy
+          - underpass
+          - skywalk
+          - jaywalk
+          - zebra crossing, crosswalk
+          - walk signal
+          - tunnel
+          - parking lot
+          - idewalk
+          - gas station
+          - roadworks
+          - traffic jam
+          - >-
+            {1-$$crossroads|intersection}
+          - >-
+            {1-$$scooter|motorcycle}
+          - >-
+            {1-$$shopping|storefront|signboard}
+        fn:
+          road-in:
+            - >-
+              ((busy street in ${country:taiwan})), ${location:taipei} road
+      # https://danbooru.donmai.us/posts?tags=highway&z=5
+      highway:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/highway/env-bg-main__
+            {, {1-3$$__lazy-wildcards/subject/env-bg/highway/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-3$$__lazy-wildcards/subject/env-bg/highway/env-road__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/highway/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/highway/style__}|}
+        env-bg-main:
+          - highway
+        env-bg:
+          - elevated highway
+          - rural_highway
+          - mountain_highway
+          - coastal_highway, seaside_scenery
+          - desert_highway
+          - multi_level_highway
+          - tunnel_highway, lit_tunnel
+          - tollbooth, toll_booth, payment_gate
+          - divided highway
+        env-road:
+          - dirt_road
+          - snowy_road
+          - elevated_road
+          - river_road
+          - curved_road
+          - straight_road
+          - endless_road
+          - intersection, complex_road_system, multi-lane road
+          - night_highway, illuminated_road
+          - rainy_highway, wet_road
+        env:
+          - cityscape_view
+          - __lazy-wildcards/subject/env-moment/weather-mist/prompts__
+          - sunset_view
+          - ocean_view
+          - heat_wave
+          - traffic_jam, crowded_highway
+          - concrete_walls
+          - queue_of_cars
+          - urban
+          - traffic
+          - overpass
+          - __lazy-wildcards/subject/env-elem/traffic-barrier/prompts__
+          - under bridge
+          - lamppost
+        style:
+          - light_trails
+          - __lazy-wildcards/utils/scenery-no-humans__
+      city:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/city/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-3$$__lazy-wildcards/subject/env-bg/city/env-bg__}|}
+        env-bg-main:
+          - city, metropolis, cityscape
+        env-bg:
+          - tokyo \(city\)
+          - night city
+          - __lazy-wildcards/subject/env-bg/city/fn/city(v=futuristic)__
+          - __lazy-wildcards/subject/env-bg/city/fn/city(v=cyberpunk)__
+          - __lazy-wildcards/subject/env-bg/city/fn/city(v=steampunk)__
+          - __lazy-wildcards/subject/env-bg/city/fn/city(v=mega)__
+          - __lazy-wildcards/subject/env-bg/city/fn/city(v=megastructure)__
+        fn:
+          city:
+            - >-
+              ${v} city, ${v} metropolis, ${v} urban
+          cityscape:
+            - >-
+              ${v} city, ${v} metropolis, ${v} urban, ${v} cityscape
 

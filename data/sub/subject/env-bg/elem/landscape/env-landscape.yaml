@@ -87,4 +87,166 @@ lazy-wildcards:
           - close up lava
         style:
           - heat distortion
+      cliff:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/cliff/env-bg-main__
+            {, {{1-3$$__lazy-wildcards/subject/env-bg/cliff/env-bg__}|0.2::__lazy-wildcards/subject/env-bg/cliff/env-bg-real__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/cliff/env__}|}
+        env-bg-main:
+          - cliff
+        env-bg:
+          - steep cliff, rocky wall, vertical rock
+          - cliffside, precipice, overhanging rock
+          - sheer cliff, vertical drop, abyss
+          - eroded cliff, rugged surface, wind carved
+          - sea cliff, ocean view, crashing waves
+          - cliff cave, hidden cavern, rocky outcrop
+          - canyon wall, towering cliff, desert plateau
+          - waterfall cliff, cascading water, misty rocks
+          - cliffside foliage, hanging plants, hardy trees
+          - rock pillar, natural monument, towering peak
+          - cliffside view, steep drop, breathtaking scenery
+          - misty mountain, foggy cliffs, ethereal landscape
+          - waterfall view, cascading falls, nature majesty
+          - stormy skies, high winds, snow capped cliffs
+        env-bg-real:
+          - Cliffs of Moher, Irish coast, green highlands
+          - Preikestolen, fjord view, dramatic drop
+          - Grand Canyon, desert cliff, layered rock
+          - Komodo Cliff, tropical sea, rugged coastline
+          - Faroe Cliffs, North Atlantic, misty shores
+        env:
+          - floating rock
+          - cracked landscape
+          - floating cliff
+          - plant, tree
+          - water, waterfall
+          - cloud
+          - stone, rock
+          - dramatic sunset
+          - stormy horizon
+          - golden light effects
+      # https://civitai.com/models/1159453/desert-oasis
+      desert-oasis:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/desert-oasis/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-2$$__lazy-wildcards/subject/env-bg/desert-oasis/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/desert-oasis/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/desert-oasis/action__}|}
+        env-bg-main:
+          - oasis
+        env-bg:
+          - oasis in the desert, desert oasis
+          - oasis in the wilderness
+          - oasis in the forest
+          - __cof-location/place/lush-oasis__
+          - __cof-location/place/desert-oasis__
+          - __cof-location/place/oasis__
+          - oasis pond
+        env:
+          - palm tree
+          - cactus
+          - lake
+          - lush vegetation
+          - water reflection
+          - stone well
+          - lily pad
+          - herbal plants
+          - oasis wildlife
+        action:
+          - kneeling on liquid
+          - mixed-sex bathing
+          - shared bathing
+      desert:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/desert/env-bg-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-2$$__lazy-wildcards/subject/env-bg/desert/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/desert/env__}|}
+        env-bg-main:
+          - desert
+        env-bg:
+          - __lazy-wildcards/subject/env-bg/desert-oasis/prompts__
+          - __cof-location/place/desert-camp__
+          - __cof-location/place/desert__
+          - pyramid \(structure\)
+          - desert shrine
+          - mirage
+          - ancient ruins nearby
+          - scorched earth
+        env:
+          - sand
+          - cactus
+          - sand dunes
+          - desert sunset
+      # https://civitai.com/models/337587?modelVersionId=1652446
+      # https://danbooru.donmai.us/posts?tags=conan_%28series%29&z=5
+      desert-oasis-city:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/desert-oasis-city/env-bg-main__
+            {0.3:::{1.2|1.3|1.4}|})
+            {, {1-2$$__lazy-wildcards/subject/env-bg/desert-oasis-city/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/desert-oasis-city/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/desert-oasis-city/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/desert-oasis-city/style__}|}
+        env-bg-main:
+          - >-
+            desert oasis city, desert city
+            , stygar
+            , stygia, stygians
+            , conan the barbarian
+            , conan \(series\)
+        env-bg:
+          - __lazy-wildcards/subject/env-bg/desert-oasis/prompts__
+          - whitewashed houses
+          - marketplace stalls
+          - camel stables
+          - watchtower
+          - minaret
+          - palm-lined streets
+          - stone-paved plaza
+          - dark temple
+          - obsidian altar
+          - ancient ruins
+          - cave tomb
+          - underground crypt
+          - narrow sandstone alley
+          - pyramid interior
+        env:
+          - mudbrick walls
+          - colorful canopies
+          - ceramic water jars
+          - serpent motif
+          - blood ritual, bloodstained altar
+          - sun-baked stone
+          - stone sarcophagus
+        costume-elem:
+          - desert traveler
+          - veil dancer
+          - desert priestess
+          - caravan merchant
+          - camel rider
+          - elaborate headdress
+          - gold jewelry
+          - black robes
+          - dark sorceress
+          - snake priestess
+          - hieroglyphic tattoos
+          - bikini armor
+          - gold armlet
+          - handprint, arm tattoo
+          - harem outfit
+        style:
+          - golden hour lighting
+          - heat haze
+          - glowing water
+          - ancient egypt
+          - snake god worship
+          - dark fantasy
+          - sword and sorcery
+          - egyptian gothic
+          - sunset desert lighting
 
