@@ -320,4 +320,31 @@ lazy-wildcards:
           - soft light
           - bathroom lighting
           - __lazy-wildcards/subject/env-moment/weather-mist/prompts__
+      # 乾砌石牆
+      wall-stone-dry:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/wall-stone-dry/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/wall-stone-dry/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/wall-stone-dry/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/wall-stone-dry/style__}|}
+        env-bg-main:
+          - dry stone wall
+        env-bg:
+          - hillside stone wall
+          - farmland boundary
+          - rural roadside wall
+        env:
+          - stacked stones
+          - irregular stones
+          - stone interlock
+          - weathered stone
+          - lichen on stone
+          - moss growth
+          - cracks
+          - gravel path
+        style:
+          - interlocking stones
+          - rough surface
+          - random stacking
 
