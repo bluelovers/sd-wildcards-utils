@@ -198,4 +198,54 @@ lazy-wildcards:
           cityscape:
             - >-
               ${v} city, ${v} metropolis, ${v} urban, ${v} cityscape
+      # 都市島嶼型大都會
+      city-island:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/city-island/env-bg-main__
+            {, __lazy-wildcards/subject/env-bg/city-island/env-bg-real__|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/city-island/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/city-island/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/city-island/style__}|}
+        env-bg-main:
+          - urban island
+        env-bg-real:
+          # 羅斯福島｜紐約
+          - roosevelt island
+          # 貝爾島｜底特律
+          - belle isle, [urban park]
+          # 蒙特婁
+          - montreal island
+          # 香港島
+          - hong kong island
+          # 倫敦
+          - london
+        env-bg:
+          - artificial island
+          - waterfront city
+          - urban island metropolis
+          - harbor city
+        env:
+          - river
+          - harbor
+          - narrow island
+          - modern residential buildings
+          - historic ruins
+          - tramway cable car
+          - neoclassical architecture
+          - abandoned structures
+          - river landscape
+          - old town architecture
+          - victorian architecture
+        style:
+          - historical layering
+          - architectural contrast
+          - cultural intersection
+          - quiet urban atmosphere, melancholic atmosphere
+          - post industrial romanticism
+          - nostalgic tone
+          - european old world, north american modernity
+          - french colonial style
+          - east west fusion
+          - imperial legacy
 
