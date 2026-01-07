@@ -62,13 +62,13 @@ lazy-wildcards:
         env:
           - gantry
           - ground_support_equipment
-      crashed_starships:
+      starships_crashed:
         prompts:
           - >-
-            (__lazy-wildcards/subject/env-bg/crashed_starships/env-bg-main__:{1.2|1.3|1.4})
-            {, {1-$$__lazy-wildcards/subject/env-bg/crashed_starships/env__}|}
-            {, {1-2$$__lazy-wildcards/subject/env-bg/crashed_starships/env-bg__}|}
-            {, {1-$$__lazy-wildcards/subject/env-bg/crashed_starships/style__}|}
+            (__lazy-wildcards/subject/env-bg/starships_crashed/env-bg-main__:{1.2|1.3|1.4})
+            {, {1-$$__lazy-wildcards/subject/env-bg/starships_crashed/env__}|}
+            {, {1-2$$__lazy-wildcards/subject/env-bg/starships_crashed/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/starships_crashed/style__}|}
         env-bg-main:
           - crashed starships, broken starships
         env-bg:
@@ -89,4 +89,50 @@ lazy-wildcards:
           - glowing_mist
         style:
           - __lazy-wildcards/subject/style-elem/post-apocalypse/prompts__
+      # 星際飛船動力室
+      starships_engine_room:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/starships_engine_room/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/starships_engine_room/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/starships_engine_room/env-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/starships_engine_room/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/starships_engine_room/style__}|}
+        env-bg-main:
+          - futuristic engine room
+        env-bg:
+          - starship engine room
+          - spaceship engine room
+          - circular room
+          - ring shaped walkway
+        env-elem:
+          - energy core
+          - central reactor
+          - power generator
+          - cylindrical reactor
+          - giant reactor
+          - spherical energy core
+          - glowing core
+        env:
+          - symmetrical structure
+          - layered mechanical shell
+          - exposed machinery
+          - plasma energy
+          - arc energy
+          - >-
+            {1-$$blue energy|cyan glow|orange core}
+          - thick cables
+          - conduits
+          - radial pipes
+          - ceiling mounted cables
+          - __lazy-wildcards/subject/env-elem-pipes/industrial-pipes/prompts__
+          - safety railing
+          - warning lights
+          - dangerous energy
+        style:
+          - radial layout, radial composition
+          - rim lighting
+          - industrial atmosphere
+          - technological
+          - __lazy-wildcards/subject/style-elem/sci-fi/prompts__
 

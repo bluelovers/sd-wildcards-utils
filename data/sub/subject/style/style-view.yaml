@@ -52,4 +52,29 @@ lazy-wildcards:
           - focus blur
           - breaking frame
           - upward angle
+      # 立體透視模型
+      view-diorama:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-view/view-diorama/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|:1.2})
+            {, {1-$$__lazy-wildcards/subject/style-view/view-diorama/style__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/style-view/view-diorama/style-view-main__
+            {, {1-2$$__lazy-wildcards/subject/style-view/view-diorama/style-view__}|}
+        style-view-main:
+          - diorama
+        style-view:
+          - miniature scene
+          - scale model
+          - diorama \(medium\)
+          - dollhouse view
+          - faux figurine
+          - floorplan
+          - cutaway view
+        style:
+          - isometric
+          - depth perception
+          - spatial hierarchy
+          - transparent structure
 

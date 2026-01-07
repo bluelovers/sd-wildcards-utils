@@ -300,4 +300,63 @@ lazy-wildcards:
         env-bg:
           - boxing ring
           - __cf-boxer/location__
+      # 滑雪裝
+      sports-winter-ski:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/sports-winter-ski/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/sports-winter-ski/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/sports-winter-ski/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/sports-winter-ski/style__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume/sports-winter-ski/costume-main__
+            {, {1-$$__lazy-wildcards/subject/costume/sports-winter-ski/costume-headwear__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/sports-winter-ski/costume__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/sports-winter-ski/costume-elem__}|}
+        costume-main:
+          - ski outfit
+        costume-headwear:
+          - beanie
+          - pom pom hat
+          - earflap hat
+          - fur hat
+          - winter hats
+        costume:
+          - winter sportswear
+          - insulated suit
+        costume-elem:
+          - ski jacket
+          - ski pants
+          - ski goggles
+          - puffy jacket
+          - waterproof fabric, windproof material
+          - fleece lining
+          - snow boots
+          - thermal gloves
+        env-bg:
+          - snowy mountain
+          - ski slope
+          - ski tracks
+          - ski resort
+          - snow covered ground
+        env:
+          - ski equipment
+          - long narrow skis
+          - snowboard
+          - scratches
+          - powder snow
+          - uneven snow surface
+          - snowball
+          - packed snow
+          - fresh air
+        style:
+          - thick knit texture
+          - diagonal composition
+          - rough surface
+          - white dominant
+          - bright accent colors
+          - cool color palette
+          - cold atmosphere
+          - energetic winter mood
 

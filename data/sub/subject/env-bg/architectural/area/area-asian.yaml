@@ -97,4 +97,57 @@ lazy-wildcards:
           - arcade
         style:
           - retro, historical, early modern era
+      # 客家土樓
+      zh-hakka_tulou:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/zh-hakka_tulou/env-bg-main__
+            {, {1-2$$__lazy-wildcards/subject/env-bg/zh-hakka_tulou/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/zh-hakka_tulou/env-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/zh-hakka_tulou/env__}|}
+            {, {1-3$$__lazy-wildcards/subject/env-bg/zh-hakka_tulou/env-bg2__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/zh-hakka_tulou/style__}|}
+        env-bg-main:
+          - hakka tulou, traditional hakka architecture
+        env-bg:
+          - chinese hakka round tulou, circular building
+          - chinese hakka square tulou
+          - chinese hakka  weilong house, chinese hakka horseshoe shape
+          - fujian enclosed building
+          - hakka enclosed house
+        env-elem:
+          - open courtyard
+          - heavy wooden gate
+        env:
+          - defensive architecture
+          - self sufficient settlement
+          - thick earthen wall, rammed earth wall, thick wall cross section
+          - minimal exterior openings
+          - fortress like building
+          - weathered wall
+          - __lazy-wildcards/subject/env-elem/roof-tiled/prompts-no-weight__
+          - semi circular enclosure
+          - main hall
+          - curved enclosing wall
+          - ceremonial architecture
+          - processional path
+          - ancestral hall
+          - small windows on upper floors
+          - earth and wood materials
+        env-bg2:
+          - mountain valley
+          - rural landscape
+          - farmland
+          - terraced fields
+          - misty mountains
+          - river nearby
+          - subtropical vegetation
+        style:
+          - clan living
+          - rammed earth texture
+          - axial symmetry
+          - feng shui based layout
+          - massive scale
+          - communal living
+          - historical atmosphere, quiet rural mood
 
