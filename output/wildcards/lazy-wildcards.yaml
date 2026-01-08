@@ -1871,6 +1871,7 @@
           - "__lazy-wildcards/subject/style-elem/sci-fi/fn/prefix(v=elements)__"
           - "__lazy-wildcards/subject/style-elem/sci-fi/fn/prefix(v=fashion)__"
           - "__lazy-wildcards/subject/style-elem/sci-fi/fn/suffix(v=hard)__"
+          - technological
         fn:
           # __lazy-wildcards/subject/style-elem/sci-fi/fn/prefix(v=settings)__
           prefix:
@@ -2441,160 +2442,6 @@
         "main-trigger-words":
           - >-
             4ndi_illu
-    style-elem-texture:
-      "iron-skin":
-        prompts:
-          - >-
-            __lazy-wildcards/subject/style-elem-texture/iron-skin/main__{,{1-$$__lazy-wildcards/subject/style-elem-texture/iron-skin/style__}|}{,{1-$$__lazy-wildcards/subject/style-elem-texture/iron-skin/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/style-elem-texture/iron-skin/env__}|}
-        main:
-          - DonM1r0nSk1n skin,iron skin
-        style:
-          - checkerboard pattern
-          - danger of the wilderness
-          - humanoid appearance
-        "costume-elem":
-          - emerald eyes
-        env:
-          - draining blood
-          - fig tree
-          - conglomerate stone
-      # https://civitai.com/models/623803?modelVersionId=697383
-      Fossils:
-        prompts:
-          - >-
-            (DonMF0551l5,Fossils texture,Fossils:1.4),(stone texture,bone texture:1.2),specimen{,{1-$$__lazy-wildcards/subject/style-elem-texture/Fossils/env-bg__}|}{,({1-$$__lazy-wildcards/subject/style-elem-texture/Fossils/style__})|}{,{1-3$$__lazy-wildcards/subject/style-elem-texture/Fossils/env__}|}
-        env:
-          - Petrified_Wood
-          - Ammonite_Fossil
-          - Dinosaur_Bone_Fossil
-          - Bone_Fossil
-          - Trilobite_Fossil
-          - Coral_Fossil,porous texture
-          - Fish_Fossil
-          - Leaf_Fossil,veined texture of fossilized plant leaves
-          - Shell_Fossil
-          - Amber_Fossil
-          - Gastropod_Fossil,spiral
-          - Eroded_Rock
-          - Petroglyphs
-          - Sandstone
-        "env-bg":
-          - Cave_Formation
-          - Ancient_Ruin
-          - "__lazy-wildcards/subject/env-bg/desert/prompts__"
-          - Fossilized_Rock
-          - Sedimentary_Rock
-          - Metamorphic_Rock
-          - Igneous_Rock
-        style:
-          - Erosion
-          - dissolution
-          - Weathered
-          - Cracked
-          - Sandification
-          - Lithification
-      # https://civitai.com/models/199118/moon-sciwhite?modelVersionId=224029
-      SciWhite:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/style-elem-texture/SciWhite/style-main__{,{1-$$__lazy-wildcards/subject/style-elem-texture/SciWhite/env__}|}{,{1-$$__lazy-wildcards/subject/style-elem-texture/SciWhite/env-bg__}|}{,{1-$$__lazy-wildcards/subject/style-elem-texture/SciWhite/style-main__}|}
-        "style-main":
-          - SciWhite texture,m01n texture,in the style of m01n
-        style:
-          - white texture
-          - clear texture
-          - translucent texture
-          - dull texture
-          - glossy texture
-          - metallic texture
-          - reflective texture
-          - shiny texture
-          - "__lazy-wildcards/subject/style-elem/sci-fi/prompts__"
-        env:
-          - intricate box shapes artifact
-          - futuristic and complex computer with keyboard
-          - futuristic seismic meter with black screen
-          - water inside
-        "env-bg":
-          - over clear skies background
-          - research facility room interior
-          - street passage with structures
-          - over clear white background
-      # https://civitai.com/models/84528
-      nebula:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/style-elem-texture/nebula/style-main__{,{1-$$__lazy-wildcards/subject/style-elem-texture/nebula/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/style-elem-texture/nebula/env-bg__}|}{,{1-$$__lazy-wildcards/subject/style-elem-texture/nebula/style__}|}
-        "style-main":
-          - "nebula texture,nebula style,nebula pattern,__lazy-wildcards/subject/env-bg/space-nebula/env-bg-main__,__lazy-wildcards/utils/fn/style-inspired(v=nebula)__"
-        "costume-elem":
-          - nebula clothes,nebula outfit,nebula costume
-          - nebula skin
-          - nebula hair
-          - nebula eyes
-          - nebula makeup
-          - nebula accessories,nebula jewelry
-          - nebula tattoos
-          - nebula armor
-          - nebula wings
-          - nebula limbs
-        "env-bg":
-          - "__lazy-wildcards/subject/env-bg/space-nebula/prompts__"
-          - nebula building
-        style:
-          - colorful texture
-          - cosmic texture
-          - starry texture
-          - space texture
-          - galaxy texture
-          - nebula magic
-      rainbow:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/style-elem-texture/rainbow/style-main__,__lazy-wildcards/subject/env-moment/weather-rainbow/prompts__
-        "style-main":
-          - "rainbow texture,rainbow pattern,__lazy-wildcards/utils/fn/style-inspired(v=rainbow)__"
-      # 金繼
-      # https://civitai.com/models/153348/kintsugi-lora-or
-      # https://civitai.com/models/101176/kintsugi-statues
-      # https://civitai.com/models/2003154/kintsugi-15-lora
-      # https://civitai.com/models/2006676/kintsugi?modelVersionId=2271284
-      kintsugi:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/style-elem-texture/kintsugi/style-main__{,{1-$$__lazy-wildcards/subject/style-elem-texture/kintsugi/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/style-elem-texture/kintsugi/env__}|}{,{1-2$$__lazy-wildcards/subject/style-elem-texture/kintsugi/env-elem__}|}{,{1-$$__lazy-wildcards/subject/style-elem-texture/kintsugi/style__}|}
-        "style-main":
-          - >-
-            kintsukuroi,kintsugi texture,__lazy-wildcards/utils/fn/pattern(v=kintsugi)__,__lazy-wildcards/utils/fn/style-inspired(v=kintsugi)__,gold crack,KintsugiBust,kintsugistyle
-        "costume-elem":
-          - kintsugi tattoo
-          - kintsugi fingernail polish
-          - kintsugi skin
-        env:
-          - gold line
-          - "__lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__"
-          - metallic gold
-          - bold crack
-          - crack
-          - shiny gold
-          - glowing gold
-          - "__lazy-wildcards/utils/fn/made-of(v=kintsugi)__"
-          - kintsugi statues
-        "env-elem":
-          - tea bowl
-          - cup
-          - plate
-          - vase
-          - pot
-          - ceramic
-          - porcelain
-        style:
-          - japanese craft
-          - traditional art
-          - matte surface
-          - glazed surface
-          - zen
-          - diffused light
     style-view:
       # https://civitai.com/models/610256/deep-urbanized-city-background-in-style-of-ayuli2424-pony-xl-sd-15-animagine-sdxl?modelVersionId=682167
       "view-angle-wide-shot":
@@ -2644,7 +2491,131 @@
           - focus blur
           - breaking frame
           - upward angle
+      # 立體透視模型
+      "view-diorama":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-view/view-diorama/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|:1.2}){,{1-$$__lazy-wildcards/subject/style-view/view-diorama/style__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/style-view/view-diorama/style-view-main__{,{1-2$$__lazy-wildcards/subject/style-view/view-diorama/style-view__}|}
+        "style-view-main":
+          - diorama
+        "style-view":
+          - miniature scene
+          - scale model
+          - diorama \(medium\)
+          - dollhouse view
+          - faux figurine
+          - floorplan
+          - cutaway view
+        style:
+          - isometric
+          - depth perception
+          - spatial hierarchy
+          - transparent structure
     style-theme:
+      "elements-fusion":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-theme/elements-fusion/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/style-theme/elements-fusion/style-main__{,{1-$$__lazy-wildcards/subject/style-theme/elements-fusion/style__}|}
+        "style-main":
+          - fusion,fusion theme
+        style:
+          - vortex
+          - swirling patterns
+          - fluid
+          - glowing
+          - melting
+          - dissolving
+          - molten melting
+          - dripping form,dripping liquid
+          - soft edges
+          - duality fusion
+      # https://civitai.com/models/2258853/alchemic-ritual-lora?modelVersionId=2542747
+      "elements-contrasting-blue_red":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-theme/elements-contrasting-blue_red/style-main__,{1-$$__lazy-wildcards/subject/style-theme/elements-contrasting-blue_red/env-elem-01__},{1-$$__lazy-wildcards/subject/style-theme/elements-contrasting-blue_red/env-elem-02__}{0.3:::{1.2|1.3|1.4|1.6}|:1.3}){,{1-$$__lazy-wildcards/subject/style-theme/elements-contrasting-blue_red/env__}|}{,{1-$$__lazy-wildcards/subject/style-theme/elements-contrasting-blue_red/style-elem__}|}{,{1-$$__lazy-wildcards/subject/style-theme/elements-contrasting-blue_red/style__}|}{,__lazy-wildcards/subject/style-theme/elements-fusion/prompts-no-weight__|}
+        "style-main":
+          - duality fusion,contrasting elements,duality theme,elemental fusion,arstyle,water,fire
+        "env-elem-01":
+          - flowing water,water splash
+          - ice crystal,freeze effect
+          - cyan blue
+          - blue fire
+          - water ball,water orb
+        "env-elem-02":
+          - blazing fire,flame burst
+          - molten lava
+          - glowing orange
+          - orange water
+          - fire ball,fire orb
+        env:
+          - steam vapor
+          - cracked ice
+          - molten ice
+          - freeze lava
+        "style-elem":
+          - split composition
+          - gradient transition
+          - alchemic ritual
+          - dual lighting
+        style:
+          - collision point
+          - yin yang balance
+          - energy collision
+          - volumetric light
+          - shadow mass
+          - geometric pattern
+          - organic distortion
+      # https://civitai.com/models/139657/made-of-earth-ai
+      EarthElemental:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-theme/EarthElemental/main-trigger-words__{,{1-$$__lazy-wildcards/subject/style-theme/EarthElemental/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/style-theme/EarthElemental/env__}|}{,{1-$$__lazy-wildcards/subject/style-theme/EarthElemental/style__}|}
+        "main-trigger-words":
+          - "made of stone,GolemIL-V1.0,EarthelementalIL-V1.0,madeofearthai,worldofearth"
+        "costume-elem":
+          - stone_body
+          - golem_form,golem_armor
+          - stone_skin,rock_skin
+          - mineral_hair
+          - rocky_armor
+          - rock_fur
+          - crystal_teeth
+          - gemstone_eyes,crystal_eyes
+          - rock_feathers
+          - crystal_beak
+          - rock_scales
+          - rock_shell
+          - >-
+            {1-3$$ earth,$$__lazy-wildcards/utils/color-base__} earth
+        env:
+          - smooth_rock
+          - mineral_composition
+          - rock_texture
+          - seaweed_stone
+          - mossy_elemental
+          - rocky_terrain
+          - mineral_environment
+          - earth_adaptation
+          - moss_growth
+          - vine_cover
+          - plant_integration
+        style:
+          - slow_movement
+          - powerful_strength
+          - earth_tones
+          - natural_palette
+          - mineral_colors
+          - heavy_weight
+          - earth_manipulation
+          - mineral_power
+          - ground_control
       # https://civitai.com/models/823949/vibrant-calavera-sd1-sdxl-pony-flux?modelVersionId=921359
       Day_of_the_Dead:
         prompts:
@@ -2858,50 +2829,6 @@
           - metal_shadows
           - cold_light
           - mesh_shadows
-      # https://civitai.com/models/139657/made-of-earth-ai
-      EarthElemental:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/style-theme/EarthElemental/main-trigger-words__{,{1-$$__lazy-wildcards/subject/style-theme/EarthElemental/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/style-theme/EarthElemental/env__}|}{,{1-$$__lazy-wildcards/subject/style-theme/EarthElemental/style__}|}
-        "main-trigger-words":
-          - "made of stone,GolemIL-V1.0,EarthelementalIL-V1.0,madeofearthai,worldofearth"
-        "costume-elem":
-          - stone_body
-          - golem_form,golem_armor
-          - stone_skin,rock_skin
-          - mineral_hair
-          - rocky_armor
-          - rock_fur
-          - crystal_teeth
-          - gemstone_eyes,crystal_eyes
-          - rock_feathers
-          - crystal_beak
-          - rock_scales
-          - rock_shell
-          - >-
-            {1-3$$ earth,$$__lazy-wildcards/utils/color-base__} earth
-        env:
-          - smooth_rock
-          - mineral_composition
-          - rock_texture
-          - seaweed_stone
-          - mossy_elemental
-          - rocky_terrain
-          - mineral_environment
-          - earth_adaptation
-          - moss_growth
-          - vine_cover
-          - plant_integration
-        style:
-          - slow_movement
-          - powerful_strength
-          - earth_tones
-          - natural_palette
-          - mineral_colors
-          - heavy_weight
-          - earth_manipulation
-          - mineral_power
-          - ground_control
       "age-victorian":
         prompts:
           - >-
@@ -3010,6 +2937,160 @@
           - "__lazy-wildcards/subject/costume/mixin-asian-clothes/prompts__"
         env:
           - "__lazy-wildcards/utils/fn/made-of(v=chinese)__"
+    style-elem-texture:
+      "iron-skin":
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-elem-texture/iron-skin/main__{,{1-$$__lazy-wildcards/subject/style-elem-texture/iron-skin/style__}|}{,{1-$$__lazy-wildcards/subject/style-elem-texture/iron-skin/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/style-elem-texture/iron-skin/env__}|}
+        main:
+          - DonM1r0nSk1n skin,iron skin
+        style:
+          - checkerboard pattern
+          - danger of the wilderness
+          - humanoid appearance
+        "costume-elem":
+          - emerald eyes
+        env:
+          - draining blood
+          - fig tree
+          - conglomerate stone
+      # https://civitai.com/models/623803?modelVersionId=697383
+      Fossils:
+        prompts:
+          - >-
+            (DonMF0551l5,Fossils texture,Fossils:1.4),(stone texture,bone texture:1.2),specimen{,{1-$$__lazy-wildcards/subject/style-elem-texture/Fossils/env-bg__}|}{,({1-$$__lazy-wildcards/subject/style-elem-texture/Fossils/style__})|}{,{1-3$$__lazy-wildcards/subject/style-elem-texture/Fossils/env__}|}
+        env:
+          - Petrified_Wood
+          - Ammonite_Fossil
+          - Dinosaur_Bone_Fossil
+          - Bone_Fossil
+          - Trilobite_Fossil
+          - Coral_Fossil,porous texture
+          - Fish_Fossil
+          - Leaf_Fossil,veined texture of fossilized plant leaves
+          - Shell_Fossil
+          - Amber_Fossil
+          - Gastropod_Fossil,spiral
+          - Eroded_Rock
+          - Petroglyphs
+          - Sandstone
+        "env-bg":
+          - Cave_Formation
+          - Ancient_Ruin
+          - "__lazy-wildcards/subject/env-bg/desert/prompts__"
+          - Fossilized_Rock
+          - Sedimentary_Rock
+          - Metamorphic_Rock
+          - Igneous_Rock
+        style:
+          - Erosion
+          - dissolution
+          - Weathered
+          - Cracked
+          - Sandification
+          - Lithification
+      # https://civitai.com/models/199118/moon-sciwhite?modelVersionId=224029
+      SciWhite:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-elem-texture/SciWhite/style-main__{,{1-$$__lazy-wildcards/subject/style-elem-texture/SciWhite/env__}|}{,{1-$$__lazy-wildcards/subject/style-elem-texture/SciWhite/env-bg__}|}{,{1-$$__lazy-wildcards/subject/style-elem-texture/SciWhite/style-main__}|}
+        "style-main":
+          - SciWhite texture,m01n texture,in the style of m01n
+        style:
+          - white texture
+          - clear texture
+          - translucent texture
+          - dull texture
+          - glossy texture
+          - metallic texture
+          - reflective texture
+          - shiny texture
+          - "__lazy-wildcards/subject/style-elem/sci-fi/prompts__"
+        env:
+          - intricate box shapes artifact
+          - futuristic and complex computer with keyboard
+          - futuristic seismic meter with black screen
+          - water inside
+        "env-bg":
+          - over clear skies background
+          - research facility room interior
+          - street passage with structures
+          - over clear white background
+      # https://civitai.com/models/84528
+      nebula:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-elem-texture/nebula/style-main__{,{1-$$__lazy-wildcards/subject/style-elem-texture/nebula/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/style-elem-texture/nebula/env-bg__}|}{,{1-$$__lazy-wildcards/subject/style-elem-texture/nebula/style__}|}
+        "style-main":
+          - "nebula texture,nebula style,nebula pattern,__lazy-wildcards/subject/env-bg/space-nebula/env-bg-main__,__lazy-wildcards/utils/fn/style-inspired(v=nebula)__"
+        "costume-elem":
+          - nebula clothes,nebula outfit,nebula costume
+          - nebula skin
+          - nebula hair
+          - nebula eyes
+          - nebula makeup
+          - nebula accessories,nebula jewelry
+          - nebula tattoos
+          - nebula armor
+          - nebula wings
+          - nebula limbs
+        "env-bg":
+          - "__lazy-wildcards/subject/env-bg/space-nebula/prompts__"
+          - nebula building
+        style:
+          - colorful texture
+          - cosmic texture
+          - starry texture
+          - space texture
+          - galaxy texture
+          - nebula magic
+      rainbow:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-elem-texture/rainbow/style-main__,__lazy-wildcards/subject/env-moment/weather-rainbow/prompts__
+        "style-main":
+          - "rainbow texture,rainbow pattern,__lazy-wildcards/utils/fn/style-inspired(v=rainbow)__"
+      # 金繼
+      # https://civitai.com/models/153348/kintsugi-lora-or
+      # https://civitai.com/models/101176/kintsugi-statues
+      # https://civitai.com/models/2003154/kintsugi-15-lora
+      # https://civitai.com/models/2006676/kintsugi?modelVersionId=2271284
+      kintsugi:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/style-elem-texture/kintsugi/style-main__{,{1-$$__lazy-wildcards/subject/style-elem-texture/kintsugi/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/style-elem-texture/kintsugi/env__}|}{,{1-2$$__lazy-wildcards/subject/style-elem-texture/kintsugi/env-elem__}|}{,{1-$$__lazy-wildcards/subject/style-elem-texture/kintsugi/style__}|}
+        "style-main":
+          - >-
+            kintsukuroi,kintsugi texture,__lazy-wildcards/utils/fn/pattern(v=kintsugi)__,__lazy-wildcards/utils/fn/style-inspired(v=kintsugi)__,gold crack,KintsugiBust,kintsugistyle
+        "costume-elem":
+          - kintsugi tattoo
+          - kintsugi fingernail polish
+          - kintsugi skin
+        env:
+          - gold line
+          - "__lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__"
+          - metallic gold
+          - bold crack
+          - crack
+          - shiny gold
+          - glowing gold
+          - "__lazy-wildcards/utils/fn/made-of(v=kintsugi)__"
+          - kintsugi statues
+        "env-elem":
+          - tea bowl
+          - cup
+          - plate
+          - vase
+          - pot
+          - ceramic
+          - porcelain
+        style:
+          - japanese craft
+          - traditional art
+          - matte surface
+          - glazed surface
+          - zen
+          - diffused light
     style-artist:
       mtg:
         prompts:
@@ -5604,108 +5685,6 @@
           - landscape of Atmospheric organic crystal
           - comic background
     env-bg:
-      "city-traffic":
-        prompts:
-          - >-
-            {1-$$__lazy-wildcards/subject/env-bg/city-traffic/style__},__lazy-wildcards/subject/env-bg/city-traffic/fn/road-in__,__lazy-wildcards/subject/env-bg/city-traffic/main__,{5-$$__lazy-wildcards/subject/env-bg/city-traffic/env__}{,__lazy-wildcards/subject/env-moment/random/prompts__|}
-        main:
-          - cityscape,building
-        style:
-          - "city-life-overload"
-          - ((pedestrian hell))
-        env:
-          - traffic light,road sign
-          - roadway
-          - crowd
-          - greenery,trees
-          - wind,windy
-          - underpass
-          - skywalk
-          - jaywalk
-          - zebra crossing,crosswalk
-          - walk signal
-          - tunnel
-          - parking lot
-          - idewalk
-          - gas station
-          - roadworks
-          - traffic jam
-          - >-
-            {1-$$crossroads|intersection}
-          - >-
-            {1-$$scooter|motorcycle}
-          - >-
-            {1-$$shopping|storefront|signboard}
-        fn:
-          "road-in":
-            - >-
-              ((busy street in ${country:taiwan})),${location:taipei} road
-      # https://danbooru.donmai.us/posts?tags=highway&z=5
-      highway:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/env-bg/highway/env-bg-main__{,{1-3$$__lazy-wildcards/subject/env-bg/highway/env-bg__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-3$$__lazy-wildcards/subject/env-bg/highway/env-road__}|}{,{1-$$__lazy-wildcards/subject/env-bg/highway/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/highway/style__}|}
-        "env-bg-main":
-          - highway
-        "env-bg":
-          - elevated highway
-          - rural_highway
-          - mountain_highway
-          - coastal_highway,seaside_scenery
-          - desert_highway
-          - multi_level_highway
-          - tunnel_highway,lit_tunnel
-          - tollbooth,toll_booth,payment_gate
-          - divided highway
-        "env-road":
-          - dirt_road
-          - snowy_road
-          - elevated_road
-          - river_road
-          - curved_road
-          - straight_road
-          - endless_road
-          - "intersection,complex_road_system,multi-lane road"
-          - night_highway,illuminated_road
-          - rainy_highway,wet_road
-        env:
-          - cityscape_view
-          - "__lazy-wildcards/subject/env-moment/weather-mist/prompts__"
-          - sunset_view
-          - ocean_view
-          - heat_wave
-          - traffic_jam,crowded_highway
-          - concrete_walls
-          - queue_of_cars
-          - urban
-          - traffic
-          - overpass
-          - "__lazy-wildcards/subject/env-elem/traffic-barrier/prompts__"
-          - under bridge
-          - lamppost
-        style:
-          - light_trails
-          - "__lazy-wildcards/utils/scenery-no-humans__"
-      city:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/env-bg/city/env-bg-main__{0.3:::{1.2|1.3|1.4}|}){,{1-3$$__lazy-wildcards/subject/env-bg/city/env-bg__}|}
-        "env-bg-main":
-          - city,metropolis,cityscape
-        "env-bg":
-          - tokyo \(city\)
-          - night city
-          - "__lazy-wildcards/subject/env-bg/city/fn/city(v=futuristic)__"
-          - "__lazy-wildcards/subject/env-bg/city/fn/city(v=cyberpunk)__"
-          - "__lazy-wildcards/subject/env-bg/city/fn/city(v=steampunk)__"
-          - "__lazy-wildcards/subject/env-bg/city/fn/city(v=mega)__"
-        fn:
-          city:
-            - >-
-              ${v} city,${v} metropolis
-          cityscape:
-            - >-
-              ${v} city,${v} metropolis,${v} cityscape
       # https://civitai.com/models/689322/bgi-battlestar-galactica-interiors?modelVersionId=771492
       battlestar_galactica_interiors:
         prompts:
@@ -5761,10 +5740,10 @@
         env:
           - gantry
           - ground_support_equipment
-      crashed_starships:
+      starships_crashed:
         prompts:
           - >-
-            (__lazy-wildcards/subject/env-bg/crashed_starships/env-bg-main__:{1.2|1.3|1.4}){,{1-$$__lazy-wildcards/subject/env-bg/crashed_starships/env__}|}{,{1-2$$__lazy-wildcards/subject/env-bg/crashed_starships/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/crashed_starships/style__}|}
+            (__lazy-wildcards/subject/env-bg/starships_crashed/env-bg-main__:{1.2|1.3|1.4}){,{1-$$__lazy-wildcards/subject/env-bg/starships_crashed/env__}|}{,{1-2$$__lazy-wildcards/subject/env-bg/starships_crashed/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/starships_crashed/style__}|}
         "env-bg-main":
           - crashed starships,broken starships
         "env-bg":
@@ -5785,6 +5764,48 @@
           - glowing_mist
         style:
           - "__lazy-wildcards/subject/style-elem/post-apocalypse/prompts__"
+      # 星際飛船動力室
+      starships_engine_room:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/starships_engine_room/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg/starships_engine_room/env-bg__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg/starships_engine_room/env-elem__}|}{,{1-$$__lazy-wildcards/subject/env-bg/starships_engine_room/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/starships_engine_room/style__}|}
+        "env-bg-main":
+          - futuristic engine room
+        "env-bg":
+          - starship engine room
+          - spaceship engine room
+          - circular room
+          - ring shaped walkway
+        "env-elem":
+          - energy core
+          - central reactor
+          - power generator
+          - cylindrical reactor
+          - giant reactor
+          - spherical energy core
+          - glowing core
+        env:
+          - symmetrical structure
+          - layered mechanical shell
+          - exposed machinery
+          - plasma energy
+          - arc energy
+          - >-
+            {1-$$blue energy|cyan glow|orange core}
+          - thick cables
+          - conduits
+          - radial pipes
+          - ceiling mounted cables
+          - "__lazy-wildcards/subject/env-elem-pipes/industrial-pipes/prompts__"
+          - safety railing
+          - warning lights
+          - dangerous energy
+        style:
+          - radial layout,radial composition
+          - rim lighting
+          - industrial atmosphere
+          - technological
+          - "__lazy-wildcards/subject/style-elem/sci-fi/prompts__"
       background:
         prompts:
           - "__lazy-wildcards/subject/env-bg/background/env-bg__"
@@ -6557,132 +6578,6 @@
           - falling_blocks
         style:
           - game_screen_ui
-      cliff:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-bg/cliff/env-bg-main__{,{{1-3$$__lazy-wildcards/subject/env-bg/cliff/env-bg__}|0.2::__lazy-wildcards/subject/env-bg/cliff/env-bg-real__}|}{,{1-$$__lazy-wildcards/subject/env-bg/cliff/env__}|}
-        "env-bg-main":
-          - cliff
-        "env-bg":
-          - steep cliff,rocky wall,vertical rock
-          - cliffside,precipice,overhanging rock
-          - sheer cliff,vertical drop,abyss
-          - eroded cliff,rugged surface,wind carved
-          - sea cliff,ocean view,crashing waves
-          - cliff cave,hidden cavern,rocky outcrop
-          - canyon wall,towering cliff,desert plateau
-          - waterfall cliff,cascading water,misty rocks
-          - cliffside foliage,hanging plants,hardy trees
-          - rock pillar,natural monument,towering peak
-          - cliffside view,steep drop,breathtaking scenery
-          - misty mountain,foggy cliffs,ethereal landscape
-          - waterfall view,cascading falls,nature majesty
-          - stormy skies,high winds,snow capped cliffs
-        "env-bg-real":
-          - Cliffs of Moher,Irish coast,green highlands
-          - Preikestolen,fjord view,dramatic drop
-          - Grand Canyon,desert cliff,layered rock
-          - Komodo Cliff,tropical sea,rugged coastline
-          - Faroe Cliffs,North Atlantic,misty shores
-        env:
-          - floating rock
-          - cracked landscape
-          - floating cliff
-          - plant,tree
-          - water,waterfall
-          - cloud
-          - stone,rock
-          - dramatic sunset
-          - stormy horizon
-          - golden light effects
-      # https://civitai.com/models/1159453/desert-oasis
-      "desert-oasis":
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/env-bg/desert-oasis/env-bg-main__{0.3:::{1.2|1.3|1.4}|}){,{1-2$$__lazy-wildcards/subject/env-bg/desert-oasis/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/desert-oasis/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/desert-oasis/action__}|}
-        "env-bg-main":
-          - oasis
-        "env-bg":
-          - oasis in the desert,desert oasis
-          - oasis in the wilderness
-          - oasis in the forest
-          - "__cof-location/place/lush-oasis__"
-          - "__cof-location/place/desert-oasis__"
-          - "__cof-location/place/oasis__"
-          - oasis pond
-        env:
-          - palm tree
-          - cactus
-          - lake
-          - lush vegetation
-          - water reflection
-          - stone well
-          - lily pad
-          - herbal plants
-          - oasis wildlife
-        action:
-          - kneeling on liquid
-          - "mixed-sex bathing"
-          - shared bathing
-      # https://civitai.com/models/337587?modelVersionId=1652446
-      # https://danbooru.donmai.us/posts?tags=conan_%28series%29&z=5
-      "desert-oasis-city":
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/env-bg/desert-oasis-city/env-bg-main__ {0.3:::{1.2|1.3|1.4}|}){,{1-2$$__lazy-wildcards/subject/env-bg/desert-oasis-city/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/desert-oasis-city/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-bg/desert-oasis-city/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/desert-oasis-city/style__}|}
-        "env-bg-main":
-          - >-
-            desert oasis city,desert city,stygar,stygia,stygians,conan the barbarian,conan \(series\)
-        "env-bg":
-          - "__lazy-wildcards/subject/env-bg/desert-oasis/prompts__"
-          - whitewashed houses
-          - marketplace stalls
-          - camel stables
-          - watchtower
-          - minaret
-          - "palm-lined streets"
-          - "stone-paved plaza"
-          - dark temple
-          - obsidian altar
-          - ancient ruins
-          - cave tomb
-          - underground crypt
-          - narrow sandstone alley
-          - pyramid interior
-        env:
-          - mudbrick walls
-          - colorful canopies
-          - ceramic water jars
-          - serpent motif
-          - blood ritual,bloodstained altar
-          - "sun-baked stone"
-          - stone sarcophagus
-        "costume-elem":
-          - desert traveler
-          - veil dancer
-          - desert priestess
-          - caravan merchant
-          - camel rider
-          - elaborate headdress
-          - gold jewelry
-          - black robes
-          - dark sorceress
-          - snake priestess
-          - hieroglyphic tattoos
-          - bikini armor
-          - gold armlet
-          - handprint,arm tattoo
-          - harem outfit
-        style:
-          - golden hour lighting
-          - heat haze
-          - glowing water
-          - ancient egypt
-          - snake god worship
-          - dark fantasy
-          - sword and sorcery
-          - egyptian gothic
-          - sunset desert lighting
       # https://civitai.com/models/1103964/superstructures?modelVersionId=1240149
       # https://danbooru.donmai.us/posts?tags=megastructure&z=5
       # https://civitai.com/models/1238651/retro-scifi-architecture?modelVersionId=1395943
@@ -8087,6 +7982,155 @@
           - "__lazy-wildcards/utils/fn/style-inspired(v=retro)__"
           - muted color
           - nostalgic city mood,nostalgic atmosphere
+      "city-traffic":
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-bg/city-traffic/style__},__lazy-wildcards/subject/env-bg/city-traffic/fn/road-in__,__lazy-wildcards/subject/env-bg/city-traffic/main__,{5-$$__lazy-wildcards/subject/env-bg/city-traffic/env__}{,__lazy-wildcards/subject/env-moment/random/prompts__|}
+        main:
+          - cityscape,building
+        style:
+          - "city-life-overload"
+          - ((pedestrian hell))
+        env:
+          - traffic light,road sign
+          - roadway
+          - crowd
+          - greenery,trees
+          - wind,windy
+          - underpass
+          - skywalk
+          - jaywalk
+          - zebra crossing,crosswalk
+          - walk signal
+          - tunnel
+          - parking lot
+          - idewalk
+          - gas station
+          - roadworks
+          - traffic jam
+          - >-
+            {1-$$crossroads|intersection}
+          - >-
+            {1-$$scooter|motorcycle}
+          - >-
+            {1-$$shopping|storefront|signboard}
+        fn:
+          "road-in":
+            - >-
+              ((busy street in ${country:taiwan})),${location:taipei} road
+      # https://danbooru.donmai.us/posts?tags=highway&z=5
+      highway:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/highway/env-bg-main__{,{1-3$$__lazy-wildcards/subject/env-bg/highway/env-bg__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-3$$__lazy-wildcards/subject/env-bg/highway/env-road__}|}{,{1-$$__lazy-wildcards/subject/env-bg/highway/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/highway/style__}|}
+        "env-bg-main":
+          - highway
+        "env-bg":
+          - elevated highway
+          - rural_highway
+          - mountain_highway
+          - coastal_highway,seaside_scenery
+          - desert_highway
+          - multi_level_highway
+          - tunnel_highway,lit_tunnel
+          - tollbooth,toll_booth,payment_gate
+          - divided highway
+        "env-road":
+          - dirt_road
+          - snowy_road
+          - elevated_road
+          - river_road
+          - curved_road
+          - straight_road
+          - endless_road
+          - "intersection,complex_road_system,multi-lane road"
+          - night_highway,illuminated_road
+          - rainy_highway,wet_road
+        env:
+          - cityscape_view
+          - "__lazy-wildcards/subject/env-moment/weather-mist/prompts__"
+          - sunset_view
+          - ocean_view
+          - heat_wave
+          - traffic_jam,crowded_highway
+          - concrete_walls
+          - queue_of_cars
+          - urban
+          - traffic
+          - overpass
+          - "__lazy-wildcards/subject/env-elem/traffic-barrier/prompts__"
+          - under bridge
+          - lamppost
+        style:
+          - light_trails
+          - "__lazy-wildcards/utils/scenery-no-humans__"
+      city:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/city/env-bg-main__{0.3:::{1.2|1.3|1.4}|}){,{1-3$$__lazy-wildcards/subject/env-bg/city/env-bg__}|}
+        "env-bg-main":
+          - city,metropolis,cityscape
+        "env-bg":
+          - tokyo \(city\)
+          - night city
+          - "__lazy-wildcards/subject/env-bg/city/fn/city(v=futuristic)__"
+          - "__lazy-wildcards/subject/env-bg/city/fn/city(v=cyberpunk)__"
+          - "__lazy-wildcards/subject/env-bg/city/fn/city(v=steampunk)__"
+          - "__lazy-wildcards/subject/env-bg/city/fn/city(v=mega)__"
+          - "__lazy-wildcards/subject/env-bg/city/fn/city(v=megastructure)__"
+        fn:
+          city:
+            - >-
+              ${v} city,${v} metropolis,${v} urban
+          cityscape:
+            - >-
+              ${v} city,${v} metropolis,${v} urban,${v} cityscape
+      # 都市島嶼型大都會
+      "city-island":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/city-island/env-bg-main__{,__lazy-wildcards/subject/env-bg/city-island/env-bg-real__|}{,{1-$$__lazy-wildcards/subject/env-bg/city-island/env-bg__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg/city-island/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/city-island/style__}|}
+        "env-bg-main":
+          - urban island
+        "env-bg-real":
+          # 羅斯福島｜紐約
+          - roosevelt island
+          # 貝爾島｜底特律
+          - belle isle,[urban park]
+          # 蒙特婁
+          - montreal island
+          # 香港島
+          - hong kong island
+          # 倫敦
+          - london
+        "env-bg":
+          - artificial island
+          - waterfront city
+          - urban island metropolis
+          - harbor city
+        env:
+          - river
+          - harbor
+          - narrow island
+          - modern residential buildings
+          - historic ruins
+          - tramway cable car
+          - neoclassical architecture
+          - abandoned structures
+          - river landscape
+          - old town architecture
+          - victorian architecture
+        style:
+          - historical layering
+          - architectural contrast
+          - cultural intersection
+          - quiet urban atmosphere,melancholic atmosphere
+          - post industrial romanticism
+          - nostalgic tone
+          - european old world,north american modernity
+          - french colonial style
+          - east west fusion
+          - imperial legacy
       race-car_racing_court:
         prompts:
           - >-
@@ -8198,6 +8242,132 @@
           - close up lava
         style:
           - heat distortion
+      cliff:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg/cliff/env-bg-main__{,{{1-3$$__lazy-wildcards/subject/env-bg/cliff/env-bg__}|0.2::__lazy-wildcards/subject/env-bg/cliff/env-bg-real__}|}{,{1-$$__lazy-wildcards/subject/env-bg/cliff/env__}|}
+        "env-bg-main":
+          - cliff
+        "env-bg":
+          - steep cliff,rocky wall,vertical rock
+          - cliffside,precipice,overhanging rock
+          - sheer cliff,vertical drop,abyss
+          - eroded cliff,rugged surface,wind carved
+          - sea cliff,ocean view,crashing waves
+          - cliff cave,hidden cavern,rocky outcrop
+          - canyon wall,towering cliff,desert plateau
+          - waterfall cliff,cascading water,misty rocks
+          - cliffside foliage,hanging plants,hardy trees
+          - rock pillar,natural monument,towering peak
+          - cliffside view,steep drop,breathtaking scenery
+          - misty mountain,foggy cliffs,ethereal landscape
+          - waterfall view,cascading falls,nature majesty
+          - stormy skies,high winds,snow capped cliffs
+        "env-bg-real":
+          - Cliffs of Moher,Irish coast,green highlands
+          - Preikestolen,fjord view,dramatic drop
+          - Grand Canyon,desert cliff,layered rock
+          - Komodo Cliff,tropical sea,rugged coastline
+          - Faroe Cliffs,North Atlantic,misty shores
+        env:
+          - floating rock
+          - cracked landscape
+          - floating cliff
+          - plant,tree
+          - water,waterfall
+          - cloud
+          - stone,rock
+          - dramatic sunset
+          - stormy horizon
+          - golden light effects
+      # https://civitai.com/models/1159453/desert-oasis
+      "desert-oasis":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/desert-oasis/env-bg-main__{0.3:::{1.2|1.3|1.4}|}){,{1-2$$__lazy-wildcards/subject/env-bg/desert-oasis/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/desert-oasis/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/desert-oasis/action__}|}
+        "env-bg-main":
+          - oasis
+        "env-bg":
+          - oasis in the desert,desert oasis
+          - oasis in the wilderness
+          - oasis in the forest
+          - "__cof-location/place/lush-oasis__"
+          - "__cof-location/place/desert-oasis__"
+          - "__cof-location/place/oasis__"
+          - oasis pond
+        env:
+          - palm tree
+          - cactus
+          - lake
+          - lush vegetation
+          - water reflection
+          - stone well
+          - lily pad
+          - herbal plants
+          - oasis wildlife
+        action:
+          - kneeling on liquid
+          - "mixed-sex bathing"
+          - shared bathing
+      # https://civitai.com/models/337587?modelVersionId=1652446
+      # https://danbooru.donmai.us/posts?tags=conan_%28series%29&z=5
+      "desert-oasis-city":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/desert-oasis-city/env-bg-main__ {0.3:::{1.2|1.3|1.4}|}){,{1-2$$__lazy-wildcards/subject/env-bg/desert-oasis-city/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/desert-oasis-city/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-bg/desert-oasis-city/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/desert-oasis-city/style__}|}
+        "env-bg-main":
+          - >-
+            desert oasis city,desert city,stygar,stygia,stygians,conan the barbarian,conan \(series\)
+        "env-bg":
+          - "__lazy-wildcards/subject/env-bg/desert-oasis/prompts__"
+          - whitewashed houses
+          - marketplace stalls
+          - camel stables
+          - watchtower
+          - minaret
+          - "palm-lined streets"
+          - "stone-paved plaza"
+          - dark temple
+          - obsidian altar
+          - ancient ruins
+          - cave tomb
+          - underground crypt
+          - narrow sandstone alley
+          - pyramid interior
+        env:
+          - mudbrick walls
+          - colorful canopies
+          - ceramic water jars
+          - serpent motif
+          - blood ritual,bloodstained altar
+          - "sun-baked stone"
+          - stone sarcophagus
+        "costume-elem":
+          - desert traveler
+          - veil dancer
+          - desert priestess
+          - caravan merchant
+          - camel rider
+          - elaborate headdress
+          - gold jewelry
+          - black robes
+          - dark sorceress
+          - snake priestess
+          - hieroglyphic tattoos
+          - bikini armor
+          - gold armlet
+          - handprint,arm tattoo
+          - harem outfit
+        style:
+          - golden hour lighting
+          - heat haze
+          - glowing water
+          - ancient egypt
+          - snake god worship
+          - dark fantasy
+          - sword and sorcery
+          - egyptian gothic
+          - sunset desert lighting
       # https://civitai.com/models/347130/roman-interior
       Ancient_Roman_Interior_Design:
         prompts:
@@ -10280,6 +10450,54 @@
           - arcade
         style:
           - retro,historical,early modern era
+      # 客家土樓
+      "zh-hakka_tulou":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/zh-hakka_tulou/env-bg-main__{,{1-2$$__lazy-wildcards/subject/env-bg/zh-hakka_tulou/env-bg__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg/zh-hakka_tulou/env-elem__}|}{,{1-$$__lazy-wildcards/subject/env-bg/zh-hakka_tulou/env__}|}{,{1-3$$__lazy-wildcards/subject/env-bg/zh-hakka_tulou/env-bg2__}|}{,{1-$$__lazy-wildcards/subject/env-bg/zh-hakka_tulou/style__}|}
+        "env-bg-main":
+          - hakka tulou,traditional hakka architecture
+        "env-bg":
+          - chinese hakka round tulou,circular building
+          - chinese hakka square tulou
+          - chinese hakka weilong house,chinese hakka horseshoe shape
+          - fujian enclosed building
+          - hakka enclosed house
+        "env-elem":
+          - open courtyard
+          - heavy wooden gate
+        env:
+          - defensive architecture
+          - self sufficient settlement
+          - thick earthen wall,rammed earth wall,thick wall cross section
+          - minimal exterior openings
+          - fortress like building
+          - weathered wall
+          - "__lazy-wildcards/subject/env-elem/roof-tiled/prompts-no-weight__"
+          - semi circular enclosure
+          - main hall
+          - curved enclosing wall
+          - ceremonial architecture
+          - processional path
+          - ancestral hall
+          - small windows on upper floors
+          - earth and wood materials
+        "env-bg2":
+          - mountain valley
+          - rural landscape
+          - farmland
+          - terraced fields
+          - misty mountains
+          - river nearby
+          - subtropical vegetation
+        style:
+          - clan living
+          - rammed earth texture
+          - axial symmetry
+          - feng shui based layout
+          - massive scale
+          - communal living
+          - historical atmosphere,quiet rural mood
       # https://civitai.com/models/230964/middle-eastern-market-rug-stall
       # https://civitai.com/models/169967/game-scenario-middle-east-region
       middle_eastern_market:
@@ -10703,6 +10921,30 @@
           - soft light
           - bathroom lighting
           - "__lazy-wildcards/subject/env-moment/weather-mist/prompts__"
+      # 乾砌石牆
+      "wall-stone-dry":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/wall-stone-dry/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg/wall-stone-dry/env-bg__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg/wall-stone-dry/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/wall-stone-dry/style__}|}
+        "env-bg-main":
+          - dry stone wall
+        "env-bg":
+          - hillside stone wall
+          - farmland boundary
+          - rural roadside wall
+        env:
+          - stacked stones
+          - irregular stones
+          - stone interlock
+          - weathered stone
+          - lichen on stone
+          - moss growth
+          - cracks
+          - gravel path
+        style:
+          - interlocking stones
+          - rough surface
+          - random stacking
     env-elem-punk:
       holographic:
         prompts:
@@ -11740,6 +11982,70 @@
         style:
           - fantasy setting
           - portal to another world
+      # 貼花／轉印貼紙
+      decal:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem/decal/env-elem-main__{,{1-$$__lazy-wildcards/subject/env-elem/decal/env-elem__}|}{,{1-$$__lazy-wildcards/subject/env-elem/decal/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem/decal/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-elem/decal/style__}|}
+        "env-elem-main":
+          - decal,bcstyle,indstyle,sdstyle,typography
+        "env-elem":
+          - package decal
+          - package sticker
+          - packaging label
+          - "__lazy-wildcards/subject/env-elem/decal-tag/prompts-no-weight__"
+        env:
+          - decal wall
+          - decal floor
+          - decal ground
+          - decal table
+          - decal furniture
+          - decal building
+          - decal vehicle
+          - typography
+          - barcode
+          - qr code
+          - english text
+        "costume-elem":
+          - decal clothes,decal outfit,decal costume
+          - decal skin
+          - decal makeup
+          - decal accessories,decal jewelry
+          - decal tattoos
+          - decal armor
+        style:
+          - sticker texture
+          - decal texture
+          - printed texture
+          - object attachment
+          - flat design
+          - vector art
+          - clean outline
+          - matte surface
+          - glossy surface
+          - industrial design
+      # 包裝吊牌貼花
+      "decal-tag":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/decal-tag/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem/decal-tag/env__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/env-elem/decal-tag/env-elem-main__{,{1-$$__lazy-wildcards/subject/env-elem/decal-tag/env-elem__}|}
+        "env-elem-main":
+          - decal tag,package tags decals
+        "env-elem":
+          - clothing tag
+          - product tag
+          - brand tag
+          - care instruction tag
+        env:
+          - tag on clothes
+          - tag on product
+          - hanging tag
+          - "sewn-in tag"
+          - string attachment
+          - kraft paper
       cross:
         prompts:
           - >-
@@ -12663,7 +12969,7 @@
           - magic circle background
         style:
           - spell
-          - fusion
+          - "__lazy-wildcards/subject/style-theme/elements-fusion/prompts-no-weight__"
           - vortex
           - swirling patterns
           - fluid
@@ -14183,6 +14489,26 @@
           - traffic barrel
           - jersey barrier
           - guard rail
+      # 瓦片屋頂
+      "roof-tiled":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/roof-tiled/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/env-elem/roof-tiled/env-elem-main__{,{1-$$__lazy-wildcards/subject/env-elem/roof-tiled/env-elem__}|}{,{1-$$__lazy-wildcards/subject/env-elem/roof-tiled/env__}|}
+        "env-elem-main":
+          - tiled roof
+        "env-elem":
+          - terracotta roof
+          - traditional roofing
+          - patterned roof tiles
+          - sloped roof
+        env:
+          - clay tiles
+          - weathered roof
+          - "moss-covered tiles"
+          - rustic roof
       stairs:
         prompts:
           - >-
@@ -17927,6 +18253,9 @@
           - steam valves
           - brass tubing
           - exposed wiring
+          - thick cables
+          - radial pipes
+          - ceiling mounted cables
         "costume-weapon":
           - holding cable
       "tubes-connected":
@@ -20912,6 +21241,37 @@
         "costume-elem":
           - thighhighs
           - stockings
+      # 吊帶
+      "belt-suspenders":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/belt-suspenders/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}){,__lazy-wildcards/subject/costume-elem/belt-suspenders/costume__|}{,{1-$$__lazy-wildcards/subject/costume-elem/belt-suspenders/costume-elem__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-elem/belt-suspenders/costume-elem-main__{,{1-$$__lazy-wildcards/subject/costume-elem/belt-suspenders/costume-elem-main2__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/belt-suspenders/action__}|}
+        "costume-elem-main":
+          - suspenders
+        "costume-elem-main2":
+          - suspenders slip
+          - naked suspenders,nude suspenders
+          - suspenders hanging
+          - suspenders gap
+        action:
+          - adjusting suspenders
+          - pulling suspenders,suspenders pull
+        costume:
+          - suspender skirt
+          - suspender shorts
+          - suspender pants,suit pants
+          - suspender dress
+        "costume-elem":
+          - tie
+          # 吊襪帶
+          - suspender belt
+          - topless
+          - cleavage
+          - "__lazy-wildcards/subject/costume-elem-tattoo/tattoo-tanlines/prompts-no-weight__"
+          - "__lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned-black/prompts__"
       # https://civitai.com/models/125210/concept-curtain-mouth-veil
       curtain:
         prompts:
@@ -23929,6 +24289,59 @@
         "env-bg":
           - boxing ring
           - "__cf-boxer/location__"
+      # 滑雪裝
+      "sports-winter-ski":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/sports-winter-ski/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume/sports-winter-ski/env-bg__}|}{,{1-$$__lazy-wildcards/subject/costume/sports-winter-ski/env__}|}{,{1-$$__lazy-wildcards/subject/costume/sports-winter-ski/style__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume/sports-winter-ski/costume-main__{,{1-$$__lazy-wildcards/subject/costume/sports-winter-ski/costume-headwear__}|}{,{1-$$__lazy-wildcards/subject/costume/sports-winter-ski/costume__}|}{,{1-$$__lazy-wildcards/subject/costume/sports-winter-ski/costume-elem__}|}
+        "costume-main":
+          - ski outfit
+        "costume-headwear":
+          - beanie
+          - pom pom hat
+          - earflap hat
+          - fur hat
+          - winter hats
+        costume:
+          - winter sportswear
+          - insulated suit
+        "costume-elem":
+          - ski jacket
+          - ski pants
+          - ski goggles
+          - puffy jacket
+          - waterproof fabric,windproof material
+          - fleece lining
+          - snow boots
+          - thermal gloves
+        "env-bg":
+          - snowy mountain
+          - ski slope
+          - ski tracks
+          - ski resort
+          - snow covered ground
+        env:
+          - ski equipment
+          - long narrow skis
+          - snowboard
+          - scratches
+          - powder snow
+          - uneven snow surface
+          - snowball
+          - packed snow
+          - fresh air
+        style:
+          - thick knit texture
+          - diagonal composition
+          - rough surface
+          - white dominant
+          - bright accent colors
+          - cool color palette
+          - cold atmosphere
+          - energetic winter mood
       # https://civitai.com/models/234197/v-shaped-slingshot-swimsuit-wide-fabric?modelVersionId=264068
       # https://civitai.com/models/234206/v-shaped-slingshot-swimsuit-string-type?modelVersionId=264079
       "v-shaped_slingshot_swimsuit":
@@ -26029,6 +26442,41 @@
           - traditional_landscape
           - traditional_marketplace
           - bamboo_architecture
+      # choli 印度短上衣 , lehenga 印度傳統寬裙
+      # https://civitai.com/models/307454/floral-embroidered-lehenga-skirt-with-fitted-blouse-draped-scarf
+      "indian-choli-lehenga":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/indian-choli-lehenga/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume/indian-choli-lehenga/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume/indian-choli-lehenga/env-bg__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume/indian-choli-lehenga/costume__){,{1-$$__lazy-wildcards/subject/costume/indian-choli-lehenga/costume-elem-main__}|}
+        costume:
+          - lehenga choli,l3h3ng4_1
+        "costume-elem-main":
+          - dupatta scarf
+          - sari
+          - odhani
+        "costume-elem":
+          - top compact bottom expansive
+          - layered fabric
+          - heavy embroidery
+          - floral pattern
+          - paisley pattern
+          - wide flare
+          - long skirt
+          - gold embroidery
+          - bead decoration
+          - cropped top
+          - tight fit
+          - sleeveless
+          - short sleeves
+          - ornament density
+          - "see-through fabric"
+        "env-bg":
+          - indian palace
+          - indian temple courtyard
+          - indian festival night
       # https://civitai.com/models/214318/eastern-fantasy-by-edg
       "mixin-asian-clothes":
         prompts:
@@ -27325,9 +27773,10 @@
             (__lazy-wildcards/subject/costume-elem-tattoo/tattoo-tanlines/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|})
         "prompts-no-weight":
           - >-
-            {1-$$__lazy-wildcards/subject/costume-elem-tattoo/tattoo-tanlines/costume-elem-tattoo__}
-        "costume-elem-tattoo":
+            __lazy-wildcards/subject/costume-elem-tattoo/tattoo-tanlines/costume-elem-tattoo-main__{,{1-$$__lazy-wildcards/subject/costume-elem-tattoo/tattoo-tanlines/costume-elem-tattoo__}|}
+        "costume-elem-tattoo-main":
           - tanlines
+        "costume-elem-tattoo":
           - suntanned
           - "tan tattoo,tattoo-like tanlines"
           - presenting tanlines
@@ -27779,7 +28228,7 @@
         prompts:
           - "__lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned-black/costume-ethnicity__,cinematic dark black skin tone"
         "costume-ethnicity":
-          - "dark_skin,tan_skin,tanned skin,dark skin,dark-skinned,black-skinned"
+          - "dark_skin,tan skin,tanned skin,dark skin,dark-skinned,black-skinned"
         fn:
           tone:
             - >-
@@ -28714,6 +29163,37 @@
           - pointy hair ends
           - asymmetrical bangs
           - parted bangs
+      # 姫髮型
+      hime_cut:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-hair-style/hime_cut/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-ethnicity-hair-style/hime_cut/costume-elem__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-hair-style/hime_cut/costume-ethnicity-hair-main__{,{1-2$$__lazy-wildcards/subject/costume-ethnicity-hair-style/hime_cut/costume-ethnicity-hair-hime__}|}{,{1-4$$__lazy-wildcards/subject/costume-ethnicity-hair-style/hime_cut/costume-ethnicity-hair__}|}
+        "costume-ethnicity-hair-main":
+          - hime cut hairstyle
+        "costume-ethnicity-hair-hime":
+          - classic hime cut
+          - modern hime cut
+          - layered hime cut
+          - wavy hime cut
+          - curly hime cut
+          - asymmetrical hime cut
+        "costume-ethnicity-hair":
+          - hime cut with bangs
+          - blunt bangs
+          - side locks
+          - long straight hair
+          - lighter bangs
+          - side swept bangs
+          - asymmetrical bangs
+          - off center bangs
+          - one eye covered bangs
+        "costume-elem":
+          - hair ornament
+          - emotionless beauty
+          - cold beauty
       # 繁複編髮
       intricate_braids:
         prompts:
@@ -41781,6 +42261,35 @@
           - syringe
         "env-bg":
           - "chain-link fence"
+    # https://www.wnacg.com/search/?q=Croriin&f=_all&s=create_time_DESC&syn=yes
+    # https://civitai.com/models/2214175/croriin-majo-no-okiniiri-isekai-kairakuten-vol-52-doujin-style-illustrious?modelVersionId=2492850
+    croriin:
+      majo_no_okiniiri:
+        prompts:
+          - >-
+            __lazy-wildcards/cosplay-char-hentai/croriin/majo_no_okiniiri/main-trigger-words__,(__lazy-wildcards/cosplay-char-hentai/croriin/majo_no_okiniiri/costume-ethnicity__,__lazy-wildcards/cosplay-char-hentai/croriin/majo_no_okiniiri/costume__{,{1-$$__lazy-wildcards/cosplay-char-hentai/croriin/majo_no_okiniiri/expressions__}|}{,{1-$$__lazy-wildcards/cosplay-char-hentai/croriin/majo_no_okiniiri/action__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/cosplay-char-hentai/croriin/majo_no_okiniiri/costume-elem__}|}
+        "main-trigger-words":
+          - cror,isekai kairakuten
+        "costume-ethnicity":
+          - >-
+            dark elf,hair over one eye,eyes visible through hair,long pointy ears,yellow eyes,long hair,white hair,shiny skin,__lazy-wildcards/subject/costume-ethnicity-body-skin-tone/dark-skinned/prompts__
+        costume:
+          - >-
+            hair ornament,bracelet,ear piercing,earrings,o-ring,necklace,collar,jewelry,gem,purple gemstone,red gemstone,blue gemstone
+        expressions:
+          - seductive smile
+          - open mouth,teeth,tongue
+          - groin
+          - naughty face
+          - parted lips,blush
+        action:
+          - finger to mouth
+          - hands up
+          - head tilt
+        "costume-elem":
+          - long fingernails,nail polish
+          - revealing clothes
+          - gloves
 "mix-lazy-auto":
   # @example __mix-lazy-auto/color-anything__
   # "color-anything" (total: 1007 => 234, save 773 ) is merge from
