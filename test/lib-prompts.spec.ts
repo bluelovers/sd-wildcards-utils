@@ -64,6 +64,9 @@ describe(`_checkValue`, () => {
 			`__costume-ethnicity-breasts/tits-rocket/fn/rocket_tits(v={x})__`,
 			`__costume-ethnicity-breasts/tits-rocket/fn/rocket_tits(v=\${x})__`,
 
+			`{1-$abc}`,
+			`$a`,
+
 		])(`%j`, (input) => {
 
 			let actual = _checkValue(input);
