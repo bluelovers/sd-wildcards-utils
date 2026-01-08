@@ -71,7 +71,14 @@ export function _checkValue(value: string, options?: IOptionsParseDocument): ICh
 		re = /(?:^|[\s{},])_(?=[^_]|$)|(?<!_)_(?:[\s{},]|$)|\/_+|_+\/(?!\()/
 	}
 
-	let m = re.exec(value)
+	let m = re.exec(value);
+
+	if (!m && value.includes('$'))
+	{
+		// check `$$` or `${`
+		re = /(?<![{$])\$[^${]/;
+		m = re.exec(value);
+	}
 
 	if (m)
 	{
