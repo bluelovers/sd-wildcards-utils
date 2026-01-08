@@ -147,4 +147,38 @@ lazy-wildcards:
           - pointy hair ends
           - asymmetrical bangs
           - parted bangs
+      # 姫髮型
+      hime_cut:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-hair-style/hime_cut/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-hair-style/hime_cut/costume-elem__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-hair-style/hime_cut/costume-ethnicity-hair-main__
+            {, {1-2$$__lazy-wildcards/subject/costume-ethnicity-hair-style/hime_cut/costume-ethnicity-hair-hime__}|}
+            {, {1-4$$__lazy-wildcards/subject/costume-ethnicity-hair-style/hime_cut/costume-ethnicity-hair__}|}
+        costume-ethnicity-hair-main:
+          - hime cut hairstyle
+        costume-ethnicity-hair-hime:
+          - classic hime cut
+          - modern hime cut
+          - layered hime cut
+          - wavy hime cut
+          - curly hime cut
+          - asymmetrical hime cut
+        costume-ethnicity-hair:
+          - hime cut with bangs
+          - blunt bangs
+          - side locks
+          - long straight hair
+          - lighter bangs
+          - side swept bangs
+          - asymmetrical bangs
+          - off center bangs
+          - one eye covered bangs
+        costume-elem:
+          - hair ornament
+          - emotionless beauty
+          - cold beauty
 
