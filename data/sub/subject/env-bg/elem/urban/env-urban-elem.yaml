@@ -1,0 +1,78 @@
+lazy-wildcards:
+  subject:
+    env-elem:
+      # 停車收費碼錶
+      parking_meter:
+        prompts:
+          - >-
+            (parking meter{0.3:::{1.2|1.3|1.4}|:1.2})
+      # 公共電話亭
+      phone-booth:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/phone-booth/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            {, __lazy-wildcards/subject/env-elem/phone-booth/env-elem-color__|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/phone-booth/env-elem__}|}
+            {, {1-3$$__lazy-wildcards/subject/env-elem/phone-booth/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/phone-booth/style__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-elem/phone-booth/env-bg-main__
+            {, {1-2$$__lazy-wildcards/subject/env-elem/phone-booth/env-bg__}|}
+        env-bg-main:
+          - telephone booth
+        env-bg:
+          - japanese telephone booth
+          - american payphone booth
+          - open booth
+          - modern glass phone booth
+        env-elem-color:
+          - green telephone booth
+          - red telephone booth
+        env-elem:
+          - cast iron structure
+          - glass panel windows
+          - domed roof
+          - aluminum frame
+          - transparent walls
+          - plastic shell
+          - __lazy-wildcards/subject/env-elem/phone-public/prompts-no-weight__
+        env:
+          - rainy night
+          - neon reflection
+          - graffiti
+          - street corner
+          - subway station
+          - bus stop
+        style:
+          - nostalgic atmosphere
+          - urban decay
+          - street culture
+          - faded colors
+      # 公共電話
+      phone-public:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/phone-public/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/phone-public/env__}|}
+            {, {1-3$$__lazy-wildcards/subject/env-elem/phone-booth/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/phone-booth/style__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-elem/phone-public/env-elem-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/phone-public/env-elem__}|}
+        env-elem-main:
+          - public telephone, payphone
+        env-elem:
+          - coin operated phone
+          - telephone card slot
+          - wall mounted phone
+        env:
+          - instruction stickers, instruction label
+          - coin slot
+          - rotary dial phone
+          - push button keypad
+          - protective hood
+          - telephone handset, coiled cord
+          - numeric keypad
+

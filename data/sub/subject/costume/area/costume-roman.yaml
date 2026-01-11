@@ -1,0 +1,39 @@
+lazy-wildcards:
+  subject:
+    costume:
+      roman-attire:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/roman-attire/costume-main__
+            {, {1-2$$__lazy-wildcards/subject/costume/roman-attire/costume__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume/roman-attire/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/roman-attire/style__}|}
+        costume-main:
+          - ancient roman attire, roman clothes, greco-roman clothes, ancient greek clothes
+        costume:
+          # 長袍 托加袍
+          - >-
+            roman toga
+            {. {toga virilis, white toga|toga praetexta, purple border|toga picta, gold embroidery}|}
+          # 女用長袍 斯托拉袍
+          - stola, long flowing dress
+          # 短袍 丘尼卡
+          - tunica, knee length tunic
+          - palla
+          - fibula brooch
+        costume-elem:
+          - short sleeves
+          - belted waist
+          - draped fabric
+          - linen and wool
+          - large draped cloth, heavy fabric weight
+          - asymmetrical drapery
+          - one shoulder exposed
+          - high waist line
+          - large rectangular shawl
+          - head covering
+          - arm draping
+        style:
+          - geometric folds
+          - earth tone palette
+

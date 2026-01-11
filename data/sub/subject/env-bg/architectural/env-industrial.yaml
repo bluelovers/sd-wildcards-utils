@@ -218,4 +218,34 @@ lazy-wildcards:
           - mechanical solemnity
           - low angle view
           - __lazy-wildcards/utils/scenery-no-humans__
+      # 升降台
+      platform-lifting:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/platform-lifting/env-bg-main__
+            {, {1-2$$__lazy-wildcards/subject/env-bg/platform-lifting/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/platform-lifting/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/platform-lifting/style__}|}
+        env-bg-main:
+          - lifting platform
+        env-bg:
+          - suspended platform
+          - sliding platform
+          - aerial work platform
+          - mobile lift platform
+          - stage Lift
+          - elevating platform
+        env:
+          - heavy machinery
+          - steel structure
+          - urban skyline
+          - futuristic design
+          - scissor lift, scissor mechanism
+          - column lift mechanism
+          - hydraulic cylinder
+          - guided rail
+          - wheeled base
+          - industrial lift platform
+        style:
+          - industrial paint
 
