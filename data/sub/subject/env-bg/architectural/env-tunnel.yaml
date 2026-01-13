@@ -6,46 +6,89 @@ lazy-wildcards:
       tunnel-sewer:
         prompts:
           - >-
-            __lazy-wildcards/subject/env-bg/tunnel-sewer/env-bg-main__
-            {, ({1-$$__lazy-wildcards/subject/env-bg/tunnel-sewer/env-bg__})|}
+            (__lazy-wildcards/subject/env-bg/tunnel-sewer/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/tunnel-sewer/env-bg__}|__cof-location/place/sewer__|})
             {, {1-$$__lazy-wildcards/subject/env-bg/tunnel-sewer/env__}|}
             {, {1-$$__lazy-wildcards/subject/env-bg/tunnel-sewer/env-elem-creatures__}|}
             {, {1-$$__lazy-wildcards/subject/env-bg/tunnel-sewer/style__}|}
         env-bg-main:
           - sewer, sewers
         env-bg:
-          - sewer_tunnel
-          - dark_tunnel
-          - flooded_sewers
-          - ancient_sewers
+          - sewer tunnel
+          - dark tunnel
+          - flooded sewers
+          - ancient sewers
           - brick_tunnels, stone walls
         env:
-          - damp_environment, damp_atmosphere
-          - dim_green_light
-          - flickering_lights
-          - sewer_grates
-          - rusty_grate
+          - damp environment, damp atmosphere
+          - dim green light
+          - flickering lights
+          - sewer grates
+          - rusty grate
           - manhole_cover
-          - floating_trash, debris_float
-          - murky_water, polluted_water
-          - knee_deep_water
-          - maintenance_tools
+          - floating trash, debris float
+          - murky water, polluted water
+          - knee deep water
+          - maintenance tools
           - overgrown moss
-          - low_ceiling
+          - low ceiling
           - water
         env-elem-creatures:
-          - sewer_monster
-          - rats_swarm
-          - tentacle_monster
+          - sewer monster
+          - rats swarm
+          - tentacle monster
           - giant rats
         style:
-          - urban_grime
-          - lurking_in_shadows
-          - claustrophobic_space
-          - creepy_noise
+          - urban grime
+          - lurking in_shadows
+          - claustrophobic space
+          - creepy noise
           - subsurface scattering
           - medieval
           - fantasy
+      # 中古世紀風格的下水道
+      tunnel-sewer-medieval:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/tunnel-sewer-medieval/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/tunnel-sewer-medieval/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/tunnel-sewer-medieval/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/tunnel-sewer-medieval/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/tunnel-sewer-medieval/style__}|}
+        env-bg-main:
+          - medieval sewer, stone sewer, underground sewer
+        env-bg:
+          - roman arch influence
+          - barrel vault ceiling
+          - open sewer channel
+          - cesspits, wastewater
+          - sanitary sewer
+        costume-weapon:
+          - torch lighting
+          - oil lamp
+          - light shafts from grates
+        env:
+          - urban underworld
+          - shallow flowing water
+          - organic debris
+          - rough cut stone
+          - irregular masonry
+          - mortar gaps
+          - water stains
+          - slime
+          - algae
+          - moss
+          - low light environment
+          - iron ladder
+          - manhole opening
+          - iron grates
+          - rusted metal
+          - barrier elements
+          - gutters
+        style:
+          - dark fantasy mood
+          - grim medieval atmosphere
+          - claustrophobic space
       # https://civitai.com/models/404805/light-tunnel-or-rainbow-tunnel?modelVersionId=451343
       light_tunnel:
         prompts:
