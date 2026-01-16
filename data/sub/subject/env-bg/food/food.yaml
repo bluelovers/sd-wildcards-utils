@@ -622,4 +622,64 @@ lazy-wildcards:
           - pistachio
         env-elem-food-tool:
           - __lazy-wildcards/subject/env-elem-food-tool/jar/prompts__
+      # 爆米花
+      corn-popcorn:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-food/corn-popcorn/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-elem-food/corn-popcorn/env-elem-food__
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/corn-popcorn/costume-weapon__}|}
+        env-elem-food:
+          - popcorn
+        costume-weapon:
+          - holding popcorn
+      # 玉米
+      corn:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-food/corn/env-elem-food-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/corn/env-elem-food__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/corn/costume-weapon__}|}
+        env-elem-food-main:
+          - corn, maize, zea mays
+        env-elem-food:
+          - indian corn
+          - corn cob
+        costume-weapon:
+          - holding corn
+      # 烤玉米
+      corn-grilled:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-food/corn-grilled/env-elem-food-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/corn-grilled/env-elem-food__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/corn/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/corn-grilled/env__}|}
+        env-elem-food-main:
+          - grilled corn
+        env-elem-food:
+          - charred kernels, charred texture
+          - butter glaze
+          - __lazy-wildcards/subject/env-elem-food/corn/prompts__
+        env:
+          - grill marks
+          - steam rising
+      # 玉米田
+      corn-field:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-food/corn-field/env-elem-food-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-food/corn-field/env-elem-food__}|}
+        env-elem-food-main:
+          - cornfield
+        env-elem-food:
+          - wild corn
+          - rows of corn
+          - __lazy-wildcards/subject/env-elem-food/corn/prompts__
+          - tall corn plants
+          - corn ear
+          - corn husk
+          - corn silk
 
