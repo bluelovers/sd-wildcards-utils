@@ -1,11 +1,14 @@
 lazy-wildcards:
   subject:
     costume-ethnicity-horns:
-      horns:
+      horns-base:
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/costume-ethnicity-horns/horns/costume-ethnicity__}
-            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-horns/horns/costume-elem__}|}
+            (__lazy-wildcards/subject/costume-ethnicity-horns/horns-base/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-ethnicity-horns/horns-base/costume-ethnicity__}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-horns/horns-base/costume-elem__}|}
         costume-ethnicity:
           - horns
           - broken horn
@@ -39,4 +42,26 @@ lazy-wildcards:
           - devil horns
           - large horns
           - curved horns
+      horns-demon-oni:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-horns/horns-demon-oni/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-horns/horns-demon-oni/costume-elem__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-horns/horns-demon-oni/costume-ethnicity-horns-main__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-horns/horns-demon-oni/costume-ethnicity-horns__}|}
+        costume-ethnicity-horns-main:
+          - oni horns, skin-covered horns
+        costume-ethnicity-horns:
+          - hair between horns
+          - single horn
+          - small horns
+          - cone horns
+          - striped horns
+        costume-elem:
+          - horn ribbon
+          - horn ornament
+          - __lazy-wildcards/subject/costume-ethnicity-horns/horns-base/prompts-no-weight__
+          - yellow horns
 

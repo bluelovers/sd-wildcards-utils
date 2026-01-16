@@ -226,4 +226,16 @@ lazy-wildcards:
           - ethereal entangled
           - celestial colors
           - journey
+      tiger-print:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-elem/tiger-print/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/style-elem/tiger-print/style-main__
+            {, {1-$$__lazy-wildcards/subject/style-elem/tiger-print/style__}|}
+        style-main:
+          - tiger-print
+        style:
+          - tiger stripes
 

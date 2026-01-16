@@ -1224,4 +1224,48 @@ lazy-wildcards:
           - haunted atmosphere
           - dark fantasy
           - ominous mood
+      # https://civitai.com/models/21226/anime-oni-horns
+      demon-oni:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-race/demon-oni/prompts-no-weight__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/demon-oni/expressions__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/demon-oni/costume-ethnicity__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/demon-oni/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/demon-oni/costume-weapon__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/demon-oni/costume-ethnicity-race-main__
+            {, {1-2$$__lazy-wildcards/subject/costume-ethnicity-race/demon-oni/costume-ethnicity-race__}|}
+            , __lazy-wildcards/subject/costume-ethnicity-race/demon-oni/costume-ethnicity-main__
+        costume-ethnicity-race-main:
+          - oni, oni musume, oni girl
+        costume-ethnicity-race:
+          - oni ko
+          - kijo
+          - blue oni
+          - red oni
+        costume-ethnicity-main:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-horns/horns-demon-oni/prompts__
+        expressions:
+          - mischievous smile
+          - feral expression
+          - seductive expression
+          - innocent expression
+        costume-ethnicity:
+          - petite body
+          - fangs
+          - glowing eyes
+        costume-elem:
+          - tiger-print loincloth
+          - tiger panties
+          - tiger bra
+          - __lazy-wildcards/subject/style-elem/tiger-print/prompts-no-weight__
+          - kimono
+          - yukata
+          - obi belt
+          - oversized clothing
+        costume-weapon:
+          - __lazy-wildcards/subject/costume-weapon/cudgel-club-spiked-jp/prompts-no-weight__
 
