@@ -248,4 +248,39 @@ lazy-wildcards:
           - french colonial style
           - east west fusion
           - imperial legacy
+      # 城門
+      city_gate:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/city_gate/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/city_gate/env-bg__}|}
+            {, __lazy-wildcards/subject/env-bg/city_gate/env-bg-age__|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/city_gate/env__}|}
+        env-bg-main:
+          - ancient city gate
+        env-bg:
+          - massive stone city gate
+          - fortified wall, stone brick wall
+          - castle gate
+          - gatehouse interior
+          - drawbridge, moat
+          - fortress gate
+        env-bg-age:
+          - medieval city gate
+          - ancient chinese city gate
+        env:
+          - thick wooden gate doors
+          - arched gateway
+          - battlements
+          - towered gatehouse
+          - arrow slits
+          - portcullis
+          - weathered stone
+          - medieval road
+          - castle banner
+          - rammed earth wall
+          - multi tiered gate tower
+          - upturned eaves, curved tiled roof
+          - red wooden pillars
+          - gate plaque
 
