@@ -1,0 +1,56 @@
+lazy-wildcards:
+  subject:
+    costume-elem-lower-body-race:
+      # 趾行，指僅有腳趾著地而腳跟或腕不接觸地面的行走方式
+      # 趾行動物包括部分鳥類、貓狗等其他哺乳動物
+      digitigrade_legs:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs/costume-ethnicity__
+        costume-ethnicity:
+          - digitigrade, digitigrade legs
+      # 爬行類
+      digitigrade_legs_reptilian:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs_reptilian/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs_reptilian/costume-ethnicity-main__
+            {, {1-$$__lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs_reptilian/costume-ethnicity__}|}
+        costume-ethnicity-main:
+          - >-
+            reptilian digitigrade legs
+            , __lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs/costume-ethnicity__
+        costume-ethnicity:
+          - thick muscular legs
+          - digitigrade stance
+          - dragon scales
+          - hard scale plating
+          - scale color gradient
+          - taloned feet
+          - thick claws
+      # 鳥型腿
+      digitigrade_legs_avian:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs_avian/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs_avian/costume-ethnicity-main__
+            {, {1-$$__lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs_avian/costume-ethnicity__}|}
+        costume-ethnicity-main:
+          - >-
+            avian digitigrade legs
+            , __lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs/costume-ethnicity__
+        costume-ethnicity:
+          - long thin shins
+          - visible joints
+          - feathered thighs
+          - scaly lower legs
+          - talons
+          - three forward toes, one backward toe
+
