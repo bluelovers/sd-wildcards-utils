@@ -2227,6 +2227,17 @@
           - ethereal entangled
           - celestial colors
           - journey
+      "tiger-print":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-elem/tiger-print/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/style-elem/tiger-print/style-main__{,{1-$$__lazy-wildcards/subject/style-elem/tiger-print/style__}|}
+        "style-main":
+          - "tiger-print"
+        style:
+          - tiger stripes
       # https://civitai.com/models/937649/manga-style-food
       # https://civitai.com/models/190341/food-real-photos?modelVersionId=213754
       # https://civitai.com/models/127450/food-elegant-style?modelVersionId=139441
@@ -4059,7 +4070,7 @@
           - skull mask
           - oni mask
           - tentacle
-          - "__lazy-wildcards/subject/costume-ethnicity-horns/horns/prompts__"
+          - "__lazy-wildcards/subject/costume-ethnicity-horns/horns-base/prompts-no-weight__"
         "costume-weapon":
           - holding weapon
           - sword
@@ -7912,6 +7923,40 @@
           - dramatic lighting,cinematic lighting
           - asymmetrical design
           - peaceful authority
+      race-car_racing_court:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/race-car_racing_court/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg/race-car_racing_court/env-bg__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg/race-car_racing_court/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/race-car_racing_court/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-bg/race-car_racing_court/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/env-bg/race-car_racing_court/style__}|}
+        "env-bg-main":
+          - car racing court
+        "env-bg":
+          - race track
+          - racing environment
+          - pit lane
+          - garage building
+          - control tower
+          - grandstand
+        env:
+          - asphalt
+          - tire marks
+          - track lines
+          - curved track
+          - straight track
+          - safety barrier
+          - metal guardrail
+          - concrete wall
+          - fence
+        "costume-elem":
+          - racing queen dress
+        "costume-weapon":
+          - umbrella
+          - holding umbrella
+          - opened umbrella
+        style:
+          - gray,black,red,white
+          - speed,competition
+          - tension
+          - powerful atmosphere
       "dirty-street":
         prompts:
           - >-
@@ -8131,40 +8176,38 @@
           - french colonial style
           - east west fusion
           - imperial legacy
-      race-car_racing_court:
+      # 城門
+      city_gate:
         prompts:
           - >-
-            (__lazy-wildcards/subject/env-bg/race-car_racing_court/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg/race-car_racing_court/env-bg__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg/race-car_racing_court/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/race-car_racing_court/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-bg/race-car_racing_court/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/env-bg/race-car_racing_court/style__}|}
+            (__lazy-wildcards/subject/env-bg/city_gate/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg/city_gate/env-bg__}|}{,__lazy-wildcards/subject/env-bg/city_gate/env-bg-age__|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg/city_gate/env__}|}
         "env-bg-main":
-          - car racing court
+          - ancient city gate
         "env-bg":
-          - race track
-          - racing environment
-          - pit lane
-          - garage building
-          - control tower
-          - grandstand
+          - massive stone city gate
+          - fortified wall,stone brick wall
+          - castle gate
+          - gatehouse interior
+          - drawbridge,moat
+          - fortress gate
+        "env-bg-age":
+          - medieval city gate
+          - ancient chinese city gate
         env:
-          - asphalt
-          - tire marks
-          - track lines
-          - curved track
-          - straight track
-          - safety barrier
-          - metal guardrail
-          - concrete wall
-          - fence
-        "costume-elem":
-          - racing queen dress
-        "costume-weapon":
-          - umbrella
-          - holding umbrella
-          - opened umbrella
-        style:
-          - gray,black,red,white
-          - speed,competition
-          - tension
-          - powerful atmosphere
+          - thick wooden gate doors
+          - arched gateway
+          - battlements
+          - towered gatehouse
+          - arrow slits
+          - portcullis
+          - weathered stone
+          - medieval road
+          - castle banner
+          - rammed earth wall
+          - multi tiered gate tower
+          - upturned eaves,curved tiled roof
+          - red wooden pillars
+          - gate plaque
       volcanic_crater_lake:
         prompts:
           - >-
@@ -9396,6 +9439,33 @@
           - mechanical solemnity
           - low angle view
           - "__lazy-wildcards/utils/scenery-no-humans__"
+      # 升降台
+      "platform-lifting":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/platform-lifting/env-bg-main__{,{1-2$$__lazy-wildcards/subject/env-bg/platform-lifting/env-bg__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg/platform-lifting/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/platform-lifting/style__}|}
+        "env-bg-main":
+          - lifting platform
+        "env-bg":
+          - suspended platform
+          - sliding platform
+          - aerial work platform
+          - mobile lift platform
+          - stage Lift
+          - elevating platform
+        env:
+          - heavy machinery
+          - steel structure
+          - urban skyline
+          - futuristic design
+          - scissor lift,scissor mechanism
+          - column lift mechanism
+          - hydraulic cylinder
+          - guided rail
+          - wheeled base
+          - industrial lift platform
+        style:
+          - industrial paint
       # https://civitai.com/models/111386/prison-or
       # https://civitai.com/models/370760
       # https://civitai.com/models/380968
@@ -10280,42 +10350,81 @@
       "tunnel-sewer":
         prompts:
           - >-
-            __lazy-wildcards/subject/env-bg/tunnel-sewer/env-bg-main__{,({1-$$__lazy-wildcards/subject/env-bg/tunnel-sewer/env-bg__})|}{,{1-$$__lazy-wildcards/subject/env-bg/tunnel-sewer/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/tunnel-sewer/env-elem-creatures__}|}{,{1-$$__lazy-wildcards/subject/env-bg/tunnel-sewer/style__}|}
+            (__lazy-wildcards/subject/env-bg/tunnel-sewer/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg/tunnel-sewer/env-bg__}|__cof-location/place/sewer__|}){,{1-$$__lazy-wildcards/subject/env-bg/tunnel-sewer/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/tunnel-sewer/env-elem-creatures__}|}{,{1-$$__lazy-wildcards/subject/env-bg/tunnel-sewer/style__}|}
         "env-bg-main":
           - sewer,sewers
         "env-bg":
-          - sewer_tunnel
-          - dark_tunnel
-          - flooded_sewers
-          - ancient_sewers
+          - sewer tunnel
+          - dark tunnel
+          - flooded sewers
+          - ancient sewers
           - brick_tunnels,stone walls
         env:
-          - damp_environment,damp_atmosphere
-          - dim_green_light
-          - flickering_lights
-          - sewer_grates
-          - rusty_grate
+          - damp environment,damp atmosphere
+          - dim green light
+          - flickering lights
+          - sewer grates
+          - rusty grate
           - manhole_cover
-          - floating_trash,debris_float
-          - murky_water,polluted_water
-          - knee_deep_water
-          - maintenance_tools
+          - floating trash,debris float
+          - murky water,polluted water
+          - knee deep water
+          - maintenance tools
           - overgrown moss
-          - low_ceiling
+          - low ceiling
           - water
         "env-elem-creatures":
-          - sewer_monster
-          - rats_swarm
-          - tentacle_monster
+          - sewer monster
+          - rats swarm
+          - tentacle monster
           - giant rats
         style:
-          - urban_grime
-          - lurking_in_shadows
-          - claustrophobic_space
-          - creepy_noise
+          - urban grime
+          - lurking in_shadows
+          - claustrophobic space
+          - creepy noise
           - subsurface scattering
           - medieval
           - fantasy
+      # 中古世紀風格的下水道
+      "tunnel-sewer-medieval":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/tunnel-sewer-medieval/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg/tunnel-sewer-medieval/env-bg__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg/tunnel-sewer-medieval/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/env-bg/tunnel-sewer-medieval/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/tunnel-sewer-medieval/style__}|}
+        "env-bg-main":
+          - medieval sewer,stone sewer,underground sewer
+        "env-bg":
+          - roman arch influence
+          - barrel vault ceiling
+          - open sewer channel
+          - cesspits,wastewater
+          - sanitary sewer
+        "costume-weapon":
+          - torch lighting
+          - oil lamp
+          - light shafts from grates
+        env:
+          - urban underworld
+          - shallow flowing water
+          - organic debris
+          - rough cut stone
+          - irregular masonry
+          - mortar gaps
+          - water stains
+          - slime
+          - algae
+          - moss
+          - low light environment
+          - iron ladder
+          - manhole opening
+          - iron grates
+          - rusted metal
+          - barrier elements
+          - gutters
+        style:
+          - dark fantasy mood
+          - grim medieval atmosphere
+          - claustrophobic space
       # https://civitai.com/models/404805/light-tunnel-or-rainbow-tunnel?modelVersionId=451343
       light_tunnel:
         prompts:
@@ -13303,10 +13412,6 @@
       skull_and_crossbones:
         prompts:
           - skull_and_crossbones,jolly_roger,pirate symbol,pirate emblem,skull print
-      parking_meter:
-        prompts:
-          - >-
-            (parking meter{0.3:::{1.2|1.3|1.4}|:1.2})
       liquid:
         prompts:
           - >-
@@ -13587,6 +13692,115 @@
           - ambient light,soft lighting
           - dutch angle
           - warm yellow light
+      water_well:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/water_well/env-elem-main__{,{1-$$__lazy-wildcards/subject/env-elem/water_well/env-elem__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem/water_well/env__}|}
+        "env-elem-main":
+          - water well
+        "env-elem":
+          - circular stone opening well
+          - stone well opening
+          - rope and pulley
+          - wooden bucket
+          - ancient stone well
+        env:
+          - raised stone rim
+          - weathered stone surface
+          - moss growth
+          - damp surface
+          - wooden beam
+          - hand stacked stones
+          - dark water
+          - vertical shaft
+      # 停車收費碼錶
+      parking_meter:
+        prompts:
+          - >-
+            (parking meter{0.3:::{1.2|1.3|1.4}|:1.2})
+      # 公共電話亭
+      "phone-booth":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/phone-booth/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}){,__lazy-wildcards/subject/env-elem/phone-booth/env-elem-color__|}{,{1-$$__lazy-wildcards/subject/env-elem/phone-booth/env-elem__}|}{,{1-3$$__lazy-wildcards/subject/env-elem/phone-booth/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem/phone-booth/style__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/env-elem/phone-booth/env-bg-main__{,{1-2$$__lazy-wildcards/subject/env-elem/phone-booth/env-bg__}|}
+        "env-bg-main":
+          - telephone booth
+        "env-bg":
+          - japanese telephone booth
+          - american payphone booth
+          - open booth
+          - modern glass phone booth
+        "env-elem-color":
+          - green telephone booth
+          - red telephone booth
+        "env-elem":
+          - cast iron structure
+          - glass panel windows
+          - domed roof
+          - aluminum frame
+          - transparent walls
+          - plastic shell
+          - "__lazy-wildcards/subject/env-elem/phone-public/prompts-no-weight__"
+        env:
+          - rainy night
+          - neon reflection
+          - graffiti
+          - street corner
+          - subway station
+          - bus stop
+        style:
+          - nostalgic atmosphere
+          - urban decay
+          - street culture
+          - faded colors
+      # 公共電話
+      "phone-public":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/phone-public/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem/phone-public/env__}|}{,{1-3$$__lazy-wildcards/subject/env-elem/phone-booth/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem/phone-booth/style__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/env-elem/phone-public/env-elem-main__{,{1-$$__lazy-wildcards/subject/env-elem/phone-public/env-elem__}|}
+        "env-elem-main":
+          - public telephone,payphone
+        "env-elem":
+          - coin operated phone
+          - telephone card slot
+          - wall mounted phone
+        env:
+          - instruction stickers,instruction label
+          - coin slot
+          - rotary dial phone
+          - push button keypad
+          - protective hood
+          - telephone handset,coiled cord
+          - numeric keypad
+      hanging_fabric_between_buildings:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/hanging_fabric_between_buildings/env-elem-main__{,{1-$$__lazy-wildcards/subject/env-elem/hanging_fabric_between_buildings/env-elem__}|}){,{1-$$__lazy-wildcards/subject/env-elem/hanging_fabric_between_buildings/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem/hanging_fabric_between_buildings/style__}|}
+        "env-elem-main":
+          - hanging fabric between buildings
+        "env-elem":
+          - street banner cloth
+          - street draped cloth
+          - fabric canopy strip
+          - long narrow cloth
+        env:
+          - rope ties
+          - ancient buildings
+          - vertical drop
+          - slight sagging
+          - silk fabric
+          - woven fabric
+        style:
+          - calligraphy patterns
+          - ink wash color palette
+          - geometric patterns
+          - fabric flutter,gentle wind motion
       "gold-gemstone":
         prompts:
           - >-
@@ -17974,6 +18188,59 @@
           - pistachio
         "env-elem-food-tool":
           - "__lazy-wildcards/subject/env-elem-food-tool/jar/prompts__"
+      # 爆米花
+      "corn-popcorn":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-food/corn-popcorn/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/env-elem-food/corn-popcorn/env-elem-food__{,{1-$$__lazy-wildcards/subject/env-elem-food/corn-popcorn/costume-weapon__}|}
+        "env-elem-food":
+          - popcorn
+        "costume-weapon":
+          - holding popcorn
+      # 玉米
+      corn:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-food/corn/env-elem-food-main__{,{1-$$__lazy-wildcards/subject/env-elem-food/corn/env-elem-food__}|}{,{1-$$__lazy-wildcards/subject/env-elem-food/corn/costume-weapon__}|}
+        "env-elem-food-main":
+          - corn,maize,zea mays
+        "env-elem-food":
+          - indian corn
+          - corn cob
+        "costume-weapon":
+          - holding corn
+      # 烤玉米
+      "corn-grilled":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-food/corn-grilled/env-elem-food-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem-food/corn-grilled/env-elem-food__}|}{,{1-$$__lazy-wildcards/subject/env-elem-food/corn/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/env-elem-food/corn-grilled/env__}|}
+        "env-elem-food-main":
+          - grilled corn
+        "env-elem-food":
+          - charred kernels,charred texture
+          - butter glaze
+          - "__lazy-wildcards/subject/env-elem-food/corn/prompts__"
+        env:
+          - grill marks
+          - steam rising
+      # 玉米田
+      "corn-field":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-food/corn-field/env-elem-food-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem-food/corn-field/env-elem-food__}|}
+        "env-elem-food-main":
+          - cornfield
+        "env-elem-food":
+          - wild corn
+          - rows of corn
+          - "__lazy-wildcards/subject/env-elem-food/corn/prompts__"
+          - tall corn plants
+          - corn ear
+          - corn husk
+          - corn silk
     env-elem-food-tool:
       # https://civitai.com/models/192295/red-sake-cup-sakazuki-sfw-and-nsfw?modelVersionId=216003
       red_sake_cup:
@@ -18367,34 +18634,6 @@
           - industrial machine
           - metallic tool
     env-elem-vehicle:
-      other:
-        prompts:
-          - >-
-            {1-2$$__lazy-wildcards/subject/env-elem-vehicle/other/env-elem-vehicle__}
-        "env-elem-vehicle":
-          - "personal-flying-space-vehicle"
-      backhoe_loader:
-        prompts:
-          - backhoe_loader
-      # https://danbooru.donmai.us/posts?tags=front-end_loader&z=5
-      "front-end_loader":
-        prompts:
-          - >-
-            {1-$$__lazy-wildcards/subject/env-elem-vehicle/front-end_loader/env-elem-vehicle-main__}{,{1-$$__lazy-wildcards/subject/env-elem-vehicle/front-end_loader/env-elem-vehicle__}|}
-        "env-elem-vehicle-main":
-          - "front-end loader"
-          - skid loader
-        "env-elem-vehicle":
-          - "kirovets k-700"
-          - "komatsu wa500-8"
-      lowboy_trailer:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-elem-vehicle/lowboy_trailer/env-elem-vehicle-main__{,{1-$$__lazy-wildcards/subject/env-elem-vehicle/lowboy_trailer/env-elem-vehicle__}|}
-        "env-elem-vehicle-main":
-          - lowboy trailer
-        "env-elem-vehicle":
-          - "maz-537"
       # 船骸
       # https://danbooru.donmai.us/posts?page=3&tags=shipwreck
       # https://civitai.com/models/1291124/shipwreck?modelVersionId=1456996
@@ -18449,6 +18688,141 @@
         "costume-weapon":
           - holding lantern
           - holding torch
+      container_ship:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-vehicle/container_ship/env-elem-vehicle-main__{,{1-$$__lazy-wildcards/subject/env-elem-vehicle/container_ship/env-elem-vehicle__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem-vehicle/container_ship/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-elem-vehicle/container_ship/env__}|}
+        "env-elem-vehicle-main":
+          - >-
+            container ship,container vessel,cargo ship,cargo vessel,container carrier
+        "env-elem-vehicle":
+          - bulk carrier
+          - oil tanker
+          - freighter
+          - ship deck
+          - shipping port
+          - dock crane,container crane
+        "env-bg":
+          - at sea
+          - in the harbor
+          - port area
+        env:
+          - "__lazy-wildcards/subject/env-bg/shipping_containers/prompts__"
+          - cranes
+      # 樓船 Lou Chuan
+      # https://www.sohu.com/a/378779454_120381658
+      "ship-chinese-lou-chuan":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-lou-chuan/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-lou-chuan/env-elem-vehicle__}|}{,{1-$$__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-lou-chuan/env__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/env-elem-vehicle/ship-chinese-lou-chuan/env-elem-vehicle-main__,__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-lou-chuan/env-elem-vehicle-main-trigger-words__,__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-sha/env-elem-vehicle-main-trigger-words__
+        "env-elem-vehicle-main-trigger-words":
+          - ancient chinese wooden naval vessels,ancient chinese wooden warship
+        "env-elem-vehicle-main":
+          - lou chuan,louchuan,wooden hull
+        "env-elem-vehicle":
+          - multi deck ship
+          - high stern
+          - river warship
+          - "tang-song dynasty ships"
+        env:
+          - tower like superstructure
+      # 沙船 Sha Chuan
+      "ship-chinese-sha":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-sha/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-sha/env-elem-vehicle__}|}{,{1-$$__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-sha/env__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/env-elem-vehicle/ship-chinese-sha/env-elem-vehicle-main__,__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-sha/env-elem-vehicle-main-trigger-words__
+        "env-elem-vehicle-main-trigger-words":
+          - >-
+            ancient chinese wooden boat
+        "env-elem-vehicle-main":
+          - sha chuan
+        "env-elem-vehicle":
+          - flat bottom ship
+        env:
+          - wide beam
+          - shallow draft
+      # 福船 Fu Chuan
+      "ship-chinese-fu":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-fu/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-fu/env-elem-vehicle__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/env-elem-vehicle/ship-chinese-fu/env-elem-vehicle-main__,__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-sha/env-elem-vehicle-main-trigger-words__
+        "env-elem-vehicle-main":
+          - fu chuan
+        "env-elem-vehicle":
+          - "v-shaped hull"
+          - multiple masts
+          - junk sail
+          - sea ship
+      # 廣船 Guang Chuan 廣東海船
+      "ship-chinese-guang":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-guang/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-guang/env-elem-vehicle__}|}{,{1-$$__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-guang/env__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/env-elem-vehicle/ship-chinese-guang/env-elem-vehicle-main__,__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-sha/env-elem-vehicle-main-trigger-words__
+        "env-elem-vehicle-main":
+          - guang chuan
+        "env-elem-vehicle":
+          - round hull
+          - high freeboard
+          - ancient chinese harbor ship
+          - ancient chinese merchant ship
+        env:
+          - large cargo hold
+      # 舫船 Fang Chuan 畫舫
+      "ship-chinese-fang":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-fang/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-fang/env-elem-vehicle__}|}{,{1-$$__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-fang/env__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/env-elem-vehicle/ship-chinese-fang/env-elem-vehicle-main__,__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-sha/env-elem-vehicle-main-trigger-words__
+        "env-elem-vehicle-main":
+          - fang chuan
+        "env-elem-vehicle":
+          - ornate pavilion deck,ancient chinese pavilion boat
+          - decorative railing
+          - ancient chinese pleasure boat
+        env:
+          - silk curtains
+      other:
+        prompts:
+          - >-
+            {1-2$$__lazy-wildcards/subject/env-elem-vehicle/other/env-elem-vehicle__}
+        "env-elem-vehicle":
+          - "personal-flying-space-vehicle"
+      backhoe_loader:
+        prompts:
+          - backhoe_loader
+      # https://danbooru.donmai.us/posts?tags=front-end_loader&z=5
+      "front-end_loader":
+        prompts:
+          - >-
+            {1-$$__lazy-wildcards/subject/env-elem-vehicle/front-end_loader/env-elem-vehicle-main__}{,{1-$$__lazy-wildcards/subject/env-elem-vehicle/front-end_loader/env-elem-vehicle__}|}
+        "env-elem-vehicle-main":
+          - "front-end loader"
+          - skid loader
+        "env-elem-vehicle":
+          - "kirovets k-700"
+          - "komatsu wa500-8"
+      lowboy_trailer:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-vehicle/lowboy_trailer/env-elem-vehicle-main__{,{1-$$__lazy-wildcards/subject/env-elem-vehicle/lowboy_trailer/env-elem-vehicle__}|}
+        "env-elem-vehicle-main":
+          - lowboy trailer
+        "env-elem-vehicle":
+          - "maz-537"
       # https://civitai.com/models/1564360/macross-variable-fighters?modelVersionId=1770226
       macross_variable_fighters:
         prompts:
@@ -18528,27 +18902,6 @@
           - train conductor
           - train driver
           - wing collar
-      container_ship:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/env-elem-vehicle/container_ship/env-elem-vehicle-main__{,{1-$$__lazy-wildcards/subject/env-elem-vehicle/container_ship/env-elem-vehicle__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem-vehicle/container_ship/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-elem-vehicle/container_ship/env__}|}
-        "env-elem-vehicle-main":
-          - >-
-            container ship,container vessel,cargo ship,cargo vessel,container carrier
-        "env-elem-vehicle":
-          - bulk carrier
-          - oil tanker
-          - freighter
-          - ship deck
-          - shipping port
-          - dock crane,container crane
-        "env-bg":
-          - at sea
-          - in the harbor
-          - port area
-        env:
-          - "__lazy-wildcards/subject/env-bg/shipping_containers/prompts__"
-          - cranes
       "airplane-interior":
         prompts:
           - >-
@@ -18752,6 +19105,46 @@
           - handcrafted look,asymmetrical design
           - cultural motif
           - spiritual symbolism
+      # 馬車
+      horse_carriage:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-vehicle/horse_carriage/env-elem-vehicle-main__{,{1-$$__lazy-wildcards/subject/env-elem-vehicle/horse_carriage/env-bg__}|}{,{1-2$$__lazy-wildcards/subject/env-elem-vehicle/horse_carriage/env-elem-vehicle__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-5$$__lazy-wildcards/subject/env-elem-vehicle/horse_carriage/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem-vehicle/horse_carriage/style__}|}
+        "env-elem-vehicle-main":
+          - horse carriage
+        "env-bg":
+          - horse carriage interior
+          - velvet interior
+        "env-elem-vehicle":
+          - medieval horse carriage
+          - ancient eastern horse carriage
+          - noble carriage,royal carriage
+        env:
+          - wooden carriage body
+          - iron reinforced edges
+          - large wooden wheels
+          - iron rim wheels
+          - simple suspension
+          - two wheeled chariot
+          - open carriage platform
+          - woven rope binding
+          - enclosed carriage
+          - curved roof
+          - glass windows
+          - gold trim carriage
+          - royal emblem
+          - decorated horses
+          - leather harness
+          - metal buckles
+          - plumed headgear
+        style:
+          - rough texture
+          - weathered surface
+          - carved patterns
+          - bronze fittings
+          - silk drapery
+          - ornate carving
+          - gilded surface
     env-elem-creatures:
       # https://tw.blog.voicetube.com/archives/42888/%E4%BD%A0%E7%9F%A5%E9%81%93%E5%8D%81%E4%BA%8C%E7%94%9F%E8%82%96%E8%8B%B1%E6%96%87%E6%80%8E%E9%BA%BC%E8%AC%9B%E5%97%8E%EF%BC%9F/
       # https://danbooru.donmai.us/posts?page=4&tags=chinese_zodiac
@@ -26477,6 +26870,37 @@
           - indian palace
           - indian temple courtyard
           - indian festival night
+      roman-attire:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/roman-attire/costume-main__{,{1-2$$__lazy-wildcards/subject/costume/roman-attire/costume__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume/roman-attire/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume/roman-attire/style__}|}
+        "costume-main":
+          - "ancient roman attire,roman clothes,greco-roman clothes,ancient greek clothes"
+        costume:
+          # 長袍 托加袍
+          - >-
+            roman toga {. {toga virilis,white toga|toga praetexta,purple border|toga picta,gold embroidery}|}
+          # 女用長袍 斯托拉袍
+          - stola,long flowing dress
+          # 短袍 丘尼卡
+          - tunica,knee length tunic
+          - palla
+          - fibula brooch
+        "costume-elem":
+          - short sleeves
+          - belted waist
+          - draped fabric
+          - linen and wool
+          - large draped cloth,heavy fabric weight
+          - asymmetrical drapery
+          - one shoulder exposed
+          - high waist line
+          - large rectangular shawl
+          - head covering
+          - arm draping
+        style:
+          - geometric folds
+          - earth tone palette
       # https://civitai.com/models/214318/eastern-fantasy-by-edg
       "mixin-asian-clothes":
         prompts:
@@ -27567,6 +27991,9 @@
           - natural lighting
           - slight low angle
           - humble elegance
+      "jp-headwear-mask-oni":
+        prompts:
+          - horned oni mask
     costume-nsfw:
       # https://civitai.com/models/141250/fanny-packing-meat-shield-onarmor-or-concept?modelVersionId=156583
       # https://danbooru.donmai.us/posts?page=1&tags=meat_armor
@@ -29251,10 +29678,13 @@
           - hip hop style
           - reggae style
     costume-ethnicity-horns:
-      horns:
+      "horns-base":
         prompts:
           - >-
-            {1-$$__lazy-wildcards/subject/costume-ethnicity-horns/horns/costume-ethnicity__}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-horns/horns/costume-elem__}|}
+            (__lazy-wildcards/subject/costume-ethnicity-horns/horns-base/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-ethnicity-horns/horns-base/costume-ethnicity__}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-horns/horns-base/costume-elem__}|}
         "costume-ethnicity":
           - horns
           - broken horn
@@ -29287,6 +29717,26 @@
           - devil horns
           - large horns
           - curved horns
+      "horns-demon-oni":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-horns/horns-demon-oni/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-ethnicity-horns/horns-demon-oni/costume-elem__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-horns/horns-demon-oni/costume-ethnicity-horns-main__{,{1-$$__lazy-wildcards/subject/costume-ethnicity-horns/horns-demon-oni/costume-ethnicity-horns__}|}
+        "costume-ethnicity-horns-main":
+          - "oni horns,skin-covered horns"
+        "costume-ethnicity-horns":
+          - hair between horns
+          - single horn
+          - small horns
+          - cone horns
+          - striped horns
+        "costume-elem":
+          - horn ribbon
+          - horn ornament
+          - "__lazy-wildcards/subject/costume-ethnicity-horns/horns-base/prompts-no-weight__"
+          - yellow horns
     costume-ethnicity-makeup:
       # https://gyaru.fandom.com/
       # https://civitai.com/models/82265/japanese-gal-average-face
@@ -29454,6 +29904,55 @@
           - tribal face tattoo
           - geometric face tattoo
           - floral face tattoo
+    costume-elem-lower-body-race:
+      # 趾行，指僅有腳趾著地而腳跟或腕不接觸地面的行走方式
+      # 趾行動物包括部分鳥類、貓狗等其他哺乳動物
+      digitigrade_legs:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs/costume-ethnicity__
+        "costume-ethnicity":
+          - digitigrade,digitigrade legs
+      # 爬行類
+      digitigrade_legs_reptilian:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs_reptilian/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs_reptilian/costume-ethnicity-main__{,{1-$$__lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs_reptilian/costume-ethnicity__}|}
+        "costume-ethnicity-main":
+          - >-
+            reptilian digitigrade legs,__lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs/costume-ethnicity__
+        "costume-ethnicity":
+          - thick muscular legs
+          - digitigrade stance
+          - dragon scales
+          - hard scale plating
+          - scale color gradient
+          - taloned feet
+          - thick claws
+      # 鳥型腿
+      digitigrade_legs_avian:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs_avian/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs_avian/costume-ethnicity-main__{,{1-$$__lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs_avian/costume-ethnicity__}|}
+        "costume-ethnicity-main":
+          - >-
+            avian digitigrade legs,__lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs/costume-ethnicity__
+        "costume-ethnicity":
+          - long thin shins
+          - visible joints
+          - feathered thighs
+          - scaly lower legs
+          - talons
+          - three forward toes,one backward toe
     costume-ethnicity-race:
       # https://civitai.com/models/299307/indian-beuty
       # https://civitai.com/models/193934/indianbridallook
@@ -30846,6 +31345,44 @@
           - haunted atmosphere
           - dark fantasy
           - ominous mood
+      # https://civitai.com/models/21226/anime-oni-horns
+      "demon-oni":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-race/demon-oni/prompts-no-weight__{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/demon-oni/expressions__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/demon-oni/costume-ethnicity__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/demon-oni/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/demon-oni/costume-weapon__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/demon-oni/costume-ethnicity-race-main__{,{1-2$$__lazy-wildcards/subject/costume-ethnicity-race/demon-oni/costume-ethnicity-race__}|},__lazy-wildcards/subject/costume-ethnicity-race/demon-oni/costume-ethnicity-main__
+        "costume-ethnicity-race-main":
+          - oni,oni musume,oni girl
+        "costume-ethnicity-race":
+          - oni ko
+          - kijo
+          - blue oni
+          - red oni
+        "costume-ethnicity-main":
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-horns/horns-demon-oni/prompts__
+        expressions:
+          - mischievous smile
+          - feral expression
+          - seductive expression
+          - innocent expression
+        "costume-ethnicity":
+          - petite body
+          - fangs
+          - glowing eyes
+        "costume-elem":
+          - "tiger-print loincloth"
+          - tiger panties
+          - tiger bra
+          - "__lazy-wildcards/subject/style-elem/tiger-print/prompts-no-weight__"
+          - kimono
+          - yukata
+          - obi belt
+          - oversized clothing
+        "costume-weapon":
+          - "__lazy-wildcards/subject/costume-weapon/cudgel-club-spiked-jp/prompts-no-weight__"
       moth_girl:
         prompts:
           - >-
@@ -31199,10 +31736,31 @@
           - holding weapon
           - huge weapon
           - arm mounted weapon
-      map:
+      # 金棒 金砕棒
+      "cudgel-club-spiked-jp":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-weapon/cudgel-club-spiked-jp/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-weapon/cudgel-club-spiked-jp/costume-weapon-main__,__lazy-wildcards/subject/costume-weapon/cudgel-club-spiked-jp/costume-weapon__{,{1-$$__lazy-wildcards/subject/costume-weapon/cudgel-club-spiked-jp/costume-weapon-elem__}|}
+        "costume-weapon-main":
+          - traditional japanese spiked club
         "costume-weapon":
-          - map \(object\)
-          - holding map
+          - >-
+            kanabou,kanabo club{,holding kanabou|}
+          - >-
+            tetsubo{,holding tetsubo|}
+        "costume-weapon-elem":
+          - "spiked two-handed war club"
+          - "studded two-handed war club"
+      map:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-weapon/map/costume-weapon__
+        "costume-weapon":
+          - >-
+            map \(object\){,holding map|}
       # https://danbooru.donmai.us/posts?tags=flamethrower&z=1
       flamethrower:
         prompts:
@@ -40572,7 +41130,7 @@
           - >-
             sleeveless kimono,hakama pants,hakama,sideboob,shimenawa,sleeveless,rope
         "costume-weapon":
-          - kanabou,traditional japanese spiked club
+          - "__lazy-wildcards/subject/costume-weapon/cudgel-club-spiked-jp/prompts-no-weight__"
     isekai_ojisan:
       # https://danbooru.donmai.us/posts?tags=sui_%28isekai_ojisan%29&z=2
       # https://civitai.com/models/16332/sui-isekai-ojisan
