@@ -86,4 +86,105 @@ lazy-wildcards:
         env:
           - __lazy-wildcards/subject/env-bg/shipping_containers/prompts__
           - cranes
+      # 樓船 Lou Chuan
+      # https://www.sohu.com/a/378779454_120381658
+      ship-chinese-lou-chuan:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-lou-chuan/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-lou-chuan/env-elem-vehicle__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-lou-chuan/env__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-elem-vehicle/ship-chinese-lou-chuan/env-elem-vehicle-main__
+            , __lazy-wildcards/subject/env-elem-vehicle/ship-chinese-lou-chuan/env-elem-vehicle-main-trigger-words__
+            , __lazy-wildcards/subject/env-elem-vehicle/ship-chinese-sha/env-elem-vehicle-main-trigger-words__
+        env-elem-vehicle-main-trigger-words:
+          - ancient chinese wooden naval vessels, ancient chinese wooden warship
+        env-elem-vehicle-main:
+          - lou chuan, louchuan, wooden hull
+        env-elem-vehicle:
+          - multi deck ship
+          - high stern
+          - river warship
+          - tang-song dynasty ships
+        env:
+          - tower like superstructure
+      # 沙船 Sha Chuan
+      ship-chinese-sha:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-sha/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-sha/env-elem-vehicle__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-sha/env__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-elem-vehicle/ship-chinese-sha/env-elem-vehicle-main__
+            , __lazy-wildcards/subject/env-elem-vehicle/ship-chinese-sha/env-elem-vehicle-main-trigger-words__
+        env-elem-vehicle-main-trigger-words:
+          - >-
+            ancient chinese wooden boat
+        env-elem-vehicle-main:
+          - sha chuan
+        env-elem-vehicle:
+          - flat bottom ship
+        env:
+          - wide beam
+          - shallow draft
+      # 福船 Fu Chuan
+      ship-chinese-fu:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-fu/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-fu/env-elem-vehicle__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-elem-vehicle/ship-chinese-fu/env-elem-vehicle-main__
+            , __lazy-wildcards/subject/env-elem-vehicle/ship-chinese-sha/env-elem-vehicle-main-trigger-words__
+        env-elem-vehicle-main:
+          - fu chuan
+        env-elem-vehicle:
+          - v-shaped hull
+          - multiple masts
+          - junk sail
+          - sea ship
+      # 廣船 Guang Chuan 廣東海船
+      ship-chinese-guang:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-guang/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-guang/env-elem-vehicle__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-guang/env__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-elem-vehicle/ship-chinese-guang/env-elem-vehicle-main__
+            , __lazy-wildcards/subject/env-elem-vehicle/ship-chinese-sha/env-elem-vehicle-main-trigger-words__
+        env-elem-vehicle-main:
+          - guang chuan
+        env-elem-vehicle:
+          - round hull
+          - high freeboard
+          - ancient chinese harbor ship
+          - ancient chinese merchant ship
+        env:
+          - large cargo hold
+      # 舫船 Fang Chuan 畫舫
+      ship-chinese-fang:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-fang/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-fang/env-elem-vehicle__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-vehicle/ship-chinese-fang/env__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-elem-vehicle/ship-chinese-fang/env-elem-vehicle-main__
+            , __lazy-wildcards/subject/env-elem-vehicle/ship-chinese-sha/env-elem-vehicle-main-trigger-words__
+        env-elem-vehicle-main:
+          - fang chuan
+        env-elem-vehicle:
+          - ornate pavilion deck, ancient chinese pavilion boat
+          - decorative railing
+          - ancient chinese pleasure boat
+        env:
+          - silk curtains
 
