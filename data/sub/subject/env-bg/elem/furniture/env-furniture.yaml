@@ -207,6 +207,37 @@ lazy-wildcards:
           - __lazy-wildcards/subject/env-elem/bed-sheet/prompts__
           - pillow
           - __lazy-wildcards/utils/color-base__ pillow
+      bed-canopy-chinese_wedding:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/bed-canopy-chinese_wedding/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/bed-canopy-chinese_wedding/env-bg__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/bed-canopy-chinese_wedding/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/bed-canopy-chinese_wedding/style__}|}
+        env-bg-main:
+          - red canopy bed, ancient chinese wedding bed, bright red fabric
+        env-bg:
+          - ancient chinese interior
+          - traditional canopy bed
+          - silk canopy curtains
+          - embroidered bedspread
+          - traditional chinese bedroom, ancient chinese wedding bedroom
+        env:
+          - textile enclosure
+          - wooden bed frame
+          - four poster bed
+          - raised platform
+          - layered fabric, sheer inner curtain, heavy outer drape
+          - __lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__
+          - chinese wedding bed ornaments
+          - carved wooden panels
+          - relief carving
+          - pierced carving
+          - hanging tassels
+          - fabric valance
+        style:
+          - symbolic ornament
+          - double happiness symbol
       bed-sheet:
         prompts:
           - >-

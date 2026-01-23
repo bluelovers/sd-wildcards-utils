@@ -4,14 +4,14 @@ lazy-wildcards:
       punk-insect:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume-ethnicity-race/punk-insect/main__
+            __lazy-wildcards/subject/costume-ethnicity-race/punk-insect/main-trigger-words__
             ,{1-2$$__lazy-wildcards/subject/costume-ethnicity-race/punk-insect/costume-ethnicity__}
             {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/punk-insect/costume-weapon__}|}
             {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/punk-insect/costume-elem__}|}
             {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/punk-insect/env__}|}
             {,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/punk-insect/style__}|}
-        main:
-          - IPNK, Insectpunk, Insect punk, inspired by insects, insectoid, Monster Musume
+        main-trigger-words:
+          - IPNK, Insectpunk, Insect punk, inspired by insects, insectoid, monster musume
         style:
           - biomechanical_integration
           - mechanical
@@ -96,4 +96,73 @@ lazy-wildcards:
           - Insect
           - __lazy-wildcards/subject/env-elem-pipes/spider-webs/prompts-no-weight__
           - flower
+      # 甲蟲
+      insect-beetle:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-race/insect-beetle/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/insect-beetle/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/insect-beetle/style__}|}
+            , __lazy-wildcards/subject/costume-ethnicity-race/punk-insect/main-trigger-words__
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/insect-beetle/costume-ethnicity-race-main__
+            , {1-$$__lazy-wildcards/subject/costume-ethnicity-race/insect-beetle/costume-ethnicity-race__}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/insect-beetle/costume-ethnicity__}|}
+        costume-ethnicity-race-main:
+          - beetle
+        costume-ethnicity-race:
+          - beetle girl
+          - stag beetle
+        costume-ethnicity:
+          - beetle exoskeletons
+          - beetle wings
+          - beetle antennae
+          - beetle legs
+          - beetle arms
+          - beetle limbs
+          - beetle parts
+          - beetle horns
+          - beetle mandibles
+        costume-elem:
+          - chitin exoskeleton
+          - hard shell plating
+          - segmented carapace
+          - bulky torso
+          - thick limbs
+          - digitigrade legs
+          - compound eyes
+          - beetle shell armor
+          - layered plating
+          - joint gaps
+          - __lazy-wildcards/subject/costume-ethnicity-race/insect-exposed_joint_muscle/prompts-no-weight__
+        style:
+          - glossy surface
+          - obsidian sheen
+          - iridescent black
+          - emerald green
+          - scarlet red
+      # 甲蟲關節間的筋肉 Exposed Joint Muscle 關節外露筋肉 關節筋繊維
+      insect-exposed_joint_muscle:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-race/insect-exposed_joint_muscle/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/insect-exposed_joint_muscle/costume-ethnicity-main__
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/insect-exposed_joint_muscle/costume-ethnicity__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-ethnicity-race/insect-exposed_joint_muscle/style__}|}
+        costume-ethnicity-main:
+          - >-
+            exposed joint muscle
+        costume-ethnicity:
+          # 外露肌纖維
+          - exposed muscle fibers
+          # 細長肌腱
+          - organic tendon
+          # 柔軟關節膜
+          - flexible joint membrane
+        style:
+          - ribbed texture
+          - wet organic texture
 

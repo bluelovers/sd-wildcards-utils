@@ -176,4 +176,38 @@ lazy-wildcards:
           - __lazy-wildcards/subject/costume/mixin-asian-clothes/prompts__
         env:
           - __lazy-wildcards/utils/fn/made-of(v=chinese)__
+      # https://civitai.com/models/108212/chinese-wedding
+      # https://civitai.com/models/846901/ghost-bride-flux
+      chinese_wedding:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-theme/chinese_wedding/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/style-theme/chinese_wedding/style-theme-main__
+            {, {1-$$__lazy-wildcards/subject/style-theme/chinese_wedding/style-theme__}|}
+            {, {1-$$__lazy-wildcards/subject/style-theme/chinese_wedding/env__}|}
+            {, {1-$$__lazy-wildcards/subject/style-theme/chinese_wedding/style__}|}
+        style-theme-main:
+          - chinese wedding
+        style-theme:
+          - chinese horror, ghost bride
+        env:
+          - red flower
+          - red silk ball
+          - red butterfly
+          - red umbrella, __lazy-wildcards/subject/costume-weapon/umbrella-oil-paper/prompts-no-weight__
+          - plum blossoms
+          - bare tree
+          - __lazy-wildcards/subject/env-elem-vehicle/litter-chinese-red/prompts-no-weight__
+          - red paper lantern
+          - glowing butterfly, too many butterflies
+          - fog
+          - red ribbon
+          - red light
+          - hanging lantern
+        style:
+          - bright red theme
+          - shou \(symbol\)
+          - double happiness symbol
 
