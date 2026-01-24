@@ -32231,466 +32231,6 @@
         env:
           - glowing liver \(organ\)
           - floating liver \(organ\)
-    # https://civitai.com/user/JujoHotaru/models
-    costume-elem-expressions:
-      # https://civitai.com/models/155547/v-shaped-eyebrowsdoyagao-smug-v
-      "v-shaped_eyebrows":
-        prompts:
-          - "v-shaped eyebrows"
-      # https://civitai.com/models/330548/scornful-eyesjitome-type-18-type-18?modelVersionId=370357
-      # 輕蔑、不耐煩的眼神（呈尖狀，半開的眼睛）
-      "eyes-scornful":
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/eyes-scornful/expressions-main__{0.3:::{1.2|1.3|1.4}|})
-        "expressions-main":
-          - scornful eyes,jitome
-      # https://civitai.com/models/155553/worried-eyes?modelVersionId=345646
-      # 困り顔の眼
-      "eyes-worried":
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/eyes-worried/expressions-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/eyes-worried/expressions__}|}
-        "expressions-main":
-          - worried eyes
-        expressions:
-          - worry
-          - upset
-          - confused
-          - thinking
-          - expressionless
-      "open-or-closed-mouth":
-        prompts:
-          - "__lazy-wildcards/subject/costume-elem-expressions/mouth-open/prompts__"
-          - "__lazy-wildcards/subject/costume-elem-expressions/mouth-closed/prompts__"
-      # https://civitai.com/models/144735/large-closed-mouth-type-2-type-2?modelVersionId=160897
-      # https://civitai.com/models/144727/large-closed-mouth-type-1-type-1?modelVersionId=160890
-      "mouth-closed":
-        prompts:
-          - >-
-            __lazy-wildcards/subject/costume-elem-expressions/mouth-closed/expressions-main__{0.3::,{1-$$__lazy-wildcards/subject/costume-elem-expressions/mouth-closed/expressions__}|}
-        "expressions-main":
-          - closed mouth
-          - large closed mouth
-        expressions:
-          - straight line shaped mouth
-          - "large U-shaped mouth"
-      "mouth-open":
-        prompts:
-          - >-
-            __lazy-wildcards/subject/costume-elem-expressions/mouth-open/expressions-main__{0.3::,{1-$$__lazy-wildcards/subject/costume-elem-expressions/mouth-open/expressions__}|}
-        "expressions-main":
-          - open mouth
-          - large open mouth
-        expressions:
-          - >-
-            {lower|up} teeth only
-          - teeth
-      # 恍惚のヤンデレポーズ
-      # https://danbooru.donmai.us/wiki_pages/yandere_trance?z=2
-      # https://civitai.com/search/models?sortBy=models_v9&query=yandere
-      #
-      # https://civitai.com/models/127754/yandere-trance-or-goofy-ai
-      yandere_trance:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/yandere_trance/expressions__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/yandere_trance/action-pose__}|}{0.3:::{1.2|1.3|1.4|1.6}|:1.3}),__lazy-wildcards/subject/costume-elem-expressions/yandere/prompts__
-        expressions:
-          - >-
-            yandere trance
-        "action-pose":
-          - hands on own face
-          - hands on own cheeks
-      # https://civitai.com/models/56918/yandere
-      yandere:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/yandere/expressions-main__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/yandere/expressions__}|}{0.3:::{1.2|1.3|1.4|1.6}|}){,{1-3$$__lazy-wildcards/subject/costume-elem-expressions/yandere/expressions-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/yandere/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/yandere/costume-weapon__}|}{,{1-3$$__lazy-wildcards/subject/costume-elem-expressions/yandere/action__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/yandere/style__}|}
-        "expressions-main":
-          - >-
-            yandere
-        expressions:
-          - creepy smile
-          - yandere eyes,dilated pupils,staring
-          - distorted smile
-          - "heart-shaped pupils"
-          - heavy breathing,visible breath
-          - blush
-        "expressions-elem":
-          - teary eyes
-          - blush while crying
-          - grin
-          - biting lip
-          - tongue out
-          - laughing
-          - rape face
-          - open mouth
-          - "__lazy-wildcards/subject/costume-elem-expressions/shaded_face/prompts__"
-        "costume-elem":
-          - messy hair
-          - blood stained hands
-          - makeup,lipstick
-          - glowing eyes
-        "costume-weapon":
-          - holding knife
-          - licking knife
-        action:
-          - clingy
-          - tilting head
-          - hugging
-          - clutching
-          - scratching
-        style:
-          - obsessive love
-          - jealousy
-          - dark atmosphere
-          - love and madness
-          - sweet but dangerous
-      seductive:
-        prompts:
-          - >-
-            {1-$$seductive smile|seductive|voluptuous}
-      # https://civitai.com/models/631023/tongue-outahegao?modelVersionId=705421
-      # https://civitai.com/models/537390/perfect-ahegao
-      # https://civitai.com/models/114626/hdaahegao-sd15
-      # https://www.pixiv.net/tags/%E3%82%AA%E3%83%9B%E9%A1%94
-      # https://civitai.com/models/196514/mesugao-seductive-pleasure-face?modelVersionId=220946
-      ahegao:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/ahegao/expressions-main__{0.3:::{1.2|1.3|1.4}|}){0.3::,{1-$$__lazy-wildcards/subject/costume-elem-expressions/ahegao/expressions-trigger-words__}|}{0.3::,{1-$$__lazy-wildcards/subject/costume-elem-expressions/ahegao/expressions__}|}{0.3::,{1-$$__lazy-wildcards/subject/costume-elem-expressions/ahegao/costume-elem__}|}{0.3::,{1-$$__lazy-wildcards/subject/costume-elem-expressions/ahegao/style__}|}
-        "expressions-main":
-          - Ahegao,Ohogao,mesugao
-        "expressions-trigger-words":
-          - HDA_Ahegao
-        expressions:
-          - open mouth
-          - wide eyes
-          - crossed eyes
-          - rolling eyes
-          - Tongue Out
-          - blush
-          - asymmetrical_expression
-          - teasing
-          - eyes_up
-          - eyes_rolling_back
-          - eye_roll
-          - "__lazy-wildcards/subject/costume-ethnicity-face/tongue_out_to_the_side/prompts__"
-          - seductive
-          - pleasure face
-          - aroused
-        "costume-elem":
-          - tears
-          - "heart-shaped pupils"
-          - "__lazy-wildcards/subject/costume-elem/saliva/prompts__"
-          - "__lazy-wildcards/subject/costume-elem/sweat/prompts__"
-        style:
-          - "close-up"
-          - motion_lines
-      # https://civitai.com/models/189973/pornmaster-tongue-fetishahegaofucked-sillytongue-outfacialbukkakecum-on-tonguewide-open-mouthmouth-pulloral-cavityuvulasaliva-dripnose-piercinglong-tonguecross-eyed
-      # https://civitai.com/models/24530/fucked-silly-from-behind-or-sex-act-lora-220
-      # https://civitai.com/models/84619/fucked-silly-after-sex-locon
-      # https://civitai.com/models/261335/ohogao-fucked-silly
-      fucked_silly:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/fucked_silly/expressions-main__{0.3:::{1.2|1.3|1.4}|}){0.8::,__lazy-wildcards/subject/costume-elem-expressions/ahegao/prompts__|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/fucked_silly/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/fucked_silly/action__}|}
-        "expressions-main":
-          - fucked silly
-        expressions:
-          - rolling eyes
-          - >-
-            {wide |}open mouth
-          - uvula
-          - drunk
-          - unfocused_eyes
-          - flushed_face
-          - silly_expression
-          - blush
-          - tipsy
-          - exhausted
-          - torogao
-          - Dazed
-          - Climax
-          - Confused
-        "costume-elem":
-          - clenched teeth
-          - "half-closed eyes"
-          - spiral_eyes
-        action:
-          - looking up
-          - oral invitation
-          - after sex
-          - dizzy,woozy
-          - wobbly_pose,swaying_pose
-          - slouching
-      # 厭惡
-      # https://civitai.com/models/53448/looking-disgusted-facial-expression
-      # https://danbooru.donmai.us/posts?tags=disgust&z=5
-      # https://civitai.com/models/1145230/show-me-your-underwear-with-a-disgusted-look-on-your-face?modelVersionId=1288023
-      disgusted:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/disgusted/expressions-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/disgusted/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/disgusted/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/disgusted/action__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/disgusted/style__}|}
-        "expressions-main":
-          - disgusted,disgust,looking disgusted,disgust_face,disgust facial expression,disguststyle
-        expressions:
-          - >-
-            {very |}angry
-          - disappointed
-          - scowl
-          - grimace
-          - frown
-          - gloom \(expression\)
-          - narrowed eyes
-          - furrowed brow
-          - annoyed
-          - scorn
-          - negative_emotions
-          - averting eyes
-        "costume-elem":
-          - |-
-            (shaded face:1.2)
-          - turn pale
-          - clenched teeth
-          - empty eyes
-          - open mouth
-          - teeth
-          - "half-closed eyes"
-          - wrinkled nose
-        action:
-          - looking down
-          - stepping back
-        style:
-          - from above
-          - from below
-          - dutch angle
-          - foreshortening
-      # https://civitai.com/models/196486/netorare-face-cheating-ntr-face?modelVersionId=220916
-      netorare_face:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/netorare_face/expressions-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/netorare_face/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/netorare_face/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/netorare_face/action__}|}
-        "expressions-main":
-          - netorare face,netorare,ntrgao,ntr face
-        expressions:
-          - false smile
-          - flustered
-          - panicking
-          - rushing
-          - forced smile
-          - blush
-          - "__lazy-wildcards/subject/costume-elem/see-through-clothes/prompts__"
-          - "__lazy-wildcards/subject/costume-elem/sweat/prompts__"
-          - nose blush
-          - trembling
-        "costume-elem":
-          - "half-closed eyes"
-          - empty eyes
-          - purple eyes
-          - stray pubic hair
-          - "heart-shaped pupils"
-          - "symbol-shaped pupils"
-        action:
-          - cheating
-          - standing
-          - arms behind back
-          - double w
-      confused:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/confused/expressions-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/confused/expressions__}|}
-        "expressions-main":
-          - confused
-        expressions:
-          - "__lazy-wildcards/subject/costume-elem-expressions/v-shaped_eyebrows/prompts__"
-          - |-
-            !?
-      # https://civitai.com/models/136914
-      blush:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/blush/expressions-trigger-words__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/blush/expressions-main__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/blush/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/blush/action__}|}
-        "expressions-trigger-words":
-          - blush,embarrassed,yudedako
-        "expressions-main":
-          - "full-face blush"
-          - ear blush
-          - humiliation,shame
-          - blushing cheeks,rosy cheeks
-        expressions:
-          - panicing
-          - |-
-            @ @
-          - averting eyes
-          - nervous
-          - steam from head
-          - awkward situation
-          - coy
-          - shy
-        action:
-          - covering face
-          - teased
-      shocked_face:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/shocked_face/expressions-trigger-words__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/shocked_face/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/shocked_face/action__}|}
-        "expressions-trigger-words":
-          - shockedface,shocked face
-          - dumbfounded
-          - flustered,surprised
-        expressions:
-          - open mouth
-          - "wide eyes,constricted pupils,wide-eyed"
-          - shock lines,mouth agape
-          - sweatdrop
-          - "__lazy-wildcards/subject/costume-elem-expressions/blush/prompts__"
-        action:
-          - confession
-          - changing clothes
-          - accidental fall
-      # https://civitai.com/models/469309?modelVersionId=522175
-      # https://civitai.com/models/469941
-      doyagao_smug:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/doyagao_smug/expressions-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/doyagao_smug/expressions__}|}
-        "expressions-main":
-          - doyagao,smug,proudly face,yaeba
-        expressions:
-          - "v-shaped eyebrows"
-          - grinning smile
-          - grin
-          - smug smile
-          - evil smug face
-          - happy smile
-          - naughty face
-          - >-
-            {open mouth|closed mouth}
-      # https://civitai.com/models/136940/paled-face?modelVersionId=151092
-      # https://civitai.com/models/232245/yandereangrydisappointed-shade
-      shaded_face:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/shaded_face/expressions-trigger-words__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/shaded_face/expressions-main__}|}{0.3:::{1.2|1.3|1.4}|}){0.3::,{1-$$__lazy-wildcards/subject/costume-elem-expressions/shaded_face/expressions__}|}
-        "expressions-trigger-words":
-          - shaded face
-        "expressions-main":
-          - turn pale
-          - partially shaded face
-          - paled face
-        expressions:
-          - scared
-          - trembling
-          - gloom \(expression\)
-          - emphasis lines
-          - surprised
-          - fear
-          - strong anger
-      smirk:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/smirk/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
-        "prompts-no-weight":
-          - >-
-            __lazy-wildcards/subject/costume-elem-expressions/smirk/expressions-main__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/smirk/expressions__}|}
-        "expressions-main":
-          - smirk
-        expressions:
-          - seductive smirk
-          - confident smirk
-      "smile-sad":
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/smile-sad/expressions__{0.3:::{1.2|1.3|1.4}|})
-        expressions:
-          - sad smile,sad
-      crying:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/crying/expressions-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/crying/expressions__}|}
-        "expressions-main":
-          - crying
-        expressions:
-          - closed mouth
-          - red eyes
-          - crying with eyes open
-          - sad
-          - "__lazy-wildcards/subject/costume-elem-expressions/tears/prompts__"
-      tears:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/tears/expressions-main__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/tears/expressions__}|}{0.3:::{1.2|1.3|1.4}|})
-        "expressions-main":
-          - tears
-        expressions:
-          - streaming tears
-          - teardrop
-          - wiping tears
-          - tearing up
-          - blood from eyes,blood tears
-          - happy tears
-          - sad tears
-          - single tear
-          - flying teardrops
-      # 自信
-      "smirk-confident":
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/smirk-confident/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
-        "prompts-no-weight":
-          - >-
-            __lazy-wildcards/subject/costume-elem-expressions/smirk-confident/expressions-main__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/smirk-confident/expressions__}|}
-        "expressions-main":
-          - confident
-        expressions:
-          - "__lazy-wildcards/subject/costume-elem-expressions/smirk/prompts-no-weight__"
-          - confident smile
-          - narrowed eyes
-          - direct gaze
-          - intense stare
-          - proud
-          - cool expression
-          - seductive smile
-      # 邪惡笑容
-      "grin-sinister":
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/grin-sinister/expressions-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/grin-sinister/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/grin-sinister/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/grin-sinister/style__}|}
-        "expressions-main":
-          - sinister grin
-        expressions:
-          - evil smile
-          - smirk
-          - upturned mouth
-          - grinning teeth
-          - cunning eyes
-          - menacing eyes
-          - glaring
-          - arched eyebrows
-          - trembling lips
-          - animated grin
-        "costume-elem":
-          - sharp teeth
-          - dark lips
-          - shadowed eyes
-          - asymmetric face
-        style:
-          - psychological horror
-          - creepy
-      # https://civitai.com/images/110595383
-      "serious-blush":
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-expressions/serious-blush/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
-        "prompts-no-weight":
-          - >-
-            __lazy-wildcards/subject/costume-elem-expressions/serious-blush/expressions-main__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/serious-blush/expressions__}|}
-        "expressions-main":
-          - serious expression,blush
-        expressions:
-          - resolute
-          - head tilt
     costume-elem-upper-body:
       # https://civitai.com/search/models?baseModel=SD%201.5&sortBy=models_v9&query=Corset
       # https://civitai.com/models/130637/corset-gothique-by-edg
@@ -33506,6 +33046,466 @@
           - clothing cutout
           - underboob
           - sideboob
+    # https://civitai.com/user/JujoHotaru/models
+    costume-elem-expressions:
+      # https://civitai.com/models/155547/v-shaped-eyebrowsdoyagao-smug-v
+      "v-shaped_eyebrows":
+        prompts:
+          - "v-shaped eyebrows"
+      # https://civitai.com/models/330548/scornful-eyesjitome-type-18-type-18?modelVersionId=370357
+      # 輕蔑、不耐煩的眼神（呈尖狀，半開的眼睛）
+      "eyes-scornful":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/eyes-scornful/expressions-main__{0.3:::{1.2|1.3|1.4}|})
+        "expressions-main":
+          - scornful eyes,jitome
+      # https://civitai.com/models/155553/worried-eyes?modelVersionId=345646
+      # 困り顔の眼
+      "eyes-worried":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/eyes-worried/expressions-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/eyes-worried/expressions__}|}
+        "expressions-main":
+          - worried eyes
+        expressions:
+          - worry
+          - upset
+          - confused
+          - thinking
+          - expressionless
+      "open-or-closed-mouth":
+        prompts:
+          - "__lazy-wildcards/subject/costume-elem-expressions/mouth-open/prompts__"
+          - "__lazy-wildcards/subject/costume-elem-expressions/mouth-closed/prompts__"
+      # https://civitai.com/models/144735/large-closed-mouth-type-2-type-2?modelVersionId=160897
+      # https://civitai.com/models/144727/large-closed-mouth-type-1-type-1?modelVersionId=160890
+      "mouth-closed":
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-expressions/mouth-closed/expressions-main__{0.3::,{1-$$__lazy-wildcards/subject/costume-elem-expressions/mouth-closed/expressions__}|}
+        "expressions-main":
+          - closed mouth
+          - large closed mouth
+        expressions:
+          - straight line shaped mouth
+          - "large U-shaped mouth"
+      "mouth-open":
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-expressions/mouth-open/expressions-main__{0.3::,{1-$$__lazy-wildcards/subject/costume-elem-expressions/mouth-open/expressions__}|}
+        "expressions-main":
+          - open mouth
+          - large open mouth
+        expressions:
+          - >-
+            {lower|up} teeth only
+          - teeth
+      # 恍惚のヤンデレポーズ
+      # https://danbooru.donmai.us/wiki_pages/yandere_trance?z=2
+      # https://civitai.com/search/models?sortBy=models_v9&query=yandere
+      #
+      # https://civitai.com/models/127754/yandere-trance-or-goofy-ai
+      yandere_trance:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/yandere_trance/expressions__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/yandere_trance/action-pose__}|}{0.3:::{1.2|1.3|1.4|1.6}|:1.3}),__lazy-wildcards/subject/costume-elem-expressions/yandere/prompts__
+        expressions:
+          - >-
+            yandere trance
+        "action-pose":
+          - hands on own face
+          - hands on own cheeks
+      # https://civitai.com/models/56918/yandere
+      yandere:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/yandere/expressions-main__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/yandere/expressions__}|}{0.3:::{1.2|1.3|1.4|1.6}|}){,{1-3$$__lazy-wildcards/subject/costume-elem-expressions/yandere/expressions-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/yandere/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/yandere/costume-weapon__}|}{,{1-3$$__lazy-wildcards/subject/costume-elem-expressions/yandere/action__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/yandere/style__}|}
+        "expressions-main":
+          - >-
+            yandere
+        expressions:
+          - creepy smile
+          - yandere eyes,dilated pupils,staring
+          - distorted smile
+          - "heart-shaped pupils"
+          - heavy breathing,visible breath
+          - blush
+        "expressions-elem":
+          - teary eyes
+          - blush while crying
+          - grin
+          - biting lip
+          - tongue out
+          - laughing
+          - rape face
+          - open mouth
+          - "__lazy-wildcards/subject/costume-elem-expressions/shaded_face/prompts__"
+        "costume-elem":
+          - messy hair
+          - blood stained hands
+          - makeup,lipstick
+          - glowing eyes
+        "costume-weapon":
+          - holding knife
+          - licking knife
+        action:
+          - clingy
+          - tilting head
+          - hugging
+          - clutching
+          - scratching
+        style:
+          - obsessive love
+          - jealousy
+          - dark atmosphere
+          - love and madness
+          - sweet but dangerous
+      seductive:
+        prompts:
+          - >-
+            {1-$$seductive smile|seductive|voluptuous}
+      # https://civitai.com/models/631023/tongue-outahegao?modelVersionId=705421
+      # https://civitai.com/models/537390/perfect-ahegao
+      # https://civitai.com/models/114626/hdaahegao-sd15
+      # https://www.pixiv.net/tags/%E3%82%AA%E3%83%9B%E9%A1%94
+      # https://civitai.com/models/196514/mesugao-seductive-pleasure-face?modelVersionId=220946
+      ahegao:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/ahegao/expressions-main__{0.3:::{1.2|1.3|1.4}|}){0.3::,{1-$$__lazy-wildcards/subject/costume-elem-expressions/ahegao/expressions-trigger-words__}|}{0.3::,{1-$$__lazy-wildcards/subject/costume-elem-expressions/ahegao/expressions__}|}{0.3::,{1-$$__lazy-wildcards/subject/costume-elem-expressions/ahegao/costume-elem__}|}{0.3::,{1-$$__lazy-wildcards/subject/costume-elem-expressions/ahegao/style__}|}
+        "expressions-main":
+          - Ahegao,Ohogao,mesugao
+        "expressions-trigger-words":
+          - HDA_Ahegao
+        expressions:
+          - open mouth
+          - wide eyes
+          - crossed eyes
+          - rolling eyes
+          - Tongue Out
+          - blush
+          - asymmetrical_expression
+          - teasing
+          - eyes_up
+          - eyes_rolling_back
+          - eye_roll
+          - "__lazy-wildcards/subject/costume-ethnicity-face/tongue_out_to_the_side/prompts__"
+          - seductive
+          - pleasure face
+          - aroused
+        "costume-elem":
+          - tears
+          - "heart-shaped pupils"
+          - "__lazy-wildcards/subject/costume-elem/saliva/prompts__"
+          - "__lazy-wildcards/subject/costume-elem/sweat/prompts__"
+        style:
+          - "close-up"
+          - motion_lines
+      # https://civitai.com/models/189973/pornmaster-tongue-fetishahegaofucked-sillytongue-outfacialbukkakecum-on-tonguewide-open-mouthmouth-pulloral-cavityuvulasaliva-dripnose-piercinglong-tonguecross-eyed
+      # https://civitai.com/models/24530/fucked-silly-from-behind-or-sex-act-lora-220
+      # https://civitai.com/models/84619/fucked-silly-after-sex-locon
+      # https://civitai.com/models/261335/ohogao-fucked-silly
+      fucked_silly:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/fucked_silly/expressions-main__{0.3:::{1.2|1.3|1.4}|}){0.8::,__lazy-wildcards/subject/costume-elem-expressions/ahegao/prompts__|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/fucked_silly/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/fucked_silly/action__}|}
+        "expressions-main":
+          - fucked silly
+        expressions:
+          - rolling eyes
+          - >-
+            {wide |}open mouth
+          - uvula
+          - drunk
+          - unfocused_eyes
+          - flushed_face
+          - silly_expression
+          - blush
+          - tipsy
+          - exhausted
+          - torogao
+          - Dazed
+          - Climax
+          - Confused
+        "costume-elem":
+          - clenched teeth
+          - "half-closed eyes"
+          - spiral_eyes
+        action:
+          - looking up
+          - oral invitation
+          - after sex
+          - dizzy,woozy
+          - wobbly_pose,swaying_pose
+          - slouching
+      # 厭惡
+      # https://civitai.com/models/53448/looking-disgusted-facial-expression
+      # https://danbooru.donmai.us/posts?tags=disgust&z=5
+      # https://civitai.com/models/1145230/show-me-your-underwear-with-a-disgusted-look-on-your-face?modelVersionId=1288023
+      disgusted:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/disgusted/expressions-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/disgusted/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/disgusted/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/disgusted/action__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/disgusted/style__}|}
+        "expressions-main":
+          - disgusted,disgust,looking disgusted,disgust_face,disgust facial expression,disguststyle
+        expressions:
+          - >-
+            {very |}angry
+          - disappointed
+          - scowl
+          - grimace
+          - frown
+          - gloom \(expression\)
+          - narrowed eyes
+          - furrowed brow
+          - annoyed
+          - scorn
+          - negative_emotions
+          - averting eyes
+        "costume-elem":
+          - |-
+            (shaded face:1.2)
+          - turn pale
+          - clenched teeth
+          - empty eyes
+          - open mouth
+          - teeth
+          - "half-closed eyes"
+          - wrinkled nose
+        action:
+          - looking down
+          - stepping back
+        style:
+          - from above
+          - from below
+          - dutch angle
+          - foreshortening
+      # https://civitai.com/models/196486/netorare-face-cheating-ntr-face?modelVersionId=220916
+      netorare_face:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/netorare_face/expressions-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/netorare_face/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/netorare_face/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/netorare_face/action__}|}
+        "expressions-main":
+          - netorare face,netorare,ntrgao,ntr face
+        expressions:
+          - false smile
+          - flustered
+          - panicking
+          - rushing
+          - forced smile
+          - blush
+          - "__lazy-wildcards/subject/costume-elem/see-through-clothes/prompts__"
+          - "__lazy-wildcards/subject/costume-elem/sweat/prompts__"
+          - nose blush
+          - trembling
+        "costume-elem":
+          - "half-closed eyes"
+          - empty eyes
+          - purple eyes
+          - stray pubic hair
+          - "heart-shaped pupils"
+          - "symbol-shaped pupils"
+        action:
+          - cheating
+          - standing
+          - arms behind back
+          - double w
+      confused:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/confused/expressions-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/confused/expressions__}|}
+        "expressions-main":
+          - confused
+        expressions:
+          - "__lazy-wildcards/subject/costume-elem-expressions/v-shaped_eyebrows/prompts__"
+          - |-
+            !?
+      # https://civitai.com/models/136914
+      blush:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/blush/expressions-trigger-words__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/blush/expressions-main__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/blush/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/blush/action__}|}
+        "expressions-trigger-words":
+          - blush,embarrassed,yudedako
+        "expressions-main":
+          - "full-face blush"
+          - ear blush
+          - humiliation,shame
+          - blushing cheeks,rosy cheeks
+        expressions:
+          - panicing
+          - |-
+            @ @
+          - averting eyes
+          - nervous
+          - steam from head
+          - awkward situation
+          - coy
+          - shy
+        action:
+          - covering face
+          - teased
+      shocked_face:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/shocked_face/expressions-trigger-words__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/shocked_face/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/shocked_face/action__}|}
+        "expressions-trigger-words":
+          - shockedface,shocked face
+          - dumbfounded
+          - flustered,surprised
+        expressions:
+          - open mouth
+          - "wide eyes,constricted pupils,wide-eyed"
+          - shock lines,mouth agape
+          - sweatdrop
+          - "__lazy-wildcards/subject/costume-elem-expressions/blush/prompts__"
+        action:
+          - confession
+          - changing clothes
+          - accidental fall
+      # https://civitai.com/models/469309?modelVersionId=522175
+      # https://civitai.com/models/469941
+      doyagao_smug:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/doyagao_smug/expressions-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/doyagao_smug/expressions__}|}
+        "expressions-main":
+          - doyagao,smug,proudly face,yaeba
+        expressions:
+          - "v-shaped eyebrows"
+          - grinning smile
+          - grin
+          - smug smile
+          - evil smug face
+          - happy smile
+          - naughty face
+          - >-
+            {open mouth|closed mouth}
+      # https://civitai.com/models/136940/paled-face?modelVersionId=151092
+      # https://civitai.com/models/232245/yandereangrydisappointed-shade
+      shaded_face:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/shaded_face/expressions-trigger-words__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/shaded_face/expressions-main__}|}{0.3:::{1.2|1.3|1.4}|}){0.3::,{1-$$__lazy-wildcards/subject/costume-elem-expressions/shaded_face/expressions__}|}
+        "expressions-trigger-words":
+          - shaded face
+        "expressions-main":
+          - turn pale
+          - partially shaded face
+          - paled face
+        expressions:
+          - scared
+          - trembling
+          - gloom \(expression\)
+          - emphasis lines
+          - surprised
+          - fear
+          - strong anger
+      smirk:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/smirk/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-elem-expressions/smirk/expressions-main__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/smirk/expressions__}|}
+        "expressions-main":
+          - smirk
+        expressions:
+          - seductive smirk
+          - confident smirk
+      "smile-sad":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/smile-sad/expressions__{0.3:::{1.2|1.3|1.4}|})
+        expressions:
+          - sad smile,sad
+      crying:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/crying/expressions-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/crying/expressions__}|}
+        "expressions-main":
+          - crying
+        expressions:
+          - closed mouth
+          - red eyes
+          - crying with eyes open
+          - sad
+          - "__lazy-wildcards/subject/costume-elem-expressions/tears/prompts__"
+      tears:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/tears/expressions-main__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/tears/expressions__}|}{0.3:::{1.2|1.3|1.4}|})
+        "expressions-main":
+          - tears
+        expressions:
+          - streaming tears
+          - teardrop
+          - wiping tears
+          - tearing up
+          - blood from eyes,blood tears
+          - happy tears
+          - sad tears
+          - single tear
+          - flying teardrops
+      # 自信
+      "smirk-confident":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/smirk-confident/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-elem-expressions/smirk-confident/expressions-main__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/smirk-confident/expressions__}|}
+        "expressions-main":
+          - confident
+        expressions:
+          - "__lazy-wildcards/subject/costume-elem-expressions/smirk/prompts-no-weight__"
+          - confident smile
+          - narrowed eyes
+          - direct gaze
+          - intense stare
+          - proud
+          - cool expression
+          - seductive smile
+      # 邪惡笑容
+      "grin-sinister":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/grin-sinister/expressions-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem-expressions/grin-sinister/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/grin-sinister/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/grin-sinister/style__}|}
+        "expressions-main":
+          - sinister grin
+        expressions:
+          - evil smile
+          - smirk
+          - upturned mouth
+          - grinning teeth
+          - cunning eyes
+          - menacing eyes
+          - glaring
+          - arched eyebrows
+          - trembling lips
+          - animated grin
+        "costume-elem":
+          - sharp teeth
+          - dark lips
+          - shadowed eyes
+          - asymmetric face
+        style:
+          - psychological horror
+          - creepy
+      # https://civitai.com/images/110595383
+      "serious-blush":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-expressions/serious-blush/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-elem-expressions/serious-blush/expressions-main__{,{1-$$__lazy-wildcards/subject/costume-elem-expressions/serious-blush/expressions__}|}
+        "expressions-main":
+          - serious expression,blush
+        expressions:
+          - resolute
+          - head tilt
     action:
       sleeping:
         prompts:
