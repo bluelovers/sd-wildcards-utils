@@ -325,4 +325,47 @@ lazy-wildcards:
         env:
           - petals
           - very windy, wind blowing
+      grass-tall_grass_high_crops:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/grass-tall_grass_high_crops/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/grass-tall_grass_high_crops/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem/grass-tall_grass_high_crops/style__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-elem/grass-tall_grass_high_crops/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/grass-tall_grass_high_crops/env-bg__}|}
+        env-bg-main:
+          - tall grass, high crops
+        env-bg:
+          - dense grass
+          - reed like plants
+          - long thin leaves
+          - millet field
+          - sorghum field
+          - miscanthus, miscanthus giganteus
+          - sugarcane
+        env:
+          - maze like environment
+          - narrow paths
+          - random gaps
+          - wild grass
+          - sharp grass edges
+          - uneven growth
+          - ancient farmland
+          - grass swaying in wind
+          - rustling vegetation
+          - footstep trail visible
+          - sunlight filtering through grass
+          - moonlight grass field
+          - foggy grass field, mist between plants
+          - rain soaked vegetation
+        style:
+          - concealment, limited visibility
+          - suspense
+          - scale contrast
+          - partially hidden
+          - low angle shot
+          - shallow depth of field
+          - high contrast light shadow
 
