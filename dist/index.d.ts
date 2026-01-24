@@ -141,6 +141,7 @@ export declare function getNodeTypeSymbol(node: IVisitPathsNode): IYamlNodeTypeS
 export declare function _getNodeTypeCore(sym: IYamlNodeTypeSymbol): string;
 export declare function getNodeType(node: IVisitPathsNode): string;
 export declare function isSameNodeType(a: IVisitPathsNode, b: IVisitPathsNode): boolean;
+export declare function isUnset(value: unknown): value is undefined | null;
 export type IOmitParsedNodeContents<T extends Node$1 | Document$1, P extends ParsedNode | Document$1.Parsed> = Omit<P, "contents"> & T;
 export type IWildcardsYAMLScalar = IOmitParsedNodeContents<Scalar<string>, Scalar.Parsed>;
 export type IWildcardsYAMLSeq = IOmitParsedNodeContents<YAMLSeq<IWildcardsYAMLScalar>, YAMLSeq.Parsed>;
@@ -166,6 +167,19 @@ export interface IOptionsSharedWildcardsYaml {
 	 */
 	expandForwardSlashKeys?: boolean;
 	allowScalarValueIsEmptySpace?: boolean;
+	/**
+	 * by default, the immediate flag `=!` pattern is not allowed to be used in the value of a parameterized template.
+	 *
+	 * `__season_clothes(season={summer|autumn|winter|spring)__`
+	 *
+	 * enable this option to allow it. when you patch the source with https://github.com/bluelovers/dynamicprompts
+	 *
+	 * `__season_clothes(season=!{summer|autumn|winter|spring)__`
+	 *
+	 * @see https://github.com/bluelovers/dynamicprompts
+	 * @see https://github.com/adieyal/sd-dynamic-prompts/blob/main/docs/SYNTAX.md#parameterized-templates
+	 */
+	allowParameterizedTemplatesImmediate?: boolean;
 }
 export type IOptionsStringify = DocumentOptions & SchemaOptions & ParseOptions & CreateNodeOptions & ToStringOptions & IOptionsSharedWildcardsYaml;
 export type IOptionsParseDocument = ParseOptions & DocumentOptions & SchemaOptions & IOptionsSharedWildcardsYaml & {
@@ -214,6 +228,7 @@ export type IResultDeepFindSingleRootAt = {
 	key: string;
 	value: IWildcardsYAMLSeq | IWildcardsYAMLMapRoot;
 	parent: IWildcardsYAMLMapRoot;
+	child: IWildcardsYAMLPair;
 } | {
 	paths: readonly string[] & {
 		length: 0;
@@ -221,6 +236,7 @@ export type IResultDeepFindSingleRootAt = {
 	key: void;
 	value: IWildcardsYAMLMapRoot;
 	parent: IWildcardsYAMLDocument;
+	child: void;
 };
 export type IVisitPathsList = (string | number)[];
 export type IVisitPathsListReadonly = readonly (string | number)[];
@@ -295,6 +311,81 @@ export interface ICheckErrorResult {
 	near?: string;
 	error: string;
 }
+export interface IYAMLNodeBaseLike {
+	/** A comment on or immediately after this */
+	comment?: string | null;
+	/** A comment before this */
+	commentBefore?: string | null;
+	/**
+	 * The `[start, value-end, node-end]` character offsets for the part of the
+	 * source parsed into this node (undefined if not parsed). The `value-end`
+	 * and `node-end` positions are themselves not included in their respective
+	 * ranges.
+	 */
+	range?: Scalar["range"];
+	/** A blank line before this node and its commentBefore */
+	spaceBefore?: boolean;
+	/** The CST token that was composed into this node.  */
+	srcToken?: Scalar["srcToken"];
+	/** A fully qualified tag, if required */
+	tag?: string;
+}
+export interface ICollectionLike extends IYAMLNodeBaseLike {
+	/**
+	 * If true, stringify this and all child nodes using flow rather than
+	 * block styles.
+	 */
+	flow?: boolean;
+	/** Adds a value to the collection. */
+	add(value: unknown): void;
+	/**
+	 * Removes a value from the collection.
+	 * @returns `true` if the item was found and removed.
+	 */
+	delete(key: unknown): boolean;
+	/**
+	 * Returns item at `key`, or `undefined` if not found. By default unwraps
+	 * scalar values from their surrounding node; to disable set `keepScalar` to
+	 * `true` (collections are always returned intact).
+	 */
+	get(key: unknown, keepScalar?: boolean): unknown;
+	/**
+	 * Checks if the collection includes a value with the key `key`.
+	 */
+	has(key: unknown): boolean;
+	/**
+	 * Sets a value in this collection. For `!!set`, `value` needs to be a
+	 * boolean to add/remove the item from the set.
+	 */
+	set(key: unknown, value: unknown): void;
+	/**
+	 * Adds a value to the collection. For `!!map` and `!!omap` the value must
+	 * be a Pair instance or a `{ key, value }` object, which may not have a key
+	 * that already exists in the map.
+	 */
+	addIn(path: Iterable<unknown>, value: unknown): void;
+	/**
+	 * Removes a value from the collection.
+	 * @returns `true` if the item was found and removed.
+	 */
+	deleteIn(path: Iterable<unknown>): boolean;
+	/**
+	 * Returns item at `key`, or `undefined` if not found. By default unwraps
+	 * scalar values from their surrounding node; to disable set `keepScalar` to
+	 * `true` (collections are always returned intact).
+	 */
+	getIn(path: Iterable<unknown>, keepScalar?: boolean): unknown;
+	/**
+	 * Checks if the collection includes a value with the key `key`.
+	 */
+	hasIn(path: Iterable<unknown>): boolean;
+	/**
+	 * Sets a value in this collection. For `!!set`, `value` needs to be a
+	 * boolean to add/remove the item from the set.
+	 */
+	setIn(path: Iterable<unknown>, value: unknown): void;
+}
+export type IYAMLCollectionNode = ICollectionLike | IWildcardsYAMLMapRoot | IWildcardsYAMLSeq;
 export declare function getOptionsShared<T extends IOptionsSharedWildcardsYaml>(opts?: T): Pick<T, keyof IOptionsSharedWildcardsYaml>;
 export declare function defaultOptionsStringifyMinify(): {
 	readonly lineWidth: 0;
@@ -306,6 +397,7 @@ export declare function getOptionsFromDocument<T extends Document$1>(doc: T, opt
 export declare function visitWildcardsYAML(node: Node$1 | Document$1 | null, visitorOptions: IOptionsVisitor): void;
 export declare function defaultCheckerIgnoreCase(a: unknown, b: unknown): boolean;
 export declare function uniqueSeqItemsChecker(a: Node$1, b: Node$1): boolean;
+export declare function uniqueSeqItemsCheckerWithMerge(a: Node$1, b: Node$1): boolean;
 export declare function uniqueSeqItems<T extends Node$1>(items: (T | unknown)[]): T[];
 /**
  * This function is used to find a single root node in a YAML structure.
@@ -365,7 +457,7 @@ export declare function _handleExtractorErrorCore(value: string, e: IExtractionE
 export declare function _checkBracketsCore(value: string, _extractor: Extractor): ICheckErrorResult;
 export declare function _checkBrackets(value: string): ICheckErrorResult;
 export declare function _checkBrackets2(value: string): ICheckErrorResult;
-export declare function _checkValue(value: string): ICheckErrorResult;
+export declare function _checkValue(value: string, options?: IOptionsParseDocument): ICheckErrorResult;
 export declare function mergeWildcardsYAMLDocumentRoots<T extends Pick<Document$1<YAMLMap>, "contents">>(ls: [
 	T,
 	...any[]
@@ -378,6 +470,8 @@ export declare function _mergeWildcardsYAMLDocumentRootsCore<T extends Pick<Docu
  * mergeWildcardsYAMLDocumentJsonBy(ls, {
  * 	deepmerge: deepmergeAll,
  * })
+ *
+ * @deprecated only use this when u need it
  */
 export declare function mergeWildcardsYAMLDocumentJsonBy<T extends Document$1 | unknown, R = IRecordWildcards>(ls: T[], opts: IOptionsMergeWilcardsYAMLDocumentJsonBy): R;
 export declare function _toJSON<T extends Document$1 | unknown, R = IRecordWildcards>(v: T): R;
@@ -392,16 +486,11 @@ export declare function mergeSeq<T extends YAMLSeq | IWildcardsYAMLSeq>(a: T, b:
  * @throws {TypeError} - If the current node does not support deep merge.
  */
 export declare function mergeFindSingleRoots<T extends IWildcardsYAMLMapRoot | IWildcardsYAMLDocument>(doc: T, list: NoInfer<T>[] | NoInfer<T>): T;
-export declare function pathsToWildcardsPath(paths: IVisitPathsListReadonly, full?: boolean): string;
-export declare function pathsToDotPath(paths: IVisitPathsListReadonly): string;
-/**
- * Recursively searches for a path in a nested object or array structure.
- */
-export declare function findPath(data: IRecordWildcards | Document$1 | IWildcardsYAMLDocument, paths: string[], findOpts?: IOptionsFind, prefix?: string[], list?: IFindPathEntry[]): IFindPathEntry[];
-export declare function findPathOptionsToGlobOptions(findOpts?: IOptionsFind): PicomatchOptions;
-export declare function _findPathCore(data: IRecordWildcards, paths: string[], findOpts: IOptionsFind, prefix: string[], list: IFindPathEntry[], _cache: ICachesFindPath): IFindPathEntry[];
 export declare function findUpParentNodes(nodeList: IVisitPathsNodeList): IWildcardsYAMLPair[];
 export declare function findUpParentNodesNames(nodeList: IVisitPathsNodeList): string[];
+export declare function _nodeGetInPairCore(node: IYAMLCollectionNode, key: unknown): IWildcardsYAMLPair;
+export declare function nodeGetInPair(node: IYAMLCollectionNode, paths: readonly unknown[]): IWildcardsYAMLPair;
+export declare function nodeGetInPairAll(node: IYAMLCollectionNode, paths: readonly unknown[]): IWildcardsYAMLPair[];
 export declare function stripZeroStr(value: string): string;
 export declare function trimPrompts(value: string): string;
 export declare function normalizeWildcardsYamlString(value: string): string;
@@ -411,6 +500,14 @@ export declare function normalizeWildcardsYamlString(value: string): string;
 export declare function trimPromptsDynamic(value: string): string;
 export declare function formatPrompts(value: string, opts?: IOptionsSharedWildcardsYaml): string;
 export declare function stripBlankLines(value: string, appendEOF?: boolean): string;
+export declare function pathsToWildcardsPath(paths: IVisitPathsListReadonly, full?: boolean): string;
+export declare function pathsToDotPath(paths: IVisitPathsListReadonly): string;
+/**
+ * Recursively searches for a path in a nested object or array structure.
+ */
+export declare function findPath(data: IRecordWildcards | Document$1 | IWildcardsYAMLDocument, paths: string[], findOpts?: IOptionsFind, prefix?: string[], list?: IFindPathEntry[]): IFindPathEntry[];
+export declare function findPathOptionsToGlobOptions(findOpts?: IOptionsFind): PicomatchOptions;
+export declare function _findPathCore(data: IRecordWildcards, paths: string[], findOpts: IOptionsFind, prefix: string[], list: IFindPathEntry[], _cache: ICachesFindPath): IFindPathEntry[];
 /**
  * Checks if all self-link wildcards exist in a given object.
  *
@@ -440,6 +537,8 @@ export declare function isWildcardsYAMLDocument<T extends YAMLMap = IWildcardsYA
 export declare function isWildcardsYAMLDocumentAndContentsIsMap(doc: any): doc is IWildcardsYAMLDocument;
 export declare function isWildcardsYAMLMap<K extends IWildcardsYAMLScalar, V extends IWildcardsYAMLPairValue>(doc: IWildcardsYAMLMapRoot<K, V> | YAMLMap.Parsed<K, V> | YAMLMap<K, V>): doc is IWildcardsYAMLMapRoot<K, V>;
 export declare function isWildcardsYAMLMap<K extends IWildcardsYAMLScalar = IWildcardsYAMLScalar, V extends IWildcardsYAMLPairValue = IWildcardsYAMLPairValue>(doc: any): doc is IWildcardsYAMLMapRoot<K, V>;
+export declare function isWildcardsYAMLPair(node: any): node is IWildcardsYAMLPair;
+export declare function isWildcardsYAMLScalar(node: any): node is IWildcardsYAMLScalar;
 /**
  * Normalizes a YAML document by applying specific rules to its nodes.
  **/
