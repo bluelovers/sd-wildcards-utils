@@ -279,3 +279,12 @@ nested:
 
 - [Dynamic Prompts 語法](https://github.com/adieyal/sd-dynamic-prompts/blob/main/docs/SYNTAX.md)
 - [YAML 1.2 規格](https://yaml.org/spec/1.2/spec.html)
+
+---
+
+## 文檔索引
+
+- [stringifyWildcardsYamlData 錯誤說明](./stringifyWildcardsYamlData-errors.md) (本文) - 所有錯誤類型和驗證規則
+- [mergeFindSingleRoots 與 mergeWildcardsYAMLDocumentRoots](./merge-functions.md) - 合併函數使用說明
+- [stringifyWildcardsYamlData 輸出格式說明](./stringifyWildcardsYamlData-format.md) - 完整的輸出格式指南
+
