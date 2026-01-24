@@ -452,4 +452,44 @@ lazy-wildcards:
       torch-welding:
         prompts:
           - welding torch
+      # https://civitai.com/models/664485/nude-censoring-innertube
+      innertube-nude_censoring:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-weapon/innertube-swim_ring/prompts__
+            , __lazy-wildcards/subject/costume-weapon/innertube-nude_censoring/main-trigger-words__
+        main-trigger-words:
+          - convenient censoring, nude, censored
+      # 游泳圈／內胎浮圈
+      innertube-swim_ring:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-weapon/innertube-swim_ring/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/innertube-swim_ring/expressions__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/innertube-swim_ring/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/innertube-swim_ring/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/innertube-swim_ring/env-bg__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-weapon/innertube-swim_ring/costume-weapon-main__
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/innertube-swim_ring/costume-weapon__}|}
+        costume-weapon-main:
+          - innertube, swim ring
+        costume-weapon:
+          - translucent inner tube
+          - hugging inner tube, holding innertube
+          - ring shaped flotation device
+        expressions:
+          - __lazy-wildcards/subject/costume-elem-expressions/blush/prompts__
+        costume-elem:
+          - __lazy-wildcards/subject/costume-ethnicity-breasts/breast_squish/prompts__
+          - butt crack
+          - stuck in a swim ring
+        action:
+          - leaning forward
+        env-bg:
+          - pool, water
+          - beach, palm tree
+        style:
+          - relaxation
 
