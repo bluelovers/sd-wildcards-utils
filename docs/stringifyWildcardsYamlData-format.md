@@ -103,6 +103,7 @@ doc.toString (轉換為 YAML 字串)
 - 包含 `//` (雙斜線)
 - 包含連續的點、底線或連字號 (如 `._`、`/.`、`__`、`..`、`--`)
 - 路徑中包含 `[._-]/` 或 `/[._-]` 的組合
+- **注意：包含點 `.` 或連字號 `-` 的鍵名（如 `style.main`、`style-main`）會被保留引號，因為它們可能是不安全的**
 
 ### Key 引號處理範例
 
@@ -175,6 +176,30 @@ key_with_underscore: value
 "-key": "value"
 ```
 
+**重要：包含點 `.` 或連字號 `-` 的鍵名是不安全的**
+
+```yaml
+# 輸入
+"style.main":
+  - value1
+
+# 輸出（需要引號）
+"style.main":
+  - value1
+```
+
+```yaml
+# 輸入
+style-main:
+  - value2
+
+# 輸出（需要引號）
+"style-main":
+  - value2
+```
+
+這是因為點 `.` 和連字號 `-` 在鍵名中只有與底線 `_` 或斜線 `/` 組合時才安全（如 `style_main` 或 `style/sub`），單獨使用點或連字號會被視為不安全模式（例如 `..` 或 `--`）。
+
 ---
 
 ### Key 格式化流程
@@ -243,29 +268,36 @@ basic_key:
 
 **輸入 YAML：**
 ```yaml
-colors:
-  - "red"
-  - 'blue'
-  - green
-shapes:
-  - "circle"
-  - 'square'
-  - triangle
+style-main:
+  - high contrast,__lazy-wildcards/subject/style-elem/lighting-dramatic/prompts-no-weight__
+  - high contrast,__x/subject/style__
+  - "high contrast,__x2/subject/style__"
+style_main:
+  - 1
+style.main:
+  - 1
 ```
 
 **輸出 YAML：**
 ```yaml
-colors:
-  - red
-  - blue
-  - green
-shapes:
-  - circle
-  - square
-  - triangle
+"style-main":
+  - "high
+    contrast,__lazy-wildcards/subject/style-elem/lighting-dramatic/prompts-no-w\
+    eight__"
+  - high contrast,__x/subject/style__
+  - high contrast,__x2/subject/style__
+style_main:
+  - 1
+"style.main":
+  - 1
 ```
 
-**說明：** 不必要的引號被自動移除，所有字串轉為 `PLAIN` 類型。鍵名 `"colors"` 和 `"shapes"` 也被移除引號，因為它們是安全鍵。
+**說明：**
+- 鍵名 `\"style-main\"` 包含連字號 `-`，被視為不安全鍵，引號被保留
+- 鍵名 `\"style_main\"` 是安全鍵（底線），引號被移除
+- 鍵名 `\"style.main\"` 包含點 `.`，被視為不安全鍵，引號被保留
+- 值中的引號（如 `\"high contrast,__x2/subject/style__\"`）也被移除
+- 長字串被自動換行處理
 
 ---
 
@@ -1156,53 +1188,127 @@ const output = stringifyWildcardsYamlData(yamlData, {
 
 ---
 
-## 完整 Key 格式化範例
+## 完整 Key 格式化範例（基於實際測試案例）
 
-### 輸入 YAML
-
-```yaml
-# 安全鍵
-"colors": ["red", "blue"]
-"colors-primary": ["green", "yellow"]
-"colors/secondary": ["purple", "orange"]
-"basic_key": ["value"]
-"key_with_underscore": ["value"]
-
-# 不安全鍵（需要引號）
-"key with spaces": ["value2"]
-"key:with:colons": ["value3"]
-"key[with]brackets": ["value4"]
-"key{with}braces": ["value5"]
-```
-
-### 輸出 YAML
+### 輸入 YAML（fixtures）
 
 ```yaml
-# 安全鍵
-colors:
-  - red
-  - blue
-colors-primary:
-  - green
-  - yellow
-colors/secondary:
-  - purple
-  - orange
-basic_key:
-  - value
-key_with_underscore:
-  - value
-
-# 不安全鍵（需要引號）
-"key with spaces":
-  - value2
-"key:with:colons":
-  - value3
-"key[with]brackets":
-  - value4
-"key{with}braces":
-  - value5
+style-main:
+  - high contrast,__lazy-wildcards/subject/style-elem/lighting-dramatic/prompts-no-weight__
+  - high contrast,__x/subject/style__
+  - "high contrast,__x2/subject/style__"
+style_main:
+  - 1
+style.main:
+  - 1
 ```
+
+### 輸出 YAML（預期結果）
+
+```yaml
+"style-main":
+  - "high
+    contrast,__lazy-wildcards/subject/style-elem/lighting-dramatic/prompts-no-w\
+    eight__"
+  - high contrast,__x/subject/style__
+  - high contrast,__x2/subject/style__
+style_main:
+  - 1
+"style.main":
+  - 1
+```
+
+**說明：**
+- `style-main`：不安全鍵（連字號），保留引號
+- `style_main`：安全鍵（底線），移除引號
+- `style.main`：不安全鍵（點號），保留引號
+- Value 中的引號都被移除
+- 長字串自動換行
+
+---
+
+## 結構重排範例
+
+### 輸入 YAML（fixtures）
+
+```yaml
+cdfy_ex0:
+  - 1
+
+# RANDOM EXAMPLES PROPMPTS
+cdfy_ex/random_full:
+  # 111
+  - 1
+  - 2
+  # 333
+  - 3
+  - __cdfy_gifts/race_any__ wearing __cdfy/outfit_civil_any__, __cdfy/accessory_any__, in __cdfy/outfit_military_any__ pose, with __cdfy_gifts/expression_fantasy_any__, surrounded by __cdfy_gifts/dark_fantasy_atmosphere__, under __cdfy_gifts/dark_fantasy_light__, in __cdfy_gifts/dark_fantasy_background__
+  - __cdfy_gifts/character_any__ corrupted by __cdfy_gifts/dark_fantasy_corruption__, standing in __cdfy_gifts/dark_fantasy_background__, under __cdfy_gifts/dark_fantasy_light__, with __cdfy_gifts/expression_fantasy_male__
+  - __cdfy_gifts/race_any__ in __cdfy/outfit_military_any__ pose, wearing __cdfy/outfit_military_any__, with __cdfy/accessory_any__, surrounded by __cdfy/cosplay_shooting_atmosphere__, under __cdfy/cosplay_shooting_light__, in __cdfy/cosplay_background_city__
+  - __cdfy_gifts/race_any__ with __cdfy/accessory_any__, in __cdfy_gifts/dark_fantasy_background__, under __cdfy_gifts/dark_fantasy_light__, with __cdfy_gifts/expression_fantasy_female__
+  # 777
+  - __cdfy_gifts/character_any__ standing in __cdfy/cosplay_background_city__,
+    under __cdfy/cosplay_shooting_light__, with
+    __cdfy_gifts/expression_fantasy_unisex__, surrounded by
+    __cdfy/cosplay_shooting_atmosphere__
+cdfy_ex2:
+  - 1
+
+cdfy_ex:
+  xxx:
+    - 1
+```
+
+### 輸出 YAML（預期結果）
+
+```yaml
+cdfy_ex0:
+  - 1
+cdfy_ex2:
+  - 1
+
+cdfy_ex:
+  xxx:
+    - 1
+
+  # RANDOM EXAMPLES PROPMPTS
+  random_full:
+    # 111
+    - 1
+    - 2
+    # 333
+    - 3
+    - __cdfy_gifts/race_any__ wearing __cdfy/outfit_civil_any__,
+      __cdfy/accessory_any__, in __cdfy/outfit_military_any__ pose, with
+      __cdfy_gifts/expression_fantasy_any__, surrounded by
+      __cdfy_gifts/dark_fantasy_atmosphere__, under
+      __cdfy_gifts/dark_fantasy_light__, in
+      __cdfy_gifts/dark_fantasy_background__
+    - __cdfy_gifts/character_any__ corrupted by
+      __cdfy_gifts/dark_fantasy_corruption__, standing in
+      __cdfy_gifts/dark_fantasy_background__, under
+      __cdfy_gifts/dark_fantasy_light__, with
+      __cdfy_gifts/expression_fantasy_male__
+    - __cdfy_gifts/race_any__ in __cdfy/outfit_military_any__ pose, wearing
+      __cdfy/outfit_military_any__, with __cdfy/accessory_any__, surrounded by
+      __cdfy/cosplay_shooting_atmosphere__, under
+      __cdfy/cosplay_shooting_light__, in __cdfy/cosplay_background_city__
+    - __cdfy_gifts/race_any__ with __cdfy/accessory_any__, in
+      __cdfy_gifts/dark_fantasy_background__, under
+      __cdfy_gifts/dark_fantasy_light__, with
+      __cdfy_gifts/expression_fantasy_female__
+    # 777
+    - __cdfy_gifts/character_any__ standing in __cdfy/cosplay_background_city__,
+      under __cdfy/cosplay_shooting_light__, with
+      __cdfy_gifts/expression_fantasy_unisex__, surrounded by
+      __cdfy/cosplay_shooting_atmosphere__
+```
+
+**說明：**
+- YAML 結構被重新排序：`cdfy_ex0`、`cdfy_ex2`、`cdfy_ex`（包含 `xxx` 和 `random_full`）
+- 註解被保留並移動到相應位置
+- 長字串被自動換行（使用 `>-` 區塊引號）
+- 空行被移除
 
 ---
 
@@ -1274,6 +1380,13 @@ items:
    - YAML Document 會先經過 `normalizeDocument` 處理
    - JSON 物件直接進行格式化
    - 最終輸出結果通常一致
+6. **結構重排**：
+   - 鍵值對的順序可能會被重新排列（由 YAML 解析器決定）
+   - 嵌套結構會被正確識別並格式化
+   - 空行會被移除
+7. **點號鍵名特別注意**：
+   - 包含點 `.` 的鍵名（如 `style.main`）會被保留引號
+   - 這與某些 YAML 解析器的行為不同，但確保了跨平台的兼容性
 
 ---
 
