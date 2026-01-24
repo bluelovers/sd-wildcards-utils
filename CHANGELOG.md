@@ -3,6 +3,262 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.1](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.3.23...sd-wildcards-utils@1.4.1) (2026-01-24)
+
+
+### BREAKING CHANGES
+
+* 部分內部函式簽名變更，包括 `_checkValue` 新增 options 参數
+* 允許使用 '
+* add test cases for checking invalid prompts syntax
+* add support for expanding forward slash keys into nested YAML maps
+
+
+
+### 🐛　Bug Fixes
+
+* test ([e96efb4](https://github.com/bluelovers/sd-wildcards-utils/commit/e96efb47c31a4156293ff54549faf6b908cd0bec))
+* update others file content ([8ad5562](https://github.com/bluelovers/sd-wildcards-utils/commit/8ad556296b7de4a9cee58fb5225279b210969a21))
+* add test cases for checking invalid prompts syntax ([573b2f9](https://github.com/bluelovers/sd-wildcards-utils/commit/573b2f9dbb0c4d9d6fdb2440b07e7f126f8f7f6f))
+* **ci-copy-to-runtime:** update exclusion pattern and suppress debug log ([03d8536](https://github.com/bluelovers/sd-wildcards-utils/commit/03d8536ed3b4b7134d6c8e1e3d66665a039efe08))
+* **cosplay-game:** adjust YAML indentation for costume-weapon in mobile config ([6cd6dd4](https://github.com/bluelovers/sd-wildcards-utils/commit/6cd6dd405a3bd724d600b981a5cbcd87b464ea25))
+* **data:** correct formatting errors in nuts_dried_fruits section ([f2e0187](https://github.com/bluelovers/sd-wildcards-utils/commit/f2e0187311b3f7f27b7b569abab00aa48f2258b9))
+* **valid:** 检测并提示键名中包含零宽字符的情况 ([9daeb09](https://github.com/bluelovers/sd-wildcards-utils/commit/9daeb09f4ac4a0e267af4e573429f353e7356456))
+
+
+### ✨　Features
+
+* 新增 allowParameterizedTemplatesImmediate 選項與改進 YAML 合併功能 ([c8b73c6](https://github.com/bluelovers/sd-wildcards-utils/commit/c8b73c611f7278727778775f9f3fa16968bc1c09))
+* 添加中式婚礼红盖头及相关元素 ([6f73b22](https://github.com/bluelovers/sd-wildcards-utils/commit/6f73b2290d7bf01dabf0544bafcd5b8961ee7af8))
+* 添加中式婚礼相关主题和元素 ([785979f](https://github.com/bluelovers/sd-wildcards-utils/commit/785979f2db84ac4be7836b90643876181fd914d4))
+* 添加中国古代船舶类型配置 ([7a99c4f](https://github.com/bluelovers/sd-wildcards-utils/commit/7a99c4f2073e946c8c4c1b022ea0e15b45f8e5ee))
+* 将船舶相关配置从env-vehicle.yaml迁移到独立文件 ([b78022f](https://github.com/bluelovers/sd-wildcards-utils/commit/b78022f136e1bb2355987e8e69bb0b2eed4a1412))
+* 添加种族相关的下肢服装元素配置 ([f46be41](https://github.com/bluelovers/sd-wildcards-utils/commit/f46be4130f6a9a5ec6f530888ed6b4a902781b99))
+* 添加城門环境背景配置 ([8d533c5](https://github.com/bluelovers/sd-wildcards-utils/commit/8d533c539620f29a182a514e520355c11fec36ef))
+* add horse carriage vehicle configuration to env-vehicle.yaml ([2d4c959](https://github.com/bluelovers/sd-wildcards-utils/commit/2d4c9594e2c198a721f99643b5a0197f97576b9e))
+* 添加玉米相关食物配置 ([6a5cd35](https://github.com/bluelovers/sd-wildcards-utils/commit/6a5cd354886ae411b549db5993d7cbc2093a8e27))
+* Add Japanese Oni clan character configurations ([995741e](https://github.com/bluelovers/sd-wildcards-utils/commit/995741e7e7656124fb51dca7f0e17d34262c3ed7))
+* 新增滑雪装、客家土楼、星际飞船动力室等主题配置 ([24a902e](https://github.com/bluelovers/sd-wildcards-utils/commit/24a902e729db71bc2d99b6cd28cb5182c9d817c3))
+* 添加主题元素配置 ([11ccd92](https://github.com/bluelovers/sd-wildcards-utils/commit/11ccd927713c538450861e41bb542f7650f0408c))
+* add croriin majo no okiniiri cosplay character configuration ([e2dd9c4](https://github.com/bluelovers/sd-wildcards-utils/commit/e2dd9c4af7213b497d191843d878f48d9e975924))
+* extend prompt library with fishnet tops/dresses and refrigerator furniture ([ade2405](https://github.com/bluelovers/sd-wildcards-utils/commit/ade2405fad8e214d88a0f7df286c71271e58c28a))
+* add Jest CI check-each run configuration for IntelliJ ([52e5a90](https://github.com/bluelovers/sd-wildcards-utils/commit/52e5a905bf18e6f5cb1ea2bd2b79cc359d96c533))
+* add Dubai environment section and refactor Middle Eastern area prompts ([a9d96f8](https://github.com/bluelovers/sd-wildcards-utils/commit/a9d96f8e4c6a894ab061c86671bcf6b05fc114b2))
+* add spectral costume wildcards and Middle Eastern env-bg data ([5a5c8be](https://github.com/bluelovers/sd-wildcards-utils/commit/5a5c8befab07565e296c781f82a56ec0d34c49a2))
+* reorganize costume race files and minor cleanup in expressions ([67be0bc](https://github.com/bluelovers/sd-wildcards-utils/commit/67be0bc8c41fef439b696a80da776986dcfca650))
+* add new custom character prompts to scenes showcase ([161e914](https://github.com/bluelovers/sd-wildcards-utils/commit/161e9145ac84befbdf4260147fb0de44dc97170b))
+* add chiffon dress theme with prompts and styles ([5bade91](https://github.com/bluelovers/sd-wildcards-utils/commit/5bade913643e1050a2f5e52a237792b1db229002))
+* Add cosplay data for Yamato, Supergirl, and Glorious ([18e9edf](https://github.com/bluelovers/sd-wildcards-utils/commit/18e9edf7c7197343435502e033286263e9d23900))
+* add zero-width package for regex utilities ([0604ac7](https://github.com/bluelovers/sd-wildcards-utils/commit/0604ac751407bdb78dde5a88eae3efe6d1135468))
+* add Ragnania cosplay and new scene prompts ([470d6d0](https://github.com/bluelovers/sd-wildcards-utils/commit/470d6d0f3412d917f6efe61abead85615dc0ee32))
+* add Fire Emblem character cosplay definitions ([bbb5c82](https://github.com/bluelovers/sd-wildcards-utils/commit/bbb5c82bc18cbe7ce05e4b48221fa0b8834476ef))
+* 添加像素游戏肖像风格并增强万智牌艺术提示 ([15b5d27](https://github.com/bluelovers/sd-wildcards-utils/commit/15b5d27c35de078c897ad572d614a9a39e399060))
+* add allowParameterizedTemplatesImmediate option to support immediate flag in templates ([9547f8a](https://github.com/bluelovers/sd-wildcards-utils/commit/9547f8a600d6fbd4f3afc15eefa4ca0d02108552))
+* 允許使用 ' ([d7e96a9](https://github.com/bluelovers/sd-wildcards-utils/commit/d7e96a91514334839db111daa5f764f377ca8865))
+* add new costume elements and prompts for arm warmers, gloves, and see-through items ([81209f9](https://github.com/bluelovers/sd-wildcards-utils/commit/81209f90a792604fc5ca578deb69a0867872b2f4))
+* add sailor moon cosplay and various costume/style enhancements ([33292a8](https://github.com/bluelovers/sd-wildcards-utils/commit/33292a88b49890d8cb167c2168109262393cb819))
+* improve YAML node merge with comment adjustments and deprecate specific method ([8444ae7](https://github.com/bluelovers/sd-wildcards-utils/commit/8444ae7747ae90fcae53b0aced70673bf2e6f1fc))
+* enhance YAML node merging with comment preservation and scalar handling ([eebf94c](https://github.com/bluelovers/sd-wildcards-utils/commit/eebf94cb1b72b2c4add7824c79a3b6846161de09))
+* add _copyMergePairCore for improved pair merging with comment handling ([98aea3c](https://github.com/bluelovers/sd-wildcards-utils/commit/98aea3cdd397cce3c5be96c6a350925984ccd2e4))
+* enhance unique sequence item handling with scalar merging with comment ([6443289](https://github.com/bluelovers/sd-wildcards-utils/commit/64432893adcee517247a7ca9149c893fbba8dcec))
+* improve wildcard YAML parsing with key comment preservation ([c1e9b49](https://github.com/bluelovers/sd-wildcards-utils/commit/c1e9b49350f8d9057cfb30450f0eb8c2c940bf3e))
+* add "dystopian_mythology_fantasy" theme configuration and prompts ([147fddc](https://github.com/bluelovers/sd-wildcards-utils/commit/147fddc99b80d8f7bdcef232e4ae5663faba405b))
+* add support for empty space values and improve error messages ([b91a198](https://github.com/bluelovers/sd-wildcards-utils/commit/b91a198be0f3dd51d83d03ae9406b09a616eef4a))
+* add support for empty space values and improve error messages ([78c982b](https://github.com/bluelovers/sd-wildcards-utils/commit/78c982b4542859ffb3d8c1013a8bf955d94ae0a5))
+* add CI tests for checking wildcards yaml files ([222a1e3](https://github.com/bluelovers/sd-wildcards-utils/commit/222a1e35cb38e2545fe421aa43dcf75a84d72414))
+* add group split files configuration and improve code formatting ([6f01f47](https://github.com/bluelovers/sd-wildcards-utils/commit/6f01f47d1acc4415941c0e2657c7b5aef9cd1f5f))
+* add expandForwardSlashKeys option to YAML parser config ([b597ca6](https://github.com/bluelovers/sd-wildcards-utils/commit/b597ca67e0fcf72707d115f21c9c6dcee74b4a9d))
+* add support for expanding forward slash keys into nested YAML maps ([9cf4fa9](https://github.com/bluelovers/sd-wildcards-utils/commit/9cf4fa99669ad9b94b8b615c0e3e66b8d6e1b56f))
+* add stringify yaml tests and improve key validation ([8f8aba0](https://github.com/bluelovers/sd-wildcards-utils/commit/8f8aba0a1500bbd75359e5ef6eb99c882157079c))
+* add mine environments and update weapon/race wildcards ([f33c2a8](https://github.com/bluelovers/sd-wildcards-utils/commit/f33c2a839fee49b44f4d7d3ac65d9a135d289da7))
+* add new styles, costumes and character prompts ([39e30f2](https://github.com/bluelovers/sd-wildcards-utils/commit/39e30f223dfaf3e2e48a9f38837da1edef2302fa))
+* **art-type-game:** add model links and update prompts ([f3b3447](https://github.com/bluelovers/sd-wildcards-utils/commit/f3b3447318f2bd67154122b7ceb81f27af123e6b))
+* **char-cosplay:** 新增Genshin Impact角色Nefer的cosplay提示词和场景展示 ([a368b0e](https://github.com/bluelovers/sd-wildcards-utils/commit/a368b0ed140956b4ade1ae474e5c6a87cfc78acd))
+* **char-cosplay:** Add sekaiju_no_meikyuu necromancer_4 cosplay prompts and surgical scar elements ([7230ac7](https://github.com/bluelovers/sd-wildcards-utils/commit/7230ac7e12ed87060005747c5261e363581d2289))
+* **ci-copy-to-runtime:** exclude additional files from glob patterns ([292a648](https://github.com/bluelovers/sd-wildcards-utils/commit/292a648e20a86d2534ffbb49d7bc2dcce7427e7a))
+* **cosplay:** add new characters and improve existing ones ([0460ae9](https://github.com/bluelovers/sd-wildcards-utils/commit/0460ae9d5d6bd7771edd80d049ca61dec4e2d34b))
+* **cosplay-data:** 新增ShinMegamiTensei角色cosplay配置及风格元素 ([50a39ee](https://github.com/bluelovers/sd-wildcards-utils/commit/50a39ee947f53de1da82345260da19a772a508fe))
+* **cosplay/env:** add Cleopatra cosplay prompts and garden gazebo environment ([c8f943c](https://github.com/bluelovers/sd-wildcards-utils/commit/c8f943cac628308bb346a62c53d6043df65ba63d))
+* **costume:** 为crop_top添加新的prompts和costume元素 ([762b1a6](https://github.com/bluelovers/sd-wildcards-utils/commit/762b1a663b17015c30f46d6503e6574799547450))
+* **costume-hair:** 新增姫髮型髮型配置 ([27d82bc](https://github.com/bluelovers/sd-wildcards-utils/commit/27d82bc6fadfd73116bcc40515d8f38aebb1214e))
+* **data:** add boxing sports and Hindu-Indian environment configurations ([c2104cc](https://github.com/bluelovers/sd-wildcards-utils/commit/c2104cc256bdfe22d1726b8a599195a0da3b1370))
+* **data:** 新增ojou-sama姿势和热变形背景描述 ([49f3043](https://github.com/bluelovers/sd-wildcards-utils/commit/49f304305298cf83b092d198632844313573d788))
+* **data:** 将火山口湖环境配置移至独立文件 ([6c143e3](https://github.com/bluelovers/sd-wildcards-utils/commit/6c143e3dff7f50fad835b4fbfa5e20c1464a3340))
+* **data:** add yami kawaii aesthetic prompts and horror monster girl templates ([162a490](https://github.com/bluelovers/sd-wildcards-utils/commit/162a49026710774096b0ef6f758e59b11682dcd8))
+* **data:** add organ-based costume elements and expand environment templates ([bc66d76](https://github.com/bluelovers/sd-wildcards-utils/commit/bc66d7605fcb779232847efe8cfe964b2081333f))
+* **data:** add demon horn prompts and expand body costume templates ([0cf9d0e](https://github.com/bluelovers/sd-wildcards-utils/commit/0cf9d0eb40649e271599bd6c47528168937762d7))
+* **data:** add playful arm and bowlegged pose templates ([61022d3](https://github.com/bluelovers/sd-wildcards-utils/commit/61022d3afae59430bff57d173604e81d90595316))
+* **data:** restructure env-elem to env-bg and expand urban environments ([05b6afd](https://github.com/bluelovers/sd-wildcards-utils/commit/05b6afd0ebf45218fe6d4bbe2e2a0b18999be4c5))
+* **data:** add new prompts for scenes, costumes, environments, food, and ruins ([f4e137a](https://github.com/bluelovers/sd-wildcards-utils/commit/f4e137aa7f0d3f7f56b0306391a9c4bd4b41b963))
+* **data:** add new style prompts for paper ledger and photo film effects ([4308ffb](https://github.com/bluelovers/sd-wildcards-utils/commit/4308ffb554ab0d5fb3070a35e29b6b9bf71c291b))
+* **data:** add new prompts for scenes, weapons, and styles ([da9f9f1](https://github.com/bluelovers/sd-wildcards-utils/commit/da9f9f1c526d57dceb39b293211b030f7199e687))
+* **data:** add final fantasy iv enemies and pixel style prompts ([f837693](https://github.com/bluelovers/sd-wildcards-utils/commit/f837693cd9609bb4b29350d35a8f38eb40e194cc))
+* **data:** update others subproject ([adb181a](https://github.com/bluelovers/sd-wildcards-utils/commit/adb181ae9c44cca2a79fbc82a4f28bda6124c847))
+* **data:** add hydropower plant prompts and update scene showcases ([6adaf04](https://github.com/bluelovers/sd-wildcards-utils/commit/6adaf049ac967951027753a44d3d38124fe6b949))
+* **data:** add paper bag over head costume prompts and update fountain prompts ([3ced7b9](https://github.com/bluelovers/sd-wildcards-utils/commit/3ced7b938f5c3b90ee7eb0e1a9c00f4dd4408e0f))
+* **data:** add crumbling stucco wall and fountain prompts ([540862f](https://github.com/bluelovers/sd-wildcards-utils/commit/540862f1e235514ba815317cda825f31b64be48b))
+* **data:** 更新角色扮演和风格艺术相关的YAML数据文件 ([97d32dd](https://github.com/bluelovers/sd-wildcards-utils/commit/97d32dd7bc47699841bcc155aaa3a338017f44cd))
+* **data:** Add matador costume theme and update Spain locations ([6dc67e8](https://github.com/bluelovers/sd-wildcards-utils/commit/6dc67e802b4a52ecb6d7f4f2cadc737a3e352f30))
+* **data:** 更新角色扮演和场景相关的YAML数据文件 ([596e04f](https://github.com/bluelovers/sd-wildcards-utils/commit/596e04f45b22c368a50196318e7633ea49aec5e6))
+* **env-bg:** add stone wall and tiled roof architectural elements ([2a66492](https://github.com/bluelovers/sd-wildcards-utils/commit/2a66492a1a202eabe2ac80d194604e7bc0bf4c89))
+* **env-bg:** 添加城市岛屿型大都會环境背景配置 ([a795744](https://github.com/bluelovers/sd-wildcards-utils/commit/a79574432d80c8b1ac718068b6d7fcc88b6a2210))
+* **env-bg:** 更新火山景观相关环境描述并添加火山爆发和岩浆场景 ([589a753](https://github.com/bluelovers/sd-wildcards-utils/commit/589a75301367f8bfa1a0dde3205a75c17da0ccc6))
+* **env-bg:** 添加日式贵族女子学校环境配置并调整注释 ([218933f](https://github.com/bluelovers/sd-wildcards-utils/commit/218933f25b1465dfe488a55ea3ae73d73de1b943))
+* **env-bg:** 新增橱窗逛街和木制商店的环境背景配置 ([07e744b](https://github.com/bluelovers/sd-wildcards-utils/commit/07e744b2921eb57fbf42a87d29f3be9bc3d6160d))
+* **env-bg:** 新增沙漠帐篷环境主题配置 ([8434756](https://github.com/bluelovers/sd-wildcards-utils/commit/8434756dfdf6d4d7c317c582396126cd8143457e))
+* **env-bg:** add AzulejoAI model reference and prompt ([83d07fd](https://github.com/bluelovers/sd-wildcards-utils/commit/83d07fd95bd638f8504576ef2eb77214d1980b9d))
+* **env-bg:** add messy room background prompts and update post-apocalypse style ([98dcc2d](https://github.com/bluelovers/sd-wildcards-utils/commit/98dcc2d4c4e1ca886bf9bd73991edaf8e5a9cb85))
+* **env-bg:** add chimney elements and enhance rusted style ([80862ab](https://github.com/bluelovers/sd-wildcards-utils/commit/80862ab6efa1a2c0349a7896e3dd753b99ea5952))
+* **env-config:** 新增landscape环境元素配置 ([d0689bb](https://github.com/bluelovers/sd-wildcards-utils/commit/d0689bbfc7026ee1348e2e7f57cb1cb1f4f1b51b))
+* **env-elem:** 新增landscape环境元素配置 ([d7f7dc9](https://github.com/bluelovers/sd-wildcards-utils/commit/d7f7dc937b783a6e41d767dd4a1e7f9118ea5125))
+* **prompts:** 新增美元符号unsafe syntax检测机制 ([07483f4](https://github.com/bluelovers/sd-wildcards-utils/commit/07483f4e2ea13354300b5c75c2dc85dc03b3d277))
+* **prompts:** 添加新的lazy-wildcards提示和serious-blush表情配置 ([a300218](https://github.com/bluelovers/sd-wildcards-utils/commit/a3002187705dee7fa225463e9faa371448766245))
+* **prompts:** 新增厨房场景提示和家具相关提示配置 ([87c552a](https://github.com/bluelovers/sd-wildcards-utils/commit/87c552a2b416e57d633f23ad38808af4c2017202))
+* **prompts:** add new prompts and refactor existing ones ([6609bb5](https://github.com/bluelovers/sd-wildcards-utils/commit/6609bb51efee186114f29df6c4be65d4aae4bdf5))
+* **samurai-armor:** expand config with kabuto helmet, new wildcards for actions, weapons, and backgrounds ([0ced677](https://github.com/bluelovers/sd-wildcards-utils/commit/0ced6771a44ecd586a7377f76145b9cc3bd172cb))
+* **style:** add game icon and equipment prompts ([939df48](https://github.com/bluelovers/sd-wildcards-utils/commit/939df48a306814a36d1971704315d408ddf6c805))
+* **style-art:** 更新艺术风格配置，调整chibi-3d位置并添加chibi-gundam-sd风格 ([01912dd](https://github.com/bluelovers/sd-wildcards-utils/commit/01912ddaf59169a44bdd38b26c3d439e640ebcde))
+* **theme:** 添加elements-fusion主题配置并扩展contrasting-blue_red主题 ([81f5b84](https://github.com/bluelovers/sd-wildcards-utils/commit/81f5b844990654cff960dc2fc9c39c2a2e8841e4))
+* **theme:** 在moment主题中添加新的天空效果关键词 ([8796abe](https://github.com/bluelovers/sd-wildcards-utils/commit/8796abe4eec6d7f1273ca295315395e35955f84f))
+* **valid:** enhance isSafeKey validation with more strict rules ([bb57201](https://github.com/bluelovers/sd-wildcards-utils/commit/bb57201986ca90f78aa2d09d1cfa3f5c54a4bb8a))
+* **wildcards:** add medieval sewer tunnel and water well environments ([742f8a4](https://github.com/bluelovers/sd-wildcards-utils/commit/742f8a452f4faf9fb99d5f6c580730e0532517ac))
+* **wildcards:** add Roman attire, industrial platforms, and urban elements ([350a62b](https://github.com/bluelovers/sd-wildcards-utils/commit/350a62bdcf3a2d317ced8f0103c823b6bf8a5dd9))
+* **wildcards:** Add Mongolian costume, sports top, and tree roots-branches data ([1108062](https://github.com/bluelovers/sd-wildcards-utils/commit/11080620b6537e936a8bef7bed099abebd86bd8b))
+* **wildcards:** add Whistler_mc lingerie and statement outfit sets ([5636fc1](https://github.com/bluelovers/sd-wildcards-utils/commit/5636fc1273cfe7aa4e2f92cdd5cea52c49fc610d))
+
+
+### 📦　Code Refactoring
+
+* 将昆虫朋克服装配置移至种族分类目录 ([3429c5a](https://github.com/bluelovers/sd-wildcards-utils/commit/3429c5a43e541a0e59416b162ccb654d64ccf16d))
+* reorganize tattoo and costume elements for better structure ([b392a4c](https://github.com/bluelovers/sd-wildcards-utils/commit/b392a4c6c44d7e7c16f4bd2e58f02e9a28500222))
+* reorganize style-texture.yaml into dedicated texture directory ([4fad26c](https://github.com/bluelovers/sd-wildcards-utils/commit/4fad26c6726679b4e411a97863c2289b63470011))
+* { globSync => globSync2 } ([9046ef5](https://github.com/bluelovers/sd-wildcards-utils/commit/9046ef54bc626e1c8018781fc7a3f08bcc0d740b))
+* reorganize node modules into a `node` folder ([644bdd9](https://github.com/bluelovers/sd-wildcards-utils/commit/644bdd94a1c63b9c63a5720cd53d51da4ad204b1))
+* refactor and reorganize prompt and path-related utilities ([95a9e77](https://github.com/bluelovers/sd-wildcards-utils/commit/95a9e770cf1768bbf1262675f419f03aa01be9fe))
+* reorganize node-related modules and improve comment handling ([3f9590c](https://github.com/bluelovers/sd-wildcards-utils/commit/3f9590c7924396b491c4938c48c5df01f1d3e507))
+* split prompt validation logic into separate module ([b9d3722](https://github.com/bluelovers/sd-wildcards-utils/commit/b9d372255a324a498c7958c9cea3a1ffb670ad84))
+* **art-type:** move isometric config to game-specific file ([cebbf1d](https://github.com/bluelovers/sd-wildcards-utils/commit/cebbf1d7997d2b1a25b6e90b561c404a4e689a00))
+* **art-type:** remove pixel art and vector art style entries from art-type.yaml ([098b8b9](https://github.com/bluelovers/sd-wildcards-utils/commit/098b8b945f05dd58f1977927e2fdacbfea3e732c))
+* **data:** 重构env-elem.yaml中manhole-cover的prompts结构和命名 ([bb04d86](https://github.com/bluelovers/sd-wildcards-utils/commit/bb04d86c237570d5f41e46f07e90016390620a2a))
+* **data:** remove dirty-street, street-palm_trees, and dirty-alley from env-bg ([a9dae78](https://github.com/bluelovers/sd-wildcards-utils/commit/a9dae7885cf1af313d8ddab9a27a6a6fd32292e1))
+* **data:** standardize wing field naming and introduce specialized creative templates ([0c067b7](https://github.com/bluelovers/sd-wildcards-utils/commit/0c067b7ba1275889ad9214aa157be8b8d400bc50))
+* **env-bg:** reorganize environment background configurations into structured directories ([854d24d](https://github.com/bluelovers/sd-wildcards-utils/commit/854d24ddac0126a3bfd2948ae2e76ef2337077f4))
+* **theme:** move EarthElemental configuration to theme-elements.yaml ([3d84b2a](https://github.com/bluelovers/sd-wildcards-utils/commit/3d84b2a07d38da5f0ea3329534a84931e7f93434))
+
+
+### 📚　Documentation
+
+* 新增 parseWildcardsYaml 完整文件與更新文檔索引 ([815693d](https://github.com/bluelovers/sd-wildcards-utils/commit/815693d8980acec74992bd4d491f71eb5bc46c4a))
+* 更新 README.md 和文檔索引 ([9846071](https://github.com/bluelovers/sd-wildcards-utils/commit/9846071b2be0a80c903d669b12e06bc273263673))
+* 新增 YAML 鍵名安全性規則與範例 ([35d17dd](https://github.com/bluelovers/sd-wildcards-utils/commit/35d17ddc01415015fd7b7e88a38cbee4ee4ddd4d))
+* 新增 YAML 鍵格式處理規則與範例 ([ce94ff1](https://github.com/bluelovers/sd-wildcards-utils/commit/ce94ff1d8c1b74ba058905650505e0a37c07216a))
+* 新增 stringifyWildcardsYamlData 輸出格式說明文件 ([d5e8ee6](https://github.com/bluelovers/sd-wildcards-utils/commit/d5e8ee6f1e6a3e49e817d96b80f79ae0858e6e60))
+* 新增 merge-functions.md 文件 ([f5d7c9a](https://github.com/bluelovers/sd-wildcards-utils/commit/f5d7c9ac368ade3c6e029d6ace48d3c784ead949))
+* 新增 stringifyWildcardsYamlData 錯誤處理文件 ([c60999a](https://github.com/bluelovers/sd-wildcards-utils/commit/c60999aeb3e0f8fa72d535dd6ff90d036e1e0c50))
+* **data:** 为城市环境背景添加怀旧氛围描述 ([03eeec4](https://github.com/bluelovers/sd-wildcards-utils/commit/03eeec4168b1d789eaa724a5ed5ad2af7b223968))
+* **env-bg:** 添加石器时代背景相关资源链接和提示词 ([9c42c65](https://github.com/bluelovers/sd-wildcards-utils/commit/9c42c656b3700c0b14059908c3ef974822a5d5d7))
+
+
+### 💎　Styles
+
+* **data:** 修复YAML文件中Danbooru链接的格式问题 ([9b31adf](https://github.com/bluelovers/sd-wildcards-utils/commit/9b31adfcaf7464242570d6f1dcfe760b6c1be361))
+* **data/prompts/scenes-showcase.yaml:** remove trailing space in oni girl prompt under lazy-wildcards ([144c06d](https://github.com/bluelovers/sd-wildcards-utils/commit/144c06d0a01ac9786c104a043864fd0900f0f1f5))
+
+
+### 🚨　Tests
+
+* update snapshots for new data additions and modifications ([2e8bb05](https://github.com/bluelovers/sd-wildcards-utils/commit/2e8bb053a44d672dbf1e8dec1f675e98528190da))
+* update ci-cache and lib-check tests with new data exclusions and indentation fix ([558e9fa](https://github.com/bluelovers/sd-wildcards-utils/commit/558e9fa55da85ec653527791e2443ab35c68f884))
+* fix test ([4f9dc3f](https://github.com/bluelovers/sd-wildcards-utils/commit/4f9dc3f55ce173f1330cca137910787c2b05350c))
+* add snapshot update flag to lib test command ([9be34d8](https://github.com/bluelovers/sd-wildcards-utils/commit/9be34d87d56e63291410ecbaf236f101b7a575a4))
+* **snapshots:** Snapshot tests for wildcard existence checking ([7fb2710](https://github.com/bluelovers/sd-wildcards-utils/commit/7fb2710b84966f7ea35da368a25e67cdb5e34224))
+* **snapshots:** Snapshot tests for wildcard existence checking ([5ba4e3d](https://github.com/bluelovers/sd-wildcards-utils/commit/5ba4e3d2113abd8be9f88ef80e78948c307c00bd))
+
+
+### 🛠　Build System
+
+* update snapshots [skip ci] ([f34020c](https://github.com/bluelovers/sd-wildcards-utils/commit/f34020c82aff115b6f06423f4565e170fa8008a6))
+* update build [skip ci] ([49d7dc7](https://github.com/bluelovers/sd-wildcards-utils/commit/49d7dc76915d21f0907bb83fed42fa432f7cfee3))
+* update snapshots [skip ci] ([c4702ba](https://github.com/bluelovers/sd-wildcards-utils/commit/c4702bab20d0fbf3e7c61de523642e82f0e7aed5))
+* update build [skip ci] ([4ac1c07](https://github.com/bluelovers/sd-wildcards-utils/commit/4ac1c070ef70dbd2bc2db32ccb162154ab95f1a3))
+* update snapshots [skip ci] ([2ac2f81](https://github.com/bluelovers/sd-wildcards-utils/commit/2ac2f812a40a022e26bf4a106ae89b28314ceba5))
+* update build [skip ci] ([ec1984f](https://github.com/bluelovers/sd-wildcards-utils/commit/ec1984f2a3288e51f3971cc97fd26ae38ad740ae))
+* update snapshots [skip ci] ([2042a78](https://github.com/bluelovers/sd-wildcards-utils/commit/2042a78fcaeeb1817fd595418c92654caded2170))
+* update build [skip ci] ([ab9a4c1](https://github.com/bluelovers/sd-wildcards-utils/commit/ab9a4c1067358605b5a6cfd746a848a72b55c663))
+* update snapshots [skip ci] ([a98059f](https://github.com/bluelovers/sd-wildcards-utils/commit/a98059fe42172610b7d2cc4be0a387de19c39d0f))
+* update build [skip ci] ([c106396](https://github.com/bluelovers/sd-wildcards-utils/commit/c106396cae39cfc2366e6d871d69e3f2353d6c04))
+* update snapshots [skip ci] ([292d8a7](https://github.com/bluelovers/sd-wildcards-utils/commit/292d8a705eee7ec52898917afe2a70d7f07b7a55))
+* update build [skip ci] ([c1129c6](https://github.com/bluelovers/sd-wildcards-utils/commit/c1129c6994d470e6019710f5a217c504c65f89aa))
+* update snapshots [skip ci] ([9947bfc](https://github.com/bluelovers/sd-wildcards-utils/commit/9947bfc2077c420fe6716eea40019c8e3c18b814))
+* update build [skip ci] ([2fa572d](https://github.com/bluelovers/sd-wildcards-utils/commit/2fa572d8b44cdb723936de83b949508c32eea0df))
+* update snapshots [skip ci] ([0028f52](https://github.com/bluelovers/sd-wildcards-utils/commit/0028f52d41063571147a1bd2af2aa05488e92e44))
+* update build [skip ci] ([964bd1c](https://github.com/bluelovers/sd-wildcards-utils/commit/964bd1cedee6bca6bc7be800744cc2dd7195c746))
+* update snapshots [skip ci] ([af1ac1c](https://github.com/bluelovers/sd-wildcards-utils/commit/af1ac1c3efb2d1abffa9773d836cc6d4351698c8))
+* update build [skip ci] ([8f8fd5a](https://github.com/bluelovers/sd-wildcards-utils/commit/8f8fd5aaded42fdc1549367564bee6a030ed3b11))
+* update snapshots [skip ci] ([d56d4e9](https://github.com/bluelovers/sd-wildcards-utils/commit/d56d4e96a9070c1633f0302ab2bc279295247e39))
+* update build [skip ci] ([c3bad83](https://github.com/bluelovers/sd-wildcards-utils/commit/c3bad832e5b15f7d135298faf1d6048749f33c6b))
+* update snapshots [skip ci] ([e12f9dc](https://github.com/bluelovers/sd-wildcards-utils/commit/e12f9dc38e4c7168123c84cdcfa929a139f1e729))
+* update build [skip ci] ([fd4cd3b](https://github.com/bluelovers/sd-wildcards-utils/commit/fd4cd3b63c02f33de3aeef2db992fdc14fe61569))
+* update snapshots [skip ci] ([b1242b2](https://github.com/bluelovers/sd-wildcards-utils/commit/b1242b2930edef2e83b5a1e13dac1d56de92b140))
+* update build [skip ci] ([c6219f4](https://github.com/bluelovers/sd-wildcards-utils/commit/c6219f47f5317f3afa54c834086c7ce6679bfc7b))
+* update snapshots [skip ci] ([7ef5716](https://github.com/bluelovers/sd-wildcards-utils/commit/7ef5716826ef1e8174c78cf14f564ee04118ac50))
+* update build [skip ci] ([5881b9e](https://github.com/bluelovers/sd-wildcards-utils/commit/5881b9e7fd8478376d599f6ed0571cf3b1554e19))
+* update snapshots [skip ci] ([19caa6a](https://github.com/bluelovers/sd-wildcards-utils/commit/19caa6abcff33abf4c4198642c5d29ddfdabcd4c))
+* update build [skip ci] ([0e58f38](https://github.com/bluelovers/sd-wildcards-utils/commit/0e58f3889486e1cf497a6a7523eeecca7630e338))
+* update snapshots [skip ci] ([c5418f6](https://github.com/bluelovers/sd-wildcards-utils/commit/c5418f6e7cffd3812bbfc5bc69a577d9596fd101))
+* update build [skip ci] ([ac7c78b](https://github.com/bluelovers/sd-wildcards-utils/commit/ac7c78bdcc97ece9ad92827bf8623c4fab24cbae))
+* update build ([ad7bc67](https://github.com/bluelovers/sd-wildcards-utils/commit/ad7bc67c1305ec2099ca17eecfd4473638638ad4))
+* update snapshots [skip ci] ([fc948ed](https://github.com/bluelovers/sd-wildcards-utils/commit/fc948ed69b90c4df12ee53251b091beec904c43a))
+* update build [skip ci] ([843c93c](https://github.com/bluelovers/sd-wildcards-utils/commit/843c93c97ea01f7ac82cb1b03e52962a21a87b0b))
+* update snapshots [skip ci] ([a7c61bf](https://github.com/bluelovers/sd-wildcards-utils/commit/a7c61bf0e91e3dd6c325cef0640d21743dea1138))
+* update build [skip ci] ([7b19531](https://github.com/bluelovers/sd-wildcards-utils/commit/7b19531a753b41cbccbd4de21e786ab19cda4eed))
+
+
+### ⚙️　Continuous Integration
+
+* update cf data file ([d4f0660](https://github.com/bluelovers/sd-wildcards-utils/commit/d4f0660055550e191006f2b247386607c3bf4897))
+
+
+### ♻️　Chores
+
+* update .gitignore to exclude test, config, and workflow files ([14c7530](https://github.com/bluelovers/sd-wildcards-utils/commit/14c75308fb533dec3e8e7474b2e46baaab5a1c77))
+* update dependencies and devDependencies to latest versions ([c7f8733](https://github.com/bluelovers/sd-wildcards-utils/commit/c7f87337bcaae039a3c29fd33ac263ebbb01d3ab))
+* update .aiexclude ([0688346](https://github.com/bluelovers/sd-wildcards-utils/commit/068834643f4a556edadc6e36446da239e03d391c))
+* comment out unused bracket extraction logic in _checkBrackets2 ([65e0840](https://github.com/bluelovers/sd-wildcards-utils/commit/65e0840185ec9c0e3c2aa61285bb0074b9e612e9))
+* Remove deprecated 'color-anything' block from utils.yaml ([83d9087](https://github.com/bluelovers/sd-wildcards-utils/commit/83d908771168c970bb4d6eb47c60500816582243))
+* **data:** move env-wall.yaml to architectural-elem subdirectory ([d45fb85](https://github.com/bluelovers/sd-wildcards-utils/commit/d45fb85c1e9b86d7c9c3fb0dee22520cee8eacd9))
+* **data:** 更新子模块 others 到最新提交 ([2aa759b](https://github.com/bluelovers/sd-wildcards-utils/commit/2aa759b36c603b620d1246b074fc7f2cde086daf))
+* **data:** 更新子模块others的commit引用 ([fa31085](https://github.com/bluelovers/sd-wildcards-utils/commit/fa31085faf48fba7485898c5b6292a49530303ee))
+* **data:** 更新子模块引用到最新提交 ([296a4c4](https://github.com/bluelovers/sd-wildcards-utils/commit/296a4c499ea618b2b3ffb55c6c78a83e7d39d2b1))
+* **scripts:** add `globSync2` import to build.ts for utility expansion ([f090891](https://github.com/bluelovers/sd-wildcards-utils/commit/f0908916a3d1e9818d913842b125582841c92210))
+* **submodule:** bump data/others to new commit ([4604d8f](https://github.com/bluelovers/sd-wildcards-utils/commit/4604d8fab096855933ba65ccca93f4defd78d3b1))
+* **submodule:** update data/others to commit 6aa781d ([a210e5f](https://github.com/bluelovers/sd-wildcards-utils/commit/a210e5f6570d3fe413bf4c0bd30f66b80b9e0d57))
+* **submodule:** update data/others to commit e219303 ([f20d9a8](https://github.com/bluelovers/sd-wildcards-utils/commit/f20d9a8df8715b2b94aad49a352816b5d9b017f2))
+* **test:** 在设置文件中添加新的忽略模式 ([1d1de12](https://github.com/bluelovers/sd-wildcards-utils/commit/1d1de126a69e6dd4fca87fece024045f479bd79a))
+* **test:** 更新测试设置文件中的路径配置 ([9478a42](https://github.com/bluelovers/sd-wildcards-utils/commit/9478a42603c2b567bcd05a4f6312ba80fbc6405c))
+* **tests:** add `allowScalarValueIsEmptySpace` option to YAML stringification test ([7de581e](https://github.com/bluelovers/sd-wildcards-utils/commit/7de581e8ab46d84b42ff1c279a2deb08d220c685))
+* **wildcards:** fix typos in prompts and update YAML processing in tests ([aa7beca](https://github.com/bluelovers/sd-wildcards-utils/commit/aa7beca0694bf629f0c949a4af81645bddee5d19))
+* **wildcards:** update wildcard paths and introduce new weather-mist-smoke and weather-mist-perfume prompts ([a616b0f](https://github.com/bluelovers/sd-wildcards-utils/commit/a616b0ff4e6ed85e0e6187f1f0bcba773d8a9885))
+* **wildcards:** add new medieval, gemstone, and tavern-related prompts with detailed costume and environment expansions ([9505d99](https://github.com/bluelovers/sd-wildcards-utils/commit/9505d995a0557c8bc3b94f4266bf0e9acff0f99b))
+* **wildcards:** add medieval, craft, and religious costume prompts with expanded elements ([cdc5416](https://github.com/bluelovers/sd-wildcards-utils/commit/cdc541655721ae79bbd2969502f1e97ca07900a6))
+* **wildcards:** rename `holstered` to `holster` and expand related prompts for costumes and environments ([53a6162](https://github.com/bluelovers/sd-wildcards-utils/commit/53a616284f9fcbc44977849a74af45d5b12c2e77))
+* **wildcards:** add new prompts and expand wildcards for costumes, styles, and environments ([abe5584](https://github.com/bluelovers/sd-wildcards-utils/commit/abe5584a248c94818d3e40bc69d9272662b1e286))
+* **wildcards:** rename and reorganize `costume-tattoo` paths to `costume-elem-tattoo` ([6dd8a03](https://github.com/bluelovers/sd-wildcards-utils/commit/6dd8a034af2608e6c1cbb4d3e981bfba5c01845d))
+* **wildcards:** add new themes, environments, and prompt categories; update spider-web paths ([8e570cc](https://github.com/bluelovers/sd-wildcards-utils/commit/8e570cc80753af7bd7017acf8e50e4f4381da699))
+* **wildcards:** move suitcase-related prompts to a new `bag.yaml` file for better organization ([db0118c](https://github.com/bluelovers/sd-wildcards-utils/commit/db0118cd0d64a6b6e1bb38c76e27da1608509cfc))
+* **wildcards:** update paths and add new entries for costumes, environments, and character sets ([e995453](https://github.com/bluelovers/sd-wildcards-utils/commit/e995453fbb6c484baf12371f90fcca9c5c2d511b))
+
+
+### 🔖　Miscellaneous
+
+* . ([db95f9e](https://github.com/bluelovers/sd-wildcards-utils/commit/db95f9e581f0525cda1aa1c9cfbc6f8efd4d63a6))
+* . ([ec506ea](https://github.com/bluelovers/sd-wildcards-utils/commit/ec506ea9ce501efe19a6ae35ab01cf377141f836))
+* . ([007b608](https://github.com/bluelovers/sd-wildcards-utils/commit/007b608c3406b425744d9b37ef396c546dd8d453))
+* . ([a9bab95](https://github.com/bluelovers/sd-wildcards-utils/commit/a9bab95600ee9818f00deb9c07497988b88db179))
+* . ([b4a36ff](https://github.com/bluelovers/sd-wildcards-utils/commit/b4a36ff4ec44846e2df915049606dd67d2be0913))
+
+
+
 ## [1.3.23](https://github.com/bluelovers/sd-wildcards-utils/compare/sd-wildcards-utils@1.3.22...sd-wildcards-utils@1.3.23) (2025-09-08)
 
 
