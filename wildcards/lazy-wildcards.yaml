@@ -2948,6 +2948,39 @@
           - "__lazy-wildcards/subject/costume/mixin-asian-clothes/prompts__"
         env:
           - "__lazy-wildcards/utils/fn/made-of(v=chinese)__"
+      # https://civitai.com/models/108212/chinese-wedding
+      # https://civitai.com/models/846901/ghost-bride-flux
+      chinese_wedding:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/style-theme/chinese_wedding/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/style-theme/chinese_wedding/style-theme-main__{,{1-$$__lazy-wildcards/subject/style-theme/chinese_wedding/style-theme__}|}{,{1-$$__lazy-wildcards/subject/style-theme/chinese_wedding/env__}|}{,{1-$$__lazy-wildcards/subject/style-theme/chinese_wedding/style__}|}
+        "style-theme-main":
+          - chinese wedding
+        "style-theme":
+          - chinese horror,ghost bride
+        env:
+          - red flower
+          - red silk ball
+          - red butterfly
+          - "red umbrella,__lazy-wildcards/subject/costume-weapon/umbrella-oil-paper/prompts-no-weight__"
+          - plum blossoms
+          - bare tree
+          - "__lazy-wildcards/subject/env-elem-vehicle/litter-chinese-red/prompts-no-weight__"
+          - red paper lantern
+          - glowing butterfly,too many butterflies
+          - fog
+          - red ribbon
+          - red light
+          - hanging lantern
+          # https://danbooru.donmai.us/wiki_pages/chinese_knot?z=1
+          - chinese knot
+        style:
+          - bright red theme
+          - shou \(symbol\)
+          - double happiness symbol
     style-elem-texture:
       "iron-skin":
         prompts:
@@ -14395,6 +14428,34 @@
           - "__lazy-wildcards/subject/env-elem/bed-sheet/prompts__"
           - pillow
           - "__lazy-wildcards/utils/color-base__ pillow"
+      "bed-canopy-chinese_wedding":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/bed-canopy-chinese_wedding/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-elem/bed-canopy-chinese_wedding/env-bg__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem/bed-canopy-chinese_wedding/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem/bed-canopy-chinese_wedding/style__}|}
+        "env-bg-main":
+          - red canopy bed,ancient chinese wedding bed,bright red fabric
+        "env-bg":
+          - ancient chinese interior
+          - traditional canopy bed
+          - silk canopy curtains
+          - embroidered bedspread
+          - traditional chinese bedroom,ancient chinese wedding bedroom
+        env:
+          - textile enclosure
+          - wooden bed frame
+          - four poster bed
+          - raised platform
+          - layered fabric,sheer inner curtain,heavy outer drape
+          - "__lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__"
+          - chinese wedding bed ornaments
+          - carved wooden panels
+          - relief carving
+          - pierced carving
+          - hanging tassels
+          - fabric valance
+        style:
+          - symbolic ornament
+          - double happiness symbol
       "bed-sheet":
         prompts:
           - >-
@@ -19145,6 +19206,35 @@
           - silk drapery
           - ornate carving
           - gilded surface
+      # 轎
+      # https://danbooru.donmai.us/wiki_pages/litter_(vehicle)?z=1
+      litter:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-vehicle/litter/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/env-elem-vehicle/litter/env-elem-vehicle-main__{,{1-$$__lazy-wildcards/subject/env-elem-vehicle/litter/env-elem-vehicle__}|}
+        "env-elem-vehicle-main":
+          - litter \(vehicle\)
+        "env-elem-vehicle":
+          - litter interior
+      "litter-chinese-red":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-vehicle/litter-chinese-red/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem-vehicle/litter-chinese-red/env__}|}{,__lazy-wildcards/subject/env-elem-vehicle/litter/prompts-no-weight__|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/env-elem-vehicle/litter-chinese-red/env-elem-vehicle-main__{,{1-$$__lazy-wildcards/subject/env-elem-vehicle/litter-chinese-red/env-elem-vehicle__}|}
+        "env-elem-vehicle-main":
+          - red litter \(vehicle\)
+          - chinese wedding litter \(vehicle\)
+        "env-elem-vehicle":
+          - wooden litter \(vehicle\)
+        env:
+          - long carrying poles
+          - enclosed cabin
+          - fabric canopy
     env-elem-creatures:
       # https://tw.blog.voicetube.com/archives/42888/%E4%BD%A0%E7%9F%A5%E9%81%93%E5%8D%81%E4%BA%8C%E7%94%9F%E8%82%96%E8%8B%B1%E6%96%87%E6%80%8E%E9%BA%BC%E8%AC%9B%E5%97%8E%EF%BC%9F/
       # https://danbooru.donmai.us/posts?page=4&tags=chinese_zodiac
@@ -22889,95 +22979,6 @@
           - scarletformmech
           - skyformmech
           - zoneformmech
-      "punk-insect":
-        prompts:
-          - >-
-            __lazy-wildcards/subject/costume/punk-insect/main__,{1-2$$__lazy-wildcards/subject/costume/punk-insect/costume-ethnicity__}{,{1-$$__lazy-wildcards/subject/costume/punk-insect/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume/punk-insect/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume/punk-insect/env__}|}{,{1-$$__lazy-wildcards/subject/costume/punk-insect/style__}|}
-        main:
-          - IPNK,Insectpunk,Insect punk,inspired by insects,insectoid,Monster Musume
-        style:
-          - biomechanical_integration
-          - mechanical
-          - biological
-          - natural
-          - intricate patterns
-          - |-
-            transparent|colorful|iridescent
-          - chitinous_materials
-          - symbiosis
-          - symmetrical
-          - lepidoptera
-          - cyberpunk
-          - android
-          - insect technology
-          - taur
-          - Anthro Bugs
-        "costume-ethnicity":
-          - >-
-            insect {1-$$,insect $$girl|exoskeletons|wings|antennae|tail|claws|hair|tattoo|legs|arms|limbs|parts|ears|eyes|horns|joints|tentacles}
-          - >-
-            prosthetic {1-$$,prosthetic $$girl|exoskeletons|wings|antennae|tail|claws|hair|tattoo|legs|arms|limbs|parts|ears|eyes|horns|joints|tentacles}
-          - >-
-            moth {1-$$,moth $$girl|exoskeletons|wings|antennae}
-          - >-
-            butterfly {1-$$,butterfly $$girl|exoskeletons|wings|antennae}
-          - >-
-            bee {1-$$,bee $$girl|exoskeletons|wings|antennae|tail}
-          - >-
-            MosquitoGirl,Mosquito {1-$$,Mosquito $$girl|exoskeletons|wings|antennae|tail}
-          - >-
-            arthropod {1-$$,arthropod $$girl|exoskeletons|wings|antennae|legs|arms|limbs|parts}
-          - >-
-            beetle {1-$$,beetle $$girl|exoskeletons|wings|antennae|legs|arms|limbs|parts|horns}{,{stag beetle}|}
-          - >-
-            scorpion {1-$$,scorpion $$girl|exoskeletons|tail|claws|legs|arms|limbs|parts}
-          - >-
-            mantis {1-$$,mantis $$girl|exoskeletons|tail|claws|legs|arms|limbs|parts|eyes}{,{praying mantis}|}
-          - >-
-            spider {1-$$,spider $$girl|exoskeletons|claws|legs|arms|limbs|parts|eyes}
-          - >-
-            arachne {1-$$,arachne $$girl|exoskeletons|claws|legs|arms|limbs|parts|eyes}
-        "costume-elem":
-          - >-
-            mechanical {1-$$,mechanical $$girl|exoskeletons|wings|antennae|tail|claws|hair|tattoo|legs|arms|limbs|parts|ears|eyes|horns|joints|tentacles}
-          - >-
-            extra {1-$$,extra $$claws|legs|arms|limbs|parts|eyes|tail|forearms|pupils}
-          - >-
-            multiple {1-$$,multiple $$claws|legs|arms|limbs|parts|eyes|tail|forearms|pupils}
-          - >-
-            oversized {1-$$,oversized $$claws|legs|arms|limbs|parts|eyes|tail|forearms}
-          - organic_textures
-          - exoskeleton_armor
-          - joints
-          - compound_eyes
-          - venom_sacs,venom
-          - bioluminescence
-          - monster girl
-          - wings hair
-          - carapace
-          - colored sclera
-          - colored skin
-          - tail
-          - fang
-          - navel
-          - barefoot
-          - bandages
-          - racelet
-          - claws
-          - centauroid
-          - tattoo
-          - silk
-          - body fur
-          - >-
-            fur {1-$$,fur $$wings|claws|legs|arms|limbs|parts|hair|tail|forearms}
-          - bright pupils
-        "costume-weapon":
-          - scythe
-        env:
-          - food in mouth
-          - Insect
-          - "__lazy-wildcards/subject/env-elem-pipes/spider-webs/prompts-no-weight__"
-          - flower
       # https://civitai.com/models/1494603/spaceman-lora?modelVersionId=1690790
       # https://civitai.com/models/25236/clothes-spacesuit
       # https://civitai.com/models/583134/spacesuit
@@ -27321,14 +27322,73 @@
           - red lantern,lantern glow
           - deity statue
           - engraving,dragon motif
-      # https://civitai.com/models/371267/chinese-styleweddingdress-like-clothes
-      "wedding_dress-chinese":
+      # 红盖头
+      # https://danbooru.donmai.us/wiki_pages/honggaitou?z=2
+      chinese_wedding_honggaitou:
         prompts:
           - >-
-            (__lazy-wildcards/subject/costume/wedding_dress-chinese/costume__{0.3:::{1.2|1.3|1.4}|})
-        costume:
+            (__lazy-wildcards/subject/costume/chinese_wedding_honggaitou/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+        "prompts-no-weight":
           - >-
-            chinese wedding dress,chinese-style wedding dress,JIAYI55,JIAYIQS25,chinese clothes,red dress,long dress,hair ornament
+            __lazy-wildcards/subject/costume/chinese_wedding_honggaitou/costume-headwear-main__{,{1-$$__lazy-wildcards/subject/costume/chinese_wedding_honggaitou/costume-headwear__}|}{,{1-$$__lazy-wildcards/subject/costume/chinese_wedding_honggaitou/costume-elem__}|}
+        "costume-headwear-main":
+          - honggaitou,red honggaitou,chinese wedding honggaitou
+        "costume-headwear":
+          - chinese bridal hijab,red bridal hijab
+          - chinese bridal veil,red bridal veil
+        "costume-elem":
+          - veil lift
+          - "see-through veil"
+          - bridal veil
+      #
+      # https://danbooru.donmai.us/wiki_pages/honggaitou?z=1
+      #
+      # https://civitai.com/models/371267/chinese-styleweddingdress-like-clothes
+      # https://civitai.com/models/2189751/chinese-style-wedding-dress-3
+      # https://civitai.com/models/2190207/chinese-style-wedding-dress-3zittest
+      # https://civitai.com/models/1828738/chinese-style-wedding-dress-2
+      # https://civitai.com/models/1763308/chinese-style-wedding-dress
+      # https://civitai.com/models/30305/hanfuchinese-wedding-dresswomenfemale-spz
+      # https://civitai.com/models/846901/ghost-bride-flux
+      chinese_wedding_dress:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/chinese_wedding_dress/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|:1.3}){,{1-$$__lazy-wildcards/subject/costume/chinese_wedding_dress/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume/chinese_wedding_dress/env-bg__}|}{,{1-$$__lazy-wildcards/subject/costume/chinese_wedding_dress/style__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume/chinese_wedding_dress/costume-main__{,{1-$$__lazy-wildcards/subject/costume/chinese_wedding_dress/costume-headwear__}|}{,{1-$$__lazy-wildcards/subject/costume/chinese_wedding_dress/costume__}|}
+        "costume-main":
+          - >-
+            traditional chinese wedding dress,traditional chinese hanfu wedding dress,red hanfu wedding dress,wide sleeves,JIAYI55,JIAYIQS25,ChineseHunfu,Chinese weddingdress,HUNSHA3,zshf,chinese wedding
+        "costume-headwear":
+          - "__lazy-wildcards/subject/costume/chinese_wedding_honggaitou/prompts-no-weight__"
+          - fengguan
+        costume:
+          - chinese clothes
+          - red dress
+          - chinese wedding dress top
+          # https://danbooru.donmai.us/wiki_pages/qungua?z=2
+          - qungua
+        "costume-elem":
+          - long dress
+          - hair ornament,jewelry,earrings
+          - red high heels
+          - red shawl,print shawl
+          - long trailing hem
+          - layered robe
+          - "__lazy-wildcards/subject/costume-elem-accessories/gold-trim/prompts__"
+          - "tassel-trimmed capelet"
+          - heziqun
+          - yunjian
+        "env-bg":
+          - "__lazy-wildcards/subject/style-theme/chinese_wedding/prompts-no-weight__"
+        style:
+          - phoenix embroidery
+          - floral print
+          - peony pattern
+          - cloud motif
+          - bright red
+          - butterfly print
       # https://civitai.com/models/25266/korean-student-hanbok-korean-clothes
       "korean-hanbok-student":
         prompts:
@@ -29904,56 +29964,159 @@
           - tribal face tattoo
           - geometric face tattoo
           - floral face tattoo
-    costume-elem-lower-body-race:
-      # 趾行，指僅有腳趾著地而腳跟或腕不接觸地面的行走方式
-      # 趾行動物包括部分鳥類、貓狗等其他哺乳動物
-      digitigrade_legs:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
-        "prompts-no-weight":
-          - >-
-            __lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs/costume-ethnicity__
-        "costume-ethnicity":
-          - digitigrade,digitigrade legs
-      # 爬行類
-      digitigrade_legs_reptilian:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs_reptilian/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
-        "prompts-no-weight":
-          - >-
-            __lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs_reptilian/costume-ethnicity-main__{,{1-$$__lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs_reptilian/costume-ethnicity__}|}
-        "costume-ethnicity-main":
-          - >-
-            reptilian digitigrade legs,__lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs/costume-ethnicity__
-        "costume-ethnicity":
-          - thick muscular legs
-          - digitigrade stance
-          - dragon scales
-          - hard scale plating
-          - scale color gradient
-          - taloned feet
-          - thick claws
-      # 鳥型腿
-      digitigrade_legs_avian:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs_avian/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
-        "prompts-no-weight":
-          - >-
-            __lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs_avian/costume-ethnicity-main__{,{1-$$__lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs_avian/costume-ethnicity__}|}
-        "costume-ethnicity-main":
-          - >-
-            avian digitigrade legs,__lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs/costume-ethnicity__
-        "costume-ethnicity":
-          - long thin shins
-          - visible joints
-          - feathered thighs
-          - scaly lower legs
-          - talons
-          - three forward toes,one backward toe
+    # https://civitai.com/search/models?baseModel=SD%201.5&sortBy=models_v9&query=doll-likeness
     costume-ethnicity-race:
+      "punk-insect":
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/punk-insect/main-trigger-words__,{1-2$$__lazy-wildcards/subject/costume-ethnicity-race/punk-insect/costume-ethnicity__}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/punk-insect/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/punk-insect/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/punk-insect/env__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/punk-insect/style__}|}
+        "main-trigger-words":
+          - IPNK,Insectpunk,Insect punk,inspired by insects,insectoid,monster musume
+        style:
+          - biomechanical_integration
+          - mechanical
+          - biological
+          - natural
+          - intricate patterns
+          - |-
+            transparent|colorful|iridescent
+          - chitinous_materials
+          - symbiosis
+          - symmetrical
+          - lepidoptera
+          - cyberpunk
+          - android
+          - insect technology
+          - taur
+          - Anthro Bugs
+        "costume-ethnicity":
+          - >-
+            insect {1-$$,insect $$girl|exoskeletons|wings|antennae|tail|claws|hair|tattoo|legs|arms|limbs|parts|ears|eyes|horns|joints|tentacles}
+          - >-
+            prosthetic {1-$$,prosthetic $$girl|exoskeletons|wings|antennae|tail|claws|hair|tattoo|legs|arms|limbs|parts|ears|eyes|horns|joints|tentacles}
+          - >-
+            moth {1-$$,moth $$girl|exoskeletons|wings|antennae}
+          - >-
+            butterfly {1-$$,butterfly $$girl|exoskeletons|wings|antennae}
+          - >-
+            bee {1-$$,bee $$girl|exoskeletons|wings|antennae|tail}
+          - >-
+            MosquitoGirl,Mosquito {1-$$,Mosquito $$girl|exoskeletons|wings|antennae|tail}
+          - >-
+            arthropod {1-$$,arthropod $$girl|exoskeletons|wings|antennae|legs|arms|limbs|parts}
+          - >-
+            beetle {1-$$,beetle $$girl|exoskeletons|wings|antennae|legs|arms|limbs|parts|horns}{,{stag beetle}|}
+          - >-
+            scorpion {1-$$,scorpion $$girl|exoskeletons|tail|claws|legs|arms|limbs|parts}
+          - >-
+            mantis {1-$$,mantis $$girl|exoskeletons|tail|claws|legs|arms|limbs|parts|eyes}{,{praying mantis}|}
+          - >-
+            spider {1-$$,spider $$girl|exoskeletons|claws|legs|arms|limbs|parts|eyes}
+          - >-
+            arachne {1-$$,arachne $$girl|exoskeletons|claws|legs|arms|limbs|parts|eyes}
+        "costume-elem":
+          - >-
+            mechanical {1-$$,mechanical $$girl|exoskeletons|wings|antennae|tail|claws|hair|tattoo|legs|arms|limbs|parts|ears|eyes|horns|joints|tentacles}
+          - >-
+            extra {1-$$,extra $$claws|legs|arms|limbs|parts|eyes|tail|forearms|pupils}
+          - >-
+            multiple {1-$$,multiple $$claws|legs|arms|limbs|parts|eyes|tail|forearms|pupils}
+          - >-
+            oversized {1-$$,oversized $$claws|legs|arms|limbs|parts|eyes|tail|forearms}
+          - organic_textures
+          - exoskeleton_armor
+          - joints
+          - compound_eyes
+          - venom_sacs,venom
+          - bioluminescence
+          - monster girl
+          - wings hair
+          - carapace
+          - colored sclera
+          - colored skin
+          - tail
+          - fang
+          - navel
+          - barefoot
+          - bandages
+          - racelet
+          - claws
+          - centauroid
+          - tattoo
+          - silk
+          - body fur
+          - >-
+            fur {1-$$,fur $$wings|claws|legs|arms|limbs|parts|hair|tail|forearms}
+          - bright pupils
+        "costume-weapon":
+          - scythe
+        env:
+          - food in mouth
+          - Insect
+          - "__lazy-wildcards/subject/env-elem-pipes/spider-webs/prompts-no-weight__"
+          - flower
+      # 甲蟲
+      "insect-beetle":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-race/insect-beetle/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/insect-beetle/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/insect-beetle/style__}|},__lazy-wildcards/subject/costume-ethnicity-race/punk-insect/main-trigger-words__
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/insect-beetle/costume-ethnicity-race-main__,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/insect-beetle/costume-ethnicity-race__}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/insect-beetle/costume-ethnicity__}|}
+        "costume-ethnicity-race-main":
+          - beetle
+        "costume-ethnicity-race":
+          - beetle girl
+          - stag beetle
+        "costume-ethnicity":
+          - beetle exoskeletons
+          - beetle wings
+          - beetle antennae
+          - beetle legs
+          - beetle arms
+          - beetle limbs
+          - beetle parts
+          - beetle horns
+          - beetle mandibles
+        "costume-elem":
+          - chitin exoskeleton
+          - hard shell plating
+          - segmented carapace
+          - bulky torso
+          - thick limbs
+          - digitigrade legs
+          - compound eyes
+          - beetle shell armor
+          - layered plating
+          - joint gaps
+          - "__lazy-wildcards/subject/costume-ethnicity-race/insect-exposed_joint_muscle/prompts-no-weight__"
+        style:
+          - glossy surface
+          - obsidian sheen
+          - iridescent black
+          - emerald green
+          - scarlet red
+      # 甲蟲關節間的筋肉 Exposed Joint Muscle 關節外露筋肉 關節筋繊維
+      "insect-exposed_joint_muscle":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-race/insect-exposed_joint_muscle/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-race/insect-exposed_joint_muscle/costume-ethnicity-main__{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/insect-exposed_joint_muscle/costume-ethnicity__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/insect-exposed_joint_muscle/style__}|}
+        "costume-ethnicity-main":
+          - >-
+            exposed joint muscle
+        "costume-ethnicity":
+          # 外露肌纖維
+          - exposed muscle fibers
+          # 細長肌腱
+          - organic tendon
+          # 柔軟關節膜
+          - flexible joint membrane
+        style:
+          - ribbed texture
+          - wet organic texture
       # https://civitai.com/models/299307/indian-beuty
       # https://civitai.com/models/193934/indianbridallook
       # https://civitai.com/models/51621/indian-doll-likeness-alpha
@@ -31414,6 +31577,55 @@
           - holding
         env:
           - feathers
+    costume-elem-lower-body-race:
+      # 趾行，指僅有腳趾著地而腳跟或腕不接觸地面的行走方式
+      # 趾行動物包括部分鳥類、貓狗等其他哺乳動物
+      digitigrade_legs:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs/costume-ethnicity__
+        "costume-ethnicity":
+          - digitigrade,digitigrade legs
+      # 爬行類
+      digitigrade_legs_reptilian:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs_reptilian/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs_reptilian/costume-ethnicity-main__{,{1-$$__lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs_reptilian/costume-ethnicity__}|}
+        "costume-ethnicity-main":
+          - >-
+            reptilian digitigrade legs,__lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs/costume-ethnicity__
+        "costume-ethnicity":
+          - thick muscular legs
+          - digitigrade stance
+          - dragon scales
+          - hard scale plating
+          - scale color gradient
+          - taloned feet
+          - thick claws
+      # 鳥型腿
+      digitigrade_legs_avian:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs_avian/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs_avian/costume-ethnicity-main__{,{1-$$__lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs_avian/costume-ethnicity__}|}
+        "costume-ethnicity-main":
+          - >-
+            avian digitigrade legs,__lazy-wildcards/subject/costume-elem-lower-body-race/digitigrade_legs/costume-ethnicity__
+        "costume-ethnicity":
+          - long thin shins
+          - visible joints
+          - feathered thighs
+          - scaly lower legs
+          - talons
+          - three forward toes,one backward toe
     costume-ethnicity-elem:
       "fish-fins":
         prompts:
@@ -31575,6 +31787,17 @@
         env:
           - umbrella stand,umbrella bucket
           - school entrance
+      "umbrella-oil-paper":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-weapon/umbrella-oil-paper/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-weapon/umbrella-oil-paper/costume-weapon-main__{,{1-$$__lazy-wildcards/subject/costume-weapon/umbrella-oil-paper/costume-weapon__}}
+        "costume-weapon-main":
+          - "oil-paper umbrella"
+        "costume-weapon":
+          - holding umbrella
       umbrella_others:
         prompts:
           - >-
