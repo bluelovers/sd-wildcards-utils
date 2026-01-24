@@ -84,9 +84,162 @@ doc.toString (轉換為 YAML 字串)
 
 ---
 
+## Key 的格式變化
+
+### 安全鍵規則
+
+鍵名必須符合安全鍵規則才能使用 `PLAIN` 類型（不使用引號）：
+
+**允許的字元：**
+- 字母：`a-z`、`A-Z`
+- 數字：`0-9`
+- 特殊字元：`_`、`/`、`.`、`-`
+
+**不允許的模式：**
+- 以非字母數字開頭或結尾
+- 包含 `__` (雙底線)
+- 包含 `..` (雙點)
+- 包含 `--` (雙連字號)
+- 包含 `//` (雙斜線)
+- 包含連續的點、底線或連字號 (如 `._`、`/.`、`__`、`..`、`--`)
+- 路徑中包含 `[._-]/` 或 `/[._-]` 的組合
+
+### Key 引號處理範例
+
+**輸入 YAML：**
+```yaml
+"simple_key": "value"
+"simple-key": "value"
+"simple.key": "value"
+"simple/key": "value"
+"key_with_underscore": "value"
+```
+
+**輸出 YAML：**
+```yaml
+simple_key: value
+simple-key: value
+simple.key: value
+simple/key: value
+key_with_underscore: value
+```
+
+**說明：** 安全的鍵名會自動移除引號並轉為 `PLAIN` 類型
+
+---
+
+**輸入 YAML：**
+```yaml
+"key with spaces": "value"
+"key:with:colons": "value"
+"key[with]brackets": "value"
+"key{with}braces": "value"
+"key|with|pipes": "value"
+```
+
+**輸出 YAML：**
+```yaml
+"key with spaces": value
+"key:with:colons": value
+"key[with]brackets": value
+"key{with}braces": value
+"key|with|pipes": value
+```
+
+**說明：** 包含特殊字元的鍵名會保留引號
+
+---
+
+### 不安全鍵名範例
+
+以下鍵名會被視為不安全：
+
+```yaml
+# 錯誤範例（會拋出 SyntaxError，除非 allowUnsafeKey: true）
+"": "value"
+" key": "value"
+"key ": "value"
+"__key": "value"
+"key__": "value"
+"..key": "value"
+"key..": "value"
+"--key": "value"
+"key--": "value"
+"//key": "value"
+"key//": "value"
+"key._": "value"
+"key/": "value"
+"/key": "value"
+"key._sub": "value"
+".key": "value"
+"-key": "value"
+```
+
+---
+
+### Key 格式化流程
+
+當輸入是 YAML Document 時，鍵名會經過以下處理：
+
+1. **檢查鍵名是否安全** (`isSafeKey`)
+2. **如果安全：** 轉為 `PLAIN` 類型（移除引號）
+3. **如果不安全：**
+   - `allowUnsafeKey: false` → 拋出錯誤
+   - `allowUnsafeKey: true` → 保留引號
+
+### 範例：YAML 檔案輸入的 Key 變化
+
+**輸入 YAML：**
+```yaml
+"colors": ["red", "blue"]
+"colors-primary": ["green", "yellow"]
+"colors/secondary": ["purple", "orange"]
+"basic_key": ["value1"]
+"key with spaces": ["value2"]
+"key:with:colons": ["value3"]
+```
+
+**輸出 YAML：**
+```yaml
+colors:
+  - red
+  - blue
+colors-primary:
+  - green
+  - yellow
+colors/secondary:
+  - purple
+  - orange
+basic_key:
+  - value1
+"key with spaces":
+  - value2
+"key:with:colons":
+  - value3
+```
+
+**說明：**
+- `colors`、`colors-primary`、`colors/secondary`、`basic_key` 都是安全鍵，引號被移除
+- `key with spaces`、`key:with:colons` 包含特殊字元，引號被保留
+
+---
+
+### 預設 Key 類型
+
+`defaultOptionsStringify` 預設設定：
+```typescript
+{
+  defaultKeyType: 'PLAIN',  // 鍵使用純量格式
+}
+```
+
+這表示安全鍵名會以純量格式輸出（不使用引號）。
+
+---
+
 ## YAML 檔案輸入格式變化範例
 
-### 範例 1：引號處理
+### 範例 1：引號處理（Value 和 Key）
 
 **輸入 YAML：**
 ```yaml
@@ -112,7 +265,7 @@ shapes:
   - triangle
 ```
 
-**說明：** 不必要的引號被自動移除，所有字串轉為 `PLAIN` 類型
+**說明：** 不必要的引號被自動移除，所有字串轉為 `PLAIN` 類型。鍵名 `"colors"` 和 `"shapes"` 也被移除引號，因為它們是安全鍵。
 
 ---
 
@@ -548,11 +701,82 @@ shapes:
 
 ---
 
+## YAML Document 與 JSON 物件的 Key 處理差異
+
+### YAML Document 輸入
+
+**輸入 YAML：**
+```yaml
+"safe_key": "value"
+"unsafe key": "value"
+```
+
+**輸出 YAML：**
+```yaml
+safe_key: value
+"unsafe key": value
+```
+
+**處理流程：**
+1. 執行 `normalizeDocument`，檢查每個鍵名
+2. 安全鍵轉為 `PLAIN` 類型（移除引號）
+3. 不安全鍵保留引號（如果 `allowUnsafeKey: true`）
+4. 然後再格式化 Value
+
+### JSON 物件輸入
+
+**輸入 JSON：**
+```json
+{
+  "safe_key": "value",
+  "unsafe key": "value"
+}
+```
+
+**輸出 YAML：**
+```yaml
+safe_key: value
+"unsafe key": value
+```
+
+**處理流程：**
+1. 直接使用 `stringify` 轉換
+2. YAML 套件會自動判斷鍵名是否需要引號
+3. 安全鍵使用 `PLAIN` 類型
+4. 不安全鍵自動加上引號
+
+**結果比較：** 兩種輸入方式的最終輸出相同
+
+---
+
+## Key 選項說明
+
+### allowUnsafeKey
+
+當設為 `true` 時，允許不安全的鍵名（會保留引號）：
+
+```typescript
+const output = stringifyWildcardsYamlData(yamlData, {
+  allowUnsafeKey: true
+});
+```
+
+**允許的鍵名範例：**
+```yaml
+"key with spaces": value
+"key:with:colons": value
+"key[with]brackets": value
+```
+
+**預設值：** `false`（不安全的鍵名會拋出錯誤）
+
+---
+
 ## 引號處理規則
 
-### 自動移除不必要的引號
+### 自動移除不必要的引號（Value）
 
-當字串不需要引號時（即為安全的純量字串），會自動轉換為 `PLAIN` 類型：
+當 Value 字串不需要引號時（即為安全的純量字串），會自動轉換為 `PLAIN` 類型：
 
 ```typescript
 // 輸入
@@ -928,6 +1152,56 @@ const output = stringifyWildcardsYamlData(yamlData, {
   minifyPrompts: false,
   disableUniqueItemValues: true
 });
+```
+
+---
+
+## 完整 Key 格式化範例
+
+### 輸入 YAML
+
+```yaml
+# 安全鍵
+"colors": ["red", "blue"]
+"colors-primary": ["green", "yellow"]
+"colors/secondary": ["purple", "orange"]
+"basic_key": ["value"]
+"key_with_underscore": ["value"]
+
+# 不安全鍵（需要引號）
+"key with spaces": ["value2"]
+"key:with:colons": ["value3"]
+"key[with]brackets": ["value4"]
+"key{with}braces": ["value5"]
+```
+
+### 輸出 YAML
+
+```yaml
+# 安全鍵
+colors:
+  - red
+  - blue
+colors-primary:
+  - green
+  - yellow
+colors/secondary:
+  - purple
+  - orange
+basic_key:
+  - value
+key_with_underscore:
+  - value
+
+# 不安全鍵（需要引號）
+"key with spaces":
+  - value2
+"key:with:colons":
+  - value3
+"key[with]brackets":
+  - value4
+"key{with}braces":
+  - value5
 ```
 
 ---
