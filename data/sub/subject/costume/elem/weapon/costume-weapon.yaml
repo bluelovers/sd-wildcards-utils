@@ -275,14 +275,17 @@ lazy-wildcards:
         env:
           - flammable symbol
           - fiery background
+      # https://danbooru.donmai.us/wiki_pages/blacksmith_tongs?z=1
       utility-blacksmith-hammer:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume-weapon/utility-blacksmith-hammer/costume-weapon__
+            __lazy-wildcards/subject/costume-weapon/utility-blacksmith-hammer/costume-weapon-main__
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/utility-blacksmith-hammer/costume-weapon__}|}
             {, {1-$$__lazy-wildcards/subject/costume-weapon/utility-blacksmith-hammer/action__}|}
             {, {1-$$__lazy-wildcards/subject/costume-weapon/utility-blacksmith-hammer/env__}|}
-        costume-weapon:
+        costume-weapon-main:
           - blacksmith tongs
+        costume-weapon:
           - holding tongs
           - blacksmith utility
           - blacksmith hammer
@@ -290,6 +293,7 @@ lazy-wildcards:
         action:
           - hammering
           - lifting hammer
+          - smithing
         env:
           - glowing hot
           - anvil
@@ -469,6 +473,7 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/costume-weapon/innertube-swim_ring/costume-elem__}|}
             {, {1-$$__lazy-wildcards/subject/costume-weapon/innertube-swim_ring/action__}|}
             {, {1-$$__lazy-wildcards/subject/costume-weapon/innertube-swim_ring/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/innertube-swim_ring/style__}|}
         prompts-no-weight:
           - >-
             __lazy-wildcards/subject/costume-weapon/innertube-swim_ring/costume-weapon-main__
@@ -492,4 +497,26 @@ lazy-wildcards:
           - beach, palm tree
         style:
           - relaxation
+          - pastel colors
+          - tropical mood
+          - resort atmosphere
+          - leisure time
+      # 黑色內胎
+      innertube-classic:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-weapon/innertube-classic/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-weapon/innertube-classic/env-elem-main__
+            , {1-2$$__lazy-wildcards/subject/costume-weapon/innertube-classic/env-elem__}
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/innertube-classic/env__}|}
+        env-elem-main:
+          - classic inner tube, classic innertube
+        env-elem:
+          - black inner tube
+          - red inner tube
+          - white inner tube
+        env:
+          - heavy rubber
 

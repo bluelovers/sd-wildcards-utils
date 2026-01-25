@@ -44,6 +44,7 @@ lazy-wildcards:
             {, {1-$$__lazy-wildcards/subject/costume/workwear/costume-elem__}|}
             {, {1-$$__lazy-wildcards/subject/costume/workwear/costume-weapon__}|}
             {, {1-2$$__lazy-wildcards/subject/costume/workwear/expressions__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/workwear/action__}|}
             {, {1-2$$__lazy-wildcards/subject/costume/workwear/env-bg__}|}
             {, {1-$$__lazy-wildcards/subject/costume/workwear/style__}|}
         costume:
@@ -80,6 +81,8 @@ lazy-wildcards:
             {1-$$__lazy-wildcards/subject/costume-weapon/utility-*/prompts__}
         expressions:
           - __lazy-wildcards/subject/costume-elem-expressions/smirk-confident/prompts-no-weight__
+        action:
+          - rolled up sleeve
         env-bg:
           - __lazy-wildcards/subject/env-bg/blacksmith-forge_smithy/prompts__
         style:
