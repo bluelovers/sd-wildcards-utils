@@ -42,9 +42,12 @@ export default (async () => {
 			// compute a fixed-length hash (sha256) for the file content
 			const hash = createHash('sha256').update(buf).digest('hex');
 
-			if (hashJson[file] !== hash || !await exists(out_file))
+			let existsOutFile = await exists(out_file);
+			let hashSrcFileSame = hashJson[file] === hash;
+
+			if (!hashSrcFileSame || !existsOutFile)
 			{
-				let skip = hashJson[file] === hash || (extname(file) === '.txt' && await exists(src_file + '.yaml')) || await exists(src_file + '.disable');
+				let skip = existsOutFile && hashSrcFileSame || file.includes('_disable') || file.includes('.disable') || (extname(file) === '.txt' && await exists(src_file + '.yaml')) || await exists(src_file + '.disable');
 
 				if (skip)
 				{
