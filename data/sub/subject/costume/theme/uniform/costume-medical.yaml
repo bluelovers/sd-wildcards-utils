@@ -41,4 +41,60 @@ lazy-wildcards:
         prompts:
           - >-
             (Classical Frilled Nurse Uniform, nurse_old_style_01:1.2), apron, nurse cap, short sleeves, striped dress, puffy sleeves, vertical stripes, nurse, white apron, puffy short sleeves, pantyhose
+      # 瘟疫醫生｜鳥嘴醫師｜疫病醫師｜中世紀防疫醫者
+      # https://civitai.com/models/146891/plague-doctor-f-darkest-dungeon
+      # https://civitai.com/models/23796/plaguedoctormask
+      plague_doctor:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/plague_doctor/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-2$$__lazy-wildcards/subject/costume/plague_doctor/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/plague_doctor/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/plague_doctor/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/plague_doctor/env__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume/plague_doctor/costume-headwear-main__
+            {, {1-$$__lazy-wildcards/subject/costume/plague_doctor/costume-headwear__}|}
+        costume-headwear-main:
+          - plague doctor, plague doctor mask, Pdctor
+        costume-headwear:
+          - round glass goggles
+        costume-weapon:
+          - scalpel
+          - cane
+          - holding cane
+          - plague doctor staff
+          - holding lantern
+          - holding necklace
+          - holding vial
+          - __lazy-wildcards/subject/costume-weapon/scalpel/prompts__
+          - closed umbrella
+        costume-elem:
+          - feather-trimmed coat
+          - long black cloak
+          - black robe
+          - bird mask, long beak mask, curved beak shape
+          - red eyes
+          - leather mask
+          - stitched seams
+          - metal rivets
+          - leather gloves
+          - knee high boots
+          - sealed clothing
+          - matte texture
+          - covered face
+          - hood, hood up, hooded coat, hoodie
+          - finger claws
+          - gothic mood
+        action:
+          - reaching
+          - looking at object
+        env:
+          - walking through fog
+          - hitodama
+          - cage
+          - erlenmeyer flask
+          - kerosene lamp
+          - darkest dungeon
 

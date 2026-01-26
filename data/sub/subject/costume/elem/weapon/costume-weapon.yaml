@@ -519,4 +519,14 @@ lazy-wildcards:
           - white inner tube
         env:
           - heavy rubber
+      # 手術刀
+      scalpel:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-weapon/scalpel/costume-weapon-main__
+            {, {1-$$__lazy-wildcards/subject/costume-weapon/scalpel/costume-weapon__}|})
+        costume-weapon-main:
+          - scalpel
+        costume-weapon:
+          - holding scalpel
 
