@@ -333,4 +333,24 @@ lazy-wildcards:
             {6-$$__lazy-wildcards/subject/env-elem/pole/env-pole__}
         env-pole:
           - wooden pole
+      # 瓦斯桶
+      cylinder-gas:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/cylinder-gas/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/cylinder-gas/env__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-elem/cylinder-gas/env-elem-main__
+            {, {1-2$$__lazy-wildcards/subject/env-elem/cylinder-gas/env-elem__}|}
+        env-elem-main:
+          - gas cylinder
+        env-elem:
+          - tall gas cylinder
+          - >-
+            {green|gray|red} steel cylinder
+          - wide body and short gas cylinder
+        env:
+          - industrial setting
+          - handle grips
 
