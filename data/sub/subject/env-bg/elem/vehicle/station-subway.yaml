@@ -152,7 +152,6 @@ lazy-wildcards:
           - back view, looking at train
           - sunset, backlit, dusty atmosphere, anime scenery
           - from above, aerial view, bird's eye view
-
       # https://danbooru.donmai.us/posts?tags=train&z=5
       train:
         prompts:
@@ -189,3 +188,56 @@ lazy-wildcards:
           - train conductor
           - train driver
           - wing collar
+      train-cof:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-vehicle/train-cof/env-elem-vehicle__
+            {0.3::, __lazy-wildcards/subject/env-bg-vehicle/train-cof/env-bg__|}
+        env-elem-vehicle:
+          - __cornf-model-train/prompt-object__
+          - __cornf-model-train/prompt-full__
+          - __cof-location/place/train__
+          - __cof-location/place/punk-train__
+        env-bg:
+          - __cof-location/place/punk-subway-station__
+          - __cornf-model-train/location__
+      station-train-cof:
+        prompts:
+          - __lazy-wildcards/subject/env-bg-vehicle/station-train-cof/env-bg-vehicle__
+        env-bg-vehicle:
+          - __cornf-model-train/punk-subway-station__
+      # 電車站｜路面電車站｜有軌電車站牌
+      train-tram:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-vehicle/train-tram/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg-vehicle/train-tram/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg-vehicle/train-tram/style__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-bg-vehicle/train-tram/env-elem-vehicle-main__
+            {, __lazy-wildcards/subject/env-bg-vehicle/train-tram/env-elem-vehicle__|}
+            {, __lazy-wildcards/subject/env-bg-vehicle/train-tram/env-bg-vehicle__|}
+        env-elem-vehicle-main:
+          - tram
+        env-elem-vehicle:
+          - streetcar
+        env-bg-vehicle:
+          - tram stop
+        env:
+          - light rail
+          - tram tracks
+          - metal rails
+          - embedded rails in street
+          - tram stop sign
+          - bench seating
+          - metal bench
+          - wooden bench
+          - glass shelter
+          - rainy
+          - foggy
+          - snowy
+        style:
+          - everyday life
+          - urban rhythm
+
