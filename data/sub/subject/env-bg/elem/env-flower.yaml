@@ -368,4 +368,36 @@ lazy-wildcards:
           - low angle shot
           - shallow depth of field
           - high contrast light shadow
+      # 荊棘與帶刺藤蔓
+      vines-thorns:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/vines-thorns/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/vines-thorns/env__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-elem/vines-thorns/env-elem-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/vines-thorns/env-elem__}|}
+        env-elem-main:
+          - thorns, sharp thorns, spiky vines
+        env-elem:
+          - thorny vines, thorn vines
+          - hooked thorns
+          - dense thorns
+          - glossy wet thorns
+          - wild thorn bushes
+          - twisted vines, twisted growth
+        env:
+          - long twisting vines
+          - interwoven vines
+          - coiling vines
+          - creeping vines
+          - irregular spikes
+          - rough bark texture
+          - fibrous surface
+          - wet mossy surface
+          - dense undergrowth
+          - natural thorn barrier
+          - rim light on thorns
+          - misty atmosphere
 
