@@ -12557,6 +12557,24 @@
             {6-$$__lazy-wildcards/subject/env-elem/pole/env-pole__}
         "env-pole":
           - wooden pole
+      # 瓦斯桶
+      "cylinder-gas":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/cylinder-gas/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem/cylinder-gas/env__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/env-elem/cylinder-gas/env-elem-main__{,{1-2$$__lazy-wildcards/subject/env-elem/cylinder-gas/env-elem__}|}
+        "env-elem-main":
+          - gas cylinder
+        "env-elem":
+          - tall gas cylinder
+          - >-
+            {green|gray|red} steel cylinder
+          - wide body and short gas cylinder
+        env:
+          - industrial setting
+          - handle grips
       # https://civitai.com/posts/11025265
       # https://civitai.com/posts/11025315
       broken_tree:
@@ -12938,6 +12956,76 @@
         env:
           - petals
           - very windy,wind blowing
+      "grass-tall_grass_high_crops":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/grass-tall_grass_high_crops/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem/grass-tall_grass_high_crops/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem/grass-tall_grass_high_crops/style__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/env-elem/grass-tall_grass_high_crops/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-elem/grass-tall_grass_high_crops/env-bg__}|}
+        "env-bg-main":
+          - tall grass,high crops
+        "env-bg":
+          - dense grass
+          - reed like plants
+          - long thin leaves
+          - millet field
+          - sorghum field
+          - miscanthus,miscanthus giganteus
+          - sugarcane
+        env:
+          - maze like environment
+          - narrow paths
+          - random gaps
+          - wild grass
+          - sharp grass edges
+          - uneven growth
+          - ancient farmland
+          - grass swaying in wind
+          - rustling vegetation
+          - footstep trail visible
+          - sunlight filtering through grass
+          - moonlight grass field
+          - foggy grass field,mist between plants
+          - rain soaked vegetation
+        style:
+          - concealment,limited visibility
+          - suspense
+          - scale contrast
+          - partially hidden
+          - low angle shot
+          - shallow depth of field
+          - high contrast light shadow
+      # 荊棘與帶刺藤蔓
+      "vines-thorns":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/vines-thorns/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem/vines-thorns/env__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/env-elem/vines-thorns/env-elem-main__{,{1-$$__lazy-wildcards/subject/env-elem/vines-thorns/env-elem__}|}
+        "env-elem-main":
+          - thorns,sharp thorns,spiky vines
+        "env-elem":
+          - thorny vines,thorn vines
+          - hooked thorns
+          - dense thorns
+          - glossy wet thorns
+          - wild thorn bushes
+          - twisted vines,twisted growth
+        env:
+          - long twisting vines
+          - interwoven vines
+          - coiling vines
+          - creeping vines
+          - irregular spikes
+          - rough bark texture
+          - fibrous surface
+          - wet mossy surface
+          - dense undergrowth
+          - natural thorn barrier
+          - rim light on thorns
+          - misty atmosphere
       lamp:
         prompts:
           - >-
@@ -14688,102 +14776,6 @@
           - kitchen interior
         style:
           - feet not in view
-      # 落地窗
-      "floor-to-ceiling_window":
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/env-elem/floor-to-ceiling_window/env-elem-window-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem/floor-to-ceiling_window/env-elem-window__}|}{,{1-$$__lazy-wildcards/subject/env-elem/floor-to-ceiling_window/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-elem/floor-to-ceiling_window/env-elem__}|}
-        "env-elem-window-main":
-          - "floor-to-ceiling window"
-        "env-elem-window":
-          - large glass window
-          - panoramic window
-          - sunlight through window
-          - window reflection
-          - rain on window
-        "env-bg":
-          - modern architecture
-          - open space
-          - cityscape
-          - glass office
-          - penthouse
-          - night view
-          - glass balcony
-        "env-elem":
-          - natural light
-          - separated by glass
-          - silhouette
-      road:
-        prompts:
-          - >-
-            ({1-2$$__lazy-wildcards/subject/env-elem/road/env-road__}){0.4::,{1-$$__lazy-wildcards/subject/env-elem/road/env__}|}
-        "env-road":
-          - rock road
-          - stone road
-          - wooden road
-          - brick road
-          - cement floor
-          - asphalt road
-          - gravel road
-          - dirt path,dirt road,muddy path
-          - marble floor
-          - tile floor
-          - grated walkway
-          - steel road
-          - perforated metal floor
-          - glass floor
-          - bamboo floor
-          - rubber path
-          - stone_paved_path
-        env:
-          - dirty
-          - cobblestone
-          - old street
-          - historic road
-          - wooden planks
-          - pedestrian area
-          - sidewalk
-          - mosaic pavement
-          - decorative floor
-          - decorative tile
-          - industrial walkway
-          - transparent material
-          - "high-tech floor"
-          - metal grate
-          - "eco-friendly materials"
-          - floating walkway
-          - "__lazy-wildcards/subject/env-elem/traffic-barrier/prompts__"
-          - under bridge
-          - lamppost
-      "traffic-barrier":
-        prompts:
-          - >-
-            ({1-$$__lazy-wildcards/subject/env-elem/traffic-barrier/env__})
-        env:
-          - traffic barrier
-          - traffic barrel
-          - jersey barrier
-          - guard rail
-      # 瓦片屋頂
-      "roof-tiled":
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/env-elem/roof-tiled/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
-        "prompts-no-weight":
-          - >-
-            __lazy-wildcards/subject/env-elem/roof-tiled/env-elem-main__{,{1-$$__lazy-wildcards/subject/env-elem/roof-tiled/env-elem__}|}{,{1-$$__lazy-wildcards/subject/env-elem/roof-tiled/env__}|}
-        "env-elem-main":
-          - tiled roof
-        "env-elem":
-          - terracotta roof
-          - traditional roofing
-          - patterned roof tiles
-          - sloped roof
-        env:
-          - clay tiles
-          - weathered roof
-          - "moss-covered tiles"
-          - rustic roof
       stairs:
         prompts:
           - >-
@@ -15089,6 +15081,102 @@
         style:
           - cold light
           - industrial
+      # 落地窗
+      "floor-to-ceiling_window":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/floor-to-ceiling_window/env-elem-window-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem/floor-to-ceiling_window/env-elem-window__}|}{,{1-$$__lazy-wildcards/subject/env-elem/floor-to-ceiling_window/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-elem/floor-to-ceiling_window/env-elem__}|}
+        "env-elem-window-main":
+          - "floor-to-ceiling window"
+        "env-elem-window":
+          - large glass window
+          - panoramic window
+          - sunlight through window
+          - window reflection
+          - rain on window
+        "env-bg":
+          - modern architecture
+          - open space
+          - cityscape
+          - glass office
+          - penthouse
+          - night view
+          - glass balcony
+        "env-elem":
+          - natural light
+          - separated by glass
+          - silhouette
+      road:
+        prompts:
+          - >-
+            ({1-2$$__lazy-wildcards/subject/env-elem/road/env-road__}){0.4::,{1-$$__lazy-wildcards/subject/env-elem/road/env__}|}
+        "env-road":
+          - rock road
+          - stone road
+          - wooden road
+          - brick road
+          - cement floor
+          - asphalt road
+          - gravel road
+          - dirt path,dirt road,muddy path
+          - marble floor
+          - tile floor
+          - grated walkway
+          - steel road
+          - perforated metal floor
+          - glass floor
+          - bamboo floor
+          - rubber path
+          - stone_paved_path
+        env:
+          - dirty
+          - cobblestone
+          - old street
+          - historic road
+          - wooden planks
+          - pedestrian area
+          - sidewalk
+          - mosaic pavement
+          - decorative floor
+          - decorative tile
+          - industrial walkway
+          - transparent material
+          - "high-tech floor"
+          - metal grate
+          - "eco-friendly materials"
+          - floating walkway
+          - "__lazy-wildcards/subject/env-elem/traffic-barrier/prompts__"
+          - under bridge
+          - lamppost
+      "traffic-barrier":
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/env-elem/traffic-barrier/env__})
+        env:
+          - traffic barrier
+          - traffic barrel
+          - jersey barrier
+          - guard rail
+      # 瓦片屋頂
+      "roof-tiled":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/roof-tiled/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/env-elem/roof-tiled/env-elem-main__{,{1-$$__lazy-wildcards/subject/env-elem/roof-tiled/env-elem__}|}{,{1-$$__lazy-wildcards/subject/env-elem/roof-tiled/env__}|}
+        "env-elem-main":
+          - tiled roof
+        "env-elem":
+          - terracotta roof
+          - traditional roofing
+          - patterned roof tiles
+          - sloped roof
+        env:
+          - clay tiles
+          - weathered roof
+          - "moss-covered tiles"
+          - rustic roof
     env-moment:
       random:
         prompts:
@@ -16290,6 +16378,45 @@
         style:
           - sewn seams
           - rough texture
+      # 農業區
+      agricultural_zone:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-elem-civilization/agricultural_zone/main__,{1-3$$__lazy-wildcards/subject/env-elem-civilization/agricultural_zone/main-types/*__},{1-$$__lazy-wildcards/subject/env-elem-civilization/agricultural_zone/env__}
+        main:
+          - indoors,interior,agricultural
+        "main-types":
+          agricultural_zone:
+            - agricultural_zone,food_production
+          hydroponic_farm:
+            - >-
+              {1-$$hydroponic_farm|hydroponics_lab},water_based_cultivation,nutrient_solution,soil-free_growth
+          indoor_garden:
+            - indoor_garden,controlled_environment,artificial_lighting,indoor_planting
+          greenhouse:
+            - greenhouse,transparent_structure,controlled_climate,protected_cultivation
+          vertical_farming:
+            - "vertical_farming,multi-layered_growth,space_efficient,urban_agriculture"
+          agricultural_technology:
+            - agricultural_technology,automated_systems,smart_irrigation,precision_farming
+          plant_genetics_lab:
+            - plant_genetics_lab,genetic_modification,plant_breeding,DNA_analysis
+          climate_control_chamber:
+            - climate_control_chamber,temperature_regulation,humidity_control,environmental_simulation
+          soil_testing_lab:
+            - soil_testing_lab,soil_analysis
+          aquaponics_lab:
+            - aquaponics_lab,integrated_fish_and_plant_cultivation
+          animal_farm:
+            - Animal Farm,(Animal,living creature)
+        env:
+          - >-
+            crops{,{1-$$__lazy-wildcards/utils/crops/essential_crops__}|}{,{1-$$__lazy-wildcards/utils/crops/economic_crops__}|}
+          - water_recycling
+          - symbiotic_systems
+          - "__lazy-wildcards/subject/env-elem/flower/prompts__"
+          - plant
+          - laboratory
     env-bg-interior:
       # https://civitai.com/models/815517/cyberpunk-club?modelVersionId=911938
       cyberpunk_club:
@@ -17148,142 +17275,6 @@
           - electrical outlet
           - clothesline
           - towel
-    env-bg-vehicle:
-      # https://civitai.com/models/308186/jjs-metro-station?modelVersionId=1598970
-      station:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-bg-vehicle/station/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg-vehicle/station/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-vehicle/station/env-bg__}|}
-        "env-bg-main":
-          # 地下鐵 / 捷運
-          - Subway,Metro,Metro Station
-        env:
-          - window
-        "env-bg":
-          - subway interior
-          - carriage
-      # https://civitai.com/models/623723/subway-station-corridor-in-japan?modelVersionId=697293
-      # https://civitai.com/models/716111/japanese-underground-passage?modelVersionId=800810
-      "station-subway-corridor-stairs":
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-bg-vehicle/station-subway-corridor-stairs/main__{,{1-$$__lazy-wildcards/subject/env-bg-vehicle/station-subway-corridor-stairs/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg-vehicle/station-subway-corridor-stairs/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/env-bg-vehicle/station-subway-corridor-stairs/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-vehicle/station-subway-corridor-stairs/style__}|}
-        main:
-          - Subway station corridor,jpsta,train_station,on stairs,interior,indoors,UGPW
-        "costume-weapon":
-          - luggage
-          - briefcase
-        style:
-          - subway station design
-          - clean_passage
-        env:
-          - tiled_walls
-          - tiled_floor
-          - ceiling
-          - public_telephone
-          - >-
-            {1-$$Signage|bilingual signs indicating directions|exits signs|facilities signs|signboard|floor_markings}
-          - >-
-            __lazy-wildcards/subject/env-elem/Vending-Machines/prompts__
-        "env-bg":
-          - Subway_Corridor
-          - underground shopping areas
-          - Japan
-          - stairwell
-      # https://civitai.com/models/777396/subway-platform?modelVersionId=869446
-      subway_station_platform:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/env-bg-vehicle/subway_station_platform/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg-vehicle/subway_station_platform/env-bg__}|}){,[{1-$$__lazy-wildcards/subject/env-bg-vehicle/subway_station_platform/env__}]|}{,[{1-$$__lazy-wildcards/subject/env-bg-vehicle/subway_station_platform/style__}]|}
-        "env-bg-main":
-          - subway station platform
-        "env-bg":
-          - "__lazy-wildcards/subject/env-bg-vehicle/subway_railway/prompts__"
-        env:
-          - platform_edge
-          - platform_lines
-          - subway_safety_barrier
-          - platform_bench
-          - ticket_machine
-          - digital_signage
-          - vending_machine
-          - subway_advertisement,platform_poster,station_banner
-          - station_crowd,commuter,busy_station,waiting_people
-          - subway_passage,station_corridor,escalator,subway_exit
-        style:
-          - station_mural
-          - platform_art
-          - decorative_ceiling
-          - historical_station
-          - fluorescent_lighting
-          - ambient_lighting
-          - station_lighting
-          - platform_shadows
-      subway_railway:
-        prompts:
-          - >-
-            ({1-$$__lazy-wildcards/subject/env-bg-vehicle/subway_railway/env-bg-main__}){,{1-$$__lazy-wildcards/subject/env-bg-vehicle/subway_railway/env-bg__}|}
-        "env-bg-main":
-          - Railway,Railroad
-          - Streetcar Tracks,Tram Tracks
-          - Metro Tracks,Subway Tracks
-          - Train Tracks,Railway Tracks
-        "env-bg":
-          - station tunnel
-          - incoming train,train lights
-          - subway tunnel
-      "ruins-station-train":
-        prompts:
-          - >-
-            abandoned train station,__lazy-wildcards/subject/env-bg-vehicle/station/prompts__,__lazy-wildcards/subject/env-bg/ruins-city-common/prompts__
-      # 鐵路平交道
-      railroad_crossing:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/env-bg-vehicle/railroad_crossing/env-bg__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg-vehicle/railroad_crossing/env__}|}
-        "env-bg":
-          - railroad crossing,level crossing
-        env:
-          - crossing gate
-          - boom barrier
-          - railroad signal
-          - "__lazy-wildcards/subject/env-bg-vehicle/railway/env-bg-main__"
-          - signboard
-      railway:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/env-bg-vehicle/railway/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg-vehicle/railway/env-bg__}|}){,{1-$$__lazy-wildcards/subject/env-bg-vehicle/railway/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-vehicle/railway/env-moment__}|}{,{1-$$__lazy-wildcards/subject/env-bg-vehicle/railway/style__}|}
-        "env-bg-main":
-          - railway,train rail,train tracks
-        "env-bg":
-          - seaside railway,coastal scenery
-          - mountain railway
-          - forest railway
-          - tunnel entrance
-          - railroad curve,train turning
-          - railway bridge
-          - suburban railway
-        env:
-          - slope
-          - bridge over river,river below
-          - steel structure
-          - japanese street
-          - showa era,nostalgic,wooden station,retro signage
-          - station tunnel
-          - subway tunnel
-          - japan railways
-          - overhead line
-          - power lines
-        "env-moment":
-          - cherry blossoms,railway and sakura
-          - summer seaside,train and ocean
-          - autumn leaves,railroad in autumn
-          - snowy railway,winter scenery
-        style:
-          - back view,looking at train
-          - sunset,backlit,dusty atmosphere,anime scenery
-          - |-
-            from above,aerial view,bird's eye view
     env-elem-food-drink:
       # https://civitai.com/models/604678/ramune-sd15?modelVersionId=675915
       # 彈珠汽水
@@ -18931,38 +18922,6 @@
           - military_design
           - mecha_paint_scheme
           - space_battle
-      # https://danbooru.donmai.us/posts?tags=train&z=5
-      train:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/env-elem-vehicle/train/env-elem-vehicle-main__{,{1-$$__lazy-wildcards/subject/env-elem-vehicle/train/env-elem-vehicle__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem-vehicle/train/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-elem-vehicle/train/env__}|}{,{1-$$__lazy-wildcards/subject/env-elem-vehicle/train/costume-elem__}|}
-        "env-elem-vehicle-main":
-          - train
-        "env-elem-vehicle":
-          - steampunk train,steampunk aesthetic
-          - multiple unit train
-          - locomotive
-          - steam locomotive
-          - "high-speed train"
-          - diesel locomotive
-          - freight train
-          - shinkansen
-          - electric locomotive,electric train
-        "env-bg":
-          - on train
-          - train station
-          - train station platform
-          - subway
-          - "__lazy-wildcards/subject/env-bg-vehicle/railway/prompts__"
-          - "__lazy-wildcards/subject/env-bg-vehicle/railroad_crossing/prompts__"
-        env:
-          # 導盲磚
-          - tactile paving
-          - "windshield,side-view mirror"
-        "costume-elem":
-          - train conductor
-          - train driver
-          - wing collar
       "airplane-interior":
         prompts:
           - >-
@@ -19235,6 +19194,221 @@
           - long carrying poles
           - enclosed cabin
           - fabric canopy
+    env-bg-vehicle:
+      # https://civitai.com/models/308186/jjs-metro-station?modelVersionId=1598970
+      station:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-vehicle/station/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg-vehicle/station/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-vehicle/station/env-bg__}|}
+        "env-bg-main":
+          # 地下鐵 / 捷運
+          - Subway,Metro,Metro Station
+        env:
+          - window
+        "env-bg":
+          - subway interior
+          - carriage
+      # https://civitai.com/models/623723/subway-station-corridor-in-japan?modelVersionId=697293
+      # https://civitai.com/models/716111/japanese-underground-passage?modelVersionId=800810
+      "station-subway-corridor-stairs":
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-vehicle/station-subway-corridor-stairs/main__{,{1-$$__lazy-wildcards/subject/env-bg-vehicle/station-subway-corridor-stairs/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg-vehicle/station-subway-corridor-stairs/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/env-bg-vehicle/station-subway-corridor-stairs/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-vehicle/station-subway-corridor-stairs/style__}|}
+        main:
+          - Subway station corridor,jpsta,train_station,on stairs,interior,indoors,UGPW
+        "costume-weapon":
+          - luggage
+          - briefcase
+        style:
+          - subway station design
+          - clean_passage
+        env:
+          - tiled_walls
+          - tiled_floor
+          - ceiling
+          - public_telephone
+          - >-
+            {1-$$Signage|bilingual signs indicating directions|exits signs|facilities signs|signboard|floor_markings}
+          - >-
+            __lazy-wildcards/subject/env-elem/Vending-Machines/prompts__
+        "env-bg":
+          - Subway_Corridor
+          - underground shopping areas
+          - Japan
+          - stairwell
+      # https://civitai.com/models/777396/subway-platform?modelVersionId=869446
+      subway_station_platform:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-vehicle/subway_station_platform/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg-vehicle/subway_station_platform/env-bg__}|}){,[{1-$$__lazy-wildcards/subject/env-bg-vehicle/subway_station_platform/env__}]|}{,[{1-$$__lazy-wildcards/subject/env-bg-vehicle/subway_station_platform/style__}]|}
+        "env-bg-main":
+          - subway station platform
+        "env-bg":
+          - "__lazy-wildcards/subject/env-bg-vehicle/subway_railway/prompts__"
+        env:
+          - platform_edge
+          - platform_lines
+          - subway_safety_barrier
+          - platform_bench
+          - ticket_machine
+          - digital_signage
+          - vending_machine
+          - subway_advertisement,platform_poster,station_banner
+          - station_crowd,commuter,busy_station,waiting_people
+          - subway_passage,station_corridor,escalator,subway_exit
+        style:
+          - station_mural
+          - platform_art
+          - decorative_ceiling
+          - historical_station
+          - fluorescent_lighting
+          - ambient_lighting
+          - station_lighting
+          - platform_shadows
+      subway_railway:
+        prompts:
+          - >-
+            ({1-$$__lazy-wildcards/subject/env-bg-vehicle/subway_railway/env-bg-main__}){,{1-$$__lazy-wildcards/subject/env-bg-vehicle/subway_railway/env-bg__}|}
+        "env-bg-main":
+          - Railway,Railroad
+          - Streetcar Tracks,Tram Tracks
+          - Metro Tracks,Subway Tracks
+          - Train Tracks,Railway Tracks
+        "env-bg":
+          - station tunnel
+          - incoming train,train lights
+          - subway tunnel
+      "ruins-station-train":
+        prompts:
+          - >-
+            abandoned train station,__lazy-wildcards/subject/env-bg-vehicle/station/prompts__,__lazy-wildcards/subject/env-bg/ruins-city-common/prompts__
+      # 鐵路平交道
+      railroad_crossing:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-vehicle/railroad_crossing/env-bg__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg-vehicle/railroad_crossing/env__}|}
+        "env-bg":
+          - railroad crossing,level crossing
+        env:
+          - crossing gate
+          - boom barrier
+          - railroad signal
+          - "__lazy-wildcards/subject/env-bg-vehicle/railway/env-bg-main__"
+          - signboard
+      railway:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-vehicle/railway/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg-vehicle/railway/env-bg__}|}){,{1-$$__lazy-wildcards/subject/env-bg-vehicle/railway/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-vehicle/railway/env-moment__}|}{,{1-$$__lazy-wildcards/subject/env-bg-vehicle/railway/style__}|}
+        "env-bg-main":
+          - railway,train rail,train tracks
+        "env-bg":
+          - seaside railway,coastal scenery
+          - mountain railway
+          - forest railway
+          - tunnel entrance
+          - railroad curve,train turning
+          - railway bridge
+          - suburban railway
+        env:
+          - slope
+          - bridge over river,river below
+          - steel structure
+          - japanese street
+          - showa era,nostalgic,wooden station,retro signage
+          - station tunnel
+          - subway tunnel
+          - japan railways
+          - overhead line
+          - power lines
+        "env-moment":
+          - cherry blossoms,railway and sakura
+          - summer seaside,train and ocean
+          - autumn leaves,railroad in autumn
+          - snowy railway,winter scenery
+        style:
+          - back view,looking at train
+          - sunset,backlit,dusty atmosphere,anime scenery
+          - |-
+            from above,aerial view,bird's eye view
+      # https://danbooru.donmai.us/posts?tags=train&z=5
+      train:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-vehicle/train/env-elem-vehicle-main__{,{1-$$__lazy-wildcards/subject/env-bg-vehicle/train/env-elem-vehicle__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg-vehicle/train/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg-vehicle/train/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-vehicle/train/costume-elem__}|}
+        "env-elem-vehicle-main":
+          - train
+        "env-elem-vehicle":
+          - steampunk train,steampunk aesthetic
+          - multiple unit train
+          - locomotive
+          - steam locomotive
+          - "high-speed train"
+          - diesel locomotive
+          - freight train
+          - shinkansen
+          - electric locomotive,electric train
+        "env-bg":
+          - on train
+          - train station
+          - train station platform
+          - subway
+          - "__lazy-wildcards/subject/env-bg-vehicle/railway/prompts__"
+          - "__lazy-wildcards/subject/env-bg-vehicle/railroad_crossing/prompts__"
+        env:
+          # 導盲磚
+          - tactile paving
+          - "windshield,side-view mirror"
+        "costume-elem":
+          - train conductor
+          - train driver
+          - wing collar
+      "train-cof":
+        prompts:
+          - >-
+            __lazy-wildcards/subject/env-bg-vehicle/train-cof/env-elem-vehicle__{0.3::,__lazy-wildcards/subject/env-bg-vehicle/train-cof/env-bg__|}
+        "env-elem-vehicle":
+          - "__cornf-model-train/prompt-object__"
+          - "__cornf-model-train/prompt-full__"
+          - "__cof-location/place/train__"
+          - "__cof-location/place/punk-train__"
+        "env-bg":
+          - "__cof-location/place/punk-subway-station__"
+          - "__cornf-model-train/location__"
+      "station-train-cof":
+        prompts:
+          - "__lazy-wildcards/subject/env-bg-vehicle/station-train-cof/env-bg-vehicle__"
+        "env-bg-vehicle":
+          - "__cornf-model-train/punk-subway-station__"
+      # 電車站｜路面電車站｜有軌電車站牌
+      "train-tram":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg-vehicle/train-tram/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg-vehicle/train-tram/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg-vehicle/train-tram/style__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/env-bg-vehicle/train-tram/env-elem-vehicle-main__{,__lazy-wildcards/subject/env-bg-vehicle/train-tram/env-elem-vehicle__|}{,__lazy-wildcards/subject/env-bg-vehicle/train-tram/env-bg-vehicle__|}
+        "env-elem-vehicle-main":
+          - tram
+        "env-elem-vehicle":
+          - streetcar
+        "env-bg-vehicle":
+          - tram stop
+        env:
+          - light rail
+          - tram tracks
+          - metal rails
+          - embedded rails in street
+          - tram stop sign
+          - bench seating
+          - metal bench
+          - wooden bench
+          - glass shelter
+          - rainy
+          - foggy
+          - snowy
+        style:
+          - everyday life
+          - urban rhythm
     env-elem-creatures:
       # https://tw.blog.voicetube.com/archives/42888/%E4%BD%A0%E7%9F%A5%E9%81%93%E5%8D%81%E4%BA%8C%E7%94%9F%E8%82%96%E8%8B%B1%E6%96%87%E6%80%8E%E9%BA%BC%E8%AC%9B%E5%97%8E%EF%BC%9F/
       # https://danbooru.donmai.us/posts?page=4&tags=chinese_zodiac
@@ -20114,44 +20288,6 @@
         "env-bg":
           - plaza mayor,madrid,madrid plaza,spain
     env-bg-architectural:
-      agricultural_zone:
-        prompts:
-          - >-
-            __lazy-wildcards/subject/env-bg-architectural/agricultural_zone/main__,{1-3$$__lazy-wildcards/subject/env-bg-architectural/agricultural_zone/main-types/*__},{1-$$__lazy-wildcards/subject/env-bg-architectural/agricultural_zone/env__}
-        main:
-          - indoors,interior,agricultural
-        "main-types":
-          agricultural_zone:
-            - agricultural_zone,food_production
-          hydroponic_farm:
-            - >-
-              {1-$$hydroponic_farm|hydroponics_lab},water_based_cultivation,nutrient_solution,soil-free_growth
-          indoor_garden:
-            - indoor_garden,controlled_environment,artificial_lighting,indoor_planting
-          greenhouse:
-            - greenhouse,transparent_structure,controlled_climate,protected_cultivation
-          vertical_farming:
-            - "vertical_farming,multi-layered_growth,space_efficient,urban_agriculture"
-          agricultural_technology:
-            - agricultural_technology,automated_systems,smart_irrigation,precision_farming
-          plant_genetics_lab:
-            - plant_genetics_lab,genetic_modification,plant_breeding,DNA_analysis
-          climate_control_chamber:
-            - climate_control_chamber,temperature_regulation,humidity_control,environmental_simulation
-          soil_testing_lab:
-            - soil_testing_lab,soil_analysis
-          aquaponics_lab:
-            - aquaponics_lab,integrated_fish_and_plant_cultivation
-          animal_farm:
-            - Animal Farm,(Animal,living creature)
-        env:
-          - >-
-            crops{,{1-$$__lazy-wildcards/utils/crops/essential_crops__}|}{,{1-$$__lazy-wildcards/utils/crops/economic_crops__}|}
-          - water_recycling
-          - symbiotic_systems
-          - "__lazy-wildcards/subject/env-elem/flower/prompts__"
-          - plant
-          - laboratory
       parking:
         prompts:
           - >-
@@ -22014,6 +22150,45 @@
         "costume-elem":
           - >-
             torn {1-$$,torn $$pantyhose|thighhighs|shirt|pants|dress|skirt|sleeves,mismatched sleeves|bodysuit|cape|shorts|jeans|leotard|legwear|camisole}
+      "apron-blacksmith":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/apron-blacksmith/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem/apron-blacksmith/env__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-elem/apron-blacksmith/costume__{,{1-$$__lazy-wildcards/subject/costume-elem/apron-blacksmith/costume-elem__}|}
+        costume:
+          - blacksmith apron
+        "costume-elem":
+          - long apron
+          - chest to knee coverage
+          - neck strap
+          - waist straps
+          - cross back straps
+          - leather apron,thick leather
+          - rough apron
+          - >-
+            {dark|tan} brown leather
+          - canvas apron
+          - "__lazy-wildcards/subject/costume-elem/apron-nude/prompts-no-weight__"
+        env:
+          - flying sparks
+          - hot metal fragments
+          - slag
+          - burn marks
+          - scratch marks
+      "apron-nude":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/apron-nude/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-elem/apron-nude/costume__{,{1-$$__lazy-wildcards/subject/costume-elem/apron-nude/costume-elem__}|}
+        costume:
+          - nude apron,naked apron
+        "costume-elem":
+          - sideboob
+          - apron lift
       # https://civitai.com/models/260177/bone-dress-by-edg?modelVersionId=293461
       # https://civitai.com/models/250346/wearing-bones?modelVersionId=282494
       "skull-clothes":
@@ -24770,27 +24945,6 @@
           - hand on hip
           - arms behind head,arms up
           - "__lazy-wildcards/subject/action-pose-anything/pose-bottom-nsfw-open-legs/prompts__"
-      # https://civitai.com/models/664485/nude-censoring-innertube
-      nude_censoring_innertube:
-        prompts:
-          - >-
-            ({1-$$__lazy-wildcards/subject/costume/nude_censoring_innertube/costume-weapon__}{0.3:::{1.2|1.3|1.4}|}),__lazy-wildcards/subject/costume/nude_censoring_innertube/main-trigger-words__{,{1-$$__lazy-wildcards/subject/costume/nude_censoring_innertube/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume/nude_censoring_innertube/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume/nude_censoring_innertube/action__}|}{,{1-$$__lazy-wildcards/subject/costume/nude_censoring_innertube/env-bg__}|}
-        "main-trigger-words":
-          - convenient censoring,nude,censored
-        "costume-weapon":
-          - innertube
-          - translucent inner tube
-          - hugging inner tube,holding innertube
-        expressions:
-          - "__lazy-wildcards/subject/costume-elem-expressions/blush/prompts__"
-        "costume-elem":
-          - "__lazy-wildcards/subject/costume-ethnicity-breasts/breast_squish/prompts__"
-          - butt crack
-        action:
-          - leaning forward
-        "env-bg":
-          - pool,water
-          - beach,palm tree
       bikini:
         prompts:
           - >-
@@ -25283,7 +25437,7 @@
       workwear:
         prompts:
           - >-
-            (__lazy-wildcards/subject/costume/workwear/costume__{,{1-$$__lazy-wildcards/subject/costume/workwear/costume-elem-lower-body__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume/workwear/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume/workwear/costume-weapon__}|}{,{1-2$$__lazy-wildcards/subject/costume/workwear/expressions__}|}{,{1-2$$__lazy-wildcards/subject/costume/workwear/env-bg__}|}{,{1-$$__lazy-wildcards/subject/costume/workwear/style__}|}
+            (__lazy-wildcards/subject/costume/workwear/costume__{,{1-$$__lazy-wildcards/subject/costume/workwear/costume-elem-lower-body__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume/workwear/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume/workwear/costume-weapon__}|}{,{1-2$$__lazy-wildcards/subject/costume/workwear/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume/workwear/action__}|}{,{1-2$$__lazy-wildcards/subject/costume/workwear/env-bg__}|}{,{1-$$__lazy-wildcards/subject/costume/workwear/style__}|}
         costume:
           - >-
             workwear,goggles,open jacket,midriff,navel,cleavage,underboob,__lazy-wildcards/subject/costume-elem/belt-utility/prompts__,blacksmith
@@ -25313,6 +25467,8 @@
             {1-$$__lazy-wildcards/subject/costume-weapon/utility-*/prompts__}
         expressions:
           - "__lazy-wildcards/subject/costume-elem-expressions/smirk-confident/prompts-no-weight__"
+        action:
+          - rolled up sleeve
         "env-bg":
           - "__lazy-wildcards/subject/env-bg/blacksmith-forge_smithy/prompts__"
         style:
@@ -25547,6 +25703,57 @@
         prompts:
           - >-
             (Classical Frilled Nurse Uniform,nurse_old_style_01:1.2),apron,nurse cap,short sleeves,striped dress,puffy sleeves,vertical stripes,nurse,white apron,puffy short sleeves,pantyhose
+      # 瘟疫醫生｜鳥嘴醫師｜疫病醫師｜中世紀防疫醫者
+      # https://civitai.com/models/146891/plague-doctor-f-darkest-dungeon
+      # https://civitai.com/models/23796/plaguedoctormask
+      plague_doctor:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/plague_doctor/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|:1.3}){,{1-2$$__lazy-wildcards/subject/costume/plague_doctor/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume/plague_doctor/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume/plague_doctor/action__}|}{,{1-$$__lazy-wildcards/subject/costume/plague_doctor/env__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume/plague_doctor/costume-headwear-main__{,{1-$$__lazy-wildcards/subject/costume/plague_doctor/costume-headwear__}|}
+        "costume-headwear-main":
+          - plague doctor,plague doctor mask,Pdctor
+        "costume-headwear":
+          - round glass goggles
+        "costume-weapon":
+          - scalpel
+          - cane
+          - holding cane
+          - plague doctor staff
+          - holding lantern
+          - holding necklace
+          - holding vial
+          - "__lazy-wildcards/subject/costume-weapon/scalpel/prompts__"
+          - closed umbrella
+        "costume-elem":
+          - "feather-trimmed coat"
+          - long black cloak
+          - black robe
+          - bird mask,long beak mask,curved beak shape
+          - red eyes
+          - leather mask
+          - stitched seams
+          - metal rivets
+          - leather gloves
+          - knee high boots
+          - sealed clothing
+          - matte texture
+          - covered face
+          - hood,hood up,hooded coat,hoodie
+          - finger claws
+          - gothic mood
+        action:
+          - reaching
+          - looking at object
+        env:
+          - walking through fog
+          - hitodama
+          - cage
+          - erlenmeyer flask
+          - kerosene lamp
+          - darkest dungeon
       # https://civitai.com/models/768688/military-uniform-of-chinese-red-army?modelVersionId=859737
       Military_Uniform_of_Chinese_Red_Army:
         prompts:
@@ -32003,12 +32210,14 @@
         env:
           - flammable symbol
           - fiery background
+      # https://danbooru.donmai.us/wiki_pages/blacksmith_tongs?z=1
       "utility-blacksmith-hammer":
         prompts:
           - >-
-            __lazy-wildcards/subject/costume-weapon/utility-blacksmith-hammer/costume-weapon__{,{1-$$__lazy-wildcards/subject/costume-weapon/utility-blacksmith-hammer/action__}|}{,{1-$$__lazy-wildcards/subject/costume-weapon/utility-blacksmith-hammer/env__}|}
-        "costume-weapon":
+            __lazy-wildcards/subject/costume-weapon/utility-blacksmith-hammer/costume-weapon-main__{,{1-$$__lazy-wildcards/subject/costume-weapon/utility-blacksmith-hammer/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume-weapon/utility-blacksmith-hammer/action__}|}{,{1-$$__lazy-wildcards/subject/costume-weapon/utility-blacksmith-hammer/env__}|}
+        "costume-weapon-main":
           - blacksmith tongs
+        "costume-weapon":
           - holding tongs
           - blacksmith utility
           - blacksmith hammer
@@ -32016,6 +32225,7 @@
         action:
           - hammering
           - lifting hammer
+          - smithing
         env:
           - glowing hot
           - anvil
@@ -32159,6 +32369,69 @@
       "torch-welding":
         prompts:
           - welding torch
+      # https://civitai.com/models/664485/nude-censoring-innertube
+      "innertube-nude_censoring":
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-weapon/innertube-swim_ring/prompts__,__lazy-wildcards/subject/costume-weapon/innertube-nude_censoring/main-trigger-words__
+        "main-trigger-words":
+          - convenient censoring,nude,censored
+      # 游泳圈／內胎浮圈
+      "innertube-swim_ring":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-weapon/innertube-swim_ring/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-weapon/innertube-swim_ring/expressions__}|}{,{1-$$__lazy-wildcards/subject/costume-weapon/innertube-swim_ring/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-weapon/innertube-swim_ring/action__}|}{,{1-$$__lazy-wildcards/subject/costume-weapon/innertube-swim_ring/env-bg__}|}{,{1-$$__lazy-wildcards/subject/costume-weapon/innertube-swim_ring/style__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-weapon/innertube-swim_ring/costume-weapon-main__{,{1-$$__lazy-wildcards/subject/costume-weapon/innertube-swim_ring/costume-weapon__}|}
+        "costume-weapon-main":
+          - innertube,swim ring
+        "costume-weapon":
+          - translucent inner tube
+          - hugging inner tube,holding innertube
+          - ring shaped flotation device
+        expressions:
+          - "__lazy-wildcards/subject/costume-elem-expressions/blush/prompts__"
+        "costume-elem":
+          - "__lazy-wildcards/subject/costume-ethnicity-breasts/breast_squish/prompts__"
+          - butt crack
+          - stuck in a swim ring
+        action:
+          - leaning forward
+        "env-bg":
+          - pool,water
+          - beach,palm tree
+        style:
+          - relaxation
+          - pastel colors
+          - tropical mood
+          - resort atmosphere
+          - leisure time
+      # 黑色內胎
+      "innertube-classic":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-weapon/innertube-classic/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-weapon/innertube-classic/env-elem-main__,{1-2$$__lazy-wildcards/subject/costume-weapon/innertube-classic/env-elem__}{,{1-$$__lazy-wildcards/subject/costume-weapon/innertube-classic/env__}|}
+        "env-elem-main":
+          - classic inner tube,classic innertube
+        "env-elem":
+          - black inner tube
+          - red inner tube
+          - white inner tube
+        env:
+          - heavy rubber
+      # 手術刀
+      scalpel:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-weapon/scalpel/costume-weapon-main__{,{1-$$__lazy-wildcards/subject/costume-weapon/scalpel/costume-weapon__}|})
+        "costume-weapon-main":
+          - scalpel
+        "costume-weapon":
+          - holding scalpel
       "stuffed-animal":
         prompts:
           - >-
@@ -34694,6 +34967,8 @@
           - heavy painterly texture,soft airbrush shading,muted pastel horror,monster girl,dark pale skin,large horns,curved horns,demon horns,long fingers,sharp nails,veil over eyes,see through veil,long dress,red lips,smile,parted lips,holding heart \(organ\),bloody hands,black robes,collarbone,cleavage,off shoulder,curvy,red trim,long sleeves,standing,from side,from above,dark background,dark,dark lighting,chiaroscuro,looking up at viewer,very awa
           - "yami kawaii aesthetic,gray eyes,bangs,black hair,two-color hair,blue hair (long hair),outdoors,detailed hands,black nails,looking at up,realistic pantyhose (black pantyhose),white short hoodie,hood down,night,empty street,power lines,utility pole,standing"
           - thighhighs,hair flower,jewelry,flower,hair ornament,blush,gloves,white gloves,large breasts,Croriin,bride,wedding dress,white hair,red eyes,earrings
+          - >-
+            harajuku,cotton_candy_pastel,layered_dress,lace_ribbon,cardigan,pastel,big_buttons,over-kneehighs,sheer,platform_sneakers,pastel,beanie,pom_pom,braid,crown_braid,pastel_blue_hair,choker,ribbon_choker,ribbon,hair_ornament,headphones_around_neck,star_earrings,plushie_bag,plaid_pastel,under_eye_stickers,hearts,stars,pastel_nails,glossy,smartphone,selfie,pastel_aura,detailed_hair,gray trench_coat,double_breasted,(translucent inner tube,hugging inner tube,holding innertube:1.2),convenient censoring,nude,censored,(blush,embarrassed,yudedako),teased,covering face,butt crack,(breast squish,breast press),(dark_skin,tan skin,tanned skin,dark skin,dark-skinned,black-skinned,bronze skin,bronzed skin,cinematic Bronze tan tanning skin tone:1.1),absurdly long hair,hair ornament,brakmar,amakna,snow,town,shadowheart vale,haunting shadows,moonlit glades,domain of shadow creatures
         "action-pose":
           - hands on hips
           - "__lazy-wildcards/dataset/action__"
