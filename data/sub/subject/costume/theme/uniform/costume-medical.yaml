@@ -47,7 +47,7 @@ lazy-wildcards:
       plague_doctor:
         prompts:
           - >-
-            (__lazy-wildcards/subject/costume/plague_doctor/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            (__lazy-wildcards/subject/costume/plague_doctor/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
             {, {1-2$$__lazy-wildcards/subject/costume/plague_doctor/costume-weapon__}|}
             {, {1-$$__lazy-wildcards/subject/costume/plague_doctor/costume-elem__}|}
             {, {1-$$__lazy-wildcards/subject/costume/plague_doctor/action__}|}
