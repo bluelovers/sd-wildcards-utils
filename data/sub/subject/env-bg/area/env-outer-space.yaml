@@ -116,4 +116,35 @@ lazy-wildcards:
           - dutch angle
           - ancient yet futuristic
           - cosmic isolation
+      # 流星
+      space-meteor:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/space-meteor/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/space-meteor/env__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-bg/space-meteor/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/space-meteor/env-bg__}|}
+        env-bg-main:
+          - meteor
+        env-bg:
+          - meteor shower
+          - meteorite
+          - meteorite shower
+          - small meteor
+        env:
+          - deep space
+          - starry sky
+          - glowing trail
+          - fiery tail
+          - light streak, sky full of streaks
+          - burning debris
+          - rocky core
+          - molten surface, molten crust
+          - irregular rock shape
+          - rough surface
+          - charred surface
+          - impact crater, smoking ground, broken earth
+          - scattered debris
 
