@@ -338,4 +338,22 @@ lazy-wildcards:
           - fascist aesthetic
           - dystopian aesthetic
           - intimidating, stern, serious
+      # 馬術服裝
+      equestrian:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/equestrian/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume/equestrian/costume__
+            {, {1-$$__lazy-wildcards/subject/costume/equestrian/costume-elem__}|}
+        costume:
+          - equestrian uniform
+        costume-elem:
+          - jodhpurs, breeches
+          - tall boots
+          - riding jacket, tailored jacket
+          - leather gloves
+          - metal buckles
+          - double-breasted
 
