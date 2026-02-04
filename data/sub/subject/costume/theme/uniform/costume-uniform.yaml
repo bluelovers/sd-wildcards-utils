@@ -394,4 +394,55 @@ lazy-wildcards:
           - fluorescent yellow green
           - fluorescent orange
           - neon effect
+      # 消防員 火災救援人員
+      firefighter:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/firefighter/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            {, __lazy-wildcards/subject/costume/firefighter/costume__|}
+            {, {1-$$__lazy-wildcards/subject/costume/firefighter/costume-weapon__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/firefighter/env__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/firefighter/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/firefighter/style__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume/firefighter/costume-main__
+            {, {1-$$__lazy-wildcards/subject/costume/firefighter/costume-headwear__}|}
+            {, {1-$$__lazy-wildcards/subject/costume/firefighter/costume-elem__}|}
+        costume-main:
+          - firefighter
+        costume-headwear:
+          - firefighter helmet
+          - neck flap
+        costume-elem:
+          - firefighter jacket
+          - firefighter pants
+          - firefighter boots
+          - firefighter gloves
+          - high-visibility pants, high-visibility clothing
+          - belt
+          - open jacket
+        costume:
+          - __cf-firefighter/uniform__
+        costume-weapon:
+          - fire axe
+          - fire extinguisher
+          # 消防水管
+          - fire hose
+          - thermal imaging camera
+          - holding axe
+          - __cf-firefighter/accessory__
+        env:
+          - burning building
+          - industrial fire
+          - sparks, embers, fiery orange
+          - wet ground
+          - dark smoke
+        env-bg:
+          - __cof-location/place/burning-room__
+          - __cof-location/place/burning-building__
+          - __cof-location/place/urban-fire__
+          - __cof-location/place/fire-station__
+        style:
+          - scorched texture
 
