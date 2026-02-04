@@ -8638,6 +8638,35 @@
           - dutch angle
           - ancient yet futuristic
           - cosmic isolation
+      # 流星
+      "space-meteor":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/space-meteor/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg/space-meteor/env__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/env-bg/space-meteor/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg/space-meteor/env-bg__}|}
+        "env-bg-main":
+          - meteor
+        "env-bg":
+          - meteor shower
+          - meteorite
+          - meteorite shower
+          - small meteor
+        env:
+          - deep space
+          - starry sky
+          - glowing trail
+          - fiery tail
+          - light streak,sky full of streaks
+          - burning debris
+          - rocky core
+          - molten surface,molten crust
+          - irregular rock shape
+          - rough surface
+          - charred surface
+          - impact crater,smoking ground,broken earth
+          - scattered debris
       # https://civitai.com/models/390454/againguofengstyle?modelVersionId=435648
       chinese_landscape:
         prompts:
@@ -21645,6 +21674,25 @@
           - tied jacket
           - "front-tie top"
           - tied open shirts
+      # 自然滑落方式穿著 露肩外套
+      "jacket-off-shoulders":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/jacket-off-shoulders/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|:1.2}){,{1-$$__lazy-wildcards/subject/costume-elem/jacket-off-shoulders/costume-elem__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-elem/jacket-off-shoulders/costume-main__{,{1-$$__lazy-wildcards/subject/costume-elem/jacket-off-shoulders/costume__}|}
+        "costume-main":
+          - "off-shoulders jacket"
+        costume:
+          - jacket worn off shoulders
+          - loose fit jacket
+          - oversized jacket
+          - open jacket
+        "costume-elem":
+          - bare shoulders
+          - collarbone
+          - slipping off shoulders
       "see-through":
         prompts:
           - >-
@@ -26055,6 +26103,23 @@
           - fascist aesthetic
           - dystopian aesthetic
           - intimidating,stern,serious
+      # 馬術服裝
+      equestrian:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/equestrian/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume/equestrian/costume__{,{1-$$__lazy-wildcards/subject/costume/equestrian/costume-elem__}|}
+        costume:
+          - equestrian uniform
+        "costume-elem":
+          - jodhpurs,breeches
+          - tall boots
+          - riding jacket,tailored jacket
+          - leather gloves
+          - metal buckles
+          - "double-breasted"
       prisoner:
         prompts:
           - >-
@@ -26668,6 +26733,50 @@
           - fluorescent yellow green
           - fluorescent orange
           - neon effect
+      # 消防員 火災救援人員
+      firefighter:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/firefighter/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}){,__lazy-wildcards/subject/costume/firefighter/costume__|}{,{1-$$__lazy-wildcards/subject/costume/firefighter/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume/firefighter/env__}|}{,{1-$$__lazy-wildcards/subject/costume/firefighter/env-bg__}|}{,{1-$$__lazy-wildcards/subject/costume/firefighter/style__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume/firefighter/costume-main__{,{1-$$__lazy-wildcards/subject/costume/firefighter/costume-headwear__}|}{,{1-$$__lazy-wildcards/subject/costume/firefighter/costume-elem__}|}
+        "costume-main":
+          - firefighter
+        "costume-headwear":
+          - firefighter helmet
+          - neck flap
+        "costume-elem":
+          - firefighter jacket
+          - firefighter pants
+          - firefighter boots
+          - firefighter gloves
+          - "high-visibility pants,high-visibility clothing"
+          - belt
+          - open jacket
+        costume:
+          - "__cf-firefighter/uniform__"
+        "costume-weapon":
+          - fire axe
+          - fire extinguisher
+          # 消防水管
+          - fire hose
+          - thermal imaging camera
+          - holding axe
+          - "__cf-firefighter/accessory__"
+        env:
+          - burning building
+          - industrial fire
+          - sparks,embers,fiery orange
+          - wet ground
+          - dark smoke
+        "env-bg":
+          - "__cof-location/place/burning-room__"
+          - "__cof-location/place/burning-building__"
+          - "__cof-location/place/urban-fire__"
+          - "__cof-location/place/fire-station__"
+        style:
+          - scorched texture
       djellaba:
         prompts:
           - >-
@@ -29043,6 +29152,22 @@
           - tail piercing
           - tail ring
           - tail flower
+      # 松鼠
+      "tail-squirrel":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-body-tail/tail-squirrel/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-ethnicity-body-tail/tail-squirrel/costume-ethnicity-elem__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-body-tail/tail-squirrel/costume-ethnicity-main__{,{1-$$__lazy-wildcards/subject/costume-ethnicity-body-tail/tail-squirrel/costume-ethnicity__}|}
+        "costume-ethnicity-main":
+          - squirrel tail
+        "costume-ethnicity":
+          - big tail
+          - brown tail
+        "costume-ethnicity-elem":
+          - bushy tail
+          - fluffy tail
     costume-ethnicity-body:
       curvy_female:
         prompts:
@@ -29468,10 +29593,10 @@
       "third-eye":
         prompts:
           - >-
-            __lazy-wildcards/subject/costume-ethnicity-eyes/third-eye/costume-eyes-main__{,{1-$$__lazy-wildcards/subject/costume-ethnicity-eyes/third-eye/costume-eyes__}|}{0.3::,{1-$$__lazy-wildcards/subject/costume-ethnicity-eyes/third-eye/costume-elem__}|}{0.2::,{1-$$__lazy-wildcards/subject/costume-ethnicity-eyes/third-eye/style__}|}
-        "costume-eyes-main":
+            __lazy-wildcards/subject/costume-ethnicity-eyes/third-eye/costume-ethnicity-eyes-main__{,{1-$$__lazy-wildcards/subject/costume-ethnicity-eyes/third-eye/costume-ethnicity-eyes__}|}{0.3::,{1-$$__lazy-wildcards/subject/costume-ethnicity-eyes/third-eye/costume-elem__}|}{0.2::,{1-$$__lazy-wildcards/subject/costume-ethnicity-eyes/third-eye/style__}|}
+        "costume-ethnicity-eyes-main":
           - third_eye,3x3_eyes,ThirdEye,triclops
-        "costume-eyes":
+        "costume-ethnicity-eyes":
           - demonic third eye
           - fayan eyes
           - extra_eye
@@ -29681,6 +29806,20 @@
           - star makeup
           - heart makeup
           - egyptian makeup
+      compound_eyes-insect:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-ethnicity-eyes/compound_eyes-insect/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-ethnicity-eyes/compound_eyes-insect/costume-ethnicity-eyes-main__{,{1-$$__lazy-wildcards/subject/costume-ethnicity-eyes/compound_eyes-insect/costume-ethnicity-eyes__}|}
+        "costume-ethnicity-eyes-main":
+          - compound eyes
+        "costume-ethnicity-eyes":
+          - faceted eye surface
+          - glossy insect eyes
+          - no pupils
+          - glowing eyes,bioluminescent eyes
     costume-ethnicity-face:
       # https://civitai.com/models/67632/better-sharp-teeth
       sharp_teeth:
@@ -30700,7 +30839,7 @@
       "plant-girl-alraune":
         prompts:
           - >-
-            __lazy-wildcards/subject/costume-ethnicity-race/plant-girl-alraune/main__,({1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant-girl-alraune/costume-ethnicity__}){,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant-girl-alraune/costume-eyes__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant-girl-alraune/costume__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant-girl-alraune/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant-girl-alraune/env__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant-girl-alraune/env-bg__}|}
+            __lazy-wildcards/subject/costume-ethnicity-race/plant-girl-alraune/main__,({1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant-girl-alraune/costume-ethnicity__}){,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant-girl-alraune/costume-ethnicity-eyes__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant-girl-alraune/costume__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant-girl-alraune/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant-girl-alraune/env__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/plant-girl-alraune/env-bg__}|}
         main:
           - |-
             (alraune,alrauneSH:1.2),alraune_\(megami_tensei\),plant girl,upper body
@@ -30734,7 +30873,7 @@
           - drill hair
           - dress
           - lily \(flower\)
-        "costume-eyes":
+        "costume-ethnicity-eyes":
           - "symbol-shaped pupils"
           - heart,heart in eye
         "costume-weapon":
@@ -31018,7 +31157,7 @@
       lizard:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-ethnicity-main__,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-ethnicity__}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-elem__}|},{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-eyes__}{,{1-3$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-ethnicity-hair__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/env-bg__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/env-elem-creatures__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/env__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/style__}|}
+            __lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-ethnicity-main__,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-ethnicity__}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-elem__}|},{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-ethnicity-eyes__}{,{1-3$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-ethnicity-hair__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/env-bg__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/env-elem-creatures__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/env__}|}{,{1-$$__lazy-wildcards/subject/costume-ethnicity-race/lizard/style__}|}
         "costume-ethnicity-main":
           - lizardman,lizard,lizardmen,lizardman \(warhammer fantasy\),reptile,reptile girl
         "costume-ethnicity":
@@ -31042,7 +31181,7 @@
           - shoulder armor,pauldrons
           - hood,hooded coat
           - "__lazy-wildcards/subject/costume-elem/bound-shackles/prompts__"
-        "costume-eyes":
+        "costume-ethnicity-eyes":
           - reptilian_eyes,slit_pupils
           - yellow_eyes
           - green_eyes
@@ -32432,6 +32571,76 @@
           - scalpel
         "costume-weapon":
           - holding scalpel
+      # 連枷
+      # https://danbooru.donmai.us/wiki_pages/flail?z=2
+      flail:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-weapon/flail/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-weapon/flail/env__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-weapon/flail/costume-weapon-main__{,{1-$$__lazy-wildcards/subject/costume-weapon/flail/costume-weapon__}|}
+        "costume-weapon-main":
+          - spiked flail \(weapon\),spiked ball and chain \(weapon\)
+        "costume-weapon":
+          - holding flail
+          - holding chain
+        env:
+          - chain rope
+      # 錘
+      # https://danbooru.donmai.us/wiki_pages/mace
+      mace:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-weapon/mace/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-weapon/mace/costume-weapon-main__{,{1-$$__lazy-wildcards/subject/costume-weapon/mace/costume-weapon__}|}
+        "costume-weapon-main":
+          - mace
+        "costume-weapon":
+          - holding mace
+          - flanged mace
+          - spiked mace
+      # 雙節棍
+      "chain-nunchaku":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-weapon/chain-nunchaku/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-weapon/chain-nunchaku/costume-weapon-main__{,{1-$$__lazy-wildcards/subject/costume-weapon/chain-nunchaku/costume-weapon__}|}
+        "costume-weapon-main":
+          - nunchaku
+        "costume-weapon":
+          - holding nunchaku
+      # 鎖鎌
+      "chain-kusarigama":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-weapon/chain-kusarigama/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-weapon/chain-kusarigama/costume-weapon-main__{,{1-$$__lazy-wildcards/subject/costume-weapon/chain-kusarigama/costume-weapon__}|}
+        "costume-weapon-main":
+          - kusarigama
+        "costume-weapon":
+          - holding kusarigama
+          - chain sickie
+      # https://danbooru.donmai.us/wiki_pages/whip_sword
+      "chain-whip":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-weapon/chain-whip/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-weapon/chain-whip/costume-weapon-main__{,{1-$$__lazy-wildcards/subject/costume-weapon/chain-whip/costume-weapon__}|}
+        "costume-weapon-main":
+          - chain whip
+        "costume-weapon":
+          - holding chain whip
+          # 蛇腹剣
+          - whip sword
       "stuffed-animal":
         prompts:
           - >-
@@ -33296,11 +33505,11 @@
       unzipping:
         prompts:
           - >-
-            __lazy-wildcards/subject/costume-elem-accessories/unzipping/costume__{0.1::,{1-$$__lazy-wildcards/subject/costume-elem-accessories/unzipping/action__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-accessories/unzipping/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-accessories/unzipping/costume-elem-zipper__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-accessories/unzipping/costume-eyes__}|}
+            __lazy-wildcards/subject/costume-elem-accessories/unzipping/costume__{0.1::,{1-$$__lazy-wildcards/subject/costume-elem-accessories/unzipping/action__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-accessories/unzipping/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-accessories/unzipping/costume-elem-zipper__}|}{,{1-$$__lazy-wildcards/subject/costume-elem-accessories/unzipping/costume-ethnicity-eyes__}|}
         costume:
           - >-
             (unzipping,undressing:1.4),zipper,({unzipped|partially unzipped}:1.2),half naked
-        "costume-eyes":
+        "costume-ethnicity-eyes":
           - averting eyes
           - "heart-shaped pupils"
         action:
@@ -34147,6 +34356,20 @@
         expressions:
           - smug
           - okawaii koto+
+      # 指尖金字塔 尖塔式手勢
+      # https://danbooru.donmai.us/wiki_pages/steepled_fingers?z=1
+      steepled_fingers:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/action-pose/steepled_fingers/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}){,__lazy-wildcards/subject/action-pose/steepled_fingers/action-pose__|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/action-pose/steepled_fingers/action-pose-main__
+        "action-pose-main":
+          - steepled fingers
+        "action-pose":
+          - own hands clasped
+          - own hands together
     action-pose-selfie:
       selfie-mirror:
         prompts:
@@ -34835,7 +35058,7 @@
       "fellatio-invitation-after":
         prompts:
           - >-
-            __lazy-wildcards/subject/action-nsfw-sex/fellatio-invitation-after/main__{,({1-2$$__lazy-wildcards/subject/action-nsfw-sex/fellatio-invitation-after/action-hand__})|}{,(__lazy-wildcards/subject/costume-elem/cum/prompts__:1.3)|}{,{1-2$$__lazy-wildcards/subject/action-nsfw-sex/fellatio-invitation-after/costume-eyes__}|}{,{1-$$__lazy-wildcards/subject/action-nsfw-sex/fellatio-invitation-after/costume__}|}{,{1-$$__lazy-wildcards/subject/action-nsfw-sex/fellatio-invitation-after/style__}|}
+            __lazy-wildcards/subject/action-nsfw-sex/fellatio-invitation-after/main__{,({1-2$$__lazy-wildcards/subject/action-nsfw-sex/fellatio-invitation-after/action-hand__})|}{,(__lazy-wildcards/subject/costume-elem/cum/prompts__:1.3)|}{,{1-2$$__lazy-wildcards/subject/action-nsfw-sex/fellatio-invitation-after/costume-ethnicity-eyes__}|}{,{1-$$__lazy-wildcards/subject/action-nsfw-sex/fellatio-invitation-after/costume__}|}{,{1-$$__lazy-wildcards/subject/action-nsfw-sex/fellatio-invitation-after/style__}|}
         main:
           - (open mouth,tongue out,pov),looking at viewer,looking up
         "action-hand":
@@ -34845,7 +35068,7 @@
           - grabbing own breast
           - ok sign
           - peace sign
-        "costume-eyes":
+        "costume-ethnicity-eyes":
           - >-
             {one |}eye closed
           - "heart-shaped pupils"
@@ -35062,6 +35285,12 @@
         - >-
           {1-4$$__lazy-wildcards/*/*/*/costume-ethnicity*__}
         # - __lazy-wildcards/*/*/*/ethnicity*__
+      "costume-ethnicity-eyes":
+        - "__lazy-wildcards/prompts/eyes__"
+        - >-
+          {1-2$$__lazy-wildcards/subject/costume-ethnicity-eyes*/*/prompts__}
+        - >-
+          {1-3$$__lazy-wildcards/*/*/*/costume-ethnicity-eyes*__}
       "costume-elem":
         - >-
           {1-3$$__lazy-wildcards/subject/costume-*/*/prompts__}
@@ -35179,6 +35408,10 @@
       - "__lazy-wildcards/utils-dataset/costume/costume-ethnicity__"
       - >-
         {1-2$$__lazy-wildcards/utils-dataset/costume/costume-ethnicity__}
+    "costume-ethnicity-eyes":
+      - "__lazy-wildcards/utils-dataset/costume/costume-ethnicity-eyes__"
+      - >-
+        {1-2$$__lazy-wildcards/utils-dataset/costume/costume-ethnicity-eyes__}
     "costume-elem":
       - >-
         {1-4$$__lazy-wildcards/utils-dataset/costume/costume-elem__}
@@ -36728,7 +36961,7 @@
       queen_emeraldas:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/costume-main__,__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/costume-ethnicity-hair__,{1-$$__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/costume-eyes__},__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/costume-scar__{,__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/costume__|}{,{1-$$__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/costume-weapon__}|},{1-$$__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/env-symbol__}{,{1-$$__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/env__}|}{,{1-$$__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/style__}|}
+            __lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/costume-main__,__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/costume-ethnicity-hair__,{1-$$__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/costume-ethnicity-eyes__},__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/costume-scar__{,__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/costume__|}{,{1-$$__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/costume-weapon__}|},{1-$$__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/env-symbol__}{,{1-$$__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/env__}|}{,{1-$$__lazy-wildcards/cosplay-char/matsumoto_leiji/queen_emeraldas/style__}|}
         "costume-main":
           - queen_emeraldas,emeraldas \(cosplay\),ginga tetsudou 999,space pirate
         "costume-ethnicity-hair":
@@ -36737,7 +36970,7 @@
           - pirate_outfit,long coat,black and red cape
         "costume-scar":
           - scar,facial_scar,cheek_scar
-        "costume-eyes":
+        "costume-ethnicity-eyes":
           - lavender_eyes,violet_eyes,purple_eyes,distinct_eyes
           - "v-shaped eyebrows"
         "costume-elem":
@@ -37556,7 +37789,7 @@
     3x3_eyes:
       ayanokouji_pai:
         prompts:
-          - "ayanokouji pai,parvati iv,ayanokouji pai \\(cosplay\\),parvati iv \\(cosplay\\),3x3_eyes,__lazy-wildcards/subject/costume-ethnicity-eyes/third-eye/costume-eyes-main__"
+          - "ayanokouji pai,parvati iv,ayanokouji pai \\(cosplay\\),parvati iv \\(cosplay\\),3x3_eyes,__lazy-wildcards/subject/costume-ethnicity-eyes/third-eye/costume-ethnicity-eyes-main__"
     durarara:
       # https://civitai.com/models/20614/celty-sturluson-durarara-pdxl-update?modelVersionId=24527
       celty_sturluson:
@@ -38512,7 +38745,7 @@
       2b:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/Nier/2b/main__,__lazy-wildcards/cosplay-char/Nier/2b/costume-ethnicity__{,__lazy-wildcards/cosplay-char/Nier/2b/costume-types/type-*__|},__lazy-wildcards/cosplay-char/Nier/2b/costume-eyes/*__{,{1-$$__lazy-wildcards/cosplay-char/Nier/2b/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/Nier/2b/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/Nier/2b/env__}|}
+            __lazy-wildcards/cosplay-char/Nier/2b/main__,__lazy-wildcards/cosplay-char/Nier/2b/costume-ethnicity__{,__lazy-wildcards/cosplay-char/Nier/2b/costume-types/type-*__|},__lazy-wildcards/cosplay-char/Nier/2b/costume-ethnicity-eyes/*__{,{1-$$__lazy-wildcards/cosplay-char/Nier/2b/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/Nier/2b/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/Nier/2b/env__}|}
         main:
           - |-
             nier:automata,nier \(series\),nier,2bnierdef,2b,2b \(nier:automata\)
@@ -38541,7 +38774,7 @@
             - kaine lingerie,kaine bandages,kaine gloves,kaine shoes
           "type-bride":
             - Nier.2b\(Bride\),thighhighs,frills,sheer sleeves,sheer dress,sheer bridal veil,lace dress,wedding dress,bridal lingerie
-        "costume-eyes":
+        "costume-ethnicity-eyes":
           eyes:
             - "blue-gray eyes,no blindfold"
           blindfold:
@@ -40289,7 +40522,7 @@
       rakshata_chawla:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/main__,__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/costume-ethnicity__{,__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/costume-weapon__|}{,(__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/costume__)|}{,__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/costume-eyes__|}{,{1-$$__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/action__}|}{,{1-$$__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/expressions__}|}{,{1-$$__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/env__}|}{,{1-$$__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/style__}|}
+            __lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/main__,__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/costume-ethnicity__{,__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/costume-weapon__|}{,(__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/costume__)|}{,__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/costume-ethnicity-eyes__|}{,{1-$$__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/action__}|}{,{1-$$__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/expressions__}|}{,{1-$$__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/env__}|}{,{1-$$__lazy-wildcards/cosplay-char/code_geass/rakshata_chawla/style__}|}
         main:
           - >-
             rakshata_chawla,code geass,anime_rakshata_chawla_aiwaifu69,aiwaifu69
@@ -40299,7 +40532,7 @@
         costume:
           - white lab coat,long sleeves,red shirt,collared shirt
           - arabian clothes,dress,harem outfit,partially fingerless gloves,veil
-        "costume-eyes":
+        "costume-ethnicity-eyes":
           - "v-shaped eyebrows"
         "costume-elem":
           - black panties
@@ -40811,7 +41044,7 @@
       mosquito_musume:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/one-punch_man/mosquito_musume/costume-ethnicity__{,__lazy-wildcards/cosplay-char/one-punch_man/mosquito_musume/costume__}{,{1-$$__lazy-wildcards/cosplay-char/one-punch_man/mosquito_musume/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/one-punch_man/mosquito_musume/costume-eyes__}|}{,{1-$$__lazy-wildcards/cosplay-char/one-punch_man/mosquito_musume/expressions__}|}{,{1-$$__lazy-wildcards/cosplay-char/one-punch_man/mosquito_musume/action-pose__}|}
+            __lazy-wildcards/cosplay-char/one-punch_man/mosquito_musume/costume-ethnicity__{,__lazy-wildcards/cosplay-char/one-punch_man/mosquito_musume/costume__}{,{1-$$__lazy-wildcards/cosplay-char/one-punch_man/mosquito_musume/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char/one-punch_man/mosquito_musume/costume-ethnicity-eyes__}|}{,{1-$$__lazy-wildcards/cosplay-char/one-punch_man/mosquito_musume/expressions__}|}{,{1-$$__lazy-wildcards/cosplay-char/one-punch_man/mosquito_musume/action-pose__}|}
         "costume-ethnicity":
           - "mosquito musume,antennae,mosquito girl,mosquito wings,one-punch man,navel,single horn,insect wings,spikes,long_hair,red_eyes,makeup,lipstick,lips"
         costume:
@@ -40827,7 +41060,7 @@
           - claws
           - ribbon
           - helmet
-        "costume-eyes":
+        "costume-ethnicity-eyes":
           - jitome
         expressions:
           - smirk
@@ -41698,7 +41931,7 @@
       falling_devil:
         prompts:
           - >-
-            __lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-main__,__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-ethnicity__{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-eyes__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-nude__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-elem__}|}{,{1-3$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/expressions__}|}{0.2::,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/env-bg__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/env__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/env-elem-food__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/style__}|}
+            __lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-main__,__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-ethnicity__{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-ethnicity-eyes__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-nude__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-elem__}|}{,{1-3$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/costume-weapon__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/expressions__}|}{0.2::,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/env-bg__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/env__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/env-elem-food__}|}{,{1-$$__lazy-wildcards/cosplay-char/chainsaw_man/falling_devil/style__}|}
         "costume-main":
           - falling_devil_\(chainsaw_man\),fallingdevil,falldevil,falling_devil_\(chainsaw_man\)_\(cosplay\),chainsaw_man
         "costume-ethnicity":
@@ -41711,7 +41944,7 @@
           - buttons
           - chef
           - shirt tucked in,taut clothes,white shirt
-        "costume-eyes":
+        "costume-ethnicity-eyes":
           - closed eyes
           - "__lazy-wildcards/subject/costume-elem-expressions/doyagao_smug/prompts__"
           - wide smile
