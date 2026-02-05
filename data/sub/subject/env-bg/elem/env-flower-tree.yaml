@@ -95,4 +95,57 @@ lazy-wildcards:
           - wind effect
           - mysterious
           - serene
+      tree-palm:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/tree-palm/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-elem/tree-palm/env-elem-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/tree-palm/env-elem__}|}
+        env-elem-main:
+          - palm tree
+        env-elem:
+          - palm leaves
+      # 椰子樹
+      coconut-tree:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/coconut-tree/env-elem-main__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem/coconut-tree/env-elem__}|}
+            {, {1-3$$__lazy-wildcards/subject/env-elem/coconut-tree/env-bg__}|}
+        env-elem-main:
+          - coconut tree, coconut palm tree
+        env-elem:
+          - palm leaves
+          - __lazy-wildcards/subject/env-elem/coconut/prompts-no-weight__
+          - cracked shell
+          - cutting coconut
+          - __lazy-wildcards/subject/costume-weapon/knife-coconut_cutting/prompts-no-weight__
+        env-bg:
+          - tropical beach
+          - island scenery
+          - tropical landscape
+          - paradise vibe
+          - turquoise ocean
+          - tropical forest
+      # 椰子
+      coconut:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/coconut/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|:1.3})
+            {, {1-$$__lazy-wildcards/subject/env-elem/coconut/env__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-elem/coconut/env-elem-food-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/coconut/env-elem-food__}|}
+        env-elem-food-main:
+          - coconut
+        env-elem-food:
+          - opened coconut
+          - white coconut meat
+          - coconut water, coconut cup
+        env:
+          - juice droplets
+          - clear liquid
 
