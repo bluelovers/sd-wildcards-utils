@@ -287,4 +287,20 @@ lazy-wildcards:
           - holding knife and fork
           - holding knife
           - holding fork
+      # 酒杯，聖杯
+      cup-chalice:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-food-tool/cup-chalice/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-elem-food-tool/cup-chalice/env-elem-food-tool-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-food-tool/cup-chalice/env-elem-food-tool__}|}
+        env-elem-food-tool-main:
+          - chalice, goblet
+        env-elem-food-tool:
+          - medieval wooden goblet
+          - wooden wine goblet
+          - medieval wooden cup
+          - ancient rustic wooden beer mug
 
