@@ -101,4 +101,19 @@ lazy-wildcards:
           - ink wash color palette
           - geometric patterns
           - fabric flutter, gentle wind motion
+      # 經幡 幡布 彩色布條
+      flags-prayer:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/flags-prayer/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-elem/flags-prayer/env-elem-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem/flags-prayer/env-elem__}|}
+        env-elem-main:
+          - prayer flags
+        env-elem:
+          - tibetan prayer flags
+          - colorful prayer flags
+          - fluttering prayer flags
 

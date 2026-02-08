@@ -166,4 +166,31 @@ lazy-wildcards:
           - nostalgic
           - guiding light
           - soul light
+      # 髦牛
+      ox-yak:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-creatures/ox-yak/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-elem-creatures/ox-yak/costume-elem__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-creatures/ox-yak/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-elem-creatures/ox-yak/env__}|}
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/env-elem-creatures/ox-yak/env-elem-creatures-main__
+            {, {1-$$__lazy-wildcards/subject/env-elem-creatures/ox-yak/env-elem-creatures__}|}
+        env-elem-creatures-main:
+          - yak, tibetan yak
+        env-elem-creatures:
+          - large yak
+        costume-elem:
+          - long shaggy fur
+          - curved horns
+        env-bg:
+          - tibetan plateau
+          - himalayan mountains
+          - alpine grassland
+          - snow capped mountains
+        env:
+          - thin air atmosphere
+          - __lazy-wildcards/subject/env-elem/flags-prayer/prompts-no-weight__
 

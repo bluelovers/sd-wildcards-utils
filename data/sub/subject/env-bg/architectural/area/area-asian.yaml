@@ -150,4 +150,39 @@ lazy-wildcards:
           - massive scale
           - communal living
           - historical atmosphere, quiet rural mood
+      # 西藏
+      tibetan:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/tibetan/env-bg-main__
+            {, {1-$$__lazy-wildcards/subject/env-bg/tibetan/env-bg-real__}|}{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/env-bg/tibetan/env-bg__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/tibetan/env__}|}
+            {, {1-$$__lazy-wildcards/subject/env-bg/tibetan/style__}|}
+        env-bg-main:
+          - tibetan
+        env-bg-real:
+          - tibetan plateau
+          - himalayan mountains
+        env-bg:
+          - tibetan monastery, tibetan temple
+          - tibetan stupa
+          - tibetan village
+          - tibetan alpine grassland
+          - tibetan snow capped mountains
+          - tibetan religious architecture
+        env:
+          - __lazy-wildcards/subject/env-elem/flags-prayer/prompts-no-weight__
+          - dramatic clouds
+          - cold climate
+          - strong wind
+          - prayer wheels
+          - red-trim white stone walls
+          - __lazy-wildcards/subject/env-elem-creatures/ox-yak/prompts-no-weight__
+        style:
+          - thin air atmosphere
+          - majestic mood
+          - spiritual culture
+          - __lazy-wildcards/utils/fn/style-inspired(v=tibetan)__
+          - __lazy-wildcards/utils/fn/pattern(v=tibetan)__
 
