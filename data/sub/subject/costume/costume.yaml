@@ -634,24 +634,6 @@ lazy-wildcards:
           - black sheer dress
           - red sheer dress
           - black panties
-      # https://civitai.com/models/265516/plunge-overalls-and-crop-top?modelVersionId=299391
-      # https://civitai.com/models/83700?modelVersionId=88950
-      plunge_overalls:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume/plunge_overalls/costume-main__{0.3:::{1.2|1.3|1.4}|})
-            {, {1-$$__lazy-wildcards/subject/costume/plunge_overalls/costume__}|}
-            {, {1-$$__lazy-wildcards/subject/costume/plunge_overalls/costume-elem__}|}
-        costume-main:
-          - plung30v3r4ll, plunge overalls, deep v overalls, underboob, baggy overalls, naked overalls, cleavage
-        costume:
-          - crop tank top
-          - naked suspenders
-        costume-elem:
-          - denim
-          - sleeveless, bare shoulders
-          - __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-shapes-sagging/prompts__
-          - no bra
       # https://civitai.com/models/268186/net-dress?modelVersionId=302356
       net_dress:
         prompts:
