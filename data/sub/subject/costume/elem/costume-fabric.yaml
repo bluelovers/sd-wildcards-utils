@@ -340,6 +340,7 @@ lazy-wildcards:
             (__lazy-wildcards/subject/costume-elem/overalls-plunge/costume-main__{0.3:::{1.2|1.3|1.4}|})
             {, {1-$$__lazy-wildcards/subject/costume-elem/overalls-plunge/costume__}|}
             {, {1-$$__lazy-wildcards/subject/costume-elem/overalls-plunge/costume-elem__}|}
+            , __lazy-wildcards/subject/costume-elem/overalls-base/prompts-no-weight__
         costume-main:
           - plung30v3r4ll, plunge overalls, deep v overalls, underboob, baggy overalls, naked overalls, cleavage
         costume:
@@ -350,4 +351,75 @@ lazy-wildcards:
           - sleeveless, bare shoulders
           - __lazy-wildcards/subject/costume-ethnicity-breasts/breasts-shapes-sagging/prompts__
           - no bra
+          - __lazy-wildcards/subject/costume-elem/overalls-naked/prompts-no-weight__
+      # https://civitai.com/models/268638/overalls
+      # https://civitai.com/models/581255/overallssuspenders-concept
+      # https://civitai.com/models/492468/y5-overalls
+      overalls-base:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/overalls-base/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-elem/overalls-base/costume__
+            {, {1-$$__lazy-wildcards/subject/costume-elem/overalls-base/action__}|}
+            {, {1-$$__lazy-wildcards/subject/costume-elem/overalls-base/costume-elem__}|}
+        costume:
+          - overalls, 0v3r4lls
+        action:
+          - overalls pull
+        costume-elem:
+          - suspenders slip, strap slip
+          - sleeveless, bare shoulders
+          - suspenders hanging
+          - suspenders
+          - overall shorts
+          - overall pants
+          - torn overalls
+          - print overalls
+          - dirty overalls
+      overalls-naked:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/overalls-naked/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|:1.3})
+            , __lazy-wildcards/subject/costume-elem/overalls-base/prompts-no-weight__
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-elem/overalls-naked/costume__
+            {, {1-$$__lazy-wildcards/subject/costume-elem/overalls-naked/costume-elem__}|}
+        costume:
+          - naked overalls, nude overalls
+        costume-elem:
+          - sideboob
+          - underboob
+          - no bra
+          - naked suspenders
+      overalls-denim:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/overalls-denim/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            {, {1-$$__lazy-wildcards/subject/costume-elem/overalls-denim/costume-elem__}|}
+            , __lazy-wildcards/subject/costume-elem/overalls-base/prompts-no-weight__
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-elem/overalls-denim/costume__
+        costume:
+          - denim overalls, denim
+        costume-elem:
+          - __lazy-wildcards/subject/costume-elem/denim-texture/prompts-no-weight__
+      denim-texture:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/denim-texture/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-elem/denim-texture/costume-elem-main__
+            {, {1-$$__lazy-wildcards/subject/costume-elem/denim-texture/costume-elem__}|}
+        costume-elem-main:
+          - denim texture
+        costume-elem:
+          - blue denim
+          - distressed denim
+          - faded denim
+          - ripped denim
 
