@@ -1,0 +1,60 @@
+lazy-wildcards:
+  subject:
+    costume-elem:
+      cutout-backless-base:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/cutout-backless-base/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-elem/cutout-backless-base/costume__
+            {, {1-$$__lazy-wildcards/subject/costume-elem/cutout-backless-base/costume-elem__}|}
+        costume:
+          - backless, backless outfit
+        costume-elem:
+          - open back
+          - exposed back
+          - back cutout
+      cutout-backless-outfit:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/cutout-backless-outfit/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+            , __lazy-wildcards/subject/costume-elem/cutout-backless-base/prompts-no-weight__
+        prompts-no-weight:
+          - >-
+            {1-2$$__lazy-wildcards/subject/costume-elem/cutout-backless-outfit/costume__}
+        costume:
+          - backless dress
+          - backless shirt
+          - backless top
+          - backless swimsuit
+      cutout-side:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/cutout-side/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            __lazy-wildcards/subject/costume-elem/cutout-side/costume-elem__
+        costume-elem:
+          - side cutout
+      cutout-pattern:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/cutout-pattern/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        prompts-no-weight:
+          - >-
+            {1-3$$__lazy-wildcards/subject/costume-elem/cutout-pattern/costume-elem__}
+        costume-elem:
+          - cat cutout
+          - heart cutout
+          - star cutout
+          - moon cutout
+          - diamond cutout
+          - skull cutout
+          - cross cutout
+          - flower cutout
+          - butterfly cutout
+          - sun cutout
+          - bat cutout
+          - spiderweb cutout
+
