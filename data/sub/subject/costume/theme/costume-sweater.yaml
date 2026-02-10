@@ -1,0 +1,18 @@
+lazy-wildcards:
+  subject:
+    costume:
+      sweater:
+        prompts:
+          - >-
+            sweater
+            {,{1-$$__lazy-wildcards/subject/costume/sweater/costume__}|}
+            {,{1-$$__lazy-wildcards/subject/costume/sweater/costume-elem__}|}
+        costume:
+          - ribbed shirt, ribbed sweater
+          - sleeveless, sleeveless sweater
+          - turtleneck sweater
+          - virgin killer sweater
+        costume-elem:
+          - navel
+          - torn sweater
+

@@ -479,20 +479,6 @@ lazy-wildcards:
         prompts:
           - >-
             hinatazaka46 10th single uniform, olive green shirt, white collar
-      sweater:
-        prompts:
-          - >-
-            sweater
-            {,{1-$$__lazy-wildcards/subject/costume/sweater/costume__}|}
-            {,{1-$$__lazy-wildcards/subject/costume/sweater/costume-elem__}|}
-        costume:
-          - ribbed shirt, ribbed sweater
-          - sleeveless, sleeveless sweater
-          - turtleneck sweater
-          - virgin killer sweater
-        costume-elem:
-          - navel
-          - torn sweater
       martial_arts:
         prompts:
           - >-
