@@ -8008,6 +8008,7 @@
           - retro car
           - summer,night
           - neon lights,neon sign
+          - "__lazy-wildcards/subject/env-elem/tree-palm/prompts-no-weight__"
       "dirty-alley":
         prompts:
           - >-
@@ -8372,7 +8373,7 @@
           - "__cof-location/place/oasis__"
           - oasis pond
         env:
-          - palm tree
+          - "__lazy-wildcards/subject/env-elem/tree-palm/prompts-no-weight__"
           - cactus
           - lake
           - lush vegetation
@@ -10669,6 +10670,37 @@
           - massive scale
           - communal living
           - historical atmosphere,quiet rural mood
+      # 西藏
+      tibetan:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-bg/tibetan/env-bg-main__{,{1-$$__lazy-wildcards/subject/env-bg/tibetan/env-bg-real__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-bg/tibetan/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-bg/tibetan/env__}|}{,{1-$$__lazy-wildcards/subject/env-bg/tibetan/style__}|}
+        "env-bg-main":
+          - tibetan
+        "env-bg-real":
+          - tibetan plateau
+          - himalayan mountains
+        "env-bg":
+          - tibetan monastery,tibetan temple
+          - tibetan stupa
+          - tibetan village
+          - tibetan alpine grassland
+          - tibetan snow capped mountains
+          - tibetan religious architecture
+        env:
+          - "__lazy-wildcards/subject/env-elem/flags-prayer/prompts-no-weight__"
+          - dramatic clouds
+          - cold climate
+          - strong wind
+          - prayer wheels
+          - "red-trim white stone walls"
+          - "__lazy-wildcards/subject/env-elem-creatures/ox-yak/prompts-no-weight__"
+        style:
+          - thin air atmosphere
+          - majestic mood
+          - spiritual culture
+          - "__lazy-wildcards/utils/fn/style-inspired(v=tibetan)__"
+          - "__lazy-wildcards/utils/fn/pattern(v=tibetan)__"
       # https://civitai.com/models/230964/middle-eastern-market-rug-stall
       # https://civitai.com/models/169967/game-scenario-middle-east-region
       middle_eastern_market:
@@ -12688,6 +12720,54 @@
           - wind effect
           - mysterious
           - serene
+      "tree-palm":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/tree-palm/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/env-elem/tree-palm/env-elem-main__{,{1-$$__lazy-wildcards/subject/env-elem/tree-palm/env-elem__}|}
+        "env-elem-main":
+          - palm tree
+        "env-elem":
+          - palm leaves
+      # 椰子樹
+      "coconut-tree":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/coconut-tree/env-elem-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem/coconut-tree/env-elem__}|}{,{1-3$$__lazy-wildcards/subject/env-elem/coconut-tree/env-bg__}|}
+        "env-elem-main":
+          - coconut tree,coconut palm tree
+        "env-elem":
+          - palm leaves
+          - "__lazy-wildcards/subject/env-elem/coconut/prompts-no-weight__"
+          - cracked shell
+          - cutting coconut
+          - "__lazy-wildcards/subject/costume-weapon/knife-coconut_cutting/prompts-no-weight__"
+        "env-bg":
+          - tropical beach
+          - island scenery
+          - tropical landscape
+          - paradise vibe
+          - turquoise ocean
+          - tropical forest
+      # 椰子
+      coconut:
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/coconut/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|:1.3}){,{1-$$__lazy-wildcards/subject/env-elem/coconut/env__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/env-elem/coconut/env-elem-food-main__{,{1-$$__lazy-wildcards/subject/env-elem/coconut/env-elem-food__}|}
+        "env-elem-food-main":
+          - coconut
+        "env-elem-food":
+          - opened coconut
+          - white coconut meat
+          - coconut water,coconut cup
+        env:
+          - juice droplets
+          - clear liquid
       others:
         prompts:
           - "__lazy-wildcards/subject/env-elem/others/env__"
@@ -13951,6 +14031,20 @@
           - ink wash color palette
           - geometric patterns
           - fabric flutter,gentle wind motion
+      # 經幡 幡布 彩色布條
+      "flags-prayer":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem/flags-prayer/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/env-elem/flags-prayer/env-elem-main__{,{1-$$__lazy-wildcards/subject/env-elem/flags-prayer/env-elem__}|}
+        "env-elem-main":
+          - prayer flags
+        "env-elem":
+          - tibetan prayer flags
+          - colorful prayer flags
+          - fluttering prayer flags
       "gold-gemstone":
         prompts:
           - >-
@@ -16081,7 +16175,7 @@
           - tropical island
         env:
           - torch
-          - palm tree
+          - "__lazy-wildcards/subject/env-elem/tree-palm/prompts-no-weight__"
           - bamboo structure
           - shell
           - lantern
@@ -18576,6 +18670,21 @@
           - holding knife and fork
           - holding knife
           - holding fork
+      # 酒杯，聖杯
+      "cup-chalice":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-food-tool/cup-chalice/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/env-elem-food-tool/cup-chalice/env-elem-food-tool-main__{,{1-$$__lazy-wildcards/subject/env-elem-food-tool/cup-chalice/env-elem-food-tool__}|}
+        "env-elem-food-tool-main":
+          - chalice,goblet
+        "env-elem-food-tool":
+          - medieval wooden goblet
+          - wooden wine goblet
+          - medieval wooden cup
+          - ancient rustic wooden beer mug
     env-elem-pipes:
       # https://civitai.com/models/85779/manypipesai-konyconi
       "industrial-pipes":
@@ -19583,6 +19692,29 @@
           - nostalgic
           - guiding light
           - soul light
+      # 髦牛
+      "ox-yak":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/env-elem-creatures/ox-yak/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/env-elem-creatures/ox-yak/costume-elem__}|}{,{1-$$__lazy-wildcards/subject/env-elem-creatures/ox-yak/env-bg__}|}{,{1-$$__lazy-wildcards/subject/env-elem-creatures/ox-yak/env__}|}
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/env-elem-creatures/ox-yak/env-elem-creatures-main__{,{1-$$__lazy-wildcards/subject/env-elem-creatures/ox-yak/env-elem-creatures__}|}
+        "env-elem-creatures-main":
+          - yak,tibetan yak
+        "env-elem-creatures":
+          - large yak
+        "costume-elem":
+          - long shaggy fur
+          - curved horns
+        "env-bg":
+          - tibetan plateau
+          - himalayan mountains
+          - alpine grassland
+          - snow capped mountains
+        env:
+          - thin air atmosphere
+          - "__lazy-wildcards/subject/env-elem/flags-prayer/prompts-no-weight__"
     env-bg-real-world-location:
       # 雪梨歌劇院
       # 悉尼歌剧院，以帆船形屋顶、临水位置、文化中心为特征。
@@ -20486,7 +20618,7 @@
           - carpet,rug
           - barrel,pot,crate
           - fruit
-          - palm tree
+          - "__lazy-wildcards/subject/env-elem/tree-palm/prompts-no-weight__"
           - platform
           - "__lazy-wildcards/utils/color-base__ cloth"
           - ladder
@@ -21693,6 +21825,60 @@
           - bare shoulders
           - collarbone
           - slipping off shoulders
+      "cutout-backless-base":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/cutout-backless-base/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-elem/cutout-backless-base/costume__{,{1-$$__lazy-wildcards/subject/costume-elem/cutout-backless-base/costume-elem__}|}
+        costume:
+          - backless,backless outfit
+        "costume-elem":
+          - open back
+          - exposed back
+          - back cutout
+      "cutout-backless-outfit":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/cutout-backless-outfit/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}),__lazy-wildcards/subject/costume-elem/cutout-backless-base/prompts-no-weight__
+        "prompts-no-weight":
+          - >-
+            {1-2$$__lazy-wildcards/subject/costume-elem/cutout-backless-outfit/costume__}
+        costume:
+          - backless dress
+          - backless shirt
+          - backless top
+          - backless swimsuit
+      "cutout-side":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/cutout-side/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-elem/cutout-side/costume-elem__
+        "costume-elem":
+          - side cutout
+      "cutout-pattern":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/cutout-pattern/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            {1-3$$__lazy-wildcards/subject/costume-elem/cutout-pattern/costume-elem__}
+        "costume-elem":
+          - cat cutout
+          - heart cutout
+          - star cutout
+          - moon cutout
+          - diamond cutout
+          - skull cutout
+          - cross cutout
+          - flower cutout
+          - butterfly cutout
+          - sun cutout
+          - bat cutout
+          - spiderweb cutout
       "see-through":
         prompts:
           - >-
@@ -21966,6 +22152,7 @@
           - "__lazy-wildcards/subject/costume-elem/fabric-elem/prompts-no-weight__"
           - underbutt
           - "see-through loincloth"
+          - backless pelvic curtain
         action:
           - pelvic curtain lift
           - hand on fabric
@@ -22237,6 +22424,87 @@
         "costume-elem":
           - sideboob
           - apron lift
+      # 深V領吊帶褲
+      # https://civitai.com/models/265516/plunge-overalls-and-crop-top?modelVersionId=299391
+      # https://civitai.com/models/83700?modelVersionId=88950
+      "overalls-plunge":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/overalls-plunge/costume-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem/overalls-plunge/costume__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/overalls-plunge/costume-elem__}|},__lazy-wildcards/subject/costume-elem/overalls-base/prompts-no-weight__
+        "costume-main":
+          - plung30v3r4ll,plunge overalls,deep v overalls,underboob,baggy overalls,naked overalls,cleavage
+        costume:
+          - crop tank top
+          - naked suspenders
+        "costume-elem":
+          - denim
+          - sleeveless,bare shoulders
+          - "__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-shapes-sagging/prompts__"
+          - no bra
+          - "__lazy-wildcards/subject/costume-elem/overalls-naked/prompts-no-weight__"
+      # https://civitai.com/models/268638/overalls
+      # https://civitai.com/models/581255/overallssuspenders-concept
+      # https://civitai.com/models/492468/y5-overalls
+      "overalls-base":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/overalls-base/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-elem/overalls-base/costume__{,{1-$$__lazy-wildcards/subject/costume-elem/overalls-base/action__}|}{,{1-$$__lazy-wildcards/subject/costume-elem/overalls-base/costume-elem__}|}
+        costume:
+          - overalls,0v3r4lls
+        action:
+          - overalls pull
+        "costume-elem":
+          - suspenders slip,strap slip
+          - sleeveless,bare shoulders
+          - suspenders hanging
+          - suspenders
+          - overall shorts
+          - overall pants
+          - torn overalls
+          - print overalls
+          - dirty overalls
+      "overalls-naked":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/overalls-naked/prompts-no-weight__{0.3:::{1.2|1.3|1.4|1.6}|:1.3}),__lazy-wildcards/subject/costume-elem/overalls-base/prompts-no-weight__
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-elem/overalls-naked/costume__{,{1-$$__lazy-wildcards/subject/costume-elem/overalls-naked/costume-elem__}|}
+        costume:
+          - naked overalls,nude overalls
+        "costume-elem":
+          - sideboob
+          - underboob
+          - no bra
+          - naked suspenders
+      "overalls-denim":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/overalls-denim/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume-elem/overalls-denim/costume-elem__}|},__lazy-wildcards/subject/costume-elem/overalls-base/prompts-no-weight__
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-elem/overalls-denim/costume__
+        costume:
+          - denim overalls,denim
+        "costume-elem":
+          - "__lazy-wildcards/subject/costume-elem/denim-texture/prompts-no-weight__"
+      "denim-texture":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem/denim-texture/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-elem/denim-texture/costume-elem-main__{,{1-$$__lazy-wildcards/subject/costume-elem/denim-texture/costume-elem__}|}
+        "costume-elem-main":
+          - denim texture
+        "costume-elem":
+          - blue denim
+          - distressed denim
+          - faded denim
+          - ripped denim
       # https://civitai.com/models/260177/bone-dress-by-edg?modelVersionId=293461
       # https://civitai.com/models/250346/wearing-bones?modelVersionId=282494
       "skull-clothes":
@@ -23720,18 +23988,6 @@
         prompts:
           - >-
             hinatazaka46 10th single uniform,olive green shirt,white collar
-      sweater:
-        prompts:
-          - >-
-            sweater{,{1-$$__lazy-wildcards/subject/costume/sweater/costume__}|}{,{1-$$__lazy-wildcards/subject/costume/sweater/costume-elem__}|}
-        costume:
-          - ribbed shirt,ribbed sweater
-          - sleeveless,sleeveless sweater
-          - turtleneck sweater
-          - virgin killer sweater
-        "costume-elem":
-          - navel
-          - torn sweater
       martial_arts:
         prompts:
           - >-
@@ -23853,22 +24109,6 @@
           - black sheer dress
           - red sheer dress
           - black panties
-      # https://civitai.com/models/265516/plunge-overalls-and-crop-top?modelVersionId=299391
-      # https://civitai.com/models/83700?modelVersionId=88950
-      plunge_overalls:
-        prompts:
-          - >-
-            (__lazy-wildcards/subject/costume/plunge_overalls/costume-main__{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/subject/costume/plunge_overalls/costume__}|}{,{1-$$__lazy-wildcards/subject/costume/plunge_overalls/costume-elem__}|}
-        "costume-main":
-          - plung30v3r4ll,plunge overalls,deep v overalls,underboob,baggy overalls,naked overalls,cleavage
-        costume:
-          - crop tank top
-          - naked suspenders
-        "costume-elem":
-          - denim
-          - sleeveless,bare shoulders
-          - "__lazy-wildcards/subject/costume-ethnicity-breasts/breasts-shapes-sagging/prompts__"
-          - no bra
       # https://civitai.com/models/268186/net-dress?modelVersionId=302356
       net_dress:
         prompts:
@@ -24959,6 +25199,50 @@
           - cool color palette
           - cold atmosphere
           - energetic winter mood
+      sweater:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume/sweater/costume-main__{,{1-$$__lazy-wildcards/subject/costume/sweater/costume__}|}{,{1-$$__lazy-wildcards/subject/costume/sweater/costume-elem__}|}
+        "costume-main":
+          - sweater
+        costume:
+          - ribbed shirt,ribbed sweater
+          - sleeveless,sleeveless sweater
+          - turtleneck sweater
+          - "__lazy-wildcards/subject/costume/sweater-virgin-killer/prompts-no-weight__"
+        "costume-elem":
+          - navel
+          - torn sweater
+      # https://danbooru.donmai.us/wiki_pages/virgin_killer_sweater
+      # https://danbooru.donmai.us/wiki_pages/virgin_destroyer_sweater
+      "sweater-virgin-killer":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/sweater-virgin-killer/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume/sweater-virgin-killer/costume-main__{,{1-2$$__lazy-wildcards/subject/costume/sweater-virgin-killer/costume__}|}
+        "costume-main":
+          - virgin killer sweater
+        costume:
+          - backwards virgin killer sweater
+          - evolved virgin killer sweater
+          - virgin annihilator sweater
+          - virgin destroyer sweater,detached sleeves
+          - virgin terminator sweater
+      "sweater-cutout":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume/sweater-cutout/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume/sweater-cutout/costume-main__{,{1-$$__lazy-wildcards/subject/costume/sweater-cutout/costume__}|}
+        "costume-main":
+          - sweater cutout
+        costume:
+          - "open-chest sweater"
+          - "side-cutout sweater"
+          - torn sweater
       # https://civitai.com/models/234197/v-shaped-slingshot-swimsuit-wide-fabric?modelVersionId=264068
       # https://civitai.com/models/234206/v-shaped-slingshot-swimsuit-string-type?modelVersionId=264079
       "v-shaped_slingshot_swimsuit":
@@ -26737,7 +27021,7 @@
       firefighter:
         prompts:
           - >-
-            (__lazy-wildcards/subject/costume/firefighter/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}){,__lazy-wildcards/subject/costume/firefighter/costume__|}{,{1-$$__lazy-wildcards/subject/costume/firefighter/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume/firefighter/env__}|}{,{1-$$__lazy-wildcards/subject/costume/firefighter/env-bg__}|}{,{1-$$__lazy-wildcards/subject/costume/firefighter/style__}|}
+            (__lazy-wildcards/subject/costume/firefighter/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|}){,__lazy-wildcards/subject/costume/firefighter/costume__|}{,{1-$$__lazy-wildcards/subject/costume/firefighter/costume-weapon__}|}{,{1-$$__lazy-wildcards/subject/costume/firefighter/env__}|}{,{1-2$$__lazy-wildcards/subject/costume/firefighter/env-bg__}|}{,{1-$$__lazy-wildcards/subject/costume/firefighter/style__}|}
         "prompts-no-weight":
           - >-
             __lazy-wildcards/subject/costume/firefighter/costume-main__{,{1-$$__lazy-wildcards/subject/costume/firefighter/costume-headwear__}|}{,{1-$$__lazy-wildcards/subject/costume/firefighter/costume-elem__}|}
@@ -32641,6 +32925,16 @@
           - holding chain whip
           # 蛇腹剣
           - whip sword
+      # 椰子刀
+      "knife-coconut_cutting":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-weapon/knife-coconut_cutting/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-weapon/knife-coconut_cutting/costume-weapon__
+        "costume-weapon":
+          - coconut cutting knife
       "stuffed-animal":
         prompts:
           - >-
@@ -33455,6 +33749,97 @@
           - collarbone piercing
           - navel piercing,navel
           - tail piercing
+      halo:
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-accessories/halo/costume-elem-main__{,{1-5$$__lazy-wildcards/subject/costume-elem-accessories/halo/costume-elem__}|}
+        "costume-elem-main":
+          - halo
+        "costume-elem":
+          - glowing halo
+          - floating halo
+          - broken halo
+          - glitched halo
+          - fake halo
+          - flaming halo
+          - |-
+            0.3::mechanical halo
+          - spiked halo
+          - traditional halo
+          - winged halo
+          - distorted halo
+          - faded halo
+          - "__lazy-wildcards/subject/costume-elem-accessories/halo-color/prompts-no-weight__"
+          - "__lazy-wildcards/subject/costume-elem-accessories/halo-liquid/prompts-no-weight__"
+          - "__lazy-wildcards/subject/costume-elem-accessories/halo-multi/prompts-no-weight__"
+          - "__lazy-wildcards/subject/costume-elem-accessories/halo-shaped/prompts-no-weight__"
+          - "__lazy-wildcards/subject/costume-elem-accessories/halo-fake/prompts-no-weight__"
+      "halo-fake":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-accessories/halo-fake/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-elem-accessories/halo-fake/costume-elem__
+        "costume-elem":
+          - fake halo
+      "halo-shaped":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-accessories/halo-shaped/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            {1-2$$__lazy-wildcards/subject/costume-elem-accessories/halo-shaped/costume-elem__}
+        "costume-elem":
+          - star halo
+          - rectangular halo
+          - crescent halo
+          - cross halo
+      "halo-multi":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-accessories/halo-multi/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            {1-2$$__lazy-wildcards/subject/costume-elem-accessories/halo-multi/costume-elem__}
+        "costume-elem":
+          - "two-sided halo"
+          - ophanim halo
+          - double halo
+      # https://danbooru.donmai.us/wiki_pages/pregnancy_halo
+      "halo-pregnancy":
+        prompts:
+          - >-
+            __lazy-wildcards/subject/costume-elem-accessories/halo-pregnancy/costume-elem__
+        "costume-elem":
+          - pregnancy halo
+      "halo-liquid":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-accessories/halo-liquid/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            {1-$$__lazy-wildcards/subject/costume-elem-accessories/halo-liquid/costume-elem__}
+        "costume-elem":
+          - liquid halo
+          - blood halo
+          - melting halo
+      "halo-color":
+        prompts:
+          - >-
+            (__lazy-wildcards/subject/costume-elem-accessories/halo-color/prompts-no-weight__{0.3:::{1.2|1.3|1.4}|})
+        "prompts-no-weight":
+          - >-
+            __lazy-wildcards/subject/costume-elem-accessories/halo-color/costume-elem__
+        "costume-elem":
+          - "__lazy-wildcards/utils/color-base__ halo"
+          - >-
+            two-tone halo{,{2$$ halo,$$__lazy-wildcards/utils/color-base__} halo|}
+          - >-
+            multicolored halo{,{2-3$$ halo,$$__lazy-wildcards/utils/color-base__} halo|}
+          - >-
+            gradient halo{,{2-3$$ halo,$$__lazy-wildcards/utils/color-base__} halo|}
+          - rainbow halo
       zipper:
         prompts:
           - >-
@@ -35237,6 +35622,8 @@
           - "dutch angle,Health Goth Art,extreme close-up shot of a traditional Rasta Airship,Vulgar,covered in Ash,made from Black hole,Tranquil,warm golden hour lighting,Hypersaturated,Plain white background,ethnic"
           - |-
             A digital illustration shoot about a character in a suggestive pose,1 girl,solo,mature female,Yaoye,the most sexy face of the world,curvy,Venus body,beautiful,seductive,erotic and aesthetic,slender perfect body,thin waist,big breasts,(sexy long legs:0.5),holding a umbrella,opened umbrella,dynamic pose,dynamic angle,Yaoye_outfit,gold eyes,red hair,long hair,uneven bangs,hair between eyes,long sidelocks,loose hair,pointed ears,black and red racing queen dress,leg bandages,thigh bandages,arm bandages,wrist bandages,bright detailed background,car racing court,official art official style,niploutline,Expressiveh,cowboy shot,close-up,best angle
+          - >-
+            ((Ancient Egypt theme,ancient egyptian theme)),ancient egyptian symbol,ancient egyptian hieroglyphic,(1girl:1.3),1other,dark purple hair,(flower eye patch,flower eyepatch,flower over eye,flowerovereye:1.3),scenery,HDRI Panorama View,panoramic view,dollhouse view,landscape,horizon,((raining,t1hal,Under The Rain,rain,RainWorld)),reflection,car driver view of road,background reflection,tempestmagic,fantasy,tempest,storm,typhoon,lightning glare,lightning,lightning bolt,inverted lightning,upside-down lightning strikes,debris_swirl,white flowers,wind_destruction,cloud,random cyclones,storm_surges,eye_of_the_storm,heavy_rain,winter
       "throne-sitting-dark":
         prompts:
           - >-
