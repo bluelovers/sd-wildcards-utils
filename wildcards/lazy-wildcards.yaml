@@ -42824,6 +42824,8 @@
           - long sleeves,black dress
   cosplay-char-mythology:
     chinese:
+      # 白素贞 Bai Suzhen | 白蛇传 Legend of the White Snake
+      # https://civitai.com/models/128943/bai-suzhen-or-legend-of-the-white-snake-or-chinese-mythology
       bai_suzhen:
         prompts:
           - >-
@@ -42856,6 +42858,55 @@
           - love_story,romantic_encounter,destined_love
           - tragic_ending,imprisonment
           - legend of the white snake,chinese folk religion
+    "jp-urban-legend":
+      # 八尺様
+      # https://civitai.com/models/438737/hasshaku-sama
+      # https://civitai.com/models/83645/hasshaku-sama
+      # https://civitai.com/models/1916439/hasshaku-sama8-shaku-8-wa-kerakumeguri-igyou-kaikitan-the-animation-20
+      # https://civitai.com/models/310751/hasshaku-sama-toshi-densetsu-series
+      "hasshaku-sama":
+        prompts:
+          - >-
+            (__lazy-wildcards/cosplay-char-mythology/jp-urban-legend/hasshaku-sama/main-trigger-words__,__lazy-wildcards/cosplay-char-mythology/jp-urban-legend/hasshaku-sama/costume-main__,__lazy-wildcards/cosplay-char-mythology/jp-urban-legend/hasshaku-sama/costume-ethnicity-main__{,{1-$$__lazy-wildcards/cosplay-char-mythology/jp-urban-legend/hasshaku-sama/costume-ethnicity__}|}{,{1-$$__lazy-wildcards/cosplay-char-mythology/jp-urban-legend/hasshaku-sama/expression__}|}{,{1-$$__lazy-wildcards/cosplay-char-mythology/jp-urban-legend/hasshaku-sama/costume-headwear__}|}{0.3:::{1.2|1.3|1.4}|}){,{1-$$__lazy-wildcards/cosplay-char-mythology/jp-urban-legend/hasshaku-sama/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char-mythology/jp-urban-legend/hasshaku-sama/costume__}|}{,{1-$$__lazy-wildcards/cosplay-char-mythology/jp-urban-legend/hasshaku-sama/costume-elem__}|}{,{1-$$__lazy-wildcards/cosplay-char-mythology/jp-urban-legend/hasshaku-sama/style__}|}
+        "main-trigger-words":
+          - >-
+            hasshaku-sama,hasshaku-sama \(cosplay\),hachisha-sam,hasshaku
+        "costume-main":
+          - white dress,white gown
+        "costume-ethnicity-main":
+          - long hair,hair over face,hair between eyes,very long hair
+        "costume-ethnicity":
+          - black hair
+          - hair over shoulder
+          - long bangs
+        expression:
+          - glasgow smile
+          - naughty face
+          - tongue out
+          - yandere
+        "costume-headwear":
+          - white wide brimmed hat,wide brim
+          - white sun hat
+        costume:
+          - white sundress
+          - white outfit
+        "costume-elem":
+          - tall female
+          - mature female
+          - "heart-shaped pupils"
+          - red eyes
+          - white gloves
+          - collarbone
+          - thick thighs
+          - wet clothes
+          - hat flower
+          - sweat
+        style:
+          - from below
+          - looking down
+          - urban legend atmosphere
+          - height difference,size difference
+          - pantyshot
   real-cosplay:
     # 亞美尼亞人
     Armenian:
