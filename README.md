@@ -15,6 +15,10 @@ https://civitai.com/models/449400
 ## Documentation
 
 - [parseWildcardsYaml Guide](docs/parseWildcardsYaml.md) - Complete guide for parsing wildcards YAML
+
+### AI Agent Guidelines
+
+- [.github/AGENTS.md](./AGENTS.md) - AI 代理行為規範 / AI Agent behavior conventions
 - [Format Documentation](docs/stringifyWildcardsYamlData-format.md) - Complete guide for `stringifyWildcardsYamlData` output format
 - [Error Documentation](docs/stringifyWildcardsYamlData-errors.md) - All error types and validation rules
 - [Merge Functions](docs/merge-functions.md) - `mergeFindSingleRoots` and `mergeWildcardsYAMLDocumentRoots` guide
